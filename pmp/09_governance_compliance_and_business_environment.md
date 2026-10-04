@@ -10,7 +10,7 @@ Management vận hành bên trong ranh giới (boundary / 경계) đó. quản t
 
 Quản trị (governance / 거버넌스) tốt không cố quyết mọi việc ở cấp cao nhất. Nó phân loại quyết định (decision / 결정) theo impact, reversibility và rủi ro (risk / 위험), rồi đặt quyền quyết định ở mức (level / 수준) thấp nhất vẫn bảo vệ được organization.
 
-> **Chuyển mạch:** Trong **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Quản trị (governance / 거버넌스) là quyết định (decision / 결정) kiến trúc (architecture / 아키텍처), không chỉ committee** tiếp nhận điểm tựa từ **Quản trị (governance / 거버넌스) là hệ thống quyền quyết định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quản trị (governance / 거버넌스) khác bureaucracy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Quản trị (governance / 거버넌스) là quyết định (decision / 결정) kiến trúc (architecture / 아키텍처), không chỉ committee** nối từ **Quản trị (governance / 거버넌스) là hệ thống quyền quyết định** sang **Quản trị (governance / 거버넌스) khác bureaucracy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quản trị (governance / 거버넌스) là quyết định (decision / 결정) kiến trúc (architecture / 아키텍처), không chỉ committee
 
@@ -20,7 +20,7 @@ Nếu quyết định (decision / 결정) đơn vị sở hữu (owner / 오너)
 
 Một thiết kế (design / 설계) tốt cố tối thiểu hóa tổng chi phí (cost / 비용) gồm rủi ro (risk / 위험) của quyết định (decision / 결정) sai và độ trễ (latency / 지연 시간)/overhead của quyết định (decision / 결정) tiến trình (process / 프로세스). quản trị (governance / 거버넌스) quá nhẹ tăng uncontrolled rủi ro (risk / 위험); quản trị (governance / 거버넌스) quá nặng tạo hàng đợi (queue / 큐), workaround và shadow quyết định (decision / 결정).
 
-> **Chuyển mạch:** Ở chặng này của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Quản trị (governance / 거버넌스) khác bureaucracy** tiếp nhận điểm tựa từ **Quản trị (governance / 거버넌스) là quyết định (decision / 결정) kiến trúc (architecture / 아키텍처), không chỉ committee** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quản trị (governance / 거버넌스) debt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Quản trị (governance / 거버넌스) khác bureaucracy** nối từ **Quản trị (governance / 거버넌스) là quyết định (decision / 결정) kiến trúc (architecture / 아키텍처), không chỉ committee** sang **Quản trị (governance / 거버넌스) debt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quản trị (governance / 거버넌스) khác bureaucracy
 
@@ -30,7 +30,7 @@ Tailoring quản trị (governance / 거버넌스) nghĩa giữ điều khiển 
 
 Một cách kiểm tra (audit / 감사) quản trị (governance / 거버넌스) đơn giản là hỏi mỗi điều khiển (control / 제어) đang bảo vệ dạng thất bại (failure mode / 실패 모드) nào. Nếu không ai trả lời được, điều khiển (control / 제어) có thể đã biến thành ritual. Ngược lại, bỏ một điều khiển (control / 제어) mà không hiểu dạng thất bại (failure mode / 실패 모드) phía sau có thể tạo rủi ro (risk / 위험) lớn hơn overhead đã tiết kiệm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Quản trị (governance / 거버넌스) debt** tiếp nhận điểm tựa từ **Quản trị (governance / 거버넌스) khác bureaucracy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyết định (decision / 결정) hàng đợi (queue / 큐) và quản trị (governance / 거버넌스) độ trễ (latency / 지연 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Quản trị (governance / 거버넌스) debt** nối từ **Quản trị (governance / 거버넌스) khác bureaucracy** sang **Quyết định (decision / 결정) hàng đợi (queue / 큐) và quản trị (governance / 거버넌스) độ trễ (latency / 지연 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quản trị (governance / 거버넌스) debt
 
@@ -40,7 +40,7 @@ Debt cũng xuất hiện khi chính sách (policy / 정책)/threshold không đ�
 
 Giống technical debt, quản trị (governance / 거버넌스) debt có thể hợp lý trong emergency nếu visible, đơn vị sở hữu (owner / 오너) rõ và repayment date có thật. Hidden permanent exception mới nguy hiểm.
 
-> **Chuyển mạch:** Trong **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Quyết định (decision / 결정) hàng đợi (queue / 큐) và quản trị (governance / 거버넌스) độ trễ (latency / 지연 시간)** tiếp nhận điểm tựa từ **Quản trị (governance / 거버넌스) debt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sponsor, dự án (project / 프로젝트) manager và quản trị (governance / 거버넌스) body** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Quyết định (decision / 결정) hàng đợi (queue / 큐) và quản trị (governance / 거버넌스) độ trễ (latency / 지연 시간)** nối từ **Quản trị (governance / 거버넌스) debt** sang **Sponsor, dự án (project / 프로젝트) manager và quản trị (governance / 거버넌스) body**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quyết định (decision / 결정) hàng đợi (queue / 큐) và quản trị (governance / 거버넌스) độ trễ (latency / 지연 시간)
 
@@ -50,7 +50,7 @@ Một hệ thống (system / 시스템) tốt theo dõi không chỉ số quyế
 
 Nếu nhóm (team / 팀) liên tục bắt đầu công việc (work / 작업) “at rủi ro (risk / 위험)” vì approval đến quá chậm, vấn đề không chỉ là discipline của nhóm (team / 팀); quản trị (governance / 거버넌스) thiết kế (design / 설계) có thể đang không đáp ứng cadence của delivery hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Ở chặng này của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Sponsor, dự án (project / 프로젝트) manager và quản trị (governance / 거버넌스) body** tiếp nhận điểm tựa từ **Quyết định (decision / 결정) hàng đợi (queue / 큐) và quản trị (governance / 거버넌스) độ trễ (latency / 지연 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sponsor attention là tài nguyên (resource / 자원) khan hiếm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sponsor, dự án (project / 프로젝트) manager và quản trị (governance / 거버넌스) body** nối từ **Quyết định (decision / 결정) hàng đợi (queue / 큐) và quản trị (governance / 거버넌스) độ trễ (latency / 지연 시간)** sang **Sponsor attention là tài nguyên (resource / 자원) khan hiếm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sponsor, dự án (project / 프로젝트) manager và quản trị (governance / 거버넌스) body
 
@@ -60,7 +60,7 @@ Sponsor thường sở hữu nghiệp vụ (business / 비즈니스) justificati
 
 Một escalation tốt nên nêu quyết định (decision / 결정) cần đưa ra, option, impact, recommendation và deadline. Chỉ gửi “có vấn đề” làm quản trị (governance / 거버넌스) body phải tự tái tạo toàn bộ phân tích (analysis / 분석).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Sponsor, dự án (project / 프로젝트) manager và quản trị (governance / 거버넌스) body** nêu điều cần giải thích; **Sponsor attention là tài nguyên (resource / 자원) khan hiếm** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **PMO và organizational quản trị (governance / 거버넌스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sponsor, dự án (project / 프로젝트) manager và quản trị (governance / 거버넌스) body** đặt vấn đề; **Sponsor attention là tài nguyên (resource / 자원) khan hiếm** kiểm tra bằng chứng, rồi **PMO và organizational quản trị (governance / 거버넌스)** mở rộng hệ quả.
 
 ## Sponsor attention là tài nguyên (resource / 자원) khan hiếm
 
@@ -70,7 +70,7 @@ Escalation packet tốt giảm cognitive tải (load / 로드): trạng thái hi
 
 Ngược lại, PM che bad news để “không làm phiền sponsor” có thể làm sponsor chỉ biết bài toán (problem / 문제) khi option đã biến mất. Attention management không phải thông tin (information / 정보) suppression.
 
-> **Chuyển mạch:** Trong **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Sponsor attention là tài nguyên (resource / 자원) khan hiếm** nêu điều cần giải thích; **PMO và organizational quản trị (governance / 거버넌스)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **PMO operating mô hình (model / 모델): hỗ trợ (support / 지원), điều khiển (control / 제어) hay delivery** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sponsor attention là tài nguyên (resource / 자원) khan hiếm** đặt vấn đề; **PMO và organizational quản trị (governance / 거버넌스)** kiểm tra bằng chứng, rồi **PMO operating mô hình (model / 모델): hỗ trợ (support / 지원), điều khiển (control / 제어) hay delivery** mở rộng hệ quả.
 
 ## PMO và organizational quản trị (governance / 거버넌스)
 
@@ -78,7 +78,7 @@ Dự án (project / 프로젝트) Management Office (PMO / 프로젝트 관리 �
 
 PMO yếu có thể tập trung vào template compliance hơn kết quả (outcome / 결과). PMO mạnh giúp organization phân biệt variance bình thường với systemic rủi ro (risk / 위험), dùng historical dữ liệu (data / 데이터) tốt hơn và hỗ trợ dự án (project / 프로젝트) manager khi issue vượt ranh giới (boundary / 경계) một dự án (project / 프로젝트).
 
-> **Chuyển mạch:** Ở chặng này của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **PMO operating mô hình (model / 모델): hỗ trợ (support / 지원), điều khiển (control / 제어) hay delivery** tiếp nhận điểm tựa từ **PMO và organizational quản trị (governance / 거버넌스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Assurance cần đủ độc lập để challenge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **PMO operating mô hình (model / 모델): hỗ trợ (support / 지원), điều khiển (control / 제어) hay delivery** nối từ **PMO và organizational quản trị (governance / 거버넌스)** sang **Assurance cần đủ độc lập để challenge**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## PMO operating mô hình (model / 모델): hỗ trợ (support / 지원), điều khiển (control / 제어) hay delivery
 
@@ -88,7 +88,7 @@ Ba chế độ (mode / 모드) này không phải maturity ladder. Một regulat
 
 PMO nên đo giá trị (value / 값) của mình bằng organizational outcomes như quyết định (decision / 결정) speed, forecast chất lượng (quality / 품질), delivery predictability, reuse of học tập (learning / 학습) và systemic rủi ro (risk / 위험) visibility hơn là số template được điền đúng hạn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Assurance cần đủ độc lập để challenge** tiếp nhận điểm tựa từ **PMO operating mô hình (model / 모델): hỗ trợ (support / 지원), điều khiển (control / 제어) hay delivery** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dự án (project / 프로젝트), program và portfolio nối nhau qua phụ thuộc (dependency / 의존성) và capital allocation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Assurance cần đủ độc lập để challenge** nối từ **PMO operating mô hình (model / 모델): hỗ trợ (support / 지원), điều khiển (control / 제어) hay delivery** sang **Dự án (project / 프로젝트), program và portfolio nối nhau qua phụ thuộc (dependency / 의존성) và capital allocation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Assurance cần đủ độc lập để challenge
 
@@ -98,7 +98,7 @@ Independence không có nghĩa reviewer không hiểu ngữ cảnh (context / �
 
 Assurance tốt hỏi bằng chứng (evidence / 증거) và giả định (assumption / 가정), không chỉ “đã điền template chưa?”.
 
-> **Chuyển mạch:** Trong **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Dự án (project / 프로젝트), program và portfolio nối nhau qua phụ thuộc (dependency / 의존성) và capital allocation** tiếp nhận điểm tựa từ **Assurance cần đủ độc lập để challenge** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Portfolio WIP và sức chứa (capacity / 용량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dự án (project / 프로젝트), program và portfolio nối nhau qua phụ thuộc (dependency / 의존성) và capital allocation** nối từ **Assurance cần đủ độc lập để challenge** sang **Portfolio WIP và sức chứa (capacity / 용량)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dự án (project / 프로젝트), program và portfolio nối nhau qua phụ thuộc (dependency / 의존성) và capital allocation
 
@@ -108,7 +108,7 @@ Ranh giới (boundary / 경계) này quan trọng vì một dự án (project / 
 
 Portfolio cũng có thể dừng một dự án (project / 프로젝트) khỏe nếu capital cần chuyển sang opportunity có strategic giá trị (value / 값) cao hơn. Với dự án (project / 프로젝트) manager, điều này có thể khó chấp nhận nếu chỉ nhìn delivery metrics. quản trị (governance / 거버넌스) cấp portfolio hỏi một câu khác: đây còn là nơi tốt nhất để đầu tư nguồn lực khan hiếm không?
 
-> **Chuyển mạch:** Ở chặng này của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Portfolio WIP và sức chứa (capacity / 용량)** tiếp nhận điểm tựa từ **Dự án (project / 프로젝트), program và portfolio nối nhau qua phụ thuộc (dependency / 의존성) và capital allocation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Incremental funding và progressive commitment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Portfolio WIP và sức chứa (capacity / 용량)** nối từ **Dự án (project / 프로젝트), program và portfolio nối nhau qua phụ thuộc (dependency / 의존성) và capital allocation** sang **Incremental funding và progressive commitment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Portfolio WIP và sức chứa (capacity / 용량)
 
@@ -118,7 +118,7 @@ Portfolio WIP cao làm cycle thời gian (time / 시간) của strategic thay đ
 
 Portfolio quản trị (governance / 거버넌스) vì vậy không chỉ chọn dự án (project / 프로젝트) tốt; nó quyết định bao nhiêu công việc (work / 작업) có thể được active đồng thời mà hệ thống (system / 시스템) vẫn giữ focus và absorption sức chứa (capacity / 용량).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Incremental funding và progressive commitment** tiếp nhận điểm tựa từ **Portfolio WIP và sức chứa (capacity / 용량)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cross-project phụ thuộc (dependency / 의존성) và dùng chung (shared / 공유) ràng buộc (constraint / 제약조건)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Incremental funding và progressive commitment** nối từ **Portfolio WIP và sức chứa (capacity / 용량)** sang **Cross-project phụ thuộc (dependency / 의존성) và dùng chung (shared / 공유) ràng buộc (constraint / 제약조건)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Incremental funding và progressive commitment
 
@@ -128,7 +128,7 @@ Incremental funding tạo option stop/pivot trước irreversible spend lớn. N
 
 Đây là portfolio equivalent của stage-gate/real-options thinking ở chapter vòng đời (lifecycle / 생명주기) và rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Trong **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Cross-project phụ thuộc (dependency / 의존성) và dùng chung (shared / 공유) ràng buộc (constraint / 제약조건)** tiếp nhận điểm tựa từ **Incremental funding và progressive commitment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Portfolio quản trị (governance / 거버넌스) và kill/pause/pivot quyết định (decision / 결정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cross-project phụ thuộc (dependency / 의존성) và dùng chung (shared / 공유) ràng buộc (constraint / 제약조건)** nối từ **Incremental funding và progressive commitment** sang **Portfolio quản trị (governance / 거버넌스) và kill/pause/pivot quyết định (decision / 결정)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cross-project phụ thuộc (dependency / 의존성) và dùng chung (shared / 공유) ràng buộc (constraint / 제약조건)
 
@@ -138,7 +138,7 @@ Phụ thuộc (dependency / 의존성) cần đơn vị sở hữu (owner / 오�
 
 Dùng chung (shared / 공유) ràng buộc (constraint / 제약조건) cũng làm rủi ro (risk / 위험) correlated. Năm dự án (project / 프로젝트) dùng cùng vendor không phải năm exposure độc lập. Đây là điểm nối với [Risk, uncertainty và decision](./08_risk_uncertainty_issues_and_decisions.md).
 
-> **Chuyển mạch:** Ở chặng này của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Portfolio quản trị (governance / 거버넌스) và kill/pause/pivot quyết định (decision / 결정)** tiếp nhận điểm tựa từ **Cross-project phụ thuộc (dependency / 의존성) và dùng chung (shared / 공유) ràng buộc (constraint / 제약조건)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Strategic alignment drift** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Portfolio quản trị (governance / 거버넌스) và kill/pause/pivot quyết định (decision / 결정)** nối từ **Cross-project phụ thuộc (dependency / 의존성) và dùng chung (shared / 공유) ràng buộc (constraint / 제약조건)** sang **Strategic alignment drift**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Portfolio quản trị (governance / 거버넌스) và kill/pause/pivot quyết định (decision / 결정)
 
@@ -148,7 +148,7 @@ Quyết định (decision / 결정) nên xem sunk chi phí (cost / 비용) là l
 
 Một dự án (project / 프로젝트) bị terminate không nhất thiết là thất bại (failure / 실패) của PM. Có thể đó là bằng chứng (evidence / 증거) rằng quản trị (governance / 거버넌스) học sớm trước khi đốt thêm capital.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Strategic alignment drift** tiếp nhận điểm tựa từ **Portfolio quản trị (governance / 거버넌스) và kill/pause/pivot quyết định (decision / 결정)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Compliance là ràng buộc (constraint / 제약조건) không thể “sự đánh đổi (trade-off / 트레이드오프) tùy ý”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Strategic alignment drift** nối từ **Portfolio quản trị (governance / 거버넌스) và kill/pause/pivot quyết định (decision / 결정)** sang **Compliance là ràng buộc (constraint / 제약조건) không thể “sự đánh đổi (trade-off / 트레이드오프) tùy ý”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Strategic alignment drift
 
@@ -158,7 +158,7 @@ Alignment vì vậy cần được reassess ở material trigger, không chỉ a
 
 Strategic drift cũng có thể theo hướng ngược: một dự án (project / 프로젝트) từng optional trở thành trọng yếu (critical / 중요) vì regulation hoặc competitor sự kiện (event / 이벤트). quản trị (governance / 거버넌스) cần có ability reprioritize, không khóa toàn portfolio theo ranking cũ.
 
-> **Chuyển mạch:** Trong **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Compliance là ràng buộc (constraint / 제약조건) không thể “sự đánh đổi (trade-off / 트레이드오프) tùy ý”** tiếp nhận điểm tựa từ **Strategic alignment drift** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chính sách (policy / 정책) hierarchy và xung đột (conflict / 충돌)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Compliance là ràng buộc (constraint / 제약조건) không thể “sự đánh đổi (trade-off / 트레이드오프) tùy ý”** nối từ **Strategic alignment drift** sang **Chính sách (policy / 정책) hierarchy và xung đột (conflict / 충돌)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Compliance là ràng buộc (constraint / 제약조건) không thể “sự đánh đổi (trade-off / 트레이드오프) tùy ý”
 
@@ -168,7 +168,7 @@ Bảo mật (security / 보안), privacy, health & an toàn (safety / 안전) v�
 
 Compliance yêu cầu (requirement / 요구사항) cần được chuyển thành testable bằng chứng (evidence / 증거). “Đảm bảo privacy” quá mơ hồ; “PII được mã hóa at rest, retention theo chính sách (policy / 정책) X và truy cập (access / 접근) được log” tạo ranh giới (boundary / 경계) có thể verify. Đây là điểm nối giữa quản trị (governance / 거버넌스) và chất lượng (quality / 품질).
 
-> **Chuyển mạch:** Ở chặng này của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Chính sách (policy / 정책) hierarchy và xung đột (conflict / 충돌)** tiếp nhận điểm tựa từ **Compliance là ràng buộc (constraint / 제약조건) không thể “sự đánh đổi (trade-off / 트레이드오프) tùy ý”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Compliance by thiết kế (design / 설계) thay vì compliance at gate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Chính sách (policy / 정책) hierarchy và xung đột (conflict / 충돌)** nối từ **Compliance là ràng buộc (constraint / 제약조건) không thể “sự đánh đổi (trade-off / 트레이드오프) tùy ý”** sang **Compliance by thiết kế (design / 설계) thay vì compliance at gate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chính sách (policy / 정책) hierarchy và xung đột (conflict / 충돌)
 
@@ -178,7 +178,7 @@ Khi hai yêu cầu (requirement / 요구사항) xung đột (conflict / 충돌),
 
 Làm rõ nguồn (source / 소스)/authority của ràng buộc (constraint / 제약조건) giúp scenario lập luận (reasoning / 추론) tránh lỗi “manager đã approve nên được phép”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Compliance by thiết kế (design / 설계) thay vì compliance at gate** tiếp nhận điểm tựa từ **Chính sách (policy / 정책) hierarchy và xung đột (conflict / 충돌)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bằng chứng (evidence / 증거) chuỗi (chain / 사슬) và auditability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Compliance by thiết kế (design / 설계) thay vì compliance at gate** nối từ **Chính sách (policy / 정책) hierarchy và xung đột (conflict / 충돌)** sang **Bằng chứng (evidence / 증거) chuỗi (chain / 사슬) và auditability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Compliance by thiết kế (design / 설계) thay vì compliance at gate
 
@@ -188,7 +188,7 @@ Ví dụ dữ liệu (data / 데이터) retention yêu cầu (requirement / 요�
 
 Gate cuối vẫn cần, nhưng role của nó nên xác nhận accumulated bằng chứng (evidence / 증거) chứ không khám phá lần đầu yêu cầu (requirement / 요구사항) trọng yếu (critical / 중요).
 
-> **Chuyển mạch:** Trong **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Compliance by thiết kế (design / 설계) thay vì compliance at gate** nêu điều cần giải thích; **Bằng chứng (evidence / 증거) chuỗi (chain / 사슬) và auditability** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Materiality và proportional điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Compliance by thiết kế (design / 설계) thay vì compliance at gate** đặt vấn đề; **Bằng chứng (evidence / 증거) chuỗi (chain / 사슬) và auditability** kiểm tra bằng chứng, rồi **Materiality và proportional điều khiển (control / 제어)** mở rộng hệ quả.
 
 ## Bằng chứng (evidence / 증거) chuỗi (chain / 사슬) và auditability
 
@@ -196,7 +196,7 @@ Một điều khiển (control / 제어) chỉ đáng tin khi có bằng chứng
 
 Traceability không nhất thiết phải là spreadsheet lớn. Trong software dự án (project / 프로젝트), chuỗi (chain / 사슬) có thể đi từ regulatory yêu cầu (requirement / 요구사항) → backlog/điều khiển (control / 제어) → mã (code / 코드)/cấu hình (configuration / 구성) → kiểm thử (test / 테스트) bằng chứng (evidence / 증거) → bản phát hành (release / 릴리스) approval. Mục tiêu là reconstruct lập luận (reasoning / 추론) khi kiểm tra (audit / 감사) hoặc sự cố (incident / 인시던트) xảy ra.
 
-> **Chuyển mạch:** Ở chặng này của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Bằng chứng (evidence / 증거) chuỗi (chain / 사슬) và auditability** nêu điều cần giải thích; **Materiality và proportional điều khiển (control / 제어)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Exception management** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bằng chứng (evidence / 증거) chuỗi (chain / 사슬) và auditability** đặt vấn đề; **Materiality và proportional điều khiển (control / 제어)** kiểm tra bằng chứng, rồi **Exception management** mở rộng hệ quả.
 
 ## Materiality và proportional điều khiển (control / 제어)
 
@@ -204,7 +204,7 @@ Không phải mọi deviation có cùng materiality. Một typo trong nội bộ
 
 Nếu mọi deviation được xử lý bằng cùng escalation, hệ thống (system / 시스템) quá tải. Nếu materiality bị hiểu là “issue nhỏ nên bỏ qua” mà không có quy tắc (rule / 규칙), hidden rủi ro (risk / 위험) tích tụ. Proportionality cần tường minh (explicit / 명시적) ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Exception management** tiếp nhận điểm tựa từ **Materiality và proportional điều khiển (control / 제어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Organizational tiến trình (process / 프로세스) Assets và Enterprise Environmental Factors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Exception management** nối từ **Materiality và proportional điều khiển (control / 제어)** sang **Organizational tiến trình (process / 프로세스) Assets và Enterprise Environmental Factors**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Exception management
 
@@ -214,7 +214,7 @@ Nếu exception không có expiry hoặc rà soát (review / 검토), temporary 
 
 Exception register cũng nên theo dõi concentration. Mười exception nhỏ trên cùng điều khiển (control / 제어) area có thể tạo systemic weakness dù từng exception riêng nằm dưới threshold.
 
-> **Chuyển mạch:** Trong **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Exception management** xác định đầu vào; **Organizational tiến trình (process / 프로세스) Assets và Enterprise Environmental Factors** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Organizational cấu trúc (structure / 구조) và authority** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Exception management làm lộ nơi governance cần phản hồi; Organizational Process Assets và Enterprise Environmental Factors cung cấp bối cảnh. **Organizational structure và authority** kiểm tra quyền xử lý.
 
 ## Organizational tiến trình (process / 프로세스) Assets và Enterprise Environmental Factors
 
@@ -224,7 +224,7 @@ Không cần học thuộc category nếu mô hình tư duy (mental model / 사�
 
 OPA chỉ có giá trị nếu được cập nhật từ học tập (learning / 학습) thực tế. Template cũ không phản ánh sự cố (incident / 인시던트) hoặc technology mới có thể gây false confidence. dự án (project / 프로젝트) manager nên reuse kiến thức (knowledge / 지식) nhưng vẫn kiểm tra relevance.
 
-> **Chuyển mạch:** Ở chặng này của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Organizational tiến trình (process / 프로세스) Assets và Enterprise Environmental Factors** xác định đầu vào; **Organizational cấu trúc (structure / 구조) và authority** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Nghiệp vụ (business / 비즈니스) môi trường (environment / 환경) là moving mục tiêu (target / 대상)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Organizational Process Assets và Enterprise Environmental Factors tạo nền; Organizational structure và authority chuyển nền đó thành quyết định. **Business environment là moving target** nên governance phải cập nhật.
 
 ## Organizational cấu trúc (structure / 구조) và authority
 
@@ -234,7 +234,7 @@ Cấu trúc ảnh hưởng tốc độ tài nguyên (resource / 자원) allocati
 
 Trong ma trận (matrix / 행렬), xung đột (conflict / 충돌) tài nguyên (resource / 자원) thường không giải được chỉ bằng “ưu tiên dự án (project / 프로젝트)”. Functional manager tối ưu năng lực (capability / 역량) dài hạn, dự án (project / 프로젝트) manager tối ưu temporary delivery. quản trị (governance / 거버넌스) phải cung cấp cơ chế (mechanism / 메커니즘) để giải sự đánh đổi (trade-off / 트레이드오프) thay vì để hai phía tranh quyền không chính thức.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Nghiệp vụ (business / 비즈니스) môi trường (environment / 환경) là moving mục tiêu (target / 대상)** tiếp nhận điểm tựa từ **Organizational cấu trúc (structure / 구조) và authority** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Environmental tín hiệu (signal / 신호), trigger và phản hồi (response / 응답) horizon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Nghiệp vụ (business / 비즈니스) môi trường (environment / 환경) là moving mục tiêu (target / 대상)** nối từ **Organizational cấu trúc (structure / 구조) và authority** sang **Environmental tín hiệu (signal / 신호), trigger và phản hồi (response / 응답) horizon**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nghiệp vụ (business / 비즈니스) môi trường (environment / 환경) là moving mục tiêu (target / 대상)
 
@@ -244,7 +244,7 @@ Environmental scanning không có nghĩa PM dự đoán mọi trend. Nó nghĩa 
 
 Trigger có thể là regulation draft mới, competitor bản phát hành (release / 릴리스), FX movement, vendor acquisition hoặc strategic priority thay đổi (change / 변경). Một dự án (project / 프로젝트) khỏe phải có khả năng hỏi lại “nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) còn đúng không?” thay vì coi charter ban đầu là chân lý bất biến.
 
-> **Chuyển mạch:** Trong **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Environmental tín hiệu (signal / 신호), trigger và phản hồi (response / 응답) horizon** tiếp nhận điểm tựa từ **Nghiệp vụ (business / 비즈니스) môi trường (environment / 환경) là moving mục tiêu (target / 대상)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) cần sống trong suốt dự án (project / 프로젝트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Environmental tín hiệu (signal / 신호), trigger và phản hồi (response / 응답) horizon** nối từ **Nghiệp vụ (business / 비즈니스) môi trường (environment / 환경) là moving mục tiêu (target / 대상)** sang **Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) cần sống trong suốt dự án (project / 프로젝트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Environmental tín hiệu (signal / 신호), trigger và phản hồi (response / 응답) horizon
 
@@ -254,7 +254,7 @@ Một regulation draft có thể cần scenario phân tích (analysis / 분석);
 
 Environmental scanning tốt nối tín hiệu (signal / 신호) → possible impact → đơn vị sở hữu (owner / 오너) → quyết định (decision / 결정) trigger. “Theo dõi thị trường” mà không có threshold không tạo actionability.
 
-> **Chuyển mạch:** Ở chặng này của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Environmental tín hiệu (signal / 신호), trigger và phản hồi (response / 응답) horizon** cho ta quy tắc; **Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) cần sống trong suốt dự án (project / 프로젝트)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Benefits quyền sở hữu (ownership / 소유권)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Environmental tín hiệu (signal / 신호), trigger và phản hồi (response / 응답) horizon** nêu quy tắc; **Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) cần sống trong suốt dự án (project / 프로젝트)** thử quy tắc trong tình huống, rồi **Benefits quyền sở hữu (ownership / 소유권)** mở rộng hệ quả.
 
 ## Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) cần sống trong suốt dự án (project / 프로젝트)
 
@@ -262,7 +262,7 @@ Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) không c
 
 Dự án (project / 프로젝트) manager có thể không có authority hủy dự án (project / 프로젝트), nhưng phải surface bằng chứng (evidence / 증거) khi expected giá trị (value / 값) thay đổi đáng kể. quản trị (governance / 거버넌스) body cần quyết định continue, pivot, pause hoặc terminate.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) cần sống trong suốt dự án (project / 프로젝트)** cho ta quy tắc; **Benefits quyền sở hữu (ownership / 소유권)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Benefit phụ thuộc (dependency / 의존성) mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Nghiệp vụ (business / 비즈니스) trường hợp (case / 사례) cần sống trong suốt dự án (project / 프로젝트)** nêu quy tắc; **Benefits quyền sở hữu (ownership / 소유권)** thử quy tắc trong tình huống, rồi **Benefit phụ thuộc (dependency / 의존성) mạng (network / 네트워크)** mở rộng hệ quả.
 
 ## Benefits quyền sở hữu (ownership / 소유권)
 
@@ -270,7 +270,7 @@ Dự án (project / 프로젝트) tạo năng lực (capability / 역량) nhưng
 
 Một benefit map nối đầu ra (output / 출력) → năng lực (capability / 역량) → hành vi (behavior / 동작) thay đổi (change / 변경) → measurable kết quả (outcome / 결과) giúp xác định giả định (assumption / 가정) nào nằm ngoài điều khiển (control / 제어) trực tiếp của dự án (project / 프로젝트) nhưng vẫn phải được quản lý như phụ thuộc (dependency / 의존성).
 
-> **Chuyển mạch:** Trong **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Benefit phụ thuộc (dependency / 의존성) mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Benefits quyền sở hữu (ownership / 소유권)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Benefits realization không kết thúc ở dự án (project / 프로젝트) closure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Benefit phụ thuộc (dependency / 의존성) mạng (network / 네트워크)** nối từ **Benefits quyền sở hữu (ownership / 소유권)** sang **Benefits realization không kết thúc ở dự án (project / 프로젝트) closure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Benefit phụ thuộc (dependency / 의존성) mạng (network / 네트워크)
 
@@ -280,7 +280,7 @@ Benefit mạng (network / 네트워크) nên cho thấy phụ thuộc (dependenc
 
 Nếu multiple projects cùng claim một benefit, portfolio cần tránh double-count. Attribution lô-gic (logic / 논리) phải consistent với nghiệp vụ (business / 비즈니스) trường hợp (case / 사례).
 
-> **Chuyển mạch:** Ở chặng này của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Benefits realization không kết thúc ở dự án (project / 프로젝트) closure** tiếp nhận điểm tựa từ **Benefit phụ thuộc (dependency / 의존성) mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Organizational thay đổi (change / 변경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Benefits realization không kết thúc ở dự án (project / 프로젝트) closure** nối từ **Benefit phụ thuộc (dependency / 의존성) mạng (network / 네트워크)** sang **Organizational thay đổi (change / 변경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Benefits realization không kết thúc ở dự án (project / 프로젝트) closure
 
@@ -290,7 +290,7 @@ Nếu benefit phụ thuộc adoption, tiến trình (process / 프로세스) red
 
 Quản trị (governance / 거버넌스) cũng cần phân biệt benefit không xuất hiện vì dự án (project / 프로젝트) đầu ra (output / 출력) kém với benefit không xuất hiện vì giả định (assumption / 가정) nghiệp vụ (business / 비즈니스) sai. Hai nguyên nhân dẫn tới học tập (learning / 학습) khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Organizational thay đổi (change / 변경)** tiếp nhận điểm tựa từ **Benefits realization không kết thúc ở dự án (project / 프로젝트) closure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thay đổi (change / 변경) readiness: ability, willingness và môi trường (environment / 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Organizational thay đổi (change / 변경)** nối từ **Benefits realization không kết thúc ở dự án (project / 프로젝트) closure** sang **Thay đổi (change / 변경) readiness: ability, willingness và môi trường (environment / 환경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Organizational thay đổi (change / 변경)
 
@@ -300,7 +300,7 @@ Dự án (project / 프로젝트) manager không nhất thiết sở hữu toàn
 
 Resistance không phải lúc nào cũng “người dùng chống thay đổi”. Nó có thể là tín hiệu (signal / 신호) rằng tiến trình (process / 프로세스) mới tăng tải công việc (workload / 워크로드), incentive không phù hợp hoặc stakeholder không tin dữ liệu (data / 데이터). Treat resistance như thông tin (information / 정보) giúp thiết kế (design / 설계) intervention tốt hơn.
 
-> **Chuyển mạch:** Trong **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Thay đổi (change / 변경) readiness: ability, willingness và môi trường (environment / 환경)** tiếp nhận điểm tựa từ **Organizational thay đổi (change / 변경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reinforcement và regression về hành vi (behavior / 동작) cũ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Thay đổi (change / 변경) readiness: ability, willingness và môi trường (environment / 환경)** nối từ **Organizational thay đổi (change / 변경)** sang **Reinforcement và regression về hành vi (behavior / 동작) cũ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thay đổi (change / 변경) readiness: ability, willingness và môi trường (environment / 환경)
 
@@ -310,7 +310,7 @@ Có thể lập luận (reasoning / 추론) readiness qua ba lớp: ability—ng
 
 Nếu một trong ba lớp thất bại (fail / 실패), communication campaign mạnh hơn chưa chắc sửa được adoption.
 
-> **Chuyển mạch:** Ở chặng này của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Reinforcement và regression về hành vi (behavior / 동작) cũ** tiếp nhận điểm tựa từ **Thay đổi (change / 변경) readiness: ability, willingness và môi trường (environment / 환경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thay đổi (change / 변경) saturation và portfolio tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Reinforcement và regression về hành vi (behavior / 동작) cũ** nối từ **Thay đổi (change / 변경) readiness: ability, willingness và môi trường (environment / 환경)** sang **Thay đổi (change / 변경) saturation và portfolio tác động (effect / 효과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Reinforcement và regression về hành vi (behavior / 동작) cũ
 
@@ -320,7 +320,7 @@ Vì vậy adoption cần theo dõi sau chuyển tiếp (transition / 전이), kh
 
 Không phải lúc nào cũng nên tắt old tiến trình (process / 프로세스) ngay; nếu new hệ thống (system / 시스템) chưa stable, parallel run có thể là rủi ro (risk / 위험) điều khiển (control / 제어). Nhưng old đường dẫn (path / 경로) không có retirement plan sẽ làm dual tiến trình (process / 프로세스) thành permanent độ phức tạp (complexity / 복잡도).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Thay đổi (change / 변경) saturation và portfolio tác động (effect / 효과)** tiếp nhận điểm tựa từ **Reinforcement và regression về hành vi (behavior / 동작) cũ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adoption chỉ số (metric / 지표) phải đo hành vi (behavior / 동작), không chỉ activity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Thay đổi (change / 변경) saturation và portfolio tác động (effect / 효과)** nối từ **Reinforcement và regression về hành vi (behavior / 동작) cũ** sang **Adoption chỉ số (metric / 지표) phải đo hành vi (behavior / 동작), không chỉ activity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thay đổi (change / 변경) saturation và portfolio tác động (effect / 효과)
 
@@ -330,7 +330,7 @@ Một nhóm (team / 팀) có thể chịu nhiều initiative cùng lúc: ERP m�
 
 Thay đổi (change / 변경) saturation là ví dụ điển hình cho hệ thống (system / 시스템) tác động (effect / 효과) không nhìn thấy khi quản lý từng dự án (project / 프로젝트) riêng lẻ.
 
-> **Chuyển mạch:** Trong **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Adoption chỉ số (metric / 지표) phải đo hành vi (behavior / 동작), không chỉ activity** tiếp nhận điểm tựa từ **Thay đổi (change / 변경) saturation và portfolio tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển tiếp (transition / 전이) và operating mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Adoption chỉ số (metric / 지표) phải đo hành vi (behavior / 동작), không chỉ activity** nối từ **Thay đổi (change / 변경) saturation và portfolio tác động (effect / 효과)** sang **Chuyển tiếp (transition / 전이) và operating mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Adoption chỉ số (metric / 지표) phải đo hành vi (behavior / 동작), không chỉ activity
 
@@ -340,7 +340,7 @@ Một rollout có 100% huấn luyện (training / 학습) completion nhưng 40% 
 
 Đo lường (measurement / 측정) nên segment theo role, location hoặc cohort để tìm nơi intervention cần khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Chuyển tiếp (transition / 전이) và operating mô hình (model / 모델)** tiếp nhận điểm tựa từ **Adoption chỉ số (metric / 지표) phải đo hành vi (behavior / 동작), không chỉ activity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ethics và professional responsibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Chuyển tiếp (transition / 전이) và operating mô hình (model / 모델)** nối từ **Adoption chỉ số (metric / 지표) phải đo hành vi (behavior / 동작), không chỉ activity** sang **Ethics và professional responsibility**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển tiếp (transition / 전이) và operating mô hình (model / 모델)
 
@@ -350,7 +350,7 @@ Nếu dự án (project / 프로젝트) nhóm (team / 팀) rời đi nhưng khô
 
 Chuyển tiếp (transition / 전이) readiness vì vậy là acceptance criterion của hệ thống (system / 시스템) vận hành, không phải administrative checklist cuối dự án (project / 프로젝트).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Ethics và professional responsibility** tiếp nhận điểm tựa từ **Chuyển tiếp (transition / 전이) và operating mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Speaking truth to power là điều khiển (control / 제어) cơ chế (mechanism / 메커니즘)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Ethics và professional responsibility** nối từ **Chuyển tiếp (transition / 전이) và operating mô hình (model / 모델)** sang **Speaking truth to power là điều khiển (control / 제어) cơ chế (mechanism / 메커니즘)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ethics và professional responsibility
 
@@ -360,7 +360,7 @@ Khi xung đột (conflict / 충돌) of interest hoặc pressure vượt authorit
 
 Professional judgment cũng yêu cầu phân biệt confidentiality với concealment. Không chia sẻ sensitive dữ liệu (data / 데이터) bừa bãi là đúng; giấu rủi ro (risk / 위험) material khỏi người có quyền quyết định là quản trị (governance / 거버넌스) thất bại (failure / 실패).
 
-> **Chuyển mạch:** Trong **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Ethics và professional responsibility** xác định đầu vào; **Speaking truth to power là điều khiển (control / 제어) cơ chế (mechanism / 메커니즘)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Quản trị (governance / 거버넌스) thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ethics và professional responsibility đặt giới hạn; speaking truth to power là control mechanism giúp tín hiệu xấu đi tới quyết định. **Governance failure modes** kiểm tra nơi tín hiệu bị chặn.
 
 ## Speaking truth to power là điều khiển (control / 제어) cơ chế (mechanism / 메커니즘)
 
@@ -370,7 +370,7 @@ PM cần trình bày material fact, bất định (uncertainty / 불확실성) v
 
 Một organization trưởng thành phân biệt messenger khỏi bài toán (problem / 문제). Nếu không, silence trở thành rational hành vi (behavior / 동작) của nhóm (team / 팀) và quản trị (governance / 거버넌스) mất sensor.
 
-> **Chuyển mạch:** Ở chặng này của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Speaking truth to power là điều khiển (control / 제어) cơ chế (mechanism / 메커니즘)** xác định đầu vào; **Quản trị (governance / 거버넌스) thất bại (failure / 실패) modes** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Ví dụ scenario** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Speaking truth to power đưa tín hiệu vào control mechanism; Governance failure modes giải thích cách quyền lực làm méo tín hiệu. **Ví dụ scenario** kiểm tra hệ quả trong bối cảnh cụ thể.
 
 ## Quản trị (governance / 거버넌스) thất bại (failure / 실패) modes
 
@@ -382,7 +382,7 @@ Khi quản trị (governance / 거버넌스) tạo incentive che bad news, organ
 
 Quản trị (governance / 거버넌스) cũng có thể thất bại (fail / 실패) vì chính sách (policy / 정책) collision, assurance theater, exception accumulation hoặc committee without authority. Những thất bại (failure / 실패) này khác nhau nhưng đều phá link giữa bằng chứng (evidence / 증거) và hành động (action / 동작).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Quản trị (governance / 거버넌스) thất bại (failure / 실패) modes** cho ta quy tắc; **Ví dụ scenario** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Quản trị (governance / 거버넌스) thất bại (failure / 실패) modes** nêu quy tắc; **Ví dụ scenario** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Ví dụ scenario
 
@@ -396,7 +396,7 @@ Một scenario thay đổi (change / 변경): rollout mới đạt 100% huấn l
 
 Một scenario quản trị (governance / 거버넌스): kiến trúc (architecture / 아키텍처) board họp hai tuần một lần, nhưng sprint cần quyết định (decision / 결정) giao diện (interface / 인터페이스) trong ba ngày. nhóm (team / 팀) liên tục implement trước rồi xin approve sau. Chỉ nhắc nhóm (team / 팀) “tuân thủ quy trình” không sửa nguyên nhân gốc (root cause / 근본 원인). quản trị (governance / 거버넌스) cần threshold/delegation hoặc faster rà soát (review / 검토) đường dẫn (path / 경로) để điều khiển (control / 제어) cadence match delivery cadence.
 
-> **Chuyển mạch:** Trong **09 — quản trị (governance / 거버넌스), compliance và nghiệp vụ (business / 비즈니스) môi trường (environment / 환경)**, **Ví dụ scenario** cho ta quy tắc; **Mô hình tư duy (mental model / 사고 모델)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ví dụ scenario nêu quy tắc; **Mô hình tư duy** thử quy tắc trong tình huống cụ thể để khép mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
