@@ -28,7 +28,7 @@ components
 
 Nếu thành phần (component / 컴포넌트) chỉ là view, mã (code / 코드) nghiệp vụ nên ưu tiên thao tác mô hình (model / 모델) thay vì cố đọc từng cell UI để dựng lại dữ liệu.
 
-> **Chuyển mạch:** Trong **03 — DataCollection & Submission**, **1. Tách dữ liệu khỏi thành phần (component / 컴포넌트)** nêu điều cần giải thích; **2. DataMap: bản ghi (record / 레코드) có lược đồ (schema / 스키마)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. DataList: bảng (table / 테이블) mô hình (model / 모델) phía máy khách (client / 클라이언트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **03 — DataCollection & Submission**, **1. Tách dữ liệu khỏi thành phần (component / 컴포넌트)** đặt vấn đề; **2. DataMap: bản ghi (record / 레코드) có lược đồ (schema / 스키마)** đối chiếu bằng chứng, rồi **3. DataList: bảng (table / 테이블) mô hình (model / 모델) phía máy khách (client / 클라이언트)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2. DataMap: bản ghi (record / 레코드) có lược đồ (schema / 스키마)
 
@@ -55,7 +55,7 @@ User nhập điều kiện
 
 Điểm mạnh không chỉ là mã (code / 코드) ngắn hơn. Nó tạo một ranh giới (boundary / 경계) rõ giữa UI trạng thái (state / 상태) và yêu cầu (request / 요청) trạng thái (state / 상태).
 
-> **Chuyển mạch:** DataMap giữ record theo schema; DataList mở record thành collection có ordering và selection. Row status tiếp theo biến mutation của từng row thành state machine có thể submit và rollback.
+> **Nối mạch:** DataMap giữ record theo schema; DataList mở record thành collection có ordering và selection. Row status tiếp theo biến mutation của từng row thành state machine có thể submit và rollback.
 
 ## 3. DataList: bảng (table / 테이블) mô hình (model / 모델) phía máy khách (client / 클라이언트)
 
@@ -72,7 +72,7 @@ for (var i = 0; i < count; i++) {
 
 Nhưng DataList không nên bị hiểu đơn giản là JavaScript Array. Nó còn giữ siêu dữ liệu (metadata / 메타데이터) và row trạng thái (state / 상태) phục vụ binding, CRUD và Submission.
 
-> **Chuyển mạch:** DataList giữ client-side model; row status biến mỗi row thành state machine, nên delete tiếp theo có thể là pending operation thay vì biến mất ngay.
+> **Nối mạch:** DataList giữ client-side model; row status biến mỗi row thành state machine, nên delete tiếp theo có thể là pending operation thay vì biến mất ngay.
 
 ## 4. Row status là một mini máy trạng thái (state machine / 상태 머신)
 
@@ -100,7 +100,7 @@ for (var i = 0; i < dlUser.getRowCount(); i++) {
 
 Cấp cao (senior / 시니어) ghi chú (note / 노트): đừng tự tạo thêm cột `STATUS` chỉ để duplicate row status khung phần mềm (framework / 프레임워크) nếu không có nghiệp vụ (business / 비즈니스) reason. Nếu máy chủ (server / 서버) đặc tả hợp đồng (contract / 계약) cần một status trường dữ liệu (field / 필드) tường minh (explicit / 명시적) thì ánh xạ (mapping / 매핑) có thể cần, nhưng phải phân biệt nghiệp vụ (business / 비즈니스) status với máy khách (client / 클라이언트) row trạng thái (state / 상태).
 
-> **Chuyển mạch:** Pending delete giữ row để rollback và submit; mutation tiếp theo phải phân biệt insert, remove khỏi view và delete khỏi persistence.
+> **Nối mạch:** Pending delete giữ row để rollback và submit; mutation tiếp theo phải phân biệt insert, remove khỏi view và delete khỏi persistence.
 
 ## 5. Delete không phải lúc nào cũng biến mất ngay
 
@@ -108,7 +108,7 @@ Trong CRUD grid, một row bị delete có thể được đánh dấu `D` nhưn
 
 Điều này giải thích bug kiểu “UI chỉ còn 9 dòng nhưng API DataList vẫn thấy 10”. Câu hỏi đúng là API đang trả **visible rows**, **all rows**, hay **rows bao gồm delete trạng thái (state / 상태)**. Khi export, validate hoặc count, phải chọn ngữ nghĩa (semantics / 의미론) phù hợp.
 
-> **Chuyển mạch:** Ở chặng này của **03 — DataCollection & Submission**, **5. Delete không phải lúc nào cũng biến mất ngay** nêu điều cần giải thích; **6. dữ liệu (data / 데이터) mutation cần phân biệt insert/remove/delete** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. LinkedDataList: derived view, không nhất thiết là dữ liệu mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **03 — DataCollection & Submission**, **5. Delete không phải lúc nào cũng biến mất ngay** đặt vấn đề; **6. dữ liệu (data / 데이터) mutation cần phân biệt insert/remove/delete** đối chiếu bằng chứng, rồi **7. LinkedDataList: derived view, không nhất thiết là dữ liệu mới** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 6. dữ liệu (data / 데이터) mutation cần phân biệt insert/remove/delete
 
@@ -116,7 +116,7 @@ Một khung phần mềm (framework / 프레임워크) mô hình dữ liệu (da
 
 Do tên API giữa generation/bản dựng (build / 빌드) có thể khác hoặc có option khác nhau, hãy tra tham chiếu (reference / 참조) đúng bản dựng (build / 빌드) trước khi chọn. Điều quan trọng là lập luận (reasoning / 추론): **bạn muốn thay UI danh sách (list / 목록), thay máy khách (client / 클라이언트) mô hình (model / 모델), hay phát sinh một delete thao tác (operation / 연산) cần máy chủ (server / 서버) lần ghi nhận (commit / 커밋)?**
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **6. dữ liệu (data / 데이터) mutation cần phân biệt insert/remove/delete** nêu điều cần giải thích; **7. LinkedDataList: derived view, không nhất thiết là dữ liệu mới** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. Submission là communication description, không phải nghiệp vụ (business / 비즈니스) giao dịch (transaction / 트랜잭션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **6. dữ liệu (data / 데이터) mutation cần phân biệt insert/remove/delete** đặt vấn đề; **7. LinkedDataList: derived view, không nhất thiết là dữ liệu mới** đối chiếu bằng chứng, rồi **8. Submission là communication description, không phải nghiệp vụ (business / 비즈니스) giao dịch (transaction / 트랜잭션)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 7. LinkedDataList: derived view, không nhất thiết là dữ liệu mới
 
@@ -134,7 +134,7 @@ LinkedDataList
 
 Không nên mặc định coi LinkedDataList là một nguồn chuẩn (source of truth / 정본) độc lập. Hãy hiểu quan hệ (relation / 관계) của nó với nguồn (source / 소스) trước khi cập nhật (update / 업데이트)/save.
 
-> **Chuyển mạch:** Trong **03 — DataCollection & Submission**, **7. LinkedDataList: derived view, không nhất thiết là dữ liệu mới** nêu điều cần giải thích; **8. Submission là communication description, không phải nghiệp vụ (business / 비즈니스) giao dịch (transaction / 트랜잭션)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. tham chiếu (reference / 참조) và mục tiêu (target / 대상) là đặc tả hợp đồng (contract / 계약) dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **03 — DataCollection & Submission**, **7. LinkedDataList: derived view, không nhất thiết là dữ liệu mới** đặt vấn đề; **8. Submission là communication description, không phải nghiệp vụ (business / 비즈니스) giao dịch (transaction / 트랜잭션)** đối chiếu bằng chứng, rồi **9. tham chiếu (reference / 참조) và mục tiêu (target / 대상) là đặc tả hợp đồng (contract / 계약) dữ liệu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8. Submission là communication description, không phải nghiệp vụ (business / 비즈니스) giao dịch (transaction / 트랜잭션)
 
@@ -158,7 +158,7 @@ GridView
 
 Submission giúp chuẩn hóa serialization và ánh xạ (mapping / 매핑) nhưng nó không tự biến nhiều HTTP lời gọi (call / 호출) thành một cơ sở dữ liệu (database / 데이터베이스) giao dịch (transaction / 트랜잭션). giao dịch (transaction / 트랜잭션) thật nằm ở máy chủ (server / 서버).
 
-> **Chuyển mạch:** Ở chặng này của **03 — DataCollection & Submission**, **8. Submission là communication description, không phải nghiệp vụ (business / 비즈니스) giao dịch (transaction / 트랜잭션)** nêu điều cần giải thích; **9. tham chiếu (reference / 참조) và mục tiêu (target / 대상) là đặc tả hợp đồng (contract / 계약) dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. Execute Submission và async lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **03 — DataCollection & Submission**, **8. Submission là communication description, không phải nghiệp vụ (business / 비즈니스) giao dịch (transaction / 트랜잭션)** đặt vấn đề; **9. tham chiếu (reference / 참조) và mục tiêu (target / 대상) là đặc tả hợp đồng (contract / 계약) dữ liệu** đối chiếu bằng chứng, rồi **10. Execute Submission và async lập luận (reasoning / 추론)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. tham chiếu (reference / 참조) và mục tiêu (target / 대상) là đặc tả hợp đồng (contract / 계약) dữ liệu
 
@@ -178,7 +178,7 @@ GridView có bind đúng DataList?
 
 Đừng nhảy thẳng từ “mạng (network / 네트워크) 200” sang “Grid bug”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **9. tham chiếu (reference / 참조) và mục tiêu (target / 대상) là đặc tả hợp đồng (contract / 계약) dữ liệu** nêu điều cần giải thích; **10. Execute Submission và async lập luận (reasoning / 추론)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. Success HTTP không đồng nghĩa success nghiệp vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **9. tham chiếu (reference / 참조) và mục tiêu (target / 대상) là đặc tả hợp đồng (contract / 계약) dữ liệu** đặt vấn đề; **10. Execute Submission và async lập luận (reasoning / 추론)** đối chiếu bằng chứng, rồi **11. Success HTTP không đồng nghĩa success nghiệp vụ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 10. Execute Submission và async lập luận (reasoning / 추론)
 
@@ -207,7 +207,7 @@ executeSubmission()
 
 Nếu mã (code / 코드) cần dùng phản hồi (response / 응답), đặt nó ở vòng đời (lifecycle / 생명주기) callback tương ứng hoặc trong hàm (function / 함수) được callback gọi.
 
-> **Chuyển mạch:** Trong **03 — DataCollection & Submission**, **11. Success HTTP không đồng nghĩa success nghiệp vụ** tiếp nhận điểm tựa từ **10. Execute Submission và async lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. lỗi (error / 오류) đường dẫn (path / 경로) phải là first-class đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **03 — DataCollection & Submission**, **11. Success HTTP không đồng nghĩa success nghiệp vụ** nối từ **10. Execute Submission và async lập luận (reasoning / 추론)** sang **12. lỗi (error / 오류) đường dẫn (path / 경로) phải là first-class đường dẫn (path / 경로)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Success HTTP không đồng nghĩa success nghiệp vụ
 
@@ -228,7 +228,7 @@ operation có được chấp nhận không?
 
 Một handler `submitdone` không nên mặc định hiển thị “Save success” chỉ vì vận chuyển (transport / 전송) không lỗi. Nó phải đọc nghiệp vụ (business / 비즈니스) kết quả (result / 결과) đặc tả hợp đồng (contract / 계약).
 
-> **Chuyển mạch:** Ở chặng này của **03 — DataCollection & Submission**, **11. Success HTTP không đồng nghĩa success nghiệp vụ** xác định đầu vào; **12. lỗi (error / 오류) đường dẫn (path / 경로) phải là first-class đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **13. Race điều kiện (condition / 조건) giữa các tìm kiếm (search / 검색) yêu cầu (request / 요청)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **03 — DataCollection & Submission**, **11. Success HTTP không đồng nghĩa success nghiệp vụ** đặt đầu vào cho **12. lỗi (error / 오류) đường dẫn (path / 경로) phải là first-class đường dẫn (path / 경로)**, rồi **13. Race điều kiện (condition / 조건) giữa các tìm kiếm (search / 검색) yêu cầu (request / 요청)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. lỗi (error / 오류) đường dẫn (path / 경로) phải là first-class đường dẫn (path / 경로)
 
@@ -242,7 +242,7 @@ scwin.sbmSave_submitdone = function () {
 
 Môi trường vận hành (production / 운영 환경) luồng (flow / 흐름) phải nghĩ đến hết thời gian chờ (timeout / 타임아웃), 401/403, 500, mạng (network / 네트워크) mất mát (loss / 손실), malformed payload, duplicate click và máy chủ (server / 서버) nghiệp vụ (business / 비즈니스) thất bại (failure / 실패). Nếu UI set loading trạng thái (state / 상태) trước yêu cầu (request / 요청) thì mọi terminal đường dẫn (path / 경로) phải reset trạng thái (state / 상태). Nếu chỉ reset ở success, người dùng (user / 사용자) có thể bị kẹt nút Save sau lỗi (error / 오류).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **12. lỗi (error / 오류) đường dẫn (path / 경로) phải là first-class đường dẫn (path / 경로)** xác định đầu vào; **13. Race điều kiện (condition / 조건) giữa các tìm kiếm (search / 검색) yêu cầu (request / 요청)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. truy vấn (query / 쿼리) luồng (flow / 흐름) và Save luồng (flow / 흐름) nên tách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **12. lỗi (error / 오류) đường dẫn (path / 경로) phải là first-class đường dẫn (path / 경로)** đặt đầu vào cho **13. Race điều kiện (condition / 조건) giữa các tìm kiếm (search / 검색) yêu cầu (request / 요청)**, rồi **14. truy vấn (query / 쿼리) luồng (flow / 흐름) và Save luồng (flow / 흐름) nên tách** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13. Race điều kiện (condition / 조건) giữa các tìm kiếm (search / 검색) yêu cầu (request / 요청)
 
@@ -250,7 +250,7 @@ Một trường hợp (case / 사례) phổ biến là yêu cầu (request / 요
 
 Giải pháp tùy khung phần mềm (framework / 프레임워크)/bản dựng (build / 빌드) và API: abort yêu cầu (request / 요청) cũ, disable new tìm kiếm (search / 검색) khi yêu cầu (request / 요청) đang chạy, hoặc attach yêu cầu (request / 요청) định danh (identity / 식별자) và bỏ phản hồi (response / 응답) stale. WebSquare có cơ chế (mechanism / 메커니즘) abort Submission ở các API/bản dựng (build / 빌드) tương ứng, nhưng first principle vẫn là: **asynchronous phản hồi (response / 응답) không đảm bảo về đúng thứ tự người dùng (user / 사용자) intent**.
 
-> **Chuyển mạch:** Trong **03 — DataCollection & Submission**, **13. Race điều kiện (condition / 조건) giữa các tìm kiếm (search / 검색) yêu cầu (request / 요청)** xác định đầu vào; **14. truy vấn (query / 쿼리) luồng (flow / 흐름) và Save luồng (flow / 흐름) nên tách** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **15. CRUD screen mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **03 — DataCollection & Submission**, **13. Race điều kiện (condition / 조건) giữa các tìm kiếm (search / 검색) yêu cầu (request / 요청)** đặt đầu vào cho **14. truy vấn (query / 쿼리) luồng (flow / 흐름) và Save luồng (flow / 흐름) nên tách**, rồi **15. CRUD screen mẫu (pattern / 패턴)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. truy vấn (query / 쿼리) luồng (flow / 흐름) và Save luồng (flow / 흐름) nên tách
 
@@ -258,7 +258,7 @@ Tìm kiếm (search / 검색)/truy vấn (query / 쿼리) thường read-only, d
 
 Đừng dùng cùng một helper mơ hồ cho mọi Submission nếu nó che mất ngữ nghĩa (semantics / 의미론) này.
 
-> **Chuyển mạch:** Ở chặng này của **03 — DataCollection & Submission**, **14. truy vấn (query / 쿼리) luồng (flow / 흐름) và Save luồng (flow / 흐름) nên tách** xác định đầu vào; **15. CRUD screen mẫu (pattern / 패턴)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. Dirty check** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **03 — DataCollection & Submission**, **14. truy vấn (query / 쿼리) luồng (flow / 흐름) và Save luồng (flow / 흐름) nên tách** đặt đầu vào cho **15. CRUD screen mẫu (pattern / 패턴)**, rồi **16. Dirty check** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. CRUD screen mẫu (pattern / 패턴)
 
@@ -286,7 +286,7 @@ re-query hoặc normalize client state
 
 Sau save, **re-query** lấy lại dữ liệu chuẩn gốc (canonical / 정본) từ máy chủ (server / 서버) và an toàn khi máy chủ (server / 서버) có trigger/default/normalization. **cục bộ (local / 로컬) lần ghi nhận (commit / 커밋)/reset** giữ dữ liệu (data / 데이터) hiện tại rồi reset row trạng thái (state / 상태), nhanh hơn nhưng dễ lệch nếu máy chủ (server / 서버) biến đổi dữ liệu. Chọn dựa trên đặc tả hợp đồng (contract / 계약), không theo thói quen.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **16. Dirty check** tiếp nhận điểm tựa từ **15. CRUD screen mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Validate changed rows, không nhất thiết validate toàn bộ dataset** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **16. Dirty check** nối từ **15. CRUD screen mẫu (pattern / 패턴)** sang **17. Validate changed rows, không nhất thiết validate toàn bộ dataset**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Dirty check
 
@@ -308,7 +308,7 @@ scwin.hasChangedRows = function () {
 
 Nhưng cần hiểu ngữ nghĩa (semantics / 의미론) của deleted row và filtered view. Nếu `getRowCount()` không bao gồm một loại row trong cấu hình (configuration / 구성) cụ thể, dirty check có thể sai. Kiểm tra API tham chiếu (reference / 참조)/bản dựng (build / 빌드) khi hiện thực (implementation / 구현) cần môi trường vận hành (production / 운영 환경) guarantee.
 
-> **Chuyển mạch:** Trong **03 — DataCollection & Submission**, **17. Validate changed rows, không nhất thiết validate toàn bộ dataset** tiếp nhận điểm tựa từ **16. Dirty check** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. máy chủ (server / 서버) đặc tả hợp đồng (contract / 계약) phải tường minh (explicit / 명시적)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **03 — DataCollection & Submission**, **17. Validate changed rows, không nhất thiết validate toàn bộ dataset** nối từ **16. Dirty check** sang **18. máy chủ (server / 서버) đặc tả hợp đồng (contract / 계약) phải tường minh (explicit / 명시적)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Validate changed rows, không nhất thiết validate toàn bộ dataset
 
@@ -332,7 +332,7 @@ scwin.validateChanges = function () {
 };
 ```
 
-> **Chuyển mạch:** Ở chặng này của **03 — DataCollection & Submission**, **18. máy chủ (server / 서버) đặc tả hợp đồng (contract / 계약) phải tường minh (explicit / 명시적)** tiếp nhận điểm tựa từ **17. Validate changed rows, không nhất thiết validate toàn bộ dataset** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Empty string, null và undefined** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **03 — DataCollection & Submission**, **18. máy chủ (server / 서버) đặc tả hợp đồng (contract / 계약) phải tường minh (explicit / 명시적)** nối từ **17. Validate changed rows, không nhất thiết validate toàn bộ dataset** sang **19. Empty string, null và undefined**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. máy chủ (server / 서버) đặc tả hợp đồng (contract / 계약) phải tường minh (explicit / 명시적)
 
@@ -340,7 +340,7 @@ Máy khách (client / 클라이언트) không nên gửi “mọi thứ có tron
 
 Nếu máy khách (client / 클라이언트) gửi cả trường dữ liệu (field / 필드) không được phép sửa, máy chủ (server / 서버) vẫn phải whitelist/validate. Không tin payload chỉ vì nó do WebSquare tạo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **19. Empty string, null và undefined** tiếp nhận điểm tựa từ **18. máy chủ (server / 서버) đặc tả hợp đồng (contract / 계약) phải tường minh (explicit / 명시적)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Date và number không nên đi qua UI format mơ hồ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **19. Empty string, null và undefined** nối từ **18. máy chủ (server / 서버) đặc tả hợp đồng (contract / 계약) phải tường minh (explicit / 명시적)** sang **20. Date và number không nên đi qua UI format mơ hồ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Empty string, null và undefined
 
@@ -354,7 +354,7 @@ undefined = field không tồn tại/không được gửi?
 
 JavaScript, serializer, WebSquare DataCollection và máy chủ (server / 서버) binding khung phần mềm (framework / 프레임워크) có thể xử lý khác nhau. Với cập nhật (update / 업데이트) API, `field absent` và `field: null` thường mang ý nghĩa khác. Đừng normalize tất cả về `""` chỉ để “dễ”. đặc tả hợp đồng (contract / 계약) phải quyết định.
 
-> **Chuyển mạch:** Trong **03 — DataCollection & Submission**, **20. Date và number không nên đi qua UI format mơ hồ** tiếp nhận điểm tựa từ **19. Empty string, null và undefined** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Submission so với AJAX thấp hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **03 — DataCollection & Submission**, **20. Date và number không nên đi qua UI format mơ hồ** nối từ **19. Empty string, null và undefined** sang **21. Submission so với AJAX thấp hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Date và number không nên đi qua UI format mơ hồ
 
@@ -368,7 +368,7 @@ hoặc API contract: 2026-09-22
 
 Chọn một biểu diễn (representation / 표현) ổn định ở API ranh giới (boundary / 경계). Đừng parse locale-formatted string ở máy chủ (server / 서버) nếu có thể tránh.
 
-> **Chuyển mạch:** Ở chặng này của **03 — DataCollection & Submission**, **21. Submission so với AJAX thấp hơn** tiếp nhận điểm tựa từ **20. Date và number không nên đi qua UI format mơ hồ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Workflow và orchestration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **03 — DataCollection & Submission**, **21. Submission so với AJAX thấp hơn** nối từ **20. Date và number không nên đi qua UI format mơ hồ** sang **22. Workflow và orchestration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Submission so với AJAX thấp hơn
 
@@ -376,7 +376,7 @@ WebSquare cũng có AJAX utility cho trường hợp cần điều khiển (cont
 
 Submission có lợi khi luồng (flow / 흐름) phù hợp DataCollection ánh xạ (mapping / 매핑), khung phần mềm (framework / 프레임워크) vòng đời (lifecycle / 생명주기) và convention của dự án (project / 프로젝트). AJAX phù hợp khi yêu cầu (request / 요청) không khớp mô hình (model / 모델) đó, cần raw payload/stream/special header hoặc tích hợp (integration / 통합) đặc biệt. quyết định (decision / 결정) nên dựa vào lớp trừu tượng (abstraction / 추상화) fit, không dựa vào sở thích cá nhân.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **21. Submission so với AJAX thấp hơn** xác định đầu vào; **22. Workflow và orchestration** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **23. hiệu năng (performance / 성능): payload trước, Grid sau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **21. Submission so với AJAX thấp hơn** đặt đầu vào cho **22. Workflow và orchestration**, rồi **23. hiệu năng (performance / 성능): payload trước, Grid sau** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 22. Workflow và orchestration
 
@@ -392,7 +392,7 @@ loadPermission
 
 Sai mẫu (pattern / 패턴) là fire cả ba cùng lúc rồi dùng `setTimeout` để hy vọng thứ tự. Nếu yêu cầu (request / 요청) độc lập, chạy song song có thể nhanh hơn. Nếu có phụ thuộc (dependency / 의존성), encode phụ thuộc (dependency / 의존성) tường minh (explicit / 명시적).
 
-> **Chuyển mạch:** Trong **03 — DataCollection & Submission**, **22. Workflow và orchestration** xác định đầu vào; **23. hiệu năng (performance / 성능): payload trước, Grid sau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **24. ranh giới bảo mật (security boundary / 보안 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **03 — DataCollection & Submission**, **22. Workflow và orchestration** đặt đầu vào cho **23. hiệu năng (performance / 성능): payload trước, Grid sau**, rồi **24. ranh giới bảo mật (security boundary / 보안 경계)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 23. hiệu năng (performance / 성능): payload trước, Grid sau
 
@@ -409,7 +409,7 @@ T_total = request_wait
 
 Nếu mạng (network / 네트워크) cho thấy phản hồi (response / 응답) mất 3 giây, tối ưu Grid không giải quyết chính. Nếu phản hồi (response / 응답) 50 ms nhưng UI freeze 2 giây với 50.000 row, vấn đề nằm máy khách (client / 클라이언트) rendering/dữ liệu (data / 데이터) processing. bằng chứng (evidence / 증거) trước tối ưu hóa (optimization / 최적화).
 
-> **Chuyển mạch:** Ở chặng này của **03 — DataCollection & Submission**, **23. hiệu năng (performance / 성능): payload trước, Grid sau** đã nêu tiêu chí phân biệt, còn **24. ranh giới bảo mật (security boundary / 보안 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **25. Debugging Submission theo chuỗi xử lý (pipeline / 파이프라인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **03 — DataCollection & Submission**, **23. hiệu năng (performance / 성능): payload trước, Grid sau** đặt tiêu chí; **24. ranh giới bảo mật (security boundary / 보안 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **25. Debugging Submission theo chuỗi xử lý (pipeline / 파이프라인)** mở rộng hệ quả.
 
 ## 24. ranh giới bảo mật (security boundary / 보안 경계)
 
@@ -424,7 +424,7 @@ readOnly field ≠ immutable business data
 
 Máy chủ (server / 서버) phải xác thực định danh (identity / 식별자), authorization, quyền sở hữu (ownership / 소유권) và bất biến (invariant / 불변식) trước khi lần ghi nhận (commit / 커밋).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **24. ranh giới bảo mật (security boundary / 보안 경계)** đã nêu tiêu chí phân biệt, còn **25. Debugging Submission theo chuỗi xử lý (pipeline / 파이프라인)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **26. submitdone và submiterror: hiểu đúng vận chuyển (transport / 전송) ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **24. ranh giới bảo mật (security boundary / 보안 경계)** đặt tiêu chí; **25. Debugging Submission theo chuỗi xử lý (pipeline / 파이프라인)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **26. submitdone và submiterror: hiểu đúng vận chuyển (transport / 전송) ranh giới (boundary / 경계)** mở rộng hệ quả.
 
 ## 25. Debugging Submission theo chuỗi xử lý (pipeline / 파이프라인)
 
@@ -432,7 +432,7 @@ Khi Save thất bại, kiểm tra theo chuỗi xử lý (pipeline / 파이프라
 
 Đi theo thứ tự này tốt hơn việc thêm `alert()` ngẫu nhiên.
 
-> **Chuyển mạch:** Trong **03 — DataCollection & Submission**, **25. Debugging Submission theo chuỗi xử lý (pipeline / 파이프라인)** đã nêu tiêu chí phân biệt, còn **26. submitdone và submiterror: hiểu đúng vận chuyển (transport / 전송) ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **27. Async là default lập luận (reasoning / 추론); sync là tính tương thích (compatibility / 호환성) debt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **03 — DataCollection & Submission**, **25. Debugging Submission theo chuỗi xử lý (pipeline / 파이프라인)** đặt tiêu chí; **26. submitdone và submiterror: hiểu đúng vận chuyển (transport / 전송) ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **27. Async là default lập luận (reasoning / 추론); sync là tính tương thích (compatibility / 호환성) debt** mở rộng hệ quả.
 
 ## 26. `submitdone` và `submiterror`: hiểu đúng vận chuyển (transport / 전송) ranh giới (boundary / 경계)
 
@@ -457,7 +457,7 @@ Ví dụ trên chỉ là đặc tả hợp đồng (contract / 계약) minh họ
 
 `submiterror(e)` cũng có `requestBody` và `responseText` ở SP5. Đây là bằng chứng (evidence / 증거) hữu ích khi gỡ lỗi (debug / 디버그) nhưng có thể chứa PII hoặc credential-like dữ liệu (data / 데이터). Không dump toàn bộ sự kiện (event / 이벤트) vào môi trường vận hành (production / 운영 환경) log chỉ vì nó tiện.
 
-> **Chuyển mạch:** Ở chặng này của **03 — DataCollection & Submission**, **26. submitdone và submiterror: hiểu đúng vận chuyển (transport / 전송) ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **27. Async là default lập luận (reasoning / 추론); sync là tính tương thích (compatibility / 호환성) debt** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **28. getAllJSON() không chỉ là “convert DataList thành Array”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **03 — DataCollection & Submission**, **26. submitdone và submiterror: hiểu đúng vận chuyển (transport / 전송) ranh giới (boundary / 경계)** đặt tiêu chí; **27. Async là default lập luận (reasoning / 추론); sync là tính tương thích (compatibility / 호환성) debt** dùng tiêu chí đó để kiểm tra ranh giới, rồi **28. getAllJSON() không chỉ là “convert DataList thành Array”** mở rộng hệ quả.
 
 ## 27. Async là default lập luận (reasoning / 추론); sync là tính tương thích (compatibility / 호환성) debt
 
@@ -473,7 +473,7 @@ executeSubmission()
 
 Khi chuyển async, bất biến (invariant / 불변식) đó biến mất. di chuyển (migration / 마이그레이션) phải tìm mọi read-after-submit, chuyển tiếp trạng thái (state transition / 상태 전이), popup close, điều hướng (navigation / 내비게이션) và lỗi (error / 오류) đường dẫn (path / 경로) phụ thuộc timing cũ rồi chuyển chúng vào callback/orchestration tường minh (explicit / 명시적).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **28. getAllJSON() không chỉ là “convert DataList thành Array”** tiếp nhận điểm tựa từ **27. Async là default lập luận (reasoning / 추론); sync là tính tương thích (compatibility / 호환성) debt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Filtered chỉ mục (index / 인덱스) và real chỉ mục (index / 인덱스) là hai coordinate hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **28. getAllJSON() không chỉ là “convert DataList thành Array”** nối từ **27. Async là default lập luận (reasoning / 추론); sync là tính tương thích (compatibility / 호환성) debt** sang **29. Filtered chỉ mục (index / 인덱스) và real chỉ mục (index / 인덱스) là hai coordinate hệ thống (system / 시스템)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. `getAllJSON()` không chỉ là “convert DataList thành Array”
 
@@ -495,7 +495,7 @@ getOnlyDeletedJSON → delete set
 
 Đừng chọn API vì tên “có vẻ đúng”; kiểm tra xem deleted row, rowStatus và null conversion được trả như thế nào trong bản dựng (build / 빌드) thật.
 
-> **Chuyển mạch:** Trong **03 — DataCollection & Submission**, **29. Filtered chỉ mục (index / 인덱스) và real chỉ mục (index / 인덱스) là hai coordinate hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **28. getAllJSON() không chỉ là “convert DataList thành Array”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Null handling đã trở thành một phần version-sensitive của DataList** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **03 — DataCollection & Submission**, **29. Filtered chỉ mục (index / 인덱스) và real chỉ mục (index / 인덱스) là hai coordinate hệ thống (system / 시스템)** nối từ **28. getAllJSON() không chỉ là “convert DataList thành Array”** sang **30. Null handling đã trở thành một phần version-sensitive của DataList**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Filtered chỉ mục (index / 인덱스) và real chỉ mục (index / 인덱스) là hai coordinate hệ thống (system / 시스템)
 
@@ -511,7 +511,7 @@ filtered/view index = vị trí trong projection hiện tại
 
 Cấp cao (senior / 시니어) mã (code / 코드) ưu tiên nghiệp vụ (business / 비즈니스) key cho thao tác (operation / 연산) sống lâu hơn một tương tác (interaction / 상호작용) tức thời. chỉ mục (index / 인덱스) chỉ nên được giữ ngắn hạn trong đúng coordinate hệ thống (system / 시스템) của nó.
 
-> **Chuyển mạch:** Ở chặng này của **03 — DataCollection & Submission**, **30. Null handling đã trở thành một phần version-sensitive của DataList** tiếp nhận điểm tựa từ **29. Filtered chỉ mục (index / 인덱스) và real chỉ mục (index / 인덱스) là hai coordinate hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. dữ liệu (data / 데이터) kiểu (type / 타입) coercion cũng là đặc tả hợp đồng (contract / 계약), không phải convenience vô hại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **03 — DataCollection & Submission**, **30. Null handling đã trở thành một phần version-sensitive của DataList** nối từ **29. Filtered chỉ mục (index / 인덱스) và real chỉ mục (index / 인덱스) là hai coordinate hệ thống (system / 시스템)** sang **31. dữ liệu (data / 데이터) kiểu (type / 타입) coercion cũng là đặc tả hợp đồng (contract / 계약), không phải convenience vô hại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Null handling đã trở thành một phần version-sensitive của DataList
 
@@ -525,7 +525,7 @@ Các SP5 engine mới bổ sung `nullYN` ở column và `nullYNType` ở DataLis
 
 Nếu backend hiểu ba payload trên khác nhau, một thay đổi engine/cấu hình (config / 설정) ở DataList có thể thay nghiệp vụ (business / 비즈니스) hành vi (behavior / 동작) dù handler JavaScript không đổi. Vì vậy regression kiểm thử (test / 테스트) serialization phải kiểm tra payload thật, không chỉ kiểm tra giá trị (value / 값) hiển thị trên Grid.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **30. Null handling đã trở thành một phần version-sensitive của DataList** nêu điều cần giải thích; **31. dữ liệu (data / 데이터) kiểu (type / 타입) coercion cũng là đặc tả hợp đồng (contract / 계약), không phải convenience vô hại** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **32. Row status và cell status có bộ nhớ (memory / 메모리) chi phí (cost / 비용) thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **30. Null handling đã trở thành một phần version-sensitive của DataList** đặt vấn đề; **31. dữ liệu (data / 데이터) kiểu (type / 타입) coercion cũng là đặc tả hợp đồng (contract / 계약), không phải convenience vô hại** đối chiếu bằng chứng, rồi **32. Row status và cell status có bộ nhớ (memory / 메모리) chi phí (cost / 비용) thật** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 31. dữ liệu (data / 데이터) kiểu (type / 타입) coercion cũng là đặc tả hợp đồng (contract / 계약), không phải convenience vô hại
 
@@ -541,7 +541,7 @@ Nếu column bị mô hình (model / 모델) như number và coercion biến nó
 
 Quy tắc first-principles: chọn DataList `dataType` theo ý nghĩa lĩnh vực (domain / 도메인) và phép toán hợp lệ, không theo hình dạng ký tự.
 
-> **Chuyển mạch:** Trong **03 — DataCollection & Submission**, **31. dữ liệu (data / 데이터) kiểu (type / 타입) coercion cũng là đặc tả hợp đồng (contract / 계약), không phải convenience vô hại** nêu điều cần giải thích; **32. Row status và cell status có bộ nhớ (memory / 메모리) chi phí (cost / 비용) thật** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **33. Workflow không phải Promise chuỗi (chain / 사슬) “cổ điển” cần thay bằng tay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **03 — DataCollection & Submission**, **31. dữ liệu (data / 데이터) kiểu (type / 타입) coercion cũng là đặc tả hợp đồng (contract / 계약), không phải convenience vô hại** đặt vấn đề; **32. Row status và cell status có bộ nhớ (memory / 메모리) chi phí (cost / 비용) thật** đối chiếu bằng chứng, rồi **33. Workflow không phải Promise chuỗi (chain / 사슬) “cổ điển” cần thay bằng tay** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 32. Row status và cell status có bộ nhớ (memory / 메모리) chi phí (cost / 비용) thật
 
@@ -561,7 +561,7 @@ number of rows × number of columns
 
 chứ không chỉ nhìn DOM row count.
 
-> **Chuyển mạch:** Ở chặng này của **03 — DataCollection & Submission**, **32. Row status và cell status có bộ nhớ (memory / 메모리) chi phí (cost / 비용) thật** xác định đầu vào; **33. Workflow không phải Promise chuỗi (chain / 사슬) “cổ điển” cần thay bằng tay** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **34. Submission serialization phải được regression-test như công khai (public / 공개) đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **03 — DataCollection & Submission**, **32. Row status và cell status có bộ nhớ (memory / 메모리) chi phí (cost / 비용) thật** đặt đầu vào cho **33. Workflow không phải Promise chuỗi (chain / 사슬) “cổ điển” cần thay bằng tay**, rồi **34. Submission serialization phải được regression-test như công khai (public / 공개) đặc tả hợp đồng (contract / 계약)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 33. Workflow không phải Promise chuỗi (chain / 사슬) “cổ điển” cần thay bằng tay
 
@@ -569,7 +569,7 @@ WebSquare có `xf:workflow` để mô tả thứ tự `submit`/`submitDone` khi 
 
 Tuy vậy workflow không tự giải quyết nghiệp vụ (business / 비즈니스) giao dịch (transaction / 트랜잭션), quay lui (rollback / 롤백) hay phân tán (distributed / 분산) consistency. Nếu `loadA → loadB → loadC` chỉ là truy vấn (query / 쿼리) phụ thuộc (dependency / 의존성), workflow có thể phù hợp. Nếu `saveA → saveB` phải atomic ở cơ sở dữ liệu (database / 데이터베이스), giải pháp đúng thường là một server-side giao dịch (transaction / 트랜잭션) ranh giới (boundary / 경계), không phải hai máy khách (client / 클라이언트) Submission nối nhau rồi hy vọng cả hai cùng thành công.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **33. Workflow không phải Promise chuỗi (chain / 사슬) “cổ điển” cần thay bằng tay** xác định đầu vào; **34. Submission serialization phải được regression-test như công khai (public / 공개) đặc tả hợp đồng (contract / 계약)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **35. Checklist lập luận (reasoning / 추론) trước khi sửa Submission bug** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **03 — DataCollection & Submission**, **33. Workflow không phải Promise chuỗi (chain / 사슬) “cổ điển” cần thay bằng tay** đặt đầu vào cho **34. Submission serialization phải được regression-test như công khai (public / 공개) đặc tả hợp đồng (contract / 계약)**, rồi **35. Checklist lập luận (reasoning / 추론) trước khi sửa Submission bug** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 34. Submission serialization phải được regression-test như công khai (public / 공개) đặc tả hợp đồng (contract / 계약)
 
@@ -591,7 +591,7 @@ stale async response
 
 Bằng chứng (evidence / 증거) cuối cùng là yêu cầu (request / 요청) body trong mạng (network / 네트워크) hoặc kiểm thử (test / 테스트) harness, không phải screenshot UI. Đây là điểm nối trực tiếp sang [11 — Testing, Testability & Regression Engineering](11_testing_testability_regression.md).
 
-> **Chuyển mạch:** Trong **03 — DataCollection & Submission**, **35. Checklist lập luận (reasoning / 추론) trước khi sửa Submission bug** tiếp nhận điểm tựa từ **34. Submission serialization phải được regression-test như công khai (public / 공개) đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **03 — DataCollection & Submission**, **35. Checklist lập luận (reasoning / 추론) trước khi sửa Submission bug** nối từ **34. Submission serialization phải được regression-test như công khai (public / 공개) đặc tả hợp đồng (contract / 계약)** sang **36. Kết nối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Checklist lập luận (reasoning / 추론) trước khi sửa Submission bug
 
@@ -599,7 +599,7 @@ Trước khi sửa mã (code / 코드), trả lời được các câu sau: ngu�
 
 Nếu một câu chưa trả lời được, fix bằng thêm `if` thường chỉ che symptom.
 
-> **Chuyển mạch:** Ở chặng này của **03 — DataCollection & Submission**, **36. Kết nối** tiếp nhận điểm tựa từ **35. Checklist lập luận (reasoning / 추론) trước khi sửa Submission bug** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **03 — DataCollection & Submission**, **36. Kết nối** nối từ **35. Checklist lập luận (reasoning / 추론) trước khi sửa Submission bug** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 36. Kết nối
 

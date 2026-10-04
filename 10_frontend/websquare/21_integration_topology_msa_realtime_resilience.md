@@ -37,7 +37,7 @@ WebSquare Shell
 
 Độ trễ (latency / 지연 시간), hết thời gian chờ (timeout / 타임아웃), auth, thử lại (retry / 재시도) và lỗi (error / 오류) ánh xạ (mapping / 매핑) có thể phát sinh ở từng hop.
 
-> **Chuyển mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **1. Vẽ topology trước khi gỡ lỗi (debug / 디버그)** đã nêu tiêu chí phân biệt, còn **2. Frontend ranh giới (boundary / 경계) không nên mirror microservice topology** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **3. WebSquare SP5 và MSA hỗ trợ (support / 지원)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **1. Vẽ topology trước khi gỡ lỗi (debug / 디버그)** đặt tiêu chí; **2. Frontend ranh giới (boundary / 경계) không nên mirror microservice topology** dùng tiêu chí đó để kiểm tra ranh giới, rồi **3. WebSquare SP5 và MSA hỗ trợ (support / 지원)** mở rộng hệ quả.
 
 ## 2. Frontend ranh giới (boundary / 경계) không nên mirror microservice topology
 
@@ -56,7 +56,7 @@ Screen intent
 
 Không phải mọi hệ thống cần BFF, nhưng **frontend đặc tả hợp đồng (contract / 계약) nên phản ánh người dùng (user / 사용자)/nghiệp vụ (business / 비즈니스) năng lực (capability / 역량) hơn triển khai (deployment / 배포) topology**.
 
-> **Chuyển mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **2. Frontend ranh giới (boundary / 경계) không nên mirror microservice topology** đã nêu tiêu chí phân biệt, còn **3. WebSquare SP5 và MSA hỗ trợ (support / 지원)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4. msaCommon không biến frontend thành dịch vụ (service / 서비스) registry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **2. Frontend ranh giới (boundary / 경계) không nên mirror microservice topology** đặt tiêu chí; **3. WebSquare SP5 và MSA hỗ trợ (support / 지원)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **4. msaCommon không biến frontend thành dịch vụ (service / 서비스) registry** mở rộng hệ quả.
 
 ## 3. WebSquare SP5 và MSA hỗ trợ (support / 지원)
 
@@ -72,7 +72,7 @@ logical resource/service name
 
 Không hard-code giả định (assumption / 가정) rằng mọi bản dựng (build / 빌드) SP5 đều có cùng thuộc tính (property / 속성) hoặc default.
 
-> **Chuyển mạch:** WebSquare SP5 có thể hỗ trợ MSA nhưng msaCommon không phải frontend service registry; resource topology và business API topology tiếp theo cần được vẽ riêng.
+> **Nối mạch:** WebSquare SP5 có thể hỗ trợ MSA nhưng msaCommon không phải frontend service registry; resource topology và business API topology tiếp theo cần được vẽ riêng.
 
 ## 4. `msaCommon` không biến frontend thành dịch vụ (service / 서비스) registry
 
@@ -82,7 +82,7 @@ Khám phá dịch vụ (service discovery / 서비스 디스커버리), routing,
 
 Frontend chỉ nên biết đặc tả hợp đồng (contract / 계약) cần thiết.
 
-> **Chuyển mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **4. msaCommon không biến frontend thành dịch vụ (service / 서비스) registry** nêu điều cần giải thích; **5. tài nguyên (resource / 자원) topology và nghiệp vụ (business / 비즈니스) API topology khác nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. Contract-first tích hợp (integration / 통합)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **4. msaCommon không biến frontend thành dịch vụ (service / 서비스) registry** đặt vấn đề; **5. tài nguyên (resource / 자원) topology và nghiệp vụ (business / 비즈니스) API topology khác nhau** đối chiếu bằng chứng, rồi **6. Contract-first tích hợp (integration / 통합)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. tài nguyên (resource / 자원) topology và nghiệp vụ (business / 비즈니스) API topology khác nhau
 
@@ -100,7 +100,7 @@ Một page có thể tải (load / 로드) JS từ MSA tài nguyên (resource / 
 
 Khi lỗi “screen không mở”, kiểm tra tài nguyên (resource / 자원) đồ thị (graph / 그래프). Khi screen mở nhưng tìm kiếm (search / 검색) thất bại (fail / 실패), kiểm tra yêu cầu (request / 요청) đồ thị (graph / 그래프).
 
-> **Chuyển mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **5. tài nguyên (resource / 자원) topology và nghiệp vụ (business / 비즈니스) API topology khác nhau** nêu điều cần giải thích; **6. Contract-first tích hợp (integration / 통합)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. API Gateway không sửa đặc tả hợp đồng (contract / 계약) xấu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **5. tài nguyên (resource / 자원) topology và nghiệp vụ (business / 비즈니스) API topology khác nhau** đặt vấn đề; **6. Contract-first tích hợp (integration / 통합)** đối chiếu bằng chứng, rồi **7. API Gateway không sửa đặc tả hợp đồng (contract / 계약) xấu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 6. Contract-first tích hợp (integration / 통합)
 
@@ -122,7 +122,7 @@ Không chỉ mô tả URL.
 
 URL là routing detail; đặc tả hợp đồng (contract / 계약) mới là ngữ nghĩa (semantic / 의미적) phụ thuộc (dependency / 의존성).
 
-> **Chuyển mạch:** Contract-first đặt boundary trước; API Gateway chỉ route/policy, không chữa contract xấu. BFF tiếp theo chỉ có giá trị khi cần composition theo client.
+> **Nối mạch:** Contract-first đặt boundary trước; API Gateway chỉ route/policy, không chữa contract xấu. BFF tiếp theo chỉ có giá trị khi cần composition theo client.
 
 ## 7. API Gateway không sửa đặc tả hợp đồng (contract / 계약) xấu
 
@@ -139,7 +139,7 @@ business error trả HTTP 200 nhưng không có code chuẩn
 
 Frontend vẫn cần đặc tả hợp đồng (contract / 계약) rõ như chapter 15.
 
-> **Chuyển mạch:** BFF composition giảm coupling ở client; đổi lại fan-out tạo partial failure, nên client phải có policy fallback và timeout riêng.
+> **Nối mạch:** BFF composition giảm coupling ở client; đổi lại fan-out tạo partial failure, nên client phải có policy fallback và timeout riêng.
 
 ## 8. BFF khi nào có giá trị
 
@@ -159,7 +159,7 @@ Nếu page gửi năm yêu cầu (request / 요청) và tự coordinate, nó s�
 
 Sự đánh đổi (trade-off / 트레이드오프) là BFF thêm một dịch vụ (service / 서비스) cần vận hành và phiên bản (version / 버전).
 
-> **Chuyển mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **9. máy khách (client / 클라이언트) fan-out và partial thất bại (failure / 실패)** tiếp nhận điểm tựa từ **8. BFF khi nào có giá trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. ngân sách thời gian chờ (timeout budget / 타임아웃 예산) theo hop** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **9. máy khách (client / 클라이언트) fan-out và partial thất bại (failure / 실패)** nối từ **8. BFF khi nào có giá trị** sang **10. ngân sách thời gian chờ (timeout budget / 타임아웃 예산) theo hop**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. máy khách (client / 클라이언트) fan-out và partial thất bại (failure / 실패)
 
@@ -184,7 +184,7 @@ request nào critical, request nào optional?
 
 Thiết kế degraded chế độ (mode / 모드) phải theo nghiệp vụ (business / 비즈니스) ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **10. ngân sách thời gian chờ (timeout budget / 타임아웃 예산) theo hop** tiếp nhận điểm tựa từ **9. máy khách (client / 클라이언트) fan-out và partial thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. thử lại (retry / 재시도) quyền sở hữu (ownership / 소유권)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **10. ngân sách thời gian chờ (timeout budget / 타임아웃 예산) theo hop** nối từ **9. máy khách (client / 클라이언트) fan-out và partial thất bại (failure / 실패)** sang **11. thử lại (retry / 재시도) quyền sở hữu (ownership / 소유권)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. ngân sách thời gian chờ (timeout budget / 타임아웃 예산) theo hop
 
@@ -204,7 +204,7 @@ Hết thời gian chờ (timeout / 타임아웃) phải được thiết kế th
 
 Mutating thao tác (operation / 연산) càng cần idempotency/reconciliation vì máy khách (client / 클라이언트) hết thời gian chờ (timeout / 타임아웃) không chứng minh máy chủ (server / 서버) chưa lần ghi nhận (commit / 커밋).
 
-> **Chuyển mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, sau nội dung của **10. ngân sách thời gian chờ (timeout budget / 타임아웃 예산) theo hop**, **11. thử lại (retry / 재시도) quyền sở hữu (ownership / 소유권)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **12. Circuit breaker thuộc đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, sau nội dung của **10. ngân sách thời gian chờ (timeout budget / 타임아웃 예산) theo hop**, **11. thử lại (retry / 재시도) quyền sở hữu (ownership / 소유권)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **12. Circuit breaker thuộc đâu?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 11. thử lại (retry / 재시도) quyền sở hữu (ownership / 소유권)
 
@@ -222,7 +222,7 @@ Nếu mọi tầng (layer / 계층) đều thử lại (retry / 재시도) 3 l�
 
 Thử lại (retry / 재시도) chính sách (policy / 정책) phải có đơn vị sở hữu (owner / 오너) rõ và phân biệt read vs ghi (write / 쓰기).
 
-> **Chuyển mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **12. Circuit breaker thuộc đâu?** tiếp nhận điểm tựa từ **11. thử lại (retry / 재시도) quyền sở hữu (ownership / 소유권)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Bulkhead và screen isolation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **12. Circuit breaker thuộc đâu?** nối từ **11. thử lại (retry / 재시도) quyền sở hữu (ownership / 소유권)** sang **13. Bulkhead và screen isolation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Circuit breaker thuộc đâu?
 
@@ -238,7 +238,7 @@ show degraded state
 resume/reload safely
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **13. Bulkhead và screen isolation** tiếp nhận điểm tựa từ **12. Circuit breaker thuộc đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Real-time không đồng nghĩa WebSocket** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **13. Bulkhead và screen isolation** nối từ **12. Circuit breaker thuộc đâu?** sang **14. Real-time không đồng nghĩa WebSocket**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Bulkhead và screen isolation
 
@@ -248,7 +248,7 @@ Nếu mã (code / 코드) dịch vụ (service / 서비스) thất bại (fail /
 
 Đây là **failure-domain thiết kế (design / 설계)**.
 
-> **Chuyển mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **14. Real-time không đồng nghĩa WebSocket** tiếp nhận điểm tựa từ **13. Bulkhead và screen isolation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. WebSquare ranh giới (boundary / 경계) cho real-time** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **14. Real-time không đồng nghĩa WebSocket** nối từ **13. Bulkhead và screen isolation** sang **15. WebSquare ranh giới (boundary / 경계) cho real-time**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Real-time không đồng nghĩa WebSocket
 
@@ -267,7 +267,7 @@ Chọn theo yêu cầu (requirement / 요구사항), không theo độ “hiện
 
 Nếu cập nhật (update / 업데이트) mỗi 5 phút, polling đơn giản có thể tốt hơn WebSocket.
 
-> **Chuyển mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **14. Real-time không đồng nghĩa WebSocket** đã nêu tiêu chí phân biệt, còn **15. WebSquare ranh giới (boundary / 경계) cho real-time** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **16. Polling vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **14. Real-time không đồng nghĩa WebSocket** đặt tiêu chí; **15. WebSquare ranh giới (boundary / 경계) cho real-time** dùng tiêu chí đó để kiểm tra ranh giới, rồi **16. Polling vòng đời (lifecycle / 생명주기)** mở rộng hệ quả.
 
 ## 15. WebSquare ranh giới (boundary / 경계) cho real-time
 
@@ -286,7 +286,7 @@ transport adapter
 
 Không để raw socket callback đi thẳng sửa DOM.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **15. WebSquare ranh giới (boundary / 경계) cho real-time** đã nêu tiêu chí phân biệt, còn **16. Polling vòng đời (lifecycle / 생명주기)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **17. Overlapping polling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **15. WebSquare ranh giới (boundary / 경계) cho real-time** đặt tiêu chí; **16. Polling vòng đời (lifecycle / 생명주기)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **17. Overlapping polling** mở rộng hệ quả.
 
 ## 16. Polling vòng đời (lifecycle / 생명주기)
 
@@ -311,7 +311,7 @@ resume có immediate refresh không?
 
 Chapter 10 về thời gian tồn tại (lifetime / 수명) áp dụng trực tiếp.
 
-> **Chuyển mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **16. Polling vòng đời (lifecycle / 생명주기)** xác định đầu vào; **17. Overlapping polling** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **18. SSE mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **16. Polling vòng đời (lifecycle / 생명주기)** đặt đầu vào cho **17. Overlapping polling**, rồi **18. SSE mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 17. Overlapping polling
 
@@ -335,7 +335,7 @@ request complete
 
 hoặc guard `inFlight` nếu ngữ nghĩa (semantics / 의미론) cho phép.
 
-> **Chuyển mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **18. SSE mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **17. Overlapping polling** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **19. WebSocket mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **18. SSE mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **17. Overlapping polling** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **19. WebSocket mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. SSE mô hình tư duy (mental model / 사고 모델)
 
@@ -353,7 +353,7 @@ logout cleanup
 
 Không assume reconnect đồng nghĩa không mất sự kiện (event / 이벤트); đặc tả hợp đồng (contract / 계약) phải định nghĩa replay/resume nếu cần.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **19. WebSocket mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **18. SSE mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **20. liên kết (connection / 연결) quyền sở hữu (ownership / 소유권)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **19. WebSocket mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **18. SSE mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **20. liên kết (connection / 연결) quyền sở hữu (ownership / 소유권)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. WebSocket mô hình tư duy (mental model / 사고 모델)
 
@@ -370,7 +370,7 @@ DISCONNECTED
 
 Một socket liên kết (connection / 연결) không nên mặc định thuộc từng page nếu app có nhiều screen dùng chung. Có thể app shell sở hữu liên kết (connection / 연결) và screen subscribe lĩnh vực (domain / 도메인) sự kiện (event / 이벤트).
 
-> **Chuyển mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **20. liên kết (connection / 연결) quyền sở hữu (ownership / 소유권)** gom các mảnh từ **19. WebSocket mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **21. sự kiện (event / 이벤트) định danh (identity / 식별자) quan trọng hơn arrival thứ tự (order / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **20. liên kết (connection / 연결) quyền sở hữu (ownership / 소유권)** tổng hợp từ **19. WebSocket mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **21. sự kiện (event / 이벤트) định danh (identity / 식별자) quan trọng hơn arrival thứ tự (order / 순서)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. liên kết (connection / 연결) quyền sở hữu (ownership / 소유권)
 
@@ -382,7 +382,7 @@ Hai lựa chọn:
 
 Sai quyền sở hữu (ownership / 소유권) dẫn đến duplicate liên kết (connection / 연결), leak hoặc sự kiện (event / 이벤트) gửi vào page đã disposed.
 
-> **Chuyển mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **21. sự kiện (event / 이벤트) định danh (identity / 식별자) quan trọng hơn arrival thứ tự (order / 순서)** tiếp nhận điểm tựa từ **20. liên kết (connection / 연결) quyền sở hữu (ownership / 소유권)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Requery vs patch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **21. sự kiện (event / 이벤트) định danh (identity / 식별자) quan trọng hơn arrival thứ tự (order / 순서)** nối từ **20. liên kết (connection / 연결) quyền sở hữu (ownership / 소유권)** sang **22. Requery vs patch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. sự kiện (event / 이벤트) định danh (identity / 식별자) quan trọng hơn arrival thứ tự (order / 순서)
 
@@ -401,7 +401,7 @@ correlationId
 
 Frontend không nên “sự kiện (event / 이벤트) đến sau thì mới hơn” nếu vận chuyển (transport / 전송) không đảm bảo thứ tự (ordering / 순서) toàn cục.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **22. Requery vs patch** tiếp nhận điểm tựa từ **21. sự kiện (event / 이벤트) định danh (identity / 식별자) quan trọng hơn arrival thứ tự (order / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Grid sort/filter và real-time patch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **22. Requery vs patch** nối từ **21. sự kiện (event / 이벤트) định danh (identity / 식별자) quan trọng hơn arrival thứ tự (order / 순서)** sang **23. Grid sort/filter và real-time patch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Requery vs patch
 
@@ -413,7 +413,7 @@ Khi nhận `ORDER_CHANGED`, có hai chiến lược.
 
 Hybrid chiến lược (strategy / 전략) thường hiệu quả: patch optimistic cho UX, requery khi bất biến (invariant / 불변식) phức tạp.
 
-> **Chuyển mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **23. Grid sort/filter và real-time patch** tiếp nhận điểm tựa từ **22. Requery vs patch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Backpressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **23. Grid sort/filter và real-time patch** nối từ **22. Requery vs patch** sang **24. Backpressure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Grid sort/filter và real-time patch
 
@@ -423,7 +423,7 @@ Do đó nghiệp vụ (business / 비즈니스) key phải được dùng để 
 
 Chapter 13 giải thích định danh (identity / 식별자) này sâu hơn.
 
-> **Chuyển mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **24. Backpressure** tiếp nhận điểm tựa từ **23. Grid sort/filter và real-time patch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. sự kiện (event / 이벤트) storm và formatter chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **24. Backpressure** nối từ **23. Grid sort/filter và real-time patch** sang **25. sự kiện (event / 이벤트) storm và formatter chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Backpressure
 
@@ -441,13 +441,13 @@ invalidate + requery
 
 Backpressure là mismatch giữa producer tỷ lệ (rate / 비율) và bên tiêu thụ (consumer / 소비자) sức chứa (capacity / 용량).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **25. sự kiện (event / 이벤트) storm và formatter chi phí (cost / 비용)** tiếp nhận điểm tựa từ **24. Backpressure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Offline và reconnect** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **25. sự kiện (event / 이벤트) storm và formatter chi phí (cost / 비용)** nối từ **24. Backpressure** sang **26. Offline và reconnect**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. sự kiện (event / 이벤트) storm và formatter chi phí (cost / 비용)
 
 Ngay cả DataList cập nhật (update / 업데이트) rẻ, Grid formatter/summary/expression có thể chạy lại rất nhiều. Real-time kiến trúc (architecture / 아키텍처) phải đo kết xuất (render / 렌더링) chi phí (cost / 비용), không chỉ mạng (network / 네트워크) thông lượng (throughput / 처리량).
 
-> **Chuyển mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **26. Offline và reconnect** tiếp nhận điểm tựa từ **25. sự kiện (event / 이벤트) storm và formatter chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. lược đồ (schema / 스키마) evolution trong sự kiện (event / 이벤트) stream** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **26. Offline và reconnect** nối từ **25. sự kiện (event / 이벤트) storm và formatter chi phí (cost / 비용)** sang **27. lược đồ (schema / 스키마) evolution trong sự kiện (event / 이벤트) stream**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Offline và reconnect
 
@@ -463,7 +463,7 @@ Reconnect không nên tự động replay mọi command. truy vấn (query / 쿼
 
 Hybrid app cần nối thêm bản địa (native / 네이티브) mạng (network / 네트워크) trạng thái (state / 상태) nhưng không được tin bản địa (native / 네이티브) “online” là API reachable.
 
-> **Chuyển mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **27. lược đồ (schema / 스키마) evolution trong sự kiện (event / 이벤트) stream** tiếp nhận điểm tựa từ **26. Offline và reconnect** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Frontend phiên bản (version / 버전) skew** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **27. lược đồ (schema / 스키마) evolution trong sự kiện (event / 이벤트) stream** nối từ **26. Offline và reconnect** sang **28. Frontend phiên bản (version / 버전) skew**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. lược đồ (schema / 스키마) evolution trong sự kiện (event / 이벤트) stream
 
@@ -475,7 +475,7 @@ Không rename trường dữ liệu (field / 필드) và assume tất cả trìn
 
 Đây là lý do trình duyệt (browser / 브라우저) máy khách (client / 클라이언트) khác máy chủ (server / 서버) tiến trình (process / 프로세스): máy khách (client / 클라이언트) phiên bản (version / 버전) rollout kéo dài.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **28. Frontend phiên bản (version / 버전) skew** tiếp nhận điểm tựa từ **27. lược đồ (schema / 스키마) evolution trong sự kiện (event / 이벤트) stream** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. MSA dùng chung (common / 공통) tài nguyên (resource / 자원) phiên bản (version / 버전) skew** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **28. Frontend phiên bản (version / 버전) skew** nối từ **27. lược đồ (schema / 스키마) evolution trong sự kiện (event / 이벤트) stream** sang **29. MSA dùng chung (common / 공통) tài nguyên (resource / 자원) phiên bản (version / 버전) skew**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Frontend phiên bản (version / 버전) skew
 
@@ -491,7 +491,7 @@ server → API v43 compatible mode
 
 Chapter 22 sẽ đi sâu sản phẩm tạo ra (artifact / 산출물)/bộ nhớ đệm (cache / 캐시) định danh (identity / 식별자).
 
-> **Chuyển mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **28. Frontend phiên bản (version / 버전) skew** nêu điều cần giải thích; **29. MSA dùng chung (common / 공통) tài nguyên (resource / 자원) phiên bản (version / 버전) skew** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **30. Cross-origin và credential ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **28. Frontend phiên bản (version / 버전) skew** đặt vấn đề; **29. MSA dùng chung (common / 공통) tài nguyên (resource / 자원) phiên bản (version / 버전) skew** đối chiếu bằng chứng, rồi **30. Cross-origin và credential ranh giới (boundary / 경계)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 29. MSA dùng chung (common / 공통) tài nguyên (resource / 자원) phiên bản (version / 버전) skew
 
@@ -508,7 +508,7 @@ config routing
 
 “main đã deploy” không đủ chứng minh thời gian chạy (runtime / 런타임) composition đồng nhất.
 
-> **Chuyển mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **29. MSA dùng chung (common / 공통) tài nguyên (resource / 자원) phiên bản (version / 버전) skew** đã nêu tiêu chí phân biệt, còn **30. Cross-origin và credential ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **31. tệp (file / 파일)/upload trong MSA topology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **29. MSA dùng chung (common / 공통) tài nguyên (resource / 자원) phiên bản (version / 버전) skew** đặt tiêu chí; **30. Cross-origin và credential ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **31. tệp (file / 파일)/upload trong MSA topology** mở rộng hệ quả.
 
 ## 30. Cross-origin và credential ranh giới (boundary / 경계)
 
@@ -516,7 +516,7 @@ Nếu tài nguyên (resource / 자원)/API nằm khác origin, trình duyệt (b
 
 Không workaround CORS bằng disable trình duyệt (browser / 브라우저) bảo mật (security / 보안) hoặc JSONP-like hack. Origin chính sách (policy / 정책) phải được giải quyết ở kiến trúc (architecture / 아키텍처)/máy chủ (server / 서버)/gateway.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **30. Cross-origin và credential ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **31. tệp (file / 파일)/upload trong MSA topology** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **32. Auth trong multi-service topology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **30. Cross-origin và credential ranh giới (boundary / 경계)** đặt tiêu chí; **31. tệp (file / 파일)/upload trong MSA topology** dùng tiêu chí đó để kiểm tra ranh giới, rồi **32. Auth trong multi-service topology** mở rộng hệ quả.
 
 ## 31. tệp (file / 파일)/upload trong MSA topology
 
@@ -531,7 +531,7 @@ requestId
 
 Chapter 17 đã giải thích consistency giữa nhị phân (binary / 이진) và DB trạng thái (state / 상태).
 
-> **Chuyển mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **32. Auth trong multi-service topology** tiếp nhận điểm tựa từ **31. tệp (file / 파일)/upload trong MSA topology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. khả năng quan sát (observability / 관측 가능성) xuyên topology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **32. Auth trong multi-service topology** nối từ **31. tệp (file / 파일)/upload trong MSA topology** sang **33. khả năng quan sát (observability / 관측 가능성) xuyên topology**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Auth trong multi-service topology
 
@@ -541,7 +541,7 @@ Frontend năng lực (capability / 역량) vẫn chỉ phục vụ UX.
 
 Chapter 20 là prerequisite cho phần này.
 
-> **Chuyển mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **33. khả năng quan sát (observability / 관측 가능성) xuyên topology** tiếp nhận điểm tựa từ **32. Auth trong multi-service topology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. thất bại (failure / 실패) taxonomy theo hop** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **33. khả năng quan sát (observability / 관측 가능성) xuyên topology** nối từ **32. Auth trong multi-service topology** sang **34. thất bại (failure / 실패) taxonomy theo hop**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. khả năng quan sát (observability / 관측 가능성) xuyên topology
 
@@ -558,7 +558,7 @@ screenInstanceKey
 
 Frontend không cần biết mọi nội bộ (internal / 내부) span, nhưng hỗ trợ (support / 지원) cần đủ định danh (identity / 식별자) để nối trình duyệt (browser / 브라우저) symptom với máy chủ (server / 서버) bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **34. thất bại (failure / 실패) taxonomy theo hop** tiếp nhận điểm tựa từ **33. khả năng quan sát (observability / 관측 가능성) xuyên topology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Testing topology bằng fault injection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **34. thất bại (failure / 실패) taxonomy theo hop** nối từ **33. khả năng quan sát (observability / 관측 가능성) xuyên topology** sang **35. Testing topology bằng fault injection**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. thất bại (failure / 실패) taxonomy theo hop
 
@@ -581,7 +581,7 @@ STALE_EVENT
 
 Taxonomy giúp sự cố (incident / 인시던트) triage nhanh hơn generic `SYSTEM_ERROR`.
 
-> **Chuyển mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **35. Testing topology bằng fault injection** tiếp nhận điểm tựa từ **34. thất bại (failure / 실패) taxonomy theo hop** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. trường hợp (case / 사례) study — mã (code / 코드) dịch vụ (service / 서비스) chậm làm màn hình không mở** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **35. Testing topology bằng fault injection** nối từ **34. thất bại (failure / 실패) taxonomy theo hop** sang **36. trường hợp (case / 사례) study — mã (code / 코드) dịch vụ (service / 서비스) chậm làm màn hình không mở**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Testing topology bằng fault injection
 
@@ -603,7 +603,7 @@ schema field mới/thiếu
 browser client cũ với server mới
 ```
 
-> **Chuyển mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **35. Testing topology bằng fault injection** cho ta quy tắc; **36. trường hợp (case / 사례) study — mã (code / 코드) dịch vụ (service / 서비스) chậm làm màn hình không mở** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **37. trường hợp (case / 사례) study — Polling tạo 12 yêu cầu (request / 요청) cùng lúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **35. Testing topology bằng fault injection** nêu quy tắc; **36. trường hợp (case / 사례) study — mã (code / 코드) dịch vụ (service / 서비스) chậm làm màn hình không mở** thử quy tắc trong tình huống, rồi **37. trường hợp (case / 사례) study — Polling tạo 12 yêu cầu (request / 요청) cùng lúc** mở rộng hệ quả.
 
 ## 36. trường hợp (case / 사례) study — mã (code / 코드) dịch vụ (service / 서비스) chậm làm màn hình không mở
 
@@ -620,7 +620,7 @@ BFF nên aggregate không?
 
 Fix tốt không nhất thiết là tăng hết thời gian chờ (timeout / 타임아웃).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **36. trường hợp (case / 사례) study — mã (code / 코드) dịch vụ (service / 서비스) chậm làm màn hình không mở** cho ta quy tắc; **37. trường hợp (case / 사례) study — Polling tạo 12 yêu cầu (request / 요청) cùng lúc** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **38. trường hợp (case / 사례) study — WebSocket sự kiện (event / 이벤트) cập nhật (update / 업데이트) sai row** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **36. trường hợp (case / 사례) study — mã (code / 코드) dịch vụ (service / 서비스) chậm làm màn hình không mở** nêu quy tắc; **37. trường hợp (case / 사례) study — Polling tạo 12 yêu cầu (request / 요청) cùng lúc** thử quy tắc trong tình huống, rồi **38. trường hợp (case / 사례) study — WebSocket sự kiện (event / 이벤트) cập nhật (update / 업데이트) sai row** mở rộng hệ quả.
 
 ## 37. trường hợp (case / 사례) study — Polling tạo 12 yêu cầu (request / 요청) cùng lúc
 
@@ -628,7 +628,7 @@ Tab background bị throttled rồi resume; timer fire mẫu (pattern / 패턴) 
 
 Fix bằng lifecycle-aware scheduler, in-flight guard/backoff và immediate reconciliation sau resume.
 
-> **Chuyển mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **37. trường hợp (case / 사례) study — Polling tạo 12 yêu cầu (request / 요청) cùng lúc** cho ta quy tắc; **38. trường hợp (case / 사례) study — WebSocket sự kiện (event / 이벤트) cập nhật (update / 업데이트) sai row** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **39. trường hợp (case / 사례) study — Deploy dịch vụ (service / 서비스) mới làm trình duyệt (browser / 브라우저) cũ crash** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **37. trường hợp (case / 사례) study — Polling tạo 12 yêu cầu (request / 요청) cùng lúc** nêu quy tắc; **38. trường hợp (case / 사례) study — WebSocket sự kiện (event / 이벤트) cập nhật (update / 업데이트) sai row** thử quy tắc trong tình huống, rồi **39. trường hợp (case / 사례) study — Deploy dịch vụ (service / 서비스) mới làm trình duyệt (browser / 브라우저) cũ crash** mở rộng hệ quả.
 
 ## 38. trường hợp (case / 사례) study — WebSocket sự kiện (event / 이벤트) cập nhật (update / 업데이트) sai row
 
@@ -636,7 +636,7 @@ Callback giữ `selectedRowIndex` từ lúc subscribe. người dùng (user / �
 
 Nguyên nhân gốc (root cause / 근본 원인) là định danh (identity / 식별자) ranh giới (boundary / 경계). sự kiện (event / 이벤트) phải mang `orderId`; locate DataList bằng nghiệp vụ (business / 비즈니스) key.
 
-> **Chuyển mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **38. trường hợp (case / 사례) study — WebSocket sự kiện (event / 이벤트) cập nhật (update / 업데이트) sai row** cho ta quy tắc; **39. trường hợp (case / 사례) study — Deploy dịch vụ (service / 서비스) mới làm trình duyệt (browser / 브라우저) cũ crash** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **40. Master checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **38. trường hợp (case / 사례) study — WebSocket sự kiện (event / 이벤트) cập nhật (update / 업데이트) sai row** nêu quy tắc; **39. trường hợp (case / 사례) study — Deploy dịch vụ (service / 서비스) mới làm trình duyệt (browser / 브라우저) cũ crash** thử quy tắc trong tình huống, rồi **40. Master checklist** mở rộng hệ quả.
 
 ## 39. trường hợp (case / 사례) study — Deploy dịch vụ (service / 서비스) mới làm trình duyệt (browser / 브라우저) cũ crash
 
@@ -644,7 +644,7 @@ Máy chủ (server / 서버) đổi phản hồi (response / 응답) trường d
 
 Nguyên nhân gốc (root cause / 근본 원인) là lược đồ (schema / 스키마) di chuyển (migration / 마이그레이션) không hỗ trợ phiên bản (version / 버전) overlap. Fix bằng backward-compatible đặc tả hợp đồng (contract / 계약) hoặc coordinated versioning; không chỉ “clear bộ nhớ đệm (cache / 캐시) người dùng (user / 사용자)”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **39. trường hợp (case / 사례) study — Deploy dịch vụ (service / 서비스) mới làm trình duyệt (browser / 브라우저) cũ crash** cho ta quy tắc; **40. Master checklist** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **41. liên kết (connection / 연결) map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **39. trường hợp (case / 사례) study — Deploy dịch vụ (service / 서비스) mới làm trình duyệt (browser / 브라우저) cũ crash** nêu quy tắc; **40. Master checklist** thử quy tắc trong tình huống, rồi **41. liên kết (connection / 연결) map** mở rộng hệ quả.
 
 ## 40. Master checklist
 
@@ -664,7 +664,7 @@ Client cũ/server mới coexist thế nào?
 Correlation ID đi xuyên topology tới đâu?
 ```
 
-> **Chuyển mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, sau nội dung của **40. Master checklist**, **41. liên kết (connection / 연결) map** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **42. Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, sau nội dung của **40. Master checklist**, **41. liên kết (connection / 연결) map** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **42. Kết luận** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 41. liên kết (connection / 연결) map
 
@@ -682,7 +682,7 @@ Tệp (file / 파일) chuỗi xử lý (pipeline / 파이프라인): [17 — Fil
 
 Authentication/session: [20 — Authentication, Session, SSO & Security Lifecycle](20_authentication_session_sso_security_lifecycle.md).
 
-> **Chuyển mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **42. Kết luận** gom các mảnh từ **41. liên kết (connection / 연결) map** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **21 — tích hợp (integration / 통합) Topology, MSA, Real-Time & Resilience**, **42. Kết luận** tổng hợp từ **41. liên kết (connection / 연결) map** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 42. Kết luận
 

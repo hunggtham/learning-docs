@@ -22,7 +22,7 @@ Trong nhiều tình huống ba giá trị nhanh chóng đồng bộ nên nhà ph
 
 Vì vậy câu hỏi “Grid đang hiển thị gì?” khác với “DataList sẽ serialize gì nếu Submission chạy ngay bây giờ?”. Save luồng (flow / 흐름) môi trường vận hành (production / 운영 환경) phải đảm bảo edit hiện tại đã đi qua vòng đời (lifecycle / 생명주기) mà dự án (project / 프로젝트) mong đợi trước khi đọc mô hình (model / 모델).
 
-> **Chuyển mạch:** Trong **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **1. Một cell có nhiều trạng thái hơn giá trị bạn nhìn thấy** xác định đầu vào; **2. Edit vòng đời (lifecycle / 생명주기) là chuyển tiếp trạng thái (state transition / 상태 전이), không chỉ một sự kiện (event / 이벤트)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. Before-change sự kiện (event / 이벤트) phù hợp để bảo vệ bất biến (invariant / 불변식) cục bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **1. Một cell có nhiều trạng thái hơn giá trị bạn nhìn thấy** đặt đầu vào cho **2. Edit vòng đời (lifecycle / 생명주기) là chuyển tiếp trạng thái (state transition / 상태 전이), không chỉ một sự kiện (event / 이벤트)**, rồi **3. Before-change sự kiện (event / 이벤트) phù hợp để bảo vệ bất biến (invariant / 불변식) cục bộ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2. Edit vòng đời (lifecycle / 생명주기) là chuyển tiếp trạng thái (state transition / 상태 전이), không chỉ một sự kiện (event / 이벤트)
 
@@ -43,7 +43,7 @@ Chính xác (exact / 정확한) sự kiện (event / 이벤트) name và thứ t
 
 Cấp cao (senior / 시니어) quy tắc (rule / 규칙): nếu lô-gic nghiệp vụ (business logic / 비즈니스 로직) phụ thuộc “sự kiện (event / 이벤트) A chắc chắn chạy trước sự kiện (event / 이벤트) B”, hãy kiểm chứng bằng tham chiếu (reference / 참조)/bản phát hành (release / 릴리스) ghi chú (note / 노트) đúng engine bản dựng (build / 빌드) và viết regression kiểm thử (test / 테스트) cho giả định (assumption / 가정) đó.
 
-> **Chuyển mạch:** Ở chặng này của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **2. Edit vòng đời (lifecycle / 생명주기) là chuyển tiếp trạng thái (state transition / 상태 전이), không chỉ một sự kiện (event / 이벤트)** xác định đầu vào; **3. Before-change sự kiện (event / 이벤트) phù hợp để bảo vệ bất biến (invariant / 불변식) cục bộ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **4. Row position là tương tác (interaction / 상호작용) cursor, không phải định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **2. Edit vòng đời (lifecycle / 생명주기) là chuyển tiếp trạng thái (state transition / 상태 전이), không chỉ một sự kiện (event / 이벤트)** đặt đầu vào cho **3. Before-change sự kiện (event / 이벤트) phù hợp để bảo vệ bất biến (invariant / 불변식) cục bộ**, rồi **4. Row position là tương tác (interaction / 상호작용) cursor, không phải định danh (identity / 식별자)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3. Before-change sự kiện (event / 이벤트) phù hợp để bảo vệ bất biến (invariant / 불변식) cục bộ
 
@@ -61,7 +61,7 @@ scwin.dlOrder_onbeforecelldatachange = function (info) {
 
 Nếu kiểm tra hợp lệ (validation / 검증) cần API, hãy tách thành workflow rõ: cho phép edit vào mô hình (model / 모델), đánh dấu trạng thái cần kiểm tra, chạy async kiểm tra hợp lệ (validation / 검증), rồi quyết định UX khi kết quả (result / 결과) về. Cố biến mạng (network / 네트워크) thành before-change synchronous đường dẫn (path / 경로) thường làm UI khó lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Before-change event bảo vệ invariant trước khi commit; row position chỉ là cursor, vì vậy view index và model index tiếp theo phải có tên và mapping riêng.
+> **Nối mạch:** Before-change event bảo vệ invariant trước khi commit; row position chỉ là cursor, vì vậy view index và model index tiếp theo phải có tên và mapping riêng.
 
 ## 4. Row position là tương tác (interaction / 상호작용) cursor, không phải định danh (identity / 식별자)
 
@@ -88,7 +88,7 @@ scwin.validateOrderAsync(orderId);
 
 Khi phản hồi (response / 응답) về, resolve thực thể (entity / 엔터티) bằng nghiệp vụ (business / 비즈니스) key hoặc yêu cầu (request / 요청) định danh (identity / 식별자) thay vì tin chỉ mục (index / 인덱스) cũ.
 
-> **Chuyển mạch:** Row position chỉ là cursor; tách view index khỏi model index để sort có thể đổi thứ tự hiển thị mà không đổi business identity.
+> **Nối mạch:** Row position chỉ là cursor; tách view index khỏi model index để sort có thể đổi thứ tự hiển thị mà không đổi business identity.
 
 ## 5. View chỉ mục (index / 인덱스) và mô hình (model / 모델) chỉ mục (index / 인덱스) phải được phân biệt bằng tên biến
 
@@ -106,7 +106,7 @@ Tên API chính xác (exact / 정확한) để convert giữa các loại chỉ 
 
 Đây giống bài toán coordinate hệ thống (system / 시스템) trong graphics: cùng số `5` nhưng `x=5` ở cục bộ (local / 로컬) coordinate không đồng nghĩa `x=5` ở world coordinate.
 
-> **Chuyển mạch:** Sort chỉ đổi order của view; filter tiếp theo tạo subset view và phải giữ source data cùng identity mapping nguyên vẹn.
+> **Nối mạch:** Sort chỉ đổi order của view; filter tiếp theo tạo subset view và phải giữ source data cùng identity mapping nguyên vẹn.
 
 ## 6. Sort thay đổi thứ tự (order / 순서), không thay nghiệp vụ (business / 비즈니스) định danh (identity / 식별자)
 
@@ -124,7 +124,7 @@ position của A đã đổi
 
 Bất kỳ lô-gic (logic / 논리) dài-lived nào liên quan save kết quả (result / 결과), popup kết quả (result / 결과), async kiểm tra hợp lệ (validation / 검증) hoặc cross-page communication nên ưu tiên định danh (identity / 식별자) hơn position.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **6. Sort thay đổi thứ tự (order / 순서), không thay nghiệp vụ (business / 비즈니스) định danh (identity / 식별자)** nêu điều cần giải thích; **7. Filter tạo một view con, không xóa nguồn (source / 소스) dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. Grouping tạo presentation hierarchy, không tự tạo lĩnh vực (domain / 도메인) hierarchy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **6. Sort thay đổi thứ tự (order / 순서), không thay nghiệp vụ (business / 비즈니스) định danh (identity / 식별자)** đặt vấn đề; **7. Filter tạo một view con, không xóa nguồn (source / 소스) dữ liệu (data / 데이터)** đối chiếu bằng chứng, rồi **8. Grouping tạo presentation hierarchy, không tự tạo lĩnh vực (domain / 도메인) hierarchy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 7. Filter tạo một view con, không xóa nguồn (source / 소스) dữ liệu (data / 데이터)
 
@@ -141,7 +141,7 @@ Một nút “Save all changes” thường phải quan tâm changed rows trong 
 
 Trước khi dùng count/chỉ mục (index / 인덱스) API, viết câu tiếng Việt trước: “Tôi muốn đếm/tác động tập row nào?”. Sau đó mới chọn API.
 
-> **Chuyển mạch:** Trong **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **7. Filter tạo một view con, không xóa nguồn (source / 소스) dữ liệu (data / 데이터)** nêu điều cần giải thích; **8. Grouping tạo presentation hierarchy, không tự tạo lĩnh vực (domain / 도메인) hierarchy** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. Selection, check và focus là ba loại tương tác (interaction / 상호작용) trạng thái (state / 상태) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **7. Filter tạo một view con, không xóa nguồn (source / 소스) dữ liệu (data / 데이터)** đặt vấn đề; **8. Grouping tạo presentation hierarchy, không tự tạo lĩnh vực (domain / 도메인) hierarchy** đối chiếu bằng chứng, rồi **9. Selection, check và focus là ba loại tương tác (interaction / 상호작용) trạng thái (state / 상태) khác nhau** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8. Grouping tạo presentation hierarchy, không tự tạo lĩnh vực (domain / 도메인) hierarchy
 
@@ -149,7 +149,7 @@ Grid grouping có thể hiển thị row theo phòng ban, trạng thái hoặc c
 
 Nếu máy chủ (server / 서버) cần hierarchy thật, đặc tả hợp đồng (contract / 계약) phải biểu diễn hierarchy rõ. Nếu chỉ Grid group theo `DEPT_CD`, save vẫn nên dựa nguồn (source / 소스) row định danh (identity / 식별자)/status chứ không dựa group header position.
 
-> **Chuyển mạch:** Ở chặng này của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **9. Selection, check và focus là ba loại tương tác (interaction / 상호작용) trạng thái (state / 상태) khác nhau** tiếp nhận điểm tựa từ **8. Grouping tạo presentation hierarchy, không tự tạo lĩnh vực (domain / 도메인) hierarchy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Programmatic thay đổi (change / 변경) và người dùng (user / 사용자) thay đổi (change / 변경) không nhất thiết phát cùng sự kiện (event / 이벤트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **9. Selection, check và focus là ba loại tương tác (interaction / 상호작용) trạng thái (state / 상태) khác nhau** nối từ **8. Grouping tạo presentation hierarchy, không tự tạo lĩnh vực (domain / 도메인) hierarchy** sang **10. Programmatic thay đổi (change / 변경) và người dùng (user / 사용자) thay đổi (change / 변경) không nhất thiết phát cùng sự kiện (event / 이벤트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Selection, check và focus là ba loại tương tác (interaction / 상호작용) trạng thái (state / 상태) khác nhau
 
@@ -164,7 +164,7 @@ check column → có thể chỉ là UI selection hoặc business field
 
 Bug phổ biến là dùng checkbox UI để persist `SELECTED_YN` dù nghiệp vụ (business / 비즈니스) không hề có khái niệm selected. Ngược lại, nếu checkbox thật sự là trường dữ liệu (field / 필드) nghiệp vụ như `APPROVED_YN`, nó phải nằm trong DataList và tham gia kiểm tra hợp lệ (validation / 검증)/save như dữ liệu (data / 데이터).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **10. Programmatic thay đổi (change / 변경) và người dùng (user / 사용자) thay đổi (change / 변경) không nhất thiết phát cùng sự kiện (event / 이벤트)** tiếp nhận điểm tựa từ **9. Selection, check và focus là ba loại tương tác (interaction / 상호작용) trạng thái (state / 상태) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Bulk mutation cần một transaction-like máy khách (client / 클라이언트) ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **10. Programmatic thay đổi (change / 변경) và người dùng (user / 사용자) thay đổi (change / 변경) không nhất thiết phát cùng sự kiện (event / 이벤트)** nối từ **9. Selection, check và focus là ba loại tương tác (interaction / 상호작용) trạng thái (state / 상태) khác nhau** sang **11. Bulk mutation cần một transaction-like máy khách (client / 클라이언트) ranh giới (boundary / 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Programmatic thay đổi (change / 변경) và người dùng (user / 사용자) thay đổi (change / 변경) không nhất thiết phát cùng sự kiện (event / 이벤트)
 
@@ -182,7 +182,7 @@ scwin.recalculateTotal = function () {
 
 Các sự kiện (event / 이벤트)/đường dẫn (path / 경로) cần thiết gọi hàm (function / 함수) đó, hoặc máy chủ (server / 서버) trả chuẩn gốc (canonical / 정본) total nếu đó là đơn vị sở hữu (owner / 오너) phù hợp.
 
-> **Chuyển mạch:** Trong **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **10. Programmatic thay đổi (change / 변경) và người dùng (user / 사용자) thay đổi (change / 변경) không nhất thiết phát cùng sự kiện (event / 이벤트)** đã nêu tiêu chí phân biệt, còn **11. Bulk mutation cần một transaction-like máy khách (client / 클라이언트) ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **12. Formatter là pure projection càng nhiều càng tốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **10. Programmatic thay đổi (change / 변경) và người dùng (user / 사용자) thay đổi (change / 변경) không nhất thiết phát cùng sự kiện (event / 이벤트)** đặt tiêu chí; **11. Bulk mutation cần một transaction-like máy khách (client / 클라이언트) ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **12. Formatter là pure projection càng nhiều càng tốt** mở rộng hệ quả.
 
 ## 11. Bulk mutation cần một transaction-like máy khách (client / 클라이언트) ranh giới (boundary / 경계)
 
@@ -201,7 +201,7 @@ begin bulk intent
 
 Tên API suspend/redraw cụ thể phụ thuộc bản dựng (build / 빌드). Đừng bản sao (copy / 복사) một private engine trick từ dự án (project / 프로젝트) khác. Hãy tìm API công khai (public API / 공개 API)/cấu hình (config / 설정) của Grid/DataList đang dùng và đo trước/sau bằng hiệu năng (performance / 성능) dấu vết (trace / 추적).
 
-> **Chuyển mạch:** Ở chặng này của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **11. Bulk mutation cần một transaction-like máy khách (client / 클라이언트) ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **12. Formatter là pure projection càng nhiều càng tốt** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **13. Expression, subtotal và summary có computational ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **11. Bulk mutation cần một transaction-like máy khách (client / 클라이언트) ranh giới (boundary / 경계)** đặt tiêu chí; **12. Formatter là pure projection càng nhiều càng tốt** dùng tiêu chí đó để kiểm tra ranh giới, rồi **13. Expression, subtotal và summary có computational ngân sách (budget / 예산)** mở rộng hệ quả.
 
 ## 12. Formatter là pure projection càng nhiều càng tốt
 
@@ -217,7 +217,7 @@ Nếu formatter có side tác động (effect / 효과), redraw có thể vô t�
 
 Cấp cao (senior / 시니어) ghi chú (note / 노트): kết xuất (render / 렌더링) callback phải được xem như đường xử lý nóng (hot path / 핫 패스). Một hàm (function / 함수) 0.1 ms chạy 100.000 lần vẫn thành 10 giây CPU.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **13. Expression, subtotal và summary có computational ngân sách (budget / 예산)** gom các mảnh từ **12. Formatter là pure projection càng nhiều càng tốt** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **14. Infinite scroll không biến full payload thành nhỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **13. Expression, subtotal và summary có computational ngân sách (budget / 예산)** tổng hợp từ **12. Formatter là pure projection càng nhiều càng tốt** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **14. Infinite scroll không biến full payload thành nhỏ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13. Expression, subtotal và summary có computational ngân sách (budget / 예산)
 
@@ -227,7 +227,7 @@ Nếu một cell thay đổi khiến toàn bộ summary scan lại 50.000 row, r
 
 Một số calculation nên chuyển máy chủ (server / 서버) nếu nó thuộc nghiệp vụ (business / 비즈니스) truth hoặc cần full dataset mà trình duyệt (browser / 브라우저) chỉ có một page.
 
-> **Chuyển mạch:** Trong **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **14. Infinite scroll không biến full payload thành nhỏ** gom các mảnh từ **13. Expression, subtotal và summary có computational ngân sách (budget / 예산)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **15. máy chủ (server / 서버) paging làm selection xuyên trang trở thành lĩnh vực (domain / 도메인) bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **14. Infinite scroll không biến full payload thành nhỏ** tổng hợp từ **13. Expression, subtotal và summary có computational ngân sách (budget / 예산)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **15. máy chủ (server / 서버) paging làm selection xuyên trang trở thành lĩnh vực (domain / 도메인) bài toán (problem / 문제)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. Infinite scroll không biến full payload thành nhỏ
 
@@ -243,7 +243,7 @@ Virtual/infinite rendering chủ yếu giảm view/DOM chi phí (cost / 비용).
 
 Nếu dataset lớn thật, server-side paging/truy vấn (query / 쿼리) thường là kiến trúc (architecture / 아키텍처) ranh giới (boundary / 경계) quan trọng hơn Grid rendering option.
 
-> **Chuyển mạch:** Ở chặng này của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **15. máy chủ (server / 서버) paging làm selection xuyên trang trở thành lĩnh vực (domain / 도메인) bài toán (problem / 문제)** tiếp nhận điểm tựa từ **14. Infinite scroll không biến full payload thành nhỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Save trong khi editor còn active phải có chính sách (policy / 정책) rõ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **15. máy chủ (server / 서버) paging làm selection xuyên trang trở thành lĩnh vực (domain / 도메인) bài toán (problem / 문제)** nối từ **14. Infinite scroll không biến full payload thành nhỏ** sang **16. Save trong khi editor còn active phải có chính sách (policy / 정책) rõ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. máy chủ (server / 서버) paging làm selection xuyên trang trở thành lĩnh vực (domain / 도메인) bài toán (problem / 문제)
 
@@ -261,7 +261,7 @@ Trường hợp cuối thường nên gửi truy vấn (query / 쿼리) snapshot
 
 Đây là ví dụ điển hình cho việc UI wording phải khớp dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **16. Save trong khi editor còn active phải có chính sách (policy / 정책) rõ** tiếp nhận điểm tựa từ **15. máy chủ (server / 서버) paging làm selection xuyên trang trở thành lĩnh vực (domain / 도메인) bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. điều hướng (navigation / 내비게이션) khi cell invalid cần phân biệt “không cho rời cell” và “không cho save”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **16. Save trong khi editor còn active phải có chính sách (policy / 정책) rõ** nối từ **15. máy chủ (server / 서버) paging làm selection xuyên trang trở thành lĩnh vực (domain / 도메인) bài toán (problem / 문제)** sang **17. điều hướng (navigation / 내비게이션) khi cell invalid cần phân biệt “không cho rời cell” và “không cho save”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Save trong khi editor còn active phải có chính sách (policy / 정책) rõ
 
@@ -278,7 +278,7 @@ Không nên chữa bằng `setTimeout(100)` vì đó chỉ là timing guess. Hã
 
 Nếu bản dựng (build / 빌드) tự lần ghi nhận (commit / 커밋) trước click handler thì kiểm thử (test / 테스트) sẽ chứng minh hành vi (behavior / 동작) đó; nếu không, ứng dụng (application / 애플리케이션) phải tường minh (explicit / 명시적).
 
-> **Chuyển mạch:** Trong **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **17. điều hướng (navigation / 내비게이션) khi cell invalid cần phân biệt “không cho rời cell” và “không cho save”** tiếp nhận điểm tựa từ **16. Save trong khi editor còn active phải có chính sách (policy / 정책) rõ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. lỗi (error / 오류) ánh xạ (mapping / 매핑) phải sống qua sort/filter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **17. điều hướng (navigation / 내비게이션) khi cell invalid cần phân biệt “không cho rời cell” và “không cho save”** nối từ **16. Save trong khi editor còn active phải có chính sách (policy / 정책) rõ** sang **18. lỗi (error / 오류) ánh xạ (mapping / 매핑) phải sống qua sort/filter**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. điều hướng (navigation / 내비게이션) khi cell invalid cần phân biệt “không cho rời cell” và “không cho save”
 
@@ -295,7 +295,7 @@ server-owned rule → validate server
 
 Đừng biến mọi kiểm tra hợp lệ (validation / 검증) thành before-navigation khối (block / 블록).
 
-> **Chuyển mạch:** Ở chặng này của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **18. lỗi (error / 오류) ánh xạ (mapping / 매핑) phải sống qua sort/filter** tiếp nhận điểm tựa từ **17. điều hướng (navigation / 내비게이션) khi cell invalid cần phân biệt “không cho rời cell” và “không cho save”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Excel import là một bulk edit chuỗi xử lý (pipeline / 파이프라인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **18. lỗi (error / 오류) ánh xạ (mapping / 매핑) phải sống qua sort/filter** nối từ **17. điều hướng (navigation / 내비게이션) khi cell invalid cần phân biệt “không cho rời cell” và “không cho save”** sang **19. Excel import là một bulk edit chuỗi xử lý (pipeline / 파이프라인)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. lỗi (error / 오류) ánh xạ (mapping / 매핑) phải sống qua sort/filter
 
@@ -311,7 +311,7 @@ Máy chủ (server / 서버) trả `rowIndex=12` là fragile nếu người dùn
 
 Máy khách (client / 클라이언트) resolve row hiện tại bằng key rồi focus/highlight nếu row visible. Nếu row bị filter ẩn, UX có thể hiển thị summary “1 lỗi nằm ngoài filter hiện tại” thay vì silently bỏ lỗi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **18. lỗi (error / 오류) ánh xạ (mapping / 매핑) phải sống qua sort/filter** xác định đầu vào; **19. Excel import là một bulk edit chuỗi xử lý (pipeline / 파이프라인)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **20. Excel export phải định nghĩa giá trị (value / 값) ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **18. lỗi (error / 오류) ánh xạ (mapping / 매핑) phải sống qua sort/filter** đặt đầu vào cho **19. Excel import là một bulk edit chuỗi xử lý (pipeline / 파이프라인)**, rồi **20. Excel export phải định nghĩa giá trị (value / 값) ngữ nghĩa (semantics / 의미론)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. Excel import là một bulk edit chuỗi xử lý (pipeline / 파이프라인)
 
@@ -330,7 +330,7 @@ untrusted file
 
 Không nên coi “Excel đã hiện đúng trong Grid” là “dữ liệu đã an toàn để save”. kiểu (type / 타입) conversion, trim, date format, duplicate key và hidden formula/content đều cần chính sách (policy / 정책).
 
-> **Chuyển mạch:** Trong **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **19. Excel import là một bulk edit chuỗi xử lý (pipeline / 파이프라인)** xác định đầu vào; **20. Excel export phải định nghĩa giá trị (value / 값) ngữ nghĩa (semantics / 의미론)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **21. khả năng tiếp cận (accessibility / 접근성) thay đổi tương tác (interaction / 상호작용) các giả định (assumptions / 가정들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **19. Excel import là một bulk edit chuỗi xử lý (pipeline / 파이프라인)** đặt đầu vào cho **20. Excel export phải định nghĩa giá trị (value / 값) ngữ nghĩa (semantics / 의미론)**, rồi **21. khả năng tiếp cận (accessibility / 접근성) thay đổi tương tác (interaction / 상호작용) các giả định (assumptions / 가정들)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. Excel export phải định nghĩa giá trị (value / 값) ngữ nghĩa (semantics / 의미론)
 
@@ -348,7 +348,7 @@ Max row/cell là bao nhiêu?
 
 Bảo mật (security / 보안) rà soát (review / 검토) phải bao gồm việc người dùng có thể export dữ liệu mà UI chỉ “ẩn” nhưng DataList vẫn chứa.
 
-> **Chuyển mạch:** Ở chặng này của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **21. khả năng tiếp cận (accessibility / 접근성) thay đổi tương tác (interaction / 상호작용) các giả định (assumptions / 가정들)** tiếp nhận điểm tựa từ **20. Excel export phải định nghĩa giá trị (value / 값) ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Grid debugging theo bốn coordinate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **21. khả năng tiếp cận (accessibility / 접근성) thay đổi tương tác (interaction / 상호작용) các giả định (assumptions / 가정들)** nối từ **20. Excel export phải định nghĩa giá trị (value / 값) ngữ nghĩa (semantics / 의미론)** sang **22. Grid debugging theo bốn coordinate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. khả năng tiếp cận (accessibility / 접근성) thay đổi tương tác (interaction / 상호작용) các giả định (assumptions / 가정들)
 
@@ -367,7 +367,7 @@ popup return focus
 
 Hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) không được mặc định tắt khả năng tiếp cận (accessibility / 접근성) để giảm DOM. Hãy giảm dữ liệu (data / 데이터)/kết xuất (render / 렌더링) chi phí (cost / 비용) trước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **22. Grid debugging theo bốn coordinate** tiếp nhận điểm tựa từ **21. khả năng tiếp cận (accessibility / 접근성) thay đổi tương tác (interaction / 상호작용) các giả định (assumptions / 가정들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Master bất biến (invariant / 불변식) cho Grid screen** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **22. Grid debugging theo bốn coordinate** nối từ **21. khả năng tiếp cận (accessibility / 접근성) thay đổi tương tác (interaction / 상호작용) các giả định (assumptions / 가정들)** sang **23. Master bất biến (invariant / 불변식) cho Grid screen**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Grid debugging theo bốn coordinate
 
@@ -396,7 +396,7 @@ console.log("[order-grid] edit", {
 
 Không log dữ liệu nhạy cảm nếu môi trường vận hành (production / 운영 환경) chính sách (policy / 정책) không cho phép.
 
-> **Chuyển mạch:** Trong **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **23. Master bất biến (invariant / 불변식) cho Grid screen** tiếp nhận điểm tựa từ **22. Grid debugging theo bốn coordinate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. trường hợp (case / 사례) study: chỉnh giá hàng loạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **23. Master bất biến (invariant / 불변식) cho Grid screen** nối từ **22. Grid debugging theo bốn coordinate** sang **24. trường hợp (case / 사례) study: chỉnh giá hàng loạt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Master bất biến (invariant / 불변식) cho Grid screen
 
@@ -414,7 +414,7 @@ Accessibility và keyboard path được test như interaction chính thức.
 
 Nếu một thiết kế (design / 설계) vi phạm một bất biến (invariant / 불변식), hãy ghi rõ lý do và regression kiểm thử (test / 테스트) cho exception đó.
 
-> **Chuyển mạch:** Ở chặng này của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **23. Master bất biến (invariant / 불변식) cho Grid screen** cho ta quy tắc; **24. trường hợp (case / 사례) study: chỉnh giá hàng loạt** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **25. Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **23. Master bất biến (invariant / 불변식) cho Grid screen** nêu quy tắc; **24. trường hợp (case / 사례) study: chỉnh giá hàng loạt** thử quy tắc trong tình huống, rồi **25. Kết nối** mở rộng hệ quả.
 
 ## 24. trường hợp (case / 사례) study: chỉnh giá hàng loạt
 
@@ -426,7 +426,7 @@ Nếu sản phẩm (product / 제품) ở page khác không được tải (load
 
 Trường hợp (case / 사례) này gom nhiều nguyên tắc thành một câu: **Grid chỉ là cửa sổ tương tác lên một tập dữ liệu có định danh (identity / 식별자) và quyền sở hữu (ownership / 소유권) rõ; đừng biến vị trí hiển thị thành nghiệp vụ (business / 비즈니스) truth.**
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **24. trường hợp (case / 사례) study: chỉnh giá hàng loạt** cho ta quy tắc; **25. Kết nối** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — GridView Editing, định danh (identity / 식별자) & View Internals**, **24. trường hợp (case / 사례) study: chỉnh giá hàng loạt** cho ta quy tắc; **25. Kết nối** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 25. Kết nối
 

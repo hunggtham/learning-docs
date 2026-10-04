@@ -8,7 +8,7 @@ WebSquare thường xuất hiện trong hệ thống enterprise sống nhiều n
 
 Vì vậy “mã (code / 코드) mới nhất” không đủ. nhà phát triển (developer / 개발자) cần đọc được cả mã (code / 코드) legacy và biết **hành vi (behavior / 동작) nào là historical ràng buộc (constraint / 제약조건), hành vi (behavior / 동작) nào vẫn là bất biến (invariant / 불변식), và hành vi (behavior / 동작) nào chỉ còn vì chưa refactor**.
 
-> **Chuyển mạch:** Trong **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **2. Đừng migrate cú pháp (syntax / 문법) trước mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **1. Vì sao di chuyển (migration / 마이그레이션) kiến thức (knowledge / 지식) quan trọng với WebSquare** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **3. Global-style page và Scope-style page** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **2. Đừng migrate cú pháp (syntax / 문법) trước mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **1. Vì sao di chuyển (migration / 마이그레이션) kiến thức (knowledge / 지식) quan trọng với WebSquare** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **3. Global-style page và Scope-style page** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2. Đừng migrate cú pháp (syntax / 문법) trước mô hình tư duy (mental model / 사고 모델)
 
@@ -30,7 +30,7 @@ browser-specific workaround
 
 Sau đó mới quyết định refactor ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Ở chặng này của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **3. Global-style page và Scope-style page** gom các mảnh từ **2. Đừng migrate cú pháp (syntax / 문법) trước mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **4. $w và $p** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **3. Global-style page và Scope-style page** tổng hợp từ **2. Đừng migrate cú pháp (syntax / 문법) trước mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **4. $w và $p** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3. Global-style page và Scope-style page
 
@@ -53,7 +53,7 @@ implicit cross-page dependency
 
 Nếu chỉ thêm `scwin.` nhưng vẫn giữ toàn cục (global / 전역) trạng thái (state / 상태) và `top.someComponent`, isolation chưa thật sự đạt được.
 
-> **Chuyển mạch:** Global-style page và scope-style page cho thấy migration boundary; $w/$p tiếp theo là hai API cần map theo ownership trước khi đổi IFrame SPA sang WFrame SPA.
+> **Nối mạch:** Global-style page và scope-style page cho thấy migration boundary; $w/$p tiếp theo là hai API cần map theo ownership trước khi đổi IFrame SPA sang WFrame SPA.
 
 ## 4. `$w` và `$p`
 
@@ -70,7 +70,7 @@ Target object có nằm trong child/parent Scope?
 Build hiện tại document API nào?
 ```
 
-> **Chuyển mạch:** `$w/$p` là API ownership cần map trước; IFrame SPA → WFrame SPA tiếp theo thay đổi lifecycle và scope boundary, nên `window.parent` không còn là contract mặc định.
+> **Nối mạch:** `$w/$p` là API ownership cần map trước; IFrame SPA → WFrame SPA tiếp theo thay đổi lifecycle và scope boundary, nên `window.parent` không còn là contract mặc định.
 
 ## 5. IFrame SPA → WFrame SPA
 
@@ -89,7 +89,7 @@ DOM access
 
 Không thay IFrame bằng WFrame rồi giả định `window.parent` hành vi (behavior / 동작) giống hệt.
 
-> **Chuyển mạch:** WFrame scope thay thế implicit `window.parent` traversal bằng navigation contract; inline DOM manipulation tiếp theo nên chuyển thành component API có owner rõ.
+> **Nối mạch:** WFrame scope thay thế implicit `window.parent` traversal bằng navigation contract; inline DOM manipulation tiếp theo nên chuyển thành component API có owner rõ.
 
 ## 6. `window.parent` → WebSquare phạm vi (scope / 범위) điều hướng (navigation / 내비게이션)
 
@@ -109,7 +109,7 @@ $p.parent().scwin.someFunction();
 
 Nhưng bước tiếp theo nên là giảm coupling bằng công khai (public / 공개) parent hàm (function / 함수) đặc tả hợp đồng (contract / 계약), không chỉ thay điều hướng (navigation / 내비게이션) thành phần nguyên thủy (primitive / 기본 요소).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **7. Inline DOM manipulation → thành phần (component / 컴포넌트) API** tiếp nhận điểm tựa từ **6. window.parent → WebSquare phạm vi (scope / 범위) điều hướng (navigation / 내비게이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. jQuery hỗ trợ (support / 지원) là tính tương thích (compatibility / 호환성), không nên là default mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **7. Inline DOM manipulation → thành phần (component / 컴포넌트) API** nối từ **6. window.parent → WebSquare phạm vi (scope / 범위) điều hướng (navigation / 내비게이션)** sang **8. jQuery hỗ trợ (support / 지원) là tính tương thích (compatibility / 호환성), không nên là default mới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Inline DOM manipulation → thành phần (component / 컴포넌트) API
 
@@ -126,7 +126,7 @@ $('#someInternalInput').val(x)
 
 Không phải vì jQuery “xấu”, mà vì thành phần (component / 컴포넌트) API giữ khung phần mềm (framework / 프레임워크) trạng thái (state / 상태)/binding/vòng đời (lifecycle / 생명주기) đúng hơn và bền hơn khi renderer đổi.
 
-> **Chuyển mạch:** Trong **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **8. jQuery hỗ trợ (support / 지원) là tính tương thích (compatibility / 호환성), không nên là default mới** tiếp nhận điểm tựa từ **7. Inline DOM manipulation → thành phần (component / 컴포넌트) API** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Callback string và eval** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **8. jQuery hỗ trợ (support / 지원) là tính tương thích (compatibility / 호환성), không nên là default mới** nối từ **7. Inline DOM manipulation → thành phần (component / 컴포넌트) API** sang **9. Callback string và eval**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. jQuery hỗ trợ (support / 지원) là tính tương thích (compatibility / 호환성), không nên là default mới
 
@@ -134,7 +134,7 @@ WebSquare có jQuery hỗ trợ (support / 지원) ở nhiều dòng. Với mã 
 
 Tuy nhiên không nên xóa jQuery hàng loạt nếu plugin/dùng chung (common / 공통) thư viện (library / 라이브러리) phụ thuộc. di chuyển (migration / 마이그레이션) theo usage đồ thị (graph / 그래프) và kiểm thử (test / 테스트) hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Ở chặng này của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **9. Callback string và eval** tiếp nhận điểm tựa từ **8. jQuery hỗ trợ (support / 지원) là tính tương thích (compatibility / 호환성), không nên là default mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Synchronous Submission** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **9. Callback string và eval** nối từ **8. jQuery hỗ trợ (support / 지원) là tính tương thích (compatibility / 호환성), không nên là default mới** sang **10. Synchronous Submission**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Callback string và `eval`
 
@@ -159,7 +159,7 @@ input data contract
 
 Nếu nền tảng (platform / 플랫폼) API chỉ cho string ở một điểm, ít nhất giới hạn callback vào nội bộ (internal / 내부) allowlist và tách nó khỏi arbitrary bên ngoài (external / 외부) dữ liệu (data / 데이터).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **10. Synchronous Submission** tiếp nhận điểm tựa từ **9. Callback string và eval** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. dùng chung (common / 공통) utility wrapper và lớp trừu tượng (abstraction / 추상화) debt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **10. Synchronous Submission** nối từ **9. Callback string và eval** sang **11. dùng chung (common / 공통) utility wrapper và lớp trừu tượng (abstraction / 추상화) debt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Synchronous Submission
 
@@ -185,7 +185,7 @@ execute
 
 Không thể chỉ đổi `mode="asynchronous"` mà giữ mã (code / 코드) phía sau như cũ.
 
-> **Chuyển mạch:** Trong **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **11. dùng chung (common / 공통) utility wrapper và lớp trừu tượng (abstraction / 추상화) debt** tiếp nhận điểm tựa từ **10. Synchronous Submission** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Magic cấu hình (config / 설정) và historical workaround** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **11. dùng chung (common / 공통) utility wrapper và lớp trừu tượng (abstraction / 추상화) debt** nối từ **10. Synchronous Submission** sang **12. Magic cấu hình (config / 설정) và historical workaround**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. dùng chung (common / 공통) utility wrapper và lớp trừu tượng (abstraction / 추상화) debt
 
@@ -211,7 +211,7 @@ Có hàng chục flag boolean không?
 Screen mới có buộc hiểu internal wrapper mới dùng được không?
 ```
 
-> **Chuyển mạch:** Ở chặng này của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **12. Magic cấu hình (config / 설정) và historical workaround** tiếp nhận điểm tựa từ **11. dùng chung (common / 공통) utility wrapper và lớp trừu tượng (abstraction / 추상화) debt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Engine bản dựng (build / 빌드) là phụ thuộc (dependency / 의존성) cần phiên bản (version / 버전) điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **12. Magic cấu hình (config / 설정) và historical workaround** nối từ **11. dùng chung (common / 공통) utility wrapper và lớp trừu tượng (abstraction / 추상화) debt** sang **13. Engine bản dựng (build / 빌드) là phụ thuộc (dependency / 의존성) cần phiên bản (version / 버전) điều khiển (control / 제어)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Magic cấu hình (config / 설정) và historical workaround
 
@@ -226,7 +226,7 @@ reproduction test
 
 Không xóa workaround chỉ vì không hiểu. Cũng không giữ vĩnh viễn chỉ vì “hệ thống đang chạy”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **13. Engine bản dựng (build / 빌드) là phụ thuộc (dependency / 의존성) cần phiên bản (version / 버전) điều khiển (control / 제어)** tiếp nhận điểm tựa từ **12. Magic cấu hình (config / 설정) và historical workaround** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. bản phát hành (release / 릴리스) ghi chú (note / 노트) phải đi cùng upgrade kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **13. Engine bản dựng (build / 빌드) là phụ thuộc (dependency / 의존성) cần phiên bản (version / 버전) điều khiển (control / 제어)** nối từ **12. Magic cấu hình (config / 설정) và historical workaround** sang **14. bản phát hành (release / 릴리스) ghi chú (note / 노트) phải đi cùng upgrade kiểm thử (test / 테스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Engine bản dựng (build / 빌드) là phụ thuộc (dependency / 의존성) cần phiên bản (version / 버전) điều khiển (control / 제어)
 
@@ -244,7 +244,7 @@ important config toggles
 
 Đây là phụ thuộc (dependency / 의존성) inventory giống Java phiên bản (version / 버전) hoặc Spring Boot phiên bản (version / 버전).
 
-> **Chuyển mạch:** Trong **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **14. bản phát hành (release / 릴리스) ghi chú (note / 노트) phải đi cùng upgrade kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **13. Engine bản dựng (build / 빌드) là phụ thuộc (dependency / 의존성) cần phiên bản (version / 버전) điều khiển (control / 제어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. W-Pack sản phẩm tạo ra (artifact / 산출물) và triển khai (deployment / 배포) di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **14. bản phát hành (release / 릴리스) ghi chú (note / 노트) phải đi cùng upgrade kiểm thử (test / 테스트)** nối từ **13. Engine bản dựng (build / 빌드) là phụ thuộc (dependency / 의존성) cần phiên bản (version / 버전) điều khiển (control / 제어)** sang **15. W-Pack sản phẩm tạo ra (artifact / 산출물) và triển khai (deployment / 배포) di chuyển (migration / 마이그레이션)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. bản phát hành (release / 릴리스) ghi chú (note / 노트) phải đi cùng upgrade kiểm thử (test / 테스트)
 
@@ -262,7 +262,7 @@ Khi upgrade engine:
 
 Upgrade UI engine không nên được coi là “thay vài JAR rồi xong”.
 
-> **Chuyển mạch:** Ở chặng này của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **15. W-Pack sản phẩm tạo ra (artifact / 산출물) và triển khai (deployment / 배포) di chuyển (migration / 마이그레이션)** tiếp nhận điểm tựa từ **14. bản phát hành (release / 릴리스) ghi chú (note / 노트) phải đi cùng upgrade kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. CSS di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **15. W-Pack sản phẩm tạo ra (artifact / 산출물) và triển khai (deployment / 배포) di chuyển (migration / 마이그레이션)** nối từ **14. bản phát hành (release / 릴리스) ghi chú (note / 노트) phải đi cùng upgrade kiểm thử (test / 테스트)** sang **16. CSS di chuyển (migration / 마이그레이션)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. W-Pack sản phẩm tạo ra (artifact / 산출물) và triển khai (deployment / 배포) di chuyển (migration / 마이그레이션)
 
@@ -280,7 +280,7 @@ rollback artifact
 
 Một di chuyển (migration / 마이그레이션) nguồn (source / 소스) thành công nhưng sản phẩm tạo ra (artifact / 산출물) stale vẫn thất bại môi trường vận hành (production / 운영 환경).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **16. CSS di chuyển (migration / 마이그레이션)** tiếp nhận điểm tựa từ **15. W-Pack sản phẩm tạo ra (artifact / 산출물) và triển khai (deployment / 배포) di chuyển (migration / 마이그레이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. trình duyệt (browser / 브라우저) modernization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **16. CSS di chuyển (migration / 마이그레이션)** nối từ **15. W-Pack sản phẩm tạo ra (artifact / 산출물) và triển khai (deployment / 배포) di chuyển (migration / 마이그레이션)** sang **17. trình duyệt (browser / 브라우저) modernization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. CSS di chuyển (migration / 마이그레이션)
 
@@ -298,7 +298,7 @@ browser-specific hacks
 
 Ưu tiên application-owned lớp (class / 클래스) và visual regression kiểm thử (test / 테스트).
 
-> **Chuyển mạch:** Trong **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **17. trình duyệt (browser / 브라우저) modernization** tiếp nhận điểm tựa từ **16. CSS di chuyển (migration / 마이그레이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. bảo mật (security / 보안) modernization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **17. trình duyệt (browser / 브라우저) modernization** nối từ **16. CSS di chuyển (migration / 마이그레이션)** sang **18. bảo mật (security / 보안) modernization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. trình duyệt (browser / 브라우저) modernization
 
@@ -315,7 +315,7 @@ vendor CSS prefix workaround
 
 Nếu trình duyệt (browser / 브라우저) chính sách (policy / 정책) đã bỏ IE, những branch này trở thành maintenance chi phí (cost / 비용). Nhưng xóa theo kiểm thử (test / 테스트) coverage, không theo cảm giác.
 
-> **Chuyển mạch:** Ở chặng này của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **18. bảo mật (security / 보안) modernization** tiếp nhận điểm tựa từ **17. trình duyệt (browser / 브라우저) modernization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약) di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **18. bảo mật (security / 보안) modernization** nối từ **17. trình duyệt (browser / 브라우저) modernization** sang **19. dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약) di chuyển (migration / 마이그레이션)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. bảo mật (security / 보안) modernization
 
@@ -334,7 +334,7 @@ sensitive console log
 
 Engine upgrade không tự sửa ứng dụng (application / 애플리케이션) bảo mật (security / 보안) mẫu (pattern / 패턴).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **18. bảo mật (security / 보안) modernization** nêu điều cần giải thích; **19. dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약) di chuyển (migration / 마이그레이션)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. WebSquare5 SP5 và dòng 6.0/WebSquare AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **18. bảo mật (security / 보안) modernization** đặt vấn đề; **19. dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약) di chuyển (migration / 마이그레이션)** đối chiếu bằng chứng, rồi **20. WebSquare5 SP5 và dòng 6.0/WebSquare AI** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약) di chuyển (migration / 마이그레이션)
 
@@ -351,7 +351,7 @@ legacy response
 
 Adapter tạm phải có kế hoạch remove; nếu không, tính tương thích (compatibility / 호환성) tầng (layer / 계층) trở thành permanent độ phức tạp (complexity / 복잡도).
 
-> **Chuyển mạch:** Trong **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **19. dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약) di chuyển (migration / 마이그레이션)** nêu điều cần giải thích; **20. WebSquare5 SP5 và dòng 6.0/WebSquare AI** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **21. Strangler di chuyển (migration / 마이그레이션) cho screen lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **19. dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약) di chuyển (migration / 마이그레이션)** đặt vấn đề; **20. WebSquare5 SP5 và dòng 6.0/WebSquare AI** đối chiếu bằng chứng, rồi **21. Strangler di chuyển (migration / 마이그레이션) cho screen lớn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. WebSquare5 SP5 và dòng 6.0/WebSquare AI
 
@@ -372,7 +372,7 @@ browser/runtime boundary
 
 Các concept này giúp đọc cả mã (code / 코드) cũ và mới, dù API chi tiết thay đổi.
 
-> **Chuyển mạch:** Ở chặng này của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **21. Strangler di chuyển (migration / 마이그레이션) cho screen lớn** tiếp nhận điểm tựa từ **20. WebSquare5 SP5 và dòng 6.0/WebSquare AI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Characterization kiểm thử (test / 테스트) trước refactor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **21. Strangler di chuyển (migration / 마이그레이션) cho screen lớn** nối từ **20. WebSquare5 SP5 và dòng 6.0/WebSquare AI** sang **22. Characterization kiểm thử (test / 테스트) trước refactor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Strangler di chuyển (migration / 마이그레이션) cho screen lớn
 
@@ -391,7 +391,7 @@ Một screen 5.000 dòng không nên rewrite một lần nếu không có kiểm
 
 Mỗi bước giảm rủi ro (risk / 위험) và tạo checkpoint quay lui (rollback / 롤백).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **22. Characterization kiểm thử (test / 테스트) trước refactor** tiếp nhận điểm tựa từ **21. Strangler di chuyển (migration / 마이그레이션) cho screen lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. di chuyển (migration / 마이그레이션) anti-pattern: rewrite vì “mã (code / 코드) cũ xấu”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **22. Characterization kiểm thử (test / 테스트) trước refactor** nối từ **21. Strangler di chuyển (migration / 마이그레이션) cho screen lớn** sang **23. di chuyển (migration / 마이그레이션) anti-pattern: rewrite vì “mã (code / 코드) cũ xấu”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Characterization kiểm thử (test / 테스트) trước refactor
 
@@ -406,7 +406,7 @@ And grid result Y
 
 Đây là characterization kiểm thử (test / 테스트): ghi lại hành vi (behavior / 동작) thật, kể cả hiện thực (implementation / 구현) xấu. Sau refactor, giữ nghiệp vụ (business / 비즈니스) hành vi (behavior / 동작) trừ phần bug chủ đích sửa.
 
-> **Chuyển mạch:** Trong **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **23. di chuyển (migration / 마이그레이션) anti-pattern: rewrite vì “mã (code / 코드) cũ xấu”** tiếp nhận điểm tựa từ **22. Characterization kiểm thử (test / 테스트) trước refactor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. di chuyển (migration / 마이그레이션) anti-pattern: preserve mọi hành vi (behavior / 동작) vì sợ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **23. di chuyển (migration / 마이그레이션) anti-pattern: rewrite vì “mã (code / 코드) cũ xấu”** nối từ **22. Characterization kiểm thử (test / 테스트) trước refactor** sang **24. di chuyển (migration / 마이그레이션) anti-pattern: preserve mọi hành vi (behavior / 동작) vì sợ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. di chuyển (migration / 마이그레이션) anti-pattern: rewrite vì “mã (code / 코드) cũ xấu”
 
@@ -427,7 +427,7 @@ legacy browser requirement
 
 Nếu không liệt kê được, bạn chưa hiểu đủ để rewrite an toàn.
 
-> **Chuyển mạch:** Ở chặng này của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **24. di chuyển (migration / 마이그레이션) anti-pattern: preserve mọi hành vi (behavior / 동작) vì sợ** tiếp nhận điểm tựa từ **23. di chuyển (migration / 마이그레이션) anti-pattern: rewrite vì “mã (code / 코드) cũ xấu”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. API inventory cho trọng yếu (critical / 중요) screen** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **24. di chuyển (migration / 마이그레이션) anti-pattern: preserve mọi hành vi (behavior / 동작) vì sợ** nối từ **23. di chuyển (migration / 마이그레이션) anti-pattern: rewrite vì “mã (code / 코드) cũ xấu”** sang **25. API inventory cho trọng yếu (critical / 중요) screen**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. di chuyển (migration / 마이그레이션) anti-pattern: preserve mọi hành vi (behavior / 동작) vì sợ
 
@@ -442,7 +442,7 @@ obsolete workaround → remove có test
 accidental bug → fix có requirement
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **25. API inventory cho trọng yếu (critical / 중요) screen** tiếp nhận điểm tựa từ **24. di chuyển (migration / 마이그레이션) anti-pattern: preserve mọi hành vi (behavior / 동작) vì sợ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Deprecation chiến lược (strategy / 전략)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **25. API inventory cho trọng yếu (critical / 중요) screen** nối từ **24. di chuyển (migration / 마이그레이션) anti-pattern: preserve mọi hành vi (behavior / 동작) vì sợ** sang **26. Deprecation chiến lược (strategy / 전략)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. API inventory cho trọng yếu (critical / 중요) screen
 
@@ -459,7 +459,7 @@ Trước upgrade, lập bảng:
 
 Sau đó tra đúng mục tiêu (target / 대상) bản dựng (build / 빌드).
 
-> **Chuyển mạch:** Trong **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **26. Deprecation chiến lược (strategy / 전략)** tiếp nhận điểm tựa từ **25. API inventory cho trọng yếu (critical / 중요) screen** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. rà soát mã (code review / 코드 리뷰) khi có cả legacy và hiện đại (modern / 현대적) style** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **26. Deprecation chiến lược (strategy / 전략)** nối từ **25. API inventory cho trọng yếu (critical / 중요) screen** sang **27. rà soát mã (code review / 코드 리뷰) khi có cả legacy và hiện đại (modern / 현대적) style**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Deprecation chiến lược (strategy / 전략)
 
@@ -476,7 +476,7 @@ Sau khi usage = 0 mới remove compatibility wrapper.
 
 Deprecation không đồng nghĩa broken ngay, nhưng là debt có deadline.
 
-> **Chuyển mạch:** Ở chặng này của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **27. rà soát mã (code review / 코드 리뷰) khi có cả legacy và hiện đại (modern / 현대적) style** tiếp nhận điểm tựa từ **26. Deprecation chiến lược (strategy / 전략)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Checklist đọc một tệp (file / 파일) WebSquare lạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **27. rà soát mã (code review / 코드 리뷰) khi có cả legacy và hiện đại (modern / 현대적) style** nối từ **26. Deprecation chiến lược (strategy / 전략)** sang **28. Checklist đọc một tệp (file / 파일) WebSquare lạ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. rà soát mã (code review / 코드 리뷰) khi có cả legacy và hiện đại (modern / 현대적) style
 
@@ -491,7 +491,7 @@ ghi debt có boundary rõ
 migrate theo module/screen
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **28. Checklist đọc một tệp (file / 파일) WebSquare lạ** tiếp nhận điểm tựa từ **27. rà soát mã (code review / 코드 리뷰) khi có cả legacy và hiện đại (modern / 현대적) style** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Checklist di chuyển (migration / 마이그레이션) môi trường vận hành (production / 운영 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **28. Checklist đọc một tệp (file / 파일) WebSquare lạ** nối từ **27. rà soát mã (code review / 코드 리뷰) khi có cả legacy và hiện đại (modern / 현대적) style** sang **29. Checklist di chuyển (migration / 마이그레이션) môi trường vận hành (production / 운영 환경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Checklist đọc một tệp (file / 파일) WebSquare lạ
 
@@ -512,7 +512,7 @@ Khi mở một page chưa từng thấy:
 
 Trả lời mười câu này trước khi sửa sâu.
 
-> **Chuyển mạch:** Trong **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **29. Checklist di chuyển (migration / 마이그레이션) môi trường vận hành (production / 운영 환경)** tiếp nhận điểm tựa từ **28. Checklist đọc một tệp (file / 파일) WebSquare lạ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Kết thúc nhánh học (track / 트랙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **29. Checklist di chuyển (migration / 마이그레이션) môi trường vận hành (production / 운영 환경)** nối từ **28. Checklist đọc một tệp (file / 파일) WebSquare lạ** sang **30. Kết thúc nhánh học (track / 트랙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Checklist di chuyển (migration / 마이그레이션) môi trường vận hành (production / 운영 환경)
 
@@ -532,7 +532,7 @@ Cache/W-Pack deployment verified
 Rollback plan available
 ```
 
-> **Chuyển mạch:** Ở chặng này của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **30. Kết thúc nhánh học (track / 트랙)** tiếp nhận điểm tựa từ **29. Checklist di chuyển (migration / 마이그레이션) môi trường vận hành (production / 운영 환경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **07 — Legacy, hiện đại (modern / 현대적) Evolution & di chuyển (migration / 마이그레이션)**, **30. Kết thúc nhánh học (track / 트랙)** nối từ **29. Checklist di chuyển (migration / 마이그레이션) môi trường vận hành (production / 운영 환경)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 30. Kết thúc nhánh học (track / 트랙)
 
@@ -550,6 +550,6 @@ Evidence nào kiểm chứng giả thuyết?
 Code này là modern contract hay legacy workaround?
 ```
 
-Hãy dùng [Glossary & Coverage Audit](GLOSSARY_AND_COVERAGE.md) để tự kiểm tra coverage và quay lại chapter còn yếu.
+Hãy dùng [Glossary & Coverage Audit](GLOSSARY_AND_COVERAGE.md) để rà coverage và quay lại chapter còn yếu.
 
 > **Bàn giao:** Sau **30. Kết thúc nhánh học (track / 트랙)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

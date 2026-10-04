@@ -22,7 +22,7 @@ iOS / Android capability
 
 Đây là một phân tán (distributed / 분산) ranh giới (boundary / 경계) nằm trong cùng thiết bị. Hai bên có vòng đời (lifecycle / 생명주기), lỗi (error / 오류) mô hình (model / 모델) và bảo mật (security / 보안) mô hình (model / 모델) khác nhau.
 
-> **Chuyển mạch:** Hybrid WebSquare có hai capability surface: browser và native. WebSquare.hybridApp chỉ báo hiệu môi trường; bridge architecture tiếp theo phải định nghĩa contract rõ.
+> **Nối mạch:** Hybrid WebSquare có hai capability surface: browser và native. WebSquare.hybridApp chỉ báo hiệu môi trường; bridge architecture tiếp theo phải định nghĩa contract rõ.
 
 ## 2. trình duyệt (browser / 브라우저) năng lực (capability / 역량) và bản địa (native / 네이티브) năng lực (capability / 역량) phải được tách
 
@@ -39,7 +39,7 @@ return webCameraFallback();
 
 Điểm quan trọng không phải tên helper. Điều quan trọng là năng lực (capability / 역량) detection phải nằm ở một lớp trừu tượng (abstraction / 추상화) ranh giới (boundary / 경계) thay vì rải `if (Android)`/`if (iPhone)` trong từng screen.
 
-> **Chuyển mạch:** Browser/native capability đã được tách; `WebSquare.hybridApp` chỉ là environment signal, còn bridge tiếp theo phải được thiết kế như local RPC contract.
+> **Nối mạch:** Browser/native capability đã được tách; `WebSquare.hybridApp` chỉ là environment signal, còn bridge tiếp theo phải được thiết kế như local RPC contract.
 
 ## 3. `WebSquare.hybridApp` là môi trường (environment / 환경) tín hiệu (signal / 신호), không phải kiến trúc (architecture / 아키텍처)
 
@@ -57,7 +57,7 @@ platformService.download(...)
 
 Screen không nên biết Cordova đường dẫn (path / 경로), Android intent hay iOS temporary directory.
 
-> **Chuyển mạch:** Bridge là RPC cục bộ với payload có version; không truyền runtime object qua bridge, chỉ truyền dữ liệu serializable và lỗi có mã rõ.
+> **Nối mạch:** Bridge là RPC cục bộ với payload có version; không truyền runtime object qua bridge, chỉ truyền dữ liệu serializable và lỗi có mã rõ.
 
 ## 4. bản địa (native / 네이티브) cầu nối (bridge / 브리지) là RPC cục bộ
 
@@ -74,7 +74,7 @@ JS creates request
 
 Từ mô hình tư duy (mental model / 사고 모델) này suy ra ngay các vấn đề: serialization, hết thời gian chờ (timeout / 타임아웃), duplicate callback, vòng đời (lifecycle / 생명주기) cancellation, phiên bản (version / 버전) mismatch và lỗi (error / 오류) translation.
 
-> **Chuyển mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **5. Không truyền đối tượng (object / 객체) thời gian chạy (runtime / 런타임) qua cầu nối (bridge / 브리지)** tiếp nhận điểm tựa từ **4. bản địa (native / 네이티브) cầu nối (bridge / 브리지) là RPC cục bộ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Callback đặc tả hợp đồng (contract / 계약) phải có exactly-once ngữ nghĩa (semantics / 의미론) ở mức ứng dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **5. Không truyền đối tượng (object / 객체) thời gian chạy (runtime / 런타임) qua cầu nối (bridge / 브리지)** nối từ **4. bản địa (native / 네이티브) cầu nối (bridge / 브리지) là RPC cục bộ** sang **6. Callback đặc tả hợp đồng (contract / 계약) phải có exactly-once ngữ nghĩa (semantics / 의미론) ở mức ứng dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Không truyền đối tượng (object / 객체) thời gian chạy (runtime / 런타임) qua cầu nối (bridge / 브리지)
 
@@ -105,7 +105,7 @@ Bản địa (native / 네이티브) trả về dữ liệu (data / 데이터) �
 
 Không để bản địa (native / 네이티브) biết GridView ID hoặc WebSquare phạm vi (scope / 범위) topology.
 
-> **Chuyển mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **6. Callback đặc tả hợp đồng (contract / 계약) phải có exactly-once ngữ nghĩa (semantics / 의미론) ở mức ứng dụng** tiếp nhận điểm tựa từ **5. Không truyền đối tượng (object / 객체) thời gian chạy (runtime / 런타임) qua cầu nối (bridge / 브리지)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Page thời gian tồn tại (lifetime / 수명) và bản địa (native / 네이티브) thao tác (operation / 연산) thời gian tồn tại (lifetime / 수명) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **6. Callback đặc tả hợp đồng (contract / 계약) phải có exactly-once ngữ nghĩa (semantics / 의미론) ở mức ứng dụng** nối từ **5. Không truyền đối tượng (object / 객체) thời gian chạy (runtime / 런타임) qua cầu nối (bridge / 브리지)** sang **7. Page thời gian tồn tại (lifetime / 수명) và bản địa (native / 네이티브) thao tác (operation / 연산) thời gian tồn tại (lifetime / 수명) khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Callback đặc tả hợp đồng (contract / 계약) phải có exactly-once ngữ nghĩa (semantics / 의미론) ở mức ứng dụng
 
@@ -122,7 +122,7 @@ PENDING
 
 Sau terminal trạng thái (state / 상태), callback cùng yêu cầu (request / 요청) ID phải bị ignore hoặc log anomaly.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **7. Page thời gian tồn tại (lifetime / 수명) và bản địa (native / 네이티브) thao tác (operation / 연산) thời gian tồn tại (lifetime / 수명) khác nhau** tiếp nhận điểm tựa từ **6. Callback đặc tả hợp đồng (contract / 계약) phải có exactly-once ngữ nghĩa (semantics / 의미론) ở mức ứng dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. App background/foreground là vòng đời (lifecycle / 생명주기) sự kiện (event / 이벤트) thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **7. Page thời gian tồn tại (lifetime / 수명) và bản địa (native / 네이티브) thao tác (operation / 연산) thời gian tồn tại (lifetime / 수명) khác nhau** nối từ **6. Callback đặc tả hợp đồng (contract / 계약) phải có exactly-once ngữ nghĩa (semantics / 의미론) ở mức ứng dụng** sang **8. App background/foreground là vòng đời (lifecycle / 생명주기) sự kiện (event / 이벤트) thật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Page thời gian tồn tại (lifetime / 수명) và bản địa (native / 네이티브) thao tác (operation / 연산) thời gian tồn tại (lifetime / 수명) khác nhau
 
@@ -146,7 +146,7 @@ operation lifetime độc lập
 
 Đây là stale callback bài toán (problem / 문제) tương tự stale Submission phản hồi (response / 응답), nhưng crossing bản địa (native / 네이티브) ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **7. Page thời gian tồn tại (lifetime / 수명) và bản địa (native / 네이티브) thao tác (operation / 연산) thời gian tồn tại (lifetime / 수명) khác nhau** xác định đầu vào; **8. App background/foreground là vòng đời (lifecycle / 생명주기) sự kiện (event / 이벤트) thật** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. bản địa (native / 네이티브) permission là máy trạng thái (state machine / 상태 머신)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **7. Page thời gian tồn tại (lifetime / 수명) và bản địa (native / 네이티브) thao tác (operation / 연산) thời gian tồn tại (lifetime / 수명) khác nhau** đặt đầu vào cho **8. App background/foreground là vòng đời (lifecycle / 생명주기) sự kiện (event / 이벤트) thật**, rồi **9. bản địa (native / 네이티브) permission là máy trạng thái (state machine / 상태 머신)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8. App background/foreground là vòng đời (lifecycle / 생명주기) sự kiện (event / 이벤트) thật
 
@@ -164,7 +164,7 @@ security-sensitive secret → dùng storage phù hợp, không localStorage tùy
 
 Một eKYC luồng (flow / 흐름) 5 bước cần biết sau resume người dùng (user / 사용자) đang ở bước nào và máy chủ (server / 서버) đã ghi nhận gì.
 
-> **Chuyển mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **8. App background/foreground là vòng đời (lifecycle / 생명주기) sự kiện (event / 이벤트) thật** xác định đầu vào; **9. bản địa (native / 네이티브) permission là máy trạng thái (state machine / 상태 머신)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Permission success không đồng nghĩa thao tác (operation / 연산) success** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **8. App background/foreground là vòng đời (lifecycle / 생명주기) sự kiện (event / 이벤트) thật** đặt đầu vào cho **9. bản địa (native / 네이티브) permission là máy trạng thái (state machine / 상태 머신)**, rồi **10. Permission success không đồng nghĩa thao tác (operation / 연산) success** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. bản địa (native / 네이티브) permission là máy trạng thái (state machine / 상태 머신)
 
@@ -180,7 +180,7 @@ restricted by policy
 
 UI phải map từng trạng thái (state / 상태) sang hành động (action / 동작) phù hợp. Nếu permission bị deny vĩnh viễn, gọi yêu cầu (request / 요청) lại vô hạn chỉ tạo UX vòng lặp (loop / 루프); có thể cần hướng người dùng (user / 사용자) tới hệ thống (system / 시스템) settings.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **10. Permission success không đồng nghĩa thao tác (operation / 연산) success** tiếp nhận điểm tựa từ **9. bản địa (native / 네이티브) permission là máy trạng thái (state machine / 상태 머신)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Deep link là bên ngoài (external / 외부) đầu vào (input / 입력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **10. Permission success không đồng nghĩa thao tác (operation / 연산) success** nối từ **9. bản địa (native / 네이티브) permission là máy trạng thái (state machine / 상태 머신)** sang **11. Deep link là bên ngoài (external / 외부) đầu vào (input / 입력)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Permission success không đồng nghĩa thao tác (operation / 연산) success
 
@@ -197,7 +197,7 @@ business result
 
 Không collapse tất cả thành `false`.
 
-> **Chuyển mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **11. Deep link là bên ngoài (external / 외부) đầu vào (input / 입력)** tiếp nhận điểm tựa từ **10. Permission success không đồng nghĩa thao tác (operation / 연산) success** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Deep link routing và WebSquare điều hướng (navigation / 내비게이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **11. Deep link là bên ngoài (external / 외부) đầu vào (input / 입력)** nối từ **10. Permission success không đồng nghĩa thao tác (operation / 연산) success** sang **12. Deep link routing và WebSquare điều hướng (navigation / 내비게이션)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Deep link là bên ngoài (external / 외부) đầu vào (input / 입력)
 
@@ -213,7 +213,7 @@ Deep-link payload là untrusted đầu vào (input / 입력) giống URL từ we
 
 Server-side đơn vị từ (token / 토큰) kiểm tra hợp lệ (validation / 검증), expiry, nonce/trạng thái (state / 상태) correlation và allowlisted tuyến (route / 경로) là những điều khiển (control / 제어) thường cần.
 
-> **Chuyển mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **12. Deep link routing và WebSquare điều hướng (navigation / 내비게이션)** tiếp nhận điểm tựa từ **11. Deep link là bên ngoài (external / 외부) đầu vào (input / 입력)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. bản địa (native / 네이티브) → Web callback phải đi qua một gateway** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **12. Deep link routing và WebSquare điều hướng (navigation / 내비게이션)** nối từ **11. Deep link là bên ngoài (external / 외부) đầu vào (input / 입력)** sang **13. bản địa (native / 네이티브) → Web callback phải đi qua một gateway**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Deep link routing và WebSquare điều hướng (navigation / 내비게이션)
 
@@ -234,7 +234,7 @@ cold start
 
 Nếu không có pending-route trạng thái (state / 상태), deep link cold start sẽ thỉnh thoảng “mất”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **13. bản địa (native / 네이티브) → Web callback phải đi qua một gateway** tiếp nhận điểm tựa từ **12. Deep link routing và WebSquare điều hướng (navigation / 내비게이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. sự kiện (event / 이벤트) envelope** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **13. bản địa (native / 네이티브) → Web callback phải đi qua một gateway** nối từ **12. Deep link routing và WebSquare điều hướng (navigation / 내비게이션)** sang **14. sự kiện (event / 이벤트) envelope**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. bản địa (native / 네이티브) → Web callback phải đi qua một gateway
 
@@ -253,7 +253,7 @@ native event
 
 Gateway làm versioning, logging và bảo mật (security / 보안) dễ hơn.
 
-> **Chuyển mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **14. sự kiện (event / 이벤트) envelope** tiếp nhận điểm tựa từ **13. bản địa (native / 네이티브) → Web callback phải đi qua một gateway** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. cầu nối (bridge / 브리지) versioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **14. sự kiện (event / 이벤트) envelope** nối từ **13. bản địa (native / 네이티브) → Web callback phải đi qua một gateway** sang **15. cầu nối (bridge / 브리지) versioning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. sự kiện (event / 이벤트) envelope
 
@@ -273,7 +273,7 @@ Một sự kiện (event / 이벤트) đặc tả hợp đồng (contract / 계�
 
 `type` cho routing, `version` cho tính tương thích (compatibility / 호환성), `requestId` cho correlation. Payload chỉ chứa dữ liệu (data / 데이터) cần thiết.
 
-> **Chuyển mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **15. cầu nối (bridge / 브리지) versioning** tiếp nhận điểm tựa từ **14. sự kiện (event / 이벤트) envelope** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Backward tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **15. cầu nối (bridge / 브리지) versioning** nối từ **14. sự kiện (event / 이벤트) envelope** sang **16. Backward tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. cầu nối (bridge / 브리지) versioning
 
@@ -297,7 +297,7 @@ web asks native capabilities
 
 Đừng chỉ check người dùng (user / 사용자) tác nhân (agent / 에이전트).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **16. Backward tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **15. cầu nối (bridge / 브리지) versioning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Authentication trong WebView** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **16. Backward tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** nối từ **15. cầu nối (bridge / 브리지) versioning** sang **17. Authentication trong WebView**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Backward tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)
 
@@ -312,7 +312,7 @@ Nếu web deploy độc lập, máy chủ (server / 서버)/CDN có thể cần 
 
 Hybrid môi trường vận hành (production / 운영 환경) thất bại (failure / 실패) rất hay xuất hiện khi nhóm (team / 팀) web và mobile bản phát hành (release / 릴리스) theo cadence khác nhau.
 
-> **Chuyển mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **17. Authentication trong WebView** tiếp nhận điểm tựa từ **16. Backward tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Không nhét long-lived secret vào JavaScript toàn cục (global / 전역)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **17. Authentication trong WebView** nối từ **16. Backward tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** sang **18. Không nhét long-lived secret vào JavaScript toàn cục (global / 전역)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Authentication trong WebView
 
@@ -330,7 +330,7 @@ Nếu bản địa (native / 네이티브) refresh đơn vị từ (token / 토�
 
 Auth synchronization phải là tường minh (explicit / 명시적) giao thức (protocol / 프로토콜).
 
-> **Chuyển mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **18. Không nhét long-lived secret vào JavaScript toàn cục (global / 전역)** tiếp nhận điểm tựa từ **17. Authentication trong WebView** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. XSS trong hybrid có thể nguy hiểm hơn web thường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **18. Không nhét long-lived secret vào JavaScript toàn cục (global / 전역)** nối từ **17. Authentication trong WebView** sang **19. XSS trong hybrid có thể nguy hiểm hơn web thường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Không nhét long-lived secret vào JavaScript toàn cục (global / 전역)
 
@@ -338,7 +338,7 @@ WebView JavaScript có thể bị inspect/gỡ lỗi (debug / 디버그) ở mô
 
 Web tầng (layer / 계층) nên nhận năng lực (capability / 역량)/đơn vị từ (token / 토큰) có thời gian tồn tại (lifetime / 수명) và phạm vi (scope / 범위) tối thiểu cần thiết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **19. XSS trong hybrid có thể nguy hiểm hơn web thường** tiếp nhận điểm tựa từ **18. Không nhét long-lived secret vào JavaScript toàn cục (global / 전역)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. cầu nối (bridge / 브리지) allowlist thay vì generic execute(command, args)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **19. XSS trong hybrid có thể nguy hiểm hơn web thường** nối từ **18. Không nhét long-lived secret vào JavaScript toàn cục (global / 전역)** sang **20. cầu nối (bridge / 브리지) allowlist thay vì generic execute(command, args)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. XSS trong hybrid có thể nguy hiểm hơn web thường
 
@@ -356,7 +356,7 @@ thì attacker script có thể gọi chúng nếu cầu nối (bridge / 브리�
 
 Cầu nối (bridge / 브리지) phải expose API tối thiểu, validate argument và áp dụng authorization/chính sách (policy / 정책) ở bản địa (native / 네이티브) side khi cần.
 
-> **Chuyển mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **20. cầu nối (bridge / 브리지) allowlist thay vì generic execute(command, args)** tiếp nhận điểm tựa từ **19. XSS trong hybrid có thể nguy hiểm hơn web thường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. tệp (file / 파일) download trên hybrid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **20. cầu nối (bridge / 브리지) allowlist thay vì generic execute(command, args)** nối từ **19. XSS trong hybrid có thể nguy hiểm hơn web thường** sang **21. tệp (file / 파일) download trên hybrid**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. cầu nối (bridge / 브리지) allowlist thay vì generic `execute(command, args)`
 
@@ -379,7 +379,7 @@ native.execute("some arbitrary class/method", args)
 
 Surface nhỏ hơn giúp giảm attack surface và di chuyển (migration / 마이그레이션) rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **21. tệp (file / 파일) download trên hybrid** tiếp nhận điểm tựa từ **20. cầu nối (bridge / 브리지) allowlist thay vì generic execute(command, args)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Popup/trình duyệt (browser / 브라우저) launch trong hybrid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **21. tệp (file / 파일) download trên hybrid** nối từ **20. cầu nối (bridge / 브리지) allowlist thay vì generic execute(command, args)** sang **22. Popup/trình duyệt (browser / 브라우저) launch trong hybrid**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. tệp (file / 파일) download trên hybrid
 
@@ -395,7 +395,7 @@ platformService.downloadFile({ url, fileName, mimeType })
 
 và bản địa (native / 네이티브) adapter chịu trách nhiệm đường dẫn (path / 경로)/permission/open hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **22. Popup/trình duyệt (browser / 브라우저) launch trong hybrid** tiếp nhận điểm tựa từ **21. tệp (file / 파일) download trên hybrid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. bên ngoài (external / 외부) app launch và fallback** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **22. Popup/trình duyệt (browser / 브라우저) launch trong hybrid** nối từ **21. tệp (file / 파일) download trên hybrid** sang **23. bên ngoài (external / 외부) app launch và fallback**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Popup/trình duyệt (browser / 브라우저) launch trong hybrid
 
@@ -411,7 +411,7 @@ mở native app khác?
 
 Rồi map intent sang nền tảng (platform / 플랫폼) adapter.
 
-> **Chuyển mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **23. bên ngoài (external / 외부) app launch và fallback** tiếp nhận điểm tựa từ **22. Popup/trình duyệt (browser / 브라우저) launch trong hybrid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. eKYC như một phân tán (distributed / 분산) workflow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **23. bên ngoài (external / 외부) app launch và fallback** nối từ **22. Popup/trình duyệt (browser / 브라우저) launch trong hybrid** sang **24. eKYC như một phân tán (distributed / 분산) workflow**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. bên ngoài (external / 외부) app launch và fallback
 
@@ -429,7 +429,7 @@ Không giả định app đích đã cài.
 
 Callback phải correlate với yêu cầu (request / 요청)/session ban đầu để tránh nhận kết quả (result / 결과) của luồng (flow / 흐름) cũ.
 
-> **Chuyển mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **23. bên ngoài (external / 외부) app launch và fallback** xác định đầu vào; **24. eKYC như một phân tán (distributed / 분산) workflow** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **25. yêu cầu (request / 요청) ID xuyên các tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **23. bên ngoài (external / 외부) app launch và fallback** đặt đầu vào cho **24. eKYC như một phân tán (distributed / 분산) workflow**, rồi **25. yêu cầu (request / 요청) ID xuyên các tầng (layer / 계층)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 24. eKYC như một phân tán (distributed / 분산) workflow
 
@@ -460,7 +460,7 @@ EXPIRED
 
 UI chỉ kết xuất (render / 렌더링) workflow trạng thái (state / 상태); không nên suy trạng thái chỉ từ việc popup/camera đã đóng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **24. eKYC như một phân tán (distributed / 분산) workflow** xác định đầu vào; **25. yêu cầu (request / 요청) ID xuyên các tầng (layer / 계층)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **26. Offline và flaky mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **24. eKYC như một phân tán (distributed / 분산) workflow** đặt đầu vào cho **25. yêu cầu (request / 요청) ID xuyên các tầng (layer / 계층)**, rồi **26. Offline và flaky mạng (network / 네트워크)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 25. yêu cầu (request / 요청) ID xuyên các tầng (layer / 계층)
 
@@ -475,7 +475,7 @@ backend log
 
 Nếu mỗi tầng (layer / 계층) tự sinh ID mà không map, sự cố (incident / 인시던트) “camera thành công nhưng UI không cập nhật (update / 업데이트)” sẽ rất khó điều tra.
 
-> **Chuyển mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **26. Offline và flaky mạng (network / 네트워크)** tiếp nhận điểm tựa từ **25. yêu cầu (request / 요청) ID xuyên các tầng (layer / 계층)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. thử lại (retry / 재시도) phải dựa trên thao tác (operation / 연산) ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **26. Offline và flaky mạng (network / 네트워크)** nối từ **25. yêu cầu (request / 요청) ID xuyên các tầng (layer / 계층)** sang **27. thử lại (retry / 재시도) phải dựa trên thao tác (operation / 연산) ngữ nghĩa (semantics / 의미론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Offline và flaky mạng (network / 네트워크)
 
@@ -485,7 +485,7 @@ Read thao tác (operation / 연산) có thể thử lại (retry / 재시도) v�
 
 Bản địa (native / 네이티브) thao tác (operation / 연산) success nhưng máy chủ (server / 서버) submit thất bại (fail / 실패) là một trạng thái (state / 상태) riêng; đừng bắt người dùng (user / 사용자) chụp lại ảnh nếu sản phẩm tạo ra (artifact / 산출물)/session vẫn còn hợp lệ.
 
-> **Chuyển mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **27. thử lại (retry / 재시도) phải dựa trên thao tác (operation / 연산) ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **26. Offline và flaky mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. ngân sách thời gian chờ (timeout budget / 타임아웃 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **27. thử lại (retry / 재시도) phải dựa trên thao tác (operation / 연산) ngữ nghĩa (semantics / 의미론)** nối từ **26. Offline và flaky mạng (network / 네트워크)** sang **28. ngân sách thời gian chờ (timeout budget / 타임아웃 예산)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. thử lại (retry / 재시도) phải dựa trên thao tác (operation / 연산) ngữ nghĩa (semantics / 의미론)
 
@@ -498,7 +498,7 @@ launch camera → retry nghĩa là user action mới, không auto-loop
 
 Một helper `retryAll()` cho mọi cầu nối (bridge / 브리지)/mạng (network / 네트워크) lời gọi (call / 호출) là anti-pattern.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **28. ngân sách thời gian chờ (timeout budget / 타임아웃 예산)** tiếp nhận điểm tựa từ **27. thử lại (retry / 재시도) phải dựa trên thao tác (operation / 연산) ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Cancellation đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **28. ngân sách thời gian chờ (timeout budget / 타임아웃 예산)** nối từ **27. thử lại (retry / 재시도) phải dựa trên thao tác (operation / 연산) ngữ nghĩa (semantics / 의미론)** sang **29. Cancellation đặc tả hợp đồng (contract / 계약)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. ngân sách thời gian chờ (timeout budget / 타임아웃 예산)
 
@@ -515,7 +515,7 @@ Nếu UI hết thời gian chờ (timeout / 타임아웃) 10s nhưng bản đị
 
 Hết thời gian chờ (timeout / 타임아웃) phải phản ánh quyền sở hữu (ownership / 소유권): hết thời gian chờ (timeout / 타임아웃) có cancel thao tác (operation / 연산) thật không, hay chỉ ngừng chờ?
 
-> **Chuyển mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **29. Cancellation đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **28. ngân sách thời gian chờ (timeout budget / 타임아웃 예산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. WebView bộ nhớ đệm (cache / 캐시) và stale tài nguyên (resource / 자원)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **29. Cancellation đặc tả hợp đồng (contract / 계약)** nối từ **28. ngân sách thời gian chờ (timeout budget / 타임아웃 예산)** sang **30. WebView bộ nhớ đệm (cache / 캐시) và stale tài nguyên (resource / 자원)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Cancellation đặc tả hợp đồng (contract / 계약)
 
@@ -529,7 +529,7 @@ cancel cả server/vendor session
 
 Đặc tả hợp đồng (contract / 계약) phải tường minh (explicit / 명시적). Nếu bản địa (native / 네이티브) không cancel được, mark yêu cầu (request / 요청) abandoned và ignore late callback.
 
-> **Chuyển mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **29. Cancellation đặc tả hợp đồng (contract / 계약)** nêu điều cần giải thích; **30. WebView bộ nhớ đệm (cache / 캐시) và stale tài nguyên (resource / 자원)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **31. Remote debugging và môi trường vận hành (production / 운영 환경) privacy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **29. Cancellation đặc tả hợp đồng (contract / 계약)** đặt vấn đề; **30. WebView bộ nhớ đệm (cache / 캐시) và stale tài nguyên (resource / 자원)** đối chiếu bằng chứng, rồi **31. Remote debugging và môi trường vận hành (production / 운영 환경) privacy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 30. WebView bộ nhớ đệm (cache / 캐시) và stale tài nguyên (resource / 자원)
 
@@ -546,7 +546,7 @@ config version
 
 Chỉ hỏi “app phiên bản (version / 버전) bao nhiêu?” là chưa đủ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **30. WebView bộ nhớ đệm (cache / 캐시) và stale tài nguyên (resource / 자원)** nêu điều cần giải thích; **31. Remote debugging và môi trường vận hành (production / 운영 환경) privacy** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **32. Crash vs JavaScript lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **30. WebView bộ nhớ đệm (cache / 캐시) và stale tài nguyên (resource / 자원)** đặt vấn đề; **31. Remote debugging và môi trường vận hành (production / 운영 환경) privacy** đối chiếu bằng chứng, rồi **32. Crash vs JavaScript lỗi (error / 오류)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 31. Remote debugging và môi trường vận hành (production / 운영 환경) privacy
 
@@ -556,7 +556,7 @@ Không log truy cập (access / 접근) đơn vị từ (token / 토큰), citize
 
 Gỡ lỗi (debug / 디버그) bản dựng (build / 빌드) và môi trường vận hành (production / 운영 환경) bản dựng (build / 빌드) cần chính sách (policy / 정책) khác nhau.
 
-> **Chuyển mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **32. Crash vs JavaScript lỗi (error / 오류)** tiếp nhận điểm tựa từ **31. Remote debugging và môi trường vận hành (production / 운영 환경) privacy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Testing ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **32. Crash vs JavaScript lỗi (error / 오류)** nối từ **31. Remote debugging và môi trường vận hành (production / 운영 환경) privacy** sang **33. Testing ma trận (matrix / 행렬)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Crash vs JavaScript lỗi (error / 오류)
 
@@ -572,7 +572,7 @@ JavaScript `try/catch` không bắt bản địa (native / 네이티브) crash. 
 
 Sự cố (incident / 인시던트) correlation cần telemetry ở cả hai phía.
 
-> **Chuyển mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **33. Testing ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **32. Crash vs JavaScript lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) cho cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **33. Testing ma trận (matrix / 행렬)** nối từ **32. Crash vs JavaScript lỗi (error / 오류)** sang **34. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) cho cầu nối (bridge / 브리지)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Testing ma trận (matrix / 행렬)
 
@@ -598,7 +598,7 @@ warm deep link
 
 Không nhất thiết mọi lần ghi nhận (commit / 커밋) chạy toàn ma trận (matrix / 행렬), nhưng bản phát hành (release / 릴리스) rủi ro (risk / 위험) phải được cover có chủ đích.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **34. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) cho cầu nối (bridge / 브리지)** tiếp nhận điểm tựa từ **33. Testing ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. môi trường vận hành (production / 운영 환경) checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **34. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) cho cầu nối (bridge / 브리지)** nối từ **33. Testing ma trận (matrix / 행렬)** sang **35. môi trường vận hành (production / 운영 환경) checklist**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) cho cầu nối (bridge / 브리지)
 
@@ -618,7 +618,7 @@ var fakeBridge = {
 
 Mục tiêu là kiểm thử (test / 테스트) WebSquare workflow mà không cần camera thật. bản địa (native / 네이티브) nhóm (team / 팀) kiểm thử (test / 테스트) đặc tả hợp đồng (contract / 계약) tương tự ở phía bản địa (native / 네이티브).
 
-> **Chuyển mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **35. môi trường vận hành (production / 운영 환경) checklist** tiếp nhận điểm tựa từ **34. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) cho cầu nối (bridge / 브리지)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. cấp cao (senior / 시니어) mẫu (pattern / 패턴): nền tảng (platform / 플랫폼) dịch vụ (service / 서비스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **35. môi trường vận hành (production / 운영 환경) checklist** nối từ **34. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) cho cầu nối (bridge / 브리지)** sang **36. cấp cao (senior / 시니어) mẫu (pattern / 패턴): nền tảng (platform / 플랫폼) dịch vụ (service / 서비스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. môi trường vận hành (production / 운영 환경) checklist
 
@@ -638,7 +638,7 @@ Sensitive data có đi vào JS/log không?
 Có test old app/new web compatibility không?
 ```
 
-> **Chuyển mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **36. cấp cao (senior / 시니어) mẫu (pattern / 패턴): nền tảng (platform / 플랫폼) dịch vụ (service / 서비스)** tiếp nhận điểm tựa từ **35. môi trường vận hành (production / 운영 환경) checklist** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **36. cấp cao (senior / 시니어) mẫu (pattern / 패턴): nền tảng (platform / 플랫폼) dịch vụ (service / 서비스)** nối từ **35. môi trường vận hành (production / 운영 환경) checklist** sang **37. Kết nối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. cấp cao (senior / 시니어) mẫu (pattern / 패턴): nền tảng (platform / 플랫폼) dịch vụ (service / 서비스)
 
@@ -655,7 +655,7 @@ Bên dưới mới quyết định trình duyệt (browser / 브라우저), Cord
 
 Nhờ vậy nghiệp vụ (business / 비즈니스) screen không biến thành collection của nền tảng (platform / 플랫폼) `if/else`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **37. Kết nối** tiếp nhận điểm tựa từ **36. cấp cao (senior / 시니어) mẫu (pattern / 패턴): nền tảng (platform / 플랫폼) dịch vụ (service / 서비스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Mastery checkpoint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **37. Kết nối** nối từ **36. cấp cao (senior / 시니어) mẫu (pattern / 패턴): nền tảng (platform / 플랫폼) dịch vụ (service / 서비스)** sang **38. Mastery checkpoint**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Kết nối
 
@@ -663,7 +663,7 @@ Hybrid chapter dựa trên [04 — Scope, WFrame, Popup & SPA](04_scope_wframe_p
 
 Cách dấu vết (trace / 추적) sự cố (incident / 인시던트) xuyên WebSquare/bản địa (native / 네이티브)/backend được tiếp tục ở [19 — Observability & Incident Response](19_observability_incident_response.md).
 
-> **Chuyển mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **38. Mastery checkpoint** tiếp nhận điểm tựa từ **37. Kết nối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **18 — Hybrid App, WebView & bản địa (native / 네이티브) cầu nối (bridge / 브리지)**, **38. Mastery checkpoint** nối từ **37. Kết nối** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 38. Mastery checkpoint
 
