@@ -22,13 +22,13 @@ surplus + chokepoint nước/đất
 - **Demography:** urbanization tăng phân công nhưng dễ tạo epidemic và phụ thuộc vào vùng cung lương.
 - **Ideas:** kingship thiêng, trật tự vũ trụ và luật công khai tạo legitimacy, không xóa được thương lượng xã hội.
 
-> **Chuyển mạch:** **Luận đề** nêu cơ chế hình thành nhà nước; **Cách đọc “sụp đổ”** kiểm tra khi thuế, ghi chép và quy mô không còn đủ để duy trì phối hợp, rồi chuyển sang chi phí của năng lực đó.
+> **Nối mạch:** Luận đề nêu cơ chế hình thành nhà nước; Cách đọc “sụp đổ” kiểm tra khi thuế, ghi chép và quy mô không còn đủ để duy trì phối hợp, rồi chuyển sang chi phí của năng lực đó.
 
 ## Cách đọc “sụp đổ”
 
 Collapse hiếm khi là một ngày tận thế. Hãy tách mất trung tâm, giảm dân số, đứt trade, đổi elite và continuity ở làng/khu vực; thường có tái cấu trúc thay vì biến mất hoàn toàn.
 
-> **Chuyển mạch:** Sau khi xem giới hạn của sụp đổ, **Nhà nước làm được gì và phải trả giá gì?** cân bằng năng lực huy động với cưỡng chế; **So sánh** kiểm tra cân bằng đó giữa các nền văn minh.
+> **Nối mạch:** Sau khi xem giới hạn của sụp đổ, câu hỏi nhà nước làm được gì và phải trả giá gì cân bằng năng lực huy động với cưỡng chế; **So sánh** kiểm tra cân bằng đó giữa các nền văn minh.
 
 ## Nhà nước làm được gì và phải trả giá gì?
 
@@ -48,13 +48,13 @@ failure: drought → shortfall → debt/coercion → flight/rebellion
 
 Một trung tâm có thể giàu nhưng dễ gãy nếu luồng (flow / 흐름) lương thực phụ thuộc một corridor. Ngược lại, mạng nhiều trung tâm nhỏ có thể kém hoành tráng nhưng resilient hơn nhờ redundancy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **03 — Early states and civilizations: ghi chép, thuế và quy mô**, **Nhà nước làm được gì và phải trả giá gì?** đã nêu tiêu chí phân biệt, còn **So sánh** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bằng chứng, giới hạn và cầu nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Năng lực huy động và chi phí cưỡng chế cần được so sánh giữa các nền văn minh; **Bằng chứng, giới hạn và cầu nối** ghi rõ dữ liệu nào ủng hộ cơ chế và nơi mô hình bị giới hạn.
 
 ## So sánh
 
 Mesopotamia cho thấy quản trị thành bang và cạnh tranh basin; Ai Cập cho thấy chu kỳ lũ và thung lũng dài; Indus nhấn mạnh đô thị quy hoạch nhưng bằng chứng về monarchy còn hạn chế; Shang/Zhou ghép kinship, ritual và bronze; Andes phát triển labor tax và vertical ecology mà không cần chữ viết alphabet. So sánh phải dựa trên chức năng, không dựa trên việc “có vua hay không”.
 
-> **Chuyển mạch:** **So sánh** đặt các trường hợp cạnh cùng tiêu chí; **Bằng chứng, giới hạn và cầu nối** ghi rõ dữ liệu nào ủng hộ cơ chế và nơi không thể khái quát.
+> **Nối mạch:** So sánh đặt các trường hợp cạnh cùng tiêu chí; Bằng chứng, giới hạn và cầu nối ghi rõ dữ liệu nào ủng hộ cơ chế và nơi không thể khái quát.
 
 ## Bằng chứng, giới hạn và cầu nối
 
