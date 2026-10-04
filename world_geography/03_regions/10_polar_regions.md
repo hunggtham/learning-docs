@@ -12,7 +12,7 @@ Khung đọc hữu ích là:
 
 **năng lượng (energy / 에너지) balance + ice/permafrost → khả năng tiếp cận (accessibility / 접근성)/resources → settlement/hạ tầng (infrastructure / 인프라) → logistics/economy → quản trị (governance / 거버넌스) → toàn cục (global / 전역) climate/ocean role**.
 
-> **Chuyển mạch:** Trong **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Vì sao vùng cực nhận ít năng lượng Mặt Trời?** tiếp nhận điểm tựa từ **Hai vùng cực không phải một kiểu không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Băng biển là lớp động chứ không phải “mặt đất đông cứng”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đối lập đại dương–lục địa của hai vùng cực làm thay đổi góc chiếu và cân bằng năng lượng. **Vì sao vùng cực nhận ít năng lượng Mặt Trời?** giải thích nền bức xạ trước khi đi vào trạng thái băng.
 
 ## Vì sao vùng cực nhận ít năng lượng Mặt Trời?
 
@@ -22,7 +22,7 @@ Tuyết và băng có **suất phản chiếu (albedo)** cao. Khi băng hoặc t
 
 Tuy nhiên khí hậu vùng cực không thể nén thành một phản hồi (feedback / 피드백) duy nhất. Mây, hơi nước, vận chuyển nhiệt của đại dương, cấu trúc tầng biên và độ dày băng cùng ảnh hưởng ngân sách năng lượng.
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Băng biển là lớp động chứ không phải “mặt đất đông cứng”** tiếp nhận điểm tựa từ **Vì sao vùng cực nhận ít năng lượng Mặt Trời?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Băng biển và băng trên đất liền có hệ quả khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Bức xạ thấp và mùa vụ quyết định mặt biển đóng băng theo mùa; băng biển vì thế là lớp chuyển động, không phải nền đất cố định. **Băng biển và băng trên đất liền có hệ quả khác nhau** tách tiếp hai cơ chế.
 
 ## Băng biển là lớp động chứ không phải “mặt đất đông cứng”
 
@@ -32,7 +32,7 @@ Băng biển ảnh hưởng trao đổi nhiệt ocean–atmosphere, sinh cảnh,
 
 Băng trẻ, mỏng phản ứng khác băng nhiều năm dày. Hai năm có diện tích băng tương tự nhưng cấu trúc thickness khác có thể có resilience khác khi vào mùa tan.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Băng biển và băng trên đất liền có hệ quả khác nhau** tiếp nhận điểm tựa từ **Băng biển là lớp động chứ không phải “mặt đất đông cứng”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tấm băng là một hệ dòng chảy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Băng biển tác động chủ yếu đến albedo và trao đổi đại dương–khí quyển, còn băng trên đất liền chứa khối lượng có thể làm mực biển đổi. **Tấm băng là một hệ dòng chảy** theo dõi phần băng trên đất liền ấy.
 
 ## Băng biển và băng trên đất liền có hệ quả khác nhau
 
@@ -42,7 +42,7 @@ Nhưng “băng biển không làm sea mức (level / 수준) tăng trực tiế
 
 Đây là ví dụ tốt về chuỗi nhân quả (causal chain / 인과 사슬): một thành phần có thể không gây kết quả (outcome / 결과) A trực tiếp nhưng vẫn điều khiển nhiều kết quả (outcome / 결과) khác.
 
-> **Chuyển mạch:** Trong **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Tấm băng là một hệ dòng chảy** tiếp nhận điểm tựa từ **Băng biển và băng trên đất liền có hệ quả khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thềm băng và cơ chế chống đỡ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Tấm băng chuyển khối lượng qua biến dạng, dòng băng và dòng chảy ra biển. **Thềm băng và cơ chế chống đỡ** giải thích vì sao phần nổi có thể hãm hoặc thúc đẩy dòng chảy phía sau.
 
 ## Tấm băng là một hệ dòng chảy
 
@@ -54,7 +54,7 @@ Cân bằng khối lượng của ice sheet phải theo dõi ít nhất:
 
 Do đó mất băng không chỉ là “nhiệt độ tăng nên bề mặt tan”. động (dynamic / 동적) discharge ra biển có thể là phần rất quan trọng của phản hồi (response / 응답).
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Tấm băng là một hệ dòng chảy** xác định đầu vào; **Thềm băng và cơ chế chống đỡ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Khuếch đại Bắc Cực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khi thềm băng mất lực chống đỡ, dòng băng có thể tăng tốc; ở Bắc Cực, mất băng biển còn làm giảm albedo và tăng hấp thụ nhiệt. **Khuếch đại Bắc Cực** nối hai phản hồi này.
 
 ## Thềm băng và cơ chế chống đỡ
 
@@ -64,7 +64,7 @@ Nhưng thềm băng tạo lực cản đối với dòng băng nội địa, g�
 
 Đây là mô hình tư duy (mental model / 사고 모델) quan trọng: trong hệ thống (system / 시스템), một thành phần (component / 컴포넌트) có thể quan trọng chủ yếu vì nó điều khiển luồng (flow / 흐름) của thành phần (component / 컴포넌트) khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Thềm băng và cơ chế chống đỡ** xác định đầu vào; **Khuếch đại Bắc Cực** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Băng vĩnh cửu là trạng thái nhiệt của nền đất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khuếch đại Bắc Cực làm nóng nhanh nền đất và thay đổi ổn định của hạ tầng. **Băng vĩnh cửu là trạng thái nhiệt của nền đất** chuyển tín hiệu khí hậu thành điều kiện địa kỹ thuật cụ thể.
 
 ## Khuếch đại Bắc Cực
 
@@ -74,7 +74,7 @@ Mất sea ice và snow làm albedo giảm, nhưng cloud, water vapor, ocean heat
 
 Vì vậy không nên giải thích mọi thay đổi Bắc Cực bằng một slogan “ice melts → darker ocean → warmer”. Đó là một cơ chế thật nhưng không phải toàn hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Trong **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Băng vĩnh cửu là trạng thái nhiệt của nền đất** tiếp nhận điểm tựa từ **Khuếch đại Bắc Cực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thermokarst và hạ tầng (infrastructure / 인프라) phản hồi (feedback / 피드백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Permafrost được xác định bởi nhiệt độ nền đất trong thời gian dài, nên tan–đóng băng lại gây lún và nứt không đồng đều. **Thermokarst và hạ tầng phản hồi** mô tả vòng tác động giữa địa hình tan sập và công trình.
 
 ## Băng vĩnh cửu là trạng thái nhiệt của nền đất
 
@@ -84,7 +84,7 @@ Lớp trên cùng tan vào mùa ấm rồi đóng lại gọi là **lớp hoạt
 
 Điều này nối vật lý (physical / 물리적) geography trực tiếp với settlement geography: road, runway, chuỗi xử lý (pipeline / 파이프라인), housing và utility đều phụ thuộc thermal trạng thái (state / 상태) của ground.
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Thermokarst và hạ tầng (infrastructure / 인프라) phản hồi (feedback / 피드백)** tiếp nhận điểm tựa từ **Băng vĩnh cửu là trạng thái nhiệt của nền đất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Permafrost carbon và “trí nhớ” dài của hệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hạ tầng làm thay đổi thoát nước và tải nhiệt, còn thermokarst lại làm nền yếu hơn; đây là phản hồi chứ không phải một lần hư hỏng. **Permafrost carbon và “trí nhớ” dài của hệ** mở rộng phản hồi sang carbon và thời gian trễ.
 
 ## Thermokarst và hạ tầng (infrastructure / 인프라) phản hồi (feedback / 피드백)
 
@@ -94,7 +94,7 @@ Hạ tầng lại có thể thay đổi heat flux. Một building hoặc road l�
 
 Chi phí bảo trì có thể tăng ngay cả khi tuyến đường vẫn tồn tại trên bản đồ. Đây là khác biệt giữa **vật lý (physical / 물리적) distance** và **effective truy cập (access / 접근) chi phí (cost / 비용)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Permafrost carbon và “trí nhớ” dài của hệ** tiếp nhận điểm tựa từ **Thermokarst và hạ tầng (infrastructure / 인프라) phản hồi (feedback / 피드백)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đại dương vùng cực và hoàn lưu toàn cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Carbon trong permafrost có thể được giải phóng chậm sau khi khí hậu đã đổi, tạo “trí nhớ” dài cho hệ. **Đại dương vùng cực và hoàn lưu toàn cầu** theo dõi nơi nhiệt và carbon được vận chuyển tiếp.
 
 ## Permafrost carbon và “trí nhớ” dài của hệ
 
@@ -104,7 +104,7 @@ Chi phí bảo trì có thể tăng ngay cả khi tuyến đường vẫn tồn 
 
 Điểm học quan trọng là timescale: một stock tích lũy hàng nghìn năm có thể phản ứng trong nhiều thập kỷ–thế kỷ và tạo inertia cho hệ khí hậu.
 
-> **Chuyển mạch:** Trong **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Đại dương vùng cực và hoàn lưu toàn cầu** tiếp nhận điểm tựa từ **Permafrost carbon và “trí nhớ” dài của hệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nam Cực là hoang mạc lạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đại dương vùng cực phân phối nhiệt, muối và carbon vượt khỏi ranh giới từng vùng; vì vậy cùng một cân bằng nước có thể tạo khí hậu rất khô trên lục địa Nam Cực. **Nam Cực là hoang mạc lạnh** giải thích nghịch lý đó.
 
 ## Đại dương vùng cực và hoàn lưu toàn cầu
 
@@ -114,7 +114,7 @@ Vùng vĩ độ cao là nơi nước có thể trở nên lạnh, mặn và đ�
 
 Do đó polar geography không phải “môn học ở rìa bản đồ”; nó nằm trong cốt lõi (core / 핵심) của climate hệ thống (system / 시스템) toàn cầu.
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Nam Cực là hoang mạc lạnh** tiếp nhận điểm tựa từ **Đại dương vùng cực và hoàn lưu toàn cầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ sinh thái Bắc Cực: seasonality quyết định timing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khí hậu khô, cao và lạnh của Nam Cực giới hạn nước lỏng và năng suất trên đất liền. **Hệ sinh thái Bắc Cực: seasonality quyết định timing** chuyển sang nơi mùa vụ và năng lượng biển quyết định thời điểm sinh thái.
 
 ## Nam Cực là hoang mạc lạnh
 
@@ -122,7 +122,7 @@ Nội địa Antarctica nhận rất ít precipitation dù phủ ice rất dày.
 
 Snow accumulation có thể thấp nhưng persistence rất dài. Một tầng (layer / 계층) mỏng mỗi năm khi cộng qua thời gian dài tạo bản ghi (record / 레코드) climate quan trọng trong ice cốt lõi (core / 핵심).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Hệ sinh thái Bắc Cực: seasonality quyết định timing** tiếp nhận điểm tựa từ **Nam Cực là hoang mạc lạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nam Cực: đại dương quan trọng hơn diện tích đất cho ecosystem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở Bắc Cực, cửa sổ mùa hè ngắn đồng bộ tảo, cá, chim và động vật ăn cỏ; lệch timing có thể phá cả chuỗi thức ăn. **Nam Cực: đại dương quan trọng hơn diện tích đất cho ecosystem** cho thấy cơ chế khác ở phía nam.
 
 ## Hệ sinh thái Bắc Cực: seasonality quyết định timing
 
@@ -130,7 +130,7 @@ Mùa sinh trưởng ngắn nhưng ngày hè dài. Sinh vật phải đồng bộ
 
 Nếu sea-ice breakup hoặc plankton bloom dịch timing, bên tiêu thụ (consumer / 소비자) có thể gặp **lệch pha mùa vụ (phenological mismatch)**. Vì vậy climate impact không chỉ là “nhiệt độ tăng” mà còn là thay đổi synchronization giữa processes.
 
-> **Chuyển mạch:** Trong **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Nam Cực: đại dương quan trọng hơn diện tích đất cho ecosystem** tiếp nhận điểm tựa từ **Hệ sinh thái Bắc Cực: seasonality quyết định timing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Settlement Bắc Cực: ít nút (node / 노드) nhưng mỗi nút (node / 노드) có vai trò lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Nam Cực nuôi phần lớn hệ sinh thái ở đại dương quanh lục địa, nên băng biển và dòng biển quan trọng hơn diện tích đất. **Settlement Bắc Cực: ít nút nhưng mỗi nút có vai trò lớn** chuyển từ sinh thái sang mạng cư trú.
 
 ## Nam Cực: đại dương quan trọng hơn diện tích đất cho ecosystem
 
@@ -138,7 +138,7 @@ Nội địa Antarctica rất nghèo productivity, trong khi Southern Ocean hỗ
 
 Điều này minh họa một lỗi bản đồ phổ biến: land area trông rất lớn nên người học dễ coi continent là center của hệ thống (system / 시스템), trong khi nhiều ecological flows quan trọng lại nằm ở ocean margin.
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Settlement Bắc Cực: ít nút (node / 노드) nhưng mỗi nút (node / 노드) có vai trò lớn** tiếp nhận điểm tựa từ **Nam Cực: đại dương quan trọng hơn diện tích đất cho ecosystem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chi phí dịch vụ công ở nơi thưa dân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cộng đồng Bắc Cực phân bố thưa nhưng mỗi nút gắn với cảng, sân bay, trường học và dịch vụ thiết yếu. **Chi phí dịch vụ công ở nơi thưa dân** giải thích vì sao khoảng cách giữa các nút trở thành chi phí ngân sách.
 
 ## Settlement Bắc Cực: ít nút (node / 노드) nhưng mỗi nút (node / 노드) có vai trò lớn
 
@@ -148,7 +148,7 @@ Khi distance lớn và road mạng (network / 네트워크) thưa, một town c�
 
 Vì vậy khi đọc Arctic urbanization, không nên dùng cùng chuẩn với megacity. Câu hỏi là nút (node / 노드) nào kết nối air/sea/road, cung cấp dịch vụ gì và vùng hinterland phụ thuộc nó đến đâu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Chi phí dịch vụ công ở nơi thưa dân** tiếp nhận điểm tựa từ **Settlement Bắc Cực: ít nút (node / 노드) nhưng mỗi nút (node / 노드) có vai trò lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Indigenous geography: mobility là một hệ thống (system / 시스템) thích nghi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khi dân số thưa và thời tiết làm vận chuyển đắt, dịch vụ công phải tổ chức theo mùa và theo nút trung tâm. **Indigenous geography: mobility là một hệ thống thích nghi** cho thấy di chuyển bản địa là năng lực sống, không chỉ là thiếu hạ tầng cố định.
 
 ## Chi phí dịch vụ công ở nơi thưa dân
 
@@ -160,7 +160,7 @@ Nếu fuel hoặc spare part phải nhập qua một gateway theo mùa, dịch v
 
 Development phân tích (analysis / 분석) ở Arctic vì thế phải dùng khả năng tiếp cận (accessibility / 접근성) và dịch vụ (service / 서비스) độ tin cậy (reliability / 신뢰성), không chỉ average income.
 
-> **Chuyển mạch:** Trong **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Indigenous geography: mobility là một hệ thống (system / 시스템) thích nghi** tiếp nhận điểm tựa từ **Chi phí dịch vụ công ở nơi thưa dân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài nguyên vùng cực: deposit không đồng nghĩa dự án (project / 프로젝트) khả thi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mobility theo mùa và tri thức địa phương giúp cộng đồng điều chỉnh theo băng, động vật và thời tiết; đó là một hệ thống thích nghi có logic riêng. **Tài nguyên vùng cực** tiếp theo đặt hệ thống ấy cạnh bài toán khai thác.
 
 ## Indigenous geography: mobility là một hệ thống (system / 시스템) thích nghi
 
@@ -170,7 +170,7 @@ Khi ice timing, road, settlement chính sách (policy / 정책) hoặc industria
 
 Điều quan trọng là tránh environmental determinism: môi trường (environment / 환경) tạo ràng buộc (constraint / 제약조건) và opportunity, còn society, institution và technology quyết định phản hồi (response / 응답).
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Tài nguyên vùng cực: deposit không đồng nghĩa dự án (project / 프로젝트) khả thi** tiếp nhận điểm tựa từ **Indigenous geography: mobility là một hệ thống (system / 시스템) thích nghi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài nguyên (resource / 자원) town và boom–bust rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Deposit chỉ là điều kiện địa chất; băng, khoảng cách, năng lượng, giấy phép và sự đồng thuận quyết định dự án có khả thi hay không. **Resource town và boom–bust rủi ro** theo dõi hệ quả khi một nơi phụ thuộc vào một dự án.
 
 ## Tài nguyên vùng cực: deposit không đồng nghĩa dự án (project / 프로젝트) khả thi
 
@@ -182,7 +182,7 @@ Cold, ice, short construction season và distance làm capital chi phí (cost / 
 
 Đây là lý do “Arctic có nhiều tài nguyên” không tự động suy ra khai thác quy mô lớn. tài nguyên (resource / 자원) ≠ reserve ≠ profitable dự án (project / 프로젝트).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Tài nguyên vùng cực: deposit không đồng nghĩa dự án (project / 프로젝트) khả thi** nêu điều cần giải thích; **Tài nguyên (resource / 자원) town và boom–bust rủi ro (risk / 위험)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Fisheries và biển lạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi tách deposit khỏi tính khả thi của dự án, cần xét một sinh kế phụ thuộc vào biến động sinh thái và thị trường. **Fisheries và biển lạnh** đưa bài toán tài nguyên vào hệ đại dương.
 
 ## Tài nguyên (resource / 자원) town và boom–bust rủi ro (risk / 위험)
 
@@ -190,7 +190,7 @@ Một settlement gắn mạnh với một mine, cổng (port / 포트) hoặc n�
 
 Khả năng tái sử dụng hạ tầng (infrastructure / 인프라) và skill quyết định resilience. Đây là cùng lô-gic (logic / 논리) với mining town ở các region khác, nhưng remoteness làm diversification khó hơn.
 
-> **Chuyển mạch:** Trong **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Tài nguyên (resource / 자원) town và boom–bust rủi ro (risk / 위험)** nêu điều cần giải thích; **Fisheries và biển lạnh** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Tuyến hàng hải vùng cực: khoảng cách ngắn chưa đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Fisheries phụ thuộc nhiệt độ, băng, thức ăn và hạn ngạch; cú sốc sinh thái có thể lan sang thu nhập của các thị trấn tài nguyên. **Tuyến hàng hải vùng cực: khoảng cách ngắn chưa đủ** tiếp tục với điều kiện vận tải.
 
 ## Fisheries và biển lạnh
 
@@ -198,7 +198,7 @@ Polar/subpolar seas có fisheries quan trọng vì ocean productivity, hiện t�
 
 Fisheries management cần theo stock, di chuyển (migration / 마이그레이션) và ecosystem hơn là chỉ map administrative zone. Đây là một ứng dụng (application / 애플리케이션) của stock–luồng (flow / 흐름) lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Tuyến hàng hải vùng cực: khoảng cách ngắn chưa đủ** tiếp nhận điểm tựa từ **Fisheries và biển lạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cảng, sân bay và mạng (network / 네트워크) redundancy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Tuyến ngắn trên bản đồ vẫn có thể đắt và rủi ro vì băng, cứu hộ, bảo hiểm, cảng và dự báo thời tiết. **Cảng, sân bay và mạng redundancy** cho biết mạng hậu cần cần dự phòng ở đâu.
 
 ## Tuyến hàng hải vùng cực: khoảng cách ngắn chưa đủ
 
@@ -208,7 +208,7 @@ Trong supply chuỗi (chain / 사슬), **độ tin cậy (reliability / 신뢰�
 
 Vì thế không thể nhìn một map great-circle rồi kết luận tuyến vùng cực chắc chắn cạnh tranh hơn tuyến truyền thống.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Cảng, sân bay và mạng (network / 네트워크) redundancy** tiếp nhận điểm tựa từ **Tuyến hàng hải vùng cực: khoảng cách ngắn chưa đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Korea và Đông Bắc Á: học polar geography qua mạng (network / 네트워크), không qua slogan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Redundancy biến một cảng hay sân bay đơn lẻ thành mạng có thể chịu gián đoạn, nhưng vẫn bị giới hạn bởi mùa băng và năng lực sửa chữa. **Korea và Đông Bắc Á** là case để đọc mạng vùng cực qua các nút thật.
 
 ## Cảng, sân bay và mạng (network / 네트워크) redundancy
 
@@ -218,7 +218,7 @@ Arctic logistics thường phụ thuộc ít gateway. Một airport closure, c�
 
 Bài toán luôn là sự đánh đổi (trade-off / 트레이드오프) giữa efficiency bình thường và sức chứa (capacity / 용량) khi shock xảy ra.
 
-> **Chuyển mạch:** Trong **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Korea và Đông Bắc Á: học polar geography qua mạng (network / 네트워크), không qua slogan** tiếp nhận điểm tựa từ **Cảng, sân bay và mạng (network / 네트워크) redundancy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Antarctica: research mạng (network / 네트워크) thay cho settlement mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Korea và Đông Bắc Á nối cảng, đóng tàu, nghiên cứu và thương mại với các tuyến cực; giá trị nằm ở quan hệ mạng chứ không ở khẩu hiệu địa chính trị. **Antarctica: research network** cho thấy một mô hình nút khác.
 
 ## Korea và Đông Bắc Á: học polar geography qua mạng (network / 네트워크), không qua slogan
 
@@ -228,7 +228,7 @@ Một doanh nghiệp logistics cần hỏi tuyến có ổn định không; mộ
 
 Đây là cầu nối (bridge / 브리지) giữa [Đông Á](./01_east_asia.md), [Transport & Trade](../02_human_geography/08_transport_trade_globalization.md) và [Global Trade Networks](../04_global_systems/05_global_trade_networks.md).
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Antarctica: research mạng (network / 네트워크) thay cho settlement mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Korea và Đông Bắc Á: học polar geography qua mạng (network / 네트워크), không qua slogan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Observation hạ tầng (infrastructure / 인프라) và lý do vùng cực quan trọng với khoa học toàn cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Nam Cực không có settlement dân sự thường trú; mạng trạm nghiên cứu, tàu, máy bay và mùa chiến dịch mới là cấu trúc kết nối. **Observation hạ tầng và lý do vùng cực quan trọng với khoa học toàn cầu** giải thích giá trị của mạng đó.
 
 ## Antarctica: research mạng (network / 네트워크) thay cho settlement mạng (network / 네트워크)
 
@@ -238,7 +238,7 @@ Một research station tồn tại được nhờ supply chuỗi (chain / 사슬
 
 Đây là ví dụ đặc biệt cho khái niệm nút (node / 노드): nút (node / 노드) có thể có rất ít người nhưng giá trị khoa học và mạng (network / 네트워크) hàm (function / 함수) rất cao.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Observation hạ tầng (infrastructure / 인프라) và lý do vùng cực quan trọng với khoa học toàn cầu** tiếp nhận điểm tựa từ **Antarctica: research mạng (network / 네트워크) thay cho settlement mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ polar thay đổi (change / 변경) tới coastal city ở xa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hạ tầng quan trắc biến băng, đại dương và khí quyển thành chuỗi bằng chứng cho khoa học khí hậu; tác động không dừng ở trạm. **Từ polar thay đổi tới coastal city ở xa** lần theo đường truyền đến nơi có dân cư lớn.
 
 ## Observation hạ tầng (infrastructure / 인프라) và lý do vùng cực quan trọng với khoa học toàn cầu
 
@@ -248,7 +248,7 @@ Nhưng remote sensing luôn là suy luận (inference / 추론). Radar backscatt
 
 Vùng cực vì thế là trường hợp (case / 사례) rất tốt để học [GIS và viễn thám](../00_foundations/04_geospatial_data_gis_remote_sensing.md): coverage rộng không có nghĩa bất định (uncertainty / 불확실성) thấp.
 
-> **Chuyển mạch:** Trong **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Từ polar thay đổi (change / 변경) tới coastal city ở xa** tiếp nhận điểm tựa từ **Observation hạ tầng (infrastructure / 인프라) và lý do vùng cực quan trọng với khoa học toàn cầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quản trị (governance / 거버넌스): cùng vật lý (physical / 물리적) thay đổi (change / 변경), institutional ngữ cảnh (context / 맥락) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Polar warming truyền qua mực biển, dòng biển, thời tiết và chuỗi cung ứng đến coastal city; mức thiệt hại còn phụ thuộc quy hoạch và năng lực thích ứng. **Quản trị** đặt cùng biến vật lý vào các bối cảnh thể chế khác nhau.
 
 ## Từ polar thay đổi (change / 변경) tới coastal city ở xa
 
@@ -260,7 +260,7 @@ Một delta ở Vietnam hoặc coastal city ở Korea không cần nằm gần G
 
 Regional role của polar regions vì thế lớn hơn population hoặc GDP tại chỗ rất nhiều.
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Quản trị (governance / 거버넌스): cùng vật lý (physical / 물리적) thay đổi (change / 변경), institutional ngữ cảnh (context / 맥락) khác nhau** tiếp nhận điểm tựa từ **Từ polar thay đổi (change / 변경) tới coastal city ở xa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cùng một tan băng có thể dẫn đến chính sách khác nhau vì quyền tài phán, lợi ích bản địa và năng lực nhà nước khác nhau. **Những hiểu lầm phổ biến** kiểm tra các suy luận nhảy cóc từ vật lý sang chính sách.
 
 ## Quản trị (governance / 거버넌스): cùng vật lý (physical / 물리적) thay đổi (change / 변경), institutional ngữ cảnh (context / 맥락) khác nhau
 
@@ -270,7 +270,7 @@ Arctic gồm lãnh thổ, vùng biển, cộng đồng và jurisdiction của nh
 
 Địa lý tạo ràng buộc (constraint / 제약조건)/opportunity; nó không tự viết chính sách (policy / 정책).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Quản trị (governance / 거버넌스): cùng vật lý (physical / 물리적) thay đổi (change / 변경), institutional ngữ cảnh (context / 맥락) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Các hiểu lầm được sửa bằng cách đối chiếu cơ chế: loại băng nào, dòng nào, quy mô nào và bằng chứng nào. **Mô hình tư duy** cuối file gom các phép kiểm tra đó thành chuỗi đọc vùng cực.
 
 ## Những hiểu lầm phổ biến
 
@@ -278,7 +278,7 @@ Arctic gồm lãnh thổ, vùng biển, cộng đồng và jurisdiction của nh
 
 “Sea ice tan làm sea mức (level / 수준) tăng giống glacier” sai về cơ chế trực tiếp. “Băng tan thì shipping tự động dễ và rẻ hơn” bỏ qua weather, hạ tầng (infrastructure / 인프라), insurance và độ tin cậy (reliability / 신뢰성). “Có tài nguyên là chắc chắn khai thác được” bỏ qua dự án (project / 프로젝트) economics. “Không có city lớn thì polar regions không quan trọng với economy” bỏ qua climate, fisheries, research và toàn cục (global / 전역) mạng (network / 네트워크) effects.
 
-> **Chuyển mạch:** Trong **Bắc Cực và Nam Cực: băng, khoảng cách và các hệ toàn cầu**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Mô hình cuối giữ chuỗi năng lượng–băng–khả năng tiếp cận–settlement/logistics–governance–vai trò khí hậu toàn cầu, đồng thời phân biệt Arctic ocean với Antarctic continent. Có thể mang chuỗi này sang các region và global-system chapter theo owner trong README.
 
 ## Mô hình tư duy
 
