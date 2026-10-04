@@ -12,7 +12,7 @@ Nếu học từ đầu, bắt đầu ở [Learning Route](./LEARNING_ROUTE.md).
 
 World Atlas là **ứng dụng (application / 애플리케이션) tầng (layer / 계층)**, không phải tiêu chí completion. Một tệp (file / 파일) country ngắn không được tính là chapter hoàn chỉnh chỉ vì nó tồn tại.
 
-> **Chuyển mạch:** Trong **Thư viện kiến thức (knowledge library / 지식 라이브러리) — Địa lý thế giới**, **Kiến trúc** tiếp nhận điểm tựa từ **Cách dùng thư viện (library / 라이브러리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cách dùng thư viện** xác định source và cách tra cứu; **Kiến trúc** tổ chức domain, rồi **Dependency graph** chỉ quan hệ prerequisite giữa các atlas.
 
 ## Kiến trúc
 
@@ -34,7 +34,7 @@ World Atlas là **ứng dụng (application / 애플리케이션) tầng (layer 
 
 Để hiểu vì sao các mẫu (pattern / 패턴) không gian hình thành theo thời gian, đọc song song [World History](../world_history/README.md). Geography cung cấp vật lý (physical / 물리적) ràng buộc (constraint / 제약조건), tài nguyên (resource / 자원) cơ sở (base / 기반) và mạng (network / 네트워크) location; lịch sử (history / 이력) bổ sung institutions, technology, warfare, demography và ideas đã biến đổi chúng. Không dùng địa lý như lời giải định mệnh cho lịch sử.
 
-> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức (knowledge library / 지식 라이브러리) — Địa lý thế giới**, **Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)** tiếp nhận điểm tựa từ **Kiến trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi nhân quả (causal / 인과적) bắt buộc cho chapter ứng dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Dependency graph** cho biết atlas nào cần đọc trước; **Chuỗi nhân quả bắt buộc cho chapter ứng dụng** biến geography thành explanation có cơ chế.
 
 ## Phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프)
 
@@ -118,7 +118,7 @@ Batch mới đã nâng:
 
 Chúng được chọn vì có học tập (learning / 학습) giá trị (value / 값) về resources, commodity/industrial networks, ports, urban các hệ thống (systems / 시스템들) và liên hệ East/Southeast Asia.
 
-> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức (knowledge library / 지식 라이브러리) — Địa lý thế giới**, **Quy tắc chất lượng** tiếp nhận điểm tựa từ **Trạng thái sau các độ sâu (depth / 깊이) pass gần nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy tắc ngôn ngữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Trạng thái sau depth pass** cho biết coverage đang ở đâu; **Quy tắc chất lượng** chuyển trạng thái đó thành evidence, rồi **Quy tắc ngôn ngữ** giữ prose tiếng Việt.
 
 ## Quy tắc chất lượng
 
@@ -126,7 +126,7 @@ Một chapter tốt phải trả lời: khái niệm là gì; cơ chế (mechani
 
 Số tệp (file / 파일), số heading và số dòng không phải chỉ số (metric / 지표) chất lượng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức (knowledge library / 지식 라이브러리) — Địa lý thế giới**, **Quy tắc ngôn ngữ** tiếp nhận điểm tựa từ **Quy tắc chất lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Roadmap tiếp theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Quy tắc ngôn ngữ** diễn đạt claim và boundary nhất quán; **Roadmap tiếp theo** chỉ ưu tiên mở rộng theo gap có owner.
 
 ## Quy tắc ngôn ngữ
 
@@ -134,7 +134,7 @@ Giải thích chính bằng tiếng Việt tự nhiên. English từ khóa (keyw
 
 Mã (code / 코드), formula, acronym, proper noun và chuẩn gốc (canonical / 정본) technical name giữ nguyên nếu dịch làm mất chính xác.
 
-> **Chuyển mạch:** Trong **Thư viện kiến thức (knowledge library / 지식 라이브러리) — Địa lý thế giới**, **Roadmap tiếp theo** tiếp nhận điểm tựa từ **Quy tắc ngôn ngữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Roadmap tiếp theo** khép README bằng owner, coverage gap và route kiểm chứng; không mở chapter mới chỉ để tăng số lượng.
 
 ## Roadmap tiếp theo
 

@@ -208,7 +208,7 @@ chemistry/
 
 Không tạo chapter mới chỉ để làm cây thư mục lớn hơn. Một tệp (file / 파일) mới chỉ hợp lý khi có ranh giới khái niệm đủ lớn và không thể tích hợp sạch vào tệp chuẩn gốc (canonical file / 정본 파일) hiện tại.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức Hóa học**, **Quy tắc ngôn ngữ** tiếp nhận điểm tựa từ **Cấu trúc chuẩn gốc (canonical / 정본) hiện tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ba tầng mô tả luôn phải nối với nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cấu trúc canonical hiện tại** giữ owner và boundary; **Quy tắc ngôn ngữ** biến chúng thành thuật ngữ dễ tra cứu, rồi **Ba tầng mô tả** nối macro–mechanism–evidence.
 
 ## Quy tắc ngôn ngữ
 
@@ -232,7 +232,7 @@ Các ký hiệu và tên chuẩn quốc tế như `pH`, `pKa`, `Ka`, `ΔG`, `VSE
 
 Thuật ngữ tiếng Hàn chỉ là lớp bổ sung khi hữu ích cho học tập hoặc công việc tại Hàn Quốc; phần giải thích chính vẫn phải là tiếng Việt.
 
-> **Chuyển mạch:** Trong **Thư viện kiến thức Hóa học**, **Ba tầng mô tả luôn phải nối với nhau** tiếp nhận điểm tựa từ **Quy tắc ngôn ngữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuẩn về độ sâu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Quy tắc ngôn ngữ** khóa cách gọi; **Ba tầng mô tả** kiểm tra cùng một hiện tượng ở scale khác nhau trước khi **Chuẩn về độ sâu** đặt mức giải thích.
 
 ## Ba tầng mô tả luôn phải nối với nhau
 
@@ -254,7 +254,7 @@ ký hiệu: NaCl(s) → Na+(aq) + Cl−(aq)
 
 Nếu một tệp (file / 파일) chỉ có công thức mà không nối được về hiện tượng và cơ chế hạt, tệp (file / 파일) đó chưa đạt chuẩn của thư viện (library / 라이브러리).
 
-> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức Hóa học**, **Chuẩn về độ sâu** tiếp nhận điểm tựa từ **Ba tầng mô tả luôn phải nối với nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lộ trình cho người học lại từ gần số 0** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Chuẩn về độ sâu** yêu cầu cơ chế, giới hạn và ví dụ; **Lộ trình từ gần số 0** dùng chuẩn đó để xây prerequisite mà không nhảy cóc.
 
 ## Chuẩn về độ sâu
 
@@ -271,7 +271,7 @@ Một chapter được xem là đủ mạnh khi người đọc có thể trả 
 
 Độ dài tệp (file / 파일) chỉ là tín hiệu kiểm tra (audit / 감사), không phải tiêu chuẩn chất lượng. Một chapter phạm vi hẹp có thể ngắn mà vẫn hoàn chỉnh; một chapter phạm vi lớn nhưng chỉ vài đoạn thường cần đào sâu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức Hóa học**, **Lộ trình cho người học lại từ gần số 0** tiếp nhận điểm tựa từ **Chuẩn về độ sâu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các liên hệ liên ngành được ưu tiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Lộ trình từ gần số 0** sắp xếp concept theo prerequisite; **Các liên hệ liên ngành** chỉ những điểm nối thật với physics, biology và materials.
 
 ## Lộ trình cho người học lại từ gần số 0
 
@@ -314,7 +314,7 @@ Chặng 7
 
 Người đọc không cần nhớ toàn bộ trước khi đi tiếp. Mục tiêu là giữ được mô hình tư duy (mental model / 사고 모델), biết prerequisite ở đâu và có thể quay lại bằng nội bộ (internal / 내부) link.
 
-> **Chuyển mạch:** Trong **Thư viện kiến thức Hóa học**, **Các liên hệ liên ngành được ưu tiên** tiếp nhận điểm tựa từ **Lộ trình cho người học lại từ gần số 0** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bắt đầu học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Các liên hệ liên ngành** giúp chọn context cần dùng; **Bắt đầu học** quay lại câu hỏi trung tâm và mở đúng canonical chemistry owner.
 
 ## Các liên hệ liên ngành được ưu tiên
 
@@ -338,7 +338,7 @@ Redox + Nernst + kinetics + mass vận chuyển (transport / 전송) + material 
 
 Nấu ăn, làm sạch, bảo quản thực phẩm, gỉ sắt, thuốc, nhựa và pin được giải thích bằng cùng các cơ chế nền, không tách thành danh sách mẹo.
 
-> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức Hóa học**, **Bắt đầu học** tiếp nhận điểm tựa từ **Các liên hệ liên ngành được ưu tiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Bắt đầu học** khép README bằng câu hỏi, prerequisite và route; chi tiết chuyên môn quay về chapter chemistry tương ứng.
 
 ## Bắt đầu học
 

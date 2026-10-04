@@ -15,7 +15,7 @@ Folder này xây lớp **kiến thức (knowledge / 지식) + suy luận (infere
 7. [Knowledge Graphs](./06_knowledge_graphs.md) — entities/relations, ontology, provenance/thời gian (time / 시간), đồ thị (graph / 그래프) queries, embeddings/GNNs, KG-RAG và môi trường vận hành (production / 운영 환경) dữ liệu (data / 데이터) chất lượng (quality / 품질).
 8. [Symbolic and Neuro-Symbolic AI](./07_symbolic_neurosymbolic_ai.md) — strengths/limits của symbolic vs neural AI và architectures proposer → verifier → executor.
 
-> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식) biểu diễn (representation / 표현) and lập luận (reasoning / 추론)**, **Phụ thuộc (dependency / 의존성) map** tiếp nhận điểm tựa từ **Chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Formal truth và real-world truth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Chapters** đặt representation, inference và uncertainty; **Dependency map** chỉ prerequisite trước khi phân biệt **formal truth** với **real-world truth**.
 
 ## Phụ thuộc (dependency / 의존성) map
 
@@ -39,7 +39,7 @@ flowchart TD
     KG --> RAG[RAG / Agents later]
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Kiến thức (knowledge / 지식) biểu diễn (representation / 표현) and lập luận (reasoning / 추론)**, **Formal truth và real-world truth** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Symbolic và probabilistic lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Formal truth và real-world truth** tách chứng minh khỏi uncertainty; **Symbolic và probabilistic reasoning** cho thấy hai kiểu bằng chứng xử lý distinction đó thế nào.
 
 ## Formal truth và real-world truth
 
@@ -59,7 +59,7 @@ uncertainty
 real-world validation
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiến thức (knowledge / 지식) biểu diễn (representation / 표현) and lập luận (reasoning / 추론)**, **Symbolic và probabilistic lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **Formal truth và real-world truth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết (connection / 연결) với hiện đại (modern / 현대적) AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Symbolic và probabilistic reasoning** tạo hai route suy luận bổ sung; **Connections với modern AI** trả từng route về owner của learning, agents và systems.
 
 ## Symbolic và probabilistic lập luận (reasoning / 추론)
 
@@ -77,7 +77,7 @@ Probability
 
 Real các hệ thống (systems / 시스템들) thường cần cả hai. Hard access-control quy tắc (rule / 규칙) nên deterministic; fraud rủi ro (risk / 위험) có thể probabilistic.
 
-> **Chuyển mạch:** Trong **Kiến thức (knowledge / 지식) biểu diễn (representation / 표현) and lập luận (reasoning / 추론)**, sau nội dung của **Symbolic và probabilistic lập luận (reasoning / 추론)**, **Liên kết (connection / 연결) với hiện đại (modern / 현대적) AI** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Connections với modern AI** khép README bằng canonical owner và boundary; chi tiết model hoặc agent quay về chapter chuyên môn tương ứng.
 
 ## Liên kết (connection / 연결) với hiện đại (modern / 현대적) AI
 
