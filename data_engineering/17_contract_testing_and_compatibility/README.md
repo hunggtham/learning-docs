@@ -15,7 +15,7 @@ service → freshness, completeness, availability, owner
 
 Lược đồ (schema / 스키마) pass mà ngữ nghĩa (semantics / 의미론) thất bại (fail / 실패) vẫn là breaking thay đổi (change / 변경).
 
-> **Chuyển mạch:** Trong **17 — Machine-readable dữ liệu (data / 데이터) contracts và tính tương thích (compatibility / 호환성) testing**, **2. tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **1. đặc tả hợp đồng (contract / 계약) layers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Consumer-driven đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Contract layers** xác định interface và owner; **Compatibility matrix** đối chiếu producer/consumer versions trước khi mở **consumer-driven contract**.
 
 ## 2. tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)
 
@@ -23,25 +23,25 @@ Kiểm tra producer mới với bên tiêu thụ (consumer / 소비자) cũ, pro
 
 Tính tương thích (compatibility / 호환성) kiểm thử (test / 테스트) cần fixture thật có duplicate, null, delete, late sự kiện (event / 이벤트), timezone và large giá trị (value / 값)—không chỉ một bản ghi (record / 레코드) tối giản.
 
-> **Chuyển mạch:** Ở chặng này của **17 — Machine-readable dữ liệu (data / 데이터) contracts và tính tương thích (compatibility / 호환성) testing**, **3. Consumer-driven đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **2. tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. ngữ nghĩa (semantic / 의미적) versioning và deprecation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Consumer-driven contract** đưa nhu cầu thật của bên dùng vào test; **Semantic versioning và deprecation** biến kết quả test thành policy phát hành.
 
 ## 3. Consumer-driven đặc tả hợp đồng (contract / 계약)
 
 Bên tiêu thụ (consumer / 소비자) khai báo trường dữ liệu (field / 필드)/chỉ số (metric / 지표)/độ trễ (latency / 지연 시간) mà mình phụ thuộc. Producer chạy kiểm thử (test / 테스트) trước deploy và biết blast radius. Cần tránh bên tiêu thụ (consumer / 소비자) khai báo mọi hiện thực (implementation / 구현) detail, nếu không đặc tả hợp đồng (contract / 계약) trở nên cứng và cản evolution.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **17 — Machine-readable dữ liệu (data / 데이터) contracts và tính tương thích (compatibility / 호환성) testing**, **4. ngữ nghĩa (semantic / 의미적) versioning và deprecation** tiếp nhận điểm tựa từ **3. Consumer-driven đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. thời gian chạy (runtime / 런타임) enforcement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Semantic versioning và deprecation** ghi rõ compatibility promise; **Runtime enforcement** bảo vệ promise đó khi dữ liệu đi qua pipeline thật.
 
 ## 4. ngữ nghĩa (semantic / 의미적) versioning và deprecation
 
 Breaking ngữ nghĩa (semantic / 의미적) thay đổi (change / 변경) phải tạo phiên bản (version / 버전)/effective date, dual-run hoặc di chuyển (migration / 마이그레이션). Telemetry bên tiêu thụ (consumer / 소비자) dùng để quyết định khi nào xóa v1; không xóa vì danh mục (catalog / 카탈로그) không thấy bên tiêu thụ (consumer / 소비자).
 
-> **Chuyển mạch:** Trong **17 — Machine-readable dữ liệu (data / 데이터) contracts và tính tương thích (compatibility / 호환성) testing**, **5. thời gian chạy (runtime / 런타임) enforcement** tiếp nhận điểm tựa từ **4. ngữ nghĩa (semantic / 의미적) versioning và deprecation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. bằng chứng (evidence / 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Runtime enforcement** bắt lỗi drift tại boundary; **Evidence** ghi lại contract version, failure và quyết định xử lý.
 
 ## 5. thời gian chạy (runtime / 런타임) enforcement
 
 CI không đủ vì nguồn (source / 소스) có thể drift sau deploy. thời gian chạy (runtime / 런타임) cần lược đồ (schema / 스키마)/đặc tả hợp đồng (contract / 계약) check, quarantine hoặc stop-the-line cho breaking thay đổi (change / 변경), cùng chỉ số (metric / 지표) đặc tả hợp đồng (contract / 계약) violation và đơn vị sở hữu (owner / 오너) routing. Enforcement nên phân biệt hard thất bại (failure / 실패) với warning có expiry.
 
-> **Chuyển mạch:** Ở chặng này của **17 — Machine-readable dữ liệu (data / 데이터) contracts và tính tương thích (compatibility / 호환성) testing**, **5. thời gian chạy (runtime / 런타임) enforcement** nêu điều cần giải thích; **6. bằng chứng (evidence / 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Evidence** khép contract route bằng compatibility matrix, runtime result và owner; chi tiết schema quay về canonical data chapter.
 
 ## 6. bằng chứng (evidence / 증거)
 
