@@ -6,13 +6,13 @@
 
 Vatican City nằm hoàn toàn trong đô thị Rome. Vì thế địa lý chức năng của nó không thể hiểu độc lập với hệ giao thông, nước, năng lượng và lao động của vùng đô thị bao quanh.
 
-> **Chuyển mạch:** Trong **Holy See / Vatican City**, **Diện tích và dòng người** tiếp nhận điểm tựa từ **Lãnh thổ đô thị cực nhỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Vatican nằm trong functional region của Rome; **diện tích cực nhỏ** vì vậy phải được đọc cùng dòng khách, lao động, giao thông, nước và năng lượng của megacity. **Mô hình tư duy** sẽ phân biệt lãnh thổ vật lý với vai trò thể chế–mạng lưới.
 
 ## Diện tích và dòng người
 
 Lãnh thổ rất nhỏ nhưng lượng khách và người làm việc theo ngày lớn hơn nhiều dân số cư trú. Đây là ví dụ mạnh về **daytime population** và functional geography vượt khỏi ranh giới hành chính.
 
-> **Chuyển mạch:** Ở chặng này của **Holy See / Vatican City**, **Mô hình tư duy** gom các mảnh từ **Diện tích và dòng người** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi microstate embedded trong Rome → daytime population và shared infrastructure → role chính trị–di sản vượt quy mô đất. Đây là điểm bàn giao cho các microstate profile trong owner World Atlas.
 
 ## Mô hình tư duy
 

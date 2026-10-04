@@ -8,7 +8,7 @@ UN M49 liệt kê **China, Macao Special Administrative Region** như một area
 
 Macao nằm ở phía tây cửa châu thổ Châu Giang. Không gian nhỏ và nhiều phần đất thấp khiến cải tạo–lấn biển có vai trò lớn trong mở rộng diện tích sử dụng. Điều này làm đường bờ hiện đại khác đáng kể so với hình dạng lịch sử.
 
-> **Chuyển mạch:** Trong **Macao SAR (MAC)**, **Đô thị và kết nối vùng** tiếp nhận điểm tựa từ **Khung không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro ven biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Pearl River Delta, đất thấp và reclamation tạo nền vật lý cho **đô thị và kết nối vùng**; Zhuhai, Greater Bay và cửa khẩu mở rộng functional region vượt ranh giới Macao. **Rủi ro ven biển** tiếp theo kiểm tra chi phí của đất thấp và lấn biển.
 
 ## Đô thị và kết nối vùng
 
@@ -16,13 +16,13 @@ Quy mô nhỏ khiến Macao phụ thuộc mạnh vào các kết nối xuyên bi
 
 Đây là ví dụ rõ rằng một territory nhỏ có thể được hiểu tốt hơn bằng **vùng đô thị chức năng (functional urban region)** hơn là ranh giới hành chính đơn lẻ.
 
-> **Chuyển mạch:** Ở chặng này của **Macao SAR (MAC)**, **Rủi ro ven biển** tiếp nhận điểm tựa từ **Đô thị và kết nối vùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cầu, cửa khẩu và vận tải biển làm mobility và dịch vụ tăng mạnh trên diện tích nhỏ; **coastal risk** đặt giới hạn qua storm surge, rainfall và drainage. **Mô hình tư duy** sẽ nối land scarcity, cross-boundary network và resilience.
 
 ## Rủi ro ven biển
 
 Đất thấp, mưa gió mùa và bão nhiệt đới tạo rủi ro ngập và nước dâng. Lấn biển mở thêm không gian nhưng cũng đòi hỏi hạ tầng bảo vệ và thoát nước tương ứng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Macao SAR (MAC)**, **Mô hình tư duy** gom các mảnh từ **Rủi ro ven biển** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi delta lowland–reclamation → functional urban region → casino/service mobility → coastal exposure. Đây là điểm bàn giao cho các profile Đông Á trong owner World Atlas.
 
 ## Mô hình tư duy
 
