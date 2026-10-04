@@ -26,7 +26,7 @@ c=(10.24\pm0.08)\;mg/L
 
 có ý nghĩa hơn nhiều so với chỉ viết `10.240000 mg/L`, vì phần \(\pm0.08\) cho biết độ phân giải thông tin thực sự của phép đo.
 
-> **Chuyển mạch:** Measurement model xác định measurand và nguồn error; uncertainty mô tả độ tin cậy của kết quả, còn accuracy/precision/bias phân biệt đúng gần giá trị thật với lặp lại ổn định.
+> **Nối mạch:** Measurement model xác định measurand và nguồn error; uncertainty mô tả độ tin cậy của kết quả, còn accuracy/precision/bias phân biệt đúng gần giá trị thật với lặp lại ổn định.
 
 ## Đại lượng cần đo và mô hình đo
 
@@ -42,7 +42,7 @@ Ví dụ trong chuẩn độ, nồng độ mẫu có thể phụ thuộc nồng 
 
 Mỗi biến đầu vào đều có độ không đảm bảo. Vì vậy kết quả cuối phải phản ánh cách các độ không đảm bảo đó truyền qua mô hình.
 
-> **Chuyển mạch:** Ở chặng này của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Độ đúng, độ chụm và độ chệch** tiếp nhận điểm tựa từ **Đại lượng cần đo và mô hình đo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biến thiên ngẫu nhiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Độ đúng, độ chụm và độ chệch** nối từ **Đại lượng cần đo và mô hình đo** sang **Biến thiên ngẫu nhiên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ đúng, độ chụm và độ chệch
 
@@ -54,7 +54,7 @@ Ba ý tưởng thường bị trộn lẫn là **độ chụm (precision)**, **�
 
 Điểm cốt lõi là: lặp lại nhiều lần chỉ giúp hiểu biến thiên ngẫu nhiên tốt hơn; nó không tự sửa một phương pháp bị chệch có hệ thống.
 
-> **Chuyển mạch:** Độ chụm cho biết các lần đo tụ lại, độ đúng so sánh trung bình với giá trị tham chiếu, còn độ chệch dịch chuyển cả trung tâm kết quả. Vì thế, mục kế tiếp tách **Biến thiên ngẫu nhiên** để định lượng phần dao động còn lại sau khi nhận diện sai lệch hệ thống.
+> **Nối mạch:** Độ chụm cho biết các lần đo tụ lại, độ đúng so sánh trung bình với giá trị tham chiếu, còn độ chệch dịch chuyển cả trung tâm kết quả. Vì thế, mục kế tiếp tách **Biến thiên ngẫu nhiên** để định lượng phần dao động còn lại sau khi nhận diện sai lệch hệ thống.
 
 ## Biến thiên ngẫu nhiên
 
@@ -68,7 +68,7 @@ SE(\bar{x})=\frac{s}{\sqrt n}
 
 Điều này giải thích vì sao tăng số phép lặp có thể cải thiện ước lượng trung bình. Tuy nhiên nó **không** có nghĩa mọi độ không đảm bảo đều giảm vô hạn theo \(1/\sqrt n\). Độ chệch hiệu chuẩn, mẫu không đại diện hoặc drift có tương quan có thể đặt ra giới hạn mà việc đo lặp không thể vượt qua.
 
-> **Chuyển mạch:** Biến thiên ngẫu nhiên thay đổi giữa các lần lặp và có thể ước lượng bằng phép đo lặp; hiệu ứng hệ thống vẫn tồn tại qua các lần lặp nên phải truy nguồn bằng chuẩn, mẫu thêm chuẩn hoặc so sánh phương pháp. Khi hai phần đã tách, **Trung bình, phương sai và độ lệch chuẩn** sẽ tóm tắt tâm và độ phân tán của dữ liệu.
+> **Nối mạch:** Biến thiên ngẫu nhiên thay đổi giữa các lần lặp và có thể ước lượng bằng phép đo lặp; hiệu ứng hệ thống vẫn tồn tại qua các lần lặp nên phải truy nguồn bằng chuẩn, mẫu thêm chuẩn hoặc so sánh phương pháp. Khi hai phần đã tách, **Trung bình, phương sai và độ lệch chuẩn** sẽ tóm tắt tâm và độ phân tán của dữ liệu.
 
 ## Hiệu ứng hệ thống và nguồn độ chệch
 
@@ -85,7 +85,7 @@ Các nguồn gây độ chệch thường gồm:
 
 Muốn phát hiện chúng phải dùng bằng chứng độc lập như vật liệu chuẩn được chứng nhận, mẫu thêm chuẩn, chuẩn kiểm tra, so sánh phương pháp hoặc thử nghiệm thu hồi.
 
-> **Chuyển mạch:** Sau khi nhận diện nguồn chệch, **Trung bình, phương sai và độ lệch chuẩn** lần lượt cho biết vị trí trung tâm, độ phân tán và độ ổn định của các lần đo. Khi cần so sánh độ chụm giữa những thang nồng độ khác nhau, mục **Độ lệch chuẩn tương đối** chuẩn hóa độ phân tán theo chính giá trị trung bình.
+> **Nối mạch:** Sau khi nhận diện nguồn chệch, **Trung bình, phương sai và độ lệch chuẩn** lần lượt cho biết vị trí trung tâm, độ phân tán và độ ổn định của các lần đo. Khi cần so sánh độ chụm giữa những thang nồng độ khác nhau, mục **Độ lệch chuẩn tương đối** chuẩn hóa độ phân tán theo chính giá trị trung bình.
 
 ## Trung bình, phương sai và độ lệch chuẩn
 
@@ -111,7 +111,7 @@ Mẫu số \(n-1\) xuất hiện vì khi dùng chính dữ liệu để ước l
 
 **Độ lệch chuẩn (standard deviation, SD)** mô tả độ phân tán của các quan sát riêng lẻ. **Sai số chuẩn của trung bình (standard error, SE)** mô tả độ không chắc của ước lượng trung bình do lấy mẫu hữu hạn. Hai đại lượng trả lời hai câu hỏi khác nhau và không nên dùng thay nhau.
 
-> **Chuyển mạch:** Trung bình và độ lệch chuẩn mô tả độ lớn tuyệt đối của tâm và độ phân tán; **Độ lệch chuẩn tương đối** chia độ phân tán cho trung bình để so sánh độ chụm giữa các mức nồng độ. Bước tiếp theo, **Khoảng tin cậy** đưa thêm bất định do lấy mẫu vào khoảng bao quanh ước lượng.
+> **Nối mạch:** Trung bình và độ lệch chuẩn mô tả độ lớn tuyệt đối của tâm và độ phân tán; **Độ lệch chuẩn tương đối** chia độ phân tán cho trung bình để so sánh độ chụm giữa các mức nồng độ. Bước tiếp theo, **Khoảng tin cậy** đưa thêm bất định do lấy mẫu vào khoảng bao quanh ước lượng.
 
 ## Độ lệch chuẩn tương đối
 
@@ -123,7 +123,7 @@ RSD=\frac{s}{\bar{x}}\times100\%
 
 cho phép so sánh độ chụm ở các thang nồng độ khác nhau. Tuy nhiên khi \(\bar{x}\) gần 0, RSD trở nên rất lớn hoặc mất ý nghĩa, nên không nên sử dụng máy móc.
 
-> **Chuyển mạch:** RSD mô tả độ phân tán tương đối nhưng chưa nói trực tiếp xác suất bao phủ của một ước lượng. **Khoảng tin cậy** diễn tả hành vi lặp lại của thủ tục lấy mẫu; từ đó cần phân biệt nó với phân loại độ không đảm bảo loại A và loại B trong đo lường.
+> **Nối mạch:** RSD mô tả độ phân tán tương đối nhưng chưa nói trực tiếp xác suất bao phủ của một ước lượng. **Khoảng tin cậy** diễn tả hành vi lặp lại của thủ tục lấy mẫu; từ đó cần phân biệt nó với phân loại độ không đảm bảo loại A và loại B trong đo lường.
 
 ## Khoảng tin cậy
 
@@ -139,7 +139,7 @@ Trong cách diễn giải tần suất (frequentist), khoảng tin cậy 95% kh�
 
 Đây là một ví dụ cho thấy cần phân biệt **mô hình thống kê** với cách nói trực giác hàng ngày.
 
-> **Chuyển mạch:** Khoảng tin cậy mô tả độ bao phủ của một thủ tục lấy mẫu dưới mô hình thống kê; trong đo lường, **Độ không đảm bảo loại A và loại B** lại phân loại theo cách từng thành phần được đánh giá. Phân biệt hai ngôn ngữ này trước khi cộng các thành phần là bước cần thiết.
+> **Nối mạch:** Khoảng tin cậy mô tả độ bao phủ của một thủ tục lấy mẫu dưới mô hình thống kê; trong đo lường, **Độ không đảm bảo loại A và loại B** lại phân loại theo cách từng thành phần được đánh giá. Phân biệt hai ngôn ngữ này trước khi cộng các thành phần là bước cần thiết.
 
 ## Độ không đảm bảo loại A và loại B
 
@@ -151,7 +151,7 @@ Trong đo lường, người ta thường phân loại cách đánh giá độ k
 
 Loại A/B mô tả **cách đánh giá**, không hoàn toàn đồng nghĩa với “ngẫu nhiên/hệ thống”. Một chứng chỉ hiệu chuẩn chẳng hạn có thể chứa cả nhiều thành phần khác nhau.
 
-> **Chuyển mạch:** Loại A dùng thống kê của phép đo lặp, còn loại B dùng chứng chỉ, độ phân giải, hiệu chuẩn hoặc thông tin trước; cả hai đều quy về các thành phần độ lệch chuẩn tương đương. **Độ không đảm bảo chuẩn** tiếp theo sẽ chuẩn hóa các thành phần ấy trước khi kết hợp.
+> **Nối mạch:** Loại A dùng thống kê của phép đo lặp, còn loại B dùng chứng chỉ, độ phân giải, hiệu chuẩn hoặc thông tin trước; cả hai đều quy về các thành phần độ lệch chuẩn tương đương. **Độ không đảm bảo chuẩn** tiếp theo sẽ chuẩn hóa các thành phần ấy trước khi kết hợp.
 
 ## Độ không đảm bảo chuẩn
 
@@ -171,7 +171,7 @@ u=\frac{a}{\sqrt6}
 
 Việc chọn phân bố phải dựa trên thông tin thật về nguồn sai lệch, không phải chọn công thức nào cho số nhỏ hơn.
 
-> **Chuyển mạch:** Độ không đảm bảo chuẩn đưa các nguồn về cùng thang độ lệch chuẩn và không tự giả định nguồn nào nhỏ hơn. Khi các thành phần đi qua công thức (y=f(x_1,ldots,x_n)), **Lan truyền độ không đảm bảo** sẽ tính tác động của từng đạo hàm và mối tương quan.
+> **Nối mạch:** Độ không đảm bảo chuẩn đưa các nguồn về cùng thang độ lệch chuẩn và không tự giả định nguồn nào nhỏ hơn. Khi các thành phần đi qua công thức (y=f(x_1,ldots,x_n)), **Lan truyền độ không đảm bảo** sẽ tính tác động của từng đạo hàm và mối tương quan.
 
 ## Lan truyền độ không đảm bảo
 
@@ -216,7 +216,7 @@ và xem \(M\) là hằng số tham chiếu, \(m\) và \(V\) độc lập, thì g
 
 Nếu độ không đảm bảo tương đối của thể tích lớn hơn nhiều so với cân, việc mua cân tốt hơn gần như không cải thiện kết quả. Đây là giá trị thực tế của **ngân sách độ không đảm bảo (uncertainty budget)**: nó chỉ ra mắt xích nào đáng đầu tư cải thiện.
 
-> **Chuyển mạch:** Ở chặng này của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Lan truyền độ không đảm bảo** nêu điều cần giải thích; **Tương quan và sai lệch chung nguồn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Lan truyền bằng Monte Carlo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Lan truyền độ không đảm bảo** đặt vấn đề; **Tương quan và sai lệch chung nguồn** đối chiếu bằng chứng, rồi **Lan truyền bằng Monte Carlo** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tương quan và sai lệch chung nguồn
 
@@ -226,7 +226,7 @@ Trong một tỉ số, phần sai lệch chung có thể triệt tiêu một ph�
 
 Vì vậy quy tắc “cứ lấy căn tổng bình phương” chỉ đúng khi giả định độc lập là hợp lý.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Tương quan và sai lệch chung nguồn** nêu điều cần giải thích; **Lan truyền bằng Monte Carlo** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Độ không đảm bảo mở rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Tương quan và sai lệch chung nguồn** đặt vấn đề; **Lan truyền bằng Monte Carlo** đối chiếu bằng chứng, rồi **Độ không đảm bảo mở rộng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Lan truyền bằng Monte Carlo
 
@@ -241,7 +241,7 @@ Quy trình cơ bản:
 
 Đây là điểm nối trực tiếp giữa hóa học, xác suất và lập trình khoa học.
 
-> **Chuyển mạch:** Trong **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Độ không đảm bảo mở rộng** tiếp nhận điểm tựa từ **Lan truyền bằng Monte Carlo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chữ số có nghĩa không thay thế lý thuyết độ không đảm bảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Độ không đảm bảo mở rộng** nối từ **Lan truyền bằng Monte Carlo** sang **Chữ số có nghĩa không thay thế lý thuyết độ không đảm bảo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ không đảm bảo mở rộng
 
@@ -261,7 +261,7 @@ y\pm U\quad(k=2)
 
 và phải nêu rõ cách xác định \(U\), thay vì chỉ viết dấu \(\pm\) mà không giải thích.
 
-> **Chuyển mạch:** Ở chặng này của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Chữ số có nghĩa không thay thế lý thuyết độ không đảm bảo** tiếp nhận điểm tựa từ **Độ không đảm bảo mở rộng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao \(R^2\) cao chưa đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Chữ số có nghĩa không thay thế lý thuyết độ không đảm bảo** nối từ **Độ không đảm bảo mở rộng** sang **Vì sao \(R^2\) cao chưa đủ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chữ số có nghĩa không thay thế lý thuyết độ không đảm bảo
 
@@ -292,7 +292,7 @@ trong đó \(x\) là nồng độ chuẩn đã biết, \(y\) là tín hiệu, \(
 
 Trong hóa phân tích, phương sai thường tăng khi nồng độ tăng. Hiện tượng này gọi là **phương sai không đồng nhất (heteroscedasticity)**. Khi đó hồi quy có trọng số (weighted least squares) với trọng số gần \(1/\sigma_i^2\) có thể phù hợp hơn nếu mô hình phương sai được xác lập hợp lý.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Vì sao \(R^2\) cao chưa đủ** tiếp nhận điểm tựa từ **Chữ số có nghĩa không thay thế lý thuyết độ không đảm bảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dự đoán ngược từ tín hiệu sang nồng độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Vì sao \(R^2\) cao chưa đủ** nối từ **Chữ số có nghĩa không thay thế lý thuyết độ không đảm bảo** sang **Dự đoán ngược từ tín hiệu sang nồng độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao \(R^2\) cao chưa đủ
 
@@ -307,7 +307,7 @@ Một đường có \(R^2=0.9999\) vẫn có thể không phù hợp nếu:
 
 Vì vậy phải xem đồ thị phần dư, chuẩn kiểm tra độc lập, vùng hiệu chuẩn và sai số dự đoán — không chỉ nhìn một con số \(R^2\).
 
-> **Chuyển mạch:** Trong **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Dự đoán ngược từ tín hiệu sang nồng độ** tiếp nhận điểm tựa từ **Vì sao \(R^2\) cao chưa đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giới hạn phát hiện và giới hạn định lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Dự đoán ngược từ tín hiệu sang nồng độ** nối từ **Vì sao \(R^2\) cao chưa đủ** sang **Giới hạn phát hiện và giới hạn định lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dự đoán ngược từ tín hiệu sang nồng độ
 
@@ -324,7 +324,7 @@ Trong hiệu chuẩn, ta xây mô hình từ nồng độ đã biết tới tín
 
 Gần tín hiệu mẫu trắng, độ không đảm bảo tương đối thường tăng rất mạnh dù \(R^2\) vẫn gần 1.
 
-> **Chuyển mạch:** Ở chặng này của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Dự đoán ngược từ tín hiệu sang nồng độ** đã nêu tiêu chí phân biệt, còn **Giới hạn phát hiện và giới hạn định lượng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Thu hồi và mẫu thêm chuẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Dự đoán ngược từ tín hiệu sang nồng độ** đặt tiêu chí; **Giới hạn phát hiện và giới hạn định lượng** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Thu hồi và mẫu thêm chuẩn** mở rộng hệ quả.
 
 ## Giới hạn phát hiện và giới hạn định lượng
 
@@ -342,7 +342,7 @@ nhưng giá trị \(k\), cách ước lượng \(\sigma\), ma trận mẫu và t
 
 Báo cáo một nồng độ thấp hơn vùng định lượng đáng tin cậy với nhiều chữ số thập phân là tạo **độ chính xác giả (false precision)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Giới hạn phát hiện và giới hạn định lượng** đã nêu tiêu chí phân biệt, còn **Thu hồi và mẫu thêm chuẩn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Vật liệu chuẩn và tính liên kết chuẩn đo lường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Giới hạn phát hiện và giới hạn định lượng** đặt tiêu chí; **Thu hồi và mẫu thêm chuẩn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Vật liệu chuẩn và tính liên kết chuẩn đo lường** mở rộng hệ quả.
 
 ## Thu hồi và mẫu thêm chuẩn
 
@@ -357,7 +357,7 @@ thì thử nghiệm thu hồi giúp kiểm tra tổn thất chuẩn bị mẫu v
 
 Khoảng thu hồi chấp nhận được phụ thuộc chất phân tích, nồng độ, ma trận và mục tiêu sử dụng; không có một con số phổ quát cho mọi phép đo.
 
-> **Chuyển mạch:** Trong **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Thu hồi và mẫu thêm chuẩn** nêu điều cần giải thích; **Vật liệu chuẩn và tính liên kết chuẩn đo lường** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Ngoại lệ dữ liệu không nên bị xóa vì gây khó chịu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Thu hồi và mẫu thêm chuẩn** đặt vấn đề; **Vật liệu chuẩn và tính liên kết chuẩn đo lường** đối chiếu bằng chứng, rồi **Ngoại lệ dữ liệu không nên bị xóa vì gây khó chịu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Vật liệu chuẩn và tính liên kết chuẩn đo lường
 
@@ -365,7 +365,7 @@ Một kết quả có **tính liên kết chuẩn đo lường (metrological tra
 
 **Vật liệu chuẩn được chứng nhận (certified reference material, CRM)** cung cấp giá trị tham chiếu cùng độ không đảm bảo được xác lập. Dùng CRM không làm thiết bị “hoàn hảo”, nhưng tạo một neo độc lập để kiểm tra độ đúng và chuỗi truy xuất.
 
-> **Chuyển mạch:** Ở chặng này của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Vật liệu chuẩn và tính liên kết chuẩn đo lường** nêu điều cần giải thích; **Ngoại lệ dữ liệu không nên bị xóa vì gây khó chịu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Biểu đồ kiểm soát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Vật liệu chuẩn và tính liên kết chuẩn đo lường** đặt vấn đề; **Ngoại lệ dữ liệu không nên bị xóa vì gây khó chịu** đối chiếu bằng chứng, rồi **Biểu đồ kiểm soát** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Ngoại lệ dữ liệu không nên bị xóa vì gây khó chịu
 
@@ -381,7 +381,7 @@ Không nên nhìn kết quả rồi xóa điểm làm kết luận “đẹp hơ
 
 Nếu dữ liệu vốn có đuôi nặng hoặc phân bố không chuẩn, các phương pháp thống kê bền vững (robust statistics) có thể phù hợp hơn việc xóa điểm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Ngoại lệ dữ liệu không nên bị xóa vì gây khó chịu** nêu điều cần giải thích; **Biểu đồ kiểm soát** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Kiểm định giả thuyết và giá trị p** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Ngoại lệ dữ liệu không nên bị xóa vì gây khó chịu** đặt vấn đề; **Biểu đồ kiểm soát** đối chiếu bằng chứng, rồi **Kiểm định giả thuyết và giá trị p** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Biểu đồ kiểm soát
 
@@ -391,7 +391,7 @@ Các mẫu kiểm soát chất lượng đo lặp theo thời gian có thể đ�
 
 Một hệ thống có thể vượt hiệu chuẩn hôm nay nhưng trôi dần trong nhiều tuần. Theo dõi theo thời gian phát hiện vấn đề mà một lần hiệu chuẩn đơn lẻ không thấy được.
 
-> **Chuyển mạch:** Trong **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Kiểm định giả thuyết và giá trị p** tiếp nhận điểm tựa từ **Biểu đồ kiểm soát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiều phép so sánh làm tăng dương tính giả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Kiểm định giả thuyết và giá trị p** nối từ **Biểu đồ kiểm soát** sang **Nhiều phép so sánh làm tăng dương tính giả**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kiểm định giả thuyết và giá trị p
 
@@ -401,7 +401,7 @@ Một khác biệt có ý nghĩa thống kê chưa chắc có ý nghĩa hóa h�
 
 Vì vậy nên báo cáo đồng thời **kích thước hiệu ứng (effect size)**, khoảng tin cậy và bối cảnh hóa học.
 
-> **Chuyển mạch:** Ở chặng này của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Kiểm định giả thuyết và giá trị p** đã nêu tiêu chí phân biệt, còn **Nhiều phép so sánh làm tăng dương tính giả** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Thanh sai số phải được ghi rõ nghĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Kiểm định giả thuyết và giá trị p** đặt tiêu chí; **Nhiều phép so sánh làm tăng dương tính giả** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Thanh sai số phải được ghi rõ nghĩa** mở rộng hệ quả.
 
 ## Nhiều phép so sánh làm tăng dương tính giả
 
@@ -409,7 +409,7 @@ Nếu kiểm tra 100 giả thuyết độc lập với ngưỡng \(\alpha=0.05\)
 
 Trong dữ liệu phổ, omics hoặc sàng lọc nhiều hợp chất, cần cân nhắc điều chỉnh nhiều phép kiểm định hoặc kiểm soát **tỷ lệ phát hiện sai (false discovery rate, FDR)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Nhiều phép so sánh làm tăng dương tính giả** đã nêu tiêu chí phân biệt, còn **Thanh sai số phải được ghi rõ nghĩa** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Biến đổi dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Nhiều phép so sánh làm tăng dương tính giả** đặt tiêu chí; **Thanh sai số phải được ghi rõ nghĩa** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Biến đổi dữ liệu** mở rộng hệ quả.
 
 ## Thanh sai số phải được ghi rõ nghĩa
 
@@ -422,7 +422,7 @@ Một thanh sai số trên đồ thị có thể biểu diễn:
 
 Nếu không ghi rõ, người đọc không thể biết nó mô tả độ phân tán dữ liệu hay độ không chắc của trung bình.
 
-> **Chuyển mạch:** Trong **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Thanh sai số phải được ghi rõ nghĩa** nêu điều cần giải thích; **Biến đổi dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Ví dụ về ngân sách độ không đảm bảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Thanh sai số phải được ghi rõ nghĩa** đặt vấn đề; **Biến đổi dữ liệu** đối chiếu bằng chứng, rồi **Ví dụ về ngân sách độ không đảm bảo** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Biến đổi dữ liệu
 
@@ -445,7 +445,7 @@ Không ghi đè dữ liệu thô. Các bước xử lý nên được thể hi�
 
 Bảng tính vẫn hữu ích cho kiểm tra trực quan và phép tính đơn giản, nhưng trở nên rủi ro khi workflow phụ thuộc bản sao (copy / 복사)/paste thủ công, công thức ẩn và chỉnh sửa không có lịch sử.
 
-> **Chuyển mạch:** Ở chặng này của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Biến đổi dữ liệu** cho ta quy tắc; **Ví dụ về ngân sách độ không đảm bảo** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Sai số, độ không đảm bảo và phân tích dữ liệu — biết một con số đáng tin đến mức nào**, **Biến đổi dữ liệu** cho ta quy tắc; **Ví dụ về ngân sách độ không đảm bảo** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Ví dụ về ngân sách độ không đảm bảo
 

@@ -19,7 +19,7 @@ Những câu hỏi này cần thiết kế khác nhau.
 
 Thí nghiệm nhân quả chủ động thay đổi một yếu tố và hỏi điều gì thay đổi do chính yếu tố đó. Phép đo phân tích lại có thể chỉ nhằm ước lượng một đại lượng chưa biết với hệ hiệu chuẩn có khả năng truy xuất. Thí nghiệm sàng lọc có thể nhằm tìm những yếu tố quan trọng trước khi cơ chế được hiểu đầy đủ.
 
-> **Chuyển mạch:** Câu hỏi mô tả/nhân quả phải được operationalize thành biến đo; experimental unit và independence sau đó quyết định bằng chứng có hỗ trợ inference hay chỉ lặp lại cùng một mẫu.
+> **Nối mạch:** Câu hỏi mô tả/nhân quả phải được operationalize thành biến đo; experimental unit và independence sau đó quyết định bằng chứng có hỗ trợ inference hay chỉ lặp lại cùng một mẫu.
 
 ## Định nghĩa biến theo cách có thể đo
 
@@ -31,7 +31,7 @@ Tương tự, “hiệu suất” có thể nghĩa hiệu suất khối lượng
 
 Định nghĩa thao tác rõ ràng ngăn việc thay đổi cách hiểu sau khi đã nhìn dữ liệu.
 
-> **Chuyển mạch:** An operational variable becomes interpretable only when its experimental unit is independent; that distinction determines whether blanks and controls can rule out background signal and alternative explanations.
+> **Nối mạch:** An operational variable becomes interpretable only when its experimental unit is independent; that distinction determines whether blanks and controls can rule out background signal and alternative explanations.
 
 ## Đơn vị thí nghiệm và tính độc lập
 
@@ -43,7 +43,7 @@ Ba bình được chuẩn bị độc lập lại cung cấp thông tin mạnh h
 
 Nhầm lặp kỹ thuật với lặp độc lập gọi là **giả lặp (pseudoreplication)** và thường làm độ không đảm bảo bị đánh giá thấp một cách giả tạo.
 
-> **Chuyển mạch:** Independent units define the true replication level; blanks and positive/negative controls expose contamination, detection failure, or matrix effects, after which repeated preparation estimates process variation.
+> **Nối mạch:** Independent units define the true replication level; blanks and positive/negative controls expose contamination, detection failure, or matrix effects, after which repeated preparation estimates process variation.
 
 ## Mẫu trắng và đối chứng
 
@@ -67,7 +67,7 @@ Trong hóa phân tích, nền không chứa chất phân tích hoặc nền đư
 
 Đối chứng về bản chất là công cụ phát hiện **các giải thích thay thế**.
 
-> **Chuyển mạch:** Controls identify alternative explanations, while technical, process, and biological replicates separate instrument precision from real variation; randomization then prevents run order from becoming a hidden confounder.
+> **Nối mạch:** Controls identify alternative explanations, while technical, process, and biological replicates separate instrument precision from real variation; randomization then prevents run order from becoming a hidden confounder.
 
 ## Lặp lại
 
@@ -81,7 +81,7 @@ Lặp lại giúp ước lượng biến thiên và cho phép suy luận thống
 
 Số lần lặp phù hợp phụ thuộc phương sai dự kiến, kích thước hiệu ứng và mức tin cậy cần đạt. “Ba lần lặp” là quy ước thường gặp chứ không phải định luật thống kê.
 
-> **Chuyển mạch:** Replication estimates variation but cannot remove time-correlated drift; randomizing treatment order spreads that drift across groups, while blocking handles a known nuisance factor directly.
+> **Nối mạch:** Replication estimates variation but cannot remove time-correlated drift; randomizing treatment order spreads that drift across groups, while blocking handles a known nuisance factor directly.
 
 ## Ngẫu nhiên hóa
 
@@ -91,7 +91,7 @@ Ngẫu nhiên hóa thứ tự chạy giúp phân bố xu hướng thời gian gi
 
 Ngẫu nhiên hóa không làm drift biến mất; nó chỉ ngăn drift luôn đi cùng một điều kiện xử lý.
 
-> **Chuyển mạch:** Randomization distributes unknown drift; blocking explicitly groups known nuisance factors such as day, instrument, reagent lot, or sample source, while blinding protects the observation from expectation effects.
+> **Nối mạch:** Randomization distributes unknown drift; blocking explicitly groups known nuisance factors such as day, instrument, reagent lot, or sample source, while blinding protects the observation from expectation effects.
 
 ## Chặn theo yếu tố gây nhiễu đã biết
 
@@ -101,7 +101,7 @@ Ví dụ khối (block / 블록) có thể là ngày đo, thiết bị, lô thu�
 
 So sánh xử lý bên trong mỗi khối (block / 블록) cho phép mô hình thống kê tách biến thiên do khối (block / 블록) khỏi hiệu ứng cần nghiên cứu.
 
-> **Chuyển mạch:** Blocking removes structured nuisance variation from the comparison; blinding addresses observer and analyst judgment, after which calibration must anchor the instrument signal to known input rather than post-hoc tuning.
+> **Nối mạch:** Blocking removes structured nuisance variation from the comparison; blinding addresses observer and analyst judgment, after which calibration must anchor the instrument signal to known input rather than post-hoc tuning.
 
 ## Làm mù
 
@@ -111,7 +111,7 @@ Khi phép đo chứa quyết định chủ quan như đọc điểm cuối, ch�
 
 Phân tích tự động cũng có thể bị độ lệch (bias / 편향) nếu tham số được chỉnh sau khi người phân tích đã nhìn nhãn nhóm, vì vậy tự động hóa không tự động loại bỏ thiên lệch.
 
-> **Chuyển mạch:** Blinding protects interpretation from labels; calibration protects measurement from scale drift, and matrix effects still require standard addition when sample composition changes the response.
+> **Nối mạch:** Blinding protects interpretation from labels; calibration protects measurement from scale drift, and matrix effects still require standard addition when sample composition changes the response.
 
 ## Hiệu chuẩn là một phần của thiết kế
 
@@ -121,7 +121,7 @@ Một hiệu chuẩn tốt nên bao phủ vùng nồng độ mẫu, có đủ đ
 
 Ngoại suy ngoài vùng hiệu chuẩn giả định đáp ứng vẫn giữ nguyên ở nơi chưa từng được kiểm nghiệm.
 
-> **Chuyển mạch:** Hiệu chuẩn nối đầu vào đã biết với tín hiệu thiết bị nhưng vẫn có thể sai khi nền mẫu làm đổi độ nhạy. Vì vậy, **Phương pháp thêm chuẩn cho ảnh hưởng nền** đưa cùng nền của chính mẫu vào thiết kế; sau đó **Thiết kế nhân tố** mở rộng câu hỏi từ hiệu chỉnh một nguồn nhiễu sang kiểm tra tương tác giữa nhiều yếu tố.
+> **Nối mạch:** Hiệu chuẩn nối đầu vào đã biết với tín hiệu thiết bị nhưng vẫn có thể sai khi nền mẫu làm đổi độ nhạy. Vì vậy, **Phương pháp thêm chuẩn cho ảnh hưởng nền** đưa cùng nền của chính mẫu vào thiết kế; sau đó **Thiết kế nhân tố** mở rộng câu hỏi từ hiệu chỉnh một nguồn nhiễu sang kiểm tra tương tác giữa nhiều yếu tố.
 
 ## Phương pháp thêm chuẩn cho ảnh hưởng nền
 
@@ -131,7 +131,7 @@ Ngoại suy về tín hiệu 0 cho phép ước lượng lượng ban đầu.
 
 Cách này hiệu chỉnh một số ảnh hưởng nền vì chuẩn và mẫu cùng nền, nhưng tốn thêm phép đo và giả định ảnh hưởng nền tương đối ổn định trong dải bổ sung.
 
-> **Chuyển mạch:** Thêm chuẩn xử lý ảnh hưởng nền bằng cách giữ nguyên ma trận mẫu, còn **Thiết kế nhân tố** hỏi đồng thời nhiệt độ, lượng xúc tác và tích tương tác để tránh kết luận từ từng lát cắt riêng. Khi các yếu tố quan trọng đã lộ ra, **Phương pháp bề mặt đáp ứng** sẽ mô hình hóa độ cong trong vùng khảo sát.
+> **Nối mạch:** Thêm chuẩn xử lý ảnh hưởng nền bằng cách giữ nguyên ma trận mẫu, còn **Thiết kế nhân tố** hỏi đồng thời nhiệt độ, lượng xúc tác và tích tương tác để tránh kết luận từ từng lát cắt riêng. Khi các yếu tố quan trọng đã lộ ra, **Phương pháp bề mặt đáp ứng** sẽ mô hình hóa độ cong trong vùng khảo sát.
 
 ## Thiết kế nhân tố — vì sao thay từng biến một dễ bỏ sót tương tác
 
@@ -145,7 +145,7 @@ Cách thay từng yếu tố một (**one-factor-at-a-time**) dễ bỏ sót tư
 
 Trong tối ưu quy trình hóa học, tương tác rất phổ biến vì nhiệt độ đồng thời ảnh hưởng độ tan, hoạt tính xúc tác, phản ứng phụ và truyền khối.
 
-> **Chuyển mạch:** Thiết kế nhân tố giúp nhận diện hiệu ứng chính và tương tác; **Phương pháp bề mặt đáp ứng** dùng các yếu tố đã sàng lọc để ước lượng độ cong và vùng tối ưu, nhưng điểm tối ưu vẫn cần thí nghiệm xác nhận. Với phản ứng phụ thuộc thời gian, **Thiết kế thí nghiệm động học** tiếp tục bằng cách kiểm tra xem thiết bị có nhanh hơn hiện tượng hay không.
+> **Nối mạch:** Thiết kế nhân tố giúp nhận diện hiệu ứng chính và tương tác; **Phương pháp bề mặt đáp ứng** dùng các yếu tố đã sàng lọc để ước lượng độ cong và vùng tối ưu, nhưng điểm tối ưu vẫn cần thí nghiệm xác nhận. Với phản ứng phụ thuộc thời gian, **Thiết kế thí nghiệm động học** tiếp tục bằng cách kiểm tra xem thiết bị có nhanh hơn hiện tượng hay không.
 
 ## Phương pháp bề mặt đáp ứng
 
@@ -159,7 +159,7 @@ y=\beta_0+\beta_1x_1+\beta_2x_2+\beta_{12}x_1x_2+\beta_{11}x_1^2+\beta_{22}x_2^2
 
 Đây là xấp xỉ thực nghiệm trong vùng đã khảo sát, không phải định luật hóa học. Điểm tối ưu dự đoán cần được kiểm chứng bằng thí nghiệm độc lập.
 
-> **Chuyển mạch:** Bề mặt đáp ứng tối ưu hóa trong không gian điều kiện, còn **Thiết kế thí nghiệm động học** phải bảo toàn trục thời gian và tách thời gian chết, trộn, truyền nhiệt khỏi tốc độ phản ứng. Vì nhiệt độ chi phối cả tốc độ lẫn cân bằng, mục **Kiểm soát nhiệt độ** sẽ xử lý biến gây nhiễu này trước khi diễn giải động học.
+> **Nối mạch:** Bề mặt đáp ứng tối ưu hóa trong không gian điều kiện, còn **Thiết kế thí nghiệm động học** phải bảo toàn trục thời gian và tách thời gian chết, trộn, truyền nhiệt khỏi tốc độ phản ứng. Vì nhiệt độ chi phối cả tốc độ lẫn cân bằng, mục **Kiểm soát nhiệt độ** sẽ xử lý biến gây nhiễu này trước khi diễn giải động học.
 
 ## Thiết kế thí nghiệm động học
 
@@ -173,7 +173,7 @@ Phương pháp tốc độ ban đầu giảm ảnh hưởng thay đổi thành p
 
 Fit định luật tốc độ tích phân dùng toàn bộ đường thời gian nhưng phụ thuộc mạnh hơn vào tính đúng của mô hình động học.
 
-> **Chuyển mạch:** Trong **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Kiểm soát nhiệt độ** tiếp nhận điểm tựa từ **Thiết kế thí nghiệm động học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trộn và truyền khối như yếu tố gây nhiễu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Kiểm soát nhiệt độ** nối từ **Thiết kế thí nghiệm động học** sang **Trộn và truyền khối như yếu tố gây nhiễu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kiểm soát nhiệt độ
 
@@ -183,7 +183,7 @@ Cần ghi nhiệt độ thật của phản ứng chứ không chỉ nhiệt đ�
 
 Với phản ứng tỏa nhiệt, nhiệt độ bên trong mẫu có thể khác môi trường do giới hạn truyền nhiệt.
 
-> **Chuyển mạch:** Ở chặng này của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Trộn và truyền khối như yếu tố gây nhiễu** tiếp nhận điểm tựa từ **Kiểm soát nhiệt độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kế hoạch lấy mẫu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Trộn và truyền khối như yếu tố gây nhiễu** nối từ **Kiểm soát nhiệt độ** sang **Kế hoạch lấy mẫu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trộn và truyền khối như yếu tố gây nhiễu
 
@@ -193,7 +193,7 @@ Tốc độ quan sát được có thể bị giới hạn bởi khuếch tán h
 
 Thay tốc độ khuấy là một phép chẩn đoán hữu ích. Nếu tốc độ quan sát thay đổi mạnh theo mức trộn, hệ có thể chưa nằm trong vùng kiểm soát thuần bởi phản ứng hóa học.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Kế hoạch lấy mẫu** tiếp nhận điểm tựa từ **Trộn và truyền khối như yếu tố gây nhiễu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công suất thống kê và cỡ mẫu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Kế hoạch lấy mẫu** nối từ **Trộn và truyền khối như yếu tố gây nhiễu** sang **Công suất thống kê và cỡ mẫu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kế hoạch lấy mẫu
 
@@ -203,7 +203,7 @@ Rút thể tích làm lượng vật chất thay đổi; mở bình làm trao đ
 
 Thể tích lấy, cách dừng phản ứng và điều kiện lưu mẫu nên được định trước trước khi bắt đầu.
 
-> **Chuyển mạch:** Trong **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Công suất thống kê và cỡ mẫu** tiếp nhận điểm tựa từ **Kế hoạch lấy mẫu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định trước cách phân tích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Công suất thống kê và cỡ mẫu** nối từ **Kế hoạch lấy mẫu** sang **Định trước cách phân tích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Công suất thống kê và cỡ mẫu
 
@@ -213,7 +213,7 @@ Power tăng khi hiệu ứng thật lớn hơn, phương sai nhỏ hơn, số l�
 
 Chọn cỡ mẫu sau khi đã nhìn kết quả dễ tạo thiên lệch. Khi có thể, nên xác định trước kích thước hiệu ứng có ý nghĩa và phương sai dự kiến.
 
-> **Chuyển mạch:** Ở chặng này của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Định trước cách phân tích** tiếp nhận điểm tựa từ **Công suất thống kê và cỡ mẫu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thẩm định và độ bền phương pháp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Định trước cách phân tích** nối từ **Công suất thống kê và cỡ mẫu** sang **Thẩm định và độ bền phương pháp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định trước cách phân tích
 
@@ -221,7 +221,7 @@ Các quyết định như endpoint chính, tiêu chí loại dữ liệu, phép 
 
 Phân tích khám phá vẫn rất có giá trị, nhưng cần được ghi rõ là khám phá thay vì trình bày như kiểm định đã định trước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Thẩm định và độ bền phương pháp** tiếp nhận điểm tựa từ **Định trước cách phân tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài liệu hóa và nguồn gốc dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Thẩm định và độ bền phương pháp** nối từ **Định trước cách phân tích** sang **Tài liệu hóa và nguồn gốc dữ liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thẩm định và độ bền phương pháp
 
@@ -233,7 +233,7 @@ Ví dụ có thể thay pH một lượng nhỏ, lưu lượng vài phần trăm
 
 Một phương pháp chỉ hoạt động tại đúng một thiết lập rất hẹp thường khó chuyển giao.
 
-> **Chuyển mạch:** Trong **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Thẩm định và độ bền phương pháp** nêu điều cần giải thích; **Tài liệu hóa và nguồn gốc dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Toàn vẹn dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Thẩm định và độ bền phương pháp** đặt vấn đề; **Tài liệu hóa và nguồn gốc dữ liệu** đối chiếu bằng chứng, rồi **Toàn vẹn dữ liệu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tài liệu hóa và nguồn gốc dữ liệu
 
@@ -243,7 +243,7 @@ Cần lưu danh tính, cấp và lô thuốc thử; nồng độ thật; ngày c
 
 Theo ngôn ngữ phần mềm, thí nghiệm cần đủ siêu dữ liệu (metadata / 메타데이터) để tái tạo “trạng thái hệ thống” của lần đo.
 
-> **Chuyển mạch:** Ở chặng này của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Tài liệu hóa và nguồn gốc dữ liệu** nêu điều cần giải thích; **Toàn vẹn dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Ví dụ so sánh hai chất xúc tác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Tài liệu hóa và nguồn gốc dữ liệu** đặt vấn đề; **Toàn vẹn dữ liệu** đối chiếu bằng chứng, rồi **Ví dụ so sánh hai chất xúc tác** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Toàn vẹn dữ liệu
 
@@ -253,7 +253,7 @@ Với workflow phức tạp, script có quản lý phiên bản thường tái l
 
 Dấu vết kiểm toán đặc biệt quan trọng khi dữ liệu hỗ trợ quyết định có kiểm soát hoặc tác động cao.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Toàn vẹn dữ liệu** cho ta quy tắc; **Ví dụ so sánh hai chất xúc tác** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Toàn vẹn dữ liệu** nêu quy tắc; **Ví dụ so sánh hai chất xúc tác** thử quy tắc trong tình huống, rồi **Những hiểu lầm thường gặp** mở rộng hệ quả.
 
 ## Ví dụ so sánh hai chất xúc tác
 
@@ -280,7 +280,7 @@ có mẫu trắng và xúc tác tham chiếu
 
 Khi đó số giải thích thay thế bị thu hẹp đáng kể.
 
-> **Chuyển mạch:** Trong **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Ví dụ so sánh hai chất xúc tác** cho ta quy tắc; **Những hiểu lầm thường gặp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Ví dụ so sánh hai chất xúc tác** nêu quy tắc; **Những hiểu lầm thường gặp** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Những hiểu lầm thường gặp
 
@@ -304,7 +304,7 @@ Không. Nó làm giảm liên kết hệ thống; yếu tố phi mục tiêu l�
 
 Không. Dự đoán phải được xác nhận bằng thí nghiệm.
 
-> **Chuyển mạch:** Ở chặng này của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Thiết kế thí nghiệm — biến câu hỏi thành bằng chứng có thể diễn giải**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

@@ -12,7 +12,7 @@ Một phân tử có thể được biểu diễn như một **đồ thị (grap
 
 Đây là lý do biểu diễn phân tử là bài toán khoa học máy tính thật sự, không chỉ là đổi hình vẽ thành văn bản.
 
-> **Chuyển mạch:** Trong **Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng**, **Tìm kiếm cấu trúc con** tiếp nhận điểm tựa từ **Biểu diễn phân tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa học tính toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng**, **Tìm kiếm cấu trúc con** nối từ **Biểu diễn phân tử** sang **Hóa học tính toán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tìm kiếm cấu trúc con
 
@@ -20,7 +20,7 @@ Cơ sở dữ liệu hóa học sử dụng thuật toán đồ thị để tìm
 
 Các fingerprint giúp tìm tương đồng rất nhanh, nhưng độ tương đồng phụ thuộc cách biểu diễn. Hai phân tử có fingerprint gần nhau không đảm bảo có cùng hoạt tính sinh học hoặc cùng cơ chế phản ứng.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng**, **Hóa học tính toán** tiếp nhận điểm tựa từ **Tìm kiếm cấu trúc con** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Động học số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng**, **Hóa học tính toán** nối từ **Tìm kiếm cấu trúc con** sang **Động học số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học tính toán
 
@@ -28,7 +28,7 @@ Hóa học lượng tử tìm nghiệm gần đúng cho phương trình Schrödi
 
 **Động lực học phân tử (molecular dynamics)** mô phỏng quỹ đạo nguyên tử theo thời gian dựa trên trường lực hoặc tính toán cấu trúc điện tử. Nó cho phép nghiên cứu chuyển động, khuếch tán, gấp cuộn và dao động thay vì chỉ nhìn một cấu trúc tĩnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng**, **Động học số** tiếp nhận điểm tựa từ **Hóa học tính toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa tin học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng**, **Động học số** nối từ **Hóa học tính toán** sang **Hóa tin học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Động học số
 
@@ -42,7 +42,7 @@ Nếu tốc độ các phản ứng khác nhau qua nhiều bậc độ lớn, h�
 
 Cơ chế cháy, hóa học khí quyển và chuyển hóa sinh học có thể chứa từ hàng trăm tới hàng nghìn phản ứng, nên mô phỏng số là cách duy nhất thực tế để theo dõi toàn mạng.
 
-> **Chuyển mạch:** Trong **Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng**, **Hóa tin học** tiếp nhận điểm tựa từ **Động học số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Máy học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng**, **Hóa tin học** nối từ **Động học số** sang **Máy học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa tin học
 
@@ -50,7 +50,7 @@ Cơ chế cháy, hóa học khí quyển và chuyển hóa sinh học có thể 
 
 Những bài toán tưởng như thuần phần mềm như loại bản ghi trùng, chuẩn hóa tautomer, xử lý điện tích, lập thể hay ánh xạ nguyên tử trong phản ứng đều cần hiểu hóa học miền. Làm sạch dữ liệu hóa học vì vậy là một dạng kỹ thuật dữ liệu có tri thức chuyên ngành.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng**, **Máy học** tiếp nhận điểm tựa từ **Hóa tin học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tự động hóa phòng thí nghiệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng**, **Máy học** nối từ **Hóa tin học** sang **Tự động hóa phòng thí nghiệm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Máy học
 
@@ -60,7 +60,7 @@ Mô hình máy học có thể dự đoán độ tan, độc tính, phổ, hiệ
 
 Tuy nhiên hiệu năng luôn phụ thuộc độ lệch dữ liệu, phạm vi miền và độ đúng vật lý. Dự đoán thống kê không thay thế kiểm chứng thực nghiệm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng**, **Tự động hóa phòng thí nghiệm** tiếp nhận điểm tựa từ **Máy học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khả năng tái lập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng**, **Tự động hóa phòng thí nghiệm** nối từ **Máy học** sang **Khả năng tái lập**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tự động hóa phòng thí nghiệm
 
@@ -70,7 +70,7 @@ Trong **hệ vòng kín (closed-loop system)**, thuật toán đề xuất đi�
 
 Đây là điểm giao giữa phần mềm, điều khiển, tối ưu hóa và Hóa học thực nghiệm.
 
-> **Chuyển mạch:** Trong **Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng**, **Khả năng tái lập** tiếp nhận điểm tựa từ **Tự động hóa phòng thí nghiệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng**, **Khả năng tái lập** nối từ **Tự động hóa phòng thí nghiệm** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khả năng tái lập
 
@@ -78,7 +78,7 @@ Mã nguồn có kiểm soát phiên bản, môi trường phần mềm được 
 
 Một kết quả không thể tái tạo khi thiếu phiên bản phần mềm, bộ tham số hoặc dữ liệu đầu vào thì vẫn là kết quả khó kiểm chứng, dù thuật toán có phức tạp đến đâu.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng**, **Mô hình tư duy** gom các mảnh từ **Khả năng tái lập** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Hóa học và Khoa học máy tính — phân tử như dữ liệu và hệ mô phỏng**, **Mô hình tư duy** tổng hợp từ **Khả năng tái lập** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 
