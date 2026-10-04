@@ -8,7 +8,7 @@
 
 1. [Tài liệu học đầy đủ](01-tai-lieu-hoc-day-du.md)
 
-> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **Các bài học theo chủ đề** tiếp nhận điểm tựa từ **Bài học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ghi chú học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Bài học** đặt schema, query và transaction mechanism; **Các bài học theo chủ đề** tổ chức chúng theo task Môn 3, rồi **Ghi chú học** ghi assumption và failure.
 
 ## Các bài học theo chủ đề
 
@@ -67,7 +67,7 @@
 53. [21. 데이터 전환 및 정제 (Chuyển đổi dữ liệu - ETL)](lessons/53-bai-hoc.md)
 54. [22. 기타 주요 개념 (Các khái niệm quan trọng khác)](lessons/54-bai-hoc.md)
 
-> **Chuyển mạch:** Ở chặng này của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **Ghi chú học** tiếp nhận điểm tựa từ **Các bài học theo chủ đề** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch bài giảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Ghi chú học** giải thích constraint và failure của database topic; **Mạch bài giảng** nối chúng từ data model đến vận hành.
 
 ## Ghi chú học
 
@@ -77,13 +77,13 @@ Phần này hướng dẫn cách dùng tài liệu như một bài giảng, đ�
 - Đọc ví dụ ngay sau khái niệm vì các bài có nhiều cặp dễ nhầm như `결합도 (Coupling) (độ phụ thuộc)` và `응집도 (Cohesion) (độ gắn kết)`.
 - Phần mở rộng/nâng cao không phải nội dung rời: nó nhắc lại kiến thức nền ở mức sâu hơn hoặc trong ngữ cảnh khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **Mạch bài giảng** tiếp nhận điểm tựa từ **Ghi chú học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **복습 체크리스트 (Checklist ôn tập)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Mạch bài giảng** biến database mechanism thành route có thể theo; **Checklist ôn tập** đối chiếu invariant, link và evidence.
 
 ## Mạch bài giảng
 
 Mỗi lesson mở bằng prerequisite và mục đích, đi qua nội dung nguồn bằng các câu nối tự nhiên, rồi kết thúc bằng điểm chốt và hướng bàn giao sang lesson kế tiếp. Khi học, đừng bỏ qua các đoạn prose này: chúng giải thích vì sao các bullet, bảng và ví dụ được đặt cạnh nhau.
 
-> **Chuyển mạch:** Trong **Môn 3 — 데이터베이스 구축 (Database Construction) (Xây dựng cơ sở dữ liệu)**, **복습 체크리스트 (Checklist ôn tập)** tiếp nhận điểm tựa từ **Mạch bài giảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Checklist ôn tập** khép Môn 3 bằng boundary của schema, query và runtime; chi tiết quay về canonical database owner.
 
 ## 복습 체크리스트 (Checklist ôn tập)
 

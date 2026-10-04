@@ -8,7 +8,7 @@
 
 1. [Tài liệu học đầy đủ](01-tai-lieu-hoc-day-du.md)
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **Các bài học theo chủ đề** tiếp nhận điểm tựa từ **Bài học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ghi chú học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Bài học** đặt syntax, type và runtime semantics; **Các bài học theo chủ đề** gom chúng theo task Môn 4, rồi **Ghi chú học** chỉ rõ boundary.
 
 ## Các bài học theo chủ đề
 
@@ -104,7 +104,7 @@
 90. [292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)](lessons/90-bai-hoc.md)
 91. [298. PCB (Process Control Block)](lessons/91-bai-hoc.md)
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **Ghi chú học** tiếp nhận điểm tựa từ **Các bài học theo chủ đề** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch bài giảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Ghi chú học** tách compile-time và runtime failure; **Mạch bài giảng** nối hai lớp đó trong một route giải thích tự nhiên.
 
 ## Ghi chú học
 
@@ -114,13 +114,13 @@ Phần này hướng dẫn cách dùng tài liệu như một bài giảng, đ�
 - Đọc ví dụ ngay sau khái niệm vì các bài có nhiều cặp dễ nhầm như `결합도 (Coupling) (độ phụ thuộc)` và `응집도 (Cohesion) (độ gắn kết)`.
 - Phần mở rộng/nâng cao không phải nội dung rời: nó nhắc lại kiến thức nền ở mức sâu hơn hoặc trong ngữ cảnh khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **Mạch bài giảng** tiếp nhận điểm tựa từ **Ghi chú học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **복습 체크리스트 (Checklist ôn tập)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Mạch bài giảng** chuyển syntax và semantics thành code path; **Checklist ôn tập** đối chiếu invariant và evidence thay vì kiểm tra thuộc lòng.
 
 ## Mạch bài giảng
 
 Mỗi lesson mở bằng prerequisite và mục đích, đi qua nội dung nguồn bằng các câu nối tự nhiên, rồi kết thúc bằng điểm chốt và hướng bàn giao sang lesson kế tiếp. Khi học, đừng bỏ qua các đoạn prose này: chúng giải thích vì sao các bullet, bảng và ví dụ được đặt cạnh nhau.
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **복습 체크리스트 (Checklist ôn tập)** tiếp nhận điểm tựa từ **Mạch bài giảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Checklist ôn tập** khép Môn 4 bằng syntax/runtime boundary và link owner; phần chuyên sâu quay về chapter ngôn ngữ tương ứng.
 
 ## 복습 체크리스트 (Checklist ôn tập)
 
