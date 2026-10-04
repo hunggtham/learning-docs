@@ -6,7 +6,7 @@
 
 Senegal nằm ở phần nhô xa về phía tây của châu Phi. Dakar nằm trên bán đảo Cap-Vert, tạo một vị trí gateway tự nhiên đối với các tuyến Đại Tây Dương. Tuy nhiên giá trị của vị trí không chỉ đến từ việc “ở gần biển”, mà từ sự kết hợp cảng, sân bay, dịch vụ và kết nối với nội địa Sahel.
 
-> **Chuyển mạch:** Trong **Senegal**, **Độ dốc (gradient / 기울기) Sahel và tính mùa của nước** tiếp nhận điểm tựa từ **Cực tây của lục địa và cửa ngõ Đại Tây Dương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dakar và tính vượt trội đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cap-Vert và Atlantic gateway mở Senegal ra biển, nhưng **Độ dốc (gradient / 기울기) Sahel và tính mùa của nước** kéo điều kiện cư trú từ khô bắc tới ẩm nam. **Dakar và tính vượt trội đô thị** tiếp theo cho thấy gateway tập trung chức năng thế nào.
 
 ## Độ dốc (gradient / 기울기) Sahel và tính mùa của nước
 
@@ -14,7 +14,7 @@ Miền bắc Senegal khô hơn và mang đặc trưng Sahel, trong khi miền na
 
 Sông Senegal ở phía bắc và hệ Gambia ở phía nam tạo các hành lang nước xuyên biên giới. Điều này cho thấy watershed không tuân theo ranh giới quốc gia.
 
-> **Chuyển mạch:** Ở chặng này của **Senegal**, **Dakar và tính vượt trội đô thị** tiếp nhận điểm tựa từ **Độ dốc (gradient / 기울기) Sahel và tính mùa của nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nông nghiệp và sinh kế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sông Senegal, Gambia và mùa mưa–khô làm **Dakar và tính vượt trội đô thị** phụ thuộc cả coastal access lẫn inland water corridors; bán đảo tạo lợi thế nhưng cũng bottleneck. **Nông nghiệp và sinh kế** tiếp theo phân hóa theo cùng gradient.
 
 ## Dakar và tính vượt trội đô thị
 
@@ -22,7 +22,7 @@ Dakar tập trung dân số, việc làm, cảng, hành chính và dịch vụ �
 
 Vị trí bán đảo đồng thời tạo giới hạn đất và bottleneck giao thông: tăng trưởng đô thị dễ gây tắc nghẽn và giá đất cao khi mạng đường bị ép vào một số hành lang.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Senegal**, **Nông nghiệp và sinh kế** tiếp nhận điểm tựa từ **Dakar và tính vượt trội đô thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gateway của Sahel** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Groundnut basin, pastoral mobility, cây trồng phía nam và fisheries tạo **Nông nghiệp và sinh kế** đa dạng, nối biển với đất liền. **Gateway của Sahel** tiếp theo cho thấy Dakar phục vụ hinterland vượt biên giới ra sao.
 
 ## Nông nghiệp và sinh kế
 
@@ -30,7 +30,7 @@ Vùng groundnut basin lịch sử ở trung–tây cho thấy cách commodity cr
 
 Đánh bắt cá là sinh kế quan trọng ở bờ Đại Tây Dương, nối trực tiếp hệ sinh thái biển với an ninh lương thực và đô thị ven biển.
 
-> **Chuyển mạch:** Trong **Senegal**, **Gateway của Sahel** tiếp nhận điểm tựa từ **Nông nghiệp và sinh kế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Dakar là port–service node cho các corridor hướng đông, đặc biệt với Mali; **Gateway của Sahel** biến coastal city thành cửa ngõ của inland trade. **Rủi ro** tiếp theo đặt gateway và vùng cư trú trước hạn, xói lở và nước biển dâng.
 
 ## Gateway của Sahel
 
@@ -38,13 +38,13 @@ Dakar có thể phục vụ các dòng hàng từ nội địa Tây Phi, đặc 
 
 Đây là ví dụ cho thấy một thành phố ven biển có thể là nút (node / 노드) của hinterland vượt xa biên giới quốc gia.
 
-> **Chuyển mạch:** Ở chặng này của **Senegal**, **Rủi ro** tiếp nhận điểm tựa từ **Gateway của Sahel** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hạn và mưa biến động ở Sahel chồng với coastal erosion, flood và sea-level rise; **Rủi ro** tăng khi Dakar tập trung dân cư và hạ tầng. **Mô hình tư duy** sẽ khép liên hệ biển–nước–corridor.
 
 ## Rủi ro
 
 Hạn và biến động mưa ảnh hưởng vùng Sahel; bờ biển Dakar và nhiều đô thị khác đối mặt xói lở, ngập và nước biển dâng. Urban exposure tăng khi dân cư và hạ tầng tiếp tục tập trung ven biển.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Senegal**, **Mô hình tư duy** gom các mảnh từ **Rủi ro** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi Dakar Atlantic gateway → Sahel water gradient → transboundary rivers → livelihoods → Mali corridor và coastal risk, rồi bàn giao cho owner **Western Africa** trong [README](./README.md).
 
 ## Mô hình tư duy
 
