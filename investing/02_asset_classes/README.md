@@ -22,7 +22,7 @@ Nếu mục tiêu chính là cổ phiếu, hãy đọc [lộ trình Cổ phiếu
 
 [07_ASSET_PRICING_TERM_STRUCTURE_AND_PORTFOLIO_LAB.md](./07_ASSET_PRICING_TERM_STRUCTURE_AND_PORTFOLIO_LAB.md) là lớp học sâu dùng một ngôn ngữ chung để so tài sản: nguồn lợi suất, duration kinh tế, carry/roll-down, phần bù thanh khoản, cấu trúc kỳ hạn, định giá tương đối/tuyệt đối, hành vi theo regime và vai trò trong danh mục.
 
-> **Chuyển mạch:** Trong **02 — Các nhóm tài sản (Asset Classes)**, **Sau lĩnh vực này bạn cần làm được gì?** tiếp nhận điểm tựa từ **Thứ tự đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bài tập tích hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Thứ tự đọc** so sánh cash, bonds, equities và alternatives theo risk/return/liquidity; **Sau lĩnh vực này bạn cần làm được gì?** biến so sánh đó thành lựa chọn có điều kiện.
 
 ## Sau lĩnh vực này bạn cần làm được gì?
 
@@ -30,7 +30,7 @@ Bạn cần có khả năng nhìn một sản phẩm và xác định `quyền l
 
 Với thu nhập cố định, phải tách lợi suất nắm giữ, thay đổi lãi suất, thay đổi chênh lệch tín dụng và vỡ nợ. Với đầu tư nhân tố, phải phân biệt nhãn sản phẩm với cách triển khai thực tế. Với danh mục đa tài sản, phải nhìn đóng góp rủi ro, tiền tệ và nghĩa vụ thay vì chỉ nhìn tỷ trọng vốn. Với sản phẩm phức tạp hoặc tài sản tư nhân, phải nhìn xuyên lợi suất quảng cáo hoặc NAV ít biến động để hiểu quyền lợi pháp lý, đòn bẩy, thời điểm dòng tiền và thanh khoản khi căng thẳng.
 
-> **Chuyển mạch:** Ở chặng này của **02 — Các nhóm tài sản (Asset Classes)**, **Bài tập tích hợp** tiếp nhận điểm tựa từ **Sau lĩnh vực này bạn cần làm được gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Bài tập tích hợp** đặt các asset class vào cùng một allocation decision, rồi bàn giao sang phân tích doanh nghiệp và thị trường.
 
 ## Bài tập tích hợp
 

@@ -11,7 +11,7 @@ Economic Lịch sử (history / 이력) & Institutions là lớp cuối của Ec
 3. [Technology, Industrialization & Globalization](./02_technology_industrialization_and_globalization.md) — Malthusian các ràng buộc (constraints / 제약조건들), năng lượng (energy / 에너지), general-purpose technologies, diffusion, factories/management, vận chuyển (transport / 전송), urbanization, structural transformation, trade/toàn cục (global / 전역) giá trị (value / 값) chains và industrial chính sách (policy / 정책).
 4. [Crises, Regime Change & Path Dependence](./03_crises_regime_change_and_path_dependence.md) — leverage/amplification, banking/sovereign/currency crises, fiscal/monetary regimes, reconstruction, Lucas critique, hysteresis, lock-in và historical identification.
 
-> **Chuyển mạch:** Trong **06 — Economic Lịch sử (history / 이력) & Institutions**, **Trục học (learning spine / 학습 축)** tiếp nhận điểm tựa từ **Thứ tự học chuẩn gốc (canonical / 정본)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới (boundary / 경계) với Lịch sử (history / 이력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Thứ tự học canonical** đưa từ sự kiện đến institution và incentive; **Trục học** làm rõ causal mechanism, rồi **Ranh giới với Lịch sử** tránh trộn economic explanation với narrative chronology.
 
 ## Trục học (learning spine / 학습 축)
 
@@ -54,7 +54,7 @@ Historical correlation không tự nhân quả (causal / 인과적). Historical 
 
 Sau mô-đun (module / 모듈) này, người học phải có thể phân biệt quy tắc (rule / 규칙) với enforcement; thuộc tính (property / 속성) rights với phân phối (distribution / 분포) of power; trạng thái (state / 상태) sức chứa (capacity / 용량) với trạng thái (state / 상태) benevolence; financial deepening với simply more credit; invention với diffusion; static comparative advantage với động (dynamic / 동적) năng lực (capability / 역량); crisis shock với amplification; persistence với true đường dẫn (path / 경로) dependence; và historical narrative với identified nhân quả (causal / 인과적) tác động (effect / 효과).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **06 — Economic Lịch sử (history / 이력) & Institutions**, **Checklist** tiếp nhận điểm tựa từ **Kết quả cần đạt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Kết quả cần đạt** nêu năng lực đọc institution và incentive; **Checklist** kiểm tra người học có thể truy nguyên cơ chế từ dữ kiện lịch sử hay chưa.
 
 ## Checklist
 

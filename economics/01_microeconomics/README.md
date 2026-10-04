@@ -35,7 +35,7 @@ Individual objective + constraint
 
 Chuỗi này cố ý đi từ **private quyết định (decision / 결정)** sang **xã hội (social / 사회적) kết quả (outcome / 결과)**. Khi thị trường (market / 시장) thất bại (failure / 실패) xuất hiện, chapter không dừng ở việc nêu tên intervention; phải xác định instrument tác động đúng margin nào, cần thông tin (information / 정보) gì, ai chịu incidence, và thị trường (market / 시장) thất bại (failure / 실패) có thực sự được thay bằng kết quả (outcome / 결과) khả thi tốt hơn hay chỉ đổi sang government/đặc tả hợp đồng (contract / 계약) thất bại (failure / 실패) khác.
 
-> **Chuyển mạch:** Ở chặng này của **01 — Microeconomics**, **Kết quả cần đạt** tiếp nhận điểm tựa từ **Trục học (learning spine / 학습 축)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới (boundary / 경계) với mô-đun (module / 모듈) kế tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Trục học** sắp xếp concept theo dependency; **Kết quả cần đạt** chuyển từng dependency thành năng lực giải thích, trước khi **Ranh giới với module kế tiếp** chỉ ra owner tiếp theo.
 
 ## Kết quả cần đạt
 
@@ -57,7 +57,7 @@ Thông tin (information / 정보) asymmetry và public-goods chapters đã chạ
 
 Company phân tích (analysis / 분석) có thể dùng đơn vị (unit / 단위) economics, pricing power, demand elasticity, incentive đặc tả hợp đồng (contract / 계약) và thông tin (information / 정보) bài toán (problem / 문제), nhưng microeconomics không bắt đầu từ một investment thesis. Chapter ở đây giữ mô hình (model / 모델) tổng quát, các giả định (assumptions / 가정들), comparative statics, welfare và institutional lập luận (reasoning / 추론); ứng dụng vào firm/asset cụ thể thuộc [Investing](../../investing/README.md).
 
-> **Chuyển mạch:** Ở chặng này của **01 — Microeconomics**, **Ranh giới (boundary / 경계) với Investing** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Mathematics và Econometrics** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Ranh giới với Investing** giữ microeconomic mechanism ở đúng owner; **Ranh giới với Mathematics và Econometrics** chỉ phần formalization và identification cần quay về canonical docs.
 
 ## Ranh giới (boundary / 경계) với Mathematics và Econometrics
 
