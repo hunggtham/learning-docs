@@ -8,7 +8,7 @@ Uganda nằm trên cao nguyên Đông Phi, gần xích đạo nhưng nhiều khu
 
 Uganda không giáp biển, vì vậy khoảng cách kinh tế tới thị trường toàn cầu phụ thuộc hành lang qua Kenya và Tanzania nhiều hơn khoảng cách thẳng trên bản đồ.
 
-> **Chuyển mạch:** Trong **Uganda**, **Quốc gia Hồ Lớn không giáp biển** nêu điều cần giải thích; **Địa hình, Rift và đầu nguồn Nile** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Khí hậu và nông nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Great Lakes highland vừa làm Uganda landlocked vừa điều hòa ẩm và dân cư; **Rift/đầu nguồn Nile** cụ thể hóa cách hồ, escarpment và dòng White Nile nối quốc gia với các basin khu vực. **Khí hậu và nông nghiệp** tiếp theo phân bố lợi ích và ràng buộc theo độ cao.
 
 ## Địa hình, Rift và đầu nguồn Nile
 
@@ -16,7 +16,7 @@ Phía tây Uganda chịu ảnh hưởng mạnh của nhánh phía tây East Afri
 
 Điều này đặt Uganda trong cả hai hệ lớn: **Great Lakes hệ thống (system / 시스템)** và **Nile basin**. Một thay đổi sử dụng đất hoặc thủy văn vì vậy có thể có ý nghĩa vượt khỏi biên giới quốc gia.
 
-> **Chuyển mạch:** Ở chặng này của **Uganda**, **Địa hình, Rift và đầu nguồn Nile** nêu điều cần giải thích; **Khí hậu và nông nghiệp** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Kampala và mạng đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Rift, hồ và Nile tạo nhiều ecological zones; **khí hậu và nông nghiệp** biến gradient mưa/độ cao thành coffee, food và water systems. **Kampala và mạng đô thị** bám theo nơi có access, thị trường và corridor.
 
 ## Khí hậu và nông nghiệp
 
@@ -24,13 +24,13 @@ Mưa phân bố không đều; vùng gần hồ và một số cao nguyên ẩm 
 
 Độ cao tạo các vùng sinh thái theo tầng, do đó “Uganda nằm gần xích đạo” không đủ để suy ra một kiểu khí hậu đồng nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Uganda**, **Kampala và mạng đô thị** tiếp nhận điểm tựa từ **Khí hậu và nông nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hành lang ra biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Climate/agriculture tạo supply và demand cho Kampala, Jinja và các đô thị vùng; **hành lang ra biển** quyết định chi phí đưa hàng qua Kenya/Tanzania tới cảng. **Rủi ro và môi trường** tiếp theo kiểm tra cả corridor lẫn lake livelihoods.
 
 ## Kampala và mạng đô thị
 
 Kampala nằm gần bờ bắc Lake Victoria và là lõi đô thị–dịch vụ chính. Cùng với Entebbe và các đô thị lân cận, nó tạo metropolitan region ngày càng liên kết chặt. Jinja có vai trò lịch sử về công nghiệp và vị trí trên Nile, còn các đô thị khác kết nối vùng nông nghiệp và biên giới.
 
-> **Chuyển mạch:** Trong **Uganda**, **Hành lang ra biển** tiếp nhận điểm tựa từ **Kampala và mạng đô thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro và môi trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Northern/Central Corridors tạo redundancy nhưng phụ thuộc border procedures, port capacity và hạ tầng; **rủi ro/môi trường** gồm flood, drought, landslide và lake-water degradation quanh các node.
 
 ## Hành lang ra biển
 
@@ -38,13 +38,13 @@ Northern Corridor qua Kenya nối Uganda với Mombasa; Central Corridor qua Tan
 
 Đối với một quốc gia không giáp biển, chi phí logistics có thể ảnh hưởng giá hàng nhập và khả năng cạnh tranh của hàng xuất mạnh hơn nhiều so với quốc gia ven biển tương đương.
 
-> **Chuyển mạch:** Ở chặng này của **Uganda**, **Rủi ro và môi trường** tiếp nhận điểm tựa từ **Hành lang ra biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Rủi ro làm lộ sự phụ thuộc của landlocked corridor và Great Lakes livelihood vào mùa, địa hình và chất lượng nước. **Mô hình tư duy** sẽ gom accessibility, highland climate, Nile headwater và network redundancy.
 
 ## Rủi ro và môi trường
 
 Lũ, sạt lở ở vùng núi, hạn ở vùng khô và suy giảm chất lượng nước là các rủi ro không gian khác nhau. Lake Victoria tạo nguồn nước và sinh kế nhưng cũng tập trung dân cư, giao thông và hoạt động kinh tế quanh bờ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Uganda**, **Mô hình tư duy** gom các mảnh từ **Rủi ro và môi trường** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi Great Lakes highland–Nile headwater → climate/agriculture–urban nodes → Kenya/Tanzania corridors và environmental risk. Đây là điểm bàn giao cho các profile East Africa trong owner World Atlas.
 
 ## Mô hình tư duy
 

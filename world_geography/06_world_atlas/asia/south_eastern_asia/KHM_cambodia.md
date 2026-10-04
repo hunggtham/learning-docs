@@ -6,25 +6,25 @@
 
 Campuchia có cấu trúc địa lý xoay quanh đồng bằng thấp của Mekong và hồ Tonlé Sap, được bao quanh một phần bởi cao nguyên và núi thấp. Hệ Tonlé Sap có chế độ thủy văn đặc biệt: theo mùa mưa, dòng kết nối với Mekong có thể đảo chiều, làm diện tích hồ tăng mạnh và tạo vùng ngập giàu dinh dưỡng.
 
-> **Chuyển mạch:** Trong **Campuchia — Cambodia (KHM)**, **Nước là hạ tầng sinh thái** tiếp nhận điểm tựa từ **Đồng bằng Mekong–Tonlé Sap** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dân cư và nông nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mekong–Tonlé Sap tạo flood pulse, phù sa và fisheries; **nước là hạ tầng sinh thái** vì thế vừa cung cấp sinh kế vừa đặt giới hạn quản lý. **Dân cư và nông nghiệp** bám theo đồng bằng, sông và hành lang giao thông.
 
 ## Nước là hạ tầng sinh thái
 
 Lũ mùa không chỉ là hazard; nó mang phù sa, nuôi thủy sản và duy trì hệ sinh thái đồng bằng. Vì vậy quản lý nước phải cân bằng giữa chống ngập và duy trì pulse tự nhiên. Thay đổi dòng, đập thượng nguồn hoặc khí hậu có thể tác động không chỉ lượng nước mà cả timing và di cư cá.
 
-> **Chuyển mạch:** Ở chặng này của **Campuchia — Cambodia (KHM)**, **Dân cư và nông nghiệp** tiếp nhận điểm tựa từ **Nước là hạ tầng sinh thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết nối khu vực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Population, rice, fisheries và Phnom Penh phụ thuộc timing và chất lượng nước; **kết nối khu vực** đưa sản phẩm, người và corridor qua Thailand, Laos, Viet Nam và cảng. **Mô hình tư duy** sẽ giữ trade-off giữa flow tự nhiên và hạ tầng.
 
 ## Dân cư và nông nghiệp
 
 Phần lớn dân cư bám theo đồng bằng, sông và hành lang giao thông. Lúa nước, thủy sản và đô thị cùng phụ thuộc hệ nước. Phnom Penh nằm ở nút quan trọng của hệ Mekong–Bassac–Tonlé Sap, cho thấy thành phố lớn thường hình thành nơi các dòng hội tụ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Campuchia — Cambodia (KHM)**, **Kết nối khu vực** tiếp nhận điểm tựa từ **Dân cư và nông nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Road/port corridors mở Cambodia vào ASEAN nhưng upstream dams, climate change và land-use có thể đổi flood pulse và fish migration. **Mô hình tư duy** sẽ nối ecology, city, agriculture và regional network.
 
 ## Kết nối khu vực
 
 Campuchia nằm giữa Thailand, Laos và Viet Nam, nên corridor đường bộ xuyên biên giới ngày càng quan trọng bên cạnh sông. Có biển nhưng đường bờ không dài; cảng và trục tới Phnom Penh đóng vai trò cửa ngõ.
 
-> **Chuyển mạch:** Trong **Campuchia — Cambodia (KHM)**, **Mô hình tư duy** gom các mảnh từ **Kết nối khu vực** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi Mekong–Tonlé Sap flood pulse → water–food–urban system → ASEAN corridors, luôn kiểm tra timing, fish migration và hạ tầng. Đây là điểm bàn giao cho các profile Southeast Asia trong owner World Atlas.
 
 ## Mô hình tư duy
 
