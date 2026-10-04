@@ -1,6 +1,6 @@
 # 09 — Mathematics Connections
 
-Thư mục này không thêm một nhánh toán mới. Nó dùng các khái niệm chuẩn gốc (canonical / 정본) ở algebra, geometry, linear algebra, calculus, probability/statistics và optimization để giải thích những pattern xuất hiện xuyên Physics, Engineering, Computer Science, AI, Finance và quyết định thực tế.
+Thư mục này không thêm một nhánh toán tách biệt. Nó dùng các khái niệm canonical ở algebra, geometry, linear algebra, calculus, probability/statistics, optimization và discrete mathematics để giải thích những pattern xuất hiện xuyên Physics, Engineering, Computer Science, AI, Finance, Economics và quyết định thực tế.
 
 ## Mạch đọc
 
@@ -11,12 +11,45 @@ Thư mục này không thêm một nhánh toán mới. Nó dùng các khái ni�
 5. [Math for Finance, Work and Daily Life](./04_math_for_finance_work_and_daily_life.md) — nối percentage, compounding, probability và optimization với các bài toán thực tế.
 6. [Fourier, signals và frequency](./05_fourier_signals_and_frequency.md) — đổi representation từ time/space sang frequency.
 7. [Laplace, Z-transform và dynamic systems](./06_laplace_z_transform_and_dynamic_systems.md) — nối differential equation, transform và control reasoning.
-8. [Probability → Calibration → Decision and Risk](./07_probability_calibration_decision_and_risk.md) — nối xác suất (probability / 확률), hiệu chuẩn (calibration / 보정), loss/utility và quyết định dưới bất định (decision under uncertainty / 불확실성하 의사결정).
+8. [Probability → Calibration → Decision and Risk](./07_probability_calibration_decision_and_risk.md) — nối xác suất, calibration, loss/utility và decision under uncertainty.
+9. [Game theory: strategy, equilibrium và incentives](./08_game_theory_strategy_equilibrium_and_incentives.md) — nối probability/optimization với multi-agent interaction, Nash/minimax, repeated games, mechanism design và incentive-aware systems.
+
+## Các bridge quan trọng
+
+```text
+Probability
+→ calibration
+→ expected utility / decision
+→ strategic interaction
+→ equilibrium / incentives
+```
+
+```text
+Optimization
+→ one decision maker
+→ Game Theory
+→ multiple decision makers that react to each other
+```
+
+```text
+Graph / matching
+→ feasible allocation
+→ preference / incentives
+→ stable or strategic allocation
+```
+
+Các bridge này giúp tránh ba nhầm lẫn thường gặp: một model dự đoán tốt chưa chắc dẫn đến decision tốt; một decision tối ưu cho một agent chưa chắc tối ưu cho system; và một allocation có cardinality tối đa chưa chắc stable khi participants có preferences.
 
 ## Ranh giới
 
-Các route này không thay thế chapter toán gốc. Nếu một route sử dụng Bayes, covariance, derivative, optimization hay stochastic process mà người đọc chưa chắc, hãy quay về chapter tương ứng trong `06_probability_statistics/`, `05_calculus/` hoặc `08_optimization_numerical/`.
+Các route này không thay thế chapter toán gốc. Nếu một route sử dụng Bayes, covariance, derivative, optimization, network matching hay stochastic process mà người đọc chưa chắc, quay về canonical owner trong `06_probability_statistics/`, `05_calculus/`, `07_discrete_cs/` hoặc `08_optimization_numerical/`.
 
-Route mới về xác suất và quyết định cố ý dừng trước domain-specific policy. Với đầu tư, đọc tiếp [macro + behavior + evidence → portfolio decision](../../investing/07_integrated_case_studies/08_MACRO_BEHAVIOR_EVIDENCE_TO_PORTFOLIO_DECISION.md); với AI, dùng calibration/evaluation trong owner của Artificial Intelligence; với research, quay về `research_methods/` để kiểm tra measurement và evidence design.
+Phần application cũng giữ boundary rõ:
 
-> **Bàn giao:** Các chapter trong thư mục này nên được dùng khi người đọc đã biết từng concept riêng lẻ nhưng chưa thấy chúng kết hợp thành một mental model xuyên lĩnh vực.
+- Investing: đọc tiếp [macro + behavior + evidence → portfolio decision](../../investing/07_integrated_case_studies/08_MACRO_BEHAVIOR_EVIDENCE_TO_PORTFOLIO_DECISION.md).
+- Economics: game theory ở đây giữ mathematical structure; market/institution interpretation thuộc `economics/`.
+- AI/Data: calibration, evaluation và learning mechanics quay về owner của AI/Data tương ứng.
+- Software/Platforms: incentive-aware design ở đây chỉ cung cấp mathematical lens; architecture, security và production behavior thuộc technical libraries.
+- Research: measurement, causal design và evidence quality thuộc `research_methods/`.
+
+> **Bàn giao:** Dùng các chapter trong thư mục này khi đã biết từng concept riêng lẻ nhưng cần thấy chúng kết hợp thành một mental model xuyên lĩnh vực.
