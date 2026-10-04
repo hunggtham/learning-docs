@@ -22,7 +22,7 @@ Lĩnh vực này áp dụng toàn bộ kiến thức từ Nền tảng → Các 
 
 [07_KOREA_VIETNAM_MARKET_THESIS_AND_SCENARIO_LAB.md](./07_KOREA_VIETNAM_MARKET_THESIS_AND_SCENARIO_LAB.md) là lớp học sâu nối chế độ toàn cầu với bảng cân đối quốc gia, ràng buộc chính sách, FX/tín dụng/thanh khoản, ngành, earnings revisions, định giá, thị trường (market / 시장) truy cập (access / 접근) và quy mô vị thế. Lab yêu cầu xây scenario ma trận (matrix / 행렬) thay vì giải thích thị trường bằng một headline.
 
-> **Chuyển mạch:** Trong **06 — Thị trường Hàn Quốc và Việt Nam**, **Sau lĩnh vực này bạn cần làm được gì?** tiếp nhận điểm tựa từ **Thứ tự đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bài tập tổng hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Thứ tự đọc** đặt Korea và Vietnam trên cùng trục institutions, currency, sector và valuation; **Sau lĩnh vực này bạn cần làm được gì?** nêu năng lực so sánh có điều kiện.
 
 ## Sau lĩnh vực này bạn cần làm được gì?
 
@@ -30,7 +30,7 @@ Bạn cần có khả năng mở một cổ phiếu Hàn Quốc hoặc Việt Na
 
 Với vị thế xuyên biên giới, cần thêm lớp `kinh tế của tài sản → quốc gia/nhân tố → tiền tệ → cấu trúc sản phẩm/nơi thành lập/quyền lợi pháp lý → lưu ký/tiếp cận/thanh toán → thuế/chi phí → chuyển tiền/thanh khoản → khớp nghĩa vụ`.
 
-> **Chuyển mạch:** Ở chặng này của **06 — Thị trường Hàn Quốc và Việt Nam**, **Bài tập tổng hợp** gom các mảnh từ **Sau lĩnh vực này bạn cần làm được gì?** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Bài tập tổng hợp** kiểm tra một thesis qua hai market regime và nguồn dữ liệu tương ứng, trước khi quay về owner của asset class.
 
 ## Bài tập tổng hợp
 

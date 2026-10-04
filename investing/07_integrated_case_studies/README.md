@@ -108,7 +108,7 @@ Nếu tình huống có giao dịch hoặc phòng vệ, xem thêm [05 — Giao d
 
 Nếu muốn học theo lớp nâng cao thay vì theo lĩnh vực (domain / 도메인), sử dụng [Advanced Depth Path](../ADVANCED_DEPTH_PATH.md).
 
-> **Chuyển mạch:** Trong **07 — Bài tập tích hợp (Integrated case Studies)**, **Tiêu chuẩn hoàn thành** tiếp nhận điểm tựa từ **Liên kết với các lĩnh vực trước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mục tiêu cuối cùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Liên kết với các lĩnh vực trước** cung cấp evidence và vocabulary; **Tiêu chuẩn hoàn thành** kiểm tra người học có thể nối chúng thành một decision memo hay không.
 
 ## Tiêu chuẩn hoàn thành
 
@@ -130,7 +130,7 @@ Một attribution / post-mortem template
 
 Với worked trường hợp (case / 사례) 06 và 07, phải tự thay ít nhất ba giả định và tính lại kết quả. Nếu chỉ đọc số có sẵn, bài chưa đạt.
 
-> **Chuyển mạch:** Ở chặng này của **07 — Bài tập tích hợp (Integrated case Studies)**, **Mục tiêu cuối cùng** tiếp nhận điểm tựa từ **Tiêu chuẩn hoàn thành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Mục tiêu cuối cùng** khép route bằng thesis, downside, sizing và review loop; đây là boundary để quay lại domain owner khi cần đào sâu.
 
 ## Mục tiêu cuối cùng
 

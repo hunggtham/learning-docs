@@ -22,7 +22,7 @@ Lĩnh vực này nối doanh nghiệp với nền kinh tế và hệ thống tà
 
 [07_MACRO_TRANSMISSION_NOWCASTING_AND_POLICY_LAB.md](./07_MACRO_TRANSMISSION_NOWCASTING_AND_POLICY_LAB.md) là lớp học sâu: xây nowcast theo diffusion, tách bất ngờ dữ liệu khỏi mức tuyệt đối, đọc phản ứng đầu ngắn/đầu dài của đường cong, kênh tín dụng và FX, nhu cầu tài trợ chính phủ, chuyển chế độ kinh tế và tác động bậc một/bậc hai tới doanh nghiệp và tài sản.
 
-> **Chuyển mạch:** Trong **04 — Kinh tế học và vĩ mô (Economics)**, **Sau lĩnh vực này bạn cần làm được gì?** tiếp nhận điểm tựa từ **Thứ tự đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bài tập tích hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Thứ tự đọc** đi từ growth, inflation và policy đến market impact; **Sau lĩnh vực này bạn cần làm được gì?** chuyển route đó thành năng lực đọc dữ liệu và lập luận vĩ mô.
 
 ## Sau lĩnh vực này bạn cần làm được gì?
 
@@ -30,7 +30,7 @@ Bạn cần có khả năng nhận một cú sốc và tự xây chuỗi `cú s�
 
 Bạn cũng cần biết khi nào dữ liệu tiêu đề chỉ là nhiễu chu kỳ và khi nào bảng cân đối, cấu trúc nợ hoặc xu hướng năng suất đang làm thay đổi chế độ cấu trúc.
 
-> **Chuyển mạch:** Ở chặng này của **04 — Kinh tế học và vĩ mô (Economics)**, **Bài tập tích hợp** tiếp nhận điểm tựa từ **Sau lĩnh vực này bạn cần làm được gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Bài tập tích hợp** đặt policy shock, asset price và macro evidence trong cùng một case, rồi bàn giao sang market owner.
 
 ## Bài tập tích hợp
 

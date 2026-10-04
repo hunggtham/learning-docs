@@ -53,7 +53,7 @@ Trình tự dưới đây biến toàn bộ folder thành một buổi học có
 
 Sau khi đi hết trình tự, quay lại `00_exam_map_and_strategy.md` để tự đánh giá phần nào còn yếu. Việc quay vòng này giúp kế hoạch học thích ứng với kết quả làm bài thay vì chỉ chạy một lần từ đầu đến cuối.
 
-> **Chuyển mạch:** Ở chặng này của **KIIP 5단계 — 영주용·귀화용 시험 대비 Library**, **Nguyên tắc học** tiếp nhận điểm tựa từ **Bắt đầu ở đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch giảng của từng chapter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Bắt đầu ở đâu?** định vị prerequisite theo mục tiêu cư trú/quốc tịch; **Nguyên tắc học** giải thích cách đọc cơ chế và từ vựng trước khi vào **Mạch giảng của từng chapter**.
 
 ## Nguyên tắc học
 
@@ -69,9 +69,9 @@ Ví dụ:
 
 Cách này hiệu quả hơn việc chỉ học “국회 = Quốc hội”, vì đề thường kiểm tra **chức năng**, không chỉ kiểm tra tên.
 
-Khi đã nối được chuỗi trên, bạn có thể chuyển sang luyện multiple choice, viết và nói mà không phải học lại từ đầu.
+Khi đã nối được chuỗi trên, bạn có thể tự giải thích bằng tiếng Việt, viết và nói mà không phải học lại từ đầu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **KIIP 5단계 — 영주용·귀화용 시험 대비 Library**, **Mạch giảng của từng chapter** tiếp nhận điểm tựa từ **Nguyên tắc học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Mạch giảng của từng chapter** biến nguyên tắc thành giải thích tiếng Việt theo topic; khi cần chi tiết pháp lý hoặc văn hóa, route quay về README owner tương ứng.
 
 ## Mạch giảng của từng chapter
 
