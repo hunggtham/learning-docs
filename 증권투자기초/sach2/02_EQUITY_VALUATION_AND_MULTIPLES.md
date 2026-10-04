@@ -95,10 +95,20 @@ Giả sử `Rf = 5%`, beta bằng `1,2` và phần bù rủi ro thị trường 
 Với một dự án bỏ ra 100 hôm nay và nhận 60 rồi 70 trong hai năm, NPV ở 10% là:
 
 ```text
-NPV = −100 + 60/1,10 + 70/(1,10)^2 ≈ 8,26
+NPV = −100 + 60/1,10 + 70/(1,10)^2 ≈ 12,40
 ```
 
-NPV dương trong ví dụ này chỉ nói rằng dòng tiền giả định vượt hurdle rate 10%. Nếu doanh thu giảm, capex tăng hoặc discount rate lên 14%, NPV có thể âm. Vì vậy một mô hình tốt phải có bảng độ nhạy, không chỉ một giá trị trung tâm.
+NPV dương trong ví dụ này chỉ nói rằng dòng tiền giả định vượt hurdle rate 10%; bảng độ nhạy dưới đây cho thấy biên an toàn thay đổi thế nào khi discount rate đổi.
+
+Để thấy kết luận phụ thuộc giả định ra sao, giữ nguyên dòng tiền nhưng đổi discount rate:
+
+| Discount rate | NPV xấp xỉ | Cách đọc |
+|---:|---:|---|
+| 8% | 15,57 | Biên an toàn rộng hơn vì suất chiết khấu thấp hơn |
+| 10% | 12,40 | Kịch bản cơ sở của ví dụ |
+| 20% | −1,39 | Giá trị hiện tại không còn bù vốn bỏ ra |
+
+NPV dương trong ví dụ này chỉ nói rằng dòng tiền giả định vượt hurdle rate 10%. Nếu doanh thu giảm, capex tăng hoặc discount rate lên 20%, NPV có thể âm. Bảng độ nhạy không dự báo mức nào sẽ xảy ra; nó chỉ cho biết luận điểm nhạy nhất với biến nào và khi nào cần vô hiệu hóa mô hình.
 
 ## 11. Tam giác kiểm tra multiple
 

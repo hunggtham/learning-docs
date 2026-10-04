@@ -6,6 +6,16 @@ Bài 5 đã xác định các dòng tiền hợp đồng. Bài cuối giải quy
 
 Discount rate là suất dùng để quy đổi dòng tiền về hiện tại. IRR (Internal Rate of Return) là nghiệm làm NPV bằng 0 cho một chuỗi dòng tiền. YTM (Yield to Maturity) là IRR của trái phiếu nếu giữ đến đáo hạn và các coupon được tái đầu tư theo cùng lợi suất; đó là quy đổi mô hình, không phải realized return nếu bán sớm, tái đầu tư khác mức hoặc issuer vỡ nợ. Coupon rate chỉ là tỷ lệ trên mệnh giá, không đồng nghĩa YTM.
 
+### Worked YTM: coupon không phải lợi suất
+
+Dùng trái phiếu ở Bài 5: mệnh giá 1.000, coupon 60 mỗi năm, còn hai năm và giá 964,33. YTM là nghiệm của phương trình:
+
+```
+964,33 = 60/(1+y) + 1.060/(1+y)^2
+```
+
+Nghiệm xấp xỉ là `y = 8%`, trong khi coupon rate chỉ là `60/1.000 = 6%`. Chênh lệch xuất hiện vì người mua trả dưới mệnh giá và nhận lại 1.000 khi đáo hạn. Nếu bán trước hạn hoặc coupon được tái đầu tư ở mức khác 8%, realized return sẽ lệch khỏi YTM. Đây là lý do YTM là ngôn ngữ quy đổi để so sánh, không phải lời hứa về kết quả thực nhận.
+
 ## 2. Đường cong lợi suất
 
 Yield curve xếp lợi suất theo kỳ hạn. Source trình bày bốn cách giải thích: Expectations Theory coi lợi suất dài hạn phản ánh lãi suất ngắn hạn kỳ vọng; Liquidity Premium Theory cộng phần bù cho việc nắm giữ kỳ hạn dài; Market Segmentation Theory cho rằng cung–cầu mỗi bucket kỳ hạn tương đối tách biệt; Preferred Habitat Theory cho phép nhà đầu tư có kỳ hạn ưa thích nhưng dịch chuyển khi phần bù đủ lớn. Bốn theory là các lăng kính bổ sung, không phải bốn dự báo đồng nhất.
