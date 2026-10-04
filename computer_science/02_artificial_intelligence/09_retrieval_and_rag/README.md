@@ -22,7 +22,7 @@ flowchart TD
     ADV --> EVAL[RAG Evaluation]
 ```
 
-> **Chuyển mạch:** Trong **Retrieval & RAG kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Chapters** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) Map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Full mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Dependency Map** đi từ corpus, chunking và retrieval đến generation; **Full mental model** giữ rõ evidence path và nơi hallucination có thể phát sinh.
 
 ## Chapters
 
@@ -88,7 +88,7 @@ newest source           ≠ authoritative source
 long context            ≠ retrieval replacement
 ```
 
-> **Chuyển mạch:** Trong **Retrieval & RAG kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Môi trường vận hành (production / 운영 환경) Principle** tiếp nhận điểm tựa từ **Important Distinctions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Next** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Important Distinctions** tách retrieval quality khỏi generation quality; **Production Principle** đặt cả hai vào latency, freshness, access control và observability.
 
 ## Môi trường vận hành (production / 운영 환경) Principle
 
@@ -104,7 +104,7 @@ LLM có use evidence faithfully không?
 citation có map đúng source không?
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Retrieval & RAG kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Next** tiếp nhận điểm tựa từ **Môi trường vận hành (production / 운영 환경) Principle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Production Principle** khép RAG bằng evidence và operational limits; phần tiếp theo quay về owner của search, data platform hoặc model serving khi cần đào sâu.
 
 ## Next
 

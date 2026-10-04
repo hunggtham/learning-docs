@@ -300,7 +300,7 @@ Nếu bạn chỉ nhớ tên `ATP synthase`, `p53`, `Nernst`, `Hardy–Weinberg`
 
 ---
 
-> **Chuyển mạch:** Trong **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**, **7. Phạm vi của thư viện (library / 라이브러리)** tiếp nhận điểm tựa từ **6. Cách tự kiểm tra sau mỗi chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Trạng thái hiện tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cách tự kiểm tra sau mỗi chapter** xác nhận mental model đã dùng được; **Phạm vi của thư viện** đặt boundary cho phần sinh học canonical trước khi đọc **Trạng thái hiện tại**.
 
 ## 7. Phạm vi của thư viện (library / 라이브러리)
 
@@ -310,7 +310,7 @@ Hai chapter Human Health cung cấp nền systems-level và preventive-health l�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**, **8. Trạng thái hiện tại** tiếp nhận điểm tựa từ **7. Phạm vi của thư viện (library / 라이브러리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy ước ngôn ngữ và liên kết nội bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Trạng thái hiện tại** cho biết chapter nào đã có evidence và chapter nào còn gap; **Quy ước ngôn ngữ và liên kết nội bộ** giữ route và owner không bị trôi.
 
 ## 8. Trạng thái hiện tại
 
@@ -333,7 +333,7 @@ Chi tiết kiểm tra coverage và continuity nằm trong [Biology Knowledge Lib
 
 <!-- continuity-2026:language-links -->
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**, sau nội dung của **8. Trạng thái hiện tại**, **Quy ước ngôn ngữ và liên kết nội bộ** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Quy ước ngôn ngữ và liên kết nội bộ** khép README bằng cách chỉ đường quay lại canonical owner, để phần còn thiếu được bổ sung đúng chapter thay vì mở bản sao.
 
 ## Quy ước ngôn ngữ và liên kết nội bộ
 

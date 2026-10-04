@@ -50,7 +50,7 @@ bối cảnh
 
 Xem [[90_connections/06_historical_theories_and_modern_evidence_matrix]].
 
-> **Chuyển mạch:** Trong **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Cấu trúc** tiếp nhận điểm tựa từ **Quy ước bắt buộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ba tệp (file / 파일) điều phối thư viện (library / 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Quy ước bắt buộc** đặt contract cho nguồn, thuật ngữ và ownership; **Cấu trúc** biến contract đó thành route, rồi **Ba tệp điều phối** giữ route nhất quán.
 
 ## Cấu trúc
 
@@ -72,7 +72,7 @@ psychology/
 └── README.md
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Ba tệp (file / 파일) điều phối thư viện (library / 라이브러리)** tiếp nhận điểm tựa từ **Cấu trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reading đường dẫn (path / 경로) 1 — Scientific foundations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Ba tệp điều phối** chia ownership giữa map, style và coverage; **Reading path 1 — Scientific foundations** bắt đầu từ nền tảng có thể kiểm chứng.
 
 ## Ba tệp (file / 파일) điều phối thư viện (library / 라이브러리)
 
@@ -282,7 +282,7 @@ Một chapter tốt cần trả lời tự nhiên:
 
 Không dùng bullet thay lập luận (reasoning / 추론) nếu phần đó cần explanatory prose.
 
-> **Chuyển mạch:** Ở chặng này của **Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Nguyên tắc viết chapter** nêu điều cần giải thích; **Chuẩn gốc (canonical / 정본) nguồn (source / 소스) và merge chính sách (policy / 정책)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Nguyên tắc viết chapter** giữ prose theo cơ chế và evidence; **Canonical source và merge policy** bảo vệ owner khi thêm nghiên cứu hoặc hợp nhất thay đổi.
 
 ## Chuẩn gốc (canonical / 정본) nguồn (source / 소스) và merge chính sách (policy / 정책)
 

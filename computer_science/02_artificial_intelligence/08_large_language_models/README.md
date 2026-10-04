@@ -29,7 +29,7 @@ flowchart TD
     EVAL --> LIM[Limitations]
 ```
 
-> **Chuyển mạch:** Trong **Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Chapters** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) Map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reading lô-gic (logic / 논리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Dependency Map** đặt token, training và serving theo prerequisite; **Reading logic** dùng route đó để giải thích mỗi capability bằng cơ chế thay vì tên model.
 
 ## Chapters
 
@@ -54,7 +54,7 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 15_llm_limitations.md
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Reading lô-gic (logic / 논리)** tiếp nhận điểm tựa từ **Chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Reading logic** nối data, objective và inference; **Mental model** chốt trade-off giữa capability, latency, cost và failure.
 
 ## Reading lô-gic (logic / 논리)
 
@@ -97,7 +97,7 @@ low temperature              ≠ factuality
 LLM                          ≠ complete AI system
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Large ngôn ngữ (language / 언어) các mô hình (models / 모델들) kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Next** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) Distinctions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Core distinctions** giữ ranh giới giữa pretraining, alignment và serving; **Next** bàn giao các ranh giới đó về owner của MLOps, RAG và AI safety.
 
 ## Next
 

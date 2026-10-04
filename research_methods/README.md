@@ -12,7 +12,7 @@
 4. [Systematic Reviews & Evidence Synthesis](./03_systematic_reviews_and_evidence_synthesis.md) — protocols, tìm kiếm (search / 검색)/screening, rủi ro (risk / 위험) of độ lệch (bias / 편향), meta-analysis, heterogeneity, publication độ lệch (bias / 편향), qualitative synthesis và bằng chứng (evidence / 증거) certainty.
 5. [Mixed Methods, Ethics, Reproducibility & Open Science](./04_mixed_methods_ethics_reproducibility_and_open_science.md) — tích hợp (integration / 통합) designs, consent/privacy, preregistration, reproducible pipelines, replication, dữ liệu (data / 데이터)/mã (code / 코드) sharing, reporting và AI-assisted research boundaries.
 
-> **Chuyển mạch:** Trong **Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Trục học (learning spine / 학습 축)** tiếp nhận điểm tựa từ **Thứ tự học chuẩn gốc (canonical / 정본)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới (boundary / 경계) với Econometrics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Thứ tự học canonical** đi từ câu hỏi, design đến inference; **Trục học** làm rõ dependency, rồi **Ranh giới với Econometrics** giữ phần identification ở đúng owner.
 
 ## Trục học (learning spine / 학습 축)
 
@@ -92,7 +92,7 @@ uncertainty and limits
 reproducibility materials
 ```
 
-> **Chuyển mạch:** Trong **Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Connections** tiếp nhận điểm tựa từ **Chất lượng (quality / 품질) đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mục tiêu cuối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Quality contract** quy định evidence tối thiểu của một nghiên cứu; **Connections** nối contract đó với causal inference, measurement và reproducibility.
 
 ## Connections
 
@@ -103,7 +103,7 @@ reproducibility materials
 - [World History](../world_history/README.md): archival/historical bằng chứng (evidence / 증거) and nguồn (source / 소스) criticism.
 - [Computer Science](../computer_science/README.md): dữ liệu (data / 데이터) pipelines, computation, reproducibility and AI-assisted workflows.
 
-> **Chuyển mạch:** Ở chặng này của **Research Methods Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Mục tiêu cuối** tiếp nhận điểm tựa từ **Connections** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Mục tiêu cuối** khép route bằng khả năng thiết kế, đọc và giới hạn một claim; khi cần formal detail, quay về owner canonical tương ứng.
 
 ## Mục tiêu cuối
 

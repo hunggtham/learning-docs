@@ -22,7 +22,7 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 10_ai_system_design.md
 ```
 
-> **Chuyển mạch:** Trong **AI kỹ thuật (engineering / 엔지니어링)**, **Bản đồ phụ thuộc** tiếp nhận điểm tựa từ **Thứ tự đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy cốt lõi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Thứ tự đọc** đi từ model/data đến API, evaluation và production; **Bản đồ phụ thuộc** giải thích prerequisite trước khi xây **mental model cốt lõi**.
 
 ## Bản đồ phụ thuộc
 
@@ -91,7 +91,7 @@ Prompt instruction      ≠ security boundary
 
 Các distinction này quan trọng vì nhiều tối ưu nhìn tốt ở một tầng (layer / 계층) có thể làm hệ thống tổng thể tệ hơn. Ví dụ mô hình (model / 모델) nhỏ hơn có thể tải (load / 로드) nhanh nhưng tokenizer, mạng (network / 네트워크) hoặc hàng đợi (queue / 큐) vẫn là bottleneck; GPU utilization cao có thể đến từ batch lớn nhưng làm yêu cầu (request / 요청) đơn lẻ chờ lâu hơn.
 
-> **Chuyển mạch:** Trong **AI kỹ thuật (engineering / 엔지니어링)**, **Cách đọc tầng (layer / 계층) này** tiếp nhận điểm tựa từ **Những phân biệt cần giữ rõ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Những phân biệt cần giữ rõ** tách model, product và platform concerns; **Cách đọc tầng này** dùng chúng để chọn evidence và boundary cho từng layer.
 
 ## Cách đọc tầng (layer / 계층) này
 
@@ -101,7 +101,7 @@ Một nguyên tắc xuyên suốt là:
 
 > **Tối ưu mô hình (model / 모델) không đồng nghĩa tối ưu hệ thống. môi trường vận hành (production / 운영 환경) chất lượng (quality / 품질) xuất hiện khi mô hình (model / 모델), thời gian chạy (runtime / 런타임), dữ liệu, orchestration và hạ tầng được thiết kế như một hệ thống thống nhất.**
 
-> **Chuyển mạch:** Ở chặng này của **AI kỹ thuật (engineering / 엔지니어링)**, sau nội dung của **Cách đọc tầng (layer / 계층) này**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Liên kết kiến thức** trả mỗi layer về canonical owner—ML, systems, security hoặc product—để mở rộng mà không duplicate.
 
 ## Liên kết kiến thức
 
