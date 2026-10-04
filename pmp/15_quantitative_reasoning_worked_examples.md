@@ -79,7 +79,7 @@ C có `LS-ES = 7-3 = 4` ngày float. E có `9-5 = 4` ngày float. Đường A-C-
 
 Free float là khoảng activity có thể delay mà chưa làm early start của successor trực tiếp bị delay. Total float rộng hơn: delay bao nhiêu trước khi dự án (project / 프로젝트) finish date bị ảnh hưởng. Hai quantity trả lời hai câu hỏi khác nhau. Một activity có thể còn total float nhưng không còn free float, nghĩa là dự án (project / 프로젝트) date chưa trượt nhưng successor sẽ phải bắt đầu muộn hơn.
 
-> **Chuyển mạch:** Trong **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **1. đường găng (critical path / 임계 경로) phương thức (method / 메서드): forward pass, backward pass và float** xác định đầu vào; **2. Three-point estimation: expected giá trị (value / 값) không phải lời hứa** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. EVM: trước hết phải hiểu PV, EV và AC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **1. đường găng (critical path / 임계 경로) phương thức (method / 메서드): forward pass, backward pass và float** xác định đầu vào; **2. Three-point estimation: expected giá trị (value / 값) không phải lời hứa** giải thích vận hành; **3. EVM: trước hết phải hiểu PV, EV và AC** kiểm tra hệ quả.
 
 ## 2. Three-point estimation: expected giá trị (value / 값) không phải lời hứa
 
@@ -115,7 +115,7 @@ Interpretation quan trọng hơn arithmetic: khoảng giữa optimistic và pess
 
 Khi cộng variance của nhiều activity trên một đường dẫn (path / 경로), giả định (assumption / 가정) về independence trở nên quan trọng. Trong dự án (project / 프로젝트) thật, nhiều delay có thể correlated vì cùng vendor, cùng môi trường (environment / 환경) hoặc cùng tài nguyên (resource / 자원). Vì vậy Monte Carlo simulation thường hữu ích hơn một phép cộng thủ công khi schedule bất định (uncertainty / 불확실성) tương tác phức tạp.
 
-> **Chuyển mạch:** Ở chặng này của **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **3. EVM: trước hết phải hiểu PV, EV và AC** tiếp nhận điểm tựa từ **2. Three-point estimation: expected giá trị (value / 값) không phải lời hứa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. EAC: mỗi công thức encode một giả định (assumption / 가정) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. EVM: trước hết phải hiểu PV, EV và AC** nối từ **2. Three-point estimation: expected giá trị (value / 값) không phải lời hứa** sang **4. EAC: mỗi công thức encode một giả định (assumption / 가정) khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. EVM: trước hết phải hiểu PV, EV và AC
 
@@ -158,7 +158,7 @@ Nếu CPI bằng 0.80, intuition là mỗi 1 đơn vị chi phí chỉ tạo đ�
 
 Khi dự án (project / 프로젝트) hoàn thành toàn bộ baseline phạm vi (scope / 범위), `EV` và `PV` đều tiến tới `BAC`, nên SPI tiến về 1 dù dự án (project / 프로젝트) có thể đã kết thúc muộn. Vì vậy EVM schedule metrics không thay thế schedule mạng (network / 네트워크), milestone forecast hoặc time-based bằng chứng (evidence / 증거). chỉ số (metric / 지표) phải được dùng đúng câu hỏi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **4. EAC: mỗi công thức encode một giả định (assumption / 가정) khác nhau** tiếp nhận điểm tựa từ **3. EVM: trước hết phải hiểu PV, EV và AC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. ETC, VAC và TCPI: forecast khác mục tiêu (target / 대상)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. EAC: mỗi công thức encode một giả định (assumption / 가정) khác nhau** nối từ **3. EVM: trước hết phải hiểu PV, EV và AC** sang **5. ETC, VAC và TCPI: forecast khác mục tiêu (target / 대상)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. EAC: mỗi công thức encode một giả định (assumption / 가정) khác nhau
 
@@ -214,7 +214,7 @@ EAC = AC + Bottom-up ETC
 
 Đây là ví dụ quan trọng cho nguyên tắc: mô hình (model / 모델) đơn giản chỉ hữu ích khi nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘) phía sau còn hợp lệ.
 
-> **Chuyển mạch:** Trong **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **5. ETC, VAC và TCPI: forecast khác mục tiêu (target / 대상)** tiếp nhận điểm tựa từ **4. EAC: mỗi công thức encode một giả định (assumption / 가정) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. EMV và cây quyết định (decision tree / 의사결정 트리): expected giá trị (value / 값) không thay rủi ro (risk / 위험) appetite** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. ETC, VAC và TCPI: forecast khác mục tiêu (target / 대상)** nối từ **4. EAC: mỗi công thức encode một giả định (assumption / 가정) khác nhau** sang **6. EMV và cây quyết định (decision tree / 의사결정 트리): expected giá trị (value / 값) không thay rủi ro (risk / 위험) appetite**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. ETC, VAC và TCPI: forecast khác mục tiêu (target / 대상)
 
@@ -268,7 +268,7 @@ TCPI(EAC) = 600 / 675 ≈ 0.889
 
 TCPI là feasibility diagnostic, không phải mệnh lệnh rebaseline.
 
-> **Chuyển mạch:** Ở chặng này của **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **6. EMV và cây quyết định (decision tree / 의사결정 트리): expected giá trị (value / 값) không thay rủi ro (risk / 위험) appetite** tiếp nhận điểm tựa từ **5. ETC, VAC và TCPI: forecast khác mục tiêu (target / 대상)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. giá trị (value / 값) of thông tin (information / 정보): khi nào đáng trả tiền để biết thêm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. EMV và cây quyết định (decision tree / 의사결정 트리): expected giá trị (value / 값) không thay rủi ro (risk / 위험) appetite** nối từ **5. ETC, VAC và TCPI: forecast khác mục tiêu (target / 대상)** sang **7. giá trị (value / 값) of thông tin (information / 정보): khi nào đáng trả tiền để biết thêm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. EMV và cây quyết định (decision tree / 의사결정 트리): expected giá trị (value / 값) không thay rủi ro (risk / 위험) appetite
 
@@ -290,7 +290,7 @@ Nếu chỉ tối ưu expected money, A cao hơn B. Nhưng organization có th�
 
 Cây quyết định (decision tree / 의사결정 트리) đặc biệt hữu ích khi quyết định (decision / 결정) tạo nhiều branch nối tiếp nhau. Ta tính từ phải sang trái: mỗi chance nút (node / 노드) lấy expected giá trị (value / 값) của branches; mỗi quyết định (decision / 결정) nút (node / 노드) so options dựa trên mục tiêu (objective / 목표) và các ràng buộc (constraints / 제약조건들). Nhưng xác suất (probability / 확률) estimate phải được xem như giả định (assumption / 가정) cần bằng chứng (evidence / 증거), không phải fact.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **7. giá trị (value / 값) of thông tin (information / 정보): khi nào đáng trả tiền để biết thêm** tiếp nhận điểm tựa từ **6. EMV và cây quyết định (decision tree / 의사결정 트리): expected giá trị (value / 값) không thay rủi ro (risk / 위험) appetite** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. NPV: tiền cùng nominal amount nhưng khác thời điểm không tương đương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. giá trị (value / 값) of thông tin (information / 정보): khi nào đáng trả tiền để biết thêm** nối từ **6. EMV và cây quyết định (decision tree / 의사결정 트리): expected giá trị (value / 값) không thay rủi ro (risk / 위험) appetite** sang **8. NPV: tiền cùng nominal amount nhưng khác thời điểm không tương đương**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. giá trị (value / 값) of thông tin (information / 정보): khi nào đáng trả tiền để biết thêm
 
@@ -302,7 +302,7 @@ Nếu prototype giúp tránh một quyết định có expected mất mát (loss
 
 Đọc tiếp mô hình tư duy (mental model / 사고 모델) này ở [Risk, uncertainty và decision](./08_risk_uncertainty_issues_and_decisions.md).
 
-> **Chuyển mạch:** Trong **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **8. NPV: tiền cùng nominal amount nhưng khác thời điểm không tương đương** tiếp nhận điểm tựa từ **7. giá trị (value / 값) of thông tin (information / 정보): khi nào đáng trả tiền để biết thêm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. luồng (flow / 흐름) metrics: Little's Law và forecasting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. NPV: tiền cùng nominal amount nhưng khác thời điểm không tương đương** nối từ **7. giá trị (value / 값) of thông tin (information / 정보): khi nào đáng trả tiền để biết thêm** sang **9. luồng (flow / 흐름) metrics: Little's Law và forecasting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. NPV: tiền cùng nominal amount nhưng khác thời điểm không tương đương
 
@@ -326,7 +326,7 @@ NPV dương trong mô hình (model / 모델) này nghĩa discounted inflow lớn
 
 Không nên so dự án (project / 프로젝트) chỉ bằng nominal total benefit nếu timing và rủi ro (risk / 위험) khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **8. NPV: tiền cùng nominal amount nhưng khác thời điểm không tương đương** xác định đầu vào; **9. luồng (flow / 흐름) metrics: Little's Law và forecasting** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Communication channels: độ phức tạp (complexity / 복잡도) tăng theo cặp, nhưng formula chỉ là upper bound lý thuyết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. NPV: tiền cùng nominal amount nhưng khác thời điểm không tương đương** xác định đầu vào; **9. luồng (flow / 흐름) metrics: Little's Law và forecasting** giải thích vận hành; **10. Communication channels: độ phức tạp (complexity / 복잡도) tăng theo cặp, nhưng formula chỉ là upper bound lý thuyết** kiểm tra hệ quả.
 
 ## 9. luồng (flow / 흐름) metrics: Little's Law và forecasting
 
@@ -354,7 +354,7 @@ Cycle Time ≈ 40 / 5 = 8 tuần
 
 Luồng (flow / 흐름) forecasting tốt hơn khi dùng phân phối (distribution / 분포) thực tế của cycle thời gian (time / 시간) hoặc thông lượng (throughput / 처리량) thay vì chỉ average. Ví dụ thay vì nói “tác vụ (task / 작업) mất 5 ngày”, có thể nói “85% item tương tự hoàn thành trong 8 ngày”. Đây là probabilistic forecast, không phải guarantee.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **9. luồng (flow / 흐름) metrics: Little's Law và forecasting** xác định đầu vào; **10. Communication channels: độ phức tạp (complexity / 복잡도) tăng theo cặp, nhưng formula chỉ là upper bound lý thuyết** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. đặc tả hợp đồng (contract / 계약) lập luận (reasoning / 추론): số tiền chỉ là một phần của rủi ro (risk / 위험) allocation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. luồng (flow / 흐름) metrics: Little's Law và forecasting** xác định đầu vào; **10. Communication channels: độ phức tạp (complexity / 복잡도) tăng theo cặp, nhưng formula chỉ là upper bound lý thuyết** giải thích vận hành; **11. đặc tả hợp đồng (contract / 계약) lập luận (reasoning / 추론): số tiền chỉ là một phần của rủi ro (risk / 위험) allocation** kiểm tra hệ quả.
 
 ## 10. Communication channels: độ phức tạp (complexity / 복잡도) tăng theo cặp, nhưng formula chỉ là upper bound lý thuyết
 
@@ -380,7 +380,7 @@ Headcount tăng khoảng 67%, còn possible pairwise channels tăng 200%.
 
 Nhưng formula không chứng minh communication tải công việc (workload / 워크로드) thực tế tăng đúng 3 lần. nhóm (team / 팀) cấu trúc (structure / 구조), giao diện (interface / 인터페이스), role clarity, modularity và communication giao thức (protocol / 프로토콜) làm giảm tương tác (interaction / 상호작용) cần thiết. Ý nghĩa của công thức là cho thấy coordination có nonlinear pressure khi group phình lớn.
 
-> **Chuyển mạch:** Trong **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **11. đặc tả hợp đồng (contract / 계약) lập luận (reasoning / 추론): số tiền chỉ là một phần của rủi ro (risk / 위험) allocation** tiếp nhận điểm tựa từ **10. Communication channels: độ phức tạp (complexity / 복잡도) tăng theo cặp, nhưng formula chỉ là upper bound lý thuyết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Sensitivity phân tích (analysis / 분석): quantity nào thật sự lái kết quả (outcome / 결과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. đặc tả hợp đồng (contract / 계약) lập luận (reasoning / 추론): số tiền chỉ là một phần của rủi ro (risk / 위험) allocation** nối từ **10. Communication channels: độ phức tạp (complexity / 복잡도) tăng theo cặp, nhưng formula chỉ là upper bound lý thuyết** sang **12. Sensitivity phân tích (analysis / 분석): quantity nào thật sự lái kết quả (outcome / 결과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. đặc tả hợp đồng (contract / 계약) lập luận (reasoning / 추론): số tiền chỉ là một phần của rủi ro (risk / 위험) allocation
 
@@ -392,7 +392,7 @@ Commercial lập luận (reasoning / 추론) không dừng ở “giá thấp nh
 
 Procurement mechanics sâu hơn nằm ở [Quality, resources và procurement](./07_quality_resources_and_procurement.md).
 
-> **Chuyển mạch:** Ở chặng này của **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **12. Sensitivity phân tích (analysis / 분석): quantity nào thật sự lái kết quả (outcome / 결과)** tiếp nhận điểm tựa từ **11. đặc tả hợp đồng (contract / 계약) lập luận (reasoning / 추론): số tiền chỉ là một phần của rủi ro (risk / 위험) allocation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Monte Carlo lập luận (reasoning / 추론): đọc percentile thay vì một deadline duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Sensitivity phân tích (analysis / 분석): quantity nào thật sự lái kết quả (outcome / 결과)** nối từ **11. đặc tả hợp đồng (contract / 계약) lập luận (reasoning / 추론): số tiền chỉ là một phần của rủi ro (risk / 위험) allocation** sang **13. Monte Carlo lập luận (reasoning / 추론): đọc percentile thay vì một deadline duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Sensitivity phân tích (analysis / 분석): quantity nào thật sự lái kết quả (outcome / 결과)
 
@@ -402,7 +402,7 @@ Ví dụ nghiệp vụ (business / 비즈니스) trường hợp (case / 사례)
 
 Điều này nối quantitative lập luận (reasoning / 추론) với dự án (project / 프로젝트) priority: bất định (uncertainty / 불확실성) nào vừa lớn vừa có sensitivity cao cần attention trước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **13. Monte Carlo lập luận (reasoning / 추론): đọc percentile thay vì một deadline duy nhất** tiếp nhận điểm tựa từ **12. Sensitivity phân tích (analysis / 분석): quantity nào thật sự lái kết quả (outcome / 결과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Claim lập luận (reasoning / 추론) bằng số: entitlement không tự sinh quantum** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Monte Carlo lập luận (reasoning / 추론): đọc percentile thay vì một deadline duy nhất** nối từ **12. Sensitivity phân tích (analysis / 분석): quantity nào thật sự lái kết quả (outcome / 결과)** sang **14. Claim lập luận (reasoning / 추론) bằng số: entitlement không tự sinh quantum**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Monte Carlo lập luận (reasoning / 추론): đọc percentile thay vì một deadline duy nhất
 
@@ -430,7 +430,7 @@ Nếu deterministic/baseline mục tiêu (target / 대상) là 30/11 nhưng qu�
 
 Khi phản hồi (response / 응답) làm phân phối (distribution / 분포) thu hẹp, P80 có thể dịch sớm hơn dù P50 gần như không đổi. Điều đó cho thấy mitigation giảm tail rủi ro (risk / 위험) ngay cả khi expected date không thay nhiều.
 
-> **Chuyển mạch:** Trong **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **14. Claim lập luận (reasoning / 추론) bằng số: entitlement không tự sinh quantum** tiếp nhận điểm tựa từ **13. Monte Carlo lập luận (reasoning / 추론): đọc percentile thay vì một deadline duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Một worked scenario tích hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Claim lập luận (reasoning / 추론) bằng số: entitlement không tự sinh quantum** nối từ **13. Monte Carlo lập luận (reasoning / 추론): đọc percentile thay vì một deadline duy nhất** sang **15. Một worked scenario tích hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Claim lập luận (reasoning / 추론) bằng số: entitlement không tự sinh quantum
 
@@ -455,7 +455,7 @@ Khi đó bằng chứng (evidence / 증거) hiện tại không hỗ trợ đơn
 
 Nếu cùng giai đoạn seller cũng chậm 3 ngày do staffing riêng, concurrent delay phải được specialist phân tích. Arithmetic không tự quyết legal entitlement; nó làm dispute có cấu trúc (structure / 구조) thay vì bargaining từ hai con số cực đoan.
 
-> **Chuyển mạch:** Ở chặng này của **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **14. Claim lập luận (reasoning / 추론) bằng số: entitlement không tự sinh quantum** cho ta quy tắc; **15. Một worked scenario tích hợp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **16. Robustness check: quyết định (decision / 결정) có đứng vững khi đầu vào (input / 입력) thay đổi không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Claim lập luận (reasoning / 추론) bằng số: entitlement không tự sinh quantum** nêu quy tắc; **15. Một worked scenario tích hợp** thử quy tắc trong tình huống, rồi **16. Robustness check: quyết định (decision / 결정) có đứng vững khi đầu vào (input / 입력) thay đổi không?** mở rộng hệ quả.
 
 ## 15. Một worked scenario tích hợp
 
@@ -509,7 +509,7 @@ Remaining công việc (work / 작업) phải đạt CPI 1.20 trong khi historic
 
 Đây chính là quantitative lập luận (reasoning / 추론): phép tính tạo tín hiệu (signal / 신호); nguyên nhân gốc (root cause / 근본 원인) và quản trị (governance / 거버넌스) quyết định hành động (action / 동작).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **15. Một worked scenario tích hợp** cho ta quy tắc; **16. Robustness check: quyết định (decision / 결정) có đứng vững khi đầu vào (input / 입력) thay đổi không?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **17. Decision-reversal threshold: tìm ranh giới (boundary / 경계) thay vì tranh luận một con số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Một worked scenario tích hợp** nêu quy tắc; **16. Robustness check: quyết định (decision / 결정) có đứng vững khi đầu vào (input / 입력) thay đổi không?** thử quy tắc trong tình huống, rồi **17. Decision-reversal threshold: tìm ranh giới (boundary / 경계) thay vì tranh luận một con số** mở rộng hệ quả.
 
 ## 16. Robustness check: quyết định (decision / 결정) có đứng vững khi đầu vào (input / 입력) thay đổi không?
 
@@ -528,7 +528,7 @@ Có option nào giảm downside mà giữ upside không?
 
 Đây là cầu nối giữa sensitivity phân tích (analysis / 분석) và quản trị (governance / 거버넌스). Sensitivity nói đầu vào (input / 입력) nào ảnh hưởng đầu ra (output / 출력); robustness hỏi ảnh hưởng đó có đủ để thay quyết định không.
 
-> **Chuyển mạch:** Trong **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **16. Robustness check: quyết định (decision / 결정) có đứng vững khi đầu vào (input / 입력) thay đổi không?** đã nêu tiêu chí phân biệt, còn **17. Decision-reversal threshold: tìm ranh giới (boundary / 경계) thay vì tranh luận một con số** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **18. mô hình (model / 모델) rủi ro (risk / 위험): con số có thể chính xác theo mô hình (model / 모델) nhưng mô hình (model / 모델) sai cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Robustness check: quyết định (decision / 결정) có đứng vững khi đầu vào (input / 입력) thay đổi không?** đặt tiêu chí; **17. Decision-reversal threshold: tìm ranh giới (boundary / 경계) thay vì tranh luận một con số** dùng nó để kiểm tra ranh giới, rồi **18. mô hình (model / 모델) rủi ro (risk / 위험): con số có thể chính xác theo mô hình (model / 모델) nhưng mô hình (model / 모델) sai cấu trúc** mở rộng cơ chế.
 
 ## 17. Decision-reversal threshold: tìm ranh giới (boundary / 경계) thay vì tranh luận một con số
 
@@ -540,7 +540,7 @@ Tương tự, nếu dự án (project / 프로젝트) chỉ đạt nghiệp vụ
 
 Threshold thinking giúp allocation của phân tích (analysis / 분석) effort dựa trên **quyết định (decision / 결정) sensitivity**, không dựa trên thói quen “càng nhiều dữ liệu (data / 데이터) càng tốt”.
 
-> **Chuyển mạch:** Ở chặng này của **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **17. Decision-reversal threshold: tìm ranh giới (boundary / 경계) thay vì tranh luận một con số** đã nêu tiêu chí phân biệt, còn **18. mô hình (model / 모델) rủi ro (risk / 위험): con số có thể chính xác theo mô hình (model / 모델) nhưng mô hình (model / 모델) sai cấu trúc** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **19. Forecast calibration: mô hình (model / 모델) phải học từ sai số lịch sử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Decision-reversal threshold: tìm ranh giới (boundary / 경계) thay vì tranh luận một con số** đặt tiêu chí; **18. mô hình (model / 모델) rủi ro (risk / 위험): con số có thể chính xác theo mô hình (model / 모델) nhưng mô hình (model / 모델) sai cấu trúc** dùng nó để kiểm tra ranh giới, rồi **19. Forecast calibration: mô hình (model / 모델) phải học từ sai số lịch sử** mở rộng cơ chế.
 
 ## 18. mô hình (model / 모델) rủi ro (risk / 위험): con số có thể chính xác theo mô hình (model / 모델) nhưng mô hình (model / 모델) sai cấu trúc
 
@@ -552,7 +552,7 @@ Ví dụ Monte Carlo với 100.000 iteration vẫn cho kết quả yếu nếu m
 
 Vì vậy rà soát (review / 검토) quantitative mô hình (model / 모델) nên hỏi không chỉ “formula đúng không?” mà còn “mô hình (model / 모델) ranh giới (boundary / 경계) có chứa driver tạo kết quả (outcome / 결과) không?”. Precision không bù được omission.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **19. Forecast calibration: mô hình (model / 모델) phải học từ sai số lịch sử** tiếp nhận điểm tựa từ **18. mô hình (model / 모델) rủi ro (risk / 위험): con số có thể chính xác theo mô hình (model / 모델) nhưng mô hình (model / 모델) sai cấu trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Cross-metric consistency: các con số có kể cùng một câu chuyện không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Forecast calibration: mô hình (model / 모델) phải học từ sai số lịch sử** nối từ **18. mô hình (model / 모델) rủi ro (risk / 위험): con số có thể chính xác theo mô hình (model / 모델) nhưng mô hình (model / 모델) sai cấu trúc** sang **20. Cross-metric consistency: các con số có kể cùng một câu chuyện không?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Forecast calibration: mô hình (model / 모델) phải học từ sai số lịch sử
 
@@ -568,7 +568,7 @@ Sau nhiều milestone, organization có thể phát hiện systematic optimism, 
 
 Calibration cũng giúp tránh hindsight độ lệch (bias / 편향). Khi actual xảy ra, con số cũ phải được giữ để xem nhóm (team / 팀) đã biết gì lúc ra quyết định (decision / 결정), thay vì âm thầm sửa forecast lịch sử (history / 이력) cho giống kết quả (outcome / 결과).
 
-> **Chuyển mạch:** Trong **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **20. Cross-metric consistency: các con số có kể cùng một câu chuyện không?** tiếp nhận điểm tựa từ **19. Forecast calibration: mô hình (model / 모델) phải học từ sai số lịch sử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. đơn vị (unit / 단위) và dimensional sanity check** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. Cross-metric consistency: các con số có kể cùng một câu chuyện không?** nối từ **19. Forecast calibration: mô hình (model / 모델) phải học từ sai số lịch sử** sang **21. đơn vị (unit / 단위) và dimensional sanity check**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Cross-metric consistency: các con số có kể cùng một câu chuyện không?
 
@@ -587,7 +587,7 @@ Có lag hoặc committed-but-not-realized state nào chưa phản ánh không?
 
 Cross-metric lập luận (reasoning / 추론) ngăn việc chọn đúng một con số thuận lợi để kể narrative mong muốn. Quantitative bằng chứng (evidence / 증거) mạnh khi nhiều independent view converge hoặc khi divergence được giải thích bằng cơ chế (mechanism / 메커니즘) rõ.
 
-> **Chuyển mạch:** Ở chặng này của **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **21. đơn vị (unit / 단위) và dimensional sanity check** tiếp nhận điểm tựa từ **20. Cross-metric consistency: các con số có kể cùng một câu chuyện không?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Formula map theo meaning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. đơn vị (unit / 단위) và dimensional sanity check** nối từ **20. Cross-metric consistency: các con số có kể cùng một câu chuyện không?** sang **Formula map theo meaning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. đơn vị (unit / 단위) và dimensional sanity check
 
@@ -597,7 +597,7 @@ Sanity check cũng áp dụng cho magnitude. Nếu thêm một engineer được
 
 Trước khi tin một đầu ra (output / 출력) phức tạp, hãy kiểm tra đơn vị, thứ tự (order / 순서) of magnitude và ranh giới (boundary / 경계). Đây là cách rẻ nhất để bắt mô hình (model / 모델) lỗi (error / 오류).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **Formula map theo meaning** tiếp nhận điểm tựa từ **21. đơn vị (unit / 단위) và dimensional sanity check** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Formula map theo meaning** nối từ **21. đơn vị (unit / 단위) và dimensional sanity check** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Formula map theo meaning
 
@@ -640,7 +640,7 @@ Monte Carlo percentile, claim phân tích (analysis / 분석) và sensitivity kh
 
 Formula map này chỉ nên dùng sau khi bạn có thể giải thích quantity bằng lời. Nếu không thể nói EV khác AC thế nào hoặc vì sao một EAC formula phù hợp hơn formula khác, hãy quay lại mô hình tư duy (mental model / 사고 모델) trước arithmetic.
 
-> **Chuyển mạch:** Trong **15 — Quantitative lập luận (reasoning / 추론): bài toán và lời giải đủ bước**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Formula map theo meaning** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Formula map theo meaning** thành một kết luận có thể mang sang phần kế tiếp. để khép mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
