@@ -36,19 +36,19 @@ flow: grain, taxes, soldiers, messages, migrants, luxury goods
 
 Roads tăng tốc quân đội và thương mại cùng lúc; coinage giúp thanh toán nhưng không thay thế thuế hiện vật. Khi frontier chi phí (cost / 비용), succession crisis hoặc epidemic làm luồng (flow / 흐름) giảm, chính quyền có thể debase currency, tăng thuế, thuê lính hoặc nhượng quyền địa phương.
 
-> **Chuyển mạch:** Trong **04 — Classical civilizations: đế chế, thị trường và công dân**, **Cơ chế đế chế** đã nêu tiêu chí phân biệt, còn **Giới hạn của “classical decline”** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bằng chứng, giới hạn và cầu nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cơ chế đế chế giải thích cách thuế, quân đội và hạ tầng phối hợp; **Giới hạn của “classical decline”** kiểm tra nơi mô hình suy tàn quá đơn giản. **Bằng chứng, giới hạn và cầu nối** đưa tranh luận về dấu vết cụ thể.
 
 ## Giới hạn của “classical decline”
 
 Phân rã một đế chế có thể là decentralization, chuyển ngôn ngữ elite, đổi tôn giáo, tái sử dụng hạ tầng (infrastructure / 인프라) hoặc hình thành nhà nước mới. Dân thường không trải nghiệm “fall” giống nhau; thương nhân có thể mất tuyến, nông dân đổi chủ, còn village ritual vẫn tiếp tục.
 
-> **Chuyển mạch:** Ở chặng này của **04 — Classical civilizations: đế chế, thị trường và công dân**, **Giới hạn của “classical decline”** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ sâu (depth / 깊이) pass: nhà nước cổ điển như bài toán phối hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khi giới hạn của decline đã rõ, bằng chứng về đế chế, thị trường và công dân cho phép kiểm tra khả năng phối hợp. **Độ sâu pass** chỉ nâng khi mô hình nói rõ nhóm nào được giải thích và nhóm nào bị bỏ sót.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Luật, tiền, bia ký và văn chương cho thấy official ideals; khảo cổ đô thị, đồng ruộng, nghĩa trang và papyri giúp kiểm tra khoảng cách với practice. Counterfactual: nếu frontier có trade corridor ổn định hơn chi phí quân sự, đế chế có thể decentralize mà vẫn giữ revenue. Cầu nối sang 05 là **law/road/empire tạo contact zones** để văn bản (text / 텍스트), ritual và người di chuyển.
 
-> **Chuyển mạch:** **Bằng chứng, giới hạn và cầu nối** nối đế chế, thị trường và công dân với năng lực phối hợp; phần **Độ sâu pass** kiểm tra xem mô hình nhà nước cổ điển giải thích được gì và bỏ sót nhóm nào.
+> **Nối mạch:** Bằng chứng nối đế chế, thị trường và công dân với năng lực phối hợp; **Độ sâu pass** kiểm tra phạm vi giải thích của mô hình nhà nước cổ điển và các nhóm nằm ngoài nó.
 
 ## Độ sâu (depth / 깊이) pass: nhà nước cổ điển như bài toán phối hợp
 

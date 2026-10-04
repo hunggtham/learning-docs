@@ -33,19 +33,19 @@ flow: credit, jobs, commodities, refugees, votes, propaganda
 shock: crash, drought, tariff, coup, border conflict
 ```
 
-> **Chuyển mạch:** Trong **12 — Interwar period: khủng hoảng dân chủ, đế quốc và kinh tế**, **Các cơ chế trung gian** đã nêu tiêu chí phân biệt, còn **So sánh không gian** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bằng chứng, giới hạn và cầu nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Các cơ chế trung gian tách cú sốc kinh tế, legitimacy và tổ chức chính trị; **So sánh không gian** kiểm tra chúng thay đổi theo quốc gia và vùng thế nào. **Bằng chứng, giới hạn và cầu nối** gắn so sánh với nguồn.
 
 ## So sánh không gian
 
 Đức/Italy, Liên Xô, Hoa Kỳ, Nhật Bản và các thuộc địa có đường đi khác nhau vì war settlement, land cấu trúc (structure / 구조), labor movement, trạng thái (state / 상태) sức chứa (capacity / 용량) và bên ngoài (external / 외부) thị trường (market / 시장) khác nhau. Appeasement và rearmament không chỉ là lỗi cá nhân; chúng phản ánh bộ nhớ (memory / 메모리) của WWI, fiscal ràng buộc (constraint / 제약조건), empire và đánh giá sai technology.
 
-> **Chuyển mạch:** Ở chặng này của **12 — Interwar period: khủng hoảng dân chủ, đế quốc và kinh tế**, **So sánh không gian** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ sâu (depth / 깊이) pass: interwar như phản hồi (feedback / 피드백) giữa kinh tế và legitimacy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** So sánh không gian cho thấy cùng một khủng hoảng có thể dẫn tới kết quả thể chế khác nhau. **Bằng chứng, giới hạn và cầu nối** kiểm tra các khác biệt đó trước depth pass về feedback kinh tế–legitimacy.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Unemployment, election, price, trade và fiscal dữ liệu (data / 데이터) cần đọc cùng party membership, radio reach, memoir, police tệp (file / 파일) và colonial archive; dữ liệu quốc gia có thể che giấu gender/lớp (class / 클래스) difference. Counterfactual: nếu collective bảo mật (security / 보안) có enforcement và debt restructuring sớm, authoritarianism có thể mất một số openings nhưng không biến mất mọi racial/imperial xung đột (conflict / 충돌). Cầu nối sang 13 là **rearmament, occupation, genocide chính sách (policy / 정책) và tài nguyên (resource / 자원) war**.
 
-> **Chuyển mạch:** Hãy dùng **Bằng chứng, giới hạn và cầu nối** để nối khủng hoảng kinh tế với thay đổi legitimacy, rồi kiểm tra trong phần **Độ sâu pass** khi phản hồi chính trị làm suy yếu hoặc củng cố dân chủ.
+> **Nối mạch:** Bằng chứng nối khủng hoảng kinh tế với thay đổi legitimacy; **Độ sâu pass** kiểm tra khi phản hồi chính trị làm suy yếu hoặc củng cố dân chủ.
 
 ## Độ sâu (depth / 깊이) pass: interwar như phản hồi (feedback / 피드백) giữa kinh tế và legitimacy
 
