@@ -26,7 +26,7 @@ application
 
 Kernel nhận yêu cầu, kiểm tra đối số, quyền, trạng thái tài nguyên và sau đó mới thực hiện thao tác.
 
-> **Chuyển mạch:** Trong **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Wrapper của thư viện khác lời gọi hệ thống (system call / 시스템 호출) như thế nào?** tiếp nhận điểm tựa từ **Vì sao cần ranh giới lời gọi hệ thống (system call / 시스템 호출)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều gì xảy ra khi CPU đi vào kernel?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Wrapper của thư viện khác lời gọi hệ thống (system call / 시스템 호출) như thế nào?** nối từ **Vì sao cần ranh giới lời gọi hệ thống (system call / 시스템 호출)?** sang **Điều gì xảy ra khi CPU đi vào kernel?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Wrapper của thư viện khác lời gọi hệ thống (system call / 시스템 호출) như thế nào?
 
@@ -48,7 +48,7 @@ Quan sát bằng:
 strace -e openat,read,close cat /etc/hostname
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Điều gì xảy ra khi CPU đi vào kernel?** tiếp nhận điểm tựa từ **Wrapper của thư viện khác lời gọi hệ thống (system call / 시스템 호출) như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lời gọi hệ thống (system call / 시스템 호출) không đồng nghĩa ngữ cảnh (context / 맥락) switch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Điều gì xảy ra khi CPU đi vào kernel?** nối từ **Wrapper của thư viện khác lời gọi hệ thống (system call / 시스템 호출) như thế nào?** sang **Lời gọi hệ thống (system call / 시스템 호출) không đồng nghĩa ngữ cảnh (context / 맥락) switch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điều gì xảy ra khi CPU đi vào kernel?
 
@@ -63,7 +63,7 @@ Kernel cần biết:
 
 Trên x86-64, các thanh ghi được dùng để truyền số lời gọi hệ thống (system call / 시스템 호출) và đối số theo ABI đã định nghĩa. Ứng dụng bình thường không nên viết lô-gic (logic / 논리) phụ thuộc trực tiếp vào chi tiết này nếu libc/thời gian chạy (runtime / 런타임) đã che giấu nó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Lời gọi hệ thống (system call / 시스템 호출) không đồng nghĩa ngữ cảnh (context / 맥락) switch** tiếp nhận điểm tựa từ **Điều gì xảy ra khi CPU đi vào kernel?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Blocking và sleeping trong lời gọi hệ thống (system call / 시스템 호출)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Lời gọi hệ thống (system call / 시스템 호출) không đồng nghĩa ngữ cảnh (context / 맥락) switch** nối từ **Điều gì xảy ra khi CPU đi vào kernel?** sang **Blocking và sleeping trong lời gọi hệ thống (system call / 시스템 호출)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lời gọi hệ thống (system call / 시스템 호출) không đồng nghĩa ngữ cảnh (context / 맥락) switch
 
@@ -95,7 +95,7 @@ read() cần chờ disk
 → sau đó mới tiếp tục
 ```
 
-> **Chuyển mạch:** Trong **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Blocking và sleeping trong lời gọi hệ thống (system call / 시스템 호출)** tiếp nhận điểm tựa từ **Lời gọi hệ thống (system call / 시스템 호출) không đồng nghĩa ngữ cảnh (context / 맥락) switch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bản sao (copy / 복사) dữ liệu giữa người dùng (user / 사용자) không gian (space / 공간) và kernel** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Blocking và sleeping trong lời gọi hệ thống (system call / 시스템 호출)** nối từ **Lời gọi hệ thống (system call / 시스템 호출) không đồng nghĩa ngữ cảnh (context / 맥락) switch** sang **Bản sao (copy / 복사) dữ liệu giữa người dùng (user / 사용자) không gian (space / 공간) và kernel**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Blocking và sleeping trong lời gọi hệ thống (system call / 시스템 호출)
 
@@ -107,7 +107,7 @@ Kernel thường không “quay CPU vòng tròn” vô ích. tác vụ (task / �
 
 Đây là nền tảng để hiểu tại sao một tiến trình có hàng trăm luồng thực thi (thread / 스레드) nhưng CPU không nhất thiết 100%.
 
-> **Chuyển mạch:** Ở chặng này của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Blocking và sleeping trong lời gọi hệ thống (system call / 시스템 호출)** nêu điều cần giải thích; **Bản sao (copy / 복사) dữ liệu giữa người dùng (user / 사용자) không gian (space / 공간) và kernel** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **errno thực sự đến từ đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Blocking và sleeping trong lời gọi hệ thống (system call / 시스템 호출)** đặt vấn đề; **Bản sao (copy / 복사) dữ liệu giữa người dùng (user / 사용자) không gian (space / 공간) và kernel** đối chiếu bằng chứng, rồi **errno thực sự đến từ đâu?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Bản sao (copy / 복사) dữ liệu giữa người dùng (user / 사용자) không gian (space / 공간) và kernel
 
@@ -117,7 +117,7 @@ Các cơ chế như `copy_from_user()` và `copy_to_user()` tồn tại để ki
 
 Đây là lý do một lời gọi hệ thống (system call / 시스템 호출) có thể thất bại với `EFAULT` khi vùng nhớ người dùng không hợp lệ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Bản sao (copy / 복사) dữ liệu giữa người dùng (user / 사용자) không gian (space / 공간) và kernel** nêu điều cần giải thích; **errno thực sự đến từ đâu?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Lời gọi hệ thống (system call / 시스템 호출) bảng (table / 테이블) và ABI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Bản sao (copy / 복사) dữ liệu giữa người dùng (user / 사용자) không gian (space / 공간) và kernel** đặt vấn đề; **errno thực sự đến từ đâu?** đối chiếu bằng chứng, rồi **Lời gọi hệ thống (system call / 시스템 호출) bảng (table / 테이블) và ABI** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## `errno` thực sự đến từ đâu?
 
@@ -146,7 +146,7 @@ Trong `strace` có thể thấy trực tiếp:
 openat(..., "/missing", ...) = -1 ENOENT (No such file or directory)
 ```
 
-> **Chuyển mạch:** Trong **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Lời gọi hệ thống (system call / 시스템 호출) bảng (table / 테이블) và ABI** tiếp nhận điểm tựa từ **errno thực sự đến từ đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **vDSO: khi người dùng (user / 사용자) không gian (space / 공간) tránh lời gọi hệ thống (system call / 시스템 호출) thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Lời gọi hệ thống (system call / 시스템 호출) bảng (table / 테이블) và ABI** nối từ **errno thực sự đến từ đâu?** sang **vDSO: khi người dùng (user / 사용자) không gian (space / 공간) tránh lời gọi hệ thống (system call / 시스템 호출) thật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lời gọi hệ thống (system call / 시스템 호출) bảng (table / 테이블) và ABI
 
@@ -156,7 +156,7 @@ Kernel có bảng ánh xạ số lời gọi hệ thống (system call / 시스�
 
 Một ứng dụng (application / 애플리케이션) nhị phân (binary / 이진) cũ có thể tiếp tục chạy trên kernel mới miễn ABI cần thiết vẫn được hỗ trợ, dù hiện thực (implementation / 구현) nội bộ kernel đã thay đổi nhiều.
 
-> **Chuyển mạch:** Ở chặng này của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **vDSO: khi người dùng (user / 사용자) không gian (space / 공간) tránh lời gọi hệ thống (system call / 시스템 호출) thật** tiếp nhận điểm tựa từ **Lời gọi hệ thống (system call / 시스템 호출) bảng (table / 테이블) và ABI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chi phí của lời gọi hệ thống (system call / 시스템 호출)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **vDSO: khi người dùng (user / 사용자) không gian (space / 공간) tránh lời gọi hệ thống (system call / 시스템 호출) thật** nối từ **Lời gọi hệ thống (system call / 시스템 호출) bảng (table / 테이블) và ABI** sang **Chi phí của lời gọi hệ thống (system call / 시스템 호출)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `vDSO`: khi người dùng (user / 사용자) không gian (space / 공간) tránh lời gọi hệ thống (system call / 시스템 호출) thật
 
@@ -172,7 +172,7 @@ cat /proc/self/maps | grep vdso
 
 Điểm quan trọng: không phải mọi API trông giống hệ thống (system / 시스템) API đều nhất thiết gây chế độ (mode / 모드) chuyển tiếp (transition / 전이).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Chi phí của lời gọi hệ thống (system call / 시스템 호출)** tiếp nhận điểm tựa từ **vDSO: khi người dùng (user / 사용자) không gian (space / 공간) tránh lời gọi hệ thống (system call / 시스템 호출) thật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Batch và amortization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Chi phí của lời gọi hệ thống (system call / 시스템 호출)** nối từ **vDSO: khi người dùng (user / 사용자) không gian (space / 공간) tránh lời gọi hệ thống (system call / 시스템 호출) thật** sang **Batch và amortization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chi phí của lời gọi hệ thống (system call / 시스템 호출)
 
@@ -189,7 +189,7 @@ Nhưng không nên suy diễn rằng “lời gọi hệ thống (system call / 
 
 Một `getpid()` hoặc `clock_gettime()` khác hoàn toàn `fsync()` lên lưu trữ (storage / 저장소) chậm.
 
-> **Chuyển mạch:** Trong **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Batch và amortization** tiếp nhận điểm tựa từ **Chi phí của lời gọi hệ thống (system call / 시스템 호출)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lời gọi hệ thống (system call / 시스템 호출) và bảo mật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Batch và amortization** nối từ **Chi phí của lời gọi hệ thống (system call / 시스템 호출)** sang **Lời gọi hệ thống (system call / 시스템 호출) và bảo mật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Batch và amortization
 
@@ -204,7 +204,7 @@ Ví dụ:
 
 Tuy nhiên tối ưu kiểu này chỉ có ý nghĩa khi profiling cho thấy lời gọi hệ thống (system call / 시스템 호출) overhead thực sự là bottleneck.
 
-> **Chuyển mạch:** Ở chặng này của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Lời gọi hệ thống (system call / 시스템 호출) và bảo mật** tiếp nhận điểm tựa từ **Batch và amortization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gỡ lỗi (debug / 디버그) bằng strace** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Lời gọi hệ thống (system call / 시스템 호출) và bảo mật** nối từ **Batch và amortization** sang **Gỡ lỗi (debug / 디버그) bằng strace**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lời gọi hệ thống (system call / 시스템 호출) và bảo mật
 
@@ -222,7 +222,7 @@ credentials
 
 Seccomp có thể giới hạn tập lời gọi hệ thống (system call / 시스템 호출) mà tiến trình được phép thực hiện. bộ chứa (container / 컨테이너) thời gian chạy (runtime / 런타임) thường dùng cơ chế này để giảm bề mặt tấn công.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Gỡ lỗi (debug / 디버그) bằng strace** tiếp nhận điểm tựa từ **Lời gọi hệ thống (system call / 시스템 호출) và bảo mật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **seccomp và lời gọi hệ thống (system call / 시스템 호출) surface** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Gỡ lỗi (debug / 디버그) bằng strace** nối từ **Lời gọi hệ thống (system call / 시스템 호출) và bảo mật** sang **seccomp và lời gọi hệ thống (system call / 시스템 호출) surface**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gỡ lỗi (debug / 디버그) bằng `strace`
 
@@ -258,7 +258,7 @@ openat(..., "/missing/config", ...) = -1 ENOENT
 
 thì vấn đề có thể đơn giản là đường dẫn (path / 경로)/cấu hình (config / 설정).
 
-> **Chuyển mạch:** Trong **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **seccomp và lời gọi hệ thống (system call / 시스템 호출) surface** tiếp nhận điểm tựa từ **Gỡ lỗi (debug / 디버그) bằng strace** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tín hiệu (signal / 신호) có thể ngắt lời gọi hệ thống (system call / 시스템 호출)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **seccomp và lời gọi hệ thống (system call / 시스템 호출) surface** nối từ **Gỡ lỗi (debug / 디버그) bằng strace** sang **Tín hiệu (signal / 신호) có thể ngắt lời gọi hệ thống (system call / 시스템 호출)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `seccomp` và lời gọi hệ thống (system call / 시스템 호출) surface
 
@@ -266,7 +266,7 @@ Một tiến trình có thể bị chặn lời gọi hệ thống (system call 
 
 Bộ chứa (container / 컨테이너) thường áp default seccomp profile. Vì vậy tình huống “nhị phân (binary / 이진) chạy trên host nhưng không chạy trong bộ chứa (container / 컨테이너)” có thể liên quan lời gọi hệ thống (system call / 시스템 호출) chính sách (policy / 정책), không chỉ filesystem.
 
-> **Chuyển mạch:** Ở chặng này của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Tín hiệu (signal / 신호) có thể ngắt lời gọi hệ thống (system call / 시스템 호출)** tiếp nhận điểm tựa từ **seccomp và lời gọi hệ thống (system call / 시스템 호출) surface** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lời gọi hệ thống (system call / 시스템 호출) cancellation và hết thời gian chờ (timeout / 타임아웃)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Tín hiệu (signal / 신호) có thể ngắt lời gọi hệ thống (system call / 시스템 호출)** nối từ **seccomp và lời gọi hệ thống (system call / 시스템 호출) surface** sang **Lời gọi hệ thống (system call / 시스템 호출) cancellation và hết thời gian chờ (timeout / 타임아웃)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tín hiệu (signal / 신호) có thể ngắt lời gọi hệ thống (system call / 시스템 호출)
 
@@ -274,7 +274,7 @@ Một lời gọi hệ thống (system call / 시스템 호출) đang khối (bl
 
 Đây là lý do mã (code / 코드) hệ thống cần xử lý thử lại (retry / 재시도) đúng cách thay vì giả định mọi `read()` hoặc `wait()` chỉ thất bại vì lỗi vĩnh viễn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Lời gọi hệ thống (system call / 시스템 호출) cancellation và hết thời gian chờ (timeout / 타임아웃)** tiếp nhận điểm tựa từ **Tín hiệu (signal / 신호) có thể ngắt lời gọi hệ thống (system call / 시스템 호출)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Lời gọi hệ thống (system call / 시스템 호출) cancellation và hết thời gian chờ (timeout / 타임아웃)** nối từ **Tín hiệu (signal / 신호) có thể ngắt lời gọi hệ thống (system call / 시스템 호출)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lời gọi hệ thống (system call / 시스템 호출) cancellation và hết thời gian chờ (timeout / 타임아웃)
 
@@ -288,7 +288,7 @@ setsockopt(..., SO_RCVTIMEO, ...)
 
 hoặc ứng dụng (application / 애플리케이션) quản lý hết thời gian chờ (timeout / 타임아웃) ở vòng lặp sự kiện (event loop / 이벤트 루프).
 
-> **Chuyển mạch:** Trong **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Lời gọi hệ thống (system call / 시스템 호출) cancellation và hết thời gian chờ (timeout / 타임아웃)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Lời gọi hệ thống (system call / 시스템 호출) cancellation và hết thời gian chờ (timeout / 타임아웃)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -312,7 +312,7 @@ resume user-space execution
 
 Điểm cần quan sát không chỉ là “lời gọi hệ thống (system call / 시스템 호출) nào được gọi”, mà còn là nó **khối (block / 블록) ở đâu, chờ tài nguyên gì, chịu chính sách (policy / 정책) nào và có gây scheduling hay không**.
 
-> **Chuyển mạch:** Ở chặng này của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -326,7 +326,7 @@ resume user-space execution
 
 **“Tối ưu bằng cách giảm lời gọi hệ thống (system call / 시스템 호출) luôn có lợi.”** Chỉ tối ưu khi đo lường cho thấy đây là bottleneck thật.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vòng đời lời gọi hệ thống: từ người dùng (user / 사용자) không gian (space / 공간) vào kernel và quay trở lại**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

@@ -12,7 +12,7 @@ CPU vì vậy hỗ trợ các mức đặc quyền. Linux dùng cơ chế phần
 
 Bảo mật ở đây không chỉ là mật khẩu. Sự cô lập (isolation) bắt đầu từ đặc quyền phần cứng và cơ chế bảo vệ bộ nhớ.
 
-> **Chuyển mạch:** Trong **Kernel, không gian người dùng và lời gọi hệ thống**, **Lời gọi hệ thống là gì?** tiếp nhận điểm tựa từ **Vì sao phải có ranh giới đặc quyền?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lời gọi thư viện không đồng nghĩa với lời gọi hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kernel, không gian người dùng và lời gọi hệ thống**, **Lời gọi hệ thống là gì?** nối từ **Vì sao phải có ranh giới đặc quyền?** sang **Lời gọi thư viện không đồng nghĩa với lời gọi hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lời gọi hệ thống là gì?
 
@@ -34,7 +34,7 @@ strace -e openat,read,write,close cat /etc/os-release
 
 `strace` hữu ích vì nó cho thấy ứng dụng **đã yêu cầu kernel điều gì và kernel trả về kết quả gì**, thay vì chỉ nhìn thông báo lỗi ở tầng khung phần mềm (framework / 프레임워크).
 
-> **Chuyển mạch:** Ở chặng này của **Kernel, không gian người dùng và lời gọi hệ thống**, **Lời gọi thư viện không đồng nghĩa với lời gọi hệ thống** tiếp nhận điểm tựa từ **Lời gọi hệ thống là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển ngữ cảnh và chuyển chế độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kernel, không gian người dùng và lời gọi hệ thống**, **Lời gọi thư viện không đồng nghĩa với lời gọi hệ thống** nối từ **Lời gọi hệ thống là gì?** sang **Chuyển ngữ cảnh và chuyển chế độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lời gọi thư viện không đồng nghĩa với lời gọi hệ thống
 
@@ -44,7 +44,7 @@ Do đó quan hệ không phải lúc nào cũng là 1:1. Một lời gọi thư 
 
 Điều này quan trọng khi tối ưu hiệu năng: gọi nhiều hàm không tự động có nghĩa là hệ thống thực hiện nhiều lần chuyển ngữ cảnh, và một lần gọi API cấp cao cũng không nhất thiết tương ứng với đúng một lời gọi hệ thống (system call / 시스템 호출).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kernel, không gian người dùng và lời gọi hệ thống**, **Chuyển ngữ cảnh và chuyển chế độ** tiếp nhận điểm tựa từ **Lời gọi thư viện không đồng nghĩa với lời gọi hệ thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mã lỗi và errno** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kernel, không gian người dùng và lời gọi hệ thống**, **Chuyển ngữ cảnh và chuyển chế độ** nối từ **Lời gọi thư viện không đồng nghĩa với lời gọi hệ thống** sang **Mã lỗi và errno**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển ngữ cảnh và chuyển chế độ
 
@@ -52,7 +52,7 @@ Khi CPU chuyển từ chế độ người dùng sang chế độ kernel để x
 
 **Chuyển ngữ cảnh (context switch)** thường nói đến việc CPU chuyển ngữ cảnh thực thi giữa các luồng hoặc tiến trình, cần lưu và phục hồi trạng thái và có thể ảnh hưởng bộ nhớ đệm CPU. **Chuyển chế độ (mode switch)** chỉ nói đến việc thay đổi mức đặc quyền. Hai khái niệm có liên quan nhưng không giống nhau.
 
-> **Chuyển mạch:** Trong **Kernel, không gian người dùng và lời gọi hệ thống**, **Mã lỗi và errno** tiếp nhận điểm tựa từ **Chuyển ngữ cảnh và chuyển chế độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **/proc và /sys: cửa sổ nhìn vào trạng thái kernel** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kernel, không gian người dùng và lời gọi hệ thống**, **Mã lỗi và errno** nối từ **Chuyển ngữ cảnh và chuyển chế độ** sang **/proc và /sys: cửa sổ nhìn vào trạng thái kernel**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mã lỗi và `errno`
 
@@ -67,7 +67,7 @@ Một số tên thường gặp:
 
 Điều quan trọng không phải học thuộc số `errno`, mà là đọc lỗi như một bằng chứng về lớp nào trong hệ thống đang từ chối hoặc không thể thực hiện yêu cầu.
 
-> **Chuyển mạch:** Ở chặng này của **Kernel, không gian người dùng và lời gọi hệ thống**, **/proc và /sys: cửa sổ nhìn vào trạng thái kernel** tiếp nhận điểm tựa từ **Mã lỗi và errno** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô-đun kernel và trình điều khiển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kernel, không gian người dùng và lời gọi hệ thống**, **/proc và /sys: cửa sổ nhìn vào trạng thái kernel** nối từ **Mã lỗi và errno** sang **Mô-đun kernel và trình điều khiển**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `/proc` và `/sys`: cửa sổ nhìn vào trạng thái kernel
 
@@ -85,7 +85,7 @@ ls -l /proc/$$/fd
 
 `/sys` hay `sysfs` trình bày mô hình của thiết bị, trình điều khiển và các đối tượng kernel. Đây là một ví dụ mạnh cho triết lý đưa trạng thái hệ thống vào một vùng tên phân cấp để các công cụ không gian người dùng có thể quan sát và thao tác tương đối thống nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kernel, không gian người dùng và lời gọi hệ thống**, **Mô-đun kernel và trình điều khiển** tiếp nhận điểm tựa từ **/proc và /sys: cửa sổ nhìn vào trạng thái kernel** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lời gọi hệ thống như một ranh giới bảo mật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kernel, không gian người dùng và lời gọi hệ thống**, **Mô-đun kernel và trình điều khiển** nối từ **/proc và /sys: cửa sổ nhìn vào trạng thái kernel** sang **Lời gọi hệ thống như một ranh giới bảo mật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mô-đun kernel và trình điều khiển
 
@@ -98,7 +98,7 @@ modinfo <module>
 
 Không nên nạp hoặc gỡ mô-đun trên môi trường vận hành (production / 운영 환경) chỉ để thử nghiệm. Mô-đun chạy trong ngữ cảnh kernel, vì vậy một lỗi ở đây có phạm vi ảnh hưởng khác hẳn lỗi của một tiến trình thông thường.
 
-> **Chuyển mạch:** Trong **Kernel, không gian người dùng và lời gọi hệ thống**, **Lời gọi hệ thống như một ranh giới bảo mật** tiếp nhận điểm tựa từ **Mô-đun kernel và trình điều khiển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với hiệu năng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kernel, không gian người dùng và lời gọi hệ thống**, **Lời gọi hệ thống như một ranh giới bảo mật** nối từ **Mô-đun kernel và trình điều khiển** sang **Liên hệ với hiệu năng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lời gọi hệ thống như một ranh giới bảo mật
 
@@ -106,7 +106,7 @@ Một tiến trình không thể tự quyết định rằng nó được đọc
 
 Tương tự, bộ chứa (container / 컨테이너) thông thường không tạo kernel riêng. Tiến trình trong bộ chứa (container / 컨테이너) vẫn gọi lời gọi hệ thống (system call / 시스템 호출) vào kernel Linux của máy chủ, nhưng kernel nhìn chúng qua các ràng buộc khác về vùng tên (namespace), nhóm điều khiển (cgroup) và bảo mật. Xem thêm [Linux và container](../09_production/linux_containers.md).
 
-> **Chuyển mạch:** Ở chặng này của **Kernel, không gian người dùng và lời gọi hệ thống**, **Liên hệ với hiệu năng** tiếp nhận điểm tựa từ **Lời gọi hệ thống như một ranh giới bảo mật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kernel, không gian người dùng và lời gọi hệ thống**, **Liên hệ với hiệu năng** nối từ **Lời gọi hệ thống như một ranh giới bảo mật** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với hiệu năng
 
@@ -114,7 +114,7 @@ Tương tự, bộ chứa (container / 컨테이너) thông thường không t�
 
 Nếu `%system` tăng mạnh, không nên kết luận ngay rằng kernel "bị lỗi". Có thể ứng dụng đang tạo rất nhiều lời gọi hệ thống (system call / 시스템 호출) hoặc tải mạng/hệ thống tệp lớn. Cần đối chiếu với tiến trình, I/O và hành vi lời gọi hệ thống (system call / 시스템 호출) trước khi kết luận.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kernel, không gian người dùng và lời gọi hệ thống**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên hệ với hiệu năng** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kernel, không gian người dùng và lời gọi hệ thống**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên hệ với hiệu năng** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -122,7 +122,7 @@ Hãy coi kernel như một **bộ môi giới tài nguyên đáng tin cậy (tru
 
 Mô hình này giúp đọc lỗi theo hướng: yêu cầu nào đã được gửi? đối tượng nào được yêu cầu? chính sách hoặc trạng thái nào của kernel có thể khiến yêu cầu thất bại?
 
-> **Chuyển mạch:** Trong **Kernel, không gian người dùng và lời gọi hệ thống**, **Những hiểu lầm phổ biến (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Thực hành quan sát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kernel, không gian người dùng và lời gọi hệ thống**, **Những hiểu lầm phổ biến (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Thực hành quan sát** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -134,7 +134,7 @@ Mô hình này giúp đọc lỗi theo hướng: yêu cầu nào đã được g
 
 **"gốc (root / 루트) có thể đọc mọi thứ bất kể cơ chế nào."** `root` có thể bỏ qua nhiều quyền truy cập tùy ý (discretionary permission), nhưng vẫn có thể bị giới hạn bởi không gian tên (namespace / 네임스페이스), năng lực (capability / 역량), SELinux/AppArmor, trạng thái bất biến, lưu trữ mã hóa hoặc những ràng buộc khác của kernel.
 
-> **Chuyển mạch:** Ở chặng này của **Kernel, không gian người dùng và lời gọi hệ thống**, **Thực hành quan sát** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến (Common Misconceptions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Kernel, không gian người dùng và lời gọi hệ thống**, **Thực hành quan sát** nối từ **Những hiểu lầm phổ biến (Common Misconceptions)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Thực hành quan sát
 

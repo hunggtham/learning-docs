@@ -10,7 +10,7 @@ Một tiến trình có thể cần đọc tệp cấu hình, ghi nhật ký, nh
 
 Linux cung cấp cho mỗi tiến trình một bảng các tệp (file / 파일) descriptor. tệp (file / 파일) descriptor thường là một số nguyên nhỏ và đóng vai trò như tay cầm (handle) dẫn tới một điểm cuối I/O đang mở.
 
-> **Chuyển mạch:** Trong **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Các luồng chuẩn** tiếp nhận điểm tựa từ **Vấn đề cần giải quyết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển hướng là thay đổi cách nối các luồng I/O** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Các luồng chuẩn** nối từ **Vấn đề cần giải quyết** sang **Chuyển hướng là thay đổi cách nối các luồng I/O**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các luồng chuẩn
 
@@ -38,7 +38,7 @@ shell thiết lập lại tệp (file / 파일) descriptor trước khi chương
 
 Đây là một ví dụ rõ về **tách biệt trách nhiệm (separation of concerns)**: chương trình tạo dữ liệu đầu ra, còn shell quyết định dữ liệu đó được chuyển tới đâu.
 
-> **Chuyển mạch:** Ở chặng này của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Chuyển hướng là thay đổi cách nối các luồng I/O** tiếp nhận điểm tựa từ **Các luồng chuẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pipe là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Chuyển hướng là thay đổi cách nối các luồng I/O** nối từ **Các luồng chuẩn** sang **Pipe là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển hướng là thay đổi cách nối các luồng I/O
 
@@ -72,7 +72,7 @@ không nhất thiết tương đương. Khi `2>&1` xảy ra trước, `stderr` �
 
 Đây không phải cú pháp bí ẩn. Nó là thao tác thay đổi đồ thị kết nối của các tệp (file / 파일) descriptor.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Pipe là gì?** tiếp nhận điểm tựa từ **Chuyển hướng là thay đổi cách nối các luồng I/O** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao cần stderr riêng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Pipe là gì?** nối từ **Chuyển hướng là thay đổi cách nối các luồng I/O** sang **Vì sao cần stderr riêng?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pipe là gì?
 
@@ -92,7 +92,7 @@ ps stdout (FD 1) -> [pipe] -> grep stdin (FD 0)
 
 Vì vậy chuỗi xử lý (pipeline / 파이프라인) không đơn giản là "chạy lệnh đầu xong rồi sao chép toàn bộ văn bản sang lệnh sau". Với lượng dữ liệu đủ lớn, bên tạo dữ liệu và bên tiêu thụ có thể hoạt động đồng thời theo kiểu truyền dòng (streaming), đồng thời pipe buffer tạo ra cơ chế ép tốc độ ngược (backpressure) ở mức nhất định.
 
-> **Chuyển mạch:** Trong **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Vì sao cần stderr riêng?** tiếp nhận điểm tựa từ **Pipe là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **/dev/null và /dev/zero** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Vì sao cần stderr riêng?** nối từ **Pipe là gì?** sang **/dev/null và /dev/zero**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao cần `stderr` riêng?
 
@@ -112,7 +112,7 @@ Khi xử lý sự cố, không nên luôn loại bỏ `stderr` vì đó có th�
 find / -name app.log >results.txt 2>errors.txt
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **/dev/null và /dev/zero** tiếp nhận điểm tựa từ **Vì sao cần stderr riêng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ mô tả tệp đang mở và trạng thái tiến trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **/dev/null và /dev/zero** nối từ **Vì sao cần stderr riêng?** sang **Bộ mô tả tệp đang mở và trạng thái tiến trình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `/dev/null` và `/dev/zero`
 
@@ -124,7 +124,7 @@ command >/dev/null 2>&1
 
 `/dev/zero` trả về các byte bằng 0 khi đọc và có nhiều trường hợp sử dụng ở mức hệ thống. Hai đường dẫn này minh họa rằng vùng tên `/dev` chứa các đối tượng không phải tệp dữ liệu thông thường trên đĩa nhưng vẫn dùng giao diện I/O giống tệp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Bộ mô tả tệp đang mở và trạng thái tiến trình** tiếp nhận điểm tựa từ **/dev/null và /dev/zero** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rò rỉ bộ mô tả tệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Bộ mô tả tệp đang mở và trạng thái tiến trình** nối từ **/dev/null và /dev/zero** sang **Rò rỉ bộ mô tả tệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ mô tả tệp đang mở và trạng thái tiến trình
 
@@ -154,7 +154,7 @@ cat /proc/12345/limits
 
 Hãy kiểm tra mục `Max open files`.
 
-> **Chuyển mạch:** Trong **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Rò rỉ bộ mô tả tệp** tiếp nhận điểm tựa từ **Bộ mô tả tệp đang mở và trạng thái tiến trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ đệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Rò rỉ bộ mô tả tệp** nối từ **Bộ mô tả tệp đang mở và trạng thái tiến trình** sang **Bộ đệm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rò rỉ bộ mô tả tệp
 
@@ -171,7 +171,7 @@ Theo dõi số lượng theo thời gian hữu ích hơn một ảnh chụp tứ
 
 Mối liên hệ với Java rất rõ: `InputStream`, `OutputStream`, socket hoặc tài nguyên JDBC cuối cùng đều phụ thuộc vào tài nguyên của hệ điều hành. `try-with-resources` không chỉ là phong cách viết mã; nó giúp bảo đảm tài nguyên nền được giải phóng đúng vòng đời.
 
-> **Chuyển mạch:** Ở chặng này của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Bộ đệm** tiếp nhận điểm tựa từ **Rò rỉ bộ mô tả tệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vị trí đọc/ghi và trạng thái dùng chung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Bộ đệm** nối từ **Rò rỉ bộ mô tả tệp** sang **Vị trí đọc/ghi và trạng thái dùng chung**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ đệm
 
@@ -187,13 +187,13 @@ tail -F app.log | grep --line-buffered ERROR
 
 `--line-buffered` yêu cầu GNU `grep` đẩy đầu ra theo từng dòng để giảm độ trễ trong chuỗi xử lý (pipeline / 파이프라인) truyền dòng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Vị trí đọc/ghi và trạng thái dùng chung** tiếp nhận điểm tựa từ **Bộ đệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Socket cũng được biểu diễn bằng tệp (file / 파일) descriptor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Vị trí đọc/ghi và trạng thái dùng chung** nối từ **Bộ đệm** sang **Socket cũng được biểu diễn bằng tệp (file / 파일) descriptor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vị trí đọc/ghi và trạng thái dùng chung
 
 Đối tượng tệp đã mở trong kernel có trạng thái như vị trí hiện tại (current offset). Khi tiến trình đọc tuần tự, vị trí này tiến lên. Các descriptor có thể được sao chép và trong một số trường hợp chia sẻ trạng thái tệp đang mở bên dưới. Vì vậy tệp (file / 파일) descriptor không chỉ là "số thứ tự tệp"; nó là một tay cầm tới trạng thái mà kernel đang duy trì.
 
-> **Chuyển mạch:** Trong **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Socket cũng được biểu diễn bằng tệp (file / 파일) descriptor** tiếp nhận điểm tựa từ **Vị trí đọc/ghi và trạng thái dùng chung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Socket cũng được biểu diễn bằng tệp (file / 파일) descriptor** nối từ **Vị trí đọc/ghi và trạng thái dùng chung** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Socket cũng được biểu diễn bằng tệp (file / 파일) descriptor
 
@@ -205,7 +205,7 @@ sudo lsof -nP -iTCP:8080
 
 kết nối góc nhìn tiến trình với góc nhìn mạng. Phần này được giải thích sâu hơn tại [Mạng, DNS, socket và cổng](../07_networking/networking_dns_sockets_ports.md).
 
-> **Chuyển mạch:** Ở chặng này của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Socket cũng được biểu diễn bằng tệp (file / 파일) descriptor** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Socket cũng được biểu diễn bằng tệp (file / 파일) descriptor** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -213,7 +213,7 @@ Hãy hình dung mỗi tiến trình có một **bảng các ổ cắm I/O**. S�
 
 Mô hình này giúp hiểu cú pháp shell mà không cần học thuộc từng ký hiệu như những quy tắc rời rạc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Những hiểu lầm phổ biến (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Từ tệp (file / 파일) descriptor tới shell** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Những hiểu lầm phổ biến (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Từ tệp (file / 파일) descriptor tới shell** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -225,7 +225,7 @@ Mô hình này giúp hiểu cú pháp shell mà không cần học thuộc từn
 
 **"Đưa tiến trình xuống nền thì đóng terminal vẫn chắc chắn chạy."** Tiến trình có thể nhận `SIGHUP` hoặc mất tài nguyên gắn với terminal. Với dịch vụ lâu dài trong môi trường vận hành (production / 운영 환경), trình quản lý dịch vụ ổn định hơn `nohup`.
 
-> **Chuyển mạch:** Trong **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Từ tệp (file / 파일) descriptor tới shell** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến (Common Misconceptions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Tệp, luồng dữ liệu và bộ mô tả tệp**, **Từ tệp (file / 파일) descriptor tới shell** nối từ **Những hiểu lầm phổ biến (Common Misconceptions)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Từ tệp (file / 파일) descriptor tới shell
 
