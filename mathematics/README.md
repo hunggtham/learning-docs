@@ -4,9 +4,9 @@
 
 Triết lý xuyên suốt:
 
-> Understanding > Memorization  
-> Reasoning > Formula  
-> Connection > Isolated Facts  
+> Understanding > Memorization
+> Reasoning > Formula
+> Connection > Isolated Facts
 > First Principles > Rules
 
 Mỗi chapter cố gắng đi theo luồng: vấn đề cần giải quyết → intuition → formalism → reasoning/derivation → assumptions/domain → worked examples → failure modes → connections → mental model.
