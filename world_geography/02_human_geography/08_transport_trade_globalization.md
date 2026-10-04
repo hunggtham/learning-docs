@@ -8,7 +8,7 @@ Khoảng cách hình học chỉ là đầu vào. Người và hàng hóa trải
 
 Một tuyến (route / 경로) dài hơn kilomet nhưng chạy highway ổn định có thể rẻ hơn tuyến (route / 경로) ngắn qua mountain và slow checkpoint. Vì vậy vận chuyển (transport / 전송) geography nghiên cứu **effective distance**, không chỉ straight-line distance.
 
-> **Chuyển mạch:** Trong **Giao thông, thương mại và toàn cầu hóa**, **Terrain và climate nằm bên dưới mọi mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Giao thông biến khoảng cách thành thời gian, chi phí và độ tin cậy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lựa chọn phương thức là bài toán đánh đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Giao thông biến khoảng cách thành thời gian và chi phí, nhưng terrain, khí hậu, dốc, nước và mùa vụ quyết định mạng có thể đi qua đâu. **Terrain và climate nằm bên dưới mọi mạng (network / 네트워크)** đặt các giới hạn vật lý trước khi so sánh phương thức vận chuyển.
 
 ## Terrain và climate nằm bên dưới mọi mạng (network / 네트워크)
 
@@ -16,7 +16,7 @@ Mountain tăng độ dốc (gradient / 기울기), tunnel/cầu nối (bridge / 
 
 Hạ tầng (infrastructure / 인프라) không xóa vật lý (physical / 물리적) geography; nó **chuyển vật lý (physical / 물리적) ràng buộc (constraint / 제약조건) thành capital/maintenance chi phí (cost / 비용)**.
 
-> **Chuyển mạch:** Ở chặng này của **Giao thông, thương mại và toàn cầu hóa**, **Lựa chọn phương thức là bài toán đánh đổi** tiếp nhận điểm tựa từ **Terrain và climate nằm bên dưới mọi mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạng giao thông: nút (node / 노드), edge, sức chứa (capacity / 용량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Từ giới hạn địa hình, người vận hành phải cân bằng tốc độ, giá, năng lực, độ tin cậy và phát thải giữa đường bộ, rail, biển, hàng không hay đường ống. **Lựa chọn phương thức là bài toán đánh đổi** mở ra cách đọc những lựa chọn đó trước khi ghép chúng thành mạng.
 
 ## Lựa chọn phương thức là bài toán đánh đổi
 
@@ -24,7 +24,7 @@ Sea freight rẻ cho mass cargo nhưng chậm; air nhanh nhưng đắt; rail hi�
 
 Vì vậy sản phẩm (product / 제품) cấu trúc (structure / 구조) tạo trade geography. Iron ore, semiconductor, fresh seafood và software không dùng cùng mạng (network / 네트워크).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao thông, thương mại và toàn cầu hóa**, **Mạng giao thông: nút (node / 노드), edge, sức chứa (capacity / 용량)** tiếp nhận điểm tựa từ **Lựa chọn phương thức là bài toán đánh đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hub-and-spoke: efficiency đổi lấy concentration rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Phương thức chỉ có ý nghĩa trong quan hệ giữa node, tuyến, sức chứa và thời gian chuyển tải. **Mạng giao thông: nút (node / 노드), edge, sức chứa (capacity / 용량)** mô tả cấu trúc đó, rồi cho thấy vì sao nhiều mạng gom luồng vào hub.
 
 ## Mạng giao thông: nút (node / 노드), edge, sức chứa (capacity / 용량)
 
@@ -32,7 +32,7 @@ Cổng (port / 포트), airport, station, warehouse, border crossing là **nút 
 
 Centrality hữu ích nhưng cần đọc với sức chứa (capacity / 용량) và substitutability. Một nút (node / 노드) ít edge nhưng nằm trên gần như mọi đường dẫn (path / 경로) giữa hai region có thể strategic hơn nút (node / 노드) nhiều cục bộ (local / 로컬) liên kết (connection / 연결).
 
-> **Chuyển mạch:** Trong **Giao thông, thương mại và toàn cầu hóa**, **Hub-and-spoke: efficiency đổi lấy concentration rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **Mạng giao thông: nút (node / 노드), edge, sức chứa (capacity / 용량)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Intermodal và containerization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hub-and-spoke giảm số tuyến trực tiếp và tăng hiệu quả gom tải, nhưng đổi lại là phụ thuộc vào một số điểm tập trung. **Intermodal và containerization** tiếp theo giải thích cách chuẩn hóa đơn vị hàng và nối các phương thức để giảm thời gian chuyển tiếp.
 
 ## Hub-and-spoke: efficiency đổi lấy concentration rủi ro (risk / 위험)
 
@@ -40,7 +40,7 @@ Centrality hữu ích nhưng cần đọc với sức chứa (capacity / 용량)
 
 Ưu điểm là high utilization và frequency; nhược điểm là disruption tại hub lan rộng. mạng (network / 네트워크) thiết kế (design / 설계) luôn sự đánh đổi (trade-off / 트레이드오프) **efficiency ↔ redundancy**.
 
-> **Chuyển mạch:** Ở chặng này của **Giao thông, thương mại và toàn cầu hóa**, **Intermodal và containerization** tiếp nhận điểm tựa từ **Hub-and-spoke: efficiency đổi lấy concentration rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cổng (port / 포트) là giao diện (interface / 인터페이스) giữa ocean và hinterland** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Container hóa biến nhiều chặng thành một chuỗi phối hợp, nhưng cổng biển vẫn phải xử lý giao diện giữa tàu, rail, truck và kho. **Cổng (port / 포트) là giao diện (interface / 인터페이스) giữa ocean và hinterland** làm rõ node nơi hiệu quả liên phương thức được quyết định.
 
 ## Intermodal và containerization
 
@@ -48,7 +48,7 @@ Centrality hữu ích nhưng cần đọc với sức chứa (capacity / 용량)
 
 Đây là ví dụ rõ của **tiêu chuẩn (standard / 표준) + hạ tầng (infrastructure / 인프라) + mạng (network / 네트워크) tác động (effect / 효과)** cùng làm geography thay đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao thông, thương mại và toàn cầu hóa**, **Cổng (port / 포트) là giao diện (interface / 인터페이스) giữa ocean và hinterland** tiếp nhận điểm tựa từ **Intermodal và containerization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Corridor development: đường đi tạo ra hay chỉ đi qua vùng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cảng hiệu quả không chỉ nhờ bến nước mà còn nhờ vùng hậu phương, thủ tục và kết nối nội địa. **Corridor development: đường đi tạo ra hay chỉ đi qua vùng?** hỏi liệu đầu tư nối cảng có tạo năng lực kinh tế cho vùng dọc tuyến hay chỉ đưa hàng đi qua.
 
 ## Cổng (port / 포트) là giao diện (interface / 인터페이스) giữa ocean và hinterland
 
@@ -56,7 +56,7 @@ Cổng (port / 포트) lớn không chỉ cần deep water. Nó cần channel, t
 
 Tắc cổng (port / 포트) có thể truyền upstream vào factory qua thiếu thành phần (component / 컴포넌트) và downstream tới retail qua inventory. cổng (port / 포트) là vật lý (physical / 물리적) nút (node / 노드) của môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Trong **Giao thông, thương mại và toàn cầu hóa**, **Corridor development: đường đi tạo ra hay chỉ đi qua vùng?** tiếp nhận điểm tựa từ **Cổng (port / 포트) là giao diện (interface / 인터페이스) giữa ocean và hinterland** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chokepoint là thuộc tính của mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Corridor tạo cơ hội khi có node, dịch vụ và thị trường dọc tuyến; nếu chỉ là đường xuyên vùng, lợi ích địa phương có thể nhỏ. **Chokepoint là thuộc tính của mạng (network / 네트워크)** tiếp theo chỉ ra nơi một tuyến hoặc node trở nên khó thay thế.
 
 ## Corridor development: đường đi tạo ra hay chỉ đi qua vùng?
 
@@ -64,7 +64,7 @@ Một highway/rail corridor có thể tạo station city, warehouse, industrial 
 
 Để corridor tạo development, cần interchange, cục bộ (local / 로컬) supplier, labor skill, land-use planning và liên kết (connection / 연결) tới cục bộ (local / 로컬) firm. “Có tuyến đi qua” khác “được tích hợp vào mạng (network / 네트워크)”.
 
-> **Chuyển mạch:** Ở chặng này của **Giao thông, thương mại và toàn cầu hóa**, **Chokepoint là thuộc tính của mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Corridor development: đường đi tạo ra hay chỉ đi qua vùng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Border là friction có thể đo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Chokepoint không phải nhãn cố định của một địa danh; nó phụ thuộc luồng, sức chứa, tuyến thay thế và khả năng phục hồi của cả mạng. **Border là friction có thể đo** chuyển sang một nguồn ma sát khác bằng thủ tục, thời gian và chi phí qua biên giới.
 
 ## Chokepoint là thuộc tính của mạng (network / 네트워크)
 
@@ -72,7 +72,7 @@ Một narrow passage trở thành **chokepoint** khi luồng (flow / 흐름) l�
 
 Lô-gic (logic / 논리) tương tự áp dụng cho border cầu nối (bridge / 브리지), chuỗi xử lý (pipeline / 파이프라인) junction, transformer hoặc cable landing station. Câu hỏi đúng là: **nếu nút (node / 노드) mất đi, luồng (flow / 흐름) chuyển sang đâu, sức chứa (capacity / 용량) thay thế bao nhiêu và stock buffer đủ bao lâu?**
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao thông, thương mại và toàn cầu hóa**, **Border là friction có thể đo** tiếp nhận điểm tựa từ **Chokepoint là thuộc tính của mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vận chuyển (transport / 전송) và urbanization tạo phản hồi (feedback / 피드백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ma sát biên giới có thể đo bằng thời gian chờ, giấy tờ, tỷ lệ kiểm tra, phí và độ biến động, chứ không chỉ bằng khoảng cách. **Vận chuyển (transport / 전송) và urbanization tạo phản hồi (feedback / 피드백)** tiếp theo xem mạng vận tải thay đổi hình thái và nhịp tăng trưởng đô thị ra sao.
 
 ## Border là friction có thể đo
 
@@ -80,7 +80,7 @@ Waiting thời gian (time / 시간), inspection, incompatible standards và pape
 
 Agreement, dùng chung (common / 공통) tiêu chuẩn (standard / 표준) và digital customs có thể “rút ngắn” economic distance mà không đổi vật lý (physical / 물리적) map.
 
-> **Chuyển mạch:** Trong **Giao thông, thương mại và toàn cầu hóa**, **Vận chuyển (transport / 전송) và urbanization tạo phản hồi (feedback / 피드백)** tiếp nhận điểm tựa từ **Border là friction có thể đo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Supply chuỗi (chain / 사슬): lead thời gian (time / 시간), inventory và geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đô thị hóa làm tăng demand và lưu lượng, còn lưu lượng mới có thể kéo hạ tầng, việc làm và dân cư về các node. **Supply chuỗi (chain / 사슬): lead thời gian (time / 시간), inventory và geography** đưa phản hồi đó vào bài toán giao hàng đúng hạn và tồn kho.
 
 ## Vận chuyển (transport / 전송) và urbanization tạo phản hồi (feedback / 피드백)
 
@@ -88,7 +88,7 @@ Transit/highway làm một location dễ tiếp cận hơn; khả năng tiếp c
 
 Vì vậy một tuyến mới không chỉ “giải congestion”; nó có thể thay settlement mẫu (pattern / 패턴). Road sức chứa (capacity / 용량) tăng đôi khi kích thích additional trip và suburbanization, làm long-run congestion quay lại.
 
-> **Chuyển mạch:** Ở chặng này của **Giao thông, thương mại và toàn cầu hóa**, **Vận chuyển (transport / 전송) và urbanization tạo phản hồi (feedback / 피드백)** xác định đầu vào; **Supply chuỗi (chain / 사슬): lead thời gian (time / 시간), inventory và geography** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Multi-tier phụ thuộc (dependency / 의존성) và false diversification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Lead time và độ tin cậy quyết định doanh nghiệp giữ bao nhiêu tồn kho và đặt các tầng cung ứng ở đâu. **Multi-tier phụ thuộc (dependency / 의존성) và false diversification** tiếp theo kiểm tra liệu nhiều nhà cung cấp có thực sự giảm phụ thuộc hay chỉ che giấu cùng một node gốc.
 
 ## Supply chuỗi (chain / 사슬): lead thời gian (time / 시간), inventory và geography
 
@@ -96,7 +96,7 @@ Firm không chỉ minimize freight tỷ lệ (rate / 비율). Họ tối ưu lea
 
 Buffer stock, multi-sourcing hoặc nearshoring tăng một số recurring chi phí (cost / 비용) nhưng giảm tail rủi ro (risk / 위험). Đây là thiết kế (design / 설계) bài toán (problem / 문제) giữa efficiency và resilience, không phải nhị phân (binary / 이진) “globalization vs localization”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao thông, thương mại và toàn cầu hóa**, **Supply chuỗi (chain / 사슬): lead thời gian (time / 시간), inventory và geography** xác định đầu vào; **Multi-tier phụ thuộc (dependency / 의존성) và false diversification** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Trade và comparative advantage cần hạ tầng (infrastructure / 인프라)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Phụ thuộc đa tầng cho thấy thương mại không chỉ là quan hệ giữa hai nước mà là mạng linh kiện, dịch vụ, tài chính và vận tải. **Trade và comparative advantage cần hạ tầng (infrastructure / 인프라)** giải thích vì sao lợi thế so sánh chỉ vận hành khi mạng đó đủ tin cậy.
 
 ## Multi-tier phụ thuộc (dependency / 의존성) và false diversification
 
@@ -104,7 +104,7 @@ Firm có thể có ba direct supplier ở ba country nhưng tất cả lại ph�
 
 Supply-chain ánh xạ (mapping / 매핑) vì thế phải đi nhiều tier. Đây là cầu nối (bridge / 브리지) giữa vận chuyển (transport / 전송) geography và tài nguyên (resource / 자원) geography.
 
-> **Chuyển mạch:** Trong **Giao thông, thương mại và toàn cầu hóa**, **Trade và comparative advantage cần hạ tầng (infrastructure / 인프라)** tiếp nhận điểm tựa từ **Multi-tier phụ thuộc (dependency / 의존성) và false diversification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Globalization là mạng nhiều lớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hạ tầng, thủ tục và năng lực logistics quyết định một lợi thế so sánh có thể biến thành giao dịch hay không. **Globalization là mạng nhiều lớp** tiếp theo mở rộng từ một lợi thế đơn lẻ sang các lớp sản xuất, tài chính, dữ liệu và thể chế.
 
 ## Trade và comparative advantage cần hạ tầng (infrastructure / 인프라)
 
@@ -112,7 +112,7 @@ Comparative advantage tạo incentive exchange, nhưng goods chỉ trở thành 
 
 Trade geography nằm ở giao điểm giữa economic lô-gic (logic / 논리) và vật lý (physical / 물리적)/institutional mạng (network / 네트워크).
 
-> **Chuyển mạch:** Ở chặng này của **Giao thông, thương mại và toàn cầu hóa**, **Globalization là mạng nhiều lớp** tiếp nhận điểm tựa từ **Trade và comparative advantage cần hạ tầng (infrastructure / 인프라)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Maritime trade và inland mạng (network / 네트워크) phải đọc cùng nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Toàn cầu hóa kết nối nhiều lớp nhưng các lớp ấy vẫn gặp nhau tại cảng, kho, rail, đường bộ và đô thị nội địa. **Maritime trade và inland mạng (network / 네트워크) phải đọc cùng nhau** đặt biển và hậu phương vào cùng một chuỗi vận hành.
 
 ## Globalization là mạng nhiều lớp
 
@@ -120,7 +120,7 @@ Trade geography nằm ở giao điểm giữa economic lô-gic (logic / 논리) 
 
 Một place có thể hyper-connected ở một tầng (layer / 계층) nhưng peripheral ở tầng (layer / 계층) khác. Landlocked trạng thái (state / 상태) có disadvantage với bulk cargo nhưng vẫn export digital dịch vụ (service / 서비스) nếu electricity, skill và telecom mạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao thông, thương mại và toàn cầu hóa**, **Maritime trade và inland mạng (network / 네트워크) phải đọc cùng nhau** tiếp nhận điểm tựa từ **Globalization là mạng nhiều lớp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Korea–Vietnam môi trường vận hành (production / 운영 환경) corridor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Một tuyến biển không tạo ra thương mại nếu hinterland, thủ tục và nhà cung cấp nội địa không nối được với nó. **Korea–Vietnam môi trường vận hành (production / 운영 환경) corridor** là trường hợp để đọc một hành lang biển–đất liền bằng dữ liệu và trải nghiệm sản xuất cụ thể.
 
 ## Maritime trade và inland mạng (network / 네트워크) phải đọc cùng nhau
 
@@ -128,7 +128,7 @@ Toàn cục (global / 전역) shipping map thường làm cổng (port / 포트)
 
 Vì vậy **sea lane → cổng (port / 포트) → inland corridor → industrial/urban nút (node / 노드)** phải được đọc như một chuỗi (chain / 사슬).
 
-> **Chuyển mạch:** Trong **Giao thông, thương mại và toàn cầu hóa**, **Korea–Vietnam môi trường vận hành (production / 운영 환경) corridor** tiếp nhận điểm tựa từ **Maritime trade và inland mạng (network / 네트워크) phải đọc cùng nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Digital geography vẫn có cable, power và độ trễ (latency / 지연 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Corridor Korea–Vietnam cho thấy sản xuất xuyên biên giới cần cả tàu, cảng, đường bộ, điện, dữ liệu và phối hợp thủ tục. **Digital geography vẫn có cable, power và độ trễ (latency / 지연 시간)** tiếp tục với các hạ tầng vô hình nhưng có vị trí và giới hạn vật lý.
 
 ## Korea–Vietnam môi trường vận hành (production / 운영 환경) corridor
 
@@ -136,7 +136,7 @@ Korea–Vietnam economic quan hệ (relation / 관계) là ví dụ multi-layer 
 
 Nếu chỉ nhìn bilateral trade giá trị (value / 값) ta bỏ mất spatial cơ chế (mechanism / 메커니즘): industrial park ở Vietnam, supplier cluster, cổng (port / 포트)/airport, Korean corporate mạng (network / 네트워크) và regional đầu vào (input / 입력) từ China/Japan/ASEAN cùng tạo môi trường vận hành (production / 운영 환경) geography.
 
-> **Chuyển mạch:** Ở chặng này của **Giao thông, thương mại và toàn cầu hóa**, **Digital geography vẫn có cable, power và độ trễ (latency / 지연 시간)** tiếp nhận điểm tựa từ **Korea–Vietnam môi trường vận hành (production / 운영 환경) corridor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vận chuyển (transport / 전송) externality và distributional tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cáp, điện, máy chủ và độ trễ làm dịch vụ số phụ thuộc vào cùng logic node–tuyến–sức chứa như vận tải. **Vận chuyển (transport / 전송) externality và distributional tác động (effect / 효과)** quay lại hỏi ai hưởng lợi, ai chịu ô nhiễm, tắc nghẽn và chi phí hạ tầng.
 
 ## Digital geography vẫn có cable, power và độ trễ (latency / 지연 시간)
 
@@ -144,7 +144,7 @@ Cloud là vật lý (physical / 물리적) hạ tầng (infrastructure / 인프�
 
 Digitalization làm một số distance rẻ hơn nhưng tạo chokepoint mới.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao thông, thương mại và toàn cầu hóa**, **Vận chuyển (transport / 전송) externality và distributional tác động (effect / 효과)** tiếp nhận điểm tựa từ **Digital geography vẫn có cable, power và độ trễ (latency / 지연 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trade mạng (network / 네트워크) và regional role** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ngoại tác và phân phối cho thấy một mạng hiệu quả về tổng thể vẫn có thể gây thiệt cho khu dân cư hoặc vùng bị bỏ qua. **Trade mạng (network / 네트워크) và regional role** tiếp theo đặt các lợi ích và chi phí ấy vào vai trò vùng trong hệ thống thương mại.
 
 ## Vận chuyển (transport / 전송) externality và distributional tác động (effect / 효과)
 
@@ -152,7 +152,7 @@ Vận chuyển (transport / 전송) tạo noise, pollution, emission, accident v
 
 Do đó vận chuyển (transport / 전송) benefit/chi phí (cost / 비용) phân bố không đều. Average travel-time saving không cho biết ai được lợi và ai chịu externality.
 
-> **Chuyển mạch:** Trong **Giao thông, thương mại và toàn cầu hóa**, **Trade mạng (network / 네트워크) và regional role** tiếp nhận điểm tựa từ **Vận chuyển (transport / 전송) externality và distributional tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Vai trò vùng phải được đọc qua vị trí trong mạng, luồng hàng, năng lực node, giá trị giữ lại và khả năng thay thế, không chỉ qua kim ngạch. **Những hiểu lầm phổ biến** kiểm tra các suy luận như “có cảng là gateway” hoặc “mở cửa luôn làm mọi nơi hưởng lợi”.
 
 ## Trade mạng (network / 네트워크) và regional role
 
@@ -160,13 +160,13 @@ Một region trở thành gateway không chỉ nhờ vị trí “ở giữa”.
 
 Singapore, Netherlands hay Panama là những trường hợp (case / 사례) khác nhau của gateway lô-gic (logic / 논리); Korea/Vietnam lại thể hiện manufacturing–maritime mạng (network / 네트워크) hơn là transit-only hub.
 
-> **Chuyển mạch:** Ở chặng này của **Giao thông, thương mại và toàn cầu hóa**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Trade mạng (network / 네트워크) và regional role** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi loại bỏ các đồng nhất hóa, còn lại cách đọc giao thông như mạng vật lý–thể chế có đánh đổi, phụ thuộc và phân phối không gian. **Mô hình tư duy** cô đọng cách đọc đó để áp dụng cho thương mại, đô thị và toàn cầu hóa.
 
 ## Những hiểu lầm phổ biến
 
 “Globalization làm distance biến mất” sai. “Có road là có development” bỏ qua cục bộ (local / 로컬) năng lực (capability / 역량). “cổng (port / 포트) lớn chỉ cần coast tốt” bỏ qua hinterland. “Nhiều supplier = diversified” bỏ qua dùng chung (shared / 공유) upstream phụ thuộc (dependency / 의존성). “bản dựng (build / 빌드) more lanes luôn giảm congestion dài hạn” bỏ qua land-use phản hồi (feedback / 피드백).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao thông, thương mại và toàn cầu hóa**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi địa hình–phương thức → node, hub và container → cảng, corridor và chokepoint → border friction → supply chain, hạ tầng và toàn cầu hóa → digital, ngoại tác và vai trò vùng. Kết luận bàn giao owner **Human Geography** theo [README](../README.md), để nối sang địa lý chính trị, kinh tế hoặc hệ thống toàn cầu.
 
 ## Mô hình tư duy
 
