@@ -5,22 +5,22 @@
 ## Khung không gian
 Cuba là đảo lớn nhất Caribbean và kéo dài theo hướng tây–đông, tạo nhiều vùng địa hình và khí hậu khác nhau. Các đồng bằng rộng xen với núi Sierra Maestra và các dải núi khác.
 
-> **Chuyển mạch:** Trong **Cuba**, **Nước, đất và sản xuất** tiếp nhận điểm tựa từ **Khung không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạng đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Long island relief, karst và seasonal rain phân bố đất, reservoir và production; **nước–đất–sản xuất** nối đồng bằng nông nghiệp với mountain blocks và coast. **Mạng đô thị** tiếp theo bám theo trục tây–đông và các cảng.
 
 ## Nước, đất và sản xuất
 Địa hình đá vôi karst phổ biến ở nhiều nơi, trong khi đồng bằng thuận lợi cho nông nghiệp. Mưa có tính mùa và bão là yếu tố quan trọng đối với reservoir management và sản xuất.
 
-> **Chuyển mạch:** Ở chặng này của **Cuba**, **Mạng đô thị** tiếp nhận điểm tựa từ **Nước, đất và sản xuất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Agriculture và reservoir phụ thuộc mùa mưa, còn Havana–Santiago và các tỉnh tạo network dọc đảo; **rủi ro** tiếp theo chồng hurricane, drought và coastal flooding lên corridor đó.
 
 ## Mạng đô thị
 Havana là cực lớn phía tây; Santiago de Cuba và các thành phố tỉnh tạo mạng dọc theo đảo. Hình dạng dài khiến road/rail corridor theo trục tây–đông có ý nghĩa cấu trúc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cuba**, **Rủi ro** tiếp nhận điểm tựa từ **Mạng đô thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Long coast vừa mở port/tourism vừa tăng exposure trước hurricane, saltwater intrusion và storm surge. **Mô hình tư duy** sẽ giữ trade-off giữa island corridor, agriculture và climate resilience.
 
 ## Rủi ro
 Hurricane, drought, coastal flooding và saltwater intrusion tác động khác nhau theo vùng. Bờ biển dài làm exposure lớn nhưng cũng tạo nhiều cảng và tài nguyên du lịch.
 
-> **Chuyển mạch:** Trong **Cuba**, **Mô hình tư duy** gom các mảnh từ **Rủi ro** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi long island–plains/mountains → water/soil–urban corridor → ports/tourism và hurricane exposure. Đây là điểm bàn giao cho các profile Caribbean trong owner World Atlas.
 
 ## Mô hình tư duy
 Cuba = **long island corridor + agricultural plains + multiple mountain blocks + hurricane-exposed coasts**.
