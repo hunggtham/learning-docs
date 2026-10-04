@@ -8,7 +8,7 @@
 
 Phân biệt này quan trọng vì một lao động đi về hàng tuần qua biên giới có tác động tới thị trường lao động nhưng không nhất thiết được tính là migrant theo mọi hệ thống thống kê.
 
-> **Chuyển mạch:** Trong **Di cư, khả năng di chuyển và mạng lưới con người**, **Mobility rộng hơn di chuyển (migration / 마이그레이션)** xác định đầu vào; **Di chuyển (migration / 마이그레이션) là luồng (flow / 흐름) có origin, destination, tuyến (route / 경로) và friction** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Push–pull hữu ích nhưng chưa đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mobility gồm commute, seasonal movement và migration lâu dài; **Di chuyển (migration / 마이그레이션) là luồng (flow / 흐름) có origin, destination, tuyến (route / 경로) và friction** định vị stock/flow trên không gian. **Push–pull hữu ích nhưng chưa đủ** tiếp theo thêm cơ chế mạng và selectivity.
 
 ## Di chuyển (migration / 마이그레이션) là luồng (flow / 흐름) có origin, destination, tuyến (route / 경로) và friction
 
@@ -16,7 +16,7 @@ Mỗi dòng di cư có nơi đi, nơi đến và tuyến. Khoảng cách vật l
 
 Do đó hai nơi gần nhau có thể ít trao đổi người nếu biên giới khó qua, trong khi hai nơi xa có thể có dòng lớn nhờ đường bay và mạng cộng đồng mạnh.
 
-> **Chuyển mạch:** Ở chặng này của **Di cư, khả năng di chuyển và mạng lưới con người**, **Di chuyển (migration / 마이그레이션) là luồng (flow / 흐름) có origin, destination, tuyến (route / 경로) và friction** xác định đầu vào; **Push–pull hữu ích nhưng chưa đủ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Selectivity: migrant không phải mẫu ngẫu nhiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Origin, destination, route và friction tạo flow cụ thể; **Push–pull hữu ích nhưng chưa đủ** vì quyết định còn qua information, network, visa và chi phí. **Selectivity: migrant không phải mẫu ngẫu nhiên** tiếp theo chỉ ra ai có khả năng đi.
 
 ## Push–pull hữu ích nhưng chưa đủ
 
@@ -24,7 +24,7 @@ Khung **đẩy–kéo (push–pull)** liệt kê lý do rời nơi đi và hấp
 
 Một người có động lực lớn nhưng thiếu tiền, giấy tờ hoặc mạng (network / 네트워크) có thể bị “mắc kẹt”. Vì vậy di chuyển (migration / 마이그레이션) nên được hiểu bằng ba thành phần: **aspiration (muốn đi) + năng lực (capability / 역량) (có khả năng đi) + opportunity/pathway (có tuyến khả thi)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Di cư, khả năng di chuyển và mạng lưới con người**, **Selectivity: migrant không phải mẫu ngẫu nhiên** tiếp nhận điểm tựa từ **Push–pull hữu ích nhưng chưa đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gravity mô hình (model / 모델) và khả năng tiếp cận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Push–pull mô tả lực, còn **Selectivity: migrant không phải mẫu ngẫu nhiên** lọc theo tuổi, kỹ năng, vốn, giới và network. **Gravity mô hình (model / 모델) và khả năng tiếp cận** tiếp theo khái quát khoảng cách và quy mô origin/destination.
 
 ## Selectivity: migrant không phải mẫu ngẫu nhiên
 
@@ -32,7 +32,7 @@ Người di cư thường chọn lọc theo tuổi, kỹ năng, thu nhập và m
 
 Selectivity cũng làm nghiên cứu khó: thấy migrant có thu nhập cao hơn người ở lại không tự động chứng minh di cư gây toàn bộ chênh lệch, vì người có khả năng di cư đã khác từ đầu.
 
-> **Chuyển mạch:** Trong **Di cư, khả năng di chuyển và mạng lưới con người**, **Gravity mô hình (model / 모델) và khả năng tiếp cận** tiếp nhận điểm tựa từ **Selectivity: migrant không phải mẫu ngẫu nhiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Intervening opportunities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Selectivity thay đổi “mass” hiệu dụng, còn **Gravity mô hình (model / 모델) và khả năng tiếp cận** nối quy mô population với distance/cost và opportunities. **Intervening opportunities** tiếp theo giải thích vì sao điểm gần hơn có thể dừng dòng.
 
 ## Gravity mô hình (model / 모델) và khả năng tiếp cận
 
@@ -46,7 +46,7 @@ Dòng giữa nơi lớn thường mạnh hơn và giảm theo distance/friction.
 
 Mô hình (model / 모델) không phải định luật; nó là baseline để hỏi “dòng nào lớn hơn/nhỏ hơn mức kích thước và khoảng cách dự kiến, và vì sao?”.
 
-> **Chuyển mạch:** Ở chặng này của **Di cư, khả năng di chuyển và mạng lưới con người**, **Intervening opportunities** tiếp nhận điểm tựa từ **Gravity mô hình (model / 모델) và khả năng tiếp cận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạng (network / 네트워크) tác động (effect / 효과) và chuỗi (chain / 사슬) di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Gravity dự đoán attraction, còn **Intervening opportunities** cho thấy job, school, housing và family ở giữa có thể giữ người lại. **Mạng (network / 네트워크) tác động (effect / 효과) và chuỗi (chain / 사슬) di chuyển (migration / 마이그레이션)** tiếp theo mô tả feedback giữa người đi và nơi đến.
 
 ## Intervening opportunities
 
@@ -54,7 +54,7 @@ Người không nhất thiết đi tới nơi hấp dẫn nhất tuyệt đối.
 
 Điều này đặc biệt quan trọng với di chuyển (migration / 마이그레이션) nội địa và hệ thống thành phố nhiều cấp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Di cư, khả năng di chuyển và mạng lưới con người**, **Intervening opportunities** xác định đầu vào; **Mạng (network / 네트워크) tác động (effect / 효과) và chuỗi (chain / 사슬) di chuyển (migration / 마이그레이션)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Di chuyển (migration / 마이그레이션) nội địa là động cơ tái phân bố dân số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Opportunities trung gian làm flow dừng/đổi hướng, còn **Mạng (network / 네트워크) tác động (effect / 효과) và chuỗi (chain / 사슬) di chuyển (migration / 마이그레이션)** tạo information, remittance và path dependence. **Di chuyển (migration / 마이그레이션) nội địa là động cơ tái phân bố dân số** tiếp theo đặt flow trong một quốc gia.
 
 ## Mạng (network / 네트워크) tác động (effect / 효과) và chuỗi (chain / 사슬) di chuyển (migration / 마이그레이션)
 
@@ -62,7 +62,7 @@ Người đi trước cung cấp thông tin, chỗ ở và kết nối việc l�
 
 Khi mạng (network / 네트워크) đủ lớn, dòng có thể tiếp tục ngay cả khi chênh lệch kinh tế ban đầu giảm. Đây là một ví dụ về đường dẫn (path / 경로) dependence trong human geography.
 
-> **Chuyển mạch:** Trong **Di cư, khả năng di chuyển và mạng lưới con người**, **Mạng (network / 네트워크) tác động (effect / 효과) và chuỗi (chain / 사슬) di chuyển (migration / 마이그레이션)** xác định đầu vào; **Di chuyển (migration / 마이그레이션) nội địa là động cơ tái phân bố dân số** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **International di chuyển (migration / 마이그레이션) và border regime** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Network feedback kéo thêm flow về các cực job và service; **Di chuyển (migration / 마이그레이션) nội địa là động cơ tái phân bố dân số** biến khác biệt vùng thành urbanization và depopulation. **International di chuyển (migration / 마이그레이션) và border regime** tiếp theo thêm visa, citizenship và border friction.
 
 ## Di chuyển (migration / 마이그레이션) nội địa là động cơ tái phân bố dân số
 
@@ -70,7 +70,7 @@ Nông thôn–đô thị chỉ là một dạng. Còn có đô thị–đô th�
 
 Tăng dân số đô thị = di chuyển (migration / 마이그레이션) + natural increase + reclassification. Nếu không tách ba thành phần, ta dễ gán toàn bộ urban growth cho người từ nông thôn.
 
-> **Chuyển mạch:** Ở chặng này của **Di cư, khả năng di chuyển và mạng lưới con người**, **International di chuyển (migration / 마이그레이션) và border regime** tiếp nhận điểm tựa từ **Di chuyển (migration / 마이그레이션) nội địa là động cơ tái phân bố dân số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Forced displacement cần phân biệt khái niệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Internal flow bị định hình bởi region và jobs, còn **International di chuyển (migration / 마이그레이션) và border regime** thêm hộ chiếu, quota, labor demand và legal status. **Forced displacement cần phân biệt khái niệm** tiếp theo tách lựa chọn khỏi cưỡng bức.
 
 ## International di chuyển (migration / 마이그레이션) và border regime
 
@@ -78,7 +78,7 @@ Biên giới tạo bước nhảy trong friction. Visa, giấy phép lao động
 
 Do đó di chuyển (migration / 마이그레이션) corridor là sản phẩm đồng thời của geography và institution.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Di cư, khả năng di chuyển và mạng lưới con người**, **Forced displacement cần phân biệt khái niệm** tiếp nhận điểm tựa từ **International di chuyển (migration / 마이그레이션) và border regime** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Climate và di chuyển (migration / 마이그레이션): nhiều bước trung gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Border regime phân loại legal mobility, còn **Forced displacement cần phân biệt khái niệm** nhấn mạnh threat, coercion và protection status. **Climate và di chuyển (migration / 마이그레이션): nhiều bước trung gian** tiếp theo tránh gán mọi movement cho khí hậu.
 
 ## Forced displacement cần phân biệt khái niệm
 
@@ -86,7 +86,7 @@ Người tị nạn, người xin tị nạn và **IDP — Internally Displaced 
 
 Địa lý displacement liên quan nơi hiểm họa/xung đột xảy ra, tuyến an toàn, khả năng tiếp cận biên giới và sức chứa (capacity / 용량) của nơi tiếp nhận.
 
-> **Chuyển mạch:** Trong **Di cư, khả năng di chuyển và mạng lưới con người**, **Climate và di chuyển (migration / 마이그레이션): nhiều bước trung gian** tiếp nhận điểm tựa từ **Forced displacement cần phân biệt khái niệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Remittance và circulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Forced displacement là trạng thái cưỡng bức, còn **Climate và di chuyển (migration / 마이그레이션): nhiều bước trung gian** đi qua crop loss, income, conflict, adaptation và policy trước khi thành flow. **Remittance và circulation** tiếp theo theo dõi tiền, người và goods quay về origin.
 
 ## Climate và di chuyển (migration / 마이그레이션): nhiều bước trung gian
 
@@ -94,7 +94,7 @@ Khí hậu có thể ảnh hưởng năng suất, nước, hiểm họa và sinh
 
 Vì vậy “climate thay đổi (change / 변경) làm X triệu người di cư” phải được đọc như scenario với giả định, không phải chuỗi nhân quả (causal chain / 인과 사슬) một bước. Nghèo hơn đôi khi còn làm người dân ít khả năng di cư xa hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Di cư, khả năng di chuyển và mạng lưới con người**, **Remittance và circulation** tiếp nhận điểm tựa từ **Climate và di chuyển (migration / 마이그레이션): nhiều bước trung gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Brain drain, brain gain và mạng (network / 네트워크) diaspora** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Climate pathway đổi decision và destination, còn **Remittance và circulation** cho thấy migration là circulation của income, care, goods và knowledge. **Brain drain, brain gain và mạng (network / 네트워크) diaspora** tiếp theo xét vốn người và network xuyên biên giới.
 
 ## Remittance và circulation
 
@@ -102,13 +102,13 @@ Vì vậy “climate thay đổi (change / 변경) làm X triệu người di c�
 
 Return di chuyển (migration / 마이그레이션) có thể mang vốn và kỹ năng về; circular di chuyển (migration / 마이그레이션) tạo hộ gia đình phân bố giữa nhiều nơi. Vì vậy household có thể là một **mạng (network / 네트워크) đa địa điểm**, không phải đơn vị (unit / 단위) gắn cố định một làng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Di cư, khả năng di chuyển và mạng lưới con người**, **Brain drain, brain gain và mạng (network / 네트워크) diaspora** tiếp nhận điểm tựa từ **Remittance và circulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Korea–Vietnam như corridor để học phương pháp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Remittance đưa value về origin, còn **Brain drain, brain gain và mạng (network / 네트워크) diaspora** mô tả skill loss/gain, entrepreneurship và transnational ties. **Korea–Vietnam như corridor để học phương pháp** tiếp theo dùng một corridor cụ thể để kiểm tra cơ chế.
 
 ## Brain drain, brain gain và mạng (network / 네트워크) diaspora
 
 Di cư kỹ năng cao có thể làm nơi đi thiếu nhân lực, nhưng diaspora cũng tạo trade, investment và kiến thức (knowledge / 지식) link. Kết quả không thể suy từ số người rời đi; cần hỏi ngành, tốc độ đào tạo thay thế và mức kết nối với quê hương.
 
-> **Chuyển mạch:** Trong **Di cư, khả năng di chuyển và mạng lưới con người**, **Korea–Vietnam như corridor để học phương pháp** tiếp nhận điểm tựa từ **Brain drain, brain gain và mạng (network / 네트워크) diaspora** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu di chuyển (migration / 마이그레이션) khó hơn dữ liệu stock** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Diaspora/network cho cơ chế, còn **Korea–Vietnam như corridor để học phương pháp** nối labor demand, visa, language, remittance và family strategy giữa origin–destination. **Dữ liệu di chuyển (migration / 마이그레이션) khó hơn dữ liệu stock** tiếp theo kiểm tra cách đo flow.
 
 ## Korea–Vietnam như corridor để học phương pháp
 
@@ -116,7 +116,7 @@ Khi phân tích một corridor Việt Nam–Hàn Quốc, không nên chỉ đế
 
 Cách tiếp cận này có thể áp dụng cho mọi corridor và giúp tránh biến cộng đồng migrant thành một nhóm đồng nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Di cư, khả năng di chuyển và mạng lưới con người**, **Korea–Vietnam như corridor để học phương pháp** nêu điều cần giải thích; **Dữ liệu di chuyển (migration / 마이그레이션) khó hơn dữ liệu stock** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Corridor case cho biết câu hỏi cần dữ liệu nào; **Dữ liệu di chuyển (migration / 마이그레이션) khó hơn dữ liệu stock** phải phân biệt census, visa, border crossing, survey và duration. **Những hiểu lầm phổ biến** tiếp theo sửa các nhầm lẫn về push–pull và climate.
 
 ## Dữ liệu di chuyển (migration / 마이그레이션) khó hơn dữ liệu stock
 
@@ -124,13 +124,13 @@ Census đo nơi cư trú tại một thời điểm; border dữ liệu (data / 
 
 Một người crossing nhiều lần có thể tạo nhiều bản ghi (record / 레코드) nhưng chỉ là một người. Khi so nguồn phải kiểm tra đơn vị (unit / 단위): person, trip, permit hay household.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Di cư, khả năng di chuyển và mạng lưới con người**, **Dữ liệu di chuyển (migration / 마이그레이션) khó hơn dữ liệu stock** nêu điều cần giải thích; **Những hiểu lầm phổ biến** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Flow data phụ thuộc định nghĩa và thời điểm; **Những hiểu lầm phổ biến** giữ rõ migrant không ngẫu nhiên, climate không phải nguyên nhân đơn và border không chỉ là đường trên bản đồ. **Mô hình tư duy** tiếp theo cô đọng migration system.
 
 ## Những hiểu lầm phổ biến
 
 “Nghèo nhất sẽ di cư nhiều nhất” bỏ chi phí (cost / 비용) của di chuyển (migration / 마이그레이션). “Urban growth = rural di chuyển (migration / 마이그레이션)” bỏ natural increase. “Climate là nguyên nhân duy nhất” bỏ pathway xã hội. “di chuyển (migration / 마이그레이션) chỉ gây brain drain” bỏ circulation và diaspora mạng (network / 네트워크).
 
-> **Chuyển mạch:** Trong **Di cư, khả năng di chuyển và mạng lưới con người**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi mobility → origin/destination/friction → selectivity/gravity → network → internal/international/forced flow → climate/remittance/diaspora → evidence, rồi bàn giao owner **Human Geography** trong [README](../README.md).
 
 ## Mô hình tư duy
 
