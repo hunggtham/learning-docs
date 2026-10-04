@@ -19,7 +19,7 @@ background jobs cũ
 
 Tính đúng đắn (correctness / 정확성) phải giữ trong **chuyển tiếp (transition / 전이) trạng thái (state / 상태)**, không chỉ ở trạng thái cuối.
 
-> **Chuyển mạch:** Deployment là distributed state transition; rolling compatibility giữ invariant đầu tiên, còn canary/blue-green/flags giới hạn blast radius trước khi rollback hoặc mở rộng capacity.
+> **Nối mạch:** Deployment là distributed state transition; rolling compatibility giữ invariant đầu tiên, còn canary/blue-green/flags giới hạn blast radius trước khi rollback hoặc mở rộng capacity.
 
 ## 2. tính tương thích (compatibility / 호환성) là bất biến (invariant / 불변식) đầu tiên của rolling triển khai (deployment / 배포)
 
@@ -36,7 +36,7 @@ message/event consumer lag có kéo version cũ tồn tại lâu hơn dự kiế
 
 Tính tương thích (compatibility / 호환성) ranh giới (boundary / 경계) có thể là API, DB lược đồ (schema / 스키마), sự kiện (event / 이벤트) lược đồ (schema / 스키마), bộ nhớ đệm (cache / 캐시) encoding hoặc dùng chung (shared / 공유) tệp (file / 파일) format.
 
-> **Chuyển mạch:** Ở chặng này của **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **3. Rolling triển khai (deployment / 배포) giữ sức chứa (capacity / 용량) nhưng làm trạng thái (state / 상태) không gian (space / 공간) lớn hơn** tiếp nhận điểm tựa từ **2. tính tương thích (compatibility / 호환성) là bất biến (invariant / 불변식) đầu tiên của rolling triển khai (deployment / 배포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Blue-green giảm traffic-switch chi phí (cost / 비용) nhưng không tách trạng thái (state / 상태) tự động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Rolling triển khai (deployment / 배포) giữ sức chứa (capacity / 용량) nhưng làm trạng thái (state / 상태) không gian (space / 공간) lớn hơn** nối từ **2. tính tương thích (compatibility / 호환성) là bất biến (invariant / 불변식) đầu tiên của rolling triển khai (deployment / 배포)** sang **4. Blue-green giảm traffic-switch chi phí (cost / 비용) nhưng không tách trạng thái (state / 상태) tự động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Rolling triển khai (deployment / 배포) giữ sức chứa (capacity / 용량) nhưng làm trạng thái (state / 상태) không gian (space / 공간) lớn hơn
 
@@ -46,7 +46,7 @@ Nếu readiness sai, triển khai (deployment / 배포) controller có thể đ�
 
 Triển khai (deployment / 배포) chính sách (policy / 정책) vì thế liên quan trực tiếp sức chứa (capacity / 용량) kỹ thuật (engineering / 엔지니어링).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **4. Blue-green giảm traffic-switch chi phí (cost / 비용) nhưng không tách trạng thái (state / 상태) tự động** tiếp nhận điểm tựa từ **3. Rolling triển khai (deployment / 배포) giữ sức chứa (capacity / 용량) nhưng làm trạng thái (state / 상태) không gian (space / 공간) lớn hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Canary là experiment dưới traffic thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Blue-green giảm traffic-switch chi phí (cost / 비용) nhưng không tách trạng thái (state / 상태) tự động** nối từ **3. Rolling triển khai (deployment / 배포) giữ sức chứa (capacity / 용량) nhưng làm trạng thái (state / 상태) không gian (space / 공간) lớn hơn** sang **5. Canary là experiment dưới traffic thật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Blue-green giảm traffic-switch chi phí (cost / 비용) nhưng không tách trạng thái (state / 상태) tự động
 
@@ -56,7 +56,7 @@ Nhưng cơ sở dữ liệu (database / 데이터베이스), message broker, thi
 
 “Blue-green quay lui (rollback / 롤백)” chỉ mạnh tới ranh giới (boundary / 경계) trạng thái (state / 상태) mà hai environments thực sự tách được.
 
-> **Chuyển mạch:** Trong **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **5. Canary là experiment dưới traffic thật** tiếp nhận điểm tựa từ **4. Blue-green giảm traffic-switch chi phí (cost / 비용) nhưng không tách trạng thái (state / 상태) tự động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Guardrail phải gắn với bất biến (invariant / 불변식), không chỉ CPU/lỗi (error / 오류) tỷ lệ (rate / 비율)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Canary là experiment dưới traffic thật** nối từ **4. Blue-green giảm traffic-switch chi phí (cost / 비용) nhưng không tách trạng thái (state / 상태) tự động** sang **6. Guardrail phải gắn với bất biến (invariant / 불변식), không chỉ CPU/lỗi (error / 오류) tỷ lệ (rate / 비율)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Canary là experiment dưới traffic thật
 
@@ -66,7 +66,7 @@ Canary giảm blast radius nhưng chỉ có giá trị nếu traffic mẫu (samp
 
 Canary thiết kế (design / 설계) nên chọn cohort theo rủi ro (risk / 위험), không chỉ percentage.
 
-> **Chuyển mạch:** Ở chặng này của **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **6. Guardrail phải gắn với bất biến (invariant / 불변식), không chỉ CPU/lỗi (error / 오류) tỷ lệ (rate / 비율)** tiếp nhận điểm tựa từ **5. Canary là experiment dưới traffic thật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. cờ tính năng (feature flag / 기능 플래그) tách mã (code / 코드) triển khai (deployment / 배포) khỏi tính năng (feature / 기능) exposure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Guardrail phải gắn với bất biến (invariant / 불변식), không chỉ CPU/lỗi (error / 오류) tỷ lệ (rate / 비율)** nối từ **5. Canary là experiment dưới traffic thật** sang **7. cờ tính năng (feature flag / 기능 플래그) tách mã (code / 코드) triển khai (deployment / 배포) khỏi tính năng (feature / 기능) exposure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Guardrail phải gắn với bất biến (invariant / 불변식), không chỉ CPU/lỗi (error / 오류) tỷ lệ (rate / 비율)
 
@@ -84,7 +84,7 @@ schema compatibility errors
 
 Chỉ số (metric / 지표) noisy hoặc label cardinality sai có thể làm auto quay lui (rollback / 롤백) giả. Guardrail cần threshold, cửa sổ (window / 윈도우) và baseline hợp lý.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **7. cờ tính năng (feature flag / 기능 플래그) tách mã (code / 코드) triển khai (deployment / 배포) khỏi tính năng (feature / 기능) exposure** tiếp nhận điểm tựa từ **6. Guardrail phải gắn với bất biến (invariant / 불변식), không chỉ CPU/lỗi (error / 오류) tỷ lệ (rate / 비율)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. quay lui (rollback / 롤백) không phải thời gian (time / 시간) machine** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. cờ tính năng (feature flag / 기능 플래그) tách mã (code / 코드) triển khai (deployment / 배포) khỏi tính năng (feature / 기능) exposure** nối từ **6. Guardrail phải gắn với bất biến (invariant / 불변식), không chỉ CPU/lỗi (error / 오류) tỷ lệ (rate / 비율)** sang **8. quay lui (rollback / 롤백) không phải thời gian (time / 시간) machine**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. cờ tính năng (feature flag / 기능 플래그) tách mã (code / 코드) triển khai (deployment / 배포) khỏi tính năng (feature / 기능) exposure
 
@@ -94,7 +94,7 @@ Nhưng mỗi flag tạo thêm trạng thái (state / 상태) dimension. N flags 
 
 Flag cần đơn vị sở hữu (owner / 오너), purpose, expiry/cleanup điều kiện (condition / 조건) và safe default. Security-critical điều khiển (control / 제어) không nên biến thành “flag có thể vô tình off” nếu bất biến (invariant / 불변식) yêu cầu luôn enforce.
 
-> **Chuyển mạch:** Trong **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **8. quay lui (rollback / 롤백) không phải thời gian (time / 시간) machine** tiếp nhận điểm tựa từ **7. cờ tính năng (feature flag / 기능 플래그) tách mã (code / 코드) triển khai (deployment / 배포) khỏi tính năng (feature / 기능) exposure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션) là phần triển khai (deployment / 배포) khó đảo nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. quay lui (rollback / 롤백) không phải thời gian (time / 시간) machine** nối từ **7. cờ tính năng (feature flag / 기능 플래그) tách mã (code / 코드) triển khai (deployment / 배포) khỏi tính năng (feature / 기능) exposure** sang **9. cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션) là phần triển khai (deployment / 배포) khó đảo nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. quay lui (rollback / 롤백) không phải thời gian (time / 시간) machine
 
@@ -113,7 +113,7 @@ Do đó cần tách **reversible mã (code / 코드) trạng thái (state / 상�
 
 Nhiều sự cố (incident / 인시던트) an toàn hơn khi roll-forward bằng tính tương thích (compatibility / 호환성) fix thay vì cố chạy old nhị phân (binary / 이진) trên trạng thái (state / 상태) mới.
 
-> **Chuyển mạch:** Ở chặng này của **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **8. quay lui (rollback / 롤백) không phải thời gian (time / 시간) machine** nêu điều cần giải thích; **9. cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션) là phần triển khai (deployment / 배포) khó đảo nhất** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. hàng đợi (queue / 큐)/sự kiện (event / 이벤트) làm coexistence cửa sổ (window / 윈도우) dài hơn rollout cửa sổ (window / 윈도우)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. quay lui (rollback / 롤백) không phải thời gian (time / 시간) machine** đặt vấn đề; **9. cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션) là phần triển khai (deployment / 배포) khó đảo nhất** kiểm tra bằng chứng, rồi **10. hàng đợi (queue / 큐)/sự kiện (event / 이벤트) làm coexistence cửa sổ (window / 윈도우) dài hơn rollout cửa sổ (window / 윈도우)** mở rộng hệ quả.
 
 ## 9. cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션) là phần triển khai (deployment / 배포) khó đảo nhất
 
@@ -132,7 +132,7 @@ Destructive drop/rename sớm phá quay lui (rollback / 롤백) và mixed-versio
 
 Backfill cũng là tải công việc (workload / 워크로드) môi trường vận hành (production / 운영 환경). Nó có thể saturate DB/lưu trữ (storage / 저장소) và làm người dùng (user / 사용자) traffic chậm, nên di chuyển (migration / 마이그레이션) cần tỷ lệ (rate / 비율) limit và khả năng quan sát (observability / 관측 가능성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **9. cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션) là phần triển khai (deployment / 배포) khó đảo nhất** nêu điều cần giải thích; **10. hàng đợi (queue / 큐)/sự kiện (event / 이벤트) làm coexistence cửa sổ (window / 윈도우) dài hơn rollout cửa sổ (window / 윈도우)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. Readiness, liveness và health là control-loop inputs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션) là phần triển khai (deployment / 배포) khó đảo nhất** đặt vấn đề; **10. hàng đợi (queue / 큐)/sự kiện (event / 이벤트) làm coexistence cửa sổ (window / 윈도우) dài hơn rollout cửa sổ (window / 윈도우)** kiểm tra bằng chứng, rồi **11. Readiness, liveness và health là control-loop inputs** mở rộng hệ quả.
 
 ## 10. hàng đợi (queue / 큐)/sự kiện (event / 이벤트) làm coexistence cửa sổ (window / 윈도우) dài hơn rollout cửa sổ (window / 윈도우)
 
@@ -142,7 +142,7 @@ Do đó giao thức (protocol / 프로토콜) deprecation cần dựa **dữ li�
 
 Đây là reason lược đồ (schema / 스키마) evolution là phân tán (distributed / 분산) giao thức (protocol / 프로토콜) theo thời gian.
 
-> **Chuyển mạch:** Trong **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **11. Readiness, liveness và health là control-loop inputs** tiếp nhận điểm tựa từ **10. hàng đợi (queue / 큐)/sự kiện (event / 이벤트) làm coexistence cửa sổ (window / 윈도우) dài hơn rollout cửa sổ (window / 윈도우)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. liên kết (connection / 연결) draining giữ in-flight bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Readiness, liveness và health là control-loop inputs** nối từ **10. hàng đợi (queue / 큐)/sự kiện (event / 이벤트) làm coexistence cửa sổ (window / 윈도우) dài hơn rollout cửa sổ (window / 윈도우)** sang **12. liên kết (connection / 연결) draining giữ in-flight bất biến (invariant / 불변식)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Readiness, liveness và health là control-loop inputs
 
@@ -160,7 +160,7 @@ dependency failure là local hay shared?
 
 Health check sai là phản hồi (feedback / 피드백) controller sai.
 
-> **Chuyển mạch:** Ở chặng này của **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **12. liên kết (connection / 연결) draining giữ in-flight bất biến (invariant / 불변식)** tiếp nhận điểm tựa từ **11. Readiness, liveness và health là control-loop inputs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. bộ nhớ đệm (cache / 캐시) warm-up và cold-start là phase khác steady trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. liên kết (connection / 연결) draining giữ in-flight bất biến (invariant / 불변식)** nối từ **11. Readiness, liveness và health là control-loop inputs** sang **13. bộ nhớ đệm (cache / 캐시) warm-up và cold-start là phase khác steady trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. liên kết (connection / 연결) draining giữ in-flight bất biến (invariant / 불변식)
 
@@ -170,7 +170,7 @@ HTTP/2, WebSocket, long polling hoặc background tác vụ (task / 작업) có 
 
 Triển khai (deployment / 배포) controller phải hiểu liên kết (connection / 연결)/công việc (work / 작업) vòng đời (lifecycle / 생명주기) thực tế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **13. bộ nhớ đệm (cache / 캐시) warm-up và cold-start là phase khác steady trạng thái (state / 상태)** tiếp nhận điểm tựa từ **12. liên kết (connection / 연결) draining giữ in-flight bất biến (invariant / 불변식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. sức chứa (capacity / 용량) headroom là điều kiện triển khai (deployment / 배포) an toàn (safety / 안전)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. bộ nhớ đệm (cache / 캐시) warm-up và cold-start là phase khác steady trạng thái (state / 상태)** nối từ **12. liên kết (connection / 연결) draining giữ in-flight bất biến (invariant / 불변식)** sang **14. sức chứa (capacity / 용량) headroom là điều kiện triển khai (deployment / 배포) an toàn (safety / 안전)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. bộ nhớ đệm (cache / 캐시) warm-up và cold-start là phase khác steady trạng thái (state / 상태)
 
@@ -180,7 +180,7 @@ Rollout bằng chứng (evidence / 증거) cần phân biệt warm-up tác độ
 
 Một triển khai (deployment / 배포) có thể pass canary nhưng thất bại (fail / 실패) ở 50% traffic khi dùng chung (shared / 공유) DB/bộ nhớ đệm (cache / 캐시) pressure tăng phi tuyến.
 
-> **Chuyển mạch:** Trong **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **14. sức chứa (capacity / 용량) headroom là điều kiện triển khai (deployment / 배포) an toàn (safety / 안전)** tiếp nhận điểm tựa từ **13. bộ nhớ đệm (cache / 캐시) warm-up và cold-start là phase khác steady trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. dạng thất bại (failure mode / 실패 모드): thử lại (retry / 재시도) storm trong rollout** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. sức chứa (capacity / 용량) headroom là điều kiện triển khai (deployment / 배포) an toàn (safety / 안전)** nối từ **13. bộ nhớ đệm (cache / 캐시) warm-up và cold-start là phase khác steady trạng thái (state / 상태)** sang **15. dạng thất bại (failure mode / 실패 모드): thử lại (retry / 재시도) storm trong rollout**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. sức chứa (capacity / 용량) headroom là điều kiện triển khai (deployment / 배포) an toàn (safety / 안전)
 
@@ -199,7 +199,7 @@ rollback overlap
 
 Triển khai (deployment / 배포) và sức chứa (capacity / 용량) planning không thể tách rời.
 
-> **Chuyển mạch:** Ở chặng này của **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **15. dạng thất bại (failure mode / 실패 모드): thử lại (retry / 재시도) storm trong rollout** tiếp nhận điểm tựa từ **14. sức chứa (capacity / 용량) headroom là điều kiện triển khai (deployment / 배포) an toàn (safety / 안전)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. bảo mật (security / 보안) rollout cũng có tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. dạng thất bại (failure mode / 실패 모드): thử lại (retry / 재시도) storm trong rollout** nối từ **14. sức chứa (capacity / 용량) headroom là điều kiện triển khai (deployment / 배포) an toàn (safety / 안전)** sang **16. bảo mật (security / 보안) rollout cũng có tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. dạng thất bại (failure mode / 실패 모드): thử lại (retry / 재시도) storm trong rollout
 
@@ -207,7 +207,7 @@ Nếu new phiên bản (version / 버전) chậm, máy khách (client / 클라�
 
 Guardrail cần nhìn attempt/thử lại (retry / 재시도) tỷ lệ (rate / 비율) và hàng đợi (queue / 큐) độ sâu (depth / 깊이), không chỉ lỗi (error / 오류) tỷ lệ (rate / 비율). quay lui (rollback / 롤백) hành động (action / 동작) bản thân cũng là một tải (load / 로드) sự kiện (event / 이벤트) cần sức chứa (capacity / 용량).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **16. bảo mật (security / 보안) rollout cũng có tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우)** tiếp nhận điểm tựa từ **15. dạng thất bại (failure mode / 실패 모드): thử lại (retry / 재시도) storm trong rollout** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. bằng chứng vận hành (production evidence / 운영 증거) trước khi tăng rollout** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. bảo mật (security / 보안) rollout cũng có tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우)** nối từ **15. dạng thất bại (failure mode / 실패 모드): thử lại (retry / 재시도) storm trong rollout** sang **17. bằng chứng vận hành (production evidence / 운영 증거) trước khi tăng rollout**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. bảo mật (security / 보안) rollout cũng có tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우)
 
@@ -217,7 +217,7 @@ Publish verifier trust trước khi issuer chuyển key thường an toàn hơn 
 
 Bảo mật (security / 보안) cấu hình (config / 설정) nên có canary/kiểm tra (audit / 감사)/quay lui (rollback / 롤백) discipline tương tự mã (code / 코드), nhưng không được quay lui (rollback / 롤백) theo cách resurrect credential đã revoke vì compromise.
 
-> **Chuyển mạch:** Trong **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **16. bảo mật (security / 보안) rollout cũng có tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우)** nêu điều cần giải thích; **17. bằng chứng vận hành (production evidence / 운영 증거) trước khi tăng rollout** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. triển khai (deployment / 배포) sự cố (incident / 인시던트) timeline phải giữ phiên bản (version / 버전) định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. bảo mật (security / 보안) rollout cũng có tính tương thích (compatibility / 호환성) cửa sổ (window / 윈도우)** đặt vấn đề; **17. bằng chứng vận hành (production evidence / 운영 증거) trước khi tăng rollout** kiểm tra bằng chứng, rồi **18. triển khai (deployment / 배포) sự cố (incident / 인시던트) timeline phải giữ phiên bản (version / 버전) định danh (identity / 식별자)** mở rộng hệ quả.
 
 ## 17. bằng chứng vận hành (production evidence / 운영 증거) trước khi tăng rollout
 
@@ -236,7 +236,7 @@ log/trace anomalies
 
 So sánh canary với điều khiển (control / 제어) cùng traffic/thời gian (time / 시간) cửa sổ (window / 윈도우) tốt hơn nhìn chỉ số (metric / 지표) tuyệt đối đơn lẻ.
 
-> **Chuyển mạch:** Ở chặng này của **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **17. bằng chứng vận hành (production evidence / 운영 증거) trước khi tăng rollout** nêu điều cần giải thích; **18. triển khai (deployment / 배포) sự cố (incident / 인시던트) timeline phải giữ phiên bản (version / 버전) định danh (identity / 식별자)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. Reversibility phải được kiểm thử (test / 테스트), không chỉ viết trong runbook** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. bằng chứng vận hành (production evidence / 운영 증거) trước khi tăng rollout** đặt vấn đề; **18. triển khai (deployment / 배포) sự cố (incident / 인시던트) timeline phải giữ phiên bản (version / 버전) định danh (identity / 식별자)** kiểm tra bằng chứng, rồi **19. Reversibility phải được kiểm thử (test / 테스트), không chỉ viết trong runbook** mở rộng hệ quả.
 
 ## 18. triển khai (deployment / 배포) sự cố (incident / 인시던트) timeline phải giữ phiên bản (version / 버전) định danh (identity / 식별자)
 
@@ -254,7 +254,7 @@ instance/zone/region
 
 Khả năng quan sát (observability / 관측 가능성) không version-aware sẽ biến triển khai (deployment / 배포) regression thành “random errors across fleet”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **19. Reversibility phải được kiểm thử (test / 테스트), không chỉ viết trong runbook** tiếp nhận điểm tựa từ **18. triển khai (deployment / 배포) sự cố (incident / 인시던트) timeline phải giữ phiên bản (version / 버전) định danh (identity / 식별자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Reversibility phải được kiểm thử (test / 테스트), không chỉ viết trong runbook** nối từ **18. triển khai (deployment / 배포) sự cố (incident / 인시던트) timeline phải giữ phiên bản (version / 버전) định danh (identity / 식별자)** sang **20. Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Reversibility phải được kiểm thử (test / 테스트), không chỉ viết trong runbook
 
@@ -270,13 +270,13 @@ failure giữa migration steps
 
 Nếu quay lui (rollback / 롤백) chưa được kiểm thử (test / 테스트) với production-like trạng thái (state / 상태), nó là hypothesis chứ chưa phải năng lực (capability / 역량).
 
-> **Chuyển mạch:** Trong **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **20. Mô hình tư duy** gom các mảnh từ **19. Reversibility phải được kiểm thử (test / 테스트), không chỉ viết trong runbook** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. Mô hình tư duy** tổng hợp từ **19. Reversibility phải được kiểm thử (test / 테스트), không chỉ viết trong runbook**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 20. Mô hình tư duy
 
 > Safe triển khai (deployment / 배포) là **controlled exposure dưới bất định (uncertainty / 불확실성)**. Rolling/canary/blue-green/flags chỉ là mechanisms. bất biến (invariant / 불변식) thật là tính tương thích (compatibility / 호환성) trong chuyển tiếp (transition / 전이), bounded blast radius, sufficient sức chứa (capacity / 용량) và bằng chứng (evidence / 증거) để quyết định bước tiếp theo. quay lui (rollback / 롤백) chỉ tồn tại trong phạm vi mã (code / 코드)/dữ liệu (data / 데이터)/giao thức (protocol / 프로토콜) còn reversible; ngoài phạm vi đó phải thiết kế roll-forward và reconciliation.
 
-> **Chuyển mạch:** Ở chặng này của **Triển khai (deployment / 배포) an toàn (safety / 안전): canary, blue-green, tính năng (feature / 기능) flags và quay lui (rollback / 롤백) limits**, **Kết nối** gom các mảnh từ **20. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **20. Mô hình tư duy**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

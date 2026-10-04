@@ -10,7 +10,7 @@ Một API môi trường vận hành (production / 운영 환경) hiếm khi có
 
 Vì thuật ngữ dễ gây nhầm, kỹ thuật (engineering / 엔지니어링) document nên viết rõ producer phiên bản (version / 버전) nào nói chuyện với bên tiêu thụ (consumer / 소비자) phiên bản (version / 버전) nào thay vì chỉ ghi “backward compatible”.
 
-> **Chuyển mạch:** Compatibility có hướng theo producer/consumer; additive change thường mở rộng contract, destructive change phá consumer, còn tolerant reader chỉ an toàn khi giới hạn được kiểm thử.
+> **Nối mạch:** Compatibility có hướng theo producer/consumer; additive change thường mở rộng contract, destructive change phá consumer, còn tolerant reader chỉ an toàn khi giới hạn được kiểm thử.
 
 ## Additive thay đổi (change / 변경) thường an toàn hơn destructive thay đổi (change / 변경)
 
@@ -18,7 +18,7 @@ Thêm optional trường dữ liệu (field / 필드) thường dễ tương th�
 
 Tính tương thích (compatibility / 호환성) có ít nhất ba tầng: **syntactic**, **ngữ nghĩa (semantic / 의미적)**, **operational**.
 
-> **Chuyển mạch:** Ở chặng này của **API/lược đồ (schema / 스키마) tính tương thích (compatibility / 호환성) và evolutionary thiết kế (design / 설계)**, **Additive thay đổi (change / 변경) thường an toàn hơn destructive thay đổi (change / 변경)** đã nêu tiêu chí phân biệt, còn **Tolerant reader có giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Enum là một tính tương thích (compatibility / 호환성) trap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Additive thay đổi (change / 변경) thường an toàn hơn destructive thay đổi (change / 변경)** đặt tiêu chí; **Tolerant reader có giới hạn** dùng nó để kiểm tra ranh giới, rồi **Enum là một tính tương thích (compatibility / 호환성) trap** mở rộng hệ quả.
 
 ## Tolerant reader có giới hạn
 
@@ -26,7 +26,7 @@ Bên tiêu thụ (consumer / 소비자) nên bỏ qua unknown fields khi giao th
 
 Robustness không có nghĩa accept mọi thứ; đặc tả hợp đồng (contract / 계약) phải xác định extension points nào được phép và bất biến (invariant / 불변식) nào phải reject.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **API/lược đồ (schema / 스키마) tính tương thích (compatibility / 호환성) và evolutionary thiết kế (design / 설계)**, **Tolerant reader có giới hạn** đã nêu tiêu chí phân biệt, còn **Enum là một tính tương thích (compatibility / 호환성) trap** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마) evolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tolerant reader có giới hạn** đặt tiêu chí; **Enum là một tính tương thích (compatibility / 호환성) trap** dùng nó để kiểm tra ranh giới, rồi **Cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마) evolution** mở rộng hệ quả.
 
 ## Enum là một tính tương thích (compatibility / 호환성) trap
 
@@ -34,7 +34,7 @@ Producer thêm enum giá trị (value / 값) mới có thể làm bên tiêu th�
 
 Trình biên dịch (compiler / 컴파일러) exhaustiveness rất hữu ích trong mã (code / 코드) nội bộ nhưng ranh giới (boundary / 경계) evolving cần thiết kế riêng.
 
-> **Chuyển mạch:** Trong **API/lược đồ (schema / 스키마) tính tương thích (compatibility / 호환성) và evolutionary thiết kế (design / 설계)**, **Enum là một tính tương thích (compatibility / 호환성) trap** nêu điều cần giải thích; **Cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마) evolution** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Sự kiện (event / 이벤트) lược đồ (schema / 스키마) khó hơn yêu cầu (request / 요청)/phản hồi (response / 응답)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Enum là một tính tương thích (compatibility / 호환성) trap** đặt vấn đề; **Cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마) evolution** kiểm tra bằng chứng, rồi **Sự kiện (event / 이벤트) lược đồ (schema / 스키마) khó hơn yêu cầu (request / 요청)/phản hồi (response / 응답)** mở rộng hệ quả.
 
 ## Cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마) evolution
 
@@ -42,7 +42,7 @@ Rename column trực tiếp có thể phá old ứng dụng (application / 애�
 
 Mỗi bước phải quay lui (rollback / 롤백) được trong phạm vi hợp lý. di chuyển (migration / 마이그레이션) lược đồ (schema / 스키마) và ứng dụng (application / 애플리케이션) triển khai (deployment / 배포) là một giao thức (protocol / 프로토콜) nhiều phiên bản (version / 버전).
 
-> **Chuyển mạch:** Ở chặng này của **API/lược đồ (schema / 스키마) tính tương thích (compatibility / 호환성) và evolutionary thiết kế (design / 설계)**, **Cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마) evolution** nêu điều cần giải thích; **Sự kiện (event / 이벤트) lược đồ (schema / 스키마) khó hơn yêu cầu (request / 요청)/phản hồi (response / 응답)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Consumer-driven đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마) evolution** đặt vấn đề; **Sự kiện (event / 이벤트) lược đồ (schema / 스키마) khó hơn yêu cầu (request / 요청)/phản hồi (response / 응답)** kiểm tra bằng chứng, rồi **Consumer-driven đặc tả hợp đồng (contract / 계약)** mở rộng hệ quả.
 
 ## Sự kiện (event / 이벤트) lược đồ (schema / 스키마) khó hơn yêu cầu (request / 요청)/phản hồi (response / 응답)
 
@@ -50,7 +50,7 @@ Sự kiện (event / 이벤트) có thể được lưu và replay nhiều thán
 
 Nếu trường dữ liệu (field / 필드) `amount` đổi từ gross sang net mà vẫn cùng tên/kiểu (type / 타입), lược đồ (schema / 스키마) checker có thể không phát hiện breaking ngữ nghĩa (semantic / 의미적) thay đổi (change / 변경).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **API/lược đồ (schema / 스키마) tính tương thích (compatibility / 호환성) và evolutionary thiết kế (design / 설계)**, **Consumer-driven đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **Sự kiện (event / 이벤트) lược đồ (schema / 스키마) khó hơn yêu cầu (request / 요청)/phản hồi (response / 응답)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Versioning endpoint không giải quyết mọi thứ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Consumer-driven đặc tả hợp đồng (contract / 계약)** nối từ **Sự kiện (event / 이벤트) lược đồ (schema / 스키마) khó hơn yêu cầu (request / 요청)/phản hồi (response / 응답)** sang **Versioning endpoint không giải quyết mọi thứ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Consumer-driven đặc tả hợp đồng (contract / 계약)
 
@@ -58,19 +58,19 @@ Provider không phải lúc nào biết bên tiêu thụ (consumer / 소비자) 
 
 Tuy nhiên kiểm thử (test / 테스트) không thay thế phiên bản (version / 버전) chính sách (policy / 정책). Nếu hàng trăm bên tiêu thụ (consumer / 소비자) contracts encode accidental hành vi (behavior / 동작), provider có thể bị đóng băng. đặc tả hợp đồng (contract / 계약) cần tập trung vào supported hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Trong **API/lược đồ (schema / 스키마) tính tương thích (compatibility / 호환성) và evolutionary thiết kế (design / 설계)**, **Versioning endpoint không giải quyết mọi thứ** tiếp nhận điểm tựa từ **Consumer-driven đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deprecation là vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Versioning endpoint không giải quyết mọi thứ** nối từ **Consumer-driven đặc tả hợp đồng (contract / 계약)** sang **Deprecation là vòng đời (lifecycle / 생명주기)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Versioning endpoint không giải quyết mọi thứ
 
 `/v1` và `/v2` cho phép breaking thay đổi (change / 변경) rõ ràng nhưng tạo chi phí (cost / 비용) duy trì hai các hệ thống (systems / 시스템들). Nếu mọi thay đổi nhỏ đều tạo phiên bản (version / 버전) mới, di chuyển (migration / 마이그레이션) debt tăng nhanh. Additive evolution trong cùng major phiên bản (version / 버전) thường rẻ hơn; major phiên bản (version / 버전) dành cho ngữ nghĩa (semantic / 의미적) break thực sự.
 
-> **Chuyển mạch:** Ở chặng này của **API/lược đồ (schema / 스키마) tính tương thích (compatibility / 호환성) và evolutionary thiết kế (design / 설계)**, **Versioning endpoint không giải quyết mọi thứ** xác định đầu vào; **Deprecation là vòng đời (lifecycle / 생명주기)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Versioning endpoint không giải quyết mọi thứ** đặt đầu vào cho **Deprecation là vòng đời (lifecycle / 생명주기)**, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Deprecation là vòng đời (lifecycle / 생명주기)
 
 Một trường dữ liệu (field / 필드)/API không biến mất chỉ vì documentation ghi deprecated. Cần telemetry biết bên tiêu thụ (consumer / 소비자) nào còn dùng, communication, deadline, di chuyển (migration / 마이그레이션) đường dẫn (path / 경로) và enforcement. Unknown consumers là lý do khả năng quan sát (observability / 관측 가능성) tại ranh giới (boundary / 경계) rất quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **API/lược đồ (schema / 스키마) tính tương thích (compatibility / 호환성) và evolutionary thiết kế (design / 설계)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Deprecation là vòng đời (lifecycle / 생명주기)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Deprecation là vòng đời (lifecycle / 생명주기)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
