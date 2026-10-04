@@ -6,7 +6,7 @@
 
 Antarctica (ATA, M49 010) là area trong UN M49 nhưng không nên ép vào template country profile. Geography cốt lõi ở đây là **ice sheet, bedrock, atmosphere, Southern Ocean, logistics khoa học và seasonal khả năng tiếp cận (accessibility / 접근성)**.
 
-> **Chuyển mạch:** Trong **Antarctica**, **Địa hình nhìn thấy và địa hình thực** tiếp nhận điểm tựa từ **Một atlas entry không giống quốc gia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **East Antarctica và West Antarctica** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Vì Antarctica là area chứ không phải quốc gia, **Địa hình nhìn thấy và địa hình thực** bắt đầu từ ba lớp surface, bed và ice thickness thay vì template dân cư. **East Antarctica và West Antarctica** tiếp theo cho thấy hai nền băng khác nhau trong cùng entry.
 
 ## Địa hình nhìn thấy và địa hình thực
 
@@ -18,7 +18,7 @@ Bề mặt Antarctica trông như một plateau băng khổng lồ, nhưng bên 
 
 Ba lớp này cùng quyết định ice luồng (flow / 흐름).
 
-> **Chuyển mạch:** Ở chặng này của **Antarctica**, **East Antarctica và West Antarctica** tiếp nhận điểm tựa từ **Địa hình nhìn thấy và địa hình thực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ice sheet không phải khối băng đứng yên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Surface topography che bedrock và ice thickness; **East Antarctica và West Antarctica** phân biệt plateau cao với bed dưới mực biển và Transantarctic Mountains. **Ice sheet không phải khối băng đứng yên** tiếp theo giải thích khối băng chảy qua các ranh địa hình đó.
 
 ## East Antarctica và West Antarctica
 
@@ -26,7 +26,7 @@ East Antarctica lớn hơn, có plateau cao và phần lớn nền đá cao hơn
 
 Transantarctic Mountains là ranh địa hình lớn giữa hai miền.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Antarctica**, **Ice sheet không phải khối băng đứng yên** tiếp nhận điểm tựa từ **East Antarctica và West Antarctica** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Climate cực nhưng không đơn giản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** East/West khác nhau vì bed geometry, còn **Ice sheet không phải khối băng đứng yên** cho thấy snow nén, gravity và ice shelves điều khiển flow và buttressing. **Climate cực nhưng không đơn giản** tiếp theo đặt động lực băng vào gradient lạnh–khô và ven biển.
 
 ## Ice sheet không phải khối băng đứng yên
 
@@ -34,7 +34,7 @@ Snow accumulation ở interior dần nén thành ice. Gravity làm ice deform v�
 
 Ice shelf đã nổi nên khi tan không trực tiếp nâng sea mức (level / 수준) đáng kể, nhưng nó có thể tạo buttressing cho grounded ice phía sau. Khi buttressing giảm, grounded ice có thể chảy nhanh hơn ra biển.
 
-> **Chuyển mạch:** Trong **Antarctica**, **Climate cực nhưng không đơn giản** tiếp nhận điểm tựa từ **Ice sheet không phải khối băng đứng yên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Southern Ocean là một phần của hệ Antarctica** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ice dynamics phụ thuộc accumulation và nhiệt, nhưng **Climate cực nhưng không đơn giản** nhắc rằng interior là polar desert còn coast/Peninsula ẩm và chịu katabatic winds. **Southern Ocean là một phần của hệ Antarctica** tiếp theo đưa nhiệt, sea ice và circulation vào hệ.
 
 ## Climate cực nhưng không đơn giản
 
@@ -42,7 +42,7 @@ Interior Antarctica rất lạnh và khô; theo precipitation criterion, phần 
 
 Katabatic winds hình thành khi air lạnh, đặc trượt xuống từ plateau, tạo wind regime rất mạnh ở một số coastal sectors.
 
-> **Chuyển mạch:** Ở chặng này của **Antarctica**, **Southern Ocean là một phần của hệ Antarctica** tiếp nhận điểm tựa từ **Climate cực nhưng không đơn giản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sinh thái tập trung ở biển và bờ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Climate và katabatic winds tác động lên bờ, còn **Southern Ocean là một phần của hệ Antarctica** phân phối nhiệt quanh lục địa và làm sea ice theo mùa. **Sinh thái tập trung ở biển và bờ** tiếp theo cho thấy năng lượng sinh học tập trung ngoài khơi.
 
 ## Southern Ocean là một phần của hệ Antarctica
 
@@ -50,7 +50,7 @@ Antarctic Circumpolar hiện tại (current / 현재) chạy quanh lục địa 
 
 Sea ice mở rộng và thu hẹp theo mùa, ảnh hưởng albedo, air–sea exchange và ecosystem. Sea ice khác hoàn toàn grounded ice sheet về tác động sea mức (level / 수준).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Antarctica**, **Sinh thái tập trung ở biển và bờ** tiếp nhận điểm tựa từ **Southern Ocean là một phần của hệ Antarctica** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Con người sử dụng không gian như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sea ice, current và Southern Ocean tạo phytoplankton–krill–fish–penguin/seal/whale food web; **Sinh thái tập trung ở biển và bờ** giải thích vì sao lục địa lớn có productivity trên cạn rất thấp. **Con người sử dụng không gian như thế nào?** tiếp theo chuyển sang research-station logistics.
 
 ## Sinh thái tập trung ở biển và bờ
 
@@ -58,7 +58,7 @@ Interior có biological productivity cực thấp. Food web giàu hơn nhiều �
 
 Điều này là ví dụ rõ: terrestrial area khổng lồ nhưng ecological năng lượng (energy / 에너지) luồng (flow / 흐름) lại tập trung ngoài khơi.
 
-> **Chuyển mạch:** Trong **Antarctica**, **Con người sử dụng không gian như thế nào?** tiếp nhận điểm tựa từ **Sinh thái tập trung ở biển và bờ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Remote sensing là hạ tầng tri thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Vì ecology và access tập trung ở bờ, **Con người sử dụng không gian như thế nào?** được tổ chức bởi station, airfield, ship, traverse, fuel và weather window chứ không phải urban network. **Remote sensing là hạ tầng tri thức** tiếp theo bù khoảng trống quan sát mặt đất.
 
 ## Con người sử dụng không gian như thế nào?
 
@@ -66,7 +66,7 @@ Không có urban mạng (network / 네트워크) thông thường. Thay vào đ�
 
 Khoảng cách hiệu dụng thay đổi theo mùa: một station có thể gần theo bản đồ nhưng rất xa về logistics nếu sea ice, crevasses hoặc weather làm tuyến (route / 경로) không khả dụng.
 
-> **Chuyển mạch:** Ở chặng này của **Antarctica**, **Remote sensing là hạ tầng tri thức** tiếp nhận điểm tựa từ **Con người sử dụng không gian như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Station logistics phụ thuộc khoảng cách mùa và thời tiết; **Remote sensing là hạ tầng tri thức** dùng radar, altimetry, gravity và GIS cực để theo dõi surface/flow khi ground data thưa. **Rủi ro** tiếp theo nối quan sát với an toàn tại chỗ và sea-level toàn cầu.
 
 ## Remote sensing là hạ tầng tri thức
 
@@ -74,7 +74,7 @@ Vì ground observations thưa, satellite radar, altimetry, gravity missions và 
 
 GIS ở Antarctica phải xử lý projection phù hợp polar region; Web Mercator là lựa chọn kém cho phân tích gần cực.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Antarctica**, **Rủi ro** tiếp nhận điểm tựa từ **Remote sensing là hạ tầng tri thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Remote sensing làm rõ ice change, còn **Rủi ro** tách extreme cold/crevasse/isolation khỏi ice-sheet mass loss có thể nâng sea level ở nơi xa. **Những hiểu lầm phổ biến** tiếp theo sửa các cách đọc sai về floating ice, desert và sea-level fingerprint.
 
 ## Rủi ro
 
@@ -82,7 +82,7 @@ GIS ở Antarctica phải xử lý projection phù hợp polar region; Web Merca
 
 Ở quy mô toàn cầu, rủi ro quan trọng hơn là **ice-sheet mass mất mát (loss / 손실) → sea-level rise**, ảnh hưởng các coastal settlements cách Antarctica hàng nghìn kilomet.
 
-> **Chuyển mạch:** Trong **Antarctica**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Các ngộ nhận về “toàn bộ băng nổi”, “nhiều tuyết nên không phải desert” và sea-level đồng đều đều bỏ qua bedrock, precipitation và gravity; **Những hiểu lầm phổ biến** giữ các giới hạn cần thiết. **Mô hình tư duy** tiếp theo cô đọng hệ Antarctica.
 
 ## Những hiểu lầm phổ biến
 
@@ -92,7 +92,7 @@ GIS ở Antarctica phải xử lý projection phù hợp polar region; Web Merca
 
 **“Băng tan ở đâu thì sea mức (level / 수준) tăng đều đúng bằng lượng đó tại mọi coast.”** Sai: sea-level fingerprint phụ thuộc gravity, Earth deformation và ocean dynamics.
 
-> **Chuyển mạch:** Ở chặng này của **Antarctica**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi ice plateau + dynamic ice streams + floating shelves + Southern Ocean + research network, nơi ice physics cục bộ tạo coastal consequences toàn cầu. Kết luận này bàn giao cho owner **Antarctica — Atlas entry đặc biệt** trong [README](./README.md).
 
 ## Mô hình tư duy
 
