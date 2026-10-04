@@ -6,25 +6,25 @@
 
 Dãy Carpathian uốn thành vòng cung quanh cao nguyên Transylvania. Bên ngoài là các đồng bằng và đồi thấp mở về Danube và Biển Đen. Địa hình này tạo phân hóa rõ giữa lõi nội địa và các vùng ngoại vi.
 
-> **Chuyển mạch:** Trong **Romania**, **Carpathian tạo khung xương lãnh thổ** xác định đầu vào; **Danube và đồng bằng châu thổ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Đô thị và hành lang** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Carpathian tạo basin và hướng thoát nước; **Danube và đồng bằng châu thổ** nối lõi nội địa với Black Sea và các ecosystem hạ lưu. **Đô thị và hành lang** tiếp theo bám theo đồng bằng, sông và pass xuyên vùng.
 
 ## Danube và đồng bằng châu thổ
 
 Danube tạo phần lớn biên giới phía nam rồi đổ vào Biển Đen qua một đồng bằng châu thổ lớn. **Danube Delta** là hệ đất ngập nước quan trọng, nơi dòng phù sa, sinh thái và giao thông thủy giao thoa.
 
-> **Chuyển mạch:** Ở chặng này của **Romania**, **Đô thị và hành lang** tiếp nhận điểm tựa từ **Danube và đồng bằng châu thổ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài nguyên và năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Danube và Delta cung cấp corridor thủy nhưng cũng tạo floodplain và ràng buộc bảo tồn; **đô thị và hành lang** phân bố quanh các điểm kết nối đó. **Tài nguyên và năng lượng** giải thích cách dầu khí, than, thủy điện và biển hỗ trợ hoặc giới hạn mạng này.
 
 ## Đô thị và hành lang
 
 Bucharest nằm trên đồng bằng Wallachia và là cực đô thị lớn. Các trung tâm như Cluj-Napoca, Timișoara, Iași, Brașov và Constanța phản ánh các vùng lịch sử–địa lý khác nhau và các hướng kết nối khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Romania**, **Tài nguyên và năng lượng** tiếp nhận điểm tựa từ **Đô thị và hành lang** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Bucharest, Constanța và các thành phố vùng nhận lợi ích khác nhau từ corridor và resource base; năng lượng không tách khỏi market access. **Mô hình tư duy** sẽ gom Carpathian–Danube–Black Sea thành một mạng phát triển có nhiều cực.
 
 ## Tài nguyên và năng lượng
 
 Romania có lịch sử khai thác dầu khí, than và thủy điện; Carpathian tạo nguồn nước và tiềm năng năng lượng, còn Biển Đen mở thêm không gian tài nguyên và vận tải biển.
 
-> **Chuyển mạch:** Trong **Romania**, **Mô hình tư duy** gom các mảnh từ **Tài nguyên và năng lượng** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi Carpathian–basin → Danube–Delta → đô thị–corridor → energy–Black Sea, giữ rõ trade-off giữa resource, ecology và kết nối. Đây là điểm bàn giao cho các profile Eastern Europe trong owner World Atlas.
 
 ## Mô hình tư duy
 

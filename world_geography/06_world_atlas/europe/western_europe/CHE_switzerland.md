@@ -6,25 +6,25 @@
 
 Switzerland gồm Alps ở phía nam–trung tâm, Swiss Plateau tập trung phần lớn dân cư ở giữa và Jura ở phía tây bắc. Plateau là corridor đô thị–kinh tế chính vì relief thuận lợi hơn.
 
-> **Chuyển mạch:** Trong **Switzerland**, **Alps, Plateau và Jura** nêu điều cần giải thích; **Nguồn của nhiều sông lớn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mạng đô thị đa cực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Alps, Plateau và Jura phân bố dân cư và corridor theo relief; đồng thời tạo nguồn nước ở thượng lưu. **Mạng đô thị đa cực** xuất hiện ở Plateau và các cửa ngõ, gắn với các river system đó.
 
 ## Nguồn của nhiều sông lớn
 
 Rhine, Rhône, Inn và Ticino đều có nguồn hoặc phần thượng lưu trong Alps. Switzerland vì vậy nằm trên một **European water tower**, nơi snowpack và glacier ảnh hưởng downstream flows.
 
-> **Chuyển mạch:** Ở chặng này của **Switzerland**, **Nguồn của nhiều sông lớn** nêu điều cần giải thích; **Mạng đô thị đa cực** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Tunnel geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Rhine, Rhône, Inn và Ticino biến Alps thành European water tower, còn **mạng đô thị** tập trung nơi Plateau và corridor thuận lợi. **Tunnel geography** cho thấy engineering giảm barrier giữa các basin và thị trường.
 
 ## Mạng đô thị đa cực
 
 Zurich, Geneva, Basel, Bern, Lausanne và các thành phố khác tạo mạng polycentric. Địa hình khiến các corridor rail–road qua pass và tunnel có vai trò đặc biệt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Switzerland**, **Tunnel geography** tiếp nhận điểm tựa từ **Mạng đô thị đa cực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Polycentric cities cần rail–road corridors; **tunnel geography** rút ngắn effective distance nhưng vẫn mang chi phí, rủi ro và giới hạn địa chất. **Mô hình tư duy** sẽ nối water tower, đô thị và hạ tầng vượt Alps.
 
 ## Tunnel geography
 
 Các tunnel xuyên Alps thay đổi effective distance giữa northern và southern Europe. Đây là ví dụ hạ tầng có thể giảm barrier tự nhiên nhưng không xóa hoàn toàn chi phí địa hình.
 
-> **Chuyển mạch:** Trong **Switzerland**, **Mô hình tư duy** gom các mảnh từ **Tunnel geography** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi Alps–water → Plateau–cities → tunnel–cross-border economy, luôn giữ rõ vai trò relief và governance. Đây là điểm bàn giao cho các profile Western Europe trong World Atlas.
 
 ## Mô hình tư duy
 

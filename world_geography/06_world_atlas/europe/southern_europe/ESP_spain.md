@@ -6,31 +6,31 @@
 
 Phần lớn nội địa Spain nằm trên Meseta Central cao tương đối, bị chia cắt và bao bởi nhiều hệ núi. Các đồng bằng lớn tập trung dọc Ebro, Guadalquivir và một số dải ven biển.
 
-> **Chuyển mạch:** Trong **Spain**, **Khí hậu phân hóa mạnh** tiếp nhận điểm tựa từ **Meseta và các vành núi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nước là giới hạn không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Meseta và các vành núi tạo độ cao, bóng mưa và các basin; **khí hậu phân hóa mạnh** là hệ quả không gian của relief đó. **Nước** tiếp theo biến chênh lệch mưa–bốc hơi thành ràng buộc cho sản xuất và đô thị.
 
 ## Khí hậu phân hóa mạnh
 
 North Atlantic ẩm hơn, Mediterranean east–south có mùa hè khô, còn southeast có những vùng bán khô rõ. Độ cao nội địa làm nhiệt độ cực đoan hơn so với bờ biển cùng vĩ độ.
 
-> **Chuyển mạch:** Ở chặng này của **Spain**, **Khí hậu phân hóa mạnh** đã nêu tiêu chí phân biệt, còn **Nước là giới hạn không gian** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mạng đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Climate gradient giải thích vì sao irrigation, reservoir và groundwater tập trung ở các vùng khô; **nước** là bài toán phân bổ chứ không chỉ tổng lượng. **Mạng đô thị** cho thấy demand và infrastructure tập trung tại các node khác nhau.
 
 ## Nước là giới hạn không gian
 
 Tưới tiêu và đô thị ở các vùng khô phụ thuộc reservoir, transfer và groundwater. Water demand thường cao nhất ở nơi rainfall thấp nhất, tạo bài toán phân bổ liên vùng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Spain**, **Nước là giới hạn không gian** đã nêu tiêu chí phân biệt, còn **Mạng đô thị** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Islands** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Water stress định hình lựa chọn của Madrid, Mediterranean cities và các vùng nông nghiệp; network đô thị điều phối flow qua những ràng buộc đó. **Islands** mở rộng profile bằng hai hệ quần đảo có climate, ecology và connectivity khác mainland.
 
 ## Mạng đô thị
 
 Madrid nằm gần trung tâm bán đảo và là hub giao thông xuyên tâm. Barcelona mở ra Mediterranean; Valencia, Seville, Bilbao và nhiều thành phố khác tạo mạng vùng đa dạng.
 
-> **Chuyển mạch:** Trong **Spain**, **Islands** tiếp nhận điểm tựa từ **Mạng đô thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mạng đô thị mainland dựa vào corridor xuyên tâm, còn **Islands** phụ thuộc ferry, aviation, du lịch và hệ sinh thái riêng. **Mô hình tư duy** sẽ giữ cả hai dạng connectivity khi tổng hợp profile.
 
 ## Islands
 
 Balearic Islands có địa lý Mediterranean, còn Canary Islands là quần đảo núi lửa Atlantic với khí hậu và sinh thái khác rõ mainland.
 
-> **Chuyển mạch:** Ở chặng này của **Spain**, **Mô hình tư duy** gom các mảnh từ **Islands** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi Meseta–mountain → climate–water → đô thị–corridor, có nhánh đảo Atlantic/Mediterranean và giới hạn tài nguyên. Đây là điểm bàn giao cho các profile Southern Europe trong owner World Atlas.
 
 ## Mô hình tư duy
 
