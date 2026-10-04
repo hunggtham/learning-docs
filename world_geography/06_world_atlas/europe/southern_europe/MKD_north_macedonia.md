@@ -6,19 +6,19 @@
 
 North Macedonia không giáp biển và phần lớn là núi xen các bồn địa. Các thung lũng Vardar tạo trục giao thông chính xuyên lãnh thổ theo hướng bắc–nam.
 
-> **Chuyển mạch:** Trong **North Macedonia**, **Skopje và corridor** tiếp nhận điểm tựa từ **Bồn địa giữa núi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hồ kiến tạo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mountain basins và thung lũng Vardar biến một quốc gia landlocked thành tuyến bắc–nam có thể tiếp cận; **Skopje và corridor** cụ thể hóa node đô thị–transit đó. **Hồ kiến tạo** mở sang chiều sâu địa chất và sinh thái của cùng relief.
 
 ## Skopje và corridor
 
 Skopje nằm trong bồn địa trên Vardar, là trung tâm đô thị vượt trội. Vardar corridor nối Serbia với Greece, biến địa hình thung lũng thành tuyến transit quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **North Macedonia**, **Hồ kiến tạo** tiếp nhận điểm tựa từ **Skopje và corridor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Vardar corridor nối Serbia–Greece nhưng phụ thuộc địa hình và quan hệ khu vực; **Lake Ohrid** cho thấy landscape value có thể vượt chức năng transit nhờ biodiversity và lịch sử địa chất. **Mô hình tư duy** sẽ giữ cả hai loại connectivity.
 
 ## Hồ kiến tạo
 
 Lake Ohrid là hồ cổ sâu, nổi bật về địa chất và đa dạng sinh học. Nó minh họa cách lịch sử địa chất dài tạo hotspot sinh thái.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **North Macedonia**, **Mô hình tư duy** gom các mảnh từ **Hồ kiến tạo** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi mountain basins → Vardar corridor–Skopje → ancient lakes–ecology, luôn nhấn mạnh landlocked dependency và corridor bottleneck. Đây là điểm bàn giao cho các profile Balkan trong owner World Atlas.
 
 ## Mô hình tư duy
 
