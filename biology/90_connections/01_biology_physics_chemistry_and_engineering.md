@@ -16,7 +16,7 @@ Phân tích thứ nguyên còn giúp suy relationship. Hệ số khuếch tán (
 
 Thói quen kiểm đơn vị (unit / 단위) là một trong những cách rẻ nhất để bắt lỗi lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Dimensional analysis kiểm tra model trước; random motion tạo net flux ở population level, và diffusion time tiếp theo biến flux thành giới hạn kích thước có thể tính.
+> **Nối mạch:** Dimensional analysis kiểm tra model trước; random motion tạo net flux ở population level, và diffusion time tiếp theo biến flux thành giới hạn kích thước có thể tính.
 
 ## 2. Random motion tạo directed flux ở population mức (level / 수준)
 
@@ -32,7 +32,7 @@ J=-D\frac{dC}{dx}
 
 Dấu âm cho biết flux đi theo chiều giảm concentration. Đây là emergence: motion microscopic không có direction nhưng dòng quần thể (population flux) có direction.
 
-> **Chuyển mạch:** Random motion tạo net flux ở quy mô quần thể; diffusion time tăng theo khoảng cách, và surface-area-to-volume ratio biến giới hạn hình học đó thành giới hạn sinh lý.
+> **Nối mạch:** Random motion tạo net flux ở quy mô quần thể; diffusion time tăng theo khoảng cách, và surface-area-to-volume ratio biến giới hạn hình học đó thành giới hạn sinh lý.
 
 ## 3. Thời gian khuếch tán (diffusion time) giải thích giới hạn kích thước
 
@@ -46,7 +46,7 @@ Distance tăng 10 lần làm thời gian (time / 시간) tăng khoảng 100 lầ
 
 Từ một equation này ta suy ra vì sao cell nhỏ, vì sao lung cần circulation, vì sao plant cần mô mạch (vascular tissue) và vì sao tumor lớn cần angiogenesis.
 
-> **Chuyển mạch:** Khi diffusion time và surface-area-to-volume ratio đã đặt giới hạn trao đổi, osmosis và chemical potential giải thích hướng nước di chuyển qua màng.
+> **Nối mạch:** Khi diffusion time và surface-area-to-volume ratio đã đặt giới hạn trao đổi, osmosis và chemical potential giải thích hướng nước di chuyển qua màng.
 
 ## 4. Surface-area-to-volume ratio là hình học (geometry / 기하학) trở thành physiology
 
@@ -66,7 +66,7 @@ Organism lớn có ít exchange area relative volume hơn nếu chỉ quy mô (s
 
 Alveoli, intestinal villi, gill lamellae và gốc (root / 루트) hair đều là geometric solution cho cùng ràng buộc (constraint / 제약조건).
 
-> **Chuyển mạch:** Surface-area/volume turns geometry into exchange capacity; osmosis follows chemical potential, while ions additionally require electrochemical potential.
+> **Nối mạch:** Surface-area/volume turns geometry into exchange capacity; osmosis follows chemical potential, while ions additionally require electrochemical potential.
 
 ## 5. Osmosis và thế hóa học (chemical potential)
 
@@ -82,7 +82,7 @@ Equation cho thấy particle concentration có thể tạo áp suất (pressure)
 
 Plant tận dụng turgor; animal cell tránh swelling bằng ion pump và extracellular regulation.
 
-> **Chuyển mạch:** Osmosis mô tả nước theo chemical potential; với ion, charge separation thêm electric potential, còn membrane capacitance giải thích cách điện thế tích lũy trên màng.
+> **Nối mạch:** Osmosis mô tả nước theo chemical potential; với ion, charge separation thêm electric potential, còn membrane capacitance giải thích cách điện thế tích lũy trên màng.
 
 ## 6. Chênh lệch nồng độ (concentration gradient) chưa đủ cho ion: cần electrochemical potential
 
@@ -98,7 +98,7 @@ E=\frac{RT}{zF}\ln\frac{[ion]_{out}}{[ion]_{in}}
 
 Nơron điện thế màng (membrane potential) và động lực proton (proton motive force) ở mitochondria cùng dùng một principle: **charge separation + concentration difference lưu năng lượng tự do (free energy)**.
 
-> **Chuyển mạch:** Electrochemical potential quyết định lực ion; membrane capacitance biến dòng ion thành thay đổi voltage, rồi thermodynamics tách câu hỏi “có thuận lợi không?” khỏi “xảy ra nhanh không?”.
+> **Nối mạch:** Electrochemical potential quyết định lực ion; membrane capacitance biến dòng ion thành thay đổi voltage, rồi thermodynamics tách câu hỏi “có thuận lợi không?” khỏi “xảy ra nhanh không?”.
 
 ## 7. Membrane capacitance: màng tế bào (cell membrane) cũng có đặc tính (property) điện học
 
@@ -114,7 +114,7 @@ RC-like hằng số thời gian (time constant) giúp hiểu vì sao neuron inte
 
 Kỹ thuật (engineering / 엔지니어링) circuit analogy không nói neuron là wire; nó giúp formalize một phần biophysics.
 
-> **Chuyển mạch:** Membrane voltage mô tả trạng thái điện; thermodynamics cho biết hướng tự phát, còn kinetics quyết định tốc độ, trước khi ATP được dùng để couple các quá trình.
+> **Nối mạch:** Membrane voltage mô tả trạng thái điện; thermodynamics cho biết hướng tự phát, còn kinetics quyết định tốc độ, trước khi ATP được dùng để couple các quá trình.
 
 ## 8. Thermodynamics: favorable không đồng nghĩa fast
 
@@ -130,7 +130,7 @@ Enzym (enzyme) giảm activation barrier, thay kinetics, nhưng không đổi eq
 
 Đây là distinction nền tảng giữa thermodynamics và kinetics.
 
-> **Chuyển mạch:** Thermodynamics nói phản ứng có thuận lợi; ATP coupling biến chênh lệch free energy thành work, còn redox potential theo dõi hướng electron qua hệ chuyển hóa.
+> **Nối mạch:** Thermodynamics nói phản ứng có thuận lợi; ATP coupling biến chênh lệch free energy thành work, còn redox potential theo dõi hướng electron qua hệ chuyển hóa.
 
 ## 9. ATP: coupling chứ không phải “năng lượng nằm trong một bond” theo nghĩa đơn giản
 
@@ -140,7 +140,7 @@ Vận chuyển chủ động (active transport), biosynthesis và protein vận 
 
 ATP không phải battery độc lập; nó là **currency trong mạng lưới phản ứng (reaction network)** được regenerate liên tục.
 
-> **Chuyển mạch:** ATP coupling supplies work from free-energy differences; redox potential orders electron flow, which then builds the chemiosmotic gradient.
+> **Nối mạch:** ATP coupling supplies work from free-energy differences; redox potential orders electron flow, which then builds the chemiosmotic gradient.
 
 ## 10. Redox potential và electron luồng (flow / 흐름)
 
@@ -150,7 +150,7 @@ Quang hợp (photosynthesis) dùng photon để nâng electron lên năng lượ
 
 Do đó metabolism có thể đọc như **controlled electron luồng (flow / 흐름) → chênh lệch ion (ion gradient) → chemical công việc (work / 작업)**.
 
-> **Chuyển mạch:** Redox flow pumps charge to create a gradient; chemiosmosis converts that gradient into molecular work, while enzyme kinetics measures the rate and saturation of the downstream machinery.
+> **Nối mạch:** Redox flow pumps charge to create a gradient; chemiosmosis converts that gradient into molecular work, while enzyme kinetics measures the rate and saturation of the downstream machinery.
 
 ## 11. Thẩm thấu hóa học (chemiosmosis): độ dốc (gradient / 기울기) nối Chemistry với mechanics phân tử
 
@@ -160,7 +160,7 @@ Chuỗi chuyền electron (electron transport chain) tạo chênh lệch proton 
 
 Tiến hóa (evolution) đã tái sử dụng membrane độ dốc (gradient / 기울기) như universal năng lượng (energy / 에너지) transducer.
 
-> **Chuyển mạch:** Chemiosmosis biến gradient thành flux; enzyme kinetics đo tốc độ và saturation, rồi Hill equation/cooperativity mở rộng từ một binding site sang tương tác giữa nhiều site.
+> **Nối mạch:** Chemiosmosis biến gradient thành flux; enzyme kinetics đo tốc độ và saturation, rồi Hill equation/cooperativity mở rộng từ một binding site sang tương tác giữa nhiều site.
 
 ## 12. Động học enzym (enzyme kinetics) và bão hòa (saturation)
 
@@ -174,7 +174,7 @@ v=\frac{V_{max}[S]}{K_m+[S]}
 
 Saturation xuất hiện rộng hơn enzyme: transporter, thụ thể (receptor), oxy (oxygen) binding và many physiological phản hồi (response / 응답) đều có ceiling.
 
-> **Chuyển mạch:** Saturation mô tả giới hạn rate; Hill equation mô tả cooperativity, còn affinity/occupancy chuyển curve đó thành xác suất ligand chiếm site.
+> **Nối mạch:** Saturation mô tả giới hạn rate; Hill equation mô tả cooperativity, còn affinity/occupancy chuyển curve đó thành xác suất ligand chiếm site.
 
 ## 13. Hill equation và cooperativity
 
@@ -188,7 +188,7 @@ Khi \(n>1\), curve steep hơn. Hemoglobin oxygen binding là classic ngữ cản
 
 Nhưng Hill coefficient là phenomenological summary, không tự nói full molecular cơ chế (mechanism / 메커니즘).
 
-> **Chuyển mạch:** Cooperativity làm occupancy phụ thuộc trạng thái lân cận; từ molecular binding, mạch nối sang fluid flow nơi pressure gradient biến thành bulk transport.
+> **Nối mạch:** Cooperativity làm occupancy phụ thuộc trạng thái lân cận; từ molecular binding, mạch nối sang fluid flow nơi pressure gradient biến thành bulk transport.
 
 ## 14. Binding affinity và occupancy
 
@@ -202,7 +202,7 @@ Simple one-site binding:
 
 Occupancy không đồng nghĩa phản hồi (response / 응답); few occupied receptor có thể tạo large downstream tín hiệu (signal / 신호) nếu amplification mạnh.
 
-> **Chuyển mạch:** Binding occupancy describes molecular loading; fluid pressure gradients scale that local interaction into bulk transport, and Reynolds number predicts whether the flow remains laminar.
+> **Nối mạch:** Binding occupancy describes molecular loading; fluid pressure gradients scale that local interaction into bulk transport, and Reynolds number predicts whether the flow remains laminar.
 
 ## 15. Fluid luồng (flow / 흐름): áp suất chênh lệch (gradient) biến thành bulk vận chuyển (transport / 전송)
 
@@ -218,7 +218,7 @@ Radius xuất hiện lũy thừa 4. Vì vậy thay đổi nhỏ arteriole radius
 
 Điều này giải thích tại sao smooth muscle quanh vessel là điều khiển (control / 제어) điểm (point / 지점) mạnh của circulation.
 
-> **Chuyển mạch:** Pressure gradient drives bulk flow; Reynolds number classifies the regime, then vessel compliance explains why biological conduits cannot be modeled as rigid pipes.
+> **Nối mạch:** Pressure gradient drives bulk flow; Reynolds number classifies the regime, then vessel compliance explains why biological conduits cannot be modeled as rigid pipes.
 
 ## 16. Số Reynolds (Reynolds number): khi luồng (flow / 흐름) laminar hay turbulent?
 
@@ -234,7 +234,7 @@ Dòng máu (blood flow) ở nhiều small vessel laminar, nhưng turbulence có 
 
 Dimensionless number giúp compare hệ thống (system / 시스템) khác quy mô (scale / 규모).
 
-> **Chuyển mạch:** Reynolds classifies the flow regime; compliance makes a vessel deformable, and stress/strain/viscoelasticity explain how pressure changes its diameter over time.
+> **Nối mạch:** Reynolds classifies the flow regime; compliance makes a vessel deformable, and stress/strain/viscoelasticity explain how pressure changes its diameter over time.
 
 ## 17. Compliance: vessel không phải pipe cứng
 
@@ -248,7 +248,7 @@ Artery elasticity giúp smooth pulsatile đầu ra (output / 출력) của heart
 
 Mechanics của material vì vậy trực tiếp thành physiology.
 
-> **Chuyển mạch:** Compliance couples pressure to geometry; stress/strain characterize the tissue response, then Laplace-like reasoning links wall tension to alveolar or vessel radius.
+> **Nối mạch:** Compliance couples pressure to geometry; stress/strain characterize the tissue response, then Laplace-like reasoning links wall tension to alveolar or vessel radius.
 
 ## 18. Căng thẳng (stress), strain và viscoelastic tissue
 
@@ -260,7 +260,7 @@ Cartilage có thể creep dưới tải (load / 로드) lâu; tendon store elast
 
 Mechanical thuộc tính (property / 속성) đi thẳng vào signaling và biểu hiện gen (gene expression) qua mechanotransduction.
 
-> **Chuyển mạch:** Stress and geometry determine wall tension; Laplace-like reasoning feeds that load into feedback control, where homeostasis regulates the changing state.
+> **Nối mạch:** Stress and geometry determine wall tension; Laplace-like reasoning feeds that load into feedback control, where homeostasis regulates the changing state.
 
 ## 19. Laplace-like lập luận (reasoning / 추론) trong alveoli và vessel
 
@@ -274,7 +274,7 @@ Small alveolus sẽ cần pressure cao hơn nếu surface tension giống nhau. 
 
 Một quan hệ (relation / 관계) physics giải thích vì sao một biochemical secretion là essential cho lung hàm (function / 함수).
 
-> **Chuyển mạch:** Feedback control stabilizes homeostasis; positive feedback instead amplifies a signal, so thresholds and delays can produce switching or oscillation.
+> **Nối mạch:** Feedback control stabilizes homeostasis; positive feedback instead amplifies a signal, so thresholds and delays can produce switching or oscillation.
 
 ## 20. Điều khiển phản hồi (feedback control): homeostasis như điều hòa động (dynamic regulation)
 
@@ -284,7 +284,7 @@ Glucose, nhiệt độ (temperature), huyết áp (blood pressure) và trục n�
 
 Kỹ thuật (engineering / 엔지니어링) ngôn ngữ (language / 언어) giúp hỏi: bộ cảm nhận (sensor) ở đâu? delay bao nhiêu? gain mạnh quá có oscillate không? nhiễu động (disturbance) đi vào điểm (point / 지점) nào?
 
-> **Chuyển mạch:** Positive feedback pushes a state toward a threshold; once delay and recovery are added, the same loop can overshoot and generate oscillation instead of a stable switch.
+> **Nối mạch:** Positive feedback pushes a state toward a threshold; once delay and recovery are added, the same loop can overshoot and generate oscillation instead of a stable switch.
 
 ## 21. Phản hồi dương (positive feedback) và ngưỡng (threshold)
 
@@ -294,7 +294,7 @@ Phản hồi dương amplifies phản hồi (response / 응답) nhưng cần sto
 
 Kết hợp positive + phản hồi âm thường tạo công tắc (switch) ổn định hơn.
 
-> **Chuyển mạch:** Delayed feedback creates temporal rhythm; reaction–diffusion adds spatial spread, so local chemistry can turn the same instability into a pattern across tissue.
+> **Nối mạch:** Delayed feedback creates temporal rhythm; reaction–diffusion adds spatial spread, so local chemistry can turn the same instability into a pattern across tissue.
 
 ## 22. Dao động (oscillation): rhythm có thể emerge từ phản hồi (feedback / 피드백) delay
 
@@ -304,7 +304,7 @@ Phản hồi âm + delay + tính phi tuyến (nonlinearity) là motif chung tạ
 
 Một static diagram không thể cho biết period hoặc phase. Sinh học động cần thời gian (time / 시간) dimension.
 
-> **Chuyển mạch:** Reaction–diffusion sets a characteristic length and time for patterns; scaling law and allometry test how those dimensions change as an organism grows.
+> **Nối mạch:** Reaction–diffusion sets a characteristic length and time for patterns; scaling law and allometry test how those dimensions change as an organism grows.
 
 ## 23. Phản ứng–khuếch tán (reaction–diffusion): cục bộ (local / 로컬) chemistry có thể tạo spatial mẫu (pattern / 패턴)
 
@@ -312,7 +312,7 @@ Activator và inhibitor có sự tạo ra (production)/diffusion khác nhau có 
 
 Developmental mẫu (pattern / 패턴) không nhất thiết cần mỗi cell có coordinate prewritten. độ dốc (gradient / 기울기) và cục bộ (local / 로컬) tương tác (interaction / 상호작용) có thể tạo spatial thông tin (information / 정보).
 
-> **Chuyển mạch:** Scaling compares signal, transport cost, and noise across size; information theory then quantifies how much uncertainty remains in those biological measurements.
+> **Nối mạch:** Scaling compares signal, transport cost, and noise across size; information theory then quantifies how much uncertainty remains in those biological measurements.
 
 ## 24. Scaling law và allometry
 
@@ -332,7 +332,7 @@ Giúp estimate exponent \(b\). Nhưng exponent có thể khác taxon/phạm vi (
 
 Quy mô (scale / 규모) thay ràng buộc (constraint / 제약조건) sinh lý học (physiology), life lịch sử (history / 이력) và sinh thái học (ecology).
 
-> **Chuyển mạch:** Scaling tells us how much signal survives a size change; information theory makes the remaining uncertainty explicit, and noise analysis separates intrinsic variation from measurement error.
+> **Nối mạch:** Scaling tells us how much signal survives a size change; information theory makes the remaining uncertainty explicit, and noise analysis separates intrinsic variation from measurement error.
 
 ## 25. Lý thuyết thông tin (information theory): bất định (uncertainty / 불확실성) chứ không phải ý nghĩa (semantic meaning / 의미적 뜻)
 
@@ -346,7 +346,7 @@ H=-\sum_i p_i\log_2p_i
 
 Nhưng Shannon thông tin (information / 정보) không tự chứa ý nghĩa sinh học (biological meaning). DNA chuỗi (sequence / 시퀀스) có hàm (function / 함수) vì molecular hệ thống (system / 시스템) interpret nó; lý thuyết thông tin chỉ formalize bất định (uncertainty / 불확실성)/năng lực (capacity).
 
-> **Chuyển mạch:** Noise identifies which observations are unreliable; redundancy can average or route around that noise, while fragility appears when a shared dependency fails.
+> **Nối mạch:** Noise identifies which observations are unreliable; redundancy can average or route around that noise, while fragility appears when a shared dependency fails.
 
 ## 26. Nhiễu (noise): intrinsic, extrinsic và phép đo (measurement)
 
@@ -356,7 +356,7 @@ Ba loại variation phải tách nếu muốn hiểu cơ chế (mechanism / 메�
 
 Hệ thống (system / 시스템) có thể buffer noise bằng phản hồi âm, averaging molecule hoặc redundancy; đôi khi noise lại tạo bet-hedging.
 
-> **Chuyển mạch:** Redundancy improves resilience but costs energy, space, or speed; that tension is the concrete trade-off that prevents one-dimensional optimization.
+> **Nối mạch:** Redundancy improves resilience but costs energy, space, or speed; that tension is the concrete trade-off that prevents one-dimensional optimization.
 
 ## 27. Tính bền vững, redundancy và fragility
 
@@ -366,7 +366,7 @@ Một mạng (network / 네트워크) robust với single perturbation có thể
 
 Đây là lô-gic (logic / 논리) của synthetic lethality và khả năng phục hồi hệ sinh thái (ecosystem resilience).
 
-> **Chuyển mạch:** Once costs and benefits are explicit, optimization searches the feasible trade-off surface; the fitness landscape shows why local improvements need not reach a global best.
+> **Nối mạch:** Once costs and benefits are explicit, optimization searches the feasible trade-off surface; the fitness landscape shows why local improvements need not reach a global best.
 
 ## 28. sự đánh đổi (trade-off / 트레이드오프): không có tối ưu hóa (optimization / 최적화) một chiều
 
@@ -376,7 +376,7 @@ Biological thiết kế (design / 설계) gần như luôn multi-objective dư�
 
 Evolution không tìm toàn cục (global / 전역) optimum; nó thay đổi cục bộ (local / 로컬) population qua available variation và lịch sử (history / 이력).
 
-> **Chuyển mạch:** Optimization selects an operating point on the trade-off surface; observability asks whether measured outputs are sufficient to infer the hidden biological state before control acts.
+> **Nối mạch:** Optimization selects an operating point on the trade-off surface; observability asks whether measured outputs are sufficient to infer the hidden biological state before control acts.
 
 ## 29. tối ưu hóa (optimization / 최적화) và fitness landscape
 
@@ -386,7 +386,7 @@ Landscape cũng thay khi môi trường (environment / 환경) hoặc species kh
 
 Kỹ thuật (engineering / 엔지니어링) tối ưu hóa (optimization / 최적화) hữu ích như analogy, nhưng biological mục tiêu (objective / 목표) không được engineer định trước.
 
-> **Chuyển mạch:** Observability depends on which nodes and signals are measured; network topology determines how perturbations propagate, without fixing the dynamics by itself.
+> **Nối mạch:** Observability depends on which nodes and signals are measured; network topology determines how perturbations propagate, without fixing the dynamics by itself.
 
 ## 30. Điều khiển, khả năng quan sát (observability / 관측 가능성) và hidden trạng thái (state / 상태)
 
@@ -394,7 +394,7 @@ Trong kỹ thuật (engineering / 엔지니어링), hệ thống (system / 시�
 
 Điều này giải thích vì sao multiple đo lường (measurement / 측정) tầng (layer / 계층) và time-series quan trọng. Hidden trạng thái (state / 상태) là challenge central của physiology và sinh học hệ thống (systems biology).
 
-> **Chuyển mạch:** Topology exposes dependencies and alternate paths; engineering modularity turns them into replaceable components, while biological context decides which interfaces are actually valid.
+> **Nối mạch:** Topology exposes dependencies and alternate paths; engineering modularity turns them into replaceable components, while biological context decides which interfaces are actually valid.
 
 ## 31. mạng (network / 네트워크) lý thuyết (theory / 이론): cấu trúc liên kết (topology) ảnh hưởng dynamics nhưng không quyết định hết
 
@@ -404,7 +404,7 @@ Nhưng edge kiểu (type / 타입), strength, sign và delay cũng quan trọng.
 
 Đồ thị (graph / 그래프) là biểu diễn (representation / 표현), không phải full hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Modularity gives a component-level checklist; oxygen delivery tests it against ventilation, diffusion, perfusion, hemoglobin binding, and feedback as one causal chain.
+> **Nối mạch:** Modularity gives a component-level checklist; oxygen delivery tests it against ventilation, diffusion, perfusion, hemoglobin binding, and feedback as one causal chain.
 
 ## 32. kỹ thuật (engineering / 엔지니어링) modularity và biological ngữ cảnh (context / 맥락)
 
@@ -414,7 +414,7 @@ Mạch sinh học tổng hợp (synthetic circuit) có thể thất bại (fail 
 
 Biology dạy một lesson kỹ thuật (engineering / 엔지니어링) ngược lại: giao diện (interface / 인터페이스) không bao giờ hoàn toàn context-free trong living hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Oxygen delivery validates modular reasoning across ventilation, diffusion, perfusion, binding, and feedback; the action-potential case reuses that chain with electrochemical gradients and refractory feedback.
+> **Nối mạch:** Oxygen delivery validates modular reasoning across ventilation, diffusion, perfusion, binding, and feedback; the action-potential case reuses that chain with electrochemical gradients and refractory feedback.
 
 ## 33. Tình huống phân tích (case study): vận chuyển oxy (oxygen delivery) nối 5 principle cùng lúc
 
@@ -424,7 +424,7 @@ Một physiological hàm (function / 함수) duy nhất nối diffusion + hình 
 
 Đây là kiểu synthesis nên hướng tới thay vì thuộc riêng từng equation.
 
-> **Chuyển mạch:** An action potential turns electrochemical potential into a thresholded, delayed signal; the ecosystem tipping-point case asks when the same switch-like intuition applies at a larger scale.
+> **Nối mạch:** An action potential turns electrochemical potential into a thresholded, delayed signal; the ecosystem tipping-point case asks when the same switch-like intuition applies at a larger scale.
 
 ## 34. Tình huống phân tích: điện thế hoạt động nối electrochemistry và phản hồi
 
@@ -432,7 +432,7 @@ Na⁺ độ dốc (gradient / 기울기) chứa electrochemical năng lượng (
 
 Điện thế hoạt động vì vậy là động (dynamic / 동적) sự kiện (event / 이벤트) của độ dốc (gradient / 기울기) + nonlinear conductance + phản hồi, không phải “electricity chạy dọc dây”.
 
-> **Chuyển mạch:** The tipping-point comparison exposes where threshold mathematics transfers and where scale, noise, or feedback direction breaks the analogy; misconceptions are the next stress test for those boundaries.
+> **Nối mạch:** The tipping-point comparison exposes where threshold mathematics transfers and where scale, noise, or feedback direction breaks the analogy; misconceptions are the next stress test for those boundaries.
 
 ## 35. Tình huống phân tích: ecosystem tipping điểm (point / 지점) và tế bào switch dùng cùng math intuition
 
@@ -440,7 +440,7 @@ Gene circuit có tính lưỡng ổn (bistability); shallow lake cũng có trạ
 
 Đây là sức mạnh của mathematical lớp trừu tượng (abstraction / 추상화): không nói hai hệ thống giống nhau về vật chất, mà nhận ra **cùng dynamical motif**.
 
-> **Chuyển mạch:** Misconceptions mark failed transfers—such as treating correlation as causation or a model as the whole system—so the synthesis can retain only assumptions that survived the cases.
+> **Nối mạch:** Misconceptions mark failed transfers—such as treating correlation as causation or a model as the whole system—so the synthesis can retain only assumptions that survived the cases.
 
 ## 36. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -452,7 +452,7 @@ Gene circuit có tính lưỡng ổn (bistability); shallow lake cũng có trạ
 
 “Mô hình đơn giản là sai vì reality phức tạp” cũng sai. mô hình (model / 모델) đơn giản hữu ích nếu giữ đúng relationship cho câu hỏi cụ thể.
 
-> **Chuyển mạch:** The synthesis keeps the validated chain—state, mechanism, scale, feedback, and evidence—so the next reasoning template can reuse it from molecule to ecosystem.
+> **Nối mạch:** The synthesis keeps the validated chain—state, mechanism, scale, feedback, and evidence—so the next reasoning template can reuse it from molecule to ecosystem.
 
 ## 37. Mô hình tư duy tổng hợp
 
@@ -482,7 +482,7 @@ Mục tiêu cuối cùng không phải nhớ thêm hàng chục formula, mà bi�
 
 <!-- depth-audit-2026:structure-mechanism-failure -->
 
-> **Chuyển mạch:** The molecule-to-ecosystem template turns each claim into state → mechanism → scale → test; the final bridge maps that reusable reasoning to the library’s next owner.
+> **Nối mạch:** The molecule-to-ecosystem template turns each claim into state → mechanism → scale → test; the final bridge maps that reusable reasoning to the library’s next owner.
 
 ## Một template lập luận (reasoning / 추론) dùng từ molecule tới ecosystem
 
@@ -492,7 +492,7 @@ Ví dụ membrane có phospholipid bilayer (structure) → selective diffusion/v
 
 Cùng template áp dụng cho kidney, immune hệ thống (system / 시스템), development, food web và synthetic circuit. Nó ngăn thư viện (library / 라이브러리) trở thành atlas tên gọi vì mỗi thành phần (component / 컴포넌트) chỉ có ý nghĩa khi được đặt trong nhân quả (causal / 인과적) hệ thống (system / 시스템).
 
-> **Chuyển mạch:** The library bridge carries the validated reasoning template into the next domain; return here when a new topic needs a biological example of scale, mechanism, or feedback.
+> **Nối mạch:** The library bridge carries the validated reasoning template into the next domain; return here when a new topic needs a biological example of scale, mechanism, or feedback.
 
 ## 38. cầu nối (bridge / 브리지) về toàn bộ thư viện kiến thức (knowledge library / 지식 라이브러리)
 
