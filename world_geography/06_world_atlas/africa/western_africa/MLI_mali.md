@@ -6,7 +6,7 @@
 
 Mali trải từ Sahara ở phía bắc qua Sahel tới vùng xavan tương đối ẩm hơn ở phía nam. Phần lớn dân cư tập trung ở nửa nam và dọc Niger, cho thấy nước và rainfall độ dốc (gradient / 기울기) quan trọng hơn diện tích hành chính.
 
-> **Chuyển mạch:** Trong **Mali**, **Niger River và Inner Niger Delta** tiếp nhận điểm tựa từ **Một lãnh thổ khô rộng nhưng dân cư tập trung theo nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bamako và các nút (node / 노드) sông** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sahara–Sahel–xavan tạo rainfall gradient, còn **Niger River và Inner Niger Delta** gom nước và dân cư vào một dải sống. **Bamako và các nút (node / 노드) sông** tiếp theo cho thấy đô thị bám dòng chảy thế nào.
 
 ## Niger River và Inner Niger Delta
 
@@ -14,7 +14,7 @@ Sông Niger đi vào Mali, uốn qua nội địa rồi tiếp tục về phía 
 
 Flood pulse hỗ trợ nông nghiệp, chăn thả, đánh bắt và wetland ecology. Vì vậy lượng nước không chỉ quan trọng ở tổng volume mà còn ở timing.
 
-> **Chuyển mạch:** Ở chặng này của **Mali**, **Bamako và các nút (node / 노드) sông** tiếp nhận điểm tựa từ **Niger River và Inner Niger Delta** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sinh kế theo độ dốc (gradient / 기울기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Flood pulse của Niger và Inner Delta tạo nút river–road cho **Bamako và các nút (node / 노드) sông**, quan trọng hơn mạng đô thị đều trong lãnh thổ thưa. **Sinh kế theo độ dốc (gradient / 기울기)** tiếp theo phân hóa agriculture, pastoralism và mobility.
 
 ## Bamako và các nút (node / 노드) sông
 
@@ -22,7 +22,7 @@ Bamako nằm trên Niger ở phía nam và là metropolitan cốt lõi (core / �
 
 Trong môi trường rộng, khô và mật độ thấp, nút (node / 노드) river/road quan trọng hơn mạng đô thị phân bố đều.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mali**, **Sinh kế theo độ dốc (gradient / 기울기)** tiếp nhận điểm tựa từ **Bamako và các nút (node / 노드) sông** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Landlocked corridor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Phía nam trồng trọt, Sahel chăn thả cơ động, Sahara thưa nhưng có tuyến và tài nguyên; **Sinh kế theo độ dốc (gradient / 기울기)** phải đọc theo nước và cỏ thay vì ranh giới tĩnh. **Landlocked corridor** tiếp theo biến sự phân mảnh đó thành chi phí giao thương.
 
 ## Sinh kế theo độ dốc (gradient / 기울기)
 
@@ -30,7 +30,7 @@ Phía nam phù hợp hơn với agriculture mưa và cotton; Sahel có chăn nu�
 
 Mobility của pastoral các hệ thống (systems / 시스템들) là adaptation đối với biến động nước và cỏ. Nếu chỉ nhìn land quyền sở hữu (ownership / 소유권) tĩnh, dễ hiểu sai lô-gic (logic / 논리) không gian của hệ này.
 
-> **Chuyển mạch:** Trong **Mali**, **Landlocked corridor** tiếp nhận điểm tựa từ **Sinh kế theo độ dốc (gradient / 기울기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Không giáp biển khiến **Landlocked corridor** phụ thuộc Dakar, Abidjan, Tema, Conakry và độ tin cậy road–port; effective remoteness lớn hơn kilomet. **Rủi ro** tiếp theo đặt corridor trước hạn, lũ và desertification.
 
 ## Landlocked corridor
 
@@ -38,13 +38,13 @@ Mali không giáp biển và phụ thuộc các corridor dài tới Dakar, Abidj
 
 Đây là ví dụ điển hình của **effective remoteness**: khoảng cách tới biển không chỉ đo bằng kilomet.
 
-> **Chuyển mạch:** Ở chặng này của **Mali**, **Rủi ro** tiếp nhận điểm tựa từ **Landlocked corridor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hạn, lũ Niger và rainfall variability có thể cùng xuất hiện trong một năm ở các vùng khác nhau; **Rủi ro** vì thế không phải hai cực loại trừ. **Mô hình tư duy** sẽ giữ nước, corridor và mobility trong một profile.
 
 ## Rủi ro
 
 Hạn, desertification cục bộ, flood trong Niger basin và biến động rainfall đều quan trọng. Một sai lầm thường gặp là xem lũ và hạn là hai vấn đề đối lập; ở Sahel, chúng có thể xảy ra trong cùng một năm ở các nơi khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mali**, **Mô hình tư duy** gom các mảnh từ **Rủi ro** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi Sahara–Sahel–xavan → Niger/Inner Delta → Bamako và mobility → landlocked corridors → drought/flood, rồi bàn giao cho owner **Western Africa** trong [README](./README.md).
 
 ## Mô hình tư duy
 
