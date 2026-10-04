@@ -10,7 +10,7 @@ Chuỗi nhân quả (causal chain / 인과 사슬):
 
 **continental relief/tài nguyên (resource / 자원) → specialized agricultural/industrial regions → river/rail/highway/air tích hợp (integration / 통합) → large metropolitan markets → diversified national economy → toàn cục (global / 전역) mạng (network / 네트워크) role**.
 
-> **Chuyển mạch:** Trong **Hoa Kỳ (United States) — continental quy mô (scale / 규모), diversified tài nguyên (resource / 자원) cơ sở (base / 기반) và metropolitan mạng (network / 네트워크)**, **Western mountain và water geography** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Central plains và Mississippi basin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Thesis của profile đặt quy mô lục địa, resource base và metropolitan network trong một hệ thống. **Western mountain và water geography** mở bằng relief, water storage và hazard; **Central plains và Mississippi basin** tiếp theo biến đất, sông và scale thành nền nông nghiệp–vận tải.
 
 ## Western mountain và water geography
 
@@ -20,7 +20,7 @@ Reservoir và aqueduct nối mountain water nguồn (source / 소스) với farm
 
 Pacific margin còn có active tectonic hazard.
 
-> **Chuyển mạch:** Ở chặng này của **Hoa Kỳ (United States) — continental quy mô (scale / 규모), diversified tài nguyên (resource / 자원) cơ sở (base / 기반) và metropolitan mạng (network / 네트워크)**, **Central plains và Mississippi basin** tiếp nhận điểm tựa từ **Western mountain và water geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Great Lakes industrial corridor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Western water tạo giới hạn và lợi thế; **Central plains/Mississippi basin** nối chúng với grain, barge và inland markets. **Great Lakes industrial corridor** cho thấy nước ngọt và khoáng sản có thể tạo một hệ thống manufacturing riêng.
 
 ## Central plains và Mississippi basin
 
@@ -30,7 +30,7 @@ Barge vận chuyển (transport / 전송) giúp bulk grain/material đi tới Gu
 
 Agricultural belt là functional specialization, không ranh giới (boundary / 경계) cố định.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hoa Kỳ (United States) — continental quy mô (scale / 규모), diversified tài nguyên (resource / 자원) cơ sở (base / 기반) và metropolitan mạng (network / 네트워크)**, **Great Lakes industrial corridor** tiếp nhận điểm tựa từ **Central plains và Mississippi basin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Atlantic seaboard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Great Lakes kết hợp freshwater, steel, manufacturing và shipping; **Atlantic seaboard** tiếp tục bằng các cảng, tài chính, dân cư và chính sách tạo metropolitan corridor ven biển.
 
 ## Great Lakes industrial corridor
 
@@ -40,7 +40,7 @@ Auto/steel cluster tạo supplier city mạng (network / 네트워크). Deindust
 
 Hạ tầng (infrastructure / 인프라) legacy vẫn ảnh hưởng location hiện tại.
 
-> **Chuyển mạch:** Trong **Hoa Kỳ (United States) — continental quy mô (scale / 규모), diversified tài nguyên (resource / 자원) cơ sở (base / 기반) và metropolitan mạng (network / 네트워크)**, **Atlantic seaboard** tiếp nhận điểm tựa từ **Great Lakes industrial corridor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gulf Coast** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Atlantic seaboard tập trung gateway và knowledge economy; **Gulf Coast** chuyển trọng tâm sang energy, petrochemical, ports và storm exposure để thấy resource advantage có giới hạn.
 
 ## Atlantic seaboard
 
@@ -50,7 +50,7 @@ Functional megalopolis vượt trạng thái (state / 상태) ranh giới (bound
 
 Rail/road congestion và high housing chi phí (cost / 비용) cho thấy agglomeration benefit đi kèm diseconomy.
 
-> **Chuyển mạch:** Ở chặng này của **Hoa Kỳ (United States) — continental quy mô (scale / 규모), diversified tài nguyên (resource / 자원) cơ sở (base / 기반) và metropolitan mạng (network / 네트워크)**, **Gulf Coast** tiếp nhận điểm tựa từ **Atlantic seaboard** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **West Coast metropolitan hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Gulf Coast cho thấy hạ tầng năng lượng và cảng gắn chặt với hazard; **West Coast metropolitan system** đối chiếu bằng technology, Pacific trade, ports và earthquake–wildfire exposure.
 
 ## Gulf Coast
 
@@ -58,7 +58,7 @@ Gulf có oil/gas, petrochemical, cổng (port / 포트) và hurricane/storm-surg
 
 A refinery/cổng (port / 포트) shutdown có thể tạo supply tác động (effect / 효과) rộng vì nút (node / 노드) nằm trong national năng lượng (energy / 에너지)/logistics mạng (network / 네트워크).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hoa Kỳ (United States) — continental quy mô (scale / 규모), diversified tài nguyên (resource / 자원) cơ sở (base / 기반) và metropolitan mạng (network / 네트워크)**, **West Coast metropolitan hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Gulf Coast** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sun Belt growth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** West Coast network dựa trên gateway ports, talent và capital; **Sun Belt growth** mở câu hỏi về spatial shift của dân cư, việc làm và infrastructure về phía nam–tây.
 
 ## West Coast metropolitan hệ thống (system / 시스템)
 
@@ -68,7 +68,7 @@ Tech cluster Silicon Valley minh họa kiến thức (knowledge / 지식) agglom
 
 High-value digital economy vẫn phụ thuộc housing, power, airport, dữ liệu (data / 데이터) center và labor mobility.
 
-> **Chuyển mạch:** Trong **Hoa Kỳ (United States) — continental quy mô (scale / 규모), diversified tài nguyên (resource / 자원) cơ sở (base / 기반) và metropolitan mạng (network / 네트워크)**, **Sun Belt growth** tiếp nhận điểm tựa từ **West Coast metropolitan hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Agricultural specialization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sun Belt hấp thụ population và industry nhờ đất, climate, energy và policy nhưng tăng exposure nóng, bão và thiếu nước. **Agricultural specialization** cho thấy climate và market access định hình production khác nhau theo vùng.
 
 ## Sun Belt growth
 
@@ -78,7 +78,7 @@ Nhưng growth region có distinct các ràng buộc (constraints / 제약조건�
 
 “Sun Belt” là analytic region chứ không homogeneous khối (block / 블록).
 
-> **Chuyển mạch:** Ở chặng này của **Hoa Kỳ (United States) — continental quy mô (scale / 규모), diversified tài nguyên (resource / 자원) cơ sở (base / 기반) và metropolitan mạng (network / 네트워크)**, **Agricultural specialization** tiếp nhận điểm tựa từ **Sun Belt growth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng (energy / 에너지) diversity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Agricultural specialization nối đất, nước, technology và logistics với regional markets; nó cũng phụ thuộc energy cho irrigation và cold chain. **Energy diversity** tiếp theo kiểm tra portfolio resource và độ bền của hệ thống supply.
 
 ## Agricultural specialization
 
@@ -86,7 +86,7 @@ Corn/soy Midwest, wheat plains, California specialty crops, southern poultry/cot
 
 Irrigated agriculture western US phụ thuộc snow/reservoir/groundwater, làm Water–Food–năng lượng (energy / 에너지) nexus rõ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hoa Kỳ (United States) — continental quy mô (scale / 규모), diversified tài nguyên (resource / 자원) cơ sở (base / 기반) và metropolitan mạng (network / 네트워크)**, **Năng lượng (energy / 에너지) diversity** tiếp nhận điểm tựa từ **Agricultural specialization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Highway, rail và aviation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Energy diversity giúp agriculture và industry chống shock cục bộ nhưng vẫn cần grid và pipeline kết nối. **Highway, rail và aviation** là lớp network biến resource và production thành flow xuyên lục địa.
 
 ## Năng lượng (energy / 에너지) diversity
 
@@ -94,7 +94,7 @@ Oil/gas, coal, nuclear, hydropower, wind, solar phân bố mạnh theo region. T
 
 Năng lượng (energy / 에너지) abundance national không có nghĩa mọi region self-sufficient; grid congestion và refinery location có spatial tác động (effect / 효과).
 
-> **Chuyển mạch:** Trong **Hoa Kỳ (United States) — continental quy mô (scale / 규모), diversified tài nguyên (resource / 자원) cơ sở (base / 기반) và metropolitan mạng (network / 네트워크)**, **Highway, rail và aviation** tiếp nhận điểm tựa từ **Năng lượng (energy / 에너지) diversity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Border môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Transport network phân vai theo khoảng cách, giá trị và tốc độ; nó tạo access cho thị trường nhưng không xóa friction. **Border production networks** tiếp theo cho thấy supply chain phân bổ công đoạn qua biên giới.
 
 ## Highway, rail và aviation
 
@@ -102,7 +102,7 @@ Interstate highway reshape suburbanization/freight; freight rail mạnh với bu
 
 Chế độ (mode / 모드) choice phản ánh cargo kiểu (type / 타입) và geography. Passenger rail mạnh hơn ở dense Northeast corridor so nhiều low-density region.
 
-> **Chuyển mạch:** Ở chặng này của **Hoa Kỳ (United States) — continental quy mô (scale / 규모), diversified tài nguyên (resource / 자원) cơ sở (base / 기반) và metropolitan mạng (network / 네트워크)**, **Border môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Highway, rail và aviation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Immigration và population geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Border network biến highway, rail và logistics thành manufacturing corridor khi standards, labor và customs bổ trợ nhau. **Immigration và population geography** tiếp theo theo dõi cách lao động và gia đình phân bố theo corridor đó.
 
 ## Border môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)
 
@@ -112,7 +112,7 @@ Border vừa là friction vừa là specialization giao diện (interface / 인�
 
 Supply chuỗi (chain / 사슬) resilience phải map border crossing sức chứa (capacity / 용량) và alternate tuyến (route / 경로).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hoa Kỳ (United States) — continental quy mô (scale / 규모), diversified tài nguyên (resource / 자원) cơ sở (base / 기반) và metropolitan mạng (network / 네트워크)**, **Immigration và population geography** tiếp nhận điểm tựa từ **Border môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Urban inequality và khả năng tiếp cận (accessibility / 접근성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Immigration vừa đáp ứng labor demand vừa tạo network và cultural geography mới; kết quả phụ thuộc policy, housing và region. **Urban inequality/accessibility** hỏi ai có thể tiếp cận việc làm, trường, transit và nhà ở trong metropolitan system.
 
 ## Immigration và population geography
 
@@ -120,7 +120,7 @@ International di chuyển (migration / 마이그레이션) và domestic di chuy�
 
 Population thay đổi (change / 변경) không chỉ natural increase; di chuyển (migration / 마이그레이션) selectivity ảnh hưởng age/skill cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Trong **Hoa Kỳ (United States) — continental quy mô (scale / 규모), diversified tài nguyên (resource / 자원) cơ sở (base / 기반) và metropolitan mạng (network / 네트워크)**, **Urban inequality và khả năng tiếp cận (accessibility / 접근성)** tiếp nhận điểm tựa từ **Immigration và population geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hazard mosaic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Accessibility phân bố không đều theo income, race, housing và transit; đó là cơ chế spatial inequality chứ không chỉ khác biệt cá nhân. **Hazard mosaic** chồng thêm exposure trước bão, cháy, lũ, drought và động đất lên các khu dân cư.
 
 ## Urban inequality và khả năng tiếp cận (accessibility / 접근성)
 
@@ -130,7 +130,7 @@ Income alone không đủ; commute thời gian (time / 시간), car quyền sở
 
 Urban geography Hoa Kỳ minh họa quan hệ (relation / 관계) giữa land-use chính sách (policy / 정책) và xã hội (social / 사회적) kết quả (outcome / 결과).
 
-> **Chuyển mạch:** Ở chặng này của **Hoa Kỳ (United States) — continental quy mô (scale / 규모), diversified tài nguyên (resource / 자원) cơ sở (base / 기반) và metropolitan mạng (network / 네트워크)**, **Hazard mosaic** tiếp nhận điểm tựa từ **Urban inequality và khả năng tiếp cận (accessibility / 접근성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Federalism và spatial quản trị (governance / 거버넌스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hazard exposure và resilience phụ thuộc nơi ở, hạ tầng và resources; cùng một thiên tai tạo thiệt hại khác nhau theo accessibility. **Federalism và spatial governance** giải thích ai chịu trách nhiệm và vì sao ứng phó khác nhau giữa bang, county và city.
 
 ## Hazard mosaic
 
@@ -138,7 +138,7 @@ Earthquake/wildfire West; hurricane Gulf/Atlantic; tornado/severe storm central;
 
 National hazard map không có một dominant hazard. Insurance/building mã (code / 코드) phải regionalized.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hoa Kỳ (United States) — continental quy mô (scale / 규모), diversified tài nguyên (resource / 자원) cơ sở (base / 기반) và metropolitan mạng (network / 네트워크)**, **Federalism và spatial quản trị (governance / 거버넌스)** tiếp nhận điểm tựa từ **Hazard mosaic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Toàn cục (global / 전역) role** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Federalism chia quyền và nguồn lực theo không gian, nên policy implementation và hazard response có thể lệch giữa các cấp. **Global role** tiếp theo đặt những mạng nội địa đó vào trade, finance, alliance và technology flows.
 
 ## Federalism và spatial quản trị (governance / 거버넌스)
 
@@ -146,7 +146,7 @@ Trạng thái (state / 상태)/cục bộ (local / 로컬)/federal authority chi
 
 Political geography ở đây là multi-level quản trị (governance / 거버넌스) chứ không chỉ national ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Trong **Hoa Kỳ (United States) — continental quy mô (scale / 규모), diversified tài nguyên (resource / 자원) cơ sở (base / 기반) và metropolitan mạng (network / 네트워크)**, **Toàn cục (global / 전역) role** tiếp nhận điểm tựa từ **Federalism và spatial quản trị (governance / 거버넌스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Global role của Hoa Kỳ dựa trên quy mô thị trường, energy, technology và network centrality, nhưng bị giới hạn bởi inequality, hazard và political friction. **Common misconceptions** sẽ kiểm tra các khái quát “continental scale = đồng đều” hoặc “resource = tự động giàu”.
 
 ## Toàn cục (global / 전역) role
 
@@ -154,7 +154,7 @@ Hoa Kỳ có Atlantic và Pacific truy cập (access / 접근), large nội bộ
 
 Toàn cục (global / 전역) role đến từ combination quy mô (scale / 규모) + connectivity + institutional/economic sức chứa (capacity / 용량), không một geographic advantage duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Hoa Kỳ (United States) — continental quy mô (scale / 규모), diversified tài nguyên (resource / 자원) cơ sở (base / 기반) và metropolitan mạng (network / 네트워크)**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Toàn cục (global / 전역) role** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Misconceptions thường bỏ qua sự khác nhau giữa resource base, network access, governance và exposure. **Mental model** gom các điều kiện đó thành causal chain có thể áp dụng cho profile khác.
 
 ## Dùng chung (common / 공통) misconceptions
 
@@ -164,7 +164,7 @@ Toàn cục (global / 전역) role đến từ combination quy mô (scale / 규�
 
 “National average đại diện mọi nơi” sai vì coastal metro, rural plain, mountain west và southern corridor rất khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hoa Kỳ (United States) — continental quy mô (scale / 규모), diversified tài nguyên (resource / 자원) cơ sở (base / 기반) và metropolitan mạng (network / 네트워크)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mental model** khép profile bằng chuỗi relief–water–resource → corridor–metro–labor → governance–hazard–global role, luôn kiểm tra access và value capture. Đây là điểm bàn giao để đọc các country profile khác trong owner World Atlas.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
