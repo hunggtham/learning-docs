@@ -12,7 +12,7 @@ Không học bằng cách thuộc toàn bộ ngày tháng. Mỗi vòng đọc ph
 → điều gì tiếp tục sang giai đoạn sau
 ```
 
-> **Chuyển mạch:** **Nguyên tắc** đặt khung vật chất–thể chế; **Tuyến 1** dùng khung đó để đi từ sinh thái đến nhà nước, trước khi **Tuyến 2** mở sang đế chế, ý tưởng và mạng liên vùng.
+> **Nối mạch:** Nguyên tắc đặt khung vật chất–thể chế; Tuyến 1 dùng khung đó để đi từ sinh thái đến nhà nước. **Tuyến 2** mở rộng cùng cơ chế sang đế chế, ý tưởng và mạng liên vùng.
 
 ## Tuyến (route / 경로) 1 — nền tảng từ vật chất đến nhà nước
 
@@ -26,7 +26,7 @@ Sau tuyến (route / 경로) này, người học phải phân biệt được:
 - chữ viết như biểu tượng với chữ viết như hạ tầng kế toán;
 - collapse của trung tâm với biến mất của xã hội.
 
-> **Chuyển mạch:** **Tuyến 2** nối quyền lực và trao đổi liên vùng trên nền tảng của Tuyến 1; **Tuyến 3** tiếp tục bằng đại dương, vốn và công nghiệp để giải thích quy mô tích hợp mới.
+> **Nối mạch:** Tuyến 2 nối quyền lực với trao đổi liên vùng trên nền Tuyến 1. **Tuyến 3** đưa đại dương, vốn và công nghiệp vào để giải thích tích hợp ở quy mô lớn hơn.
 
 ## Tuyến (route / 경로) 2 — đế chế, ý tưởng và mạng liên vùng
 
@@ -34,7 +34,7 @@ Sau tuyến (route / 경로) này, người học phải phân biệt được:
 
 Bài tập: chọn một mạng (Silk Roads, Indian Ocean, Sahara hoặc steppe), vẽ nút (node / 노드)/luồng (flow / 흐름)/chokepoint, rồi ghi technology, trust institution, disease và coercion đi cùng hàng hoá.
 
-> **Chuyển mạch:** **Tuyến 3** cho thấy mạng toàn cầu tạo năng lực và bất bình đẳng ra sao; **Tuyến 4** kiểm tra khi năng lực ấy bị đẩy vào chiến tranh và tổng động viên.
+> **Nối mạch:** Tuyến 3 cho thấy mạng toàn cầu đồng thời tạo năng lực và bất bình đẳng. **Tuyến 4** theo dõi khi năng lực ấy bị đẩy vào chiến tranh và tổng động viên.
 
 ## Tuyến (route / 경로) 3 — đại dương, vốn và công nghiệp
 
@@ -42,7 +42,7 @@ Bài tập: chọn một mạng (Silk Roads, Indian Ocean, Sahara hoặc steppe)
 
 Đừng hỏi “vì sao châu Âu thắng” như một nguyên nhân duy nhất. Hãy tách: địa lý cảng và gió; tài chính và bảo hiểm; súng và logistics; bạc, nô lệ, đất và bệnh; nhà nước; tri thức; phản kháng địa phương.
 
-> **Chuyển mạch:** **Tuyến 4** theo dõi cách chiến tranh tái cấu trúc đế chế và xã hội; **Tuyến 5** chuyển câu hỏi sang chủ quyền, thể chế và hệ thống hiện đại.
+> **Nối mạch:** Tuyến 4 cho thấy chiến tranh tái cấu trúc đế chế và xã hội. **Tuyến 5** chuyển trọng tâm sang chủ quyền, thể chế và hệ thống hiện đại.
 
 ## Tuyến (route / 경로) 4 — thế kỷ chiến tranh
 
@@ -55,7 +55,7 @@ state trước → shock/escalation → capacity được huy động
 → tổn thất và phân phối lại → institution/border mới
 ```
 
-> **Chuyển mạch:** **Tuyến 5** đặt chủ quyền vào cấu trúc hiện đại; **Tuyến 6** dùng case study Đông Á để kiểm tra mô hình qua bối cảnh cụ thể.
+> **Nối mạch:** Tuyến 5 đặt chủ quyền trong cấu trúc hiện đại. **Tuyến 6** dùng case study Đông Á để kiểm tra mô hình khi địa hình, đế chế và thể chế gặp nhau.
 
 ## Tuyến (route / 경로) 5 — chủ quyền và hệ thống hiện đại
 
@@ -63,7 +63,7 @@ state trước → shock/escalation → capacity được huy động
 
 Đọc song song [World Geography](../world_geography/README.md) để nối tài nguyên (resource / 자원) cơ sở (base / 기반), corridor, cổng (port / 포트), climate và settlement với lịch sử thể chế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Học tập (learning / 학습) tuyến (route / 경로) — World lịch sử (history / 이력)**, **Tuyến (route / 경로) 5 — chủ quyền và hệ thống hiện đại** cho ta quy tắc; **Tuyến (route / 경로) 6 — trường hợp (case / 사례) study Đông Á** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Vòng ôn tập 30 phút** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Tuyến 5 cung cấp quy tắc về chủ quyền và hệ thống hiện đại; Tuyến 6 thử quy tắc ấy trong các case Đông Á. **Vòng ôn tập 30 phút** giúp nối lại cơ chế và giới hạn trước khi đi tiếp.
 
 ## Tuyến (route / 경로) 6 — trường hợp (case / 사례) study Đông Á
 
@@ -71,7 +71,7 @@ state trước → shock/escalation → capacity được huy động
 
 Mục tiêu không phải ép lịch sử Hàn Quốc vào timeline toàn cầu, mà kiểm tra một xã hội cụ thể đã **tiếp nhận, chọn lọc, chống lại và biến đổi** các lực xuyên vùng như thế nào.
 
-> **Chuyển mạch:** Trong **Học tập (learning / 학습) tuyến (route / 경로) — World lịch sử (history / 이력)**, **Tuyến (route / 경로) 6 — trường hợp (case / 사례) study Đông Á** cho ta quy tắc; **Vòng ôn tập 30 phút** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Tuyến (route / 경로) 7 — kiểm tra độ bền của mô hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Case Đông Á cho thấy quy tắc hoạt động trong bối cảnh cụ thể; vòng ôn tập gom lại điểm chuyển và giới hạn. **Tuyến 7** tiếp tục bằng cách thử độ bền của mô hình ở case mới.
 
 ## Vòng ôn tập 30 phút
 
@@ -81,7 +81,7 @@ Mục tiêu không phải ép lịch sử Hàn Quốc vào timeline toàn cầu,
 4. Kiểm tra một claim bằng ít nhất hai loại bằng chứng (evidence / 증거) khác nhau.
 5. Nối giai đoạn đó với chapter trước và sau bằng một luồng (flow / 흐름) cụ thể.
 
-> **Chuyển mạch:** **Vòng ôn tập 30 phút** kiểm tra khả năng nhớ và nối cơ chế; **Tuyến 7** nâng tiêu chuẩn bằng cách thử mô hình ở case mới và ghi rõ nơi mô hình không còn đúng.
+> **Nối mạch:** Vòng ôn tập củng cố mạch cơ chế; Tuyến 7 nâng tiêu chuẩn bằng case mới và ghi rõ nơi mô hình không còn đúng, để route không biến thành danh sách sự kiện.
 
 ## Tuyến (route / 경로) 7 — kiểm tra độ bền của mô hình
 
