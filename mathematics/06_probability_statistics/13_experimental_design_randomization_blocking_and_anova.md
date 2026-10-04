@@ -18,8 +18,8 @@ Ví dụ A/B test cho checkout page:
 
 ```text
 experimental unit = user
-reatment A        = old checkout
-reatment B        = new checkout
+treatment A       = old checkout
+treatment B       = new checkout
 response          = purchase / conversion value
 ```
 
