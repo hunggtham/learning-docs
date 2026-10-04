@@ -10,7 +10,7 @@ Belarus (BLR), Bulgaria (BGR), Czechia (CZE), Hungary (HUN), Poland (POL), Repub
 
 → [Mở Eastern Europe](./eastern_europe/README.md)
 
-> **Chuyển mạch:** Sau **Eastern Europe**, **Northern Europe** tiếp tục inventory theo UN M49; **Southern Europe** giữ cùng mã và source owner cho nhóm kế tiếp.
+> **Nối mạch:** **Eastern Europe** mở atlas bằng các corridor lục địa và chuyển tiếp khí hậu; **Northern Europe** tiếp theo giữ inventory UN M49 nhưng chuyển sang biển Bắc, Baltic và Bắc Cực. **Southern Europe** sau đó giữ cùng mã và source owner.
 
 ## Northern Europe
 
@@ -18,7 +18,7 @@ Belarus (BLR), Bulgaria (BGR), Czechia (CZE), Hungary (HUN), Poland (POL), Repub
 
 → [Mở Northern Europe](./northern_europe/README.md)
 
-> **Chuyển mạch:** **Southern Europe** bổ sung nhóm địa lý phía nam; **Western Europe** tiếp tục phân loại cùng boundary thay vì trộn với political blocs.
+> **Nối mạch:** **Southern Europe** bổ sung Địa Trung Hải, bán đảo và đảo phía nam; **Western Europe** tiếp theo phân loại cùng boundary UN M49 thay vì trộn subregion với political blocs.
 
 ## Southern Europe
 
@@ -26,7 +26,7 @@ Albania (ALB), Andorra (AND), Bosnia and Herzegovina (BIH), Croatia (HRV), Gibra
 
 → [Mở Southern Europe](./southern_europe/README.md)
 
-> **Chuyển mạch:** **Western Europe** hoàn tất nhóm chính; **Supplemental** ghi phần chú thích và ngoại lệ cần giữ khi đọc atlas.
+> **Nối mạch:** **Western Europe** hoàn tất nhóm chính bằng các lõi đô thị–cảng phía tây; **Supplemental** tiếp theo ghi chú thích và ngoại lệ cần giữ khi đọc atlas.
 
 ## Western Europe
 
@@ -34,7 +34,7 @@ Austria (AUT), Belgium (BEL), France (FRA), Germany (DEU), Liechtenstein (LIE), 
 
 → [Mở Western Europe](./western_europe/README.md)
 
-> **Chuyển mạch:** **Supplemental** khép README bằng boundary và caveat của UN M49; dữ liệu chi tiết vẫn thuộc geography canonical owner.
+> **Nối mạch:** **Supplemental** khép README bằng boundary và caveat của UN M49; dữ liệu chi tiết của từng entry vẫn thuộc geography canonical owner.
 
 ## Supplemental
 
