@@ -6,19 +6,19 @@
 
 Isle of Man nằm gần trung tâm biển Irish Sea, giữa Great Britain và Ireland. Địa hình gồm dãy đồi trung tâm và các dải thấp ven bờ.
 
-> **Chuyển mạch:** Trong **Isle of Man**, **Quy mô nhỏ, vị trí mạng lưới lớn** tiếp nhận điểm tựa từ **Vị trí giữa British Isles** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế và sử dụng đất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Irish Sea và vị trí giữa Britain–Ireland tạo potential network, nhưng **quy mô nhỏ/vị trí mạng lưới lớn** chỉ có giá trị khi ferry, aviation và weather reliability hoạt động. **Kinh tế và sử dụng đất** tiếp theo phản ánh giới hạn access đó.
 
 ## Quy mô nhỏ, vị trí mạng lưới lớn
 
 Khoảng cách đến nhiều bờ lân cận tương đối ngắn, nhưng di chuyển vẫn phụ thuộc phà và hàng không. Vì vậy weather độ tin cậy (reliability / 신뢰성) và lịch vận tải là một phần của địa lý tiếp cận.
 
-> **Chuyển mạch:** Ở chặng này của **Isle of Man**, **Kinh tế và sử dụng đất** tiếp nhận điểm tựa từ **Quy mô nhỏ, vị trí mạng lưới lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Transport schedule và weather risk định hình labour, tourism và supply, nên **kinh tế/sử dụng đất** ưu tiên dịch vụ giá trị cao trên diện tích nhỏ. **Mô hình tư duy** sẽ nối island relief với network reliability.
 
 ## Kinh tế và sử dụng đất
 
 Không gian nhỏ giới hạn nông nghiệp quy mô lớn; dịch vụ, du lịch và các hoạt động có giá trị trên đơn vị diện tích cao quan trọng hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Isle of Man**, **Mô hình tư duy** gom các mảnh từ **Kinh tế và sử dụng đất** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi Irish Sea island–hill relief → ferry/air reliability → service economy và land constraints. Đây là điểm bàn giao cho các island profiles trong owner World Atlas.
 
 ## Mô hình tư duy
 

@@ -6,19 +6,19 @@
 
 Guernsey thuộc Channel Islands, nằm gần bờ Normandy hơn mainland Britain. Địa hình ven biển đá, diện tích nhỏ và mật độ sử dụng đất cao làm không gian trở thành nguồn lực khan hiếm.
 
-> **Chuyển mạch:** Trong **Guernsey**, **Khí hậu và biển** tiếp nhận điểm tựa từ **Đảo nhỏ trong English Channel** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Island geography và đất khan hiếm đặt giới hạn cho Guernsey; **khí hậu biển và tides** điều chỉnh cư trú, nông nghiệp chuyên canh, cảng và bờ. **Kinh tế không gian** tiếp theo giải thích vì sao dịch vụ giá trị cao phù hợp hơn land-intensive production.
 
 ## Khí hậu và biển
 
 Khí hậu hải dương làm mùa đông ôn hòa, thuận lợi cho nông nghiệp chuyên canh và cư trú. Tides mạnh ở Channel ảnh hưởng cảng, điều hướng (navigation / 내비게이션) và hệ sinh thái bờ.
 
-> **Chuyển mạch:** Ở chặng này của **Guernsey**, **Kinh tế không gian** tiếp nhận điểm tựa từ **Khí hậu và biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Tides và maritime access làm cảng/điều hướng nhạy với thời gian và thời tiết; **kinh tế không gian** vì vậy dựa vào aviation, shipping và dịch vụ trên diện tích nhỏ. **Mô hình tư duy** sẽ giữ rõ trade-off giữa connectivity, đất và biển.
 
 ## Kinh tế không gian
 
 Với diện tích rất nhỏ, hoạt động giá trị cao, dịch vụ và kết nối hàng không–hàng hải quan trọng hơn sản xuất dựa trên đất rộng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Guernsey**, **Mô hình tư duy** gom các mảnh từ **Kinh tế không gian** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi Channel island–land scarcity → maritime climate/tides → high-value service và port connectivity. Đây là điểm bàn giao cho các profile Northern Europe trong owner World Atlas.
 
 ## Mô hình tư duy
 
