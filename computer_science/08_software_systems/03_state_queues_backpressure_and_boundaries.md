@@ -10,7 +10,7 @@ Producer may create công việc (work / 작업) faster temporarily than bên ti
 
 But for sustained arrival `λ > μ` dịch vụ (service / 서비스) tỷ lệ (rate / 비율), hàng đợi (queue / 큐) grows without bound. Stable hệ thống (system / 시스템) requires long-term dịch vụ (service / 서비스) sức chứa (capacity / 용량) exceed admitted tải (load / 로드) or rejection/degradation.
 
-> **Chuyển mạch:** Queue tách producer khỏi consumer; bounded queue biến bộ nhớ thành giới hạn rõ ràng, còn backpressure lan tín hiệu chậm lại thay vì để backlog phình vô hạn.
+> **Nối mạch:** Queue tách producer khỏi consumer; bounded queue biến bộ nhớ thành giới hạn rõ ràng, còn backpressure lan tín hiệu chậm lại thay vì để backlog phình vô hạn.
 
 ## Bounded vs unbounded hàng đợi (queue / 큐)
 
@@ -18,7 +18,7 @@ Unbounded hàng đợi (queue / 큐) converts overload into ever-growing độ t
 
 Choice is nghiệp vụ (business / 비즈니스) ngữ nghĩa (semantics / 의미론): dropping metrics may be acceptable; dropping payment command not.
 
-> **Chuyển mạch:** Ở chặng này của **Trạng thái (state / 상태), queues, backpressure và hệ thống (system / 시스템) boundaries**, **Backpressure** tiếp nhận điểm tựa từ **Bounded vs unbounded hàng đợi (queue / 큐)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Messaging ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Backpressure** nối từ **Bounded vs unbounded hàng đợi (queue / 큐)** sang **Messaging ngữ nghĩa (semantics / 의미론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Backpressure
 
@@ -26,7 +26,7 @@ Backpressure propagates tín hiệu (signal / 신호) upstream that bên tiêu t
 
 If upstream ignores tín hiệu (signal / 신호) and buffers locally, hệ thống (system / 시스템) has not solved overload. Backpressure must extend through chuỗi (chain / 사슬) or termination chính sách (policy / 정책) apply.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trạng thái (state / 상태), queues, backpressure và hệ thống (system / 시스템) boundaries**, **Messaging ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **Backpressure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thứ tự (ordering / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Messaging ngữ nghĩa (semantics / 의미론)** nối từ **Backpressure** sang **Thứ tự (ordering / 순서)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Messaging ngữ nghĩa (semantics / 의미론)
 
@@ -34,7 +34,7 @@ At-most-once may lose but no thử lại (retry / 재시도) duplicates; at-leas
 
 Message broker delivery acknowledgement is not same as nghiệp vụ (business / 비즈니스) giao dịch (transaction / 트랜잭션) completion. bên tiêu thụ (consumer / 소비자) may lần ghi nhận (commit / 커밋) DB then crash before ack → redelivery; idempotent handler/outbox/inbox patterns handle.
 
-> **Chuyển mạch:** Trong **Trạng thái (state / 상태), queues, backpressure và hệ thống (system / 시스템) boundaries**, **Thứ tự (ordering / 순서)** tiếp nhận điểm tựa từ **Messaging ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái (state / 상태) placement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Thứ tự (ordering / 순서)** nối từ **Messaging ngữ nghĩa (semantics / 의미론)** sang **Trạng thái (state / 상태) placement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thứ tự (ordering / 순서)
 
@@ -42,7 +42,7 @@ Toàn cục (global / 전역) total thứ tự (order / 순서) expensive and of
 
 Tính đồng thời (concurrency / 동시성) can reorder completion even if dequeue thứ tự (order / 순서) fixed. thứ tự (ordering / 순서) đặc tả hợp đồng (contract / 계약) must specify enqueue, delivery, processing or lần ghi nhận (commit / 커밋) thứ tự (order / 순서).
 
-> **Chuyển mạch:** Ở chặng này của **Trạng thái (state / 상태), queues, backpressure và hệ thống (system / 시스템) boundaries**, **Trạng thái (state / 상태) placement** tiếp nhận điểm tựa từ **Thứ tự (ordering / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự kiện (event / 이벤트) log and trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Trạng thái (state / 상태) placement** nối từ **Thứ tự (ordering / 순서)** sang **Sự kiện (event / 이벤트) log and trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trạng thái (state / 상태) placement
 
@@ -50,7 +50,7 @@ Trạng thái (state / 상태) can live máy khách (client / 클라이언트), 
 
 “Stateless dịch vụ (service / 서비스)” usually means durable/người dùng (user / 사용자) session trạng thái (state / 상태) externalized, not literally no temporary trạng thái (state / 상태).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trạng thái (state / 상태), queues, backpressure và hệ thống (system / 시스템) boundaries**, **Sự kiện (event / 이벤트) log and trạng thái (state / 상태)** tiếp nhận điểm tựa từ **Trạng thái (state / 상태) placement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Backpressure vs tỷ lệ (rate / 비율) limiting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sự kiện (event / 이벤트) log and trạng thái (state / 상태)** nối từ **Trạng thái (state / 상태) placement** sang **Backpressure vs tỷ lệ (rate / 비율) limiting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sự kiện (event / 이벤트) log and trạng thái (state / 상태)
 
@@ -58,25 +58,25 @@ Event-sourcing stores chuỗi (sequence / 시퀀스) of lĩnh vực (domain / �
 
 Thay đổi (change / 변경) dữ liệu (data / 데이터) Capture streams cơ sở dữ liệu (database / 데이터베이스) changes to downstream indexes/analytics; consistency lag must be accepted/monitored.
 
-> **Chuyển mạch:** Trong **Trạng thái (state / 상태), queues, backpressure và hệ thống (system / 시스템) boundaries**, **Sự kiện (event / 이벤트) log and trạng thái (state / 상태)** đã nêu tiêu chí phân biệt, còn **Backpressure vs tỷ lệ (rate / 비율) limiting** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Queueing and thử lại (retry / 재시도) storms** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sự kiện (event / 이벤트) log and trạng thái (state / 상태)** đặt tiêu chí; **Backpressure vs tỷ lệ (rate / 비율) limiting** dùng nó để kiểm tra ranh giới, rồi **Queueing and thử lại (retry / 재시도) storms** mở rộng hệ quả.
 
 ## Backpressure vs tỷ lệ (rate / 비율) limiting
 
 Tỷ lệ (rate / 비율) limiter protects ranh giới (boundary / 경계) by limiting admitted yêu cầu (request / 요청) tỷ lệ (rate / 비율) per định danh (identity / 식별자)/hệ thống (system / 시스템). Backpressure is động (dynamic / 동적) downstream pressure. Both may coexist: limiter prevents abuse/overload; backpressure reacts hiện tại (current / 현재) sức chứa (capacity / 용량).
 
-> **Chuyển mạch:** Ở chặng này của **Trạng thái (state / 상태), queues, backpressure và hệ thống (system / 시스템) boundaries**, **Backpressure vs tỷ lệ (rate / 비율) limiting** đã nêu tiêu chí phân biệt, còn **Queueing and thử lại (retry / 재시도) storms** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Backpressure vs tỷ lệ (rate / 비율) limiting** đặt tiêu chí; **Queueing and thử lại (retry / 재시도) storms** dùng nó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Queueing and thử lại (retry / 재시도) storms
 
 If phụ thuộc (dependency / 의존성) slows, queues grow; hết thời gian chờ (timeout / 타임아웃) triggers retries; retries increase arrival tỷ lệ (rate / 비율); overload worsens. Circuit breaker, thử lại (retry / 재시도) ngân sách (budget / 예산), bounded queues and deadlines break vòng phản hồi (feedback loop / 피드백 루프).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trạng thái (state / 상태), queues, backpressure và hệ thống (system / 시스템) boundaries**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Queueing and thử lại (retry / 재시도) storms** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Queueing and thử lại (retry / 재시도) storms**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > hàng đợi (queue / 큐) is **stored waiting thời gian (time / 시간)**. It absorbs burst, not sustained sức chứa (capacity / 용량) deficit. Every hàng đợi (queue / 큐) should have sức chứa (capacity / 용량), admission chính sách (policy / 정책), thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론), thứ tự (ordering / 순서) phạm vi (scope / 범위) and khả năng quan sát (observability / 관측 가능성).
 
-> **Chuyển mạch:** Trong **Trạng thái (state / 상태), queues, backpressure và hệ thống (system / 시스템) boundaries**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -86,7 +86,7 @@ If phụ thuộc (dependency / 의존성) slows, queues grow; hết thời gian 
 
 **“Unbounded hàng đợi (queue / 큐) is safer because không reject.”** It often fails later with worse độ trễ (latency / 지연 시간)/tài nguyên (resource / 자원) exhaustion.
 
-> **Chuyển mạch:** Ở chặng này của **Trạng thái (state / 상태), queues, backpressure và hệ thống (system / 시스템) boundaries**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

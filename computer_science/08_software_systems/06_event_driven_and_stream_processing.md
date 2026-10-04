@@ -10,7 +10,7 @@ Message là envelope vận chuyển (transport / 전송). Command thường bi�
 
 Terminology không tuyệt đối giữa frameworks, nhưng distinction intent vs fact hữu ích cho coupling.
 
-> **Chuyển mạch:** Trong **Event-driven các hệ thống (systems / 시스템들) và stream processing**, **Hàng đợi (queue / 큐) và log** tiếp nhận điểm tựa từ **Sự kiện (event / 이벤트), command và message** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **At-most-once, at-least-once, effectively-once** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Hàng đợi (queue / 큐) và log** nối từ **Sự kiện (event / 이벤트), command và message** sang **At-most-once, at-least-once, effectively-once**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hàng đợi (queue / 큐) và log
 
@@ -20,7 +20,7 @@ Append-only phân tán (distributed / 분산) log như Kafka giữ ordered recor
 
 Hàng đợi (queue / 큐) nhấn mạnh công việc (work / 작업) phân phối (distribution / 분포); log nhấn mạnh durable ordered lịch sử (history / 이력)/replay.
 
-> **Chuyển mạch:** Ở chặng này của **Event-driven các hệ thống (systems / 시스템들) và stream processing**, **At-most-once, at-least-once, effectively-once** tiếp nhận điểm tựa từ **Hàng đợi (queue / 큐) và log** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thứ tự (ordering / 순서) chỉ có phạm vi (scope / 범위)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **At-most-once, at-least-once, effectively-once** nối từ **Hàng đợi (queue / 큐) và log** sang **Thứ tự (ordering / 순서) chỉ có phạm vi (scope / 범위)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## At-most-once, at-least-once, effectively-once
 
@@ -28,7 +28,7 @@ At-most-once có thể mất message nhưng không redeliver. At-least-once th�
 
 Thực tế thường dùng idempotent consumers, deduplication keys hoặc transactional tích hợp (integration / 통합) để đạt effectively-once nghiệp vụ (business / 비즈니스) kết quả (outcome / 결과).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Event-driven các hệ thống (systems / 시스템들) và stream processing**, **Thứ tự (ordering / 순서) chỉ có phạm vi (scope / 범위)** tiếp nhận điểm tựa từ **At-most-once, at-least-once, effectively-once** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Thứ tự (ordering / 순서) chỉ có phạm vi (scope / 범위)** nối từ **At-most-once, at-least-once, effectively-once** sang **Sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thứ tự (ordering / 순서) chỉ có phạm vi (scope / 범위)
 
@@ -38,7 +38,7 @@ Nếu account updates phải ordered, partition theo account ID giúp cùng acco
 
 Thứ tự (ordering / 순서) yêu cầu (requirement / 요구사항) vì vậy ảnh hưởng partitioning và thông lượng (throughput / 처리량).
 
-> **Chuyển mạch:** Trong **Event-driven các hệ thống (systems / 시스템들) và stream processing**, **Thứ tự (ordering / 순서) chỉ có phạm vi (scope / 범위)** xác định đầu vào; **Sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Backpressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Thứ tự (ordering / 순서) chỉ có phạm vi (scope / 범위)** đặt đầu vào cho **Sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)**, rồi **Backpressure** mở rộng hệ quả.
 
 ## Sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)
 
@@ -48,7 +48,7 @@ Late/out-of-order events làm cửa sổ (window / 윈도우) aggregation khó. 
 
 Streaming tính đúng đắn (correctness / 정확성) phải nói rõ lateness chính sách (policy / 정책), cửa sổ (window / 윈도우) kiểu (type / 타입) và cập nhật (update / 업데이트)/retraction ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Ở chặng này của **Event-driven các hệ thống (systems / 시스템들) và stream processing**, **Sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)** xác định đầu vào; **Backpressure** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Dead-letter hàng đợi (queue / 큐)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sự kiện (event / 이벤트) thời gian (time / 시간) và processing thời gian (time / 시간)** đặt đầu vào cho **Backpressure**, rồi **Dead-letter hàng đợi (queue / 큐)** mở rộng hệ quả.
 
 ## Backpressure
 
@@ -56,7 +56,7 @@ Producer nhanh hơn bên tiêu thụ (consumer / 소비자) vô hạn thời gia
 
 Hàng đợi (queue / 큐) chỉ hấp thụ burst tạm thời; nó không tạo processing sức chứa (capacity / 용량).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Event-driven các hệ thống (systems / 시스템들) và stream processing**, **Dead-letter hàng đợi (queue / 큐)** tiếp nhận điểm tựa từ **Backpressure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sự kiện (event / 이벤트) sourcing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dead-letter hàng đợi (queue / 큐)** nối từ **Backpressure** sang **Sự kiện (event / 이벤트) sourcing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dead-letter hàng đợi (queue / 큐)
 
@@ -64,7 +64,7 @@ Messages thử lại (retry / 재시도) mãi do malformed dữ liệu (data / �
 
 Nhưng DLQ không nên là nơi dữ liệu (data / 데이터) biến mất vô thời hạn; cần quyền sở hữu (ownership / 소유권), alerting và replay tiến trình (process / 프로세스).
 
-> **Chuyển mạch:** Trong **Event-driven các hệ thống (systems / 시스템들) và stream processing**, **Sự kiện (event / 이벤트) sourcing** tiếp nhận điểm tựa từ **Dead-letter hàng đợi (queue / 큐)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sự kiện (event / 이벤트) sourcing** nối từ **Dead-letter hàng đợi (queue / 큐)** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sự kiện (event / 이벤트) sourcing
 
@@ -72,7 +72,7 @@ Sự kiện (event / 이벤트) sourcing lưu trạng thái (state / 상태) cha
 
 Không phải mọi event-driven hệ thống (system / 시스템) đều event-sourced.
 
-> **Chuyển mạch:** Ở chặng này của **Event-driven các hệ thống (systems / 시스템들) và stream processing**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Sự kiện (event / 이벤트) sourcing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Sự kiện (event / 이벤트) sourcing** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -82,13 +82,13 @@ Không phải mọi event-driven hệ thống (system / 시스템) đều event-
 
 **“hàng đợi (queue / 큐) giải overload.”** Nó trì hoãn overload; sustained arrival tỷ lệ (rate / 비율) > dịch vụ (service / 서비스) tỷ lệ (rate / 비율) vẫn không ổn định.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Event-driven các hệ thống (systems / 시스템들) và stream processing**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Event-driven thiết kế (design / 설계) biến temporal coupling thành trạng thái (state / 상태) in queues/logs. Đổi lại bạn phải tường minh (explicit / 명시적) delivery, thứ tự (ordering / 순서), replay, idempotency và backpressure.
 
-> **Chuyển mạch:** Trong **Event-driven các hệ thống (systems / 시스템들) và stream processing**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 
