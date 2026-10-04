@@ -22,13 +22,13 @@ Các chapter này đóng vai trò **foundation DSA** cho các lĩnh vực (domai
 
 Đã cover digital lô-gic (logic / 논리)/sequential circuits; CPU/ISA/instruction cycle; chuỗi xử lý (pipeline / 파이프라인)/out-of-order; bộ nhớ đệm (cache / 캐시)/TLB/coherence; I/O/interrupt/DMA; assembly/ABI; multicore/SIMD/GPU/NUMA/Amdahl; SSD/HDD/NVMe/FTL/persistence; hiệu năng (performance / 성능) equations, power, benchmarking và roofline intuition.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coverage kiểm tra (audit / 감사) — Khoa học máy tính (computer science / 컴퓨터 과학) Basic Foundations**, **4. Operating các hệ thống (systems / 시스템들) — 8 chapters** tiếp nhận điểm tựa từ **3. Computer kiến trúc (architecture / 아키텍처) — 8 chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Programming Languages & thời gian chạy (runtime / 런타임) — 9 chapters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Computer Architecture** giải thích resource và execution substrate; **Operating Systems** quản lý process, memory và I/O, rồi **Programming Languages/Runtime** đặt semantics lên substrate đó.
 
 ## 4. Operating các hệ thống (systems / 시스템들) — 8 chapters
 
 Đã cover kernel/người dùng (user / 사용자) privilege, syscalls, processes/threads/scheduling/ngữ cảnh (context / 맥락) switching, synchronization/atomics/bộ nhớ (memory / 메모리) thứ tự (ordering / 순서)/deadlock, virtual bộ nhớ (memory / 메모리)/TLB/COW/mmap, filesystem/page bộ nhớ đệm (cache / 캐시)/journaling, containers/VM/namespaces/cgroups, IPC/signals/pipes/dùng chung (shared / 공유) bộ nhớ (memory / 메모리), boot/drivers/MMIO/DMA và blocking/non-blocking/async I/O.
 
-> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — Khoa học máy tính (computer science / 컴퓨터 과학) Basic Foundations**, **5. Programming Languages & thời gian chạy (runtime / 런타임) — 9 chapters** tiếp nhận điểm tựa từ **4. Operating các hệ thống (systems / 시스템들) — 8 chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. dữ liệu (data / 데이터) & Databases — 8 chapters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Programming Languages/Runtime** biến substrate thành type và control-flow contract; **Data/Databases** lưu, truy vấn và bảo toàn state theo contract đó.
 
 ## 5. Programming Languages & thời gian chạy (runtime / 런타임) — 9 chapters
 
@@ -46,25 +46,25 @@ Các chapter này đóng vai trò **foundation DSA** cho các lĩnh vực (domai
 
 Đã cover layering/encapsulation/packets; Ethernet/ARP/IP/subnet/routing/NAT; TCP/UDP/luồng (flow / 흐름)/congestion/BDP; DNS/HTTP/TLS; partial thất bại (failure / 실패)/thời gian (time / 시간)/causality/consistency/CAP; replication/sharding/quorum/consensus/Raft intuition; socket APIs, IPv6, firewall/VPN/MTU; forwarding vs routing, OSPF/BGP/AS/anycast; HTTP/2 framing, HTTP/3/QUIC và hiện đại (modern / 현대적) vận chuyển (transport / 전송) trade-offs.
 
-> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — Khoa học máy tính (computer science / 컴퓨터 과학) Basic Foundations**, **8. bảo mật (security / 보안) & độ tin cậy (reliability / 신뢰성) — 9 chapters** tiếp nhận điểm tựa từ **7. Networks & phân tán (distributed / 분산) các hệ thống (systems / 시스템들) — 9 chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Software các hệ thống (systems / 시스템들) — 8 chapters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Networks/Distributed Systems** đặt boundary và failure semantics; **Security/Reliability** kiểm soát authority, trust và recovery; **Software Systems** kết hợp chúng thành service.
 
 ## 8. bảo mật (security / 보안) & độ tin cậy (reliability / 신뢰성) — 9 chapters
 
 Đã cover threat modeling/trust/least privilege; cryptographic primitives/password hashing/AEAD/PKI; định danh (identity / 식별자)/authentication/authorization/session/OAuth-OIDC intuition; bộ nhớ (memory / 메모리)/injection vulnerabilities; testing/static/formal/fuzz/debugging; thử lại (retry / 재시도)/hết thời gian chờ (timeout / 타임아웃)/circuit breaker/bulkhead/khả năng quan sát (observability / 관측 가능성)/SLI-SLO; SOP/CORS/XSS/CSRF/SSRF/session web bảo mật (security / 보안); keys/secrets/certificates/KMS/HSM/rotation; phụ thuộc (dependency / 의존성)/bản dựng (build / 빌드) provenance/SBOM/CI supply-chain bảo mật (security / 보안).
 
-> **Chuyển mạch:** Ở chặng này của **Coverage kiểm tra (audit / 감사) — Khoa học máy tính (computer science / 컴퓨터 과학) Basic Foundations**, **9. Software các hệ thống (systems / 시스템들) — 8 chapters** tiếp nhận điểm tựa từ **8. bảo mật (security / 보안) & độ tin cậy (reliability / 신뢰성) — 9 chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) — 5 chapters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Software Systems** cho thấy runtime và service boundary; **Software Engineering** quản lý change, testing và delivery của các boundary đó.
 
 ## 9. Software các hệ thống (systems / 시스템들) — 8 chapters
 
 Đã cover modularity/API contracts; Git/bản dựng (build / 빌드)/link/gói (package / 패키지)/reproducibility; độ trễ (latency / 지연 시간)/thông lượng (throughput / 처리량)/queueing/sức chứa (capacity / 용량)/pools/scaling; trạng thái (state / 상태) placement/queues/backpressure; clocks/serialization/lược đồ (schema / 스키마) evolution/idempotency; caching/TTL/stampede/tải (load / 로드) balancing/CDN/consistent hashing; sự kiện (event / 이벤트)/command/log/stream delivery/thứ tự (order / 순서)/sự kiện (event / 이벤트) thời gian (time / 시간); monolith/services/dữ liệu (data / 데이터) quyền sở hữu (ownership / 소유권)/saga/gateway/mesh/Conway's Law.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coverage kiểm tra (audit / 감사) — Khoa học máy tính (computer science / 컴퓨터 과학) Basic Foundations**, **10. Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) — 5 chapters** tiếp nhận điểm tựa từ **9. Software các hệ thống (systems / 시스템들) — 8 chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. AI Foundations — 5 chapters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Software Engineering** cung cấp lifecycle và evidence; **AI Foundations** áp dụng chúng cho data, model, inference và evaluation.
 
 ## 10. Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) — 5 chapters
 
 Đã cover requirements/specification/acceptance criteria/traceability/risk-driven tiến trình (process / 프로세스); kiến trúc (architecture / 아키텍처) chất lượng (quality / 품질) attributes, coupling/cohesion, ADR, thông tin (information / 정보) hiding và patterns-by-context; đơn vị (unit / 단위)/tích hợp (integration / 통합)/E2E/đặc tả hợp đồng (contract / 계약)/thuộc tính (property / 속성)/fuzz/mutation/static xác minh (verification / 확인) chiến lược (strategy / 전략); CI/CD/cấu hình (config / 설정)/tính năng (feature / 기능) flags/triển khai (deployment / 배포)/cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션)/IaC/runbooks; maintenance/refactoring/legacy/technical debt/dữ liệu (data / 데이터) evolution/kiến thức (knowledge / 지식) debt/sunsetting.
 
-> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — Khoa học máy tính (computer science / 컴퓨터 과학) Basic Foundations**, **11. AI Foundations — 5 chapters** tiếp nhận điểm tựa từ **10. Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) — 5 chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. HCI & Computer Graphics — 5 chapters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **AI Foundations** làm rõ representation và decision; **HCI/Graphics** chuyển chúng thành perception, interaction và rendering boundary.
 
 ## 11. AI Foundations — 5 chapters
 
@@ -72,13 +72,13 @@ Các chapter này đóng vai trò **foundation DSA** cho các lĩnh vực (domai
 
 AI specialization như NLP, computer vision, reinforcement học tập (learning / 학습), robotics, foundation-model các hệ thống (systems / 시스템들) và MLOps đủ lớn để thành libraries riêng; chapter hiện tại cung cấp prerequisites và vocabulary để đi vào chúng.
 
-> **Chuyển mạch:** Ở chặng này của **Coverage kiểm tra (audit / 감사) — Khoa học máy tính (computer science / 컴퓨터 과학) Basic Foundations**, **12. HCI & Computer Graphics — 5 chapters** tiếp nhận điểm tựa từ **11. AI Foundations — 5 chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Computing, Society, Ethics & Profession — 4 chapters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **HCI/Graphics** cho biết hệ thống được cảm nhận và dùng thế nào; **Computing, Society, Ethics & Profession** đặt impact và responsibility vào context xã hội.
 
 ## 12. HCI & Computer Graphics — 5 chapters
 
 Đã cover mô hình tư duy (mental models / 사고 모델들)/phản hồi (feedback / 피드백)/human factors/Fitts/Hick/errors; giao diện (interface / 인터페이스) thông tin (information / 정보) kiến trúc (architecture / 아키텍처)/khả năng tiếp cận (accessibility / 접근성)/keyboard/focus/color/responsive/người dùng (user / 사용자) research; graphics coordinate spaces/matrices/projection/raster chuỗi xử lý (pipeline / 파이프라인)/shaders/độ sâu (depth / 깊이); sampling/color spaces/gamma/alpha/textures/raster-vs-ray-tracing/compression; multimedia frame timing/game vòng lặp (loop / 루프)/audio/video/synchronization/real-time hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Coverage kiểm tra (audit / 감사) — Khoa học máy tính (computer science / 컴퓨터 과학) Basic Foundations**, **13. Computing, Society, Ethics & Profession — 4 chapters** tiếp nhận điểm tựa từ **12. HCI & Computer Graphics — 5 chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Cross-domain Connections — 5 chapters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Computing/Society/Ethics** nêu boundary của use và harm; **Cross-domain Connections** nối các invariant về đúng owner ở domain khác.
 
 ## 13. Computing, Society, Ethics & Profession — 4 chapters
 
@@ -86,7 +86,7 @@ AI specialization như NLP, computer vision, reinforcement học tập (learning
 
 Legal specifics thay đổi theo jurisdiction/thời gian (time / 시간) nên chapter law chỉ cung cấp conceptual map, không thay hiện tại (current / 현재) legal research/advice.
 
-> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — Khoa học máy tính (computer science / 컴퓨터 과학) Basic Foundations**, **14. Cross-domain Connections — 5 chapters** tiếp nhận điểm tựa từ **13. Computing, Society, Ethics & Profession — 4 chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coverage đối chiếu với một curriculum CS rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cross-domain Connections** ghi đường quay lại canonical owner; **Coverage đối chiếu curriculum CS rộng** kiểm tra gap mà không biến gap thành duplicate.
 
 ## 14. Cross-domain Connections — 5 chapters
 
@@ -108,7 +108,7 @@ Các lĩnh vực (domain / 도메인) sau đủ lớn để tạo thư viện ki
 
 Việc không tạo 20–50 files cho mỗi specialization là **conceptual ranh giới (boundary / 경계)**, không phải missing foundational topic.
 
-> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — Khoa học máy tính (computer science / 컴퓨터 과학) Basic Foundations**, **Chất lượng (quality / 품질) kiểm tra (audit / 감사) criteria** tiếp nhận điểm tựa từ **Các lĩnh vực (domain / 도메인) cố ý không nhồi vào Basic thư viện (library / 라이브러리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Maintenance quy tắc (rule / 규칙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Các domain cố ý không nhồi vào Basic** giữ boundary của thư viện; **Quality criteria** kiểm tra boundary đó, rồi **Maintenance rules** bảo vệ nó qua các lần cập nhật.
 
 ## Chất lượng (quality / 품질) kiểm tra (audit / 감사) criteria
 
@@ -116,7 +116,7 @@ Một chapter chỉ được coi là đạt khi có bài toán (problem / 문제
 
 Vòng comprehensive expansion tập trung xử lý ba loại gap: concept có mặt nhưng quá implicit; foundational lĩnh vực (domain / 도메인) hoàn toàn chưa có; và môi trường vận hành (production / 운영 환경) cơ chế (mechanism / 메커니즘) thường bị khung phần mềm (framework / 프레임워크)/API che khuất. Kết quả là thư viện (library / 라이브러리) tăng từ 59 lên **100 topic chapters** mà vẫn giữ ranh giới (boundary / 경계) theo mô hình tư duy (mental model / 사고 모델) thay vì chia tệp (file / 파일) theo độ khó.
 
-> **Chuyển mạch:** Ở chặng này của **Coverage kiểm tra (audit / 감사) — Khoa học máy tính (computer science / 컴퓨터 과학) Basic Foundations**, **Maintenance quy tắc (rule / 규칙)** tiếp nhận điểm tựa từ **Chất lượng (quality / 품질) kiểm tra (audit / 감사) criteria** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Maintenance rules** khép coverage bằng owner, link và evidence; phần chuyên sâu quay về chapter canonical thay vì mở rộng mù.
 
 ## Maintenance quy tắc (rule / 규칙)
 
