@@ -20,6 +20,8 @@ Các mẫu tiếp diễn như flag, pennant, wedge và rectangle mô tả co h�
 
 Candlestick biểu diễn quan hệ mở–đóng và biên độ trong một kỳ. Thân nến cho biết bên thắng tương đối, bóng nến cho biết giá bị từ chối ở đâu. Các nhóm như engulfing, doji, hammer, shooting star, harami và morning/evening star được dùng để nhận diện đảo chiều hoặc do dự. Một nến đơn không đủ; cần vị trí của nó trong xu hướng, nến xác nhận và khối lượng. Nếu bỏ bối cảnh, cùng một doji có thể chỉ là nhiễu.
 
+Trong source, `Doji` được dùng cho trạng thái mở và đóng gần nhau; `Harami` là nến nhỏ nằm trong biên nến trước; `morning star` và `evening star` là các cụm ba nến thường được đọc như chuyển đổi giữa áp lực bán và mua. Cách reconstruct đúng là giữ cấu trúc nhiều nến và điều kiện xác nhận, không biến tên mẫu thành tín hiệu mua/bán tự động.
+
 ## 5. Chỉ báo động lượng và biến động
 
 MACD so sánh các EMA để mô tả động lượng và giao cắt. RSI chuẩn hóa mức tăng/giảm gần đây thành dao động; vùng “quá mua/quá bán” không đồng nghĩa giá phải đảo chiều, vì xu hướng mạnh có thể duy trì lâu. Stochastic so sánh giá đóng cửa với biên độ gần đây. Bollinger Bands dùng trung bình và độ lệch chuẩn để tạo dải biến động; Envelope dùng khoảng cách phần trăm hoặc quy tắc tương tự. Dải mở rộng cho biết biến động tăng, không cho biết hướng.
@@ -30,6 +32,8 @@ OBV (On-Balance Volume) cộng/trừ khối lượng theo hướng đóng cửa 
 
 Dow Theory đặt trọng tâm vào xu hướng chính, xu hướng phụ và dao động ngắn hơn; xác nhận giữa các chỉ số và khối lượng giúp tránh đọc một thị trường đơn lẻ. Elliott Wave diễn tả nhịp động lực và điều chỉnh lồng nhau. Vì việc gán nhãn sóng phụ thuộc cách đếm, nó cần được xem là kịch bản có điều kiện, không là bằng chứng duy nhất. Khi cấu trúc giá không thỏa điều kiện, phải bỏ nhãn thay vì ép dữ liệu vào lý thuyết.
 
+Source cũng dùng nguyên lý sóng cùng dãy Fibonacci `1, 1, 2, 3, 5, 8, ...` và các tỷ lệ 38,2%, 61,8%, 1,618 và 2,618 để minh họa vùng điều chỉnh/mục tiêu. Các tỷ lệ này là mốc hình học được quan sát trong mô hình, không phải định luật cung–cầu. Chúng chỉ có giá trị khi gắn với cấu trúc đỉnh–đáy, điểm vô hiệu hóa và rủi ro vị thế.
+
 ## 7. Quy trình kiểm thử một tín hiệu
 
 Trước khi dùng tín hiệu, ghi rõ: dữ liệu có sẵn tại thời điểm nào; quy tắc vào/ra; phí và trượt giá; regime nào làm tín hiệu thất bại; và benchmark nào để so sánh. Kiểm thử ngoài mẫu, tránh look-ahead và ghi nhật ký quyết định. Đây là chỗ nối tới [Systematic Risk, Backtest and Execution](../../investing/05_trading_derivatives/02_SYSTEMATIC_RISK_BACKTEST_EXECUTION.md), nơi phần phương pháp thuộc owner canonical được đào sâu.
@@ -37,4 +41,3 @@ Trước khi dùng tín hiệu, ghi rõ: dữ liệu có sẵn tại thời đi�
 ## Chốt và bàn giao
 
 Invariant là “tín hiệu kỹ thuật mô tả hành vi giá với độ trễ và xác suất; nó không tạo ra giá trị nội tại”. Bài 4 đặt tín hiệu vào chiến lược, danh mục và benchmark, rồi kiểm tra một chiến lược có sống được sau chi phí hay không. Xem [Chiến lược và chỉ số](./04_INVESTMENT_STRATEGIES_AND_INDICES.md).
-

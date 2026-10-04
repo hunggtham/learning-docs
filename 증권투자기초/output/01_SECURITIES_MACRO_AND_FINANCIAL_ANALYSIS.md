@@ -32,6 +32,8 @@ Phân tích cơ bản đi từ ngành và môi trường kinh tế đến doanh 
 
 Khi đọc một khoản mục, cần giữ ba lớp: định nghĩa kế toán, cơ chế kinh tế và giới hạn so sánh. Doanh thu có thể tăng nhưng vốn lưu động hút tiền; lợi nhuận có thể tăng nhưng do đánh giá lại; tài sản ghi sổ có thể khác xa giá trị thay thế. Vì vậy, hãy đi từ báo cáo sang KPI ngành, chất lượng lợi nhuận và dòng tiền trước khi dùng multiple ở bài 2. Phần chuyên sâu thuộc owner [Financial Statements and Accounting](../../investing/03_company_analysis/01_FINANCIAL_STATEMENTS_AND_ACCOUNTING.md).
 
+Source còn đặt báo cáo vào một quy trình phân tích thay vì xem từng bảng riêng lẻ: bắt đầu ở ngành và vị thế cạnh tranh, đọc bảng cân đối để biết nguồn lực–nghĩa vụ, đọc kết quả kinh doanh để theo dõi doanh thu–chi phí–lợi nhuận, rồi đối chiếu lưu chuyển tiền tệ và thuyết minh. IFRS/IASC và K-IFRS định nghĩa cách ghi nhận, đo lường và trình bày; chúng giúp so sánh có kỷ luật nhưng không xóa khác biệt mô hình kinh doanh. Vì thế cùng một chỉ tiêu phải được hỏi thêm “được tạo ra bởi hoạt động nào, có lặp lại không, và chuyển thành tiền khi nào?”.
+
 ## 5. ROI và ROE
 
 ROI (Return on Investment) đo lợi nhuận so với khoản đầu tư; ROE (Return on Equity) đo lợi nhuận quy cho vốn chủ sở hữu. Dạng khái quát:
@@ -46,4 +48,3 @@ ROE cao có thể đến từ biên lợi nhuận tốt, sử dụng tài sản 
 ## Chốt và bàn giao
 
 Mental model của bài này là “điều kiện kinh tế → hoạt động doanh nghiệp → dòng tiền/quyền lợi → thước đo”. Ranh giới quan trọng là chỉ báo vĩ mô và tỷ số kế toán đều là phép đo có định nghĩa, không phải lời tiên tri. Bài 2 dùng dòng tiền, suất sinh lợi yêu cầu và tỷ số đó để trả lời doanh nghiệp đáng giá bao nhiêu; hãy đọc tiếp [Định giá cổ phiếu](./02_EQUITY_VALUATION_AND_MULTIPLES.md).
-

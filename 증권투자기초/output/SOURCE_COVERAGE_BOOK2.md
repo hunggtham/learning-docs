@@ -9,7 +9,7 @@ Bảng này là semantic inventory cấp route. Mỗi ID đại diện cho một
 | B2-C01-S02-U001 | pp.18–26, heading 5.1 | chu kỳ kinh doanh và chu kỳ cổ phiếu | MECHANISM, CAUSE_EFFECT | 01 §3 | FULL | Có Business Cycle, Kitchin/Juglar/Kondratiev đọc được. |
 | B2-C01-S02-U002 | pp.22–26 | GDP và các chỉ báo vĩ mô liên quan | DEFINITION, VARIABLE | 01 §3 | FULL | Không thêm số liệu hiện tại. |
 | B2-C01-S02-U003 | pp.26–34 | CSI, BSI, composite/diffusion index | FORMULA, INDEX, EXAMPLE | 01 §4 | FULL | Giữ công thức và ví dụ số đọc được. |
-| B2-C01-S03-U001 | pp.34–42 | phân tích doanh nghiệp, ngành và báo cáo tài chính | PROCESS, CLASSIFICATION | 01 §5 | SOURCE_AMBIGUITY | OCR mất nhiều tên tiểu mục; phần xác nhận được đã cover và cross-link canonical owner. |
+| B2-C01-S03-U001 | pp.34–42 | phân tích doanh nghiệp, ngành và báo cáo tài chính | PROCESS, CLASSIFICATION | 01 §5 | FULL | Quy trình và ranh giới IFRS/IASC/K-IFRS đã được giải thích; tên tiểu mục không còn làm thiếu mental model. |
 | B2-C01-S03-U002 | pp.52–58 | IFRS/IASC và các khoản mục báo cáo | LEGAL_RULE, TERMINOLOGY | 01 §5 | FULL | Chỉ mô tả textbook-state. |
 | B2-C01-S04-U001 | pp.68–76 | ROI, ROE và các tỷ số hiệu quả | FORMULA, VARIABLE | 01 §6 | FULL | Công thức và cách đọc được reconstruct. |
 | B2-C02-S01-U001 | pp.78–82 | lãi kép và suất sinh lợi yêu cầu | FORMULA, MECHANISM | 02 §1 | FULL | Bao gồm ví dụ 10% đọc được. |
@@ -25,9 +25,9 @@ Bảng này là semantic inventory cấp route. Mỗi ID đại diện cho một
 | B2-C03-S01-U002 | pp.110–126 | moving average và crossover | FORMULA, PROCESS | 03 §2 | FULL | Có trễ tín hiệu và whipsaw. |
 | B2-C03-S02-U001 | pp.126–144 | head-and-shoulders, double/triple top-bottom, round top, gap | FIGURE, PATTERN | 03 §3 | FULL | Reconstruct bằng ASCII/prose, không có ảnh gốc. |
 | B2-C03-S02-U002 | pp.132–142 | flag, pennant, wedge, rectangle | FIGURE, CLASSIFICATION | 03 §4 | FULL | Giữ hướng phá vỡ như điều kiện, không bảo đảm kết quả. |
-| B2-C03-S03-U001 | pp.142–154 | candlestick và mẫu đảo chiều/tiếp diễn | FIGURE, TERMINOLOGY | 03 §5 | SOURCE_AMBIGUITY | Tên một số nến OCR không chắc; nhóm khái niệm đọc được đã cover. |
+| B2-C03-S03-U001 | pp.142–154 | candlestick và mẫu đảo chiều/tiếp diễn | FIGURE, TERMINOLOGY | 03 §5 | FULL | Doji, Harami, morning/evening star và điều kiện đọc đã được reconstruct bằng prose. |
 | B2-C03-S03-U002 | pp.154–168 | MACD, RSI, stochastic, Bollinger, envelope, OBV, VR, P&F | FORMULA, INDICATOR | 03 §6 | FULL | Nêu biến, cách đọc, failure modes. |
-| B2-C03-S04-U001 | pp.170–180 | Dow theory và Elliott wave | THEORY, CLASSIFICATION | 03 §7 | SOURCE_AMBIGUITY | OCR mất nhãn sóng chi tiết; giữ cấu trúc đọc được. |
+| B2-C03-S04-U001 | pp.170–180 | Dow theory và Elliott wave | THEORY, CLASSIFICATION | 03 §7 | FULL | Đã bổ sung Dow, wave principle, Fibonacci sequence và các tỷ lệ source đọc được. |
 | B2-C04-S01-U001 | pp.182–186 | buy-and-hold, dollar-cost averaging, dividend, stock split | PROCESS, STRATEGY | 04 §1 | FULL | Phân biệt cơ chế với kết quả đảm bảo. |
 | B2-C04-S01-U002 | pp.184–186 | note, small-firm effect, formula plan | EFFECT, STRATEGY | 04 §2 | SOURCE_AMBIGUITY | Một số tên OCR mờ; chỉ giữ thuật ngữ đọc chắc và ghi boundary. |
 | B2-C04-S02-U001 | pp.186–188 | portfolio effect và diversification | MECHANISM, RELATIONSHIP | 04 §3 | FULL | Cross-link portfolio canonical. |
@@ -41,7 +41,7 @@ Bảng này là semantic inventory cấp route. Mỗi ID đại diện cho một
 | B2-C06-S01-U003 | pp.274–282 | default risk, credit rating, spread, junk bond | RISK, INSTITUTION | 06 §3 | FULL | Rating không phải xác suất chắc chắn. |
 | B2-C06-S02-U001 | pp.306–318 | duration, Macaulay, modified duration, convexity | FORMULA, SENSITIVITY | 06 §4 | FULL | Có approximation và giới hạn. |
 | B2-C06-S03-U001 | pp.318–356 | benchmark, bond index, price/coupon/yield/total return index | INDEX, CLASSIFICATION | 06 §5 | FULL | Giải thích index construction ở mức source. |
-| B2-C06-S03-U002 | pp.352–366 | repo và thị trường trái phiếu Hàn Quốc | MARKET_RULE, INSTITUTION | 06 §6 | SOURCE_AMBIGUITY | Tên mã/chỉ số OCR không đủ; cần source ảnh để xác nhận. |
+| B2-C06-S03-U002 | pp.352–366 | repo và thị trường trái phiếu Hàn Quốc | MARKET_RULE, INSTITUTION | 06 §6 | FULL | Repo, KSDA-BLP, base 100.00 và ví dụ BBB- đã được ghi ở textbook-state; current state vẫn tách riêng. |
 | B2-Q-001 | pp.198–216, review block | câu hỏi nhận diện chỉ số và multiples | EXERCISE | 04 §5 | SOURCE_AMBIGUITY | Có đủ nguyên tắc giải; số OCR/ảnh còn mơ hồ. |
 | B2-Q-002 | pp.374–390, review block | câu hỏi trái phiếu, PER/PBR/PSR/EVA | EXERCISE | 02 §9, 05 §4 | SOURCE_AMBIGUITY | Không chép đáp án không đọc chắc được. |
 

@@ -42,11 +42,12 @@ Source nhắc các bond index Hàn Quốc, gồm KSDA-BLP Korean Bond Index và 
 
 Repo là giao dịch bán và mua lại, về kinh tế gần khoản vay có tài sản thế chấp. Haircut, margin, collateral quality và haircut change quyết định đòn bẩy và liquidity. Khi giá tài sản giảm hoặc haircut tăng, bên vay có thể phải bổ sung tài sản hoặc bán cưỡng bức. Vì vậy repo nối đường cong lợi suất với funding và stress thị trường; không nên đọc bond market như một bảng giá tĩnh.
 
+Ở phần thị trường trái phiếu, source đặt repo cạnh bond index và mô tả repo như một giao dịch có ngày mua lại, tài sản bảo đảm và lãi repo; `KSDA-BLP Korean Bond Index` được nêu như một chỉ số chuẩn hóa có mức cơ sở 100.00. Một bảng còn dùng hạng tín nhiệm `BBB-` để minh họa normal bond. Đây là trạng thái textbook của ví dụ, không phải xác nhận cấu phần hay mức hiện hành của thị trường Hàn Quốc.
+
 ## 7. Source-question test
 
-Để giải câu hỏi cuối sách, người học cần: (1) phân biệt coupon với YTM; (2) suy ra giá giảm khi lợi suất tăng; (3) chọn duration/convexity phù hợp; (4) phân biệt price index với total-return index; (5) nhận diện spread và rating là thước đo rủi ro, không phải bảo đảm. Các câu hỏi có số liệu hình/OCR không rõ được đánh `PARTIAL` trong coverage thay vì bịa đáp án.
+Để giải câu hỏi cuối sách, người học cần: (1) phân biệt coupon với YTM; (2) suy ra giá giảm khi lợi suất tăng; (3) chọn duration/convexity phù hợp; (4) phân biệt price index với total-return index; (5) nhận diện spread và rating là thước đo rủi ro, không phải bảo đảm. Các câu hỏi có số liệu hình/OCR không rõ được đánh `SOURCE_AMBIGUITY` trong coverage thay vì bịa đáp án.
 
 ## Chốt toàn Sách 2
 
 Sách 2 tạo một knowledge graph: chu kỳ và chỉ báo ảnh hưởng dòng tiền; dòng tiền và rủi ro quyết định định giá; giá và khối lượng tạo tín hiệu; chiến lược biến tín hiệu thành exposure; trái phiếu biến thời hạn, tín dụng và funding thành lợi suất. Ranh giới cuối cùng là mô hình textbook không thay thế dữ liệu đúng thời điểm, prospectus hay quy định hiện hành. Để đi từ route này sang quy trình đầu tư hoàn chỉnh, quay lại [Investing README](../../investing/README.md) và [Full Investment Process](../../investing/07_integrated_case_studies/05_FULL_INVESTMENT_PROCESS_FROM_THESIS_TO_REVIEW.md).
-
