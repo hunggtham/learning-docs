@@ -10,7 +10,7 @@ Chuỗi nhân quả (causal / 인과적) trung tâm:
 
 **relief/climate/water → settlement and livelihood → tài nguyên (resource / 자원)/agriculture zones → corridor/cổng (port / 포트) → urban growth → trade/giá trị (value / 값) capture → regional inequality and role**.
 
-> **Chuyển mạch:** Trong **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **“Plateau continent” và hệ quả về river vận chuyển (transport / 전송)** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Basin và highland tạo regional cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Thesis không gian đặt Châu Phi trong quan hệ địa hình–khí hậu–kết nối; **“plateau continent”** cụ thể hóa bằng độ cao, độ dốc và năng lực vận chuyển của sông. **Basin và highland** tiếp theo phân chia các regional structure mà dòng nước và dân cư phải đi qua.
 
 ## “Plateau continent” và hệ quả về river vận chuyển (transport / 전송)
 
@@ -18,7 +18,7 @@ Phần lớn surface có elevation tương đối cao so với nhiều lục đ�
 
 Chênh cao hỗ trợ hydropower nhưng làm continuous inland điều hướng (navigation / 내비게이션) từ ocean khó ở nhiều basin. Một river dài không tự động là vận chuyển (transport / 전송) highway.
 
-> **Chuyển mạch:** Ở chặng này của **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Basin và highland tạo regional cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **“Plateau continent” và hệ quả về river vận chuyển (transport / 전송)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **East African Rift: hazard và opportunity cùng nguồn gốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cao nguyên quyết định hướng chảy và độ dốc, còn **basin và highland** gom chúng thành các đơn vị không gian có ràng buộc khác nhau. **East African Rift** cho thấy một cấu trúc kiến tạo vừa tạo hồ, đất và khoáng sản vừa tạo hazard.
 
 ## Basin và highland tạo regional cấu trúc (structure / 구조)
 
@@ -26,7 +26,7 @@ Congo Basin, Ethiopian/East African highland, southern plateau và Sahara–Sahe
 
 Địa hình kiểm road chi phí (cost / 비용), hydropower site, rainfall và thị trường (market / 시장) truy cập (access / 접근). Một remote highland city có effective distance tới cổng (port / 포트) lớn hơn map distance gợi ý.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Basin và highland tạo regional cấu trúc (structure / 구조)** nêu điều cần giải thích; **East African Rift: hazard và opportunity cùng nguồn gốc** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **ITCZ và seasonal rainfall** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Rift là ví dụ basin–highland đang hình thành, nơi lợi ích nước và địa nhiệt đi kèm động đất, núi lửa và sụt lún. **ITCZ và seasonal rainfall** quyết định khi nào các basin đó nhận nước và rủi ro lũ tăng.
 
 ## East African Rift: hazard và opportunity cùng nguồn gốc
 
@@ -34,7 +34,7 @@ Continental rifting tạo valley, escarpment, deep lake, volcano và seismicity.
 
 Đây là ví dụ điển hình: vật lý (physical / 물리적) tiến trình (process / 프로세스) không chỉ tạo hazard hay tài nguyên (resource / 자원); nó tạo **bundle of các ràng buộc (constraints / 제약조건들) and opportunities**.
 
-> **Chuyển mạch:** Trong **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **East African Rift: hazard và opportunity cùng nguồn gốc** nêu điều cần giải thích; **ITCZ và seasonal rainfall** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Sahara và selective connectivity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **ITCZ và seasonal rainfall** giải thích nhịp mưa theo mùa và độ lệch bắc–nam của đai ẩm. Khi đai đó rút về, **Sahara và selective connectivity** cho thấy sa mạc không phải khoảng trống tuyệt đối mà là mạng hành lang có chọn lọc.
 
 ## ITCZ và seasonal rainfall
 
@@ -42,7 +42,7 @@ ITCZ di chuyển (migration / 마이그레이션) làm rainfall belt dịch bắ
 
 Agriculture quan tâm onset, length và dry spell chứ không chỉ annual total. Một năm có tổng rain gần normal nhưng phân bố timing xấu vẫn có thể làm crop thất bại (fail / 실패).
 
-> **Chuyển mạch:** Ở chặng này của **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Sahara và selective connectivity** tiếp nhận điểm tựa từ **ITCZ và seasonal rainfall** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sahel: climate variability và mobility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sahara phản ánh giới hạn ẩm do ITCZ tạo ra nhưng các oasis, tuyến thương mại và bờ biển vẫn duy trì **selective connectivity**. **Sahel** nằm ngay vùng chuyển tiếp, nên climate variability nhanh chóng biến thành mobility và cạnh tranh tài nguyên.
 
 ## Sahara và selective connectivity
 
@@ -50,7 +50,7 @@ Sahara có population density thấp nhưng không phải blank không gian (spa
 
 Khi friction rất cao, mạng (network / 네트워크) có ít edge hơn và mỗi edge trở nên trọng yếu (critical / 중요). Đây là reason border post, road điều kiện (condition / 조건) và fuel/water logistics có vai trò lớn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Sahel: climate variability và mobility** tiếp nhận điểm tựa từ **Sahara và selective connectivity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Congo Basin: water–forest–carbon hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sahel** biến dao động mưa, chăn thả và tuyến di chuyển thành một hệ thống thích nghi không ổn định. Đi xuống vùng ẩm hơn, **Congo Basin** cho thấy nước, rừng và carbon tạo một feedback khác hẳn.
 
 ## Sahel: climate variability và mobility
 
@@ -58,7 +58,7 @@ Sahel là chuyển tiếp (transition / 전이) zone giữa hyper-arid north và
 
 Fixed administrative ranh giới (boundary / 경계) hay land enclosure có thể xung đột (conflict / 충돌) với ecological lô-gic (logic / 논리) của seasonal pasture. Mobility không tự động là “lạc hậu”; trong variable môi trường (environment / 환경) nó có thể là rủi ro (risk / 위험) management.
 
-> **Chuyển mạch:** Trong **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Congo Basin: water–forest–carbon hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Sahel: climate variability và mobility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nile và upstream–downstream phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Congo Basin** giữ nước qua rừng, đất ngập và sông, đồng thời lưu trữ carbon quy mô lớn. **Nile** chuyển trọng tâm sang upstream–downstream dependency, nơi nguồn nước nằm xa trung tâm dân cư và chính trị.
 
 ## Congo Basin: water–forest–carbon hệ thống (system / 시스템)
 
@@ -66,7 +66,7 @@ Congo rainforest tương tác rainfall, evapotranspiration, carbon và biodivers
 
 Forest mất mát (loss / 손실) thay runoff, habitat và moisture recycling. Nhưng impact phụ thuộc quy mô (scale / 규모), soil và land-use mẫu (pattern / 패턴); slogan “forest = lungs” không đủ cho nhân quả (causal / 인과적) phân tích (analysis / 분석).
 
-> **Chuyển mạch:** Ở chặng này của **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Nile và upstream–downstream phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **Congo Basin: water–forest–carbon hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Niger, Zambezi và các lô-gic (logic / 논리) basin khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Nile cho thấy phụ thuộc lưu vực qua biên giới và mùa nước; cơ chế đó không thể áp nguyên xi cho mọi nơi. **Niger và Zambezi** cung cấp các basin logic khác về nguồn, phù sa, đập và cửa sông.
 
 ## Nile và upstream–downstream phụ thuộc (dependency / 의존성)
 
@@ -74,7 +74,7 @@ Nile nối highland/wetter nguồn (source / 소스) region với extremely dry 
 
 Đây là classic **functional basin vượt political ranh giới (boundary / 경계)**. Reservoir, irrigation, evaporation và timing phải được phân tích theo basin quy mô (scale / 규모).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Niger, Zambezi và các lô-gic (logic / 논리) basin khác nhau** tiếp nhận điểm tựa từ **Nile và upstream–downstream phụ thuộc (dependency / 의존성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Great Lakes và inland connectivity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** So sánh Niger–Zambezi giúp tách tác động của khí hậu, địa hình và thể chế quản lý nước khỏi nhãn “sông lớn”. **Great Lakes** tiếp tục câu chuyện bằng inland connectivity qua hồ, cảng và hành lang xuyên biên giới.
 
 ## Niger, Zambezi và các lô-gic (logic / 논리) basin khác nhau
 
@@ -82,7 +82,7 @@ Niger hỗ trợ floodplain agriculture, city và ecosystem ở West Africa; Zam
 
 Không nên áp cùng một reservoir/irrigation solution cho mọi basin. Slope, seasonality, sediment, ecology và settlement khác nhau làm sự đánh đổi (trade-off / 트레이드오프) khác.
 
-> **Chuyển mạch:** Trong **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Great Lakes và inland connectivity** tiếp nhận điểm tựa từ **Niger, Zambezi và các lô-gic (logic / 논리) basin khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coast, cổng (port / 포트) và landlocked phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hồ lớn nối nội địa với các tuyến vận tải nhưng chi phí chuyển tải vẫn quan trọng. **Coast, port và landlocked dependency** xác định nơi nào tiếp cận biển trực tiếp, nơi nào phải trả phí qua lãnh thổ khác.
 
 ## Great Lakes và inland connectivity
 
@@ -90,7 +90,7 @@ Large lakes ở East/Central Africa tạo fisheries, water, cổng (port / 포�
 
 Regional tích hợp (integration / 통합) cần **lake/road/rail/cổng (port / 포트) chuỗi (chain / 사슬)**, không chỉ một chế độ (mode / 모드).
 
-> **Chuyển mạch:** Ở chặng này của **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Coast, cổng (port / 포트) và landlocked phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **Great Lakes và inland connectivity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hạ tầng (infrastructure / 인프라) legacy và đường dẫn (path / 경로) dependence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Vị trí ven biển hay landlocked chuyển thành lợi thế chỉ khi có port và corridor hoạt động. **Infrastructure legacy và path dependence** giải thích vì sao các tuyến lịch sử tiếp tục định hình chi phí kết nối hiện tại.
 
 ## Coast, cổng (port / 포트) và landlocked phụ thuộc (dependency / 의존성)
 
@@ -98,7 +98,7 @@ Nhiều economy phụ thuộc vài coastal gateway. Landlocked trạng thái (st
 
 Đây là **corridor geography**: môi trường vận hành (production / 운영 환경) zone/mine → road/rail → border → seaport → ocean tuyến (route / 경로). Weakest link có thể quyết định total chi phí (cost / 비용).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Coast, cổng (port / 포트) và landlocked phụ thuộc (dependency / 의존성)** xác định đầu vào; **Hạ tầng (infrastructure / 인프라) legacy và đường dẫn (path / 경로) dependence** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Population growth là spatial tiến trình (process / 프로세스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Port, corridor và legacy infrastructure đặt khung cho nơi dân cư và việc làm tập trung, nhưng không quyết định duy nhất kết quả. **Population growth** cần được đọc như một spatial process tương tác với đất, nước và cơ hội.
 
 ## Hạ tầng (infrastructure / 인프라) legacy và đường dẫn (path / 경로) dependence
 
@@ -106,7 +106,7 @@ Nhiều historical rail line tập trung nối extraction zone với cổng (por
 
 New road/rail có thể thay mẫu (pattern / 패턴) nhưng đường dẫn (path / 경로) dependence mạnh vì city, land thị trường (market / 시장) và supplier đã tích lũy quanh old mạng (network / 네트워크).
 
-> **Chuyển mạch:** Trong **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Hạ tầng (infrastructure / 인프라) legacy và đường dẫn (path / 경로) dependence** xác định đầu vào; **Population growth là spatial tiến trình (process / 프로세스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Urbanization không nhất thiết đi theo manufacturing-first mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Population growth** phân bố không đều theo basin, coast, corridor và climate; đó là bản đồ nhu cầu chứ chưa phải tăng trưởng tự động. **Urbanization** vì vậy có thể đi qua dịch vụ và informal economy, không nhất thiết manufacturing-first.
 
 ## Population growth là spatial tiến trình (process / 프로세스)
 
@@ -114,7 +114,7 @@ New road/rail có thể thay mẫu (pattern / 패턴) nhưng đường dẫn (pa
 
 Demographic dividend chỉ xuất hiện khi education, health, housing, vận chuyển (transport / 전송) và productive employment hấp thụ labor force. Age cấu trúc (structure / 구조) là potential, không phải guarantee.
 
-> **Chuyển mạch:** Ở chặng này của **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Population growth là spatial tiến trình (process / 프로세스)** xác định đầu vào; **Urbanization không nhất thiết đi theo manufacturing-first mô hình (model / 모델)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Informal economy và hidden urban mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Urbanization không theo một trình tự công nghiệp duy nhất; nó tạo các mạng việc làm, nhà ở và logistics chính thức–phi chính thức. **Informal economy và hidden urban network** làm lộ phần vận hành mà số liệu hành chính thường bỏ sót.
 
 ## Urbanization không nhất thiết đi theo manufacturing-first mô hình (model / 모델)
 
@@ -122,7 +122,7 @@ Lagos, Cairo, Kinshasa, Nairobi, Johannesburg, Addis Ababa và nhiều city có 
 
 Urban growth có thể mạnh dù formal manufacturing share chưa cao, vì administration, services và informal economy cũng hút population. Điều này tạo housing/hạ tầng (infrastructure / 인프라) challenge khác classic European industrialization.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Informal economy và hidden urban mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Urbanization không nhất thiết đi theo manufacturing-first mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Agriculture: climate chỉ là một tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Informal urban networks** hấp thụ lao động và dịch vụ nhưng phụ thuộc vào dòng hàng, nước và giá đất. **Agriculture** cần được nhìn như một layer của cùng hệ thống, nơi climate là điều kiện chứ không phải lời giải duy nhất.
 
 ## Informal economy và hidden urban mạng (network / 네트워크)
 
@@ -130,7 +130,7 @@ Informal trade/dịch vụ (service / 서비스) thường bám thị trường 
 
 Satellite night light, mobile dữ liệu (data / 데이터) và household survey bổ sung bằng chứng (evidence / 증거) nhưng mỗi nguồn (source / 소스) có độ lệch (bias / 편향). Data-poor không có nghĩa activity-poor.
 
-> **Chuyển mạch:** Trong **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Agriculture: climate chỉ là một tầng (layer / 계층)** tiếp nhận điểm tựa từ **Informal economy và hidden urban mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài nguyên (resource / 자원) belt và câu hỏi giá trị (value / 값) capture** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Nông nghiệp nối vùng nông thôn với mạng đô thị qua lương thực, lao động và logistics; climate chỉ là một tầng trong bài toán đó. **Resource belt và value capture** chuyển sang câu hỏi ai giữ lại giá trị từ đất và khoáng sản.
 
 ## Agriculture: climate chỉ là một tầng (layer / 계층)
 
@@ -138,7 +138,7 @@ Rainfed farming, irrigated agriculture, cash crop, livestock và Mediterranean h
 
 Post-harvest mất mát (loss / 손실) làm trường dữ liệu (field / 필드) đầu ra (output / 출력) khác thị trường (market / 시장) supply. Cold chuỗi (chain / 사슬) và rural road có thể tạo giá trị (value / 값) ngang với increase yield trong một số ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Ở chặng này của **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Agriculture: climate chỉ là một tầng (layer / 계층)** nêu điều cần giải thích; **Tài nguyên (resource / 자원) belt và câu hỏi giá trị (value / 값) capture** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Năng lượng (energy / 에너지) geography: potential khác usable hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Resource belt và value capture** buộc phân biệt trữ lượng, quyền khai thác, chế biến và phần giá trị ở lại địa phương. **Energy geography** tiếp tục phân biệt potential tự nhiên với usable system có truyền tải và độ tin cậy.
 
 ## Tài nguyên (resource / 자원) belt và câu hỏi giá trị (value / 값) capture
 
@@ -146,7 +146,7 @@ Copper/cobalt, gold, bauxite, iron ore, oil/gas và other tài nguyên (resource
 
 Economic kết quả (outcome / 결과) phụ thuộc giá trị (value / 값) chuỗi (chain / 사슬). Nếu extraction tại A, refining tại B, manufacturing tại C, gross export từ A không đồng nghĩa A giữ phần lớn giá trị (value / 값).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Tài nguyên (resource / 자원) belt và câu hỏi giá trị (value / 값) capture** nêu điều cần giải thích; **Năng lượng (energy / 에너지) geography: potential khác usable hệ thống (system / 시스템)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Trade và regional thị trường (market / 시장)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Một resource belt chỉ tạo tăng trưởng khi năng lượng, đường vận tải và thể chế cho phép value capture. **Trade và regional markets** là nơi kiểm tra các điều kiện đó qua luồng hàng và giá.
 
 ## Năng lượng (energy / 에너지) geography: potential khác usable hệ thống (system / 시스템)
 
@@ -154,7 +154,7 @@ Solar, wind, hydro và geothermal potential lớn ở nhiều subregion nhưng t
 
 Power plant xa tải (load / 로드) cần transmission; weak grid làm generation sức chứa (capacity / 용량) không chuyển thành reliable electricity. năng lượng (energy / 에너지) geography phải đọc **tài nguyên (resource / 자원) + mạng (network / 네트워크) + hệ thống (system / 시스템) thao tác (operation / 연산)**.
 
-> **Chuyển mạch:** Trong **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Trade và regional thị trường (market / 시장)** tiếp nhận điểm tựa từ **Năng lượng (energy / 에너지) geography: potential khác usable hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Climate rủi ro (risk / 위험) và exposure growth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Trade và regional markets** phản ánh network, năng lượng và khả năng tiếp cận cảng hơn là chỉ khoảng cách địa lý. Các mạng đó cũng phân bố exposure, nên **climate risk** phải gắn với tài sản, dân cư và năng lực ứng phó.
 
 ## Trade và regional thị trường (market / 시장)
 
@@ -162,7 +162,7 @@ Map adjacency không bảo đảm trade lớn. Border delay, road chất lượn
 
 Một coastal economy đôi khi trade dễ với overseas thị trường (market / 시장) hơn land neighbor nếu domestic/cross-border corridor yếu. Đây là legacy của port-oriented mạng (network / 네트워크).
 
-> **Chuyển mạch:** Ở chặng này của **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Climate rủi ro (risk / 위험) và exposure growth** tiếp nhận điểm tựa từ **Trade và regional thị trường (market / 시장)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regional role trong toàn cục (global / 전역) economy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Climate risk tăng khi growth đặt tài sản và dân cư vào vùng phơi lộ mà hạ tầng chống chịu chưa theo kịp. **Regional role trong global economy** cần tính cả vị trí của các nút dễ tổn thương này.
 
 ## Climate rủi ro (risk / 위험) và exposure growth
 
@@ -170,7 +170,7 @@ Coastal city/river delta chịu flood, surge và erosion; dryland chịu drought
 
 Rising disaster mất mát (loss / 손실) có thể đến từ hazard thay đổi (change / 변경) hoặc exposure growth. Cần tách hai cơ chế (mechanism / 메커니즘) trước khi kết luận.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Regional role trong toàn cục (global / 전역) economy** tiếp nhận điểm tựa từ **Climate rủi ro (risk / 위험) và exposure growth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Development inequality là vấn đề khả năng tiếp cận (accessibility / 접근성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Vị thế toàn cầu của một vùng vừa tạo cơ hội trade vừa truyền shock khí hậu, giá và vốn. **Development inequality** cho thấy ai có accessibility để hưởng lợi hoặc hấp thụ cú sốc đó.
 
 ## Regional role trong toàn cục (global / 전역) economy
 
@@ -178,7 +178,7 @@ Africa cung cấp agricultural commodity, mineral, năng lượng (energy / 에�
 
 Câu hỏi học tốt là: **nơi nào đang giữ giá trị (value / 값) ở extraction, processing, logistics hay dịch vụ (service / 서비스) tầng (layer / 계층)?**
 
-> **Chuyển mạch:** Trong **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Development inequality là vấn đề khả năng tiếp cận (accessibility / 접근성)** tiếp nhận điểm tựa từ **Regional role trong toàn cục (global / 전역) economy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách so tiểu vùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Bất bình đẳng phát triển không chỉ là chênh lệch thu nhập mà còn là chênh lệch accessibility tới nước, trường, y tế, năng lượng và corridor. **Cách so tiểu vùng** cần giữ cùng các biến đó để tránh so sánh sai.
 
 ## Development inequality là vấn đề khả năng tiếp cận (accessibility / 접근성)
 
@@ -186,7 +186,7 @@ National average che contrast metro–rural, coast–interior, corridor–off-co
 
 Hạ tầng (infrastructure / 인프라) investment có thể giảm friction nhưng cũng có thể hút activity về cốt lõi (core / 핵심) city nếu cục bộ (local / 로컬) năng lực (capability / 역량) không đủ.
 
-> **Chuyển mạch:** Ở chặng này của **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Cách so tiểu vùng** tiếp nhận điểm tựa từ **Development inequality là vấn đề khả năng tiếp cận (accessibility / 접근성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** So tiểu vùng theo cùng chuỗi địa hình–nước–dân cư–hạ tầng–thị trường giúp phân biệt cơ chế thay vì gắn nhãn chung cho cả lục địa. **Common misconceptions** tiếp theo kiểm tra những khái quát đã đi quá xa.
 
 ## Cách so tiểu vùng
 
@@ -194,13 +194,13 @@ Khi so North, West, East, Central và Southern Africa, dùng cùng khung phần 
 
 Khung phần mềm (framework / 프레임워크) chung giúp tránh stereotype và làm rõ cơ chế (mechanism / 메커니즘) khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Cách so tiểu vùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Các misconception thường biến climate thành định mệnh, resource thành giàu có tự động hoặc urbanization thành một lộ trình duy nhất. **Mô hình tư duy** sẽ giữ lại các điều kiện và phản hồi đã chứng minh được.
 
 ## Dùng chung (common / 공통) misconceptions
 
 “Africa = tropical climate” sai. “Young population = automatic growth” sai. “Resource-rich = wealthy” bỏ qua giá trị (value / 값) chuỗi (chain / 사슬) và institution. “Landlocked = isolated” bỏ qua corridor chất lượng (quality / 품질). “Low official GDP activity = little real activity” bỏ qua informal economy.
 
-> **Chuyển mạch:** Trong **Châu Phi: cao nguyên, đai khí hậu, lưu vực lớn và hành lang kết nối**, **Mô hình tư duy** gom các mảnh từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chapter bằng chuỗi địa hình–khí hậu–nước → settlement–hạ tầng → trade–regional role, luôn kiểm tra accessibility và hazard. Đây là điểm bàn giao để đọc các region khác bằng cùng causal framework, không bằng danh sách quốc gia.
 
 ## Mô hình tư duy
 
