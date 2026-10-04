@@ -8,7 +8,7 @@
 
 Muốn hiểu đại dương cần nối ba lớp: **vật lý nước biển → hệ sinh thái → mạng con người**.
 
-> **Chuyển mạch:** Trong **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Temperature, salinity và density** tiếp nhận điểm tựa từ **Đại dương là kho nhiệt, hệ vận chuyển và không gian kinh tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mixed tầng (layer / 계층) và thermocline** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đại dương vừa lưu nhiệt vừa vận chuyển vật chất và hàng hóa; **Temperature, salinity và density** giải thích ba biến điều khiển stratification và circulation. **Mixed tầng (layer / 계층) và thermocline** tiếp theo cho thấy lớp mặt trao đổi với tầng sâu ra sao.
 
 ## Temperature, salinity và density
 
@@ -18,7 +18,7 @@ Chênh density tạo **phân tầng (stratification)**. Surface warm/light water
 
 Stratification quan trọng với oxygen và nutrient vì biology ở surface cần nutrient từ dưới, còn decomposition ở độ sâu (depth / 깊이) cần oxygen từ trên.
 
-> **Chuyển mạch:** Ở chặng này của **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Mixed tầng (layer / 계층) và thermocline** tiếp nhận điểm tựa từ **Temperature, salinity và density** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Surface circulation: wind + Coriolis + basin hình học (geometry / 기하학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** T–S–density tạo gradient, còn **Mixed tầng (layer / 계층) và thermocline** tách lớp nước trộn với lớp chuyển tiếp nhiệt. **Surface circulation: wind + Coriolis + basin hình học (geometry / 기하학)** tiếp theo mô tả dòng mặt bị gió và hình dạng basin dẫn.
 
 ## Mixed tầng (layer / 계층) và thermocline
 
@@ -26,7 +26,7 @@ Gió và wave trộn lớp bề mặt thành **mixed tầng (layer / 계층)**. 
 
 Độ sâu (depth / 깊이) của mixed tầng (layer / 계층) thay theo mùa và storm. Khi mixing sâu, nutrient có thể được đưa lên nhưng phytoplankton cũng bị trộn khỏi vùng ánh sáng tối ưu. Vì thế productivity phụ thuộc cả light và nutrient.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Surface circulation: wind + Coriolis + basin hình học (geometry / 기하학)** tiếp nhận điểm tựa từ **Mixed tầng (layer / 계층) và thermocline** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ekman vận chuyển (transport / 전송) và upwelling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Stratification giới hạn trao đổi theo chiều sâu, còn **Surface circulation: wind + Coriolis + basin hình học (geometry / 기하학)** tạo gyre và dòng biên. **Ekman vận chuyển (transport / 전송) và upwelling** tiếp theo giải thích lệch hướng và nguồn dinh dưỡng trồi lên.
 
 ## Surface circulation: wind + Coriolis + basin hình học (geometry / 기하학)
 
@@ -34,7 +34,7 @@ Wind stress truyền momentum xuống mặt biển. Coriolis làm vận chuyển
 
 Western ranh giới (boundary / 경계) currents như Kuroshio/Gulf Stream thường hẹp, mạnh và vận chuyển nhiều nhiệt về vĩ độ cao. Eastern ranh giới (boundary / 경계) currents thường rộng, chậm và liên quan upwelling ven bờ.
 
-> **Chuyển mạch:** Trong **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Ekman vận chuyển (transport / 전송) và upwelling** tiếp nhận điểm tựa từ **Surface circulation: wind + Coriolis + basin hình học (geometry / 기하학)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deep circulation và water masses** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Wind và Coriolis tổ chức dòng mặt; **Ekman vận chuyển (transport / 전송) và upwelling** nối hướng gió với nutrient, fisheries và trao đổi carbon. **Deep circulation và water masses** tiếp theo đi xuống các khối nước có nguồn gốc khác nhau.
 
 ## Ekman vận chuyển (transport / 전송) và upwelling
 
@@ -42,7 +42,7 @@ Do Coriolis, net **Ekman vận chuyển (transport / 전송)** của surface t�
 
 **Upwelling** mang nutrient lên photic zone, làm nhiều ngư trường có productivity cao. Nhưng nước trồi cũng có thể lạnh, ít oxygen hoặc giàu CO₂, nên tác động sinh thái không chỉ “nhiều cá hơn”.
 
-> **Chuyển mạch:** Ở chặng này của **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Deep circulation và water masses** tiếp nhận điểm tựa từ **Ekman vận chuyển (transport / 전송) và upwelling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ocean heat content và climate bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Upwelling đưa nước sâu lên mặt, còn **Deep circulation và water masses** vận chuyển nhiệt, muối, oxygen và carbon qua thời gian dài. **Ocean heat content và climate bộ nhớ (memory / 메모리)** tiếp theo đo phần nhiệt được lưu lại.
 
 ## Deep circulation và water masses
 
@@ -50,7 +50,7 @@ Do Coriolis, net **Ekman vận chuyển (transport / 전송)** của surface t�
 
 Không nên hình dung “toàn cục (global / 전역) conveyor belt” như một băng tải cứng với tốc độ cố định. Thực tế circulation gồm nhiều đường dẫn (path / 경로), mixing và eddy; diagram conveyor chỉ là mô hình tư duy (mental model / 사고 모델) đầu tiên.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Ocean heat content và climate bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Deep circulation và water masses** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Wave truyền năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Water masses lưu chuyển sâu, còn **Ocean heat content và climate bộ nhớ (memory / 메모리)** tạo inertia cho khí hậu và mực biển. **Wave truyền năng lượng** tiếp theo chuyển năng lượng cơ học tới bờ.
 
 ## Ocean heat content và climate bộ nhớ (memory / 메모리)
 
@@ -58,7 +58,7 @@ Nước có heat sức chứa (capacity / 용량) lớn nên ocean hấp thụ, 
 
 Sea-surface temperature anomaly có thể ảnh hưởng convection và weather mẫu (pattern / 패턴); ocean–atmosphere coupling tạo phenomena như ENSO.
 
-> **Chuyển mạch:** Trong **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Wave truyền năng lượng** tiếp nhận điểm tựa từ **Ocean heat content và climate bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tide: astronomy + basin resonance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Heat content tạo nền năng lượng, còn **Wave truyền năng lượng** quyết định erosion, sediment transport và exposure ven bờ. **Tide: astronomy + basin resonance** tiếp theo thêm dao động chu kỳ do Mặt Trăng, Mặt Trời và hình học basin.
 
 ## Wave truyền năng lượng
 
@@ -66,7 +66,7 @@ Surface wave chủ yếu truyền năng lượng (energy / 에너지); water par
 
 Khi wave vào vùng nước nông, speed và wavelength đổi, wave refract, shoal rồi break. Refraction tập trung năng lượng (energy / 에너지) tại headland và phân tán ở bay, góp phần tạo mẫu (pattern / 패턴) erosion/deposition.
 
-> **Chuyển mạch:** Ở chặng này của **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Tide: astronomy + basin resonance** tiếp nhận điểm tựa từ **Wave truyền năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coastal sediment cell** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Waves truyền năng lượng theo storm và swell, còn **Tide: astronomy + basin resonance** tạo nhịp nước lên xuống và dòng triều. **Coastal sediment cell** tiếp theo theo dõi vật liệu đi dọc bờ giữa các nguồn và bẫy.
 
 ## Tide: astronomy + basin resonance
 
@@ -74,7 +74,7 @@ Tide đến từ gravity Earth–Moon–Sun nhưng cục bộ (local / 로컬) p
 
 **Spring tide** xảy ra khi Sun–Moon alignment làm tidal forcing lớn hơn; **neap tide** khi hình học (geometry / 기하학) làm phạm vi (range / 범위) nhỏ hơn. “Spring” ở đây không liên quan mùa xuân.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Coastal sediment cell** tiếp nhận điểm tựa từ **Tide: astronomy + basin resonance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Delta: cuộc đua giữa sediment và relative sea mức (level / 수준)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Tide và wave tạo transport dọc bờ, còn **Coastal sediment cell** cân bằng nguồn–vận chuyển–lắng đọng trong từng đoạn bờ. **Delta: cuộc đua giữa sediment và relative sea mức (level / 수준)** tiếp theo xét nơi sông đưa vật liệu ra biển.
 
 ## Coastal sediment cell
 
@@ -82,7 +82,7 @@ Bờ biển nên được quản lý như **sediment cell**: nguồn (source / �
 
 Groyne hoặc seawall bảo vệ một đoạn có thể làm downstream thiếu sand. Đây là externality theo không gian.
 
-> **Chuyển mạch:** Trong **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Delta: cuộc đua giữa sediment và relative sea mức (level / 수준)** tiếp nhận điểm tựa từ **Coastal sediment cell** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Estuary: nơi river và ocean trộn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sediment cell giữ vật liệu dọc bờ, còn **Delta: cuộc đua giữa sediment và relative sea mức (level / 수준)** quyết định bồi tụ có theo kịp subsidence và sea-level hay không. **Estuary: nơi river và ocean trộn** tiếp theo chuyển sang cửa sông chịu mixing và tidal exchange.
 
 ## Delta: cuộc đua giữa sediment và relative sea mức (level / 수준)
 
@@ -90,7 +90,7 @@ Delta duy trì elevation khi sediment deposition và organic accumulation bù su
 
 Vì vậy delta rủi ro (risk / 위험) là kết quả **river kỹ thuật (engineering / 엔지니어링) + land subsidence + ocean mức (level / 수준)**, không chỉ climate thay đổi (change / 변경).
 
-> **Chuyển mạch:** Ở chặng này của **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Estuary: nơi river và ocean trộn** tiếp nhận điểm tựa từ **Delta: cuộc đua giữa sediment và relative sea mức (level / 수준)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Storm surge và compound flooding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Delta tích lũy sediment ở cửa sông, còn **Estuary: nơi river và ocean trộn** điều chỉnh salinity, nutrient và pollutant theo tide và discharge. **Storm surge và compound flooding** tiếp theo ghép lũ sông với nước biển dâng do bão.
 
 ## Estuary: nơi river và ocean trộn
 
@@ -98,7 +98,7 @@ Vì vậy delta rủi ro (risk / 위험) là kết quả **river kỹ thuật (e
 
 Urban cổng (port / 포트) thường phát triển ở estuary vì sheltered water và truy cập (access / 접근) inland, tạo sự đánh đổi (trade-off / 트레이드오프) giữa ecology và điều hướng (navigation / 내비게이션).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Storm surge và compound flooding** tiếp nhận điểm tựa từ **Estuary: nơi river và ocean trộn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Relative sea mức (level / 수준)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Estuary truyền river flow và tide vào cùng vùng thấp, còn **Storm surge và compound flooding** cho thấy mưa, lũ sông, surge và triều có thể cộng hưởng. **Relative sea mức (level / 수준)** tiếp theo đặt rủi ro trong nền chuyển động đất và mực biển dài hạn.
 
 ## Storm surge và compound flooding
 
@@ -106,7 +106,7 @@ Low pressure và wind của cyclone có thể đẩy seawater lên bờ tạo **
 
 Nếu surge trùng heavy rain và high river luồng (flow / 흐름), drainage ra biển bị chặn và tạo **compound flooding**. rủi ro (risk / 위험) vì thế không thể đánh giá bằng từng hazard riêng lẻ.
 
-> **Chuyển mạch:** Trong **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Relative sea mức (level / 수준)** tiếp nhận điểm tựa từ **Storm surge và compound flooding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coral reef và mangrove như natural hạ tầng (infrastructure / 인프라)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Compound flood là sự kiện, còn **Relative sea mức (level / 수준)** là tổng của ocean level, subsidence, uplift và land movement. **Coral reef và mangrove như natural hạ tầng (infrastructure / 인프라)** tiếp theo cho thấy hệ sinh thái có thể giảm wave energy và exposure.
 
 ## Relative sea mức (level / 수준)
 
@@ -114,7 +114,7 @@ Người dân trải nghiệm **relative sea mức (level / 수준)** so với l
 
 Một city sinking nhanh do groundwater có thể thấy relative sea-level bài toán (problem / 문제) lớn hơn toàn cục (global / 전역) mean nhiều dù forcing climate giống nơi khác.
 
-> **Chuyển mạch:** Ở chặng này của **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Coral reef và mangrove như natural hạ tầng (infrastructure / 인프라)** tiếp nhận điểm tựa từ **Relative sea mức (level / 수준)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fisheries: biology gặp quản trị (governance / 거버넌스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Relative sea level làm thay đổi habitat và exposure, còn **Coral reef và mangrove như natural hạ tầng (infrastructure / 인프라)** hấp thụ wave, giữ sediment và nursery function. **Fisheries: biology gặp quản trị (governance / 거버넌스)** tiếp theo nối productivity với access và harvest rules.
 
 ## Coral reef và mangrove như natural hạ tầng (infrastructure / 인프라)
 
@@ -122,7 +122,7 @@ Reef làm wave break offshore; mangrove tăng roughness và giữ sediment. Chú
 
 Natural hạ tầng (infrastructure / 인프라) có giới hạn: nếu sea-level rise hoặc water chất lượng (quality / 품질) vượt tolerance, ecosystem suy giảm. Conservation phải nối với basin pollution và coastal development.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Fisheries: biology gặp quản trị (governance / 거버넌스)** tiếp nhận điểm tựa từ **Coral reef và mangrove như natural hạ tầng (infrastructure / 인프라)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Maritime vận chuyển (transport / 전송) và cổng (port / 포트) mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Reef/mangrove tạo habitat, còn **Fisheries: biology gặp quản trị (governance / 거버넌스)** quyết định biomass, quota, enforcement và sinh kế. **Maritime vận chuyển (transport / 전송) và cổng (port / 포트) mạng (network / 네트워크)** tiếp theo chuyển từ food web sang luồng hàng.
 
 ## Fisheries: biology gặp quản trị (governance / 거버넌스)
 
@@ -130,7 +130,7 @@ Fish stock di chuyển theo temperature, hiện tại (current / 현재) và foo
 
 Nếu stock vượt ranh giới (boundary / 경계) jurisdiction, management cần coordination; nếu effort tăng nhanh hơn stock productivity, catch có thể giảm dù technology tốt hơn.
 
-> **Chuyển mạch:** Trong **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Maritime vận chuyển (transport / 전송) và cổng (port / 포트) mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Fisheries: biology gặp quản trị (governance / 거버넌스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Submarine cable: “internet” có địa hình đáy biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Fisheries nối ecology với quản trị, còn **Maritime vận chuyển (transport / 전송) và cổng (port / 포트) mạng (network / 네트워크)** tổ chức trade qua channel, draft, hinterland và chokepoint. **Submarine cable: “internet” có địa hình đáy biển** tiếp theo nhắc digital flow cũng có seabed geography.
 
 ## Maritime vận chuyển (transport / 전송) và cổng (port / 포트) mạng (network / 네트워크)
 
@@ -138,7 +138,7 @@ Shipping tận dụng quy mô (scale / 규모) economy, nhưng cần cổng (por
 
 Cảng là giao diện (interface / 인터페이스) land–sea: hiệu quả quay vòng tàu không đủ nếu rail/truck phía sau congested.
 
-> **Chuyển mạch:** Ở chặng này của **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Submarine cable: “internet” có địa hình đáy biển** tiếp nhận điểm tựa từ **Maritime vận chuyển (transport / 전송) và cổng (port / 포트) mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ocean observation và bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Port network vận chuyển hàng, còn **Submarine cable: “internet” có địa hình đáy biển** phụ thuộc route, landing station, seabed slope và repair access. **Ocean observation và bất định (uncertainty / 불확실성)** tiếp theo cho biết các hệ biển được đo với giới hạn nào.
 
 ## Submarine cable: “internet” có địa hình đáy biển
 
@@ -146,7 +146,7 @@ Cáp quang liên lục địa đi qua tuyến (route / 경로) được chọn �
 
 Một bản đồ cáp cho thấy digital geography vẫn rất vật lý.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Ocean observation và bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **Submarine cable: “internet” có địa hình đáy biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cable route cần seabed survey, còn **Ocean observation và bất định (uncertainty / 불확실성)** kết hợp buoy, satellite, altimetry, Argo và model với resolution khác nhau. **Những hiểu lầm phổ biến** tiếp theo sửa nhầm lẫn về sea level, current, tide và resource.
 
 ## Ocean observation và bất định (uncertainty / 불확실성)
 
@@ -154,13 +154,13 @@ Buoy, ship, satellite altimetry, SST remote sensing và Argo float đo các ph�
 
 Interpolation giữa observation tạo trường dữ liệu (field / 필드) estimate nhưng bất định (uncertainty / 불확실성) cao hơn ở nơi sampling thưa. Khi đọc ocean map cần biết sản phẩm (product / 제품) là đo lường (measurement / 측정) trực tiếp hay mô hình (model / 모델)/reanalysis.
 
-> **Chuyển mạch:** Trong **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Ocean observation và bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Observation có uncertainty và không gian đo khác nhau; **Những hiểu lầm phổ biến** giữ rõ rằng tide không phải wave, coastline dài không tự thành port, và sea-level risk không chỉ do ocean rise. **Mô hình tư duy** tiếp theo cô đọng toàn bộ hệ biển–bờ.
 
 ## Những hiểu lầm phổ biến
 
 “Dòng biển là sông trong biển” quá đơn giản; ranh giới (boundary / 경계) không cố định. “Sea-level rise giống nhau mọi nơi” bỏ land motion. “Seawall chỉ có lợi” bỏ sediment impact. “Upwelling luôn tốt” bỏ oxygen/acidification. “Bờ biển là đường cố định” bỏ sediment ngân sách (budget / 예산).
 
-> **Chuyển mạch:** Ở chặng này của **Đại dương, hoàn lưu, bờ biển và mạng hàng hải**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi T–S–density → surface/deep circulation → heat/waves/tides → sediment/delta/estuary → flood/ecosystem/fisheries → ports/cables, rồi bàn giao sang owner **Physical Geography** trong [README](../README.md).
 
 ## Mô hình tư duy
 
