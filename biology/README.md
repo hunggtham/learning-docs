@@ -41,7 +41,7 @@ structure
 
 Nếu chapter chỉ kể tên cấu trúc (structure / 구조) mà không giải cơ chế (mechanism / 메커니즘), hoặc chỉ mô tả hàm (function / 함수) mà không nói thất bại (failure / 실패)/ranh giới (boundary / 경계) điều kiện (condition / 조건), chapter chưa đạt chuẩn dù có nhiều từ khóa (keyword / 키워드).
 
-> **Chuyển mạch:** Trong **Biology thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện kiến thức Sinh học**, **1. Đồ thị kiến thức (knowledge graph) toàn thư viện** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델) trung tâm cho lần kiểm tra (audit / 감사) 2026-09** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **2. Cấu trúc thư viện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **1. Đồ thị kiến thức (knowledge graph) toàn thư viện** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델) trung tâm cho lần kiểm tra (audit / 감사) 2026-09**; **2. Cấu trúc thư viện** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 1. Đồ thị kiến thức (knowledge graph) toàn thư viện
 
@@ -102,7 +102,7 @@ flowchart TD
 
 ---
 
-> **Chuyển mạch:** Knowledge graph cho biết concept phụ thuộc nhau ra sao; cấu trúc thư mục biến dependency đó thành navigation, rồi chapter standard quy định mỗi node phải giải thích tới mức nào.
+> **Nối mạch:** Knowledge graph cho biết concept phụ thuộc nhau ra sao; cấu trúc thư mục biến dependency đó thành navigation, rồi chapter standard quy định mỗi node phải giải thích tới mức nào.
 
 ## 2. Cấu trúc thư viện
 
@@ -157,7 +157,7 @@ biology/
 
 ---
 
-> **Chuyển mạch:** Folder structure chỉ cho biết đi đâu; chapter standard kiểm tra problem, mechanism, evidence và handoff, từ đó lộ trình beginner có thể xếp prerequisite trước ứng dụng.
+> **Nối mạch:** Folder structure chỉ cho biết đi đâu; chapter standard kiểm tra problem, mechanism, evidence và handoff, từ đó lộ trình beginner có thể xếp prerequisite trước ứng dụng.
 
 ## 3. Chuẩn hoàn thiện của một chapter
 
@@ -182,7 +182,7 @@ Các tình huống phân tích (case study) không dùng chỉ để “trang tr
 
 ---
 
-> **Chuyển mạch:** Chapter standard xác định mức bằng chứng cần đạt; reading path sắp prerequisite từ nền tảng tới ứng dụng, rồi motifs xuyên thư viện giúp nhận ra cùng một cơ chế ở nhiều quy mô.
+> **Nối mạch:** Chapter standard xác định mức bằng chứng cần đạt; reading path sắp prerequisite từ nền tảng tới ứng dụng, rồi motifs xuyên thư viện giúp nhận ra cùng một cơ chế ở nhiều quy mô.
 
 ## 4. Lộ trình đọc từ số 0
 
@@ -256,7 +256,7 @@ Hai chapter này không dùng để học tắt; chúng được đọc sau khi 
 
 ---
 
-> **Chuyển mạch:** Reading path đưa người học qua prerequisite; motifs như gradient, feedback và scale tạo liên kết ngang, còn self-check kiểm tra người học có thể giải thích cơ chế chứ không chỉ nhớ thuật ngữ.
+> **Nối mạch:** Reading path đưa người học qua prerequisite; các motif như gradient, feedback và scale giúp nhận ra cùng một cơ chế ở nhiều cấp độ, trước khi đối chiếu với ứng dụng.
 
 ## 5. Các motif xuyên toàn thư viện
 
@@ -290,9 +290,9 @@ Chuyển hóa (metabolism), plant hydraulic/carbon allocation, tuần hoàn (cir
 
 ---
 
-> **Chuyển mạch:** Cross-library motifs tạo câu hỏi tự kiểm tra theo cơ chế; scope tiếp theo nêu những gì thư viện bao phủ và những gì phải đối chiếu ở domain khác.
+> **Nối mạch:** Cross-library motifs cho thấy một cơ chế lặp lại qua nhiều cấp độ; scope tiếp theo nêu phần thư viện bao phủ và phần phải đối chiếu ở domain khác.
 
-## 6. Cách tự kiểm tra sau mỗi chapter
+## 6. Cách tổng hợp cơ chế sau mỗi chapter
 
 Sau khi đọc, đừng chỉ hỏi “tôi nhớ được bao nhiêu thuật ngữ?”. Hãy thử giải thích bằng lời của mình: chương đang giải ràng buộc (constraint / 제약조건) nào; đầu vào (input / 입력)/đầu ra (output / 출력) của hệ thống (system / 시스템) là gì; vật chất, năng lượng (energy / 에너지) và thông tin đi đâu; phản hồi (feedback / 피드백) hoặc sự đánh đổi (trade-off / 트레이드오프) chính là gì; equation hoặc đo lường (measurement / 측정) nào đại diện cho relationship nào; và vì sao chapter này dẫn tự nhiên sang chapter kế tiếp.
 
@@ -300,7 +300,7 @@ Nếu bạn chỉ nhớ tên `ATP synthase`, `p53`, `Nernst`, `Hardy–Weinberg`
 
 ---
 
-> **Chuyển mạch:** **Cách tự kiểm tra sau mỗi chapter** xác nhận mental model đã dùng được; **Phạm vi của thư viện** đặt boundary cho phần sinh học canonical trước khi đọc **Trạng thái hiện tại**.
+> **Nối mạch:** **Tổng hợp cơ chế sau mỗi chapter** xác nhận mental model đã dùng được; **Phạm vi của thư viện** đặt boundary cho phần sinh học canonical trước khi đọc **Trạng thái hiện tại**.
 
 ## 7. Phạm vi của thư viện (library / 라이브러리)
 
@@ -310,7 +310,7 @@ Hai chapter Human Health cung cấp nền systems-level và preventive-health l�
 
 ---
 
-> **Chuyển mạch:** **Trạng thái hiện tại** cho biết chapter nào đã có evidence và chapter nào còn gap; **Quy ước ngôn ngữ và liên kết nội bộ** giữ route và owner không bị trôi.
+> **Nối mạch:** **Trạng thái hiện tại** cho biết chapter nào đã có evidence và chapter nào còn gap; **Quy ước ngôn ngữ và liên kết nội bộ** giữ route và owner không bị trôi.
 
 ## 8. Trạng thái hiện tại
 
@@ -333,7 +333,7 @@ Chi tiết kiểm tra coverage và continuity nằm trong [Biology Knowledge Lib
 
 <!-- continuity-2026:language-links -->
 
-> **Chuyển mạch:** **Quy ước ngôn ngữ và liên kết nội bộ** khép README bằng cách chỉ đường quay lại canonical owner, để phần còn thiếu được bổ sung đúng chapter thay vì mở bản sao.
+> **Nối mạch:** **Quy ước ngôn ngữ và liên kết nội bộ** khép README bằng cách chỉ đường quay lại canonical owner, để phần còn thiếu được bổ sung đúng chapter thay vì mở bản sao.
 
 ## Quy ước ngôn ngữ và liên kết nội bộ
 
