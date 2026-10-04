@@ -8,7 +8,7 @@ Một chuỗi như `37.5665, 126.9780` chưa phải vị trí hoàn chỉnh. Ta 
 
 Trong GIS, **hệ quy chiếu tọa độ (Coordinate Reference system, CRS)** đóng vai trò giống hệ kiểu (type system / 타입 시스템). Nó quy định cách con số liên hệ với không gian thật. Hai array giống nhau về cấu trúc nhưng khác CRS có thể đại diện cho hai nơi khác nhau.
 
-> **Chuyển mạch:** Trong **Hệ quy chiếu toàn cầu, datum và hạ tầng tọa độ**, **Tọa độ là kết quả của một quy ước đo lường** nêu điều cần giải thích; **Geographic CRS và projected CRS** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Datum và tham chiếu (reference / 참조) frame** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Tọa độ không tự nhiên xuất hiện; nó phụ thuộc ellipsoid, mốc, trục, đơn vị và quy ước đo. **Geographic CRS và projected CRS** phân biệt cách biểu diễn bề mặt cong và mặt phẳng trước khi chọn datum.
 
 ## Geographic CRS và projected CRS
 
@@ -18,7 +18,7 @@ Geographic CRS thuận tiện cho lưu trữ toàn cầu và trao đổi. Projec
 
 Không có CRS duy nhất tối ưu cho mọi việc. Một hệ thống tốt tách CRS lưu trữ, CRS phân tích và CRS hiển thị khi cần.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ quy chiếu toàn cầu, datum và hạ tầng tọa độ**, sau nội dung của **Geographic CRS và projected CRS**, **Datum và tham chiếu (reference / 참조) frame** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Geocentric và Earth-fixed** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Geographic/projected CRS quy định cách tọa độ được tính và hiển thị, còn datum/frame quy định nó gắn với Trái Đất nào và thời điểm nào. **Geocentric và Earth-fixed** làm rõ hai cách định nghĩa gốc tọa độ và chuyển động.
 
 ## Datum và tham chiếu (reference / 참조) frame
 
@@ -28,7 +28,7 @@ Trong hệ tĩnh đơn giản, người dùng thường không phân biệt hai 
 
 WGS 84 không nên được hiểu như một nhãn bất biến duy nhất cho mọi thời kỳ. Các realization của hệ toàn cầu được cập nhật để bám theo phép đo tốt hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ quy chiếu toàn cầu, datum và hạ tầng tọa độ**, **Geocentric và Earth-fixed** tiếp nhận điểm tựa từ **Datum và tham chiếu (reference / 참조) frame** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **EPSG mã (code / 코드) giúp định danh nhưng không sửa được siêu dữ liệu (metadata / 메타데이터) sai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Geocentric đặt gốc tại tâm khối lượng, Earth-fixed quay cùng Trái Đất; khác biệt này quan trọng cho vệ tinh và đo đạc. **EPSG mã (code / 코드) giúp định danh nhưng không sửa được siêu dữ liệu (metadata / 메타데이터) sai** nhắc rằng mã chỉ là nhãn cho một cấu hình cụ thể.
 
 ## Geocentric và Earth-fixed
 
@@ -38,7 +38,7 @@ GNSS tính vị trí thuận tiện trong khung ba chiều như vậy. Vĩ độ
 
 Mô hình tư duy (mental model / 사고 모델) này giải thích vì sao tọa độ địa lý không phải “đầu ra thô” của vệ tinh; chúng là một lớp chuyển đổi.
 
-> **Chuyển mạch:** Trong **Hệ quy chiếu toàn cầu, datum và hạ tầng tọa độ**, **Geocentric và Earth-fixed** nêu điều cần giải thích; **EPSG mã (code / 코드) giúp định danh nhưng không sửa được siêu dữ liệu (metadata / 메타데이터) sai** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Coordinate transformation là phép biến đổi có điều kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** EPSG code giúp phần mềm nhận CRS, nhưng không thể sửa nhầm epoch, axis order, đơn vị hay metadata nguồn. **Coordinate transformation là phép biến đổi có điều kiện** tiếp theo đòi hỏi biết đầy đủ các điều kiện đó.
 
 ## EPSG mã (code / 코드) giúp định danh nhưng không sửa được siêu dữ liệu (metadata / 메타데이터) sai
 
@@ -48,7 +48,7 @@ Nhưng mã không có phép thuật. Nếu tệp (file / 파일) thực sự ở
 
 **Assign CRS** nghĩa “các con số hiện tại nên được diễn giải theo hệ này”. **Reproject** nghĩa “hãy biến đổi các con số để giữ cùng vị trí vật lý trong hệ khác”. Nhầm hai thao tác là lỗi kinh điển.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ quy chiếu toàn cầu, datum và hạ tầng tọa độ**, **EPSG mã (code / 코드) giúp định danh nhưng không sửa được siêu dữ liệu (metadata / 메타데이터) sai** nêu điều cần giải thích; **Coordinate transformation là phép biến đổi có điều kiện** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Vertical datum là một hệ riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Transformation phụ thuộc CRS nguồn/đích, datum shift, grid, epoch và phép chiếu; đổi hệ không chỉ là đổi tên cột. **Vertical datum là một hệ riêng** tách độ cao hình học khỏi độ cao theo trọng trường.
 
 ## Coordinate transformation là phép biến đổi có điều kiện
 
@@ -56,7 +56,7 @@ Chuyển giữa hai CRS có thể cần projection formula, datum transformation
 
 Nếu nguồn (source / 소스) datum và mục tiêu (target / 대상) datum khác, phần mềm có thể dùng transformation xấp xỉ khi thiếu grid tệp (file / 파일) chính xác. Vì vậy chuỗi xử lý (pipeline / 파이프라인) kỹ thuật nên ghi transformation phương thức (method / 메서드) và expected accuracy, đặc biệt khi dùng dữ liệu survey.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ quy chiếu toàn cầu, datum và hạ tầng tọa độ**, **Vertical datum là một hệ riêng** tiếp nhận điểm tựa từ **Coordinate transformation là phép biến đổi có điều kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Epoch và động (dynamic / 동적) datum** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Vertical datum dựa vào geoid/mốc cao và không thể suy trực tiếp chỉ từ kinh–vĩ độ. **Epoch và động (dynamic / 동적) datum** bổ sung chiều thời gian khi mốc và vỏ Trái Đất chuyển động.
 
 ## Vertical datum là một hệ riêng
 
@@ -64,7 +64,7 @@ Tọa độ ngang đúng không bảo đảm cao độ đúng. Dữ liệu độ
 
 Khi ghép DEM, GNSS và survey, cần kiểm tra vertical tham chiếu (reference / 참조) riêng. Một chuỗi xử lý (pipeline / 파이프라인) chỉ kiểm tra `EPSG` của horizontal CRS nhưng bỏ vertical datum vẫn có thể gây lỗi lớn.
 
-> **Chuyển mạch:** Trong **Hệ quy chiếu toàn cầu, datum và hạ tầng tọa độ**, **Epoch và động (dynamic / 동적) datum** tiếp nhận điểm tựa từ **Vertical datum là một hệ riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **National grid và cục bộ (local / 로컬) kỹ thuật (engineering / 엔지니어링) CRS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Dynamic datum ghi tọa độ cùng thời điểm và mô hình chuyển động, còn static datum giả định mốc cố định trong phạm vi sử dụng. **National grid và cục bộ (local / 로컬) kỹ thuật (engineering / 엔지니어링) CRS** cho thấy cách quốc gia và dự án tối ưu hệ quy chiếu theo nhu cầu.
 
 ## Epoch và động (dynamic / 동적) datum
 
@@ -74,7 +74,7 @@ Nếu dữ liệu năm 2010 được so với survey 2030 mà không propagate t
 
 Đây là điểm ngày càng quan trọng khi smartphone, autonomous các hệ thống (systems / 시스템들) và precise positioning đạt độ chính xác cao hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ quy chiếu toàn cầu, datum và hạ tầng tọa độ**, **National grid và cục bộ (local / 로컬) kỹ thuật (engineering / 엔지니어링) CRS** tiếp nhận điểm tựa từ **Epoch và động (dynamic / 동적) datum** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Toàn cục (global / 전역) grid chỉ mục (index / 인덱스) không thay thế CRS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** National grid và engineering CRS có thể giảm biến dạng, phù hợp địa hình và công trình, nhưng chỉ dùng đúng trong phạm vi và datum đã công bố. **Toàn cục (global / 전역) grid chỉ mục (index / 인덱스) không thay thế CRS** phân biệt lưới chỉ mục với hệ tọa độ có ý nghĩa đo lường.
 
 ## National grid và cục bộ (local / 로컬) kỹ thuật (engineering / 엔지니어링) CRS
 
@@ -82,7 +82,7 @@ Các quốc gia thường có national grid hoặc projected CRS tối ưu cho l
 
 Dữ liệu web thường đến ở WGS84/Web Mercator, còn dữ liệu hành chính–kỹ thuật có thể ở national CRS. Vì vậy ETL geospatial thực tế phải xử lý transformation thay vì giả định mọi tệp (file / 파일) dùng cùng hệ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ quy chiếu toàn cầu, datum và hạ tầng tọa độ**, **Toàn cục (global / 전역) grid chỉ mục (index / 인덱스) không thay thế CRS** tiếp nhận điểm tựa từ **National grid và cục bộ (local / 로컬) kỹ thuật (engineering / 엔지니어링) CRS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Address, place name và coordinate là ba hệ khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Grid index giúp tìm ô và phân mảnh dữ liệu, nhưng không cho biết tọa độ, datum hay phép đo nếu thiếu CRS. **Address, place name và coordinate là ba hệ khác nhau** tiếp theo tách định danh xã hội khỏi vị trí hình học.
 
 ## Toàn cục (global / 전역) grid chỉ mục (index / 인덱스) không thay thế CRS
 
@@ -92,7 +92,7 @@ Nhưng chúng không loại bỏ nhu cầu hiểu datum và hình học (geometr
 
 Khi aggregate dữ liệu theo grid, kích thước cell trở thành quy mô (scale / 규모) of phân tích (analysis / 분석) và có thể tạo MAUP dạng lưới.
 
-> **Chuyển mạch:** Trong **Hệ quy chiếu toàn cầu, datum và hạ tầng tọa độ**, **Address, place name và coordinate là ba hệ khác nhau** tiếp nhận điểm tựa từ **Toàn cục (global / 전역) grid chỉ mục (index / 인덱스) không thay thế CRS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới (boundary / 경계) dataset cũng cần tham chiếu (reference / 참조) hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Address, place name và coordinate có thể mô tả cùng một nơi nhưng khác ngôn ngữ, thời điểm, độ chính xác và mục đích. **Ranh giới (boundary / 경계) dataset cũng cần tham chiếu (reference / 참조) hệ thống (system / 시스템)** áp dụng nguyên tắc metadata đó cho polygon và ranh giới.
 
 ## Address, place name và coordinate là ba hệ khác nhau
 
@@ -100,7 +100,7 @@ Khi aggregate dữ liệu theo grid, kích thước cell trở thành quy mô (s
 
 Một tên địa danh có thể trùng ở nhiều nơi, một địa chỉ có thể đổi sau cải cách hành chính và một polygon địa giới có thể có nhiều phiên bản (version / 버전). Hệ geocoder tốt cần phiên bản (version / 버전), provenance và confidence.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ quy chiếu toàn cầu, datum và hạ tầng tọa độ**, **Address, place name và coordinate là ba hệ khác nhau** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) dataset cũng cần tham chiếu (reference / 참조) hệ thống (system / 시스템)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Geospatial interoperability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Boundary dataset cần CRS, datum, thời điểm, nguồn pháp lý và quy tắc topology; đường biên thiếu tham chiếu không thể ghép an toàn. **Geospatial interoperability** chuyển từ metadata riêng lẻ sang khả năng các hệ thống trao đổi cùng nghĩa.
 
 ## Ranh giới (boundary / 경계) dataset cũng cần tham chiếu (reference / 참조) hệ thống (system / 시스템)
 
@@ -108,7 +108,7 @@ Biên giới hành chính và coastline không chỉ cần CRS mà còn cần th
 
 Đối với khu vực tranh chấp, hình học (geometry / 기하학) còn có ngữ nghĩa (semantic / 의미적) khác nhau: claim line, điều khiển (control / 제어) line hoặc administrative ranh giới (boundary / 경계). Không nên chỉ lưu một polygon mà không lưu loại ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ quy chiếu toàn cầu, datum và hạ tầng tọa độ**, **Ranh giới (boundary / 경계) dataset cũng cần tham chiếu (reference / 참조) hệ thống (system / 시스템)** đã nêu tiêu chí phân biệt, còn **Geospatial interoperability** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Interoperability cần CRS rõ, schema tương thích, axis/units nhất quán, provenance và quy tắc biến đổi có thể tái lập. **Mô hình tư duy** cô đọng cách đọc toàn bộ hạ tầng tọa độ.
 
 ## Geospatial interoperability
 
@@ -116,7 +116,7 @@ Khi nhiều hệ thống trao đổi dữ liệu, cần nhất quán về CRS, h
 
 Nhưng interoperability không chỉ là “tệp (file / 파일) mở được”. Hai hệ có thể đọc cùng tệp (file / 파일) nhưng hiểu khác ngữ nghĩa (semantics / 의미론) của trường dữ liệu (field / 필드) hoặc ranh giới (boundary / 경계). dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약) phải bao gồm cả meaning.
 
-> **Chuyển mạch:** Trong **Hệ quy chiếu toàn cầu, datum và hạ tầng tọa độ**, **Mô hình tư duy** gom các mảnh từ **Geospatial interoperability** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi quy ước tọa độ → geographic/projected CRS → datum/frame, geocentric/Earth-fixed → EPSG và transformation → vertical/epoch/dynamic datum → national/local grid → index, address, boundary và interoperability. Kết luận bàn giao owner **World Geography** theo [README](../README.md), để nối sang GIS và dữ liệu vùng.
 
 ## Mô hình tư duy
 
