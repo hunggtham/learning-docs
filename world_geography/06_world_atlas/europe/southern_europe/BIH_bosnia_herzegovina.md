@@ -6,19 +6,19 @@
 
 Lãnh thổ phần lớn là núi và cao nguyên thuộc Dinaric Alps, với thung lũng hẹp và bồn địa nội địa. Karst phổ biến, làm nước mặt và nước ngầm có quan hệ phức tạp.
 
-> **Chuyển mạch:** Trong **Bosnia and Herzegovina**, **Sông và hành lang** tiếp nhận điểm tựa từ **Dinaric Alps chi phối không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cửa biển nhỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Dinaric Alps và karst tạo thung lũng hẹp, nước ngầm phức tạp; **sông và hành lang** là các khe nối tự nhiên giữa Sarajevo, Mostar và vùng ngoài. **Cửa biển nhỏ** tiếp theo cho thấy network hàng hải vẫn phụ thuộc corridor láng giềng.
 
 ## Sông và hành lang
 
 Bosna, Neretva, Vrbas và Drina tạo các hành lang tự nhiên xuyên núi. Sarajevo nằm trong bồn địa nội địa; Mostar gắn với thung lũng Neretva mở về Adriatic.
 
-> **Chuyển mạch:** Ở chặng này của **Bosnia and Herzegovina**, **Cửa biển nhỏ** tiếp nhận điểm tựa từ **Sông và hành lang** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** River corridors mở từ núi ra Neretva và Adriatic, nhưng Neum có bờ rất ngắn nên trade phải đi qua ports và borders của khu vực. **Mô hình tư duy** sẽ nối relief fragmentation với access và governance.
 
 ## Cửa biển nhỏ
 
 Dải bờ biển tại Neum rất ngắn, nên phần lớn thương mại hàng hải phụ thuộc mạng cảng và hành lang của khu vực lân cận.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bosnia and Herzegovina**, **Mô hình tư duy** gom các mảnh từ **Cửa biển nhỏ** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi Dinaric karst → river valleys–urban nodes → short Adriatic access và regional dependency. Đây là điểm bàn giao cho các profile Balkan trong owner World Atlas.
 
 ## Mô hình tư duy
 
