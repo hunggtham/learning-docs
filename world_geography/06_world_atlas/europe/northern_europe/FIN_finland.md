@@ -6,31 +6,31 @@
 
 Finland có hàng chục nghìn hồ, địa hình thấp–lượn sóng và lớp trầm tích băng hà rộng. Đá nền cổ Fennoscandian Shield lộ ra nhiều nơi, tạo đất mỏng và cảnh quan rừng–hồ đặc trưng.
 
-> **Chuyển mạch:** Trong **Finland**, **Vĩ độ cao và mùa** tiếp nhận điểm tựa từ **Đất của hồ và băng hà** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dân cư tập trung về phía nam** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Glacial lakes, thin soils và Fennoscandian Shield tạo landscape; **high latitude/seasonality** chuyển chúng thành chênh lệch mùa sinh trưởng, daylight và cold across Lapland–south. **Dân cư phía nam** là hệ quả access và khí hậu đó.
 
 ## Vĩ độ cao và mùa
 
 Chênh lệch độ dài ngày theo mùa rất lớn. Miền bắc Lapland có khí hậu lạnh hơn, dân cư thưa và mùa sinh trưởng ngắn hơn miền nam.
 
-> **Chuyển mạch:** Ở chặng này của **Finland**, **Dân cư tập trung về phía nam** tiếp nhận điểm tựa từ **Vĩ độ cao và mùa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rừng, hồ và công nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Helsinki–Espoo–Vantaa, Tampere và Turku gom population, education và market ở phía nam; **forest, lakes và industry** nối nhu cầu đó với resource north qua logistics và energy.
 
 ## Dân cư tập trung về phía nam
 
 Helsinki–Espoo–Vantaa là vùng đô thị lớn nhất, nằm trên bờ Gulf of Finland. Tampere và Turku tạo các cực khác trong tam giác đô thị phía nam.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Finland**, **Rừng, hồ và công nghiệp** tiếp nhận điểm tựa từ **Dân cư tập trung về phía nam** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hậu băng hà vẫn đang diễn ra** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Boreal forest, lakes và paper/biotech industries tạo resource base nhưng logistics north–south dài; **post-glacial rebound** tiếp theo nhắc rằng coast và land vẫn đang thay đổi.
 
 ## Rừng, hồ và công nghiệp
 
 Rừng boreal là nguồn tài nguyên lớn cho lâm nghiệp và công nghiệp giấy–gỗ, nhưng giá trị hiện đại còn nằm ở vật liệu sinh học, công nghệ và dịch vụ. Hệ hồ hỗ trợ nước ngọt, du lịch và năng lượng.
 
-> **Chuyển mạch:** Trong **Finland**, **Hậu băng hà vẫn đang diễn ra** tiếp nhận điểm tựa từ **Rừng, hồ và công nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Rebound nâng bờ Gulf of Bothnia theo thời gian địa chất, ảnh hưởng shoreline và habitat; **mô hình tư duy** sẽ ghép glacial base, climate gradient, southern cities và resource economy.
 
 ## Hậu băng hà vẫn đang diễn ra
 
 Phần phía tây, đặc biệt quanh Gulf of Bothnia, tiếp tục nâng lên do **điều chỉnh đẳng tĩnh hậu băng hà (post-glacial rebound)**. Đường bờ vì thế thay đổi ở thang thời gian dài.
 
-> **Chuyển mạch:** Ở chặng này của **Finland**, **Mô hình tư duy** gom các mảnh từ **Hậu băng hà vẫn đang diễn ra** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi Shield–lakes/glacial soils → high-latitude gradient → south urban concentration và north forest/industry, với rebound đổi coastline dài hạn. Đây là điểm bàn giao cho Northern Europe trong owner World Atlas.
 
 ## Mô hình tư duy
 

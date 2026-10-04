@@ -6,25 +6,25 @@
 
 Greece có địa hình núi chiếm ưu thế, bờ biển rất chia cắt và hàng nghìn đảo trong Aegean và Ionian seas. Điều này tạo mức tiếp xúc biển rất lớn so với diện tích đất.
 
-> **Chuyển mạch:** Trong **Greece**, **Kiến tạo và động đất** tiếp nhận điểm tựa từ **Bán đảo và quần đảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Athens và các mạng đảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mountain peninsula, Aegean/Ionian islands và long coast tạo biển access nhưng đất liền fragmented; **tectonics/earthquakes** là cơ chế hazard cấu trúc trên nền đó. **Athens và mạng đảo** tiếp theo phân bố population, ports và seasonal connectivity.
 
 ## Kiến tạo và động đất
 
 Khu vực nằm gần Hellenic Arc, nơi các mảng tương tác phức tạp. Động đất là hazard cấu trúc chứ không phải hiện tượng hiếm bất thường.
 
-> **Chuyển mạch:** Ở chặng này của **Greece**, **Athens và các mạng đảo** tiếp nhận điểm tựa từ **Kiến tạo và động đất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khí hậu và nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Seismic/relief fragmentation làm phà, hàng không và Athens–Thessaloniki hubs quan trọng; **khí hậu và nước** tiếp tục với summer drought và peak tourism/agriculture demand.
 
 ## Athens và các mạng đảo
 
 Athens là cực đô thị chi phối ở Attica. Thessaloniki là cửa ngõ phía bắc, còn đảo phụ thuộc mạng phà–hàng không với seasonal khả năng tiếp cận (accessibility / 접근성) khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Greece**, **Khí hậu và nước** tiếp nhận điểm tựa từ **Athens và các mạng đảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mediterranean summer water stress đặt giới hạn lên islands, cities, farming và tourism; **mô hình tư duy** sẽ giữ cùng lúc biển như connector và infrastructure như fragmented network.
 
 ## Khí hậu và nước
 
 Mediterranean climate tạo mùa hè khô, làm du lịch, đô thị và nông nghiệp cùng cạnh tranh nước đúng vào mùa nhu cầu cao nhất.
 
-> **Chuyển mạch:** Trong **Greece**, **Mô hình tư duy** gom các mảnh từ **Khí hậu và nước** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi mountain–archipelago/tectonics → Athens/island network → summer water stress và maritime connectivity. Đây là điểm bàn giao cho Southern Europe trong owner World Atlas.
 
 ## Mô hình tư duy
 
