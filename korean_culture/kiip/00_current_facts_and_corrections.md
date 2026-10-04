@@ -1,157 +1,220 @@
-# 00. nguồn (source / 소스) vs hiện tại (current / 현재) — dữ liệu cần kiểm tra trước khi học thuộc
+# 00. Source vs Current — dữ liệu KIIP phải kiểm tra trước khi học thuộc
 
-> **Mạch đọc:** Đặt **00. nguồn (source / 소스) vs hiện tại (current / 현재) — dữ liệu cần kiểm tra trước khi học thuộc** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **1. 예금자보호 한도 — hạn mức bảo vệ tiền gửi** sang **2. 법정 최고금리 — lãi suất tối đa theo luật**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> File này tách **nội dung có thể xuất hiện trong giáo trình/tài liệu cũ** khỏi **trạng thái hiện hành đã kiểm tra đến 2026-10-04**.
+>
+> Quy tắc: học **cơ chế và khái niệm ổn định** trong chapter chính; với số liệu, luật, chính sách hoặc tên cơ quan có thể đổi, quay lại file này.
 
-Các PDF người học cung cấp rất hữu ích để ôn cấu trúc KIIP, nhưng một số con số/pháp luật phản ánh thời điểm cũ. tệp (file / 파일) này giữ tách biệt **“nội dung trong PDF”** và **“trạng thái được kiểm tra đến 2026-09-20”**. Nội dung mới không được dùng để âm thầm sửa lại nguồn gốc.
-
-> Khi thi, ưu tiên giáo trình/공지 chính thức áp dụng cho kỳ thi của bạn. tệp (file / 파일) này nhằm tránh học nhầm những dữ liệu đã thay đổi rõ ràng.
+---
 
 ## 1. 예금자보호 한도 — hạn mức bảo vệ tiền gửi
 
-Bản tóm tắt chương 경제 ghi `1인당 최고 5천만원`.
+Một số tài liệu cũ ghi `1인당 최고 5천만원`.
 
-**Hiện tại:** từ **2025-09-01**, hạn mức đã tăng lên **1억원**, gồm gốc và lãi theo quy định, theo 금융위원회.
+**Hiện hành:** từ **2025-09-01**, hạn mức bảo vệ tiền gửi được nâng lên **1억원** theo quy định áp dụng cho các sản phẩm thuộc phạm vi bảo vệ.
 
 - Cũ: `5천만원`
-- Hiện hành: `1억원`
-- từ khóa (keyword / 키워드): `예금보호한도`
+- Hiện tại: `1억원`
+- keyword: `예금자보호제도`, `예금보호한도`
 
-Nguồn: https://www.fsc.go.kr/no010101/85200
+Nguồn: 금융위원회  
+https://www.fsc.go.kr/no010101/85200
 
+Điểm thi nên nhớ trước tiên là **mục đích của 예금자보호제도**, sau đó mới nhớ con số hiện hành.
 
-> **Chuyển mạch:** Từ **1. 예금자보호 한도 — hạn mức bảo vệ tiền gửi**, ta sang **2. 법정 최고금리 — lãi suất tối đa theo luật** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+---
 
 ## 2. 법정 최고금리 — lãi suất tối đa theo luật
 
-Bản tóm tắt chương 법 ghi `연 24% 이내`.
+Tài liệu cũ có thể ghi `연 24%`.
 
-**Hiện tại:** mức tối đa được hạ xuống **20%/năm** từ 2021-07-07.
+**Hiện hành:** mức lãi suất tối đa theo luật là **20%/năm** từ 2021-07-07.
 
-- Cũ trong PDF: `24%`
+- Cũ: `24%`
 - Hiện hành: `20%`
-- từ khóa (keyword / 키워드): `법정 최고금리`
 
-Nguồn Bộ Tư pháp: https://www.moj.go.kr/bbs/moj/182/545579/artclView.do
+Nguồn Bộ Tư pháp:  
+https://www.moj.go.kr/bbs/moj/182/545579/artclView.do
 
-
-> **Chuyển mạch:** Từ **2. 법정 최고금리 — lãi suất tối đa theo luật**, ta sang **3. 1인 가구 비율** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+---
 
 ## 3. 1인 가구 비율
 
-Bản tóm tắt chương 사회 minh họa `약 30%`.
+Một số infographic KIIP cũ mô tả khoảng `30%`.
 
-Theo 인구주택총조사 2024, **1인가구 chiếm 36.1%** số hộ gia đình thông thường.
+Theo 인구주택총조사 2024, `1인 가구` chiếm khoảng **36.1%** số 일반가구.
 
-- Hãy nhớ xu hướng: `1인 가구 증가`
-- Không nên khóa trí nhớ vào `30%` nếu đề không nói rõ năm.
+Đối với KIIP nên nhớ:
 
-Nguồn 국가데이터처/통계청: 2024 인구주택총조사, công bố 2025-07-29.
+`대가족 감소 → 핵가족 증가 → 1인 가구 증가 → 가족 형태 다양화`
 
+Không học cứng một tỷ lệ nếu câu hỏi không xác định năm.
 
-> **Chuyển mạch:** Từ **3. 1인 가구 비율**, ta sang **4. 서울 인구** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+---
 
 ## 4. 서울 인구
 
-Bản tóm tắt địa lý dùng con số gần `약 1,000만 명`. Đây là mô tả truyền thống, nhưng dân số đăng ký Seoul hiện thấp hơn.
+Giáo trình thường mô tả Seoul là đô thị gần 10 triệu dân. Dân số đăng ký thực tế đã xuống dưới mức này.
 
-서울 열린데이터광장 ghi dân số đăng ký khoảng **9.56 triệu** vào quý II/2026.
+Điểm ổn định cần nhớ:
 
-Điểm nên học cho KIIP là:
+`서울 = 대한민국의 수도 + 수도권의 중심 + 정치·경제·문화 기능 집중`
 
-`서울 = 수도 + 정치·경제·문화의 중심 + 수도권 핵심`.
+Con số dân số chỉ nên dùng khi đề hoặc tài liệu chỉ rõ thời điểm.
 
-Không nên biến con số 10 triệu thành fact bất biến.
-
-
-> **Chuyển mạch:** Từ **4. 서울 인구**, ta sang **5. 종교 통계** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+---
 
 ## 5. 종교 통계
 
-Biểu đồ trong chương 문화 dùng census **2015**. Hãy đọc nó như một ví dụ lịch sử về đa dạng tôn giáo, không như tỷ lệ 2026.
+Các biểu đồ tôn giáo trong nhiều tài liệu dựa trên điều tra cũ, đặc biệt census 2015.
 
-Điểm thi ổn định hơn:
+Không biến tỷ lệ đó thành fact 2026.
 
-- Hàn Quốc có `종교의 자유`.
-- Nhiều tôn giáo cùng tồn tại.
-- `부처님오신날`, `성탄절` đều là ngày nghỉ lễ công cộng.
+Điểm ổn định:
 
+- `종교의 자유`
+- nhiều tôn giáo cùng tồn tại
+- số người `무종교` đáng kể
+- `부처님오신날`, `성탄절` là public holidays
 
-> **Chuyển mạch:** Từ **5. 종교 통계**, ta sang **6. 유학생 수, 대학 진학률 và các statistic khác** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+---
 
-## 6. 유학생 수, 대학 진학률 và các statistic khác
+## 6. 교육·복지 관련 통계와 지원금
 
-Các số liệu như số du học sinh năm 2020, tỷ lệ vào đại học hoặc một số chính sách hỗ trợ sinh con có thể đổi nhanh.
+Các dữ liệu thay đổi nhanh:
+
+- số du học sinh
+- tỷ lệ vào đại học
+- trợ cấp mang thai/sinh con/chăm trẻ
+- học phí hoặc hỗ trợ địa phương
+- chi tiết `고교학점제`
 
 Cách học:
 
-`học cơ chế/hệ thống → chỉ học số khi giáo trình hiện hành nhấn mạnh → kiểm tra nguồn chính thức trước kỳ thi`.
+`cơ chế → tên hệ thống → đối tượng/mục đích → số liệu hiện hành nếu thật sự cần`
 
-Nguồn thường dùng: `정부24`, `교육부`, `보건복지부`, `법무부`.
+Nguồn ưu tiên: `교육부`, `보건복지부`, `정부24`, chính quyền địa phương.
 
+---
 
-> **Chuyển mạch:** Từ **6. 유학생 수, 대학 진학률 và các statistic khác**, ta sang **7. KIIP hiện tại: course hours của 한국사회 이해** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+## 7. KIIP 한국사회 이해 course hours
 
-## 7. KIIP hiện tại: course hours của 한국사회 이해
+Bộ Tư pháp hiện mô tả:
 
-Trang Bộ Tư pháp hiện ghi:
+- mục tiêu `영주`: **70시간**
+- mục tiêu `국적`: **100시간**
 
-- mục tiêu `영주`: 한국사회 이해 **70시간**;
-- mục tiêu `국적`: 한국사회 이해 **100시간**.
+Nguồn: 법무부 사회통합프로그램  
+https://www.moj.go.kr/immigration/1571/subview.do
 
-Điều này giải thích vì sao người học 국적 cần thêm nội dung sâu hơn, nhưng thư viện (library / 라이브러리) này vẫn dùng **một cây ghi chú (note / 노트) chung** và gắn `귀화용 심화` ngay trong lĩnh vực (domain / 도메인) thay vì tạo hai folder trùng lặp.
+Điều này lý giải tại sao `귀화용` cần phần `심화`, nhưng trong library vẫn giữ một hệ thống liên kết thay vì duplicate toàn bộ nội dung.
 
-Nguồn: https://www.moj.go.kr/moj/369/subview.do
+---
 
+## 8. 종합평가 format — luôn kiểm tra notice trước kỳ thi
 
-> **Chuyển mạch:** Từ **7. KIIP hiện tại: course hours của 한국사회 이해**, ta sang **8. 종합평가 format — phải kiểm tra notice trước kỳ thi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+Baseline từ tài liệu đánh giá chính thức đã được công bố:
 
-## 8. 종합평가 format — phải kiểm tra notice trước kỳ thi
+- tổng `45문`
+- `70분`
+- 필기 + 구술
+- tài liệu mẫu có phần 작문 ngắn, thường luyện quanh khoảng `200자`
 
-Một hướng dẫn đánh giá chính thức của Bộ Tư pháp được công bố cho 종합평가 mô tả tổng cộng **45문 / 70분 / 100점**:
+Tuy nhiên KIIP có thể điều chỉnh format hoặc cách vận hành. Trước ngày thi phải kiểm tra:
 
-- 필기: 40문 / 60분
-- 객관식: 36문
-- 작문형: 4문 trong phần written
-- 구술: 5문 / 10분
+- https://www.kiiptest.org/
+- https://www.socinet.go.kr/
 
-Tài liệu mẫu (sample / 표본) công khai của Bộ Tư pháp cũng có dạng viết khoảng **200자** theo chủ đề và các gợi ý bắt buộc.
+**Không học lịch thi hoặc format từ screenshot cũ.**
 
-Tuy nhiên, Bộ Tư pháp đã công bố trong tháng 7/2026 rằng đang chuẩn bị hướng cải tổ 사회통합프로그램. Vì vậy, **format ở trên là baseline từ tài liệu chính thức đã công bố, không phải lời hứa rằng mọi kỳ thi tương lai sẽ không thay đổi**. Trước khi đăng ký kỳ thi, kiểm tra `kiiptest.org` và notice của `socinet.go.kr`.
-
-Nguồn:
-
-- 사회통합프로그램: https://www.moj.go.kr/moj/369/subview.do
-- KIIP 평가: https://www.kiiptest.org/
-- 사회통합프로그램 개편방향 보도자료 (2026-07-12): trang Bộ Tư pháp/출입국·외국인정책본부.
-
-
-> **Chuyển mạch:** Từ **8. 종합평가 format — phải kiểm tra notice trước kỳ thi**, ta sang **9. 정치 facts có tính cấu trúc** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+---
 
 ## 9. 정치 facts có tính cấu trúc
 
-Các điểm sau vẫn là baseline high-yield trong tài liệu chính thức và giáo trình:
+Các fact high-yield tương đối ổn định:
 
 - 대통령 임기 `5년`, 단임
 - 국회의원 임기 `4년`
-- 선거권 기본 연령 `만 18세`
 - 국회 `300명`
-- 선거 4대 원칙
-- 삼권분립
+- 선거권 기본 연령 `만 18세`
+- 선거의 4대 원칙: `보통·평등·직접·비밀`
+- `삼권분립`
 
-Đây là kiến thức công dân cấu trúc; nếu một đề hỏi quy định chi tiết về bầu cử địa phương, tư cách cử tri người nước ngoài hoặc lịch bầu cử cụ thể, phải dùng thông báo của 중앙선거관리위원회 áp dụng tại thời điểm đó.
+Quyền bầu cử của người nước ngoài trong một số cuộc bầu cử địa phương có điều kiện pháp lý riêng; không suy rộng từ quyền của 국민.
 
+---
 
-> **Chuyển mạch:** Từ **9. 정치 facts có tính cấu trúc**, ta sang **10. Các fact tương đối ổn định khác** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+## 10. 2026-10-02 형사사법 체계 개편 — 검찰청 폐지
 
-## 10. Các fact tương đối ổn định khác
+> **Rất quan trọng cho phần 법/정치 hiện tại.**
 
-Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
+Các giáo trình và note cũ có thể mô tả đơn giản:
 
-- 4대 사회보험
-- 112 / 119 / 117 / 1345
-- 학교 학제 `6-3-3`
-- 국경일·국가상징 cơ bản
-- 역사 chronology lớn
-- 지역 association như `호남=전라`, `영남=경상`, `제주=한라산`
+`경찰 → 검찰 → 법원`
 
-> **Bàn giao:** Sau **10. Các fact tương đối ổn định khác**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 exam scope and strategy](./00_exam_scope_and_strategy.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Nhưng từ **2026-10-02**, `검찰청법` bị bãi bỏ và hệ thống mới chính thức có hiệu lực nhằm tách `수사` và `기소`.
+
+### Cấu trúc lớn hiện tại
+
+- `경찰 등 사법경찰`: điều tra tội phạm theo thẩm quyền
+- `중대범죄수사청`: điều tra các nhóm trọng tội thuộc phạm vi luật định
+- `공소청`: trọng tâm là `공소 제기·공소 유지`
+- `법원`: xét xử
+
+Mental model:
+
+```text
+수사
+  ↓
+기소 여부 판단 / 공소 제기
+  ↓
+재판
+```
+
+`수사 ≠ 기소 ≠ 재판`.
+
+### Vì sao tài liệu cũ và hiện tại khác nhau?
+
+KIIP textbook được in trước khi cơ cấu mới có hiệu lực. Vì vậy khi gặp từ `검찰` trong nguồn cũ:
+
+1. hiểu chức năng lịch sử mà giáo trình đang giải thích;
+2. không tự động coi tên cơ quan đó là cấu trúc hiện hành;
+3. với câu hỏi về **현재 제도**, dùng luật hiện hành.
+
+Nguồn chính thức:
+
+- 국가법령정보센터 — `검찰청법` 폐지, `공소청법` 시행 2026-10-02
+- 국가법령정보센터 — `중대범죄수사청 조직 및 운영에 관한 법률` 시행 2026-10-02
+
+Đọc nối: [`06_법.md`](06_법.md).
+
+---
+
+## 11. Các fact tương đối ổn định khác
+
+Những thứ có thể học phản xạ:
+
+- `4대 사회보험`
+- `112 / 119 / 117 / 1345`
+- học chế `6-3-3`
+- 태극기·애국가·무궁화
+- chronology lớn của lịch sử Hàn Quốc
+- `호남 = 전라`, `영남 = 경상`
+- `제주 = 한라산`
+- `수도권 = 서울·경기·인천`
+
+---
+
+# Source hierarchy
+
+Khi nguồn mâu thuẫn, ưu tiên theo thứ tự:
+
+1. `법령` hoặc thông báo chính thức đang có hiệu lực;
+2. `법무부·사회통합정보망·kiiptest.org`;
+3. cơ quan chuyên ngành như 선관위·금융위·교육부;
+4. giáo trình KIIP được áp dụng;
+5. PDF/tài liệu tóm tắt;
+6. community note.
+
+Lưu ý: với **câu hỏi thi bám giáo trình**, cần biết giáo trình đang muốn kiểm tra concept nào; với câu hỏi hỏi **hiện nay/current**, ưu tiên thông tin hiện hành.
+
+> **Đọc tiếp:** [`00_exam_scope_and_strategy.md`](00_exam_scope_and_strategy.md) → [`17_complete_exam_coverage_map.md`](17_complete_exam_coverage_map.md).
