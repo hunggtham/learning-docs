@@ -28,7 +28,7 @@ Các ký hiệu này không phải ba cách nói cùng một điều:
 
 Trong trao đổi kỹ thuật, Big-O đôi khi được dùng tương đối lỏng để chỉ **bậc tăng trưởng (order of growth)**. Khi cần lập luận chặt chẽ, phải phân biệt rõ đang nói về cận trên, cận dưới hay cận chặt.
 
-> **Chuyển mạch:** Trong **Phân tích độ phức tạp**, **1. Tại sao không chỉ đo thời gian thực thi?** nêu điều cần giải thích; **2. Tốc độ tăng trưởng quan trọng hơn độ dài mã nguồn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Kích thước đầu vào không phải lúc nào cũng chỉ là n** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **1. Tại sao không chỉ đo thời gian thực thi?** đặt vấn đề; **2. Tốc độ tăng trưởng quan trọng hơn độ dài mã nguồn** kiểm tra bằng chứng, rồi **3. Kích thước đầu vào không phải lúc nào cũng chỉ là n** mở rộng hệ quả.
 
 ## 2. Tốc độ tăng trưởng quan trọng hơn độ dài mã nguồn
 
@@ -60,7 +60,7 @@ Sau `k` bước:
 
 `log n` xuất hiện vì mỗi bước thu nhỏ phần còn lại theo một tỷ lệ cố định, chứ không phải vì “tìm kiếm nhị phân mặc nhiên có log”.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích độ phức tạp**, **2. Tốc độ tăng trưởng quan trọng hơn độ dài mã nguồn** nêu điều cần giải thích; **3. Kích thước đầu vào không phải lúc nào cũng chỉ là n** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Trường hợp tốt nhất, trung bình, kỳ vọng và xấu nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. Tốc độ tăng trưởng quan trọng hơn độ dài mã nguồn** đặt vấn đề; **3. Kích thước đầu vào không phải lúc nào cũng chỉ là n** kiểm tra bằng chứng, rồi **4. Trường hợp tốt nhất, trung bình, kỳ vọng và xấu nhất** mở rộng hệ quả.
 
 ## 3. Kích thước đầu vào không phải lúc nào cũng chỉ là `n`
 
@@ -76,7 +76,7 @@ Không nên tùy tiện rút gọn thành `O(n)` nếu việc đó làm mất th
 
 Với đồ thị thưa (sparse graph), thường `E≈V`; với đồ thị dày (dense graph), `E` có thể gần `V²`. Cùng một công thức `O(V+E)` nhưng hành vi thực tế có thể rất khác giữa hai trường hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích độ phức tạp**, **4. Trường hợp tốt nhất, trung bình, kỳ vọng và xấu nhất** tiếp nhận điểm tựa từ **3. Kích thước đầu vào không phải lúc nào cũng chỉ là n** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Chi phí khấu hao không phải chi phí trung bình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Trường hợp tốt nhất, trung bình, kỳ vọng và xấu nhất** nối từ **3. Kích thước đầu vào không phải lúc nào cũng chỉ là n** sang **5. Chi phí khấu hao không phải chi phí trung bình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Trường hợp tốt nhất, trung bình, kỳ vọng và xấu nhất
 
@@ -88,7 +88,7 @@ Tìm kiếm tuyến tính có trường hợp tốt nhất `O(1)` nếu phần t
 
 Giá trị kỳ vọng không có nghĩa là “đa số trường hợp đều bằng đúng giá trị trung bình”. Một phân phối có thể có trung bình tốt nhưng phần đuôi rất xấu. Trong hệ thống nhạy với độ trễ, các phân vị p95/p99 và những đợt tăng đột biến ở trường hợp xấu nhất có thể quan trọng hơn giá trị kỳ vọng.
 
-> **Chuyển mạch:** Trong **Phân tích độ phức tạp**, **5. Chi phí khấu hao không phải chi phí trung bình** tiếp nhận điểm tựa từ **4. Trường hợp tốt nhất, trung bình, kỳ vọng và xấu nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Ba cách phân tích chi phí khấu hao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Chi phí khấu hao không phải chi phí trung bình** nối từ **4. Trường hợp tốt nhất, trung bình, kỳ vọng và xấu nhất** sang **6. Ba cách phân tích chi phí khấu hao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Chi phí khấu hao không phải chi phí trung bình
 
@@ -110,7 +110,7 @@ Do đó `n` lần thêm cuối có tổng chi phí `O(n)`, tương đương chi 
 
 Một lần thêm riêng lẻ vẫn có thể tốn `O(n)` khi phải thay đổi kích thước mảng. Đây là khác biệt quan trọng trong hệ thống thời gian thực: thông lượng khấu hao tốt không đồng nghĩa với độ trễ đuôi thấp.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích độ phức tạp**, **6. Ba cách phân tích chi phí khấu hao** tiếp nhận điểm tựa từ **5. Chi phí khấu hao không phải chi phí trung bình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Phân tích vòng lặp từ quy tắc cập nhật, không từ số tầng thụt lề** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Ba cách phân tích chi phí khấu hao** nối từ **5. Chi phí khấu hao không phải chi phí trung bình** sang **7. Phân tích vòng lặp từ quy tắc cập nhật, không từ số tầng thụt lề**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Ba cách phân tích chi phí khấu hao
 
@@ -128,7 +128,7 @@ Có ba phương pháp kinh điển.
 
 Mảng động, thao tác `multipop` trên ngăn xếp, cây Splay và một số phân tích của cấu trúc hợp nhất–tìm kiếm (Union-Find) đều có thể được hiểu rõ hơn bằng các phương pháp này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích độ phức tạp**, **7. Phân tích vòng lặp từ quy tắc cập nhật, không từ số tầng thụt lề** tiếp nhận điểm tựa từ **6. Ba cách phân tích chi phí khấu hao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Phép tổng là công cụ phân tích quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Phân tích vòng lặp từ quy tắc cập nhật, không từ số tầng thụt lề** nối từ **6. Ba cách phân tích chi phí khấu hao** sang **8. Phép tổng là công cụ phân tích quan trọng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Phân tích vòng lặp từ quy tắc cập nhật, không từ số tầng thụt lề
 
@@ -152,7 +152,7 @@ Ngược lại, một vòng lặp đơn cũng có thể chứa thao tác ẩn c�
 
 Nguyên tắc đúng là: **phân tích chi phí của từng thao tác nguyên thủy hoặc API được gọi, sau đó cộng hoặc nhân chi phí theo luồng điều khiển (control flow)**.
 
-> **Chuyển mạch:** Trong **Phân tích độ phức tạp**, **8. Phép tổng là công cụ phân tích quan trọng** tiếp nhận điểm tựa từ **7. Phân tích vòng lặp từ quy tắc cập nhật, không từ số tầng thụt lề** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Công thức truy hồi cho thuật toán đệ quy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Phép tổng là công cụ phân tích quan trọng** nối từ **7. Phân tích vòng lặp từ quy tắc cập nhật, không từ số tầng thụt lề** sang **9. Công thức truy hồi cho thuật toán đệ quy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Phép tổng là công cụ phân tích quan trọng
 
@@ -180,7 +180,7 @@ Một mẫu khác:
 
 Phân tích độ phức tạp thường là quá trình nhận ra dãy hoặc phép tổng đang ẩn trong mã nguồn.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích độ phức tạp**, **9. Công thức truy hồi cho thuật toán đệ quy** tiếp nhận điểm tựa từ **8. Phép tổng là công cụ phân tích quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Độ phức tạp không gian: bộ nhớ sống khác tổng lượng cấp phát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Công thức truy hồi cho thuật toán đệ quy** nối từ **8. Phép tổng là công cụ phân tích quan trọng** sang **10. Độ phức tạp không gian: bộ nhớ sống khác tổng lượng cấp phát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Công thức truy hồi cho thuật toán đệ quy
 
@@ -210,7 +210,7 @@ T(n)=T(n-1)+\Theta(n)=\Theta(n^2)
 
 Định lý Master là công cụ rút gọn cho một họ công thức truy hồi. Tuy nhiên, cây đệ quy hoặc phương pháp thế (substitution) thường cho trực giác rõ hơn khi kích thước các bài toán con không đều nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích độ phức tạp**, **10. Độ phức tạp không gian: bộ nhớ sống khác tổng lượng cấp phát** tiếp nhận điểm tựa từ **9. Công thức truy hồi cho thuật toán đệ quy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Độ phức tạp nhạy theo kích thước đầu ra** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Độ phức tạp không gian: bộ nhớ sống khác tổng lượng cấp phát** nối từ **9. Công thức truy hồi cho thuật toán đệ quy** sang **11. Độ phức tạp nhạy theo kích thước đầu ra**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Độ phức tạp không gian: bộ nhớ sống khác tổng lượng cấp phát
 
@@ -220,7 +220,7 @@ DFS đệ quy trên cây có chiều cao `h` dùng ngăn xếp lời gọi `O(h)
 
 Trong môi trường có bộ thu gom rác (GC), **tốc độ cấp phát (allocation rate)** và **lượng bộ nhớ được giữ lại (retained memory)** là hai chỉ số khác nhau. Nhiều đối tượng tạm thời có thể gây áp lực lên GC dù kích thước cấu trúc dữ liệu sống tại một thời điểm không lớn.
 
-> **Chuyển mạch:** Trong **Phân tích độ phức tạp**, **11. Độ phức tạp nhạy theo kích thước đầu ra** tiếp nhận điểm tựa từ **10. Độ phức tạp không gian: bộ nhớ sống khác tổng lượng cấp phát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Độ phức tạp phụ thuộc đặc điểm đầu vào** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Độ phức tạp nhạy theo kích thước đầu ra** nối từ **10. Độ phức tạp không gian: bộ nhớ sống khác tổng lượng cấp phát** sang **12. Độ phức tạp phụ thuộc đặc điểm đầu vào**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Độ phức tạp nhạy theo kích thước đầu ra
 
@@ -234,7 +234,7 @@ Cây tìm kiếm nhị phân cân bằng có thể trả lời truy vấn khoả
 
 Góc nhìn này giúp tránh những mục tiêu bất khả thi như “liệt kê một triệu kết quả trong `O(log n)`”.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích độ phức tạp**, **12. Độ phức tạp phụ thuộc đặc điểm đầu vào** tiếp nhận điểm tựa từ **11. Độ phức tạp nhạy theo kích thước đầu ra** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Độ phức tạp giả đa thức và độ dài biểu diễn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Độ phức tạp phụ thuộc đặc điểm đầu vào** nối từ **11. Độ phức tạp nhạy theo kích thước đầu ra** sang **13. Độ phức tạp giả đa thức và độ dài biểu diễn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Độ phức tạp phụ thuộc đặc điểm đầu vào
 
@@ -242,7 +242,7 @@ Một số thuật toán chạy nhanh hơn đáng kể khi đầu vào có cấu
 
 Nếu hiệu năng phụ thuộc vào các tham số như **mức độ mất trật tự**, **số nghịch thế (number of inversions)**, chiều cao cây hoặc số khóa phân biệt, nên giữ các tham số đó trong phân tích thay vì ép mọi thứ về một biến `n`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích độ phức tạp**, **13. Độ phức tạp giả đa thức và độ dài biểu diễn** tiếp nhận điểm tựa từ **12. Độ phức tạp phụ thuộc đặc điểm đầu vào** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Mô hình so sánh và cận dưới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Độ phức tạp giả đa thức và độ dài biểu diễn** nối từ **12. Độ phức tạp phụ thuộc đặc điểm đầu vào** sang **14. Mô hình so sánh và cận dưới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Độ phức tạp giả đa thức và độ dài biểu diễn
 
@@ -250,7 +250,7 @@ Quy hoạch động cho Knapsack có độ phức tạp `O(nW)` với sức ch�
 
 Sự phân biệt này quan trọng khi chuyển từ thiết kế thuật toán sang lý thuyết độ phức tạp: “đa thức theo giá trị số” không đồng nghĩa với “đa thức theo độ dài mã hóa của đầu vào”.
 
-> **Chuyển mạch:** Trong **Phân tích độ phức tạp**, **13. Độ phức tạp giả đa thức và độ dài biểu diễn** đã nêu tiêu chí phân biệt, còn **14. Mô hình so sánh và cận dưới** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **15. Độ phức tạp là một phần của hợp đồng API** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Độ phức tạp giả đa thức và độ dài biểu diễn** đã nêu tiêu chí phân biệt, còn **14. Mô hình so sánh và cận dưới** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm; **15. Độ phức tạp là một phần của hợp đồng API** mở rộng hệ quả hoặc giới hạn của cơ chế này.
 
 ## 14. Mô hình so sánh và cận dưới
 
@@ -266,7 +266,7 @@ Counting Sort và Radix Sort không vi phạm cận này vì chúng khai thác t
 
 Cận dưới giúp ta nhận ra khi nào phải thay đổi mô hình bài toán thay vì tiếp tục cố tối ưu mã nguồn trong một mô hình vốn đã đạt giới hạn lý thuyết.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích độ phức tạp**, **14. Mô hình so sánh và cận dưới** đã nêu tiêu chí phân biệt, còn **15. Độ phức tạp là một phần của hợp đồng API** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **16. Phân cấp bộ nhớ và ảnh hưởng của bộ nhớ đệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Mô hình so sánh và cận dưới** đã nêu tiêu chí phân biệt, còn **15. Độ phức tạp là một phần của hợp đồng API** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm; **16. Phân cấp bộ nhớ và ảnh hưởng của bộ nhớ đệm** mở rộng hệ quả hoặc giới hạn của cơ chế này.
 
 ## 15. Độ phức tạp là một phần của hợp đồng API
 
@@ -278,7 +278,7 @@ Một lần tái cấu trúc chỉ thay cách triển khai tập hợp dữ li�
 
 Vì vậy, độ phức tạp nên được xem là một phần của **hợp đồng kỹ thuật của API**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích độ phức tạp**, **16. Phân cấp bộ nhớ và ảnh hưởng của bộ nhớ đệm** tiếp nhận điểm tựa từ **15. Độ phức tạp là một phần của hợp đồng API** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. CPU, dự đoán nhánh và véc-tơ (vector / 벡터) hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Phân cấp bộ nhớ và ảnh hưởng của bộ nhớ đệm** nối từ **15. Độ phức tạp là một phần của hợp đồng API** sang **17. CPU, dự đoán nhánh và véc-tơ (vector / 벡터) hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Phân cấp bộ nhớ và ảnh hưởng của bộ nhớ đệm
 
@@ -293,7 +293,7 @@ Trong **mô hình bộ nhớ ngoài (external-memory model)**, đôi khi ta đ�
 
 Mô hình RAM tiệm cận vẫn rất hữu ích, nhưng khi phân tích hệ thống thực tế cần xét thêm tính cục bộ (locality) và chi phí di chuyển dữ liệu giữa các tầng bộ nhớ.
 
-> **Chuyển mạch:** Trong **Phân tích độ phức tạp**, **17. CPU, dự đoán nhánh và véc-tơ (vector / 벡터) hóa** tiếp nhận điểm tựa từ **16. Phân cấp bộ nhớ và ảnh hưởng của bộ nhớ đệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Độ trễ đuôi và các loại bảo đảm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. CPU, dự đoán nhánh và véc-tơ (vector / 벡터) hóa** nối từ **16. Phân cấp bộ nhớ và ảnh hưởng của bộ nhớ đệm** sang **18. Độ trễ đuôi và các loại bảo đảm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. CPU, dự đoán nhánh và véc-tơ (vector / 벡터) hóa
 
@@ -303,7 +303,7 @@ Một thuật toán có nhiều nhánh phụ thuộc dữ liệu khó dự đoá
 
 Big-O mô tả hình dạng tăng trưởng khi quy mô thay đổi; **vi kiến trúc (microarchitecture)** quyết định nhiều hệ số hằng trong thực tế.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích độ phức tạp**, **18. Độ trễ đuôi và các loại bảo đảm** tiếp nhận điểm tựa từ **17. CPU, dự đoán nhánh và véc-tơ (vector / 벡터) hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Đồng thời làm thay đổi mô hình chi phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Độ trễ đuôi và các loại bảo đảm** nối từ **17. CPU, dự đoán nhánh và véc-tơ (vector / 벡터) hóa** sang **19. Đồng thời làm thay đổi mô hình chi phí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Độ trễ đuôi và các loại bảo đảm
 
@@ -322,7 +322,7 @@ high-probability bound  -> cận đúng với xác suất cao
 
 Các loại bảo đảm này không thể thay thế lẫn nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích độ phức tạp**, **19. Đồng thời làm thay đổi mô hình chi phí** tiếp nhận điểm tựa từ **18. Độ trễ đuôi và các loại bảo đảm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Độ phức tạp trong hệ thống phân tán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Đồng thời làm thay đổi mô hình chi phí** nối từ **18. Độ trễ đuôi và các loại bảo đảm** sang **20. Độ phức tạp trong hệ thống phân tán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Đồng thời làm thay đổi mô hình chi phí
 
@@ -330,7 +330,7 @@ Một ánh xạ dùng đồng thời (concurrent map) không chỉ có chi phí 
 
 Một vòng lặp nguyên tử có độ phức tạp lý thuyết `O(1)` vẫn có thể chậm khi nhiều luồng cùng tranh chấp một trạng thái. Vì vậy, độ phức tạp của thuật toán tuần tự chỉ là đường cơ sở, không phải toàn bộ mô hình hiệu năng khi chạy đồng thời.
 
-> **Chuyển mạch:** Trong **Phân tích độ phức tạp**, **20. Độ phức tạp trong hệ thống phân tán** tiếp nhận điểm tựa từ **19. Đồng thời làm thay đổi mô hình chi phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Đo hiệu năng để kiểm chứng, không thay thế phân tích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. Độ phức tạp trong hệ thống phân tán** nối từ **19. Đồng thời làm thay đổi mô hình chi phí** sang **21. Đo hiệu năng để kiểm chứng, không thay thế phân tích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Độ phức tạp trong hệ thống phân tán
 
@@ -348,7 +348,7 @@ bytes transferred        -> số byte được truyền
 
 MapReduce, sắp xếp phân tán, lập kế hoạch truy vấn cơ sở dữ liệu và xử lý đồ thị thường phải tối ưu chi phí truyền thông không kém chi phí CPU.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích độ phức tạp**, **21. Đo hiệu năng để kiểm chứng, không thay thế phân tích** tiếp nhận điểm tựa từ **20. Độ phức tạp trong hệ thống phân tán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Ví dụ: chọn cấu trúc cho dịch vụ tra cứu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Đo hiệu năng để kiểm chứng, không thay thế phân tích** nối từ **20. Độ phức tạp trong hệ thống phân tán** sang **22. Ví dụ: chọn cấu trúc cho dịch vụ tra cứu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Đo hiệu năng để kiểm chứng, không thay thế phân tích
 
@@ -363,7 +363,7 @@ Một quy trình tốt thường gồm:
 
 Nếu đường cong thời gian chạy không giống dự đoán lý thuyết, hãy kiểm tra hệ số hằng, JIT/GC, bộ nhớ đệm, tối ưu hóa của trình biên dịch, miền kích thước đầu vào hoặc lỗi trong phép đo trước khi kết luận rằng phân tích độ phức tạp sai.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích độ phức tạp**, **21. Đo hiệu năng để kiểm chứng, không thay thế phân tích** cho ta quy tắc; **22. Ví dụ: chọn cấu trúc cho dịch vụ tra cứu** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **23. Danh sách kiểm tra khi phân tích độ phức tạp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Đo hiệu năng để kiểm chứng, không thay thế phân tích** nêu quy tắc; **22. Ví dụ: chọn cấu trúc cho dịch vụ tra cứu** thử quy tắc trong tình huống, rồi **23. Danh sách kiểm tra khi phân tích độ phức tạp** mở rộng hệ quả.
 
 ## 22. Ví dụ: chọn cấu trúc cho dịch vụ tra cứu
 
@@ -379,7 +379,7 @@ Bảng băm có thời gian tra cứu kỳ vọng tốt nhưng không hỗ trợ
 
 Phân tích độ phức tạp không tự chọn cấu trúc thay ta; nó giúp định lượng **sự đánh đổi (trade-off / 트레이드오프)** theo khối lượng công việc.
 
-> **Chuyển mạch:** Trong **Phân tích độ phức tạp**, **22. Ví dụ: chọn cấu trúc cho dịch vụ tra cứu** cho ta quy tắc; **23. Danh sách kiểm tra khi phân tích độ phức tạp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. Ví dụ: chọn cấu trúc cho dịch vụ tra cứu** nêu quy tắc; **23. Danh sách kiểm tra khi phân tích độ phức tạp** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## 23. Danh sách kiểm tra khi phân tích độ phức tạp
 
@@ -398,7 +398,7 @@ Lời gọi API/thư viện có ẩn thao tác duyệt hoặc sao chép không?
 Hệ thống thực tế cần thông lượng trung bình hay độ trễ trường hợp xấu nhất?
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích độ phức tạp**, **Mô hình tư duy** gom các mảnh từ **23. Danh sách kiểm tra khi phân tích độ phức tạp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** tổng hợp từ **23. Danh sách kiểm tra khi phân tích độ phức tạp**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy
 
