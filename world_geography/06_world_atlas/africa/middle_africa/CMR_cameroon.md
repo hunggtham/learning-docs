@@ -6,7 +6,7 @@
 
 Cameroon trải từ bờ Vịnh Guinea rất ẩm qua núi lửa, cao nguyên và rừng mưa Congo tới xavan bán khô ở phía bắc. Trong một lãnh thổ tương đối gọn, nó chứa nhiều độ dốc (gradient / 기울기) sinh thái đặc trưng của cả lục địa. Tuy nhiên nhãn “Africa in miniature” chỉ hữu ích nếu hiểu cơ chế tạo sự đa dạng này, không phải như một khẩu hiệu.
 
-> **Chuyển mạch:** Trong **Cameroon**, **Cameroon Volcanic Line và relief** tiếp nhận điểm tựa từ **Vì sao Cameroon thường được gọi là “Africa in miniature”?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dốc (gradient / 기울기) khí hậu nam–bắc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Nhãn “Africa in miniature” có cơ sở ở **Cameroon Volcanic Line và relief**: núi lửa, cao nguyên và bờ ẩm tạo nhiều hệ sinh thái trong một không gian gọn. **Độ dốc (gradient / 기울기) khí hậu nam–bắc** tiếp theo kéo sự đa dạng ấy từ rừng tới Sahel.
 
 ## Cameroon Volcanic Line và relief
 
@@ -14,7 +14,7 @@ Mount Cameroon và chuỗi núi lửa liên quan tạo địa hình dốc gần 
 
 Cao nguyên trung tâm nâng Yaoundé lên độ cao lớn hơn vùng cảng Douala; xa hơn về bắc, địa hình hạ dần vào các vùng xavan và lưu vực Lake Chad.
 
-> **Chuyển mạch:** Ở chặng này của **Cameroon**, **Độ dốc (gradient / 기울기) khí hậu nam–bắc** tiếp nhận điểm tựa từ **Cameroon Volcanic Line và relief** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Douala và Yaoundé: hai loại nút (node / 노드) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Relief đón gió ẩm ở tây nam nhưng mưa giảm dần về bắc; **Độ dốc (gradient / 기울기) khí hậu nam–bắc** phân hóa mùa vụ, dân cư và độ nhạy hạn. **Douala và Yaoundé: hai loại nút (node / 노드) khác nhau** tiếp theo cho thấy gateway biển và thủ đô nội địa phân vai thế nào.
 
 ## Độ dốc (gradient / 기울기) khí hậu nam–bắc
 
@@ -22,7 +22,7 @@ Phía nam ẩm với rừng nhiệt đới; lượng mưa giảm dần về phí
 
 Do đó một chính sách nông nghiệp áp dụng giống nhau cho toàn Cameroon dễ bỏ qua khác biệt sinh thái rất lớn giữa các vùng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cameroon**, **Douala và Yaoundé: hai loại nút (node / 노드) khác nhau** tiếp nhận điểm tựa từ **Độ dốc (gradient / 기울기) khí hậu nam–bắc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cửa ngõ cho Trung Phi nội lục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Douala là cảng–gateway, Yaoundé là administrative inland capital; **Douala và Yaoundé: hai loại nút (node / 노드) khác nhau** tạo mạng đa cực thay vì một city duy nhất. **Cửa ngõ cho Trung Phi nội lục** tiếp theo mở vai trò của Douala ra Chad và Central African Republic.
 
 ## Douala và Yaoundé: hai loại nút (node / 노드) khác nhau
 
@@ -30,7 +30,7 @@ Douala là cảng và cực kinh tế chính, nằm gần bờ biển và cửa 
 
 Mạng này làm hoạt động kinh tế không tập trung vào một thành phố duy nhất, dù Douala có vai trò đặc biệt trong thương mại quốc tế.
 
-> **Chuyển mạch:** Trong **Cameroon**, **Cửa ngõ cho Trung Phi nội lục** tiếp nhận điểm tựa từ **Douala và Yaoundé: hai loại nút (node / 노드) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nông nghiệp, rừng và tài nguyên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hàng hóa đi từ Douala qua road/rail và biên giới nên **Cửa ngõ cho Trung Phi nội lục** phụ thuộc reliability, bottleneck và thời gian chứ không chỉ khoảng cách. **Nông nghiệp, rừng và tài nguyên** tiếp theo cho thấy các vùng sinh thái cung cấp gì cho corridor.
 
 ## Cửa ngõ cho Trung Phi nội lục
 
@@ -38,7 +38,7 @@ Cameroon có vai trò transit đối với Chad và Central African Republic. H�
 
 Đây là ví dụ điển hình về **gateway phụ thuộc (dependency / 의존성)**: một quốc gia ven biển có thể trở thành hạ tầng thương mại của nhiều quốc gia không giáp biển phía sau.
 
-> **Chuyển mạch:** Ở chặng này của **Cameroon**, **Nông nghiệp, rừng và tài nguyên** tiếp nhận điểm tựa từ **Cửa ngõ cho Trung Phi nội lục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cacao, cà phê và rừng ở nam–cao nguyên khác cotton, livestock phía bắc; **Nông nghiệp, rừng và tài nguyên** phân bố theo gradient nước và khả năng tiếp cận. **Rủi ro** tiếp theo đặt các vùng này trước lũ, núi lửa, sạt lở và hạn.
 
 ## Nông nghiệp, rừng và tài nguyên
 
@@ -46,13 +46,13 @@ Các vùng cao và phía nam có cacao, cà phê, cây công nghiệp và lâm n
 
 Rừng Congo ở phía đông–nam có giá trị sinh thái lớn nhưng khả năng tiếp cận (accessibility / 접근성) thấp hơn các corridor chính.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cameroon**, **Rủi ro** tiếp nhận điểm tựa từ **Nông nghiệp, rừng và tài nguyên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Lũ ven biển, sạt lở và volcano ở vùng núi, suy thoái rừng và hạn phía bắc làm **Rủi ro** có bản đồ theo vùng, không có một hazard Cameroon duy nhất. **Mô hình tư duy** sẽ tổng hợp transect sinh thái với gateway Central Africa.
 
 ## Rủi ro
 
 Lũ ven biển, sạt lở ở vùng núi, núi lửa, suy thoái rừng và hạn phía bắc là các hazard có phân bố khác nhau. Không thể nói “rủi ro Cameroon” như một loại duy nhất.
 
-> **Chuyển mạch:** Trong **Cameroon**, **Mô hình tư duy** gom các mảnh từ **Rủi ro** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi Gulf–volcanic highlands–Sahel → Douala/Yaoundé → Central Africa gateway → agriculture/forest/resource → regional risks, rồi bàn giao cho owner **Middle Africa** trong [README](./README.md).
 
 ## Mô hình tư duy
 
