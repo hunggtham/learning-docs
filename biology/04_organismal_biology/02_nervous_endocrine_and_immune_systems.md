@@ -20,7 +20,7 @@ Sinh học tế bào (cell biology) đã xây điện thế màng (membrane pote
 
 ---
 
-> **Chuyển mạch:** Neuron chuyên hóa cho information flow; resting membrane potential lưu electrochemical energy, còn Nernst/equilibrium potential nối gradient ion với tín hiệu thần kinh.
+> **Nối mạch:** Neuron chuyên hóa cho information flow; resting membrane potential lưu electrochemical energy, còn Nernst/equilibrium potential nối gradient ion với tín hiệu thần kinh.
 
 ## 2. Resting điện thế màng là stored electrochemical năng lượng (energy / 에너지)
 
@@ -32,7 +32,7 @@ Pump không “tạo từng điện thế hoạt động (action potential)”. 
 
 ---
 
-> **Chuyển mạch:** Resting membrane potential stores electrochemical gradient; Nernst potential predicts one ion’s equilibrium, while action potential crosses a regenerative threshold.
+> **Nối mạch:** Resting membrane potential stores electrochemical gradient; Nernst potential predicts one ion’s equilibrium, while action potential crosses a regenerative threshold.
 
 ## 3. Nernst intuition và điện thế cân bằng (equilibrium potential)
 
@@ -46,7 +46,7 @@ Khi channel mở, membrane bị kéo về điện thế cân bằng của ion đ
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **4. Điện thế hoạt động là regenerative threshold sự kiện (event / 이벤트)** tiếp nhận điểm tựa từ **3. Nernst intuition và điện thế cân bằng (equilibrium potential)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Refractory period tạo directionality và giới hạn tỷ lệ (rate / 비율)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Điện thế hoạt động là regenerative threshold sự kiện (event / 이벤트)** nối từ **3. Nernst intuition và điện thế cân bằng (equilibrium potential)** sang **5. Refractory period tạo directionality và giới hạn tỷ lệ (rate / 비율)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Điện thế hoạt động là regenerative threshold sự kiện (event / 이벤트)
 
@@ -58,7 +58,7 @@ Sau đó Na⁺ channel inactivate và K⁺ channel mở → tái cực (repolari
 
 ---
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **4. Điện thế hoạt động là regenerative threshold sự kiện (event / 이벤트)** đã nêu tiêu chí phân biệt, còn **5. Refractory period tạo directionality và giới hạn tỷ lệ (rate / 비율)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **6. Myelin tăng speed bằng kiến trúc (architecture / 아키텍처), không bằng tăng channel khắp nơi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Điện thế hoạt động là regenerative threshold sự kiện (event / 이벤트)** đặt tiêu chí; **5. Refractory period tạo directionality và giới hạn tỷ lệ (rate / 비율)** dùng nó để kiểm tra ranh giới, rồi **6. Myelin tăng speed bằng kiến trúc (architecture / 아키텍처), không bằng tăng channel khắp nơi** mở rộng cơ chế.
 
 ## 5. Refractory period tạo directionality và giới hạn tỷ lệ (rate / 비율)
 
@@ -74,7 +74,7 @@ Thời gian (time / 시간) ràng buộc (constraint / 제약조건) là part of
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **5. Refractory period tạo directionality và giới hạn tỷ lệ (rate / 비율)** đã nêu tiêu chí phân biệt, còn **6. Myelin tăng speed bằng kiến trúc (architecture / 아키텍처), không bằng tăng channel khắp nơi** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **7. Chemical synapse: electrical → chemical → electrical** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Refractory period tạo directionality và giới hạn tỷ lệ (rate / 비율)** đặt tiêu chí; **6. Myelin tăng speed bằng kiến trúc (architecture / 아키텍처), không bằng tăng channel khắp nơi** dùng nó để kiểm tra ranh giới, rồi **7. Chemical synapse: electrical → chemical → electrical** mở rộng cơ chế.
 
 ## 6. Myelin tăng speed bằng kiến trúc (architecture / 아키텍처), không bằng tăng channel khắp nơi
 
@@ -86,7 +86,7 @@ Kiến trúc (architecture / 아키텍처) này tăng speed và efficiency nhưn
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **7. Chemical synapse: electrical → chemical → electrical** tiếp nhận điểm tựa từ **6. Myelin tăng speed bằng kiến trúc (architecture / 아키텍처), không bằng tăng channel khắp nơi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. EPSP/IPSP và tích hợp (integration / 통합)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Chemical synapse: electrical → chemical → electrical** nối từ **6. Myelin tăng speed bằng kiến trúc (architecture / 아키텍처), không bằng tăng channel khắp nơi** sang **8. EPSP/IPSP và tích hợp (integration / 통합)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Chemical synapse: electrical → chemical → electrical
 
@@ -103,7 +103,7 @@ Tín hiệu (signal / 신호) conversion tạo computational flexibility.
 
 ---
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **8. EPSP/IPSP và tích hợp (integration / 통합)** tiếp nhận điểm tựa từ **7. Chemical synapse: electrical → chemical → electrical** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Neurotransmitter không có “ý nghĩa cố định”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. EPSP/IPSP và tích hợp (integration / 통합)** nối từ **7. Chemical synapse: electrical → chemical → electrical** sang **9. Neurotransmitter không có “ý nghĩa cố định”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. EPSP/IPSP và tích hợp (integration / 통합)
 
@@ -115,7 +115,7 @@ Một neuron vì vậy không chỉ relay tín hiệu (signal / 신호); nó th�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **9. Neurotransmitter không có “ý nghĩa cố định”** tiếp nhận điểm tựa từ **8. EPSP/IPSP và tích hợp (integration / 통합)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Neural coding: thông tin (information / 정보) nằm ở mẫu hình (pattern)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Neurotransmitter không có “ý nghĩa cố định”** nối từ **8. EPSP/IPSP và tích hợp (integration / 통합)** sang **10. Neural coding: thông tin (information / 정보) nằm ở mẫu hình (pattern)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Neurotransmitter không có “ý nghĩa cố định”
 
@@ -127,7 +127,7 @@ Meaning nằm ở **ligand + thụ thể (receptor) + tế bào (cell) trạng t
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **10. Neural coding: thông tin (information / 정보) nằm ở mẫu hình (pattern)** tiếp nhận điểm tựa từ **9. Neurotransmitter không có “ý nghĩa cố định”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Chuyển đổi cảm giác (sensory transduction) chuyển vật lý (physical / 물리적) world thành membrane tín hiệu (signal / 신호)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Neural coding: thông tin (information / 정보) nằm ở mẫu hình (pattern)** nối từ **9. Neurotransmitter không có “ý nghĩa cố định”** sang **11. Chuyển đổi cảm giác (sensory transduction) chuyển vật lý (physical / 물리적) world thành membrane tín hiệu (signal / 신호)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Neural coding: thông tin (information / 정보) nằm ở mẫu hình (pattern)
 
@@ -145,7 +145,7 @@ Important principle: đo lường (measurement / 측정) một neuron không lu�
 
 ---
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **11. Chuyển đổi cảm giác (sensory transduction) chuyển vật lý (physical / 물리적) world thành membrane tín hiệu (signal / 신호)** tiếp nhận điểm tựa từ **10. Neural coding: thông tin (information / 정보) nằm ở mẫu hình (pattern)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Adaptation và dải động (dynamic range)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Chuyển đổi cảm giác (sensory transduction) chuyển vật lý (physical / 물리적) world thành membrane tín hiệu (signal / 신호)** nối từ **10. Neural coding: thông tin (information / 정보) nằm ở mẫu hình (pattern)** sang **12. Adaptation và dải động (dynamic range)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Chuyển đổi cảm giác (sensory transduction) chuyển vật lý (physical / 물리적) world thành membrane tín hiệu (signal / 신호)
 
@@ -159,7 +159,7 @@ Cùng first principle: bên ngoài (external / 외부) năng lượng (energy / 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **12. Adaptation và dải động (dynamic range)** tiếp nhận điểm tựa từ **11. Chuyển đổi cảm giác (sensory transduction) chuyển vật lý (physical / 물리적) world thành membrane tín hiệu (signal / 신호)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Trường tiếp nhận (receptive field) và ức chế bên (lateral inhibition)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Adaptation và dải động (dynamic range)** nối từ **11. Chuyển đổi cảm giác (sensory transduction) chuyển vật lý (physical / 물리적) world thành membrane tín hiệu (signal / 신호)** sang **13. Trường tiếp nhận (receptive field) và ức chế bên (lateral inhibition)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Adaptation và dải động (dynamic range)
 
@@ -173,7 +173,7 @@ Biological sensing tối ưu thông tin (information / 정보) under limited fir
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **13. Trường tiếp nhận (receptive field) và ức chế bên (lateral inhibition)** tiếp nhận điểm tựa từ **12. Adaptation và dải động (dynamic range)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Reflex arc và hierarchical điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Trường tiếp nhận (receptive field) và ức chế bên (lateral inhibition)** nối từ **12. Adaptation và dải động (dynamic range)** sang **14. Reflex arc và hierarchical điều khiển (control / 제어)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Trường tiếp nhận (receptive field) và ức chế bên (lateral inhibition)
 
@@ -185,7 +185,7 @@ Neuron sensory thường respond một vùng đầu vào (input / 입력) không
 
 ---
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **14. Reflex arc và hierarchical điều khiển (control / 제어)** tiếp nhận điểm tựa từ **13. Trường tiếp nhận (receptive field) và ức chế bên (lateral inhibition)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Autonomic hệ thần kinh: trạng thái (state / 상태) regulation toàn thân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Reflex arc và hierarchical điều khiển (control / 제어)** nối từ **13. Trường tiếp nhận (receptive field) và ức chế bên (lateral inhibition)** sang **15. Autonomic hệ thần kinh: trạng thái (state / 상태) regulation toàn thân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Reflex arc và hierarchical điều khiển (control / 제어)
 
@@ -204,7 +204,7 @@ Giống điều khiển phân tán (distributed control) trong kỹ thuật (eng
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **15. Autonomic hệ thần kinh: trạng thái (state / 상태) regulation toàn thân** tiếp nhận điểm tựa từ **14. Reflex arc và hierarchical điều khiển (control / 제어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Baroreflex: ví dụ closed-loop neural điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Autonomic hệ thần kinh: trạng thái (state / 상태) regulation toàn thân** nối từ **14. Reflex arc và hierarchical điều khiển (control / 제어)** sang **16. Baroreflex: ví dụ closed-loop neural điều khiển (control / 제어)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Autonomic hệ thần kinh: trạng thái (state / 상태) regulation toàn thân
 
@@ -218,7 +218,7 @@ Autonomic đầu ra (output / 출력) phối hợp trạng thái nội bộ (int
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **15. Autonomic hệ thần kinh: trạng thái (state / 상태) regulation toàn thân** cho ta quy tắc; **16. Baroreflex: ví dụ closed-loop neural điều khiển (control / 제어)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **17. Neuroplasticity: liên kết (connection / 연결) strength không cố định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Autonomic hệ thần kinh: trạng thái (state / 상태) regulation toàn thân** nêu quy tắc; **16. Baroreflex: ví dụ closed-loop neural điều khiển (control / 제어)** thử quy tắc trong tình huống, rồi **17. Neuroplasticity: liên kết (connection / 연결) strength không cố định** mở rộng hệ quả.
 
 ## 16. Baroreflex: ví dụ closed-loop neural điều khiển (control / 제어)
 
@@ -230,7 +230,7 @@ Cùng một variable được nhiều điều khiển (control / 제어) tầng 
 
 ---
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **16. Baroreflex: ví dụ closed-loop neural điều khiển (control / 제어)** cho ta quy tắc; **17. Neuroplasticity: liên kết (connection / 연결) strength không cố định** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **18. học tập (learning / 학습) cần plasticity nhưng plasticity cần stability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Baroreflex: ví dụ closed-loop neural điều khiển (control / 제어)** nêu quy tắc; **17. Neuroplasticity: liên kết (connection / 연결) strength không cố định** thử quy tắc trong tình huống, rồi **18. học tập (learning / 학습) cần plasticity nhưng plasticity cần stability** mở rộng hệ quả.
 
 ## 17. Neuroplasticity: liên kết (connection / 연결) strength không cố định
 
@@ -244,7 +244,7 @@ Bộ nhớ (memory / 메모리) vì vậy là trạng thái (state / 상태) tha
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **18. học tập (learning / 학습) cần plasticity nhưng plasticity cần stability** tiếp nhận điểm tựa từ **17. Neuroplasticity: liên kết (connection / 연결) strength không cố định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Hệ nội tiết: communication bằng concentration và thời gian (time / 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. học tập (learning / 학습) cần plasticity nhưng plasticity cần stability** nối từ **17. Neuroplasticity: liên kết (connection / 연결) strength không cố định** sang **19. Hệ nội tiết: communication bằng concentration và thời gian (time / 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. học tập (learning / 학습) cần plasticity nhưng plasticity cần stability
 
@@ -256,7 +256,7 @@ Giấc ngủ (sleep), neuromodulator và inhibitory regulation góp phần kiể
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **19. Hệ nội tiết: communication bằng concentration và thời gian (time / 시간)** tiếp nhận điểm tựa từ **18. học tập (learning / 학습) cần plasticity nhưng plasticity cần stability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Peptide vs steroid hormone** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Hệ nội tiết: communication bằng concentration và thời gian (time / 시간)** nối từ **18. học tập (learning / 학습) cần plasticity nhưng plasticity cần stability** sang **20. Peptide vs steroid hormone**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Hệ nội tiết: communication bằng concentration và thời gian (time / 시간)
 
@@ -275,7 +275,7 @@ Hormone không phải nhị phân (binary / 이진) ON/OFF message.
 
 ---
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **20. Peptide vs steroid hormone** tiếp nhận điểm tựa từ **19. Hệ nội tiết: communication bằng concentration và thời gian (time / 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Pulsatile secretion mang thông tin (information / 정보)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. Peptide vs steroid hormone** nối từ **19. Hệ nội tiết: communication bằng concentration và thời gian (time / 시간)** sang **21. Pulsatile secretion mang thông tin (information / 정보)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Peptide vs steroid hormone
 
@@ -287,7 +287,7 @@ Nhưng distinction không tuyệt đối cho mọi signaling phân tử (molecul
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **21. Pulsatile secretion mang thông tin (information / 정보)** tiếp nhận điểm tựa từ **20. Peptide vs steroid hormone** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Vùng dưới đồi (hypothalamus)–pituitary axis: nervous–endocrine giao diện (interface / 인터페이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Pulsatile secretion mang thông tin (information / 정보)** nối từ **20. Peptide vs steroid hormone** sang **22. Vùng dưới đồi (hypothalamus)–pituitary axis: nervous–endocrine giao diện (interface / 인터페이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Pulsatile secretion mang thông tin (information / 정보)
 
@@ -299,7 +299,7 @@ Vì vậy single lab đo lường (measurement / 측정) đôi khi chỉ là sna
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **22. Vùng dưới đồi (hypothalamus)–pituitary axis: nervous–endocrine giao diện (interface / 인터페이스)** tiếp nhận điểm tựa từ **21. Pulsatile secretion mang thông tin (information / 정보)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. HPA axis và đáp ứng căng thẳng (stress response)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. Vùng dưới đồi (hypothalamus)–pituitary axis: nervous–endocrine giao diện (interface / 인터페이스)** nối từ **21. Pulsatile secretion mang thông tin (information / 정보)** sang **23. HPA axis và đáp ứng căng thẳng (stress response)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Vùng dưới đồi (hypothalamus)–pituitary axis: nervous–endocrine giao diện (interface / 인터페이스)
 
@@ -319,7 +319,7 @@ Multi-stage cascade tạo amplification và multiple điều khiển (control / 
 
 ---
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **23. HPA axis và đáp ứng căng thẳng (stress response)** tiếp nhận điểm tựa từ **22. Vùng dưới đồi (hypothalamus)–pituitary axis: nervous–endocrine giao diện (interface / 인터페이스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. HPT axis và thyroid hormone** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. HPA axis và đáp ứng căng thẳng (stress response)** nối từ **22. Vùng dưới đồi (hypothalamus)–pituitary axis: nervous–endocrine giao diện (interface / 인터페이스)** sang **24. HPT axis và thyroid hormone**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. HPA axis và đáp ứng căng thẳng (stress response)
 
@@ -333,7 +333,7 @@ Căng thẳng (stress) biology không đồng nghĩa subjective anxiety, dù hai
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **24. HPT axis và thyroid hormone** tiếp nhận điểm tựa từ **23. HPA axis và đáp ứng căng thẳng (stress response)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Insulin–glucagon là state-control mạng lưới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. HPT axis và thyroid hormone** nối từ **23. HPA axis và đáp ứng căng thẳng (stress response)** sang **25. Insulin–glucagon là state-control mạng lưới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. HPT axis và thyroid hormone
 
@@ -345,7 +345,7 @@ Phản hồi âm (negative feedback) có nghĩa interpretation cần nhìn upstr
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **25. Insulin–glucagon là state-control mạng lưới** tiếp nhận điểm tựa từ **24. HPT axis và thyroid hormone** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Endocrine receptor regulation tạo thích nghi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. Insulin–glucagon là state-control mạng lưới** nối từ **24. HPT axis và thyroid hormone** sang **26. Endocrine receptor regulation tạo thích nghi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Insulin–glucagon là state-control mạng lưới
 
@@ -357,7 +357,7 @@ Liver, muscle và adipose respond khác nhau.
 
 ---
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **26. Endocrine receptor regulation tạo thích nghi** tiếp nhận điểm tựa từ **25. Insulin–glucagon là state-control mạng lưới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Hệ miễn dịch là nhận dạng (recognition) + điều khiển vấn đề (problem)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **26. Endocrine receptor regulation tạo thích nghi** nối từ **25. Insulin–glucagon là state-control mạng lưới** sang **27. Hệ miễn dịch là nhận dạng (recognition) + điều khiển vấn đề (problem)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Endocrine receptor regulation tạo thích nghi
 
@@ -369,7 +369,7 @@ Vì vậy phản hồi (response / 응답) không chỉ phụ thuộc hormone co
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **27. Hệ miễn dịch là nhận dạng (recognition) + điều khiển vấn đề (problem)** tiếp nhận điểm tựa từ **26. Endocrine receptor regulation tạo thích nghi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Miễn dịch hàng rào (barrier immunity): prevention trước recognition sâu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **27. Hệ miễn dịch là nhận dạng (recognition) + điều khiển vấn đề (problem)** nối từ **26. Endocrine receptor regulation tạo thích nghi** sang **28. Miễn dịch hàng rào (barrier immunity): prevention trước recognition sâu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Hệ miễn dịch là nhận dạng (recognition) + điều khiển vấn đề (problem)
 
@@ -386,7 +386,7 @@ Defense mạnh mà không có off-switch cũng nguy hiểm.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **28. Miễn dịch hàng rào (barrier immunity): prevention trước recognition sâu** tiếp nhận điểm tựa từ **27. Hệ miễn dịch là nhận dạng (recognition) + điều khiển vấn đề (problem)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Miễn dịch bẩm sinh (innate immunity): nhận dạng mẫu (pattern recognition) nhanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **28. Miễn dịch hàng rào (barrier immunity): prevention trước recognition sâu** nối từ **27. Hệ miễn dịch là nhận dạng (recognition) + điều khiển vấn đề (problem)** sang **29. Miễn dịch bẩm sinh (innate immunity): nhận dạng mẫu (pattern recognition) nhanh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Miễn dịch hàng rào (barrier immunity): prevention trước recognition sâu
 
@@ -398,7 +398,7 @@ Prevention tại giao diện (interface / 인터페이스) thường rẻ hơn f
 
 ---
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **29. Miễn dịch bẩm sinh (innate immunity): nhận dạng mẫu (pattern recognition) nhanh** tiếp nhận điểm tựa từ **28. Miễn dịch hàng rào (barrier immunity): prevention trước recognition sâu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Viêm (inflammation): vascular program cho defense và repair** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **29. Miễn dịch bẩm sinh (innate immunity): nhận dạng mẫu (pattern recognition) nhanh** nối từ **28. Miễn dịch hàng rào (barrier immunity): prevention trước recognition sâu** sang **30. Viêm (inflammation): vascular program cho defense và repair**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Miễn dịch bẩm sinh (innate immunity): nhận dạng mẫu (pattern recognition) nhanh
 
@@ -410,7 +410,7 @@ Phản hồi (response / 응답) broad hơn adaptive nhưng độ trễ (latency
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **30. Viêm (inflammation): vascular program cho defense và repair** tiếp nhận điểm tựa từ **29. Miễn dịch bẩm sinh (innate immunity): nhận dạng mẫu (pattern recognition) nhanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Resolution là active tiến trình (process / 프로세스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **30. Viêm (inflammation): vascular program cho defense và repair** nối từ **29. Miễn dịch bẩm sinh (innate immunity): nhận dạng mẫu (pattern recognition) nhanh** sang **31. Resolution là active tiến trình (process / 프로세스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Viêm (inflammation): vascular program cho defense và repair
 
@@ -432,7 +432,7 @@ Inflammation là regulated program, không phải disease category đơn nhất.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **30. Viêm (inflammation): vascular program cho defense và repair** xác định đầu vào; **31. Resolution là active tiến trình (process / 프로세스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **32. Complement: cascade amplification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Inflammation mở vascular program cho defense và repair; resolution chủ động kết thúc response. **Complement cascade** kiểm tra amplification.
 
 ## 31. Resolution là active tiến trình (process / 프로세스)
 
@@ -446,7 +446,7 @@ Một phản hồi (response / 응답) tốt cần activation **và** terminatio
 
 ---
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **31. Resolution là active tiến trình (process / 프로세스)** xác định đầu vào; **32. Complement: cascade amplification** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **33. Dendritic cell nối innate với adaptive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Resolution dập response bằng cơ chế chủ động; complement khuếch đại tín hiệu. **Dendritic cell** kiểm tra cầu nối innate–adaptive.
 
 ## 32. Complement: cascade amplification
 
@@ -458,7 +458,7 @@ Cascade kiến trúc (architecture / 아키텍처) cho rapid amplification nhưn
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **33. Dendritic cell nối innate với adaptive** tiếp nhận điểm tựa từ **32. Complement: cascade amplification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. MHC: trình diện kháng nguyên (antigen presentation) là sampling intracellular/extracellular world** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **33. Dendritic cell nối innate với adaptive** nối từ **32. Complement: cascade amplification** sang **34. MHC: trình diện kháng nguyên (antigen presentation) là sampling intracellular/extracellular world**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Dendritic cell nối innate với adaptive
 
@@ -470,7 +470,7 @@ Co-stimulation giúp giảm inappropriate activation.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **34. MHC: trình diện kháng nguyên (antigen presentation) là sampling intracellular/extracellular world** tiếp nhận điểm tựa từ **33. Dendritic cell nối innate với adaptive** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. B cell và kháng thể (antibody)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **34. MHC: trình diện kháng nguyên (antigen presentation) là sampling intracellular/extracellular world** nối từ **33. Dendritic cell nối innate với adaptive** sang **35. B cell và kháng thể (antibody)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. MHC: trình diện kháng nguyên (antigen presentation) là sampling intracellular/extracellular world
 
@@ -482,7 +482,7 @@ MHC polymorphism tạo population diversity về trình diện kháng nguyên.
 
 ---
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **35. B cell và kháng thể (antibody)** tiếp nhận điểm tựa từ **34. MHC: trình diện kháng nguyên (antigen presentation) là sampling intracellular/extracellular world** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Trưởng thành ái lực (affinity maturation): Darwin-like lô-gic (logic / 논리) trong germinal center** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **35. B cell và kháng thể (antibody)** nối từ **34. MHC: trình diện kháng nguyên (antigen presentation) là sampling intracellular/extracellular world** sang **36. Trưởng thành ái lực (affinity maturation): Darwin-like lô-gic (logic / 논리) trong germinal center**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. B cell và kháng thể (antibody)
 
@@ -494,7 +494,7 @@ Lớp (class / 클래스) switching đổi effector lớp (class / 클래스) nh
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **36. Trưởng thành ái lực (affinity maturation): Darwin-like lô-gic (logic / 논리) trong germinal center** tiếp nhận điểm tựa từ **35. B cell và kháng thể (antibody)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. T cell: nhận dạng + coordination + killing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **36. Trưởng thành ái lực (affinity maturation): Darwin-like lô-gic (logic / 논리) trong germinal center** nối từ **35. B cell và kháng thể (antibody)** sang **37. T cell: nhận dạng + coordination + killing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Trưởng thành ái lực (affinity maturation): Darwin-like lô-gic (logic / 논리) trong germinal center
 
@@ -508,7 +508,7 @@ Biến dị (variation) → chọn lọc → expansion xảy ra ngay trong một
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **37. T cell: nhận dạng + coordination + killing** tiếp nhận điểm tựa từ **36. Trưởng thành ái lực (affinity maturation): Darwin-like lô-gic (logic / 논리) trong germinal center** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Chọn lọc dòng tế bào (clonal selection) giải bài toán receptor diversity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **37. T cell: nhận dạng + coordination + killing** nối từ **36. Trưởng thành ái lực (affinity maturation): Darwin-like lô-gic (logic / 논리) trong germinal center** sang **38. Chọn lọc dòng tế bào (clonal selection) giải bài toán receptor diversity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. T cell: nhận dạng + coordination + killing
 
@@ -522,7 +522,7 @@ Miễn dịch thích ứng (adaptive immunity) là cellular mạng (network / �
 
 ---
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **38. Chọn lọc dòng tế bào (clonal selection) giải bài toán receptor diversity** tiếp nhận điểm tựa từ **37. T cell: nhận dạng + coordination + killing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Trí nhớ miễn dịch (immune memory)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **38. Chọn lọc dòng tế bào (clonal selection) giải bài toán receptor diversity** nối từ **37. T cell: nhận dạng + coordination + killing** sang **39. Trí nhớ miễn dịch (immune memory)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Chọn lọc dòng tế bào (clonal selection) giải bài toán receptor diversity
 
@@ -534,7 +534,7 @@ Antigen không “dạy” cell tạo receptor từ đầu; nó select clone ph�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **39. Trí nhớ miễn dịch (immune memory)** tiếp nhận điểm tựa từ **38. Chọn lọc dòng tế bào (clonal selection) giải bài toán receptor diversity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Vắc-xin (vaccine): controlled học tập (learning / 학습) của miễn dịch thích ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **39. Trí nhớ miễn dịch (immune memory)** nối từ **38. Chọn lọc dòng tế bào (clonal selection) giải bài toán receptor diversity** sang **40. Vắc-xin (vaccine): controlled học tập (learning / 학습) của miễn dịch thích ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Trí nhớ miễn dịch (immune memory)
 
@@ -546,7 +546,7 @@ Bộ nhớ (memory / 메모리) không phải absolute protection; pathogen evol
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **40. Vắc-xin (vaccine): controlled học tập (learning / 학습) của miễn dịch thích ứng** tiếp nhận điểm tựa từ **39. Trí nhớ miễn dịch (immune memory)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Tolerance: hệ miễn dịch phải học không attack self** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **40. Vắc-xin (vaccine): controlled học tập (learning / 학습) của miễn dịch thích ứng** nối từ **39. Trí nhớ miễn dịch (immune memory)** sang **41. Tolerance: hệ miễn dịch phải học không attack self**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Vắc-xin (vaccine): controlled học tập (learning / 학습) của miễn dịch thích ứng
 
@@ -560,7 +560,7 @@ Protection có thể nhắm infection, symptomatic disease hoặc severe disease
 
 ---
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **41. Tolerance: hệ miễn dịch phải học không attack self** tiếp nhận điểm tựa từ **40. Vắc-xin (vaccine): controlled học tập (learning / 학습) của miễn dịch thích ứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Allergy: wrong mục tiêu (target / 대상), not weak immunity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **41. Tolerance: hệ miễn dịch phải học không attack self** nối từ **40. Vắc-xin (vaccine): controlled học tập (learning / 학습) của miễn dịch thích ứng** sang **42. Allergy: wrong mục tiêu (target / 대상), not weak immunity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Tolerance: hệ miễn dịch phải học không attack self
 
@@ -576,7 +576,7 @@ Nếu suppression quá mạnh → mầm bệnh (pathogen)/cancer surveillance c�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **42. Allergy: wrong mục tiêu (target / 대상), not weak immunity** tiếp nhận điểm tựa từ **41. Tolerance: hệ miễn dịch phải học không attack self** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Kiệt sức miễn dịch (immune exhaustion) và chronic stimulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **42. Allergy: wrong mục tiêu (target / 대상), not weak immunity** nối từ **41. Tolerance: hệ miễn dịch phải học không attack self** sang **43. Kiệt sức miễn dịch (immune exhaustion) và chronic stimulation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Allergy: wrong mục tiêu (target / 대상), not weak immunity
 
@@ -588,7 +588,7 @@ Allergy cho thấy immune “mạnh” không luôn tốt; **correct targeting a
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **43. Kiệt sức miễn dịch (immune exhaustion) và chronic stimulation** tiếp nhận điểm tựa từ **42. Allergy: wrong mục tiêu (target / 대상), not weak immunity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. Neuro–immune tương tác (interaction / 상호작용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **43. Kiệt sức miễn dịch (immune exhaustion) và chronic stimulation** nối từ **42. Allergy: wrong mục tiêu (target / 대상), not weak immunity** sang **44. Neuro–immune tương tác (interaction / 상호작용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. Kiệt sức miễn dịch (immune exhaustion) và chronic stimulation
 
@@ -600,7 +600,7 @@ Lịch sử (history / 이력) of tín hiệu (signal / 신호) exposure lại q
 
 ---
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **44. Neuro–immune tương tác (interaction / 상호작용)** tiếp nhận điểm tựa từ **43. Kiệt sức miễn dịch (immune exhaustion) và chronic stimulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. Endocrine–immune tương tác (interaction / 상호작용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **44. Neuro–immune tương tác (interaction / 상호작용)** nối từ **43. Kiệt sức miễn dịch (immune exhaustion) và chronic stimulation** sang **45. Endocrine–immune tương tác (interaction / 상호작용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. Neuro–immune tương tác (interaction / 상호작용)
 
@@ -614,7 +614,7 @@ Sickness hành vi (behavior / 동작) là integrated body trạng thái (state /
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **45. Endocrine–immune tương tác (interaction / 상호작용)** tiếp nhận điểm tựa từ **44. Neuro–immune tương tác (interaction / 상호작용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. Nervous–endocrine tương tác (interaction / 상호작용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **45. Endocrine–immune tương tác (interaction / 상호작용)** nối từ **44. Neuro–immune tương tác (interaction / 상호작용)** sang **46. Nervous–endocrine tương tác (interaction / 상호작용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. Endocrine–immune tương tác (interaction / 상호작용)
 
@@ -626,7 +626,7 @@ Hệ thống (system / 시스템) tương tác (interaction / 상호작용) tạ
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **46. Nervous–endocrine tương tác (interaction / 상호작용)** tiếp nhận điểm tựa từ **45. Endocrine–immune tương tác (interaction / 상호작용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **47. Circadian điều khiển (control / 제어) xuyên ba hệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **46. Nervous–endocrine tương tác (interaction / 상호작용)** nối từ **45. Endocrine–immune tương tác (interaction / 상호작용)** sang **47. Circadian điều khiển (control / 제어) xuyên ba hệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 46. Nervous–endocrine tương tác (interaction / 상호작용)
 
@@ -636,7 +636,7 @@ Một nội bộ (internal / 내부) variable thường được điều chỉnh
 
 ---
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **47. Circadian điều khiển (control / 제어) xuyên ba hệ** tiếp nhận điểm tựa từ **46. Nervous–endocrine tương tác (interaction / 상호작용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **48. Tình huống phân tích (case study): đứng dậy quá nhanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **47. Circadian điều khiển (control / 제어) xuyên ba hệ** nối từ **46. Nervous–endocrine tương tác (interaction / 상호작용)** sang **48. Tình huống phân tích (case study): đứng dậy quá nhanh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. Circadian điều khiển (control / 제어) xuyên ba hệ
 
@@ -648,7 +648,7 @@ Biology có thời gian (time / 시간) dimension; đo lường (measurement / �
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **47. Circadian điều khiển (control / 제어) xuyên ba hệ** cho ta quy tắc; **48. Tình huống phân tích (case study): đứng dậy quá nhanh** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **49. Tình huống phân tích: fever** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **47. Circadian điều khiển (control / 제어) xuyên ba hệ** nêu quy tắc; **48. Tình huống phân tích (case study): đứng dậy quá nhanh** thử quy tắc trong tình huống, rồi **49. Tình huống phân tích: fever** mở rộng hệ quả.
 
 ## 48. Tình huống phân tích (case study): đứng dậy quá nhanh
 
@@ -662,7 +662,7 @@ Trường hợp (case / 사례) này nối nervous reflex + cardiovascular mecha
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **48. Tình huống phân tích (case study): đứng dậy quá nhanh** cho ta quy tắc; **49. Tình huống phân tích: fever** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **50. Tình huống phân tích: căng thẳng cấp tính (acute stress) before presentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **48. Tình huống phân tích (case study): đứng dậy quá nhanh** nêu quy tắc; **49. Tình huống phân tích: fever** thử quy tắc trong tình huống, rồi **50. Tình huống phân tích: căng thẳng cấp tính (acute stress) before presentation** mở rộng hệ quả.
 
 ## 49. Tình huống phân tích: fever
 
@@ -672,7 +672,7 @@ Fever là nervous–immune–endocrine tích hợp (integration / 통합), khôn
 
 ---
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **49. Tình huống phân tích: fever** cho ta quy tắc; **50. Tình huống phân tích: căng thẳng cấp tính (acute stress) before presentation** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **51. Tình huống phân tích: tiêm chủng (vaccination)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **49. Tình huống phân tích: fever** nêu quy tắc; **50. Tình huống phân tích: căng thẳng cấp tính (acute stress) before presentation** thử quy tắc trong tình huống, rồi **51. Tình huống phân tích: tiêm chủng (vaccination)** mở rộng hệ quả.
 
 ## 50. Tình huống phân tích: căng thẳng cấp tính (acute stress) before presentation
 
@@ -684,7 +684,7 @@ Short-term phản hồi (response / 응답) có thể khả năng hoạt động
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **50. Tình huống phân tích: căng thẳng cấp tính (acute stress) before presentation** cho ta quy tắc; **51. Tình huống phân tích: tiêm chủng (vaccination)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **52. Tình huống phân tích: autoimmune disease lôgic (logic)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **50. Tình huống phân tích: căng thẳng cấp tính (acute stress) before presentation** nêu quy tắc; **51. Tình huống phân tích: tiêm chủng (vaccination)** thử quy tắc trong tình huống, rồi **52. Tình huống phân tích: autoimmune disease lôgic (logic)** mở rộng hệ quả.
 
 ## 51. Tình huống phân tích: tiêm chủng (vaccination)
 
@@ -694,7 +694,7 @@ Cục bộ (local / 로컬) soreness/fever nhẹ trong một số trường hợ
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **51. Tình huống phân tích: tiêm chủng (vaccination)** cho ta quy tắc; **52. Tình huống phân tích: autoimmune disease lôgic (logic)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **53. Các hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **51. Tình huống phân tích: tiêm chủng (vaccination)** nêu quy tắc; **52. Tình huống phân tích: autoimmune disease lôgic (logic)** thử quy tắc trong tình huống, rồi **53. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
 
 ## 52. Tình huống phân tích: autoimmune disease lôgic (logic)
 
@@ -706,7 +706,7 @@ Bệnh (disease) mẫu (pattern / 패턴) phụ thuộc antigen, mô (tissue), g
 
 ---
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **52. Tình huống phân tích: autoimmune disease lôgic (logic)** cho ta quy tắc; **53. Các hiểu lầm phổ biến (common misconceptions)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **54. Mô hình tư duy tổng hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **52. Tình huống phân tích: autoimmune disease lôgic (logic)** nêu quy tắc; **53. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **54. Mô hình tư duy tổng hợp** mở rộng hệ quả.
 
 ## 53. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -728,7 +728,7 @@ Bệnh (disease) mẫu (pattern / 패턴) phụ thuộc antigen, mô (tissue), g
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **54. Mô hình tư duy tổng hợp** gom các mảnh từ **53. Các hiểu lầm phổ biến (common misconceptions)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Ba hệ điều khiển khác nhau chủ yếu ở kiến trúc (architecture / 아키텍처) và timescale** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mô hình tư duy tổng hợp sửa misconceptions của mục 53; ba hệ điều khiển khác nhau chủ yếu ở architecture và timescale.
 
 ## 54. Mô hình tư duy tổng hợp
 
@@ -765,7 +765,7 @@ Không hệ thống (system / 시스템) nào thật sự isolated.
 
 <!-- depth-audit-2026:control-timescales -->
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **Ba hệ điều khiển khác nhau chủ yếu ở kiến trúc (architecture / 아키텍처) và timescale** gom các mảnh từ **54. Mô hình tư duy tổng hợp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Cầu nối tự nhiên với Psychology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ba hệ điều khiển khác nhau về architecture và timescale; cầu nối với Psychology mở rộng cách đọc regulation sang hành vi.
 
 ## Ba hệ điều khiển khác nhau chủ yếu ở kiến trúc (architecture / 아키텍처) và timescale
 
@@ -775,7 +775,7 @@ Cùng một stressor có thể chạy qua cả ba timescale. Pain tín hiệu (s
 
 Thất bại (failure / 실패) cũng phản ánh kiến trúc (architecture / 아키텍처). Neural mạng (network / 네트워크) quá kích thích có thể mất ổn định; endocrine phản hồi (feedback / 피드백) có thể thất bại (fail / 실패) vì hormone môi trường vận hành (production / 운영 환경), receptor sensitivity hoặc phản hồi (feedback / 피드백) sensor; immune phản hồi (response / 응답) có thể thiếu, quá mức hoặc nhầm self. Không trường hợp nào được hiểu chỉ bằng “một chất tăng hay giảm” — phải theo nguồn (source / 소스) → receptor → mạng (network / 네트워크) → effector → phản hồi (feedback / 피드백).
 
-> **Chuyển mạch:** Trong **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **Cầu nối tự nhiên với Psychology** tiếp nhận điểm tựa từ **Ba hệ điều khiển khác nhau chủ yếu ở kiến trúc (architecture / 아키텍처) và timescale** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cơ thể điều khiển cùng một biến trên nhiều thang thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cầu nối tự nhiên với Psychology** nối từ **Ba hệ điều khiển khác nhau chủ yếu ở kiến trúc (architecture / 아키텍처) và timescale** sang **Cơ thể điều khiển cùng một biến trên nhiều thang thời gian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cầu nối tự nhiên với Psychology
 
@@ -783,7 +783,7 @@ Perception, emotion, học tập (learning / 학습) và quyết định (decisi
 
 <!-- continuity-2026:multi-timescale-control -->
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **Cơ thể điều khiển cùng một biến trên nhiều thang thời gian** tiếp nhận điểm tựa từ **Cầu nối tự nhiên với Psychology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **55. cầu nối (bridge / 브리지) sang Reproduction & Phát triển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cơ thể điều khiển cùng một biến trên nhiều thang thời gian** nối từ **Cầu nối tự nhiên với Psychology** sang **55. cầu nối (bridge / 브리지) sang Reproduction & Phát triển**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cơ thể điều khiển cùng một biến trên nhiều thang thời gian
 
@@ -793,7 +793,7 @@ Hệ miễn dịch tương tự: barrier hoạt động tức thời; innate ph�
 
 Thất bại (failure / 실패) thường là lỗi về gain hoặc timing: phản hồi (response / 응답) quá yếu không kiểm soát threat; phản hồi (response / 응답) quá mạnh gây collateral damage; phản hồi (response / 응답) kéo dài gây chronic inflammation; endocrine stimulation kéo dài có thể làm receptor giảm nhạy. Đây là cùng một control-theory mẫu (pattern / 패턴) xuất hiện ở ba hệ tưởng như khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thần kinh, Nội tiết và Miễn dịch — Nervous, Endocrine and Immune các hệ thống (systems / 시스템들)**, **55. cầu nối (bridge / 브리지) sang Reproduction & Phát triển** tiếp nhận điểm tựa từ **Cơ thể điều khiển cùng một biến trên nhiều thang thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Cầu nối sang Reproduction & Development khép mạch từ cách cơ thể điều khiển một biến trên nhiều thang thời gian.
 
 ## 55. cầu nối (bridge / 브리지) sang Reproduction & Phát triển
 
