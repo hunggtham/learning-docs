@@ -1,35 +1,36 @@
-# Master Kiến thức (knowledge / 지식) Book — Toán học
+# Master Knowledge Book — Toán học
 
-`mathematics/` là Mathematics Thư viện kiến thức (knowledge library / 지식 라이브러리) chuẩn gốc (canonical / 정본) của repository. Thư viện được tổ chức theo **conceptual phụ thuộc (dependency / 의존성)**, không theo Beginner → Intermediate → Advanced và không nhằm trở thành cheat sheet công thức.
+`mathematics/` là thư viện Toán học chuẩn gốc (canonical / 정본) của repository. Nội dung được tổ chức theo **dependency của concept**, không theo nhãn Beginner → Intermediate → Advanced và không nhằm trở thành cheat sheet công thức.
 
 Triết lý xuyên suốt:
 
 > Understanding > Memorization  
-> Lập luận (reasoning / 추론) > Formula
-> Liên kết (connection / 연결) > Isolated Facts
-> Nguyên lý nền tảng (first principles / 제일 원리) > Rules
+> Reasoning > Formula  
+> Connection > Isolated Facts  
+> First Principles > Rules
 
-Mỗi chapter cố gắng đi theo luồng (flow / 흐름) tự nhiên: vấn đề cần giải quyết → intuition → formalism → derivation/proof idea → các giả định (assumptions / 가정들)/lĩnh vực (domain / 도메인) → worked example → thất bại (failure / 실패) modes → connections → mô hình tư duy (mental model / 사고 모델).
+Mỗi chapter cố gắng đi theo luồng: vấn đề cần giải quyết → intuition → formalism → reasoning/derivation → assumptions/domain → worked examples → failure modes → connections → mental model.
 
-## Trạng thái chuẩn gốc (canonical / 정본)
+## Trạng thái canonical
 
-Tính đến source-driven coverage audit ngày **2026-10-04**, thư viện (library / 라이브러리) có **92 topic files**. Nền canonical 87 topic đã được final consistency audit ngày 2026-09-22; đợt mở rộng này đối chiếu thêm catalog free mathematics textbooks của Abakcus và chỉ bổ sung 5 conceptual gaps có giá trị dependency rõ: metric/uniform/measure analysis, experimental design, statistical learning, abstract algebra nâng cao và number theory nâng cao.
+Tính đến **2026-10-04**, thư viện có **99 topic files** trong các domain `00`–`09`.
 
-Các vòng chất lượng (quality / 품질)/độ sâu (depth / 깊이) kiểm tra (audit / 감사) từ Round 5 đến Round 11 trước đó đã lần lượt nâng những nút (node / 노드) có phụ thuộc (dependency / 의존성) centrality cao: lô-gic (logic / 논리)/proof, functions, algebra, hình học (geometry / 기하학), tuyến tính (linear / 선형) algebra, calculus, xác suất (probability / 확률)/statistics, Bayesian lập luận (reasoning / 추론), discrete mathematics, đồ thị (graph / 그래프) lý thuyết (theory / 이론), thông tin (information / 정보) lý thuyết (theory / 이론), numerical methods, tối ưu hóa (optimization / 최적화), Fourier/Laplace, stochastic processes, ma trận (matrix / 행렬) calculus/autodiff và động (dynamic / 동적) programming/điều khiển (control / 제어).
+Con số này sửa một bookkeeping issue của audit trước: `09_connections/07_probability_calibration_decision_and_risk.md` đã tồn tại nhưng bị bỏ khỏi mục lục và count trước đó. Sau khi tính lại, trạng thái sau Abakcus Round 1 là **93 topics**; Round 2 thêm **6 topics**, đưa canonical coverage lên **99**.
 
-Historical finalization tập trung vào consistency: prerequisite, notation, glossary, clickable nội bộ (internal / 내부) links, phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), phạm vi (scope / 범위) ranh giới (boundary / 경계) và branch canonicalization. Chi tiết nền nằm tại [Coverage & Finalization Audit](./COVERAGE_AUDIT.md); source-driven expansion mới nằm tại [Abakcus Textbook Gap Audit 2026-10](./ABAKCUS_TEXTBOOK_GAP_AUDIT_2026_10.md).
+Hai vòng audit gần nhất:
+
+- [Abakcus Textbook Gap Audit — Round 1](./ABAKCUS_TEXTBOOK_GAP_AUDIT_2026_10.md)
+- [Abakcus Mathematics Depth Audit — Round 2](./ABAKCUS_DEPTH_AUDIT_ROUND2_2026_10.md)
 
 ## Cách sử dụng
 
-Không bắt buộc đọc tuần tự toàn bộ. Nếu một concept dùng thuật ngữ chưa chắc, hãy quay về prerequisite gần nhất trong các học tập (learning / 학습) routes bên dưới. Mỗi chapter có thể đọc độc lập trong phạm vi hợp lý, nhưng việc học theo phụ thuộc (dependency / 의존성) giúp giảm black box và tránh học công thức trước khi hiểu cấu trúc (structure / 구조).
+Không cần đọc tuần tự toàn bộ. Chọn learning route phù hợp với mục tiêu, và khi gặp một concept chưa chắc, quay lại prerequisite gần nhất. Mỗi file được viết để có thể đọc độc lập trong phạm vi hợp lý nhưng vẫn nối rõ sang upstream/downstream topics.
 
-## Bảng (table / 테이블) of Contents
+---
 
-Mục lục được sắp theo dependency: ngôn ngữ và đại số làm nền, hàm và hình học mở rộng biểu diễn, calculus và probability xử lý thay đổi và bất định, rồi các connection đưa chúng vào khoa học máy tính và mô hình hóa. Đọc theo nhánh phù hợp sẽ giữ được câu hỏi mà mỗi nhóm đang giải quyết.
+## 00 — Foundations
 
-### 00 — Foundations
-
-Phần nền dựng ngôn ngữ, logic, tập hợp, số và cách đo trước khi dùng công thức. Hãy coi đây là lớp giúp kiểm tra giả định của mọi mô hình phía sau.
+Ngôn ngữ, logic, số, đo lường và modeling trước khi đi vào các cấu trúc toán học cụ thể.
 
 - [Tư duy toán học và First Principles](./00_foundations/00_mathematical_thinking.md)
 - [Logic và chứng minh](./00_foundations/01_logic_and_proof.md)
@@ -38,9 +39,9 @@ Phần nền dựng ngôn ngữ, logic, tập hợp, số và cách đo trước
 - [Đo lường, đơn vị và ước lượng](./00_foundations/04_measurement_units_and_estimation.md)
 - [Mô hình toán học, phân tích thứ nguyên và scaling](./00_foundations/05_mathematical_modeling_dimensional_analysis_and_scaling.md)
 
-### 01 — Algebra
+## 01 — Algebra
 
-Đại số biến quantities và quan hệ thành biểu thức có thể biến đổi. Nó là cầu nối từ số và tỷ lệ tới hàm, mô hình tăng trưởng và tối ưu.
+Đại số biến quantities và relations thành biểu thức có thể biến đổi mà vẫn giữ meaning của problem.
 
 - [Ngôn ngữ đại số: biến, biểu thức và phép biến đổi](./01_algebra/00_algebraic_language.md)
 - [Phương trình và bất phương trình](./01_algebra/01_equations_and_inequalities.md)
@@ -50,9 +51,9 @@ Phần nền dựng ngôn ngữ, logic, tập hợp, số và cách đo trước
 - [Số phức: từ nghiệm phương trình đến rotation](./01_algebra/05_complex_numbers.md)
 - [Biểu thức hữu tỉ, miền xác định và tiệm cận](./01_algebra/06_rational_expressions_domain_and_asymptotes.md)
 
-### 02 — Functions
+## 02 — Functions
 
-Hàm mô tả cách input được biến thành output. Các chapter này nối biểu diễn đại số với thay đổi theo thời gian, composition và recurrence.
+Functions là language cho dependency giữa quantities, composition, growth và recurrence.
 
 - [Hàm số: quy tắc biến input thành output](./02_functions/00_function_concept.md)
 - [Mô hình tuyến tính và bậc hai](./02_functions/01_linear_and_quadratic_models.md)
@@ -61,9 +62,9 @@ Hàm mô tả cách input được biến thành output. Các chapter này nối
 - [Hợp hàm, hàm ngược và phép biến đổi hàm](./02_functions/04_composition_inverse_and_function_transformations.md)
 - [Quan hệ ẩn, tham số và tọa độ cực](./02_functions/05_parametric_polar_and_implicit_relations.md)
 
-### 03 — Hình học (geometry / 기하학) & Trigonometry
+## 03 — Geometry & Trigonometry
 
-Hình học và lượng giác đưa cấu trúc không gian, góc, khoảng cách và dao động vào cùng một ngôn ngữ. Đây là nền cho vectors, physics và signal.
+Không gian, khoảng cách, góc, symmetry và topology làm nền cho vectors, physics, graphics và geometry nâng cao.
 
 - [Hình học Euclid: điểm, đường, góc và cấu trúc không gian](./03_geometry_trigonometry/00_euclidean_geometry.md)
 - [Hình học tọa độ: biến không gian thành algebra](./03_geometry_trigonometry/01_coordinate_geometry.md)
@@ -75,9 +76,9 @@ Hình học và lượng giác đưa cấu trúc không gian, góc, khoảng cá
 - [Đồng nhất thức lượng giác, phương trình lượng giác và harmonics](./03_geometry_trigonometry/07_trigonometric_identities_equations_and_harmonics.md)
 - [Nhập môn topology: continuity, connectivity và shape](./03_geometry_trigonometry/08_topology_continuity_connectivity.md)
 
-### 04 — Vectors & Tuyến tính (linear / 선형) Algebra
+## 04 — Vectors & Linear Algebra
 
-Đại số tuyến tính mở rộng từ một biến sang nhiều chiều, nơi basis, projection và transformation trở thành công cụ mô hình hóa dữ liệu và hệ vật lý.
+Đại số tuyến tính mở rộng từ scalar sang multidimensional representation, transformation, projection và decomposition.
 
 - [Vector: đại lượng có nhiều thành phần và hướng](./04_vectors_linear_algebra/00_vectors.md)
 - [Ma trận và hệ phương trình tuyến tính](./04_vectors_linear_algebra/01_matrices_and_linear_systems.md)
@@ -90,9 +91,9 @@ Hình học và lượng giác đưa cấu trúc không gian, góc, khoảng cá
 - [Tensor và multilinear algebra](./04_vectors_linear_algebra/08_tensors_and_multilinear_algebra.md)
 - [Matrix calculus, Jacobian, Hessian và automatic differentiation](./04_vectors_linear_algebra/09_matrix_calculus_jacobian_hessian_and_autodiff.md)
 
-### 05 — Calculus & Phân tích (analysis / 분석)
+## 05 — Calculus, Analysis & Dynamical Systems
 
-Calculus nghiên cứu giới hạn, tốc độ thay đổi và tích lũy; analysis làm rõ điều kiện để các phép đó hợp lệ. Hãy giữ quan hệ giữa local approximation và global behavior.
+Nhánh này đi từ local change/accumulation tới rigor, infinite-dimensional spaces, geometry trên manifolds và nonlinear dynamics.
 
 - [Giới hạn và tính liên tục](./05_calculus/00_limits_and_continuity.md)
 - [Đạo hàm: tốc độ thay đổi cục bộ](./05_calculus/01_derivatives.md)
@@ -107,15 +108,18 @@ Calculus nghiên cứu giới hạn, tốc độ thay đổi và tích lũy; ana
 - [Nhập môn PDE: fields, heat, wave và boundary conditions](./05_calculus/10_partial_differential_equations_and_fields_intro.md)
 - [Real analysis: giới hạn, hội tụ và nền tảng chặt chẽ của calculus](./05_calculus/11_real_analysis_convergence_and_rigor.md)
 - [Complex analysis: analytic functions, contour integrals và residues](./05_calculus/12_complex_analysis_and_analytic_functions.md)
-- [Metric spaces, uniform convergence và measure: bridge sang analysis hiện đại](./05_calculus/13_metric_spaces_uniform_convergence_and_measure_intro.md)
+- [Metric spaces, uniform convergence và measure](./05_calculus/13_metric_spaces_uniform_convergence_and_measure_intro.md)
+- [Normed, Banach, Hilbert spaces và operators](./05_calculus/14_normed_banach_hilbert_spaces_and_operators.md)
+- [Manifolds, differential forms và generalized Stokes](./05_calculus/15_manifolds_differential_forms_and_generalized_stokes.md)
+- [Dynamical systems, bifurcations và chaos](./05_calculus/16_dynamical_systems_bifurcations_and_chaos.md)
 
-### 06 — Xác suất (probability / 확률) & Statistics
+## 06 — Probability, Statistics & Statistical Learning
 
-Probability mô hình hóa bất định, còn statistics suy luận từ dữ liệu hữu hạn. Các chapter nối sample, distribution, estimation và decision để tránh nhầm tương quan với bằng chứng nhân quả.
+Probability mô hình uncertainty; statistics suy luận từ finite data; statistical learning thêm generalization/model selection; experimental design kiểm soát data-generating mechanism.
 
 - [Đếm và tổ hợp](./06_probability_statistics/00_counting_and_combinatorics.md)
 - [Nền tảng xác suất: mô hình hóa bất định](./06_probability_statistics/01_probability_foundations.md)
-- [Xác suất có điều kiện và Bayes: cập nhật uncertainty khi information thay đổi](./06_probability_statistics/02_conditional_probability_and_bayes.md)
+- [Xác suất có điều kiện và Bayes](./06_probability_statistics/02_conditional_probability_and_bayes.md)
 - [Biến ngẫu nhiên và phân phối](./06_probability_statistics/03_random_variables_and_distributions.md)
 - [Kỳ vọng, phương sai và các luật giới hạn](./06_probability_statistics/04_expectation_variance_and_limit_laws.md)
 - [Thống kê mô tả và suy luận](./06_probability_statistics/05_descriptive_and_inferential_statistics.md)
@@ -127,11 +131,11 @@ Probability mô hình hóa bất định, còn statistics suy luận từ dữ l
 - [Stochastic processes, Markov chains và time series](./06_probability_statistics/11_stochastic_processes_markov_chains_and_time_series.md)
 - [Bayesian inference, posterior predictive và hierarchical models](./06_probability_statistics/12_bayesian_inference_posterior_predictive_and_hierarchical_models.md)
 - [Experimental design: randomization, blocking, factorial designs và ANOVA](./06_probability_statistics/13_experimental_design_randomization_blocking_and_anova.md)
-- [Statistical learning: generalization, bias–variance, regularization và validation](./06_probability_statistics/14_statistical_learning_bias_variance_regularization_and_validation.md)
+- [Statistical learning: bias–variance, regularization và validation](./06_probability_statistics/14_statistical_learning_bias_variance_regularization_and_validation.md)
 
-### 07 — Discrete Mathematics & Theoretical CS
+## 07 — Discrete Mathematics, Algebra & Theoretical CS
 
-Nhánh rời rạc cung cấp ngôn ngữ cho logic, đồ thị, recurrence, information và computation. Nó giúp chuyển từ reasoning liên tục sang cấu trúc hữu hạn và thuật toán.
+Discrete structures cung cấp language cho algorithms, graphs, algebraic structure, number theory, counting và computation.
 
 - [Lý thuyết đồ thị: toán học của mạng lưới và quan hệ](./07_discrete_cs/00_graph_theory.md)
 - [Độ phức tạp thuật toán và ý nghĩa của logarithm](./07_discrete_cs/01_algorithms_complexity_and_logarithms.md)
@@ -142,12 +146,14 @@ Nhánh rời rạc cung cấp ngôn ngữ cho logic, đồ thị, recurrence, in
 - [Information theory, entropy và coding](./07_discrete_cs/06_information_theory_and_coding.md)
 - [Automata, formal languages và computability](./07_discrete_cs/07_automata_formal_languages_and_computability.md)
 - [Cấu trúc đại số: group, ring và field](./07_discrete_cs/08_groups_rings_fields_and_algebraic_structures.md)
-- [Abstract algebra nâng cao: quotients, group actions, ideals và field extensions](./07_discrete_cs/09_abstract_algebra_quotients_actions_and_field_extensions.md)
-- [Number theory nâng cao: Diophantine equations, quadratic residues và cryptographic structures](./07_discrete_cs/10_number_theory_diophantine_quadratic_residues_and_crypto.md)
+- [Abstract algebra nâng cao: quotient, actions và field extensions](./07_discrete_cs/09_abstract_algebra_quotients_actions_and_field_extensions.md)
+- [Number theory nâng cao: Diophantine, quadratic residues và elliptic curves](./07_discrete_cs/10_number_theory_diophantine_quadratic_residues_and_crypto.md)
+- [Generating functions và advanced counting](./07_discrete_cs/11_generating_functions_and_advanced_counting.md)
+- [Network flows, matching và max-flow min-cut](./07_discrete_cs/12_network_flows_matchings_and_min_cut.md)
 
-### 08 — Tối ưu hóa (optimization / 최적화) & Numerical Mathematics
+## 08 — Optimization & Numerical Mathematics
 
-Optimization chọn quyết định tốt dưới mục tiêu và ràng buộc; numerical mathematics kiểm tra sai số khi máy tính xấp xỉ. Hai lớp phải được đọc cùng conditioning và stability.
+Optimization chọn decision tốt dưới objective/constraints; numerical mathematics kiểm tra conditioning, approximation và stability khi computation hữu hạn.
 
 - [Tối ưu hóa: mục tiêu, ràng buộc và trade-off](./08_optimization_numerical/00_optimization.md)
 - [Gradient descent, learning rate và geometry của optimization](./08_optimization_numerical/01_gradient_descent_and_convexity.md)
@@ -157,26 +163,176 @@ Optimization chọn quyết định tốt dưới mục tiêu và ràng buộc; 
 - [Linear programming, duality và simplex](./08_optimization_numerical/05_linear_programming_duality_and_simplex.md)
 - [Dynamic programming, Bellman equation và optimal control](./08_optimization_numerical/06_dynamic_programming_bellman_and_optimal_control.md)
 
-### 09 — Kiến thức (knowledge / 지식) Connections
+## 09 — Knowledge Connections
 
-Các connection chapter đưa cùng một pattern toán học sang tốc độ, thông tin, AI, finance và tín hiệu. Hãy dùng chúng để kiểm tra khả năng chuyển mental model giữa domain.
+Các chapter này nhấn mạnh cùng một mathematical structure xuất hiện lại trong AI, finance, signals, decision-making và strategic systems.
 
-- [Knowledge Connection — Rate, Change và Accumulation](./09_connections/00_rate_change_and_accumulation.md)
-- [Knowledge Connection — Distance, Similarity và Projection](./09_connections/01_distance_similarity_and_projection.md)
-- [Knowledge Connection — Xác suất, thông tin và entropy](./09_connections/02_uncertainty_information_and_entropy.md)
-- [Knowledge Connection — Toán trong AI, Data và Software Engineering](./09_connections/03_math_for_ai_data_and_software.md)
-- [Knowledge Connection — Toán trong tài chính, công việc và đời sống](./09_connections/04_math_for_finance_work_and_daily_life.md)
+- [Rate, Change và Accumulation](./09_connections/00_rate_change_and_accumulation.md)
+- [Distance, Similarity và Projection](./09_connections/01_distance_similarity_and_projection.md)
+- [Uncertainty, Information và Entropy](./09_connections/02_uncertainty_information_and_entropy.md)
+- [Toán trong AI, Data và Software Engineering](./09_connections/03_math_for_ai_data_and_software.md)
+- [Toán trong tài chính, công việc và đời sống](./09_connections/04_math_for_finance_work_and_daily_life.md)
 - [Fourier, tín hiệu và miền tần số](./09_connections/05_fourier_signals_and_frequency.md)
 - [Laplace transform, Z-transform và dynamic systems](./09_connections/06_laplace_z_transform_and_dynamic_systems.md)
+- [Probability calibration, decision và risk](./09_connections/07_probability_calibration_decision_and_risk.md)
+- [Game theory: strategy, equilibrium và incentives](./09_connections/08_game_theory_strategy_equilibrium_and_incentives.md)
 
-### Tham chiếu (reference / 참조) & Editorial
+---
 
-Reference dùng để tra thuật ngữ và trạng thái coverage sau khi đã học theo route. Nó hỗ trợ navigation, không thay thế chuỗi giải thích của chapter.
+## Learning routes
+
+### Computer Science & Algorithms
+
+[Logic & Proof](./00_foundations/01_logic_and_proof.md) → [Sets & Relations](./00_foundations/02_sets_relations_and_mappings.md) → [Functions](./02_functions/00_function_concept.md) → [Recurrence](./07_discrete_cs/02_recurrence_and_induction_in_algorithms.md) → [Generating Functions](./07_discrete_cs/11_generating_functions_and_advanced_counting.md) → [Graph Theory](./07_discrete_cs/00_graph_theory.md) → [Network Flow & Matching](./07_discrete_cs/12_network_flows_matchings_and_min_cut.md) → [Complexity](./07_discrete_cs/01_algorithms_complexity_and_logarithms.md) → [Automata & Computability](./07_discrete_cs/07_automata_formal_languages_and_computability.md).
+
+### AI / Machine Learning / Data
+
+[Functions](./02_functions/00_function_concept.md) → [Vectors](./04_vectors_linear_algebra/00_vectors.md) → [Matrices](./04_vectors_linear_algebra/01_matrices_and_linear_systems.md) → [Least Squares & SVD](./04_vectors_linear_algebra/05_least_squares_svd_and_decompositions.md) → [Multivariable Calculus](./05_calculus/04_multivariable_calculus.md) → [Matrix Calculus & Autodiff](./04_vectors_linear_algebra/09_matrix_calculus_jacobian_hessian_and_autodiff.md) → [Probability](./06_probability_statistics/01_probability_foundations.md) → [Inference](./06_probability_statistics/07_sampling_estimation_confidence_and_hypothesis_testing.md) → [Statistical Learning](./06_probability_statistics/14_statistical_learning_bias_variance_regularization_and_validation.md) → [Optimization](./08_optimization_numerical/00_optimization.md) → [Math for AI/Data/Software](./09_connections/03_math_for_ai_data_and_software.md).
+
+### Experimental / Product Analytics
+
+[Probability](./06_probability_statistics/01_probability_foundations.md) → [Sampling & Inference](./06_probability_statistics/07_sampling_estimation_confidence_and_hypothesis_testing.md) → [Regression](./06_probability_statistics/06_regression_and_correlation.md) → [Experimental Design & ANOVA](./06_probability_statistics/13_experimental_design_randomization_blocking_and_anova.md) → [Statistical Learning](./06_probability_statistics/14_statistical_learning_bias_variance_regularization_and_validation.md) → [Calibration, Decision & Risk](./09_connections/07_probability_calibration_decision_and_risk.md).
+
+### Pure Mathematics / Advanced Undergraduate
+
+[Logic & Proof](./00_foundations/01_logic_and_proof.md) → [Sets & Mappings](./00_foundations/02_sets_relations_and_mappings.md) → [Linear Algebra](./04_vectors_linear_algebra/03_vector_spaces_basis_dimension.md) → [Real Analysis](./05_calculus/11_real_analysis_convergence_and_rigor.md) → [Metric Spaces & Measure](./05_calculus/13_metric_spaces_uniform_convergence_and_measure_intro.md) → [Banach & Hilbert Spaces](./05_calculus/14_normed_banach_hilbert_spaces_and_operators.md) → [Topology](./03_geometry_trigonometry/08_topology_continuity_connectivity.md) → [Manifolds & Differential Forms](./05_calculus/15_manifolds_differential_forms_and_generalized_stokes.md).
+
+Parallel algebra route:
+
+[Number Theory](./07_discrete_cs/04_number_theory_and_modular_arithmetic.md) → [Groups/Rings/Fields](./07_discrete_cs/08_groups_rings_fields_and_algebraic_structures.md) → [Advanced Abstract Algebra](./07_discrete_cs/09_abstract_algebra_quotients_actions_and_field_extensions.md) → [Advanced Number Theory](./07_discrete_cs/10_number_theory_diophantine_quadratic_residues_and_crypto.md).
+
+### Physics & Engineering
+
+[Measurement](./00_foundations/04_measurement_units_and_estimation.md) → [Modeling](./00_foundations/05_mathematical_modeling_dimensional_analysis_and_scaling.md) → [Vectors](./04_vectors_linear_algebra/00_vectors.md) → [Calculus](./05_calculus/01_derivatives.md) → [Differential Equations](./05_calculus/05_differential_equations.md) → [Dynamical Systems](./05_calculus/16_dynamical_systems_bifurcations_and_chaos.md) → [Vector Calculus](./05_calculus/09_vector_calculus.md) → [PDE](./05_calculus/10_partial_differential_equations_and_fields_intro.md) → [Fourier](./09_connections/05_fourier_signals_and_frequency.md).
+
+### Signals, Systems & Control
+
+[Trigonometry](./03_geometry_trigonometry/04_trigonometry.md) → [Complex Numbers](./01_algebra/05_complex_numbers.md) → [Eigenvalues](./04_vectors_linear_algebra/04_eigenvalues_and_eigenvectors.md) → [Differential Equations](./05_calculus/05_differential_equations.md) → [Dynamical Systems](./05_calculus/16_dynamical_systems_bifurcations_and_chaos.md) → [Fourier](./09_connections/05_fourier_signals_and_frequency.md) → [Laplace/Z-transform](./09_connections/06_laplace_z_transform_and_dynamic_systems.md) → [Bellman & Optimal Control](./08_optimization_numerical/06_dynamic_programming_bellman_and_optimal_control.md).
+
+### Finance / Investing
+
+[Ratio & Percentage](./01_algebra/02_ratio_proportion_percentage.md) → [Exponential & Logarithm](./02_functions/02_exponential_and_logarithmic_models.md) → [Probability](./06_probability_statistics/01_probability_foundations.md) → [Expectation & Variance](./06_probability_statistics/04_expectation_variance_and_limit_laws.md) → [Covariance](./06_probability_statistics/08_covariance_multivariate_probability_and_gaussian.md) → [Regression](./06_probability_statistics/06_regression_and_correlation.md) → [Stochastic Processes](./06_probability_statistics/11_stochastic_processes_markov_chains_and_time_series.md) → [Optimization](./08_optimization_numerical/00_optimization.md) → [Calibration, Decision & Risk](./09_connections/07_probability_calibration_decision_and_risk.md) → [Math for Finance](./09_connections/04_math_for_finance_work_and_daily_life.md).
+
+### Strategy / Economics / Multi-agent Systems
+
+[Probability](./06_probability_statistics/01_probability_foundations.md) → [Expected Value](./06_probability_statistics/04_expectation_variance_and_limit_laws.md) → [Optimization](./08_optimization_numerical/00_optimization.md) → [Linear Programming & Duality](./08_optimization_numerical/05_linear_programming_duality_and_simplex.md) → [Game Theory](./09_connections/08_game_theory_strategy_equilibrium_and_incentives.md) → [Network Matching](./07_discrete_cs/12_network_flows_matchings_and_min_cut.md).
+
+### Software Engineering & Production Reasoning
+
+[Logic & Proof](./00_foundations/01_logic_and_proof.md) → [Functions & Contracts](./02_functions/00_function_concept.md) → [Graphs](./07_discrete_cs/00_graph_theory.md) → [Complexity](./07_discrete_cs/01_algorithms_complexity_and_logarithms.md) → [Network Flow & Capacity](./07_discrete_cs/12_network_flows_matchings_and_min_cut.md) → [Probability](./06_probability_statistics/02_conditional_probability_and_bayes.md) → [Numerical Stability](./08_optimization_numerical/02_numerical_methods_and_error.md) → [Game Theory & Incentives](./09_connections/08_game_theory_strategy_equilibrium_and_incentives.md) → [Math for AI/Data/Software](./09_connections/03_math_for_ai_data_and_software.md).
+
+---
+
+## Dependency graph
+
+```mermaid
+graph TD
+    MT[Mathematical Thinking] --> LP[Logic & Proof]
+    LP --> SET[Sets / Relations / Mappings]
+    MT --> NUM[Numbers & Measurement]
+    NUM --> ALG[Algebra]
+    ALG --> FUN[Functions]
+    FUN --> SEQ[Sequences / Recurrence]
+
+    NUM --> GEO[Geometry]
+    GEO --> TRIG[Trigonometry]
+    GEO --> TOP[Topology]
+    ALG --> LA[Linear Algebra]
+    GEO --> LA
+    LA --> ORTH[Orthogonality / Projection]
+    LA --> EIG[Eigenvalues]
+    LA --> TEN[Tensor / Multilinear Algebra]
+
+    FUN --> LIM[Limits]
+    LIM --> DER[Derivatives]
+    DER --> INT[Integrals]
+    DER --> MVC[Multivariable Calculus]
+    LA --> MVC
+    SEQ --> SERIES[Infinite Series]
+    LIM --> RA[Real Analysis]
+    SERIES --> RA
+    RA --> MET[Metric / Measure]
+    LA --> FA[Banach / Hilbert / Operators]
+    MET --> FA
+    MVC --> MAN[Manifolds / Differential Forms]
+    TOP --> MAN
+    TEN --> MAN
+    INT --> ODE[Differential Equations]
+    ODE --> DYN[Dynamical Systems]
+    SEQ --> DYN
+    MVC --> VC[Vector Calculus]
+    VC --> PDE[PDE]
+    FA --> PDE
+
+    LP --> COUNT[Counting]
+    COUNT --> PROB[Probability]
+    SEQ --> GF[Generating Functions]
+    COUNT --> GF
+    PROB --> STAT[Statistics]
+    STAT --> EXP[Experimental Design]
+    STAT --> SL[Statistical Learning]
+
+    LP --> DISC[Discrete Mathematics]
+    DISC --> GRAPH[Graph Theory]
+    GRAPH --> FLOW[Network Flow / Matching]
+    NUM --> NT[Number Theory]
+    NT --> ABS[Groups / Rings / Fields]
+    ABS --> AABS[Advanced Abstract Algebra]
+    NT --> ANT[Advanced Number Theory]
+
+    DER --> OPT[Optimization]
+    LA --> OPT
+    MVC --> OPT
+    OPT --> KKT[Constrained Optimization]
+    KKT --> LPD[LP / Duality]
+    LPD --> FLOW
+    PROB --> GAME[Game Theory / Incentives]
+    OPT --> GAME
+
+    TRIG --> FOURIER[Fourier / Frequency]
+    ORTH --> FOURIER
+    FA --> FOURIER
+    ODE --> LAPLACE[Laplace / Z Transform]
+    EIG --> LAPLACE
+    LAPLACE --> CONTROL[Dynamic Systems / Control]
+    DYN --> CONTROL
+```
+
+Mermaid dùng để nhìn topology; links trong learning routes và từng chapter là navigation canonical.
+
+---
+
+## Connections sang các library khác
+
+- [Computer Science](../computer_science/README.md): logic/proof, graphs, automata, complexity, flow/matching và algorithmic reasoning.
+- [Physics](../physics/README.md): measurement, vectors, calculus, differential equations, manifolds, fields, Fourier và modeling assumptions.
+- [Investing](../investing/README.md): compounding, probability, statistics, covariance, stochastic processes, optimization và risk.
+- [Economics](../economics/README.md): optimization, probability, strategic interaction, incentives và game theory.
+- AI/ML, Data Engineering và Software Engineering được nối qua [Math for AI, Data and Software](./09_connections/03_math_for_ai_data_and_software.md).
+
+## Mental models xuyên suốt
+
+**Representation.** Cùng object có thể được nhìn như formula, graph, vector, matrix, tensor, function, probability distribution hoặc algebraic structure. Representation tốt làm lộ structure cần dùng.
+
+**Local → Global.** Derivative là local model; integration tạo global accumulation; tangent spaces linearize curved manifolds; local differential information có thể bị global topology giới hạn.
+
+**Linearization.** Nonlinear systems thường được hiểu locally bằng Jacobian, Hessian, eigenmodes hoặc tangent maps; nhưng local stability không đồng nghĩa global behavior.
+
+**Uncertainty as structure.** Probability không chỉ gắn “độ may rủi” mà cung cấp algebra cho uncertainty, evidence update, prediction, calibration và decision.
+
+**Optimization vs interaction.** Optimization giả định objective của một decision maker; game theory thêm agents khác đang tự tối ưu và phản ứng lại rules.
+
+**Computation has limits.** Exact mathematics, noisy models và finite-precision algorithms là ba layers khác nhau; numerical stability và conditioning phải được giữ riêng.
+
+---
+
+## Reference & Editorial
 
 - [Glossary Việt / English / 한국어](./10_glossary.md)
 - [Coverage & Finalization Audit](./COVERAGE_AUDIT.md)
-- [Abakcus Textbook Gap Audit 2026-10](./ABAKCUS_TEXTBOOK_GAP_AUDIT_2026_10.md)
 - [Editorial Standard](./EDITORIAL_STANDARD.md)
+- [Abakcus Textbook Gap Audit — Round 1](./ABAKCUS_TEXTBOOK_GAP_AUDIT_2026_10.md)
+- [Abakcus Mathematics Depth Audit — Round 2](./ABAKCUS_DEPTH_AUDIT_ROUND2_2026_10.md)
 - [Quality Audit Round 5](./QUALITY_AUDIT_ROUND5.md)
 - [Quality Audit Round 7](./QUALITY_AUDIT_ROUND7.md)
 - [Quality Audit Round 8](./QUALITY_AUDIT_ROUND8.md)
@@ -184,157 +340,4 @@ Reference dùng để tra thuật ngữ và trạng thái coverage sau khi đã 
 - [Quality Audit Round 10](./QUALITY_AUDIT_ROUND10.md)
 - [Quality Audit Round 11](./QUALITY_AUDIT_ROUND11.md)
 
-## Học tập (learning / 학습) routes có thể click trực tiếp
-
-### Khoa học máy tính (computer science / 컴퓨터 과학) & Algorithms
-
-[Logic & Proof](./00_foundations/01_logic_and_proof.md) → [Sets, Relations & Mappings](./00_foundations/02_sets_relations_and_mappings.md) → [Functions](./02_functions/00_function_concept.md) → [Recurrence & Induction](./07_discrete_cs/02_recurrence_and_induction_in_algorithms.md) → [Graph Theory](./07_discrete_cs/00_graph_theory.md) → [Algorithmic Complexity](./07_discrete_cs/01_algorithms_complexity_and_logarithms.md) → [Automata & Computability](./07_discrete_cs/07_automata_formal_languages_and_computability.md).
-
-### AI / Machine Học tập (learning / 학습) / Kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링)
-
-[Functions](./02_functions/00_function_concept.md) → [Vectors](./04_vectors_linear_algebra/00_vectors.md) → [Matrices](./04_vectors_linear_algebra/01_matrices_and_linear_systems.md) → [Linear Transformations](./04_vectors_linear_algebra/02_linear_transformations.md) → [Least Squares & SVD](./04_vectors_linear_algebra/05_least_squares_svd_and_decompositions.md) → [Multivariable Calculus](./05_calculus/04_multivariable_calculus.md) → [Matrix Calculus & Autodiff](./04_vectors_linear_algebra/09_matrix_calculus_jacobian_hessian_and_autodiff.md) → [Probability](./06_probability_statistics/01_probability_foundations.md) → [Statistics](./06_probability_statistics/05_descriptive_and_inferential_statistics.md) → [Statistical Learning](./06_probability_statistics/14_statistical_learning_bias_variance_regularization_and_validation.md) → [Optimization](./08_optimization_numerical/00_optimization.md) → [Math for AI/Data/Software](./09_connections/03_math_for_ai_data_and_software.md).
-
-### Experimental / Product Analytics
-
-[Probability](./06_probability_statistics/01_probability_foundations.md) → [Sampling & Inference](./06_probability_statistics/07_sampling_estimation_confidence_and_hypothesis_testing.md) → [Experimental Design](./06_probability_statistics/13_experimental_design_randomization_blocking_and_anova.md) → [Regression](./06_probability_statistics/06_regression_and_correlation.md) → [Statistical Learning](./06_probability_statistics/14_statistical_learning_bias_variance_regularization_and_validation.md).
-
-### Pure Mathematics / Advanced Undergraduate
-
-[Logic & Proof](./00_foundations/01_logic_and_proof.md) → [Sets, Relations & Mappings](./00_foundations/02_sets_relations_and_mappings.md) → [Real Analysis](./05_calculus/11_real_analysis_convergence_and_rigor.md) → [Metric / Uniform / Measure](./05_calculus/13_metric_spaces_uniform_convergence_and_measure_intro.md).
-
-[Number Theory Core](./07_discrete_cs/04_number_theory_and_modular_arithmetic.md) → [Groups / Rings / Fields](./07_discrete_cs/08_groups_rings_fields_and_algebraic_structures.md) → [Advanced Abstract Algebra](./07_discrete_cs/09_abstract_algebra_quotients_actions_and_field_extensions.md) → [Advanced Number Theory](./07_discrete_cs/10_number_theory_diophantine_quadratic_residues_and_crypto.md).
-
-### Physics & Kỹ thuật (engineering / 엔지니어링)
-
-[Measurement](./00_foundations/04_measurement_units_and_estimation.md) → [Modeling & Dimensional Analysis](./00_foundations/05_mathematical_modeling_dimensional_analysis_and_scaling.md) → [Geometry](./03_geometry_trigonometry/00_euclidean_geometry.md) → [Trigonometry](./03_geometry_trigonometry/04_trigonometry.md) → [Vectors](./04_vectors_linear_algebra/00_vectors.md) → [Derivatives](./05_calculus/01_derivatives.md) → [Integrals](./05_calculus/03_integrals_and_accumulation.md) → [Differential Equations](./05_calculus/05_differential_equations.md) → [Vector Calculus](./05_calculus/09_vector_calculus.md) → [PDE](./05_calculus/10_partial_differential_equations_and_fields_intro.md) → [Fourier](./09_connections/05_fourier_signals_and_frequency.md).
-
-### Tín hiệu (signal / 신호), Các hệ thống (systems / 시스템들) & Điều khiển (control / 제어)
-
-[Trigonometry](./03_geometry_trigonometry/04_trigonometry.md) → [Complex Numbers](./01_algebra/05_complex_numbers.md) → [Eigenvalues](./04_vectors_linear_algebra/04_eigenvalues_and_eigenvectors.md) → [Differential Equations](./05_calculus/05_differential_equations.md) → [Fourier](./09_connections/05_fourier_signals_and_frequency.md) → [Laplace/Z-transform](./09_connections/06_laplace_z_transform_and_dynamic_systems.md) → [Bellman & Optimal Control](./08_optimization_numerical/06_dynamic_programming_bellman_and_optimal_control.md).
-
-### Finance / Investing
-
-[Ratio & Percentage](./01_algebra/02_ratio_proportion_percentage.md) → [Exponential & Logarithm](./02_functions/02_exponential_and_logarithmic_models.md) → [Probability](./06_probability_statistics/01_probability_foundations.md) → [Expectation & Variance](./06_probability_statistics/04_expectation_variance_and_limit_laws.md) → [Covariance](./06_probability_statistics/08_covariance_multivariate_probability_and_gaussian.md) → [Regression](./06_probability_statistics/06_regression_and_correlation.md) → [Stochastic Processes](./06_probability_statistics/11_stochastic_processes_markov_chains_and_time_series.md) → [Optimization](./08_optimization_numerical/00_optimization.md) → [Math for Finance & Daily Life](./09_connections/04_math_for_finance_work_and_daily_life.md).
-
-### Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) & môi trường vận hành (production / 운영 환경) lập luận (reasoning / 추론)
-
-[Logic & Proof](./00_foundations/01_logic_and_proof.md) → [Functions & Contracts](./02_functions/00_function_concept.md) → [Composition & Inverse](./02_functions/04_composition_inverse_and_function_transformations.md) → [Graphs](./07_discrete_cs/00_graph_theory.md) → [Complexity](./07_discrete_cs/01_algorithms_complexity_and_logarithms.md) → [Probability & Calibration](./06_probability_statistics/02_conditional_probability_and_bayes.md) → [Numerical Stability](./08_optimization_numerical/02_numerical_methods_and_error.md) → [Math for AI/Data/Software](./09_connections/03_math_for_ai_data_and_software.md).
-
-## Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성)
-
-Đồ thị dependency dưới đây tóm tắt prerequisite và downstream use. Khi một công thức chưa rõ, lần theo mũi tên ngược để tìm khái niệm cần dựng lại.
-
-```mermaid
-graph TD
-    MT[Mathematical Thinking] --> LP[Logic & Proof]
-    MT --> NM[Numbers & Measurement]
-    LP --> SRM[Sets / Relations / Mappings]
-    NM --> MODEL[Modeling & Dimensional Analysis]
-    MODEL --> ALG[Algebra]
-    NM --> ALG
-    ALG --> FUNC[Functions]
-    FUNC --> COMP[Composition & Inverse]
-    FUNC --> SEQ[Sequences & Recurrence]
-
-    NM --> GEO[Geometry]
-    GEO --> TRIG[Trigonometry]
-    GEO --> TOP[Topology]
-    ALG --> VEC[Vectors]
-    GEO --> VEC
-    VEC --> LA[Linear Algebra]
-    LA --> ORTH[Orthogonality & Projection]
-    LA --> RANK[Rank / Null Space / Determinant]
-    LA --> EIG[Eigenvalues]
-    LA --> TEN[Tensor & Multilinear Algebra]
-
-    FUNC --> LIM[Limits]
-    LIM --> DER[Derivatives]
-    DER --> INT[Integrals]
-    SEQ --> SERIES[Infinite Series]
-    DER --> TAYLOR[Taylor]
-    LA --> MVC[Multivariable Calculus]
-    DER --> MVC
-    MVC --> MC[Matrix Calculus / Autodiff]
-    TEN --> MC
-    MVC --> VC[Vector Calculus]
-    INT --> ODE[Differential Equations]
-    VC --> PDE[PDE]
-    ODE --> PDE
-    LIM --> RA[Real Analysis]
-    SERIES --> RA
-    RA --> MUM[Metric / Uniform / Measure]
-    ALG --> CA[Complex Analysis]
-    SERIES --> CA
-    INT --> CA
-
-    LP --> COUNT[Counting & Combinatorics]
-    COUNT --> PROB[Probability]
-    PROB --> RV[Random Variables]
-    RV --> STAT[Statistics]
-    STAT --> INF[Sampling & Inference]
-    INF --> LKH[Likelihood / MLE / MAP]
-    INF --> EXPD[Experimental Design]
-    EXPD --> SLEARN[Statistical Learning]
-    LKH --> SLEARN
-    LA --> MP[Multivariate Probability]
-    RV --> MP
-    RV --> SP[Stochastic Processes]
-    EIG --> SP
-    LKH --> BAYES[Bayesian Inference]
-    SP --> BAYES
-
-    LP --> DISC[Discrete Mathematics]
-    DISC --> GRAPH[Graph Theory & Trees]
-    NM --> NT[Number Theory]
-    PROB --> IT[Information Theory]
-    DISC --> AUTO[Automata & Computability]
-    NT --> ABS[Groups / Rings / Fields]
-    DISC --> ABS
-    ABS --> AABS[Advanced Abstract Algebra]
-    NT --> ANT[Advanced Number Theory]
-    AABS --> ANT
-
-    DER --> OPT[Optimization]
-    LA --> OPT
-    MVC --> OPT
-    MC --> OPT
-    SLEARN --> OPT
-    OPT --> KKT[Constrained Optimization]
-    KKT --> LPDUAL[Linear Programming & Duality]
-    LA --> NUM[Numerical Linear Algebra]
-    LIM --> NUM
-    SEQ --> DP[Dynamic Programming]
-    OPT --> DP
-    SP --> DP
-
-    TRIG --> FOURIER[Fourier & Frequency]
-    ORTH --> FOURIER
-    SERIES --> FOURIER
-    CA --> LAPLACE[Laplace / Z Transform]
-    ODE --> LAPLACE
-    EIG --> LAPLACE
-    LAPLACE --> CONTROL[Dynamic Systems / Control]
-    DP --> CONTROL
-```
-
-Mermaid ở trên chỉ dùng để nhìn topology. Khi cần điều hướng (navigation / 내비게이션) trên website, dùng các **Học tập (learning / 학습) routes có thể click trực tiếp** hoặc links nằm trong từng chapter.
-
-## Connections sang các Thư viện kiến thức (knowledge library / 지식 라이브러리) khác
-Phần “Connections sang các Thư viện kiến thức (knowledge library / 지식 라이브러리) khác” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
-
-- [Computer Science](../computer_science/README.md): lô-gic (logic / 논리)/proof, graphs, automata, độ phức tạp (complexity / 복잡도), numerical/hiệu năng (performance / 성능) lập luận (reasoning / 추론) và hệ thống (system / 시스템) thiết kế (design / 설계).
-- [Physics](../physics/README.md): đo lường (measurement / 측정), vectors, calculus, differential equations, fields, Fourier và modeling các giả định (assumptions / 가정들).
-- [Investing](../investing/README.md): compounding, xác suất (probability / 확률), statistics, covariance, regression, tối ưu hóa (optimization / 최적화) và stochastic lập luận (reasoning / 추론).
-- AI/ML, Kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) được nối qua [Math for AI, Data and Software](./09_connections/03_math_for_ai_data_and_software.md); chapter này giữ ranh giới (boundary / 경계) toán học, còn hiện thực (implementation / 구현) thuộc các thư viện (library / 라이브러리) kỹ thuật tương ứng.
-
-## Những mô hình tư duy (mental models / 사고 모델들) xuyên suốt
-
-**Biểu diễn (representation / 표현).** Cùng một đối tượng (object / 객체) có thể được nhìn bằng formula, đồ thị (graph / 그래프), véc-tơ (vector / 벡터), ma trận (matrix / 행렬), tensor, basis coefficients, xác suất (probability / 확률) phân phối (distribution / 분포) hoặc mã (code / 코드). Biểu diễn (representation / 표현) tốt biến bài toán (problem / 문제) khó thành cấu trúc (structure / 구조) quen thuộc.
-
-**Cục bộ (local / 로컬) → Toàn cục (global / 전역).** Derivative là cục bộ (local / 로컬) tỷ lệ (rate / 비율) nhưng tích hợp (integration / 통합) tạo toàn cục (global / 전역) accumulation; differential equation là cục bộ (local / 로컬) law nhưng sinh toàn cục (global / 전역) trajectory; chuyển tiếp (transition / 전이) quy tắc (rule / 규칙) của Markov chuỗi (chain / 사슬) tạo long-run phân phối (distribution / 분포).
-
-**Linearization.** Tuyến tính (linear / 선형) algebra quan trọng không phải vì mọi hệ đều tuyến tính (linear / 선형), mà vì nonlinear các hệ thống (systems / 시스템들) thường được approximate locally bằng tuyến tính (linear / 선형) maps: Jacobian, Hessian, Taylor expansion và eigenmodes.
-
-**Bất định (uncertainty / 불확실성) as cấu trúc (structure / 구조).** Xác suất (probability / 확률) cung cấp algebra để mô hình (model / 모델) bất định (uncertainty / 불확실성), cập nhật (update / 업데이트) thông tin (information / 정보) và ra quyết định khi dữ liệu (data / 데이터) không đủ chắc chắn.
-
-Chi tiết historical scope nằm tại [COVERAGE_AUDIT.md](./COVERAGE_AUDIT.md); phần expansion dựa trên external textbook coverage ngày 2026-10-04 nằm tại [ABAKCUS_TEXTBOOK_GAP_AUDIT_2026_10.md](./ABAKCUS_TEXTBOOK_GAP_AUDIT_2026_10.md).
+Từ Round 2 trở đi, textbook collections mới nên được dùng chủ yếu để tìm **missing dependency bridges, exercises/problem-solving patterns, examples/counterexamples và failure modes**, thay vì tiếp tục tăng số chapter chỉ vì taxonomy của nguồn khác taxonomy hiện tại.
