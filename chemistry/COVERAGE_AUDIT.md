@@ -8,7 +8,7 @@
 
 Chemistry đã hoàn tất pre-merge kiểm tra (audit / 감사) và được quản lý trực tiếp trên `main`. Mọi kiểm tra (audit / 감사) mới phải cập nhật ngày rà soát (review / 검토), coverage, phụ thuộc (dependency / 의존성) luồng (flow / 흐름) và các link chuẩn gốc (canonical / 정본) tại đây.
 
-> **Chuyển mạch:** Trong **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **Thứ tự ưu tiên kiểm tra (audit / 감사)** tiếp nhận điểm tựa từ **Trạng thái chuẩn gốc (canonical / 정본)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **01 Atomic cấu trúc (structure / 구조) / Periodic Trends** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Trạng thái canonical** xác định owner và evidence; **Audit priority** dùng chúng để mở **Atomic structure/Periodic Trends** theo prerequisite thật.
 
 ## Thứ tự ưu tiên kiểm tra (audit / 감사)
 
@@ -56,7 +56,7 @@ Luồng (flow / 흐름) này đủ để người gần như quên Hóa phổ th
 
 # Cốt lõi (core / 핵심) conceptual gaps đã xử lý
 
-> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **01 Atomic cấu trúc (structure / 구조) / Periodic Trends** tiếp nhận điểm tựa từ **Thứ tự ưu tiên kiểm tra (audit / 감사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **02 Chemical Bonding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Atomic structure/Periodic Trends** đặt electron và periodicity; **Chemical Bonding** dùng chúng để giải thích liên kết và năng lượng.
 
 ## 01 Atomic cấu trúc (structure / 구조) / Periodic Trends
 
@@ -73,7 +73,7 @@ electron configuration
 
 Đã có second-period anomaly, diagonal relationship, inert-pair tác động (effect / 효과), transition-metal trends, lanthanide contraction và relativistic effects.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **02 Chemical Bonding** tiếp nhận điểm tựa từ **01 Atomic cấu trúc (structure / 구조) / Periodic Trends** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **03 Matter and Phases** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Chemical Bonding** nối electron với cấu trúc chất; **Matter and Phases** mở rộng sang bulk properties và phase behavior.
 
 ## 02 Chemical Bonding
 
@@ -91,7 +91,7 @@ electron bookkeeping
 
 Lewis, VSEPR, VB, MO và IMF không còn ở mức ghi chú (note / 노트) nhập môn mỏng.
 
-> **Chuyển mạch:** Trong **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **03 Matter and Phases** tiếp nhận điểm tựa từ **02 Chemical Bonding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **04 Chemical Quantities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Matter and Phases** mô tả state và transition; **Chemical Quantities** biến mô tả đó thành mol, concentration và stoichiometry.
 
 ## 03 Matter and Phases
 
@@ -101,7 +101,7 @@ Chất khí hiện có Maxwell–Boltzmann, collisions/mean free đường dẫn
 
 Chất lỏng, chất rắn và chuyển pha đã có diffusion, viscosity, surface tension, wetting, lattice/defects, phonons/bands, Clapeyron, nucleation và nhị phân (binary / 이진) phase diagrams.
 
-> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **04 Chemical Quantities** tiếp nhận điểm tựa từ **03 Matter and Phases** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **05 Thermodynamics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Chemical Quantities** khóa accounting của reaction; **Thermodynamics** giải thích energy, entropy và spontaneity của reaction đó.
 
 ## 04 Chemical Quantities
 
@@ -111,7 +111,7 @@ Stoichiometry đã đi xa hơn `gram → mol → gram`, gồm extent of reaction
 
 `limiting_reagent_and_yield.md` và `solution_concentration.md` ngắn nhưng có ví dụ số, các giả định (assumptions / 가정들) và mô hình tư duy (mental model / 사고 모델) nên **không phải tệp (file / 파일) yếu**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **05 Thermodynamics** tiếp nhận điểm tựa từ **04 Chemical Quantities** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **06 Kinetics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Thermodynamics** nói reaction có thể đi đâu; **Kinetics** nói nó đi nhanh thế nào và qua mechanism nào.
 
 ## 05 Thermodynamics
 
@@ -147,7 +147,7 @@ internal energy
 
 Prose đã chuyển về Việt-first và lỗi LaTeX trong phương trình Nernst đã được sửa.
 
-> **Chuyển mạch:** Trong **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **06 Kinetics** tiếp nhận điểm tựa từ **05 Thermodynamics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **07 Equilibrium** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Kinetics** cung cấp rate và mechanism; **Equilibrium** đặt rate outcome vào trạng thái cân bằng và constraint.
 
 ## 06 Kinetics
 
@@ -166,7 +166,7 @@ Cụm kinetics hiện bao phủ:
 - diffusion điều khiển (control / 제어);
 - catalysis và degree of tỷ lệ (rate / 비율) điều khiển (control / 제어).
 
-> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **07 Equilibrium** tiếp nhận điểm tựa từ **06 Kinetics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **08 Acid–cơ sở (base / 기반)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Equilibrium** khóa reaction state; **Acid–base** áp dụng equilibrium cho proton transfer, pH và buffer.
 
 ## 07 Equilibrium
 
@@ -200,13 +200,13 @@ forward/reverse kinetics
 
 Nhờ đó hai chapter hiện bổ sung cho nhau thay vì định nghĩa lại cùng một nội dung.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **08 Acid–cơ sở (base / 기반)** tiếp nhận điểm tựa từ **07 Equilibrium** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **09 Redox / Electrochemistry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Acid–base** làm rõ charge và potential trong dung dịch; **Redox/Electrochemistry** mở cùng logic sang electron transfer và cell.
 
 ## 08 Acid–cơ sở (base / 기반)
 
 Cốt lõi (core / 핵심) hiện có Arrhenius, Brønsted–Lowry, Lewis, activity-based pH, weak/polyprotic các hệ thống (systems / 시스템들), buffer sức chứa (capacity / 용량), titration mechanisms, equivalence vs endpoint, `Ksp/Qsp`, conditional solubility và complexation/protonation effects.
 
-> **Chuyển mạch:** Trong **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **09 Redox / Electrochemistry** tiếp nhận điểm tựa từ **08 Acid–cơ sở (base / 기반)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Organic Chemistry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Redox/Electrochemistry** nối electron flow với energy; **Organic Chemistry** dùng structure và mechanism để mô tả carbon systems.
 
 ## 09 Redox / Electrochemistry
 
@@ -226,7 +226,7 @@ oxidation state
 
 # Ngôn ngữ (language / 언어) consistency pass
 
-> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **Organic Chemistry** tiếp nhận điểm tựa từ **09 Redox / Electrochemistry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Analytical Chemistry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Organic Chemistry** đặt reaction mechanism lên molecular structure; **Analytical Chemistry** đo identity, amount và uncertainty của sản phẩm.
 
 ## Organic Chemistry
 
@@ -238,7 +238,7 @@ Các chapter đã pass trực tiếp:
 
 English được giữ như từ khóa (keyword / 키워드) chuẩn thay vì trở thành ngôn ngữ chính của câu. Không mở thêm reaction danh mục (catalog / 카탈로그) chỉ để tăng độ dài.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **Analytical Chemistry** tiếp nhận điểm tựa từ **Organic Chemistry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Materials / Polymer Chemistry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Analytical Chemistry** cung cấp measurement evidence; **Materials/Polymer Chemistry** chuyển evidence đó vào structure–property relationship.
 
 ## Analytical Chemistry
 
@@ -256,7 +256,7 @@ Giữ partition, retention, resolution, plate lý thuyết (theory / 이론), Va
 
 Giữ EI/CI/ESI/MALDI, quadrupole/TOF/ion trap/Orbitrap/FT-ICR, isotope patterns, MS/MS, proteomics/metabolomics và quantitation.
 
-> **Chuyển mạch:** Trong **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **Materials / Polymer Chemistry** tiếp nhận điểm tựa từ **Analytical Chemistry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Inorganic Chemistry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Materials/Polymer Chemistry** nối measurement với bulk performance; **Inorganic Chemistry** bổ sung coordination, solids và elements.
 
 ## Materials / Polymer Chemistry
 
@@ -271,7 +271,7 @@ Chúng đã được chuẩn hóa Việt-first nhưng giữ từ khóa (keyword 
 
 # Prerequisite chuyển tiếp (transition / 전이) pass
 
-> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **Inorganic Chemistry** tiếp nhận điểm tựa từ **Materials / Polymer Chemistry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biochemistry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Inorganic Chemistry** giải thích elements và coordination; **Biochemistry** đặt chúng vào molecules, pathways và living systems.
 
 ## Inorganic Chemistry
 
@@ -310,7 +310,7 @@ Bổ sung rõ giới hạn của CFSE, lập luận (reasoning / 추론) cho Ni(
 
 `00_inorganic_compounds.md` đã được kiểm tra (audit / 감사) trước và giữ nguyên vì prose/prerequisite tốt. `05_solid_state_and_defect_chemistry.md` đã được độ sâu (depth / 깊이) pass lớn từ trước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **Biochemistry** tiếp nhận điểm tựa từ **Inorganic Chemistry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nuclear Chemistry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Biochemistry** nối chemistry với biological function; **Nuclear Chemistry** chuyển mechanism sang isotope, decay và radiation.
 
 ## Biochemistry
 
@@ -332,7 +332,7 @@ more enzyme ≠ changed equilibrium
 
 Nhấn mạnh `flux ≠ concentration` và ghép nhiệt động cần ghép hóa học thật.
 
-> **Chuyển mạch:** Trong **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **Nuclear Chemistry** tiếp nhận điểm tựa từ **Biochemistry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Environmental Chemistry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Nuclear Chemistry** cung cấp source–decay evidence; **Environmental Chemistry** đánh giá transport, exposure và risk trong môi trường.
 
 ## Nuclear Chemistry
 
@@ -368,7 +368,7 @@ Lawson criterion = reaction-rate + confinement + materials trade-off
 
 `01_radioactivity.md` và `04_radiochemistry_and_applications.md` được mở kiểm tra (audit / 감사) lại và giữ nguyên vì đã có quantitative các mô hình (models / 모델들), cơ chế (mechanism / 메커니즘), sự đánh đổi (trade-off / 트레이드오프) và prose chủ yếu là tiếng Việt.
 
-> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **Environmental Chemistry** tiếp nhận điểm tựa từ **Nuclear Chemistry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Electrochemistry ↔ Electroanalysis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Environmental Chemistry** nối mechanism với exposure evidence; **Electrochemistry ↔ Electroanalysis** quay lại đo signal, interface và concentration.
 
 ## Environmental Chemistry
 
@@ -383,7 +383,7 @@ Các tệp (file / 파일) `00`–`03` đã có prerequisite pass:
 
 # Duplicate phạm vi (scope / 범위) rà soát (review / 검토)
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **Electrochemistry ↔ Electroanalysis** tiếp nhận điểm tựa từ **Environmental Chemistry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chemical Thermodynamics ↔ Thermodynamics of Equilibrium** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Electrochemistry/Electroanalysis** khóa measurement và potential; **Thermodynamics of Equilibrium** giải thích energy và equilibrium constraint.
 
 ## Electrochemistry ↔ Electroanalysis
 
@@ -399,7 +399,7 @@ Các tệp (file / 파일) `00`–`03` đã có prerequisite pass:
 
 Butler–Volmer, RDE và EIS không còn được giải thích hai lần với cùng mục tiêu.
 
-> **Chuyển mạch:** Trong **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **Chemical Thermodynamics ↔ Thermodynamics of Equilibrium** tiếp nhận điểm tựa từ **Electrochemistry ↔ Electroanalysis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Analytical đo lường (measurement / 측정) ↔ Laboratory thiết kế (design / 설계)/bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Thermodynamics/Equilibrium** khóa model và assumptions; **Analytical measurement/lab design** kiểm tra model bằng uncertainty và calibration.
 
 ## Chemical Thermodynamics ↔ Thermodynamics of Equilibrium
 
@@ -435,7 +435,7 @@ Butler–Volmer, RDE và EIS không còn được giải thích hai lần với 
 
 Các khái niệm calibration/bất định (uncertainty / 불확실성) xuất hiện ở nhiều nơi là cross-domain reuse có chủ ý, không phải ba chapter cạnh tranh cùng mục tiêu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức Hóa học — Kiểm tra độ bao phủ**, **Analytical đo lường (measurement / 측정) ↔ Laboratory thiết kế (design / 설계)/bất định (uncertainty / 불확실성)** cho ta quy tắc; **Các overlap có chủ ý khác** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Analytical measurement/lab design** khép coverage bằng evidence, uncertainty và owner; các overlap còn lại được giữ như link có chủ đích.
 
 ## Các overlap có chủ ý khác
 
