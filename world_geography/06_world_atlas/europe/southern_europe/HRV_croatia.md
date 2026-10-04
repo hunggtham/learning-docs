@@ -6,19 +6,19 @@
 
 Croatia kết hợp đồng bằng Pannonian ở phía bắc–đông, Dinaric Alps ở trung tâm và bờ Adriatic dài với nhiều đảo ở phía tây–nam. Hình dạng kéo dài làm kết nối nội bộ có tính hành lang rõ.
 
-> **Chuyển mạch:** Trong **Croatia**, **Adriatic và du lịch** tiếp nhận điểm tựa từ **Ba không gian lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Zagreb và cửa ngõ nội địa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Pannonian plain, Dinaric Alps và Adriatic islands tạo ba điều kiện relief khác nhau; **Adriatic và du lịch** khai thác coast nhưng phụ thuộc corridor và mùa vụ. **Zagreb và cửa ngõ nội địa** nối các không gian đó với Danube–Central Europe.
 
 ## Adriatic và du lịch
 
 Bờ biển karst chia cắt, nước biển tương đối trong và nhiều đảo tạo nền du lịch mạnh. Split, Rijeka và Dubrovnik là các nút ven biển với chức năng khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Croatia**, **Zagreb và cửa ngõ nội địa** tiếp nhận điểm tựa từ **Adriatic và du lịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Du lịch Adriatic tạo các coastal nodes như Split, Rijeka và Dubrovnik, nhưng bờ karst chia cắt làm access không đều. **Zagreb** đóng vai trò inland gateway để phân phối flow giữa Pannonian corridor và biển.
 
 ## Zagreb và cửa ngõ nội địa
 
 Zagreb nằm gần rìa nam đồng bằng Pannonian, tại vị trí kết nối tuyến Danube–Central Europe với Adriatic.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Croatia**, **Mô hình tư duy** gom các mảnh từ **Zagreb và cửa ngõ nội địa** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi plain–mountain–island coast → tourism/ports → Zagreb–Danube gateway, luôn kiểm tra bottleneck và mùa vụ. Đây là điểm bàn giao cho các profile Southern Europe trong owner World Atlas.
 
 ## Mô hình tư duy
 

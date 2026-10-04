@@ -6,19 +6,19 @@
 
 Slovenia nhỏ nhưng nằm nơi bốn hệ địa lý gặp nhau. Vì vậy relief, khí hậu và cảnh quan thay đổi nhanh trên khoảng cách ngắn.
 
-> **Chuyển mạch:** Trong **Slovenia**, **Karst** tiếp nhận điểm tựa từ **Giao điểm Alps, Dinaric, Pannonian và Adriatic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ljubljana và Koper** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Bốn hệ địa lý gặp nhau trong diện tích nhỏ, tạo relief và climate gradient mạnh; **Karst** là cơ chế thủy văn đặc biệt với nước ngầm, hang và sinkhole. **Ljubljana và Koper** chuyển sự đa dạng đó thành inland hub và Adriatic gateway.
 
 ## Karst
 
 Vùng Karst của Slovenia là nơi thuật ngữ **karst** được phổ biến quốc tế. Đá vôi hòa tan tạo hang động, sông ngầm và bề mặt sinkhole, làm thủy văn rất khác lưu vực thông thường.
 
-> **Chuyển mạch:** Ở chặng này của **Slovenia**, **Ljubljana và Koper** tiếp nhận điểm tựa từ **Karst** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Karst tạo ràng buộc nước và địa hình, còn **Ljubljana–Koper** là node logistics nối Central Europe với biển qua một corridor ngắn. **Mô hình tư duy** sẽ ghép landscape diversity với network value.
 
 ## Ljubljana và Koper
 
 Ljubljana nằm trong bồn địa trung tâm, còn Koper cung cấp cửa Adriatic. Hành lang từ Central Europe tới Koper có giá trị logistics vượt quy mô bờ biển ngắn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Slovenia**, **Mô hình tư duy** gom các mảnh từ **Ljubljana và Koper** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi Alps–Dinaric–Pannonian–Adriatic → karst/water → Ljubljana–Koper logistics gateway. Đây là điểm bàn giao cho các profile Central/Southern Europe trong owner World Atlas.
 
 ## Mô hình tư duy
 
