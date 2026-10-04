@@ -6,7 +6,7 @@
 
 Đức nằm ở trung tâm mạng lục địa châu Âu, nơi **North European Plain, Rhine–Main–Danube corridors, dense city mạng (network / 네트워크) và industrial supplier hệ thống (system / 시스템)** giao nhau. Sức mạnh địa lý không đến từ một siêu đô thị hay một tài nguyên (resource / 자원) duy nhất, mà từ mật độ rất cao của medium/large cities, rail–road–river links và manufacturing clusters.
 
-> **Chuyển mạch:** Trong **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **Relief và regional cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **River như hạ tầng kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Thesis về mạng lục địa cần bắt đầu từ **Relief và regional cấu trúc (structure / 구조)**: plain, upland và Alpine foreland tạo các mức độ dễ tiếp cận khác nhau. **River như hạ tầng kinh tế** tiếp theo cho thấy sông biến sự liên tục địa hình thành năng lực vận chuyển ra sao.
 
 ## Relief và regional cấu trúc (structure / 구조)
 
@@ -16,7 +16,7 @@ Rhine valley là corridor rõ vì low relief, waterway và dense settlement. Dan
 
 Relief không chia nước Đức thành isolated basin mạnh như mountain countries, nên land connectivity tương đối thuận lợi.
 
-> **Chuyển mạch:** Ở chặng này của **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **River như hạ tầng kinh tế** tiếp nhận điểm tựa từ **Relief và regional cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Polycentric urban hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Relief tương đối mở và Rhine–Danube–Elbe tạo các hành lang nối plain với North Sea và phía đông; **River như hạ tầng kinh tế** vì thế là lớp multimodal chứ không chỉ là đường nước. **Polycentric urban hệ thống (system / 시스템)** tiếp theo cho thấy các nút đô thị phân bố trên mạng ấy.
 
 ## River như hạ tầng kinh tế
 
@@ -26,7 +26,7 @@ Barge phù hợp bulk/industrial cargo; rail/road bổ sung time-sensitive freig
 
 Low water sự kiện (event / 이벤트) trên Rhine có thể tăng vận chuyển (transport / 전송) chi phí (cost / 비용), cho thấy climate/hydrology vẫn ảnh hưởng advanced industrial economy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **Polycentric urban hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **River như hạ tầng kinh tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Manufacturing cluster** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Rhine–Ruhr, Frankfurt, Munich, Hamburg và các metro khác biến sông và rail–road thành **Polycentric urban hệ thống (system / 시스템)** thay vì một cực duy nhất. **Manufacturing cluster** tiếp theo giải thích vì sao mạng thành phố này giữ được supplier và kỹ năng chuyên môn.
 
 ## Polycentric urban hệ thống (system / 시스템)
 
@@ -34,7 +34,7 @@ Berlin là capital lớn nhưng Germany không bị một city thống trị tuy
 
 Polycentricity làm labor/firm mạng (network / 네트워크) phân tán hơn và tạo nhiều specialization cluster.
 
-> **Chuyển mạch:** Trong **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **Manufacturing cluster** tiếp nhận điểm tựa từ **Polycentric urban hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rhine–Ruhr transformation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Manufacturing cluster** dựa trên mật độ đô thị, vocational skill, supplier proximity và logistics; lợi thế vì thế nằm trong mạng chứ không chỉ ở nhà máy. **Rhine–Ruhr transformation** tiếp theo cho thấy mạng cũ thích nghi thế nào khi coal–steel suy giảm.
 
 ## Manufacturing cluster
 
@@ -44,7 +44,7 @@ Manufacturing success phụ thuộc vocational skill, supplier proximity, logist
 
 Cluster tạo đường dẫn (path / 경로) dependence: khi mạng (network / 네트워크) supplier đã dày, relocation toàn bộ rất tốn chi phí (cost / 비용).
 
-> **Chuyển mạch:** Ở chặng này của **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **Rhine–Ruhr transformation** tiếp nhận điểm tựa từ **Manufacturing cluster** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng (energy / 에너지) geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ruhr cho thấy brownfield, logistics, university và city network có thể tái sử dụng di sản công nghiệp; **Rhine–Ruhr transformation** không xóa geography cũ mà đổi chức năng của nó. **Năng lượng (energy / 에너지) geography** tiếp theo đặt câu hỏi về nguồn điện cho mạng công nghiệp mới.
 
 ## Rhine–Ruhr transformation
 
@@ -52,7 +52,7 @@ Coal/steel từng là cốt lõi (core / 핵심) của Ruhr. Khi heavy industry 
 
 Brownfield redevelopment cho thấy geography cũ không biến mất; hạ tầng (infrastructure / 인프라) và city mạng (network / 네트워크) được repurpose.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **Năng lượng (energy / 에너지) geography** tiếp nhận điểm tựa từ **Rhine–Ruhr transformation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cổng (port / 포트) và bên ngoài (external / 외부) gateway** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Công nghiệp sau chuyển đổi vẫn cần tải lớn, trong khi wind ở north và solar ở south tạo mismatch; **Năng lượng (energy / 에너지) geography** vì thế là bài toán source–grid–load. **Cổng (port / 포트) và bên ngoài (external / 외부) gateway** tiếp theo cho thấy mạng ấy phụ thuộc những cửa ngõ vượt biên giới ra sao.
 
 ## Năng lượng (energy / 에너지) geography
 
@@ -60,7 +60,7 @@ Industrial tải (load / 로드) lớn trong khi renewable wind mạnh hơn ở 
 
 Năng lượng (energy / 에너지) chuyển tiếp (transition / 전이) vì thế là geography của **nguồn (source / 소스)–grid–tải (load / 로드)**, không chỉ technology choice.
 
-> **Chuyển mạch:** Trong **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **Cổng (port / 포트) và bên ngoài (external / 외부) gateway** tiếp nhận điểm tựa từ **Năng lượng (energy / 에너지) geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Society và regional inequality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hamburg, Rotterdam và Antwerp cho thấy gateway hiệu quả có thể nằm ngoài biên giới quốc gia; **Cổng (port / 포트) và bên ngoài (external / 외부) gateway** mở rộng hinterland của Đức. **Society và regional inequality** tiếp theo kiểm tra ai được hưởng lợi từ mạng trung tâm đó.
 
 ## Cổng (port / 포트) và bên ngoài (external / 외부) gateway
 
@@ -68,7 +68,7 @@ Hamburg là major seaport; Rhine hệ thống (system / 시스템) kết nối m
 
 Border giảm friction trong integrated thị trường (market / 시장) làm functional hinterland vượt trạng thái (state / 상태) ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Ở chặng này của **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **Society và regional inequality** tiếp nhận điểm tựa từ **Cổng (port / 포트) và bên ngoài (external / 외부) gateway** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regional role** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Gateway và industrial network tạo cơ hội không đều giữa booming metro, eastern districts và rural areas; **Society và regional inequality** đưa chi phí dân số, aging và labor shortage vào cùng bản đồ. **Regional role** sẽ tổng hợp vị trí trung tâm nhưng không đồng nhất của Germany.
 
 ## Society và regional inequality
 
@@ -76,13 +76,13 @@ East–west historical development difference vẫn để lại demographic/econ
 
 Aging và labor shortage có geography khác giữa booming metro và shrinking rural district.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **Regional role** tiếp nhận điểm tựa từ **Society và regional inequality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Regional role** của Germany là central manufacturing–logistics node, nhưng nó được tạo bởi nhiều city, river, port và cross-border links với các bất cân bằng nội vùng. **Mô hình tư duy (mental model / 사고 모델)** sẽ giữ cả mật độ mạng lẫn giới hạn phân phối đó.
 
 ## Regional role
 
 Germany nằm như central manufacturing/logistics nút (node / 노드) của Europe. Role đến từ centrality, industrial độ sâu (depth / 깊이) và cross-border khả năng tiếp cận (accessibility / 접근성).
 
-> **Chuyển mạch:** Trong **Đức (Germany) — Central European corridor, industrial clusters và Rhine mạng (network / 네트워크)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Regional role** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** khép chuỗi relief–rivers → polycentric cities → manufacturing–Rhine–Ruhr → energy–ports → social inequality, rồi bàn giao cho owner **Western Europe — Hồ sơ địa lý** trong [README](./README.md).
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
