@@ -104,7 +104,7 @@ query references A, C, F
 
 Trong phân tán (distributed / 분산)/đối tượng (object / 객체) lưu trữ (storage / 저장소), tránh tải unused columns còn giảm mạng (network / 네트워크) egress và yêu cầu (request / 요청) chi phí (cost / 비용).
 
-> **Nối mạch:** cơ chế trong **7. Projection pushdown quyết định columns nào đi vào chuỗi xử lý (pipeline / 파이프라인)** cần được kiểm chứng bằng dấu vết cụ thể; **8. Predicate pushdown cần phân biệt siêu dữ liệu (metadata / 메타데이터) filter và row filter** đưa dữ liệu và nguồn vào đúng điểm đó.; **9. Vectorized scan làm việc trên batch thay vì tuple-at-a-time** mở rộng hệ quả hoặc giới hạn của cơ chế này.
+> **Nối mạch:** **7. Projection pushdown quyết định columns nào đi vào chuỗi xử lý (pipeline / 파이프라인)** đặt vấn đề; **8. Predicate pushdown cần phân biệt siêu dữ liệu (metadata / 메타데이터) filter và row filter** kiểm chứng bằng dấu vết, rồi **9. Vectorized scan làm việc trên batch thay vì tuple-at-a-time** mở rộng hệ quả.
 
 ## 8. Predicate pushdown cần phân biệt siêu dữ liệu (metadata / 메타데이터) filter và row filter
 

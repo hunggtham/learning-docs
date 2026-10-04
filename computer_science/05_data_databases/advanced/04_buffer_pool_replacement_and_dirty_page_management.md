@@ -79,7 +79,7 @@ not resident
 
 Transitions có thể overlap/concurrent tùy hiện thực (implementation / 구현). lập luận (reasoning / 추론) theo máy trạng thái (state machine / 상태 머신) giúp gỡ lỗi (debug / 디버그) “page vẫn dirty”, “victim không chọn được”, “flush backlog tăng” tốt hơn việc chỉ nhìn hit ratio.
 
-> **Nối mạch:** cơ chế trong **4. Page vòng đời (lifecycle / 생명주기) là một máy trạng thái (state machine / 상태 머신)** cần được kiểm chứng bằng dấu vết cụ thể; **5. Replacement chính sách (policy / 정책) đang dự đoán future reuse** đưa dữ liệu và nguồn vào đúng điểm đó.; **6. Dirty page là deferred ghi (write / 쓰기) debt** mở rộng hệ quả hoặc giới hạn của cơ chế này.
+> **Nối mạch:** **4. Page vòng đời (lifecycle / 생명주기) là một máy trạng thái (state machine / 상태 머신)** đặt vấn đề; **5. Replacement chính sách (policy / 정책) đang dự đoán future reuse** kiểm chứng bằng dấu vết, rồi **6. Dirty page là deferred ghi (write / 쓰기) debt** mở rộng hệ quả.
 
 ## 5. Replacement chính sách (policy / 정책) đang dự đoán future reuse
 
