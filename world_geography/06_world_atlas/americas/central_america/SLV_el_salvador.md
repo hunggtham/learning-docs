@@ -5,17 +5,17 @@
 ## Khung không gian
 El Salvador nhỏ và mở ra Pacific, với chuỗi núi lửa, bồn địa nội địa và đồng bằng ven biển nằm gần nhau. Khoảng cách ngắn làm các vùng chức năng liên kết chặt nhưng cũng khiến hazard lan ảnh hưởng nhanh tới khu dân cư.
 
-> **Chuyển mạch:** Trong **El Salvador**, **Dân cư và đô thị** tiếp nhận điểm tựa từ **Khung không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Lãnh thổ hẹp, núi lửa và Pacific đặt các basin, đồng bằng và đô thị rất gần nhau; **dân cư và đô thị** vì thế đạt mật độ cao nhưng thiếu dư địa. **Rủi ro** tiếp theo kiểm tra cách exposure lan nhanh trong không gian nén.
 
 ## Dân cư và đô thị
 Mật độ dân cư cao làm hành lang San Salvador và các thung lũng trung tâm chịu áp lực đất lớn. Đô thị hóa, công nghiệp và nông nghiệp cạnh tranh không gian trong một lãnh thổ hẹp.
 
-> **Chuyển mạch:** Ở chặng này của **El Salvador**, **Rủi ro** tiếp nhận điểm tựa từ **Dân cư và đô thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Density và cạnh tranh đất làm tăng vulnerability khi động đất, núi lửa, mưa cực đoan hay lở đất xảy ra. **Mô hình tư duy** sẽ gom access, settlement và hazard thành một hệ thống duy nhất thay vì tách tự nhiên khỏi xã hội.
 
 ## Rủi ro
 Động đất, núi lửa, mưa cực đoan, lũ quét và lở đất là các hazard chính. Độ dốc cao kết hợp xây dựng dày làm exposure và vulnerability tăng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **El Salvador**, **Mô hình tư duy** gom các mảnh từ **Rủi ro** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi volcanic/coastal relief → dense settlement → urban/economic network → exposure và vulnerability. Đây là điểm bàn giao cho các profile Central America trong owner World Atlas.
 
 ## Mô hình tư duy
 El Salvador = **lãnh thổ nhỏ, đông dân, núi lửa và kết nối cao**, nên cả lợi ích mạng lưới lẫn rủi ro đều bị nén trong không gian ngắn.

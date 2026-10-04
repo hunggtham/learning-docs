@@ -6,25 +6,25 @@
 
 Phần lớn Slovakia là đồi núi, đặc biệt ở phía bắc và trung tâm thuộc hệ Carpathian. Vùng thấp tập trung hơn ở phía tây nam và đông nam, nơi nông nghiệp và đô thị phát triển thuận lợi hơn.
 
-> **Chuyển mạch:** Trong **Slovakia**, **Carpathian chi phối địa hình** xác định đầu vào; **Danube và hành lang phía tây** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Công nghiệp dọc hành lang** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Carpathian chia Slovakia thành thung lũng và vùng thấp; **Danube và hành lang phía tây** là nơi địa hình mở ra mạng Trung Âu. **Công nghiệp dọc hành lang** tiếp theo cho thấy access và hạ tầng bám theo các khe địa hình đó.
 
 ## Danube và hành lang phía tây
 
 Bratislava nằm sát Danube và gần rìa phía tây quốc gia. Vị trí này tạo kết nối mạnh với mạng đô thị và giao thông Trung Âu, trong khi phần nội địa phụ thuộc các thung lũng xuyên núi.
 
-> **Chuyển mạch:** Ở chặng này của **Slovakia**, **Công nghiệp dọc hành lang** tiếp nhận điểm tựa từ **Danube và hành lang phía tây** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nước và du lịch núi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Danube, Bratislava và các thung lũng phía tây tập trung corridor, logistics và industry; đây là corridorization do relief và thị trường cùng tạo. **Nước và du lịch núi** bổ sung nguồn tài nguyên và hazard ở vùng cao.
 
 ## Công nghiệp dọc hành lang
 
 Các thung lũng và vùng thấp tập trung hạ tầng, công nghiệp và dân cư. Địa hình làm hiệu ứng **hành lang hóa (corridorization)** rõ: tuyến đường và khu công nghiệp không phân bố đều mà bám theo không gian dễ tiếp cận.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Slovakia**, **Nước và du lịch núi** tiếp nhận điểm tựa từ **Công nghiệp dọc hành lang** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Industry tập trung ở vùng thấp nhờ access, còn Carpathian cung cấp nước, rừng và tourism nhưng tăng lũ quét, sạt lở và chi phí hạ tầng. **Mô hình tư duy** sẽ nối corridor economy với giới hạn sinh thái đó.
 
 ## Nước và du lịch núi
 
 Carpathian là nguồn nước, rừng và du lịch. Tuy nhiên địa hình dốc cũng tạo rủi ro lũ quét, sạt lở cục bộ và chi phí hạ tầng cao hơn.
 
-> **Chuyển mạch:** Trong **Slovakia**, **Mô hình tư duy** gom các mảnh từ **Nước và du lịch núi** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi Carpathian–Danube → corridor–industry → water–tourism–hazard, giữ rõ vị trí nội lục trong network Trung Âu. Đây là điểm bàn giao cho các profile Eastern Europe trong World Atlas.
 
 ## Mô hình tư duy
 
