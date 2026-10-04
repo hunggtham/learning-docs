@@ -6,19 +6,19 @@
 
 Andorra nằm trong thung lũng núi cao Pyrenees giữa France và Spain. Không gian xây dựng tập trung mạnh dọc thung lũng sông Valira và các nhánh.
 
-> **Chuyển mạch:** Trong **Andorra**, **Kinh tế núi** tiếp nhận điểm tựa từ **Microstate trong Pyrenees** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Pyrenees và thung lũng Valira giới hạn đất xây dựng nhưng tạo snow, hiking và cảnh quan; **kinh tế núi** vì vậy phụ thuộc accessibility đường bộ từ France/Spain và dòng khách theo mùa. **Rủi ro** kiểm tra chi phí của chính địa hình dốc đó.
 
 ## Kinh tế núi
 
 Địa hình hạn chế nông nghiệp và đất xây dựng nhưng tạo lợi thế du lịch mùa đông, hiking và cảnh quan. Kinh tế vì vậy phụ thuộc mạnh vào dòng khách và khả năng tiếp cận (accessibility / 접근성) qua đường bộ.
 
-> **Chuyển mạch:** Ở chặng này của **Andorra**, **Rủi ro** tiếp nhận điểm tựa từ **Kinh tế núi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Tourism và dịch vụ tập trung dọc Valira, nên lở đá, tuyết lở và lũ nhanh có thể ảnh hưởng đồng thời đất ở, đường và access du khách. **Mô hình tư duy** sẽ nối microstate economy với land scarcity và resilience.
 
 ## Rủi ro
 
 Địa hình dốc tạo nguy cơ lở đá, tuyết lở và lũ nhanh cục bộ; quy hoạch phải cân bằng phát triển đô thị với quỹ đất nhỏ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Andorra**, **Mô hình tư duy** gom các mảnh từ **Rủi ro** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi Pyrenees–Valira → land scarcity–road access → mountain tourism–hazard, đặt Andorra trong functional region France/Spain. Đây là điểm bàn giao cho các microstate profile trong owner World Atlas.
 
 ## Mô hình tư duy
 
