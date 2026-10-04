@@ -6,7 +6,7 @@ Ngoài sáu lĩnh vực kiến thức chính, thư viện còn có một tệp (
 
 ### Route theo Sách 2 — Nhập môn đầu tư chứng khoán
 
-Learning edition của `증권투자기초/raw/sach2.md` nằm tại [`증권투자기초/output/README.md`](../증권투자기초/output/README.md). Đây là route cầu nối sáu bài về nền tảng, định giá cổ phiếu, phân tích kỹ thuật, chiến lược/chỉ số, trái phiếu và rủi ro trái phiếu. Các chương chuyên sâu vẫn thuộc owner trong thư viện này; route Sách 2 chỉ giữ đủ mạch để người mới học được knowledge-bearing content của source và chỉ sang owner khi cần đào sâu.
+Learning edition của `증권투자기초/raw/sach2.md` nằm tại [`증권투자기초/sach2/README.md`](../증권투자기초/sach2/README.md). Đây là route cầu nối sáu bài về nền tảng, định giá cổ phiếu, phân tích kỹ thuật, chiến lược/chỉ số, trái phiếu và rủi ro trái phiếu. Các chương chuyên sâu vẫn thuộc owner trong thư viện này; route Sách 2 chỉ giữ đủ mạch để người mới học được knowledge-bearing content của source và chỉ sang owner khi cần đào sâu.
 
 Để kiểm tra phần nào đã đủ sâu, phần nào time-sensitive và phần nào **không nên tiếp tục mở rộng chỉ để tăng số tệp (file / 파일)**, xem [Coverage & Depth Audit](./COVERAGE_AUDIT.md). Sau cốt lõi (core / 핵심) tuyến (route / 경로), dùng [Advanced Depth Path](./ADVANCED_DEPTH_PATH.md) và [Advanced Practice Workbook](./ADVANCED_PRACTICE_WORKBOOK.md) để chuyển kiến thức sang sản phẩm tạo ra (artifact / 산출물) có thể rà soát (review / 검토).
 
