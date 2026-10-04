@@ -15,7 +15,7 @@
 
 Sau cốt lõi (core / 핵심) tuyến (route / 경로), dùng [Cross-domain Integration Bridge](./90_connections/00_sociology_psychology_economics_history_and_methods.md) để xác định khi nào một phenomenon nên được giải thích ở mức (level / 수준) Psychology, Sociology, Economics, Lịch sử (history / 이력)/Geography hay Research Methods/ Econometrics. Cầu nối (bridge / 브리지) này không tạo lý thuyết (theory / 이론) mới; nó giữ quyền sở hữu (ownership / 소유권) và bằng chứng (evidence / 증거) category rõ khi chuyển lĩnh vực (domain / 도메인).
 
-> **Chuyển mạch:** Trong **Sociology Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Trục học (learning spine / 학습 축)** tiếp nhận điểm tựa từ **Thứ tự học chuẩn gốc (canonical / 정본)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới (boundary / 경계) với Psychology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Thứ tự học canonical** đi từ cấu trúc, interaction đến institution; **Trục học** làm rõ dependency, rồi **Ranh giới với Psychology** giữ cơ chế xã hội ở đúng owner.
 
 ## Trục học (learning spine / 학습 축)
 
@@ -90,7 +90,7 @@ Khi đọc một xã hội (social / 사회적) phenomenon, hỏi:
 9. phản hồi (feedback / 피드백), diffusion hoặc đường dẫn (path / 경로) dependence nào sustain mẫu (pattern / 패턴)?
 10. bằng chứng (evidence / 증거) hỗ trợ (support / 지원) descriptive, interpretive hay nhân quả (causal / 인과적) claim mạnh đến đâu?
 
-> **Chuyển mạch:** Ở chặng này của **Sociology Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Mục tiêu cuối** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) analytical questions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Cốt lõi analytical questions** tạo tiêu chí đọc evidence; **Mục tiêu cuối** kiểm tra người học có thể nối micro interaction với macro institution mà không nhảy cóc hay không.
 
 ## Mục tiêu cuối
 

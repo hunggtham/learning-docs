@@ -66,7 +66,7 @@ Dùng tệp (file / 파일) này sau Master hoặc khi cần tra cứu một d�
 
 Không đọc 05 thay cho 01–04. tham chiếu (reference / 참조) cố tình cross-cutting và giả định bạn đã có vocabulary về quyền sở hữu (ownership / 소유권), isolation, trạng thái (state / 상태), vòng đời (lifecycle / 생명주기) và tính tương thích (compatibility / 호환성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Những phụ thuộc (dependency / 의존성) kiến thức không nên bỏ qua** tiếp nhận điểm tựa từ **Môi trường vận hành (production / 운영 환경) tham chiếu (reference / 참조) — không phải mức (level / 수준) tiếp theo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phiên bản (version / 버전) principles** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Production reference** nêu runtime, signing và distribution constraints; **Dependencies không nên bỏ qua** biến chúng thành prerequisite trước khi chọn **version principles**.
 
 ## Những phụ thuộc (dependency / 의존성) kiến thức không nên bỏ qua
 
@@ -80,7 +80,7 @@ Không đọc 05 thay cho 01–04. tham chiếu (reference / 참조) cố tình 
 
 **môi trường vận hành (production / 운영 환경) hiện thực (implementation / 구현) trước phiên bản (version / 버전) quản trị (governance / 거버넌스).** Master giả định bạn đã biết hiện thực (implementation / 구현) hoạt động; lúc đó mới đánh giá di chuyển (migration / 마이그레이션), tính tương thích (compatibility / 호환성), rollout và khôi phục (recovery / 복구) có ý nghĩa.
 
-> **Chuyển mạch:** Trong **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Phiên bản (version / 버전) principles** tiếp nhận điểm tựa từ **Những phụ thuộc (dependency / 의존성) kiến thức không nên bỏ qua** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dự án (project / 프로젝트) progression đề xuất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi prerequisite và deployment floor đã rõ, **Version principles** đặt policy tương thích; **Project progression** dùng policy đó để chọn bước xây dựng tiếp theo.
 
 ## Phiên bản (version / 버전) principles
 
@@ -90,7 +90,7 @@ Thời gian chạy (runtime / 런타임) availability dùng `#available`; compil
 
 Khi tài liệu/blog cũ mâu thuẫn hành vi (behavior / 동작) của toolchain đang dùng, ưu tiên Swift.org/Swift Evolution, Apple nhà phát triển (developer / 개발자) Documentation và Xcode bản phát hành (release / 릴리스) notes chính thức.
 
-> **Chuyển mạch:** Ở chặng này của **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Dự án (project / 프로젝트) progression đề xuất** tiếp nhận điểm tựa từ **Phiên bản (version / 버전) principles** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Project progression** khép route bằng artifact, test và release evidence; phần sâu hơn quay về owner của Swift runtime, UIKit/SwiftUI và Apple platform docs.
 
 ## Dự án (project / 프로젝트) progression đề xuất
 

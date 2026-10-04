@@ -19,7 +19,7 @@ Mục tiêu là giúp người đọc nhận ra một claim đang nói về **m�
 - Political ideologies khác nhau ở conception nào về freedom, authority, thuộc tính (property / 속성), equality, community và institutional thay đổi (change / 변경)?
 - Technology chỉ là công cụ hay còn định hình agency, kiến thức (knowledge / 지식), công việc (work / 작업) và xã hội (social / 사회적) thứ tự (order / 순서)?
 
-> **Chuyển mạch:** Trong **Philosophy Thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện Triết học**, **Cấu trúc** tiếp nhận điểm tựa từ **Những câu hỏi trung tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reading đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Những câu hỏi trung tâm** xác định vấn đề cần suy tư; **Cấu trúc** sắp xếp các trường phái và khái niệm thành route, rồi **Reading path** chỉ owner để đọc sâu.
 
 ## Cấu trúc
 
@@ -86,7 +86,7 @@ Các tuyến (route / 경로) nâng cao không phải thứ tự bắt buộc. C
 - [World History](../world_history/README.md) là đơn vị sở hữu (owner / 오너) chuẩn gốc (canonical / 정본) khi ideology chapter chuyển từ conceptual genealogy sang historical movements, wars, trạng thái (state / 상태) formation hoặc regime thay đổi (change / 변경).
 - [Computer Science / AI](../computer_science/README.md) mở rộng các câu hỏi về computation, biểu diễn (representation / 표현), agency, alignment và responsibility.
 
-> **Chuyển mạch:** Trong **Philosophy Thư viện kiến thức (knowledge library / 지식 라이브러리) — Thư viện Triết học**, **Chuẩn biên soạn** tiếp nhận điểm tựa từ **Kiến thức (knowledge / 지식) connections** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Kiến thức connections** cho biết các lập luận giao nhau ở đâu; **Chuẩn biên soạn** giữ mỗi lập luận ở đúng chapter owner và tránh biến thư viện thành danh sách trích dẫn.
 
 ## Chuẩn biên soạn
 

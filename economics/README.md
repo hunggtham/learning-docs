@@ -36,7 +36,7 @@ Từ đây Economics không còn khoảng trống cốt lõi (core / 핵심) b�
 
 Folder numbering phản ánh taxonomy, không ép thứ tự học tuyệt đối. Econometrics được đặt trước Applied Economics trong học tập (learning / 학습) phụ thuộc (dependency / 의존성) để empirical trường hợp (case / 사례) không biến thành correlation narrative.
 
-> **Chuyển mạch:** Ở chặng này của **Economics Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Độ sâu (depth / 깊이) đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **Học tập (learning / 학습) tuyến (route / 경로)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các liên kết (connection / 연결) làm spine của thư viện (library / 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Học tập route** xác định thứ tự prerequisite; **Depth contract** nêu mức giải thích cần đạt, rồi **Connections làm spine** nối các domain bằng causal mechanism thật.
 
 ## Độ sâu (depth / 깊이) đặc tả hợp đồng (contract / 계약)
 
@@ -68,7 +68,7 @@ Applied chapter thêm incidence và scale-up. Historical chapter thêm enforceme
 - [Korea Business & Economy](../korea_business_economy_knowledge_library/README.md): trường hợp (case / 사례) tầng (layer / 계층) cho labor, chaebol, trade, industrial chính sách (policy / 정책) và Korean institutions.
 - [Computer Science](../computer_science/README.md): auctions, cơ chế (mechanism / 메커니즘) thiết kế (design / 설계), platforms, matching, tối ưu hóa (optimization / 최적화) và computational methods.
 
-> **Chuyển mạch:** Trong **Economics Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Quy ước biên soạn** tiếp nhận điểm tựa từ **Các liên kết (connection / 연결) làm spine của thư viện (library / 라이브러리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sau cốt lõi (core / 핵심)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Connections làm spine** chỉ ra nơi các lập luận kinh tế gặp nhau; **Quy ước biên soạn** giữ thuật ngữ, evidence và owner nhất quán trước khi sang **Sau cốt lõi**.
 
 ## Quy ước biên soạn
 
@@ -83,7 +83,7 @@ Causal Estimate ≠ Policy Recommendation
 
 Positive economics phải tách khỏi normative judgment. Historical persistence cũng không tự đồng nghĩa đường dẫn (path / 경로) dependence; formal rules cũng không tự đồng nghĩa effective enforcement.
 
-> **Chuyển mạch:** Ở chặng này của **Economics Thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Sau cốt lõi (core / 핵심)** tiếp nhận điểm tựa từ **Quy ước biên soạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Sau cốt lõi** chốt năng lực giải thích và chỉ ra điểm quay lại từng domain owner; đây là boundary của README, không phải một chapter mới.
 
 ## Sau cốt lõi (core / 핵심)
 
