@@ -8,7 +8,7 @@
 
 Vì vậy một ngày lạnh không bác bỏ warming trend, và một ngày nóng không tự chứng minh climate thay đổi (change / 변경). Cần tách **sự kiện (event / 이벤트)** khỏi **phân phối (distribution / 분포)**.
 
-> **Chuyển mạch:** Trong **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Thành phần và cấu trúc thẳng đứng của khí quyển** tiếp nhận điểm tựa từ **Weather là trạng thái, climate là phân bố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pressure là weight của air column** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Weather** là trạng thái tức thời còn climate là phân bố dài hạn; để giải thích cả hai cần biết khí quyển gồm lớp khí nào và cấu trúc thẳng đứng ra sao. **Pressure** tiếp theo chuyển thành phần khí thành trọng lượng của cả air column.
 
 ## Thành phần và cấu trúc thẳng đứng của khí quyển
 
@@ -18,7 +18,7 @@ Theo profile nhiệt, khí quyển thường chia thành troposphere, stratosphe
 
 Stratosphere có ozone hấp thụ UV, làm temperature tăng theo height trong một phần tầng (layer / 계층). Cấu trúc này hạn chế vertical mixing khác troposphere.
 
-> **Chuyển mạch:** Ở chặng này của **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Pressure là weight của air column** tiếp nhận điểm tựa từ **Thành phần và cấu trúc thẳng đứng của khí quyển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coriolis đổi hướng, không tạo năng lượng cho wind** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cấu trúc khí quyển quyết định cột không khí dày hay mỏng; **pressure** là cách đo lực do cột đó gây ra. Chênh lệch pressure tạo gradient cho gió, còn **Coriolis** chỉ bẻ hướng chuyển động chứ không cung cấp năng lượng.
 
 ## Pressure là weight của air column
 
@@ -28,7 +28,7 @@ Sự khác nhau pressure theo phương ngang tạo **pressure-gradient force**, 
 
 Wind không chỉ “đi từ cao sang thấp” vì rotation và friction làm quỹ đạo phức tạp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Coriolis đổi hướng, không tạo năng lượng cho wind** tiếp nhận điểm tựa từ **Pressure là weight của air column** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Friction làm surface wind cắt isobar** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Pressure gradient thúc đẩy gió, Coriolis làm quỹ đạo lệch trên Trái Đất quay. Gần mặt đất, **friction** làm gió chậm và cắt isobar thay vì thổi song song như ở tầng cao.
 
 ## Coriolis đổi hướng, không tạo năng lượng cho wind
 
@@ -38,7 +38,7 @@ Do Earth quay, vật chuyển động trong tham chiếu (reference / 참조) fr
 
 Ở quy mô (scale / 규모) lớn và friction nhỏ, pressure-gradient và Coriolis có thể gần cân bằng, tạo **geostrophic wind** chạy gần song song isobar.
 
-> **Chuyển mạch:** Trong **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Friction làm surface wind cắt isobar** tiếp nhận điểm tựa từ **Coriolis đổi hướng, không tạo năng lượng cho wind** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Radiation ngân sách (budget / 예산): atmosphere được sưởi cả từ trên và dưới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ma sát giải thích cấu trúc gió tầng thấp và hội tụ gần bề mặt; đó là phần động lực cần ghép với nguồn năng lượng. **Radiation budget** theo dõi năng lượng Mặt Trời và mặt đất cung cấp cho khí quyển.
 
 ## Friction làm surface wind cắt isobar
 
@@ -48,7 +48,7 @@ Vì vậy surface convergence quanh low pressure có thể hỗ trợ uplift, c�
 
 Topography và roughness đô thị làm ranh giới (boundary / 경계) tầng (layer / 계층) phức tạp hơn simple textbook mô hình (model / 모델).
 
-> **Chuyển mạch:** Ở chặng này của **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Radiation ngân sách (budget / 예산): atmosphere được sưởi cả từ trên và dưới** tiếp nhận điểm tựa từ **Friction làm surface wind cắt isobar** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stability và lapse tỷ lệ (rate / 비율)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Radiation budget** làm rõ khí quyển được sưởi từ mặt đất và hấp thụ trực tiếp ở các bước sóng khác nhau. Phân bố nhiệt theo độ cao quyết định **stability và lapse rate**, tức khả năng khối khí tiếp tục bốc lên.
 
 ## Radiation ngân sách (budget / 예산): atmosphere được sưởi cả từ trên và dưới
 
@@ -56,7 +56,7 @@ Solar shortwave đi vào hệ; một phần reflect bởi cloud/surface, phần 
 
 Troposphere được sưởi mạnh từ surface, nhưng greenhouse gases và cloud tương tác longwave. Vì vậy temperature cấu trúc (structure / 구조) là kết quả của radiation + convection + phase thay đổi (change / 변경) + dynamics.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Stability và lapse tỷ lệ (rate / 비율)** tiếp nhận điểm tựa từ **Radiation ngân sách (budget / 예산): atmosphere được sưởi cả từ trên và dưới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Temperature inversion và air pollution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Radiation tạo gradient nhiệt; **stability/lapse rate** cho biết gradient đó kìm hay hỗ trợ đối lưu. **Temperature inversion** là trường hợp ổn định mạnh, dễ giữ chất ô nhiễm gần mặt đất.
 
 ## Stability và lapse tỷ lệ (rate / 비율)
 
@@ -66,7 +66,7 @@ Atmospheric **stability** phụ thuộc so sánh parcel lapse với environmenta
 
 Đây là cơ chế nền của thunderstorm, fog, inversion và pollution trapping.
 
-> **Chuyển mạch:** Trong **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Temperature inversion và air pollution** tiếp nhận điểm tựa từ **Stability và lapse tỷ lệ (rate / 비율)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Water vapor, relative humidity và dew điểm (point / 지점)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Inversion nối stability với chất lượng không khí bằng cách hạn chế trộn đứng. Để theo dõi ngưng tụ và mây, cần chuyển sang **water vapor, relative humidity và dew point**.
 
 ## Temperature inversion và air pollution
 
@@ -76,7 +76,7 @@ Trong basin city, inversion có thể giữ pollutant gần surface. Seoul và n
 
 Pollution episode vì thế là tương tác (interaction / 상호작용) giữa emission + boundary-layer meteorology + topography, không chỉ “thành phố xả nhiều”.
 
-> **Chuyển mạch:** Ở chặng này của **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Water vapor, relative humidity và dew điểm (point / 지점)** tiếp nhận điểm tựa từ **Temperature inversion và air pollution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bốn cơ chế uplift chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Relative humidity và dew point** đo mức gần bão hòa của không khí, không chỉ lượng hơi nước tuyệt đối. Khi khối khí đạt bão hòa, **bốn cơ chế uplift** cung cấp đường nâng để hơi nước ngưng tụ.
 
 ## Water vapor, relative humidity và dew điểm (point / 지점)
 
@@ -86,7 +86,7 @@ Pollution episode vì thế là tương tác (interaction / 상호작용) giữa
 
 Cloud formation cần saturation và thường cần condensation nuclei.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Water vapor, relative humidity và dew điểm (point / 지점)** xác định đầu vào; **Bốn cơ chế uplift chính** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Cloud không chỉ là indicator; chúng tương tác radiation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Uplift do địa hình, фронt, hội tụ hoặc đối lưu biến hơi nước gần bão hòa thành mây và mưa. **Cloud** không chỉ là dấu hiệu của uplift; chúng còn phản xạ, hấp thụ và phát xạ radiation.
 
 ## Bốn cơ chế uplift chính
 
@@ -96,7 +96,7 @@ Mỗi cơ chế tạo cloud/precipitation mẫu (pattern / 패턴) khác nhau. M
 
 Khi đọc rainfall map, cần hỏi “air bị nâng bằng cơ chế (mechanism / 메커니즘) nào?”.
 
-> **Chuyển mạch:** Trong **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Bốn cơ chế uplift chính** xác định đầu vào; **Cloud không chỉ là indicator; chúng tương tác radiation** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Air mass và front** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mây phản hồi radiation và vi khí hậu, nên cùng một uplift có thể tạo kết quả khác nhau tùy tính chất khối khí. **Air mass và front** tổ chức các khác biệt nhiệt–ẩm đó thành ranh giới thời tiết.
 
 ## Cloud không chỉ là indicator; chúng tương tác radiation
 
@@ -104,7 +104,7 @@ Cloud low/thick thường reflect solar mạnh và có cooling tác động (eff
 
 Net tác động (effect / 효과) phụ thuộc cloud kiểu (type / 타입), altitude, optical thickness và thời gian (time / 시간) of day. Đây là lý do cloud phản hồi (feedback / 피드백) là phần phức tạp trong climate hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Ở chặng này của **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Air mass và front** tiếp nhận điểm tựa từ **Cloud không chỉ là indicator; chúng tương tác radiation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mid-latitude cyclone và jet stream** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Air mass và front** mô tả nơi các gradient nhiệt–ẩm tập trung; mây và mưa phát triển dọc các gradient đó. Ở vĩ độ trung bình, **mid-latitude cyclone và jet stream** tổ chức các front thành hệ thống di chuyển.
 
 ## Air mass và front
 
@@ -112,7 +112,7 @@ Net tác động (effect / 효과) phụ thuộc cloud kiểu (type / 타입), a
 
 Warm front, cold front và occluded front trong textbook là idealized cấu trúc (structure / 구조) của mid-latitude cyclone. Real atmosphere có deformation và fronts phức tạp nhưng mô hình (model / 모델) giúp xây nhân quả (causal / 인과적) intuition.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Mid-latitude cyclone và jet stream** tiếp nhận điểm tựa từ **Air mass và front** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tropical cyclone: heat engine trên ocean ấm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Jet stream điều khiển đường đi và tăng cường của cyclone vĩ độ trung bình qua shear và divergence. **Tropical cyclone** dùng một nguồn năng lượng khác: nhiệt ẩn từ ocean ấm và tổ chức đối lưu quanh tâm.
 
 ## Mid-latitude cyclone và jet stream
 
@@ -122,7 +122,7 @@ Warm front, cold front và occluded front trong textbook là idealized cấu tr�
 
 Không nên giải thích cyclone chỉ bằng “low pressure hút gió”; pressure trường dữ liệu (field / 필드) là phần của một circulation 3D có conservation of momentum và heat vận chuyển (transport / 전송).
 
-> **Chuyển mạch:** Trong **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Tropical cyclone: heat engine trên ocean ấm** tiếp nhận điểm tựa từ **Mid-latitude cyclone và jet stream** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Monsoon là seasonal circulation, không chỉ “mùa mưa”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Tropical cyclone là heat engine cần biển ấm, ẩm và điều kiện shear phù hợp, nên không thể suy ra chỉ từ áp thấp. **Monsoon** mở rộng quy mô theo mùa bằng tương phản nhiệt đất–biển và sự dịch chuyển của dải hội tụ.
 
 ## Tropical cyclone: heat engine trên ocean ấm
 
@@ -134,7 +134,7 @@ Khi lên land hoặc water lạnh, năng lượng (energy / 에너지)/moisture 
 
 Wind category không mô tả đầy đủ storm surge và rain hazard.
 
-> **Chuyển mạch:** Ở chặng này của **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Monsoon là seasonal circulation, không chỉ “mùa mưa”** tiếp nhận điểm tựa từ **Tropical cyclone: heat engine trên ocean ấm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cục bộ (local / 로컬) wind và terrain** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Monsoon là circulation đổi hướng theo mùa, có thể tương tác với cyclone và địa hình để phân bố mưa. **Local wind và terrain** giải thích các biến thiên nhỏ hơn mà bản đồ synoptic không thấy.
 
 ## Monsoon là seasonal circulation, không chỉ “mùa mưa”
 
@@ -144,7 +144,7 @@ South Asia và East/Southeast Asia có monsoon regime khác nhau. Mountain như 
 
 Vietnam và Korea cùng chịu seasonal circulation nhưng rainfall timing, typhoon exposure và winter monsoon influence khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Cục bộ (local / 로컬) wind và terrain** tiếp nhận điểm tựa từ **Monsoon là seasonal circulation, không chỉ “mùa mưa”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Numerical Weather Prediction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Terrain bẻ dòng, tạo gió núi–thung lũng, sea breeze và hiệu ứng lee; đó là điều kiện biên cho mô hình. **Numerical Weather Prediction** ghép các phương trình động lực, nhiệt và ẩm để dự báo toàn trường.
 
 ## Cục bộ (local / 로컬) wind và terrain
 
@@ -154,7 +154,7 @@ Urban heat island cũng tạo circulation cục bộ. Building morphology thay �
 
 Đây là lý do forecast mô hình (model / 모델) toàn cục (global / 전역) phải **parameterize** hoặc downscale nhiều tiến trình (process / 프로세스) dưới grid kích thước (size / 크기).
 
-> **Chuyển mạch:** Trong **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Numerical Weather Prediction** tiếp nhận điểm tựa từ **Cục bộ (local / 로컬) wind và terrain** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chaos và ensemble forecast** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** NWP đưa terrain và điều kiện ban đầu vào phép tích phân số, nhưng sai số nhỏ có thể lớn dần. **Chaos và ensemble forecast** biểu diễn bất định bằng nhiều quỹ đạo thay vì một dự báo duy nhất.
 
 ## Numerical Weather Prediction
 
@@ -164,7 +164,7 @@ Initial điều kiện (condition / 조건) đến từ observation: satellite, 
 
 Mô hình (model / 모델) không “đọc thời tiết tương lai”; nó tích phân equations từ trạng thái (state / 상태) ước lượng.
 
-> **Chuyển mạch:** Ở chặng này của **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Chaos và ensemble forecast** tiếp nhận điểm tựa từ **Numerical Weather Prediction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Radar, satellite và observation độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ensemble biến chaos thành phân bố xác suất và cho biết dự báo nhạy với điều kiện nào. **Radar, satellite và observation bias** cung cấp dữ liệu để hiệu chỉnh trạng thái ban đầu và kiểm tra sai lệch hệ thống.
 
 ## Chaos và ensemble forecast
 
@@ -174,7 +174,7 @@ Atmosphere nhạy với initial điều kiện (condition / 조건). Sai số nh
 
 Người dùng tốt nên đọc “xác suất mưa 70%” như xác suất (probability / 확률)/ensemble bằng chứng (evidence / 증거), không như mô hình (model / 모델) do dự.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Radar, satellite và observation độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **Chaos và ensemble forecast** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Observation từ radar và satellite không trung lập: coverage, retrieval và bias ảnh hưởng dữ liệu đưa vào forecast. **Mô hình tư duy** sẽ nối năng lượng–động lực–ẩm với quan sát và bất định dự báo.
 
 ## Radar, satellite và observation độ lệch (bias / 편향)
 
@@ -182,7 +182,7 @@ Weather radar đo backscatter từ precipitation particle; satellite đo radiati
 
 Mountain có thể khối (block / 블록) radar; satellite IR không “nhìn xuyên” cloud như radar; surface station phân bố không đều. Observation trường dữ liệu (field / 필드) luôn có sampling độ lệch (bias / 편향).
 
-> **Chuyển mạch:** Trong **Khí quyển, thời tiết và cơ chế tạo thời tiết**, **Mô hình tư duy** gom các mảnh từ **Radar, satellite và observation độ lệch (bias / 편향)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chapter bằng chuỗi radiation → pressure/wind → stability/moisture → uplift/cloud/front → circulation → forecast/observation. Đây là điểm bàn giao để đọc climate và hydrology theo cùng nguyên tắc cơ chế, scale và bằng chứng.
 
 ## Mô hình tư duy
 
