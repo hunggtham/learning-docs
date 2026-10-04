@@ -15,7 +15,7 @@ Serving biến modeled dữ liệu (data / 데이터) thành giao diện (interf
 
 Không có serving shape tốt cho mọi bên tiêu thụ (consumer / 소비자). Dùng cùng một bảng cho BI ad-hoc và online API thường tạo xung đột (conflict / 충돌) về độ trễ (latency / 지연 시간), cập nhật (update / 업데이트) và lược đồ (schema / 스키마).
 
-> **Chuyển mạch:** Trong **10 — Serving tầng (layer / 계층) và ngữ nghĩa (semantic / 의미적) tầng (layer / 계층)**, **2. chỉ số (metric / 지표) đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **1. Các serving shape** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Point-in-time tính đúng đắn (correctness / 정확성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Serving shapes** xác định interface và consumer; **Metric contract** khóa ý nghĩa chỉ số, rồi **Point-in-time correctness** kiểm tra thời điểm dữ liệu.
 
 ## 2. chỉ số (metric / 지표) đặc tả hợp đồng (contract / 계약)
 
@@ -29,13 +29,13 @@ name + grain + numerator/denominator + time semantics
 
 “Revenue” có tính refund không? Dùng sự kiện (event / 이벤트) thời gian (time / 시간) hay paid_at? Currency conversion ở đâu? Câu hỏi này là đặc tả hợp đồng (contract / 계약), không phải chi tiết dashboard.
 
-> **Chuyển mạch:** Ở chặng này của **10 — Serving tầng (layer / 계층) và ngữ nghĩa (semantic / 의미적) tầng (layer / 계층)**, **3. Point-in-time tính đúng đắn (correctness / 정확성)** tiếp nhận điểm tựa từ **2. chỉ số (metric / 지표) đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Materialization và freshness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Point-in-time correctness** bảo vệ causality của metric; **Materialization và freshness** cân correctness với độ trễ cập nhật.
 
 ## 3. Point-in-time tính đúng đắn (correctness / 정확성)
 
 Tính năng (feature / 기능) hoặc report lịch sử không được dùng dimension của tương lai. Khi phép nối (join / 조인) fact sự kiện (event / 이벤트) với customer trạng thái (state / 상태), phải chọn phiên bản (version / 버전) có `effective_time <= event_time` và xử lý tie-breaker. phép nối (join / 조인) theo trạng thái hiện tại có thể tạo dữ liệu (data / 데이터) leakage trong ML và lịch sử sai trong analytics.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10 — Serving tầng (layer / 계층) và ngữ nghĩa (semantic / 의미적) tầng (layer / 계층)**, **4. Materialization và freshness** tiếp nhận điểm tựa từ **3. Point-in-time tính đúng đắn (correctness / 정확성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. ngữ nghĩa (semantic / 의미적) consistency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Materialization và freshness** cho biết dữ liệu sẵn sàng khi nào; **Semantic consistency** kiểm tra các serving path có cùng nghĩa hay không.
 
 ## 4. Materialization và freshness
 
@@ -43,7 +43,7 @@ Materialized kết quả (result / 결과) giảm độ trễ (latency / 지연 
 
 Serving nên công khai (public / 공개) một phiên bản (version / 버전)/snapshot atomically. bên tiêu thụ (consumer / 소비자) không nên thấy nửa đầu ra (output / 출력) cũ/nửa đầu ra (output / 출력) mới.
 
-> **Chuyển mạch:** Trong **10 — Serving tầng (layer / 계층) và ngữ nghĩa (semantic / 의미적) tầng (layer / 계층)**, **5. ngữ nghĩa (semantic / 의미적) consistency** tiếp nhận điểm tựa từ **4. Materialization và freshness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Semantic consistency** đặt invariant giữa batch, online và cache; **Failure modes** chỉ nơi invariant bị phá và tác động downstream.
 
 ## 5. ngữ nghĩa (semantic / 의미적) consistency
 
@@ -51,7 +51,7 @@ Chỉ số (metric / 지표) lô-gic (logic / 논리) nên được định ngh�
 
 Versioning chỉ số (metric / 지표) là cần thiết khi nghiệp vụ (business / 비즈니스) meaning thay đổi. Đổi lô-gic (logic / 논리) âm thầm làm thời gian (time / 시간) series discontinuity mà không có lược đồ (schema / 스키마) lỗi (error / 오류).
 
-> **Chuyển mạch:** Ở chặng này của **10 — Serving tầng (layer / 계층) và ngữ nghĩa (semantic / 의미적) tầng (layer / 계층)**, **6. thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **5. ngữ nghĩa (semantic / 의미적) consistency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Serving rà soát (review / 검토)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Failure modes** nêu symptom và boundary; **Serving review** biến chúng thành check về freshness, latency và correctness.
 
 ## 6. thất bại (failure / 실패) modes
 
@@ -62,7 +62,7 @@ Versioning chỉ số (metric / 지표) là cần thiết khi nghiệp vụ (bus
 - chỉ số (metric / 지표) đổi filter nhưng giữ cùng tên;
 - bên tiêu thụ (consumer / 소비자) đọc đầu ra (output / 출력) khi materialization chưa atomic.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10 — Serving tầng (layer / 계층) và ngữ nghĩa (semantic / 의미적) tầng (layer / 계층)**, **7. Serving rà soát (review / 검토)** tiếp nhận điểm tựa từ **6. thất bại (failure / 실패) modes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. chỉ số (metric / 지표) algebra và composability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Serving review** kiểm tra failure evidence; **Metric algebra và composability** xác nhận các chỉ số có thể kết hợp mà không đổi nghĩa.
 
 ## 7. Serving rà soát (review / 검토)
 
@@ -74,7 +74,7 @@ Versioning chỉ số (metric / 지표) là cần thiết khi nghiệp vụ (bus
 
 Đọc tiếp: [05 — Modeling](../05_data_modeling_and_transformation/README.md), [04 — Reliability](../04_reliability_and_production.md), [11 — Governance](../11_governance_lineage_security/README.md).
 
-> **Chuyển mạch:** Trong **10 — Serving tầng (layer / 계층) và ngữ nghĩa (semantic / 의미적) tầng (layer / 계층)**, **8. chỉ số (metric / 지표) algebra và composability** tiếp nhận điểm tựa từ **7. Serving rà soát (review / 검토)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. ngữ nghĩa (semantic / 의미적) versioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Metric algebra** giữ phép gộp và phân rã có nghĩa; **Semantic versioning** quản lý thay đổi contract theo thời gian.
 
 ## 8. chỉ số (metric / 지표) algebra và composability
 
@@ -82,7 +82,7 @@ Chỉ số (metric / 지표) nên có tính chất cho phép biết khi nào đ�
 
 Ngữ nghĩa (semantic / 의미적) tầng (layer / 계층) phải lưu measure definition và aggregation hành vi (behavior / 동작), không chỉ SQL expression. Nếu một dashboard aggregate chỉ số (metric / 지표) non-additive như additive, kết quả có thể sai mà không có lược đồ (schema / 스키마) lỗi (error / 오류).
 
-> **Chuyển mạch:** Ở chặng này của **10 — Serving tầng (layer / 계층) và ngữ nghĩa (semantic / 의미적) tầng (layer / 계층)**, **9. ngữ nghĩa (semantic / 의미적) versioning** tiếp nhận điểm tựa từ **8. chỉ số (metric / 지표) algebra và composability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. bộ nhớ đệm (cache / 캐시) và vô hiệu hóa (invalidation / 무효화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Semantic versioning** ghi compatibility promise; **Cache và invalidation** kiểm tra promise đó khi giá trị cũ còn được phục vụ.
 
 ## 9. ngữ nghĩa (semantic / 의미적) versioning
 
@@ -94,7 +94,7 @@ metric_v1 → dual-run → reconcile delta → metric_v2 → deprecate v1
 
 Dual-run tốn compute nhưng tạo bằng chứng (evidence / 증거) cho bên tiêu thụ (consumer / 소비자). Không đổi tên chỉ số (metric / 지표) để che một thay đổi ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10 — Serving tầng (layer / 계층) và ngữ nghĩa (semantic / 의미적) tầng (layer / 계층)**, **10. bộ nhớ đệm (cache / 캐시) và vô hiệu hóa (invalidation / 무효화)** tiếp nhận điểm tựa từ **9. ngữ nghĩa (semantic / 의미적) versioning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Golden dataset** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cache/invalidation** làm lộ semantic drift; **Golden dataset** cung cấp reference output để phát hiện drift qua serving path.
 
 ## 10. bộ nhớ đệm (cache / 캐시) và vô hiệu hóa (invalidation / 무효화)
 
@@ -102,7 +102,7 @@ Bộ nhớ đệm (cache / 캐시) key phải bao gồm chỉ số (metric / 지
 
 Serving đặc tả hợp đồng (contract / 계약) nên nêu `as_of`, freshness và correction hành vi (behavior / 동작) để bên tiêu thụ (consumer / 소비자) biết giá trị đang provisional hay final. bộ nhớ đệm (cache / 캐시) không được trở thành một bản bản sao (copy / 복사) không có lineage.
 
-> **Chuyển mạch:** Trong **10 — Serving tầng (layer / 계층) và ngữ nghĩa (semantic / 의미적) tầng (layer / 계층)**, **11. Golden dataset** tiếp nhận điểm tựa từ **10. bộ nhớ đệm (cache / 캐시) và vô hiệu hóa (invalidation / 무효화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Golden dataset** khép README bằng semantic, freshness và reference evidence; chi tiết serving quay về canonical data-platform owner.
 
 ## 11. Golden dataset
 
