@@ -1,24 +1,35 @@
-# 00. Bản đồ phạm vi KIIP — học chung, chỉ gắn nhãn 영주/귀화 khi cần
+# 00. Bản đồ phạm vi KIIP — 시험 범위와 전략
 
-> **Mạch đọc:** Đặt **00. Bản đồ phạm vi KIIP — học chung, chỉ gắn nhãn 영주/귀화 khi cần** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Cách đọc tag** sang **Phạm vi cơ bản từ bộ PDF**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> File này trả lời ba câu hỏi trước khi học: **thi cái gì, tài liệu nào là nguồn chuẩn, và phải học đến mức nào**.
 
+---
 
-## Cách đọc tag
+# 1. KIIP nằm ở đâu trong chương trình?
 
-`공통` = phần cơ bản dùng để ôn `영주용`, đồng thời là nền tảng mà người thi `귀화용` vẫn phải biết.  
-`귀화용 심화` = học thêm về tư cách công dân, quyền–nghĩa vụ, phúc lợi, hiến pháp, nhà nước và quá trình hình thành nền dân chủ hiện đại.  
-`현재 확인` = con số, luật hoặc chính sách có thể đổi theo thời gian và cần đối chiếu nguồn chính thức.
+`사회통합프로그램(KIIP)` gồm hai khối lớn:
 
-Folder này cố ý **không tách hai nhánh học (track / 트랙) thành hai bộ ghi chú (note / 노트)**. Bộ Tư pháp hiện mô tả `한국사회 이해` là 70 giờ đối với mục tiêu 영주 và 100 giờ đối với mục tiêu 국적; sự khác nhau về course hours không có nghĩa hai bên cần hai kiến thức (knowledge / 지식) cây (tree / 트리) hoàn toàn riêng. Trong thư viện (library / 라이브러리) này, kiến thức chung được học một lần và phần cần mở rộng được đánh dấu ngay tại chỗ.
+```text
+한국어와 한국문화
+└─ 0~4단계
 
-Nguồn hiện tại (current / 현재) cấu trúc (structure / 구조): `법무부 사회통합프로그램` — https://www.moj.go.kr/moj/369/subview.do
+한국사회 이해
+└─ 5단계
+```
 
+Theo 안내 hiện hành của 법무부:
 
-> **Chuyển mạch:** Từ **Cách đọc tag**, ta sang **Phạm vi cơ bản từ bộ PDF** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+- mục tiêu `영주`: 한국사회 이해 70시간;
+- mục tiêu `국적/귀화`: 한국사회 이해 100시간.
 
-## Phạm vi cơ bản từ bộ PDF
+Do đó repository này tập trung vào **5단계 한국사회 이해**, không thay thế toàn bộ giáo trình tiếng Hàn 0~4단계.
 
-Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
+---
+
+# 2. Hai lớp phạm vi: 기본 và 심화
+
+## 공통 / 기본
+
+Đây là backbone 50 bài mà cả người ôn 영주용 lẫn 귀화용 đều cần nắm:
 
 ```text
 사회 1~8
@@ -31,86 +42,270 @@ Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong
 지리 45~50
 ```
 
-> **시험 범위: 공통**
+Bản `한국사회 이해 : 기본` được xác minh trong audit 2026-10 là **12판 (2025)**.
 
-Đây là xương sống 50 bài trong 8 PDF người học cung cấp. Người ôn 영주 học toàn bộ khối này. Người ôn 귀화 cũng học cùng khối, sau đó đọc thêm các section `귀화용 심화` ngay trong từng lĩnh vực (domain / 도메인).
+## 귀화용 심화
 
+Người hướng tới 국적/귀화 phải học thêm lớp kiến thức về:
 
-> **Chuyển mạch:** Từ **Phạm vi cơ bản từ bộ PDF**, ta sang **Phần 심화 được gộp vào đâu?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+- `대한민국의 국민`;
+- `국민의 권리`;
+- `국민의 의무`;
+- `국민을 위한 복지`;
+- `대한민국 정부수립` và tiến trình 헌정·민주주의;
+- `헌법적 가치`, 국가 공동체, an ninh/thống nhất ở mức giáo trình yêu cầu.
 
-## Phần 심화 được gộp vào đâu?
+Bản `한국사회 이해 : 심화` được xác minh trong audit là **10판 (2024)**.
 
-Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
+Repository không tạo hai cây note trùng nhau. Phần chung học một lần; nội dung 심화 được gắn đúng domain.
+
+---
+
+# 3. Cách đọc tag
+
+- `공통`: nội dung cơ bản dùng cho 영주용 và là nền cho 귀화용.
+- `귀화용 심화`: phần cần mở rộng cho quốc tịch/귀화.
+- `현재 확인`: dữ liệu, luật, policy, cơ cấu hoặc format đánh giá có thể đổi.
+
+Ví dụ:
+
+```text
+국회의원 임기 4년
+→ structural fact, tương đối ổn định
+
+예금자보호한도
+→ policy/amount, phải 현재 확인
+
+외국인의 지방선거 선거권 조건
+→ legal condition, phải 현재 확인
+```
+
+---
+
+# 4. Source hierarchy — học theo nguồn nào?
+
+Ưu tiên:
+
+1. giáo trình/공지 chính thức áp dụng cho thời điểm kỳ thi;
+2. 법무부, 사회통합정보망(Socinet), KIIP 평가;
+3. cơ quan chuyên ngành chính thức;
+4. textbook edition gần nhất đã xác minh;
+5. 8 PDF study summary người dùng cung cấp;
+6. note tổng hợp của repository;
+7. community/blog/prep material.
+
+Chi tiết provenance: [`SOURCES.md`](SOURCES.md).
+
+Điều này giải quyết một vấn đề thực tế: **textbook và note cũ có thể vẫn đúng về concept nhưng sai về số liệu hiện hành**.
+
+---
+
+# 5. Phạm vi 50 bài — không chỉ tên chapter
+
+Dùng [`17_complete_exam_coverage_map.md`](17_complete_exam_coverage_map.md) làm “contract học tập”.
+
+Với mỗi bài, bạn phải biết:
+
+```text
+정의      nó là gì?
+이유      tại sao tồn tại?
+구별      khác gì với concept gần nó?
+적용      áp dụng trong đời sống Hàn thế nào?
+시험출력  nếu đề đổi câu chữ, mình vẫn trả lời được không?
+```
+
+Nếu chỉ nhớ một keyword nhưng không giải thích được, concept đó chưa hoàn thành.
+
+---
+
+# 6. Phần 심화 được gộp vào đâu?
 
 | Trục 심화 | File chính |
 |---|---|
-| `대한민국의 국민` | `01_사회.md`, `06_법.md` |
-| `국민의 권리` | `04_정치.md`, `06_법.md` |
-| `국민의 의무` | `04_정치.md`, `06_법.md` |
-| `국민을 위한 복지` | `01_사회.md` |
-| `정부수립·헌정·민주주의` | `04_정치.md`, `07_역사.md` |
-| `국가상징·면접 연결` | `01_사회.md`, `10_작문_구술.md` |
+| 대한민국의 국민 | `01_사회.md`, `06_법.md`, `17_complete_exam_coverage_map.md` |
+| 국민의 기본권 | `04_정치.md`, `06_법.md` |
+| 국민의 의무 | `04_정치.md`, `06_법.md` |
+| 국민을 위한 복지 | `01_사회.md` |
+| 헌법·삼권분립·국가기관 | `04_정치.md` |
+| 정부수립·한국전쟁·민주화 | `04_정치.md`, `07_역사.md` |
+| 국가상징 | `01_사회.md`, `10_작문_구술.md` |
+| 국가안보·통일·헌법적 가치 | `17_complete_exam_coverage_map.md` + 심화 source |
 
-> **시험 범위: 귀화용 심화**
+Điểm khác giữa 기본 và 심화 không phải chỉ “thêm vài câu khó”. Ở 심화, bạn phải giải thích sâu hơn về **công dân, quyền-nghĩa vụ và trật tự hiến pháp**.
 
-Điểm khác biệt không phải “học một bộ hoàn toàn khác”, mà là phải **giải thích sâu hơn**: `국민` khác `영주자` thế nào, quyền đi cùng nghĩa vụ ra sao, `헌법` định nghĩa trật tự nhà nước như thế nào, `사회보험` khác `공공부조` ra sao, và chuỗi `광복 → 정부수립 → 전쟁 → 민주화` có ý nghĩa gì.
+---
 
+# 7. Format đánh giá — học theo kỹ năng, không đóng đinh vào một notice cũ
 
-> **Chuyển mạch:** Từ **Phần 심화 được gộp vào đâu?**, ta sang **Học theo 5 vòng thay vì đọc một lần** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+Một thông báo chính thức của 법무부 về `귀화용 종합평가` công bố cấu trúc 100 điểm gồm:
 
-## Học theo 5 vòng thay vì đọc một lần
+- 객관식;
+- 작문형;
+- 구술형;
+- tổng cộng 45문 / 70분 trong format được công bố ở notice đó;
+- 합격 기준 60점 이상 trong notice tương ứng.
 
-### Vòng 1 — cấu trúc (structure / 구조)
+Tuy nhiên **format kỳ thi là dữ liệu vận hành có thể được thay đổi bằng 공지 mới**. Vì vậy trước kỳ thi, kiểm tra Socinet/KIIP 평가 thay vì coi số câu/thời gian cũ là bất biến.
 
-Đọc 01→08 để biết “cái gì nằm ở đâu”. Chưa cần thuộc mọi chi tiết.
+Điều không đổi trong strategy của repository là bạn phải luyện đủ:
 
-### Vòng 2 — Contrast
+```text
+객관식 recognition
++ contrast/trap
++ 작문 output
++ 구술 output
+```
 
-Mỗi khái niệm phải ghép với thứ dễ nhầm:
+---
 
-`국회 ↔ 행정부`  
-`사회보험 ↔ 공공부조`  
-`영주권 ↔ 국적`  
-`어린이집 ↔ 유치원`  
-`수시 ↔ 정시`  
-`전세 ↔ 월세`  
-`설날 ↔ 추석`  
-`호남 ↔ 영남`
+# 8. Bảy kiểu câu hỏi cần chuẩn bị
 
-### Vòng 3 — Numbers & institutions
+## ① 정의형 — định nghĩa
 
-Dùng [`09_high_yield_numbers_institutions.md`](09_high_yield_numbers_institutions.md). Chỉ học cứng số có tính cấu trúc; số liệu thống kê/pháp luật thay đổi phải đi qua tệp (file / 파일) hiện tại (current / 현재) facts.
+`지방자치란 무엇입니까?`
 
-### Vòng 4 — Active recall
+Cần trả lời: **nó là gì + mục đích**.
 
-Dùng [`14_active_recall_bank.md`](14_active_recall_bank.md), tự trả lời trước khi nhìn đáp án. Không chỉ nhận diện; phải nói được một câu giải thích.
+## ② 비교형 — so sánh
 
-### Vòng 5 — đầu ra (output / 출력)
+`전세와 월세의 차이`, `사회보험과 공공부조`, `대법원과 헌법재판소`.
 
-Dùng [`10_작문_구술.md`](10_작문_구술.md), [`13_exam_question_patterns.md`](13_exam_question_patterns.md), sau đó làm mock 01 và mock 02.
+Cần có ít nhất 2 trục phân biệt.
 
+## ③ 기관형 — cơ quan
 
-> **Chuyển mạch:** Từ **Học theo 5 vòng thay vì đọc một lần**, ta sang **Ba mức độ ghi nhớ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+Tình huống → chọn đúng 기관/chức năng.
 
-## Ba mức độ ghi nhớ
+Ví dụ: 119, 112, 1345, 국회, 법원, 지방자치단체.
 
-Một fact chỉ được coi là “đã học” khi đạt đủ ba tầng:
+## ④ 순서형 — thứ tự
 
-1. **Recognition** — nhìn thấy và biết đáp án.
-2. **Recall** — không nhìn ghi chú (note / 노트) vẫn nhớ được.
-3. **Explanation** — nói được bằng câu tiếng Hàn đơn giản.
+Lịch sử và 민주화:
 
-Ví dụ với `삼권분립`:
+`4·19 → 5·18 → 6월 민주항쟁`
 
-- recognition: biết gồm 입법·행정·사법;
-- recall: tự viết được `국회–정부–법원`;
+hoặc chuỗi thời đại lịch sử.
+
+## ⑤ 원인·결과형 — nguyên nhân/hệ quả
+
+Tại sao cần 삼권분립? Vì sao 도시화 diễn ra? Vì sao 경제위기 ảnh hưởng việc làm?
+
+## ⑥ 상황형 — tình huống đời sống
+
+Hợp đồng thuê nhà, lao động, bệnh viện, lừa đảo tài chính, quyền lợi người tiêu dùng, visa.
+
+## ⑦ 작문·구술형 — output
+
+Không chỉ chọn đáp án. Phải tự tạo câu tiếng Hàn ngắn, đúng từ khóa.
+
+---
+
+# 9. Học theo 6 vòng
+
+## Vòng 1 — Coverage
+
+Đọc [`17_complete_exam_coverage_map.md`](17_complete_exam_coverage_map.md). Đánh dấu concept lạ.
+
+## Vòng 2 — Understanding
+
+Đọc `01~08` theo domain. Với phần chưa hiểu cơ chế, dùng master books qua [`12_cross_reference_master_books.md`](12_cross_reference_master_books.md).
+
+## Vòng 3 — Contrast + numbers
+
+Dùng [`09_high_yield_numbers_institutions.md`](09_high_yield_numbers_institutions.md).
+
+Tập trung vào cặp dễ nhầm:
+
+- 국회 ↔ 행정부;
+- 대법원 ↔ 헌법재판소;
+- 사회보험 ↔ 공공부조;
+- 영주권 ↔ 국적;
+- 어린이집 ↔ 유치원;
+- 수시 ↔ 정시;
+- 전세 ↔ 월세;
+- 설날 ↔ 추석;
+- 지역구 ↔ 비례대표.
+
+## Vòng 4 — Active recall
+
+Dùng [`14_active_recall_bank.md`](14_active_recall_bank.md). Không nhìn đáp án trước.
+
+## Vòng 5 — Output
+
+Dùng [`10_작문_구술.md`](10_작문_구술.md) và [`13_exam_question_patterns.md`](13_exam_question_patterns.md).
+
+Mẫu nói hiệu quả:
+
+```text
+정의
+→ 이유/특징
+→ 예시
+```
+
+## Vòng 6 — Mock + error loop
+
+Làm `11_mock_01.md` và `15_mock_02.md`.
+
+Mỗi câu sai phải được phân loại:
+
+- thiếu fact;
+- nhầm concept;
+- không hiểu Korean wording;
+- nhầm cơ quan;
+- nhầm timeline;
+- fact đã stale.
+
+Sau đó quay lại **concept gốc**, không học thuộc đáp án sai/đúng riêng lẻ.
+
+---
+
+# 10. Ba mức ghi nhớ
+
+Một fact chỉ được coi là “đã học” khi đạt:
+
+1. **Recognition** — nhìn thấy thì biết.
+2. **Recall** — không nhìn note vẫn nhớ.
+3. **Explanation** — nói được bằng một câu Hàn đơn giản.
+
+Ví dụ `삼권분립`:
+
+- recognition: 입법·행정·사법;
+- recall: 국회–정부–법원;
 - explanation: `국가 권력이 한 곳에 집중되지 않도록 권력을 나누는 원리입니다.`
 
+Với 귀화용 심화, ưu tiên mức 3.
 
-> **Chuyển mạch:** Từ **Ba mức độ ghi nhớ**, ta sang **Dữ liệu có thể thay đổi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+---
 
-## Dữ liệu có thể thay đổi
+# 11. Dữ liệu có thể thay đổi
 
-Các PDF là bản tóm tắt học tập ở một thời điểm. Không tự động thay nội dung nguồn bằng dữ liệu mới. Khi một con số/quy định có khả năng đổi, xem riêng [`00_current_facts_and_corrections.md`](00_current_facts_and_corrections.md): tệp (file / 파일) đó luôn tách rõ **PDF ghi gì** và **hiện tại (current / 현재) xác minh (verification / 확인) ghi gì**.
+Không học cứng từ infographic/PDF cũ các nhóm:
 
-> **Bàn giao:** Sau **Dữ liệu có thể thay đổi**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 current facts and corrections](./00_current_facts_and_corrections.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+- phúc lợi và trợ cấp;
+- visa/quốc tịch/영주;
+- luật lao động và mức tiền;
+- bảo vệ tiền gửi, lãi suất/trần lãi;
+- thống kê dân số/hộ gia đình/tôn giáo/giáo dục;
+- quyền bầu cử có điều kiện;
+- cơ cấu bộ/cơ quan công tố-tư pháp;
+- format/lệ phí/lịch đánh giá.
+
+Route toàn bộ qua [`00_current_facts_and_corrections.md`](00_current_facts_and_corrections.md).
+
+---
+
+# 12. Checklist cuối
+
+Trước khi nói “đủ KIIP”, bạn phải có thể:
+
+- [ ] giải thích toàn bộ checklist 50 bài trong file 17;
+- [ ] hoàn thành 8 domain 01~08;
+- [ ] nếu thi 귀화용, hoàn thành toàn bộ lớp 심화;
+- [ ] thuộc high-yield numbers/institutions;
+- [ ] làm recall không nhìn note;
+- [ ] viết được câu ngắn;
+- [ ] nói được câu trả lời 3 tầng definition → reason → example;
+- [ ] làm ít nhất 2 mock và sửa lỗi theo concept;
+- [ ] cập nhật current facts ngay trước kỳ thi.
+
+> **Nguyên tắc:** mục tiêu không phải “nhìn câu này đã từng gặp”, mà là **dù đề đổi cách hỏi, vẫn nhận ra hệ thống phía sau và suy ra đáp án**.
