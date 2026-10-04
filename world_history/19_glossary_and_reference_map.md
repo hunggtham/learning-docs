@@ -17,7 +17,7 @@
 
 Tên người, nơi chốn và triều đại giữ dạng quen dùng quốc tế hoặc tiếng Việt ổn định; lần đầu có thể thêm tên bản địa. Dùng `BCE/CE` hoặc `TCN/SCN` nhất quán trong từng chapter và tránh giả định lịch Gregorian là lịch duy nhất của quá khứ.
 
-> **Chuyển mạch:** **Quy ước tên và niên đại** giúp các chapter dùng cùng một mốc; **Bản đồ nguồn nên tra cứu** chỉ rõ nơi kiểm chứng khi thuật ngữ, niên đại hoặc diễn giải có tranh luận.
+> **Nối mạch:** Quy ước tên và niên đại giữ các chapter dùng cùng mốc và tránh nhập nhằng thuật ngữ. **Bản đồ nguồn nên tra cứu** chỉ rõ nơi kiểm chứng khi niên đại hoặc diễn giải còn tranh luận.
 
 ## Bản đồ nguồn nên tra cứu
 
