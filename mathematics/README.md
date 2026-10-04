@@ -19,13 +19,13 @@ Tính đến final consistency kiểm tra (audit / 감사) ngày **2026-09-22**,
 
 Vòng finalization không thêm chapter mới. Trọng tâm là consistency: prerequisite, notation, glossary, clickable nội bộ (internal / 내부) links, phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), phạm vi (scope / 범위) ranh giới (boundary / 경계) và branch canonicalization. Chi tiết nằm tại [Coverage & Finalization Audit](./COVERAGE_AUDIT.md).
 
-> **Chuyển mạch:** Trong **Master Kiến thức (knowledge / 지식) Book — Toán học**, **Cách sử dụng** tiếp nhận điểm tựa từ **Trạng thái chuẩn gốc (canonical / 정본)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảng (table / 테이블) of Contents** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Trạng thái canonical** xác định source và boundary; **Cách sử dụng** giải thích cách đọc, rồi **Table of Contents** biến cấu trúc đó thành route.
 
 ## Cách sử dụng
 
 Không bắt buộc đọc tuần tự toàn bộ. Nếu một concept dùng thuật ngữ chưa chắc, hãy quay về prerequisite gần nhất trong các học tập (learning / 학습) routes bên dưới. Mỗi chapter có thể đọc độc lập trong phạm vi hợp lý, nhưng việc học theo phụ thuộc (dependency / 의존성) giúp giảm black box và tránh học công thức trước khi hiểu cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Ở chặng này của **Master Kiến thức (knowledge / 지식) Book — Toán học**, **Bảng (table / 테이블) of Contents** tiếp nhận điểm tựa từ **Cách sử dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Học tập (learning / 학습) routes có thể click trực tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Table of Contents** cho biết domain và prerequisite; **Learning routes có thể click trực tiếp** chuyển chúng thành đường đọc không cần đoán.
 
 ## Bảng (table / 테이블) of Contents
 
@@ -182,7 +182,7 @@ Reference dùng để tra thuật ngữ và trạng thái coverage sau khi đã 
 - [Quality Audit Round 10](./QUALITY_AUDIT_ROUND10.md)
 - [Quality Audit Round 11](./QUALITY_AUDIT_ROUND11.md)
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Master Kiến thức (knowledge / 지식) Book — Toán học**, **Học tập (learning / 학습) routes có thể click trực tiếp** tiếp nhận điểm tựa từ **Bảng (table / 테이블) of Contents** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Learning routes** biến mục lục thành prerequisite graph; **Kiến thức phụ thuộc** giải thích vì sao một concept cần đứng trước concept khác.
 
 ## Học tập (learning / 학습) routes có thể click trực tiếp
 
@@ -210,7 +210,7 @@ Reference dùng để tra thuật ngữ và trạng thái coverage sau khi đã 
 
 [Logic & Proof](./00_foundations/01_logic_and_proof.md) → [Functions & Contracts](./02_functions/00_function_concept.md) → [Composition & Inverse](./02_functions/04_composition_inverse_and_function_transformations.md) → [Graphs](./07_discrete_cs/00_graph_theory.md) → [Complexity](./07_discrete_cs/01_algorithms_complexity_and_logarithms.md) → [Probability & Calibration](./06_probability_statistics/02_conditional_probability_and_bayes.md) → [Numerical Stability](./08_optimization_numerical/02_numerical_methods_and_error.md) → [Math for AI/Data/Software](./09_connections/03_math_for_ai_data_and_software.md).
 
-> **Chuyển mạch:** Trong **Master Kiến thức (knowledge / 지식) Book — Toán học**, **Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **Học tập (learning / 학습) routes có thể click trực tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Connections sang các Thư viện kiến thức (knowledge library / 지식 라이브러리) khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Kiến thức phụ thuộc** khóa prerequisite và owner; **Connections sang thư viện khác** chỉ nơi invariant toán học được tái sử dụng.
 
 ## Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성)
 
@@ -303,7 +303,7 @@ graph TD
 
 Mermaid ở trên chỉ dùng để nhìn topology. Khi cần điều hướng (navigation / 내비게이션) trên website, dùng các **Học tập (learning / 학습) routes có thể click trực tiếp** hoặc links nằm trong từng chapter.
 
-> **Chuyển mạch:** Ở chặng này của **Master Kiến thức (knowledge / 지식) Book — Toán học**, **Connections sang các Thư viện kiến thức (knowledge library / 지식 라이브러리) khác** tiếp nhận điểm tựa từ **Kiến thức (knowledge / 지식) Phụ thuộc (dependency / 의존성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những mô hình tư duy (mental models / 사고 모델들) xuyên suốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Connections** cho thấy toán học đi vào physics, economics, CS và data; **Mental models xuyên suốt** gom các invariant dùng lại giữa những domain đó.
 
 ## Connections sang các Thư viện kiến thức (knowledge library / 지식 라이브러리) khác
 
@@ -312,7 +312,7 @@ Mermaid ở trên chỉ dùng để nhìn topology. Khi cần điều hướng (
 - [Investing](../investing/README.md): compounding, xác suất (probability / 확률), statistics, covariance, regression, tối ưu hóa (optimization / 최적화) và stochastic lập luận (reasoning / 추론).
 - AI/ML, Kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학) được nối qua [Math for AI, Data and Software](./09_connections/03_math_for_ai_data_and_software.md); chapter này giữ ranh giới (boundary / 경계) toán học, còn hiện thực (implementation / 구현) thuộc các thư viện (library / 라이브러리) kỹ thuật tương ứng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Master Kiến thức (knowledge / 지식) Book — Toán học**, **Những mô hình tư duy (mental models / 사고 모델들) xuyên suốt** gom các mảnh từ **Connections sang các Thư viện kiến thức (knowledge library / 지식 라이브러리) khác** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Mental models xuyên suốt** khép README bằng invariant, boundary và link owner; chi tiết chứng minh quay về chapter toán học canonical.
 
 ## Những mô hình tư duy (mental models / 사고 모델들) xuyên suốt
 
