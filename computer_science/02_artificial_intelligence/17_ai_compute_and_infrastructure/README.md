@@ -20,7 +20,7 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 08_compute_economics_capacity_and_energy.md
 ```
 
-> **Chuyển mạch:** Trong **Tính toán và Hạ tầng AI**, **Bản đồ phụ thuộc** tiếp nhận điểm tựa từ **Thứ tự đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Thứ tự đọc** đi từ workload đến accelerator, memory và scheduling; **Bản đồ phụ thuộc** chỉ ra prerequisite nào thuộc hardware, systems hay ML owner.
 
 ## Bản đồ phụ thuộc
 
@@ -75,7 +75,7 @@ Unified memory                   ≠ mọi vùng bộ nhớ có cùng tốc đ�
 Accelerator rẻ hơn               ≠ chi phí trên mỗi tác vụ thành công thấp hơn
 ```
 
-> **Chuyển mạch:** Trong **Tính toán và Hạ tầng AI**, sau nội dung của **Những phân biệt cần giữ**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Những phân biệt cần giữ** tách compute capacity, data movement và model parallelism; **Liên kết kiến thức** đưa mỗi cơ chế về owner canonical trước khi đi sâu.
 
 ## Liên kết kiến thức
 

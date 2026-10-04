@@ -21,7 +21,7 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 09_incident_response_and_lifecycle.md
 ```
 
-> **Chuyển mạch:** Trong **MLOps & LLMOps**, **Bản đồ phụ thuộc** tiếp nhận điểm tựa từ **Thứ tự đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Thứ tự đọc** đi từ data/model đến serving và feedback; **Bản đồ phụ thuộc** giải thích prerequisite nào phải được owner giữ ổn định trước khi vận hành MLOps hoặc LLMOps.
 
 ## Bản đồ phụ thuộc
 
@@ -78,7 +78,7 @@ Prompt version                    ≠ toàn bộ LLM app version
 HTTP 200                          ≠ AI task success
 ```
 
-> **Chuyển mạch:** Trong **MLOps & LLMOps**, sau nội dung của **Những phân biệt cần giữ**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Những phân biệt cần giữ** tách model quality, data quality và serving risk; **Liên kết kiến thức** trả từng risk về canonical owner để đào sâu mà không duplicate.
 
 ## Liên kết kiến thức
 

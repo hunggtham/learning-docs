@@ -25,7 +25,7 @@ problem → mental model → mechanism → invariant
 
 Nếu một phần chỉ mô tả API hoặc tên sản phẩm mà không nói guarantee và hành vi khi thất bại (failure behavior / 실패 동작), nó là hiện thực (implementation / 구현) ghi chú (note / 노트) chứ chưa phải kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Trong **Thư viện kiến thức kỹ thuật dữ liệu (data engineering knowledge library / 데이터 엔지니어링 지식 라이브러리)**, **P1 — Trạng thái triển khai** tiếp nhận điểm tựa từ **Chuẩn độ sâu của chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lộ trình chuẩn gốc (canonical / 정본)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Chuẩn độ sâu của chapter** định nghĩa evidence và failure semantics; **P1 — Trạng thái triển khai** biến chúng thành trạng thái thật của thư viện, rồi **Lộ trình chuẩn gốc** chỉ đường về owner.
 
 ## P1 — Trạng thái triển khai
 
@@ -107,7 +107,7 @@ Kiến thức về relational mô hình (model / 모델), truy vấn (query / �
 
 Trong giai đoạn di chuyển (migration / 마이그레이션), `sql/` vẫn là nguồn chuẩn gốc (canonical / 정본) cho nội dung SQL hiện có. Khi di chuyển (migration / 마이그레이션) diễn ra, link cũ phải được kiểm tra trước khi đổi đường dẫn (path / 경로) và raw/nguồn (source / 소스) material không được xóa chỉ vì chuẩn gốc (canonical / 정본) reading material đã chuyển nơi.
 
-> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức kỹ thuật dữ liệu (data engineering knowledge library / 데이터 엔지니어링 지식 라이브러리)**, các dấu vết trong **Ranh giới (boundary / 경계) với SQL và cơ sở dữ liệu (database / 데이터베이스)** được đọc cùng nhau ở **Mô hình tư duy (mental model / 사고 모델) xuyên suốt** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Ranh giới với SQL và database** giữ phần semantics truy vấn ở đúng owner; **Mental model xuyên suốt** nối nó với ingestion, storage, orchestration và serving trong data engineering.
 
 ## Mô hình tư duy (mental model / 사고 모델) xuyên suốt
 

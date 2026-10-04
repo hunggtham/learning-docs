@@ -95,7 +95,7 @@ Cấu trúc hiện tại đi từ foundations và mathematics tới model, retri
 └── 90_connections/
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Artificial Intelligence thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Những distinction quan trọng** tiếp nhận điểm tựa từ **Hiện tại (current / 현재) cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Terminology convention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Hiện tại cấu trúc** cho biết các domain AI đang đứng ở đâu; **Những distinction quan trọng** tách khái niệm dễ lẫn trước khi **Terminology convention** khóa cách gọi dùng chung.
 
 ## Những distinction quan trọng
 
@@ -131,7 +131,7 @@ Long Context        ≠ Persistent Memory
 Model says “done”   ≠ Verified completion
 ```
 
-> **Chuyển mạch:** Trong **Artificial Intelligence thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Terminology convention** tiếp nhận điểm tựa từ **Những distinction quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Terminology convention** đóng vai trò vocabulary contract; từ đây người học quay về README của từng domain để đọc đúng owner và phạm vi.
 
 ## Terminology convention
 
