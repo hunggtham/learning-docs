@@ -109,7 +109,7 @@ graph TD
 
 Sơ đồ giữ một số từ khóa tiếng Anh vì đây là những thuật ngữ người đọc sẽ thường xuyên gặp trong tài liệu Linux. Phần giải thích trong từng chương ưu tiên tiếng Việt và chỉ giữ thuật ngữ gốc trong ngoặc khi nó giúp nhận diện khái niệm.
 
-> **Chuyển mạch:** Trong **Thư viện kiến thức Linux**, **Cấu trúc thư viện** tiếp nhận điểm tựa từ **Bản đồ đọc và quan hệ phụ thuộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gợi ý đường đọc theo nhu cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Bản đồ đọc và quan hệ phụ thuộc** xác định prerequisite của Linux; **Cấu trúc thư viện** sắp xếp chúng, rồi **Gợi ý đường đọc theo nhu cầu** chọn route theo task.
 
 ## Cấu trúc thư viện
 
@@ -215,7 +215,7 @@ Các tài liệu cuối cùng dùng để nối Linux với backend, database, n
 - [`90_connections/linux_system_mental_models.md`](./90_connections/linux_system_mental_models.md) — kết nối các lớp trừu tượng thành mô hình tư duy (mental model) thống nhất về Linux.
 - [`reference/putty_ssh_linux_server_commands.md`](./reference/putty_ssh_linux_server_commands.md) — bảng câu lệnh, tùy chọn, ví dụ và ghi chú thực tế để tra cứu nhanh.
 
-> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức Linux**, **Gợi ý đường đọc theo nhu cầu** tiếp nhận điểm tựa từ **Cấu trúc thư viện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách dùng chapter nền tảng và deep dive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Gợi ý đường đọc** ánh xạ task như process, networking hoặc storage vào owner; **Cách dùng chapter nền tảng và deep dive** giữ mental model trước khi mở chi tiết.
 
 ## Gợi ý đường đọc theo nhu cầu
 
@@ -231,7 +231,7 @@ Nếu mục tiêu là **hiểu một HTTP yêu cầu (request / 요청) môi tr�
 
 Nếu mục tiêu là **hiểu độ tin cậy (reliability / 신뢰성) từ chỉ số (metric / 지표) Linux tới trải nghiệm người dùng**, hãy đi theo: RED/USE metrics → tracing → sức chứa (capacity / 용량) planning → triển khai (deployment / 배포)/quay lui (rollback / 롤백) → backup/DR → SLI/SLO/lỗi (error / 오류) ngân sách (budget / 예산) → sự cố (incident / 인시던트) kỹ thuật (engineering / 엔지니어링). Đường đọc này giải thích tại sao một máy chủ (server / 서버) “còn tài nguyên” vẫn có thể vi phạm SLO, và ngược lại tại sao utilization cao không tự động là sự cố (incident / 인시던트).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thư viện kiến thức Linux**, **Cách dùng chapter nền tảng và deep dive** tiếp nhận điểm tựa từ **Gợi ý đường đọc theo nhu cầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy ước ngôn ngữ và liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cách dùng chapter và deep dive** phân biệt concept với implementation detail; **Quy ước ngôn ngữ và liên kết** giữ terminology và canonical links ổn định.
 
 ## Cách dùng chapter nền tảng và deep dive
 
@@ -276,7 +276,7 @@ production_troubleshooting / capacity_planning
 
 Mục tiêu không phải học thuộc mọi chi tiết kernel ngay từ đầu. Mục tiêu là có một đường đi rõ từ **mô hình tổng quan → cơ chế bên dưới → công cụ quan sát → dạng thất bại (failure mode / 실패 모드) môi trường vận hành (production / 운영 환경) → độ tin cậy (reliability / 신뢰성) mục tiêu (objective / 목표)**.
 
-> **Chuyển mạch:** Trong **Thư viện kiến thức Linux**, sau nội dung của **Cách dùng chapter nền tảng và deep dive**, **Quy ước ngôn ngữ và liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Quy ước ngôn ngữ và liên kết** khép README bằng owner và boundary; syscall, kernel và network detail quay về canonical chapters.
 
 ## Quy ước ngôn ngữ và liên kết
 

@@ -52,7 +52,7 @@ KRW weakens
 
 Derivative mất mát (loss / 손실) không tự động là thất bại (failure / 실패).
 
-> **Chuyển mạch:** Ở chặng này của **Institutional FX Hedging Trường hợp (case / 사례) Studies**, **Các loại rủi ro (risk / 위험) phải tách** tiếp nhận điểm tựa từ **Không dùng hedge P/L riêng để đánh giá hedge** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hedge chính sách (policy / 정책) trước hedge trade** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Không dùng hedge P/L riêng** để tránh đánh giá sai; **Các loại rủi ro phải tách** phân rủi ro translation, transaction và economic trước khi viết **Hedge policy**.
 
 ## Các loại rủi ro (risk / 위험) phải tách
 
@@ -71,7 +71,7 @@ Funding / rollover risk
 
 Không một hedge instrument nào xóa tất cả.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Institutional FX Hedging Trường hợp (case / 사례) Studies**, **Hedge chính sách (policy / 정책) trước hedge trade** tiếp nhận điểm tựa từ **Các loại rủi ro (risk / 위험) phải tách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết nối với các phần khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Hedge policy** biến risk taxonomy thành authority, limit và review cadence; **Kết nối với các phần khác** đưa policy về treasury, accounting và market owners.
 
 ## Hedge chính sách (policy / 정책) trước hedge trade
 
@@ -89,7 +89,7 @@ What is the treatment of over-hedge / under-hedge?
 How is hedge effectiveness measured?
 ```
 
-> **Chuyển mạch:** Trong **Institutional FX Hedging Trường hợp (case / 사례) Studies**, **Kết nối với các phần khác** tiếp nhận điểm tựa từ **Hedge chính sách (policy / 정책) trước hedge trade** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đầu ra (output / 출력) chuẩn cho mỗi trường hợp (case / 사례)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Connections** xác định prerequisite và owner; **Output chuẩn cho mỗi case** ghi lại exposure, decision, hedge instrument và evidence theo cùng format.
 
 ## Kết nối với các phần khác
 
@@ -99,7 +99,7 @@ How is hedge effectiveness measured?
 - [FX options and hedging](../14_FX_OPTIONS_VOLATILITY_AND_HEDGING.md)
 - [Systematic risk/attribution project](../70_systematic_project/README.md)
 
-> **Chuyển mạch:** Ở chặng này của **Institutional FX Hedging Trường hợp (case / 사례) Studies**, **Kết nối với các phần khác** cho ta quy tắc; **Đầu ra (output / 출력) chuẩn cho mỗi trường hợp (case / 사례)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Output chuẩn** khép case study bằng decision trail và boundary; chi tiết định giá, settlement hoặc accounting quay về canonical owner.
 
 ## Đầu ra (output / 출력) chuẩn cho mỗi trường hợp (case / 사례)
 
