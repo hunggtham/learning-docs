@@ -5,22 +5,22 @@
 ## Khung không gian
 Costa Rica nằm giữa Caribbean và Pacific, với trục núi–núi lửa chạy dọc lãnh thổ và một Central Valley có vai trò tập trung dân cư.
 
-> **Chuyển mạch:** Trong **Costa Rica**, **Khí hậu và sinh thái** tiếp nhận điểm tựa từ **Khung không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dân cư và kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mountain spine, volcanoes và hai mặt biển tạo climate gradient mạnh; **khí hậu và sinh thái** biến độ cao ngắn thành nhiều ecosystem. **Dân cư và kinh tế** tiếp theo tập trung ở Central Valley và các đai production/du lịch tương ứng.
 
 ## Khí hậu và sinh thái
 Dãy núi tạo độ dốc (gradient / 기울기) mưa rất mạnh giữa sườn đón gió và khuất gió. Khoảng cách ngắn nhưng thay đổi độ cao nhanh tạo nhiều đai sinh thái, hỗ trợ mức đa dạng sinh học cao.
 
-> **Chuyển mạch:** Ở chặng này của **Costa Rica**, **Dân cư và kinh tế** tiếp nhận điểm tựa từ **Khí hậu và sinh thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng và nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Central Valley gom đô thị và dịch vụ, còn altitude bands hỗ trợ agriculture và ecotourism; **năng lượng và nước** chuyển mưa, dốc và núi lửa thành hydropower/geothermal nhưng kèm landslide risk.
 
 ## Dân cư và kinh tế
 Central Valley tập trung mạng đô thị lớn nhất. Du lịch sinh thái, nông nghiệp theo đai cao độ và các dịch vụ đô thị tạo cấu trúc kinh tế không gian đa dạng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Costa Rica**, **Năng lượng và nước** tiếp nhận điểm tựa từ **Dân cư và kinh tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hydropower, geothermal và water supply dựa trên cùng relief tạo đa dạng sinh thái; mưa lớn cũng có thể làm gián đoạn đường và hạ tầng. **Mô hình tư duy** sẽ ghép energy potential với resilience và ecosystem value.
 
 ## Năng lượng và nước
 Địa hình dốc và mưa nhiều tạo tiềm năng thủy điện; hoạt động núi lửa gắn với địa nhiệt. Tuy nhiên cùng địa hình đó tạo lở đất và gián đoạn đường khi mưa lớn.
 
-> **Chuyển mạch:** Trong **Costa Rica**, **Mô hình tư duy** gom các mảnh từ **Năng lượng và nước** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi volcanic spine–Central Valley–two coasts → climate/ecology gradient → urban, tourism, agriculture và water/energy trade-off. Đây là điểm bàn giao cho các profile Central America trong owner World Atlas.
 
 ## Mô hình tư duy
 Costa Rica = **mountain spine + Central Valley + hai mặt tiền biển + độ dốc (gradient / 기울기) sinh thái rất ngắn nhưng mạnh**.
