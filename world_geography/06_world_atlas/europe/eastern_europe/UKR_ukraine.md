@@ -6,31 +6,31 @@
 
 Phần lớn Ukraine nằm trên đồng bằng Đông Âu, với những vùng đất đen **chernozem** rất màu mỡ. Nền địa hình rộng và tương đối bằng phẳng hỗ trợ nông nghiệp quy mô lớn và các hành lang giao thông dài.
 
-> **Chuyển mạch:** Trong **Ukraine**, **Dnieper là trục không gian lớn** tiếp nhận điểm tựa từ **Đồng bằng và đất đen** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công nghiệp và tài nguyên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** East European plain và chernozem tạo quy mô agriculture/transport; **Dnieper** biến đồng bằng thành trục water, energy, cities và irrigation. **Công nghiệp và tài nguyên** tiếp theo phân bố theo river, coal/metal và Black Sea ports.
 
 ## Dnieper là trục không gian lớn
 
 Sông Dnieper chia lãnh thổ theo hướng bắc–nam và kết nối hệ hồ chứa, đô thị, công nghiệp và nông nghiệp. Nước sông phục vụ cấp nước, năng lượng, tưới và giao thông, nên bất kỳ thay đổi lớn nào trên hệ thống đều có tác động dây chuyền.
 
-> **Chuyển mạch:** Ở chặng này của **Ukraine**, **Công nghiệp và tài nguyên** tiếp nhận điểm tựa từ **Dnieper là trục không gian lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạng đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Dnieper links industry, agriculture, cities and ports; **mạng đô thị** tiếp theo phản ánh sự kết hợp giữa Kyiv, Kharkiv, Dnipro, Odesa, Lviv và các vùng sản xuất.
 
 ## Công nghiệp và tài nguyên
 
 Phía đông và đông nam có lịch sử công nghiệp nặng, khai khoáng và luyện kim; vùng trung tâm và phía nam gắn mạnh với nông nghiệp hàng hóa. Các cảng Biển Đen tạo cửa xuất khẩu quan trọng cho ngũ cốc và hàng rời.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ukraine**, **Mạng đô thị** tiếp nhận điểm tựa từ **Công nghiệp và tài nguyên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đọc dữ liệu theo thời điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Resource/industrial geography tạo nhiều urban nodes thay vì một thủ đô duy nhất; **đọc dữ liệu theo thời điểm** là bắt buộc vì control, population, ports và infrastructure có thể đổi nhanh.
 
 ## Mạng đô thị
 
 Kyiv nằm trên Dnieper và là cực đô thị lớn. Kharkiv, Dnipro, Odesa, Lviv cùng nhiều thành phố công nghiệp tạo mạng đa trung tâm hơn so với mô hình một thủ đô duy nhất.
 
-> **Chuyển mạch:** Trong **Ukraine**, **Mạng đô thị** nêu điều cần giải thích; **Đọc dữ liệu theo thời điểm** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Dữ liệu hiện hành phải tách lớp physical geography tương đối ổn định khỏi administrative/control và network layers biến động. **Mô hình tư duy** sẽ giữ causal chain mà không biến snapshot thành kết luận lâu dài.
 
 ## Đọc dữ liệu theo thời điểm
 
 Đây là một trường hợp cần đặc biệt tách **địa lý vật lý tương đối ổn định** khỏi dữ liệu hành chính, kiểm soát lãnh thổ, dân số và hạ tầng có thể thay đổi theo thời điểm. Khi dùng atlas cho quyết định thực tế, các lớp dữ liệu hiện hành phải được kiểm tra riêng.
 
-> **Chuyển mạch:** Ở chặng này của **Ukraine**, các dấu vết trong **Đọc dữ liệu theo thời điểm** được đọc cùng nhau ở **Mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi plain/chernozem → Dnieper water–energy–city axis → industrial/agricultural/Black Sea network, luôn ghi rõ thời điểm dữ liệu và ranh giới địa lý–pháp lý. Đây là điểm bàn giao cho Eastern Europe trong owner World Atlas.
 
 ## Mô hình tư duy
 
