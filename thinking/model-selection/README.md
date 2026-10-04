@@ -131,6 +131,18 @@ Model đủ dùng khi thêm complexity không thay đổi materially:
 
 Không tối ưu model vì elegance nếu decision không hưởng lợi.
 
+## 10. Competing models khi thông tin chưa đủ
+
+Khi hai model cùng khớp observation hiện tại, đừng chọn model quen thuộc chỉ vì nó dễ tính. Ghi cho từng model `task → assumptions → valid domain → prediction → failure mode`, rồi tìm observation mà các prediction tách nhau rõ nhất. Nếu chưa có observation đó, confidence nên phản ánh model uncertainty chứ không chỉ parameter uncertainty.
+
+Một model mismatch thường lộ ra khi residual, error pattern hoặc decision failure lặp lại ở cùng boundary. Khi đó quay lại [Problem Framing](../problem-framing/README.md) để kiểm tra câu hỏi và operationalization trước khi thêm tham số. [Value of Information](../value-of-information/README.md) giúp chọn test có khả năng phân biệt model với chi phí hợp lý.
+
+## 11. Khi không nên tối ưu
+
+Không phải mọi bài toán đều cần model tốt hơn. Nếu decision đã ổn định qua plausible ranges, nếu action reversible và learning rẻ, hoặc nếu uncertainty nằm ngoài khả năng giảm trước deadline, thêm complexity chỉ tạo delay và false precision.
+
+Stop rule nên ghi rõ: “nếu model mới không đổi ranking, risk boundary hoặc action, dừng refinement”. Khi stakes cao, ưu tiên robust action và margin of safety; khi stakes thấp, dùng model đơn giản rồi review bằng outcome và evidence mới.
+
 ## Connections
 
 - [Problem Framing](../problem-framing/README.md): xác định question trước model.

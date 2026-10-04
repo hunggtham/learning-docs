@@ -120,6 +120,8 @@ Quyết định này thay đổi monthly cash flow thế nào?
 
 Khi chuỗi này đã được trả lời, quyết định mới sẵn sàng được nối sang Economics để hiểu external environment hoặc sang Investing để đánh giá allocation/risk-return.
 
+[Thinking Toolkit](../thinking/README.md) bổ sung decision, expected value, risk và value-of-information workflows cho các lựa chọn tài chính bất định; Personal Finance vẫn là owner của household cash flow, balance sheet và jurisdiction-specific obligations.
+
 ## Từ syllabus sang operating system
 
 Library được thiết kế thành hai vòng:

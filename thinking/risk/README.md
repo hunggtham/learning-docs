@@ -44,6 +44,10 @@ Survive first → optimize second.
 
 Đây không phải lời khuyên luôn tránh risk; nó nhắc rằng repeated decision chỉ tồn tại nếu ta còn capacity để tiếp tục.
 
+## 4.5. Sequential risk và robust choice
+
+Risk thay đổi sau mỗi hành động vì exposure, information và actor response thay đổi. Vì vậy risk register cần có trigger cập nhật, điều kiện dừng và recovery path, không chỉ một likelihood cố định. Nếu distribution không đáng tin, dùng stress worlds và hỏi action nào vẫn sống được thay vì giả một con số chính xác.
+
 ## 5. Diversification và correlation
 
 Diversification giảm idiosyncratic risk khi exposures không hoàn toàn correlated. Nếu nhiều positions cùng phụ thuộc một macro driver, số lượng assets tăng nhưng effective diversification có thể thấp.

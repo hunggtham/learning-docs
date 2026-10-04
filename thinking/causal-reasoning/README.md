@@ -75,7 +75,13 @@ Khi không có randomized experiment, hỏi:
 
 Đây chỉ là câu hỏi tìm design; không tự biến observational data thành causal evidence.
 
-## 7. Causal debugging
+## 7. Alternative hypotheses và disconfirmation
+
+Một causal story chỉ đáng tin hơn khi nó sống sót qua các explanation cạnh tranh. Viết `H1` cùng ít nhất hai alternative, sau đó ghi evidence mà mỗi hypothesis dự đoán khác nhau. Evidence chỉ xác nhận H1 nhưng cũng dễ xuất hiện khi H2 đúng không có diagnostic value cao.
+
+Khi intervention nguy hiểm hoặc không thể làm, dùng prediction bất đối xứng, negative control, temporal boundary hoặc natural comparison để tìm evidence có thể làm H1 yếu đi. [Red-team, Steelman & Disconfirmation](../practice/07_red_team_steelman_and_disconfirmation.md) luyện cách phản biện causal claim mà không nhầm “chưa chứng minh” với “đã sai”.
+
+## 8. Causal debugging
 
 Trong engineering:
 
@@ -97,7 +103,7 @@ timeline
 → update confidence
 ```
 
-## 8. Intervention ladder
+## 9. Intervention ladder
 
 Có thể xếp evidence theo khả năng phân biệt hypothesis:
 
@@ -110,7 +116,7 @@ observation
 
 Đây không phải ranking tuyệt đối về chất lượng mọi study; measurement kém hoặc external validity thấp vẫn có thể làm evidence yếu.
 
-## 9. Causal checklist
+## 10. Causal checklist
 
 Trước một claim “X gây Y”, hỏi:
 

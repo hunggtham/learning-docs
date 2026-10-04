@@ -24,11 +24,15 @@ EV khái niệm = `0.4×5 + 0.5×0 - 0.1×1 = +1.9M KRW`.
 
 Nhưng EV dương chưa tự động có nghĩa “nên làm”. Ta còn phải kiểm tra capital constraint, time opportunity cost, downside, correlation và reversibility.
 
+Đặc biệt với decision một lần, hãy viết utility hoặc ngưỡng sống còn riêng thay vì giả định tiền là thước đo duy nhất. EV là cách xếp trung bình các state; nó không trả lời liệu một state xấu có làm mất khả năng tiếp tục hay không.
+
 ## 3. One-shot vs repeated decisions
 
 EV đặc biệt hữu ích khi decision được lặp nhiều lần trong điều kiện tương đối ổn định. Với one-shot life decision, utility, ruin và irreversibility có thể quan trọng hơn average payoff.
 
 Một bet có EV dương nhưng 5% chance bankruptcy có thể không phù hợp nếu bankruptcy làm ta không thể tiếp tục chơi.
+
+Với decision tuần tự, có thể so sánh action “làm ngay” với action “mua thêm information rồi mới làm”. Khi action có thể đảo ngược và signal đến nhanh, option value của việc chờ có thể lớn hơn chênh lệch EV tĩnh.
 
 ## 4. Monetary payoff ≠ utility
 

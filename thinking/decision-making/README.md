@@ -80,6 +80,14 @@ Frame
 → define update/review rule
 ```
 
+## 9. Sequential decisions và stopping rule
+
+Nhiều decision không phải một lần chọn A/B mà là chuỗi hành động có thể quan sát và điều chỉnh. Viết `next action → signal → update → continue/stop/switch`, rồi đặt điều kiện dừng trước khi sunk cost hoặc identity kéo decision đi tiếp. Pilot và staged commitment thường mua option value, nhưng chỉ hữu ích khi trigger và quyền dừng thật sự tồn tại.
+
+## 10. Robust decision trước tối ưu hóa
+
+Khi probability/model không đáng tin, chọn action giữ outcome đủ tốt qua nhiều plausible worlds thay vì action tối ưu trong một base case mỏng. So sánh rõ `expected value`, `worst acceptable state`, `ruin condition`, `reversibility` và `cost of delay`; robust không đồng nghĩa luôn conservative, mà là phù hợp với stakes và model uncertainty.
+
 ## Connections
 
 - [Probability](../probability/README.md): uncertainty.

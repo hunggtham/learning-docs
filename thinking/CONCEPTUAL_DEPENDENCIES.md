@@ -32,6 +32,20 @@ All paths
 └── Decision Making
 ```
 
+## Practice dependency
+
+Practice không phải nhánh theory mới. Mỗi drill nhận input từ graph trên rồi tạo output để quay lại graph:
+
+```text
+Problem / claim / decision
+→ estimate or evidence map
+→ test / disconfirm / observe
+→ update belief, model or action
+→ journal / postmortem
+```
+
+`05_estimation_and_sanity_checks.md` nối Problem Framing với Forecasting và Sensitivity; `06_argument_and_evidence_mapping.md` nối Critical Thinking với Causal Reasoning; `07_red_team_steelman_and_disconfirmation.md` nối Model Selection với Decision Making. Formal theory vẫn thuộc Mathematics, Philosophy và Research Methods.
+
 ## Dependency by question type
 
 ### “Claim này có đáng tin không?”

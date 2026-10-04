@@ -44,6 +44,8 @@ Nguồn tốt phải phù hợp với câu hỏi. Khi đọc một claim, kiểm
 
 Đi sâu tại [Research Methods](../../research_methods/README.md) và [Psychology evidence evaluation](../../psychology/README.md).
 
+Khi claim có nhiều nguồn hoặc nhiều bước suy luận, hãy lưu một evidence map thay vì chỉ ghi “nguồn uy tín”. Map tối thiểu gồm `claim → evidence for/against → assumptions → inference → alternative explanations → confidence → evidence that would change conclusion`. [Argument & Evidence Mapping](../practice/06_argument_and_evidence_mapping.md) biến cấu trúc này thành drill có thể review.
+
 ## 4. Steelman trước khi phản biện
 
 **Steelmanning** là diễn đạt phiên bản mạnh, hợp lý và chính xác nhất của argument đối phương trước khi đánh giá. Nó chống lại straw man và giúp tách bất đồng thật khỏi bất đồng do cách diễn đạt.
@@ -73,6 +75,8 @@ Critical thinking cũng có thể bị dùng sai:
 - nhầm “có tranh luận” với “hai phía có bằng chứng ngang nhau”.
 
 Mục tiêu không phải thắng tranh luận mà là **giảm sai số giữa belief và reality**.
+
+Nếu cần phản biện một claim quan trọng, chạy theo thứ tự `steelman → strongest counterargument → disconfirming test → update`. Đây là red-team có kiểm soát, không phải phản đối vì phản đối; [Red-team, Steelman & Disconfirmation](../practice/07_red_team_steelman_and_disconfirmation.md) cung cấp template để giữ provenance và tránh đổi tiêu chuẩn giữa các phía.
 
 ## Checklist thực hành
 

@@ -14,6 +14,7 @@ Các topic ở `thinking/` được tách riêng để học concept, nhưng v�
 6. [Business, metrics, incentives và organizations](./05_business_metrics_incentives_and_organizations.md)
 7. [Negotiation, bargaining và conflict](./06_negotiation_bargaining_and_conflict.md)
 8. [Politics, public policy và institutions](./07_politics_policy_and_institutions.md)
+9. [AI-generated claims và verification](./08_ai_generated_claims_and_verification.md)
 
 ## Cách đọc casebook
 
@@ -56,7 +57,7 @@ Depth phải tỷ lệ với stakes, irreversibility và uncertainty.
 
 ## Practice layer
 
-Nếu casebook giúp nhận ra **tool nào cần dùng**, [`../practice/`](../practice/README.md) luyện **cách dùng tool lặp lại** qua calibration/Bayesian updating, sensitivity analysis, scenario stress testing và decision journal/postmortem.
+Nếu casebook giúp nhận ra **tool nào cần dùng**, [`../practice/`](../practice/README.md) luyện **cách dùng tool lặp lại** qua calibration/Bayesian updating, sensitivity analysis, scenario stress testing, decision journal/postmortem, estimation/sanity checks, argument/evidence mapping và red-team/disconfirmation.
 
 ## Boundary
 

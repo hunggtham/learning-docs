@@ -54,4 +54,6 @@ Các phần về Quốc hội, Tổng thống, Chính phủ, tòa án, chính qu
 
 Phần ôn KIIP nằm tại [`../korean_culture/kiip/`](../korean_culture/kiip/README.md), đặc biệt [`04_정치.md`](../korean_culture/kiip/04_정치.md) và [`06_법.md`](../korean_culture/kiip/06_법.md). KIIP phục vụ ôn thi; thư viện hiện tại đi sâu hơn vào **cách hệ thống hoạt động và cách tự tra cứu trong đời sống thực**.
 
+[Thinking Toolkit](../thinking/README.md) chỉ cung cấp workflow trung lập để tách rule, evidence, interpretation và uncertainty; nội dung pháp lý, quyền và thủ tục vẫn phải quay về owner của thư viện này hoặc nguồn pháp lý chính thức.
+
 > **Bàn giao:** Sau **Liên kết với các thư viện (library / 라이브러리) khác**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -100,14 +100,19 @@ Dùng để tránh hai cực: quyết định quá sớm khi thiếu evidence, h
 
 ## Practice — luyện reasoning thay vì chỉ đọc concept
 
-[Thinking Practice](./practice/README.md) hiện có bốn drill:
+[Thinking Practice](./practice/README.md) hiện có bảy drill:
 
 1. [Calibration & Bayesian Updating](./practice/01_calibration_and_bayesian_updating.md) — đưa uncertainty thành probability/range có thể review và update.
 2. [Sensitivity Analysis & Uncertainty Decomposition](./practice/02_sensitivity_analysis_and_uncertainty_decomposition.md) — tìm assumption nào thật sự làm conclusion đổi.
 3. [Scenario Planning & Stress Testing](./practice/03_scenario_planning_and_stress_testing.md) — kiểm tra decision khi tương lai lệch base case hoặc system gặp stress.
 4. [Decision Journal & Postmortem](./practice/04_decision_journal_and_postmortem.md) — tách process quality khỏi luck và tạo feedback loop qua thời gian.
+5. [Estimation & Sanity Checks](./practice/05_estimation_and_sanity_checks.md) — ước lượng bậc độ lớn, bounds, units và decision threshold.
+6. [Argument & Evidence Mapping](./practice/06_argument_and_evidence_mapping.md) — truy claim, provenance, inference, alternative và confidence.
+7. [Red-team, Steelman & Disconfirmation](./practice/07_red_team_steelman_and_disconfirmation.md) — kiểm tra model bằng phản biện có prediction và update rule.
 
 Practice layer không thêm canonical theory. Nó biến knowledge thành kỹ năng bằng chu kỳ `estimate → expose assumptions → test → observe → update → review`.
+
+Mỗi drill phải để lại artifact có thể lưu và review: estimate, map, trigger, journal hoặc rule update. Nếu một skill chỉ tạo cảm giác “đã suy nghĩ kỹ” nhưng không có output hoặc feedback loop, nó chưa phải deliberate practice.
 
 ## Casebook — từ concept sang tình huống thật
 
@@ -121,8 +126,9 @@ Practice layer không thêm canonical theory. Nó biến knowledge thành kỹ n
 6. [Business, metrics, incentives và organizations](./90_connections/05_business_metrics_incentives_and_organizations.md)
 7. [Negotiation, bargaining và conflict](./90_connections/06_negotiation_bargaining_and_conflict.md)
 8. [Politics, public policy và institutions](./90_connections/07_politics_policy_and_institutions.md)
+9. [AI-generated claims và verification](./90_connections/08_ai_generated_claims_and_verification.md)
 
-Casebook có ba mức depth: quick pass cho vấn đề nhỏ, normal pass cho quyết định thường ngày và deep pass cho quyết định material/khó đảo ngược.
+Casebook có ba mức depth: quick pass cho vấn đề nhỏ, normal pass cho quyết định thường ngày và deep pass cho quyết định material/khó đảo ngược. Case AI mới được thêm vì `plausible answer ≠ verified answer` là recurring failure mode xuyên research, engineering, health và policy; nó không tạo một owner AI riêng.
 
 ## Cross-domain map
 
