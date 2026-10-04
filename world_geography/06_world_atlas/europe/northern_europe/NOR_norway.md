@@ -6,25 +6,25 @@
 
 Norway có địa hình núi cao bị glacier cắt xẻ mạnh, tạo hàng nghìn fjord và đảo ven bờ. Đường bờ thực tế cực dài và phân mảnh.
 
-> **Chuyển mạch:** Trong **Norway**, **Dân cư thành dải ven biển** tiếp nhận điểm tựa từ **Núi và fjord tạo hình quốc gia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biển là không gian kinh tế chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Glacier-cut mountains và fjords làm đất bằng hiếm, nên **dân cư thành dải ven biển** bám valley, islands và lowlands; biển vừa chia cắt vừa nối các node. **Biển là không gian kinh tế chính** tiếp theo mở fishery, shipping và offshore resources.
 
 ## Dân cư thành dải ven biển
 
 Đất bằng hiếm nên đô thị, nông nghiệp và hạ tầng tập trung trong thung lũng, đồng bằng nhỏ và dải ven biển. Oslo nằm ở vùng thấp đông nam; Bergen, Stavanger và Trondheim là các cực ven biển khác.
 
-> **Chuyển mạch:** Ở chặng này của **Norway**, **Biển là không gian kinh tế chính** tiếp nhận điểm tựa từ **Dân cư thành dải ven biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thủy điện và địa hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Coastal settlement và fjord access làm mặt nước thành production/transport space; **thủy điện và địa hình** chuyển mưa, head và hồ núi thành energy infrastructure trong đất liền.
 
 ## Biển là không gian kinh tế chính
 
 Ngư nghiệp, vận tải biển, dầu khí ngoài khơi và gần đây offshore wind làm vùng biển có vai trò kinh tế rất lớn. Diện tích mặt nước chức năng vượt xa đất canh tác hữu dụng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Norway**, **Thủy điện và địa hình** tiếp nhận điểm tựa từ **Biển là không gian kinh tế chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ocean economy và hydropower dựa trên cùng khí hậu ẩm, relief dốc và network ven biển; **mô hình tư duy** sẽ giữ trade-off giữa resource, settlement và Arctic/coastal access.
 
 ## Thủy điện và địa hình
 
 Núi cao, mưa lớn phía tây và hồ tạo head thủy lực thuận lợi cho hydropower. Đây là ví dụ địa hình + khí hậu chuyển thành lợi thế năng lượng.
 
-> **Chuyển mạch:** Trong **Norway**, **Mô hình tư duy** gom các mảnh từ **Thủy điện và địa hình** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi mountain–fjord → coastal settlement/ocean economy → hydropower và offshore resource. Đây là điểm bàn giao cho Northern Europe trong owner World Atlas.
 
 ## Mô hình tư duy
 
