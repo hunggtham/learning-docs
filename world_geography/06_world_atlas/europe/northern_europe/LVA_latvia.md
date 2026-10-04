@@ -6,25 +6,25 @@
 
 Latvia có địa hình thấp, nhiều rừng, hồ và đất ngập nước. Dấu tích băng hà tạo đồng bằng cát, moraines và hệ hồ phân tán.
 
-> **Chuyển mạch:** Trong **Latvia**, **Daugava là trục lịch sử** tiếp nhận điểm tựa từ **Đồng bằng Baltic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cảng và transit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Baltic lowland, forest và wetlands tạo nền cho **Daugava** như trục river–city từ inland tới Gulf of Riga. **Cảng và transit** tiếp theo kiểm tra cách cửa sông biến flow tự nhiên thành logistics có điều kiện.
 
 ## Daugava là trục lịch sử
 
 Sông Daugava chảy qua Riga ra Gulf of Riga, tạo hành lang tự nhiên từ nội địa về Baltic. Riga vì thế phát triển tại nút sông–biển và trở thành đô thị vượt trội.
 
-> **Chuyển mạch:** Ở chặng này của **Latvia**, **Cảng và transit** tiếp nhận điểm tựa từ **Daugava là trục lịch sử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rừng và dân cư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Riga và ports khai thác Daugava/hinterland, nhưng transit phụ thuộc thương mại và network thay đổi; **rừng và dân cư** phản ánh resource base và sự tập trung quanh thủ đô.
 
 ## Cảng và transit
 
 Các cảng Baltic tạo vai trò logistics cho hàng hóa từ hinterland. Tuy nhiên giá trị transit phụ thuộc cấu trúc thương mại và mạng vận tải thay đổi theo thời gian, không phải lợi thế cố định.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Latvia**, **Rừng và dân cư** tiếp nhận điểm tựa từ **Cảng và transit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Forest economy và sparse settlement tạo khoảng cách tới services, trong khi Riga tập trung node logistics và labor; **mô hình tư duy** sẽ giữ rõ transit advantage phụ thuộc network và thị trường.
 
 ## Rừng và dân cư
 
 Rừng phủ diện tích lớn và là tài nguyên kinh tế–sinh thái quan trọng. Dân cư tập trung tương đối mạnh quanh Riga so với phần còn lại.
 
-> **Chuyển mạch:** Trong **Latvia**, **Mô hình tư duy** gom các mảnh từ **Rừng và dân cư** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi Baltic lowland–forest/wetland → Daugava–Riga river/port → transit-dependent urban concentration. Đây là điểm bàn giao cho Northern Europe trong owner World Atlas.
 
 ## Mô hình tư duy
 
