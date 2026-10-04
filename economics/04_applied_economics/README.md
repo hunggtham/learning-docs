@@ -67,13 +67,13 @@ Applied chính sách (policy / 정책) gần như luôn tạo winners/losers. V�
 
 Ngoài ra, tác động (effect / 효과) cục bộ (local / 로컬)/pilot có thể đổi khi quy mô (scale / 규모): wages, prices, rents, firm entry, di chuyển (migration / 마이그레이션), taxes và political phản hồi (response / 응답) đều có thể điều chỉnh. Mô-đun (module / 모듈) này phải luôn nêu partial-equilibrium vs general-equilibrium ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Ở chặng này của **04 — Applied Economics**, **Chính sách (policy / 정책) interpretation** tiếp nhận điểm tựa từ **Phân phối (distribution / 분포) và general equilibrium** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Distribution và general equilibrium** mô tả cơ chế phân bổ; **Policy interpretation** thêm institutional constraint, rồi **Connections** chỉ đường quay lại owner.
 
 ## Chính sách (policy / 정책) interpretation
 
 Economics có thể estimate consequences, trade-offs và welfare under tường minh (explicit / 명시적) xã hội (social / 사회적) các giả định (assumptions / 가정들). Một estimate không tự chuyển thành chính sách (policy / 정책) recommendation. Chính sách (policy / 정책) còn phụ thuộc distributional weights, legal các ràng buộc (constraints / 제약조건들), hiện thực (implementation / 구현) sức chứa (capacity / 용량), rights, political institutions và bất định (uncertainty / 불확실성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **04 — Applied Economics**, **Connections** tiếp nhận điểm tựa từ **Chính sách (policy / 정책) interpretation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Checklist khi đọc một applied claim** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Connections** nối policy mechanism với empirical design; **Checklist khi đọc một applied claim** kiểm tra estimand, evidence và giới hạn suy luận.
 
 ## Connections
 
@@ -83,7 +83,7 @@ Economics có thể estimate consequences, trade-offs và welfare under tường
 - [World History](../../world_history/README.md) cung cấp institutional/historical chuỗi (sequence / 시퀀스) nhưng không tự đóng vai nhân quả (causal / 인과적) thiết kế (design / 설계).
 - [Psychology](../../psychology/README.md) liên quan labor supply, salience, take-up, expectations và behavioral công khai (public / 공개) economics.
 
-> **Chuyển mạch:** Trong **04 — Applied Economics**, **Checklist khi đọc một applied claim** tiếp nhận điểm tựa từ **Connections** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Checklist** khép applied route bằng cách phân biệt correlation, identification và policy relevance; chi tiết formal quay về econometrics owner.
 
 ## Checklist khi đọc một applied claim
 

@@ -14,7 +14,7 @@ Thư viện đi từ cấu trúc nền tảng của nhà nước và pháp luậ
 
 Các thuật ngữ Hàn quan trọng được giữ cạnh tiếng Việt, ví dụ **hợp đồng lao động (근로계약서)**, **tiền đặt cọc thuê nhà (보증금)**, **thông báo hành chính (통지서)**, **xử lý hành chính (처분)**, **khiếu nại hành chính (행정심판)**.
 
-> **Chuyển mạch:** Trong **Hệ thống pháp luật, công dân và đời sống tại Hàn Quốc**, **Bản đồ nội dung** tiếp nhận điểm tựa từ **Phạm vi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách dùng thư viện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Phạm vi** xác định domain pháp luật và civic life; **Bản đồ nội dung** sắp xếp statute, institution và đời sống thành route, rồi **Cách dùng thư viện** chỉ cách tra cứu.
 
 ## Bản đồ nội dung
 
@@ -34,7 +34,7 @@ Các thuật ngữ Hàn quan trọng được giữ cạnh tiếng Việt, ví d
 14. [Glossary Việt–Hàn–Anh](GLOSSARY.md)
 15. [Nguồn chính thức](SOURCES.md)
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống pháp luật, công dân và đời sống tại Hàn Quốc**, **Cách dùng thư viện** tiếp nhận điểm tựa từ **Bản đồ nội dung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyên tắc trung lập civic/political** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cách dùng thư viện** hướng người đọc từ câu hỏi đến source và ngày hiệu lực; **Nguyên tắc trung lập civic/political** đặt giới hạn cho cách diễn giải.
 
 ## Cách dùng thư viện
 
@@ -42,13 +42,13 @@ Các thuật ngữ Hàn quan trọng được giữ cạnh tiếng Việt, ví d
 
 Khi một vấn đề có thể làm thay đổi quyền, nghĩa vụ, tiền bạc hoặc tình trạng cư trú của cá nhân, tài liệu này chỉ đóng vai trò **bản đồ**. Hãy kiểm tra văn bản đang có hiệu lực trên `국가법령정보센터`, hướng dẫn của cơ quan có thẩm quyền và, nếu cần, sử dụng tư vấn chuyên môn phù hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống pháp luật, công dân và đời sống tại Hàn Quốc**, **Nguyên tắc trung lập civic/political** tiếp nhận điểm tựa từ **Cách dùng thư viện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết với các thư viện (library / 라이브러리) khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Trung lập civic/political** giữ distinction giữa rule, interpretation và opinion; **Liên kết với thư viện khác** đưa phần chuyên môn về đúng owner.
 
 ## Nguyên tắc trung lập civic/political
 
 Các phần về Quốc hội, Tổng thống, Chính phủ, tòa án, chính quyền địa phương và quyền công dân chỉ mô tả **cấu trúc, thẩm quyền, quy trình và nguồn pháp lý**. Thư viện không xếp hạng đảng phái, ứng viên, chính sách hay đưa ra lựa chọn chính trị.
 
-> **Chuyển mạch:** Trong **Hệ thống pháp luật, công dân và đời sống tại Hàn Quốc**, **Liên kết với các thư viện (library / 라이브러리) khác** tiếp nhận điểm tựa từ **Nguyên tắc trung lập civic/political** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Liên kết với các thư viện khác** khép README bằng source owner và boundary; claim pháp lý chi tiết phải quay về canonical law chapter.
 
 ## Liên kết với các thư viện (library / 라이브러리) khác
 

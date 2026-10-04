@@ -34,7 +34,7 @@ Trước tầng (layer / 계층) này nên nắm:
 
 Không nên đọc bảo mật (security / 보안) như một chủ đề tách khỏi kiến trúc (architecture / 아키텍처) môi trường vận hành (production / 운영 환경), vì nhiều rủi ro chỉ xuất hiện khi mô hình (model / 모델) được nối với retrieval, bộ nhớ (memory / 메모리), công cụ (tool / 도구) và quyền thực thi.
 
-> **Chuyển mạch:** Trong **An toàn, Bảo mật và Căn chỉnh AI**, **Thứ tự đọc** tiếp nhận điểm tựa từ **Kiến thức cần có trước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bản đồ phụ thuộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Kiến thức cần có trước** đặt nền về threat, model và systems; **Thứ tự đọc** sắp xếp chúng thành route trước khi **Bản đồ phụ thuộc** khóa prerequisite.
 
 ## Thứ tự đọc
 
@@ -53,7 +53,7 @@ Phần này chuyển khái niệm Computer Science thành cấu trúc, ví dụ 
 09_alignment_techniques_and_oversight.md
 ```
 
-> **Chuyển mạch:** Ở chặng này của **An toàn, Bảo mật và Căn chỉnh AI**, **Bản đồ phụ thuộc** tiếp nhận điểm tựa từ **Thứ tự đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Checklist cho mỗi chapter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Bản đồ phụ thuộc** cho biết claim nào cần security, evaluation hay governance; **Checklist cho mỗi chapter** biến dependency đó thành evidence phải kiểm tra.
 
 ## Bản đồ phụ thuộc
 
@@ -76,7 +76,7 @@ flowchart TD
     SEC --> O
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **An toàn, Bảo mật và Căn chỉnh AI**, **Checklist cho mỗi chapter** tiếp nhận điểm tựa từ **Bản đồ phụ thuộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy xuyên suốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Checklist cho mỗi chapter** bảo đảm từng cơ chế có threat, control và limit; **Mô hình tư duy xuyên suốt** nối các control thành safety case.
 
 ## Checklist cho mỗi chapter
 
@@ -172,7 +172,7 @@ failure nào phải fail closed?
 
 Từ đó mới chọn tỷ lệ (rate / 비율) limit, sandbox, ACL, verifier, approval hoặc isolation phù hợp.
 
-> **Chuyển mạch:** Ở chặng này của **An toàn, Bảo mật và Căn chỉnh AI**, **Môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스) gate** tiếp nhận điểm tựa từ **Từ mô hình đe dọa tới điều khiển (control / 제어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nội bộ (internal / 내부) links chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Từ threat model tới control** tạo release criteria; **Production release gate** dùng criteria đó để chặn rủi ro có bằng chứng trước khi deploy.
 
 ## Môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스) gate
 
@@ -191,7 +191,7 @@ unit / schema test
 
 Một điểm benchmark tăng không đủ để promote nếu attack surface hoặc authority ranh giới (boundary / 경계) bị mở rộng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **An toàn, Bảo mật và Căn chỉnh AI**, **Nội bộ (internal / 내부) links chính** tiếp nhận điểm tựa từ **Môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스) gate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Internal links chính** trả safety claim về canonical security, evaluation và systems owners; README khép ở đó để không tạo chapter trùng.
 
 ## Nội bộ (internal / 내부) links chính
 
