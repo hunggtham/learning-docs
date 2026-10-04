@@ -26,7 +26,7 @@ Tuần hoàn không thay thế diffusion; nó làm khoảng cách diffusion còn
 
 ---
 
-> **Chuyển mạch:** Large bodies need transport beyond diffusion; homeostasis therefore maintains a regulated range, and set point/range depend on context and control costs.
+> **Nối mạch:** Large bodies need transport beyond diffusion; homeostasis therefore maintains a regulated range, and set point/range depend on context and control costs.
 
 ## 2. Cân bằng nội môi không phải giữ một con số bất biến
 
@@ -46,7 +46,7 @@ Phản hồi âm (negative feedback) làm giảm sai lệch. Phản hồi dươn
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **3. Điểm đặt và phạm vi hoạt động phụ thuộc bối cảnh** tiếp nhận điểm tựa từ **2. Cân bằng nội môi không phải giữ một con số bất biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Allostasis: cơ thể có thể chuẩn bị trước khi sai lệch xảy ra** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Điểm đặt và phạm vi hoạt động phụ thuộc bối cảnh** nối từ **2. Cân bằng nội môi không phải giữ một con số bất biến** sang **4. Allostasis: cơ thể có thể chuẩn bị trước khi sai lệch xảy ra**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Điểm đặt và phạm vi hoạt động phụ thuộc bối cảnh
 
@@ -56,7 +56,7 @@ Do đó “bình thường” nên được hiểu là **phạm vi phù hợp v�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **4. Allostasis: cơ thể có thể chuẩn bị trước khi sai lệch xảy ra** tiếp nhận điểm tựa từ **3. Điểm đặt và phạm vi hoạt động phụ thuộc bối cảnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Dòng chảy phụ thuộc chênh lệch áp lực và sức cản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Allostasis: cơ thể có thể chuẩn bị trước khi sai lệch xảy ra** nối từ **3. Điểm đặt và phạm vi hoạt động phụ thuộc bối cảnh** sang **5. Dòng chảy phụ thuộc chênh lệch áp lực và sức cản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Allostasis: cơ thể có thể chuẩn bị trước khi sai lệch xảy ra
 
@@ -66,7 +66,7 @@ Homeostasis chủ yếu sửa sai khi biến lệch; allostasis cho phép hệ c
 
 ---
 
-> **Chuyển mạch:** Trong **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **5. Dòng chảy phụ thuộc chênh lệch áp lực và sức cản** tiếp nhận điểm tựa từ **4. Allostasis: cơ thể có thể chuẩn bị trước khi sai lệch xảy ra** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Tim là nguồn tạo chênh lệch áp lực cho hai vòng tuần hoàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Dòng chảy phụ thuộc chênh lệch áp lực và sức cản** nối từ **4. Allostasis: cơ thể có thể chuẩn bị trước khi sai lệch xảy ra** sang **6. Tim là nguồn tạo chênh lệch áp lực cho hai vòng tuần hoàn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Dòng chảy phụ thuộc chênh lệch áp lực và sức cản
 
@@ -88,7 +88,7 @@ Bán kính vì vậy có ảnh hưởng rất mạnh lên sức cản. Tiểu đ
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **5. Dòng chảy phụ thuộc chênh lệch áp lực và sức cản** nêu điều cần giải thích; **6. Tim là nguồn tạo chênh lệch áp lực cho hai vòng tuần hoàn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. Cơ chế Frank–Starling: tim tự ghép lượng máu nhận vào với lượng bơm ra** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Dòng chảy phụ thuộc chênh lệch áp lực và sức cản** đặt vấn đề; **6. Tim là nguồn tạo chênh lệch áp lực cho hai vòng tuần hoàn** kiểm tra bằng chứng, rồi **7. Cơ chế Frank–Starling: tim tự ghép lượng máu nhận vào với lượng bơm ra** mở rộng hệ quả.
 
 ## 6. Tim là nguồn tạo chênh lệch áp lực cho hai vòng tuần hoàn
 
@@ -104,7 +104,7 @@ Trong đó \(HR\) là nhịp tim và \(SV\) là thể tích nhát bóp. Khi dema
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **6. Tim là nguồn tạo chênh lệch áp lực cho hai vòng tuần hoàn** nêu điều cần giải thích; **7. Cơ chế Frank–Starling: tim tự ghép lượng máu nhận vào với lượng bơm ra** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. Cây mạch máu: cấu trúc khác nhau vì chức năng vật lý khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Tim là nguồn tạo chênh lệch áp lực cho hai vòng tuần hoàn** đặt vấn đề; **7. Cơ chế Frank–Starling: tim tự ghép lượng máu nhận vào với lượng bơm ra** kiểm tra bằng chứng, rồi **8. Cây mạch máu: cấu trúc khác nhau vì chức năng vật lý khác nhau** mở rộng hệ quả.
 
 ## 7. Cơ chế Frank–Starling: tim tự ghép lượng máu nhận vào với lượng bơm ra
 
@@ -112,7 +112,7 @@ Trong phạm vi sinh lý, thất được đổ đầy nhiều hơn làm sợi c
 
 Đây là ví dụ quan trọng của **điều hòa được nhúng vào chính cơ học của mô**: cấu trúc (structure / 구조) và material thuộc tính (property / 속성) có thể tạo phản hồi (feedback / 피드백) trước cả khi hormone hay gene expression thay đổi.
 
-> **Chuyển mạch:** Trong **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **7. Cơ chế Frank–Starling: tim tự ghép lượng máu nhận vào với lượng bơm ra** xác định đầu vào; **8. Cây mạch máu: cấu trúc khác nhau vì chức năng vật lý khác nhau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. Độ giãn mạch và áp lực xung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Frank–Starling nối venous return với stroke volume; vascular-tree structure chuyển nguyên tắc vật lý thành flow. **Vasodilation và pulse pressure** kiểm tra hệ quả.
 
 ## 8. Cây mạch máu: cấu trúc khác nhau vì chức năng vật lý khác nhau
 
@@ -120,7 +120,7 @@ Hệ mạch không phải một tập các “ống” giống nhau. **Động m
 
 Đây là ví dụ trực tiếp của `structure → mechanism → function`: thành dày chịu áp lực; bán kính điều chỉnh sức cản; màng mỏng giảm khoảng cách khuếch tán; compliance cao tạo kho chứa thể tích.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **9. Độ giãn mạch và áp lực xung** tiếp nhận điểm tựa từ **8. Cây mạch máu: cấu trúc khác nhau vì chức năng vật lý khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Máu là môi trường vận chuyển, không chỉ là chất mang oxy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Độ giãn mạch và áp lực xung** nối từ **8. Cây mạch máu: cấu trúc khác nhau vì chức năng vật lý khác nhau** sang **10. Máu là môi trường vận chuyển, không chỉ là chất mang oxy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Độ giãn mạch và áp lực xung
 
@@ -134,7 +134,7 @@ Mạch có compliance cao có thể nhận thêm thể tích mà áp lực tăng
 
 Khi thành động mạch cứng hơn theo tuổi hoặc bệnh lý, cùng một thay đổi thể tích có thể tạo thay đổi áp lực lớn hơn. Cơ học của thành mạch vì vậy ảnh hưởng trực tiếp huyết áp và tải mà tim phải chống lại.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **10. Máu là môi trường vận chuyển, không chỉ là chất mang oxy** tiếp nhận điểm tựa từ **9. Độ giãn mạch và áp lực xung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Độ bão hòa oxy khác tổng lượng oxy được vận chuyển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Máu là môi trường vận chuyển, không chỉ là chất mang oxy** nối từ **9. Độ giãn mạch và áp lực xung** sang **11. Độ bão hòa oxy khác tổng lượng oxy được vận chuyển**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Máu là môi trường vận chuyển, không chỉ là chất mang oxy
 
@@ -142,7 +142,7 @@ Máu gồm plasma, hồng cầu, bạch cầu và tiểu cầu. Plasma mang nư�
 
 Điểm quan trọng là nhiều cơ quan cùng “chia sẻ” một môi trường bên trong. Vì vậy thay đổi ở một nơi — mất nước, viêm, thiếu protein huyết tương hay thay đổi điện giải — có thể lan tới nhiều hệ khác qua máu.
 
-> **Chuyển mạch:** Trong **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **11. Độ bão hòa oxy khác tổng lượng oxy được vận chuyển** tiếp nhận điểm tựa từ **10. Máu là môi trường vận chuyển, không chỉ là chất mang oxy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Hemoglobin phải cân bằng giữa bắt và nhả oxy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Độ bão hòa oxy khác tổng lượng oxy được vận chuyển** nối từ **10. Máu là môi trường vận chuyển, không chỉ là chất mang oxy** sang **12. Hemoglobin phải cân bằng giữa bắt và nhả oxy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Độ bão hòa oxy khác tổng lượng oxy được vận chuyển
 
@@ -157,7 +157,7 @@ cung cấp oxy cho mô
 
 Do đó phải phân biệt ba câu hỏi: phổi có nạp O₂ tốt không, máu có đủ khả năng mang O₂ không, và tim có tạo đủ dòng máu không.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **12. Hemoglobin phải cân bằng giữa bắt và nhả oxy** tiếp nhận điểm tựa từ **11. Độ bão hòa oxy khác tổng lượng oxy được vận chuyển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Trao đổi khí: dòng khối duy trì độ dốc (gradient / 기울기), khuếch tán hoàn thành trao đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Hemoglobin phải cân bằng giữa bắt và nhả oxy** nối từ **11. Độ bão hòa oxy khác tổng lượng oxy được vận chuyển** sang **13. Trao đổi khí: dòng khối duy trì độ dốc (gradient / 기울기), khuếch tán hoàn thành trao đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Hemoglobin phải cân bằng giữa bắt và nhả oxy
 
@@ -165,7 +165,7 @@ Hemoglobin có tính hiệp đồng (cooperativity), tạo đường cong gắn 
 
 CO₂, H⁺ và nhiệt độ tăng trong mô hoạt động có thể làm hemoglobin giảm ái lực với O₂, thuận lợi cho việc nhả oxy tại nơi nhu cầu cao. Đây là ví dụ phân tử về điều hòa phù hợp bối cảnh: cùng protein nhưng trạng thái hóa học địa phương đổi chức năng của nó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **13. Trao đổi khí: dòng khối duy trì độ dốc (gradient / 기울기), khuếch tán hoàn thành trao đổi** tiếp nhận điểm tựa từ **12. Hemoglobin phải cân bằng giữa bắt và nhả oxy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. CO₂ nối hô hấp với cân bằng acid–cơ sở (base / 기반)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Trao đổi khí: dòng khối duy trì độ dốc (gradient / 기울기), khuếch tán hoàn thành trao đổi** nối từ **12. Hemoglobin phải cân bằng giữa bắt và nhả oxy** sang **14. CO₂ nối hô hấp với cân bằng acid–cơ sở (base / 기반)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Trao đổi khí: dòng khối duy trì độ dốc (gradient / 기울기), khuếch tán hoàn thành trao đổi
 
@@ -173,7 +173,7 @@ Theo lô-gic (logic / 논리) Fick, tốc độ khuếch tán khí tăng khi di�
 
 Thông khí chỉ đưa không khí vào phổi; tưới máu đưa máu tới mao mạch phổi; khuếch tán mới đưa khí qua hàng rào. Có thông khí nhưng không tưới máu tạo vùng giống khoảng chết; có tưới máu nhưng không thông khí tạo dòng máu ít được oxy hóa. Vì vậy chức năng hô hấp là thuộc tính (property / 속성) của **sự ghép thông khí–tưới máu (ventilation–perfusion matching)**, không phải của phổi riêng lẻ.
 
-> **Chuyển mạch:** Trong **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **14. CO₂ nối hô hấp với cân bằng acid–cơ sở (base / 기반)** tiếp nhận điểm tựa từ **13. Trao đổi khí: dòng khối duy trì độ dốc (gradient / 기울기), khuếch tán hoàn thành trao đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Tiêu hóa: từ cấu trúc thức ăn tới phân tử có thể hấp thu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. CO₂ nối hô hấp với cân bằng acid–cơ sở (base / 기반)** nối từ **13. Trao đổi khí: dòng khối duy trì độ dốc (gradient / 기울기), khuếch tán hoàn thành trao đổi** sang **15. Tiêu hóa: từ cấu trúc thức ăn tới phân tử có thể hấp thu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. CO₂ nối hô hấp với cân bằng acid–cơ sở (base / 기반)
 
@@ -187,7 +187,7 @@ Phổi thay CO₂ trong vài phút thông qua ventilation; thận điều chỉn
 
 “Bù” không có nghĩa nguyên nhân đã được sửa. Nó chỉ cho thấy phản hồi (feedback / 피드백) của cơ thể đang kéo pH trở lại vùng ít nguy hiểm hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **15. Tiêu hóa: từ cấu trúc thức ăn tới phân tử có thể hấp thu** tiếp nhận điểm tựa từ **14. CO₂ nối hô hấp với cân bằng acid–cơ sở (base / 기반)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Ruột–gan tạo một hệ cảm nhận và phân phối chất dinh dưỡng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Tiêu hóa: từ cấu trúc thức ăn tới phân tử có thể hấp thu** nối từ **14. CO₂ nối hô hấp với cân bằng acid–cơ sở (base / 기반)** sang **16. Ruột–gan tạo một hệ cảm nhận và phân phối chất dinh dưỡng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Tiêu hóa: từ cấu trúc thức ăn tới phân tử có thể hấp thu
 
@@ -197,7 +197,7 @@ Ruột non tăng diện tích bằng nếp gấp, nhung mao và vi nhung mao. Tr
 
 Vì vậy hấp thu ở ruột chính là các nguyên lý membrane vận chuyển (transport / 전송), diffusion và bulk luồng (flow / 흐름) được phóng lớn lên cấp cơ quan.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **16. Ruột–gan tạo một hệ cảm nhận và phân phối chất dinh dưỡng** tiếp nhận điểm tựa từ **15. Tiêu hóa: từ cấu trúc thức ăn tới phân tử có thể hấp thu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Trạng thái no và nhịn ăn là hai cấu hình điều hòa khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Ruột–gan tạo một hệ cảm nhận và phân phối chất dinh dưỡng** nối từ **15. Tiêu hóa: từ cấu trúc thức ăn tới phân tử có thể hấp thu** sang **17. Trạng thái no và nhịn ăn là hai cấu hình điều hòa khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Ruột–gan tạo một hệ cảm nhận và phân phối chất dinh dưỡng
 
@@ -207,7 +207,7 @@ Máu tĩnh mạch từ ruột đi qua hệ cửa tới gan. Gan vì vậy có v�
 
 Khái niệm “detox” trong sinh lý nên hiểu là enzyme biến đổi chất lạ + đường thải qua mật/thận/phổi, không phải một quá trình “rửa sạch” chung chung.
 
-> **Chuyển mạch:** Trong **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **17. Trạng thái no và nhịn ăn là hai cấu hình điều hòa khác nhau** tiếp nhận điểm tựa từ **16. Ruột–gan tạo một hệ cảm nhận và phân phối chất dinh dưỡng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Thận: lọc nhiều để sau đó chọn lọc rất kỹ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Trạng thái no và nhịn ăn là hai cấu hình điều hòa khác nhau** nối từ **16. Ruột–gan tạo một hệ cảm nhận và phân phối chất dinh dưỡng** sang **18. Thận: lọc nhiều để sau đó chọn lọc rất kỹ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Trạng thái no và nhịn ăn là hai cấu hình điều hòa khác nhau
 
@@ -215,7 +215,7 @@ Sau ăn, insulin và tín hiệu dinh dưỡng làm nhiều mô tăng sử dụn
 
 Một metabolism khỏe không phải luôn giữ một pathway ở mức cao, mà là **khả năng chuyển trạng thái đúng lúc**. Mất khả năng chuyển trạng thái là một dạng thất bại (failure / 실패) của regulation, không chỉ thất bại (failure / 실패) của một enzyme đơn lẻ.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **18. Thận: lọc nhiều để sau đó chọn lọc rất kỹ** tiếp nhận điểm tựa từ **17. Trạng thái no và nhịn ăn là hai cấu hình điều hòa khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. GFR và tự điều hòa giữ filtration trong vùng hoạt động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Thận: lọc nhiều để sau đó chọn lọc rất kỹ** nối từ **17. Trạng thái no và nhịn ăn là hai cấu hình điều hòa khác nhau** sang **19. GFR và tự điều hòa giữ filtration trong vùng hoạt động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Thận: lọc nhiều để sau đó chọn lọc rất kỹ
 
@@ -230,7 +230,7 @@ lọc
 
 Điểm cốt lõi là thận điều khiển **thành phần** của môi trường bên trong, không phải chỉ “lọc độc”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **19. GFR và tự điều hòa giữ filtration trong vùng hoạt động** tiếp nhận điểm tựa từ **18. Thận: lọc nhiều để sau đó chọn lọc rất kỹ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Tái hấp thu có tính chọn lọc và có giới hạn công suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. GFR và tự điều hòa giữ filtration trong vùng hoạt động** nối từ **18. Thận: lọc nhiều để sau đó chọn lọc rất kỹ** sang **20. Tái hấp thu có tính chọn lọc và có giới hạn công suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. GFR và tự điều hòa giữ filtration trong vùng hoạt động
 
@@ -238,7 +238,7 @@ lọc
 
 Khi tưới máu giảm quá mạnh, autoregulation không còn đủ. Đây là ví dụ của mọi hệ homeostasis: phản hồi (feedback / 피드백) chỉ hoạt động tốt trong một **phạm vi năng lực (operating range)**; vượt khỏi phạm vi đó, đầu ra (output / 출력) có thể suy nhanh.
 
-> **Chuyển mạch:** Trong **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **19. GFR và tự điều hòa giữ filtration trong vùng hoạt động** đã nêu tiêu chí phân biệt, còn **20. Tái hấp thu có tính chọn lọc và có giới hạn công suất** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **21. Hệ đối dòng tạo độ dốc (gradient / 기울기) để cô đặc nước tiểu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. GFR và tự điều hòa giữ filtration trong vùng hoạt động** đặt tiêu chí; **20. Tái hấp thu có tính chọn lọc và có giới hạn công suất** dùng nó để kiểm tra ranh giới, rồi **21. Hệ đối dòng tạo độ dốc (gradient / 기울기) để cô đặc nước tiểu** mở rộng cơ chế.
 
 ## 20. Tái hấp thu có tính chọn lọc và có giới hạn công suất
 
@@ -246,7 +246,7 @@ Khi tưới máu giảm quá mạnh, autoregulation không còn đủ. Đây là
 
 Đây là cùng nguyên lý bão hòa từng gặp ở enzyme và transporter màng, giờ xuất hiện ở cấp cơ quan.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **20. Tái hấp thu có tính chọn lọc và có giới hạn công suất** đã nêu tiêu chí phân biệt, còn **21. Hệ đối dòng tạo độ dốc (gradient / 기울기) để cô đặc nước tiểu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **22. ADH, RAAS và peptide lợi niệu điều khiển các bài toán khác nhau nhưng chồng lấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. Tái hấp thu có tính chọn lọc và có giới hạn công suất** đặt tiêu chí; **21. Hệ đối dòng tạo độ dốc (gradient / 기울기) để cô đặc nước tiểu** dùng nó để kiểm tra ranh giới, rồi **22. ADH, RAAS và peptide lợi niệu điều khiển các bài toán khác nhau nhưng chồng lấp** mở rộng cơ chế.
 
 ## 21. Hệ đối dòng tạo độ dốc (gradient / 기울기) để cô đặc nước tiểu
 
@@ -254,7 +254,7 @@ Các đoạn của quai Henle có tính thấm khác nhau với nước và mu�
 
 ADH làm tăng số aquaporin ở màng tế bào ống góp. Nhưng ADH không thể cô đặc nước tiểu nếu độ dốc (gradient / 기울기) tủy đã mất. Hormone điều chỉnh **khả năng khai thác một cấu trúc vật lý có sẵn**, không tự tạo toàn bộ chức năng từ đầu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **22. ADH, RAAS và peptide lợi niệu điều khiển các bài toán khác nhau nhưng chồng lấp** tiếp nhận điểm tựa từ **21. Hệ đối dòng tạo độ dốc (gradient / 기울기) để cô đặc nước tiểu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Osmolarity và thể tích tuần hoàn là hai biến khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. ADH, RAAS và peptide lợi niệu điều khiển các bài toán khác nhau nhưng chồng lấp** nối từ **21. Hệ đối dòng tạo độ dốc (gradient / 기울기) để cô đặc nước tiểu** sang **23. Osmolarity và thể tích tuần hoàn là hai biến khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. ADH, RAAS và peptide lợi niệu điều khiển các bài toán khác nhau nhưng chồng lấp
 
@@ -262,7 +262,7 @@ ADH chủ yếu đáp ứng osmolarity và giúp giữ nước. Hệ renin–ang
 
 Cơ thể vì vậy dùng nhiều vòng lặp (loop / 루프) chồng lấp thay vì một “hormone huyết áp”. Điều này tăng robustness nhưng cũng làm thất bại (failure / 실패) phức tạp: kích hoạt kéo dài một hệ bù có thể trở thành gánh nặng cho hệ khác.
 
-> **Chuyển mạch:** Trong **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **23. Osmolarity và thể tích tuần hoàn là hai biến khác nhau** tiếp nhận điểm tựa từ **22. ADH, RAAS và peptide lợi niệu điều khiển các bài toán khác nhau nhưng chồng lấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Điều hòa thân nhiệt là bài toán cân bằng năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. Osmolarity và thể tích tuần hoàn là hai biến khác nhau** nối từ **22. ADH, RAAS và peptide lợi niệu điều khiển các bài toán khác nhau nhưng chồng lấp** sang **24. Điều hòa thân nhiệt là bài toán cân bằng năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Osmolarity và thể tích tuần hoàn là hai biến khác nhau
 
@@ -270,7 +270,7 @@ Mất nước tinh khiết làm osmolarity tăng rõ. Mất dịch gần đẳng
 
 Sự phân biệt này giải thích tại sao cùng cảm giác “khát/mất nước” có thể xuất hiện từ những trạng thái dịch cơ thể khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **24. Điều hòa thân nhiệt là bài toán cân bằng năng lượng** tiếp nhận điểm tựa từ **23. Osmolarity và thể tích tuần hoàn là hai biến khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Cơ xương biến tín hiệu điện thành lực cơ học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. Điều hòa thân nhiệt là bài toán cân bằng năng lượng** nối từ **23. Osmolarity và thể tích tuần hoàn là hai biến khác nhau** sang **25. Cơ xương biến tín hiệu điện thành lực cơ học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Điều hòa thân nhiệt là bài toán cân bằng năng lượng
 
@@ -289,7 +289,7 @@ Khi độ ẩm cao, mồ hôi khó bay hơi nên tiết nhiều mồ hôi không
 
 **Sốt (fever)** khác **tăng thân nhiệt do quá tải nhiệt (hyperthermia)**. Trong sốt, hệ điều hòa tăng điểm mục tiêu; trong hyperthermia, điểm mục tiêu không tăng nhưng tải nhiệt vượt khả năng thải nhiệt. Cùng một con số nhiệt độ có thể đến từ cơ chế khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **25. Cơ xương biến tín hiệu điện thành lực cơ học** tiếp nhận điểm tựa từ **24. Điều hòa thân nhiệt là bài toán cân bằng năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Xương là mô sống thích nghi với tải** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. Cơ xương biến tín hiệu điện thành lực cơ học** nối từ **24. Điều hòa thân nhiệt là bài toán cân bằng năng lượng** sang **26. Xương là mô sống thích nghi với tải**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Cơ xương biến tín hiệu điện thành lực cơ học
 
@@ -299,7 +299,7 @@ ATP cần cả để tách myosin khỏi actin và để bơm ion/Ca²⁺ trở 
 
 Lực còn phụ thuộc chiều dài sarcomere và vận tốc co. Hệ thần kinh tăng lực bằng huy động thêm **đơn vị vận động (motor unit)** và tăng tần số phát xung, không phải bằng cách làm từng sợi cơ “co một nửa”.
 
-> **Chuyển mạch:** Trong **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **26. Xương là mô sống thích nghi với tải** tiếp nhận điểm tựa từ **25. Cơ xương biến tín hiệu điện thành lực cơ học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Exercise là phép thử tích hợp của toàn hệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **26. Xương là mô sống thích nghi với tải** nối từ **25. Cơ xương biến tín hiệu điện thành lực cơ học** sang **27. Exercise là phép thử tích hợp của toàn hệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Xương là mô sống thích nghi với tải
 
@@ -307,7 +307,7 @@ Xương liên tục được tái cấu trúc bởi osteoclast và osteoblast. T
 
 Xương phải vừa đủ mạnh để chịu lực vừa đủ nhẹ để vận động hiệu quả. Hình dạng và mật độ vì vậy phản ánh sự đánh đổi (trade-off / 트레이드오프) giữa cơ học, vật liệu và chi phí chuyển hóa.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **27. Exercise là phép thử tích hợp của toàn hệ** tiếp nhận điểm tựa từ **26. Xương là mô sống thích nghi với tải** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Glucose và calcium minh họa homeostasis nhiều cơ quan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **27. Exercise là phép thử tích hợp của toàn hệ** nối từ **26. Xương là mô sống thích nghi với tải** sang **28. Glucose và calcium minh họa homeostasis nhiều cơ quan**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Exercise là phép thử tích hợp của toàn hệ
 
@@ -333,7 +333,7 @@ Tức là cơ thể có thể tăng sử dụng O₂ bằng cách tăng dòng m�
 
 Tập luyện sức bền lâu dài có thể tăng thể tích nhát bóp, mật độ mao mạch, số lượng/chức năng ty thể và điều chỉnh điều khiển (control / 제어) thần kinh tự chủ. Đây là **thích nghi sinh lý trong đời**, khác với thích nghi tiến hóa qua nhiều thế hệ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **28. Glucose và calcium minh họa homeostasis nhiều cơ quan** tiếp nhận điểm tựa từ **27. Exercise là phép thử tích hợp của toàn hệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Compensation giữ đầu ra (output / 출력) nhưng không xóa nguyên nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **28. Glucose và calcium minh họa homeostasis nhiều cơ quan** nối từ **27. Exercise là phép thử tích hợp của toàn hệ** sang **29. Compensation giữ đầu ra (output / 출력) nhưng không xóa nguyên nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Glucose và calcium minh họa homeostasis nhiều cơ quan
 
@@ -341,7 +341,7 @@ Glucose máu được điều khiển bởi pancreas, gan, cơ, mô mỡ, ruột
 
 Ca²⁺ ngoại bào cần cho neuron, cơ, đông máu và signaling. PTH, vitamin D, thận, ruột và xương phối hợp giữ calcium/phosphate trong vùng hoạt động. Xương vì vậy vừa là cấu trúc cơ học vừa là khoáng dự trữ trong một mạng (network / 네트워크) nội tiết.
 
-> **Chuyển mạch:** Trong **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **29. Compensation giữ đầu ra (output / 출력) nhưng không xóa nguyên nhân** tiếp nhận điểm tựa từ **28. Glucose và calcium minh họa homeostasis nhiều cơ quan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Ba trường hợp (case / 사례) tích hợp: mất nước, mất máu và độ cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **29. Compensation giữ đầu ra (output / 출력) nhưng không xóa nguyên nhân** nối từ **28. Glucose và calcium minh họa homeostasis nhiều cơ quan** sang **30. Ba trường hợp (case / 사례) tích hợp: mất nước, mất máu và độ cao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Compensation giữ đầu ra (output / 출력) nhưng không xóa nguyên nhân
 
@@ -349,7 +349,7 @@ Cơ thể có reserve và redundancy. Khi một thành phần suy, thành phần
 
 Nhưng bù trừ kéo dài có chi phí. Co mạch và giữ dịch có thể hỗ trợ pressure ngắn hạn nhưng tăng tải cho tim nếu duy trì quá lâu. **Decompensation** xảy ra khi demand vượt reserve hoặc chính cơ chế bù tạo gánh nặng lớn hơn lợi ích.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **29. Compensation giữ đầu ra (output / 출력) nhưng không xóa nguyên nhân** cho ta quy tắc; **30. Ba trường hợp (case / 사례) tích hợp: mất nước, mất máu và độ cao** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **31. Một bữa ăn cũng là chuyển trạng thái toàn cơ thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **29. Compensation giữ đầu ra (output / 출력) nhưng không xóa nguyên nhân** nêu quy tắc; **30. Ba trường hợp (case / 사례) tích hợp: mất nước, mất máu và độ cao** thử quy tắc trong tình huống, rồi **31. Một bữa ăn cũng là chuyển trạng thái toàn cơ thể** mở rộng hệ quả.
 
 ## 30. Ba trường hợp (case / 사례) tích hợp: mất nước, mất máu và độ cao
 
@@ -359,7 +359,7 @@ Nhưng bù trừ kéo dài có chi phí. Co mạch và giữ dịch có thể h�
 
 **Độ cao:** áp suất riêng phần O₂ hít vào giảm → ventilation tăng sớm; trong ngày–tuần, thận điều chỉnh acid–cơ sở (base / 기반) và erythropoietin tăng tạo hồng cầu. Đây là acclimatization trong đời. Quần thể sống lâu dài ở cao nguyên có thể có adaptation di truyền khác — một cầu nối trực tiếp từ physiology sang evolution.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **30. Ba trường hợp (case / 사례) tích hợp: mất nước, mất máu và độ cao** cho ta quy tắc; **31. Một bữa ăn cũng là chuyển trạng thái toàn cơ thể** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **32. Các hiểu lầm cần tránh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **30. Ba trường hợp (case / 사례) tích hợp: mất nước, mất máu và độ cao** nêu quy tắc; **31. Một bữa ăn cũng là chuyển trạng thái toàn cơ thể** thử quy tắc trong tình huống, rồi **32. Các hiểu lầm cần tránh** mở rộng hệ quả.
 
 ## 31. Một bữa ăn cũng là chuyển trạng thái toàn cơ thể
 
@@ -367,7 +367,7 @@ Nutrient đi vào ruột → hormone/neural tín hiệu (signal / 신호) thay �
 
 Vì vậy “ăn” không phải sự kiện riêng của dạ dày mà là perturbation của một mạng (network / 네트워크) toàn thân.
 
-> **Chuyển mạch:** Trong **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **32. Các hiểu lầm cần tránh** tiếp nhận điểm tựa từ **31. Một bữa ăn cũng là chuyển trạng thái toàn cơ thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Mô hình tổng hợp từ môi trường tới tế bào rồi quay trở lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **32. Các hiểu lầm cần tránh** nối từ **31. Một bữa ăn cũng là chuyển trạng thái toàn cơ thể** sang **33. Mô hình tổng hợp từ môi trường tới tế bào rồi quay trở lại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Các hiểu lầm cần tránh
 
@@ -381,7 +381,7 @@ Vì vậy “ăn” không phải sự kiện riêng của dạ dày mà là per
 
 “Exercise chỉ là chuyện của cơ” sai; nó huy động tim mạch, hô hấp, chuyển hóa, thần kinh, nội tiết, thận và điều hòa nhiệt.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **33. Mô hình tổng hợp từ môi trường tới tế bào rồi quay trở lại** gom các mảnh từ **32. Các hiểu lầm cần tránh** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Human Biology theo luồng (flow / 흐름): oxygen delivery là ví dụ tích hợp nhiều cơ quan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mô hình tổng hợp sửa các hiểu lầm của mục 32; Human Biology theo flow dùng oxygen delivery để tích hợp nhiều cơ quan.
 
 ## 33. Mô hình tổng hợp từ môi trường tới tế bào rồi quay trở lại
 
@@ -402,7 +402,7 @@ Chồng lên luồng (flow / 흐름) vật chất này là các lớp thông tin
 
 <!-- depth-audit-2026:oxygen-delivery-control -->
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **33. Mô hình tổng hợp từ môi trường tới tế bào rồi quay trở lại** cho ta quy tắc; **Human Biology theo luồng (flow / 흐름): oxygen delivery là ví dụ tích hợp nhiều cơ quan** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Compensation khác khôi phục (recovery / 복구)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **33. Mô hình tổng hợp từ môi trường tới tế bào rồi quay trở lại** nêu quy tắc; **Human Biology theo luồng (flow / 흐름): oxygen delivery là ví dụ tích hợp nhiều cơ quan** thử quy tắc trong tình huống, rồi **Compensation khác khôi phục (recovery / 복구)** mở rộng hệ quả.
 
 ## Human Biology theo luồng (flow / 흐름): oxygen delivery là ví dụ tích hợp nhiều cơ quan
 
@@ -420,7 +420,7 @@ trong đó \(CO\) là cung lượng tim và \(C_{aO_2}\) là hàm lượng oxy �
 
 Vì vậy cùng một oxygen consumption có thể đạt bằng tăng luồng (flow / 흐름) hoặc tăng extraction ở mô. Một thất bại (failure / 실패) ở phổi làm giảm arterial oxygen; anemia làm giảm oxygen content dù saturation có thể không quá thấp; cardiac thất bại (failure / 실패) làm giảm luồng (flow / 흐름). Cùng symptom cuối có thể xuất phát từ cơ chế (mechanism / 메커니즘) khác nhau — đây là lý do Human Biology phải học theo chuỗi nhân quả (causal chain / 인과 사슬) thay vì danh sách cơ quan.
 
-> **Chuyển mạch:** Trong **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **Human Biology theo luồng (flow / 흐름): oxygen delivery là ví dụ tích hợp nhiều cơ quan** cho ta quy tắc; **Compensation khác khôi phục (recovery / 복구)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trao đổi dịch mao mạch: vì sao phù xuất hiện khi balance giữa áp lực và dẫn lưu bị phá?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Human Biology theo luồng (flow / 흐름): oxygen delivery là ví dụ tích hợp nhiều cơ quan** nêu quy tắc; **Compensation khác khôi phục (recovery / 복구)** thử quy tắc trong tình huống, rồi **Trao đổi dịch mao mạch: vì sao phù xuất hiện khi balance giữa áp lực và dẫn lưu bị phá?** mở rộng hệ quả.
 
 ## Compensation khác khôi phục (recovery / 복구)
 
@@ -430,7 +430,7 @@ Homeostasis thường che giấu thất bại (failure / 실패) sớm bằng co
 
 <!-- continuity-2026:starling-edema -->
 
-> **Chuyển mạch:** Ở chặng này của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **Trao đổi dịch mao mạch: vì sao phù xuất hiện khi balance giữa áp lực và dẫn lưu bị phá?** tiếp nhận điểm tựa từ **Compensation khác khôi phục (recovery / 복구)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trường hợp (case / 사례) tích hợp: exercise làm nhiều hệ thay trạng thái (state / 상태) cùng lúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Trao đổi dịch mao mạch: vì sao phù xuất hiện khi balance giữa áp lực và dẫn lưu bị phá?** nối từ **Compensation khác khôi phục (recovery / 복구)** sang **Trường hợp (case / 사례) tích hợp: exercise làm nhiều hệ thay trạng thái (state / 상태) cùng lúc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trao đổi dịch mao mạch: vì sao phù xuất hiện khi balance giữa áp lực và dẫn lưu bị phá?
 
@@ -440,7 +440,7 @@ Nước qua thành mao mạch chịu tác động của áp lực thủy tĩnh, 
 
 <!-- continuity-2026:integrated-exercise -->
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **Trao đổi dịch mao mạch: vì sao phù xuất hiện khi balance giữa áp lực và dẫn lưu bị phá?** cho ta quy tắc; **Trường hợp (case / 사례) tích hợp: exercise làm nhiều hệ thay trạng thái (state / 상태) cùng lúc** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) tích hợp: nóng và mất nước tạo xung đột giữa thermoregulation và circulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Trao đổi dịch mao mạch: vì sao phù xuất hiện khi balance giữa áp lực và dẫn lưu bị phá?** nêu quy tắc; **Trường hợp (case / 사례) tích hợp: exercise làm nhiều hệ thay trạng thái (state / 상태) cùng lúc** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례) tích hợp: nóng và mất nước tạo xung đột giữa thermoregulation và circulation** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례) tích hợp: exercise làm nhiều hệ thay trạng thái (state / 상태) cùng lúc
 
@@ -458,7 +458,7 @@ Thất bại (failure / 실패) xảy ra khi một mắt xích trở thành bott
 
 <!-- continuity-2026:dehydration-heat -->
 
-> **Chuyển mạch:** Trong **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **Trường hợp (case / 사례) tích hợp: exercise làm nhiều hệ thay trạng thái (state / 상태) cùng lúc** cho ta quy tắc; **Trường hợp (case / 사례) tích hợp: nóng và mất nước tạo xung đột giữa thermoregulation và circulation** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **50. cầu nối (bridge / 브리지) sang Nervous–Endocrine–Immune các hệ thống (systems / 시스템들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Trường hợp (case / 사례) tích hợp: exercise làm nhiều hệ thay trạng thái (state / 상태) cùng lúc** nêu quy tắc; **Trường hợp (case / 사례) tích hợp: nóng và mất nước tạo xung đột giữa thermoregulation và circulation** thử quy tắc trong tình huống, rồi **50. cầu nối (bridge / 브리지) sang Nervous–Endocrine–Immune các hệ thống (systems / 시스템들)** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례) tích hợp: nóng và mất nước tạo xung đột giữa thermoregulation và circulation
 
@@ -468,7 +468,7 @@ ADH và hệ renin–angiotensin–aldosterone giúp giữ nước/natri theo b�
 
 Nếu heat tải (load / 로드) vượt khả năng tản nhiệt hoặc circulation không còn đủ reserve, compensation có thể chuyển sang decompensation. Điểm quan trọng cho học biology là hiểu **ranh giới (boundary / 경계) của phản hồi (feedback / 피드백)**: vòng điều hòa chỉ hoạt động khi effector còn đủ sức chứa (capacity / 용량) và nguồn lực vật chất chưa cạn.
 
-> **Chuyển mạch:** Ở chặng này của **Sinh lý động vật và Cân bằng nội môi — Animal Physiology and Homeostasis (동물생리학과 항상성)**, **Trường hợp (case / 사례) tích hợp: nóng và mất nước tạo xung đột giữa thermoregulation và circulation** cho ta quy tắc; **50. cầu nối (bridge / 브리지) sang Nervous–Endocrine–Immune các hệ thống (systems / 시스템들)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Case nóng và mất nước cho thấy thermoregulation có thể xung đột với circulation; cầu nối sang Nervous–Endocrine–Immune systems khép mạch điều hòa.
 
 ## 50. cầu nối (bridge / 브리지) sang Nervous–Endocrine–Immune các hệ thống (systems / 시스템들)
 
