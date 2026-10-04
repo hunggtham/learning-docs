@@ -12,6 +12,17 @@ Yield curve xếp lợi suất theo kỳ hạn. Source trình bày bốn cách g
 
 Đường cong dốc lên có thể phản ánh tăng trưởng/lạm phát kỳ vọng hoặc term premium; đường cong đảo có thể phản ánh kỳ vọng hạ lãi suất. Không được đọc hình dạng mà bỏ qua regime, thanh khoản, cung trái phiếu và chính sách. Những kênh vĩ mô rộng hơn thuộc [Monetary System, Liquidity and Crisis Transmission](../../investing/04_economics/04_MONETARY_SYSTEM_LIQUIDITY_AND_CRISIS_TRANSMISSION.md).
 
+### Đặt bốn lý thuyết cạnh nhau
+
+| Lý thuyết | Động lực chính | Dự đoán/insight | Giới hạn |
+|---|---|---|---|
+| Expectations | kỳ vọng lãi suất ngắn hạn tương lai | kỳ hạn dài phản ánh chuỗi short rate kỳ vọng | bỏ qua term/liquidity premium nếu dùng đơn độc |
+| Liquidity premium | phần bù cho duration và thanh khoản | kỳ hạn dài thường cần lợi suất thêm | không nói premium cố định |
+| Market segmentation | cung–cầu tách theo bucket kỳ hạn | mỗi đoạn có giá riêng theo nhà đầu tư và phát hành | khó giải thích thay thế giữa kỳ hạn |
+| Preferred habitat | nhà đầu tư có kỳ hạn ưa thích nhưng có thể dịch chuyển | premium đủ lớn kéo vốn sang habitat khác | sở thích và premium khó quan sát trực tiếp |
+
+Khi đọc một curve, hãy viết hai giả thuyết cạnh nhau: “thị trường đang dự báo short rate nào?” và “term/liquidity premium đang đóng góp bao nhiêu?”. Cách tách này ngăn việc gọi mọi đường cong dốc lên là tăng trưởng hoặc mọi đường cong đảo là suy thoái.
+
 ## 3. Tín dụng và xếp hạng
 
 Default risk là khả năng issuer không trả đủ hoặc đúng hạn. Credit rating của Moody’s, S&P, Fitch và các tổ chức khác là đánh giá tương đối về credit risk; rating không phải bảo hiểm và có thể chậm hơn thông tin thị trường. Spread so với trái phiếu tham chiếu bù cho default, liquidity, tax và các rủi ro khác. High-yield/junk bond có spread và xác suất tổn thất cao hơn trong textbook, nhưng lợi suất cao không tự bù đủ nếu recovery thấp hoặc thanh khoản biến mất.
@@ -60,7 +71,7 @@ Với trái phiếu callable, lãi suất giảm có thể khiến issuer gọi 
 
 Total return của danh mục trái phiếu có thể phân rã thành carry/coupon, thay đổi giá do đường cong, thay đổi spread, FX nếu có và chi phí. So sánh với bond index cần hỏi phần chênh lệch đến từ duration khác, rating khác, sector khác hay timing giao dịch. Một danh mục vượt benchmark trong môi trường lợi suất giảm chưa chắc có kỹ năng; có thể chỉ đang mang duration dài hơn. Attribution làm rõ exposure nào đã tạo kết quả.
 
-## 7. Source-question test
+## 9. Source-question test
 
 Để giải câu hỏi cuối sách, người học cần: (1) phân biệt coupon với YTM; (2) suy ra giá giảm khi lợi suất tăng; (3) chọn duration/convexity phù hợp; (4) phân biệt price index với total-return index; (5) nhận diện spread và rating là thước đo rủi ro, không phải bảo đảm. Các câu hỏi có số liệu hình/OCR không rõ được đánh `SOURCE_AMBIGUITY` trong coverage thay vì bịa đáp án.
 

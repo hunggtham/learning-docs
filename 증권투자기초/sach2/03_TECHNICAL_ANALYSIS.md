@@ -28,6 +28,21 @@ MACD so sánh các EMA để mô tả động lượng và giao cắt. RSI chu�
 
 OBV (On-Balance Volume) cộng/trừ khối lượng theo hướng đóng cửa để tìm xác nhận hoặc phân kỳ. Volume Ratio (VR) so sánh khối lượng tăng và giảm. Point-and-Figure lọc thời gian để tập trung vào chuyển động theo ngưỡng. Mỗi chỉ báo là phép biến đổi của cùng dữ liệu; dùng nhiều chỉ báo tương quan không tạo thêm độc lập thống kê.
 
+### Công thức và biến cần theo dõi
+
+Các chỉ báo trên không phải nhãn bí truyền; chúng là phép biến đổi có đầu vào rõ ràng:
+
+| Chỉ báo | Dạng tính khái quát | Câu hỏi nó trả lời | Bẫy |
+|---|---|---|---|
+| SMA | `SMAₙ = (Pₜ + … + Pₜ₋ₙ₊₁)/n` | Giá trung bình đang dốc lên hay xuống? | Độ trễ, nhạy với cửa sổ `n` |
+| EMA | `EMAₜ = αPₜ + (1−α)EMAₜ₋₁` | Dữ liệu mới đang đổi động lượng nhanh đến đâu? | `α` khác nhau cho tín hiệu khác nhau |
+| RSI | `100 − 100/(1 + average gain/average loss)` | Mức tăng gần đây có áp đảo mức giảm không? | “Quá mua” không phải lệnh bán |
+| MACD | `EMA nhanh − EMA chậm`; signal là EMA của MACD | Động lượng ngắn lệch động lượng dài thế nào? | Crossover trễ và nhiễu |
+| Bollinger | `SMA ± k·độ lệch chuẩn` | Biến động đang co hay giãn quanh trung bình? | Dải rộng không cho biết hướng |
+| OBV | tăng khối lượng khi giá tăng, giảm khi giá giảm | Khối lượng có xác nhận hướng giá không? | Phụ thuộc chất lượng volume |
+
+Đọc bảng theo chuỗi `đầu vào → phép biến đổi → diễn giải → giới hạn`. Nếu thay cửa sổ hoặc nguồn giá, tín hiệu thay đổi; vì vậy không được so sánh hai backtest khi tham số và dữ liệu không cùng định nghĩa.
+
 ## 6. Dow và Elliott
 
 Dow Theory đặt trọng tâm vào xu hướng chính, xu hướng phụ và dao động ngắn hơn; xác nhận giữa các chỉ số và khối lượng giúp tránh đọc một thị trường đơn lẻ. Elliott Wave diễn tả nhịp động lực và điều chỉnh lồng nhau. Vì việc gán nhãn sóng phụ thuộc cách đếm, nó cần được xem là kịch bản có điều kiện, không là bằng chứng duy nhất. Khi cấu trúc giá không thỏa điều kiện, phải bỏ nhãn thay vì ép dữ liệu vào lý thuyết.

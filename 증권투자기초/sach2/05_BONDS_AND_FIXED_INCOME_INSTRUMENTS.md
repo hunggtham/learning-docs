@@ -24,6 +24,22 @@ ABS (Asset-Backed Securities) và MBS (Mortgage-Backed Securities) gom dòng ti�
 
 Preferred stock có quyền ưu tiên cổ tức hoặc tài sản so với common stock nhưng thường hạn chế quyền biểu quyết. Catastrophe bond chuyển một phần rủi ro thảm họa sang nhà đầu tư; nếu trigger xảy ra, principal có thể dùng để bù tổn thất. Structured note kết hợp trái phiếu với phái sinh, nên phải đọc payoff, collateral, issuer risk, liquidity và điều kiện trigger thay vì chỉ nhìn coupon quảng cáo.
 
+### So sánh nhanh: cùng là “fixed income” nhưng payoff không giống nhau
+
+Tên nhóm sản phẩm chỉ cho biết lớp tài sản; muốn đánh giá phải xác định ai sở hữu dòng tiền, biến cố nào làm dòng tiền lệch khỏi kế hoạch và rủi ro nào không thể quan sát từ coupon. Bảng dưới đây dùng cùng một bộ câu hỏi để tránh xếp các sản phẩm khác bản chất vào một rổ:
+
+| Sản phẩm | Dòng tiền chính đến từ đâu? | Rủi ro đặc thù cần tách riêng | Câu hỏi kiểm tra trước khi định giá |
+| --- | --- | --- | --- |
+| Trái phiếu coupon thông thường | Coupon cố định + hoàn gốc | Lãi suất, tín dụng issuer, thanh khoản | YTM dựa trên giá nào và thứ tự ưu tiên khi vỡ nợ ra sao? |
+| Zero-coupon | Khoản hoàn gốc duy nhất ở đáo hạn | Duration dài, nhạy với lãi suất, không có dòng tiền giữa kỳ | Khoảng thời gian khóa vốn và giá trị chiết khấu là bao nhiêu? |
+| Convertible / warrant | Coupon hoặc gốc + quyền tham gia upside của tài sản cơ sở | Biến động cổ phiếu, dilution, điều khoản chuyển đổi | Quyền chuyển đổi thuộc ai, tỷ lệ chuyển đổi và ngày khóa quyền thế nào? |
+| Callable / puttable | Dòng tiền trái phiếu + quyền mua lại/bán lại | Reinvestment risk hoặc extension risk | Ai có quyền kích hoạt, tại mức giá và thời điểm nào? |
+| ABS / MBS / CMO | Dòng tiền từ pool tài sản và waterfall | Default pool, prepayment, tranche, pháp lý cấu trúc | Tiền trả theo pass-through hay waterfall; tranche chịu lỗ trước hay sau? |
+| Floating-rate / reverse floater | Coupon gắn với benchmark, theo cùng chiều hoặc ngược chiều | Basis risk, reset, leverage coupon | Benchmark, spread, kỳ reset và floor/cap cụ thể là gì? |
+| Structured note | Trái phiếu issuer + payoff phái sinh | Issuer risk, barrier/trigger, định giá khó và thanh khoản thấp | Nếu barrier/trigger xảy ra thì mất coupon, gốc hay cả hai? |
+
+Điểm cần nhớ là **nguồn dòng tiền** và **quyền thay đổi dòng tiền** là hai trục khác nhau. Một MBS có thể có tài sản thế chấp nhưng vẫn chịu prepayment; một structured note có thể hứa coupon cao nhưng phần bù nằm ở rủi ro issuer hoặc quyền chọn bán cho nhà đầu tư. Vì thế không nên dùng một chỉ tiêu duy nhất (coupon, rating hay duration) để kết luận sản phẩm “an toàn”.
+
 ## 4. Cách đọc một sản phẩm
 
 Trước khi định giá, ghi bảy câu hỏi: ai là issuer; dòng tiền cố định hay biến đổi; gốc trả khi nào; quyền chọn thuộc ai; tài sản bảo đảm và thứ tự ưu tiên ra sao; điều gì làm dòng tiền đổi; và thị trường thứ cấp có thanh khoản không. Hai sản phẩm cùng coupon có thể có duration, default risk và liquidity risk khác hẳn. Đây là mối nối từ classification sang mechanism.
