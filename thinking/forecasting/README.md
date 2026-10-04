@@ -95,6 +95,12 @@ Outcome được mã hóa 1 nếu xảy ra, 0 nếu không. Score thấp hơn l�
 
 Không dùng một vài forecast để kết luận khả năng dự báo dài hạn.
 
+## 10. Aggregation, structural break và forecast postmortem
+
+Một forecast riêng lẻ có thể phụ thuộc may/rủi; tập forecast tương đồng mới cho biết calibration. Khi gộp nhiều forecaster hoặc model, ghi rõ chúng có chung source, assumption hay failure mode không; trung bình các dự báo correlated không tạo ra evidence độc lập.
+
+Luôn có một câu hỏi về structural break: cơ chế tạo base rate còn tồn tại không, hay policy, technology, competitor hoặc regime đã đổi? Sau resolution, postmortem phải tách `bad luck`, `bad estimate`, `bad model`, `bad data` và `bad resolution rule`, rồi ghi một update rule có thể áp dụng cho forecast sau. [Calibration & Bayesian Updating](../practice/01_calibration_and_bayesian_updating.md) và [Decision Journal & Postmortem](../practice/04_decision_journal_and_postmortem.md) cung cấp vòng feedback này.
+
 ## 7. Scenario ≠ forecast
 
 Scenario hỏi:

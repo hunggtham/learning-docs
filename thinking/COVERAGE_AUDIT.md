@@ -58,6 +58,7 @@ Casebook hiện bao phủ:
 - business/metrics/organizations;
 - negotiation/bargaining/conflict;
 - politics/public policy/institutions.
+- AI-generated claims and verification.
 
 ### Deliberate practice
 
@@ -66,7 +67,10 @@ Casebook hiện bao phủ:
 - calibration và Bayesian updating;
 - sensitivity analysis và uncertainty decomposition;
 - scenario planning và stress testing;
-- decision journal và postmortem.
+- decision journal và postmortem;
+- estimation và sanity checks;
+- argument/evidence mapping;
+- red-team, steelman và disconfirmation.
 
 Practice và casebook có vai trò khác nhau:
 
@@ -165,6 +169,20 @@ Các candidate trước đây đã được xử lý:
 - uncertainty decomposition / sensitivity analysis → `practice/02_sensitivity_analysis_and_uncertainty_decomposition.md`;
 - scenario planning / stress testing → `practice/03_scenario_planning_and_stress_testing.md`;
 - decision journal / review exercises → `practice/04_decision_journal_and_postmortem.md`.
+
+### Depth pass 2026-10-04
+
+| Node | Đã deepen | Artifact / feedback | Giới hạn còn giữ |
+|---|---|---|---|
+| Problem Framing | operationalization, model boundary, competing frames | problem brief với proxy, boundary, evidence và stop condition | measurement theory thuộc Research Methods |
+| Model Selection | model mismatch, discriminating evidence, incomplete information, when not to optimize | model card và test chọn model | formal model/statistics thuộc Mathematics |
+| Critical/Causal Reasoning | evidence map, alternative hypotheses, disconfirmation | map claim và test/update record | causal identification thuộc Research Methods/Econometrics |
+| Forecasting | aggregation, structural break, postmortem | forecast journal và update rule | không biến scenario thành forecast |
+| Decision/EV/Risk | sequential decision, stopping, utility/ruin, robust choice | trigger, stop rule, risk boundary | domain advice vẫn handoff |
+| Practice | estimation, evidence mapping, red-team | 7 drill có output, scoring và review | causal diagnosis riêng chưa mở vì casebook đã bao phủ đủ |
+| Casebook | AI-generated claim verification | provenance/evidence audit record | không link `/life` hoặc `how_things_work` vì chưa tracked trên main |
+
+Ma trận audit nội bộ đã được dùng để quyết định các thay đổi trên: topic → canonical owner → current depth → practical workflow/output → feedback loop → missing failure modes → duplication risk → backlink status. Không tạo practice causal diagnosis riêng vì `causal-reasoning/` và engineering incident case đã có workflow, còn gap có giá trị cao hơn nằm ở estimation/evidence/red-team.
 
 ## Next depth rule
 

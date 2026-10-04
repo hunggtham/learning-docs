@@ -10,6 +10,9 @@ Khác với [`90_connections/`](../90_connections/README.md), nơi bắt đầu 
 2. [Sensitivity Analysis & Uncertainty Decomposition](./02_sensitivity_analysis_and_uncertainty_decomposition.md) — tìm assumption nào thật sự quyết định conclusion.
 3. [Scenario Planning & Stress Testing](./03_scenario_planning_and_stress_testing.md) — kiểm tra decision khi tương lai khác base case.
 4. [Decision Journal & Postmortem](./04_decision_journal_and_postmortem.md) — tách decision quality khỏi luck bằng record trước quyết định và review sau outcome.
+5. [Estimation & Sanity Checks](./05_estimation_and_sanity_checks.md) — luyện bounds, decomposition, units và order-of-magnitude trước khi tính chi tiết.
+6. [Argument & Evidence Mapping](./06_argument_and_evidence_mapping.md) — biến claim thành map có provenance, inference, alternatives và update trigger.
+7. [Red-team, Steelman & Disconfirmation](./07_red_team_steelman_and_disconfirmation.md) — luyện phản biện có prediction thay vì phản đối theo phản xạ.
 
 ## Chu kỳ luyện
 
