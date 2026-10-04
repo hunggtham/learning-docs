@@ -6,7 +6,7 @@
 
 Mozambique kéo dài theo bờ Ấn Độ Dương, với hình dạng bắc–nam rất dài. Điều này làm khoảng cách nội bộ lớn và tạo nhiều vùng chức năng thay vì một lõi duy nhất. Maputo ở cực nam, Beira ở miền trung và Nacala/Pemba ở phía bắc tạo các gateway khác nhau.
 
-> **Chuyển mạch:** Trong **Mozambique**, **Đồng bằng ven biển và các lưu vực xuyên biên giới** tiếp nhận điểm tựa từ **Một quốc gia ven Ấn Độ Dương có chiều dài lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khí hậu và cyclone** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Chiều dài bờ biển và các lưu vực xuyên biên giới làm **Đồng bằng ven biển và các lưu vực xuyên biên giới** nối Mozambique với nội địa Southern Africa. **Khí hậu và cyclone** tiếp theo đặt dải đồng bằng ấy trước mùa mưa và bão nhiệt đới.
 
 ## Đồng bằng ven biển và các lưu vực xuyên biên giới
 
@@ -14,7 +14,7 @@ Nhiều con sông lớn bắt nguồn từ các nước nội lục rồi chảy
 
 Các đồng bằng thấp có đất nông nghiệp và khả năng tiếp cận (accessibility / 접근성) tốt nhưng cũng tăng exposure trước lũ và bão. Đây là sự đánh đổi (trade-off / 트레이드오프) điển hình của coastal lowland.
 
-> **Chuyển mạch:** Ở chặng này của **Mozambique**, **Khí hậu và cyclone** tiếp nhận điểm tựa từ **Đồng bằng ven biển và các lưu vực xuyên biên giới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ đô thị và cảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Zambezi và các basin xuyên biên giới cấp nước, nhưng **Khí hậu và cyclone** tạo flood, storm surge và variability dọc bờ. **Hệ đô thị và cảng** tiếp theo cho thấy các nút coastal chịu exposure ra sao.
 
 ## Khí hậu và cyclone
 
@@ -22,7 +22,7 @@ Bờ biển dài hướng ra vùng tây nam Ấn Độ Dương khiến Mozambiqu
 
 Miền bắc và trung nhìn chung ẩm hơn miền nam, nhưng biến động mưa vẫn lớn và hạn có thể ảnh hưởng sản xuất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mozambique**, **Hệ đô thị và cảng** tiếp nhận điểm tựa từ **Khí hậu và cyclone** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Maputo, Beira, Nacala và các cảng khác biến **Hệ đô thị và cảng** thành gateway của hinterland khác nhau, trong khi coastal exposure vẫn cao. **Kinh tế không gian** tiếp theo nối ports với agriculture, gas và mining.
 
 ## Hệ đô thị và cảng
 
@@ -30,19 +30,19 @@ Maputo kết nối mạnh với hành lang kinh tế Nam Phi. Beira là cửa ng
 
 Do đó Mozambique có thể đọc như **một chuỗi cổng (port / 포트)–corridor các hệ thống (systems / 시스템들)** hơn là một mạng đô thị tập trung duy nhất.
 
-> **Chuyển mạch:** Trong **Mozambique**, **Kinh tế không gian** tiếp nhận điểm tựa từ **Hệ đô thị và cảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro và resilience** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Coal, gas, agriculture, fisheries và logistics phân bố theo corridor ven biển–sông; **Kinh tế không gian** tạo các cực nhưng không phủ đều lãnh thổ. **Rủi ro và resilience** tiếp theo kiểm tra khả năng duy trì các cực ấy.
 
 ## Kinh tế không gian
 
 Nông nghiệp vẫn quan trọng ở vùng nông thôn, trong khi khai khoáng và khí tự nhiên tạo các cực đầu tư lớn tại một số vùng. Tuy nhiên tài nguyên chỉ tạo spillover rộng nếu được nối với mạng đường, việc làm địa phương, năng lượng và dịch vụ.
 
-> **Chuyển mạch:** Ở chặng này của **Mozambique**, **Rủi ro và resilience** tiếp nhận điểm tựa từ **Kinh tế không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cyclone, flood, drought và coastal erosion làm **Rủi ro và resilience** phụ thuộc cả hạ tầng, livelihood và governance; corridor không chỉ là lợi thế. **Mô hình tư duy** sẽ tổng hợp coast, basin và port.
 
 ## Rủi ro và resilience
 
 Ngoài cyclone và flood, xói lở bờ biển, hạn và hạ tầng yếu tại một số vùng làm vulnerability tăng. Khi một cây cầu hoặc đoạn đường duy nhất bị hỏng, mạng (network / 네트워크) có thể mất kết nối trên phạm vi lớn vì thiếu tuyến thay thế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mozambique**, **Mô hình tư duy** gom các mảnh từ **Rủi ro và resilience** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi Indian Ocean length → coastal plains/basins → climate/cyclone → urban ports → spatial economy → risk/resilience, rồi bàn giao cho owner **Eastern Africa** trong [README](./README.md).
 
 ## Mô hình tư duy
 
