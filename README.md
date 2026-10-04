@@ -40,7 +40,7 @@ Phần này là bản đồ của toàn bộ kho học tập. Hãy chọn một 
 - [Study Planner](planner/study-planner/README.md): ứng dụng lập kế hoạch học tập đồng bộ Supabase.
 - [Study Library](learning-library/README.md): trình đọc Markdown/PDF tĩnh cho GitHub Pages.
 
-> **Chuyển mạch:** Trong **Học tập (learning / 학습) Docs**, **Quy ước biên soạn** tiếp nhận điểm tựa từ **Bộ tài liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lecture contract cho tài liệu học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Bộ tài liệu** cho biết repository đang sở hữu những domain nào; **Quy ước biên soạn** biến ownership đó thành cách viết, rồi **Lecture contract** khóa mục tiêu học của từng file.
 
 ## Quy ước biên soạn
 
@@ -50,7 +50,7 @@ Các quy ước dưới đây giải thích cách đọc, cách cập nhật và
 - Trình bày theo thứ tự: khái niệm → cơ chế/quy tắc → so sánh → ví dụ → ôn tập.
 - Không sửa nguồn thô; mọi bản học được tạo lại bằng script tương ứng trong `scripts/`.
 
-> **Chuyển mạch:** Ở chặng này của **Học tập (learning / 학습) Docs**, **Lecture contract cho tài liệu học** tiếp nhận điểm tựa từ **Quy ước biên soạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Lecture contract** chốt object, mechanism, evidence và boundary; các README domain dùng contract đó để giải thích bằng tiếng Việt mà vẫn giữ owner riêng.
 
 ## Lecture contract cho tài liệu học
 

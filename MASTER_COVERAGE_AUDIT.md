@@ -63,7 +63,7 @@ Vì vậy đợt tiếp theo không nên tạo thêm các lĩnh vực (domain / 
 
 Đây là backlog **P0 siêu dữ liệu (metadata / 메타데이터)**, nhưng chỉ nên tạo kiểm tra (audit / 감사)/README khi có đơn vị sở hữu (owner / 오너) và nội dung thực tế; không tạo tệp (file / 파일) rỗng để làm mất cảnh báo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Master Coverage kiểm tra (audit / 감사) — học tập (learning / 학습) Docs**, **Cross-domain spine được chốt** tiếp nhận điểm tựa từ **Ma trận coverage cấp repository** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đối chiếu trực tiếp với 12 khuyến nghị trong cuộc rà soát (review / 검토)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Ma trận coverage cấp repository** cho biết mỗi domain đã có gì; **Cross-domain spine** gom các route giao nhau, rồi **Đối chiếu 12 khuyến nghị** kiểm tra claim bằng evidence cụ thể.
 
 ## Cross-domain spine được chốt
 
@@ -146,7 +146,7 @@ Psychology + Sociology
 
 Measure lý thuyết (theory / 이론), advanced stochastic calculus, advanced trình biên dịch (compiler / 컴파일러) hiện thực (implementation / 구현), vendor-specific cloud catalogs, frontier ML papers hoặc nhánh lịch sử/philosophy mới chỉ nên mở khi một tuyến (route / 경로) hiện tại bị chặn bởi phụ thuộc (dependency / 의존성) cụ thể. Độ dài corpus tự nó không phải completion criterion.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Master Coverage kiểm tra (audit / 감사) — học tập (learning / 학습) Docs**, **Quy tắc tránh mở rộng sai hướng** tiếp nhận điểm tựa từ **Gaps được ưu tiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Definition of done cho master kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Gaps được ưu tiên** xác định thiếu gì và owner nào chịu trách nhiệm; **Quy tắc tránh mở rộng sai hướng** ngăn sửa lấn domain trước khi **Definition of done** được kiểm chứng.
 
 ## Quy tắc tránh mở rộng sai hướng
 
@@ -156,7 +156,7 @@ Measure lý thuyết (theory / 이론), advanced stochastic calculus, advanced t
 - Không dùng nguồn exam/PDF/trường hợp (case / 사례) như prose chuẩn gốc (canonical / 정본) nếu chưa chuyển thành explanation có provenance.
 - Với law, thị trường (market / 시장), cloud sản phẩm (product / 제품) và kỹ thuật thay đổi nhanh, ghi ngày kiểm tra và nguồn chính thức.
 
-> **Chuyển mạch:** Trong **Master Coverage kiểm tra (audit / 감사) — học tập (learning / 학습) Docs**, **Definition of done cho master kiểm tra (audit / 감사)** tiếp nhận điểm tựa từ **Quy tắc tránh mở rộng sai hướng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Definition of done** khép audit bằng owner, link, evidence và prose tự nhiên; nếu thiếu một điều kiện, route quay lại gap tương ứng thay vì ghi nhận hoàn thành.
 
 ## Definition of done cho master kiểm tra (audit / 감사)
 
