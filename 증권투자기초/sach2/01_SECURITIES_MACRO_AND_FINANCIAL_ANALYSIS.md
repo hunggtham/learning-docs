@@ -45,6 +45,16 @@ ROE = lợi nhuận sau thuế / vốn chủ sở hữu bình quân × 100%
 
 ROE cao có thể đến từ biên lợi nhuận tốt, sử dụng tài sản hiệu quả hoặc đòn bẩy cao. Vì mẫu số khác nhau, không được xếp hạng doanh nghiệp chỉ bằng một tỷ số. ROE là đầu vào trực tiếp cho quan hệ PBR–ROE ở bài 2; nếu bỏ qua đòn bẩy và chất lượng lợi nhuận, multiple sẽ bị đọc sai.
 
+## 6. Worked chain: từ chỉ báo đến luận điểm doanh nghiệp
+
+Hãy coi một chỉ báo là điểm bắt đầu của chuỗi, không phải kết luận. Nếu BSI tăng trên 100, giả thuyết đầu tiên là kỳ vọng doanh nghiệp cải thiện. Bước kế tiếp là hỏi ngành nào trả lời tích cực, doanh thu nào có thể tăng, chi phí đầu vào và lãi vay có tăng nhanh hơn không, rồi kiểm tra xem lợi nhuận có chuyển thành CFO hay bị vốn lưu động hút mất. Chỉ khi chuỗi `kỳ vọng → hoạt động → lợi nhuận → tiền` nhất quán, chỉ báo mới có thể trở thành một phần của luận điểm.
+
+Ví dụ, một nhà sản xuất có thể hưởng lợi từ cầu tăng nhưng đồng thời phải dự trữ hàng tồn kho và vay ngắn hạn. Doanh thu tăng làm GDP/BSI narrative đẹp hơn, nhưng dòng tiền hoạt động âm và lãi vay tăng có thể làm ROE giảm. Cùng một tín hiệu vĩ mô vì thế có thể tốt cho doanh thu nhưng xấu cho khả năng thanh toán. Đây là lý do source đặt chu kỳ, báo cáo và tỷ số cạnh nhau.
+
+## 7. Checklist đọc báo cáo không nhầm số liệu với cơ chế
+
+Trước khi chuyển sang định giá, hãy ghi bốn dòng: (1) doanh nghiệp bán gì và ở thị trường nào; (2) lợi nhuận đến từ giá, sản lượng, biên hay khoản bất thường; (3) tài sản và nợ nào tài trợ hoạt động; (4) chênh lệch giữa lợi nhuận và dòng tiền đến từ vốn lưu động, capex hay ghi nhận kế toán nào. Nếu không trả lời được dòng thứ tư, chưa nên dùng PER/PBR/EV/EBITDA. Bài 2 sẽ dùng chính các câu trả lời này để chọn denominator phù hợp.
+
 ## Chốt và bàn giao
 
 Mental model của bài này là “điều kiện kinh tế → hoạt động doanh nghiệp → dòng tiền/quyền lợi → thước đo”. Ranh giới quan trọng là chỉ báo vĩ mô và tỷ số kế toán đều là phép đo có định nghĩa, không phải lời tiên tri. Bài 2 dùng dòng tiền, suất sinh lợi yêu cầu và tỷ số đó để trả lời doanh nghiệp đáng giá bao nhiêu; hãy đọc tiếp [Định giá cổ phiếu](./02_EQUITY_VALUATION_AND_MULTIPLES.md).

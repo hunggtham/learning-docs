@@ -26,9 +26,24 @@ Khi đọc một chỉ số, kiểm tra: universe, quy tắc chọn và loại m
 
 ## 5. Câu hỏi ứng dụng và cách giải
 
-Các câu hỏi cuối khối yêu cầu nhận diện KOSPI/KOSDAQ/S&P 500/Nikkei 225, phân biệt PER–PBR–PSR–EV/EBITDA và hiểu portfolio effect. Cách giải không phải nhớ đáp án: (1) xác định object; (2) viết numerator/denominator hoặc cách index-weight; (3) nêu điều kiện; (4) kiểm tra bẫy như split, cổ tức, đòn bẩy và currency. Các số trong ảnh OCR không đủ chắc để chép lại; nguyên tắc reasoning được giữ, chi tiết số liệu được đánh dấu `PARTIAL` trong coverage.
+Các câu hỏi cuối khối yêu cầu nhận diện KOSPI/KOSDAQ/S&P 500/Nikkei 225, phân biệt PER–PBR–PSR–EV/EBITDA và hiểu portfolio effect. Cách giải không phải nhớ đáp án: (1) xác định object; (2) viết numerator/denominator hoặc cách index-weight; (3) nêu điều kiện; (4) kiểm tra bẫy như split, cổ tức, đòn bẩy và currency. Các số trong ảnh OCR không đủ chắc để chép lại; nguyên tắc reasoning được giữ, chi tiết số liệu được đánh dấu `SOURCE_AMBIGUITY` trong coverage.
+
+## 6. Worked portfolio and benchmark check
+
+Với hai tài sản có trọng số `w₁`, `w₂`, phương sai danh mục không chỉ là trung bình phương sai riêng:
+
+```text
+σ²p = w₁²σ₁² + w₂²σ₂² + 2w₁w₂ρ₁₂σ₁σ₂
+```
+
+Hạng tử tương quan giải thích vì sao hai khoản đầu tư biến động mạnh vẫn có thể làm danh mục ổn định hơn khi chúng không cùng giảm. Nhưng tương quan là biến số theo regime; trong stress, thanh khoản và đòn bẩy có thể làm `ρ` tăng. Vì vậy diversification cần được kiểm tra bằng kịch bản, không chỉ bằng correlation trung bình lịch sử.
+
+Khi so sánh với benchmark, phải đồng nhất ba thứ: cách tính lợi suất (price hay total return), tiền tệ và thời điểm tái cân bằng. Một quỹ nhận cổ tức nhưng benchmark chỉ tính giá sẽ bị đánh giá thấp giả tạo; một danh mục KRW so với benchmark USD sẽ trộn lợi nhuận tài sản với FX. Đây là lý do index construction là một phần của measurement, không chỉ là tên chỉ số.
+
+## 7. Khi chiến lược thất bại
+
+Buy-and-hold thất bại nếu tài sản mất khả năng tạo dòng tiền; DCA thất bại về mục tiêu nếu nhà đầu tư không chịu được drawdown kéo dài; small-firm/formula effect thất bại nếu premium bị phí, thanh khoản hoặc data-mining ăn hết. Mỗi chiến lược cần một kill condition: thay đổi quyền lợi pháp lý, suy giảm chất lượng lợi nhuận, turnover vượt ngân sách hoặc benchmark-adjusted return không còn bù rủi ro. Bài 5 sẽ cho thấy cùng logic này áp dụng vào sản phẩm trái phiếu có payoff phức tạp hơn.
 
 ## Chốt và bàn giao
 
 Invariant là “kết quả đầu tư = exposure × cơ chế lợi suất − chi phí và rủi ro”. Benchmark chỉ có ý nghĩa khi cùng định nghĩa lợi suất, tiền tệ và thời hạn. Bài 5 chuyển sang trái phiếu, nơi exposure được trả theo coupon, gốc, quyền chọn và thứ tự ưu tiên thay vì residual claim của cổ phiếu. Xem [Trái phiếu và sản phẩm thu nhập cố định](./05_BONDS_AND_FIXED_INCOME_INSTRUMENTS.md).
-

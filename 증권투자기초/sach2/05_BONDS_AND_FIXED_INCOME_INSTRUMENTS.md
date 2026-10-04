@@ -32,7 +32,22 @@ Trước khi định giá, ghi bảy câu hỏi: ai là issuer; dòng tiền c�
 
 Tên sản phẩm, điều khoản phát hành và luật thuế thay đổi theo jurisdiction và ngày phát hành. Source cung cấp taxonomy, không cung cấp bản cập nhật pháp lý hiện tại. Trước khi mua sản phẩm thật, cần đọc prospectus và nguồn chính thức; không suy ra suitability từ tên gọi “fixed income”.
 
+## 6. Worked bond price
+
+Giả sử trái phiếu mệnh giá 1.000, coupon năm 6% và còn hai năm. Nếu lợi suất thị trường là 8%, giá lý thuyết là:
+
+```text
+P = 60/1,08 + (60 + 1.000)/(1,08)^2 ≈ 964,33
+```
+
+Giá thấp hơn mệnh giá vì coupon 6% thấp hơn lợi suất yêu cầu 8%. Nếu lợi suất giảm xuống 4%, cùng dòng tiền sẽ có giá cao hơn mệnh giá. Ví dụ này cho thấy coupon rate cố định nhưng market yield thay đổi; không được gọi coupon 6% là “lợi suất chắc chắn” khi mua trên thị trường thứ cấp.
+
+## 7. Payoff map cho sản phẩm lai
+
+Convertible bond có một phần trái phiếu và một quyền chọn chuyển đổi; khi giá cổ phiếu tăng, quyền chọn có thể làm giá sản phẩm tăng nhanh hơn trái phiếu thuần. Callable bond trao quyền cho issuer mua lại khi lãi suất giảm, nên nhà đầu tư bị giới hạn upside và chịu reinvestment risk. Puttable bond trao quyền ngược lại cho nhà đầu tư, thường có giá trị bảo vệ khi lãi suất tăng hoặc credit xấu đi. ABS/MBS thêm prepayment và waterfall risk: dòng tiền có thể đến sớm, đến muộn hoặc bị phân tầng khác dự kiến.
+
+Khi đọc structured note, hãy tách payoff thành trái phiếu nền + quyền chọn + rủi ro issuer + điều kiện trigger. Coupon cao có thể là tiền bán quyền chọn hoặc bù cho thanh khoản thấp, không phải “free yield”. Đây là mental model giúp người học không nhầm tên sản phẩm với mức an toàn.
+
 ## Chốt và bàn giao
 
 Invariant là “trái phiếu là gói dòng tiền có thời điểm, ưu tiên và quyền chọn”. Giá phụ thuộc discount rate và xác suất dòng tiền thực sự nhận được. Bài 6 dùng invariant này để giải YTM, đường cong lợi suất, spread, duration và chỉ số trái phiếu. Xem [Lợi suất và rủi ro trái phiếu](./06_BOND_YIELDS_RISK_DURATION_AND_INDICES.md).
-

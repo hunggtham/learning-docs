@@ -38,6 +38,16 @@ Source cũng dùng nguyên lý sóng cùng dãy Fibonacci `1, 1, 2, 3, 5, 8, ...
 
 Trước khi dùng tín hiệu, ghi rõ: dữ liệu có sẵn tại thời điểm nào; quy tắc vào/ra; phí và trượt giá; regime nào làm tín hiệu thất bại; và benchmark nào để so sánh. Kiểm thử ngoài mẫu, tránh look-ahead và ghi nhật ký quyết định. Đây là chỗ nối tới [Systematic Risk, Backtest and Execution](../../investing/05_trading_derivatives/02_SYSTEMATIC_RISK_BACKTEST_EXECUTION.md), nơi phần phương pháp thuộc owner canonical được đào sâu.
 
+## 8. Worked signal reading
+
+Giả sử giá đóng cửa đi từ 100 → 102 → 101 → 103 → 104. SMA ba kỳ lần lượt chỉ được tính khi đủ ba quan sát: tại ngày 3 là `(100+102+101)/3 = 101`; tại ngày 4 là `(102+101+103)/3 ≈ 102`; tại ngày 5 là `(101+103+104)/3 ≈ 102,67`. Đường trung bình tăng, nhưng nó vẫn chậm hơn giá thật và không nói được cú tăng có bền không. Nếu dùng crossover, ngày bắt đầu tín hiệu phải được ghi rõ để không vô tình dùng dữ liệu tương lai.
+
+Với một mẫu head-and-shoulders, quy trình đọc là: xác định ba đỉnh và hai đáy tương đối, vẽ neckline, đợi giá đóng cửa phá neckline, rồi kiểm tra khối lượng và điểm vô hiệu hóa. Nếu giá quay lại trên neckline, tín hiệu phá vỡ thất bại; không được giữ nguyên mục tiêu chỉ vì hình vẽ ban đầu trông đẹp. Với RSI hoặc Bollinger, cùng nguyên tắc áp dụng: chỉ báo tạo điều kiện quan sát, còn quyết định cần bối cảnh xu hướng và mức lỗ chấp nhận.
+
+## 9. Phân biệt tín hiệu, quy tắc và lợi thế
+
+Một tín hiệu là biến đổi dữ liệu; một quy tắc là tín hiệu cộng điều kiện vào/ra; một lợi thế là chênh lệch kỳ vọng còn lại sau chi phí và sai số. Ví dụ “RSI dưới 30” chỉ là tín hiệu. Quy tắc phải nói tài sản nào, khung thời gian nào, vào ở đâu, thoát khi nào và xử lý gap ra sao. Lợi thế chỉ được tin sau kiểm thử ngoài mẫu, phân tích độ nhạy tham số và kiểm tra turnover. Đây là boundary ngăn việc biến sách kỹ thuật thành danh sách indicator.
+
 ## Chốt và bàn giao
 
 Invariant là “tín hiệu kỹ thuật mô tả hành vi giá với độ trễ và xác suất; nó không tạo ra giá trị nội tại”. Bài 4 đặt tín hiệu vào chiến lược, danh mục và benchmark, rồi kiểm tra một chiến lược có sống được sau chi phí hay không. Xem [Chiến lược và chỉ số](./04_INVESTMENT_STRATEGIES_AND_INDICES.md).

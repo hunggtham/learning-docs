@@ -88,7 +88,28 @@ EV (Enterprise Value) nhìn giá trị hoạt động cho cả chủ nợ và c�
 
 Đọc bảng multiple theo bốn bước: (1) xác định numerator và denominator; (2) kiểm tra chất lượng và chu kỳ của denominator; (3) so với nhóm tương đồng; (4) nối multiple với tăng trưởng, biên, ROIC và rủi ro. Không dùng nhiều tỷ số để tạo ảo giác đồng thuận: PER, PBR, PSR và EV/EBITDA có thể cùng sai nếu dự báo dòng tiền sai.
 
+## 10. Worked valuation bridge
+
+Giả sử `Rf = 5%`, beta bằng `1,2` và phần bù rủi ro thị trường là `5%`. CAPM cho suất sinh lợi yêu cầu khoảng `5% + 1,2 × 5% = 11%`. Con số 11% chưa phải giá trị cổ phiếu; nó chỉ là tỷ lệ dùng để chiết khấu dòng tiền có rủi ro tương tự. Nếu doanh nghiệp có nợ, dòng tiền cho toàn công ty còn cần WACC; nếu định giá trực tiếp phần cổ đông, FCFE phải đi với cost of equity.
+
+Với một dự án bỏ ra 100 hôm nay và nhận 60 rồi 70 trong hai năm, NPV ở 10% là:
+
+```text
+NPV = −100 + 60/1,10 + 70/(1,10)^2 ≈ 8,26
+```
+
+NPV dương trong ví dụ này chỉ nói rằng dòng tiền giả định vượt hurdle rate 10%. Nếu doanh thu giảm, capex tăng hoặc discount rate lên 14%, NPV có thể âm. Vì vậy một mô hình tốt phải có bảng độ nhạy, không chỉ một giá trị trung tâm.
+
+## 11. Tam giác kiểm tra multiple
+
+Giả sử một cổ phiếu có EPS chuẩn hóa 5 và giá 75, PER là 15 lần. Để biết 15 lần có hợp lý không, cần nối ba câu hỏi: lợi nhuận 5 có lặp lại không; ROE và tái đầu tư có đủ để tăng EPS không; và 15 lần đang cao hay thấp so với rủi ro, tăng trưởng và cost of equity của nhóm tương đồng. Nếu EPS tăng do bán tài sản, PER thấp là ảo; nếu EPS đang ở đáy chu kỳ, PER cao chưa chắc đắt.
+
+Tương tự, PBR phải đọc cùng ROE và chất lượng tài sản; PSR phải đọc cùng margin; EV/EBITDA phải đọc cùng capex và nợ. Ba cặp này là các phép kiểm chéo, không phải ba phiếu bầu độc lập. Khi chúng mâu thuẫn, quay về báo cáo và dòng tiền ở bài 1 thay vì lấy trung bình các multiple.
+
+## 12. Điều kiện vô hiệu hóa luận điểm định giá
+
+Một luận điểm định giá cần được coi là sai nếu một trong bốn điều kiện xảy ra: denominator không còn phản ánh hoạt động bình thường; tăng trưởng đòi hỏi tái đầu tư lớn hơn mô hình; ROIC giảm dưới WACC; hoặc discount rate tăng vì rủi ro hệ thống/liquidity. Viết trước các điều kiện này giúp phân biệt “giá chưa chạy” với “mô hình đã hỏng”.
+
 ## Chốt và bàn giao
 
 Invariant của bài là “giá trị = dòng tiền hoặc lợi nhuận tương lai được quy đổi theo rủi ro và thời gian”. Ranh giới là mọi công thức phụ thuộc giả định và đối tượng dòng tiền. Bài 3 chuyển từ giá trị nội tại sang dữ liệu giá/khối lượng: tín hiệu kỹ thuật có thể giúp mô tả hành vi thị trường, nhưng không chứng minh doanh nghiệp đáng giá hơn. Xem [Phân tích kỹ thuật](./03_TECHNICAL_ANALYSIS.md).
-

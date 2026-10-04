@@ -44,6 +44,22 @@ Repo là giao dịch bán và mua lại, về kinh tế gần khoản vay có t�
 
 Ở phần thị trường trái phiếu, source đặt repo cạnh bond index và mô tả repo như một giao dịch có ngày mua lại, tài sản bảo đảm và lãi repo; `KSDA-BLP Korean Bond Index` được nêu như một chỉ số chuẩn hóa có mức cơ sở 100.00. Một bảng còn dùng hạng tín nhiệm `BBB-` để minh họa normal bond. Đây là trạng thái textbook của ví dụ, không phải xác nhận cấu phần hay mức hiện hành của thị trường Hàn Quốc.
 
+## 7. Worked duration and spread scenario
+
+Giả sử một trái phiếu có modified duration bằng 4. Khi lợi suất tăng 50 điểm cơ bản, xấp xỉ bậc một cho biết:
+
+```text
+ΔP/P ≈ −4 × 0,005 = −2%
+```
+
+Nếu convexity dương, số lỗ thực tế thường nhỏ hơn một chút so với approximation tuyến tính khi cú sốc không quá lớn. Nhưng nếu spread tín dụng đồng thời tăng 100 điểm cơ bản, chỉ dùng duration của đường cong chính phủ sẽ đánh giá thiếu rủi ro. Nhà đầu tư cần tách rate duration, spread duration và khả năng dòng tiền thay đổi.
+
+Với trái phiếu callable, lãi suất giảm có thể khiến issuer gọi lại trái phiếu; nhà đầu tư nhận tiền sớm đúng lúc cơ hội tái đầu tư có lợi suất thấp. Với MBS, lãi suất giảm có thể làm prepayment tăng và duration rút ngắn. Vì vậy duration là trạng thái của dòng tiền tại một kịch bản, không phải nhãn cố định trên sản phẩm.
+
+## 8. Từ benchmark đến attribution
+
+Total return của danh mục trái phiếu có thể phân rã thành carry/coupon, thay đổi giá do đường cong, thay đổi spread, FX nếu có và chi phí. So sánh với bond index cần hỏi phần chênh lệch đến từ duration khác, rating khác, sector khác hay timing giao dịch. Một danh mục vượt benchmark trong môi trường lợi suất giảm chưa chắc có kỹ năng; có thể chỉ đang mang duration dài hơn. Attribution làm rõ exposure nào đã tạo kết quả.
+
 ## 7. Source-question test
 
 Để giải câu hỏi cuối sách, người học cần: (1) phân biệt coupon với YTM; (2) suy ra giá giảm khi lợi suất tăng; (3) chọn duration/convexity phù hợp; (4) phân biệt price index với total-return index; (5) nhận diện spread và rating là thước đo rủi ro, không phải bảo đảm. Các câu hỏi có số liệu hình/OCR không rõ được đánh `SOURCE_AMBIGUITY` trong coverage thay vì bịa đáp án.
