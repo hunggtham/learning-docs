@@ -6,7 +6,7 @@
 
 Pháp kết hợp **Atlantic truy cập (access / 접근), Mediterranean truy cập (access / 접근), broad lowland basin, major river các hệ thống (systems / 시스템들) và mountain boundaries**, tạo tài nguyên (resource / 자원)/agricultural diversity lớn. Nhưng urban-economic hệ thống (system / 시스템) có centrality rất mạnh của Paris so với phần còn lại.
 
-> **Chuyển mạch:** Trong **Pháp (France) — Atlantic–Mediterranean duality, Paris centrality và đa dạng nông nghiệp**, **Basin và mountain frame** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hai mặt biển và cổng (port / 포트) geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Thesis về hai mặt biển và địa hình đa dạng cần bắt đầu từ **Basin và mountain frame**: basin mở không gian sản xuất, còn núi tạo biên và hành lang. **Hai mặt biển và cổng (port / 포트) geography** tiếp theo sẽ cho thấy các nền địa hình ấy hướng ra gateway nào.
 
 ## Basin và mountain frame
 
@@ -14,7 +14,7 @@ Paris Basin là low-relief sedimentary region thuận agriculture, road/rail và
 
 Rhône corridor nối interior tới Mediterranean và tạo axis industry/vận chuyển (transport / 전송).
 
-> **Chuyển mạch:** Ở chặng này của **Pháp (France) — Atlantic–Mediterranean duality, Paris centrality và đa dạng nông nghiệp**, **Hai mặt biển và cổng (port / 포트) geography** tiếp nhận điểm tựa từ **Basin và mountain frame** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Paris và primate-city tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Basin và mountain frame định tuyến các sông, pass và vùng cư trú; **Hai mặt biển và cổng (port / 포트) geography** biến chúng thành hai hướng kết nối Atlantic–Channel và Mediterranean. **Paris và primate-city tác động (effect / 효과)** tiếp theo sẽ giải thích trung tâm nào điều phối các gateway đó.
 
 ## Hai mặt biển và cổng (port / 포트) geography
 
@@ -24,7 +24,7 @@ Le Havre–Seine hệ thống (system / 시스템) kết nối Paris basin với
 
 Dual maritime orientation giúp France không phụ thuộc một gateway duy nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pháp (France) — Atlantic–Mediterranean duality, Paris centrality và đa dạng nông nghiệp**, **Paris và primate-city tác động (effect / 효과)** tiếp nhận điểm tựa từ **Hai mặt biển và cổng (port / 포트) geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Agriculture** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hai hướng biển tạo nhiều cửa ngõ, nhưng **Paris và primate-city tác động (effect / 효과)** vẫn tập trung quyết định, vốn và mạng giao thông vào một cực lớn. **Agriculture** tiếp theo kiểm tra cách centrality ấy gặp các basin, soil và climate khác nhau.
 
 ## Paris và primate-city tác động (effect / 효과)
 
@@ -34,7 +34,7 @@ Centrality tạo agglomeration benefit nhưng cũng housing pressure và regiona
 
 High-speed rail làm provincial city gần Paris hơn theo thời gian (time / 시간), nhưng có thể đồng thời tăng Paris pull.
 
-> **Chuyển mạch:** Trong **Pháp (France) — Atlantic–Mediterranean duality, Paris centrality và đa dạng nông nghiệp**, **Agriculture** tiếp nhận điểm tựa từ **Paris và primate-city tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng (energy / 에너지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Paris tạo demand, processing và logistics lớn, còn **Agriculture** phân bố theo soil–climate và vùng chuyên môn hóa; vì vậy sản xuất không trùng với cực đô thị. **Năng lượng (energy / 에너지)** tiếp theo cho thấy mạng sản xuất ấy cần nền điện và nước ở đâu.
 
 ## Agriculture
 
@@ -42,7 +42,7 @@ Climate/soil diversity hỗ trợ grain ở northern basin, wine region, dairy, 
 
 Agriculture hiện đại gắn processing, chất lượng (quality / 품질) label, logistics và export; landscape cultural giá trị (value / 값) cũng lớn.
 
-> **Chuyển mạch:** Ở chặng này của **Pháp (France) — Atlantic–Mediterranean duality, Paris centrality và đa dạng nông nghiệp**, **Năng lượng (energy / 에너지)** tiếp nhận điểm tựa từ **Agriculture** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Industry và dịch vụ (service / 서비스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Agriculture phụ thuộc mùa vụ, nước và processing; **Năng lượng (energy / 에너지)** nối các nhu cầu đó với nuclear, hydro, grid và demand centers. **Industry và dịch vụ (service / 서비스)** sẽ cho thấy nền năng lượng này phân hóa theo cụm kinh tế thế nào.
 
 ## Năng lượng (energy / 에너지)
 
@@ -50,19 +50,19 @@ Electricity hệ thống (system / 시스템) có nuclear role lớn về mặt 
 
 Mountain hydro và coastal wind/solar potential có regional phân phối (distribution / 분포) khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pháp (France) — Atlantic–Mediterranean duality, Paris centrality và đa dạng nông nghiệp**, **Industry và dịch vụ (service / 서비스)** tiếp nhận điểm tựa từ **Năng lượng (energy / 에너지)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vận chuyển (transport / 전송) corridors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Năng lượng là nền dùng chung, nhưng **Industry và dịch vụ (service / 서비스)** chọn nơi có kỹ năng, trường đại học, cảng và thị trường phù hợp. **Vận chuyển (transport / 전송) corridors** tiếp theo sẽ nối các cụm phân tán ấy thành mạng liên vùng.
 
 ## Industry và dịch vụ (service / 서비스)
 
 Aerospace cluster, automotive, luxury, chemical, food processing và tourism có geography khác nhau. Toulouse aerospace cho thấy kiến thức (knowledge / 지식) cluster có thể phát triển ngoài capital khi university/firm/trạng thái (state / 상태) investment tích tụ.
 
-> **Chuyển mạch:** Trong **Pháp (France) — Atlantic–Mediterranean duality, Paris centrality và đa dạng nông nghiệp**, **Vận chuyển (transport / 전송) corridors** tiếp nhận điểm tựa từ **Industry và dịch vụ (service / 서비스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Climate rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Các cụm industry–service chỉ hoạt động như một hệ thống khi được nối bằng Seine, Rhône, rail, road, Alpine pass và Channel crossing; **Vận chuyển (transport / 전송) corridors** là lớp liên kết đó. **Climate rủi ro (risk / 위험)** tiếp theo đặt thử thách lên chính các tuyến này.
 
 ## Vận chuyển (transport / 전송) corridors
 
 Seine, Rhône, Rhine-adjacent east, Alpine pass và Channel crossing là key corridors. France còn đóng vai transit giữa Iberian Peninsula, northern Europe và Italy.
 
-> **Chuyển mạch:** Ở chặng này của **Pháp (France) — Atlantic–Mediterranean duality, Paris centrality và đa dạng nông nghiệp**, **Climate rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **Vận chuyển (transport / 전송) corridors** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regional role** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Corridor tập trung dọc sông, bờ biển và pass nên đồng thời phơi ra trước flood, storm, drought, heat và snow loss; **Climate rủi ro (risk / 위험)** phải được đọc theo vùng chứ không chỉ theo quốc gia. **Regional role** sẽ tổng hợp các liên kết và giới hạn đó.
 
 ## Climate rủi ro (risk / 위험)
 
@@ -70,13 +70,13 @@ Mediterranean south nhạy heat/drought/wildfire; Atlantic/river basin có flood
 
 National adaptation phải regionalized.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pháp (France) — Atlantic–Mediterranean duality, Paris centrality và đa dạng nông nghiệp**, **Regional role** tiếp nhận điểm tựa từ **Climate rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Rủi ro khí hậu phân hóa theo basin, coast, mountain và đô thị, nhưng **Regional role** của France nằm ở khả năng nối Atlantic, Mediterranean và lục địa qua nhiều gateway. **Mô hình tư duy (mental model / 사고 모델)** sẽ giữ cả đa dạng lẫn centrality khi khép profile.
 
 ## Regional role
 
 France là cầu nối (bridge / 브리지) giữa Atlantic, Mediterranean và continental western Europe; Paris là toàn cục (global / 전역) city nút (node / 노드) còn regional corridor tạo diverse môi trường vận hành (production / 운영 환경).
 
-> **Chuyển mạch:** Trong **Pháp (France) — Atlantic–Mediterranean duality, Paris centrality và đa dạng nông nghiệp**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Regional role** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** khép chuỗi basin–mountain → hai gateway biển → Paris primacy → agriculture–energy–industry → corridors và climate risk, rồi bàn giao cho owner **Western Europe — Hồ sơ địa lý** trong [README](./README.md).
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
