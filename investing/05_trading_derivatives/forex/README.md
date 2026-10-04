@@ -57,7 +57,7 @@ Tệp (file / 파일) `00_MASTER_TRADING_FOREX_RISK.md` ở thư mục cha vẫn
 
 # Phase A — Mechanics và survival
 
-> **Chuyển mạch:** Trong **Forex — Foreign Exchange Lộ trình học (learning path / 학습 경로)**, **01 — Thị trường (market / 시장) cấu trúc (structure / 구조) and instruments** tiếp nhận điểm tựa từ **Vị trí trong Investing thư viện (library / 라이브러리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **02 — Quotes, pips, lots and P/L** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Vị trí trong Investing library** đặt FX trong asset và risk context; **01 Market structure/instruments** dựng substrate, rồi **02 Quotes/pips/P&L** làm rõ đơn vị đo.
 
 ## 01 — Thị trường (market / 시장) cấu trúc (structure / 구조) and instruments
 
@@ -65,7 +65,7 @@ Tệp (file / 파일) `00_MASTER_TRADING_FOREX_RISK.md` ở thư mục cha vẫn
 
 Bắt đầu từ câu hỏi **“Forex thị trường (market / 시장) thực sự là thị trường nào?”** Phân biệt spot FX, retail OTC/rolling products, forward, FX swap, currency swap, futures và options; giải thích OTC, interdealer/dealer-client markets, liquidity provider, settlement và vì sao không có một toàn cục (global / 전역) thứ tự (order / 순서) book duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Forex — Foreign Exchange Lộ trình học (learning path / 학습 경로)**, **02 — Quotes, pips, lots and P/L** tiếp nhận điểm tựa từ **01 — Thị trường (market / 시장) cấu trúc (structure / 구조) and instruments** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **03 — Leverage, margin and position sizing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Quotes/pips/P&L** xác định payoff và exposure; **Leverage, margin và sizing** đặt payoff đó vào capacity và loss boundary.
 
 ## 02 — Quotes, pips, lots and P/L
 
@@ -73,7 +73,7 @@ Bắt đầu từ câu hỏi **“Forex thị trường (market / 시장) thực
 
 Đọc currency pair từ nguyên lý nền tảng (first principles / 제일 원리): cơ sở (base / 기반)/quote currency, bid/ask, spread, pip, đặc tả hợp đồng (contract / 계약) kích thước (size / 크기), lot, notional, cross tỷ lệ (rate / 비율), pip giá trị (value / 값) và account-currency conversion. Mục tiêu là tự tính P/L thay vì phụ thuộc broker calculator.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Forex — Foreign Exchange Lộ trình học (learning path / 학습 경로)**, **03 — Leverage, margin and position sizing** tiếp nhận điểm tựa từ **02 — Quotes, pips, lots and P/L** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **04 — Macro drivers, rates, carry and sessions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Leverage/margin/sizing** biến payoff thành risk budget; **Macro drivers, rates, carry và sessions** giải thích nguồn biến động và funding.
 
 ## 03 — Leverage, margin and position sizing
 
@@ -89,7 +89,7 @@ Notional Exposure
 
 Đi sâu equity, used/free margin, margin mức (level / 수준), liquidation/stop-out, portfolio heat, gap rủi ro (risk / 위험) và sizing từ vô hiệu hóa (invalidation / 무효화).
 
-> **Chuyển mạch:** Trong **Forex — Foreign Exchange Lộ trình học (learning path / 학습 경로)**, **04 — Macro drivers, rates, carry and sessions** tiếp nhận điểm tựa từ **03 — Leverage, margin and position sizing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **05 — Thực thi (execution / 실행), brokers, costs and operational rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Macro/rates/carry** xác định regime; **Execution, brokers, costs và operational risk** kiểm tra trade đi qua hệ thống thật với friction nào.
 
 ## 04 — Macro drivers, rates, carry and sessions
 
@@ -97,7 +97,7 @@ Notional Exposure
 
 Currency pair là relative price nên phải phân tích hai economies và hai expected tỷ lệ (rate / 비율) paths. Chương nối central-bank reaction hàm (function / 함수), inflation, growth, real yields, carry, balance of payments, capital flows, sessions và positioning vào chuỗi nhân quả (causal chain / 인과 사슬).
 
-> **Chuyển mạch:** Ở chặng này của **Forex — Foreign Exchange Lộ trình học (learning path / 학습 경로)**, **05 — Thực thi (execution / 실행), brokers, costs and operational rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **04 — Macro drivers, rates, carry and sessions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) and volatility regimes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Execution/operational risk** ghi actual fill và cost; **Price action, trend, range và volatility regime** mô tả dữ liệu thị trường sau friction.
 
 ## 05 — Thực thi (execution / 실행), brokers, costs and operational rủi ro (risk / 위험)
 
@@ -107,7 +107,7 @@ Giải thích chuỗi xử lý (pipeline / 파이프라인) từ tín hiệu (si
 
 # Phase B — Chart và tín hiệu (signal / 신호) nhưng không thần bí hóa indicator
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Forex — Foreign Exchange Lộ trình học (learning path / 학습 경로)**, **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) and volatility regimes** tiếp nhận điểm tựa từ **05 — Thực thi (execution / 실행), brokers, costs and operational rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **07 — Technical indicators as dữ liệu (data / 데이터) transformations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Price action và volatility regimes** mô tả state của market; **Technical indicators** chỉ là transformations cần kiểm chứng, không phải signal tự đủ.
 
 ## 06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) and volatility regimes
 
@@ -133,7 +133,7 @@ Giải thích SMA/EMA, momentum, RSI, MACD, stochastic, Bollinger, ATR, ADX, Don
 
 Xây sự kiện (event / 이벤트) phân tích (analysis / 분석) từ `consensus → actual → surprise → policy repricing → rates → FX`, dùng official central-bank/statistical sources, phân biệt first reaction/follow-through và xử lý revisions, vintage dữ liệu (data / 데이터), timestamp/DST.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Forex — Foreign Exchange Lộ trình học (learning path / 학습 경로)**, **09 — Carry, momentum, giá trị (value / 값) and macro FX strategies** tiếp nhận điểm tựa từ **08 — Fundamental and event-driven FX phân tích (analysis / 분석)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10 — Backtesting and point-in-time FX dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Fundamental/event-driven analysis** tạo hypothesis; **Carry, momentum và value strategies** biến hypothesis thành rule, rồi **Backtesting** kiểm tra point-in-time data.
 
 ## 09 — Carry, momentum, giá trị (value / 값) and macro FX strategies
 
@@ -159,7 +159,7 @@ Học chiến lược (strategy / 전략) families thay vì các setup rời r�
 
 Tách ticket khỏi true exposure: currency decomposition, broad-USD/carry/rates/commodity factors, covariance, stress correlation, VaR/Expected Shortfall, volatility targeting, rủi ro (risk / 위험) contribution, basis rủi ro (risk / 위험) và portfolio heat.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Forex — Foreign Exchange Lộ trình học (learning path / 학습 경로)**, **12 — Trading journal, rà soát (review / 검토) and hiệu năng (performance / 성능) attribution** tiếp nhận điểm tựa từ **11 — Portfolio FX rủi ro (risk / 위험), correlation and factor exposure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13 — Advanced FX microstructure and thứ tự (order / 순서) luồng (flow / 흐름)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Portfolio risk/correlation/factors** phân rã exposure; **Trading journal và performance attribution** đối chiếu quyết định với outcome, rồi **Microstructure/order flow** giải thích execution detail.
 
 ## 12 — Trading journal, rà soát (review / 검토) and hiệu năng (performance / 성능) attribution
 
@@ -185,7 +185,7 @@ Biến journal thành research cơ sở dữ liệu (database / 데이터베이�
 
 # Phase E — Ngữ cảnh (context / 맥락) Korea / Vietnam
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Forex — Foreign Exchange Lộ trình học (learning path / 학습 경로)**, **15 — Korea / Vietnam FX thị trường (market / 시장) ngữ cảnh (context / 맥락) and regulations** tiếp nhận điểm tựa từ **14 — FX options, volatility and hedging** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16 — NDF, forward points, basis and funding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **FX options/volatility/hedging** đặt risk transfer vào context; **Korea/Vietnam market and regulations** xác định boundary, rồi **NDF/forward/basis/funding** lượng hóa giá funding.
 
 ## 15 — Korea / Vietnam FX thị trường (market / 시장) ngữ cảnh (context / 맥락) and regulations
 
@@ -195,7 +195,7 @@ Chapter time-sensitive được research lại từ nguồn chính thức. Korea
 
 # Phase F — Institutional funding, chính sách (policy / 정책) và valuation
 
-> **Chuyển mạch:** Trong **Forex — Foreign Exchange Lộ trình học (learning path / 학습 경로)**, **16 — NDF, forward points, basis and funding** tiếp nhận điểm tựa từ **15 — Korea / Vietnam FX thị trường (market / 시장) ngữ cảnh (context / 맥락) and regulations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17 — Intervention, reserves, REER and currency valuation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **NDF/forward/basis/funding** nối instrument với local market constraint; **Intervention, reserves, REER và valuation** đưa constraint vào policy và equilibrium.
 
 ## 16 — NDF, forward points, basis and funding
 
@@ -203,7 +203,7 @@ Chapter time-sensitive được research lại từ nguồn chính thức. Korea
 
 Đi từ covered-interest-parity intuition sang forward points, FX swaps, cross-currency basis, dealer balance-sheet các ràng buộc (constraints / 제약조건들), collateral, synthetic funding và NDF. Chương này tách onshore/offshore thị trường (market / 시장), fixing convention và capital-control wedge để tránh gọi mọi price gap là arbitrage.
 
-> **Chuyển mạch:** Ở chặng này của **Forex — Foreign Exchange Lộ trình học (learning path / 학습 경로)**, **17 — Intervention, reserves, REER and currency valuation** tiếp nhận điểm tựa từ **16 — NDF, forward points, basis and funding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyên tắc an toàn nghiên cứu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Intervention/reserves/REER/valuation** khép macro route; **Nguyên tắc an toàn nghiên cứu** bảo vệ claim bằng source, date và uncertainty boundary.
 
 ## 17 — Intervention, reserves, REER and currency valuation
 
@@ -225,7 +225,7 @@ Sau Phase E, phải biết rằng **sản phẩm (product / 제품) truy cập (
 
 Sau Phase F, phải phân biệt spot direction với forward/funding economics; hiểu NDF/onshore-offshore segmentation; đọc reserves/intervention/REER theo regime và mô hình (model / 모델) các giả định (assumptions / 가정들) thay vì như single-variable signals.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Forex — Foreign Exchange Lộ trình học (learning path / 학습 경로)**, **Nguyên tắc an toàn nghiên cứu** tiếp nhận điểm tựa từ **17 — Intervention, reserves, REER and currency valuation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn nền xuyên suốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Research safety principles** giới hạn cách diễn giải; **Nguồn nền xuyên suốt** cung cấp canonical evidence cho từng claim FX.
 
 ## Nguyên tắc an toàn nghiên cứu
 
@@ -233,7 +233,7 @@ Forex có thể sử dụng đòn bẩy lớn. Tài liệu phục vụ **học c
 
 Đối với retail OTC/FX-margin products, broker/intermediary/legal thực thể (entity / 엔터티) là một phần của rủi ro (risk / 위험) mô hình (model / 모델). Regulatory details phải được re-check tại thời điểm sử dụng, đặc biệt chapter 15.
 
-> **Chuyển mạch:** Trong **Forex — Foreign Exchange Lộ trình học (learning path / 학습 경로)**, **Nguyên tắc an toàn nghiên cứu** nêu điều cần giải thích; **Nguồn nền xuyên suốt** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Nguồn nền** khép README bằng owner, date và evidence; phần chuyên sâu quay về case/hedging/microstructure canonical chapters.
 
 ## Nguồn nền xuyên suốt
 
