@@ -8,7 +8,7 @@ Khu định cư tập trung nước, thị trường, hành chính, lao động 
 
 Nhưng proximity cũng tạo congestion, giá đất cao, ô nhiễm và rủi ro (risk / 위험) concentration. Thành phố là kết quả cân bằng giữa **lợi ích gần nhau** và **chi phí mật độ**.
 
-> **Chuyển mạch:** Trong **Định cư, đô thị hóa và cấu trúc thành phố**, **Settlement hierarchy** tiếp nhận điểm tựa từ **Thành phố tồn tại vì proximity tạo giá trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Site và situation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Proximity tạo agglomeration, còn **Settlement hierarchy** xếp village–town–city theo dịch vụ, market và reach. **Site và situation** tiếp theo tách điều kiện ngay tại chỗ khỏi quan hệ với vùng xung quanh.
 
 ## Settlement hierarchy
 
@@ -16,7 +16,7 @@ Hệ thống định cư thường có nhiều cấp: làng, thị trấn, thàn
 
 **Central place lý thuyết (theory / 이론)** là mô hình (model / 모델) lý tưởng hóa giúp hiểu dịch vụ (service / 서비스) hierarchy và catchment area. Thực tế bị biến dạng bởi đường, địa hình, online dịch vụ (service / 서비스) và lịch sử, nhưng intuition về threshold và phạm vi (range / 범위) vẫn hữu ích.
 
-> **Chuyển mạch:** Ở chặng này của **Định cư, đô thị hóa và cấu trúc thành phố**, **Site và situation** tiếp nhận điểm tựa từ **Settlement hierarchy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Urbanization khác urban growth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hierarchy cho biết cấp đô thị, còn **Site và situation** giải thích địa hình, nước, cảng và vị trí mạng làm một nơi thuận lợi thế nào. **Urbanization khác urban growth** tiếp theo phân biệt tỷ trọng dân cư với mở rộng số lượng.
 
 ## Site và situation
 
@@ -24,7 +24,7 @@ Hệ thống định cư thường có nhiều cấp: làng, thị trấn, thàn
 
 Nhiều thành phố hình thành nhờ site nhưng lớn lên nhờ situation. Khi công nghệ đổi, situation có thể quan trọng hơn điều kiện ban đầu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định cư, đô thị hóa và cấu trúc thành phố**, **Urbanization khác urban growth** tiếp nhận điểm tựa từ **Site và situation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Land thị trường (market / 시장) và bid-rent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Site/situation tạo nền location, còn **Urbanization khác urban growth** tách urban share, built-up expansion và population increase. **Land thị trường (market / 시장) và bid-rent** tiếp theo giải thích giá đất phân bổ chức năng quanh center.
 
 ## Urbanization khác urban growth
 
@@ -32,7 +32,7 @@ Nhiều thành phố hình thành nhờ site nhưng lớn lên nhờ situation. 
 
 Ngoài di chuyển (migration / 마이그레이션) và natural increase, **reclassification** cũng làm dân số “đô thị” tăng khi khu định cư được đổi định nghĩa hành chính.
 
-> **Chuyển mạch:** Trong **Định cư, đô thị hóa và cấu trúc thành phố**, **Land thị trường (market / 시장) và bid-rent** tiếp nhận điểm tựa từ **Urbanization khác urban growth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vận chuyển (transport / 전송)–land use phản hồi (feedback / 피드백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Urban growth đổi demand, còn **Land thị trường (market / 시장) và bid-rent** nối accessibility với giá đất và land-use intensity. **Vận chuyển (transport / 전송)–land use phản hồi (feedback / 피드백)** tiếp theo cho thấy road/transit lại đổi accessibility.
 
 ## Land thị trường (market / 시장) và bid-rent
 
@@ -40,7 +40,7 @@ Khả năng tiếp cận cao làm nhiều activity sẵn sàng trả rent cao ch
 
 Nhưng metro, highway, zoning và polycentric employment tạo nhiều peak giá đất thay vì một CBD duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Định cư, đô thị hóa và cấu trúc thành phố**, **Vận chuyển (transport / 전송)–land use phản hồi (feedback / 피드백)** tiếp nhận điểm tựa từ **Land thị trường (market / 시장) và bid-rent** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Polycentric city và metropolitan region** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Bid-rent phân bố land theo accessibility, còn **Vận chuyển (transport / 전송)–land use phản hồi (feedback / 피드백)** mô tả loop giữa infrastructure, density và congestion. **Polycentric city và metropolitan region** tiếp theo mở từ một center sang nhiều nút.
 
 ## Vận chuyển (transport / 전송)–land use phản hồi (feedback / 피드백)
 
@@ -50,7 +50,7 @@ Giao thông và sử dụng đất tác động hai chiều:
 
 Đây là lý do xây thêm đường không chỉ “phục vụ nhu cầu có sẵn”; nó có thể thay đổi vị trí nhà ở và doanh nghiệp, tạo **induced demand**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định cư, đô thị hóa và cấu trúc thành phố**, **Polycentric city và metropolitan region** tiếp nhận điểm tựa từ **Vận chuyển (transport / 전송)–land use phản hồi (feedback / 피드백)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Agglomeration và diseconomies** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Transport–land feedback tạo corridor và subcenter; **Polycentric city và metropolitan region** cho thấy commuting và jobs vượt administrative boundary. **Agglomeration và diseconomies** tiếp theo cân lợi ích tập trung với congestion và rent.
 
 ## Polycentric city và metropolitan region
 
@@ -58,7 +58,7 @@ Giao thông và sử dụng đất tác động hai chiều:
 
 Đánh giá housing chỉ trong city proper có thể sai nếu commuter sống ngoài ranh giới. Nên dùng travel-to-work area khi có thể.
 
-> **Chuyển mạch:** Trong **Định cư, đô thị hóa và cấu trúc thành phố**, **Agglomeration và diseconomies** tiếp nhận điểm tựa từ **Polycentric city và metropolitan region** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Housing là hệ thống tồn kho chậm điều chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Polycentric network chia sẻ jobs và services, còn **Agglomeration và diseconomies** giải thích productivity, congestion, pollution và housing pressure. **Housing là hệ thống tồn kho chậm điều chỉnh** tiếp theo cho thấy supply không phản ứng ngay.
 
 ## Agglomeration và diseconomies
 
@@ -66,7 +66,7 @@ Cụm lớn tăng productivity qua matching, sharing, học tập (learning / �
 
 Khi diseconomies tăng, activity có thể chuyển ra suburban nút (node / 노드) hoặc thành phố cấp hai nhưng vẫn giữ link tới cốt lõi (core / 핵심). Vì vậy decentralization không nhất thiết là “thành phố suy tàn”; nó có thể là tái cấu trúc metropolitan mạng (network / 네트워크).
 
-> **Chuyển mạch:** Ở chặng này của **Định cư, đô thị hóa và cấu trúc thành phố**, **Housing là hệ thống tồn kho chậm điều chỉnh** tiếp nhận điểm tựa từ **Agglomeration và diseconomies** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Informal settlement: phản hồi (response / 응답) trước thiếu hụt formal hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Agglomeration hút demand nhanh hơn construction và policy có thể điều chỉnh; **Housing là hệ thống tồn kho chậm điều chỉnh** tạo rent, overcrowding và displacement. **Informal settlement: phản hồi (response / 응답) trước thiếu hụt formal hệ thống (system / 시스템)** tiếp theo cho thấy households tự lấp khoảng trống.
 
 ## Housing là hệ thống tồn kho chậm điều chỉnh
 
@@ -74,7 +74,7 @@ Nhà ở có tuổi thọ dài và xây dựng mất thời gian. Khi việc là
 
 Zoning, floor-area ratio, land assembly, construction sức chứa (capacity / 용량) và vận chuyển (transport / 전송) đều ảnh hưởng supply. Housing affordability vì vậy không chỉ là vấn đề income mà là **income + supply + location + vận chuyển (transport / 전송) chi phí (cost / 비용)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định cư, đô thị hóa và cấu trúc thành phố**, **Informal settlement: phản hồi (response / 응답) trước thiếu hụt formal hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Housing là hệ thống tồn kho chậm điều chỉnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hạ tầng (infrastructure / 인프라) mạng (network / 네트워크) và urban metabolism** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Slow housing supply tạo informal response, còn **Informal settlement: phản hồi (response / 응답) trước thiếu hụt formal hệ thống (system / 시스템)** bộc lộ trade-off giữa affordability, tenure và service access. **Hạ tầng (infrastructure / 인프라) mạng (network / 네트워크) và urban metabolism** tiếp theo nối settlement với water, energy, waste và transport.
 
 ## Informal settlement: phản hồi (response / 응답) trước thiếu hụt formal hệ thống (system / 시스템)
 
@@ -82,7 +82,7 @@ Khi formal housing quá đắt hoặc thủ tục đất đai khó, hộ gia đ�
 
 Chính sách (policy / 정책) phá dỡ xa trung tâm có thể cải thiện building tiêu chuẩn (standard / 표준) nhưng làm mất livelihood nếu commute tăng. Cần đánh giá tổng gói (package / 패키지) **housing + dịch vụ (service / 서비스) + khả năng tiếp cận (accessibility / 접근성)**.
 
-> **Chuyển mạch:** Trong **Định cư, đô thị hóa và cấu trúc thành phố**, **Hạ tầng (infrastructure / 인프라) mạng (network / 네트워크) và urban metabolism** tiếp nhận điểm tựa từ **Informal settlement: phản hồi (response / 응답) trước thiếu hụt formal hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Urban heat island** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Informal housing phản ứng với service gap, còn **Hạ tầng (infrastructure / 인프라) mạng (network / 네트워크) và urban metabolism** theo dõi flows vào/ra đô thị. **Urban heat island** tiếp theo cho thấy built surface đổi energy balance.
 
 ## Hạ tầng (infrastructure / 인프라) mạng (network / 네트워크) và urban metabolism
 
@@ -90,7 +90,7 @@ Thành phố nhập nước, điện, thực phẩm và vật liệu; xuất nư
 
 Mạng nước/điện có economies of density nhưng cũng tạo cascading rủi ro (risk / 위험): mất điện có thể dừng bơm nước, metro và telecom. Resilience cần ánh xạ (mapping / 매핑) phụ thuộc (dependency / 의존성) giữa hạ tầng.
 
-> **Chuyển mạch:** Ở chặng này của **Định cư, đô thị hóa và cấu trúc thành phố**, **Urban heat island** tiếp nhận điểm tựa từ **Hạ tầng (infrastructure / 인프라) mạng (network / 네트워크) và urban metabolism** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Flood và impervious surface** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Urban metabolism điều khiển heat, water và waste flows; **Urban heat island** nối impervious cover, building, vegetation và waste heat với thermal exposure. **Flood và impervious surface** tiếp theo chuyển heat/cover sang runoff.
 
 ## Urban heat island
 
@@ -98,7 +98,7 @@ Vật liệu tối hấp thụ nhiệt, thiếu evapotranspiration, urban canyon
 
 Nhưng nhiệt không phân bố đồng đều trong thành phố. cây (tree / 트리) cover, housing chất lượng (quality / 품질) và AC truy cập (access / 접근) làm **heat exposure + vulnerability** khác nhau giữa neighborhood.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định cư, đô thị hóa và cấu trúc thành phố**, **Flood và impervious surface** tiếp nhận điểm tựa từ **Urban heat island** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Smart city và digital twin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Heat island và impervious cover cùng phản ánh mặt phủ dày; **Flood và impervious surface** giải thích runoff peak, drainage overload và exposure vùng thấp. **Smart city và digital twin** tiếp theo đặt sensor/model vào quản trị các flow đó.
 
 ## Flood và impervious surface
 
@@ -106,7 +106,7 @@ Nhưng nhiệt không phân bố đồng đều trong thành phố. cây (tree /
 
 Quy hoạch cần giữ floodplain, lưu trữ (storage / 저장소) và overland luồng (flow / 흐름) tuyến (route / 경로), không chỉ tăng kích thước cống.
 
-> **Chuyển mạch:** Trong **Định cư, đô thị hóa và cấu trúc thành phố**, **Smart city và digital twin** tiếp nhận điểm tựa từ **Flood và impervious surface** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Korea–Vietnam như hai cấu trúc đô thị để so cơ chế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Flood risk cho thấy city cần dữ liệu drainage và exposure, còn **Smart city và digital twin** có thể mô phỏng nhưng phụ thuộc sensor quality, governance và privacy. **Korea–Vietnam như hai cấu trúc đô thị để so cơ chế** tiếp theo kiểm tra cùng khung ở hai bối cảnh.
 
 ## Smart city và digital twin
 
@@ -114,7 +114,7 @@ Sensor, transit card, traffic dữ liệu (data / 데이터) và **digital twin*
 
 Smart city tốt bắt đầu từ bài toán (problem / 문제) và quản trị (governance / 거버넌스), không từ việc lắp sensor.
 
-> **Chuyển mạch:** Ở chặng này của **Định cư, đô thị hóa và cấu trúc thành phố**, **Smart city và digital twin** xác định đầu vào; **Korea–Vietnam như hai cấu trúc đô thị để so cơ chế** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Digital twin là công cụ cho một city, còn **Korea–Vietnam như hai cấu trúc đô thị để so cơ chế** đối chiếu density, corridor, flooding, housing và governance thay vì chỉ so quy mô. **Những hiểu lầm phổ biến** tiếp theo sửa các nhãn “city = built-up”.
 
 ## Korea–Vietnam như hai cấu trúc đô thị để so cơ chế
 
@@ -122,13 +122,13 @@ Seoul metropolitan region hữu ích để học polycentric commuting, rail kh�
 
 Nên dùng trường hợp (case / 사례) để kiểm tra mô hình (model / 모델), không biến trường hợp (case / 사례) thành “mẫu đại diện” cho toàn quốc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định cư, đô thị hóa và cấu trúc thành phố**, **Korea–Vietnam như hai cấu trúc đô thị để so cơ chế** xác định đầu vào; **Những hiểu lầm phổ biến** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Comparison giữ cơ chế site, transport, housing, infrastructure và hazard; **Những hiểu lầm phổ biến** nhắc rằng urbanization không đồng nghĩa growth, density không tự là congestion và smart tech không thay governance. **Mô hình tư duy** tiếp theo cô đọng đô thị như hệ thống.
 
 ## Những hiểu lầm phổ biến
 
 “High density = bad living điều kiện (condition / 조건)” nhầm density với overcrowding. “Xây highway giảm tắc vĩnh viễn” bỏ induced demand. “City ranh giới (boundary / 경계) = urban economy” bỏ commuting region. “Informal settlement chỉ là vấn đề pháp lý” bỏ truy cập (access / 접근) và housing shortage.
 
-> **Chuyển mạch:** Trong **Định cư, đô thị hóa và cấu trúc thành phố**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi proximity/site → hierarchy/urbanization → land/transport feedback → polycentric agglomeration → housing/informal settlement → infrastructure/metabolism → heat/flood → digital governance, rồi bàn giao owner **Human Geography** trong [README](../README.md).
 
 ## Mô hình tư duy
 
