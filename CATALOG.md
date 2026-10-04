@@ -1,6 +1,6 @@
 ---
 catalog_version: 1
-last_reviewed: 2026-09-30
+last_reviewed: 2026-10-04
 source_of_truth: main
 review_policy: Update this catalog when a canonical library is added, removed, renamed, or changes domain.
 domains:
@@ -83,7 +83,7 @@ domains:
     last_reviewed: 2026-09-30
     scope: Practical cross-domain reasoning integration layer covering problem framing, evidence, uncertainty, causality, forecasting, model selection, trade-offs, incentives, systems, risk and decision practice without duplicating canonical theory.
     prerequisites: []
-    related: [philosophy, mathematics, psychology, economics, research_methods, investing, personal_finance, pmp, computer_science]
+    related: [philosophy, mathematics, psychology, economics, research_methods, investing, personal_finance, life, pmp, computer_science]
 
   - id: computer_science
     title: Computer Science
@@ -257,6 +257,17 @@ domains:
     prerequisites: []
     related: [world_history, biology, physics, korea_business_economy, sociology]
 
+  - id: life
+    title: Life Knowledge Library
+    group: Everyday & Consumer
+    path: life/
+    entrypoint: life/README.md
+    status: canonical
+    last_reviewed: 2026-10-04
+    scope: Everyday object and consumer literacy covering specs and labels, materials and durability, reliability and maintenance, repairability and lifecycle/TCO, plus mechanism-first product verticals such as Cars, Beer and Whisky.
+    prerequisites: []
+    related: [thinking, personal_finance, physics, chemistry, biology, electrical_engineering, korea_law_civic_life]
+
   - id: personal_finance
     title: Personal Finance
     group: Professional
@@ -266,7 +277,7 @@ domains:
     last_reviewed: 2026-09-29
     scope: Personal and household financial literacy from money, banking, interest, inflation, credit, debt, insurance and taxes through housing, car finance, retirement, emergency liquidity, financial scams and personal balance-sheet reasoning.
     prerequisites: []
-    related: [economics, investing, korea_law_civic_life, thinking]
+    related: [economics, investing, korea_law_civic_life, thinking, life]
   - id: investing
     title: Investing
     group: Professional
@@ -383,6 +394,9 @@ Human & Society
 ├── Economics
 └── World Geography
 
+Everyday & Consumer
+└── Life Knowledge Library
+
 Professional
 ├── Personal Finance
 ├── Investing
@@ -491,7 +505,25 @@ Thinking Toolkit
 cross-domain application + feedback loop
 ```
 
-Khi một vấn đề chạm mechanics chuyên ngành — tài chính cá nhân, investing, medical evidence, software reliability, project governance hay institutions — `thinking/` handoff về canonical domain tương ứng thay vì biến generic mental model thành subject-matter advice.
+Khi một vấn đề chạm mechanics chuyên ngành — tài chính cá nhân, investing, medical evidence, software reliability, project governance, consumer products hay institutions — `thinking/` handoff về canonical domain tương ứng thay vì biến generic mental model thành subject-matter advice.
+
+## 13. Life Knowledge Library: everyday object & consumer literacy
+
+[`life/`](life/README.md) giữ phần kiến thức nằm giữa science theory, generic reasoning và quyết định mua/sử dụng trong đời sống. Nó trả lời các câu hỏi như: một vật/sản phẩm hoạt động bằng mechanism nào, spec đo gì và giới hạn ở đâu, vật liệu/process ảnh hưởng durability ra sao, failure/maintenance/repairability hình thành lifecycle thế nào, và các label/classification phải được đọc trên trục nào.
+
+Ownership chủ đích:
+
+```text
+science / engineering theory
+          ↓
+Life: object mechanism + consumer literacy
+          ↓
+use / maintenance / comparison / lifecycle
+          ↓
+Thinking + Personal Finance khi cần quyết định
+```
+
+Consumer Literacy là backbone dùng lại cho specs, materials, reliability, maintenance, warranty và TCO. Cars là vertical mẫu cho system mechanics từ propulsion tới chassis dynamics; Beer và Whisky là vertical mẫu cho process, classification, labels, degradation/freshness và sensory state. Infrastructure end-to-end vẫn thuộc How Things Work khi domain đó canonical; affordability/debt thuộc Personal Finance; generic decision/evidence reasoning thuộc Thinking.
 
 ## Domain entrypoints
 

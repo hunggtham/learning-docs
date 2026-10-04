@@ -52,6 +52,12 @@
       "rights": "author-confirmed"
     },
     {
+      "path": "life",
+      "category": "Life / Consumer Literacy",
+      "language": "vi-en-ko",
+      "rights": "author-confirmed"
+    },
+    {
       "path": "computer_science",
       "category": "Computer Science",
       "language": "vi-en",
