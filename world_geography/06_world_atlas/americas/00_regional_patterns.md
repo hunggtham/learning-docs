@@ -6,7 +6,7 @@
 
 Americas có độ dốc (gradient / 기울기) vĩ độ rất lớn, từ Arctic qua ôn đới, nhiệt đới tới subantarctic. Vì thế các mẫu (pattern / 패턴) khí hậu không thể giải thích bằng một cơ chế duy nhất. Vĩ độ tạo nền, nhưng dòng biển, địa hình và continentality làm cùng một vĩ độ có thể có khí hậu rất khác nhau giữa hai bờ.
 
-> **Chuyển mạch:** Trong **Americas — Các mẫu địa lý cấp châu lục**, **Cordillera phía tây là “xương sống” địa hình** tiếp nhận điểm tựa từ **Một hệ lục địa kéo dài gần từ cực này tới cực kia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ba hệ lưu vực có sức tổ chức không gian rất lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Độ dốc vĩ độ đặt nền khí hậu, còn **Cordillera phía tây là “xương sống” địa hình** biến nền đó thành các bờ núi, rain shadow và đai hazard kéo dài. **Ba hệ lưu vực có sức tổ chức không gian rất lớn** tiếp theo cho thấy nước mở không gian về phía đông thế nào.
 
 ## Cordillera phía tây là “xương sống” địa hình
 
@@ -14,7 +14,7 @@ Từ Alaska–Rockies qua Sierra Madre tới Andes, rìa tây Americas là một
 
 Hệ quả quan trọng là **west coast thường có relief lớn trong khoảng cách ngắn từ biển**, còn phần lớn các plain/basin rộng hơn nằm về phía đông của mountain spine.
 
-> **Chuyển mạch:** Ở chặng này của **Americas — Các mẫu địa lý cấp châu lục**, **Ba hệ lưu vực có sức tổ chức không gian rất lớn** tiếp nhận điểm tựa từ **Cordillera phía tây là “xương sống” địa hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Atlantic và Pacific không có vai trò đối xứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cordillera chia watershed, còn **Ba hệ lưu vực có sức tổ chức không gian rất lớn** nối agricultural hinterland, wetlands, đô thị và ports bằng các dòng chảy dài. **Atlantic và Pacific không có vai trò đối xứng** tiếp theo đặt các basin vào những gateway biển khác nhau.
 
 ## Ba hệ lưu vực có sức tổ chức không gian rất lớn
 
@@ -22,7 +22,7 @@ Mississippi–Missouri, Amazon và Paraná–Paraguay–Río de la Plata không 
 
 Ở phía bắc còn có Great Lakes–St. Lawrence; phía nam có Orinoco. Vì vậy đọc Americas bằng watershed thường giải thích tốt hơn chỉ nhìn biên giới quốc gia.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Americas — Các mẫu địa lý cấp châu lục**, **Atlantic và Pacific không có vai trò đối xứng** tiếp nhận điểm tựa từ **Ba hệ lưu vực có sức tổ chức không gian rất lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dân cư tập trung theo hành lang hơn là phủ đều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Plain và estuary phía Atlantic tạo urban belts khác với Pacific margin hẹp và núi sát biển; **Atlantic và Pacific không có vai trò đối xứng** còn phải đọc cùng Caribbean–Gulf maritime interior. **Dân cư tập trung theo hành lang hơn là phủ đều** tiếp theo cho thấy các gateway kéo dân cư về đâu.
 
 ## Atlantic và Pacific không có vai trò đối xứng
 
@@ -30,7 +30,7 @@ Atlantic side có nhiều plain rộng, estuary và historical urban belts, tron
 
 Caribbean và Gulf of Mexico tạo một **maritime interior** riêng, nơi hurricane, oil/gas, tourism, canal routes và island networks giao nhau.
 
-> **Chuyển mạch:** Trong **Americas — Các mẫu địa lý cấp châu lục**, **Dân cư tập trung theo hành lang hơn là phủ đều** tiếp nhận điểm tựa từ **Atlantic và Pacific không có vai trò đối xứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đô thị hóa và tính vượt trội đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Northeast, Andean valleys, southeast Brazil và các coastal nodes cho thấy dân cư bám corridor, còn Arctic, Amazon và Patagonia có diện tích lớn nhưng ít người; **Dân cư tập trung theo hành lang hơn là phủ đều** là bài toán effective access. **Đô thị hóa và tính vượt trội đô thị** tiếp theo phân biệt tỷ lệ đô thị với cấu trúc cực đô thị.
 
 ## Dân cư tập trung theo hành lang hơn là phủ đều
 
@@ -38,13 +38,13 @@ Các ví dụ nổi bật gồm Northeast Corridor ở Hoa Kỳ, Windsor–Québ
 
 Amazon, Canadian Arctic, Patagonia, Guiana interior hay Great Basin cho thấy diện tích lớn không đồng nghĩa dân số lớn. **Effective geography** phụ thuộc nước, khí hậu, terrain, lịch sử (history / 이력) và truy cập mạng (network access / 네트워크 접근).
 
-> **Chuyển mạch:** Ở chặng này của **Americas — Các mẫu địa lý cấp châu lục**, **Đô thị hóa và tính vượt trội đô thị** tiếp nhận điểm tựa từ **Dân cư tập trung theo hành lang hơn là phủ đều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Commodity geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Đô thị hóa và tính vượt trội đô thị** cho biết corridor nào có metropolitan core mạnh, nhưng không tự nói nguồn hàng hóa đi qua đó. **Commodity geography** tiếp theo nối đô thị, processing và gateway với resource zones.
 
 ## Đô thị hóa và tính vượt trội đô thị
 
 Nhiều quốc gia Americas có mức đô thị hóa cao, nhưng cấu trúc khác nhau. Hoa Kỳ có nhiều metropolitan cores lớn; Canada tập trung theo dải phía nam; một số nước Mỹ Latinh có thủ đô hoặc metro dẫn đầu rất mạnh. Vì vậy cần phân biệt `urbanization rate` với `urban system structure`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Americas — Các mẫu địa lý cấp châu lục**, **Commodity geography** tiếp nhận điểm tựa từ **Đô thị hóa và tính vượt trội đô thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Climate teleconnection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Soy, copper, iron ore, oil, forestry và fisheries đều cần chuỗi resource → corridor → processing → gateway; **Commodity geography** vì thế là mạng chứ không chỉ là điểm mỏ. **Climate teleconnection** tiếp theo cho thấy khí hậu xuyên vùng có thể làm các chuỗi này biến động ra sao.
 
 ## Commodity geography
 
@@ -54,13 +54,13 @@ Agriculture, minerals, hydrocarbons, forestry và fisheries đều tạo corrido
 
 `resource/production zone → corridor → processing/storage node → gateway → world market`.
 
-> **Chuyển mạch:** Trong **Americas — Các mẫu địa lý cấp châu lục**, **Climate teleconnection** tiếp nhận điểm tựa từ **Commodity geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những rủi ro có cấu trúc không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** ENSO nối Pacific với rainfall, drought, fisheries và hazard trên nhiều vùng; **Climate teleconnection** giải thích vì sao một cú đổi đại dương có thể lan vào commodity và đô thị. **Những rủi ro có cấu trúc không gian** tiếp theo đặt teleconnection cạnh exposure cụ thể.
 
 ## Climate teleconnection
 
 ENSO là ví dụ điển hình về quá trình Pacific có thể thay đổi rainfall, drought, fisheries và hazard trên nhiều phần Americas. Không nên coi El Niño chỉ là “nước biển ấm ở Peru”; nó là một coupled ocean–atmosphere mẫu (pattern / 패턴) có teleconnection rộng.
 
-> **Chuyển mạch:** Ở chặng này của **Americas — Các mẫu địa lý cấp châu lục**, **Những rủi ro có cấu trúc không gian** tiếp nhận điểm tựa từ **Climate teleconnection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ring of Fire, hurricane corridors, tornado plains, drought–wildfire drylands và mountain landslides tạo mosaic **Những rủi ro có cấu trúc không gian**; exposure còn phụ thuộc đô thị hóa và hạ tầng. **Mô hình tư duy** sẽ tổng hợp các lớp địa hình, mạng nước, gateway và settlement.
 
 ## Những rủi ro có cấu trúc không gian
 
@@ -68,7 +68,7 @@ Pacific Ring of Fire làm earthquake/volcano rủi ro (risk / 위험) nổi bậ
 
 Rủi ro không chỉ theo hazard map. Metropolitan growth, coastal concentration và hạ tầng (infrastructure / 인프라) phụ thuộc (dependency / 의존성) có thể tăng exposure nhanh hơn hazard thay đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Americas — Các mẫu địa lý cấp châu lục**, **Mô hình tư duy** gom các mảnh từ **Những rủi ro có cấu trúc không gian** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi western mountain spine → mega-basins → Atlantic/Pacific/Caribbean gateways → corridor settlement → commodity và hazard, rồi bàn giao cho owner **Americas — Các mẫu địa lý cấp châu lục** trong [README](./README.md).
 
 ## Mô hình tư duy
 
