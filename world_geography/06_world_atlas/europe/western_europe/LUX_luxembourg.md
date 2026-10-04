@@ -6,19 +6,19 @@
 
 Luxembourg nằm giữa Belgium, Germany và France. Phía bắc có uplands Ardennes, phía nam thấp hơn và đô thị hóa mạnh hơn.
 
-> **Chuyển mạch:** Trong **Luxembourg**, **Cross-border commuting** tiếp nhận điểm tựa từ **Nút nhỏ giữa các mạng lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ thép sang dịch vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Vị trí giữa ba nước đặt Luxembourg trong một functional region lớn hơn lãnh thổ; **cross-border commuting** biến biên giới thành network lao động hằng ngày. **Từ thép sang dịch vụ** cho thấy nền kinh tế đã tái cấu trúc trên network đó thế nào.
 
 ## Cross-border commuting
 
 Thị trường lao động vượt xa biên giới quốc gia; lượng lớn người đi làm hàng ngày từ các nước lân cận. Đây là ví dụ điển hình rằng **functional region** có thể lớn hơn administrative territory.
 
-> **Chuyển mạch:** Ở chặng này của **Luxembourg**, **Từ thép sang dịch vụ** tiếp nhận điểm tựa từ **Cross-border commuting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Commuting cung cấp labor pool xuyên biên giới; **chuyển từ thép sang dịch vụ** thêm finance và high-value work nhưng vẫn để lại industrial geography và hạ tầng cũ. **Mô hình tư duy** sẽ giữ cả continuity lẫn restructuring.
 
 ## Từ thép sang dịch vụ
 
 Miền nam từng gắn mạnh với iron and steel nhờ quặng vùng Lorraine–Minette. Sau tái cơ cấu, finance và high-value services tăng vai trò nhưng industrial landscape vẫn để lại dấu ấn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Luxembourg**, **Mô hình tư duy** gom các mảnh từ **Từ thép sang dịch vụ** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi vị trí giữa ba nước → cross-border labor hub → steel–services restructuring, trong đó accessibility quan trọng hơn diện tích. Đây là điểm bàn giao cho các microstate Western Europe trong owner World Atlas.
 
 ## Mô hình tư duy
 
