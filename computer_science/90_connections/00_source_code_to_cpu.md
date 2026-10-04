@@ -20,7 +20,7 @@ Nếu dùng `BigDecimal`, thao tác (operation / 연산) không còn map một l
 Ngay từ kiểu ở mã nguồn (source type / 소스 타입), ta đã chọn biểu diễn (representation / 표현)/chi phí (cost / 비용) mô hình (model / 모델) khác.
 
 
-> **Chuyển mạch:** Source semantics được parser biến thành cấu trúc, compiler/VM biến thành bytecode hoặc machine code, rồi runtime thực thi; mỗi bước giữ một phần contract và thêm một lớp failure.
+> **Nối mạch:** Source semantics được parser biến thành cấu trúc, compiler/VM biến thành bytecode hoặc machine code, rồi runtime thực thi; mỗi bước giữ một phần contract và thêm một lớp failure.
 
 ## Parsing và bytecode
 
@@ -29,7 +29,7 @@ Ngay từ kiểu ở mã nguồn (source type / 소스 타입), ta đã chọn b
 Tệp lớp (class file / 클래스 파일) chứa constant pool, phương thức (method / 메서드) bytecode và siêu dữ liệu (metadata / 메타데이터). JVM verifier kiểm tra các ràng buộc (constraints / 제약조건들) trước thực thi (execution / 실행).
 
 
-> **Chuyển mạch:** Parsing đã biến tokens thành bytecode, nhưng bytecode chưa nói class nào được nạp hoặc dependency nào được liên kết. **Nạp lớp (class loading / 클래스 로딩) và thời gian chạy (runtime / 런타임)** tiếp tục bằng chính câu hỏi đó: runtime giữ contract của source ở đâu, và failure xuất hiện khi classpath/initialization không khớp thế nào?
+> **Nối mạch:** Parsing đã biến tokens thành bytecode, nhưng bytecode chưa nói class nào được nạp hoặc dependency nào được liên kết. **Nạp lớp (class loading / 클래스 로딩) và thời gian chạy (runtime / 런타임)** tiếp tục bằng chính câu hỏi đó: runtime giữ contract của source ở đâu, và failure xuất hiện khi classpath/initialization không khớp thế nào?
 
 ## Nạp lớp (class loading / 클래스 로딩) và thời gian chạy (runtime / 런타임)
 
@@ -38,7 +38,7 @@ Bộ nạp lớp JVM (JVM class loader / JVM 클래스 로더) tải (load / 로
 JIT có thể inline getter, eliminate đối tượng (object / 객체) allocation, hoist checks hoặc constant-fold nếu các giả định (assumptions / 가정들)/profile permit. dòng mã nguồn (source line / 소스 코드 줄) và các lệnh cuối (final instructions / 최종 명령어) không 1:1.
 
 
-> **Chuyển mạch:** Runtime đã quyết định code path, object lifetime và JIT policy; bước kế tiếp phải cho thấy quyết định đó thành thao tác nào trên ISA. **Lệnh máy bản địa (native instructions / 네이티브 명령어)** vì vậy kiểm tra register, branch và calling convention thay vì coi compiler output là “mã máy chung chung”.
+> **Nối mạch:** Runtime đã quyết định code path, object lifetime và JIT policy; bước kế tiếp phải cho thấy quyết định đó thành thao tác nào trên ISA. **Lệnh máy bản địa (native instructions / 네이티브 명령어)** vì vậy kiểm tra register, branch và calling convention thay vì coi compiler output là “mã máy chung chung”.
 
 ## Lệnh máy bản địa (native instructions / 네이티브 명령어)
 
@@ -47,7 +47,7 @@ Suppose final mục tiêu (target / 대상) x86-64/ARM64. trình biên dịch (c
 Instruction bytes are fetched through I-cache, decoded, renamed/scheduled in hiện đại (modern / 현대적) microarchitecture, operands read from registers, đơn vị thực thi (execution unit / 실행 유닛) computes kết quả (result / 결과). CPU may overlap this with other independent instructions.
 
 
-> **Chuyển mạch:** Instruction sequence chỉ giải thích phép tính nếu biết operand đến từ đâu và cache miss làm đổi chi phí thế nào. **Bộ nhớ và bộ nhớ đệm (memory and cache / 메모리와 캐시)** nối register với địa chỉ, locality và coherence; đây là cầu nối từ semantics sang performance.
+> **Nối mạch:** Instruction sequence chỉ giải thích phép tính nếu biết operand đến từ đâu và cache miss làm đổi chi phí thế nào. **Bộ nhớ và bộ nhớ đệm (memory and cache / 메모리와 캐시)** nối register với địa chỉ, locality và coherence; đây là cầu nối từ semantics sang performance.
 
 ## Bộ nhớ và bộ nhớ đệm (memory and cache / 메모리와 캐시)
 
@@ -56,7 +56,7 @@ Nếu `price` nằm trong đối tượng (object / 객체)/array, CPU needs t�
 Thus a dòng mã nguồn (source line / 소스 코드 줄) that “does one multiplication” can be dominated by bộ nhớ (memory / 메모리) truy cập (access / 접근).
 
 
-> **Chuyển mạch:** Nếu dữ liệu đã nằm trong user-space cache thì hot path có thể không syscall; khi page fault, I/O hoặc scheduling xuất hiện, invariant lại thuộc OS. **OS involvement** phân biệt hai trường hợp để không gán mọi độ trễ cho kernel.
+> **Nối mạch:** Nếu dữ liệu đã nằm trong user-space cache thì hot path có thể không syscall; khi page fault, I/O hoặc scheduling xuất hiện, invariant lại thuộc OS. **OS involvement** phân biệt hai trường hợp để không gán mọi độ trễ cho kernel.
 
 ## OS involvement — often none on đường xử lý nóng (hot path / 핫 패스)
 
@@ -65,21 +65,21 @@ Ordinary arithmetic does not require syscall. tiến trình người dùng (user
 This distinction explains why Vòng lặp giới hạn bởi CPU (CPU-bound loop / CPU 바운드 루프) stays user-space while tệp (file / 파일)/truy cập mạng (network access / 네트워크 접근) crosses ranh giới nhân hệ điều hành (kernel boundary / 커널 경계).
 
 
-> **Chuyển mạch:** Từ **OS involvement — often none on đường xử lý nóng (hot path / 핫 패스)**, ta sang **If kết quả (result / 결과) is stored to cơ sở dữ liệu (database / 데이터베이스)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Nối mạch:** **OS involvement — often none on đường xử lý nóng (hot path / 핫 패스)** cung cấp điều kiện cho **If kết quả (result / 결과) is stored to cơ sở dữ liệu (database / 데이터베이스)**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
 
 ## If kết quả (result / 결과) is stored to cơ sở dữ liệu (database / 데이터베이스)
 
 Now line's giá trị (value / 값) crosses more layers: đối tượng (object / 객체) serialization → JDBC driver → socket → TCP/IP → DB parser → giao dịch (transaction / 트랜잭션) → buffer pool → WAL → filesystem/thiết bị (device / 장치). The arithmetic itself is tiny portion of độ trễ (latency / 지연 시간).
 
 
-> **Chuyển mạch:** Từ **If kết quả (result / 결과) is stored to cơ sở dữ liệu (database / 데이터베이스)**, ta sang **lan truyền lỗi (error propagation / 오류 전파) across layers** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Nối mạch:** **If kết quả (result / 결과) is stored to cơ sở dữ liệu (database / 데이터베이스)** cung cấp điều kiện cho **lan truyền lỗi (error propagation / 오류 전파) across layers**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
 
 ## Lan truyền lỗi (error propagation / 오류 전파) across layers
 
 Overflow may happen at tầng số học của ngôn ngữ (language arithmetic layer / 언어 산술 계층); `NullPointerException` before multiply; page fault transparent at OS; hardware machine check rare; Lỗi ràng buộc cơ sở dữ liệu (DB constraint error / DB 제약조건 오류) later. “The line failed” is not one miền lỗi (failure domain / 장애 도메인).
 
 
-> **Chuyển mạch:** Từ **lan truyền lỗi (error propagation / 오류 전파) across layers**, ta sang **Sơ đồ đầu-cuối (end-to-end diagram / 엔드투엔드 다이어그램)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Nối mạch:** **lan truyền lỗi (error propagation / 오류 전파) across layers** cung cấp điều kiện cho **Sơ đồ đầu-cuối (end-to-end diagram / 엔드투엔드 다이어그램)**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
 
 ## Sơ đồ đầu-cuối (end-to-end diagram / 엔드투엔드 다이어그램)
 
@@ -99,7 +99,7 @@ flowchart TD
 ```
 
 
-> **Chuyển mạch:** Từ **Sơ đồ đầu-cuối (end-to-end diagram / 엔드투엔드 다이어그램)**, ta sang **Why this liên kết (connection / 연결) matters** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Nối mạch:** **Sơ đồ đầu-cuối (end-to-end diagram / 엔드투엔드 다이어그램)** cung cấp điều kiện cho **Why this liên kết (connection / 연결) matters**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
 
 ## Why this liên kết (connection / 연결) matters
 
@@ -108,14 +108,14 @@ Nhà phát triển cấp cao (high-level developer / 고수준 개발자) does n
 Tối ưu hóa (optimization / 최적화) becomes evidence-driven instead of “rewrite vòng lặp (loop / 루프) cú pháp (syntax / 문법)”.
 
 
-> **Chuyển mạch:** Từ **Why this liên kết (connection / 연결) matters**, ta sang **mô hình tư duy (mental model / 사고 모델)** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Nối mạch:** **Why this liên kết (connection / 연결) matters** cung cấp điều kiện cho **mô hình tư duy (mental model / 사고 모델)**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > mã nguồn (source code / 소스 코드) is a **ngữ nghĩa (semantic / 의미적) description** transformed through trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임)/ISA into machine trạng thái (state / 상태) transitions. Each tầng (layer / 계층) preserves a đặc tả hợp đồng (contract / 계약) while introducing its own costs and thất bại (failure / 실패) modes.
 
 
-> **Chuyển mạch:** Từ **mô hình tư duy (mental model / 사고 모델)**, ta sang **Cross-references** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+> **Nối mạch:** **mô hình tư duy (mental model / 사고 모델)** cung cấp điều kiện cho **Cross-references**; mục sau mở rộng cơ chế và chỉ ra giới hạn.
 
 ## Cross-references
 

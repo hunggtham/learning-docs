@@ -27,7 +27,7 @@ Do đó bất biến (invariant / 불변식) không phải “disk luôn chỉ c
 
 Đọc sâu hơn tại [MVCC, visibility, WAL và recovery internals](../../05_data_databases/advanced/00_mvcc_visibility_wal_and_recovery_internals.md).
 
-> **Chuyển mạch:** MVCC quyết định visibility của version; WAL biến lịch sử giao dịch thành log có thể replay sau crash, nối semantics của commit với filesystem/device durability.
+> **Nối mạch:** MVCC quyết định visibility của version; WAL biến lịch sử giao dịch thành log có thể replay sau crash, nối semantics của commit với filesystem/device durability.
 
 ## 3. WAL giải bài toán gì?
 
@@ -54,7 +54,7 @@ page state không được đi trước durable log state theo cách làm recove
 
 Nếu ghi (write / 쓰기) thứ tự (ordering / 순서) bị phá ở lưu trữ (storage / 저장소) ngăn xếp (stack / 스택), WAL giao thức (protocol / 프로토콜) có thể mất ý nghĩa dù cơ sở dữ liệu (database / 데이터베이스) mã (code / 코드) nhìn đúng.
 
-> **Chuyển mạch:** LSN cho biết log và page phải được giải thích theo thứ tự nào; **5. `write()` success không đồng nghĩa durable** kiểm tra xem thứ tự đó có thực sự đi qua kernel, filesystem và thiết bị hay mới dừng ở bộ đệm.
+> **Nối mạch:** LSN cho biết log và page phải được giải thích theo thứ tự nào; **5. `write()` success không đồng nghĩa durable** kiểm tra xem thứ tự đó có thực sự đi qua kernel, filesystem và thiết bị hay mới dừng ở bộ đệm.
 
 ## 5. `write()` success không đồng nghĩa durable
 
@@ -89,7 +89,7 @@ filesystem journal -> filesystem metadata/data-structure consistency
 
 Một lớp không tự thay thế lớp kia. cơ sở dữ liệu (database / 데이터베이스) vẫn cần biết ghi (write / 쓰기)/flush ngữ nghĩa (semantics / 의미론) mà filesystem cung cấp.
 
-> **Chuyển mạch:** WAL và journal giữ hai loại bất biến khác nhau; **8. Controller bộ nhớ đệm, flush và power-loss protection** đi xuống điểm mà lời hứa `flush` có thể bị yếu đi nếu controller hoặc nguồn điện không bảo vệ dữ liệu.
+> **Nối mạch:** WAL và journal giữ hai loại bất biến khác nhau; **8. Controller bộ nhớ đệm, flush và power-loss protection** đi xuống điểm mà lời hứa `flush` có thể bị yếu đi nếu controller hoặc nguồn điện không bảo vệ dữ liệu.
 
 ## 8. Controller bộ nhớ đệm (cache / 캐시), flush và power-loss protection
 
@@ -152,7 +152,7 @@ Tùy giao thức (protocol / 프로토콜), máy khách (client / 클라이언�
 
 Đây là nơi giao dịch (transaction / 트랜잭션) durability nối với consensus/log replication thay vì kết thúc ở cục bộ (local / 로컬) disk.
 
-> **Chuyển mạch:** Khi replication thêm một máy trạng thái, số bản sao không còn là câu trả lời đủ. **13. Replication không tự động đồng nghĩa durability** tách rõ persistence cục bộ, quy tắc commit và độc lập failure domain.
+> **Nối mạch:** Khi replication thêm một máy trạng thái, số bản sao không còn là câu trả lời đủ. **13. Replication không tự động đồng nghĩa durability** tách rõ persistence cục bộ, quy tắc commit và độc lập failure domain.
 
 ## 13. Replication không tự động đồng nghĩa durability
 
@@ -213,7 +213,7 @@ Hiệu năng (performance / 성능) kỹ thuật (engineering / 엔지니어링)
 
 Một đồ thị (graph / 그래프) `DB commit latency` đơn độc không đủ để xác định cơ chế.
 
-> **Chuyển mạch:** Chỉ số theo từng tầng giúp dựng giả thuyết, nhưng durability còn cần chứng minh khi có gián đoạn thật. **19. Crash testing** biến invariant thành một kiểm tra có thể tái hiện thay vì một lời hứa trên giấy.
+> **Nối mạch:** Chỉ số theo từng tầng giúp dựng giả thuyết, nhưng durability còn cần chứng minh khi có gián đoạn thật. **19. Crash testing** biến invariant thành một kiểm tra có thể tái hiện thay vì một lời hứa trên giấy.
 
 ## 19. Crash testing là cách kiểm tra bất biến (invariant / 불변식), không phải edge-case luxury
 

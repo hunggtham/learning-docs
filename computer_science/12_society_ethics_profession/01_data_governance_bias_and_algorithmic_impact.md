@@ -10,7 +10,7 @@ Provenance trả lời dữ liệu (data / 데이터) đến từ đâu, transfo
 
 Lineage tools biến chuỗi xử lý (pipeline / 파이프라인) dependencies thành đồ thị (graph / 그래프) để impact phân tích (analysis / 분석) khi lược đồ (schema / 스키마)/nguồn (source / 소스) thay đổi.
 
-> **Chuyển mạch:** Provenance cho biết dữ liệu đến từ đâu và đã biến đổi ra sao; muốn đo bias phải định nghĩa metric cùng ngữ cảnh. Vì sai lệch có thể xuất hiện ngay ở nhóm được thu thập, **sampling bias** là bước kiểm tra trước cả huấn luyện mô hình.
+> **Nối mạch:** Provenance cho biết dữ liệu đến từ đâu và đã biến đổi ra sao; muốn đo bias phải định nghĩa metric cùng ngữ cảnh. Vì sai lệch có thể xuất hiện ngay ở nhóm được thu thập, **sampling bias** là bước kiểm tra trước cả huấn luyện mô hình.
 
 ## Đo lường (measurement / 측정) độ lệch (bias / 편향)
 
@@ -18,7 +18,7 @@ Ta thường không observe concept trực tiếp mà đo proxy. “Productivity
 
 Proxy mismatch tạo độ lệch (bias / 편향) ngay trước thuật toán (algorithm / 알고리즘).
 
-> **Chuyển mạch:** Proxy quyết định “bias” được đo như thế nào; **sampling** quyết định ai có mặt trong dữ liệu, còn cách tạo label quyết định mô hình học tái tạo outcome nào. Vì vậy phải kiểm tra đại diện trước khi tinh chỉnh thuật toán.
+> **Nối mạch:** Proxy quyết định “bias” được đo như thế nào; **sampling** quyết định ai có mặt trong dữ liệu, còn cách tạo label quyết định mô hình học tái tạo outcome nào. Vì vậy phải kiểm tra đại diện trước khi tinh chỉnh thuật toán.
 
 ## Sampling độ lệch (bias / 편향)
 
@@ -26,7 +26,7 @@ Dataset chỉ phản ánh population được quan sát. Nếu dữ liệu huấ
 
 Random split không sửa biểu diễn (representation / 표현) gap nếu underlying dataset đã biased.
 
-> **Chuyển mạch:** Sampling bias để lại khoảng trống đại diện mà random split không sửa được; **label** còn có thể mã hóa quyết định thể chế. Khi mô hình triển khai tác động ngược vào môi trường, feedback loop có thể khuếch đại cả hai nguồn lệch.
+> **Nối mạch:** Sampling bias để lại khoảng trống đại diện mà random split không sửa được; **label** còn có thể mã hóa quyết định thể chế. Khi mô hình triển khai tác động ngược vào môi trường, feedback loop có thể khuếch đại cả hai nguồn lệch.
 
 ## Label độ lệch (bias / 편향)
 
@@ -34,7 +34,7 @@ Labels do humans/institutions tạo có inconsistency và historical chính sác
 
 ML có thể reproduce institutional độ lệch (bias / 편향) encoded trong labels.
 
-> **Chuyển mạch:** Label có thể phản ánh chính sách lịch sử thay vì ground truth; khi dự đoán làm đổi môi trường và tạo label mới, **fairness metrics** phải kiểm tra vòng kín sau triển khai chứ không chỉ chấm dataset ban đầu.
+> **Nối mạch:** Label có thể phản ánh chính sách lịch sử thay vì ground truth; khi dự đoán làm đổi môi trường và tạo label mới, **fairness metrics** phải kiểm tra vòng kín sau triển khai chứ không chỉ chấm dataset ban đầu.
 
 ## Phản hồi (feedback / 피드백) loops
 
@@ -42,7 +42,7 @@ Prediction ảnh hưởng môi trường (environment / 환경), tạo dữ li�
 
 Closed-loop các hệ thống (systems / 시스템들) cần evaluate nhân quả (causal / 인과적)/behavioral effects, không chỉ offline accuracy.
 
-> **Chuyển mạch:** Feedback loops turn offline bias into changing exposure and outcomes; fairness metrics formalize competing goals, after which governance controls decide thresholds, review, documentation, and accountability.
+> **Nối mạch:** Feedback loop biến bias ngoại tuyến thành exposure và outcome thay đổi; fairness metrics hình thức hóa các mục tiêu cạnh tranh, rồi governance controls quyết định threshold, review, documentation và accountability.
 
 ## Fairness metrics
 
@@ -50,7 +50,7 @@ Group fairness metrics formalize different goals: parity of positive rates, equa
 
 Không có chỉ số (metric / 지표) “fairness universal”. Selection là normative quyết định (decision / 결정) cần lĩnh vực (domain / 도메인)/stakeholder phân tích (analysis / 분석).
 
-> **Chuyển mạch:** Fairness metrics expose competing normative goals; governance controls turn the chosen goal into classification, access, retention, lineage, monitoring, and deletion enforcement.
+> **Nối mạch:** Fairness metrics expose competing normative goals; governance controls turn the chosen goal into classification, access, retention, lineage, monitoring, and deletion enforcement.
 
 ## Quản trị (governance / 거버넌스) controls
 
@@ -58,7 +58,7 @@ Useful controls gồm dữ liệu (data / 데이터) classification, truy cập 
 
 Quản trị (governance / 거버넌스) không nên chỉ là document; chính sách (policy / 정책) cần map thành technical enforcement/monitoring.
 
-> **Chuyển mạch:** Governance makes policy operational, but deletion must follow data propagation through caches, backups, analytics, and model artifacts; impact assessment then asks who is affected when those controls fail.
+> **Nối mạch:** Governance makes policy operational, but deletion must follow data propagation through caches, backups, analytics, and model artifacts; impact assessment then asks who is affected when those controls fail.
 
 ## Right to deletion và derived dữ liệu (data / 데이터)
 
@@ -66,7 +66,7 @@ Xóa nguồn (source / 소스) bản ghi (record / 레코드) không luôn đơn
 
 Legal obligations vary jurisdiction, nhưng kỹ thuật (engineering / 엔지니어링) principle là deletion/retention must be designed, not improvised.
 
-> **Chuyển mạch:** Deletion and retention are architectural obligations, not a single database command; an algorithmic impact assessment tests affected populations, failure modes, oversight, contestability, and redress before deployment.
+> **Nối mạch:** Deletion and retention are architectural obligations, not a single database command; an algorithmic impact assessment tests affected populations, failure modes, oversight, contestability, and redress before deployment.
 
 ## Algorithmic impact assessment
 
@@ -74,7 +74,7 @@ Trước high-impact automation, assessment có thể hỏi affected populations
 
 Goal là discover risks before irreversible triển khai (deployment / 배포), tương tự threat modeling cho bảo mật (security / 보안).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Algorithmic impact assessment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Algorithmic impact assessment** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -84,13 +84,13 @@ Goal là discover risks before irreversible triển khai (deployment / 배포), 
 
 **“Fairness chỉ số (metric / 지표) giải ethics.”** chỉ số (metric / 지표) làm sự đánh đổi (trade-off / 트레이드오프) tường minh (explicit / 명시적) nhưng không quyết normative priority thay con người.
 
-> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > dữ liệu (data / 데이터) hệ thống (system / 시스템) là đo lường (measurement / 측정) hệ thống (system / 시스템). Mỗi trường dữ liệu (field / 필드) là claim về world; quản trị (governance / 거버넌스) giữ provenance, purpose và chất lượng (quality / 품질) của claims đó xuyên vòng đời (lifecycle / 생명주기).
 
-> **Chuyển mạch:** Ở chặng này của **Dữ liệu (data / 데이터) quản trị (governance / 거버넌스), độ lệch (bias / 편향) và algorithmic impact**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

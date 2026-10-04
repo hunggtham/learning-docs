@@ -51,7 +51,7 @@ Bất biến (invariant / 불변식) của hardware không phải “mọi cốt
 
 Đọc sâu hơn tại [Memory consistency, cache coherence và ordering](../../02_computer_architecture/advanced/00_memory_consistency_cache_coherence_and_ordering.md).
 
-> **Chuyển mạch:** Cache coherence chỉ đảm bảo từng line; quan hệ giữa nhiều biến còn phụ thuộc compiler reordering và memory model của ngôn ngữ, nên correctness phải đi qua cả hai tầng.
+> **Nối mạch:** Cache coherence chỉ đảm bảo từng line; quan hệ giữa nhiều biến còn phụ thuộc compiler reordering và memory model của ngôn ngữ, nên correctness phải đi qua cả hai tầng.
 
 ## 4. trình biên dịch (compiler / 컴파일러) cũng reorder, nhưng theo đặc tả hợp đồng (contract / 계약) khác
 
@@ -81,7 +81,7 @@ read data
 
 Nếu chuỗi edge tồn tại, software có cơ sở để yêu cầu thời gian chạy (runtime / 런타임)/trình biên dịch (compiler / 컴파일러)/hardware giữ visibility cần thiết. Nếu không có edge, việc “thường xuyên thấy đúng” chỉ là accidental hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Happens-before biến giả định về visibility thành quan hệ có thể lập luận; **6. Publication bug** cho thấy invariant đó hỏng thế nào trong một object cụ thể.
+> **Nối mạch:** Happens-before biến giả định về visibility thành quan hệ có thể lập luận; **6. Publication bug** cho thấy invariant đó hỏng thế nào trong một object cụ thể.
 
 ## 6. Publication bug: đối tượng (object / 객체) đã có tham chiếu (reference / 참조) nhưng trạng thái (state / 상태) chưa hợp lệ
 
@@ -107,7 +107,7 @@ Visibility: write có được reader hợp lệ quan sát không?
 Ordering: reader được phép suy luận các operation khác trước/sau nó thế nào?
 ```
 
-> **Chuyển mạch:** Tách atomicity, visibility và ordering giúp tránh sửa nhầm bằng scheduler; **8. OS scheduler** chỉ thay interleaving, không tự tạo memory guarantee.
+> **Nối mạch:** Tách atomicity, visibility và ordering giúp tránh sửa nhầm bằng scheduler; **8. OS scheduler** chỉ thay interleaving, không tự tạo memory guarantee.
 
 ## 8. OS scheduler quyết định interleaving, không quyết định bộ nhớ (memory / 메모리) ngữ nghĩa (semantics / 의미론)
 
