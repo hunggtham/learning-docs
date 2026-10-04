@@ -75,7 +75,7 @@ HTTP Availability    ≠ Task Reliability
 Fallback             ≠ Always Safer
 ```
 
-> **Chuyển mạch:** Trong **Evaluation, độ tin cậy (reliability / 신뢰성) & Interpretability**, **Cross-links** tiếp nhận điểm tựa từ **Distinctions cần giữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Distinctions cần giữ** tách accuracy, reliability và interpretability; **Cross-links** đưa từng distinction về owner của metric, phương pháp đánh giá và giới hạn diễn giải.
 
 ## Cross-links
 

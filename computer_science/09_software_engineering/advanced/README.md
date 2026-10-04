@@ -49,7 +49,7 @@ Một thay đổi môi trường vận hành (production / 운영 환경) phải
 
 Chỉ số (metric / 지표) chỉ có giá trị khi gắn với quyết định (decision / 결정). DORA-style tín hiệu (signal / 신호), kiểm thử (test / 테스트) coverage, triển khai (deployment / 배포) frequency, LOC hay ticket thông lượng (throughput / 처리량) không được dùng như proxy tuyệt đối cho kỹ thuật (engineering / 엔지니어링) chất lượng (quality / 품질) nếu không hiểu cơ chế (mechanism / 메커니즘) và Goodhart rủi ro (risk / 위험) phía sau.
 
-> **Chuyển mạch:** Trong **Advanced Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)**, **Bằng chứng vận hành (production evidence / 운영 증거)** nêu điều cần giải thích; **Quy tắc mở rộng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Bằng chứng vận hành** xác định quality claim có tác dụng ở đâu; **Quy tắc mở rộng** dùng claim đó để giữ ranh giới giữa software engineering và các canonical domain kế cận.
 
 ## Quy tắc mở rộng
 

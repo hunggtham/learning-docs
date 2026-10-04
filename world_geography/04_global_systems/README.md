@@ -25,7 +25,7 @@ Một climate shock có thể giảm water; water shortage ảnh hưởng food/n
 
 Đó là lý do các chapter này không nên đọc như chủ đề rời.
 
-> **Chuyển mạch:** Ở chặng này của **Toàn cục (global / 전역) các hệ thống (systems / 시스템들) — các hệ vượt biên giới**, **Cross-links quan trọng** gom các mảnh từ **Dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Dùng chung mental model** giúp so sánh các hệ vượt biên giới trên cùng trục; **Cross-links quan trọng** trả từng cơ chế về owner địa lý, kinh tế hoặc chính trị tương ứng.
 
 ## Cross-links quan trọng
 

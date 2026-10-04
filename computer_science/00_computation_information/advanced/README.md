@@ -74,7 +74,7 @@ Các liên kết (connection / 연결) quan trọng:
 - hàng đợi (queue / 큐)/sức chứa (capacity / 용량)/chi phí (cost / 비용) của prover hoặc heavy computation → [`08_software_systems/advanced`](../../08_software_systems/advanced/README.md);
 - AI cross-entropy/suy luận (inference / 추론) các hệ thống (systems / 시스템들) → [`10_ai_foundations/advanced`](../../10_ai_foundations/advanced/README.md).
 
-> **Chuyển mạch:** Trong **Advanced Computation & thông tin (information / 정보)**, **Cách đọc** tiếp nhận điểm tựa từ **Liên kết (connection / 연결) với Mathematics và các lĩnh vực (domain / 도메인) khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Liên kết với Mathematics và các domain khác** cho biết prerequisite đi ra ngoài; **Cách đọc** biến các prerequisite đó thành route để người học biết lúc nào quay về owner chuẩn.
 
 ## Cách đọc
 

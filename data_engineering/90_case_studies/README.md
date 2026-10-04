@@ -80,7 +80,7 @@ Mỗi trường hợp (case / 사례) phải có `context → invariant → fail
 | compaction race | snapshot lần ghi nhận (commit / 커밋) thời gian (time / 시간) | siêu dữ liệu (metadata / 메타데이터) snapshot | snapshot id | tệp (file / 파일)/snapshot kiểm tra hợp lệ (validation / 검증) |
 | ngữ nghĩa (semantic / 의미적) fan-out | chỉ số (metric / 지표) thời gian (time / 시간) | aggregate trạng thái (state / 상태) | mô hình (model / 모델) phiên bản (version / 버전) | grain/cardinality check |
 
-> **Chuyển mạch:** Trong **90 — trường hợp (case / 사례) studies: lập luận (reasoning / 추론) end-to-end**, **Ma trận đối chiếu trường hợp (case / 사례)** cho ta quy tắc; **Câu hỏi cấp cao (senior / 시니어) cho mọi trường hợp (case / 사례)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Ma trận đối chiếu case** nêu invariant dùng chung; **Câu hỏi cấp cao cho mọi case** buộc người học kiểm tra invariant đó qua ingestion, storage, serving và failure evidence của từng owner.
 
 ## Câu hỏi cấp cao (senior / 시니어) cho mọi trường hợp (case / 사례)
 

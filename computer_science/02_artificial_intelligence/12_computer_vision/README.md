@@ -69,7 +69,7 @@ Physical scene
 
 Computer Vision luôn là inverse bài toán (problem / 문제): infer hidden scene cấu trúc (structure / 구조) từ finite 2D/3D measurements chịu noise, viewpoint và sensor limitations.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Computer Vision — Reading Map**, **Connections** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Mô hình tư duy** xác định bài toán nhìn là suy luận từ tín hiệu; **Connections** nối biểu diễn, hình học và đánh giá để chọn đúng prerequisite cho từng loại lỗi.
 
 ## Connections
 

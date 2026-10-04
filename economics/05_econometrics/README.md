@@ -96,7 +96,7 @@ Applied Economics phải cite lý thuyết (theory / 이론) **và** identificat
 
 Vì vậy Econometrics được triển khai trước Applied Economics trong repo dù folder numbering giữ `04 Applied`, `05 Econometrics`.
 
-> **Chuyển mạch:** Trong **05 — Econometrics**, **Ranh giới (boundary / 경계) với Applied Economics** đã nêu tiêu chí phân biệt, còn **Checklist đọc empirical claim** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Ranh giới với Applied Economics** tách identification khỏi câu chuyện ứng dụng; **Checklist đọc empirical claim** kiểm tra design, estimand và evidence trước khi chấp nhận kết luận.
 
 ## Checklist đọc empirical claim
 

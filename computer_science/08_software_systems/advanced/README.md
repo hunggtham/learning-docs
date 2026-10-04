@@ -69,7 +69,7 @@ Khi hệ thống chậm hoặc không ổn định, phải đo arrival/completio
 
 Mục tiêu của khả năng quan sát (observability / 관측 가능성) là trả lời **công việc (work / 작업) đang chờ ở đâu, tài nguyên (resource / 자원) nào giới hạn progress, trạng thái (state / 상태) nào có thể stale/duplicate, vòng phản hồi (feedback loop / 피드백 루프) nào đang làm thất bại (failure / 실패) lan rộng, và chi phí (cost / 비용) nào đang tạo useful kết quả (outcome / 결과)**.
 
-> **Chuyển mạch:** Trong **Advanced Software các hệ thống (systems / 시스템들)**, **Bằng chứng vận hành (production evidence / 운영 증거)** nêu điều cần giải thích; **Quy tắc mở rộng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Bằng chứng vận hành** cho biết hệ thống đang chịu tải và thất bại ra sao; **Quy tắc mở rộng** chỉ cho phép thêm nội dung khi claim đó có boundary và owner rõ.
 
 ## Quy tắc mở rộng
 

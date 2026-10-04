@@ -17,7 +17,7 @@ Bắt đầu từ [Programming Languages foundation](../../basic/04_programming_
 
 Nhánh học (track / 트랙) đi từ static/thời gian chạy (runtime / 런타임) đặc tả hợp đồng (contract / 계약) xuống trình biên dịch (compiler / 컴파일러)/JIT, bộ nhớ (memory / 메모리) management và async scheduling. Mỗi chapter advanced phải nói rõ bất biến (invariant / 불변식) nào trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) giữ, tối ưu hóa (optimization / 최적화)/speculation nào được phép, deoptimization/thất bại (failure / 실패) xảy ra ra sao và OS/CPU bên dưới quyết định hành vi (behavior / 동작) nào.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ lập trình & thời gian chạy (runtime / 런타임) nâng cao**, **Độ sâu (depth / 깊이) priorities** tiếp nhận điểm tựa từ **Chuẩn gốc (canonical / 정본) chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Chuẩn gốc chapters** giữ semantics của ngôn ngữ và runtime; **Depth priorities** chọn thứ tự đào sâu theo rủi ro quan sát được, không tạo bản sao ngoài owner.
 
 ## Độ sâu (depth / 깊이) priorities
 

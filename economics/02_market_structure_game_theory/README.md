@@ -46,7 +46,7 @@ Mỗi market-structure mô hình (model / 모델) phải quay lại [Welfare & M
 
 Lý thuyết (theory / 이론) chỉ tạo cơ chế (mechanism / 메커니즘) và testable predictions. Claim về thị trường (market / 시장) power, collusion, merger tác động (effect / 효과), entry deterrence hoặc auction hiệu năng (performance / 성능) cần bằng chứng (evidence / 증거) và nhân quả (causal / 인과적) identification từ Econometrics/Industrial Organization. Concentration chỉ mục (index / 인덱스), price parallelism hay một anecdote riêng lẻ không đủ làm kết luận structural.
 
-> **Chuyển mạch:** Trong **02 — Thị trường (market / 시장) Cấu trúc (structure / 구조) & Game Lý thuyết (theory / 이론)**, **Welfare và bằng chứng (evidence / 증거) ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) với Applied Economics** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Welfare và evidence boundary** xác định khi nào mô hình giải thích kết quả phân phối; **Ranh giới với Applied Economics** chỉ ra phần nào cần quay về owner thực nghiệm thay vì suy diễn từ game model.
 
 ## Ranh giới (boundary / 경계) với Applied Economics
 
