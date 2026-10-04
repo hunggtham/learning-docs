@@ -30,7 +30,7 @@ Mỗi trường hợp (case / 사례) phải trả lời bốn câu hỏi:
 3. [03_SNB_CHF_FLOOR_REMOVAL_2015.md](./03_SNB_CHF_FLOOR_REMOVAL_2015.md) — central-bank floor, balance-sheet commitment, gap rủi ro (risk / 위험) và broker/counterparty thất bại (failure / 실패).
 4. [04_GLOBAL_USD_FUNDING_STRESS_2020.md](./04_GLOBAL_USD_FUNDING_STRESS_2020.md) — offshore dollar demand, cross-currency funding stress, swap lines và toàn cục (global / 전역) dollar plumbing.
 
-> **Chuyển mạch:** Trong **Forex Historical Trường hợp (case / 사례) Studies**, **Cách đọc** tiếp nhận điểm tựa từ **Thứ tự đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Thứ tự đọc** đi từ regime, event và market mechanism; **Cách đọc** biến từng case thành evidence path, rồi **Liên kết** trả cơ chế về owner của macro, FX và risk.
 
 ## Cách đọc
 
@@ -52,7 +52,7 @@ Exit from the regime
 
 Sau mỗi trường hợp (case / 사례), viết một `mechanism map` và một `risk checklist` có thể áp dụng vào research hiện tại mà không giả định lịch sử sẽ lặp lại nguyên dạng.
 
-> **Chuyển mạch:** Ở chặng này của **Forex Historical Trường hợp (case / 사례) Studies**, sau nội dung của **Cách đọc**, **Liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Liên kết** khép case-study README bằng source owner và boundary; chi tiết valuation, hedging hoặc macro quay về canonical chapter tương ứng.
 
 ## Liên kết
 

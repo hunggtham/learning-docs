@@ -36,7 +36,7 @@ Mỗi ranh giới (boundary / 경계) phải mô tả được cơ chế (mechan
 | 17 đặc tả hợp đồng (contract / 계약) testing | tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬), bên tiêu thụ (consumer / 소비자) contracts, thời gian chạy (runtime / 런타임) enforcement | Strong |
 | 90 trường hợp (case / 사례) studies | end-to-end thất bại (failure / 실패) and bằng chứng (evidence / 증거) lập luận (reasoning / 추론) | Strong |
 
-> **Chuyển mạch:** Trong **Kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) — Coverage kiểm tra (audit / 감사)**, **Bất biến (invariant / 불변식) checklist** tiếp nhận điểm tựa từ **Trạng thái coverage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gaps còn lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Trạng thái coverage** cho biết chapter nào đã có evidence; **Invariant checklist** kiểm tra cơ chế và boundary, rồi **Gaps còn lại** ghi đúng owner cần bổ sung.
 
 ## Bất biến (invariant / 불변식) checklist
 
@@ -50,7 +50,7 @@ Mỗi ranh giới (boundary / 경계) phải mô tả được cơ chế (mechan
 - **bảo mật (security / 보안):** raw/mô hình (model / 모델)/serving truy cập (access / 접근), masking, retention và deletion có bằng chứng (evidence / 증거).
 - **Economics:** scan, shuffle, spill, lưu trữ (storage / 저장소), maintenance và tính đồng thời (concurrency / 동시성) có attribution.
 
-> **Chuyển mạch:** Ở chặng này của **Kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) — Coverage kiểm tra (audit / 감사)**, **Gaps còn lại** tiếp nhận điểm tựa từ **Bất biến (invariant / 불변식) checklist** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rà soát (review / 검토) giao thức (protocol / 프로토콜)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Gaps còn lại** chỉ được coi là actionable khi invariant đã rõ; **Rà soát protocol** xác nhận route, link và contract trước khi mở rộng coverage.
 
 ## Gaps còn lại
 
@@ -64,7 +64,7 @@ Các ranh giới (boundary / 경계) P2 phía trên đã có chapter chuẩn g�
 
 Không mở chapter chỉ để liệt kê Kafka/Spark/Airflow/dbt. Mỗi gap phải có bất biến (invariant / 불변식)/thất bại (failure / 실패) mô hình (model / 모델) riêng, nhiều downstream phụ thuộc (dependency / 의존성) và bằng chứng (evidence / 증거) có thể kiểm chứng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링) — Coverage kiểm tra (audit / 감사)**, **Rà soát (review / 검토) giao thức (protocol / 프로토콜)** tiếp nhận điểm tựa từ **Gaps còn lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Rà soát protocol** khép coverage bằng link integrity, owner và evidence; mọi gap chưa đủ dữ kiện phải được giữ lại thay vì ghi pass giả.
 
 ## Rà soát (review / 검토) giao thức (protocol / 프로토콜)
 
