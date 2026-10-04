@@ -16,7 +16,7 @@ Protein (protein)-trình tự mã hóa (coding sequence) chỉ chiếm một ph�
 
 Genomics phải phân biệt **chuỗi (sequence / 시퀀스) tồn tại** với **chuỗi (sequence / 시퀀스) có selected biological hàm (function / 함수)**.
 
-> **Chuyển mạch:** Genome includes regulatory context, not only gene list; chromatin adds organization, and euchromatin/heterochromatin form a dynamic accessibility spectrum.
+> **Nối mạch:** Genome includes regulatory context, not only gene list; chromatin adds organization, and euchromatin/heterochromatin form a dynamic accessibility spectrum.
 
 ## 2. Chromatin tạo tầng (layer / 계층) organization đầu tiên
 
@@ -29,7 +29,7 @@ DNA packaging giải hai bài toán tưởng mâu thuẫn:
 
 Vì vậy chromatin không phải packaging thụ động. Nó là regulatory substrate.
 
-> **Chuyển mạch:** Chromatin provides the regulatory substrate; accessibility varies by locus, cell type, and time, while histone marks modify that state through writer–reader–eraser networks rather than a fixed on/off dictionary.
+> **Nối mạch:** Chromatin provides the regulatory substrate; accessibility varies by locus, cell type, and time, while histone marks modify that state through writer–reader–eraser networks rather than a fixed on/off dictionary.
 
 ## 3. Euchromatin và heterochromatin là spectrum, không phải hai hộp tuyệt đối
 
@@ -39,7 +39,7 @@ Nhưng trạng thái nhiễm sắc chất (chromatin state) phụ thuộc locus,
 
 Hệ gen (genome) giống thư viện (library / 라이브러리) mà mỗi loại tế bào mở một subset shelf khác nhau.
 
-> **Chuyển mạch:** Euchromatin/heterochromatin describe an accessibility spectrum; histone acetylation or methylation changes reader recruitment in context, and DNA methylation adds a complementary memory layer.
+> **Nối mạch:** Euchromatin/heterochromatin describe an accessibility spectrum; histone acetylation or methylation changes reader recruitment in context, and DNA methylation adds a complementary memory layer.
 
 ## 4. Biến đổi histone (histone modification): “mã (code / 코드)” nhưng không phải dictionary đơn giản
 
@@ -51,7 +51,7 @@ Methyl hóa histone (histone methylation) đặc biệt không có nghĩa “met
 
 Không nên học epigenetics như bảng “mark này bật, mark kia tắt” mà phải hiểu mark nằm trong mạng (network / 네트워크) writer–reader–eraser.
 
-> **Chuyển mạch:** Histone marks recruit regulatory machinery at particular residues; CpG methylation can stabilize repression or cell memory, but its developmental dynamics require a precise definition of epigenetics rather than a universal “silencing” rule.
+> **Nối mạch:** Histone marks recruit regulatory machinery at particular residues; CpG methylation can stabilize repression or cell memory, but its developmental dynamics require a precise definition of epigenetics rather than a universal “silencing” rule.
 
 ## 5. Methyl hóa DNA (DNA methylation)
 
@@ -61,7 +61,7 @@ Methylation mẫu (pattern / 패턴) có thể được bản sao (copy / 복사
 
 Nhưng methylation cũng động (dynamic / 동적) trong phát triển (development), germline và bệnh (disease).
 
-> **Chuyển mạch:** DNA methylation is one mechanism among chromatin states and heritable regulation; the definition must distinguish somatic memory from stronger transgenerational claims before scaling to X-chromosome inactivation.
+> **Nối mạch:** DNA methylation is one mechanism among chromatin states and heritable regulation; the definition must distinguish somatic memory from stronger transgenerational claims before scaling to X-chromosome inactivation.
 
 ## 6. Epigenetics chính xác là gì?
 
@@ -71,7 +71,7 @@ Trong somatic cell, epigenetic bộ nhớ (memory / 메모리) giúp daughter ce
 
 Ở mammals, nhiều epigenetic mark bị reset mạnh trong gametogenesis/early embryo. Vì vậy câu “stress của bố mẹ chắc chắn truyền epigenetically cho cháu” cần bằng chứng (evidence / 증거) rất cẩn thận.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **7. X-chromosome inactivation: epigenetic regulation ở chromosome quy mô (scale / 규모)** tiếp nhận điểm tựa từ **6. Epigenetics chính xác là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. In dấu hệ gen (genomic imprinting): parent-of-origin tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. X-chromosome inactivation: epigenetic regulation ở chromosome quy mô (scale / 규모)** nối từ **6. Epigenetics chính xác là gì?** sang **8. In dấu hệ gen (genomic imprinting): parent-of-origin tác động (effect / 효과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. X-chromosome inactivation: epigenetic regulation ở chromosome quy mô (scale / 규모)
 
@@ -83,7 +83,7 @@ Kết quả là female tissue có mosaic cell dùng X maternal hoặc paternal k
 
 Đây là ví dụ epigenetic trạng thái (state / 상태) ổn định tạo phenotype mosaic mà DNA chuỗi (sequence / 시퀀스) không đổi.
 
-> **Chuyển mạch:** Trong **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **8. In dấu hệ gen (genomic imprinting): parent-of-origin tác động (effect / 효과)** tiếp nhận điểm tựa từ **7. X-chromosome inactivation: epigenetic regulation ở chromosome quy mô (scale / 규모)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Enhancer và 3D genome** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. In dấu hệ gen (genomic imprinting): parent-of-origin tác động (effect / 효과)** nối từ **7. X-chromosome inactivation: epigenetic regulation ở chromosome quy mô (scale / 규모)** sang **9. Enhancer và 3D genome**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. In dấu hệ gen (genomic imprinting): parent-of-origin tác động (effect / 효과)
 
@@ -93,7 +93,7 @@ Imprinting cho thấy hai allele cùng chuỗi (sequence / 시퀀스) không nh�
 
 Nhưng imprinting chỉ áp dụng subset gene; không phải quy tắc (rule / 규칙) chung của genome.
 
-> **Chuyển mạch:** Ở chặng này của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **9. Enhancer và 3D genome** tiếp nhận điểm tựa từ **8. In dấu hệ gen (genomic imprinting): parent-of-origin tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Cắt nối thay thế (alternative splicing) mở rộng transcriptome** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Enhancer và 3D genome** nối từ **8. In dấu hệ gen (genomic imprinting): parent-of-origin tác động (effect / 효과)** sang **10. Cắt nối thay thế (alternative splicing) mở rộng transcriptome**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Enhancer và 3D genome
 
@@ -105,7 +105,7 @@ Do đó distance “trên chuỗi (sequence / 시퀀스)” và distance “tron
 
 Structural variant phá ranh giới (boundary / 경계) hoặc đưa enhancer gần gene khác có thể gây misregulation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **10. Cắt nối thay thế (alternative splicing) mở rộng transcriptome** tiếp nhận điểm tựa từ **9. Enhancer và 3D genome** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. RNA regulation sau phiên mã** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Cắt nối thay thế (alternative splicing) mở rộng transcriptome** nối từ **9. Enhancer và 3D genome** sang **11. RNA regulation sau phiên mã**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Cắt nối thay thế (alternative splicing) mở rộng transcriptome
 
@@ -115,7 +115,7 @@ Vì vậy số protein isoform có thể lớn hơn số gen mã hóa protein (p
 
 Tuy nhiên không phải mọi transcript isoform đều stable/functional; omics dữ liệu (data / 데이터) cần kiểm tra hợp lệ (validation / 검증).
 
-> **Chuyển mạch:** Trong **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **11. RNA regulation sau phiên mã** tiếp nhận điểm tựa từ **10. Cắt nối thay thế (alternative splicing) mở rộng transcriptome** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Protein mức (level / 수준) cũng là một tầng (layer / 계층) regulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. RNA regulation sau phiên mã** nối từ **10. Cắt nối thay thế (alternative splicing) mở rộng transcriptome** sang **12. Protein mức (level / 수준) cũng là một tầng (layer / 계층) regulation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. RNA regulation sau phiên mã
 
@@ -125,7 +125,7 @@ mRNA stability, localization và translation efficiency được regulation bở
 
 Điều hòa (regulation) sau phiên mã cho phép cell phản ứng nhanh mà không cần thay transcription ngay lập tức.
 
-> **Chuyển mạch:** Ở chặng này của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **12. Protein mức (level / 수준) cũng là một tầng (layer / 계층) regulation** tiếp nhận điểm tựa từ **11. RNA regulation sau phiên mã** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. “Omics” là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Protein mức (level / 수준) cũng là một tầng (layer / 계층) regulation** nối từ **11. RNA regulation sau phiên mã** sang **13. “Omics” là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Protein mức (level / 수준) cũng là một tầng (layer / 계층) regulation
 
@@ -135,7 +135,7 @@ Ubiquitin–proteasome hệ thống (system / 시스템) đánh dấu nhiều pr
 
 Vì vậy RNA-seq chỉ quan sát một tầng (layer / 계층). Muốn hiểu phenotype cần tích hợp proteomics/metabolomics/functional assay.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **13. “Omics” là gì?** tiếp nhận điểm tựa từ **12. Protein mức (level / 수준) cũng là một tầng (layer / 계층) regulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Giải trình tự (sequencing): đọc hàng triệu fragment rồi reconstruct picture** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. “Omics” là gì?** nối từ **12. Protein mức (level / 수준) cũng là một tầng (layer / 계층) regulation** sang **14. Giải trình tự (sequencing): đọc hàng triệu fragment rồi reconstruct picture**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. “Omics” là gì?
 
@@ -149,7 +149,7 @@ Các lĩnh vực (domain / 도메인) omics đo nhiều thành phần (component
 
 Không nên nghĩ multi-omics đơn giản là “càng nhiều dữ liệu (data / 데이터) càng tốt”. Mỗi tầng (layer / 계층) có nhiễu (noise), hiệu ứng lô (batch effect) và phép đo (measurement) độ lệch (bias / 편향) riêng; tích hợp (integration / 통합) cần mô hình (model / 모델) và biological question rõ.
 
-> **Chuyển mạch:** Trong **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **14. Giải trình tự (sequencing): đọc hàng triệu fragment rồi reconstruct picture** tiếp nhận điểm tựa từ **13. “Omics” là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Hệ gen tham chiếu (reference genome) không phải “genome chuẩn của loài”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Giải trình tự (sequencing): đọc hàng triệu fragment rồi reconstruct picture** nối từ **13. “Omics” là gì?** sang **15. Hệ gen tham chiếu (reference genome) không phải “genome chuẩn của loài”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Giải trình tự (sequencing): đọc hàng triệu fragment rồi reconstruct picture
 
@@ -161,7 +161,7 @@ Long-read sequencing giúp resolve structural variant/repeat tốt hơn nhưng c
 
 Technology choice phụ thuộc question.
 
-> **Chuyển mạch:** Ở chặng này của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, sau nội dung của **14. Giải trình tự (sequencing): đọc hàng triệu fragment rồi reconstruct picture**, **15. Hệ gen tham chiếu (reference genome) không phải “genome chuẩn của loài”** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **16. Gọi biến thể (variant calling): chuỗi (sequence / 시퀀스) khác tham chiếu (reference / 참조) chưa chắc gây bệnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sequencing reconstructs hàng triệu fragment; reference genome cung cấp hệ quy chiếu nhưng không phải genome “chuẩn” duy nhất. **Variant calling** kiểm tra khác biệt có ý nghĩa gì.
 
 ## 15. Hệ gen tham chiếu (reference genome) không phải “genome chuẩn của loài”
 
@@ -171,7 +171,7 @@ Hệ gen toàn quần thể (pangenome) approach cố biểu diễn diversity t�
 
 Đây là ví dụ dữ liệu (data / 데이터) biểu diễn (representation / 표현) ảnh hưởng suy luận sinh học (biological inference).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **15. Hệ gen tham chiếu (reference genome) không phải “genome chuẩn của loài”** xác định đầu vào; **16. Gọi biến thể (variant calling): chuỗi (sequence / 시퀀스) khác tham chiếu (reference / 참조) chưa chắc gây bệnh** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **17. GWAS: tìm association ở quy mô quần thể (population scale)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Reference genome làm nền; variant calling mô tả khác biệt so với nền đó. **GWAS** kiểm tra khi association xuất hiện ở quy mô population.
 
 ## 16. Gọi biến thể (variant calling): chuỗi (sequence / 시퀀스) khác tham chiếu (reference / 참조) chưa chắc gây bệnh
 
@@ -181,7 +181,7 @@ Classification pathogenicity cần population tần số (frequency), functional
 
 Không thể nhìn “có đột biến (mutation)” rồi kết luận disease. Mọi người đều mang rất nhiều variant.
 
-> **Chuyển mạch:** Trong **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **16. Gọi biến thể (variant calling): chuỗi (sequence / 시퀀스) khác tham chiếu (reference / 참조) chưa chắc gây bệnh** xác định đầu vào; **17. GWAS: tìm association ở quy mô quần thể (population scale)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **18. Mất cân bằng liên kết (linkage disequilibrium): biến thể (variant) đi cùng nhau làm suy luận (inference / 추론) khó hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Variant calling cung cấp danh sách khác biệt; GWAS tìm association; **Linkage disequilibrium** kiểm tra vì biến thể đi cùng nhau làm inference khó hơn.
 
 ## 17. GWAS: tìm association ở quy mô quần thể (population scale)
 
@@ -193,7 +193,7 @@ GWAS tín hiệu (signal / 신호) thường chỉ ra region liên quan trait, k
 
 Association phải được follow bằng fine ánh xạ (mapping / 매핑), functional experiment và biological lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Ở chặng này của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, sau nội dung của **17. GWAS: tìm association ở quy mô quần thể (population scale)**, **18. Mất cân bằng liên kết (linkage disequilibrium): biến thể (variant) đi cùng nhau làm suy luận (inference / 추론) khó hơn** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **19. Điểm đa gen (polygenic score)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** GWAS tìm association ở population scale; linkage disequilibrium giới hạn inference. **Polygenic score** tiếp tục bằng cách gộp nhiều biến thể có hiệu ứng nhỏ.
 
 ## 18. Mất cân bằng liên kết (linkage disequilibrium): biến thể (variant) đi cùng nhau làm suy luận (inference / 추론) khó hơn
 
@@ -203,7 +203,7 @@ Một SNP GWAS significant có thể chỉ là tag đi cùng nhân quả (causal
 
 Vì vậy statistical association và molecular causation là hai bước khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **19. Điểm đa gen (polygenic score)** tiếp nhận điểm tựa từ **18. Mất cân bằng liên kết (linkage disequilibrium): biến thể (variant) đi cùng nhau làm suy luận (inference / 추론) khó hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Hệ gen học đơn tế bào (single-cell genomics): trung bình có thể che mất loại tế bào** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Điểm đa gen (polygenic score)** nối từ **18. Mất cân bằng liên kết (linkage disequilibrium): biến thể (variant) đi cùng nhau làm suy luận (inference / 추론) khó hơn** sang **20. Hệ gen học đơn tế bào (single-cell genomics): trung bình có thể che mất loại tế bào**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Điểm đa gen (polygenic score)
 
@@ -213,7 +213,7 @@ Score có thể có predictive giá trị (value / 값) trong population tương
 
 Đây là limitation quan trọng khi đưa genomics vào medicine.
 
-> **Chuyển mạch:** Trong **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **20. Hệ gen học đơn tế bào (single-cell genomics): trung bình có thể che mất loại tế bào** tiếp nhận điểm tựa từ **19. Điểm đa gen (polygenic score)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Development như một bài toán regulatory trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. Hệ gen học đơn tế bào (single-cell genomics): trung bình có thể che mất loại tế bào** nối từ **19. Điểm đa gen (polygenic score)** sang **21. Development như một bài toán regulatory trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Hệ gen học đơn tế bào (single-cell genomics): trung bình có thể che mất loại tế bào
 
@@ -223,7 +223,7 @@ Single-cell RNA-seq tách profile từng cell (với sampling/noise limitation),
 
 Nhưng “cluster” trong dữ liệu (data / 데이터) không tự động bằng biological loại tế bào; annotation cần marker, ngữ cảnh (context / 맥락) và kiểm tra hợp lệ (validation / 검증).
 
-> **Chuyển mạch:** Ở chặng này của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **21. Development như một bài toán regulatory trạng thái (state / 상태)** tiếp nhận điểm tựa từ **20. Hệ gen học đơn tế bào (single-cell genomics): trung bình có thể che mất loại tế bào** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Mạng lưới điều hòa gen (gene regulatory network)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Development như một bài toán regulatory trạng thái (state / 상태)** nối từ **20. Hệ gen học đơn tế bào (single-cell genomics): trung bình có thể che mất loại tế bào** sang **22. Mạng lưới điều hòa gen (gene regulatory network)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Development như một bài toán regulatory trạng thái (state / 상태)
 
@@ -233,7 +233,7 @@ Development có thể hình dung như hệ thống (system / 시스템) đi qua 
 
 Đây là cầu nối (bridge / 브리지) sang development chương (chapter).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **22. Mạng lưới điều hòa gen (gene regulatory network)** tiếp nhận điểm tựa từ **21. Development như một bài toán regulatory trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Epigenetic bộ nhớ (memory / 메모리) và cell định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. Mạng lưới điều hòa gen (gene regulatory network)** nối từ **21. Development như một bài toán regulatory trạng thái (state / 상태)** sang **23. Epigenetic bộ nhớ (memory / 메모리) và cell định danh (identity / 식별자)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Mạng lưới điều hòa gen (gene regulatory network)
 
@@ -243,7 +243,7 @@ Mạng (network / 네트워크) motif như phản hồi dương (positive feedba
 
 Molecular mạng (network / 네트워크) và tư duy hệ thống (systems thinking) gặp nhau trực tiếp ở đây.
 
-> **Chuyển mạch:** Trong **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **23. Epigenetic bộ nhớ (memory / 메모리) và cell định danh (identity / 식별자)** tiếp nhận điểm tựa từ **22. Mạng lưới điều hòa gen (gene regulatory network)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Environmental phản hồi (response / 응답) và plasticity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. Epigenetic bộ nhớ (memory / 메모리) và cell định danh (identity / 식별자)** nối từ **22. Mạng lưới điều hòa gen (gene regulatory network)** sang **24. Environmental phản hồi (response / 응답) và plasticity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Epigenetic bộ nhớ (memory / 메모리) và cell định danh (identity / 식별자)
 
@@ -253,7 +253,7 @@ Một phần thông tin (information / 정보) được duy trì qua biến đ�
 
 Cell định danh (identity / 식별자) vì vậy là **trạng thái (state / 상태) của hệ thống (system / 시스템)**, không nằm trong một gene đơn độc.
 
-> **Chuyển mạch:** Ở chặng này của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **24. Environmental phản hồi (response / 응답) và plasticity** tiếp nhận điểm tựa từ **23. Epigenetic bộ nhớ (memory / 메모리) và cell định danh (identity / 식별자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. CRISPR screen: từ edit một gene sang kiểm thử (test / 테스트) hàng nghìn gene** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. Environmental phản hồi (response / 응답) và plasticity** nối từ **23. Epigenetic bộ nhớ (memory / 메모리) và cell định danh (identity / 식별자)** sang **25. CRISPR screen: từ edit một gene sang kiểm thử (test / 테스트) hàng nghìn gene**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Environmental phản hồi (response / 응답) và plasticity
 
@@ -263,7 +263,7 @@ Nhưng “môi trường (environment / 환경) thay gene” nên nói chính x�
 
 Phân biệt biến dị di truyền (genetic variation) với regulatory plasticity giúp tránh lẫn lộn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **25. CRISPR screen: từ edit một gene sang kiểm thử (test / 테스트) hàng nghìn gene** tiếp nhận điểm tựa từ **24. Environmental phản hồi (response / 응답) và plasticity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Sinh học hệ thống (systems biology): từ danh sách (list / 목록) thành phần (component / 컴포넌트) sang mô hình (model / 모델) tương tác (interaction / 상호작용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. CRISPR screen: từ edit một gene sang kiểm thử (test / 테스트) hàng nghìn gene** nối từ **24. Environmental phản hồi (response / 응답) và plasticity** sang **26. Sinh học hệ thống (systems biology): từ danh sách (list / 목록) thành phần (component / 컴포넌트) sang mô hình (model / 모델) tương tác (interaction / 상호작용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. CRISPR screen: từ edit một gene sang kiểm thử (test / 테스트) hàng nghìn gene
 
@@ -273,7 +273,7 @@ CRISPR có thể dùng để knockout/perturb hàng nghìn gene trong quần th�
 
 Kết hợp high-throughput perturbation với single-cell readout đang cho phép map mạng lưới điều hòa sâu hơn.
 
-> **Chuyển mạch:** Trong **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **26. Sinh học hệ thống (systems biology): từ danh sách (list / 목록) thành phần (component / 컴포넌트) sang mô hình (model / 모델) tương tác (interaction / 상호작용)** tiếp nhận điểm tựa từ **25. CRISPR screen: từ edit một gene sang kiểm thử (test / 테스트) hàng nghìn gene** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Tình huống phân tích (case study): cùng genome, neuron và liver cell khác nhau thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **26. Sinh học hệ thống (systems biology): từ danh sách (list / 목록) thành phần (component / 컴포넌트) sang mô hình (model / 모델) tương tác (interaction / 상호작용)** nối từ **25. CRISPR screen: từ edit một gene sang kiểm thử (test / 테스트) hàng nghìn gene** sang **27. Tình huống phân tích (case study): cùng genome, neuron và liver cell khác nhau thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Sinh học hệ thống (systems biology): từ danh sách (list / 목록) thành phần (component / 컴포넌트) sang mô hình (model / 모델) tương tác (interaction / 상호작용)
 
@@ -285,7 +285,7 @@ Lý thuyết đồ thị (graph theory), differential equation và statistical s
 
 Xem thêm [Biology × Mathematics × Computation × Scale](../90_connections/00_biology_math_computation_and_scale.md).
 
-> **Chuyển mạch:** Ở chặng này của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **26. Sinh học hệ thống (systems biology): từ danh sách (list / 목록) thành phần (component / 컴포넌트) sang mô hình (model / 모델) tương tác (interaction / 상호작용)** cho ta quy tắc; **27. Tình huống phân tích (case study): cùng genome, neuron và liver cell khác nhau thế nào?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **28. Tình huống phân tích: variant regulatory có thể mạnh như coding variant** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **26. Sinh học hệ thống (systems biology): từ danh sách (list / 목록) thành phần (component / 컴포넌트) sang mô hình (model / 모델) tương tác (interaction / 상호작용)** nêu quy tắc; **27. Tình huống phân tích (case study): cùng genome, neuron và liver cell khác nhau thế nào?** thử quy tắc trong tình huống, rồi **28. Tình huống phân tích: variant regulatory có thể mạnh như coding variant** mở rộng hệ quả.
 
 ## 27. Tình huống phân tích (case study): cùng genome, neuron và liver cell khác nhau thế nào?
 
@@ -295,7 +295,7 @@ Liver cell expression enzyme chuyển hóa (metabolism)/detoxification; neuron e
 
 Difference phenotype không cần genome khác. Nó cần regulatory trạng thái (state / 상태) khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **27. Tình huống phân tích (case study): cùng genome, neuron và liver cell khác nhau thế nào?** cho ta quy tắc; **28. Tình huống phân tích: variant regulatory có thể mạnh như coding variant** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **29. Các hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **27. Tình huống phân tích (case study): cùng genome, neuron và liver cell khác nhau thế nào?** nêu quy tắc; **28. Tình huống phân tích: variant regulatory có thể mạnh như coding variant** thử quy tắc trong tình huống, rồi **29. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
 
 ## 28. Tình huống phân tích: variant regulatory có thể mạnh như coding variant
 
@@ -305,7 +305,7 @@ Protein chuỗi (sequence / 시퀀스) hoàn toàn bình thường nhưng amount
 
 Genetics hiện đại vì vậy phải nhìn cả coding lẫn regulatory genome.
 
-> **Chuyển mạch:** Trong **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **28. Tình huống phân tích: variant regulatory có thể mạnh như coding variant** cho ta quy tắc; **29. Các hiểu lầm phổ biến (common misconceptions)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Genome chuỗi (sequence / 시퀀스) và cell trạng thái (state / 상태) là hai lớp thông tin tương tác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **28. Tình huống phân tích: variant regulatory có thể mạnh như coding variant** nêu quy tắc; **29. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **Genome chuỗi (sequence / 시퀀스) và cell trạng thái (state / 상태) là hai lớp thông tin tương tác** mở rộng hệ quả.
 
 ## 29. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -323,7 +323,7 @@ Genetics hiện đại vì vậy phải nhìn cả coding lẫn regulatory genom
 
 <!-- depth-audit-2026:genome-state-causality -->
 
-> **Chuyển mạch:** Ở chặng này của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **29. Các hiểu lầm phổ biến (common misconceptions)** xác định đầu vào; **Genome chuỗi (sequence / 시퀀스) và cell trạng thái (state / 상태) là hai lớp thông tin tương tác** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Cùng một genome nhưng cell khác nhau vì mạng điều hòa giữ trạng thái khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Misconceptions cần được đối chiếu với hai lớp: genome sequence và cell state. **Mạng điều hòa** giải thích vì sao cùng genome vẫn tạo cell khác nhau.
 
 ## Genome chuỗi (sequence / 시퀀스) và cell trạng thái (state / 상태) là hai lớp thông tin tương tác
 
@@ -337,7 +337,7 @@ Population genomics cũng đang chuyển từ một tham chiếu (reference / �
 
 <!-- continuity-2026:cell-identity-regulation -->
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **Genome chuỗi (sequence / 시퀀스) và cell trạng thái (state / 상태) là hai lớp thông tin tương tác** xác định đầu vào; **Cùng một genome nhưng cell khác nhau vì mạng điều hòa giữ trạng thái khác nhau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **30. cầu nối (bridge / 브리지): hệ gen variation trở thành evolution như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Genome sequence và cell state tương tác; mạng điều hòa giữ các trạng thái khác nhau. **Cầu nối sang Evolution** kiểm tra khi genome variation trở thành thay đổi quần thể.
 
 ## Cùng một genome nhưng cell khác nhau vì mạng điều hòa giữ trạng thái khác nhau
 
@@ -347,7 +347,7 @@ Neuron, hepatocyte và tế bào cơ gần như mang cùng DNA chuỗi (sequence
 
 Thất bại (failure / 실패) có thể xảy ra khi enhancer hoạt động sai cell kiểu (type / 타입), chromosome lĩnh vực (domain / 도메인) bị phá, dosage gene thay đổi hoặc epigenetic silencing không đúng. Nhiều disease-associated variant nằm ngoài coding region chính vì chúng thay regulation thay vì thay amino acid. Muốn chứng minh cơ chế cần perturb enhancer/gene trong đúng cell trạng thái (state / 상태), không chỉ dựa vào correlation trong dữ liệu omics.
 
-> **Chuyển mạch:** Trong **Genomics, Epigenetics và Điều hòa hệ gene — Genomics, Epigenetics and Regulation (유전체학, 후성유전학과 조절)**, **30. cầu nối (bridge / 브리지): hệ gen variation trở thành evolution như thế nào?** tiếp nhận điểm tựa từ **Cùng một genome nhưng cell khác nhau vì mạng điều hòa giữ trạng thái khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Cầu nối sang Evolution khép mạch từ cell-state regulation tới genome variation và thay đổi quần thể.
 
 ## 30. cầu nối (bridge / 브리지): hệ gen variation trở thành evolution như thế nào?
 
