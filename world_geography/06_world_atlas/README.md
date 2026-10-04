@@ -8,7 +8,7 @@ World Atlas dùng country/territory như **trường hợp (case / 사례) study
 
 Không tạo thêm country skeleton chỉ để tăng số tệp (file / 파일).
 
-> **Chuyển mạch:** Trong **World Atlas — ứng dụng (application / 애플리케이션) tầng (layer / 계층) của World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Bốn trạng thái nội dung** tiếp nhận điểm tựa từ **Atlas không phải coverage game** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Definition of Done** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Atlas không phải coverage game** đặt boundary giữa inventory và prose; **Bốn trạng thái nội dung** theo dõi tiến độ, rồi **Definition of Done** quy định evidence cần đạt.
 
 ## Bốn trạng thái nội dung
 
@@ -22,7 +22,7 @@ Không tạo thêm country skeleton chỉ để tăng số tệp (file / 파일)
 
 Xem [Coverage Status](./03_coverage_status.md).
 
-> **Chuyển mạch:** Ở chặng này của **World Atlas — ứng dụng (application / 애플리케이션) tầng (layer / 계층) của World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Definition of Done** tiếp nhận điểm tựa từ **Bốn trạng thái nội dung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Học tập (learning / 학습) profiles ưu tiên cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Definition of Done** biến trạng thái thành điều kiện publish; **Learning profiles ưu tiên cao** chọn region và topic có giá trị học trước.
 
 ## Definition of Done
 
@@ -47,7 +47,7 @@ Chuỗi nhân quả (causal chain / 인과 사슬) mặc định:
 
 Một tệp (file / 파일) có đủ heading nhưng chỉ vài câu vẫn không đạt Definition of Done.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **World Atlas — ứng dụng (application / 애플리케이션) tầng (layer / 계층) của World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Học tập (learning / 학습) profiles ưu tiên cao** tiếp nhận điểm tựa từ **Definition of Done** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Atlas promotions gần nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Learning profiles** áp dụng DoD vào nhu cầu người học; **Atlas promotions gần nhất** ghi thay đổi nào đã được kiểm chứng và owner nào chịu trách nhiệm.
 
 ## Học tập (learning / 학습) profiles ưu tiên cao
 
@@ -80,7 +80,7 @@ Bốn profile này dùng để so monsoon megaregion, continental thị trườn
 
 Germany, France, United Kingdom, Italy và Netherlands đã được promote thành comparative học tập (learning / 학습) profiles về manufacturing, dịch vụ (service / 서비스), ports, urban networks và European connectivity.
 
-> **Chuyển mạch:** Trong **World Atlas — ứng dụng (application / 애플리케이션) tầng (layer / 계층) của World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Atlas promotions gần nhất** tiếp nhận điểm tựa từ **Học tập (learning / 학습) profiles ưu tiên cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Planned, chưa completed** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Atlas promotions** cho thấy route đã ship đến đâu; **Planned, chưa completed** giữ minh bạch phần còn thiếu thay vì ghi nhận coverage giả.
 
 ## Atlas promotions gần nhất
 
@@ -92,7 +92,7 @@ Batch gần nhất **không tạo tệp (file / 파일) mới**. Ba compact refe
 
 Mỗi profile đều dùng chuỗi nhân quả (causal chain / 인과 사슬) vật lý (physical / 물리적) → resources → settlement → economy → vận chuyển (transport / 전송) → cities → trade → development/regional role.
 
-> **Chuyển mạch:** Ở chặng này của **World Atlas — ứng dụng (application / 애플리케이션) tầng (layer / 계층) của World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Planned, chưa completed** tiếp nhận điểm tựa từ **Atlas promotions gần nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Africa profiles** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Planned** xác định gap cần làm; **Africa profiles** là case cụ thể để kiểm chứng atlas boundary và prose owner.
 
 ## Planned, chưa completed
 
@@ -100,13 +100,13 @@ Thailand và Philippines có học tập (learning / 학습) giá trị (value /
 
 Các năng lượng (energy / 에너지)/chokepoint cases như Saudi Arabia, Iran, Türkiye, UAE, Egypt hay Panama chỉ được ưu tiên khi bổ sung một cơ chế (mechanism / 메커니즘) chưa được Atlas hiện tại minh họa tốt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **World Atlas — ứng dụng (application / 애플리케이션) tầng (layer / 계층) của World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Africa profiles** tiếp nhận điểm tựa từ **Planned, chưa completed** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi nào nên merge thay vì giữ country tệp (file / 파일)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Africa profiles** cho thấy chi phí giữ country file riêng; **Khi nào nên merge** đặt quyết định đó vào boundary, source và khả năng bảo trì.
 
 ## Africa profiles
 
 Một số Africa files đã qua độ sâu (depth / 깊이) pass và có giá trị về Sahel, Nile, Congo Basin, Great Rift, landlocked corridors và tài nguyên (resource / 자원) belts. Tuy nhiên chúng vẫn cần QA theo cùng Definition of Done; không có khái niệm “Africa completed” chỉ vì đủ tệp (file / 파일).
 
-> **Chuyển mạch:** Trong **World Atlas — ứng dụng (application / 애플리케이션) tầng (layer / 계층) của World Geography thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Khi nào nên merge thay vì giữ country tệp (file / 파일)?** tiếp nhận điểm tựa từ **Africa profiles** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Merge policy** khép README bằng tiêu chí country file, owner và evidence; atlas detail quay về region canonical khi cần.
 
 ## Khi nào nên merge thay vì giữ country tệp (file / 파일)?
 
