@@ -1,87 +1,168 @@
-# 09. High-Yield Numbers & Institutions — phạm vi chung + 심화
+# 09. High-Yield Numbers & Institutions — KIIP
 
-> **Mạch đọc:** Đặt **09. High-Yield Numbers & Institutions — phạm vi chung + 심화** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Con số nên thuộc** sang **Bộ bốn cần phản xạ**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> Dùng file này để **nén kiến thức sau khi đã hiểu chapter**, không dùng thay cho 01~08. Các con số/pháp luật có thể đổi phải kiểm tra [`00_current_facts_and_corrections.md`](00_current_facts_and_corrections.md).
 
-> **시험 범위:** `공통`
-
-## Con số nên thuộc
-
-Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
+## Con số cần phản xạ
 
 | Fact | Số |
 |---|---:|
-| 대통령 임기 | 5년 |
-| 국회의원 임기 | 4년 |
-| 국회의원 수 | 300명 |
-| 선거권 기본 연령 | 만 18세 |
-| 초·중·고 | 6-3-3 |
-| 외국인 종합안내 | 1345 |
-| 범죄 신고 | 112 |
-| 화재·구급 | 119 |
-| 학교폭력 | 117 |
-| hiện hành 예금보호한도 | 1억원 |
-| hiện hành 법정 최고금리 | 연 20% |
+| 대통령 임기 | `5년`, 단임 |
+| 국회의원 임기 | `4년` |
+| 국회의원 수 | `300명` |
+| 선거권 기본 연령 | `만 18세` |
+| 초·중·고 학제 | `6-3-3` |
+| 외국인 종합안내 | `1345` |
+| 범죄 긴급 신고 | `112` |
+| 화재·구급 | `119` |
+| 학교폭력 | `117` |
+| 현재 예금보호한도 | `1억원` |
+| 현재 법정 최고금리 | `연 20%` |
+| 회갑/환갑 | `60세` |
+| 3·1운동 | `1919` |
+| 광복 | `1945-08-15` |
+| 대한민국 정부 수립 | `1948` |
+| 6·25 전쟁 | `1950~1953` |
 
+---
 
-> **Chuyển mạch:** Từ **Con số nên thuộc**, ta sang **Bộ bốn cần phản xạ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Bộ bốn cần phản xạ
+## 4개 묶음
 
 ### 선거 4대 원칙
+
 `보통 · 평등 · 직접 · 비밀`
 
 ### 4대 사회보험
-`국민건강보험 · 고용보험 · 국민연금 · 산업재해보상보험`
 
+`국민건강보험 · 국민연금 · 고용보험 · 산업재해보상보험`
 
-> **Chuyển mạch:** Từ **Bộ bốn cần phản xạ**, ta sang **Cơ quan dễ nhầm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+### 국민의 4대 의무
 
-## Cơ quan dễ nhầm
+`납세 · 국방 · 교육 · 근로`
 
-Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
+### 민주화 3 marker
 
-| Cơ quan | Chức năng |
+`4·19 혁명 → 5·18 민주화운동 → 6월 민주항쟁`
+
+---
+
+# Cơ quan — học theo chức năng
+
+## 국가권력
+
+| Cơ quan | Keyword | Vai trò |
+|---|---|---|
+| `국회` | 입법 | làm/sửa luật, ngân sách, giám sát |
+| `정부/행정부` | 집행 | thực hiện chính sách, hành chính |
+| `법원` | 재판 | xét xử |
+| `헌법재판소` | 헌법재판 | tài phán hiến pháp |
+
+### 대법원 vs 헌법재판소
+
+`대법원` là tòa cao nhất trong hệ thống tòa án thông thường.  
+`헌법재판소` xử lý các vấn đề tài phán hiến pháp theo thẩm quyền.
+
+Không hiểu `헌법재판소 = 대법원보다 높은 법원`.
+
+---
+
+## 형사사법 — 2026-10-02 이후
+
+> Các note cũ có thể ghi `경찰 ↔ 검찰 ↔ 법원`. Cơ cấu hiện hành đã thay đổi.
+
+| 기관 | 핵심 기능 |
 |---|---|
-| 국회 | 입법 |
-| 정부/행정부 | 정책 집행 |
-| 법원 | 재판 |
-| 한국은행 | 중앙은행 |
-| 경찰 | 치안·수사 |
-| 검찰 | 기소 등 검찰 기능 |
-| 한국소비자원 | 소비자 분쟁/피해 지원 |
-| 대한법률구조공단 | 법률 구조 |
-| 국가인권위원회 | 인권 |
-| 국민권익위원회 | 권익·부패 관련 |
-| 외국인종합안내센터 | 1345 |
+| `경찰 등 사법경찰` | 일반 범죄 수사 |
+| `중대범죄수사청` | 법률상 중대범죄 수사 |
+| `공소청` | 공소 제기·공소 유지 중심 |
+| `법원` | 재판 |
 
+Phản xạ theo **chức năng**:
 
-> **Chuyển mạch:** Từ **Cơ quan dễ nhầm**, ta sang **Cặp dễ nhầm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+`수사 ≠ 기소 ≠ 재판`
 
-## Cặp dễ nhầm
+---
+
+## 생활 기관
+
+| Tình huống | Cơ quan |
+|---|---|
+| 출입국·체류 | `외국인종합안내센터 1345` |
+| 소비자 피해 | `한국소비자원` |
+| 법률상담·구조 | `대한법률구조공단` |
+| 인권침해 | `국가인권위원회` |
+| 국민 고충·권익·청렴 | `국민권익위원회` |
+| 중앙은행 | `한국은행` |
+
+---
+
+# Cặp dễ nhầm phải nói được thành câu
 
 `어린이집 ↔ 유치원`  
 `전세 ↔ 월세`  
 `수시 ↔ 정시`  
-`경찰 ↔ 검찰 ↔ 법원`  
-`공공부조 ↔ 사회보험`  
-`국회 ↔ 정부`  
-`호남 ↔ 영남`  
-`설날 ↔ 추석`
-
-
-> **Chuyển mạch:** Từ **Cặp dễ nhầm**, ta sang **귀화용 심화 — phản xạ thêm** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## 귀화용 심화 — phản xạ thêm
-
-> **시험 범위:** `귀화용 심화`
-
+`사회보험 ↔ 공공부조`  
 `국민 ↔ 외국인 ↔ 영주자`  
-`체류자격 ↔ 영주권 ↔ 국적`  
-`평등권 · 자유권 · 참정권 · 사회권 · 청구권`  
-`납세 · 국방 · 교육 · 근로의 의무`  
-`국가 ↔ 정부`  
-`광복 → 정부수립 → 한국전쟁 → 민주화`
+`체류자격 ↔ 영주자격 ↔ 국적`  
+`국회 ↔ 정부 ↔ 법원`  
+`대법원 ↔ 헌법재판소`  
+`수사 ↔ 기소 ↔ 재판`  
+`민사 ↔ 형사`  
+`설날 ↔ 추석`  
+`김치 ↔ 김장`  
+`장례 ↔ 제례`  
+`호남 ↔ 영남`  
+`광복 ↔ 정부 수립`
 
-Nhóm này nên luyện bằng **giải thích**, không chỉ flashcard một từ.
+---
 
-> **Bàn giao:** Sau **귀화용 심화 — phản xạ thêm**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 current facts and corrections](./00_current_facts_and_corrections.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+# Lịch sử — association tốc độ cao
+
+| Keyword | Association |
+|---|---|
+| `단군왕검` | 고조선 |
+| `광개토대왕` | 고구려 |
+| `대조영` | 발해 |
+| `왕건` | 고려 |
+| `이성계` | 조선 |
+| `세종대왕` | 훈민정음 |
+| `이순신` | 임진왜란 |
+| `유관순` | 3·1운동 |
+| `김구` | 대한민국 임시정부 |
+| `경주` | 신라 |
+| `공주·부여` | 백제 |
+| `불국사·석굴암` | 신라 문화 |
+| `팔만대장경` | 고려 |
+
+---
+
+# Địa lý — association tốc độ cao
+
+`수도권 = 서울·경기·인천`  
+`호남 = 전라`  
+`영남 = 경상`  
+`공주·부여 = 백제`  
+`경주 = 신라`  
+`인천 = 국제공항·항만`  
+`부산 = 항만`  
+`울산 = 자동차·조선·중화학`  
+`강원 = 산지·겨울`  
+`제주 = 화산섬·한라산·해녀`
+
+---
+
+# 10-second recall
+
+Không nhìn đáp án, trả lời ngay:
+
+1. 대통령 임기?
+2. 국회의원 수 và 임기?
+3. 선거 4대 원칙?
+4. 4대 사회보험?
+5. 국민의 4대 의무?
+6. 112/119/117/1345?
+7. 수사·기소·재판 기관 현재 구조?
+8. 대법원과 헌법재판소 차이?
+9. 광복과 정부수립 연도?
+10. 호남과 영남은 어디?
+
+Nếu mất quá 10 giây, quay lại chapter gốc thay vì chỉ đọc lại bảng này.
