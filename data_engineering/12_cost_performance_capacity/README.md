@@ -16,7 +16,7 @@ shuffle bytes + spill bytes + network egress
 
 Peak thường quan trọng hơn average: backfill, month-end close hoặc sự cố (incident / 인시던트) replay có thể cạnh tranh với freshness tải công việc (workload / 워크로드).
 
-> **Chuyển mạch:** Trong **12 — chi phí (cost / 비용), hiệu năng (performance / 성능) và sức chứa (capacity / 용량)**, **2. Scan và bố cục (layout / 레이아웃)** tiếp nhận điểm tựa từ **1. sức chứa (capacity / 용량) mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Shuffle, skew và spill** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Capacity model** xác định workload và headroom; **Scan và layout** biến mô hình đó thành I/O cost, rồi **Shuffle/skew/spill** giải thích amplification.
 
 ## 2. Scan và bố cục (layout / 레이아웃)
 
@@ -24,31 +24,31 @@ Partition pruning, column pruning, predicate pushdown, clustering và tệp (fil
 
 Đo end-to-end: files opened, bytes scanned, CPU decode, mạng (network / 네트워크), hàng đợi (queue / 큐) wait, tác vụ (task / 작업) count và đầu ra (output / 출력) freshness.
 
-> **Chuyển mạch:** Ở chặng này của **12 — chi phí (cost / 비용), hiệu năng (performance / 성능) và sức chứa (capacity / 용량)**, **3. Shuffle, skew và spill** tiếp nhận điểm tựa từ **2. Scan và bố cục (layout / 레이아웃)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Small files và compaction ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Shuffle, skew và spill** cho thấy cost bị nhân lên ở execution; **Small files và compaction budget** đưa cùng vấn đề vào storage maintenance.
 
 ## 3. Shuffle, skew và spill
 
 Shuffle bytes thường là predictor tốt hơn row count. Skew tạo long-tail tác vụ (task / 작업); spill tăng disk I/O và merge. Tối ưu có thể là pre-aggregation, salting, broadcast nhỏ, projection sớm hoặc tách heavy hitter—không mặc định là thêm worker.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **12 — chi phí (cost / 비용), hiệu năng (performance / 성능) và sức chứa (capacity / 용량)**, **4. Small files và compaction ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **3. Shuffle, skew và spill** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. tính đồng thời (concurrency / 동시성) và isolation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Small files và compaction budget** cân write amplification với read efficiency; **Concurrency và isolation** kiểm tra cost khi nhiều job cùng chạm storage.
 
 ## 4. Small files và compaction ngân sách (budget / 예산)
 
 Small-file bài toán (problem / 문제) tăng siêu dữ liệu (metadata / 메타데이터)/listing/tác vụ (task / 작업) overhead. Compaction tạo ghi (write / 쓰기) amplification và có thể tranh tài nguyên (resource / 자원) với truy vấn (query / 쿼리). Cần ngân sách (budget / 예산) compaction theo tệp (file / 파일) count, truy vấn (query / 쿼리) độ trễ (latency / 지연 시간) và khôi phục (recovery / 복구) chính sách (policy / 정책), không chạy cron mù quáng.
 
-> **Chuyển mạch:** Trong **12 — chi phí (cost / 비용), hiệu năng (performance / 성능) và sức chứa (capacity / 용량)**, **5. tính đồng thời (concurrency / 동시성) và isolation** tiếp nhận điểm tựa từ **4. Small files và compaction ngân sách (budget / 예산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. đơn vị (unit / 단위) economics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Concurrency và isolation** đặt giới hạn lên throughput và contention; **Unit economics** quy đổi giới hạn đó thành cost mỗi query, row hoặc workload.
 
 ## 5. tính đồng thời (concurrency / 동시성) và isolation
 
 Một truy vấn (query / 쿼리) nhanh khi chạy một mình có thể làm freshness job trễ khi chạy cùng nhiều dashboard. sức chứa (capacity / 용량) plan cần tải công việc (workload / 워크로드) lớp (class / 클래스), hàng đợi (queue / 큐), priority, admission điều khiển (control / 제어) và isolation. SLO nên nêu cả độ trễ (latency / 지연 시간) và freshness impact.
 
-> **Chuyển mạch:** Ở chặng này của **12 — chi phí (cost / 비용), hiệu năng (performance / 성능) và sức chứa (capacity / 용량)**, **6. đơn vị (unit / 단위) economics** tiếp nhận điểm tựa từ **5. tính đồng thời (concurrency / 동시성) và isolation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Experiment vòng lặp (loop / 루프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Unit economics** làm rõ baseline và denominator; **Experiment loop** kiểm tra tối ưu có cải thiện cost/performance thật hay chỉ chuyển chi phí sang lớp khác.
 
 ## 6. đơn vị (unit / 단위) economics
 
 Theo dõi chi phí (cost / 비용) per TB processed, chi phí (cost / 비용) per successful chuỗi xử lý (pipeline / 파이프라인) run, chi phí (cost / 비용) per published dataset hoặc chi phí (cost / 비용) per active bên tiêu thụ (consumer / 소비자). đơn vị (unit / 단위) economics bắt regression sớm hơn tổng invoice, vì tổng invoice có thể tăng đơn giản do volume tăng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **12 — chi phí (cost / 비용), hiệu năng (performance / 성능) và sức chứa (capacity / 용량)**, **7. Experiment vòng lặp (loop / 루프)** tiếp nhận điểm tựa từ **6. đơn vị (unit / 단위) economics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Queueing và saturation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Experiment loop** tạo evidence trước/sau; **Queueing và saturation** giải thích khi thay đổi đó chạm giới hạn capacity.
 
 ## 7. Experiment vòng lặp (loop / 루프)
 
@@ -62,7 +62,7 @@ Không chấp nhận hiệu năng (performance / 성능) gain nếu làm mất l
 
 Đọc tiếp: [06 — Distributed processing](../06_distributed_processing/README.md), [09 — Warehouse/lakehouse](../09_warehouse_lake_lakehouse/README.md), [04 — Reliability](../04_reliability_and_production.md).
 
-> **Chuyển mạch:** Trong **12 — chi phí (cost / 비용), hiệu năng (performance / 성능) và sức chứa (capacity / 용량)**, **8. Queueing và saturation** tiếp nhận điểm tựa từ **7. Experiment vòng lặp (loop / 루프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. chi phí (cost / 비용) attribution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Queueing và saturation** nối latency với resource headroom; **Cost attribution** phân bổ tác động đó về team, query hoặc product owner.
 
 ## 8. Queueing và saturation
 
@@ -74,7 +74,7 @@ utilization ρ = arrival rate / service rate
 
 Khi `ρ` gần 1, một burst nhỏ có thể làm freshness trễ hàng giờ. Cần reserve headroom cho thử lại (retry / 재시도), compaction, backfill và sự cố (incident / 인시던트) replay; chạy môi trường vận hành (production / 운영 환경) ở 100% average utilization là thiết kế không có khôi phục (recovery / 복구) sức chứa (capacity / 용량).
 
-> **Chuyển mạch:** Ở chặng này của **12 — chi phí (cost / 비용), hiệu năng (performance / 성능) và sức chứa (capacity / 용량)**, **9. chi phí (cost / 비용) attribution** tiếp nhận điểm tựa từ **8. Queueing và saturation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. tối ưu hóa (optimization / 최적화) không phá ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cost attribution** cho biết ai chịu tác động của saturation; **Optimization không phá semantics** chỉ chấp nhận thay đổi khi correctness và owner vẫn giữ nguyên.
 
 ## 9. chi phí (cost / 비용) attribution
 
@@ -82,7 +82,7 @@ Chi phí (cost / 비용) cần gắn với lĩnh vực (domain / 도메인)/data
 
 Một đơn vị (unit / 단위) economics tốt ghi rõ denominator: chi phí (cost / 비용) per TB đầu vào (input / 입력), per published partition, per successful run, per dashboard refresh hoặc per tính năng (feature / 기능) computation. Denominator thay đổi phải được phiên bản (version / 버전) trong report.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **12 — chi phí (cost / 비용), hiệu năng (performance / 성능) và sức chứa (capacity / 용량)**, **10. tối ưu hóa (optimization / 최적화) không phá ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **9. chi phí (cost / 비용) attribution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Optimization không phá semantics** khép README bằng evidence, capacity guardrail và cost owner; chi tiết engine quay về canonical performance chapter.
 
 ## 10. tối ưu hóa (optimization / 최적화) không phá ngữ nghĩa (semantics / 의미론)
 
