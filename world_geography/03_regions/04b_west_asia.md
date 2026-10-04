@@ -10,7 +10,7 @@ Tây Á được tổ chức bởi nhiều lớp chồng lên nhau:
 
 Đây không phải một “vùng sa mạc dầu mỏ” đồng nhất. Anatolia, Caucasus, Iranian Plateau, Levant, Mesopotamia, Arabian Peninsula và Gulf coast có địa hình, water regime, settlement lịch sử (history / 이력) và economic cấu trúc (structure / 구조) rất khác nhau.
 
-> **Chuyển mạch:** Trong **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Aridity: ràng buộc (constraint / 제약조건) mạnh nhưng không phải định mệnh** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mountain tạo water độ dốc (gradient / 기울기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Thesis đặt Tây Á giữa khô hạn, núi, lưu vực, năng lượng và chokepoint. **Aridity: ràng buộc (constraint / 제약조건) mạnh nhưng không phải định mệnh** giải thích giới hạn nước trước khi theo dõi độ dốc từ núi xuống đồng bằng.
 
 ## Aridity: ràng buộc (constraint / 제약조건) mạnh nhưng không phải định mệnh
 
@@ -20,7 +20,7 @@ Technology có thể giảm một ràng buộc (constraint / 제약조건) nhưn
 
 Mô hình tư duy (mental model / 사고 모델) đúng là **ràng buộc (constraint / 제약조건) transformation**, không phải ràng buộc (constraint / 제약조건) disappearance.
 
-> **Chuyển mạch:** Ở chặng này của **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Mountain tạo water độ dốc (gradient / 기울기)** tiếp nhận điểm tựa từ **Aridity: ràng buộc (constraint / 제약조건) mạnh nhưng không phải định mệnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tigris–Euphrates: river basin vượt chính trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khô hạn làm nước tập trung theo sườn núi, tuyết, mạch ngầm và các dòng theo mùa. **Mountain tạo water độ dốc (gradient / 기울기)** nối địa hình với lưu vực Tigris–Euphrates vượt qua ranh giới chính trị.
 
 ## Mountain tạo water độ dốc (gradient / 기울기)
 
@@ -28,7 +28,7 @@ West Asia có nhiều mountain/highland nhận precipitation và snow nhiều h�
 
 Vì vậy water không phân bố theo national border. Upstream snowpack và reservoir có thể quyết định downstream irrigation cách xa hàng trăm kilomet.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Tigris–Euphrates: river basin vượt chính trị** tiếp nhận điểm tựa từ **Mountain tạo water độ dốc (gradient / 기울기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Jordan basin và water scarcity theo quy mô (scale / 규모)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Tigris–Euphrates cho thấy upstream, đập, tưới tiêu và đô thị cùng chia một hệ thống nước; hành chính không xóa dòng chảy. **Jordan basin và water scarcity theo quy mô (scale / 규모)** đối chiếu một lưu vực nhỏ hơn nhưng bị ràng buộc tương tự.
 
 ## Tigris–Euphrates: river basin vượt chính trị
 
@@ -40,7 +40,7 @@ Muốn phân tích phải theo:
 
 Chỉ nhìn annual river discharge hoặc map border là không đủ.
 
-> **Chuyển mạch:** Trong **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Jordan basin và water scarcity theo quy mô (scale / 규모)** tiếp nhận điểm tựa từ **Tigris–Euphrates: river basin vượt chính trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Groundwater và fossil aquifer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Jordan cho thấy “thiếu nước” thay đổi theo quy mô hộ, thành phố, lưu vực và quốc gia; phân bổ không chỉ do lượng mưa. **Groundwater và fossil aquifer** tiếp theo đưa nguồn nước dưới đất và thời gian tái nạp vào phép tính.
 
 ## Jordan basin và water scarcity theo quy mô (scale / 규모)
 
@@ -48,7 +48,7 @@ Chỉ nhìn annual river discharge hoặc map border là không đủ.
 
 Một city có thể có water physically nearby nhưng vẫn scarcity nếu treatment, pumping hoặc allocation không đáp ứng. Ngược lại, imported food có thể giảm indirect water demand trong agriculture.
 
-> **Chuyển mạch:** Ở chặng này của **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Groundwater và fossil aquifer** tiếp nhận điểm tựa từ **Jordan basin và water scarcity theo quy mô (scale / 규모)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hydrocarbon geology và unequal tài nguyên (resource / 자원) geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Nước ngầm có thể đệm hạn ngắn hạn nhưng fossil aquifer gần như không tái tạo trong cùng nhịp sử dụng. **Hydrocarbon geology và unequal tài nguyên (resource / 자원) geography** mở rộng câu hỏi từ stock nước sang địa chất năng lượng phân bố không đều.
 
 ## Groundwater và fossil aquifer
 
@@ -56,7 +56,7 @@ Một số dry region khai thác groundwater với recharge rất chậm. Nếu 
 
 Đây là khác biệt giữa **renewable luồng (flow / 흐름)** và **stored stock**. Aquifer lớn không đồng nghĩa sustainable yield lớn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Groundwater và fossil aquifer** nêu điều cần giải thích; **Hydrocarbon geology và unequal tài nguyên (resource / 자원) geography** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Strait of Hormuz và lô-gic (logic / 논리) chokepoint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hydrocarbon tập trung tạo doanh thu và quyền lực nhưng cũng tạo phụ thuộc vào tuyến xuất khẩu và khách hàng. **Strait of Hormuz và lô-gic (logic / 논리) chokepoint** biến phân bố địa chất thành đòn bẩy mạng.
 
 ## Hydrocarbon geology và unequal tài nguyên (resource / 자원) geography
 
@@ -64,7 +64,7 @@ Oil/gas tập trung mạnh quanh Persian Gulf basin nhưng không đồng đều
 
 Vì thế năng lượng (energy / 에너지) geography phải theo **giá trị (value / 값) chuỗi (chain / 사슬)**, không chỉ bản đồ reserve.
 
-> **Chuyển mạch:** Trong **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Hydrocarbon geology và unequal tài nguyên (resource / 자원) geography** nêu điều cần giải thích; **Strait of Hormuz và lô-gic (logic / 논리) chokepoint** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Bab el-Mandeb, Suez và mạng rộng hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hormuz quan trọng vì luồng năng lượng tập trung và tuyến thay thế có chi phí khác, không phải vì mọi điểm hẹp đều có quyền lực như nhau. **Bab el-Mandeb, Suez và mạng rộng hơn** đặt chokepoint đó vào toàn bộ tuyến Ấn Độ Dương–Địa Trung Hải.
 
 ## Strait of Hormuz và lô-gic (logic / 논리) chokepoint
 
@@ -74,7 +74,7 @@ Một chokepoint quan trọng không đơn giản vì nó hẹp. Nó quan trọn
 
 Địa lý tạo phụ thuộc (dependency / 의존성) nhưng không tự động quyết định kết quả (outcome / 결과) chính trị.
 
-> **Chuyển mạch:** Ở chặng này của **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Bab el-Mandeb, Suez và mạng rộng hơn** tiếp nhận điểm tựa từ **Strait of Hormuz và lô-gic (logic / 논리) chokepoint** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi xử lý (pipeline / 파이프라인) như tuyến thay thế và nguồn lock-in** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Bab el-Mandeb và Suez cho thấy một sự cố có thể đổi tuyến, thời gian và giá trên mạng rộng, nhưng mức độ phụ thuộc còn tùy tàu, cảng và hàng hóa. **Chuỗi xử lý (pipeline / 파이프라인) như tuyến thay thế và nguồn lock-in** tiếp theo xét tuyến cố định và khả năng khóa lựa chọn.
 
 ## Bab el-Mandeb, Suez và mạng rộng hơn
 
@@ -82,7 +82,7 @@ West Asia liên kết chặt với Red Sea–Suez tuyến (route / 경로) và A
 
 Đây là ví dụ **mạng (network / 네트워크) shock propagation**: sự kiện cục bộ có thể lan thành chi phí (cost / 비용) shock toàn cầu qua vận chuyển (transport / 전송) mạng (network / 네트워크).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Bab el-Mandeb, Suez và mạng rộng hơn** nêu điều cần giải thích; **Chuỗi xử lý (pipeline / 파이프라인) như tuyến thay thế và nguồn lock-in** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Gulf urbanization: energy-backed water hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Pipeline có thể thay một phần tuyến biển nhưng cần vốn cố định, điểm vào và thỏa thuận dài hạn, từ đó tạo lock-in. **Gulf urbanization: energy-backed water hệ thống (system / 시스템)** cho thấy doanh thu năng lượng được chuyển thành nước và đô thị như thế nào.
 
 ## Chuỗi xử lý (pipeline / 파이프라인) như tuyến thay thế và nguồn lock-in
 
@@ -90,7 +90,7 @@ Chuỗi xử lý (pipeline / 파이프라인) có thể bypass một maritime ch
 
 Diversity tuyến (route / 경로) tăng resilience nhưng làm duplicate sức chứa (capacity / 용량) và capital chi phí (cost / 비용). năng lượng (energy / 에너지) bảo mật (security / 보안) vì thế là bài toán sự đánh đổi (trade-off / 트레이드오프) giữa efficiency và redundancy.
 
-> **Chuyển mạch:** Trong **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Chuỗi xử lý (pipeline / 파이프라인) như tuyến thay thế và nguồn lock-in** nêu điều cần giải thích; **Gulf urbanization: energy-backed water hệ thống (system / 시스템)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Cổng (port / 포트), aviation hub và mạng (network / 네트워크) centrality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Nước khử mặn và năng lượng cho phép Gulf urbanization vượt giới hạn tự nhiên nhưng tạo phụ thuộc vào điện, công nghệ và chuỗi cung ứng. **Cổng (port / 포트), aviation hub và mạng (network / 네트워크) centrality** tiếp theo đọc các node kết nối đô thị với mạng toàn cầu.
 
 ## Gulf urbanization: energy-backed water hệ thống (system / 시스템)
 
@@ -98,7 +98,7 @@ Nhiều Gulf city phát triển nhanh ở môi trường tự nhiên khô hạn 
 
 Urban hệ thống (system / 시스템) này cho thấy city carrying sức chứa (capacity / 용량) có thể được mở rộng bằng trade và hạ tầng (infrastructure / 인프라). Nhưng footprint vượt xa administrative ranh giới (boundary / 경계): food, construction material và embodied water được nhập từ nơi khác.
 
-> **Chuyển mạch:** Ở chặng này của **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Cổng (port / 포트), aviation hub và mạng (network / 네트워크) centrality** tiếp nhận điểm tựa từ **Gulf urbanization: energy-backed water hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Food bảo mật (security / 보안) và virtual water** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cảng và aviation hub chuyển năng lượng, người và hàng hóa qua sa mạc, tạo centrality vượt quy mô lãnh thổ. **Food bảo mật (security / 보안) và virtual water** hỏi cách các node đó bảo đảm lương thực bằng nguồn nước và đất ở nơi khác.
 
 ## Cổng (port / 포트), aviation hub và mạng (network / 네트워크) centrality
 
@@ -106,7 +106,7 @@ Một city nhỏ về diện tích có thể có toàn cục (global / 전역) r
 
 Do đó **mạng (network / 네트워크) centrality** quan trọng hơn land area. Dubai, Doha hoặc Istanbul có hàm (function / 함수) khác nhau nhưng đều minh họa việc connectivity có thể biến location thành regional role.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Food bảo mật (security / 보안) và virtual water** tiếp nhận điểm tựa từ **Cổng (port / 포트), aviation hub và mạng (network / 네트워크) centrality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Agriculture tồn tại ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Food security trong vùng khô hạn thường dựa vào nhập khẩu, logistics và “nước ảo” chứa trong hàng hóa. **Agriculture tồn tại ở đâu?** tiếp theo xác định các ốc đảo, đồng bằng, vùng ven biển và nguồn nước có thể duy trì sản xuất.
 
 ## Food bảo mật (security / 보안) và virtual water
 
@@ -116,7 +116,7 @@ Chiến lược này tiết kiệm cục bộ (local / 로컬) water nhưng chuy
 
 Water bảo mật (security / 보안) và trade bảo mật (security / 보안) vì thế không thể tách riêng.
 
-> **Chuyển mạch:** Trong **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Agriculture tồn tại ở đâu?** tiếp nhận điểm tựa từ **Food bảo mật (security / 보안) và virtual water** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Historical corridor và đường dẫn (path / 경로) dependence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Nông nghiệp chỉ bền ở nơi nước, đất và access cho phép; các vùng ấy thường trùng với corridor lịch sử và đô thị cổ. **Historical corridor và đường dẫn (path / 경로) dependence** giải thích vì sao mạng settlement và thương mại tiếp tục định hình không gian hiện tại.
 
 ## Agriculture tồn tại ở đâu?
 
@@ -124,7 +124,7 @@ Agriculture tập trung ở irrigated plain, river valley, highland có rainfall
 
 Irrigation có thể rất productive nhưng salinization, groundwater decline và heat stress là ràng buộc (constraint / 제약조건) quan trọng. Crop choice quyết định water footprint mạnh hơn chỉ diện tích farmland.
 
-> **Chuyển mạch:** Ở chặng này của **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Agriculture tồn tại ở đâu?** xác định đầu vào; **Historical corridor và đường dẫn (path / 경로) dependence** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Settlement, ngôn ngữ (language / 언어), religion và cultural landscape** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Corridor của nước, thương mại và hành hương để lại dấu vết trong settlement, ngôn ngữ, tôn giáo và cảnh quan. **Settlement, ngôn ngữ (language / 언어), religion và cultural landscape** tiếp theo đọc các lớp văn hóa như kết quả của dòng người và thể chế.
 
 ## Historical corridor và đường dẫn (path / 경로) dependence
 
@@ -132,7 +132,7 @@ Tây Á nằm giữa Mediterranean, Black Sea, Central Asia, Indian Ocean và Af
 
 Technology thay đổi tuyến (route / 경로) chi phí (cost / 비용) nhưng không xóa geography. Mountain pass, strait và coast tiếp tục tạo nút (node / 노드) có đường dẫn (path / 경로) dependence lâu dài.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Historical corridor và đường dẫn (path / 경로) dependence** xác định đầu vào; **Settlement, ngôn ngữ (language / 언어), religion và cultural landscape** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Demography và labor di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cảnh quan văn hóa cho biết ai đã cư trú, trao đổi và tạo thể chế ở đâu, nhưng hiện tại còn bị định hình bởi lao động và dân số di chuyển. **Demography và labor di chuyển (migration / 마이그레이션)** tiếp nối lớp lịch sử bằng dòng người mới.
 
 ## Settlement, ngôn ngữ (language / 언어), religion và cultural landscape
 
@@ -140,7 +140,7 @@ Nhiều city có lịch sử rất lâu vì water nguồn (source / 소스), tra
 
 Nhưng cultural geography không nên bị giản lược thành “religion quyết định society”. Ethnicity, ngôn ngữ (language / 언어), lớp (class / 클래스), trạng thái (state / 상태) institution, di chuyển (migration / 마이그레이션) và urbanization đều làm region rất đa dạng.
 
-> **Chuyển mạch:** Trong **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Settlement, ngôn ngữ (language / 언어), religion và cultural landscape** cho ta quy tắc; **Demography và labor di chuyển (migration / 마이그레이션)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Năng lượng (energy / 에너지) chuyển tiếp (transition / 전이) và trọng yếu (critical / 중요) question mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Migration phân phối kỹ năng, tiền gửi và nhu cầu dịch vụ theo mạng đô thị, đồng thời tạo phụ thuộc chính sách. **Năng lượng (energy / 에너지) chuyển tiếp (transition / 전이) và trọng yếu (critical / 중요) question mới** hỏi liệu nền kinh tế có thể chuyển đổi ngoài hydrocarbon mà vẫn giữ nước và việc làm hay không.
 
 ## Demography và labor di chuyển (migration / 마이그레이션)
 
@@ -148,7 +148,7 @@ Một số Gulf economy có tỷ lệ foreign worker cao, tạo population cấu
 
 Đây là ví dụ cho việc di chuyển (migration / 마이그레이션) luồng (flow / 흐름) có thể biến demography nhanh hơn natural increase.
 
-> **Chuyển mạch:** Ở chặng này của **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Demography và labor di chuyển (migration / 마이그레이션)** cho ta quy tắc; **Năng lượng (energy / 에너지) chuyển tiếp (transition / 전이) và trọng yếu (critical / 중요) question mới** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Korea–Vietnam liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Chuyển dịch năng lượng gắn với đầu tư, cảng, công nghệ, kỹ năng và thị trường mới, không chỉ đổi nhiên liệu. **Korea–Vietnam liên kết (connection / 연결)** là một cầu nối để so sánh cách các nền kinh tế ngoài Tây Á tiếp cận năng lượng và corridor.
 
 ## Năng lượng (energy / 에너지) chuyển tiếp (transition / 전이) và trọng yếu (critical / 중요) question mới
 
@@ -156,7 +156,7 @@ Toàn cục (global / 전역) năng lượng (energy / 에너지) chuyển tiế
 
 Câu hỏi chuyển từ “ai có oil?” sang “ai kiểm soát low-cost năng lượng (energy / 에너지), grid, hydrogen/ammonia chuỗi (chain / 사슬), petrochemical, mineral processing và logistics?”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Korea–Vietnam liên kết (connection / 연결)** tiếp nhận điểm tựa từ **Năng lượng (energy / 에너지) chuyển tiếp (transition / 전이) và trọng yếu (critical / 중요) question mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** So sánh Korea–Vietnam và Tây Á cho thấy cùng một mạng năng lượng có thể có cấu trúc cảng, nước, lao động và phụ thuộc khác nhau. **Dùng chung (common / 공통) misconceptions** kiểm tra những cách giản lược Tây Á thành chỉ khô hạn, dầu mỏ hoặc xung đột.
 
 ## Korea–Vietnam liên kết (connection / 연결)
 
@@ -164,7 +164,7 @@ Korea và Vietnam phụ thuộc West Asia qua năng lượng (energy / 에너지
 
 Đây là ví dụ rõ của **effective distance through mạng (network / 네트워크)**: một nơi xa vẫn có thể có tác động trực tiếp nếu nằm upstream trong năng lượng (energy / 에너지)/logistics chuỗi (chain / 사슬).
 
-> **Chuyển mạch:** Trong **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Korea–Vietnam liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi sửa các hiểu lầm về nước, dầu, chokepoint, đô thị và văn hóa, còn lại chuỗi aridity–water concentration–energy network–settlement–migration. **Mô hình tư duy** cô đọng chuỗi này thành khung đọc liên vùng.
 
 ## Dùng chung (common / 공통) misconceptions
 
@@ -174,7 +174,7 @@ Korea và Vietnam phụ thuộc West Asia qua năng lượng (energy / 에너지
 
 “Chokepoint quyết định chính trị” sai; chokepoint tạo ràng buộc (constraint / 제약조건) và bargaining ngữ cảnh (context / 맥락) nhưng kết quả (outcome / 결과) phụ thuộc năng lực (capability / 역량), alliance và alternative tuyến (route / 경로).
 
-> **Chuyển mạch:** Ở chặng này của **Tây Á: khô hạn, water concentration, năng lượng (energy / 에너지) mạng (network / 네트워크) và chokepoint**, **Mô hình tư duy** gom các mảnh từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi aridity–mountain water → Tigris–Euphrates, Jordan và aquifer → hydrocarbon, Hormuz, Suez và pipeline → Gulf urbanization, food, agriculture, corridor, culture, migration và transition. Kết luận bàn giao owner **World Geography** theo [README](../README.md), để nối sang hệ thống toàn cầu hoặc atlas.
 
 ## Mô hình tư duy
 
