@@ -45,6 +45,20 @@ ROE = lợi nhuận sau thuế / vốn chủ sở hữu bình quân × 100%
 
 ROE cao có thể đến từ biên lợi nhuận tốt, sử dụng tài sản hiệu quả hoặc đòn bẩy cao. Vì mẫu số khác nhau, không được xếp hạng doanh nghiệp chỉ bằng một tỷ số. ROE là đầu vào trực tiếp cho quan hệ PBR–ROE ở bài 2; nếu bỏ qua đòn bẩy và chất lượng lợi nhuận, multiple sẽ bị đọc sai.
 
+### Tách ROE thành ba cơ chế
+
+Để không dừng ở kết luận “ROE cao”, hãy phân rã nó thành khả năng giữ lại lợi nhuận, sử dụng tài sản và mức dùng vốn vay. Dạng DuPont khái quát là:
+
+```
+ROE = biên lợi nhuận ròng × vòng quay tài sản × hệ số nhân vốn chủ
+```
+
+Trong tính toán thực tế, lợi nhuận, tài sản và vốn chủ nên dùng cùng kỳ và nhất quán giữa số đầu kỳ–cuối kỳ; nếu dùng số cuối kỳ cho một thành phần và số bình quân cho thành phần khác, DuPont sẽ tạo ra tín hiệu giả.
+
+Ví dụ, biên ròng 8%, vòng quay tài sản 1,2 lần và hệ số nhân vốn chủ 1,5 lần cho ROE khoảng 8% × 1,2 × 1,5 = 14,4%. Nếu ROE tăng lên 19,2% chỉ vì hệ số nhân tăng từ 1,5 lên 2,0, chất lượng cải thiện khác hoàn toàn trường hợp biên lợi nhuận tăng. Trường hợp thứ nhất dựa nhiều hơn vào đòn bẩy, nên phải kiểm tra chi phí lãi, đáo hạn nợ và khả năng chịu suy giảm doanh thu.
+
+Phân rã này không thay thế báo cáo tài chính: nó chỉ nói **ROE tăng bằng kênh nào**. Khi chuyển sang PBR ở bài 2, hãy ghép ROE với cost of equity và độ bền của từng kênh; một multiple thấp không hấp dẫn nếu ROE cao chỉ do đòn bẩy tạm thời.
+
 ## 6. Worked chain: từ chỉ báo đến luận điểm doanh nghiệp
 
 Hãy coi một chỉ báo là điểm bắt đầu của chuỗi, không phải kết luận. Nếu BSI tăng trên 100, giả thuyết đầu tiên là kỳ vọng doanh nghiệp cải thiện. Bước kế tiếp là hỏi ngành nào trả lời tích cực, doanh thu nào có thể tăng, chi phí đầu vào và lãi vay có tăng nhanh hơn không, rồi kiểm tra xem lợi nhuận có chuyển thành CFO hay bị vốn lưu động hút mất. Chỉ khi chuỗi `kỳ vọng → hoạt động → lợi nhuận → tiền` nhất quán, chỉ báo mới có thể trở thành một phần của luận điểm.

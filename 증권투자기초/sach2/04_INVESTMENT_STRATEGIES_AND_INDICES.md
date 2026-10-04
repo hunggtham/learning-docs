@@ -24,6 +24,14 @@ Stock Price Index tổng hợp nhiều giá cổ phiếu thành một thước �
 
 Khi đọc một chỉ số, kiểm tra: universe, quy tắc chọn và loại mã, trọng số, điều chỉnh corporate action, tần suất tái cân bằng và liệu chỉ số là price return hay total return. Chỉ số price chỉ phản ánh biến động giá; total-return index tái đầu tư cổ tức. So sánh quỹ với benchmark sai loại sẽ tạo kết luận sai về năng lực.
 
+### Worked index construction
+
+Một ví dụ nhỏ cho thấy phương pháp trọng số làm thay đổi câu chuyện. Với chỉ số price-weighted gồm hai cổ phiếu giá 20 và 40, tổng giá là 60; nếu chia cho divisor 0,6 thì chỉ số cơ sở là 100. Khi cả hai giá tăng lần lượt lên 22 và 44, chỉ số thành 110, tức tăng 10%. Nếu một cổ phiếu split 2:1, giá danh nghĩa thay đổi nhưng doanh nghiệp không tự tạo thêm giá trị; divisor phải được điều chỉnh để chỉ số không rơi giả tạo.
+
+Với chỉ số market-cap-weighted, giả sử vốn hóa ban đầu là 100 và 300, trọng số tương ứng là 25% và 75%. Nếu cổ phiếu thứ nhất tăng 10% còn cổ phiếu thứ hai giảm 5%, lợi suất xấp xỉ là 0,25 × 10% + 0,75 × (−5%) = −1,25%. Cùng hai mã và cùng biến động giá, chỉ số này có thể cho kết quả khác price-weighted vì nó đo exposure theo quy mô vốn hóa.
+
+Ví dụ chỉ minh họa cơ chế, không tái dựng phương pháp hiện hành của KOSPI, S&P 500 hay Nikkei 225. Khi dùng benchmark thật, phải đọc divisor, corporate-action adjustment, ngày tái cân bằng và quy tắc float; nếu bỏ qua các chi tiết đó, attribution của danh mục sẽ lẫn thay đổi phương pháp với kỹ năng đầu tư.
+
 ## 5. Câu hỏi ứng dụng và cách giải
 
 Các câu hỏi cuối khối yêu cầu nhận diện KOSPI/KOSDAQ/S&P 500/Nikkei 225, phân biệt PER–PBR–PSR–EV/EBITDA và hiểu portfolio effect. Cách giải không phải nhớ đáp án: (1) xác định object; (2) viết numerator/denominator hoặc cách index-weight; (3) nêu điều kiện; (4) kiểm tra bẫy như split, cổ tức, đòn bẩy và currency. Các số trong ảnh OCR không đủ chắc để chép lại; nguyên tắc reasoning được giữ, chi tiết số liệu được đánh dấu `SOURCE_AMBIGUITY` trong coverage.
