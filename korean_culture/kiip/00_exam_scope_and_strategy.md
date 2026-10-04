@@ -1,116 +1,219 @@
-# 00. Bản đồ phạm vi KIIP — học chung, chỉ gắn nhãn 영주/귀화 khi cần
+# 00. Bản đồ phạm vi KIIP — strategy và mastery
 
-> **Mạch đọc:** Đặt **00. Bản đồ phạm vi KIIP — học chung, chỉ gắn nhãn 영주/귀화 khi cần** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Nội dung đi từ **Cách đọc tag** sang **Phạm vi cơ bản từ bộ PDF**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
+> **Đọc trước:** lesson numbering chính thức nằm tại [`00_official_textbook_map.md`](00_official_textbook_map.md). File này giải thích **học như thế nào**, không tự định nghĩa lại syllabus.
 
+## 1. Ba tag trong library
 
-## Cách đọc tag
+- `공통`: phần basic dùng cho `영주용`, đồng thời là nền bắt buộc cho người thi `귀화용`.
+- `귀화용 심화`: kiến thức cần đào sâu thêm cho mục tiêu 국적/귀화.
+- `현재 확인`: luật, chính sách, cơ cấu cơ quan, số liệu hoặc thống kê có thể thay đổi và phải xác minh trước kỳ thi.
 
-`공통` = phần cơ bản dùng để ôn `영주용`, đồng thời là nền tảng mà người thi `귀화용` vẫn phải biết.  
-`귀화용 심화` = học thêm về tư cách công dân, quyền–nghĩa vụ, phúc lợi, hiến pháp, nhà nước và quá trình hình thành nền dân chủ hiện đại.  
-`현재 확인` = con số, luật hoặc chính sách có thể đổi theo thời gian và cần đối chiếu nguồn chính thức.
+Bộ Tư pháp hiện mô tả `한국사회 이해` là:
 
-Folder này cố ý **không tách hai nhánh học (track / 트랙) thành hai bộ ghi chú (note / 노트)**. Bộ Tư pháp hiện mô tả `한국사회 이해` là 70 giờ đối với mục tiêu 영주 và 100 giờ đối với mục tiêu 국적; sự khác nhau về course hours không có nghĩa hai bên cần hai kiến thức (knowledge / 지식) cây (tree / 트리) hoàn toàn riêng. Trong thư viện (library / 라이브러리) này, kiến thức chung được học một lần và phần cần mở rộng được đánh dấu ngay tại chỗ.
+- `영주`: 70 giờ;
+- `국적`: tổng 100 giờ.
 
-Nguồn hiện tại (current / 현재) cấu trúc (structure / 구조): `법무부 사회통합프로그램` — https://www.moj.go.kr/moj/369/subview.do
+Nguồn hiện hành: `법무부 사회통합프로그램` — https://www.moj.go.kr/moj/369/subview.do
 
+---
 
-> **Chuyển mạch:** Từ **Cách đọc tag**, ta sang **Phạm vi cơ bản từ bộ PDF** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
-
-## Phạm vi cơ bản từ bộ PDF
-
-Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
+# 2. Xương sống 50 bài basic — mapping đã hiệu chỉnh
 
 ```text
-사회 1~8
-교육 9~12
-문화 13~19
-정치 20~24
-경제 25~29
-법 30~37
-역사 38~44
-지리 45~50
+사회1  1~8
+사회2  9~12
+문화   13~19
+정치   20~24
+경제   25~29
+법     30~36
+역사   37~43
+지리   44~50
 ```
 
-> **시험 범위: 공통**
+> **Quan trọng:** mapping cũ trong library từng ghi `법 30~37 / 역사 38~44 / 지리 45~50`. Sau khi đối chiếu lại TOC chính thức, đây là lỗi off-by-one từ bài 37. Không dùng mapping cũ nữa.
 
-Đây là xương sống 50 bài trong 8 PDF người học cung cấp. Người ôn 영주 học toàn bộ khối này. Người ôn 귀화 cũng học cùng khối, sau đó đọc thêm các section `귀화용 심화` ngay trong từng lĩnh vực (domain / 도메인).
+Exact titles và owner của từng bài: [`00_official_textbook_map.md`](00_official_textbook_map.md).
 
+---
 
-> **Chuyển mạch:** Từ **Phạm vi cơ bản từ bộ PDF**, ta sang **Phần 심화 được gộp vào đâu?** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+# 3. Những basic gap đã phát hiện khi audit
 
-## Phần 심화 được gộp vào đâu?
+Không nên tuyên bố “đủ 50 bài” chỉ vì folder có 8 chapter. Đợt audit 2026-10-04 phát hiện một số bài chính thức bị thiếu hoặc quá mỏng:
 
-Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
+- `제5과 한국의 대중매체`
+- `제19과 한국의 전통 가치와 연고`
+- `제23과 한국의 정치과정`
+- `제24과 한국의 국제관계`
+- `제35과 권리 침해에 대한 구제와 보호`
+- `제36과 준법의 중요성`
+- `제40과 지폐 속 위인들` 일부
+- `제48~50과` 관광·지역사회 기관·지역문제 해결
 
-| Trục 심화 | File chính |
-|---|---|
-| `대한민국의 국민` | `01_사회.md`, `06_법.md` |
-| `국민의 권리` | `04_정치.md`, `06_법.md` |
-| `국민의 의무` | `04_정치.md`, `06_법.md` |
-| `국민을 위한 복지` | `01_사회.md` |
-| `정부수립·헌정·민주주의` | `04_정치.md`, `07_역사.md` |
-| `국가상징·면접 연결` | `01_사회.md`, `10_작문_구술.md` |
+Các phần này được vá tại [`19_official_basic_gap_supplement.md`](19_official_basic_gap_supplement.md).
 
-> **시험 범위: 귀화용 심화**
+---
 
-Điểm khác biệt không phải “học một bộ hoàn toàn khác”, mà là phải **giải thích sâu hơn**: `국민` khác `영주자` thế nào, quyền đi cùng nghĩa vụ ra sao, `헌법` định nghĩa trật tự nhà nước như thế nào, `사회보험` khác `공공부조` ra sao, và chuỗi `광복 → 정부수립 → 전쟁 → 민주화` có ý nghĩa gì.
+# 4. 귀화용 심화 không chỉ là vài paragraph gắn tag
 
+Giáo trình 심화 có **20 bài / 5 phần**:
 
-> **Chuyển mạch:** Từ **Phần 심화 được gộp vào đâu?**, ta sang **Học theo 5 vòng thay vì đọc một lần** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+```text
+1편 대한민국의 국민
+2편 대한민국의 역사와 발전
+3편 대한민국의 정치와 외교
+4편 대한민국의 경제
+5편 대한민국의 법질서
+```
 
-## Học theo 5 vòng thay vì đọc một lần
+Canonical map + supplement:
 
-### Vòng 1 — cấu trúc (structure / 구조)
+[`18_귀화용_심화_official_map.md`](18_귀화용_심화_official_map.md)
 
-Đọc 01→08 để biết “cái gì nằm ở đâu”. Chưa cần thuộc mọi chi tiết.
+Các trục rất dễ thiếu nếu chỉ đọc 01~08:
 
-### Vòng 2 — Contrast
+- `정당·정치과정·시민참여`
+- `외교·국제관계`
+- `남북통일 노력`
+- `경제체제`
+- `금융과 자산관리`
+- `기업과 근로자`
+- `국민경제와 국제거래`
+- `가족·재산·직장·범죄와 법`
 
-Mỗi khái niệm phải ghép với thứ dễ nhầm:
+---
 
-`국회 ↔ 행정부`  
+# 5. Học theo 6 vòng
+
+## Vòng 1 — Official coverage
+
+Dùng `00_official_textbook_map.md` và tick đủ 50 bài.
+
+Nếu thi 귀화, tick thêm 20 bài ở file 18.
+
+## Vòng 2 — Understanding
+
+Đọc owner chapter 01~08 và supplement 19.
+
+Mỗi concept phải trả lời được:
+
+- nó là gì?
+- tại sao tồn tại?
+- hoạt động thế nào?
+- dễ nhầm với gì?
+
+## Vòng 3 — Contrast
+
+Ví dụ:
+
+`국회 ↔ 정부`  
 `사회보험 ↔ 공공부조`  
 `영주권 ↔ 국적`  
 `어린이집 ↔ 유치원`  
 `수시 ↔ 정시`  
-`전세 ↔ 월세`  
-`설날 ↔ 추석`  
-`호남 ↔ 영남`
+`정당 ↔ 시민단체`  
+`정전 ↔ 종전`  
+`수사 ↔ 기소 ↔ 재판`
 
-### Vòng 3 — Numbers & institutions
+## Vòng 4 — Numbers & institutions
 
-Dùng [`09_high_yield_numbers_institutions.md`](09_high_yield_numbers_institutions.md). Chỉ học cứng số có tính cấu trúc; số liệu thống kê/pháp luật thay đổi phải đi qua tệp (file / 파일) hiện tại (current / 현재) facts.
+Dùng [`09_high_yield_numbers_institutions.md`](09_high_yield_numbers_institutions.md).
 
-### Vòng 4 — Active recall
+Chỉ học cứng số mang tính cấu trúc. Luật/thống kê thay đổi phải qua [`00_current_facts_and_corrections.md`](00_current_facts_and_corrections.md).
 
-Dùng [`14_active_recall_bank.md`](14_active_recall_bank.md), tự trả lời trước khi nhìn đáp án. Không chỉ nhận diện; phải nói được một câu giải thích.
+## Vòng 5 — Active recall
 
-### Vòng 5 — đầu ra (output / 출력)
+Dùng [`14_active_recall_bank.md`](14_active_recall_bank.md) và [`17_complete_exam_coverage_checklist.md`](17_complete_exam_coverage_checklist.md).
 
-Dùng [`10_작문_구술.md`](10_작문_구술.md), [`13_exam_question_patterns.md`](13_exam_question_patterns.md), sau đó làm mock 01 và mock 02.
+Không nhìn note trước khi trả lời.
 
+## Vòng 6 — Output + mock
 
-> **Chuyển mạch:** Từ **Học theo 5 vòng thay vì đọc một lần**, ta sang **Ba mức độ ghi nhớ** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+Dùng:
 
-## Ba mức độ ghi nhớ
+- [`10_작문_구술.md`](10_작문_구술.md)
+- [`13_exam_question_patterns.md`](13_exam_question_patterns.md)
+- [`11_mock_01.md`](11_mock_01.md)
+- [`15_mock_02.md`](15_mock_02.md)
 
-Một fact chỉ được coi là “đã học” khi đạt đủ ba tầng:
+---
 
-1. **Recognition** — nhìn thấy và biết đáp án.
-2. **Recall** — không nhìn ghi chú (note / 노트) vẫn nhớ được.
-3. **Explanation** — nói được bằng câu tiếng Hàn đơn giản.
+# 6. Bốn mức mastery
 
-Ví dụ với `삼권분립`:
+Một topic chỉ được coi là “đã học” khi đạt:
 
-- recognition: biết gồm 입법·행정·사법;
-- recall: tự viết được `국회–정부–법원`;
-- explanation: `국가 권력이 한 곳에 집중되지 않도록 권력을 나누는 원리입니다.`
+1. **Recognition** — nhìn thấy và nhận ra.
+2. **Recall** — không nhìn note vẫn nhớ.
+3. **Contrast** — phân biệt được với concept gần/dễ nhầm.
+4. **Explanation** — giải thích được bằng 1~3 câu Korean đơn giản.
 
+Ví dụ `삼권분립`:
 
-> **Chuyển mạch:** Từ **Ba mức độ ghi nhớ**, ta sang **Dữ liệu có thể thay đổi** để mở rộng cùng câu hỏi và dùng kết quả đó để khép lại mạch giải thích.
+- recognition: `입법·행정·사법`;
+- recall: `국회·정부·법원`;
+- contrast: biết Quốc hội không phải cơ quan thi hành chính sách;
+- explanation: `국가 권력이 한 곳에 집중되지 않도록 권력을 나누고 서로 견제하도록 하는 원리입니다.`
 
-## Dữ liệu có thể thay đổi
+---
 
-Các PDF là bản tóm tắt học tập ở một thời điểm. Không tự động thay nội dung nguồn bằng dữ liệu mới. Khi một con số/quy định có khả năng đổi, xem riêng [`00_current_facts_and_corrections.md`](00_current_facts_and_corrections.md): tệp (file / 파일) đó luôn tách rõ **PDF ghi gì** và **hiện tại (current / 현재) xác minh (verification / 확인) ghi gì**.
+# 7. Current-fact discipline
 
-> **Bàn giao:** Sau **Dữ liệu có thể thay đổi**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 current facts and corrections](./00_current_facts_and_corrections.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+Không học mọi fact theo cùng cách.
+
+### Stable structure
+
+Ví dụ:
+
+- 대통령 `5년 단임`;
+- 국회의원 `4년`;
+- 삼권분립;
+- 학제 `6-3-3`.
+
+Có thể recall trực tiếp.
+
+### Policy/law
+
+Ví dụ:
+
+- 예금자보호한도;
+- 법정 최고금리;
+- 형사사법기관 구조;
+- visa/quốc tịch detailed rules.
+
+Phải version hóa.
+
+### Statistics
+
+Ví dụ:
+
+- 1인 가구 비율;
+- population;
+- religion share.
+
+Luôn gắn với **năm**.
+
+Owner: [`00_current_facts_and_corrections.md`](00_current_facts_and_corrections.md).
+
+---
+
+# 8. Exit criteria
+
+## 영주용
+
+- 50/50 basic lessons có owner;
+- không có domain nào chỉ đạt recognition;
+- high-yield contrasts trả lời trong khoảng 10 giây;
+- oral/writing schema dùng được;
+- mock cho thấy gap có thể quay về owner rõ ràng.
+
+## 귀화용
+
+Ngoài toàn bộ basic:
+
+- 20/20 심화 lessons ở file 18;
+- nói được về `헌법·국민주권·권리·의무`;
+- kể được `광복 → 정부수립 → 6·25 → 민주화`;
+- hiểu `정치과정·정당·외교·통일`;
+- hiểu basic economic system/finance/international trade;
+- xử lý được family/property/work/crime law scenarios.
+
+> **Bàn giao:** đi tiếp theo thứ tự `00 official map → 01~08 → 19 basic supplement → (귀화: 18 심화) → 17 coverage → 14 recall → 10 output → mock → current facts`.
