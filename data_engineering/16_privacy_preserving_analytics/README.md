@@ -8,7 +8,7 @@ Privacy là giới hạn thông tin có thể suy ra từ đầu ra (output / �
 
 Trước khi chọn kỹ thuật, xác định adversary, auxiliary dữ liệu (data / 데이터), truy vấn (query / 쿼리) ngân sách (budget / 예산), protected thực thể (entity / 엔터티) và acceptable disclosure. K-anonymity có thể thất bại khi quasi-identifier dễ phép nối (join / 조인) với dataset ngoài; suppression không sửa được attribute disclosure.
 
-> **Chuyển mạch:** Trong **16 — Privacy-preserving analytics**, **2. Differential privacy** tiếp nhận điểm tựa từ **1. Threat mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Aggregate bản phát hành (release / 릴리스) chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Threat model** xác định ai có thể suy ra điều gì; **Differential privacy** biến rủi ro đó thành noise budget, rồi **Aggregate release policy** kiểm soát cách phát hành.
 
 ## 2. Differential privacy
 
@@ -19,13 +19,13 @@ Differential privacy thêm noise có kiểm soát để đầu ra (output / 출�
 
 Composition quan trọng: nhiều truy vấn (query / 쿼리) cùng dataset cộng dồn privacy mất mát (loss / 손실). Mỗi dashboard không thể tự dùng một ngân sách vô hạn mà không có accountant trung tâm.
 
-> **Chuyển mạch:** Ở chặng này của **16 — Privacy-preserving analytics**, **3. Aggregate bản phát hành (release / 릴리스) chính sách (policy / 정책)** tiếp nhận điểm tựa từ **2. Differential privacy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Utility sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Aggregate release policy** ràng buộc query, population và budget; **Utility trade-off** đo phần thông tin còn dùng được sau ràng buộc đó.
 
 ## 3. Aggregate bản phát hành (release / 릴리스) chính sách (policy / 정책)
 
 Chính sách (policy / 정책) nên giới hạn minimum group kích thước (size / 크기), truy vấn (query / 쿼리) overlap, suppression, rounding, noise, tỷ lệ (rate / 비율) limit và retention của đầu ra (output / 출력). Một chỉ số (metric / 지표) hợp lệ riêng lẻ có thể trở thành leak khi người dùng lấy chênh lệch giữa hai filter gần giống nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **16 — Privacy-preserving analytics**, **4. Utility sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **3. Aggregate bản phát hành (release / 릴리스) chính sách (policy / 정책)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. dữ liệu (data / 데이터) vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Utility trade-off** cho biết privacy cost ảnh hưởng kết quả ra sao; **Data lifecycle** đặt quyết định đó vào collection, retention, deletion và access.
 
 ## 4. Utility sự đánh đổi (trade-off / 트레이드오프)
 
@@ -37,7 +37,7 @@ Noise mạnh bảo vệ privacy nhưng làm chỉ số (metric / 지표) nhỏ/r
 
 Raw, snapshots, backups, logs, caches và notebook extracts đều nằm trong privacy phạm vi (scope / 범위). Redaction phải xử lý cả derived features và huấn luyện (training / 학습) artifacts nếu chúng có thể encode thông tin subject.
 
-> **Chuyển mạch:** Ở chặng này của **16 — Privacy-preserving analytics**, cơ chế trong **5. dữ liệu (data / 데이터) vòng đời (lifecycle / 생명주기)** cần được kiểm chứng bằng dấu vết cụ thể; **6. bằng chứng (evidence / 증거)** đưa dữ liệu và nguồn vào đúng điểm đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Data lifecycle** chỉ có giá trị khi có log và policy evidence; **Evidence** khóa lại claim về privacy, utility và quyền truy cập bằng dấu vết có thể kiểm tra.
 
 ## 6. bằng chứng (evidence / 증거)
 

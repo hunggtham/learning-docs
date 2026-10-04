@@ -10,14 +10,14 @@ Nhánh này xây ngôn ngữ nền của kỹ thuật điện: nút (node / 노�
 KCL/KVL → Thévenin/Norton → RC/RL/RLC → phasor/impedance → frequency response → measurement
 ```
 
-> **Chuyển mạch:** Trong **Circuits — Mạch điện**, **Cốt lõi (core / 핵심) chapter** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) tuyến (route / 경로)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cần nắm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cốt lõi route** sắp xếp charge, voltage, current và energy; **Cốt lõi chapter** biến route thành mô hình mạch cụ thể, rồi **Cần nắm** nêu prerequisite phải giữ.
 
 ## Cốt lõi (core / 핵심) chapter
 
 - [Circuit analysis and measurement](00_circuit_analysis_and_measurement.md) — KCL/KVL, loading, transient, AC impedance, ADC divider và đo kiểm.
 - [Network theorems and frequency response](01_network_theorems_frequency_response.md) — nodal/mesh, Thevenin/Norton, Bode, sensitivity và tolerance.
 
-> **Chuyển mạch:** Ở chặng này của **Circuits — Mạch điện**, **Cần nắm** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cần nắm** chốt định luật và phép đo tối thiểu; **Cầu nối** dùng chúng để chuyển từ circuit model sang electronics, signals hoặc power owner.
 
 ## Cần nắm
 
@@ -27,7 +27,7 @@ KCL/KVL → Thévenin/Norton → RC/RL/RLC → phasor/impedance → frequency re
 - loading, nguồn (source / 소스) impedance, tolerance, parasitic và lỗi (error / 오류) ngân sách (budget / 예산);
 - multimeter, oscilloscope, probe loading, grounding và safe đo lường (measurement / 측정).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Circuits — Mạch điện**, **Cầu nối (bridge / 브리지)** tiếp nhận điểm tựa từ **Cần nắm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Cầu nối** khép README bằng cách chỉ rõ circuit concept nào được tái sử dụng ở domain kế tiếp và link về canonical owner tương ứng.
 
 ## Cầu nối (bridge / 브리지)
 
