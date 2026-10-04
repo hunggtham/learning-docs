@@ -34,7 +34,7 @@ computer_science/
 
 Từ **nâng cao (advanced)** mô tả vị trí của thư viện so với lớp nền tảng. Bên trong vẫn không tổ chức cứng theo Beginner → Intermediate → Advanced; các chương được chia theo quan hệ phụ thuộc kiến thức và ranh giới khái niệm.
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**, **Cấu trúc đầy đủ** tiếp nhận điểm tựa từ **Vị trí trong thư viện Khoa học máy tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ phụ thuộc kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Vị trí trong thư viện Khoa học máy tính** đặt DSA cạnh math, systems và programming; **Cấu trúc đầy đủ** sắp xếp các lớp thuật toán trước khi lập **Quan hệ phụ thuộc kiến thức**.
 
 ## Cấu trúc đầy đủ
 
@@ -114,7 +114,7 @@ advanced/
 
 Mỗi nhóm có `_index.md` để điều hướng ngắn gọn trong Obsidian, GitHub và GitHub Pages.
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**, **Quan hệ phụ thuộc kiến thức** tiếp nhận điểm tựa từ **Cấu trúc đầy đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách đọc nếu đã học phần nền tảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cấu trúc đầy đủ** cho biết mỗi chapter giải quyết class bài toán nào; **Quan hệ phụ thuộc** chỉ prerequisite để chọn **Cách đọc** phù hợp với nền tảng đã có.
 
 ## Quan hệ phụ thuộc kiến thức
 
@@ -162,7 +162,7 @@ flowchart TD
 
 Quan hệ phụ thuộc không phải mức độ khó. Nó chỉ cho biết một mô hình tư duy trước được tái sử dụng trong mô hình sau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**, **Cách đọc nếu đã học phần nền tảng** tiếp nhận điểm tựa từ **Quan hệ phụ thuộc kiến thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trường hợp (case / 사례) study xuyên nhiều cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cách đọc nếu đã học nền tảng** bỏ qua phần đã vững nhưng giữ invariant và proof boundary; **Case study xuyên nhiều cấu trúc** đưa chúng vào một bài toán end-to-end.
 
 ## Cách đọc nếu đã học phần nền tảng
 
@@ -269,7 +269,7 @@ Các chapter sau-core mở rộng tiếp: vùng nhớ động (heap / 힙) nâng
 
 Những phần này cho thấy cùng các nguyên lý nền tảng được mở rộng như thế nào khi khối lượng công việc thay đổi.
 
-> **Chuyển mạch:** Trong **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**, **C, Java và JavaScript không phải ba bộ DSA riêng** tiếp nhận điểm tựa từ **Tại sao có các chương ngoài “DSA phỏng vấn”?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm tra phạm vi thư viện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Tại sao có các chương ngoài DSA phỏng vấn?** đặt boundary theo reasoning; **C, Java và JavaScript** chỉ là implementation lens, rồi **Kiểm tra phạm vi** xác nhận owner.
 
 ## C, Java và JavaScript không phải ba bộ DSA riêng
 
@@ -279,7 +279,7 @@ C buộc ta suy luận về quyền sở hữu, vòng đời con trỏ và cấp
 
 Mô hình thuật toán không đổi; các ràng buộc triển khai thay đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc dữ liệu và thuật toán nâng cao — Thư viện kiến thức**, **Kiểm tra phạm vi thư viện** tiếp nhận điểm tựa từ **C, Java và JavaScript không phải ba bộ DSA riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Kiểm tra phạm vi** khép README bằng algorithmic boundary, proof expectation và language owner; phần implementation chi tiết quay về chapter tương ứng.
 
 ## Kiểm tra phạm vi thư viện
 
