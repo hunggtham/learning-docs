@@ -13,9 +13,11 @@ Mỗi chapter cố gắng đi theo luồng (flow / 흐름) tự nhiên: vấn đ
 
 ## Trạng thái chuẩn gốc (canonical / 정본)
 
-Tính đến final consistency kiểm tra (audit / 감사) ngày **2026-09-22**, thư viện (library / 라이브러리) giữ nguyên **87 topic files**. Các vòng chất lượng (quality / 품질)/độ sâu (depth / 깊이) kiểm tra (audit / 감사) từ Round 5 đến Round 11 đã lần lượt nâng những nút (node / 노드) có phụ thuộc (dependency / 의존성) centrality cao: lô-gic (logic / 논리)/proof, functions, algebra, hình học (geometry / 기하학), tuyến tính (linear / 선형) algebra, calculus, xác suất (probability / 확률)/statistics, Bayesian lập luận (reasoning / 추론), discrete mathematics, đồ thị (graph / 그래프) lý thuyết (theory / 이론), thông tin (information / 정보) lý thuyết (theory / 이론), numerical methods, tối ưu hóa (optimization / 최적화), Fourier/Laplace, stochastic processes, ma trận (matrix / 행렬) calculus/autodiff và động (dynamic / 동적) programming/điều khiển (control / 제어).
+Tính đến source-driven coverage audit ngày **2026-10-04**, thư viện (library / 라이브러리) có **92 topic files**. Nền canonical 87 topic đã được final consistency audit ngày 2026-09-22; đợt mở rộng này đối chiếu thêm catalog free mathematics textbooks của Abakcus và chỉ bổ sung 5 conceptual gaps có giá trị dependency rõ: metric/uniform/measure analysis, experimental design, statistical learning, abstract algebra nâng cao và number theory nâng cao.
 
-Vòng finalization không thêm chapter mới. Trọng tâm là consistency: prerequisite, notation, glossary, clickable nội bộ (internal / 내부) links, phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), phạm vi (scope / 범위) ranh giới (boundary / 경계) và branch canonicalization. Chi tiết nằm tại [Coverage & Finalization Audit](./COVERAGE_AUDIT.md).
+Các vòng chất lượng (quality / 품질)/độ sâu (depth / 깊이) kiểm tra (audit / 감사) từ Round 5 đến Round 11 trước đó đã lần lượt nâng những nút (node / 노드) có phụ thuộc (dependency / 의존성) centrality cao: lô-gic (logic / 논리)/proof, functions, algebra, hình học (geometry / 기하학), tuyến tính (linear / 선형) algebra, calculus, xác suất (probability / 확률)/statistics, Bayesian lập luận (reasoning / 추론), discrete mathematics, đồ thị (graph / 그래프) lý thuyết (theory / 이론), thông tin (information / 정보) lý thuyết (theory / 이론), numerical methods, tối ưu hóa (optimization / 최적화), Fourier/Laplace, stochastic processes, ma trận (matrix / 행렬) calculus/autodiff và động (dynamic / 동적) programming/điều khiển (control / 제어).
+
+Historical finalization tập trung vào consistency: prerequisite, notation, glossary, clickable nội bộ (internal / 내부) links, phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), phạm vi (scope / 범위) ranh giới (boundary / 경계) và branch canonicalization. Chi tiết nền nằm tại [Coverage & Finalization Audit](./COVERAGE_AUDIT.md); source-driven expansion mới nằm tại [Abakcus Textbook Gap Audit 2026-10](./ABAKCUS_TEXTBOOK_GAP_AUDIT_2026_10.md).
 
 ## Cách sử dụng
 
@@ -105,6 +107,7 @@ Calculus nghiên cứu giới hạn, tốc độ thay đổi và tích lũy; ana
 - [Nhập môn PDE: fields, heat, wave và boundary conditions](./05_calculus/10_partial_differential_equations_and_fields_intro.md)
 - [Real analysis: giới hạn, hội tụ và nền tảng chặt chẽ của calculus](./05_calculus/11_real_analysis_convergence_and_rigor.md)
 - [Complex analysis: analytic functions, contour integrals và residues](./05_calculus/12_complex_analysis_and_analytic_functions.md)
+- [Metric spaces, uniform convergence và measure: bridge sang analysis hiện đại](./05_calculus/13_metric_spaces_uniform_convergence_and_measure_intro.md)
 
 ### 06 — Xác suất (probability / 확률) & Statistics
 
@@ -123,6 +126,8 @@ Probability mô hình hóa bất định, còn statistics suy luận từ dữ l
 - [Likelihood, MLE, MAP và chọn mô hình từ dữ liệu](./06_probability_statistics/10_likelihood_mle_map_and_model_selection.md)
 - [Stochastic processes, Markov chains và time series](./06_probability_statistics/11_stochastic_processes_markov_chains_and_time_series.md)
 - [Bayesian inference, posterior predictive và hierarchical models](./06_probability_statistics/12_bayesian_inference_posterior_predictive_and_hierarchical_models.md)
+- [Experimental design: randomization, blocking, factorial designs và ANOVA](./06_probability_statistics/13_experimental_design_randomization_blocking_and_anova.md)
+- [Statistical learning: generalization, bias–variance, regularization và validation](./06_probability_statistics/14_statistical_learning_bias_variance_regularization_and_validation.md)
 
 ### 07 — Discrete Mathematics & Theoretical CS
 
@@ -137,6 +142,8 @@ Nhánh rời rạc cung cấp ngôn ngữ cho logic, đồ thị, recurrence, in
 - [Information theory, entropy và coding](./07_discrete_cs/06_information_theory_and_coding.md)
 - [Automata, formal languages và computability](./07_discrete_cs/07_automata_formal_languages_and_computability.md)
 - [Cấu trúc đại số: group, ring và field](./07_discrete_cs/08_groups_rings_fields_and_algebraic_structures.md)
+- [Abstract algebra nâng cao: quotients, group actions, ideals và field extensions](./07_discrete_cs/09_abstract_algebra_quotients_actions_and_field_extensions.md)
+- [Number theory nâng cao: Diophantine equations, quadratic residues và cryptographic structures](./07_discrete_cs/10_number_theory_diophantine_quadratic_residues_and_crypto.md)
 
 ### 08 — Tối ưu hóa (optimization / 최적화) & Numerical Mathematics
 
@@ -168,6 +175,7 @@ Reference dùng để tra thuật ngữ và trạng thái coverage sau khi đã 
 
 - [Glossary Việt / English / 한국어](./10_glossary.md)
 - [Coverage & Finalization Audit](./COVERAGE_AUDIT.md)
+- [Abakcus Textbook Gap Audit 2026-10](./ABAKCUS_TEXTBOOK_GAP_AUDIT_2026_10.md)
 - [Editorial Standard](./EDITORIAL_STANDARD.md)
 - [Quality Audit Round 5](./QUALITY_AUDIT_ROUND5.md)
 - [Quality Audit Round 7](./QUALITY_AUDIT_ROUND7.md)
@@ -184,7 +192,17 @@ Reference dùng để tra thuật ngữ và trạng thái coverage sau khi đã 
 
 ### AI / Machine Học tập (learning / 학습) / Kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링)
 
-[Functions](./02_functions/00_function_concept.md) → [Vectors](./04_vectors_linear_algebra/00_vectors.md) → [Matrices](./04_vectors_linear_algebra/01_matrices_and_linear_systems.md) → [Linear Transformations](./04_vectors_linear_algebra/02_linear_transformations.md) → [Least Squares & SVD](./04_vectors_linear_algebra/05_least_squares_svd_and_decompositions.md) → [Multivariable Calculus](./05_calculus/04_multivariable_calculus.md) → [Matrix Calculus & Autodiff](./04_vectors_linear_algebra/09_matrix_calculus_jacobian_hessian_and_autodiff.md) → [Probability](./06_probability_statistics/01_probability_foundations.md) → [Statistics](./06_probability_statistics/05_descriptive_and_inferential_statistics.md) → [Optimization](./08_optimization_numerical/00_optimization.md) → [Math for AI/Data/Software](./09_connections/03_math_for_ai_data_and_software.md).
+[Functions](./02_functions/00_function_concept.md) → [Vectors](./04_vectors_linear_algebra/00_vectors.md) → [Matrices](./04_vectors_linear_algebra/01_matrices_and_linear_systems.md) → [Linear Transformations](./04_vectors_linear_algebra/02_linear_transformations.md) → [Least Squares & SVD](./04_vectors_linear_algebra/05_least_squares_svd_and_decompositions.md) → [Multivariable Calculus](./05_calculus/04_multivariable_calculus.md) → [Matrix Calculus & Autodiff](./04_vectors_linear_algebra/09_matrix_calculus_jacobian_hessian_and_autodiff.md) → [Probability](./06_probability_statistics/01_probability_foundations.md) → [Statistics](./06_probability_statistics/05_descriptive_and_inferential_statistics.md) → [Statistical Learning](./06_probability_statistics/14_statistical_learning_bias_variance_regularization_and_validation.md) → [Optimization](./08_optimization_numerical/00_optimization.md) → [Math for AI/Data/Software](./09_connections/03_math_for_ai_data_and_software.md).
+
+### Experimental / Product Analytics
+
+[Probability](./06_probability_statistics/01_probability_foundations.md) → [Sampling & Inference](./06_probability_statistics/07_sampling_estimation_confidence_and_hypothesis_testing.md) → [Experimental Design](./06_probability_statistics/13_experimental_design_randomization_blocking_and_anova.md) → [Regression](./06_probability_statistics/06_regression_and_correlation.md) → [Statistical Learning](./06_probability_statistics/14_statistical_learning_bias_variance_regularization_and_validation.md).
+
+### Pure Mathematics / Advanced Undergraduate
+
+[Logic & Proof](./00_foundations/01_logic_and_proof.md) → [Sets, Relations & Mappings](./00_foundations/02_sets_relations_and_mappings.md) → [Real Analysis](./05_calculus/11_real_analysis_convergence_and_rigor.md) → [Metric / Uniform / Measure](./05_calculus/13_metric_spaces_uniform_convergence_and_measure_intro.md).
+
+[Number Theory Core](./07_discrete_cs/04_number_theory_and_modular_arithmetic.md) → [Groups / Rings / Fields](./07_discrete_cs/08_groups_rings_fields_and_algebraic_structures.md) → [Advanced Abstract Algebra](./07_discrete_cs/09_abstract_algebra_quotients_actions_and_field_extensions.md) → [Advanced Number Theory](./07_discrete_cs/10_number_theory_diophantine_quadratic_residues_and_crypto.md).
 
 ### Physics & Kỹ thuật (engineering / 엔지니어링)
 
@@ -244,6 +262,7 @@ graph TD
     ODE --> PDE
     LIM --> RA[Real Analysis]
     SERIES --> RA
+    RA --> MUM[Metric / Uniform / Measure]
     ALG --> CA[Complex Analysis]
     SERIES --> CA
     INT --> CA
@@ -254,6 +273,9 @@ graph TD
     RV --> STAT[Statistics]
     STAT --> INF[Sampling & Inference]
     INF --> LKH[Likelihood / MLE / MAP]
+    INF --> EXPD[Experimental Design]
+    EXPD --> SLEARN[Statistical Learning]
+    LKH --> SLEARN
     LA --> MP[Multivariate Probability]
     RV --> MP
     RV --> SP[Stochastic Processes]
@@ -268,11 +290,15 @@ graph TD
     DISC --> AUTO[Automata & Computability]
     NT --> ABS[Groups / Rings / Fields]
     DISC --> ABS
+    ABS --> AABS[Advanced Abstract Algebra]
+    NT --> ANT[Advanced Number Theory]
+    AABS --> ANT
 
     DER --> OPT[Optimization]
     LA --> OPT
     MVC --> OPT
     MC --> OPT
+    SLEARN --> OPT
     OPT --> KKT[Constrained Optimization]
     KKT --> LPDUAL[Linear Programming & Duality]
     LA --> NUM[Numerical Linear Algebra]
@@ -296,7 +322,6 @@ Mermaid ở trên chỉ dùng để nhìn topology. Khi cần điều hướng (
 ## Connections sang các Thư viện kiến thức (knowledge library / 지식 라이브러리) khác
 Phần “Connections sang các Thư viện kiến thức (knowledge library / 지식 라이브러리) khác” nối kiến thức trước với nội dung sắp đọc, giúp người mới hiểu mục đích, tiêu chí theo dõi và kết luận cần rút ra trước khi xem danh sách, bảng hoặc ví dụ.
 
-
 - [Computer Science](../computer_science/README.md): lô-gic (logic / 논리)/proof, graphs, automata, độ phức tạp (complexity / 복잡도), numerical/hiệu năng (performance / 성능) lập luận (reasoning / 추론) và hệ thống (system / 시스템) thiết kế (design / 설계).
 - [Physics](../physics/README.md): đo lường (measurement / 측정), vectors, calculus, differential equations, fields, Fourier và modeling các giả định (assumptions / 가정들).
 - [Investing](../investing/README.md): compounding, xác suất (probability / 확률), statistics, covariance, regression, tối ưu hóa (optimization / 최적화) và stochastic lập luận (reasoning / 추론).
@@ -312,4 +337,4 @@ Phần “Connections sang các Thư viện kiến thức (knowledge library / �
 
 **Bất định (uncertainty / 불확실성) as cấu trúc (structure / 구조).** Xác suất (probability / 확률) cung cấp algebra để mô hình (model / 모델) bất định (uncertainty / 불확실성), cập nhật (update / 업데이트) thông tin (information / 정보) và ra quyết định khi dữ liệu (data / 데이터) không đủ chắc chắn.
 
-Chi tiết scope, số topic theo từng nhóm và các phần được nâng cấp trong vòng audit gần nhất nằm tại [COVERAGE_AUDIT.md](./COVERAGE_AUDIT.md).
+Chi tiết historical scope nằm tại [COVERAGE_AUDIT.md](./COVERAGE_AUDIT.md); phần expansion dựa trên external textbook coverage ngày 2026-10-04 nằm tại [ABAKCUS_TEXTBOOK_GAP_AUDIT_2026_10.md](./ABAKCUS_TEXTBOOK_GAP_AUDIT_2026_10.md).
