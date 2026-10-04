@@ -14,7 +14,7 @@ Phần này là mục lục định hướng: chọn môn theo thứ tự học,
 - [Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)](04-programming-language/README.md)
 - [Môn 5 — 정보시스템 구축 관리 (Information System Construction Management) (Quản lý xây dựng hệ thống thông tin)](05-information-system-management/README.md)
 
-> **Chuyển mạch:** Trong **정보처리기사 — Bộ tài liệu học**, **Các môn** nêu điều cần giải thích; **Phạm vi nguồn đã rà soát** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Các môn** xác định route kiến thức của kỳ thi; **Phạm vi nguồn đã rà soát** đối chiếu từng phần với owner và evidence, để người học biết đâu là canonical material.
 
 ## Phạm vi nguồn đã rà soát
 

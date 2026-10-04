@@ -10,14 +10,14 @@ Power electronics điều khiển dòng năng lượng bằng semiconductor swit
 switching device → rectifier/inverter → buck/boost → PWM/control → magnetics → EMI/thermal/protection
 ```
 
-> **Chuyển mạch:** Trong **Power Electronics — Điện tử công suất**, **Cốt lõi (core / 핵심) chapter** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) tuyến (route / 경로)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cần nắm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cốt lõi route** đi từ switching, converter đến control; **Cốt lõi chapter** biến route thành cơ chế, rồi **Cần nắm** nêu prerequisite cần giữ.
 
 ## Cốt lõi (core / 핵심) chapter
 
 - [Switching converters and protection](00_switching_converters_protection.md) — buck mô hình (model / 모델), ripple, losses, thermal đường dẫn (path / 경로), protection và EMI/bố cục (layout / 레이아웃).
 - [Inverter, battery and EMI](01_inverter_battery_emi.md) — half-bridge, dead thời gian (time / 시간), SOC bất định (uncertainty / 불확실성), derating và dùng chung (common / 공통)/differential-mode noise.
 
-> **Chuyển mạch:** Ở chặng này của **Power Electronics — Điện tử công suất**, **Cần nắm** tiếp nhận điểm tựa từ **Cốt lõi (core / 핵심) chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cầu nối (bridge / 브리지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cần nắm** chốt topology, waveform và loss assumptions; **Cầu nối** đưa các invariant đó sang control, machines hoặc power-system owner.
 
 ## Cần nắm
 
@@ -27,7 +27,7 @@ switching device → rectifier/inverter → buck/boost → PWM/control → magne
 - vòng lặp (loop / 루프) compensation, transient phản hồi (response / 응답), thermal đường dẫn (path / 경로) và derating;
 - battery/charger interfaces, power integrity, EMI/EMC và compliance ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Power Electronics — Điện tử công suất**, **Cầu nối (bridge / 브리지)** tiếp nhận điểm tựa từ **Cần nắm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Cầu nối** khép README bằng link và boundary tới canonical electrical chapters; chi tiết thiết kế không bị lặp ở đây.
 
 ## Cầu nối (bridge / 브리지)
 
