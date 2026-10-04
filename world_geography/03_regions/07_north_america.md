@@ -10,7 +10,7 @@ Chuỗi nhân quả (causal / 인과적):
 
 **relief/water/tài nguyên (resource / 자원) → agricultural/industrial specialization → continental vận chuyển (transport / 전송) → metropolitan concentration → cross-border môi trường vận hành (production / 운영 환경) and trade → toàn cục (global / 전역) regional role**.
 
-> **Chuyển mạch:** Trong **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Western Cordillera: relief, water lưu trữ (storage / 저장소) và rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Central plain: quy mô (scale / 규모) economy của agriculture và vận chuyển (transport / 전송)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Thesis của Bắc Mỹ đặt scale lục địa, hinterland tài nguyên và metropolitan network trong cùng một hệ thống. **Western Cordillera** mở bằng relief, water storage và hazard; **Central Plain** tiếp theo cho thấy low relief hỗ trợ agriculture và transport ở quy mô lớn.
 
 ## Western Cordillera: relief, water lưu trữ (storage / 저장소) và rủi ro (risk / 위험)
 
@@ -20,7 +20,7 @@ Khi snow timing đổi, reservoir thao tác (operation / 연산) và irrigation 
 
 Vật lý (physical / 물리적) geography vì thế đồng thời tạo water tài nguyên (resource / 자원), scenery/tourism và systemic rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Central plain: quy mô (scale / 규모) economy của agriculture và vận chuyển (transport / 전송)** tiếp nhận điểm tựa từ **Western Cordillera: relief, water lưu trữ (storage / 저장소) và rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mississippi–Missouri: basin và freight backbone** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cordillera phân mảnh địa hình nhưng điều tiết nước và khoáng sản; **Central Plain** tận dụng đất, máy móc và corridor cho economies of scale. **Mississippi–Missouri** biến plain và basin thành freight backbone nối sản xuất với cảng.
 
 ## Central plain: quy mô (scale / 규모) economy của agriculture và vận chuyển (transport / 전송)
 
@@ -30,7 +30,7 @@ Corn/wheat/ranching belts là fuzzy regions do soil, climate, irrigation, thị 
 
 High productivity phụ thuộc machinery, fertilizer, lưu trữ (storage / 저장소), rail/barge và export terminal. Farm geography là **môi trường vận hành (production / 운영 환경) + logistics hệ thống (system / 시스템)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Mississippi–Missouri: basin và freight backbone** tiếp nhận điểm tựa từ **Central plain: quy mô (scale / 규모) economy của agriculture và vận chuyển (transport / 전송)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Great Lakes–St. Lawrence: freshwater industrial corridor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mississippi–Missouri nối grain belt, inland ports và Gulf logistics, nhưng flood và drought là giới hạn. **Great Lakes–St. Lawrence** cung cấp một freshwater industrial corridor khác, gắn khoáng sản, manufacturing và cửa biển.
 
 ## Mississippi–Missouri: basin và freight backbone
 
@@ -38,7 +38,7 @@ Mississippi basin gom runoff từ diện tích rất lớn. Navigable river gi�
 
 Levee, channelization và kỹ thuật (engineering / 엔지니어링) hỗ trợ điều hướng (navigation / 내비게이션)/flood protection nhưng thay floodplain connectivity và sediment delivery tới delta. Upstream land use có downstream consequence.
 
-> **Chuyển mạch:** Trong **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Great Lakes–St. Lawrence: freshwater industrial corridor** tiếp nhận điểm tựa từ **Mississippi–Missouri: basin và freight backbone** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Atlantic seaboard và Northeast megalopolis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Inland river và Great Lakes cho thấy nước là hạ tầng sản xuất và vận tải; **Atlantic seaboard/Northeast megalopolis** tiếp tục bằng mật độ đô thị, finance, universities và gateway ports.
 
 ## Great Lakes–St. Lawrence: freshwater industrial corridor
 
@@ -48,7 +48,7 @@ Historical steel/auto/manufacturing cluster dựa ore/coal vận chuyển (trans
 
 Đây là đường dẫn (path / 경로) dependence ở continental quy mô (scale / 규모).
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Atlantic seaboard và Northeast megalopolis** tiếp nhận điểm tựa từ **Great Lakes–St. Lawrence: freshwater industrial corridor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pacific urban corridor và gateway economy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Great Lakes–St. Lawrence cung cấp corridor vật chất; Atlantic seaboard gom các nút tri thức và tài chính thành megalopolis. **Pacific urban corridor** đổi hướng sang trade xuyên Thái Bình Dương và gateway economy.
 
 ## Atlantic seaboard và Northeast megalopolis
 
@@ -56,7 +56,7 @@ Northeast corridor có dense metro, rail/highway/airport, finance, government v�
 
 High mạng (network / 네트워크) density giảm effective distance giữa metropolitan nodes và hỗ trợ specialization: một city không cần cung cấp mọi hàm (function / 함수) nếu có thể truy cập (access / 접근) neighboring nodes nhanh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Pacific urban corridor và gateway economy** tiếp nhận điểm tựa từ **Atlantic seaboard và Northeast megalopolis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gulf Coast: năng lượng (energy / 에너지), petrochemical và storm exposure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Atlantic megalopolis dựa vào thị trường nội địa và thể chế; **Pacific corridor** dựa nhiều hơn vào cảng, Asian trade và công nghệ. **Gulf Coast** chuyển sang energy, petrochemicals và exposure trước storm.
 
 ## Pacific urban corridor và gateway economy
 
@@ -64,7 +64,7 @@ West-coast metro kết nối trans-Pacific trade, technology, agriculture và d�
 
 Coastal gateway đồng thời phụ thuộc inland rail/truck. bộ chứa (container / 컨테이너) ở cổng (port / 포트) chỉ tạo giá trị (value / 값) nếu move được tới warehouse/factory/bên tiêu thụ (consumer / 소비자).
 
-> **Chuyển mạch:** Trong **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Gulf Coast: năng lượng (energy / 에너지), petrochemical và storm exposure** tiếp nhận điểm tựa từ **Pacific urban corridor và gateway economy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sun Belt và spatial shift** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Gulf Coast cho thấy resource advantage luôn đi kèm hazard và yêu cầu hạ tầng chống chịu. **Sun Belt** là spatial shift nơi dân cư, industry và vốn di chuyển về phía nam–tây theo khí hậu, đất và chính sách.
 
 ## Gulf Coast: năng lượng (energy / 에너지), petrochemical và storm exposure
 
@@ -72,7 +72,7 @@ Gulf Coast tập trung cổng (port / 포트), refinery/petrochemical và năng 
 
 Cùng coastal lowland tạo hurricane/storm-surge exposure. Đây là classic **tài nguyên (resource / 자원)/logistics advantage ↔ concentrated rủi ro (risk / 위험)** sự đánh đổi (trade-off / 트레이드오프).
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Sun Belt và spatial shift** tiếp nhận điểm tựa từ **Gulf Coast: năng lượng (energy / 에너지), petrochemical và storm exposure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Auto-oriented urban form và induced geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sun Belt tái phân bố population và production nhưng cũng tái tạo exposure trước nóng, bão và thiếu nước. **Auto-oriented urban form** giải thích cách highway và parking tạo induced geography, thay vì chỉ phản ánh nhu cầu có sẵn.
 
 ## Sun Belt và spatial shift
 
@@ -80,7 +80,7 @@ Growth ở south/west liên quan air conditioning, highway/aviation, lower land 
 
 Nhưng “Sun Belt” không phải cơ chế (mechanism / 메커니즘) duy nhất: Texas năng lượng (energy / 에너지)/industry, Florida dịch vụ (service / 서비스)/tourism, Southwest metro và Southeast manufacturing khác nhau về driver.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Auto-oriented urban form và induced geography** tiếp nhận điểm tựa từ **Sun Belt và spatial shift** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Housing, labor thị trường (market / 시장) và metropolitan inequality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Auto-oriented form mở rộng không gian nhưng tăng chi phí di chuyển và phụ thuộc xe. **Housing, labor market và metropolitan inequality** cho thấy ai được hưởng access và ai bị đẩy ra rìa khi giá đất tăng.
 
 ## Auto-oriented urban form và induced geography
 
@@ -90,7 +90,7 @@ Highway, low-density zoning và land thị trường (market / 시장) tạo sub
 
 New lane có thể tạm giảm congestion nhưng long-run land-use phản hồi (response / 응답) làm traffic tăng trở lại. vận chuyển (transport / 전송) hạ tầng (infrastructure / 인프라) tạo geography mới chứ không chỉ phục vụ geography sẵn có.
 
-> **Chuyển mạch:** Trong **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Auto-oriented urban form và induced geography** cho ta quy tắc; **Housing, labor thị trường (market / 시장) và metropolitan inequality** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Technology cluster vẫn là geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Housing và labor market chuyển hình thái đô thị thành phân bố cơ hội, thời gian đi lại và inequality. **Technology cluster** nhắc rằng innovation vẫn bám geography qua talent, universities, capital và network.
 
 ## Housing, labor thị trường (market / 시장) và metropolitan inequality
 
@@ -98,7 +98,7 @@ Job cluster, school, zoning, transit và housing supply tạo spatial inequality
 
 Opportunity nên đo bằng **khả năng tiếp cận (accessibility / 접근성) to jobs/services**, không chỉ income hay house price.
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Housing, labor thị trường (market / 시장) và metropolitan inequality** cho ta quy tắc; **Technology cluster vẫn là geography** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Năng lượng (energy / 에너지) geography: geology + mạng (network / 네트워크) + thị trường (market / 시장)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cluster cho thấy intangible knowledge cũng cần một nơi chốn và corridor kết nối. **Energy geography** chuyển từ talent sang geology, network và market để giải thích nơi supply, demand và price gặp nhau.
 
 ## Technology cluster vẫn là geography
 
@@ -106,7 +106,7 @@ Digital/technology industry vẫn tập trung tại metro có university, ventur
 
 Dữ liệu (data / 데이터) center còn phụ thuộc electricity, cooling và fiber. “Tech economy” không thoát vật lý (physical / 물리적) hạ tầng (infrastructure / 인프라).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Năng lượng (energy / 에너지) geography: geology + mạng (network / 네트워크) + thị trường (market / 시장)** tiếp nhận điểm tựa từ **Technology cluster vẫn là geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Western water: stock, allocation và urban growth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Energy geography là bài toán topology và market, không chỉ trữ lượng dưới đất; pipeline, grid và regulation quyết định khả năng dùng. **Western water** tiếp tục với stock hữu hạn, allocation và urban growth trong khí hậu khô.
 
 ## Năng lượng (energy / 에너지) geography: geology + mạng (network / 네트워크) + thị trường (market / 시장)
 
@@ -114,7 +114,7 @@ Oil/gas basin, hydro, coal legacy, nuclear, wind/solar phân bố không đều.
 
 Shale development minh họa technology có thể biến geological formation thành economic reserve khi price/hạ tầng (infrastructure / 인프라) phù hợp. tài nguyên (resource / 자원) status thay theo technology và thị trường (market / 시장).
 
-> **Chuyển mạch:** Trong **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Western water: stock, allocation và urban growth** tiếp nhận điểm tựa từ **Năng lượng (energy / 에너지) geography: geology + mạng (network / 네트워크) + thị trường (market / 시장)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Canada: southern corridor và sparse north** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Western water đặt giới hạn sinh thái lên energy, agriculture và housing; allocation là lựa chọn thể chế chứ không chỉ bài toán tự nhiên. **Canada** cho đối chiếu về southern corridor dày đặc và north thưa dân, nơi resource access có scale khác.
 
 ## Western water: stock, allocation và urban growth
 
@@ -122,7 +122,7 @@ Western city/agriculture phụ thuộc snowpack, reservoir, groundwater và long
 
 Urban growth không tự động “gây cạn nước”; crop choice, leakage, pricing, reuse và allocation institution cùng quyết định pressure.
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Canada: southern corridor và sparse north** tiếp nhận điểm tựa từ **Western water: stock, allocation và urban growth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mexico: highland–coast–border môi trường vận hành (production / 운영 환경) geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Canada tập trung dân cư và infrastructure dọc southern corridor trong khi north có khoảng cách và climate khắc nghiệt. **Mexico** chuyển sang highland–coast–border, nơi độ cao, cảng và quan hệ biên giới định hình production geography.
 
 ## Canada: southern corridor và sparse north
 
@@ -130,7 +130,7 @@ Population tập trung mạnh gần southern corridor trong khi northern area r�
 
 Remote tài nguyên (resource / 자원) dự án (project / 프로젝트) cần road/rail/air/cổng (port / 포트) và quan hệ land/community. Territory kích thước (size / 크기) không đồng nghĩa usable settlement area.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Mexico: highland–coast–border môi trường vận hành (production / 운영 환경) geography** tiếp nhận điểm tựa từ **Canada: southern corridor và sparse north** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cross-border môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mexico nối highland production với coast và border markets; khác biệt địa hình tạo khác biệt access và industrial location. **Cross-border production networks** theo dõi cách supply chain phân bổ value qua ba nước.
 
 ## Mexico: highland–coast–border môi trường vận hành (production / 운영 환경) geography
 
@@ -138,7 +138,7 @@ Mexico nối North American manufacturing với Central America/Caribbean-Pacifi
 
 Mountain relief làm domestic travel/climate phức tạp; border truy cập (access / 접근) tạo supplier/assembly mạng (network / 네트워크) xuyên quốc gia.
 
-> **Chuyển mạch:** Trong **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Cross-border môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Mexico: highland–coast–border môi trường vận hành (production / 운영 환경) geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Continental freight: rail, truck, barge, chuỗi xử lý (pipeline / 파이프라인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cross-border network biến lợi thế địa lý thành production chỉ khi customs, standards và labor complement nhau. **Continental freight** là lớp vận hành cụ thể: rail, truck, barge và pipeline chia vai theo khoảng cách và loại hàng.
 
 ## Cross-border môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)
 
@@ -146,7 +146,7 @@ Automotive, electronics, agriculture và năng lượng (energy / 에너지) lu�
 
 Border delay do đó là môi trường vận hành (production / 운영 환경) chi phí (cost / 비용), không chỉ administrative issue. Nearshoring cần power, labor, supplier, industrial land và customs — proximity alone không đủ.
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Cross-border môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)** xác định đầu vào; **Continental freight: rail, truck, barge, chuỗi xử lý (pipeline / 파이프라인)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Hazard mosaic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Freight mode và transshipment quyết định chi phí, tốc độ và điểm nghẽn của continental network. **Hazard mosaic** tiếp theo chồng các rủi ro động đất, bão, cháy, lũ và drought lên đúng các corridor ấy.
 
 ## Continental freight: rail, truck, barge, chuỗi xử lý (pipeline / 파이프라인)
 
@@ -154,7 +154,7 @@ North America có multiple freight chế độ (mode / 모드). Bulk grain/miner
 
 Resilience đến từ chế độ (mode / 모드) substitution nhưng không hoàn hảo vì commodity, terminal và sức chứa (capacity / 용량) khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Continental freight: rail, truck, barge, chuỗi xử lý (pipeline / 파이프라인)** xác định đầu vào; **Hazard mosaic** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Indigenous geography và historical tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hazard risk không phân bố đều và có thể làm đứt freight node, energy và housing; resilience phụ thuộc redundancy và governance. **Indigenous geography** thêm lớp historical land relationship và quyền quyết định bị che khuất trong bản đồ hạ tầng.
 
 ## Hazard mosaic
 
@@ -162,7 +162,7 @@ West: earthquake/wildfire/drought. Gulf/Atlantic: hurricane/surge. Central: seve
 
 Rủi ro (risk / 위험) phản ánh **hazard + settlement + building + hạ tầng (infrastructure / 인프라)**. Insurance và building mã (code / 코드) có regional geography rõ.
 
-> **Chuyển mạch:** Trong **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Indigenous geography và historical tầng (layer / 계층)** tiếp nhận điểm tựa từ **Hazard mosaic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bắc Mỹ trong toàn cục (global / 전역) economy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Indigenous geography cho thấy resource và corridor được tạo trong lịch sử quyền đất, treaty và displacement, không phải nền trống. **Global economy** tiếp theo đặt các layer đó vào supply chain, finance và geopolitical role.
 
 ## Indigenous geography và historical tầng (layer / 계층)
 
@@ -170,7 +170,7 @@ Hiện đại (modern / 현대적) trạng thái (state / 상태) ranh giới (b
 
 Regional geography tốt cần giữ historical tầng (layer / 계층) thay vì coi map hiện tại là tự nhiên.
 
-> **Chuyển mạch:** Ở chặng này của **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Bắc Mỹ trong toàn cục (global / 전역) economy** tiếp nhận điểm tựa từ **Indigenous geography và historical tầng (layer / 계층)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Global role của Bắc Mỹ dựa trên scale thị trường, technology, energy và logistics, nhưng vẫn chịu hazard, inequality và lịch sử đất. **Common misconceptions** sẽ kiểm tra các khái quát như “continental scale luôn là lợi thế”.
 
 ## Bắc Mỹ trong toàn cục (global / 전역) economy
 
@@ -178,13 +178,13 @@ Region kết hợp large bên tiêu thụ (consumer / 소비자) thị trường
 
 Self-sufficiency không phải nhị phân (binary / 이진). Một region resource-rich vẫn có strong interdependence qua processing specialization.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Bắc Mỹ trong toàn cục (global / 전역) economy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Misconception thường bỏ qua node, biên giới, exposure và value capture khi nói về tài nguyên hay đô thị. **Mô hình tư duy** sẽ giữ chuỗi causal từ relief và resource tới network, inequality và global role.
 
 ## Dùng chung (common / 공통) misconceptions
 
 “North America = United States” sai. “Resource-rich = self-sufficient” bỏ qua processing/mạng (network / 네트워크). “Sprawl chỉ do preference” bỏ chính sách (policy / 정책)/finance/road. “Nearshoring chỉ cần ở gần thị trường (market / 시장)” bỏ power/supplier/customs. “Technology sector không phụ thuộc geography” bỏ labor cluster và hạ tầng (infrastructure / 인프라).
 
-> **Chuyển mạch:** Trong **Bắc Mỹ: continental quy mô (scale / 규모), tài nguyên (resource / 자원) hinterland và metropolitan môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**, **Mô hình tư duy** gom các mảnh từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chapter bằng chuỗi relief–water–resource → corridor–freight–metropolitan network → production–inequality–global role, luôn kiểm tra hazard và historical layer. Đây là điểm bàn giao cho các region và global-systems chapter của World Geography.
 
 ## Mô hình tư duy
 
