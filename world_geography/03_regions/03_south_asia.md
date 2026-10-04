@@ -10,7 +10,7 @@ Nam Á có thể đọc bằng một chuỗi rất rõ:
 
 Cấu trúc này nối vật lý (physical / 물리적) geography với food, population, city, vận chuyển (transport / 전송) và regional role. Nhưng region không đồng nhất: Himalayan trạng thái (state / 상태), Pakistan dryland, Indo-Gangetic Plain, Deccan Plateau, Bangladesh delta và Sri Lanka island có ràng buộc (constraint / 제약조건) rất khác nhau.
 
-> **Chuyển mạch:** Trong **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Collision tạo Himalaya và foreland basin** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Himalaya như water tower nhưng không phải “bể nước cố định”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Thesis đặt Nam Á giữa núi va chạm, đồng bằng đông dân, monsoon và Indian Ocean. **Collision tạo Himalaya và foreland basin** là nền địa mạo cần có trước khi đọc Himalaya như nguồn nước theo mùa.
 
 ## Collision tạo Himalaya và foreland basin
 
@@ -22,7 +22,7 @@ Mô hình tư duy (mental model / 사고 모델) quan trọng:
 
 **uplift upstream → erosion → sediment vận chuyển (transport / 전송) → floodplain/delta downstream**.
 
-> **Chuyển mạch:** Ở chặng này của **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Himalaya như water tower nhưng không phải “bể nước cố định”** tiếp nhận điểm tựa từ **Collision tạo Himalaya và foreland basin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mountain hazard và hạ tầng (infrastructure / 인프라)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Collision nâng Himalaya và tạo foreland basin, nhưng băng tuyết, mưa, tan chảy và trầm tích làm dòng nước biến đổi theo thời gian. **Himalaya như water tower nhưng không phải “bể nước cố định”** làm rõ giới hạn của ẩn dụ đó trước khi xét rủi ro núi.
 
 ## Himalaya như water tower nhưng không phải “bể nước cố định”
 
@@ -32,7 +32,7 @@ Climate warming có thể thay snow/rain ratio, melt timing và glacier mass. M�
 
 Vì vậy “Himalaya là water tower” hữu ích nhưng phải hiểu tower này có lưu trữ (storage / 저장소), bản phát hành (release / 릴리스) timing và hazard riêng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Mountain hazard và hạ tầng (infrastructure / 인프라)** tiếp nhận điểm tựa từ **Himalaya như water tower nhưng không phải “bể nước cố định”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Monsoon là circulation hệ thống (system / 시스템), không phải synonym của rainy season** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Nước núi biến động cùng sạt lở, động đất, băng hồ và đường sá, nên hạ tầng phải được thiết kế theo rủi ro động. **Mountain hazard và hạ tầng (infrastructure / 인프라)** nối địa mạo với khả năng tiếp cận trước khi đi vào circulation monsoon.
 
 ## Mountain hazard và hạ tầng (infrastructure / 인프라)
 
@@ -40,7 +40,7 @@ Steep slope, active tectonics và intense rainfall tạo landslide, debris luồ
 
 Road, tunnel và hydropower development trong mountain có thể tăng connectivity nhưng cũng thay slope, sediment và river tiến trình (process / 프로세스). hạ tầng (infrastructure / 인프라) benefit và geomorphic rủi ro (risk / 위험) cần được đánh giá cùng nhau.
 
-> **Chuyển mạch:** Trong **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Monsoon là circulation hệ thống (system / 시스템), không phải synonym của rainy season** tiếp nhận điểm tựa từ **Mountain hazard và hạ tầng (infrastructure / 인프라)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Timing quan trọng ngang tổng lượng mưa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hạ tầng và sinh kế không chỉ cần biết có mưa hay không mà cần biết gió mùa hình thành, rút lui và tương tác với địa hình khi nào. **Timing quan trọng ngang tổng lượng mưa** chuyển circulation thành lịch nước cụ thể.
 
 ## Monsoon là circulation hệ thống (system / 시스템), không phải synonym của rainy season
 
@@ -50,7 +50,7 @@ Rainfall rất không đồng đều. Western Ghats tạo heavy rain phía windw
 
 Do đó national rainfall average có thể che flood và drought xảy ra đồng thời ở các basin khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Timing quan trọng ngang tổng lượng mưa** tiếp nhận điểm tựa từ **Monsoon là circulation hệ thống (system / 시스템), không phải synonym của rainy season** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Indo-Gangetic Plain: fertility, khả năng tiếp cận (accessibility / 접근성) và density** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mưa đến sớm, muộn hay lệch mùa đều ảnh hưởng gieo trồng, giao thông và dự trữ, dù tổng lượng năm giống nhau. **Indo-Gangetic Plain: fertility, khả năng tiếp cận (accessibility / 접근성) và density** cho thấy dòng nước theo mùa chuyển thành mật độ dân cư và năng suất đồng bằng ra sao.
 
 ## Timing quan trọng ngang tổng lượng mưa
 
@@ -58,7 +58,7 @@ Agriculture phụ thuộc không chỉ annual rainfall mà còn onset, break, ph
 
 Reservoir operator cũng quan tâm timing: giữ water để irrigation có thể xung đột với flood-control lưu trữ (storage / 저장소) trước extreme rainfall.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Indo-Gangetic Plain: fertility, khả năng tiếp cận (accessibility / 접근성) và density** tiếp nhận điểm tựa từ **Timing quan trọng ngang tổng lượng mưa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Groundwater như hidden hạ tầng (infrastructure / 인프라)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Fertility, sông và accessibility tạo nền cho dân cư dày, nhưng mùa khô và biến động monsoon khiến đồng bằng dựa vào hạ tầng ngầm. **Groundwater như hidden hạ tầng (infrastructure / 인프라)** tiếp theo mở lớp nước không nhìn thấy trong bản đồ bề mặt.
 
 ## Indo-Gangetic Plain: fertility, khả năng tiếp cận (accessibility / 접근성) và density
 
@@ -68,7 +68,7 @@ Nhưng chính ưu thế đó làm exposure tăng. Floodplain naturally receives 
 
 Một vùng “thuận lợi để sống” có thể đồng thời trở thành vùng có asset exposure rất cao.
 
-> **Chuyển mạch:** Trong **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Groundwater như hidden hạ tầng (infrastructure / 인프라)** tiếp nhận điểm tựa từ **Indo-Gangetic Plain: fertility, khả năng tiếp cận (accessibility / 접근성) và density** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Indus basin: irrigation civilization và transboundary hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Nước ngầm giữ cho ruộng và đô thị hoạt động khi dòng mặt thiếu ổn định, nhưng bơm quá mức tạo nợ sinh thái và năng lượng. **Indus basin: irrigation civilization và transboundary hệ thống (system / 시스템)** đặt vấn đề đó vào một lưu vực phụ thuộc tưới tiêu và nhiều quốc gia.
 
 ## Groundwater như hidden hạ tầng (infrastructure / 인프라)
 
@@ -80,7 +80,7 @@ Pumping độ sâu (depth / 깊이) tăng làm năng lượng (energy / 에너�
 
 **năng lượng (energy / 에너지) price → pumping → groundwater stock → crop mẫu (pattern / 패턴) → food môi trường vận hành (production / 운영 환경)**.
 
-> **Chuyển mạch:** Ở chặng này của **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Groundwater như hidden hạ tầng (infrastructure / 인프라)** đã nêu tiêu chí phân biệt, còn **Indus basin: irrigation civilization và transboundary hệ thống (system / 시스템)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bangladesh và Ganges–Brahmaputra–Meghna delta** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Indus cho thấy tưới tiêu, đập và phân bổ nước vượt biên giới hành chính; quyết định upstream có thể đổi sinh kế downstream. **Bangladesh và Ganges–Brahmaputra–Meghna delta** tiếp theo chuyển sang một delta khác, nơi phù sa, lũ và biển cùng tác động.
 
 ## Indus basin: irrigation civilization và transboundary hệ thống (system / 시스템)
 
@@ -88,7 +88,7 @@ Indus hệ thống (system / 시스템) hỗ trợ large-scale irrigated agricul
 
 Headwater, snow/glacier, monsoon variability và irrigation demand đều ảnh hưởng luồng (flow / 흐름). Vì basin vượt border, water management không thể hiểu chỉ bằng climate map.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Indus basin: irrigation civilization và transboundary hệ thống (system / 시스템)** đã nêu tiêu chí phân biệt, còn **Bangladesh và Ganges–Brahmaputra–Meghna delta** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Relative sea-level rise và subsidence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ganges–Brahmaputra–Meghna delta gom nước và phù sa của cả hệ thống nhưng dân cư lại sống trong vùng thấp, dễ tổn thương. **Relative sea-level rise và subsidence** giải thích vì sao mực biển tương đối có thể tăng dù mực biển toàn cầu chỉ là một phần câu chuyện.
 
 ## Bangladesh và Ganges–Brahmaputra–Meghna delta
 
@@ -98,7 +98,7 @@ Flood không chỉ là hazard; nó cũng đưa sediment và recharge. Hard prote
 
 Đây là ví dụ điển hình của **rủi ro (risk / 위험) reduction ≠ rủi ro (risk / 위험) elimination**.
 
-> **Chuyển mạch:** Trong **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Relative sea-level rise và subsidence** tiếp nhận điểm tựa từ **Bangladesh và Ganges–Brahmaputra–Meghna delta** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deccan Plateau và peninsular contrast** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Delta chịu đồng thời nước biển dâng, sụt lún, lũ và thay đổi phù sa; rủi ro phụ thuộc vị trí và hạ tầng bảo vệ. **Deccan Plateau và peninsular contrast** đối chiếu vùng thấp phía đông với cao nguyên và bán đảo phía nam.
 
 ## Relative sea-level rise và subsidence
 
@@ -106,7 +106,7 @@ Coastal rủi ro (risk / 위험) phụ thuộc toàn cục (global / 전역) sea
 
 Vì vậy climate adaptation ở delta phải nối climate science với geodesy, hydrology và urban planning.
 
-> **Chuyển mạch:** Ở chặng này của **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Relative sea-level rise và subsidence** đã nêu tiêu chí phân biệt, còn **Deccan Plateau và peninsular contrast** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Coastal city, cổng (port / 포트) và Indian Ocean** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cao nguyên Deccan và bán đảo tạo tương phản về đất, khí hậu, khoáng sản và sườn thoát nước, không thể gộp vào mô hình đồng bằng. **Coastal city, cổng (port / 포트) và Indian Ocean** tiếp theo đưa tương phản đó ra các đô thị và cửa biển.
 
 ## Deccan Plateau và peninsular contrast
 
@@ -116,7 +116,7 @@ Nhiều river peninsula có luồng (flow / 흐름) seasonal hơn Himalayan rive
 
 Geology cũng ảnh hưởng soil kiểu (type / 타입) và groundwater lưu trữ (storage / 저장소); hard-rock aquifer phản ứng khác thick alluvial aquifer.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Deccan Plateau và peninsular contrast** đã nêu tiêu chí phân biệt, còn **Coastal city, cổng (port / 포트) và Indian Ocean** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Urbanization: megacity không phải toàn bộ câu chuyện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Các cảng và đô thị ven Ấn Độ Dương nối nội địa với thương mại, di cư và năng lượng, nhưng cũng phơi bày ngập, ô nhiễm và bất bình đẳng. **Urbanization: megacity không phải toàn bộ câu chuyện** nhìn rộng hơn một vài siêu đô thị để thấy mạng đô thị nhiều cấp.
 
 ## Coastal city, cổng (port / 포트) và Indian Ocean
 
@@ -124,7 +124,7 @@ Mumbai, Chennai, Kochi, Colombo, Karachi và nhiều cổng (port / 포트) khá
 
 South Asia protrudes sâu vào Indian Ocean, gần tuyến (route / 경로) nối Gulf–East Africa–Southeast Asia. Relative location này tạo maritime role lớn.
 
-> **Chuyển mạch:** Trong **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Urbanization: megacity không phải toàn bộ câu chuyện** tiếp nhận điểm tựa từ **Coastal city, cổng (port / 포트) và Indian Ocean** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Agglomeration trong IT và dịch vụ (service / 서비스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đô thị hóa gồm thị trấn, hành lang, vùng ven và megacity; quy mô lớn không tự nói lên chức năng kinh tế. **Agglomeration trong IT và dịch vụ (service / 서비스)** đi sâu vào một cơ chế tập tụ dựa trên kỹ năng, dữ liệu và dịch vụ.
 
 ## Urbanization: megacity không phải toàn bộ câu chuyện
 
@@ -132,7 +132,7 @@ Delhi, Mumbai, Bengaluru, Chennai, Hyderabad, Kolkata, Dhaka, Karachi và các m
 
 Urban hệ thống (system / 시스템) cần đọc theo mạng (network / 네트워크) chứ không chỉ city population. Secondary city và corridor có thể hấp thụ growth và nối rural hinterland với thị trường (market / 시장).
 
-> **Chuyển mạch:** Ở chặng này của **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Agglomeration trong IT và dịch vụ (service / 서비스)** tiếp nhận điểm tựa từ **Urbanization: megacity không phải toàn bộ câu chuyện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Manufacturing và toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** IT và dịch vụ tập trung nhờ kỹ năng, kết nối và khách hàng, nhưng việc làm vẫn phân tầng theo không gian. **Manufacturing và toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬)** đối chiếu tập tụ số với sản xuất vật chất và chuỗi giá trị toàn cầu.
 
 ## Agglomeration trong IT và dịch vụ (service / 서비스)
 
@@ -140,7 +140,7 @@ Digital dịch vụ (service / 서비스) có thể export qua mạng (network /
 
 Đây là bằng chứng rằng “digital” giảm một số distance friction nhưng không loại bỏ **agglomeration economy**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Agglomeration trong IT và dịch vụ (service / 서비스)** xác định đầu vào; **Manufacturing và toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Food hệ thống (system / 시스템) và regional diversity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Manufacturing nối lao động, năng lượng, cảng và thị trường vào chuỗi giá trị, nhưng các vùng Nam Á có năng lực và thực đơn khác nhau. **Food hệ thống (system / 시스템) và regional diversity** tiếp theo đưa sản xuất và khí hậu trở lại nền lương thực đa dạng.
 
 ## Manufacturing và toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬)
 
@@ -148,7 +148,7 @@ South Asia tham gia textile, garment, pharmaceutical, automotive, IT dịch vụ
 
 Factory location phụ thuộc cổng (port / 포트)/truy cập (access / 접근), labor, power độ tin cậy (reliability / 신뢰성), supplier mạng (network / 네트워크) và urban dịch vụ (service / 서비스). Wage thấp alone không giải thích industrial geography.
 
-> **Chuyển mạch:** Trong **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Manufacturing và toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬)** xác định đầu vào; **Food hệ thống (system / 시스템) và regional diversity** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Air pollution như regional luồng (flow / 흐름) bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Food system phản ánh khác biệt mưa, đất, văn hóa, thu nhập và hạ tầng, đồng thời tạo phát thải và đốt sinh khối. **Air pollution như regional luồng (flow / 흐름) bài toán (problem / 문제)** theo dõi chất ô nhiễm vượt ranh giới và tích tụ theo mùa.
 
 ## Food hệ thống (system / 시스템) và regional diversity
 
@@ -156,7 +156,7 @@ Rice, wheat, millet, livestock, fisheries và plantation crop phân bố theo ra
 
 Food bảo mật (security / 보안) vì thế cần nhìn môi trường vận hành (production / 운영 환경) + phân phối (distribution / 분포) + household purchasing power, không chỉ total grain đầu ra (output / 출력).
 
-> **Chuyển mạch:** Ở chặng này của **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Food hệ thống (system / 시스템) và regional diversity** xác định đầu vào; **Air pollution như regional luồng (flow / 흐름) bài toán (problem / 문제)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Demographic chuyển tiếp (transition / 전이) không đồng bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ô nhiễm không dừng ở nguồn phát; gió mùa, địa hình và mùa vụ chuyển nó giữa các đô thị và vùng nông nghiệp. **Demographic chuyển tiếp (transition / 전이) không đồng bộ** tiếp theo đặt rủi ro sức khỏe và nhu cầu dịch vụ vào các cơ cấu dân số khác nhau.
 
 ## Air pollution như regional luồng (flow / 흐름) bài toán (problem / 문제)
 
@@ -166,7 +166,7 @@ Pollution không dừng ở administrative ranh giới (boundary / 경계). Wint
 
 Đây là ví dụ vật lý (physical / 물리적) atmosphere + economic activity + quản trị (governance / 거버넌스) quy mô (scale / 규모) tương tác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Air pollution như regional luồng (flow / 흐름) bài toán (problem / 문제)** xác định đầu vào; **Demographic chuyển tiếp (transition / 전이) không đồng bộ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Di chuyển (migration / 마이그레이션): nội bộ (internal / 내부), international và remittance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Các nước và vùng chuyển tiếp dân số không cùng nhịp: nơi còn trẻ, nơi bắt đầu già hóa, nơi tăng việc làm nhanh hơn nơi khác. **Di chuyển (migration / 마이그레이션): nội bộ (internal / 내부), international và remittance** là cơ chế điều chỉnh không gian của lao động, hộ gia đình và thu nhập.
 
 ## Demographic chuyển tiếp (transition / 전이) không đồng bộ
 
@@ -174,7 +174,7 @@ South Asia có nhiều nơi population trẻ nhưng fertility đã giảm mạnh
 
 National label “young population” có thể che region đã bước nhanh vào aging hoặc district có out-migration mạnh.
 
-> **Chuyển mạch:** Trong **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Di chuyển (migration / 마이그레이션): nội bộ (internal / 내부), international và remittance** tiếp nhận điểm tựa từ **Demographic chuyển tiếp (transition / 전이) không đồng bộ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regional inequality và khả năng tiếp cận (accessibility / 접근성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Migration và remittance nối làng, thành phố và quốc gia, nhưng khả năng di chuyển phụ thuộc giấy tờ, chi phí và mạng xã hội. **Regional inequality và khả năng tiếp cận (accessibility / 접근성)** tiếp theo đo ai có thể tiếp cận việc làm, giáo dục và dịch vụ.
 
 ## Di chuyển (migration / 마이그레이션): nội bộ (internal / 내부), international và remittance
 
@@ -182,7 +182,7 @@ Rural–urban di chuyển (migration / 마이그레이션), di chuyển (migrati
 
 Đây là một mạng (network / 네트워크) geography rõ: wage differential + recruitment + visa + aviation + xã hội (social / 사회적) mạng (network / 네트워크) tạo corridor di chuyển (migration / 마이그레이션) bền.
 
-> **Chuyển mạch:** Ở chặng này của **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Regional inequality và khả năng tiếp cận (accessibility / 접근성)** tiếp nhận điểm tựa từ **Di chuyển (migration / 마이그레이션): nội bộ (internal / 내부), international và remittance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Korea–Vietnam liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Bất bình đẳng vùng là kết quả của vị trí, hạ tầng, kỹ năng, thể chế và lịch sử chứ không chỉ của khoảng cách. **Korea–Vietnam liên kết (connection / 연결)** đem khung access–network vào một quan hệ xuyên vùng để so sánh với Nam Á.
 
 ## Regional inequality và khả năng tiếp cận (accessibility / 접근성)
 
@@ -190,7 +190,7 @@ Coastal corridor, capital region, fertile plain, mountain và dryland có thị 
 
 Do đó “có highway = development” là quá đơn giản. Cần hỏi ai kết nối được tới thị trường (market / 시장) và ai bị bypass.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, sau nội dung của **Regional inequality và khả năng tiếp cận (accessibility / 접근성)**, **Korea–Vietnam liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Liên kết Korea–Vietnam cho thấy corridor, cảng, lao động và chuỗi giá trị có thể nối các vùng xa nhưng không tự xóa chênh lệch. **Dùng chung (common / 공통) misconceptions** kiểm tra những cách giản lược Nam Á thành một địa hình, một nền văn hóa hoặc một nhịp phát triển.
 
 ## Korea–Vietnam liên kết (connection / 연결)
 
@@ -198,7 +198,7 @@ Do đó “có highway = development” là quá đơn giản. Cần hỏi ai k�
 
 So sánh giúp hiểu rằng regional role được hình thành bởi **labor + thị trường (market / 시장) kích thước (size / 크기) + cổng (port / 포트) + năng lượng (energy / 에너지) + institution**, không chỉ geography vật lý.
 
-> **Chuyển mạch:** Trong **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Korea–Vietnam liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi sửa các hiểu lầm về Himalaya, monsoon, đồng bằng, megacity và “tăng trưởng đồng đều”, còn lại một chuỗi tự nhiên–nước–hạ tầng–dân cư–mạng lưới. **Mô hình tư duy** cô đọng chuỗi này để so sánh các tiểu vùng Nam Á.
 
 ## Dùng chung (common / 공통) misconceptions
 
@@ -210,7 +210,7 @@ So sánh giúp hiểu rằng regional role được hình thành bởi **labor +
 
 “IT làm geography không còn quan trọng” sai; labor cluster, power, airport, dữ liệu (data / 데이터) mạng (network / 네트워크) và urban amenity vẫn tạo spatial concentration.
 
-> **Chuyển mạch:** Ở chặng này của **Nam Á: collision mountain, monsoon, đồng bằng dân cư và Indian Ocean mạng (network / 네트워크)**, **Mô hình tư duy** gom các mảnh từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi collision–Himalaya → monsoon và timing → đồng bằng, nước ngầm, Indus và delta → cao nguyên, cảng và đô thị → IT, manufacturing, food, ô nhiễm, dân số, migration và access. Kết luận bàn giao owner **World Geography** theo [README](../README.md), để nối sang các vùng và hệ thống toàn cầu.
 
 ## Mô hình tư duy
 
