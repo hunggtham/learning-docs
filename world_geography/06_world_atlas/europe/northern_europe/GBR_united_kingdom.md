@@ -6,7 +6,7 @@
 
 United Kingdom là **island trạng thái (state / 상태) gần continental Europe**, có maritime truy cập (access / 접근) mạnh, lịch sử công nghiệp dựa coal/cổng (port / 포트) và hiện nay dịch vụ (service / 서비스) economy tập trung cao ở London cùng các regional cities.
 
-> **Chuyển mạch:** Trong **Vương quốc Anh (United Kingdom) — island gateway, London centrality và post-industrial mạng (network / 네트워크)**, **Island geography** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Relief và climate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Thesis về island gateway bắt đầu từ **Island geography**: biển vừa bảo vệ vừa buộc UK tổ chức kết nối qua cảng và eo biển. **Relief và climate** tiếp theo sẽ cho thấy các đảo và vùng núi phân hóa khả năng cư trú, năng lượng và giao thông ra sao.
 
 ## Island geography
 
@@ -14,7 +14,7 @@ English Channel và North Sea tách UK khỏi continent nhưng khoảng cách ng
 
 Ferry, Channel Tunnel, air và submarine cable làm effective distance thấp. Trade vẫn phụ thuộc cổng (port / 포트)/crossing sức chứa (capacity / 용량).
 
-> **Chuyển mạch:** Ở chặng này của **Vương quốc Anh (United Kingdom) — island gateway, London centrality và post-industrial mạng (network / 네트워크)**, **Relief và climate** tiếp nhận điểm tựa từ **Island geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **River/cổng (port / 포트) lịch sử (history / 이력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Relief và climate** khác nhau giữa lowland England, Wales, Scotland và Northern Ireland, tạo các corridor và rào cản riêng. **River/cổng (port / 포트) lịch sử (history / 이력)** tiếp theo cho thấy sông và cửa biển đã biến khác biệt đó thành mạng thương mại thế nào.
 
 ## Relief và climate
 
@@ -22,7 +22,7 @@ West/north upland ẩm hơn; east/southeast thấp và khô hơn tương đối 
 
 Settlement/agriculture tập trung mạnh ở lowland England, trong khi Scotland/Wales upland có lower density.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vương quốc Anh (United Kingdom) — island gateway, London centrality và post-industrial mạng (network / 네트워크)**, **River/cổng (port / 포트) lịch sử (history / 이력)** tiếp nhận điểm tựa từ **Relief và climate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Industrial revolution legacy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cửa sông và cảng nối island geography với Atlantic trade; **River/cổng (port / 포트) lịch sử (history / 이력)** vì thế là nền của đô thị và công nghiệp. **Industrial revolution legacy** tiếp theo giải thích vì sao coal, factory và canal để lại phân bố không gian lâu dài.
 
 ## River/cổng (port / 포트) lịch sử (history / 이력)
 
@@ -30,7 +30,7 @@ Thames estuary hỗ trợ London cổng (port / 포트)/urban development. Merse
 
 Containerization và ship kích thước (size / 크기) thay đổi cổng (port / 포트) geography, làm old dock chuyển chức năng và deep-water terminal dịch vị trí.
 
-> **Chuyển mạch:** Trong **Vương quốc Anh (United Kingdom) — island gateway, London centrality và post-industrial mạng (network / 네트워크)**, **Industrial revolution legacy** tiếp nhận điểm tựa từ **River/cổng (port / 포트) lịch sử (history / 이력)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **London as toàn cục (global / 전역) city** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Industrial revolution legacy** để lại các vùng cảng–manufacturing, nhưng deindustrialization đổi chức năng của chúng. **London as toàn cục (global / 전역) city** tiếp theo cho thấy một cực dịch vụ–tài chính có thể hút mạng lưới quốc gia như thế nào.
 
 ## Industrial revolution legacy
 
@@ -38,7 +38,7 @@ Coal trường dữ liệu (field / 필드), canal, rail và cổng (port / 포�
 
 Manchester/Birmingham/Leeds/Glasgow và others tái cấu trúc sang dịch vụ (service / 서비스)/education/advanced manufacturing với success khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Vương quốc Anh (United Kingdom) — island gateway, London centrality và post-industrial mạng (network / 네트워크)**, **London as toàn cục (global / 전역) city** tiếp nhận điểm tựa từ **Industrial revolution legacy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng (energy / 에너지) geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** London tập trung finance, government, culture và international access, trong khi các vùng hậu công nghiệp phải tái định vị; **London as toàn cục (global / 전역) city** tạo cả agglomeration lẫn imbalance. **Năng lượng (energy / 에너지) geography** tiếp theo mở lớp hạ tầng vật chất bên dưới centrality đó.
 
 ## London as toàn cục (global / 전역) city
 
@@ -46,7 +46,7 @@ London tập trung finance, law, media, government, culture và international v�
 
 Commuter rail mở functional metropolitan region rộng hơn administrative London.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vương quốc Anh (United Kingdom) — island gateway, London centrality và post-industrial mạng (network / 네트워크)**, **Năng lượng (energy / 에너지) geography** tiếp nhận điểm tựa từ **London as toàn cục (global / 전역) city** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Food và land** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đô thị và industry cần điện, khí và offshore resources; **Năng lượng (energy / 에너지) geography** cho thấy island system phải cân nguồn biển, grid và demand concentrated ở phía nam. **Food và land** tiếp theo đặt câu hỏi về đất sản xuất trong một quốc gia mật độ cao.
 
 ## Năng lượng (energy / 에너지) geography
 
@@ -54,7 +54,7 @@ North Sea oil/gas có historical role; offshore wind mở spatial hệ thống (
 
 Island grid liên kết (connection / 연결) với continental Europe tăng balancing/interdependence.
 
-> **Chuyển mạch:** Trong **Vương quốc Anh (United Kingdom) — island gateway, London centrality và post-industrial mạng (network / 네트워크)**, **Food và land** tiếp nhận điểm tựa từ **Năng lượng (energy / 에너지) geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vận chuyển (transport / 전송)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Food và land** phải phân bổ giữa agriculture, đô thị, bảo tồn và hạ tầng; import và supply chain bù cho giới hạn diện tích. **Vận chuyển (transport / 전송)** tiếp theo cho thấy island gateway giữ các luồng đó ổn định bằng cảng, tunnel và air links ra sao.
 
 ## Food và land
 
@@ -62,7 +62,7 @@ UK nhập phần thực phẩm đáng kể nhưng domestic agriculture vẫn qua
 
 Food bảo mật (security / 보안) vì thế là domestic môi trường vận hành (production / 운영 환경) + trade + cổng (port / 포트)/logistics.
 
-> **Chuyển mạch:** Ở chặng này của **Vương quốc Anh (United Kingdom) — island gateway, London centrality và post-industrial mạng (network / 네트워크)**, **Vận chuyển (transport / 전송)** tiếp nhận điểm tựa từ **Food và land** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regional role** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cảng, rail, road, Channel Tunnel và aviation nối các đảo với châu Âu và thế giới; **Vận chuyển (transport / 전송)** là điều kiện để bù khoảng cách biển. **Regional role** sẽ tổng hợp gateway, centrality và legacy thành vị trí của UK.
 
 ## Vận chuyển (transport / 전송)
 
@@ -70,13 +70,13 @@ Dense road/rail ở England nhưng north–south sức chứa (capacity / 용량
 
 Island economy phụ thuộc cổng (port / 포트)/airport redundancy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vương quốc Anh (United Kingdom) — island gateway, London centrality và post-industrial mạng (network / 네트워크)**, **Regional role** tiếp nhận điểm tựa từ **Vận chuyển (transport / 전송)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Regional role** của UK đến từ island gateway, London global city và các mạng vận tải–tài chính, nhưng bị điều chỉnh bởi relief, climate và hậu công nghiệp. **Mô hình tư duy (mental model / 사고 모델)** sẽ giữ cả kết nối biển lẫn bất cân bằng nội vùng.
 
 ## Regional role
 
 UK là Atlantic maritime nút (node / 노드) gần continental thị trường (market / 시장); London toàn cục (global / 전역) dịch vụ (service / 서비스) centrality vượt vật lý (physical / 물리적) kích thước (size / 크기) của country.
 
-> **Chuyển mạch:** Trong **Vương quốc Anh (United Kingdom) — island gateway, London centrality và post-industrial mạng (network / 네트워크)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Regional role** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** khép chuỗi island geography → relief–climate → rivers–ports → industrial legacy → London, energy, food–land và transport, rồi bàn giao cho owner **Northern Europe — Hồ sơ địa lý** trong [README](./README.md).
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
