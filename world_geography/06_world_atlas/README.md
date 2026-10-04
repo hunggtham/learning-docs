@@ -8,7 +8,7 @@ World Atlas dùng country/territory như **trường hợp (case / 사례) study
 
 Không tạo thêm country skeleton chỉ để tăng số tệp (file / 파일).
 
-> **Chuyển mạch:** **Atlas không phải coverage game** đặt boundary giữa inventory và prose; **Bốn trạng thái nội dung** theo dõi tiến độ, rồi **Definition of Done** quy định evidence cần đạt.
+> **Nối mạch:** **Atlas không phải coverage game** tách inventory khỏi prose học tập và ngăn việc tạo file để đếm; **Bốn trạng thái nội dung** tiếp theo cho biết mỗi entry đang ở mức nào. **Definition of Done** sau đó đặt ngưỡng evidence cho profile thật.
 
 ## Bốn trạng thái nội dung
 
@@ -22,7 +22,7 @@ Không tạo thêm country skeleton chỉ để tăng số tệp (file / 파일)
 
 Xem [Coverage Status](./03_coverage_status.md).
 
-> **Chuyển mạch:** **Definition of Done** biến trạng thái thành điều kiện publish; **Learning profiles ưu tiên cao** chọn region và topic có giá trị học trước.
+> **Nối mạch:** **Definition of Done** biến trạng thái thành thesis, cơ chế, cross-link và giới hạn có thể kiểm chứng; **Học tập (learning / 학습) profiles ưu tiên cao** tiếp theo dùng ngưỡng đó để chọn nơi có leverage lớn.
 
 ## Definition of Done
 
@@ -47,7 +47,7 @@ Chuỗi nhân quả (causal chain / 인과 사슬) mặc định:
 
 Một tệp (file / 파일) có đủ heading nhưng chỉ vài câu vẫn không đạt Definition of Done.
 
-> **Chuyển mạch:** **Learning profiles** áp dụng DoD vào nhu cầu người học; **Atlas promotions gần nhất** ghi thay đổi nào đã được kiểm chứng và owner nào chịu trách nhiệm.
+> **Nối mạch:** **Học tập (learning / 학습) profiles ưu tiên cao** áp dụng DoD vào Korea–Vietnam, châu Á và các case lục địa; **Atlas promotions gần nhất** tiếp theo ghi những profile đã vượt cổng và owner chịu trách nhiệm.
 
 ## Học tập (learning / 학습) profiles ưu tiên cao
 
@@ -80,7 +80,7 @@ Bốn profile này dùng để so monsoon megaregion, continental thị trườn
 
 Germany, France, United Kingdom, Italy và Netherlands đã được promote thành comparative học tập (learning / 학습) profiles về manufacturing, dịch vụ (service / 서비스), ports, urban networks và European connectivity.
 
-> **Chuyển mạch:** **Atlas promotions** cho thấy route đã ship đến đâu; **Planned, chưa completed** giữ minh bạch phần còn thiếu thay vì ghi nhận coverage giả.
+> **Nối mạch:** **Atlas promotions gần nhất** cho thấy những case đã có chuỗi vật lý–kinh tế–trade; **Planned, chưa completed** tiếp theo giữ minh bạch các gap thay vì biến file ngắn thành coverage giả.
 
 ## Atlas promotions gần nhất
 
@@ -92,7 +92,7 @@ Batch gần nhất **không tạo tệp (file / 파일) mới**. Ba compact refe
 
 Mỗi profile đều dùng chuỗi nhân quả (causal chain / 인과 사슬) vật lý (physical / 물리적) → resources → settlement → economy → vận chuyển (transport / 전송) → cities → trade → development/regional role.
 
-> **Chuyển mạch:** **Planned** xác định gap cần làm; **Africa profiles** là case cụ thể để kiểm chứng atlas boundary và prose owner.
+> **Nối mạch:** **Planned, chưa completed** xác định nơi cần thêm cơ chế độc lập; **Africa profiles** tiếp theo là case kiểm tra boundary, độ sâu và prose owner trước khi promote.
 
 ## Planned, chưa completed
 
@@ -100,13 +100,13 @@ Thailand và Philippines có học tập (learning / 학습) giá trị (value /
 
 Các năng lượng (energy / 에너지)/chokepoint cases như Saudi Arabia, Iran, Türkiye, UAE, Egypt hay Panama chỉ được ưu tiên khi bổ sung một cơ chế (mechanism / 메커니즘) chưa được Atlas hiện tại minh họa tốt.
 
-> **Chuyển mạch:** **Africa profiles** cho thấy chi phí giữ country file riêng; **Khi nào nên merge** đặt quyết định đó vào boundary, source và khả năng bảo trì.
+> **Nối mạch:** **Africa profiles** cho thấy country file chỉ đáng giữ khi có cơ chế địa lý riêng và evidence đủ sâu; **Khi nào nên merge** tiếp theo đưa quyết định vào boundary, source và khả năng bảo trì.
 
 ## Africa profiles
 
 Một số Africa files đã qua độ sâu (depth / 깊이) pass và có giá trị về Sahel, Nile, Congo Basin, Great Rift, landlocked corridors và tài nguyên (resource / 자원) belts. Tuy nhiên chúng vẫn cần QA theo cùng Definition of Done; không có khái niệm “Africa completed” chỉ vì đủ tệp (file / 파일).
 
-> **Chuyển mạch:** **Merge policy** khép README bằng tiêu chí country file, owner và evidence; atlas detail quay về region canonical khi cần.
+> **Nối mạch:** **Khi nào nên merge thay vì giữ country tệp (file / 파일)?** khép README bằng tiêu chí cơ chế, owner và evidence; từ đây detail quay về region canonical nếu file riêng chỉ lặp nội dung.
 
 ## Khi nào nên merge thay vì giữ country tệp (file / 파일)?
 
