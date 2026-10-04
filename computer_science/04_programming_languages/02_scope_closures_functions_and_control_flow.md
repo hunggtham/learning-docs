@@ -10,7 +10,7 @@ Phạm vi (scope / 범위) xác định region nơi binding name có thể đư�
 
 Name resolution thường xảy ra compile/static-analysis thời gian (time / 시간) theo phạm vi (scope / 범위) chuỗi (chain / 사슬), dù giá trị (value / 값) nằm thời gian chạy (runtime / 런타임).
 
-> **Chuyển mạch:** Trong **Phạm vi (scope / 범위), closures, functions và điều khiển (control / 제어) luồng (flow / 흐름)**, **Hàm (function / 함수) lời gọi (call / 호출) và activation bản ghi (record / 레코드)** tiếp nhận điểm tựa từ **Lexical phạm vi (scope / 범위)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **First-class functions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Hàm (function / 함수) lời gọi (call / 호출) và activation bản ghi (record / 레코드)** nối từ **Lexical phạm vi (scope / 범위)** sang **First-class functions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hàm (function / 함수) lời gọi (call / 호출) và activation bản ghi (record / 레코드)
 
@@ -18,7 +18,7 @@ Mỗi lời gọi (call / 호출) cần trạng thái (state / 상태) riêng: a
 
 Tail lời gọi (call / 호출) xảy ra khi kết quả (result / 결과) của hiện tại (current / 현재) hàm (function / 함수) chính là kết quả (result / 결과) của another lời gọi (call / 호출). ngôn ngữ (language / 언어)/thời gian chạy (runtime / 런타임) có thể tail-call optimize để reuse frame, nhưng không phải mọi ecosystem guarantee.
 
-> **Chuyển mạch:** Ở chặng này của **Phạm vi (scope / 범위), closures, functions và điều khiển (control / 제어) luồng (flow / 흐름)**, **First-class functions** tiếp nhận điểm tựa từ **Hàm (function / 함수) lời gọi (call / 호출) và activation bản ghi (record / 레코드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Closure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **First-class functions** nối từ **Hàm (function / 함수) lời gọi (call / 호출) và activation bản ghi (record / 레코드)** sang **Closure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## First-class functions
 
@@ -26,7 +26,7 @@ Ngôn ngữ (language / 언어) có first-class functions nếu functions có th
 
 `map`, `filter`, callbacks, sự kiện (event / 이벤트) handlers và chiến lược (strategy / 전략) injection đều dựa idea này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phạm vi (scope / 범위), closures, functions và điều khiển (control / 제어) luồng (flow / 흐름)**, **Closure** tiếp nhận điểm tựa từ **First-class functions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều khiển (control / 제어) luồng (flow / 흐름)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Closure** nối từ **First-class functions** sang **Điều khiển (control / 제어) luồng (flow / 흐름)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Closure
 
@@ -43,7 +43,7 @@ Sau `makeCounter` return, `n` vẫn phải sống vì returned hàm (function / 
 
 Capture-by-value/tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론) khác ngôn ngữ (language / 언어) và construct. Mutable captures có thể tạo dùng chung (shared / 공유) hidden trạng thái (state / 상태).
 
-> **Chuyển mạch:** Trong **Phạm vi (scope / 범위), closures, functions và điều khiển (control / 제어) luồng (flow / 흐름)**, **Closure** xác định đầu vào; **Điều khiển (control / 제어) luồng (flow / 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Exception như non-local điều khiển (control / 제어) transfer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Closure** đặt đầu vào cho **Điều khiển (control / 제어) luồng (flow / 흐름)**, rồi **Exception như non-local điều khiển (control / 제어) transfer** mở rộng hệ quả.
 
 ## Điều khiển (control / 제어) luồng (flow / 흐름)
 
@@ -51,7 +51,7 @@ Chuỗi (sequence / 시퀀스), branch, vòng lặp (loop / 루프), lời gọi
 
 Dataflow analyses như definite assignment, liveness và tối ưu hóa (optimization / 최적화) chạy trên CFG.
 
-> **Chuyển mạch:** Ở chặng này của **Phạm vi (scope / 범위), closures, functions và điều khiển (control / 제어) luồng (flow / 흐름)**, **Điều khiển (control / 제어) luồng (flow / 흐름)** xác định đầu vào; **Exception như non-local điều khiển (control / 제어) transfer** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Coroutine, generator và async** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Điều khiển (control / 제어) luồng (flow / 흐름)** đặt đầu vào cho **Exception như non-local điều khiển (control / 제어) transfer**, rồi **Coroutine, generator và async** mở rộng hệ quả.
 
 ## Exception như non-local điều khiển (control / 제어) transfer
 
@@ -59,7 +59,7 @@ Throw exception bỏ qua normal return đường dẫn (path / 경로) và tìm 
 
 Exception cho expected high-frequency điều khiển (control / 제어) luồng (flow / 흐름) có thể costly hoặc confusing tùy thời gian chạy (runtime / 런타임); use depends ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phạm vi (scope / 범위), closures, functions và điều khiển (control / 제어) luồng (flow / 흐름)**, **Coroutine, generator và async** tiếp nhận điểm tựa từ **Exception như non-local điều khiển (control / 제어) transfer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Continuations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Coroutine, generator và async** nối từ **Exception như non-local điều khiển (control / 제어) transfer** sang **Continuations**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Coroutine, generator và async
 
@@ -69,7 +69,7 @@ Coroutine có thể suspend và resume, nên activation trạng thái (state / �
 
 Generator `yield` tương tự suspend trạng thái (state / 상태) giữa values.
 
-> **Chuyển mạch:** Trong **Phạm vi (scope / 범위), closures, functions và điều khiển (control / 제어) luồng (flow / 흐름)**, **Continuations** tiếp nhận điểm tựa từ **Coroutine, generator và async** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Continuations** nối từ **Coroutine, generator và async** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Continuations
 
@@ -77,13 +77,13 @@ Continuation conceptualize “phần computation còn lại”. Callback là tư
 
 Mô hình tư duy (mental model / 사고 모델) này giúp hiểu why async ngăn xếp (stack / 스택) traces và exception propagation khác sync ngăn xếp lời gọi (call stack / 호출 스택).
 
-> **Chuyển mạch:** Ở chặng này của **Phạm vi (scope / 범위), closures, functions và điều khiển (control / 제어) luồng (flow / 흐름)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Continuations** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Continuations**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > hàm (function / 함수) lời gọi (call / 호출) tạo **thực thi (execution / 실행) ngữ cảnh (context / 맥락)**; lexical phạm vi (scope / 범위) quyết định names; closure giữ môi trường (environment / 환경) qua thời gian tồn tại (lifetime / 수명); control-flow construct quyết định continuation nào chạy tiếp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phạm vi (scope / 범위), closures, functions và điều khiển (control / 제어) luồng (flow / 흐름)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -93,7 +93,7 @@ Mô hình tư duy (mental model / 사고 모델) này giúp hiểu why async ng�
 
 **“phạm vi (scope / 범위) và thời gian tồn tại (lifetime / 수명) là một.”** Binding có lexical phạm vi (scope / 범위) giới hạn nơi truy cập, nhưng captured đối tượng (object / 객체)/giá trị (value / 값) có thể sống lâu hơn phạm vi (scope / 범위) nguồn (source / 소스).
 
-> **Chuyển mạch:** Trong **Phạm vi (scope / 범위), closures, functions và điều khiển (control / 제어) luồng (flow / 흐름)**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

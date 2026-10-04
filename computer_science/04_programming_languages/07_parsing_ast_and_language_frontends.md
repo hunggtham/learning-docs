@@ -22,7 +22,7 @@ IDENT(x) ASSIGN IDENT(price) STAR NUMBER(1.1)
 
 Lexer cần xử lý longest match, escapes, comments, Unicode identifiers và lexical ambiguity tùy ngôn ngữ (language / 언어).
 
-> **Chuyển mạch:** Trong **Parsing, AST và ngôn ngữ (language / 언어) front-end**, **Grammar mô tả cấu trúc hợp lệ** tiếp nhận điểm tựa từ **Từ bytes đến tokens** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parse cây (tree / 트리) và AST khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Grammar mô tả cấu trúc hợp lệ** nối từ **Từ bytes đến tokens** sang **Parse cây (tree / 트리) và AST khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Grammar mô tả cấu trúc hợp lệ
 
@@ -32,7 +32,7 @@ Ví dụ precedence cần làm `a + b * c` thành `a + (b * c)` thay vì `(a + b
 
 Recursive descent dễ viết thủ công; LL/LR families dựa trên parsing lý thuyết (theory / 이론); parser combinators biểu diễn parsers như composable functions.
 
-> **Chuyển mạch:** Ở chặng này của **Parsing, AST và ngôn ngữ (language / 언어) front-end**, **Parse cây (tree / 트리) và AST khác nhau** tiếp nhận điểm tựa từ **Grammar mô tả cấu trúc hợp lệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngữ nghĩa (semantic / 의미적) phân tích (analysis / 분석)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Parse cây (tree / 트리) và AST khác nhau** nối từ **Grammar mô tả cấu trúc hợp lệ** sang **Ngữ nghĩa (semantic / 의미적) phân tích (analysis / 분석)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Parse cây (tree / 트리) và AST khác nhau
 
@@ -50,7 +50,7 @@ Ví dụ `1 + 2 * 3` có AST đại ý:
 
 AST là giao diện (interface / 인터페이스) giữa cú pháp (syntax / 문법) và ngữ nghĩa (semantic / 의미적) phân tích (analysis / 분석).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Parsing, AST và ngôn ngữ (language / 언어) front-end**, **Ngữ nghĩa (semantic / 의미적) phân tích (analysis / 분석)** tiếp nhận điểm tựa từ **Parse cây (tree / 트리) và AST khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Intermediate biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Ngữ nghĩa (semantic / 의미적) phân tích (analysis / 분석)** nối từ **Parse cây (tree / 트리) và AST khác nhau** sang **Intermediate biểu diễn (representation / 표현)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ngữ nghĩa (semantic / 의미적) phân tích (analysis / 분석)
 
@@ -64,7 +64,7 @@ nếu `unknownName` chưa được declared. Name resolution xây ánh xạ (map
 
 Trình biên dịch (compiler / 컴파일러) symbol bảng (table / 테이블) là cấu trúc dữ liệu (data structure / 자료구조) quản lý bindings theo nested scopes.
 
-> **Chuyển mạch:** Trong **Parsing, AST và ngôn ngữ (language / 언어) front-end**, **Intermediate biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **Ngữ nghĩa (semantic / 의미적) phân tích (analysis / 분석)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lỗi (error / 오류) khôi phục (recovery / 복구) và diagnostics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Intermediate biểu diễn (representation / 표현)** nối từ **Ngữ nghĩa (semantic / 의미적) phân tích (analysis / 분석)** sang **Lỗi (error / 오류) khôi phục (recovery / 복구) và diagnostics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Intermediate biểu diễn (representation / 표현)
 
@@ -72,7 +72,7 @@ AST thường quá gần nguồn (source / 소스) và mã máy (machine code / 
 
 IR có thể là three-address mã (code / 코드), SSA (Static Single Assignment) hoặc graph-based biểu diễn (representation / 표현). SSA làm mỗi variable phiên bản (version / 버전) được assign một lần, giúp data-flow dependencies rõ.
 
-> **Chuyển mạch:** Ở chặng này của **Parsing, AST và ngôn ngữ (language / 언어) front-end**, **Lỗi (error / 오류) khôi phục (recovery / 복구) và diagnostics** tiếp nhận điểm tựa từ **Intermediate biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Incremental parsing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Lỗi (error / 오류) khôi phục (recovery / 복구) và diagnostics** nối từ **Intermediate biểu diễn (representation / 표현)** sang **Incremental parsing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lỗi (error / 오류) khôi phục (recovery / 복구) và diagnostics
 
@@ -80,7 +80,7 @@ Parser thực tế không nên dừng ở typo đầu tiên nếu IDE cần hi�
 
 Diagnostic tốt cần nguồn (source / 소스) span, expected tokens, ngữ cảnh (context / 맥락) và đôi khi fix suggestion. Đây là nơi trình biên dịch (compiler / 컴파일러) construction gặp HCI: lỗi (error / 오류) message là người dùng (user / 사용자) giao diện (interface / 인터페이스) cho programming ngôn ngữ (language / 언어).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Parsing, AST và ngôn ngữ (language / 언어) front-end**, **Incremental parsing** tiếp nhận điểm tựa từ **Lỗi (error / 오류) khôi phục (recovery / 복구) và diagnostics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parsing ngoài trình biên dịch (compiler / 컴파일러)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Incremental parsing** nối từ **Lỗi (error / 오류) khôi phục (recovery / 복구) và diagnostics** sang **Parsing ngoài trình biên dịch (compiler / 컴파일러)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Incremental parsing
 
@@ -88,7 +88,7 @@ IDE không muốn parse toàn tệp (file / 파일) từ đầu sau mỗi keystr
 
 Mẫu (pattern / 패턴) “reuse unaffected trạng thái (state / 상태) after cục bộ (local / 로컬) thay đổi (change / 변경)” giống incremental bản dựng (build / 빌드), bộ nhớ đệm (cache / 캐시) vô hiệu hóa (invalidation / 무효화) và reactive UI.
 
-> **Chuyển mạch:** Trong **Parsing, AST và ngôn ngữ (language / 언어) front-end**, **Parsing ngoài trình biên dịch (compiler / 컴파일러)** tiếp nhận điểm tựa từ **Incremental parsing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Parsing ngoài trình biên dịch (compiler / 컴파일러)** nối từ **Incremental parsing** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Parsing ngoài trình biên dịch (compiler / 컴파일러)
 
@@ -96,7 +96,7 @@ JSON/XML parsers, SQL parser, command-line shell, cấu hình (config / 설정) 
 
 Bảo mật (security / 보안) concern quan trọng là parser differential: hai components parse cùng bytes khác nhau có thể tạo vulnerability, ví dụ HTTP yêu cầu (request / 요청) smuggling.
 
-> **Chuyển mạch:** Ở chặng này của **Parsing, AST và ngôn ngữ (language / 언어) front-end**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Parsing ngoài trình biên dịch (compiler / 컴파일러)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Parsing ngoài trình biên dịch (compiler / 컴파일러)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -106,13 +106,13 @@ Bảo mật (security / 보안) concern quan trọng là parser differential: ha
 
 **“Parse thành công nghĩa là program hợp lệ.”** ngữ nghĩa (semantic / 의미적) checks còn phải xác minh names, types và ngôn ngữ (language / 언어) rules.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Parsing, AST và ngôn ngữ (language / 언어) front-end**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > ngôn ngữ (language / 언어) front-end là chuỗi transformations bảo toàn meaning ngày càng rõ hơn: characters → tokens → cú pháp (syntax / 문법) cây (tree / 트리) → semantically annotated biểu diễn (representation / 표현) → IR.
 
-> **Chuyển mạch:** Trong **Parsing, AST và ngôn ngữ (language / 언어) front-end**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 
