@@ -33,13 +33,13 @@ feedback: casualties → morale loss → coercion/propaganda → legitimacy cris
 
 New borders và mandates không giải quyết hết minority, land, debt và trade questions. Revolution ở Nga, collapse của Ottoman/Austro-Hungarian/German empires và anti-colonial mobilization cho thấy peace settlement tạo nhiều trạng thái (state / 상태) mới nhưng không đồng đều sovereignty.
 
-> **Chuyển mạch:** Trong **11 — World War I: tổng động viên và đứt gãy đế quốc**, **Vì sao chiến tranh kéo dài?** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ sâu (depth / 깊이) pass: WWI từ bảo mật (security / 보안) dilemma đến đường dẫn (path / 경로) dependence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Câu hỏi vì sao chiến tranh kéo dài cần phân biệt năng lực tổng động viên, logistics và lựa chọn an ninh. **Bằng chứng, giới hạn và cầu nối** đưa các yếu tố đó về dấu vết trước depth pass.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Mobilization tables, casualty rolls, ration dữ liệu (data / 데이터), soldier letters, refugee registers, newspapers và price series cho thấy war effort nhưng không tự đo trauma hay silence. Counterfactual: nếu chiến tranh kết thúc sớm, debt và empire vẫn gây khủng hoảng nhưng revolution, border và pandemic đường dẫn (path / 경로) có thể khác. Cầu nối sang 12 là **unresolved debt, minority, demobilization và mass politics**.
 
-> **Chuyển mạch:** **Bằng chứng, giới hạn và cầu nối** đưa tổng động viên và đứt gãy đế quốc về các lựa chọn an ninh có thể kiểm chứng; phần **Độ sâu pass** theo dõi cách những lựa chọn đó khóa đường đi sau chiến tranh.
+> **Nối mạch:** Bằng chứng nối tổng động viên và đứt gãy đế quốc với lựa chọn an ninh có thể kiểm chứng; **Độ sâu pass** theo dõi cách lựa chọn đó khóa đường đi sau chiến tranh.
 
 ## Độ sâu (depth / 깊이) pass: WWI từ bảo mật (security / 보안) dilemma đến đường dẫn (path / 경로) dependence
 
