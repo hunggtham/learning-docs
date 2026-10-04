@@ -17,7 +17,7 @@ Nếu môi trường vận hành (production / 운영 환경) Casebook trả l�
 7. [`07_sdk_native_boundary_api_evolution_consumer_safety.md`](07_sdk_native_boundary_api_evolution_consumer_safety.md) — API công khai (public API / 공개 API)/ABI, phụ thuộc (dependency / 의존성) leakage, Java/Kotlin interop, SDK initialization/luồng thực thi (thread / 스레드)/lỗi (error / 오류) đặc tả hợp đồng (contract / 계약), bên tiêu thụ (consumer / 소비자) R8, JNI quyền sở hữu (ownership / 소유권), ABI/bản địa (native / 네이티브) crash, deprecation, SemVer và bên tiêu thụ (consumer / 소비자) tính tương thích (compatibility / 호환성) testing.
 8. [`08_version_compatibility_migration_forensics.md`](08_version_compatibility_migration_forensics.md) — Kotlin siêu dữ liệu (metadata / 메타데이터), pre-release nhị phân (binary / 이진), ngôn ngữ (language / 언어)/API/JVM mục tiêu (target / 대상) đặc tả hợp đồng (contract / 계약), compiler-plugin lockstep, Compose trình biên dịch (compiler / 컴파일러) di chuyển (migration / 마이그레이션), KSP/kapt, công khai (public / 공개) inline/default-arg/const/value-class ABI, Android mục tiêu (target / 대상) di chuyển (migration / 마이그레이션), transitive phụ thuộc (dependency / 의존성) floor và version-upgrade forensic playbook.
 
-> **Chuyển mạch:** Trong **Kotlin + Android độ sâu (depth / 깊이) Labs**, **Thứ tự đọc** cho ta quy tắc; **Cách dùng cùng môi trường vận hành (production / 운영 환경) Casebook** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Quy tắc học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kotlin + Android độ sâu (depth / 깊이) Labs**, **Thứ tự đọc** nêu quy tắc; **Cách dùng cùng môi trường vận hành (production / 운영 환경) Casebook** thử quy tắc trong tình huống, rồi **Quy tắc học** mở rộng hệ quả.
 
 ## Cách dùng cùng môi trường vận hành (production / 운영 환경) Casebook
 
@@ -49,7 +49,7 @@ Case 17/20 NDK + SDK authoring
 → Depth Lab 08 Version compatibility + migration forensics
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Kotlin + Android độ sâu (depth / 깊이) Labs**, **Cách dùng cùng môi trường vận hành (production / 운영 환경) Casebook** cho ta quy tắc; **Quy tắc học** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mental model chung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kotlin + Android độ sâu (depth / 깊이) Labs**, **Cách dùng cùng môi trường vận hành (production / 운영 환경) Casebook** nêu quy tắc; **Quy tắc học** thử quy tắc trong tình huống, rồi **Mental model chung** mở rộng hệ quả.
 
 ## Quy tắc học
 
@@ -71,7 +71,7 @@ artifact hoặc metadata nào thật sự khác trước?
 
 Nếu chỉ biết tên API nhưng không trả lời được các câu trên, kiến thức vẫn đang ở mức hiện thực (implementation / 구현) chứ chưa tới mức kỹ thuật (engineering / 엔지니어링) lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Quy tắc học đặt mục tiêu của lab; mental model chung tiếp theo dùng invariant, race, failure và evidence để kiểm tra production reasoning.
+> **Nối mạch:** Quy tắc học đặt mục tiêu của lab; mental model chung tiếp theo dùng invariant, race, failure và evidence để kiểm tra production reasoning.
 
 ## Mental model chung
 Phần này nối mạch Android vừa học với “Mental model chung”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.

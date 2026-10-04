@@ -14,7 +14,7 @@ Chương này xây một mô hình tư duy (mental model / 사고 모델) từ s
 
 **Session** là trạng thái cho phép nhiều yêu cầu (request / 요청) liên tiếp chứng minh định danh (identity / 식별자) mà không bắt người dùng (user / 사용자) đăng nhập lại mỗi lần. Với token-based hệ thống (system / 시스템), session thường liên quan truy cập (access / 접근) đơn vị từ (token / 토큰), refresh đơn vị từ (token / 토큰) hoặc một credential/session handle tương đương.
 
-> **Chuyển mạch:** Authentication, authorization và session có lifecycle khác nhau; client không giữ absolute secret, nên modern sign-in phải đặt trust boundary và token handling rõ.
+> **Nối mạch:** Authentication, authorization và session có lifecycle khác nhau; client không giữ absolute secret, nên modern sign-in phải đặt trust boundary và token handling rõ.
 
 ## 2. máy khách (client / 클라이언트) không phải nơi giữ “bí mật tuyệt đối”
 
@@ -22,7 +22,7 @@ Một mobile app được phân phối cho người dùng (user / 사용자). m�
 
 Android Keystore hữu ích để bảo vệ key material và làm extraction khó hơn, nhưng nó không biến máy khách (client / 클라이언트) thành HSM mà máy chủ (server / 서버) có thể tin vô điều kiện. Integrity/attestation cũng là rủi ro (risk / 위험) tín hiệu (signal / 신호) để backend tăng confidence, không thay thế authentication và authorization.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **2. máy khách (client / 클라이언트) không phải nơi giữ “bí mật tuyệt đối”** đã nêu tiêu chí phân biệt, còn **3. hiện đại (modern / 현대적) sign-in ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4. Session repository là nguồn chuẩn (source of truth / 정본) cho trạng thái login** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **2. máy khách (client / 클라이언트) không phải nơi giữ “bí mật tuyệt đối”** đặt tiêu chí; **3. hiện đại (modern / 현대적) sign-in ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **4. Session repository là nguồn chuẩn (source of truth / 정본) cho trạng thái login** mở rộng hệ quả.
 
 ## 3. hiện đại (modern / 현대적) sign-in ranh giới (boundary / 경계)
 
@@ -46,7 +46,7 @@ App receives short-lived access credential + session/refresh mechanism
 
 Không nên chỉ parse định danh (identity / 식별자) đơn vị từ (token / 토큰) ở máy khách (client / 클라이언트) rồi coi người dùng (user / 사용자) là authenticated cho protected backend dữ liệu (data / 데이터). Backend phải verify đơn vị từ (token / 토큰)/assertion và tạo session của chính hệ thống.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **3. hiện đại (modern / 현대적) sign-in ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **4. Session repository là nguồn chuẩn (source of truth / 정본) cho trạng thái login** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **5. Không expose raw đơn vị từ (token / 토큰) cho UI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **3. hiện đại (modern / 현대적) sign-in ranh giới (boundary / 경계)** đặt tiêu chí; **4. Session repository là nguồn chuẩn (source of truth / 정본) cho trạng thái login** dùng tiêu chí đó để kiểm tra ranh giới, rồi **5. Không expose raw đơn vị từ (token / 토큰) cho UI** mở rộng hệ quả.
 
 ## 4. Session repository là nguồn chuẩn (source of truth / 정본) cho trạng thái login
 
@@ -73,7 +73,7 @@ sealed interface SessionState {
 
 `Unknown` hữu ích khi app mới khởi động và đang restore session. Nếu chỉ có Boolean `isLoggedIn`, UI dễ flash login screen trong vài millisecond trước khi persistent trạng thái (state / 상태) được đọc.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **4. Session repository là nguồn chuẩn (source of truth / 정본) cho trạng thái login** nêu điều cần giải thích; **5. Không expose raw đơn vị từ (token / 토큰) cho UI** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. truy cập (access / 접근) đơn vị từ (token / 토큰) ngắn hạn và refresh đơn vị từ (token / 토큰)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **4. Session repository là nguồn chuẩn (source of truth / 정본) cho trạng thái login** đặt vấn đề; **5. Không expose raw đơn vị từ (token / 토큰) cho UI** đối chiếu bằng chứng, rồi **6. truy cập (access / 접근) đơn vị từ (token / 토큰) ngắn hạn và refresh đơn vị từ (token / 토큰)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. Không expose raw đơn vị từ (token / 토큰) cho UI
 
@@ -91,7 +91,7 @@ class AuthHeaderProvider(
 
 Retrofit/OkHttp interceptor có thể attach header, nhưng refresh chiến lược (strategy / 전략) phải cẩn thận để tránh deadlock hoặc refresh storm.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **6. truy cập (access / 접근) đơn vị từ (token / 토큰) ngắn hạn và refresh đơn vị từ (token / 토큰)** tiếp nhận điểm tựa từ **5. Không expose raw đơn vị từ (token / 토큰) cho UI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Refresh trước expiry hay sau 401?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **6. truy cập (access / 접근) đơn vị từ (token / 토큰) ngắn hạn và refresh đơn vị từ (token / 토큰)** nối từ **5. Không expose raw đơn vị từ (token / 토큰) cho UI** sang **7. Refresh trước expiry hay sau 401?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. truy cập (access / 접근) đơn vị từ (token / 토큰) ngắn hạn và refresh đơn vị từ (token / 토큰)
 
@@ -109,7 +109,7 @@ data class TokenBundle(
 
 Không nên log đối tượng (object / 객체) này, kể cả ở gỡ lỗi (debug / 디버그) bản dựng (build / 빌드) nếu log có thể được upload. `toString()` mặc định của dữ liệu (data / 데이터) lớp (class / 클래스) có thể vô tình in secret; với kiểu (type / 타입) nhạy cảm, cân nhắc custom biểu diễn (representation / 표현) hoặc wrapper không expose giá trị (value / 값).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **7. Refresh trước expiry hay sau 401?** tiếp nhận điểm tựa từ **6. truy cập (access / 접근) đơn vị từ (token / 토큰) ngắn hạn và refresh đơn vị từ (token / 토큰)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Single-flight refresh: tránh 20 refresh yêu cầu (request / 요청) cùng lúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **7. Refresh trước expiry hay sau 401?** nối từ **6. truy cập (access / 접근) đơn vị từ (token / 토큰) ngắn hạn và refresh đơn vị từ (token / 토큰)** sang **8. Single-flight refresh: tránh 20 refresh yêu cầu (request / 요청) cùng lúc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Refresh trước expiry hay sau 401?
 
@@ -121,7 +121,7 @@ Có hai chiến lược chính và thường dùng kết hợp.
 
 Môi trường vận hành (production / 운영 환경) thường dùng proactive khi đơn vị từ (token / 토큰) gần hết hạn, đồng thời vẫn xử lý 401 vì máy chủ (server / 서버) có thể revoke đơn vị từ (token / 토큰) trước expiry.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **8. Single-flight refresh: tránh 20 refresh yêu cầu (request / 요청) cùng lúc** tiếp nhận điểm tựa từ **7. Refresh trước expiry hay sau 401?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. đơn vị từ (token / 토큰) refresh không được recurse vô hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **8. Single-flight refresh: tránh 20 refresh yêu cầu (request / 요청) cùng lúc** nối từ **7. Refresh trước expiry hay sau 401?** sang **9. đơn vị từ (token / 토큰) refresh không được recurse vô hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Single-flight refresh: tránh 20 refresh yêu cầu (request / 요청) cùng lúc
 
@@ -152,7 +152,7 @@ class TokenRefresher(
 
 Check `current != staleToken` rất quan trọng: yêu cầu (request / 요청) thứ hai đợi mutex, đến lượt nó thì yêu cầu (request / 요청) thứ nhất có thể đã refresh xong. Không cần refresh lần nữa.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **9. đơn vị từ (token / 토큰) refresh không được recurse vô hạn** tiếp nhận điểm tựa từ **8. Single-flight refresh: tránh 20 refresh yêu cầu (request / 요청) cùng lúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Logout là một giao dịch (transaction / 트랜잭션) về bảo mật (security / 보안) trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **9. đơn vị từ (token / 토큰) refresh không được recurse vô hạn** nối từ **8. Single-flight refresh: tránh 20 refresh yêu cầu (request / 요청) cùng lúc** sang **10. Logout là một giao dịch (transaction / 트랜잭션) về bảo mật (security / 보안) trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. đơn vị từ (token / 토큰) refresh không được recurse vô hạn
 
@@ -160,7 +160,7 @@ Nếu auth endpoint dùng cùng interceptor và yêu cầu (request / 요청) re
 
 Ngoài ra cần giới hạn thử lại (retry / 재시도). Một yêu cầu (request / 요청) protected chỉ nên thử lại (retry / 재시도) theo chính sách (policy / 정책) rõ ràng; không phải “401 thì cứ refresh mãi”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **10. Logout là một giao dịch (transaction / 트랜잭션) về bảo mật (security / 보안) trạng thái (state / 상태)** tiếp nhận điểm tựa từ **9. đơn vị từ (token / 토큰) refresh không được recurse vô hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. User-bound cục bộ (local / 로컬) dữ liệu (data / 데이터) phải có không gian tên (namespace / 네임스페이스) hoặc cleanup chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **10. Logout là một giao dịch (transaction / 트랜잭션) về bảo mật (security / 보안) trạng thái (state / 상태)** nối từ **9. đơn vị từ (token / 토큰) refresh không được recurse vô hạn** sang **11. User-bound cục bộ (local / 로컬) dữ liệu (data / 데이터) phải có không gian tên (namespace / 네임스페이스) hoặc cleanup chính sách (policy / 정책)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Logout là một giao dịch (transaction / 트랜잭션) về bảo mật (security / 보안) trạng thái (state / 상태)
 
@@ -189,7 +189,7 @@ mark session as signing out
 
 Nếu revoke mạng (network / 네트워크) thất bại (fail / 실패) vì offline, cục bộ (local / 로컬) logout vẫn phải có thể hoàn thành. Backend session sẽ expire hoặc có thể được revoke lần sau tùy threat mô hình (model / 모델).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **10. Logout là một giao dịch (transaction / 트랜잭션) về bảo mật (security / 보안) trạng thái (state / 상태)** nêu điều cần giải thích; **11. User-bound cục bộ (local / 로컬) dữ liệu (data / 데이터) phải có không gian tên (namespace / 네임스페이스) hoặc cleanup chính sách (policy / 정책)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. Secret lưu trữ (storage / 저장소): DataStore không tự động là secure vault** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **10. Logout là một giao dịch (transaction / 트랜잭션) về bảo mật (security / 보안) trạng thái (state / 상태)** đặt vấn đề; **11. User-bound cục bộ (local / 로컬) dữ liệu (data / 데이터) phải có không gian tên (namespace / 네임스페이스) hoặc cleanup chính sách (policy / 정책)** đối chiếu bằng chứng, rồi **12. Secret lưu trữ (storage / 저장소): DataStore không tự động là secure vault** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 11. User-bound cục bộ (local / 로컬) dữ liệu (data / 데이터) phải có không gian tên (namespace / 네임스페이스) hoặc cleanup chính sách (policy / 정책)
 
@@ -199,7 +199,7 @@ Cách đơn giản: clear user-specific cơ sở dữ liệu (database / 데이�
 
 Cách mạnh hơn cho multi-account: mọi row quan trọng có `accountId`, truy vấn (query / 쿼리) luôn phạm vi (scope / 범위) theo account và switch nguồn chuẩn (source of truth / 정본) theo active session. độ phức tạp (complexity / 복잡도) cao hơn nhưng hỗ trợ account switching tốt hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **11. User-bound cục bộ (local / 로컬) dữ liệu (data / 데이터) phải có không gian tên (namespace / 네임스페이스) hoặc cleanup chính sách (policy / 정책)** nêu điều cần giải thích; **12. Secret lưu trữ (storage / 저장소): DataStore không tự động là secure vault** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. Biometrics không phải backend authorization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **11. User-bound cục bộ (local / 로컬) dữ liệu (data / 데이터) phải có không gian tên (namespace / 네임스페이스) hoặc cleanup chính sách (policy / 정책)** đặt vấn đề; **12. Secret lưu trữ (storage / 저장소): DataStore không tự động là secure vault** đối chiếu bằng chứng, rồi **13. Biometrics không phải backend authorization** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. Secret lưu trữ (storage / 저장소): DataStore không tự động là secure vault
 
@@ -209,7 +209,7 @@ Không hard-code encryption key trong nguồn (source / 소스). Nếu key để
 
 Cũng cần nhớ: một thiết bị compromised/rooted có threat mô hình (model / 모델) khác. Mục tiêu mobile bảo mật (security / 보안) thường là giảm exposure và tăng chi phí attack, không hứa “secret không bao giờ bị lấy”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **13. Biometrics không phải backend authorization** tiếp nhận điểm tựa từ **12. Secret lưu trữ (storage / 저장소): DataStore không tự động là secure vault** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. mạng (network / 네트워크) bảo mật (security / 보안) cấu hình (config / 설정) và HTTPS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **13. Biometrics không phải backend authorization** nối từ **12. Secret lưu trữ (storage / 저장소): DataStore không tự động là secure vault** sang **14. mạng (network / 네트워크) bảo mật (security / 보안) cấu hình (config / 설정) và HTTPS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Biometrics không phải backend authorization
 
@@ -217,7 +217,7 @@ Cũng cần nhớ: một thiết bị compromised/rooted có threat mô hình (m
 
 Nếu thao tác (operation / 연산) tài chính cần step-up authentication, giao thức (protocol / 프로토콜) phải được thiết kế end-to-end: backend tạo challenge, máy khách (client / 클라이언트) thực hiện approved auth ceremony, backend verify proof/challenge phù hợp. Một Boolean `biometricPassed=true` từ máy khách (client / 클라이언트) không được coi là trusted bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **14. mạng (network / 네트워크) bảo mật (security / 보안) cấu hình (config / 설정) và HTTPS** tiếp nhận điểm tựa từ **13. Biometrics không phải backend authorization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Interceptor, authenticator và coroutine ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **14. mạng (network / 네트워크) bảo mật (security / 보안) cấu hình (config / 설정) và HTTPS** nối từ **13. Biometrics không phải backend authorization** sang **15. Interceptor, authenticator và coroutine ranh giới (boundary / 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. mạng (network / 네트워크) bảo mật (security / 보안) cấu hình (config / 설정) và HTTPS
 
@@ -227,7 +227,7 @@ Mạng (network / 네트워크) bảo mật (security / 보안) cấu hình (con
 
 Certificate pinning có sự đánh đổi (trade-off / 트레이드오프) vận hành lớn. Pin sai hoặc certificate rotate ngoài dự kiến có thể brick mạng (network / 네트워크) cho toàn bộ installed app cho tới khi người dùng (user / 사용자) cập nhật (update / 업데이트). Chỉ dùng khi threat mô hình (model / 모델) justify và phải có backup pins/rotation plan.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **14. mạng (network / 네트워크) bảo mật (security / 보안) cấu hình (config / 설정) và HTTPS** đã nêu tiêu chí phân biệt, còn **15. Interceptor, authenticator và coroutine ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **16. lỗi (error / 오류) mô hình (model / 모델) của authentication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **14. mạng (network / 네트워크) bảo mật (security / 보안) cấu hình (config / 설정) và HTTPS** đặt tiêu chí; **15. Interceptor, authenticator và coroutine ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **16. lỗi (error / 오류) mô hình (model / 모델) của authentication** mở rộng hệ quả.
 
 ## 15. Interceptor, authenticator và coroutine ranh giới (boundary / 경계)
 
@@ -235,7 +235,7 @@ Với OkHttp, interceptor phù hợp thêm header/logging/chính sách (policy /
 
 Nếu auth refresh API là suspend trong Retrofit nhưng authenticator chạy synchronous đặc tả hợp đồng (contract / 계약), đừng tùy tiện `runBlocking` trên luồng thực thi (thread / 스레드) không hiểu rõ. Có thể thiết kế synchronous đơn vị từ (token / 토큰) refresh máy khách (client / 클라이언트) riêng, hoặc centralize yêu cầu (request / 요청) ngăn xếp (stack / 스택) theo cách không gây deadlock. Điều quan trọng là hiểu mô hình thực thi (execution model / 실행 모델) của thư viện (library / 라이브러리) thay vì chỉ bản sao (copy / 복사) snippet.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **15. Interceptor, authenticator và coroutine ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **16. lỗi (error / 오류) mô hình (model / 모델) của authentication** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **17. yêu cầu (request / 요청) thử lại (retry / 재시도) phải dựa trên idempotency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **15. Interceptor, authenticator và coroutine ranh giới (boundary / 경계)** đặt tiêu chí; **16. lỗi (error / 오류) mô hình (model / 모델) của authentication** dùng tiêu chí đó để kiểm tra ranh giới, rồi **17. yêu cầu (request / 요청) thử lại (retry / 재시도) phải dựa trên idempotency** mở rộng hệ quả.
 
 ## 16. lỗi (error / 오류) mô hình (model / 모델) của authentication
 
@@ -255,7 +255,7 @@ sealed interface AuthError {
 
 UI có thể xử lý canceled luồng (flow / 흐름) im lặng, invalid credential bằng trường dữ liệu (field / 필드) message, offline bằng thử lại (retry / 재시도) UI, và account disabled bằng hỗ trợ (support / 지원) đường dẫn (path / 경로).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **17. yêu cầu (request / 요청) thử lại (retry / 재시도) phải dựa trên idempotency** tiếp nhận điểm tựa từ **16. lỗi (error / 오류) mô hình (model / 모델) của authentication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Session trạng thái (state / 상태) và điều hướng (navigation / 내비게이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **17. yêu cầu (request / 요청) thử lại (retry / 재시도) phải dựa trên idempotency** nối từ **16. lỗi (error / 오류) mô hình (model / 모델) của authentication** sang **18. Session trạng thái (state / 상태) và điều hướng (navigation / 내비게이션)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. yêu cầu (request / 요청) thử lại (retry / 재시도) phải dựa trên idempotency
 
@@ -273,7 +273,7 @@ data class PendingPayment(
 
 Mạng (network / 네트워크) thử lại (retry / 재시도) chính sách (policy / 정책) phải biết thao tác (operation / 연산) ngữ nghĩa (semantics / 의미론), không phải một toàn cục (global / 전역) interceptor thử lại (retry / 재시도) mọi 5xx.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **18. Session trạng thái (state / 상태) và điều hướng (navigation / 내비게이션)** tiếp nhận điểm tựa từ **17. yêu cầu (request / 요청) thử lại (retry / 재시도) phải dựa trên idempotency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Credential Manager và account vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **18. Session trạng thái (state / 상태) và điều hướng (navigation / 내비게이션)** nối từ **17. yêu cầu (request / 요청) thử lại (retry / 재시도) phải dựa trên idempotency** sang **19. Credential Manager và account vòng đời (lifecycle / 생명주기)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Session trạng thái (state / 상태) và điều hướng (navigation / 내비게이션)
 
@@ -289,7 +289,7 @@ Khi logout, reset back ngăn xếp (stack / 스택) để Back không quay về 
 
 Tiến trình (process / 프로세스) recreation có thể khôi phục back ngăn xếp (stack / 스택) cũ. Vì vậy screen protected phải react với `SessionState` hiện tại, không giả định “đã vào đây nghĩa là chắc chắn signed in”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **18. Session trạng thái (state / 상태) và điều hướng (navigation / 내비게이션)** xác định đầu vào; **19. Credential Manager và account vòng đời (lifecycle / 생명주기)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **20. khả năng quan sát (observability / 관측 가능성) nhưng không leak credential** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **18. Session trạng thái (state / 상태) và điều hướng (navigation / 내비게이션)** đặt đầu vào cho **19. Credential Manager và account vòng đời (lifecycle / 생명주기)**, rồi **20. khả năng quan sát (observability / 관측 가능성) nhưng không leak credential** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. Credential Manager và account vòng đời (lifecycle / 생명주기)
 
@@ -297,7 +297,7 @@ Credential Manager giúp thống nhất password/passkey/federated sign-in exper
 
 Sign in with Google cho authentication profile không đồng nghĩa app có authorization truy cập Google Drive/Gmail. Authorization tài nguyên (resource / 자원) của Google là luồng (flow / 흐름) riêng với phạm vi (scope / 범위) riêng. Đây là ví dụ điển hình của khác biệt authentication và authorization.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **19. Credential Manager và account vòng đời (lifecycle / 생명주기)** xác định đầu vào; **20. khả năng quan sát (observability / 관측 가능성) nhưng không leak credential** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **21. kiểm thử (test / 테스트) những gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **19. Credential Manager và account vòng đời (lifecycle / 생명주기)** đặt đầu vào cho **20. khả năng quan sát (observability / 관측 가능성) nhưng không leak credential**, rồi **21. kiểm thử (test / 테스트) những gì?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. khả năng quan sát (observability / 관측 가능성) nhưng không leak credential
 
@@ -319,7 +319,7 @@ session_signed_out source=user_action
 
 Không log truy cập (access / 접근) đơn vị từ (token / 토큰), refresh đơn vị từ (token / 토큰), password, authorization header hoặc credential assertion raw. Với crash reporting, kiểm tra breadcrumb/yêu cầu (request / 요청) logger có tự động capture header/body nhạy cảm không.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **21. kiểm thử (test / 테스트) những gì?** tiếp nhận điểm tựa từ **20. khả năng quan sát (observability / 관측 가능성) nhưng không leak credential** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Threat-model checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **21. kiểm thử (test / 테스트) những gì?** nối từ **20. khả năng quan sát (observability / 관측 가능성) nhưng không leak credential** sang **22. Threat-model checklist**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. kiểm thử (test / 테스트) những gì?
 
@@ -337,7 +337,7 @@ fun concurrent_401_only_refreshes_once() = runTest {
 }
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **22. Threat-model checklist** tiếp nhận điểm tựa từ **21. kiểm thử (test / 테스트) những gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. cấp cao (senior / 시니어) notes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **22. Threat-model checklist** nối từ **21. kiểm thử (test / 테스트) những gì?** sang **23. cấp cao (senior / 시니어) notes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Threat-model checklist
 
@@ -347,7 +347,7 @@ Ai là attacker? đơn vị từ (token / 토큰) theft qua log, malware/cục b
 
 Nếu không biết threat mô hình (model / 모델), rất dễ dùng kỹ thuật “security-looking” nhưng không bảo vệ đúng asset.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **23. cấp cao (senior / 시니어) notes** tiếp nhận điểm tựa từ **22. Threat-model checklist** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Authentication, Session, đơn vị từ (token / 토큰) Refresh và mạng (network / 네트워크) bảo mật (security / 보안)**, **23. cấp cao (senior / 시니어) notes** nối từ **22. Threat-model checklist** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 23. cấp cao (senior / 시니어) notes
 

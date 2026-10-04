@@ -25,7 +25,7 @@ source
 
 Vì vậy kiểm thử (test / 테스트) một universal/cục bộ (local / 로컬) APK không hoàn toàn giống kiểm thử (test / 테스트) sản phẩm tạo ra (artifact / 산출물) do Play generate từ AAB. quy trình phát hành (release process / 릴리스 프로세스) nên có bước kiểm thử (test / 테스트) bundle-derived APKs bằng `bundletool` hoặc nhánh học (track / 트랙) testing phù hợp.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **1. APK là installable sản phẩm tạo ra (artifact / 산출물), AAB là publishing sản phẩm tạo ra (artifact / 산출물)** cho ta quy tắc; **2. Tại sao split APK tồn tại** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **3. bundletool là cách quan sát AAB thay vì coi Play như black box** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **1. APK là installable sản phẩm tạo ra (artifact / 산출물), AAB là publishing sản phẩm tạo ra (artifact / 산출물)** nêu quy tắc; **2. Tại sao split APK tồn tại** thử quy tắc trong tình huống, rồi **3. bundletool là cách quan sát AAB thay vì coi Play như black box** mở rộng hệ quả.
 
 ## 2. Tại sao split APK tồn tại
 
@@ -40,7 +40,7 @@ Play có thể chia thành:
 
 Trình quản lý gói (package manager / 패키지 관리자) nhìn cả tập split như một app logical gói (package / 패키지). mã (code / 코드) không nên giả định “mọi tài nguyên (resource / 자원)/mã (code / 코드) đều nằm trong một vật lý (physical / 물리적) APK tệp (file / 파일)”.
 
-> **Chuyển mạch:** Split APK tồn tại để delivery theo device configuration; `bundletool` cho phép inspect mapping, còn app size tiếp theo phải được đọc như product metric chứ không chỉ build output.
+> **Nối mạch:** Split APK tồn tại để delivery theo device configuration; `bundletool` cho phép inspect mapping, còn app size tiếp theo phải được đọc như product metric chứ không chỉ build output.
 
 ## 3. `bundletool` là cách quan sát AAB thay vì coi Play như black box
 
@@ -58,7 +58,7 @@ AAB
 
 Bản phát hành (release / 릴리스) engineer nên biết inspect sản phẩm tạo ra (artifact / 산출물) thực tế thay vì chỉ nhìn Gradle cấu hình (configuration / 구성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **4. App kích thước (size / 크기) là sản phẩm (product / 제품) chỉ số (metric / 지표), không chỉ bản dựng (build / 빌드) chỉ số (metric / 지표)** tiếp nhận điểm tựa từ **3. bundletool là cách quan sát AAB thay vì coi Play như black box** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. động (dynamic / 동적) tính năng (feature / 기능) mô-đun (module / 모듈) giải quyết delivery, không phải mặc định modularization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **4. App kích thước (size / 크기) là sản phẩm (product / 제품) chỉ số (metric / 지표), không chỉ bản dựng (build / 빌드) chỉ số (metric / 지표)** nối từ **3. bundletool là cách quan sát AAB thay vì coi Play như black box** sang **5. động (dynamic / 동적) tính năng (feature / 기능) mô-đun (module / 모듈) giải quyết delivery, không phải mặc định modularization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. App kích thước (size / 크기) là sản phẩm (product / 제품) chỉ số (metric / 지표), không chỉ bản dựng (build / 빌드) chỉ số (metric / 지표)
 
@@ -77,7 +77,7 @@ APK Analyzer và bundle reports giúp phân tích contribution theo DEX/tài ngu
 
 Cấp cao (senior / 시니어) quy tắc (rule / 규칙): đo **download kích thước (size / 크기) và installed kích thước (size / 크기) theo cohort/thiết bị (device / 장치)**, không chỉ tệp (file / 파일) `.aab` kích thước (size / 크기). AAB upload kích thước (size / 크기) không bằng bytes người dùng (user / 사용자) tải.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **5. động (dynamic / 동적) tính năng (feature / 기능) mô-đun (module / 모듈) giải quyết delivery, không phải mặc định modularization** tiếp nhận điểm tựa từ **4. App kích thước (size / 크기) là sản phẩm (product / 제품) chỉ số (metric / 지표), không chỉ bản dựng (build / 빌드) chỉ số (metric / 지표)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Install-time, on-demand và conditional delivery** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **5. động (dynamic / 동적) tính năng (feature / 기능) mô-đun (module / 모듈) giải quyết delivery, không phải mặc định modularization** nối từ **4. App kích thước (size / 크기) là sản phẩm (product / 제품) chỉ số (metric / 지표), không chỉ bản dựng (build / 빌드) chỉ số (metric / 지표)** sang **6. Install-time, on-demand và conditional delivery**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. động (dynamic / 동적) tính năng (feature / 기능) mô-đun (module / 모듈) giải quyết delivery, không phải mặc định modularization
 
@@ -98,7 +98,7 @@ Cơ sở (base / 기반) app khai báo động (dynamic / 동적) tính năng (f
 
 Không chuyển mọi tính năng (feature / 기능) thành động (dynamic / 동적) chỉ để “modular hiện đại”. động (dynamic / 동적) delivery thêm trạng thái (state / 상태), install thất bại (failure / 실패), điều hướng (navigation / 내비게이션) điều kiện (condition / 조건), offline hành vi (behavior / 동작), testing và Play phụ thuộc (dependency / 의존성).
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **6. Install-time, on-demand và conditional delivery** tiếp nhận điểm tựa từ **5. động (dynamic / 동적) tính năng (feature / 기능) mô-đun (module / 모듈) giải quyết delivery, không phải mặc định modularization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. cơ sở (base / 기반) mô-đun (module / 모듈) phải giữ đặc tả hợp đồng (contract / 계약) tối thiểu ổn định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **6. Install-time, on-demand và conditional delivery** nối từ **5. động (dynamic / 동적) tính năng (feature / 기능) mô-đun (module / 모듈) giải quyết delivery, không phải mặc định modularization** sang **7. cơ sở (base / 기반) mô-đun (module / 모듈) phải giữ đặc tả hợp đồng (contract / 계약) tối thiểu ổn định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Install-time, on-demand và conditional delivery
 
@@ -124,7 +124,7 @@ hoặc
 
 UI/điều hướng (navigation / 내비게이션) phải xử lý install pending/thất bại (fail / 실패); không được `Class.forName()` hoặc navigate thẳng vào mã (code / 코드) chưa có trên thiết bị (device / 장치).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **7. cơ sở (base / 기반) mô-đun (module / 모듈) phải giữ đặc tả hợp đồng (contract / 계약) tối thiểu ổn định** tiếp nhận điểm tựa từ **6. Install-time, on-demand và conditional delivery** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. tài nguyên (resource / 자원) và điều hướng (navigation / 내비게이션) khi tính năng (feature / 기능) chưa được cài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **7. cơ sở (base / 기반) mô-đun (module / 모듈) phải giữ đặc tả hợp đồng (contract / 계약) tối thiểu ổn định** nối từ **6. Install-time, on-demand và conditional delivery** sang **8. tài nguyên (resource / 자원) và điều hướng (navigation / 내비게이션) khi tính năng (feature / 기능) chưa được cài**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. cơ sở (base / 기반) mô-đun (module / 모듈) phải giữ đặc tả hợp đồng (contract / 계약) tối thiểu ổn định
 
@@ -132,7 +132,7 @@ UI/điều hướng (navigation / 내비게이션) phải xử lý install pendi
 
 Có thể dùng giao diện (interface / 인터페이스)/API mô-đun (module / 모듈) hoặc điều hướng (navigation / 내비게이션) đặc tả hợp đồng (contract / 계약) để giảm coupling. Tuy nhiên đừng tạo lớp trừu tượng (abstraction / 추상화) chỉ để chiều phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프) đẹp; lớp trừu tượng (abstraction / 추상화) phải đại diện đặc tả hợp đồng (contract / 계약) thật sự.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **7. cơ sở (base / 기반) mô-đun (module / 모듈) phải giữ đặc tả hợp đồng (contract / 계약) tối thiểu ổn định** nêu điều cần giải thích; **8. tài nguyên (resource / 자원) và điều hướng (navigation / 내비게이션) khi tính năng (feature / 기능) chưa được cài** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. Play Asset Delivery và large assets** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **7. cơ sở (base / 기반) mô-đun (module / 모듈) phải giữ đặc tả hợp đồng (contract / 계약) tối thiểu ổn định** đặt vấn đề; **8. tài nguyên (resource / 자원) và điều hướng (navigation / 내비게이션) khi tính năng (feature / 기능) chưa được cài** đối chiếu bằng chứng, rồi **9. Play Asset Delivery và large assets** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8. tài nguyên (resource / 자원) và điều hướng (navigation / 내비게이션) khi tính năng (feature / 기능) chưa được cài
 
@@ -142,7 +142,7 @@ Deep link vào tính năng (feature / 기능) on-demand là trường hợp (cas
 
 Tiến trình (process / 프로세스) có thể chết giữa download/install. Vì vậy không giữ trọng yếu (critical / 중요) trạng thái (state / 상태) chỉ trong bộ nhớ (memory / 메모리).
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **8. tài nguyên (resource / 자원) và điều hướng (navigation / 내비게이션) khi tính năng (feature / 기능) chưa được cài** nêu điều cần giải thích; **9. Play Asset Delivery và large assets** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. ABI splits và bản địa (native / 네이티브) thư viện (library / 라이브러리) consequence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **8. tài nguyên (resource / 자원) và điều hướng (navigation / 내비게이션) khi tính năng (feature / 기능) chưa được cài** đặt vấn đề; **9. Play Asset Delivery và large assets** đối chiếu bằng chứng, rồi **10. ABI splits và bản địa (native / 네이티브) thư viện (library / 라이브러리) consequence** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. Play Asset Delivery và large assets
 
@@ -152,7 +152,7 @@ Không nên dùng động (dynamic / 동적) tính năng (feature / 기능) ch�
 
 Chọn cơ chế dựa vào quyền sở hữu (ownership / 소유권), kích thước (size / 크기), cập nhật (update / 업데이트) cadence, offline yêu cầu (requirement / 요구사항) và store phụ thuộc (dependency / 의존성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **10. ABI splits và bản địa (native / 네이티브) thư viện (library / 라이브러리) consequence** tiếp nhận điểm tựa từ **9. Play Asset Delivery và large assets** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. ngôn ngữ (language / 언어) split và thời gian chạy (runtime / 런타임) locale** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **10. ABI splits và bản địa (native / 네이티브) thư viện (library / 라이브러리) consequence** nối từ **9. Play Asset Delivery và large assets** sang **11. ngôn ngữ (language / 언어) split và thời gian chạy (runtime / 런타임) locale**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. ABI splits và bản địa (native / 네이티브) thư viện (library / 라이브러리) consequence
 
@@ -162,7 +162,7 @@ Ví dụ dự án (project / 프로젝트) có `arm64-v8a` và `x86_64` nhưng m
 
 Bản địa (native / 네이티브) sản phẩm tạo ra (artifact / 산출물) kiểm tra hợp lệ (validation / 검증) phải kiểm tra ABI availability, symbol, page-size alignment và packaging cho đúng bản phát hành (release / 릴리스) bundle.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **11. ngôn ngữ (language / 언어) split và thời gian chạy (runtime / 런타임) locale** tiếp nhận điểm tựa từ **10. ABI splits và bản địa (native / 네이티브) thư viện (library / 라이브러리) consequence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Play App Signing: app signing key và upload key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **11. ngôn ngữ (language / 언어) split và thời gian chạy (runtime / 런타임) locale** nối từ **10. ABI splits và bản địa (native / 네이티브) thư viện (library / 라이브러리) consequence** sang **12. Play App Signing: app signing key và upload key**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. ngôn ngữ (language / 언어) split và thời gian chạy (runtime / 런타임) locale
 
@@ -170,7 +170,7 @@ Play có thể tối ưu ngôn ngữ (language / 언어) resources. Nếu app c�
 
 Không nên giả định tất cả translations luôn được cài nếu bundle cấu hình (configuration / 구성) tách ngôn ngữ (language / 언어) splits. Nếu sản phẩm (product / 제품) cần mọi locale offline ngay từ đầu, cấu hình (configuration / 구성) delivery phải phản ánh yêu cầu (requirement / 요구사항) đó.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **12. Play App Signing: app signing key và upload key** tiếp nhận điểm tựa từ **11. ngôn ngữ (language / 언어) split và thời gian chạy (runtime / 런타임) locale** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Signing lineage và cập nhật (update / 업데이트) tính tương thích (compatibility / 호환성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **12. Play App Signing: app signing key và upload key** nối từ **11. ngôn ngữ (language / 언어) split và thời gian chạy (runtime / 런타임) locale** sang **13. Signing lineage và cập nhật (update / 업데이트) tính tương thích (compatibility / 호환성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Play App Signing: app signing key và upload key
 
@@ -186,7 +186,7 @@ Nhóm (team / 팀) phải document:
 - gói (package / 패키지) định danh (identity / 식별자) nào dùng key nào;
 - gỡ lỗi (debug / 디버그)/nội bộ (internal / 내부) phân phối (distribution / 분포) không được nhầm môi trường vận hành (production / 운영 환경) key.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **13. Signing lineage và cập nhật (update / 업데이트) tính tương thích (compatibility / 호환성)** tiếp nhận điểm tựa từ **12. Play App Signing: app signing key và upload key** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. versionCode và versionName** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **13. Signing lineage và cập nhật (update / 업데이트) tính tương thích (compatibility / 호환성)** nối từ **12. Play App Signing: app signing key và upload key** sang **14. versionCode và versionName**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Signing lineage và cập nhật (update / 업데이트) tính tương thích (compatibility / 호환성)
 
@@ -194,7 +194,7 @@ Android cập nhật (update / 업데이트) một gói (package / 패키지) d�
 
 Kiểm thử (test / 테스트) bản phát hành (release / 릴리스) không chỉ `fresh install`; phải kiểm thử (test / 테스트) **upgrade từ phiên bản (version / 버전) môi trường vận hành (production / 운영 환경) đang phổ biến**. Đặc biệt khi thay signing setup, split mô hình (model / 모델), bản địa (native / 네이티브) thư viện (library / 라이브러리) hoặc cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **14. versionCode và versionName** tiếp nhận điểm tựa từ **13. Signing lineage và cập nhật (update / 업데이트) tính tương thích (compatibility / 호환성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. nội bộ (internal / 내부), closed, open và môi trường vận hành (production / 운영 환경) tracks là triển khai (deployment / 배포) environments** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **14. versionCode và versionName** nối từ **13. Signing lineage và cập nhật (update / 업데이트) tính tương thích (compatibility / 호환성)** sang **15. nội bộ (internal / 내부), closed, open và môi trường vận hành (production / 운영 환경) tracks là triển khai (deployment / 배포) environments**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. `versionCode` và `versionName`
 
@@ -204,7 +204,7 @@ Không derive trọng yếu (critical / 중요) di chuyển (migration / 마이�
 
 CI nên tạo phiên bản (version / 버전) siêu dữ liệu (metadata / 메타데이터) reproducibly và dấu vết (trace / 추적) về lần ghi nhận (commit / 커밋)/bản phát hành (release / 릴리스) tag.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **15. nội bộ (internal / 내부), closed, open và môi trường vận hành (production / 운영 환경) tracks là triển khai (deployment / 배포) environments** tiếp nhận điểm tựa từ **14. versionCode và versionName** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Staged rollout không thay cờ tính năng (feature flag / 기능 플래그)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **15. nội bộ (internal / 내부), closed, open và môi trường vận hành (production / 운영 환경) tracks là triển khai (deployment / 배포) environments** nối từ **14. versionCode và versionName** sang **16. Staged rollout không thay cờ tính năng (feature flag / 기능 플래그)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. nội bộ (internal / 내부), closed, open và môi trường vận hành (production / 운영 환경) tracks là triển khai (deployment / 배포) environments
 
@@ -221,7 +221,7 @@ Mỗi bước cần clear promotion criteria. sản phẩm tạo ra (artifact / 
 
 Nếu môi trường (environment / 환경) backend khác nhau, cân nhắc bản dựng (build / 빌드) variant/cấu hình (configuration / 구성) chiến lược (strategy / 전략) cẩn thận. “Promote same sản phẩm tạo ra (artifact / 산출물)” và “different endpoint per môi trường (environment / 환경)” đôi khi xung đột; giải pháp phải phù hợp threat mô hình (model / 모델) và quy trình phát hành (release process / 릴리스 프로세스).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **16. Staged rollout không thay cờ tính năng (feature flag / 기능 플래그)** tiếp nhận điểm tựa từ **15. nội bộ (internal / 내부), closed, open và môi trường vận hành (production / 운영 환경) tracks là triển khai (deployment / 배포) environments** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. quay lui (rollback / 롤백) trên mobile khó hơn máy chủ (server / 서버) quay lui (rollback / 롤백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **16. Staged rollout không thay cờ tính năng (feature flag / 기능 플래그)** nối từ **15. nội bộ (internal / 내부), closed, open và môi trường vận hành (production / 운영 환경) tracks là triển khai (deployment / 배포) environments** sang **17. quay lui (rollback / 롤백) trên mobile khó hơn máy chủ (server / 서버) quay lui (rollback / 롤백)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Staged rollout không thay cờ tính năng (feature flag / 기능 플래그)
 
@@ -231,7 +231,7 @@ Nếu crash do nhị phân (binary / 이진) initialization trước khi remote 
 
 Một bản phát hành (release / 릴리스) resilient thường dùng cả hai ở các tầng (layer / 계층) khác nhau.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **17. quay lui (rollback / 롤백) trên mobile khó hơn máy chủ (server / 서버) quay lui (rollback / 롤백)** tiếp nhận điểm tựa từ **16. Staged rollout không thay cờ tính năng (feature flag / 기능 플래그)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. In-app cập nhật (update / 업데이트) không phải default solution cho mọi app** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **17. quay lui (rollback / 롤백) trên mobile khó hơn máy chủ (server / 서버) quay lui (rollback / 롤백)** nối từ **16. Staged rollout không thay cờ tính năng (feature flag / 기능 플래그)** sang **18. In-app cập nhật (update / 업데이트) không phải default solution cho mọi app**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. quay lui (rollback / 롤백) trên mobile khó hơn máy chủ (server / 서버) quay lui (rollback / 롤백)
 
@@ -245,7 +245,7 @@ Không thể giả định người dùng (user / 사용자) sẽ downgrade APK 
 
 Di chuyển (migration / 마이그레이션) destructive hoặc backend đặc tả hợp đồng (contract / 계약) one-way khiến quay lui (rollback / 롤백) gần như không thể.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **18. In-app cập nhật (update / 업데이트) không phải default solution cho mọi app** tiếp nhận điểm tựa từ **17. quay lui (rollback / 롤백) trên mobile khó hơn máy chủ (server / 서버) quay lui (rollback / 롤백)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. rà soát (review / 검토), integrity và Play-specific services là optional hạ tầng (infrastructure / 인프라)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **18. In-app cập nhật (update / 업데이트) không phải default solution cho mọi app** nối từ **17. quay lui (rollback / 롤백) trên mobile khó hơn máy chủ (server / 서버) quay lui (rollback / 롤백)** sang **19. rà soát (review / 검토), integrity và Play-specific services là optional hạ tầng (infrastructure / 인프라)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. In-app cập nhật (update / 업데이트) không phải default solution cho mọi app
 
@@ -255,7 +255,7 @@ Máy chủ (server / 서버) giao thức (protocol / 프로토콜) nên có tín
 
 Cập nhật (update / 업데이트) luồng (flow / 흐름) bản thân cũng là failure-prone trạng thái (state / 상태): Play availability, download, restart, người dùng (user / 사용자) cancel, mạng (network / 네트워크) thất bại (fail / 실패).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **19. rà soát (review / 검토), integrity và Play-specific services là optional hạ tầng (infrastructure / 인프라)** tiếp nhận điểm tựa từ **18. In-app cập nhật (update / 업데이트) không phải default solution cho mọi app** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. phân phối (distribution / 분포) channel là ranh giới bảo mật (security boundary / 보안 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **19. rà soát (review / 검토), integrity và Play-specific services là optional hạ tầng (infrastructure / 인프라)** nối từ **18. In-app cập nhật (update / 업데이트) không phải default solution cho mọi app** sang **20. phân phối (distribution / 분포) channel là ranh giới bảo mật (security boundary / 보안 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. rà soát (review / 검토), integrity và Play-specific services là optional hạ tầng (infrastructure / 인프라)
 
@@ -263,7 +263,7 @@ In-app rà soát (review / 검토), Play Integrity, cập nhật (update / 업�
 
 Bọc Play-specific tích hợp (integration / 통합) sau ranh giới (boundary / 경계) rõ ràng nếu app phải hỗ trợ nhiều phân phối (distribution / 분포) channel.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **19. rà soát (review / 검토), integrity và Play-specific services là optional hạ tầng (infrastructure / 인프라)** đã nêu tiêu chí phân biệt, còn **20. phân phối (distribution / 분포) channel là ranh giới bảo mật (security boundary / 보안 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **21. Offline và động (dynamic / 동적) delivery** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **19. rà soát (review / 검토), integrity và Play-specific services là optional hạ tầng (infrastructure / 인프라)** đặt tiêu chí; **20. phân phối (distribution / 분포) channel là ranh giới bảo mật (security boundary / 보안 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **21. Offline và động (dynamic / 동적) delivery** mở rộng hệ quả.
 
 ## 20. phân phối (distribution / 분포) channel là ranh giới bảo mật (security boundary / 보안 경계)
 
@@ -271,7 +271,7 @@ Bản phát hành (release / 릴리스) nhị phân (binary / 이진) có thể 
 
 Bảo mật (security / 보안) lô-gic (logic / 논리) không được chỉ hỏi “app được cài từ Play nên trusted”. máy khách (client / 클라이언트) vẫn nằm trên user-controlled thiết bị (device / 장치). Integrity tín hiệu (signal / 신호) là một đầu vào (input / 입력) rủi ro (risk / 위험) tín hiệu (signal / 신호), không thay backend authorization.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **20. phân phối (distribution / 분포) channel là ranh giới bảo mật (security boundary / 보안 경계)** đã nêu tiêu chí phân biệt, còn **21. Offline và động (dynamic / 동적) delivery** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **22. kiểm thử (test / 테스트) AAB/delivery đúng cách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **20. phân phối (distribution / 분포) channel là ranh giới bảo mật (security boundary / 보안 경계)** đặt tiêu chí; **21. Offline và động (dynamic / 동적) delivery** dùng tiêu chí đó để kiểm tra ranh giới, rồi **22. kiểm thử (test / 테스트) AAB/delivery đúng cách** mở rộng hệ quả.
 
 ## 21. Offline và động (dynamic / 동적) delivery
 
@@ -289,7 +289,7 @@ Kiến trúc (architecture / 아키텍처) nên phân biệt:
 
 Năm trạng thái này không đồng nghĩa.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **22. kiểm thử (test / 테스트) AAB/delivery đúng cách** tiếp nhận điểm tựa từ **21. Offline và động (dynamic / 동적) delivery** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. App Bundle và bản địa (native / 네이티브) 16 KB page kích thước (size / 크기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **22. kiểm thử (test / 테스트) AAB/delivery đúng cách** nối từ **21. Offline và động (dynamic / 동적) delivery** sang **23. App Bundle và bản địa (native / 네이티브) 16 KB page kích thước (size / 크기)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. kiểm thử (test / 테스트) AAB/delivery đúng cách
 
@@ -308,7 +308,7 @@ Bản phát hành (release / 릴리스) kiểm thử (test / 테스트) ma trậ
 
 Cài `debug.apk` từ IDE không cover phần lớn rủi ro (risk / 위험) này.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **23. App Bundle và bản địa (native / 네이티브) 16 KB page kích thước (size / 크기)** tiếp nhận điểm tựa từ **22. kiểm thử (test / 테스트) AAB/delivery đúng cách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. động (dynamic / 동적) tính năng (feature / 기능) thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **23. App Bundle và bản địa (native / 네이티브) 16 KB page kích thước (size / 크기)** nối từ **22. kiểm thử (test / 테스트) AAB/delivery đúng cách** sang **24. động (dynamic / 동적) tính năng (feature / 기능) thất bại (failure / 실패) modes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. App Bundle và bản địa (native / 네이티브) 16 KB page kích thước (size / 크기)
 
@@ -318,7 +318,7 @@ Khi app chứa bản địa (native / 네이티브) `.so`, phân phối (distrib
 
 Trường hợp (case / 사례) 17 sẽ đi sâu JNI/ABI/bản địa (native / 네이티브) bộ nhớ (memory / 메모리) và 16 KB page-size kỹ thuật (engineering / 엔지니어링).
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **24. động (dynamic / 동적) tính năng (feature / 기능) thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **23. App Bundle và bản địa (native / 네이티브) 16 KB page kích thước (size / 크기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. cấp cao (senior / 시니어) quyết định (decision / 결정) khung phần mềm (framework / 프레임워크): có nên dùng động (dynamic / 동적) delivery?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **24. động (dynamic / 동적) tính năng (feature / 기능) thất bại (failure / 실패) modes** nối từ **23. App Bundle và bản địa (native / 네이티브) 16 KB page kích thước (size / 크기)** sang **25. cấp cao (senior / 시니어) quyết định (decision / 결정) khung phần mềm (framework / 프레임워크): có nên dùng động (dynamic / 동적) delivery?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. động (dynamic / 동적) tính năng (feature / 기능) thất bại (failure / 실패) modes
 
@@ -344,7 +344,7 @@ UI cần graceful trạng thái (state / 상태), không spinner vô hạn.
 
 Tính năng (feature / 기능)/cơ sở (base / 기반) trong một installed app bundle phải cùng bản phát hành (release / 릴리스) set; đừng tự thiết kế hot-swap mã (code / 코드) ngoài supported nền tảng (platform / 플랫폼) mô hình (model / 모델).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **25. cấp cao (senior / 시니어) quyết định (decision / 결정) khung phần mềm (framework / 프레임워크): có nên dùng động (dynamic / 동적) delivery?** tiếp nhận điểm tựa từ **24. động (dynamic / 동적) tính năng (feature / 기능) thất bại (failure / 실패) modes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. sản phẩm tạo ra (artifact / 산출물) provenance và bản phát hành (release / 릴리스) bằng chứng (evidence / 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **25. cấp cao (senior / 시니어) quyết định (decision / 결정) khung phần mềm (framework / 프레임워크): có nên dùng động (dynamic / 동적) delivery?** nối từ **24. động (dynamic / 동적) tính năng (feature / 기능) thất bại (failure / 실패) modes** sang **26. sản phẩm tạo ra (artifact / 산출물) provenance và bản phát hành (release / 릴리스) bằng chứng (evidence / 증거)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. cấp cao (senior / 시니어) quyết định (decision / 결정) khung phần mềm (framework / 프레임워크): có nên dùng động (dynamic / 동적) delivery?
 
@@ -361,7 +361,7 @@ Hỏi lần lượt:
 
 Nếu hầu hết người dùng (user / 사용자) cần tính năng (feature / 기능) và kích thước (size / 크기) nhỏ, install-time đơn giản thường tốt hơn.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **25. cấp cao (senior / 시니어) quyết định (decision / 결정) khung phần mềm (framework / 프레임워크): có nên dùng động (dynamic / 동적) delivery?** nêu điều cần giải thích; **26. sản phẩm tạo ra (artifact / 산출물) provenance và bản phát hành (release / 릴리스) bằng chứng (evidence / 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **27. Official references** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **25. cấp cao (senior / 시니어) quyết định (decision / 결정) khung phần mềm (framework / 프레임워크): có nên dùng động (dynamic / 동적) delivery?** đặt vấn đề; **26. sản phẩm tạo ra (artifact / 산출물) provenance và bản phát hành (release / 릴리스) bằng chứng (evidence / 증거)** đối chiếu bằng chứng, rồi **27. Official references** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 26. sản phẩm tạo ra (artifact / 산출물) provenance và bản phát hành (release / 릴리스) bằng chứng (evidence / 증거)
 
@@ -381,7 +381,7 @@ release version
 
 Crash symbolication và R8 deobfuscation cần ánh xạ (mapping / 매핑) tệp (file / 파일) đúng phiên bản (version / 버전). bản địa (native / 네이티브) crash cần symbols tương ứng nhị phân (binary / 이진). Nếu sản phẩm tạo ra (artifact / 산출물) siêu dữ liệu (metadata / 메타데이터) bị mất, sự cố (incident / 인시던트) phản hồi (response / 응답) khó hơn nhiều.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **26. sản phẩm tạo ra (artifact / 산출물) provenance và bản phát hành (release / 릴리스) bằng chứng (evidence / 증거)** nêu điều cần giải thích; **27. Official references** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 16 — Android App Bundle, Split APK, Play Delivery và phân phối (distribution / 분포) kỹ thuật (engineering / 엔지니어링)**, **26. sản phẩm tạo ra (artifact / 산출물) provenance và bản phát hành (release / 릴리스) bằng chứng (evidence / 증거)** đặt vấn đề; **27. Official references** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 27. Official references
 Phần này nối mạch Android vừa học với “27. Official references”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.

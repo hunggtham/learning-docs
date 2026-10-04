@@ -16,7 +16,7 @@ Mục tiêu chapter này là tạo mô hình tư duy (mental model / 사고 모�
 
 Khi bản dựng (build / 빌드) thất bại (fail / 실패), trước tiên cần xác định thất bại (failure / 실패) thuộc lớp nào. phụ thuộc (dependency / 의존성) resolution lỗi (error / 오류) khác AGP variant cấu hình (configuration / 구성) lỗi (error / 오류); Kotlin trình biên dịch (compiler / 컴파일러) lỗi (error / 오류) khác R8 missing-class lỗi (error / 오류). Gom mọi lỗi thành “Gradle lỗi” khiến gỡ lỗi (debug / 디버그) chậm hơn nhiều.
 
-> **Chuyển mạch:** Gradle, AGP và Kotlin plugin tạo ba lớp tooling; settings/root/module build scopes tiếp theo giải thích vì sao `compileSdk`, `minSdk` và `targetSdk` có semantics khác nhau.
+> **Nối mạch:** Gradle, AGP và Kotlin plugin tạo ba lớp tooling; settings/root/module build scopes tiếp theo giải thích vì sao `compileSdk`, `minSdk` và `targetSdk` có semantics khác nhau.
 
 ## 2. Settings, gốc (root / 루트) bản dựng (build / 빌드) và mô-đun (module / 모듈) bản dựng (build / 빌드) có vai trò khác nhau
 
@@ -28,7 +28,7 @@ Mỗi mô-đun (module / 모듈) có `build.gradle.kts` riêng. Android ứng d�
 
 Một ranh giới mô-đun (module boundary / 모듈 경계) tốt vì thế không chỉ là gói (package / 패키지) organization. Nó là **bản dựng (build / 빌드) ranh giới (boundary / 경계)**: phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), compilation đơn vị (unit / 단위), API công khai (public API / 공개 API) surface và bộ nhớ đệm (cache / 캐시) ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **3. compileSdk, minSdk, targetSdk không phải ba cách viết cùng một phiên bản (version / 버전)** tiếp nhận điểm tựa từ **2. Settings, gốc (root / 루트) bản dựng (build / 빌드) và mô-đun (module / 모듈) bản dựng (build / 빌드) có vai trò khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. bản dựng (build / 빌드) kiểu (type / 타입) giải quyết môi trường (environment / 환경)/bản dựng (build / 빌드) hành vi (behavior / 동작), sản phẩm (product / 제품) flavor giải quyết sản phẩm (product / 제품) dimension** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **3. compileSdk, minSdk, targetSdk không phải ba cách viết cùng một phiên bản (version / 버전)** nối từ **2. Settings, gốc (root / 루트) bản dựng (build / 빌드) và mô-đun (module / 모듈) bản dựng (build / 빌드) có vai trò khác nhau** sang **4. bản dựng (build / 빌드) kiểu (type / 타입) giải quyết môi trường (environment / 환경)/bản dựng (build / 빌드) hành vi (behavior / 동작), sản phẩm (product / 제품) flavor giải quyết sản phẩm (product / 제품) dimension**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. `compileSdk`, `minSdk`, `targetSdk` không phải ba cách viết cùng một phiên bản (version / 버전)
 
@@ -55,7 +55,7 @@ android {
 
 Con số trên chỉ là ví dụ cấu trúc. dự án (project / 프로젝트) thật phải dùng tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬) và chính sách (policy / 정책) hiện hành thay vì bản sao (copy / 복사) cứng từ tài liệu học.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **4. bản dựng (build / 빌드) kiểu (type / 타입) giải quyết môi trường (environment / 환경)/bản dựng (build / 빌드) hành vi (behavior / 동작), sản phẩm (product / 제품) flavor giải quyết sản phẩm (product / 제품) dimension** tiếp nhận điểm tựa từ **3. compileSdk, minSdk, targetSdk không phải ba cách viết cùng một phiên bản (version / 버전)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. nguồn (source / 소스) set precedence là nguyên nhân của rất nhiều “mystery hành vi (behavior / 동작)”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **4. bản dựng (build / 빌드) kiểu (type / 타입) giải quyết môi trường (environment / 환경)/bản dựng (build / 빌드) hành vi (behavior / 동작), sản phẩm (product / 제품) flavor giải quyết sản phẩm (product / 제품) dimension** nối từ **3. compileSdk, minSdk, targetSdk không phải ba cách viết cùng một phiên bản (version / 버전)** sang **5. nguồn (source / 소스) set precedence là nguyên nhân của rất nhiều “mystery hành vi (behavior / 동작)”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. bản dựng (build / 빌드) kiểu (type / 타입) giải quyết môi trường (environment / 환경)/bản dựng (build / 빌드) hành vi (behavior / 동작), sản phẩm (product / 제품) flavor giải quyết sản phẩm (product / 제품) dimension
 
@@ -108,7 +108,7 @@ Bản dựng (build / 빌드) variant là cross-product của những lựa ch�
 
 Cấp cao (senior / 시니어) quy tắc (rule / 규칙): chỉ tạo flavor khi khác biệt thực sự là build-time sản phẩm (product / 제품) dimension. cờ tính năng (feature flag / 기능 플래그) thời gian chạy (runtime / 런타임) không nên biến thành flavor chỉ vì “có hai trạng thái”.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **4. bản dựng (build / 빌드) kiểu (type / 타입) giải quyết môi trường (environment / 환경)/bản dựng (build / 빌드) hành vi (behavior / 동작), sản phẩm (product / 제품) flavor giải quyết sản phẩm (product / 제품) dimension** nêu điều cần giải thích; **5. nguồn (source / 소스) set precedence là nguyên nhân của rất nhiều “mystery hành vi (behavior / 동작)”** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. Manifest Merger là build-time composition hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **4. bản dựng (build / 빌드) kiểu (type / 타입) giải quyết môi trường (environment / 환경)/bản dựng (build / 빌드) hành vi (behavior / 동작), sản phẩm (product / 제품) flavor giải quyết sản phẩm (product / 제품) dimension** đặt vấn đề; **5. nguồn (source / 소스) set precedence là nguyên nhân của rất nhiều “mystery hành vi (behavior / 동작)”** đối chiếu bằng chứng, rồi **6. Manifest Merger là build-time composition hệ thống (system / 시스템)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. nguồn (source / 소스) set precedence là nguyên nhân của rất nhiều “mystery hành vi (behavior / 동작)”
 
@@ -136,7 +136,7 @@ Tài nguyên (resource / 자원) có cùng tên có thể bị override theo pre
 
 Nguồn (source / 소스) sets rất hữu ích cho fake endpoint, debug-only screen, brand tài nguyên (resource / 자원) hoặc kiểm thử (test / 테스트) hiện thực (implementation / 구현), nhưng lạm dụng sẽ tạo đường đi mã (code path / 코드 경로) khó nhìn thấy bằng tìm kiếm (search / 검색) thông thường.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **5. nguồn (source / 소스) set precedence là nguyên nhân của rất nhiều “mystery hành vi (behavior / 동작)”** nêu điều cần giải thích; **6. Manifest Merger là build-time composition hệ thống (system / 시스템)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. BuildConfig, resValue, manifest placeholder và secret** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **5. nguồn (source / 소스) set precedence là nguyên nhân của rất nhiều “mystery hành vi (behavior / 동작)”** đặt vấn đề; **6. Manifest Merger là build-time composition hệ thống (system / 시스템)** đối chiếu bằng chứng, rồi **7. BuildConfig, resValue, manifest placeholder và secret** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 6. Manifest Merger là build-time composition hệ thống (system / 시스템)
 
@@ -148,7 +148,7 @@ Khi có xung đột (conflict / 충돌), dùng Manifest Merger report thay vì �
 
 Một `android:exported`, provider authority hoặc permission sai trong manifest merged sản phẩm tạo ra (artifact / 산출물) có thể trở thành môi trường vận hành (production / 운영 환경) vulnerability dù nguồn (source / 소스) manifest nhìn có vẻ đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **7. BuildConfig, resValue, manifest placeholder và secret** tiếp nhận điểm tựa từ **6. Manifest Merger là build-time composition hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. phụ thuộc (dependency / 의존성) configurations biểu diễn visibility và classpath** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **7. BuildConfig, resValue, manifest placeholder và secret** nối từ **6. Manifest Merger là build-time composition hệ thống (system / 시스템)** sang **8. phụ thuộc (dependency / 의존성) configurations biểu diễn visibility và classpath**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. `BuildConfig`, `resValue`, manifest placeholder và secret
 
@@ -166,7 +166,7 @@ buildTypes {
 
 Bản dựng (build / 빌드) cấu hình (config / 설정) là cấu hình (configuration / 구성) phân phối (distribution / 분포), không phải secure vault.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **7. BuildConfig, resValue, manifest placeholder và secret** xác định đầu vào; **8. phụ thuộc (dependency / 의존성) configurations biểu diễn visibility và classpath** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. phiên bản (version / 버전) danh mục (catalog / 카탈로그) giúp centralize coordinates nhưng không thay phụ thuộc (dependency / 의존성) quản trị (governance / 거버넌스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **7. BuildConfig, resValue, manifest placeholder và secret** đặt đầu vào cho **8. phụ thuộc (dependency / 의존성) configurations biểu diễn visibility và classpath**, rồi **9. phiên bản (version / 버전) danh mục (catalog / 카탈로그) giúp centralize coordinates nhưng không thay phụ thuộc (dependency / 의존성) quản trị (governance / 거버넌스)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8. phụ thuộc (dependency / 의존성) configurations biểu diễn visibility và classpath
 
@@ -178,7 +178,7 @@ Bản dựng (build / 빌드) cấu hình (config / 설정) là cấu hình (con
 
 Một heuristic tốt là mặc định `implementation`, chỉ dùng `api` khi API công khai (public API / 공개 API) của mô-đun (module / 모듈) thật sự để lộ kiểu (type / 타입) của phụ thuộc (dependency / 의존성) đó.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **8. phụ thuộc (dependency / 의존성) configurations biểu diễn visibility và classpath** xác định đầu vào; **9. phiên bản (version / 버전) danh mục (catalog / 카탈로그) giúp centralize coordinates nhưng không thay phụ thuộc (dependency / 의존성) quản trị (governance / 거버넌스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Convention plugin tốt hơn copy-paste Gradle khối (block / 블록)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **8. phụ thuộc (dependency / 의존성) configurations biểu diễn visibility và classpath** đặt đầu vào cho **9. phiên bản (version / 버전) danh mục (catalog / 카탈로그) giúp centralize coordinates nhưng không thay phụ thuộc (dependency / 의존성) quản trị (governance / 거버넌스)**, rồi **10. Convention plugin tốt hơn copy-paste Gradle khối (block / 블록)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. phiên bản (version / 버전) danh mục (catalog / 카탈로그) giúp centralize coordinates nhưng không thay phụ thuộc (dependency / 의존성) quản trị (governance / 거버넌스)
 
@@ -198,7 +198,7 @@ android-application = { id = "com.android.application", version = "..." }
 
 Phiên bản (version / 버전) danh mục (catalog / 카탈로그) không tự đảm bảo tính tương thích (compatibility / 호환성), license, vulnerability hay reproducibility. Những concern đó cần phụ thuộc (dependency / 의존성) locking, xác minh (verification / 확인), SBOM/vulnerability scanning và upgrade chính sách (policy / 정책) riêng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **10. Convention plugin tốt hơn copy-paste Gradle khối (block / 블록)** tiếp nhận điểm tựa từ **9. phiên bản (version / 버전) danh mục (catalog / 카탈로그) giúp centralize coordinates nhưng không thay phụ thuộc (dependency / 의존성) quản trị (governance / 거버넌스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Gradle cấu hình (configuration / 구성) phase và thực thi (execution / 실행) phase** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **10. Convention plugin tốt hơn copy-paste Gradle khối (block / 블록)** nối từ **9. phiên bản (version / 버전) danh mục (catalog / 카탈로그) giúp centralize coordinates nhưng không thay phụ thuộc (dependency / 의존성) quản trị (governance / 거버넌스)** sang **11. Gradle cấu hình (configuration / 구성) phase và thực thi (execution / 실행) phase**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Convention plugin tốt hơn copy-paste Gradle khối (block / 블록)
 
@@ -216,7 +216,7 @@ Convention plugin có thể áp AGP/Kotlin plugin, configure không gian tên (n
 
 Điểm quan trọng là convention plugin chứa **convention**, không chứa mọi business-specific phụ thuộc (dependency / 의존성). Nếu plugin trở thành một toàn cục (global / 전역) god đối tượng (object / 객체), mọi mô-đun (module / 모듈) lại coupled theo cách khác.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **11. Gradle cấu hình (configuration / 구성) phase và thực thi (execution / 실행) phase** tiếp nhận điểm tựa từ **10. Convention plugin tốt hơn copy-paste Gradle khối (block / 블록)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Incremental bản dựng (build / 빌드) phụ thuộc đầu vào (input / 입력)/đầu ra (output / 출력) đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **11. Gradle cấu hình (configuration / 구성) phase và thực thi (execution / 실행) phase** nối từ **10. Convention plugin tốt hơn copy-paste Gradle khối (block / 블록)** sang **12. Incremental bản dựng (build / 빌드) phụ thuộc đầu vào (input / 입력)/đầu ra (output / 출력) đặc tả hợp đồng (contract / 계약)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Gradle cấu hình (configuration / 구성) phase và thực thi (execution / 실행) phase
 
@@ -228,7 +228,7 @@ Cấu hình (configuration / 구성) bộ nhớ đệm (cache / 캐시) cố tá
 
 Cấp cao (senior / 시니어) gỡ lỗi (debug / 디버그) bản dựng (build / 빌드) hiệu năng (performance / 성능) nên bắt đầu bằng đo lường (measurement / 측정): Gradle bản dựng (build / 빌드) Scan/profile, tác vụ (task / 작업) timing, bộ nhớ đệm (cache / 캐시) hit/miss, đường găng (critical path / 임계 경로), annotation/mã (code / 코드) generation chi phí (cost / 비용). Không tối ưu chỉ vì thấy “nhiều mô-đun (module / 모듈)”.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **12. Incremental bản dựng (build / 빌드) phụ thuộc đầu vào (input / 입력)/đầu ra (output / 출력) đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **11. Gradle cấu hình (configuration / 구성) phase và thực thi (execution / 실행) phase** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Toolchain và JVM mục tiêu (target / 대상) phải được hiểu là tính tương thích (compatibility / 호환성) đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **12. Incremental bản dựng (build / 빌드) phụ thuộc đầu vào (input / 입력)/đầu ra (output / 출력) đặc tả hợp đồng (contract / 계약)** nối từ **11. Gradle cấu hình (configuration / 구성) phase và thực thi (execution / 실행) phase** sang **13. Toolchain và JVM mục tiêu (target / 대상) phải được hiểu là tính tương thích (compatibility / 호환성) đặc tả hợp đồng (contract / 계약)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Incremental bản dựng (build / 빌드) phụ thuộc đầu vào (input / 입력)/đầu ra (output / 출력) đặc tả hợp đồng (contract / 계약)
 
@@ -236,7 +236,7 @@ Một tác vụ (task / 작업) cacheable/incremental cần khai báo đầu và
 
 KSP thường được chọn thay KAPT trong ecosystem hiện đại khi processor hỗ trợ (support / 지원), một phần vì mã (code / 코드) generation mô hình (model / 모델) phù hợp Kotlin hơn và có thể giảm overhead so với Java annotation-processing chuỗi xử lý (pipeline / 파이프라인). Tuy nhiên di chuyển (migration / 마이그레이션) phải dựa processor thực tế; không phải mọi KAPT processor đều có replacement KSP tương đương.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **13. Toolchain và JVM mục tiêu (target / 대상) phải được hiểu là tính tương thích (compatibility / 호환성) đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **12. Incremental bản dựng (build / 빌드) phụ thuộc đầu vào (input / 입력)/đầu ra (output / 출력) đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Android Components / Variant API dành cho plugin và bản dựng (build / 빌드) lô-gic (logic / 논리) nâng cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **13. Toolchain và JVM mục tiêu (target / 대상) phải được hiểu là tính tương thích (compatibility / 호환성) đặc tả hợp đồng (contract / 계약)** nối từ **12. Incremental bản dựng (build / 빌드) phụ thuộc đầu vào (input / 입력)/đầu ra (output / 출력) đặc tả hợp đồng (contract / 계약)** sang **14. Android Components / Variant API dành cho plugin và bản dựng (build / 빌드) lô-gic (logic / 논리) nâng cao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Toolchain và JVM mục tiêu (target / 대상) phải được hiểu là tính tương thích (compatibility / 호환성) đặc tả hợp đồng (contract / 계약)
 
@@ -252,7 +252,7 @@ kotlin {
 
 Con số cần theo tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬) của Kotlin/AGP/dự án (project / 프로젝트). Không nên upgrade JDK, Gradle, AGP, Kotlin và Compose trình biên dịch (compiler / 컴파일러) cùng lúc mà không có kiểm thử (test / 테스트) ma trận (matrix / 행렬) vì khi thất bại (fail / 실패) rất khó xác định tầng (layer / 계층) gây regression.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **14. Android Components / Variant API dành cho plugin và bản dựng (build / 빌드) lô-gic (logic / 논리) nâng cao** tiếp nhận điểm tựa từ **13. Toolchain và JVM mục tiêu (target / 대상) phải được hiểu là tính tương thích (compatibility / 호환성) đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. tài nguyên (resource / 자원) processing, D8, R8 và packaging chuỗi xử lý (pipeline / 파이프라인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **14. Android Components / Variant API dành cho plugin và bản dựng (build / 빌드) lô-gic (logic / 논리) nâng cao** nối từ **13. Toolchain và JVM mục tiêu (target / 대상) phải được hiểu là tính tương thích (compatibility / 호환성) đặc tả hợp đồng (contract / 계약)** sang **15. tài nguyên (resource / 자원) processing, D8, R8 và packaging chuỗi xử lý (pipeline / 파이프라인)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Android Components / Variant API dành cho plugin và bản dựng (build / 빌드) lô-gic (logic / 논리) nâng cao
 
@@ -262,7 +262,7 @@ Anti-pattern phổ biến là script truy cập tác vụ (task / 작업) name b
 
 Nếu custom bản dựng (build / 빌드) lô-gic (logic / 논리) cần biết variant, hãy ưu tiên công khai (public / 공개) AGP Variant API và sản phẩm tạo ra (artifact / 산출물) API của phiên bản (version / 버전) đang dùng.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **14. Android Components / Variant API dành cho plugin và bản dựng (build / 빌드) lô-gic (logic / 논리) nâng cao** nêu điều cần giải thích; **15. tài nguyên (resource / 자원) processing, D8, R8 và packaging chuỗi xử lý (pipeline / 파이프라인)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. bên tiêu thụ (consumer / 소비자) ProGuard rules của thư viện (library / 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **14. Android Components / Variant API dành cho plugin và bản dựng (build / 빌드) lô-gic (logic / 논리) nâng cao** đặt vấn đề; **15. tài nguyên (resource / 자원) processing, D8, R8 và packaging chuỗi xử lý (pipeline / 파이프라인)** đối chiếu bằng chứng, rồi **16. bên tiêu thụ (consumer / 소비자) ProGuard rules của thư viện (library / 라이브러리)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. tài nguyên (resource / 자원) processing, D8, R8 và packaging chuỗi xử lý (pipeline / 파이프라인)
 
@@ -289,7 +289,7 @@ Chuỗi xử lý (pipeline / 파이프라인) thật chi tiết hơn, nhưng mô
 
 Gỡ lỗi (debug / 디버그) bản dựng (build / 빌드) thường ít tối ưu hóa (optimization / 최적화) hơn nên reflection bug hoặc missing keep quy tắc (rule / 규칙) chỉ xuất hiện ở bản phát hành (release / 릴리스). Vì vậy “gỡ lỗi (debug / 디버그) app chạy” không chứng minh bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물) đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **15. tài nguyên (resource / 자원) processing, D8, R8 và packaging chuỗi xử lý (pipeline / 파이프라인)** nêu điều cần giải thích; **16. bên tiêu thụ (consumer / 소비자) ProGuard rules của thư viện (library / 라이브러리)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. Signing cấu hình (config / 설정) và bản dựng (build / 빌드) credentials** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **15. tài nguyên (resource / 자원) processing, D8, R8 và packaging chuỗi xử lý (pipeline / 파이프라인)** đặt vấn đề; **16. bên tiêu thụ (consumer / 소비자) ProGuard rules của thư viện (library / 라이브러리)** đối chiếu bằng chứng, rồi **17. Signing cấu hình (config / 설정) và bản dựng (build / 빌드) credentials** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 16. bên tiêu thụ (consumer / 소비자) ProGuard rules của thư viện (library / 라이브러리)
 
@@ -299,7 +299,7 @@ Thư viện (library / 라이브러리) author không nên bắt app bên tiêu 
 
 Quy tắc (rule / 규칙) tốt phải càng hẹp càng tốt và đi cùng kiểm thử (test / 테스트) minified bên tiêu thụ (consumer / 소비자) sản phẩm tạo ra (artifact / 산출물).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **17. Signing cấu hình (config / 설정) và bản dựng (build / 빌드) credentials** tiếp nhận điểm tựa từ **16. bên tiêu thụ (consumer / 소비자) ProGuard rules của thư viện (library / 라이브러리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Reproducible bản dựng (build / 빌드) và supply-chain thinking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **17. Signing cấu hình (config / 설정) và bản dựng (build / 빌드) credentials** nối từ **16. bên tiêu thụ (consumer / 소비자) ProGuard rules của thư viện (library / 라이브러리)** sang **18. Reproducible bản dựng (build / 빌드) và supply-chain thinking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Signing cấu hình (config / 설정) và bản dựng (build / 빌드) credentials
 
@@ -307,7 +307,7 @@ Gỡ lỗi (debug / 디버그) signing key có thể generated/cục bộ (local
 
 CI nên lấy signing material từ secret manager/secure môi trường (environment / 환경), hạn chế quyền truy cập và kiểm tra (audit / 감사) usage. Nếu dùng Play App Signing, vẫn cần hiểu upload key khác app signing key về vai trò và khôi phục (recovery / 복구) tiến trình (process / 프로세스).
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **18. Reproducible bản dựng (build / 빌드) và supply-chain thinking** tiếp nhận điểm tựa từ **17. Signing cấu hình (config / 설정) và bản dựng (build / 빌드) credentials** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. bản dựng (build / 빌드) hiệu năng (performance / 성능): tránh cả hai cực đoan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **18. Reproducible bản dựng (build / 빌드) và supply-chain thinking** nối từ **17. Signing cấu hình (config / 설정) và bản dựng (build / 빌드) credentials** sang **19. bản dựng (build / 빌드) hiệu năng (performance / 성능): tránh cả hai cực đoan**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Reproducible bản dựng (build / 빌드) và supply-chain thinking
 
@@ -327,7 +327,7 @@ Môi trường vận hành (production / 운영 환경) bản dựng (build / �
 
 Mục tiêu không phải bureaucracy mà là khả năng trả lời “nhị phân (binary / 이진) đang chạy ngoài môi trường vận hành (production / 운영 환경) được bản dựng (build / 빌드) từ cái gì?”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **19. bản dựng (build / 빌드) hiệu năng (performance / 성능): tránh cả hai cực đoan** tiếp nhận điểm tựa từ **18. Reproducible bản dựng (build / 빌드) và supply-chain thinking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. CI ma trận (matrix / 행렬) theo variant phải có chủ đích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **19. bản dựng (build / 빌드) hiệu năng (performance / 성능): tránh cả hai cực đoan** nối từ **18. Reproducible bản dựng (build / 빌드) và supply-chain thinking** sang **20. CI ma trận (matrix / 행렬) theo variant phải có chủ đích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. bản dựng (build / 빌드) hiệu năng (performance / 성능): tránh cả hai cực đoan
 
@@ -346,7 +346,7 @@ Những hướng tối ưu thường có impact thực tế hơn micro-tweak:
 - tách tính năng (feature / 기능) có churn độc lập;
 - profile CI đường găng (critical path / 임계 경로).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **20. CI ma trận (matrix / 행렬) theo variant phải có chủ đích** tiếp nhận điểm tựa từ **19. bản dựng (build / 빌드) hiệu năng (performance / 성능): tránh cả hai cực đoan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Các lỗi thường gặp và cách suy luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **20. CI ma trận (matrix / 행렬) theo variant phải có chủ đích** nối từ **19. bản dựng (build / 빌드) hiệu năng (performance / 성능): tránh cả hai cực đoan** sang **21. Các lỗi thường gặp và cách suy luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. CI ma trận (matrix / 행렬) theo variant phải có chủ đích
 
@@ -361,7 +361,7 @@ Một chiến lược thường hợp lý:
 
 CI ma trận (matrix / 행렬) phải phản ánh rủi ro (risk / 위험) chứ không phản ánh số variant một cách máy móc.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **21. Các lỗi thường gặp và cách suy luận** tiếp nhận điểm tựa từ **20. CI ma trận (matrix / 행렬) theo variant phải có chủ đích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. cấp cao (senior / 시니어) checklist cho build-system thay đổi (change / 변경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **21. Các lỗi thường gặp và cách suy luận** nối từ **20. CI ma trận (matrix / 행렬) theo variant phải có chủ đích** sang **22. cấp cao (senior / 시니어) checklist cho build-system thay đổi (change / 변경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Các lỗi thường gặp và cách suy luận
 
@@ -385,7 +385,7 @@ Kiểm tra JDK/toolchain, phụ thuộc (dependency / 의존성) repository, cas
 
 Đo tác vụ (task / 작업) đồ thị (graph / 그래프), processor thời gian (time / 시간) và cacheability trước khi refactor cấu trúc dự án (project structure / 프로젝트 구조).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **22. cấp cao (senior / 시니어) checklist cho build-system thay đổi (change / 변경)** tiếp nhận điểm tựa từ **21. Các lỗi thường gặp và cách suy luận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Official references** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, **22. cấp cao (senior / 시니어) checklist cho build-system thay đổi (change / 변경)** nối từ **21. Các lỗi thường gặp và cách suy luận** sang **23. Official references**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. cấp cao (senior / 시니어) checklist cho build-system thay đổi (change / 변경)
 
@@ -393,7 +393,7 @@ Khi rà soát (review / 검토) thay đổi bản dựng (build / 빌드), hãy 
 
 Hệ thống dựng (build system / 빌드 시스템) là môi trường vận hành (production / 운영 환경) mã (code / 코드). Một lỗi bản dựng (build / 빌드) cấu hình (configuration / 구성) có thể không xuất hiện trong đơn vị (unit / 단위) kiểm thử (test / 테스트) nhưng vẫn thay permission, signing, tài nguyên (resource / 자원), shrinker hoặc sản phẩm tạo ra (artifact / 산출물) được ship tới hàng triệu thiết bị (device / 장치).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, sau nội dung của **22. cấp cao (senior / 시니어) checklist cho build-system thay đổi (change / 변경)**, **23. Official references** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 15 — Gradle, Android Gradle Plugin và bản dựng (build / 빌드) Variant mô hình (model / 모델)**, sau nội dung của **22. cấp cao (senior / 시니어) checklist cho build-system thay đổi (change / 변경)**, **23. Official references** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 23. Official references
 Phần này nối mạch Android vừa học với “23. Official references”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.
