@@ -10,7 +10,7 @@
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **Tailwind CSS v4.3: trình biên dịch (compiler / 컴파일러) mô hình (model / 모델), design-system kiến trúc (architecture / 아키텍처), phát hiện nguồn (source detection), custom APIs, chuyển đổi (migration) và môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링)** nêu điều cần giải thích; **Quy ước thuật ngữ Việt–Anh** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **1. Tại sao cần một Master Supplement riêng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **Tailwind CSS v4.3: trình biên dịch (compiler / 컴파일러) mô hình (model / 모델), design-system kiến trúc (architecture / 아키텍처), phát hiện nguồn (source detection), custom APIs, chuyển đổi (migration) và môi trường vận hành (production / 운영 환경) kỹ thuật (engineering / 엔지니어링)** đặt vấn đề; **Quy ước thuật ngữ Việt–Anh** đối chiếu bằng chứng, rồi **1. Tại sao cần một Master Supplement riêng?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Quy ước thuật ngữ Việt–Anh
 
@@ -18,11 +18,11 @@ Trong tài liệu này, thuật ngữ Tailwind được diễn đạt bằng ti�
 
 # PHẦN I — TỪ “DÙNG TAILWIND” ĐẾN “HIỂU HỆ THỐNG TAILWIND”
 
-> **Chuyển mạch:** Glossary giữ cách gọi ổn định; Master Supplement bắt đầu bằng diagnosis từ utility → generated CSS → browser behavior để giải thích runtime thật.
+> **Nối mạch:** Glossary giữ cách gọi ổn định; Master Supplement bắt đầu bằng diagnosis từ utility → generated CSS → browser behavior để giải thích runtime thật.
 
 ## 1. Tại sao cần một Master Supplement riêng?
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **1A. Master diagnosis: tiện ích (utility) → generated CSS → trình duyệt (browser / 브라우저) hành vi (behavior / 동작)** tiếp nhận điểm tựa từ **1. Tại sao cần một Master Supplement riêng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. Tailwind v4 là một compiler-oriented authoring hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **1A. Master diagnosis: tiện ích (utility) → generated CSS → trình duyệt (browser / 브라우저) hành vi (behavior / 동작)** nối từ **1. Tại sao cần một Master Supplement riêng?** sang **2. Tailwind v4 là một compiler-oriented authoring hệ thống (system / 시스템)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1A. Master diagnosis: tiện ích (utility) → generated CSS → trình duyệt (browser / 브라우저) hành vi (behavior / 동작)
 
@@ -49,7 +49,7 @@ Mỗi lỗi cần được định vị vào đúng tầng trước khi sửa. �
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **2. Tailwind v4 là một compiler-oriented authoring hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **1A. Master diagnosis: tiện ích (utility) → generated CSS → trình duyệt (browser / 브라우저) hành vi (behavior / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. phát hiện ứng viên lớp (candidate detection) không phải JavaScript evaluation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **2. Tailwind v4 là một compiler-oriented authoring hệ thống (system / 시스템)** nối từ **1A. Master diagnosis: tiện ích (utility) → generated CSS → trình duyệt (browser / 브라우저) hành vi (behavior / 동작)** sang **3. phát hiện ứng viên lớp (candidate detection) không phải JavaScript evaluation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Tailwind v4 là một compiler-oriented authoring hệ thống (system / 시스템)
 
@@ -75,7 +75,7 @@ nhưng không map khóa–giá trị (map) tới tiện ích (utility) nào, nó
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **3. phát hiện ứng viên lớp (candidate detection) không phải JavaScript evaluation** tiếp nhận điểm tựa từ **2. Tailwind v4 là một compiler-oriented authoring hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Static ánh xạ (mapping / 매핑) là một mẫu thiết kế (design pattern / 디자인 패턴) chứ không chỉ workaround** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **3. phát hiện ứng viên lớp (candidate detection) không phải JavaScript evaluation** nối từ **2. Tailwind v4 là một compiler-oriented authoring hệ thống (system / 시스템)** sang **4. Static ánh xạ (mapping / 매핑) là một mẫu thiết kế (design pattern / 디자인 패턴) chứ không chỉ workaround**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. phát hiện ứng viên lớp (candidate detection) không phải JavaScript evaluation
 
@@ -113,7 +113,7 @@ return (
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **4. Static ánh xạ (mapping / 매핑) là một mẫu thiết kế (design pattern / 디자인 패턴) chứ không chỉ workaround** tiếp nhận điểm tựa từ **3. phát hiện ứng viên lớp (candidate detection) không phải JavaScript evaluation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Automatic phát hiện nguồn (source detection) thực sự mang lại điều gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **4. Static ánh xạ (mapping / 매핑) là một mẫu thiết kế (design pattern / 디자인 패턴) chứ không chỉ workaround** nối từ **3. phát hiện ứng viên lớp (candidate detection) không phải JavaScript evaluation** sang **5. Automatic phát hiện nguồn (source detection) thực sự mang lại điều gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Static ánh xạ (mapping / 매핑) là một mẫu thiết kế (design pattern / 디자인 패턴) chứ không chỉ workaround
 
@@ -150,7 +150,7 @@ Nếu mai thiết kế (design / 설계) đổi `danger` từ `red-600` sang `ro
 
 # PHẦN II — phát hiện nguồn (source detection) NHƯ MỘT PHẦN CỦA kiến trúc (architecture / 아키텍처)
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **4. Static ánh xạ (mapping / 매핑) là một mẫu thiết kế (design pattern / 디자인 패턴) chứ không chỉ workaround** nêu điều cần giải thích; **5. Automatic phát hiện nguồn (source detection) thực sự mang lại điều gì?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. @source không chỉ là “fix lớp (class / 클래스) bị thiếu”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **4. Static ánh xạ (mapping / 매핑) là một mẫu thiết kế (design pattern / 디자인 패턴) chứ không chỉ workaround** đặt vấn đề; **5. Automatic phát hiện nguồn (source detection) thực sự mang lại điều gì?** đối chiếu bằng chứng, rồi **6. @source không chỉ là “fix lớp (class / 클래스) bị thiếu”** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. Automatic phát hiện nguồn (source detection) thực sự mang lại điều gì?
 
@@ -171,7 +171,7 @@ Khi đó nguồn (source / 소스) ranh giới (boundary / 경계) trở thành 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **5. Automatic phát hiện nguồn (source detection) thực sự mang lại điều gì?** nêu điều cần giải thích; **6. @source không chỉ là “fix lớp (class / 클래스) bị thiếu”** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. cơ sở (base / 기반) đường dẫn (path / 경로) với source()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **5. Automatic phát hiện nguồn (source detection) thực sự mang lại điều gì?** đặt vấn đề; **6. @source không chỉ là “fix lớp (class / 클래스) bị thiếu”** đối chiếu bằng chứng, rồi **7. cơ sở (base / 기반) đường dẫn (path / 경로) với source()** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 6. `@source` không chỉ là “fix lớp (class / 클래스) bị thiếu”
 
@@ -197,7 +197,7 @@ Một app admin có thể không cần scan storefront. Một storefront bundle 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **6. @source không chỉ là “fix lớp (class / 클래스) bị thiếu”** nêu điều cần giải thích; **7. cơ sở (base / 기반) đường dẫn (path / 경로) với source()** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. @source not và việc loại bỏ source không cần thiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **6. @source không chỉ là “fix lớp (class / 클래스) bị thiếu”** đặt vấn đề; **7. cơ sở (base / 기반) đường dẫn (path / 경로) với source()** đối chiếu bằng chứng, rồi **8. @source not và việc loại bỏ source không cần thiết** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 7. cơ sở (base / 기반) đường dẫn (path / 경로) với `source()`
 
@@ -224,7 +224,7 @@ Bạn có thể xác định cơ sở (base / 기반) đường dẫn (path / �
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **7. cơ sở (base / 기반) đường dẫn (path / 경로) với source()** nêu điều cần giải thích; **8. @source not và việc loại bỏ source không cần thiết** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. source(none) và multiple Tailwind bundles** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **7. cơ sở (base / 기반) đường dẫn (path / 경로) với source()** đặt vấn đề; **8. @source not và việc loại bỏ source không cần thiết** đối chiếu bằng chứng, rồi **9. source(none) và multiple Tailwind bundles** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8. `@source not` và việc loại bỏ source không cần thiết
 Phần này nối mạch bài học với “8. `@source not` và việc loại bỏ source không cần thiết”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -244,7 +244,7 @@ Explicitly exclude làm intent rõ và bản dựng (build / 빌드) ranh giới
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **8. @source not và việc loại bỏ source không cần thiết** nêu điều cần giải thích; **9. source(none) và multiple Tailwind bundles** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. danh sách ép giữ (safelist) bằng @source inline()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **8. @source not và việc loại bỏ source không cần thiết** đặt vấn đề; **9. source(none) và multiple Tailwind bundles** đối chiếu bằng chứng, rồi **10. danh sách ép giữ (safelist) bằng @source inline()** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. `source(none)` và multiple Tailwind bundles
 
@@ -284,7 +284,7 @@ Bây giờ mỗi bundle có tường minh (explicit / 명시적) candidate unive
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **9. source(none) và multiple Tailwind bundles** nêu điều cần giải thích; **10. danh sách ép giữ (safelist) bằng @source inline()** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. Brace expansion và combinatorial explosion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **9. source(none) và multiple Tailwind bundles** đặt vấn đề; **10. danh sách ép giữ (safelist) bằng @source inline()** đối chiếu bằng chứng, rồi **11. Brace expansion và combinatorial explosion** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 10. danh sách ép giữ (safelist) bằng `@source inline()`
 
@@ -300,7 +300,7 @@ danh sách ép giữ (safelist) nên finite và business-driven.
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **10. danh sách ép giữ (safelist) bằng @source inline()** nêu điều cần giải thích; **11. Brace expansion và combinatorial explosion** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. biến chủ đề (theme variable) không chỉ là CSS custom thuộc tính (property / 속성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **10. danh sách ép giữ (safelist) bằng @source inline()** đặt vấn đề; **11. Brace expansion và combinatorial explosion** đối chiếu bằng chứng, rồi **12. biến chủ đề (theme variable) không chỉ là CSS custom thuộc tính (property / 속성)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 11. Brace expansion và combinatorial explosion
 
@@ -331,7 +331,7 @@ Bundle tăng bao nhiêu?
 
 # PHẦN III — `@theme` NHƯ công khai (public / 공개) DESIGN-SYSTEM API
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **12. biến chủ đề (theme variable) không chỉ là CSS custom thuộc tính (property / 속성)** tiếp nhận điểm tựa từ **11. Brace expansion và combinatorial explosion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. không gian tên chủ đề (theme namespace) quyết định vocabulary** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **12. biến chủ đề (theme variable) không chỉ là CSS custom thuộc tính (property / 속성)** nối từ **11. Brace expansion và combinatorial explosion** sang **13. không gian tên chủ đề (theme namespace) quyết định vocabulary**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. biến chủ đề (theme variable) không chỉ là CSS custom thuộc tính (property / 속성)
 
@@ -372,7 +372,7 @@ Vì vậy `@theme` vừa là:
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **13. không gian tên chủ đề (theme namespace) quyết định vocabulary** tiếp nhận điểm tựa từ **12. biến chủ đề (theme variable) không chỉ là CSS custom thuộc tính (property / 속성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Versioning theme vocabulary** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **13. không gian tên chủ đề (theme namespace) quyết định vocabulary** nối từ **12. biến chủ đề (theme variable) không chỉ là CSS custom thuộc tính (property / 속성)** sang **14. Versioning theme vocabulary**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. không gian tên chủ đề (theme namespace) quyết định vocabulary
 
@@ -420,7 +420,7 @@ có thể yêu cầu sửa hàng trăm `rounded-card`.
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **14. Versioning theme vocabulary** tiếp nhận điểm tựa từ **13. không gian tên chủ đề (theme namespace) quyết định vocabulary** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. thành phần nguyên thủy (primitive / 기본 요소) và đơn vị từ (token / 토큰) ngữ nghĩa (semantic token) nên coexist thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **14. Versioning theme vocabulary** nối từ **13. không gian tên chủ đề (theme namespace) quyết định vocabulary** sang **15. thành phần nguyên thủy (primitive / 기본 요소) và đơn vị từ (token / 토큰) ngữ nghĩa (semantic token) nên coexist thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Versioning theme vocabulary
 
@@ -436,7 +436,7 @@ CSS không có TypeScript trình biên dịch (compiler / 컴파일러) báo m�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **15. thành phần nguyên thủy (primitive / 기본 요소) và đơn vị từ (token / 토큰) ngữ nghĩa (semantic token) nên coexist thế nào?** tiếp nhận điểm tựa từ **14. Versioning theme vocabulary** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. đơn vị từ (token / 토큰) ngữ nghĩa (semantic token) cần đủ chính xác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **15. thành phần nguyên thủy (primitive / 기본 요소) và đơn vị từ (token / 토큰) ngữ nghĩa (semantic token) nên coexist thế nào?** nối từ **14. Versioning theme vocabulary** sang **16. đơn vị từ (token / 토큰) ngữ nghĩa (semantic token) cần đủ chính xác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. thành phần nguyên thủy (primitive / 기본 요소) và đơn vị từ (token / 토큰) ngữ nghĩa (semantic token) nên coexist thế nào?
 
@@ -497,7 +497,7 @@ Thành phần (component / 컴포넌트):
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **16. đơn vị từ (token / 토큰) ngữ nghĩa (semantic token) cần đủ chính xác** tiếp nhận điểm tựa từ **15. thành phần nguyên thủy (primitive / 기본 요소) và đơn vị từ (token / 토큰) ngữ nghĩa (semantic token) nên coexist thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Reset không gian tên (namespace / 네임스페이스) để enforce hệ thống thiết kế (design system)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **16. đơn vị từ (token / 토큰) ngữ nghĩa (semantic token) cần đủ chính xác** nối từ **15. thành phần nguyên thủy (primitive / 기본 요소) và đơn vị từ (token / 토큰) ngữ nghĩa (semantic token) nên coexist thế nào?** sang **17. Reset không gian tên (namespace / 네임스페이스) để enforce hệ thống thiết kế (design system)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. đơn vị từ (token / 토큰) ngữ nghĩa (semantic token) cần đủ chính xác
 
@@ -531,7 +531,7 @@ danger-border
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **17. Reset không gian tên (namespace / 네임스페이스) để enforce hệ thống thiết kế (design system)** tiếp nhận điểm tựa từ **16. đơn vị từ (token / 토큰) ngữ nghĩa (semantic token) cần đủ chính xác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. chi phí (cost / 비용) của strict theme** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **17. Reset không gian tên (namespace / 네임스페이스) để enforce hệ thống thiết kế (design system)** nối từ **16. đơn vị từ (token / 토큰) ngữ nghĩa (semantic token) cần đủ chính xác** sang **18. chi phí (cost / 비용) của strict theme**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Reset không gian tên (namespace / 네임스페이스) để enforce hệ thống thiết kế (design system)
 
@@ -565,7 +565,7 @@ Bây giờ các tiện ích (utility) default không được backed bởi đơn
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **18. chi phí (cost / 비용) của strict theme** tiếp nhận điểm tựa từ **17. Reset không gian tên (namespace / 네임스페이스) để enforce hệ thống thiết kế (design system)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. @theme inline và CSS biến (variable) resolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **18. chi phí (cost / 비용) của strict theme** nối từ **17. Reset không gian tên (namespace / 네임스페이스) để enforce hệ thống thiết kế (design system)** sang **19. @theme inline và CSS biến (variable) resolution**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. chi phí (cost / 비용) của strict theme
 
@@ -589,7 +589,7 @@ Do đó strict không gian tên (namespace / 네임스페이스) phù hợp khi:
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **19. @theme inline và CSS biến (variable) resolution** tiếp nhận điểm tựa từ **18. chi phí (cost / 비용) của strict theme** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. @theme static** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **19. @theme inline và CSS biến (variable) resolution** nối từ **18. chi phí (cost / 비용) của strict theme** sang **20. @theme static**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. `@theme inline` và CSS biến (variable) resolution
 
@@ -617,7 +617,7 @@ CSS custom các thuộc tính (properties) resolve theo cơ chế phân tầng (
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **20. @theme static** tiếp nhận điểm tựa từ **19. @theme inline và CSS biến (variable) resolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. @utility là gì ở mức sâu hơn?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **20. @theme static** nối từ **19. @theme inline và CSS biến (variable) resolution** sang **21. @utility là gì ở mức sâu hơn?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. `@theme static`
 
@@ -645,7 +645,7 @@ Use:
 
 # PHẦN IV — CUSTOM tiện ích (utility) Ở CẤP trình biên dịch (compiler / 컴파일러) API
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **21. @utility là gì ở mức sâu hơn?** tiếp nhận điểm tựa từ **20. @theme static** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. tiện ích (utility) tốt phải “atomic” theo nghĩa mang tính ngữ nghĩa (semantic / 의미적)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **21. @utility là gì ở mức sâu hơn?** nối từ **20. @theme static** sang **22. tiện ích (utility) tốt phải “atomic” theo nghĩa mang tính ngữ nghĩa (semantic / 의미적)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. `@utility` là gì ở mức sâu hơn?
 
@@ -674,7 +674,7 @@ nếu điều kiện (condition / 조건) hợp lý.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **22. tiện ích (utility) tốt phải “atomic” theo nghĩa mang tính ngữ nghĩa (semantic / 의미적)** tiếp nhận điểm tựa từ **21. @utility là gì ở mức sâu hơn?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Functional tiện ích (utility)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **22. tiện ích (utility) tốt phải “atomic” theo nghĩa mang tính ngữ nghĩa (semantic / 의미적)** nối từ **21. @utility là gì ở mức sâu hơn?** sang **23. Functional tiện ích (utility)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. tiện ích (utility) tốt phải “atomic” theo nghĩa mang tính ngữ nghĩa (semantic / 의미적)
 
@@ -690,7 +690,7 @@ Một custom tiện ích (utility) tên `dashboard-card-primary` chứa bố c�
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **23. Functional tiện ích (utility)** tiếp nhận điểm tựa từ **22. tiện ích (utility) tốt phải “atomic” theo nghĩa mang tính ngữ nghĩa (semantic / 의미적)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Theme giá trị (value / 값) resolver** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **23. Functional tiện ích (utility)** nối từ **22. tiện ích (utility) tốt phải “atomic” theo nghĩa mang tính ngữ nghĩa (semantic / 의미적)** sang **24. Theme giá trị (value / 값) resolver**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Functional tiện ích (utility)
 Phần này nối mạch bài học với “23. Functional tiện ích (utility)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -719,7 +719,7 @@ prefix
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **24. Theme giá trị (value / 값) resolver** tiếp nhận điểm tựa từ **23. Functional tiện ích (utility)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Bare giá trị (value) resolver** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **24. Theme giá trị (value / 값) resolver** nối từ **23. Functional tiện ích (utility)** sang **25. Bare giá trị (value) resolver**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Theme giá trị (value / 값) resolver
 
@@ -749,7 +749,7 @@ map khóa–giá trị (map) tới theme đơn vị từ (token / 토큰).
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **25. Bare giá trị (value) resolver** tiếp nhận điểm tựa từ **24. Theme giá trị (value / 값) resolver** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. giá trị tùy ý (arbitrary value) resolver** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **25. Bare giá trị (value) resolver** nối từ **24. Theme giá trị (value / 값) resolver** sang **26. giá trị tùy ý (arbitrary value) resolver**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Bare giá trị (value) resolver
 Phần này nối mạch bài học với “25. Bare giá trị (value) resolver”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -772,7 +772,7 @@ Bare các giá trị (values) nên được giới hạn theo CSS/thuộc tính 
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **26. giá trị tùy ý (arbitrary value) resolver** tiếp nhận điểm tựa từ **25. Bare giá trị (value) resolver** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Nhiều resolver trong cùng tiện ích (utility)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **26. giá trị tùy ý (arbitrary value) resolver** nối từ **25. Bare giá trị (value) resolver** sang **27. Nhiều resolver trong cùng tiện ích (utility)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. giá trị tùy ý (arbitrary value) resolver
 Phần này nối mạch bài học với “26. giá trị tùy ý (arbitrary value) resolver”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -796,7 +796,7 @@ Typed giá trị tùy ý (arbitrary value) giúp parser biết bạn muốn gì 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **27. Nhiều resolver trong cùng tiện ích (utility)** tiếp nhận điểm tựa từ **26. giá trị tùy ý (arbitrary value) resolver** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Transform giá trị (value / 값) theo nguồn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **27. Nhiều resolver trong cùng tiện ích (utility)** nối từ **26. giá trị tùy ý (arbitrary value) resolver** sang **28. Transform giá trị (value / 값) theo nguồn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Nhiều resolver trong cùng tiện ích (utility)
 Phần này nối mạch bài học với “27. Nhiều resolver trong cùng tiện ích (utility)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -818,7 +818,7 @@ Khi tự thiết kế API, hãy chọn thứ tự (order / 순서)/accepted form
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **27. Nhiều resolver trong cùng tiện ích (utility)** nêu điều cần giải thích; **28. Transform giá trị (value / 값) theo nguồn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **29. Negative custom tiện ích (utility)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **27. Nhiều resolver trong cùng tiện ích (utility)** đặt vấn đề; **28. Transform giá trị (value / 값) theo nguồn** đối chiếu bằng chứng, rồi **29. Negative custom tiện ích (utility)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 28. Transform giá trị (value / 값) theo nguồn
 
@@ -833,7 +833,7 @@ Multiple các khai báo (declarations) với `--value()` có thể được Tail
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **28. Transform giá trị (value / 값) theo nguồn** nêu điều cần giải thích; **29. Negative custom tiện ích (utility)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **30. --default() trong v4.3** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **28. Transform giá trị (value / 값) theo nguồn** đặt vấn đề; **29. Negative custom tiện ích (utility)** đối chiếu bằng chứng, rồi **30. --default() trong v4.3** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 29. Negative custom tiện ích (utility)
 
@@ -849,7 +849,7 @@ Nếu custom tiện ích (utility) đại diện inset, bạn có thể đăng k
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **30. --default() trong v4.3** tiếp nhận điểm tựa từ **29. Negative custom tiện ích (utility)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Modifier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **30. --default() trong v4.3** nối từ **29. Negative custom tiện ích (utility)** sang **31. Modifier**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. `--default()` trong v4.3
 
@@ -879,7 +879,7 @@ Bare default chỉ nên được thêm khi người đọc tiện ích (utility)
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **31. Modifier** tiếp nhận điểm tựa từ **30. --default() trong v4.3** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Custom tiện ích (utility) sorting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **31. Modifier** nối từ **30. --default() trong v4.3** sang **32. Custom tiện ích (utility) sorting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Modifier
 
@@ -899,7 +899,7 @@ Custom API có thể dùng `--modifier()`, nhưng cấp cao (senior / 시니어)
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **32. Custom tiện ích (utility) sorting** tiếp nhận điểm tựa từ **31. Modifier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. biến thể (variant) không phải văn bản (text / 텍스트) prefix** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **32. Custom tiện ích (utility) sorting** nối từ **31. Modifier** sang **33. biến thể (variant) không phải văn bản (text / 텍스트) prefix**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Custom tiện ích (utility) sorting
 
@@ -916,7 +916,7 @@ Do đó:
 
 # PHẦN V — biến thể (variant) ALGEBRA
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **33. biến thể (variant) không phải văn bản (text / 텍스트) prefix** tiếp nhận điểm tựa từ **32. Custom tiện ích (utility) sorting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. biến thể (variant) stacking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **33. biến thể (variant) không phải văn bản (text / 텍스트) prefix** nối từ **32. Custom tiện ích (utility) sorting** sang **34. biến thể (variant) stacking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. biến thể (variant) không phải văn bản (text / 텍스트) prefix
 
@@ -934,7 +934,7 @@ Một biến thể (variant) vì vậy có thể được hiểu như **hàm (fu
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **34. biến thể (variant) stacking** tiếp nhận điểm tựa từ **33. biến thể (variant) không phải văn bản (text / 텍스트) prefix** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. @custom-variant là reusable điều kiện (condition / 조건) API** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **34. biến thể (variant) stacking** nối từ **33. biến thể (variant) không phải văn bản (text / 텍스트) prefix** sang **35. @custom-variant là reusable điều kiện (condition / 조건) API**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. biến thể (variant) stacking
 Phần này nối mạch bài học với “34. biến thể (variant) stacking”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -958,7 +958,7 @@ Khi stacked biến thể (variant) không chạy, gỡ lỗi (debug / 디버그)
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **35. @custom-variant là reusable điều kiện (condition / 조건) API** tiếp nhận điểm tựa từ **34. biến thể (variant) stacking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Naming custom biến thể (variant)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **35. @custom-variant là reusable điều kiện (condition / 조건) API** nối từ **34. biến thể (variant) stacking** sang **36. Naming custom biến thể (variant)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. `@custom-variant` là reusable điều kiện (condition / 조건) API
 
@@ -985,7 +985,7 @@ Bây giờ thiết kế (design / 설계) vocabulary biểu diễn mang tính ng
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **36. Naming custom biến thể (variant)** tiếp nhận điểm tựa từ **35. @custom-variant là reusable điều kiện (condition / 조건) API** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. @variant trong custom CSS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **36. Naming custom biến thể (variant)** nối từ **35. @custom-variant là reusable điều kiện (condition / 조건) API** sang **37. @variant trong custom CSS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Naming custom biến thể (variant)
 
@@ -1008,7 +1008,7 @@ vì Tailwind cốt lõi (core / 핵심) có thể thêm các biến thể (varia
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **37. @variant trong custom CSS** tiếp nhận điểm tựa từ **36. Naming custom biến thể (variant)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Vì sao class order trong HTML không đảm bảo winner?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **37. @variant trong custom CSS** nối từ **36. Naming custom biến thể (variant)** sang **38. Vì sao class order trong HTML không đảm bảo winner?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. `@variant` trong custom CSS
 
@@ -1036,7 +1036,7 @@ V4.3 nâng cấp stacked/compound `@variant`, nên Tailwind biến thể (varian
 
 # PHẦN VI — cơ chế phân tầng (cascade) VÀ xung đột (conflict / 충돌) Ở MỨC MASTER
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **38. Vì sao class order trong HTML không đảm bảo winner?** tiếp nhận điểm tựa từ **37. @variant trong custom CSS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Conflict-aware merge libraries giải quyết vấn đề gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **38. Vì sao class order trong HTML không đảm bảo winner?** nối từ **37. @variant trong custom CSS** sang **39. Conflict-aware merge libraries giải quyết vấn đề gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Vì sao class order trong HTML không đảm bảo winner?
 Phần này nối mạch bài học với “38. Vì sao class order trong HTML không đảm bảo winner?”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1060,7 +1060,7 @@ Vì thế động (dynamic / 동적) lớp (class / 클래스) composition khôn
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **39. Conflict-aware merge libraries giải quyết vấn đề gì?** tiếp nhận điểm tựa từ **38. Vì sao class order trong HTML không đảm bảo winner?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Prettier Tailwind lớp (class / 클래스) sorting không phải xung đột (conflict / 충돌) engine** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **39. Conflict-aware merge libraries giải quyết vấn đề gì?** nối từ **38. Vì sao class order trong HTML không đảm bảo winner?** sang **40. Prettier Tailwind lớp (class / 클래스) sorting không phải xung đột (conflict / 충돌) engine**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Conflict-aware merge libraries giải quyết vấn đề gì?
 
@@ -1081,7 +1081,7 @@ Use phù hợp ở reusable thành phần (component / 컴포넌트) thư viện
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **40. Prettier Tailwind lớp (class / 클래스) sorting không phải xung đột (conflict / 충돌) engine** tiếp nhận điểm tựa từ **39. Conflict-aware merge libraries giải quyết vấn đề gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. các lớp phân tầng (cascade layers)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **40. Prettier Tailwind lớp (class / 클래스) sorting không phải xung đột (conflict / 충돌) engine** nối từ **39. Conflict-aware merge libraries giải quyết vấn đề gì?** sang **41. các lớp phân tầng (cascade layers)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Prettier Tailwind lớp (class / 클래스) sorting không phải xung đột (conflict / 충돌) engine
 
@@ -1091,7 +1091,7 @@ Nếu formatter đổi thứ tự văn bản (text / 텍스트) mà UI đổi h�
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **41. các lớp phân tầng (cascade layers)** tiếp nhận điểm tựa từ **40. Prettier Tailwind lớp (class / 클래스) sorting không phải xung đột (conflict / 충돌) engine** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Unlayered CSS có thể gây surprise** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **41. các lớp phân tầng (cascade layers)** nối từ **40. Prettier Tailwind lớp (class / 클래스) sorting không phải xung đột (conflict / 충돌) engine** sang **42. Unlayered CSS có thể gây surprise**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. các lớp phân tầng (cascade layers)
 
@@ -1126,7 +1126,7 @@ tiện ích (utility) override thành phần (component / 컴포넌트) without 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **42. Unlayered CSS có thể gây surprise** tiếp nhận điểm tựa từ **41. các lớp phân tầng (cascade layers)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Per-utility important** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **42. Unlayered CSS có thể gây surprise** nối từ **41. các lớp phân tầng (cascade layers)** sang **43. Per-utility important**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Unlayered CSS có thể gây surprise
 
@@ -1144,7 +1144,7 @@ Không tăng `!important` ngay.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **43. Per-utility important** tiếp nhận điểm tựa từ **42. Unlayered CSS có thể gây surprise** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. toàn cục (global / 전역) important chiến lược (strategy / 전략)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **43. Per-utility important** nối từ **42. Unlayered CSS có thể gây surprise** sang **44. toàn cục (global / 전역) important chiến lược (strategy / 전략)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. Per-utility important
 
@@ -1160,7 +1160,7 @@ Nếu bạn dùng important modifier khắp app, bạn đã phá advantage của
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **44. toàn cục (global / 전역) important chiến lược (strategy / 전략)** tiếp nhận điểm tựa từ **43. Per-utility important** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. Preflight (lớp reset nền của Tailwind) trong greenfield app** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **44. toàn cục (global / 전역) important chiến lược (strategy / 전략)** nối từ **43. Per-utility important** sang **45. Preflight (lớp reset nền của Tailwind) trong greenfield app**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. toàn cục (global / 전역) important chiến lược (strategy / 전략)
 
@@ -1179,7 +1179,7 @@ Hãy xem nó như temporary anti-corruption tầng (layer / 계층), không ph�
 
 # PHẦN VII — Preflight (lớp reset nền của Tailwind), EMBEDDING VÀ MICROFRONTENDS
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **45. Preflight (lớp reset nền của Tailwind) trong greenfield app** tiếp nhận điểm tựa từ **44. toàn cục (global / 전역) important chiến lược (strategy / 전략)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. Preflight (lớp reset nền của Tailwind) trong legacy host** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **45. Preflight (lớp reset nền của Tailwind) trong greenfield app** nối từ **44. toàn cục (global / 전역) important chiến lược (strategy / 전략)** sang **46. Preflight (lớp reset nền của Tailwind) trong legacy host**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. Preflight (lớp reset nền của Tailwind) trong greenfield app
 
@@ -1192,7 +1192,7 @@ Trong app mới, Preflight (lớp reset nền của Tailwind) giúp:
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **46. Preflight (lớp reset nền của Tailwind) trong legacy host** tiếp nhận điểm tựa từ **45. Preflight (lớp reset nền của Tailwind) trong greenfield app** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **47. Disable Preflight (lớp reset nền của Tailwind) cho embedded widget** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **46. Preflight (lớp reset nền của Tailwind) trong legacy host** nối từ **45. Preflight (lớp reset nền của Tailwind) trong greenfield app** sang **47. Disable Preflight (lớp reset nền của Tailwind) cho embedded widget**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 46. Preflight (lớp reset nền của Tailwind) trong legacy host
 
@@ -1208,7 +1208,7 @@ Import Tailwind Preflight (lớp reset nền của Tailwind) có thể thay đ�
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **47. Disable Preflight (lớp reset nền của Tailwind) cho embedded widget** tiếp nhận điểm tựa từ **46. Preflight (lớp reset nền của Tailwind) trong legacy host** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **48. Prefixing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **47. Disable Preflight (lớp reset nền của Tailwind) cho embedded widget** nối từ **46. Preflight (lớp reset nền của Tailwind) trong legacy host** sang **48. Prefixing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. Disable Preflight (lớp reset nền của Tailwind) cho embedded widget
 
@@ -1225,7 +1225,7 @@ Mục tiêu là widget không làm thay đổi host typography/forms.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **48. Prefixing** tiếp nhận điểm tựa từ **47. Disable Preflight (lớp reset nền của Tailwind) cho embedded widget** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **49. Microfrontend** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **48. Prefixing** nối từ **47. Disable Preflight (lớp reset nền của Tailwind) cho embedded widget** sang **49. Microfrontend**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. Prefixing
 
@@ -1243,7 +1243,7 @@ Dùng cho cô lập (isolation) yêu cầu (requirement / 요구사항) thật, 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **49. Microfrontend** tiếp nhận điểm tựa từ **48. Prefixing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **50. thời gian chạy (runtime / 런타임) dữ liệu (data / 데이터) không nên trở thành thời gian chạy (runtime / 런타임) lớp (class / 클래스) grammar** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **49. Microfrontend** nối từ **48. Prefixing** sang **50. thời gian chạy (runtime / 런타임) dữ liệu (data / 데이터) không nên trở thành thời gian chạy (runtime / 런타임) lớp (class / 클래스) grammar**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. Microfrontend
 
@@ -1263,7 +1263,7 @@ Không có một đáp án universal; quyết định phụ thuộc triển khai
 
 # PHẦN VIII — thời gian chạy (runtime / 런타임) các giá trị (values) VÀ TAILWIND BUILD-TIME
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **49. Microfrontend** nêu điều cần giải thích; **50. thời gian chạy (runtime / 런타임) dữ liệu (data / 데이터) không nên trở thành thời gian chạy (runtime / 런타임) lớp (class / 클래스) grammar** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **51. thời gian chạy (runtime) color** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **49. Microfrontend** đặt vấn đề; **50. thời gian chạy (runtime / 런타임) dữ liệu (data / 데이터) không nên trở thành thời gian chạy (runtime / 런타임) lớp (class / 클래스) grammar** đối chiếu bằng chứng, rồi **51. thời gian chạy (runtime) color** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 50. thời gian chạy (runtime / 런타임) dữ liệu (data / 데이터) không nên trở thành thời gian chạy (runtime / 런타임) lớp (class / 클래스) grammar
 
@@ -1296,7 +1296,7 @@ Lớp (class / 클래스) remains static, giá trị (value / 값) thời gian c
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **50. thời gian chạy (runtime / 런타임) dữ liệu (data / 데이터) không nên trở thành thời gian chạy (runtime / 런타임) lớp (class / 클래스) grammar** nêu điều cần giải thích; **51. thời gian chạy (runtime) color** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **52. Khi nào inline style vẫn hoàn toàn hợp lý?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **50. thời gian chạy (runtime / 런타임) dữ liệu (data / 데이터) không nên trở thành thời gian chạy (runtime / 런타임) lớp (class / 클래스) grammar** đặt vấn đề; **51. thời gian chạy (runtime) color** đối chiếu bằng chứng, rồi **52. Khi nào inline style vẫn hoàn toàn hợp lý?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 51. thời gian chạy (runtime) color
 Phần này nối mạch bài học với “51. thời gian chạy (runtime) color”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1320,7 +1320,7 @@ nói rõ parser ngữ cảnh (context / 맥락).
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **52. Khi nào inline style vẫn hoàn toàn hợp lý?** tiếp nhận điểm tựa từ **51. thời gian chạy (runtime) color** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **53. CSP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **52. Khi nào inline style vẫn hoàn toàn hợp lý?** nối từ **51. thời gian chạy (runtime) color** sang **53. CSP**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 52. Khi nào inline style vẫn hoàn toàn hợp lý?
 
@@ -1337,7 +1337,7 @@ tiện ích (utility) lớp (class / 클래스) dùng để consume biến (vari
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **53. CSP** tiếp nhận điểm tựa từ **52. Khi nào inline style vẫn hoàn toàn hợp lý?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **54. Utility-pair dark mode** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **53. CSP** nối từ **52. Khi nào inline style vẫn hoàn toàn hợp lý?** sang **54. Utility-pair dark mode**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 53. CSP
 
@@ -1355,7 +1355,7 @@ Tailwind không bypass Content bảo mật (security / 보안) chính sách (pol
 
 # PHẦN IX — DARK chế độ (mode / 모드) VÀ MULTI-THEME Ở quy mô (scale / 규모) LỚN
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **54. Utility-pair dark mode** tiếp nhận điểm tựa từ **53. CSP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **55. Khi dark pairs bắt đầu lặp quá nhiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **54. Utility-pair dark mode** nối từ **53. CSP** sang **55. Khi dark pairs bắt đầu lặp quá nhiều**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 54. Utility-pair dark mode
 Phần này nối mạch bài học với “54. Utility-pair dark mode”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1375,7 +1375,7 @@ Rất tường minh (explicit / 명시적) và tốt trong app nhỏ/trung bình
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **55. Khi dark pairs bắt đầu lặp quá nhiều** tiếp nhận điểm tựa từ **54. Utility-pair dark mode** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **56. FOUC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **55. Khi dark pairs bắt đầu lặp quá nhiều** nối từ **54. Utility-pair dark mode** sang **56. FOUC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. Khi dark pairs bắt đầu lặp quá nhiều
 
@@ -1409,7 +1409,7 @@ bg-(--surface)
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **56. FOUC** tiếp nhận điểm tựa từ **55. Khi dark pairs bắt đầu lặp quá nhiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **57. ARIA là mang tính ngữ nghĩa (semantic) contract** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **56. FOUC** nối từ **55. Khi dark pairs bắt đầu lặp quá nhiều** sang **57. ARIA là mang tính ngữ nghĩa (semantic) contract**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 56. FOUC
 
@@ -1433,7 +1433,7 @@ Tailwind generated CSS không thể tự quyết định persisted app preferenc
 
 # PHẦN X — ARIA, dữ liệu (data / 데이터), GROUP, PEER, HAS Ở MỨC kiến trúc (architecture / 아키텍처)
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **57. ARIA là mang tính ngữ nghĩa (semantic) contract** tiếp nhận điểm tựa từ **56. FOUC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **58. Data attribute là presentation/application trạng thái (state) hook** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **57. ARIA là mang tính ngữ nghĩa (semantic) contract** nối từ **56. FOUC** sang **58. Data attribute là presentation/application trạng thái (state) hook**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 57. ARIA là mang tính ngữ nghĩa (semantic) contract
 Phần này nối mạch bài học với “57. ARIA là mang tính ngữ nghĩa (semantic) contract”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1452,7 +1452,7 @@ Nếu trạng thái (state / 상태) chỉ là “loading skeleton visible”, d
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **58. Data attribute là presentation/application trạng thái (state) hook** tiếp nhận điểm tựa từ **57. ARIA là mang tính ngữ nghĩa (semantic) contract** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **59. Group quyền sở hữu (ownership / 소유권)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **58. Data attribute là presentation/application trạng thái (state) hook** nối từ **57. ARIA là mang tính ngữ nghĩa (semantic) contract** sang **59. Group quyền sở hữu (ownership / 소유권)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 58. Data attribute là presentation/application trạng thái (state) hook
 Phần này nối mạch bài học với “58. Data attribute là presentation/application trạng thái (state) hook”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1480,7 +1480,7 @@ visual response
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **59. Group quyền sở hữu (ownership / 소유권)** tiếp nhận điểm tựa từ **58. Data attribute là presentation/application trạng thái (state) hook** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **60. in- convenience vs precision** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **59. Group quyền sở hữu (ownership / 소유권)** nối từ **58. Data attribute là presentation/application trạng thái (state) hook** sang **60. in- convenience vs precision**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 59. Group quyền sở hữu (ownership / 소유권)
 
@@ -1500,7 +1500,7 @@ Không name groups trong cấu trúc (structure / 구조) phức tạp có thể
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **60. in- convenience vs precision** tiếp nhận điểm tựa từ **59. Group quyền sở hữu (ownership / 소유권)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **61. Peer là sibling direction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **60. in- convenience vs precision** nối từ **59. Group quyền sở hữu (ownership / 소유권)** sang **61. Peer là sibling direction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 60. `in-*` convenience vs precision
 
@@ -1514,7 +1514,7 @@ Cấp cao (senior / 시니어) chọn:
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **61. Peer là sibling direction** tiếp nhận điểm tựa từ **60. in- convenience vs precision** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **62. has- không thay lô-gic nghiệp vụ (business logic / 비즈니스 로직)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **61. Peer là sibling direction** nối từ **60. in- convenience vs precision** sang **62. has- không thay lô-gic nghiệp vụ (business logic / 비즈니스 로직)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 61. Peer là sibling direction
 
@@ -1537,7 +1537,7 @@ tùy trường hợp (case / 사례).
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **62. has- không thay lô-gic nghiệp vụ (business logic / 비즈니스 로직)** tiếp nhận điểm tựa từ **61. Peer là sibling direction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **63. các biến thể tùy ý (arbitrary variants) phù hợp với integration nhỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **62. has- không thay lô-gic nghiệp vụ (business logic / 비즈니스 로직)** nối từ **61. Peer là sibling direction** sang **63. các biến thể tùy ý (arbitrary variants) phù hợp với integration nhỏ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 62. `has-*` không thay lô-gic nghiệp vụ (business logic / 비즈니스 로직)
 
@@ -1553,7 +1553,7 @@ Không dùng `:has()` để suy nghiệp vụ (business / 비즈니스) trạng 
 
 # PHẦN XI — THIRD-PARTY tích hợp (integration / 통합)
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **63. các biến thể tùy ý (arbitrary variants) phù hợp với integration nhỏ** tiếp nhận điểm tựa từ **62. has- không thay lô-gic nghiệp vụ (business logic / 비즈니스 로직)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **64. Khi tích hợp (integration / 통합) nên có biểu định kiểu (stylesheet / 스타일시트) riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **63. các biến thể tùy ý (arbitrary variants) phù hợp với integration nhỏ** nối từ **62. has- không thay lô-gic nghiệp vụ (business logic / 비즈니스 로직)** sang **64. Khi tích hợp (integration / 통합) nên có biểu định kiểu (stylesheet / 스타일시트) riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 63. các biến thể tùy ý (arbitrary variants) phù hợp với integration nhỏ
 Phần này nối mạch bài học với “63. các biến thể tùy ý (arbitrary variants) phù hợp với integration nhỏ”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1566,7 +1566,7 @@ một hoặc vài bộ chọn (selector) là fine.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **64. Khi tích hợp (integration / 통합) nên có biểu định kiểu (stylesheet / 스타일시트) riêng** tiếp nhận điểm tựa từ **63. các biến thể tùy ý (arbitrary variants) phù hợp với integration nhỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **65. @apply ở integration layer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **64. Khi tích hợp (integration / 통합) nên có biểu định kiểu (stylesheet / 스타일시트) riêng** nối từ **63. các biến thể tùy ý (arbitrary variants) phù hợp với integration nhỏ** sang **65. @apply ở integration layer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 64. Khi tích hợp (integration / 통합) nên có biểu định kiểu (stylesheet / 스타일시트) riêng
 
@@ -1594,7 +1594,7 @@ và viết normal CSS hoặc `@apply` targeted.
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **65. @apply ở integration layer** tiếp nhận điểm tựa từ **64. Khi tích hợp (integration / 통합) nên có biểu định kiểu (stylesheet / 스타일시트) riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **66. @reference trong isolated style contexts** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **65. @apply ở integration layer** nối từ **64. Khi tích hợp (integration / 통합) nên có biểu định kiểu (stylesheet / 스타일시트) riêng** sang **66. @reference trong isolated style contexts**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 65. `@apply` ở integration layer
 Phần này nối mạch bài học với “65. `@apply` ở integration layer”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1611,7 +1611,7 @@ Trong trường hợp (case / 사례) markup không điều khiển (control / �
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, sau nội dung của **65. @apply ở integration layer**, **66. @reference trong isolated style contexts** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **67. Một dự án (project / 프로젝트) có thể có quá nhiều styling layers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, sau nội dung của **65. @apply ở integration layer**, **66. @reference trong isolated style contexts** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **67. Một dự án (project / 프로젝트) có thể có quá nhiều styling layers** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 66. `@reference` trong isolated style contexts
 
@@ -1628,7 +1628,7 @@ Nhưng nếu chỉ dùng one đơn vị từ (token / 토큰), direct `var(--col
 
 # PHẦN XII — TAILWIND + SCSS / CSS MODULES / Shadow DOM (cây DOM đóng gói)
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **67. Một dự án (project / 프로젝트) có thể có quá nhiều styling layers** tiếp nhận điểm tựa từ **66. @reference trong isolated style contexts** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **68. Tailwind + SCSS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **67. Một dự án (project / 프로젝트) có thể có quá nhiều styling layers** nối từ **66. @reference trong isolated style contexts** sang **68. Tailwind + SCSS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 67. Một dự án (project / 프로젝트) có thể có quá nhiều styling layers
 
@@ -1650,7 +1650,7 @@ Mastery là biết **bỏ bớt tầng (layer / 계층)**.
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **68. Tailwind + SCSS** tiếp nhận điểm tựa từ **67. Một dự án (project / 프로젝트) có thể có quá nhiều styling layers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **69. Tailwind + CSS Modules** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **68. Tailwind + SCSS** nối từ **67. Một dự án (project / 프로젝트) có thể có quá nhiều styling layers** sang **69. Tailwind + CSS Modules**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 68. Tailwind + SCSS
 
@@ -1671,7 +1671,7 @@ Nếu dùng cả hai, hãy chọn một nguồn chuẩn (source of truth / 정�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **69. Tailwind + CSS Modules** tiếp nhận điểm tựa từ **68. Tailwind + SCSS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **70. Shadow DOM (cây DOM đóng gói)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **69. Tailwind + CSS Modules** nối từ **68. Tailwind + SCSS** sang **70. Shadow DOM (cây DOM đóng gói)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 69. Tailwind + CSS Modules
 
@@ -1695,7 +1695,7 @@ thì bạn đang thêm một lớp trừu tượng (abstraction / 추상화) mà
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **70. Shadow DOM (cây DOM đóng gói)** tiếp nhận điểm tựa từ **69. Tailwind + CSS Modules** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **71. Design-system gói (package / 패키지) có thể ship cái gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **70. Shadow DOM (cây DOM đóng gói)** nối từ **69. Tailwind + CSS Modules** sang **71. Design-system gói (package / 패키지) có thể ship cái gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 70. Shadow DOM (cây DOM đóng gói)
 
@@ -1714,7 +1714,7 @@ Tailwind không thay Shadow DOM (cây DOM đóng gói) đóng gói (encapsulatio
 
 # PHẦN XIII — gói (package / 패키지) thiết kế (design / 설계)
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **71. Design-system gói (package / 패키지) có thể ship cái gì?** tiếp nhận điểm tựa từ **70. Shadow DOM (cây DOM đóng gói)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **72. Ship nguồn (source / 소스) components** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **71. Design-system gói (package / 패키지) có thể ship cái gì?** nối từ **70. Shadow DOM (cây DOM đóng gói)** sang **72. Ship nguồn (source / 소스) components**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 71. Design-system gói (package / 패키지) có thể ship cái gì?
 
@@ -1728,7 +1728,7 @@ Mỗi lựa chọn có coupling khác nhau.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **71. Design-system gói (package / 패키지) có thể ship cái gì?** nêu điều cần giải thích; **72. Ship nguồn (source / 소스) components** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **73. Ship compiled CSS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **71. Design-system gói (package / 패키지) có thể ship cái gì?** đặt vấn đề; **72. Ship nguồn (source / 소스) components** đối chiếu bằng chứng, rồi **73. Ship compiled CSS** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 72. Ship nguồn (source / 소스) components
 
@@ -1746,7 +1746,7 @@ Tailwind trở thành peer/bản dựng (build / 빌드) đặc tả hợp đồ
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **72. Ship nguồn (source / 소스) components** nêu điều cần giải thích; **73. Ship compiled CSS** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **74. Ship theme-only gói (package / 패키지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **72. Ship nguồn (source / 소스) components** đặt vấn đề; **73. Ship compiled CSS** đối chiếu bằng chứng, rồi **74. Ship theme-only gói (package / 패키지)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 73. Ship compiled CSS
 
@@ -1763,7 +1763,7 @@ Nhược:
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **74. Ship theme-only gói (package / 패키지)** tiếp nhận điểm tựa từ **73. Ship compiled CSS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **75. phiên bản (version / 버전) tính tương thích (compatibility / 호환성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **74. Ship theme-only gói (package / 패키지)** nối từ **73. Ship compiled CSS** sang **75. phiên bản (version / 버전) tính tương thích (compatibility / 호환성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 74. Ship theme-only gói (package / 패키지)
 
@@ -1785,7 +1785,7 @@ Theme gói (package / 패키지) có thể phiên bản (version / 버전) độ
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **75. phiên bản (version / 버전) tính tương thích (compatibility / 호환성)** tiếp nhận điểm tựa từ **74. Ship theme-only gói (package / 패키지)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **76. Scrollbar các tiện ích (utilities)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **75. phiên bản (version / 버전) tính tương thích (compatibility / 호환성)** nối từ **74. Ship theme-only gói (package / 패키지)** sang **76. Scrollbar các tiện ích (utilities)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 75. phiên bản (version / 버전) tính tương thích (compatibility / 호환성)
 
@@ -1803,7 +1803,7 @@ Nếu không, bên tiêu thụ (consumer / 소비자) v4.1 có thể compile th�
 
 # PHẦN XIV — V4.3 FEATURES VÀ Ý NGHĨA KIẾN TRÚC
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **76. Scrollbar các tiện ích (utilities)** tiếp nhận điểm tựa từ **75. phiên bản (version / 버전) tính tương thích (compatibility / 호환성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **77. @container-size** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **76. Scrollbar các tiện ích (utilities)** nối từ **75. phiên bản (version / 버전) tính tương thích (compatibility / 호환성)** sang **77. @container-size**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 76. Scrollbar các tiện ích (utilities)
 
@@ -1817,7 +1817,7 @@ Nhưng scrollbar vẫn là nền tảng (platform / 플랫폼) UI. Visual hành 
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **77. @container-size** tiếp nhận điểm tựa từ **76. Scrollbar các tiện ích (utilities)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **78. zoom-** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **77. @container-size** nối từ **76. Scrollbar các tiện ích (utilities)** sang **78. zoom-**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 77. `@container-size`
 
@@ -1827,7 +1827,7 @@ Bạn có thể truy vấn (query / 쿼리) khối (block / 블록) kích thư�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **78. zoom-** tiếp nhận điểm tựa từ **77. @container-size** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **79. tab-** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **78. zoom-** nối từ **77. @container-size** sang **79. tab-**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 78. `zoom-*`
 
@@ -1842,7 +1842,7 @@ Không thay responsive bố cục (layout / 레이아웃).
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **79. tab-** tiếp nhận điểm tựa từ **78. zoom-** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **80. Stacked/compound @variant** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **79. tab-** nối từ **78. zoom-** sang **80. Stacked/compound @variant**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 79. `tab-*`
 
@@ -1857,7 +1857,7 @@ Một tính năng (feature / 기능) nhỏ nhưng minh họa triết lý Tailwin
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **80. Stacked/compound @variant** tiếp nhận điểm tựa từ **79. tab-** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **81. chuyển đổi (migration) không phải chỉ search-and-replace** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **80. Stacked/compound @variant** nối từ **79. tab-** sang **81. chuyển đổi (migration) không phải chỉ search-and-replace**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 80. Stacked/compound `@variant`
 
@@ -1869,7 +1869,7 @@ Trước đây nhiều nhà phát triển (developer / 개발자) nghĩ các bi�
 
 # PHẦN XV — chuyển đổi (migration) V3 → V4 SÂU HƠN
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **81. chuyển đổi (migration) không phải chỉ search-and-replace** tiếp nhận điểm tựa từ **80. Stacked/compound @variant** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **82. Upgrade công cụ (tool / 도구)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **81. chuyển đổi (migration) không phải chỉ search-and-replace** nối từ **80. Stacked/compound @variant** sang **82. Upgrade công cụ (tool / 도구)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 81. chuyển đổi (migration) không phải chỉ search-and-replace
 
@@ -1891,7 +1891,7 @@ Do đó chuyển đổi (migration) là cơ hội hỏi:
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **82. Upgrade công cụ (tool / 도구)** tiếp nhận điểm tựa từ **81. chuyển đổi (migration) không phải chỉ search-and-replace** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **83. mức hỗ trợ trình duyệt (browser support / 브라우저 지원) trước khi migrate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **82. Upgrade công cụ (tool / 도구)** nối từ **81. chuyển đổi (migration) không phải chỉ search-and-replace** sang **83. mức hỗ trợ trình duyệt (browser support / 브라우저 지원) trước khi migrate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 82. Upgrade công cụ (tool / 도구)
 
@@ -1907,7 +1907,7 @@ Run công cụ (tool / 도구), sau đó rà soát (review / 검토).
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **83. mức hỗ trợ trình duyệt (browser support / 브라우저 지원) trước khi migrate** tiếp nhận điểm tựa từ **82. Upgrade công cụ (tool / 도구)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **84. @config như chuyển đổi (migration) bridge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **83. mức hỗ trợ trình duyệt (browser support / 브라우저 지원) trước khi migrate** nối từ **82. Upgrade công cụ (tool / 도구)** sang **84. @config như chuyển đổi (migration) bridge**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 83. mức hỗ trợ trình duyệt (browser support / 브라우저 지원) trước khi migrate
 
@@ -1919,7 +1919,7 @@ Nếu sản phẩm (product / 제품) còn hỗ trợ trình duyệt (browser / 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **84. @config như chuyển đổi (migration) bridge** tiếp nhận điểm tựa từ **83. mức hỗ trợ trình duyệt (browser support / 브라우저 지원) trước khi migrate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **85. Custom plugin chuyển đổi (migration)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **84. @config như chuyển đổi (migration) bridge** nối từ **83. mức hỗ trợ trình duyệt (browser support / 브라우저 지원) trước khi migrate** sang **85. Custom plugin chuyển đổi (migration)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 84. `@config` như chuyển đổi (migration) bridge
 Phần này nối mạch bài học với “84. `@config` như chuyển đổi (migration) bridge”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1938,7 +1938,7 @@ thì chuyển đổi (migration) chưa hoàn thành về kiến trúc (architect
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **85. Custom plugin chuyển đổi (migration)** tiếp nhận điểm tựa từ **84. @config như chuyển đổi (migration) bridge** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **86. danh sách ép giữ (safelist) chuyển đổi (migration)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **85. Custom plugin chuyển đổi (migration)** nối từ **84. @config như chuyển đổi (migration) bridge** sang **86. danh sách ép giữ (safelist) chuyển đổi (migration)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 85. Custom plugin chuyển đổi (migration)
 
@@ -1952,7 +1952,7 @@ Mục tiêu không phải loại bỏ JS plugin bằng mọi giá, mà dùng sim
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **86. danh sách ép giữ (safelist) chuyển đổi (migration)** tiếp nhận điểm tựa từ **85. Custom plugin chuyển đổi (migration)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **87. Tailwind hiệu năng (performance / 성능) cần đo ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **86. danh sách ép giữ (safelist) chuyển đổi (migration)** nối từ **85. Custom plugin chuyển đổi (migration)** sang **87. Tailwind hiệu năng (performance / 성능) cần đo ở đâu?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 86. danh sách ép giữ (safelist) chuyển đổi (migration)
 
@@ -1969,7 +1969,7 @@ Khi chuyển sang `@source inline()`, hãy kiểm tra (audit / 감사) từng se
 
 # PHẦN XVI — hiệu năng (performance / 성능)
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **87. Tailwind hiệu năng (performance / 성능) cần đo ở đâu?** tiếp nhận điểm tựa từ **86. danh sách ép giữ (safelist) chuyển đổi (migration)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **88. Cold bản dựng (build / 빌드) và incremental bản dựng (build / 빌드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **87. Tailwind hiệu năng (performance / 성능) cần đo ở đâu?** nối từ **86. danh sách ép giữ (safelist) chuyển đổi (migration)** sang **88. Cold bản dựng (build / 빌드) và incremental bản dựng (build / 빌드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 87. Tailwind hiệu năng (performance / 성능) cần đo ở đâu?
 
@@ -1984,7 +1984,7 @@ Một nguồn (source / 소스) cây (tree / 트리) lớn nhưng candidate ít 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **88. Cold bản dựng (build / 빌드) và incremental bản dựng (build / 빌드)** tiếp nhận điểm tựa từ **87. Tailwind hiệu năng (performance / 성능) cần đo ở đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **89. Unique các giá trị tùy ý (arbitrary values)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **88. Cold bản dựng (build / 빌드) và incremental bản dựng (build / 빌드)** nối từ **87. Tailwind hiệu năng (performance / 성능) cần đo ở đâu?** sang **89. Unique các giá trị tùy ý (arbitrary values)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 88. Cold bản dựng (build / 빌드) và incremental bản dựng (build / 빌드)
 
@@ -1998,7 +1998,7 @@ V4 được tối ưu mạnh cho incremental generation, nhưng monorepo/file-wa
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **89. Unique các giá trị tùy ý (arbitrary values)** tiếp nhận điểm tựa từ **88. Cold bản dựng (build / 빌드) và incremental bản dựng (build / 빌드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **90. @theme static và đầu ra (output / 출력) kích thước (size / 크기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **89. Unique các giá trị tùy ý (arbitrary values)** nối từ **88. Cold bản dựng (build / 빌드) và incremental bản dựng (build / 빌드)** sang **90. @theme static và đầu ra (output / 출력) kích thước (size / 크기)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 89. Unique các giá trị tùy ý (arbitrary values)
 Phần này nối mạch bài học với “89. Unique các giá trị tùy ý (arbitrary values)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2017,7 +2017,7 @@ Mẫu (pattern / 패턴) đúng cho dữ liệu (data / 데이터):
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **90. @theme static và đầu ra (output / 출력) kích thước (size / 크기)** tiếp nhận điểm tựa từ **89. Unique các giá trị tùy ý (arbitrary values)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **91. Nhiều CSS điểm vào (entrypoint / 진입점)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **90. @theme static và đầu ra (output / 출력) kích thước (size / 크기)** nối từ **89. Unique các giá trị tùy ý (arbitrary values)** sang **91. Nhiều CSS điểm vào (entrypoint / 진입점)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 90. `@theme static` và đầu ra (output / 출력) kích thước (size / 크기)
 
@@ -2031,7 +2031,7 @@ Hãy quyết định dựa usage:
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **91. Nhiều CSS điểm vào (entrypoint / 진입점)** tiếp nhận điểm tựa từ **90. @theme static và đầu ra (output / 출력) kích thước (size / 크기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **92. @apply trong hàng nghìn thành phần (component / 컴포넌트) style blocks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **91. Nhiều CSS điểm vào (entrypoint / 진입점)** nối từ **90. @theme static và đầu ra (output / 출력) kích thước (size / 크기)** sang **92. @apply trong hàng nghìn thành phần (component / 컴포넌트) style blocks**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 91. Nhiều CSS điểm vào (entrypoint / 진입점)
 
@@ -2052,7 +2052,7 @@ Master cần kiểm tra (audit / 감사) biểu định kiểu (stylesheet / 스
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **92. @apply trong hàng nghìn thành phần (component / 컴포넌트) style blocks** tiếp nhận điểm tựa từ **91. Nhiều CSS điểm vào (entrypoint / 진입점)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **93. Bước 1: xác định CSS có tồn tại không** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **92. @apply trong hàng nghìn thành phần (component / 컴포넌트) style blocks** nối từ **91. Nhiều CSS điểm vào (entrypoint / 진입점)** sang **93. Bước 1: xác định CSS có tồn tại không**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 92. `@apply` trong hàng nghìn thành phần (component / 컴포넌트) style blocks
 
@@ -2072,7 +2072,7 @@ Không micro-optimize một thành phần (component / 컴포넌트); nhưng ki�
 
 # PHẦN XVII — gỡ lỗi (debugging) Ở CẤP MASTER
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **93. Bước 1: xác định CSS có tồn tại không** tiếp nhận điểm tựa từ **92. @apply trong hàng nghìn thành phần (component / 컴포넌트) style blocks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **94. gỡ lỗi (debug / 디버그) phát hiện nguồn (source detection)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **93. Bước 1: xác định CSS có tồn tại không** nối từ **92. @apply trong hàng nghìn thành phần (component / 컴포넌트) style blocks** sang **94. gỡ lỗi (debug / 디버그) phát hiện nguồn (source detection)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 93. Bước 1: xác định CSS có tồn tại không
 
@@ -2090,7 +2090,7 @@ Nếu tồn tại:
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **93. Bước 1: xác định CSS có tồn tại không** nêu điều cần giải thích; **94. gỡ lỗi (debug / 디버그) phát hiện nguồn (source detection)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **95. gỡ lỗi (debug / 디버그) custom theme** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **93. Bước 1: xác định CSS có tồn tại không** đặt vấn đề; **94. gỡ lỗi (debug / 디버그) phát hiện nguồn (source detection)** đối chiếu bằng chứng, rồi **95. gỡ lỗi (debug / 디버그) custom theme** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 94. gỡ lỗi (debug / 디버그) phát hiện nguồn (source detection)
 
@@ -2106,7 +2106,7 @@ Nếu gói (package / 패키지) nguồn (source / 소스), kiểm tra `@source`
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **94. gỡ lỗi (debug / 디버그) phát hiện nguồn (source detection)** nêu điều cần giải thích; **95. gỡ lỗi (debug / 디버그) custom theme** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **96. gỡ lỗi (debug / 디버그) custom tiện ích (utility)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **94. gỡ lỗi (debug / 디버그) phát hiện nguồn (source detection)** đặt vấn đề; **95. gỡ lỗi (debug / 디버그) custom theme** đối chiếu bằng chứng, rồi **96. gỡ lỗi (debug / 디버그) custom tiện ích (utility)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 95. gỡ lỗi (debug / 디버그) custom theme
 
@@ -2132,7 +2132,7 @@ thì thời gian chạy (runtime / 런타임) biến (variable) tồn tại như
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **96. gỡ lỗi (debug / 디버그) custom tiện ích (utility)** tiếp nhận điểm tựa từ **95. gỡ lỗi (debug / 디버그) custom theme** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **97. gỡ lỗi (debug / 디버그) biến thể (variant)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **96. gỡ lỗi (debug / 디버그) custom tiện ích (utility)** nối từ **95. gỡ lỗi (debug / 디버그) custom theme** sang **97. gỡ lỗi (debug / 디버그) biến thể (variant)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 96. gỡ lỗi (debug / 디버그) custom tiện ích (utility)
 
@@ -2149,7 +2149,7 @@ Build-time Tailwind có thể drop khai báo (declaration) không resolve.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **97. gỡ lỗi (debug / 디버그) biến thể (variant)** tiếp nhận điểm tựa từ **96. gỡ lỗi (debug / 디버그) custom tiện ích (utility)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **98. gỡ lỗi (debug / 디버그) bộ chứa (container / 컨테이너)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **97. gỡ lỗi (debug / 디버그) biến thể (variant)** nối từ **96. gỡ lỗi (debug / 디버그) custom tiện ích (utility)** sang **98. gỡ lỗi (debug / 디버그) bộ chứa (container / 컨테이너)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 97. gỡ lỗi (debug / 디버그) biến thể (variant)
 
@@ -2170,7 +2170,7 @@ Kiểm tra:
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **98. gỡ lỗi (debug / 디버그) bộ chứa (container / 컨테이너)** tiếp nhận điểm tựa từ **97. gỡ lỗi (debug / 디버그) biến thể (variant)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **99. gỡ lỗi (debug / 디버그) lớp (class / 클래스) xung đột (conflict / 충돌)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **98. gỡ lỗi (debug / 디버그) bộ chứa (container / 컨테이너)** nối từ **97. gỡ lỗi (debug / 디버그) biến thể (variant)** sang **99. gỡ lỗi (debug / 디버그) lớp (class / 클래스) xung đột (conflict / 충돌)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 98. gỡ lỗi (debug / 디버그) bộ chứa (container / 컨테이너)
 
@@ -2186,7 +2186,7 @@ Không nhìn vùng nhìn (viewport) width để kết luận bộ chứa (contai
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **99. gỡ lỗi (debug / 디버그) lớp (class / 클래스) xung đột (conflict / 충돌)** tiếp nhận điểm tựa từ **98. gỡ lỗi (debug / 디버그) bộ chứa (container / 컨테이너)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **100. gỡ lỗi (debug / 디버그) z-index** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **99. gỡ lỗi (debug / 디버그) lớp (class / 클래스) xung đột (conflict / 충돌)** nối từ **98. gỡ lỗi (debug / 디버그) bộ chứa (container / 컨테이너)** sang **100. gỡ lỗi (debug / 디버그) z-index**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 99. gỡ lỗi (debug / 디버그) lớp (class / 클래스) xung đột (conflict / 충돌)
 
@@ -2211,7 +2211,7 @@ rồi đoán.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **100. gỡ lỗi (debug / 디버그) z-index** tiếp nhận điểm tựa từ **99. gỡ lỗi (debug / 디버그) lớp (class / 클래스) xung đột (conflict / 충돌)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **101. khả năng tiếp cận (accessibility / 접근성) phải được thiết kế thành hợp đồng thành phần (component contract)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **100. gỡ lỗi (debug / 디버그) z-index** nối từ **99. gỡ lỗi (debug / 디버그) lớp (class / 클래스) xung đột (conflict / 충돌)** sang **101. khả năng tiếp cận (accessibility / 접근성) phải được thiết kế thành hợp đồng thành phần (component contract)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 100. gỡ lỗi (debug / 디버그) z-index
 
@@ -2226,7 +2226,7 @@ Tailwind không thể phá CSS stacking rules.
 
 # PHẦN XVIII — khả năng tiếp cận (accessibility / 접근성) VÀ UI trạng thái (state / 상태) Ở quy mô (scale / 규모)
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **101. khả năng tiếp cận (accessibility / 접근성) phải được thiết kế thành hợp đồng thành phần (component contract)** tiếp nhận điểm tựa từ **100. gỡ lỗi (debug / 디버그) z-index** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **102. trạng thái (state / 상태) ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **101. khả năng tiếp cận (accessibility / 접근성) phải được thiết kế thành hợp đồng thành phần (component contract)** nối từ **100. gỡ lỗi (debug / 디버그) z-index** sang **102. trạng thái (state / 상태) ma trận (matrix / 행렬)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 101. khả năng tiếp cận (accessibility / 접근성) phải được thiết kế thành hợp đồng thành phần (component contract)
 
@@ -2241,7 +2241,7 @@ Tailwind các tiện ích (utilities) làm hiện thực (implementation / 구�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **102. trạng thái (state / 상태) ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **101. khả năng tiếp cận (accessibility / 접근성) phải được thiết kế thành hợp đồng thành phần (component contract)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **103. giảm chuyển động (reduced motion) không phải optional polish** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **102. trạng thái (state / 상태) ma trận (matrix / 행렬)** nối từ **101. khả năng tiếp cận (accessibility / 접근성) phải được thiết kế thành hợp đồng thành phần (component contract)** sang **103. giảm chuyển động (reduced motion) không phải optional polish**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 102. trạng thái (state / 상태) ma trận (matrix / 행렬)
 
@@ -2262,7 +2262,7 @@ hồi quy giao diện (visual regression) rất hữu ích.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **103. giảm chuyển động (reduced motion) không phải optional polish** tiếp nhận điểm tựa từ **102. trạng thái (state / 상태) ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **104. màu cưỡng bức (forced colors)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **103. giảm chuyển động (reduced motion) không phải optional polish** nối từ **102. trạng thái (state / 상태) ma trận (matrix / 행렬)** sang **104. màu cưỡng bức (forced colors)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 103. giảm chuyển động (reduced motion) không phải optional polish
 
@@ -2274,7 +2274,7 @@ Người dùng (user / 사용자) preference là đầu vào (input / 입력) gi
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **104. màu cưỡng bức (forced colors)** tiếp nhận điểm tựa từ **103. giảm chuyển động (reduced motion) không phải optional polish** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **105. Static tests** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **104. màu cưỡng bức (forced colors)** nối từ **103. giảm chuyển động (reduced motion) không phải optional polish** sang **105. Static tests**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 104. màu cưỡng bức (forced colors)
 
@@ -2288,7 +2288,7 @@ Kiểm thử (test / 테스트) actual forced-colors hành vi (behavior / 동작
 
 # PHẦN XIX — TESTING
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **105. Static tests** tiếp nhận điểm tựa từ **104. màu cưỡng bức (forced colors)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **106. thành phần (component / 컴포넌트) tests** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **105. Static tests** nối từ **104. màu cưỡng bức (forced colors)** sang **106. thành phần (component / 컴포넌트) tests**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 105. Static tests
 
@@ -2302,7 +2302,7 @@ IDE IntelliSense giúp phản hồi (feedback / 피드백) sớm.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **106. thành phần (component / 컴포넌트) tests** tiếp nhận điểm tựa từ **105. Static tests** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **107. hồi quy giao diện (visual regression)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **106. thành phần (component / 컴포넌트) tests** nối từ **105. Static tests** sang **107. hồi quy giao diện (visual regression)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 106. thành phần (component / 컴포넌트) tests
 
@@ -2315,7 +2315,7 @@ Kiểm thử (test / 테스트) hành vi (behavior / 동작):
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **107. hồi quy giao diện (visual regression)** tiếp nhận điểm tựa từ **106. thành phần (component / 컴포넌트) tests** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **108. Tại sao chính xác (exact / 정확한) lớp (class / 클래스) snapshot thường brittle?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **107. hồi quy giao diện (visual regression)** nối từ **106. thành phần (component / 컴포넌트) tests** sang **108. Tại sao chính xác (exact / 정확한) lớp (class / 클래스) snapshot thường brittle?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 107. hồi quy giao diện (visual regression)
 
@@ -2338,7 +2338,7 @@ Với thành phần (component / 컴포넌트) thư viện (library / 라이브�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **108. Tại sao chính xác (exact / 정확한) lớp (class / 클래스) snapshot thường brittle?** tiếp nhận điểm tựa từ **107. hồi quy giao diện (visual regression)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **109. Không nhận raw Tailwind lớp (class / 클래스) từ người dùng (user / 사용자) nếu không cần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **108. Tại sao chính xác (exact / 정확한) lớp (class / 클래스) snapshot thường brittle?** nối từ **107. hồi quy giao diện (visual regression)** sang **109. Không nhận raw Tailwind lớp (class / 클래스) từ người dùng (user / 사용자) nếu không cần**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 108. Tại sao chính xác (exact / 정확한) lớp (class / 클래스) snapshot thường brittle?
 
@@ -2359,7 +2359,7 @@ Lớp (class / 클래스) snapshot chỉ hợp lý nếu lớp (class / 클래�
 
 # PHẦN XX — bảo mật (security / 보안) VÀ CMS
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **109. Không nhận raw Tailwind lớp (class / 클래스) từ người dùng (user / 사용자) nếu không cần** tiếp nhận điểm tựa từ **108. Tại sao chính xác (exact / 정확한) lớp (class / 클래스) snapshot thường brittle?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **110. giá trị tùy ý (arbitrary value) từ untrusted đầu vào (input / 입력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **109. Không nhận raw Tailwind lớp (class / 클래스) từ người dùng (user / 사용자) nếu không cần** nối từ **108. Tại sao chính xác (exact / 정확한) lớp (class / 클래스) snapshot thường brittle?** sang **110. giá trị tùy ý (arbitrary value) từ untrusted đầu vào (input / 입력)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 109. Không nhận raw Tailwind lớp (class / 클래스) từ người dùng (user / 사용자) nếu không cần
 
@@ -2390,7 +2390,7 @@ Bạn giữ:
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **110. giá trị tùy ý (arbitrary value) từ untrusted đầu vào (input / 입력)** tiếp nhận điểm tựa từ **109. Không nhận raw Tailwind lớp (class / 클래스) từ người dùng (user / 사용자) nếu không cần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **111. CSS nguồn chuẩn (source of truth / 정본) phải là một nơi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **110. giá trị tùy ý (arbitrary value) từ untrusted đầu vào (input / 입력)** nối từ **109. Không nhận raw Tailwind lớp (class / 클래스) từ người dùng (user / 사용자) nếu không cần** sang **111. CSS nguồn chuẩn (source of truth / 정본) phải là một nơi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 110. giá trị tùy ý (arbitrary value) từ untrusted đầu vào (input / 입력)
 
@@ -2410,7 +2410,7 @@ Whitelist các giá trị (values) hoặc validate dữ liệu (data / 데이터
 
 # PHẦN XXI — TƯ DUY gói (package / 패키지) VÀ ENTERPRISE
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **110. giá trị tùy ý (arbitrary value) từ untrusted đầu vào (input / 입력)** nêu điều cần giải thích; **111. CSS nguồn chuẩn (source of truth / 정본) phải là một nơi** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **112. bên ngoài (external / 외부) đơn vị từ (token / 토큰) thiết kế (design token) chuỗi xử lý (pipeline / 파이프라인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **110. giá trị tùy ý (arbitrary value) từ untrusted đầu vào (input / 입력)** đặt vấn đề; **111. CSS nguồn chuẩn (source of truth / 정본) phải là một nơi** đối chiếu bằng chứng, rồi **112. bên ngoài (external / 외부) đơn vị từ (token / 토큰) thiết kế (design token) chuỗi xử lý (pipeline / 파이프라인)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 111. CSS nguồn chuẩn (source of truth / 정본) phải là một nơi
 
@@ -2427,7 +2427,7 @@ Tailwind v4 phù hợp làm bên tiêu thụ (consumer / 소비자)/đầu ra (o
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **111. CSS nguồn chuẩn (source of truth / 정본) phải là một nơi** nêu điều cần giải thích; **112. bên ngoài (external / 외부) đơn vị từ (token / 토큰) thiết kế (design token) chuỗi xử lý (pipeline / 파이프라인)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **113. Tailwind là hiện thực (implementation / 구현) detail của thành phần (component / 컴포넌트) thư viện (library / 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **111. CSS nguồn chuẩn (source of truth / 정본) phải là một nơi** đặt vấn đề; **112. bên ngoài (external / 외부) đơn vị từ (token / 토큰) thiết kế (design token) chuỗi xử lý (pipeline / 파이프라인)** đối chiếu bằng chứng, rồi **113. Tailwind là hiện thực (implementation / 구현) detail của thành phần (component / 컴포넌트) thư viện (library / 라이브러리)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 112. bên ngoài (external / 외부) đơn vị từ (token / 토큰) thiết kế (design token) chuỗi xử lý (pipeline / 파이프라인)
 
@@ -2450,7 +2450,7 @@ Không nên parse JSON bằng CSS/Tailwind tricks.
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **112. bên ngoài (external / 외부) đơn vị từ (token / 토큰) thiết kế (design token) chuỗi xử lý (pipeline / 파이프라인)** xác định đầu vào; **113. Tailwind là hiện thực (implementation / 구현) detail của thành phần (component / 컴포넌트) thư viện (library / 라이브러리)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **114. Complex rich-text styling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **112. bên ngoài (external / 외부) đơn vị từ (token / 토큰) thiết kế (design token) chuỗi xử lý (pipeline / 파이프라인)** đặt đầu vào cho **113. Tailwind là hiện thực (implementation / 구현) detail của thành phần (component / 컴포넌트) thư viện (library / 라이브러리)**, rồi **114. Complex rich-text styling** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 113. Tailwind là hiện thực (implementation / 구현) detail của thành phần (component / 컴포넌트) thư viện (library / 라이브러리)
 
@@ -2474,7 +2474,7 @@ Nếu sau này nhóm (team / 팀) đổi sang CSS Modules hoặc vanilla CSS, gi
 
 # PHẦN XXII — KHI NÀO KHÔNG NÊN DÙNG TAILWIND
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **114. Complex rich-text styling** tiếp nhận điểm tựa từ **113. Tailwind là hiện thực (implementation / 구현) detail của thành phần (component / 컴포넌트) thư viện (library / 라이브러리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **115. Third-party DOM sâu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **114. Complex rich-text styling** nối từ **113. Tailwind là hiện thực (implementation / 구현) detail của thành phần (component / 컴포넌트) thư viện (library / 라이브러리)** sang **115. Third-party DOM sâu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 114. Complex rich-text styling
 
@@ -2493,7 +2493,7 @@ Scoped mang tính ngữ nghĩa (semantic / 의미적) CSS hoặc typography solu
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **115. Third-party DOM sâu** tiếp nhận điểm tựa từ **114. Complex rich-text styling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **116. CSS tính năng (feature / 기능) có cú pháp (syntax / 문법) phức tạp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **115. Third-party DOM sâu** nối từ **114. Complex rich-text styling** sang **116. CSS tính năng (feature / 기능) có cú pháp (syntax / 문법) phức tạp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 115. Third-party DOM sâu
 
@@ -2501,7 +2501,7 @@ Một editor thư viện (library / 라이브러리) có nội bộ (internal / 
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **116. CSS tính năng (feature / 기능) có cú pháp (syntax / 문법) phức tạp** tiếp nhận điểm tựa từ **115. Third-party DOM sâu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **117. Chọn đúng lớp trừu tượng (abstraction / 추상화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **116. CSS tính năng (feature / 기능) có cú pháp (syntax / 문법) phức tạp** nối từ **115. Third-party DOM sâu** sang **117. Chọn đúng lớp trừu tượng (abstraction / 추상화)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 116. CSS tính năng (feature / 기능) có cú pháp (syntax / 문법) phức tạp
 
@@ -2513,7 +2513,7 @@ Tailwind hỗ trợ arbitrary/custom API, nhưng không phải mọi CSS nên đ
 
 # PHẦN XXIII — MASTER quyết định (decision / 결정) khung phần mềm (framework / 프레임워크)
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **117. Chọn đúng lớp trừu tượng (abstraction / 추상화)** tiếp nhận điểm tựa từ **116. CSS tính năng (feature / 기능) có cú pháp (syntax / 문법) phức tạp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **118. Lab: scanner** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **117. Chọn đúng lớp trừu tượng (abstraction / 추상화)** nối từ **116. CSS tính năng (feature / 기능) có cú pháp (syntax / 문법) phức tạp** sang **118. Lab: scanner**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 117. Chọn đúng lớp trừu tượng (abstraction / 추상화)
 
@@ -2541,7 +2541,7 @@ Nếu nguồn (source / 소스) nằm ngoài automatic scan, dùng `@source`.
 
 # PHẦN XXIV — MASTER LABS
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **117. Chọn đúng lớp trừu tượng (abstraction / 추상화)** cho ta quy tắc; **118. Lab: scanner** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **119. Lab: strict theme** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **117. Chọn đúng lớp trừu tượng (abstraction / 추상화)** nêu quy tắc; **118. Lab: scanner** thử quy tắc trong tình huống, rồi **119. Lab: strict theme** mở rộng hệ quả.
 
 ## 118. Lab: scanner
 
@@ -2555,7 +2555,7 @@ Bản dựng (build / 빌드) và inspect generated CSS. Mục tiêu là tự nh
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **118. Lab: scanner** cho ta quy tắc; **119. Lab: strict theme** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **120. Lab: functional tiện ích (utility)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **118. Lab: scanner** nêu quy tắc; **119. Lab: strict theme** thử quy tắc trong tình huống, rồi **120. Lab: functional tiện ích (utility)** mở rộng hệ quả.
 
 ## 119. Lab: strict theme
 
@@ -2569,7 +2569,7 @@ Sau đó thử dùng `bg-blue-500` và quan sát API không còn. Mục tiêu l�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **119. Lab: strict theme** cho ta quy tắc; **120. Lab: functional tiện ích (utility)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **121. Lab: nguồn (source / 소스) split** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **119. Lab: strict theme** nêu quy tắc; **120. Lab: functional tiện ích (utility)** thử quy tắc trong tình huống, rồi **121. Lab: nguồn (source / 소스) split** mở rộng hệ quả.
 
 ## 120. Lab: functional tiện ích (utility)
 
@@ -2583,7 +2583,7 @@ Sau đó inspect generated CSS cho từng form.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **120. Lab: functional tiện ích (utility)** cho ta quy tắc; **121. Lab: nguồn (source / 소스) split** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **122. Lab: thời gian chạy (runtime / 런타임) CSS biến (variable)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **120. Lab: functional tiện ích (utility)** nêu quy tắc; **121. Lab: nguồn (source / 소스) split** thử quy tắc trong tình huống, rồi **122. Lab: thời gian chạy (runtime / 런타임) CSS biến (variable)** mở rộng hệ quả.
 
 ## 121. Lab: nguồn (source / 소스) split
 
@@ -2598,7 +2598,7 @@ Mục tiêu là hiểu phát hiện nguồn (source detection) như bundle kiế
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **121. Lab: nguồn (source / 소스) split** cho ta quy tắc; **122. Lab: thời gian chạy (runtime / 런타임) CSS biến (variable)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **123. Lab: bộ chứa (container / 컨테이너) thành phần (component / 컴포넌트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **121. Lab: nguồn (source / 소스) split** nêu quy tắc; **122. Lab: thời gian chạy (runtime / 런타임) CSS biến (variable)** thử quy tắc trong tình huống, rồi **123. Lab: bộ chứa (container / 컨테이너) thành phần (component / 컴포넌트)** mở rộng hệ quả.
 
 ## 122. Lab: thời gian chạy (runtime / 런타임) CSS biến (variable)
 
@@ -2612,7 +2612,7 @@ Cầu nối (bridge / 브리지) bằng CSS vars và static các tiện ích (ut
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **122. Lab: thời gian chạy (runtime / 런타임) CSS biến (variable)** cho ta quy tắc; **123. Lab: bộ chứa (container / 컨테이너) thành phần (component / 컴포넌트)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **124. Lab: v3 chuyển đổi (migration)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **122. Lab: thời gian chạy (runtime / 런타임) CSS biến (variable)** nêu quy tắc; **123. Lab: bộ chứa (container / 컨테이너) thành phần (component / 컴포넌트)** thử quy tắc trong tình huống, rồi **124. Lab: v3 chuyển đổi (migration)** mở rộng hệ quả.
 
 ## 123. Lab: bộ chứa (container / 컨테이너) thành phần (component / 컴포넌트)
 
@@ -2625,7 +2625,7 @@ Dùng truy vấn vùng chứa (container query) thay vùng nhìn (viewport) đi�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **123. Lab: bộ chứa (container / 컨테이너) thành phần (component / 컴포넌트)** cho ta quy tắc; **124. Lab: v3 chuyển đổi (migration)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **125. Lab: embedded widget** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **123. Lab: bộ chứa (container / 컨테이너) thành phần (component / 컴포넌트)** nêu quy tắc; **124. Lab: v3 chuyển đổi (migration)** thử quy tắc trong tình huống, rồi **125. Lab: embedded widget** mở rộng hệ quả.
 
 ## 124. Lab: v3 chuyển đổi (migration)
 
@@ -2639,7 +2639,7 @@ Migrate từng phần sang v4 ưu tiên CSS (CSS-first), nhưng giữ hồi quy 
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **124. Lab: v3 chuyển đổi (migration)** cho ta quy tắc; **125. Lab: embedded widget** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **126. Bạn đã đạt mức master khi nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **124. Lab: v3 chuyển đổi (migration)** nêu quy tắc; **125. Lab: embedded widget** thử quy tắc trong tình huống, rồi **126. Bạn đã đạt mức master khi nào?** mở rộng hệ quả.
 
 ## 125. Lab: embedded widget
 
@@ -2655,9 +2655,9 @@ Quan sát host page bị ảnh hưởng thế nào.
 
 ---
 
-# PHẦN XXV — MASTER SELF-CHECK
+# PHẦN XXV — MASTER SYNTHESIS
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **125. Lab: embedded widget** cho ta quy tắc; **126. Bạn đã đạt mức master khi nào?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **127. Trước khi merge một Tailwind tính năng (feature / 기능) lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **125. Lab: embedded widget** nêu quy tắc; **126. Bạn đã đạt mức master khi nào?** thử quy tắc trong tình huống, rồi **127. Trước khi merge một Tailwind tính năng (feature / 기능) lớn** mở rộng hệ quả.
 
 ## 126. Bạn đã đạt mức master khi nào?
 
@@ -2679,7 +2679,7 @@ thay vì thêm lớp (class / 클래스) thử từng cái.
 
 # PHẦN XXVI — môi trường vận hành (production / 운영 환경) CHECK
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **127. Trước khi merge một Tailwind tính năng (feature / 기능) lớn** tiếp nhận điểm tựa từ **126. Bạn đã đạt mức master khi nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **128. tính tương thích (compatibility / 호환성) boundaries: v3 codebase, v4 codebase và gói (package / 패키지) contracts** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **127. Trước khi merge một Tailwind tính năng (feature / 기능) lớn** nối từ **126. Bạn đã đạt mức master khi nào?** sang **128. tính tương thích (compatibility / 호환성) boundaries: v3 codebase, v4 codebase và gói (package / 패키지) contracts**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 127. Trước khi merge một Tailwind tính năng (feature / 기능) lớn
 
@@ -2729,7 +2729,7 @@ https://tailwindcss.com/docs/upgrade-guide
 
 # PHẦN XXVIII — phiên bản (version / 버전) BOUNDARIES VÀ CSS ánh xạ (mapping / 매핑) Ở MỨC MASTER
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **128. tính tương thích (compatibility / 호환성) boundaries: v3 codebase, v4 codebase và gói (package / 패키지) contracts** tiếp nhận điểm tựa từ **127. Trước khi merge một Tailwind tính năng (feature / 기능) lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **129. tiện ích (utility) ánh xạ (mapping / 매핑) phải dừng ở CSS khi khung phần mềm (framework / 프레임워크) đã hoàn thành nhiệm vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **128. tính tương thích (compatibility / 호환성) boundaries: v3 codebase, v4 codebase và gói (package / 패키지) contracts** nối từ **127. Trước khi merge một Tailwind tính năng (feature / 기능) lớn** sang **129. tiện ích (utility) ánh xạ (mapping / 매핑) phải dừng ở CSS khi khung phần mềm (framework / 프레임워크) đã hoàn thành nhiệm vụ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 128. tính tương thích (compatibility / 호환성) boundaries: v3 codebase, v4 codebase và gói (package / 패키지) contracts
 
@@ -2737,7 +2737,7 @@ Một design-system/gói (package / 패키지) không nên chỉ nói “dùng T
 
 V3 và v4 khác ở quyền sở hữu (ownership / 소유권) mô hình (model / 모델). V3 thường tập trung cấu hình (configuration / 구성) trong JavaScript; v4 đưa theme/nguồn (source / 소스)/customization vào CSS điểm vào (entrypoint / 진입점). Vì vậy thư viện (library / 라이브러리) chuyển đổi (migration) phải quyết định gói (package / 패키지) ship nguồn (source / 소스) components, compiled CSS hay theme-only CSS. Mỗi lựa chọn tạo coupling khác nhau với bên tiêu thụ (consumer / 소비자) Tailwind phiên bản (version / 버전).
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **129. tiện ích (utility) ánh xạ (mapping / 매핑) phải dừng ở CSS khi khung phần mềm (framework / 프레임워크) đã hoàn thành nhiệm vụ** tiếp nhận điểm tựa từ **128. tính tương thích (compatibility / 호환성) boundaries: v3 codebase, v4 codebase và gói (package / 패키지) contracts** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **130. Upgrade chiến lược (strategy / 전략) cho Tailwind môi trường vận hành (production / 운영 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **129. tiện ích (utility) ánh xạ (mapping / 매핑) phải dừng ở CSS khi khung phần mềm (framework / 프레임워크) đã hoàn thành nhiệm vụ** nối từ **128. tính tương thích (compatibility / 호환성) boundaries: v3 codebase, v4 codebase và gói (package / 패키지) contracts** sang **130. Upgrade chiến lược (strategy / 전략) cho Tailwind môi trường vận hành (production / 운영 환경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 129. tiện ích (utility) ánh xạ (mapping / 매핑) phải dừng ở CSS khi khung phần mềm (framework / 프레임워크) đã hoàn thành nhiệm vụ
 
@@ -2745,7 +2745,7 @@ Master gỡ lỗi (debugging) cần một “handoff quy tắc (rule / 규칙)�
 
 Điều này đặc biệt quan trọng với `flex-1`, `min-w-0`, `grid-cols-*`, `sticky`, `z-*`, `truncate`, `aspect-*`, bộ chứa (container / 컨테이너) các biến thể (variants) và motion các tiện ích (utilities). Mỗi lớp (class / 클래스) chỉ là authoring API cho CSS hành vi (behavior / 동작) đã tồn tại. Biết handoff điểm (point / 지점) giúp nhóm (team / 팀) phân loại bug nhanh và viết docs/components không thần bí hóa Tailwind.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **130. Upgrade chiến lược (strategy / 전략) cho Tailwind môi trường vận hành (production / 운영 환경)** tiếp nhận điểm tựa từ **129. tiện ích (utility) ánh xạ (mapping / 매핑) phải dừng ở CSS khi khung phần mềm (framework / 프레임워크) đã hoàn thành nhiệm vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Master Supplement, bản giải thích đầy đủ**, **130. Upgrade chiến lược (strategy / 전략) cho Tailwind môi trường vận hành (production / 운영 환경)** nối từ **129. tiện ích (utility) ánh xạ (mapping / 매핑) phải dừng ở CSS khi khung phần mềm (framework / 프레임워크) đã hoàn thành nhiệm vụ** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 130. Upgrade chiến lược (strategy / 전략) cho Tailwind môi trường vận hành (production / 운영 환경)
 
