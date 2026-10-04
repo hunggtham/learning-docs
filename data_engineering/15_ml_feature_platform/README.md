@@ -15,7 +15,7 @@ entity + prediction_time
 
 Dùng hiện tại (current / 현재) dimension cho historical huấn luyện (training / 학습) có thể đưa kết quả (outcome / 결과) tương lai vào đầu vào (input / 입력) mà không tạo exception.
 
-> **Chuyển mạch:** Trong **15 — ML tính năng (feature / 기능) nền tảng (platform / 플랫폼) và point-in-time tính đúng đắn (correctness / 정확성)**, **2. Offline/online parity** tiếp nhận điểm tựa từ **1. tính năng (feature / 기능) thời gian (time / 시간) ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Freshness và missing tính năng (feature / 기능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Feature time semantics** xác định timestamp và point-in-time correctness; **Offline/online parity** kiểm tra cùng feature có giữ semantics khi serving hay không.
 
 ## 2. Offline/online parity
 
@@ -23,25 +23,25 @@ Offline store tối ưu scan lịch sử; online store tối ưu điểm (point 
 
 Dual-write có thể lệch khi một sink thành công còn sink kia thất bại (fail / 실패). sự kiện (event / 이벤트) log + deterministic projection thường dễ replay hơn hai writer độc lập.
 
-> **Chuyển mạch:** Ở chặng này của **15 — ML tính năng (feature / 기능) nền tảng (platform / 플랫폼) và point-in-time tính đúng đắn (correctness / 정확성)**, **3. Freshness và missing tính năng (feature / 기능)** tiếp nhận điểm tựa từ **2. Offline/online parity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Backfill và leakage kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi parity đã đo được, **Freshness và missing feature** giải thích drift trong dữ liệu; **Backfill và leakage test** kiểm tra drift có làm lộ tương lai hay không.
 
 ## 3. Freshness và missing tính năng (feature / 기능)
 
 Tính năng (feature / 기능) SLO cần freshness, completeness, availability và acceptable staleness. Missing giá trị (value / 값) phải phân biệt “chưa đến”, “không áp dụng”, “bị xóa” và “chuỗi xử lý (pipeline / 파이프라인) lỗi”. Default giá trị (value / 값) có thể che sự cố (incident / 인시던트) và làm mô hình (model / 모델) drift.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **15 — ML tính năng (feature / 기능) nền tảng (platform / 플랫폼) và point-in-time tính đúng đắn (correctness / 정확성)**, **4. Backfill và leakage kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **3. Freshness và missing tính năng (feature / 기능)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Deletion và lineage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Backfill và leakage test** xác nhận temporal boundary; **Deletion và lineage** nối boundary đó với ownership, retention và khả năng truy nguyên.
 
 ## 4. Backfill và leakage kiểm thử (test / 테스트)
 
 Backfill tính năng (feature / 기능) cần giữ snapshot/mã (code / 코드)/lược đồ (schema / 스키마) phiên bản (version / 버전), không rewrite huấn luyện (training / 학습) set mà không có provenance. kiểm thử (test / 테스트) leakage bằng cách dịch prediction cutoff, kiểm tra tính năng (feature / 기능) availability và chạy negative điều khiển (control / 제어) với trường dữ liệu (field / 필드) chỉ xuất hiện sau kết quả (outcome / 결과).
 
-> **Chuyển mạch:** Trong **15 — ML tính năng (feature / 기능) nền tảng (platform / 플랫폼) và point-in-time tính đúng đắn (correctness / 정확성)**, **5. Deletion và lineage** tiếp nhận điểm tựa từ **4. Backfill và leakage kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. bằng chứng (evidence / 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Deletion và lineage** cho biết feature còn hợp pháp và tái tạo được không; **Evidence** khóa claim bằng metadata, test result và audit trail.
 
 ## 5. Deletion và lineage
 
 Xóa một subject phải lan qua raw sự kiện (event / 이벤트), offline tính năng (feature / 기능), online key, huấn luyện (training / 학습) sản phẩm tạo ra (artifact / 산출물), bộ nhớ đệm (cache / 캐시) và exported mô hình (model / 모델) nếu chính sách (policy / 정책) yêu cầu. tính năng (feature / 기능) danh mục (catalog / 카탈로그) cần đơn vị sở hữu (owner / 오너), nguồn (source / 소스) columns, transformation, TTL, sensitivity và downstream mô hình (model / 모델).
 
-> **Chuyển mạch:** Ở chặng này của **15 — ML tính năng (feature / 기능) nền tảng (platform / 플랫폼) và point-in-time tính đúng đắn (correctness / 정확성)**, **5. Deletion và lineage** nêu điều cần giải thích; **6. bằng chứng (evidence / 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Evidence** khép feature-platform route bằng point-in-time correctness, lineage và deletion proof; phần sâu hơn quay về owner của data governance hoặc model serving.
 
 ## 6. bằng chứng (evidence / 증거)
 

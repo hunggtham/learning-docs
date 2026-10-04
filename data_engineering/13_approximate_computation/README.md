@@ -8,7 +8,7 @@ Approximate computation là cách đổi một phần exactness lấy độ tr�
 
 `COUNT(DISTINCT user_id)` trên hàng tỷ row có thể cần trạng thái (state / 상태) lớn hoặc shuffle lớn. Một estimate nhanh với sai số ±1% có thể đủ cho sức chứa (capacity / 용량) planning nhưng không đủ cho billing. đặc tả hợp đồng (contract / 계약) phải nêu rõ chỉ số (metric / 지표) này là estimate hay nguồn chuẩn (source of truth / 정본).
 
-> **Chuyển mạch:** Trong **13 — Approximate computation và lỗi (error / 오류) bounds**, **2. Sketch phải merge được** tiếp nhận điểm tựa từ **1. chính xác (exact / 정확한) không phải lúc nào cũng là mục tiêu tối ưu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Cardinality và quantile** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** Khi exact computation vượt ngân sách, **Sketch phải merge được** giữ phép đo phân tán có thể hợp nhất; **Cardinality và quantile** đưa invariant đó vào hai loại ước lượng khác nhau.
 
 ## 2. Sketch phải merge được
 
@@ -20,7 +20,7 @@ input → local sketch_1 ... sketch_n → merge → estimate + bound
 
 Merge thao tác (operation / 연산) cần associative/commutative để thử lại (retry / 재시도) và partition thứ tự (order / 순서) không thay đổi kết quả ngoài bound. Sketch trạng thái (state / 상태) phải có phiên bản (version / 버전), parameter và băm (hash / 해시) hàm (function / 함수) ổn định; đổi chúng giữa run làm estimate không comparable.
 
-> **Chuyển mạch:** Ở chặng này của **13 — Approximate computation và lỗi (error / 오류) bounds**, **3. Cardinality và quantile** tiếp nhận điểm tựa từ **2. Sketch phải merge được** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Sampling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Cardinality và quantile** cho biết merge error biểu hiện ở metric nào; **Sampling** mở rộng câu hỏi sang cách chọn quan sát và bias.
 
 ## 3. Cardinality và quantile
 
@@ -28,13 +28,13 @@ Distinct sketch như HyperLogLog lưu register thay vì mọi định danh (iden
 
 Không dùng average của percentile từ từng partition để suy ra percentile toàn cục. Cần merge sketch hoặc giữ weighted phân phối (distribution / 분포) phù hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — Approximate computation và lỗi (error / 오류) bounds**, **4. Sampling** tiếp nhận điểm tựa từ **3. Cardinality và quantile** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. lỗi (error / 오류) đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Sampling** thay đổi population và uncertainty; **Error contract** phải ghi rõ bound, confidence và điều kiện áp dụng trước khi dùng kết quả.
 
 ## 4. Sampling
 
 Random mẫu (sample / 표본) đơn giản nhưng dễ độ lệch (bias / 편향) nếu sampling theo partition, tenant hoặc thời gian. Stratified sampling bảo vệ nhóm nhỏ nhưng cần allocation và weight đúng. Mọi estimate phải lưu sampling frame, seed, tỷ lệ (rate / 비율) và confidence interval.
 
-> **Chuyển mạch:** Trong **13 — Approximate computation và lỗi (error / 오류) bounds**, **5. lỗi (error / 오류) đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **4. Sampling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. thất bại (failure / 실패) và bằng chứng (evidence / 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Error contract** biến uncertainty thành điều kiện kiểm chứng; **Failure và evidence** tìm trường hợp bound không còn đáng tin trong pipeline thật.
 
 ## 5. lỗi (error / 오류) đặc tả hợp đồng (contract / 계약)
 
@@ -59,7 +59,7 @@ Không ghi một số estimate vào cột `count` như thể chính xác (exact 
 
 Bằng chứng (evidence / 증거) cần có chính xác (exact / 정확한) mẫu (sample / 표본) đối chiếu, lỗi (error / 오류) phân phối (distribution / 분포) theo segment, canary run, sketch siêu dữ liệu (metadata / 메타데이터) và reconciliation khi có thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — Approximate computation và lỗi (error / 오류) bounds**, **6. thất bại (failure / 실패) và bằng chứng (evidence / 증거)** nêu điều cần giải thích; **7. Khi nào không được approximate** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Failure và evidence** cho thấy approximation đang che rủi ro nào; **Khi nào không được approximate** đặt boundary để quay về phép đo exact hoặc owner domain.
 
 ## 7. Khi nào không được approximate
 
