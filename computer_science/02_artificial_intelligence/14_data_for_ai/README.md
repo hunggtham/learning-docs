@@ -30,7 +30,7 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 - [07 — Synthetic Data](./07_synthetic_data.md)
 - [08 — Data Governance](./08_data_governance.md)
 
-> **Chuyển mạch:** Trong **Dữ liệu (data / 데이터) for AI — Reading Map**, **Cốt lõi (core / 핵심) distinctions** tiếp nhận điểm tựa từ **Chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Chapters** tách collection, curation, labeling, governance và leakage; **Core distinctions** biến chúng thành mental model cho chất lượng dữ liệu trước training.
 
 ## Cốt lõi (core / 핵심) distinctions
 
@@ -68,7 +68,7 @@ Reality
 
 Dữ liệu (data / 데이터) chất lượng (quality / 품질) therefore depends on both statistical properties and the software/xã hội (social / 사회적) tiến trình (process / 프로세스) that generates observations.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dữ liệu (data / 데이터) for AI — Reading Map**, **Connections** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Mental model** xác định data quality là nguyên nhân của cả model và evaluation; **Connections** nối từng failure về owner của statistics, ML systems và governance.
 
 ## Connections
 

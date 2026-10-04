@@ -16,7 +16,7 @@ Các ideas ở đây không bị Machine học tập (learning / 학습) thay th
 6. [Planning](./05_planning.md) — hành động (action / 동작) preconditions/effects, STRIPS/PDDL, partial-order/HTN/temporal planning, kiểm tra hợp lệ (validation / 검증), thực thi (execution / 실행) và replanning.
 7. [Decision Making Under Uncertainty](./06_decision_making_under_uncertainty.md) — expected utility, MDP/POMDP, Bellman equations, bandits, giá trị (value / 값) of thông tin (information / 정보) và rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Trong **Tìm kiếm (search / 검색), lập luận (reasoning / 추론) and Planning Foundations**, **Phụ thuộc (dependency / 의존성) map** tiếp nhận điểm tựa từ **Chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một mô hình tư duy (mental model / 사고 모델) chung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Chapters** xây state space, heuristic và planning operators; **Dependency map** cho biết mỗi thuật toán cần giả định nào trước khi rút ra **mental model chung**.
 
 ## Phụ thuộc (dependency / 의존성) map
 
@@ -82,7 +82,7 @@ Quyết định (decision / 결정) lý thuyết (theory / 이론) thêm probabi
 
 Machine học tập (learning / 학습) có thể học heuristic, chuyển tiếp (transition / 전이) mô hình (model / 모델), giá trị (value / 값) hoặc chính sách (policy / 정책) từ dữ liệu (data / 데이터), nhưng không thay đổi bản chất các bài toán (problem / 문제) structures ở trên.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tìm kiếm (search / 검색), lập luận (reasoning / 추론) and Planning Foundations**, **Liên kết (connection / 연결) với hiện đại (modern / 현대적) AI** gom các mảnh từ **Một mô hình tư duy (mental model / 사고 모델) chung** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Mental model chung** nối search và planning với modern AI qua state, objective và feedback; **Connections** ghi rõ phần nào thuộc owner của agent, RL hoặc systems.
 
 ## Liên kết (connection / 연결) với hiện đại (modern / 현대적) AI
 

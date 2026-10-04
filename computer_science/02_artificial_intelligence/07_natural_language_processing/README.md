@@ -25,7 +25,7 @@ flowchart TD
     I --> J
 ```
 
-> **Chuyển mạch:** Trong **Natural ngôn ngữ (language / 언어) Processing kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Chapters** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Dependency map** đưa từ tokenization và representation đến modeling; **Mental model** giải thích NLP như chuỗi biến đổi tín hiệu, ngữ cảnh và mục tiêu đánh giá.
 
 ## Chapters
 
@@ -67,7 +67,7 @@ Human language
 
 NLP hệ thống (system / 시스템) chất lượng (quality / 품질) không chỉ nằm ở neural kiến trúc (architecture / 아키텍처). Corpus, tokenizer, retrieval, đầu ra (output / 출력) lược đồ (schema / 스키마), decoding và chỉ số (metric / 지표) đều có thể là bottleneck.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Natural ngôn ngữ (language / 언어) Processing kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Chuyển tiếp sang Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Khi mental model đã rõ về context và objective, **Large Language Models** mở rộng cùng chuỗi đó ở quy mô dữ liệu, compute và serving riêng.
 
 ## Chuyển tiếp sang Large ngôn ngữ (language / 언어) các mô hình (models / 모델들)
 

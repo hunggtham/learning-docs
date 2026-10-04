@@ -17,7 +17,7 @@ Bắt đầu bằng [Mathematics for AI](./00_mathematics_for_ai.md) để có b
 7. [Optimization for AI](./06_optimization.md) — SGD, momentum, Adam/AdamW, schedules, conditioning, các ràng buộc (constraints / 제약조건들) và mục tiêu (objective / 목표) alignment.
 8. [Numerical Computation](./07_numerical_computation.md) — floating điểm (point / 지점), stability, mixed precision, quantization, stable kernels và hardware-aware computation.
 
-> **Chuyển mạch:** Trong **Mathematical Foundations for Artificial Intelligence**, **Phụ thuộc (dependency / 의존성) map** tiếp nhận điểm tựa từ **Chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Chapters** cung cấp đại số tuyến tính, xác suất và tối ưu; **Dependency map** chỉ ra prerequisite nào được gọi lại trước khi xây **mental model** cho từng bài toán AI.
 
 ## Phụ thuộc (dependency / 의존성) map
 
@@ -42,7 +42,7 @@ flowchart TD
 
 Không cần đọc theo một đường duy nhất. Nếu đang học Transformer, tuyến tính (linear / 선형) Algebra + Calculus + tối ưu hóa (optimization / 최적화) + Numerical Computation có priority cao. Nếu đang học evaluation, Statistics + xác suất (probability / 확률) quan trọng hơn. Nếu đang học ngôn ngữ (language / 언어) modeling, xác suất (probability / 확률) + thông tin (information / 정보) lý thuyết (theory / 이론) là phụ thuộc (dependency / 의존성) trực tiếp.
 
-> **Chuyển mạch:** Ở chặng này của **Mathematical Foundations for Artificial Intelligence**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Phụ thuộc (dependency / 의존성) map** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Mental model** gom các dependency thành cách suy luận về dữ liệu, objective và uncertainty; đó là nền để đọc các chapter machine learning mà không học công thức rời rạc.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

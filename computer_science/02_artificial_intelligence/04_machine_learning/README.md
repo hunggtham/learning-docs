@@ -36,7 +36,7 @@ flowchart TD
 
 Đây là phụ thuộc (dependency / 의존성) khuyến nghị, không phải syllabus cứng. Ví dụ có thể đọc Clustering trước SVM nếu đang làm unsupervised bài toán (problem / 문제). Tuy nhiên `00–04` nên đọc trước phần lớn algorithms vì chúng thiết lập vocabulary về mục tiêu (target / 대상), phân phối (distribution / 분포), split, mất mát (loss / 손실) và rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Trong **Machine học tập (learning / 학습) kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Các chapter** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Dependency map** đặt thứ tự từ dữ liệu và objective đến model, training và evaluation; **Mental model của toàn tầng** giải thích vì sao mỗi chapter xuất hiện trong chuỗi đó.
 
 ## Các chapter
 
@@ -110,7 +110,7 @@ Production feedback / shift
 
 Một thuật toán (algorithm / 알고리즘) chỉ là một khối (block / 블록) trong luồng (flow / 흐름) này. Nếu dữ liệu (data / 데이터) mục tiêu (target / 대상) sai, leakage tồn tại hoặc chỉ số (metric / 지표) không phản ánh triển khai (deployment / 배포), đổi Random Forest thành neural mạng (network / 네트워크) không giải quyết nguyên nhân gốc (root cause / 근본 원인).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Machine học tập (learning / 학습) kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Chuyển tiếp sang Neural Networks** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** Khi mental model đã tách representation, loss và generalization, **Neural Networks** tiếp nhận đúng phần cần mở rộng thay vì lặp lại toàn bộ machine-learning foundation.
 
 ## Chuyển tiếp sang Neural Networks
 

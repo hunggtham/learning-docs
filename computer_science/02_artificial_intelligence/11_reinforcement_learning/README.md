@@ -32,7 +32,7 @@ Sơ đồ hoặc danh sách này mô tả thứ tự phụ thuộc của các kh
 - [08 — Actor-Critic](./08_actor_critic.md)
 - [09 — Deep Reinforcement Learning](./09_deep_reinforcement_learning.md)
 
-> **Chuyển mạch:** Trong **Reinforcement học tập (learning / 학습) — Reading Map**, **Cốt lõi (core / 핵심) distinctions** tiếp nhận điểm tựa từ **Chapters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Chapters** đặt state, action, reward và policy cạnh nhau; **Core distinctions** cho thấy feedback loop nào thực sự thuộc RL và loop nào là supervised learning.
 
 ## Cốt lõi (core / 핵심) distinctions
 
@@ -68,7 +68,7 @@ Value / policy update
 
 Khác với supervised học tập (learning / 학습), chính sách (policy / 정책) ảnh hưởng phân phối (distribution / 분포) của dữ liệu (data / 데이터) tác nhân (agent / 에이전트) sẽ thu được tiếp theo. Vì vậy RL là học tập (learning / 학습) bài toán (problem / 문제) nằm trong một vòng phản hồi (feedback loop / 피드백 루프).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Reinforcement học tập (learning / 학습) — Reading Map**, **Prerequisites và Connections** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Mental model** khóa quan hệ policy–environment–return; **Prerequisites và Connections** nối quan hệ đó về probability, control và agent owner để mở rộng đúng hướng.
 
 ## Prerequisites và Connections
 

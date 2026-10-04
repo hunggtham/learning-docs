@@ -26,7 +26,7 @@ flowchart TD
     I --> J
 ```
 
-> **Chuyển mạch:** Trong **Neural Networks kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Chapters** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Chuyển mạch:** **Dependency map** đưa người học từ tensor và gradient đến architecture; **Mental model của toàn tầng** giữ liên hệ giữa representation, optimization và failure mode.
 
 ## Chapters
 
@@ -72,7 +72,7 @@ Learned internal representation
 
 Kiến trúc (architecture / 아키텍처) quyết định đồ thị (graph / 그래프) và inductive độ lệch (bias / 편향). mất mát (loss / 손실) quyết định tín hiệu (signal / 신호). Backprop tính credit/blame. Optimizer quyết định cập nhật (update / 업데이트) trajectory. dữ liệu (data / 데이터) phân phối (distribution / 분포) quyết định experience. Generalization vẫn phải được chứng minh bằng evaluation ngoài huấn luyện (training / 학습) set.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Neural Networks kiến thức (knowledge / 지식) tầng (layer / 계층)**, **Chuyển tiếp sang Deep học tập (learning / 학습) Architectures** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델) của toàn tầng (layer / 계층)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Chuyển mạch:** **Mental model** đã làm rõ layer, gradient và inductive bias; **Deep Learning Architectures** mở rộng chúng thành CNN, sequence và attention theo từng owner kỹ thuật.
 
 ## Chuyển tiếp sang Deep học tập (learning / 학습) Architectures
 
