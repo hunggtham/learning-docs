@@ -10,7 +10,7 @@ Chuỗi nhân quả (causal / 인과적) trung tâm:
 
 **coast/river/plain → settlement/trade truy cập (access / 접근) → urban–industrial concentration → dense vận chuyển (transport / 전송) mạng (network / 네트워크) → cross-border môi trường vận hành (production / 운영 환경)/dịch vụ (service / 서비스) flows → high-connectivity regional role**.
 
-> **Chuyển mạch:** Trong **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Coastline dài không tự động tạo maritime power** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **North European Plain: low relief và continuous corridor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Thesis của chapter đặt biển, đồng bằng, sông và đô thị trong một mạng liên tục; **coastline dài** chỉ là tiềm năng, còn maritime power cần cả cảng, hạm đội và thể chế. **North European Plain** cho thấy low relief biến kết nối thành corridor như thế nào.
 
 ## Coastline dài không tự động tạo maritime power
 
@@ -18,7 +18,7 @@ Atlantic, North Sea, Baltic, Mediterranean và Black Sea tạo nhiều maritime 
 
 Rotterdam–Rhine lô-gic (logic / 논리) cho thấy coast chỉ là đầu vào vật lý. Một cổng (port / 포트) mạnh vì nó nằm trong **cổng (port / 포트)–corridor–thị trường (market / 시장) hệ thống (system / 시스템)**, không phải vì “có biển”.
 
-> **Chuyển mạch:** Ở chặng này của **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **North European Plain: low relief và continuous corridor** tiếp nhận điểm tựa từ **Coastline dài không tự động tạo maritime power** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mountain arc: barrier, water tower và specialized economy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Maritime access chỉ phát huy khi nội địa nối được với biển; **North European Plain** cung cấp địa hình thấp và liên tục cho rail, river và settlement. **Mountain arc** tạo rào cản nhưng đồng thời là water tower và nền cho các economy chuyên biệt.
 
 ## North European Plain: low relief và continuous corridor
 
@@ -26,7 +26,7 @@ Rotterdam–Rhine lô-gic (logic / 논리) cho thấy coast chỉ là đầu và
 
 Flat terrain giảm construction chi phí (cost / 비용) nhưng không xóa flood rủi ro (risk / 위험). Nhiều lowland/delta zone cần drainage, levee và river management liên tục. vật lý (physical / 물리적) advantage vì thế đi cùng maintenance burden.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Mountain arc: barrier, water tower và specialized economy** tiếp nhận điểm tựa từ **North European Plain: low relief và continuous corridor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Climate độ dốc (gradient / 기울기) và môi trường vận hành (production / 운영 환경) geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mountain arc phân mảnh giao thông nhưng điều phối nước, độ cao và khí hậu; lợi thế hay chi phí tùy công nghệ và vị trí. **Climate gradient và production geography** tiếp theo nối các gradient đó với cây trồng, năng lượng và nơi sản xuất.
 
 ## Mountain arc: barrier, water tower và specialized economy
 
@@ -34,7 +34,7 @@ Alps, Pyrenees, Carpathians và Balkan ranges chia catchment, tạo snow lưu tr
 
 Mountain pass/tunnel làm **effective distance** khác geometric distance. Một valley có highway/rail tunnel có thể gắn chặt với thị trường (market / 시장) xuyên núi hơn neighboring valley thiếu crossing.
 
-> **Chuyển mạch:** Trong **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Climate độ dốc (gradient / 기울기) và môi trường vận hành (production / 운영 환경) geography** tiếp nhận điểm tựa từ **Mountain arc: barrier, water tower và specialized economy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **River như hạ tầng (infrastructure / 인프라) tự nhiên nhưng cần kỹ thuật (engineering / 엔지니어링)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Gradient độ cao và khí hậu phân bố mùa vụ, pasture và công nghiệp theo không gian; không nên đọc chúng như định mệnh. **River** biến gradient thành hạ tầng tự nhiên nhưng vẫn cần engineering để điều hướng, chống lũ và kết nối.
 
 ## Climate độ dốc (gradient / 기울기) và môi trường vận hành (production / 운영 환경) geography
 
@@ -42,7 +42,7 @@ Northwest chịu maritime moderation; inland/east có continentality cao hơn; M
 
 Climate độ dốc (gradient / 기울기) ảnh hưởng crop, heating/cooling demand, wildfire/drought exposure và seasonality tourism. “Europe ôn đới” quá rộng để giải thích economy hay rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Ở chặng này của **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **River như hạ tầng (infrastructure / 인프라) tự nhiên nhưng cần kỹ thuật (engineering / 엔지니어링)** tiếp nhận điểm tựa từ **Climate độ dốc (gradient / 기울기) và môi trường vận hành (production / 운영 환경) geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rhine–North Sea: industrial–logistics hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sông cung cấp tuyến vận chuyển và nước nhưng phụ thuộc độ sâu, mùa, đập và quy hoạch. **Rhine–North Sea system** là trường hợp cho thấy river, port, industry và logistics đồng tiến hóa.
 
 ## River như hạ tầng (infrastructure / 인프라) tự nhiên nhưng cần kỹ thuật (engineering / 엔지니어링)
 
@@ -50,7 +50,7 @@ Rhine, Danube và nhiều river tạo corridor vì water vận chuyển (transpo
 
 River đồng thời là ecology, drinking-water nguồn (source / 소스), border, floodplain và vận chuyển (transport / 전송) tuyến (route / 경로). quản trị (governance / 거버넌스) vì thế là multi-objective bài toán (problem / 문제): điều hướng (navigation / 내비게이션), flood điều khiển (control / 제어), ecosystem và hydropower không luôn cùng lợi ích.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Rhine–North Sea: industrial–logistics hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **River như hạ tầng (infrastructure / 인프라) tự nhiên nhưng cần kỹ thuật (engineering / 엔지니어링)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Danube và east–west connectivity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Rhine cho thấy cửa sông và hinterland tạo một industrial–logistics system vượt ranh giới quốc gia. **Danube** cung cấp đối chiếu east–west connectivity với nhiều biên giới, chế độ sông và mức phát triển khác nhau.
 
 ## Rhine–North Sea: industrial–logistics hệ thống (system / 시스템)
 
@@ -58,7 +58,7 @@ Rhine corridor nối inland industrial/urban belt với North Sea ports. Barge, 
 
 Đây là trường hợp (case / 사례) điển hình để hiểu vì sao geography kinh tế vượt national border. môi trường vận hành (production / 운영 환경) location phụ thuộc cả mạng (network / 네트워크) corridor, không chỉ domestic thị trường (market / 시장).
 
-> **Chuyển mạch:** Trong **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Danube và east–west connectivity** tiếp nhận điểm tựa từ **Rhine–North Sea: industrial–logistics hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Industrial cốt lõi (core / 핵심), đường dẫn (path / 경로) dependence và restructuring** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Danube mở hành lang đông–tây nhưng connectivity phụ thuộc cả thể chế và hạ tầng xuyên biên giới. Những tuyến lịch sử tạo **industrial core và path dependence**, rồi buộc vùng phải restructuring khi công nghệ đổi.
 
 ## Danube và east–west connectivity
 
@@ -66,7 +66,7 @@ Danube nối nhiều urban/industrial region tới Black Sea. Vai trò của nó
 
 Một river dài không tự bảo đảm tích hợp (integration / 통합). nút (node / 노드) chất lượng (quality / 품질) và intermodal transfer quyết định luồng (flow / 흐름) thực.
 
-> **Chuyển mạch:** Ở chặng này của **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Danube và east–west connectivity** xác định đầu vào; **Industrial cốt lõi (core / 핵심), đường dẫn (path / 경로) dependence và restructuring** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Manufacturing không biến mất trong dịch vụ (service / 서비스) economy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cụm công nghiệp hình thành theo corridor và kỹ năng tích lũy, khiến path dependence kéo dài dù ngành thay đổi. **Manufacturing** vì vậy không biến mất khi service economy lớn lên mà tái tổ chức trong chuỗi giá trị mới.
 
 ## Industrial cốt lõi (core / 핵심), đường dẫn (path / 경로) dependence và restructuring
 
@@ -74,7 +74,7 @@ Coal trường dữ liệu (field / 필드), river và rail từng tạo heavy-i
 
 Nhưng old skill, factory land, rail yard và supplier cơ sở (base / 기반) tạo **đường dẫn (path / 경로) dependence**. Deindustrialization không xóa geography cũ; nó tạo brownfield, labor chuyển tiếp (transition / 전이) và spatial inequality mới.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Industrial cốt lõi (core / 핵심), đường dẫn (path / 경로) dependence và restructuring** xác định đầu vào; **Manufacturing không biến mất trong dịch vụ (service / 서비스) economy** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Dense urban mạng (network / 네트워크) và polycentricity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Manufacturing và dịch vụ liên kết qua R&D, logistics, tài chính và lao động kỹ thuật. Mạng liên kết đó tạo **dense urban network và polycentricity** thay vì một trung tâm duy nhất.
 
 ## Manufacturing không biến mất trong dịch vụ (service / 서비스) economy
 
@@ -82,7 +82,7 @@ High-income economy không đồng nghĩa “không còn geography của factory
 
 Dịch vụ (service / 서비스) và manufacturing thường bổ sung nhau: finance, thiết kế (design / 설계), software, logistics và professional dịch vụ (service / 서비스) bám quanh môi trường vận hành (production / 운영 환경) ecosystem.
 
-> **Chuyển mạch:** Trong **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Dense urban mạng (network / 네트워크) và polycentricity** tiếp nhận điểm tựa từ **Manufacturing không biến mất trong dịch vụ (service / 서비스) economy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Metropolitan success và regional inequality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Polycentricity phân tán chức năng đô thị nhưng không tự xóa chênh lệch; network vẫn có nút thắng và nút yếu. **Metropolitan success và regional inequality** đo ai tiếp cận được việc làm, vốn và dịch vụ trong mạng đó.
 
 ## Dense urban mạng (network / 네트워크) và polycentricity
 
@@ -90,7 +90,7 @@ Europe có nhiều city vừa–lớn nằm gần nhau. London, Paris, Benelux/R
 
 Một **polycentric urban hệ thống (system / 시스템)** khác primate-city hệ thống (system / 시스템): hàm (function / 함수) được chia giữa nhiều nút (node / 노드). High-speed rail và highway làm tương tác (interaction / 상호작용) tăng nhưng không xóa ngôn ngữ (language / 언어), housing và labor-law friction.
 
-> **Chuyển mạch:** Ở chặng này của **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Metropolitan success và regional inequality** tiếp nhận điểm tựa từ **Dense urban mạng (network / 네트워크) và polycentricity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Agriculture là climate + land lịch sử (history / 이력) + thị trường (market / 시장) truy cập (access / 접근)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Metropolitan success tập trung tri thức và cơ hội, còn inequality phản ánh khoảng cách kết nối và chính sách vùng. **Agriculture** cần đọc qua climate, lịch sử đất và market access, không chỉ qua khoảng cách tới đô thị.
 
 ## Metropolitan success và regional inequality
 
@@ -98,7 +98,7 @@ Capital và successful metro hút high-skill labor, investment và institution. 
 
 Improved khả năng tiếp cận (accessibility / 접근성) có thể giúp periphery tiếp cận thị trường (market / 시장) nhưng cũng khiến cốt lõi (core / 핵심) firm cạnh tranh dễ hơn. tích hợp (integration / 통합) không tự động tạo convergence.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Agriculture là climate + land lịch sử (history / 이력) + thị trường (market / 시장) truy cập (access / 접근)** tiếp nhận điểm tựa từ **Metropolitan success và regional inequality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng (energy / 에너지) chuyển tiếp (transition / 전이) có spatial mismatch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Agriculture vừa chịu climate vừa thừa hưởng cấu trúc đất và đường ra thị trường; đó là một nguồn regional inequality khác. **Energy transition** tạo spatial mismatch khi nơi có tài nguyên, lưới điện và nơi chịu chi phí không trùng nhau.
 
 ## Agriculture là climate + land lịch sử (history / 이력) + thị trường (market / 시장) truy cập (access / 접근)
 
@@ -106,7 +106,7 @@ Mediterranean olive/vine hệ thống (system / 시스템) khác northwestern da
 
 Terrace, hedgerow và village mẫu (pattern / 패턴) là **cultural landscape** do climate và institution cùng tạo.
 
-> **Chuyển mạch:** Trong **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Năng lượng (energy / 에너지) chuyển tiếp (transition / 전이) có spatial mismatch** tiếp nhận điểm tựa từ **Agriculture là climate + land lịch sử (history / 이력) + thị trường (market / 시장) truy cập (access / 접근)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng (energy / 에너지) import và mạng (network / 네트워크) phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Spatial mismatch buộc phân biệt nơi sản xuất năng lượng sạch với nơi tiêu thụ và nơi có lưới. **Energy import dependency** tiếp tục cho thấy network, giá và địa chính trị ràng buộc lựa chọn transition.
 
 ## Năng lượng (energy / 에너지) chuyển tiếp (transition / 전이) có spatial mismatch
 
@@ -114,7 +114,7 @@ Offshore wind potential mạnh ở North Sea, solar cao hơn ở south, hydropow
 
 Vì vậy renewable chuyển tiếp (transition / 전이) là bài toán **tài nguyên (resource / 자원) geography + grid geography + lưu trữ (storage / 저장소)/flexibility**. Có tài nguyên (resource / 자원) không đồng nghĩa có usable power nếu transmission bottleneck lớn.
 
-> **Chuyển mạch:** Ở chặng này của **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Năng lượng (energy / 에너지) import và mạng (network / 네트워크) phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **Năng lượng (energy / 에너지) chuyển tiếp (transition / 전이) có spatial mismatch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cổng (port / 포트), airport và toàn cục (global / 전역) centrality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Energy import được vận hành qua pipelines, ports và market rules; dependency nằm trong topology chứ không chỉ trong số lượng. **Port, airport và global centrality** mở rộng network lens sang các nút logistics và dòng người.
 
 ## Năng lượng (energy / 에너지) import và mạng (network / 네트워크) phụ thuộc (dependency / 의존성)
 
@@ -122,7 +122,7 @@ Industrial economy cần continuous năng lượng (energy / 에너지)/material
 
 Điều này cho thấy political ranh giới (boundary / 경계) và functional năng lượng (energy / 에너지) geography không trùng nhau. Resilience cần alternative tuyến (route / 경로) và lưu trữ (storage / 저장소), không chỉ domestic generation sức chứa (capacity / 용량).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Cổng (port / 포트), airport và toàn cục (global / 전역) centrality** tiếp nhận điểm tựa từ **Năng lượng (energy / 에너지) import và mạng (network / 네트워크) phụ thuộc (dependency / 의존성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Borders là nhiều lớp friction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Port và airport tạo centrality khi kết nối được hinterland, không chỉ vì nằm ven biển. Dòng hàng và người vẫn gặp **borders** với nhiều lớp friction: pháp lý, kiểm soát, tiêu chuẩn và chi phí.
 
 ## Cổng (port / 포트), airport và toàn cục (global / 전역) centrality
 
@@ -130,7 +130,7 @@ Rotterdam/Antwerp, Hamburg, Mediterranean ports và major airport nối Europe v
 
 Air hub cho high-value/time-sensitive luồng (flow / 흐름) và passenger mạng (network / 네트워크). Một city có thể tăng toàn cục (global / 전역) role nhờ mạng (network / 네트워크) centrality vượt xa population kích thước (size / 크기).
 
-> **Chuyển mạch:** Trong **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Borders là nhiều lớp friction** tiếp nhận điểm tựa từ **Cổng (port / 포트), airport và toàn cục (global / 전역) centrality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Aging, di chuyển (migration / 마이그레이션) và labor geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Border friction điều chỉnh tốc độ dòng hàng, vốn và người dù network centrality cao. **Aging, migration và labor geography** cho thấy các rào cản đó phân bố lao động và nhu cầu dịch vụ ra sao.
 
 ## Borders là nhiều lớp friction
 
@@ -138,7 +138,7 @@ Border không đơn giản open/closed. Customs, di chuyển (migration / 마이
 
 Regional tích hợp (integration / 통합) cho thấy giảm one tầng (layer / 계층) friction có thể làm supply chuỗi (chain / 사슬) tái tổ chức mà vật lý (physical / 물리적) distance không đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Borders là nhiều lớp friction** cho ta quy tắc; **Aging, di chuyển (migration / 마이그레이션) và labor geography** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Tourism và seasonal geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Aging tạo thiếu hụt lao động ở nơi khác, còn migration tái phân bố kỹ năng và chăm sóc trong mạng border có ma sát. **Tourism và seasonal geography** thêm một dòng di chuyển tạm thời, phụ thuộc mùa và địa điểm.
 
 ## Aging, di chuyển (migration / 마이그레이션) và labor geography
 
@@ -146,7 +146,7 @@ Low fertility/aging làm labor supply và dịch vụ (service / 서비스) dema
 
 National average che contrast: metropolitan cốt lõi (core / 핵심) có thể tiếp tục hút young adult trong khi remote region shrink nhanh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Aging, di chuyển (migration / 마이그레이션) và labor geography** cho ta quy tắc; **Tourism và seasonal geography** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Climate rủi ro (risk / 위험) theo độ dốc (gradient / 기울기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Tourism biến climate và cảnh quan thành dòng cầu theo mùa, tạo việc làm nhưng cũng tăng áp lực hạ tầng. **Climate risk theo gradient** cho thấy nơi phụ thuộc du lịch hay nông nghiệp chịu exposure khác nhau theo địa hình và vĩ độ.
 
 ## Tourism và seasonal geography
 
@@ -154,7 +154,7 @@ Mediterranean coast, alpine area và historic city có tourism intensity cao the
 
 Cùng hạ tầng (infrastructure / 인프라) phải phục vụ resident demand quanh năm và visitor surge theo mùa — một bài toán sức chứa (capacity / 용량) đặc thù của regional geography.
 
-> **Chuyển mạch:** Trong **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Climate rủi ro (risk / 위험) theo độ dốc (gradient / 기울기)** tiếp nhận điểm tựa từ **Tourism và seasonal geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Châu Âu trong toàn cục (global / 전역) trade mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Climate risk phân hóa theo coast, mountain, basin và hạ tầng; mùa du lịch chỉ là một exposure trong nhiều exposure. **Global trade network** tiếp theo đặt các vùng đó vào luồng hàng, vốn và tiêu chuẩn xuyên biên giới.
 
 ## Climate rủi ro (risk / 위험) theo độ dốc (gradient / 기울기)
 
@@ -162,7 +162,7 @@ Mediterranean heat/drought/wildfire, river flood ở central/northern plain, alp
 
 Không có một “European climate rủi ro (risk / 위험)” duy nhất. Adaptation phải match vật lý (physical / 물리적) tiến trình (process / 프로세스) và settlement mẫu (pattern / 패턴) từng region.
 
-> **Chuyển mạch:** Ở chặng này của **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Châu Âu trong toàn cục (global / 전역) trade mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Climate rủi ro (risk / 위험) theo độ dốc (gradient / 기울기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các economy lớn như comparative cases** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trade network phản ánh lợi thế corridor, cảng, kỹ năng và thể chế hơn là diện tích; climate risk có thể làm đứt các nút đó. **Comparative cases** sẽ kiểm tra vì sao các economy lớn xử lý cùng network bằng cấu trúc khác nhau.
 
 ## Châu Âu trong toàn cục (global / 전역) trade mạng (network / 네트워크)
 
@@ -170,7 +170,7 @@ Regional role đến từ combination của high-value manufacturing/dịch vụ
 
 Do đó Europe vừa là cốt lõi (core / 핵심) thị trường (market / 시장) vừa là nút (node / 노드) phụ thuộc mạng (network / 네트워크) toàn cầu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Châu Âu trong toàn cục (global / 전역) trade mạng (network / 네트워크)** cho ta quy tắc; **Các economy lớn như comparative cases** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** So sánh các economy lớn giúp tách tác động của geography khỏi policy, industrial history và network position. **Common misconceptions** tiếp theo kiểm tra các kết luận kiểu “biển dài = giàu” hay “dịch vụ = hết sản xuất”.
 
 ## Các economy lớn như comparative cases
 
@@ -178,13 +178,13 @@ Germany minh họa manufacturing + central corridor; France kết hợp Atlantic
 
 Country profile có giá trị khi dùng contrast này để kiểm tra concept, không phải khi liệt kê fact.
 
-> **Chuyển mạch:** Trong **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Các economy lớn như comparative cases** cho ta quy tắc; **Dùng chung (common / 공통) misconceptions** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Các case làm rõ điều kiện và giới hạn của causal claims; misconception thường bỏ qua corridor, thể chế hoặc lịch sử path dependence. **Mô hình tư duy** sẽ gom các quan hệ giữ lại được.
 
 ## Dùng chung (common / 공통) misconceptions
 
 “Europe phát triển vì coastline tốt” là determinism. “tích hợp (integration / 통합) xóa border” sai; friction chỉ được tái cấu hình. “dịch vụ (service / 서비스) economy không cần vật lý (physical / 물리적) geography” sai vì năng lượng (energy / 에너지), housing, cổng (port / 포트), airport và dữ liệu (data / 데이터) hạ tầng (infrastructure / 인프라) vẫn vật lý. “Dense rail làm distance biến mất” bỏ qua frequency, fare, ngôn ngữ (language / 언어) và housing thị trường (market / 시장).
 
-> **Chuyển mạch:** Ở chặng này của **Châu Âu: biển, đồng bằng, hành lang sông và mạng đô thị mật độ cao**, **Mô hình tư duy** gom các mảnh từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chapter bằng chuỗi địa hình–khí hậu–sông → corridor–đô thị–industry → energy–labor–trade, luôn kiểm tra friction và inequality. Đây là điểm bàn giao để đọc các region khác bằng cùng framework của World Geography.
 
 ## Mô hình tư duy
 
