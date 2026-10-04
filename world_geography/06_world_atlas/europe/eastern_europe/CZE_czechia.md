@@ -6,25 +6,25 @@
 
 Phần lớn Czechia nằm trong khối Bohemia và vùng Moravia. Bohemia được bao quanh bởi các dãy núi thấp–trung bình, tạo cảm giác như một bồn địa lớn mở về các thung lũng sông.
 
-> **Chuyển mạch:** Trong **Czechia**, **Nút chia lưu vực của châu Âu** tiếp nhận điểm tựa từ **Một lõi bồn địa được bao bởi vành núi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công nghiệp và đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Bohemian basin và mountain rim tạo lõi địa hình; **European watershed node** nối Elbe, Oder và Danube, nên quốc gia không giáp biển vẫn có nhiều hướng network. **Công nghiệp và đô thị** tận dụng access đó trong Central Europe.
 
 ## Nút chia lưu vực của châu Âu
 
 Lãnh thổ nằm gần các đường phân thủy lớn giữa lưu vực Elbe, Oder và Danube. Điều này cho thấy một quốc gia không cần bờ biển vẫn có thể kết nối thủy văn với nhiều hướng của châu Âu.
 
-> **Chuyển mạch:** Ở chặng này của **Czechia**, **Công nghiệp và đô thị** tiếp nhận điểm tựa từ **Nút chia lưu vực của châu Âu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phụ thuộc đường đi công nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Watershed position, Prague–Brno và biên giới Đức/Áo/Poland/Slovakia tạo dense industrial–urban network; **path dependence** tiếp theo giải thích vì sao hạ tầng và kỹ năng cũ vẫn định hình tái cơ cấu.
 
 ## Công nghiệp và đô thị
 
 Prague là cực dịch vụ và du lịch lớn; Brno là trung tâm Moravia. Mạng đô thị dày kết hợp vị trí gần Đức, Ba Lan, Áo và Slovakia giúp Czechia nằm trong vùng sản xuất công nghiệp liên kết chặt của Trung Âu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Czechia**, **Phụ thuộc đường đi công nghiệp** tiếp nhận điểm tựa từ **Công nghiệp và đô thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Coal, metallurgy và factory towns để lại infrastructure, skills và supplier networks; **mô hình tư duy** sẽ nối path dependence với market access và công nghiệp Central Europe.
 
 ## Phụ thuộc đường đi công nghiệp
 
 Các vùng công nghiệp cũ gắn với than và luyện kim đã tạo hạ tầng, đô thị và kỹ năng lao động; về sau chúng tiếp tục ảnh hưởng vị trí nhà máy và tái cơ cấu kinh tế. Đây là ví dụ rõ của **phụ thuộc đường đi (path dependence)**.
 
-> **Chuyển mạch:** Trong **Czechia**, **Mô hình tư duy** gom các mảnh từ **Phụ thuộc đường đi công nghiệp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép profile bằng chuỗi Bohemian basin–watershed → Prague/Brno–industrial network → path-dependent restructuring và market access không cần coast. Đây là điểm bàn giao cho Eastern Europe trong World Atlas.
 
 ## Mô hình tư duy
 
