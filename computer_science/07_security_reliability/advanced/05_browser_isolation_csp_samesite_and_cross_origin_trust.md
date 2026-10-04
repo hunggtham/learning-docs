@@ -10,7 +10,7 @@ Origin thường được xác định bởi scheme, host và cổng (port / 포
 
 SOP không ngăn mọi cross-origin yêu cầu (request / 요청); nhiều yêu cầu (request / 요청) vẫn có thể được gửi. Điều quan trọng thường là quyền đọc phản hồi (response / 응답) và truy cập (access / 접근) DOM/trạng thái (state / 상태).
 
-> **Chuyển mạch:** Trong **Trình duyệt (browser / 브라우저) isolation, CSP, SameSite và cross-origin trust**, **Origin là ranh giới (boundary / 경계) cơ bản** đã nêu tiêu chí phân biệt, còn **CORS** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **CSRF và SameSite** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Origin là ranh giới (boundary / 경계) cơ bản** đặt tiêu chí; **CORS** dùng nó để kiểm tra ranh giới, rồi **CSRF và SameSite** mở rộng hệ quả.
 
 ## CORS
 
@@ -18,7 +18,7 @@ SOP không ngăn mọi cross-origin yêu cầu (request / 요청); nhiều yêu 
 
 Cấu hình `Access-Control-Allow-Origin: *` có thể hợp lệ cho công khai (public / 공개) tài nguyên (resource / 자원) nhưng nguy hiểm nếu nhà phát triển (developer / 개발자) tưởng nó thay thế authorization.
 
-> **Chuyển mạch:** Ở chặng này của **Trình duyệt (browser / 브라우저) isolation, CSP, SameSite và cross-origin trust**, **CSRF và SameSite** tiếp nhận điểm tựa từ **CORS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **XSS và CSP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **CSRF và SameSite** nối từ **CORS** sang **XSS và CSP**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CSRF và SameSite
 
@@ -26,7 +26,7 @@ Cookie có thể được trình duyệt (browser / 브라우저) tự động g
 
 `SameSite` cookie giảm một số cross-site sending contexts. CSRF đơn vị từ (token / 토큰) vẫn hữu ích trong kiến trúc (architecture / 아키텍처) cần bảo vệ các luồng (flow / 흐름) không được SameSite cover đầy đủ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trình duyệt (browser / 브라우저) isolation, CSP, SameSite và cross-origin trust**, **XSS và CSP** tiếp nhận điểm tựa từ **CSRF và SameSite** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **iframe và embedding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **XSS và CSP** nối từ **CSRF và SameSite** sang **iframe và embedding**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## XSS và CSP
 
@@ -34,7 +34,7 @@ Cross-Site Scripting cho attacker chạy script trong origin của ứng dụng 
 
 **Content bảo mật (security / 보안) chính sách (policy / 정책) (CSP)** giới hạn nguồn script/tài nguyên (resource / 자원) và có thể giảm impact khi injection xảy ra. CSP tốt là defense-in-depth, không thay thế fix XSS.
 
-> **Chuyển mạch:** Trong **Trình duyệt (browser / 브라우저) isolation, CSP, SameSite và cross-origin trust**, **iframe và embedding** tiếp nhận điểm tựa từ **XSS và CSP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lưu trữ trình duyệt (browser storage / 브라우저 저장소)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **iframe và embedding** nối từ **XSS và CSP** sang **Lưu trữ trình duyệt (browser storage / 브라우저 저장소)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## iframe và embedding
 
@@ -42,7 +42,7 @@ Iframe tạo browsing ngữ cảnh (context / 맥락) riêng nhưng parent/child
 
 Frame-ancestors/CSP hoặc X-Frame-Options giúp chống clickjacking bằng cách kiểm soát ai được embed page.
 
-> **Chuyển mạch:** Ở chặng này của **Trình duyệt (browser / 브라우저) isolation, CSP, SameSite và cross-origin trust**, **Lưu trữ trình duyệt (browser storage / 브라우저 저장소)** tiếp nhận điểm tựa từ **iframe và embedding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Site isolation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Lưu trữ trình duyệt (browser storage / 브라우저 저장소)** nối từ **iframe và embedding** sang **Site isolation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lưu trữ trình duyệt (browser storage / 브라우저 저장소)
 
@@ -50,13 +50,13 @@ LocalStorage dễ dùng nhưng script cùng origin có thể đọc, nên XSS c�
 
 Không có lưu trữ (storage / 저장소) choice “an toàn tuyệt đối”; threat mô hình (model / 모델) quyết định sự đánh đổi (trade-off / 트레이드오프) giữa XSS exposure, CSRF và UX/session kiến trúc (architecture / 아키텍처).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trình duyệt (browser / 브라우저) isolation, CSP, SameSite và cross-origin trust**, **Site isolation** tiếp nhận điểm tựa từ **Lưu trữ trình duyệt (browser storage / 브라우저 저장소)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Site isolation** nối từ **Lưu trữ trình duyệt (browser storage / 브라우저 저장소)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Site isolation
 
 Hiện đại (modern / 현대적) browsers còn dùng tiến trình (process / 프로세스) isolation để tách sites/origins ở OS tiến trình (process / 프로세스) mức (level / 수준), giảm blast radius của renderer compromise và side-channel classes. Đây là ví dụ ranh giới bảo mật (security boundary / 보안 경계) được reinforce qua nhiều layers: web chính sách (policy / 정책) + tiến trình (process / 프로세스) sandbox + hardware mitigations.
 
-> **Chuyển mạch:** Trong **Trình duyệt (browser / 브라우저) isolation, CSP, SameSite và cross-origin trust**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Site isolation** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Site isolation**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

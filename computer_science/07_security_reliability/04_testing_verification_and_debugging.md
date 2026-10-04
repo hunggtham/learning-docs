@@ -12,7 +12,7 @@ Property-based testing generate many inputs và check bất biến (invariant / 
 
 Fuzzing generate/mutate unexpected inputs để tìm crash/bảo mật (security / 보안) bugs, especially parsers and bản địa (native / 네이티브) mã (code / 코드).
 
-> **Chuyển mạch:** Test là sample của behavior, specification là property cần giữ; unit/integration/system mở rộng phạm vi bằng chứng, còn determinism quyết định test có đáng tin hay flaky.
+> **Nối mạch:** Test là sample của behavior, specification là property cần giữ; unit/integration/system mở rộng phạm vi bằng chứng, còn determinism quyết định test có đáng tin hay flaky.
 
 ## Đơn vị (unit / 단위), tích hợp (integration / 통합), hệ thống (system / 시스템)
 
@@ -20,7 +20,7 @@ Fuzzing generate/mutate unexpected inputs để tìm crash/bảo mật (security
 
 Testing pyramid không phải law; optimal mix phụ thuộc kiến trúc (architecture / 아키텍처)/rủi ro (risk / 위험). đặc tả hợp đồng (contract / 계약) tests hữu ích cho dịch vụ (service / 서비스) APIs.
 
-> **Chuyển mạch:** Ở chặng này của **Testing, xác minh (verification / 확인) và debugging**, **Determinism và flaky tests** tiếp nhận điểm tựa từ **Đơn vị (unit / 단위), tích hợp (integration / 통합), hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Static phân tích (analysis / 분석)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Determinism và flaky tests** nối từ **Đơn vị (unit / 단위), tích hợp (integration / 통합), hệ thống (system / 시스템)** sang **Static phân tích (analysis / 분석)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Determinism và flaky tests
 
@@ -28,7 +28,7 @@ Flaky kiểm thử (test / 테스트) thường do hidden inputs: clock, random 
 
 A flaky kiểm thử (test / 테스트) is not merely annoyance; it erodes trust in tín hiệu (signal / 신호).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Testing, xác minh (verification / 확인) và debugging**, **Static phân tích (analysis / 분석)** tiếp nhận điểm tựa từ **Determinism và flaky tests** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Formal methods** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Static phân tích (analysis / 분석)** nối từ **Determinism và flaky tests** sang **Formal methods**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Static phân tích (analysis / 분석)
 
@@ -36,7 +36,7 @@ Trình biên dịch (compiler / 컴파일러) warnings, linters, dataflow phân 
 
 Undecidability explains why universal perfect analyzer for arbitrary programs impossible; tools solve restricted properties/các mô hình (models / 모델들).
 
-> **Chuyển mạch:** Trong **Testing, xác minh (verification / 확인) và debugging**, **Formal methods** tiếp nhận điểm tựa từ **Static phân tích (analysis / 분석)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Debugging as hypothesis testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Formal methods** nối từ **Static phân tích (analysis / 분석)** sang **Debugging as hypothesis testing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Formal methods
 
@@ -44,7 +44,7 @@ Hoare lô-gic (logic / 논리) uses `{P} C {Q}` precondition/program/postconditi
 
 Formal methods are especially valuable for protocols, crypto, kernels, safety-critical mã (code / 코드), but chi phí (cost / 비용)/mô hình (model / 모델) fidelity matter. Proving wrong mô hình (model / 모델) perfectly still leaves real hệ thống (system / 시스템) bugs.
 
-> **Chuyển mạch:** Ở chặng này của **Testing, xác minh (verification / 확인) và debugging**, **Debugging as hypothesis testing** tiếp nhận điểm tựa từ **Formal methods** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Logs, traces, metrics and debuggers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Debugging as hypothesis testing** nối từ **Formal methods** sang **Logs, traces, metrics and debuggers**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Debugging as hypothesis testing
 
@@ -59,7 +59,7 @@ Good debugging vòng lặp (loop / 루프):
 
 Random mã (code / 코드) changes are tìm kiếm (search / 검색) without mô hình (model / 모델).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Testing, xác minh (verification / 확인) và debugging**, **Logs, traces, metrics and debuggers** tiếp nhận điểm tựa từ **Debugging as hypothesis testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reproduction and minimization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Logs, traces, metrics and debuggers** nối từ **Debugging as hypothesis testing** sang **Reproduction and minimization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Logs, traces, metrics and debuggers
 
@@ -67,7 +67,7 @@ Logs bản ghi (record / 레코드) discrete events/ngữ cảnh (context / 맥�
 
 Each view loses different thông tin (information / 정보). High-cardinality IDs belong naturally in traces/logs more than naive chỉ số (metric / 지표) labels.
 
-> **Chuyển mạch:** Trong **Testing, xác minh (verification / 확인) và debugging**, **Reproduction and minimization** tiếp nhận điểm tựa từ **Logs, traces, metrics and debuggers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tests and refactoring** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Reproduction and minimization** nối từ **Logs, traces, metrics and debuggers** sang **Tests and refactoring**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Reproduction and minimization
 
@@ -75,19 +75,19 @@ Reduce failing đầu vào (input / 입력)/môi trường (environment / 환경
 
 For tính đồng thời (concurrency / 동시성), deterministic bản ghi (record / 레코드)/replay or stress scheduling can help; for phân tán (distributed / 분산) failures, fault injection/mạng (network / 네트워크) simulation reveals các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Ở chặng này của **Testing, xác minh (verification / 확인) và debugging**, **Tests and refactoring** tiếp nhận điểm tựa từ **Reproduction and minimization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tests and refactoring** nối từ **Reproduction and minimization** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tests and refactoring
 
 Tests provide behavioral đặc tả hợp đồng (contract / 계약) during refactor. But over-mocking hiện thực (implementation / 구현) details makes tests brittle and blocks nội bộ (internal / 내부) changes. kiểm thử (test / 테스트) observable đặc tả hợp đồng (contract / 계약)/invariants, use mocks at meaningful boundaries.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Testing, xác minh (verification / 확인) và debugging**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Tests and refactoring** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Tests and refactoring**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Confidence comes from **overlapping bằng chứng (evidence / 증거)**. Types prove one lớp (class / 클래스), tests mẫu (sample / 표본) behaviors, static phân tích (analysis / 분석) approximates paths, formal proof covers modeled properties, môi trường vận hành (production / 운영 환경) khả năng quan sát (observability / 관측 가능성) checks reality.
 
-> **Chuyển mạch:** Trong **Testing, xác minh (verification / 확인) và debugging**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -97,7 +97,7 @@ Tests provide behavioral đặc tả hợp đồng (contract / 계약) during re
 
 **“Debugger is first công cụ (tool / 도구) for every issue.”** Logs/traces/profiles/reproducers may locate phân tán (distributed / 분산)/hiệu năng (performance / 성능) bugs better.
 
-> **Chuyển mạch:** Ở chặng này của **Testing, xác minh (verification / 확인) và debugging**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

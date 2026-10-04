@@ -12,7 +12,7 @@ Băm (hash / 해시) không có secret key, nên ai cũng có thể băm (hash /
 
 SHA-256 là cryptographic băm (hash / 해시) phổ biến; MD5/SHA-1 không phù hợp collision-sensitive bảo mật (security / 보안) hiện đại (modern / 현대적) dù có thể còn dùng non-security checksums/legacy identifiers.
 
-> **Chuyển mạch:** Cryptographic hash gives integrity primitive; password hashing adds salt/cost for offline resistance, while MAC next authenticates message origin with a shared secret.
+> **Nối mạch:** Cryptographic hash gives integrity primitive; password hashing adds salt/cost for offline resistance, while MAC next authenticates message origin with a shared secret.
 
 ## Password hashing
 
@@ -20,7 +20,7 @@ Password không nên lưu bằng fast general băm (hash / 해시). Attacker có
 
 Salt random unique per password ngăn precomputed rainbow tables và làm identical passwords có hashes khác. Salt không cần secret. Pepper nếu dùng là server-held secret separate from DB.
 
-> **Chuyển mạch:** Ở chặng này của **Băm (hash / 해시), MAC, symmetric và public-key cryptography**, **MAC** tiếp nhận điểm tựa từ **Password hashing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Symmetric encryption** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **MAC** nối từ **Password hashing** sang **Symmetric encryption**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## MAC
 
@@ -28,7 +28,7 @@ Message Authentication mã (code / 코드) dùng dùng chung (shared / 공유) s
 
 MAC không cung cấp non-repudiation giữa parties cùng share key vì cả hai có thể forge tag.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Băm (hash / 해시), MAC, symmetric và public-key cryptography**, **Symmetric encryption** tiếp nhận điểm tựa từ **MAC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Public-key cryptography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Symmetric encryption** nối từ **MAC** sang **Public-key cryptography**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Symmetric encryption
 
@@ -38,7 +38,7 @@ Authenticated Encryption with Associated dữ liệu (data / 데이터) — AEAD
 
 Nonce reuse có thể catastrophic tùy construction; “random IV bất kỳ” không phải universal quy tắc (rule / 규칙).
 
-> **Chuyển mạch:** Trong **Băm (hash / 해시), MAC, symmetric và public-key cryptography**, **Public-key cryptography** tiếp nhận điểm tựa từ **Symmetric encryption** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Digital signature** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Public-key cryptography** nối từ **Symmetric encryption** sang **Digital signature**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Public-key cryptography
 
@@ -46,7 +46,7 @@ Asymmetric hệ thống (system / 시스템) có công khai (public / 공개)/pr
 
 Public-key operations chậm hơn symmetric, nên protocols thường dùng asymmetric key exchange/authentication để establish symmetric session keys, rồi bulk encrypt symmetric.
 
-> **Chuyển mạch:** Ở chặng này của **Băm (hash / 해시), MAC, symmetric và public-key cryptography**, **Digital signature** tiếp nhận điểm tựa từ **Public-key cryptography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Key exchange và forward secrecy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Digital signature** nối từ **Public-key cryptography** sang **Key exchange và forward secrecy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Digital signature
 
@@ -54,7 +54,7 @@ Signature binds message to private key thao tác (operation / 연산) under thu�
 
 PKI/certificates giải phân phối (distribution / 분포)/trust ánh xạ (mapping / 매핑) bằng certificate authorities và kiểm tra hợp lệ (validation / 검증) rules.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Băm (hash / 해시), MAC, symmetric và public-key cryptography**, **Key exchange và forward secrecy** tiếp nhận điểm tựa từ **Digital signature** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Randomness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Key exchange và forward secrecy** nối từ **Digital signature** sang **Randomness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Key exchange và forward secrecy
 
@@ -62,31 +62,31 @@ Ephemeral Diffie–Hellman variants cho parties derive dùng chung (shared / 공
 
 TLS hiện đại (modern / 현대적) commonly uses ephemeral key exchange + certificates for authentication.
 
-> **Chuyển mạch:** Trong **Băm (hash / 해시), MAC, symmetric và public-key cryptography**, **Randomness** tiếp nhận điểm tựa từ **Key exchange và forward secrecy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Checksums vs hashes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Randomness** nối từ **Key exchange và forward secrecy** sang **Checksums vs hashes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Randomness
 
 Cryptographic keys/nonces cần cryptographically secure random generator. `Math.random()`-style PRNG không thích hợp cho secrets nếu predictable. CSPRNG seed/trạng thái (state / 상태) bảo mật (security / 보안) là foundational.
 
-> **Chuyển mạch:** Ở chặng này của **Băm (hash / 해시), MAC, symmetric và public-key cryptography**, **Checksums vs hashes** tiếp nhận điểm tựa từ **Randomness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Crypto kỹ thuật (engineering / 엔지니어링)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Checksums vs hashes** nối từ **Randomness** sang **Crypto kỹ thuật (engineering / 엔지니어링)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Checksums vs hashes
 
 CRC detects accidental transmission errors efficiently but attacker có thể deliberately alter message và recompute CRC. Cryptographic integrity primitives assume adversary and are computationally stronger.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Băm (hash / 해시), MAC, symmetric và public-key cryptography**, **Crypto kỹ thuật (engineering / 엔지니어링)** tiếp nhận điểm tựa từ **Checksums vs hashes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Crypto kỹ thuật (engineering / 엔지니어링)** nối từ **Checksums vs hashes** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Crypto kỹ thuật (engineering / 엔지니어링)
 
 “Do not roll your own crypto” không chỉ vì math khó; giao thức (protocol / 프로토콜) composition, nonce management, side channels, key rotation, encoding, lỗi (error / 오류) hành vi (behavior / 동작) đều dễ sai. Use mature libraries/protocols and safe APIs.
 
-> **Chuyển mạch:** Trong **Băm (hash / 해시), MAC, symmetric và public-key cryptography**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Crypto kỹ thuật (engineering / 엔지니어링)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Crypto kỹ thuật (engineering / 엔지니어링)**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > băm (hash / 해시) = fingerprint không key. MAC = integrity/authenticity với dùng chung (shared / 공유) key. Encryption = confidentiality. AEAD = confidentiality + integrity. Signature = authenticity/integrity với asymmetric key. **Key management quyết định bảo mật (security / 보안) thực tế nhiều như thuật toán (algorithm / 알고리즘).**
 
-> **Chuyển mạch:** Ở chặng này của **Băm (hash / 해시), MAC, symmetric và public-key cryptography**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -96,7 +96,7 @@ CRC detects accidental transmission errors efficiently but attacker có thể de
 
 **“Encrypt rồi là không cần integrity.”** Malleability/tampering có thể nguy hiểm; authenticated encryption preferred.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Băm (hash / 해시), MAC, symmetric và public-key cryptography**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 
