@@ -78,7 +78,7 @@ Ta đã có mô hình cơ bản:
 
 `ngũ cốc → đường → lên men → chất lỏng có ethanol → chưng cất → rượu nền → trưởng thành → whisky`
 
-Mô hình này giải thích **whisky được hình thành như thế nào**, nhưng chưa đủ để trả lời tại sao Scotch, Irish whiskey, Bourbon, Rye và Japanese whisky có những định nghĩa khác nhau. Bước tiếp theo của nhánh này sẽ dùng chính chuỗi sản xuất trên làm khung và đặt các quy định, nguyên liệu và phương pháp của từng họ whisky lên cùng một bản đồ so sánh.
+Mô hình này giải thích **whisky được hình thành như thế nào**, nhưng chưa đủ để trả lời tại sao Scotch, Irish whiskey, Bourbon, Rye và Japanese whisky có những định nghĩa khác nhau. Bước tiếp theo của nhánh này nằm tại [`01_classification_and_legal_definitions.md`](01_classification_and_legal_definitions.md), dùng chính chuỗi sản xuất trên làm khung và đặt các quy định, nguyên liệu và phương pháp của từng họ whisky lên cùng một bản đồ so sánh. Các bài tiếp theo đi sâu vào thiết bị chưng cất tại [`02_distillation_stills_reflux_and_cuts.md`](02_distillation_stills_reflux_and_cuts.md), thùng gỗ tại [`03_casks_maturation_and_finishing.md`](03_casks_maturation_and_finishing.md), và nếm cảm quan tại [`04_tasting_sensory_vocabulary_and_comparison.md`](04_tasting_sensory_vocabulary_and_comparison.md).
 
 Để thấy một nhánh khác cũng bắt đầu từ ngũ cốc, đường và men nhưng không đi qua cùng con đường chưng cất, đọc tiếp [`../beer/00_beer_foundations.md`](../beer/00_beer_foundations.md).
 

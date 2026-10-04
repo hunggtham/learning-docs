@@ -82,6 +82,6 @@ Ta đã có chuỗi cơ bản:
 
 `ngũ cốc → malt/đường → dịch đường → hoa bia + nhiệt → lên men bằng men → bia`
 
-Từ đây có thể đi sâu theo hai hướng. Hướng thứ nhất xây bản đồ các phong cách bia và giải thích IPA, stout, porter, pilsner, wheat beer bằng nguyên liệu và quy trình. Hướng thứ hai quay sang whisky để thấy cùng điểm xuất phát ngũ cốc–đường–men nhưng thêm chưng cất và trưởng thành trong thùng đã tạo ra một loại đồ uống hoàn toàn khác. Hướng thứ hai nằm tại [`../whisky/00_whisky_foundations.md`](../whisky/00_whisky_foundations.md).
+Từ đây có thể đi sâu theo hai hướng. Hướng thứ nhất đi sâu vào chi tiết nguyên liệu, hóa sinh lên men và bảo quản tại [`01_ingredients_mashing_hops_and_fermentation.md`](01_ingredients_mashing_hops_and_fermentation.md) cùng bản đồ phong cách và phục vụ tại [`02_style_map_specs_freshness_and_serving.md`](02_style_map_specs_freshness_and_serving.md). Hướng thứ hai quay sang whisky để thấy cùng điểm xuất phát ngũ cốc–đường–men nhưng thêm chưng cất và trưởng thành trong thùng đã tạo ra một loại đồ uống hoàn toàn khác tại [`../whisky/00_whisky_foundations.md`](../whisky/00_whisky_foundations.md).
 
 > **Bàn giao:** Beer đã cung cấp mental model về nguyên liệu, lên men và phong cách; whisky dùng một phần nền ngũ cốc–đường–men nhưng thêm chưng cất và thùng, nên là bước đối chiếu tự nhiên tiếp theo.

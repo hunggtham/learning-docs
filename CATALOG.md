@@ -1,6 +1,6 @@
 ---
 catalog_version: 1
-last_reviewed: 2026-10-11
+last_reviewed: 2026-10-15
 source_of_truth: main
 review_policy: Update this catalog when a canonical library is added, removed, renamed, or changes domain.
 domains:
@@ -247,6 +247,16 @@ domains:
     prerequisites: []
     related: [world_history, biology, physics, korea_business_economy, sociology]
 
+  - id: life
+    title: Life Knowledge Library
+    group: Everyday & Consumer
+    path: life/
+    entrypoint: life/README.md
+    status: canonical
+    last_reviewed: 2026-10-15
+    scope: Everyday object and consumer literacy covering specs and labels, materials and durability, reliability and maintenance, repairability and lifecycle/TCO, plus mechanism-first product verticals such as Cars, Beer and Whisky.
+    prerequisites: []
+    related: [physics, chemistry, biology, electrical_engineering, korea_law_civic_life]
   - id: investing
     title: Investing
     group: Professional
@@ -362,6 +372,9 @@ Human & Society
 ├── Economics
 └── World Geography
 
+Everyday & Consumer
+└── Life Knowledge Library
+
 Professional
 ├── Investing
 └── Project Management / PMP
@@ -449,7 +462,25 @@ Physics
 
 Đây là một library canonical đã có core chapter cho cả 9 nhánh, dependency map và coverage audit; các chapter chuyên sâu sẽ được mở rộng theo từng nhánh, không duplicate Physics hoặc Computer Science.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Repository catalog**, **Domain entrypoints** tiếp nhận điểm tựa từ **10. P3 — Electrical / Electronics / Control** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+## 11. Life Knowledge Library: everyday object & consumer literacy
+
+[`life/`](life/README.md) giữ phần kiến thức nằm giữa lý thuyết khoa học, mô hình tư duy và các quyết định mua sắm, sử dụng trong đời sống. Nó trả lời các câu hỏi như: một đồ vật/sản phẩm hoạt động bằng cơ chế nào, thông số đo gì và giới hạn ở đâu, vật liệu và quy trình chế tạo ảnh hưởng đến độ bền ra sao, sự suy thoái, bảo dưỡng và khả năng sửa chữa hình thành chi phí trọn vòng đời thế nào, và các nhãn mác/hệ thống phân loại phải được đọc trên trục nào.
+
+Mô hình định vị:
+
+```text
+science / engineering theory
+          ↓
+Life: object mechanism + consumer literacy
+          ↓
+use / maintenance / comparison / lifecycle
+          ↓
+quyết định mua sắm và tối ưu đời sống
+```
+
+Consumer Literacy là khung xương sống (backbone) dùng lại cho việc đọc thông số, vật liệu, độ tin cậy, bảo dưỡng, bảo hành và TCO. Cars là phân hệ tiêu biểu cho cơ học hệ thống từ động lực tới động lực học khung gầm; Beer và Whisky là phân hệ tiêu biểu cho quy trình sản xuất, hệ phân loại độc lập, nhãn mác pháp lý, độ tươi và trạng thái cảm quan. Hạ tầng xã hội quy mô lớn vẫn thuộc How Things Work khi domain đó canonical; khả năng chi trả thuộc Personal Finance; phương pháp suy luận và đánh giá bằng chứng thuộc Thinking.
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Repository catalog**, **Domain entrypoints** tiếp nhận điểm tựa từ **11. Life Knowledge Library: everyday object & consumer literacy** nhưng đổi góc nhìn sang danh mục các điểm vào hệ thống; đọc liền hai mục để thấy mối quan hệ đó.
 
 ## Domain entrypoints
 
