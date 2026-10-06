@@ -24,6 +24,8 @@ ABS (Asset-Backed Securities) và MBS (Mortgage-Backed Securities) gom dòng ti�
 
 Preferred stock có quyền ưu tiên cổ tức hoặc tài sản so với common stock nhưng thường hạn chế quyền biểu quyết. Catastrophe bond chuyển một phần rủi ro thảm họa sang nhà đầu tư; nếu trigger xảy ra, principal có thể dùng để bù tổn thất. Structured note kết hợp trái phiếu với phái sinh, nên phải đọc payoff, collateral, issuer risk, liquidity và điều kiện trigger thay vì chỉ nhìn coupon quảng cáo.
 
+Source minh họa floating-rate bond bằng coupon dạng `benchmark + spread` (ví dụ LIBOR + biên) và có thể đặt floor rate. Reverse floater đi theo dạng `constant − benchmark`, thường cần cap để giới hạn coupon. Cấu trúc này khiến coupon đổi theo benchmark và basis risk; LIBOR ở đây chỉ là ví dụ textbook trong raw, không phải khuyến nghị dùng benchmark hiện hành. Indexed bond có thể gắn coupon hoặc principal với chỉ số/real rate, nên phải kiểm tra index lag, cách điều chỉnh và liệu khoản bảo vệ có thực sự khớp với lạm phát của nhà đầu tư.
+
 ### So sánh nhanh: cùng là “fixed income” nhưng payoff không giống nhau
 
 Tên nhóm sản phẩm chỉ cho biết lớp tài sản; muốn đánh giá phải xác định ai sở hữu dòng tiền, biến cố nào làm dòng tiền lệch khỏi kế hoạch và rủi ro nào không thể quan sát từ coupon. Bảng dưới đây dùng cùng một bộ câu hỏi để tránh xếp các sản phẩm khác bản chất vào một rổ:
