@@ -30,7 +30,7 @@ Tham chiếu (reference / 참조) at hiện tại (current / 현재) spot:
 = 10.88bn KRW
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **2. Directional rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **1. Exposure map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Unhedged scenarios** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **2. Directional rủi ro (risk / 위험)** nối từ **1. Exposure map** sang **3. Unhedged scenarios**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Directional rủi ro (risk / 위험)
 
@@ -49,7 +49,7 @@ Short USD
 Long KRW
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **3. Unhedged scenarios** tiếp nhận điểm tựa từ **2. Directional rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Forward hedge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **3. Unhedged scenarios** nối từ **2. Directional rủi ro (risk / 위험)** sang **4. Forward hedge**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Unhedged scenarios
 
@@ -63,7 +63,7 @@ Difference giữa 1,250 và 1,500 là 2.0bn KRW.
 
 Nếu gross margin dự kiến chỉ vài tỷ KRW, currency move có thể thay đổi profitability của entire đặc tả hợp đồng (contract / 계약).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **4. Forward hedge** tiếp nhận điểm tựa từ **3. Unhedged scenarios** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. USD strengthens to 1,500** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **4. Forward hedge** nối từ **3. Unhedged scenarios** sang **5. USD strengthens to 1,500**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Forward hedge
 
@@ -89,7 +89,7 @@ Approximate locked KRW chi phí (cost / 비용):
 
 Ignoring giao dịch (transaction / 트랜잭션)/credit details.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **5. USD strengthens to 1,500** tiếp nhận điểm tựa từ **4. Forward hedge** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. USD weakens to 1,250** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **5. USD strengthens to 1,500** nối từ **4. Forward hedge** sang **6. USD weakens to 1,250**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. USD strengthens to 1,500
 
@@ -113,7 +113,7 @@ Combined chi phí (cost / 비용):
 ≈ 10.96bn KRW
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **6. USD weakens to 1,250** tiếp nhận điểm tựa từ **5. USD strengthens to 1,500** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Procurement pricing liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **6. USD weakens to 1,250** nối từ **5. USD strengthens to 1,500** sang **7. Procurement pricing liên kết (connection / 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. USD weakens to 1,250
 
@@ -139,7 +139,7 @@ Combined:
 
 Again, derivative mất mát (loss / 손실) can indicate hedge is working.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, sau nội dung của **6. USD weakens to 1,250**, **7. Procurement pricing liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **8. Natural hedge before derivatives** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, sau nội dung của **6. USD weakens to 1,250**, **7. Procurement pricing liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **8. Natural hedge before derivatives** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 7. Procurement pricing liên kết (connection / 연결)
 
@@ -155,7 +155,7 @@ Input cost floating in USD/KRW
 
 A forward can convert uncertain FX chi phí (cost / 비용) into known procurement chi phí (cost / 비용), helping price the final sản phẩm (product / 제품).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **8. Natural hedge before derivatives** tiếp nhận điểm tựa từ **7. Procurement pricing liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Payment certainty** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **8. Natural hedge before derivatives** nối từ **7. Procurement pricing liên kết (connection / 연결)** sang **9. Payment certainty**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Natural hedge before derivatives
 
@@ -174,7 +174,7 @@ Net USD need is approximately:
 
 Buying 8m forward ignores natural offset.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **9. Payment certainty** tiếp nhận điểm tựa từ **8. Natural hedge before derivatives** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Timing rủi ro (risk / 위험) from shipment delay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **9. Payment certainty** nối từ **8. Natural hedge before derivatives** sang **10. Timing rủi ro (risk / 위험) from shipment delay**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Payment certainty
 
@@ -191,7 +191,7 @@ Hedge ratio should reflect certainty.
 
 A 100% forward against uncertain purchase can create long USD speculation if thứ tự (order / 순서) is canceled.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **10. Timing rủi ro (risk / 위험) from shipment delay** tiếp nhận điểm tựa từ **9. Payment certainty** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Early payment rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **10. Timing rủi ro (risk / 위험) from shipment delay** nối từ **9. Payment certainty** sang **11. Early payment rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Timing rủi ro (risk / 위험) from shipment delay
 
@@ -207,7 +207,7 @@ FX swap / forward roll
 
 The hedge direction was right, but tenor mismatched actual cash luồng (flow / 흐름).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **11. Early payment rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **10. Timing rủi ro (risk / 위험) from shipment delay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Layered purchase hedge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **11. Early payment rủi ro (risk / 위험)** nối từ **10. Timing rủi ro (risk / 위험) from shipment delay** sang **12. Layered purchase hedge**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Early payment rủi ro (risk / 위험)
 
@@ -217,7 +217,7 @@ Hedge maturity no longer aligns.
 
 Closing/rolling can create mark-to-market cash flows before operating giao dịch (transaction / 트랜잭션) settles.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **12. Layered purchase hedge** tiếp nhận điểm tựa từ **11. Early payment rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Rolling hedge program** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **12. Layered purchase hedge** nối từ **11. Early payment rủi ro (risk / 위험)** sang **13. Rolling hedge program**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Layered purchase hedge
 
@@ -231,7 +231,7 @@ quarter +3 uncertain 30%
 
 A layered hedge can reflect confidence by horizon.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **13. Rolling hedge program** tiếp nhận điểm tựa từ **12. Layered purchase hedge** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Rolling creates đường dẫn (path / 경로) dependence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **13. Rolling hedge program** nối từ **12. Layered purchase hedge** sang **14. Rolling creates đường dẫn (path / 경로) dependence**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Rolling hedge program
 
@@ -254,7 +254,7 @@ hedge book is rebalanced
 
 This is a tiến trình (process / 프로세스), not one trade.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **13. Rolling hedge program** xác định đầu vào; **14. Rolling creates đường dẫn (path / 경로) dependence** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **15. Forward points affect locked chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **13. Rolling hedge program** đặt đầu vào cho **14. Rolling creates đường dẫn (path / 경로) dependence**, rồi **15. Forward points affect locked chi phí (cost / 비용)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. Rolling creates đường dẫn (path / 경로) dependence
 
@@ -264,7 +264,7 @@ Two companies with same final exposure can have different hedge portfolio rates 
 
 Do not judge kết quả (result / 결과) from one maturity snapshot only.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **14. Rolling creates đường dẫn (path / 경로) dependence** xác định đầu vào; **15. Forward points affect locked chi phí (cost / 비용)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. Money-market hedge intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **14. Rolling creates đường dẫn (path / 경로) dependence** đặt đầu vào cho **15. Forward points affect locked chi phí (cost / 비용)**, rồi **16. Money-market hedge intuition** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. Forward points affect locked chi phí (cost / 비용)
 
@@ -282,7 +282,7 @@ known forward-locked cost
 
 not `spot today vs forward` as if cash could be settled today for free.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **16. Money-market hedge intuition** tiếp nhận điểm tựa từ **15. Forward points affect locked chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Option hedge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **16. Money-market hedge intuition** nối từ **15. Forward points affect locked chi phí (cost / 비용)** sang **17. Option hedge**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Money-market hedge intuition
 
@@ -298,7 +298,7 @@ Forward pricing should relate to this synthetic funding đường dẫn (path / 
 
 This explains why rates enter forward tỷ lệ (rate / 비율).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **17. Option hedge** tiếp nhận điểm tựa từ **16. Money-market hedge intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Why option can match uncertain exposure better** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **17. Option hedge** nối từ **16. Money-market hedge intuition** sang **18. Why option can match uncertain exposure better**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Option hedge
 
@@ -314,7 +314,7 @@ This costs option premium.
 
 Useful when amount/timing is uncertain or company values favorable FX participation.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **18. Why option can match uncertain exposure better** tiếp nhận điểm tựa từ **17. Option hedge** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Premium is real ngân sách (budget / 예산) chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **18. Why option can match uncertain exposure better** nối từ **17. Option hedge** sang **19. Premium is real ngân sách (budget / 예산) chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Why option can match uncertain exposure better
 
@@ -324,7 +324,7 @@ An option can simply expire unused, limiting downside to premium, depending on c
 
 Therefore optionality can have giá trị (value / 값) when underlying giao dịch (transaction / 트랜잭션) itself is uncertain.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **19. Premium is real ngân sách (budget / 예산) chi phí (cost / 비용)** tiếp nhận điểm tựa từ **18. Why option can match uncertain exposure better** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Collars and structured hedges** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **19. Premium is real ngân sách (budget / 예산) chi phí (cost / 비용)** nối từ **18. Why option can match uncertain exposure better** sang **20. Collars and structured hedges**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Premium is real ngân sách (budget / 예산) chi phí (cost / 비용)
 
@@ -339,7 +339,7 @@ Option = expensive
 
 Forward has opportunity chi phí (cost / 비용)/locked payoff; option pays for asymmetry.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **20. Collars and structured hedges** tiếp nhận điểm tựa từ **19. Premium is real ngân sách (budget / 예산) chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Supplier currency negotiation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **20. Collars and structured hedges** nối từ **19. Premium is real ngân sách (budget / 예산) chi phí (cost / 비용)** sang **21. Supplier currency negotiation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Collars and structured hedges
 
@@ -349,7 +349,7 @@ But structured products may add barriers/leverage/conditional notional.
 
 Treasury must mô hình (model / 모델) full payoff, especially under large USD move.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **21. Supplier currency negotiation** tiếp nhận điểm tựa từ **20. Collars and structured hedges** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Inventory holding period** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **21. Supplier currency negotiation** nối từ **20. Collars and structured hedges** sang **22. Inventory holding period**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Supplier currency negotiation
 
@@ -366,7 +366,7 @@ Shorter price validity
 
 Supplier will price its own FX rủi ro (risk / 위험) into terms, so rủi ro (risk / 위험) does not disappear—it is redistributed.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **22. Inventory holding period** tiếp nhận điểm tựa từ **21. Supplier currency negotiation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Pass-through** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **22. Inventory holding period** nối từ **21. Supplier currency negotiation** sang **23. Pass-through**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Inventory holding period
 
@@ -376,7 +376,7 @@ If final selling price can adjust with FX, economic exposure differs from a full
 
 Treasury needs nghiệp vụ (business / 비즈니스) tiến trình (process / 프로세스) map, not invoice danh sách (list / 목록) only.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **23. Pass-through** tiếp nhận điểm tựa từ **22. Inventory holding period** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Working-capital impact** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **23. Pass-through** nối từ **22. Inventory holding period** sang **24. Working-capital impact**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Pass-through
 
@@ -391,7 +391,7 @@ Then long-run economic exposure may be smaller than giao dịch (transaction / �
 
 But pass-through timing and competitive các ràng buộc (constraints / 제약조건들) matter.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **24. Working-capital impact** tiếp nhận điểm tựa từ **23. Pass-through** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Credit and FX tương tác (interaction / 상호작용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **24. Working-capital impact** nối từ **23. Pass-through** sang **25. Credit and FX tương tác (interaction / 상호작용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Working-capital impact
 
@@ -401,7 +401,7 @@ Even if long-run margins recover, short-term liquidity can tighten.
 
 Hedge can protect liquidity timing as well as accounting margin.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **25. Credit and FX tương tác (interaction / 상호작용)** tiếp nhận điểm tựa từ **24. Working-capital impact** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Counterparty concentration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **25. Credit and FX tương tác (interaction / 상호작용)** nối từ **24. Working-capital impact** sang **26. Counterparty concentration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Credit and FX tương tác (interaction / 상호작용)
 
@@ -415,7 +415,7 @@ USD strengthens
 
 FX hedge alone may not cover supplier-credit shock.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **26. Counterparty concentration** tiếp nhận điểm tựa từ **25. Credit and FX tương tác (interaction / 상호작용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Settlement rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **26. Counterparty concentration** nối từ **25. Credit and FX tương tác (interaction / 상호작용)** sang **27. Settlement rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Counterparty concentration
 
@@ -429,7 +429,7 @@ can impair hedge program.
 
 Large corporate treasury often tracks counterparty limits.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **27. Settlement rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **26. Counterparty concentration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Cash-flow-at-risk view** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **27. Settlement rủi ro (risk / 위험)** nối từ **26. Counterparty concentration** sang **28. Cash-flow-at-risk view**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Settlement rủi ro (risk / 위험)
 
@@ -447,7 +447,7 @@ supplier settlement
 
 A correctly priced hedge can thất bại (fail / 실패) operationally if payment tiến trình (process / 프로세스) fails.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **27. Settlement rủi ro (risk / 위험)** xác định đầu vào; **28. Cash-flow-at-risk view** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **29. Ngân sách (budget / 예산) tỷ lệ (rate / 비율) vs thị trường (market / 시장) tỷ lệ (rate / 비율)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **27. Settlement rủi ro (risk / 위험)** đặt đầu vào cho **28. Cash-flow-at-risk view**, rồi **29. Ngân sách (budget / 예산) tỷ lệ (rate / 비율) vs thị trường (market / 시장) tỷ lệ (rate / 비율)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 28. Cash-flow-at-risk view
 
@@ -461,7 +461,7 @@ under scenarios.
 
 Hedge chính sách (policy / 정책) can mục tiêu (target / 대상) maximum acceptable cash-flow-at-risk.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **28. Cash-flow-at-risk view** xác định đầu vào; **29. Ngân sách (budget / 예산) tỷ lệ (rate / 비율) vs thị trường (market / 시장) tỷ lệ (rate / 비율)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **30. Over-hedge example** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **28. Cash-flow-at-risk view** đặt đầu vào cho **29. Ngân sách (budget / 예산) tỷ lệ (rate / 비율) vs thị trường (market / 시장) tỷ lệ (rate / 비율)**, rồi **30. Over-hedge example** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 29. Ngân sách (budget / 예산) tỷ lệ (rate / 비율) vs thị trường (market / 시장) tỷ lệ (rate / 비율)
 
@@ -477,7 +477,7 @@ This may create procurement margin buffer relative to ngân sách (budget / 예�
 
 Ngân sách (budget / 예산) tỷ lệ (rate / 비율) is nội bộ (internal / 내부) quyết định (decision / 결정) benchmark.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **29. Ngân sách (budget / 예산) tỷ lệ (rate / 비율) vs thị trường (market / 시장) tỷ lệ (rate / 비율)** cho ta quy tắc; **30. Over-hedge example** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **31. Under-hedge example** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **29. Ngân sách (budget / 예산) tỷ lệ (rate / 비율) vs thị trường (market / 시장) tỷ lệ (rate / 비율)** nêu quy tắc; **30. Over-hedge example** thử quy tắc trong tình huống, rồi **31. Under-hedge example** mở rộng hệ quả.
 
 ## 30. Over-hedge example
 
@@ -495,7 +495,7 @@ Net after paying supplier:
 
 Treasury must sell excess USD, exposing company to closeout P/L.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **30. Over-hedge example** cho ta quy tắc; **31. Under-hedge example** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **32. Forecast-quality vòng phản hồi (feedback loop / 피드백 루프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **30. Over-hedge example** nêu quy tắc; **31. Under-hedge example** thử quy tắc trong tình huống, rồi **32. Forecast-quality vòng phản hồi (feedback loop / 피드백 루프)** mở rộng hệ quả.
 
 ## 31. Under-hedge example
 
@@ -509,7 +509,7 @@ Remaining:
 
 If USD spikes, residual chi phí (cost / 비용) can still be material.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **31. Under-hedge example** cho ta quy tắc; **32. Forecast-quality vòng phản hồi (feedback loop / 피드백 루프)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **33. Scenario ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **31. Under-hedge example** nêu quy tắc; **32. Forecast-quality vòng phản hồi (feedback loop / 피드백 루프)** thử quy tắc trong tình huống, rồi **33. Scenario ma trận (matrix / 행렬)** mở rộng hệ quả.
 
 ## 32. Forecast-quality vòng phản hồi (feedback loop / 피드백 루프)
 
@@ -524,7 +524,7 @@ forecast vs actual payment date
 
 Improving supply-chain forecast can reduce FX rủi ro (risk / 위험) as much as changing derivative instrument.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **33. Scenario ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **32. Forecast-quality vòng phản hồi (feedback loop / 피드백 루프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Stress — USD spike + purchase increase** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **33. Scenario ma trận (matrix / 행렬)** nối từ **32. Forecast-quality vòng phản hồi (feedback loop / 피드백 루프)** sang **34. Stress — USD spike + purchase increase**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Scenario ma trận (matrix / 행렬)
 
@@ -547,7 +547,7 @@ Over/under hedge
 Total procurement cash cost
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **34. Stress — USD spike + purchase increase** tiếp nhận điểm tựa từ **33. Scenario ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Stress — thứ tự (order / 순서) cancellation + USD spike** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **34. Stress — USD spike + purchase increase** nối từ **33. Scenario ma trận (matrix / 행렬)** sang **35. Stress — thứ tự (order / 순서) cancellation + USD spike**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Stress — USD spike + purchase increase
 
@@ -563,7 +563,7 @@ Residual unhedged amount faces high spot tỷ lệ (rate / 비율).
 
 Rủi ro (risk / 위험) management must stress volume and tỷ lệ (rate / 비율) jointly.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **35. Stress — thứ tự (order / 순서) cancellation + USD spike** tiếp nhận điểm tựa từ **34. Stress — USD spike + purchase increase** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Hedge attribution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **35. Stress — thứ tự (order / 순서) cancellation + USD spike** nối từ **34. Stress — USD spike + purchase increase** sang **36. Hedge attribution**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Stress — thứ tự (order / 순서) cancellation + USD spike
 
@@ -573,7 +573,7 @@ USD spike may create gain, but that is accidental speculation after nghiệp v�
 
 Chính sách (policy / 정책) should require prompt exposure/hedge reconciliation.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **36. Hedge attribution** tiếp nhận điểm tựa từ **35. Stress — thứ tự (order / 순서) cancellation + USD spike** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Procurement hedge dashboard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **36. Hedge attribution** nối từ **35. Stress — thứ tự (order / 순서) cancellation + USD spike** sang **37. Procurement hedge dashboard**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Hedge attribution
 
@@ -589,7 +589,7 @@ Unhedged procurement FX effect
 = Hedged procurement result
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **37. Procurement hedge dashboard** tiếp nhận điểm tựa từ **36. Hedge attribution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. What not to learn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **37. Procurement hedge dashboard** nối từ **36. Hedge attribution** sang **38. What not to learn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Procurement hedge dashboard
 
@@ -608,7 +608,7 @@ Counterparty
 Residual stress cost
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **38. What not to learn** tiếp nhận điểm tựa từ **37. Procurement hedge dashboard** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Trường hợp (case / 사례) outputs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **38. What not to learn** nối từ **37. Procurement hedge dashboard** sang **39. Trường hợp (case / 사례) outputs**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. What not to learn
 
@@ -635,7 +635,7 @@ Instrument and hedge ratio must fit certainty, horizon,
 cash-flow objective and residual-risk tolerance.
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **38. What not to learn** cho ta quy tắc; **39. Trường hợp (case / 사례) outputs** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **40. Rà soát (review / 검토) questions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **38. What not to learn** nêu quy tắc; **39. Trường hợp (case / 사례) outputs** thử quy tắc trong tình huống, rồi **40. Rà soát (review / 검토) questions** mở rộng hệ quả.
 
 ## 39. Trường hợp (case / 사례) outputs
 
@@ -650,7 +650,7 @@ cash_flow_at_risk_report.md
 hedge_effectiveness_report.md
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **39. Trường hợp (case / 사례) outputs** cho ta quy tắc; **40. Rà soát (review / 검토) questions** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Nội bộ (internal / 내부) links** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **39. Trường hợp (case / 사례) outputs** nêu quy tắc; **40. Rà soát (review / 검토) questions** thử quy tắc trong tình huống, rồi **Nội bộ (internal / 내부) links** mở rộng hệ quả.
 
 ## 40. Rà soát (review / 검토) questions
 
@@ -664,7 +664,7 @@ You should explain:
 6. Why procurement forecast accuracy is part of FX rủi ro (risk / 위험) management.
 7. Why combined underlying + hedge kết quả (result / 결과) matters more than derivative P/L.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **Nội bộ (internal / 내부) links** tiếp nhận điểm tựa từ **40. Rà soát (review / 검토) questions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Korean Importer: Hedge USD Payables và Procurement Margin**, **Nội bộ (internal / 내부) links** nối từ **40. Rà soát (review / 검토) questions** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nội bộ (internal / 내부) links
 

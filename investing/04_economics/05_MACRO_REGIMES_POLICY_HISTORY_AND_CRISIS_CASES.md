@@ -21,7 +21,7 @@ Inflation: tăng / giảm
 
 Từ đó có thể hình thành bốn trạng thái trực giác.
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **2. Goldilocks** tiếp nhận điểm tựa từ **1. Regime là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Overheating** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **2. Goldilocks** nối từ **1. Regime là gì?** sang **3. Overheating**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Goldilocks
 
@@ -36,7 +36,7 @@ Trạng thái này thường dễ chịu cho tài sản rủi ro vì earnings c�
 
 Nhưng valuation và positioning vẫn quyết định kết quả thực tế.
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **3. Overheating** tiếp nhận điểm tựa từ **2. Goldilocks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Stagflation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **3. Overheating** nối từ **2. Goldilocks** sang **4. Stagflation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Overheating
 
@@ -57,7 +57,7 @@ nhưng
 Discount Rate ↑
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **4. Stagflation** tiếp nhận điểm tựa từ **3. Overheating** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Deflationary bust** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **4. Stagflation** nối từ **3. Overheating** sang **5. Deflationary bust**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Stagflation
 
@@ -70,7 +70,7 @@ Inflation ↑
 
 Đây là trạng thái khó cho chính sách (policy / 정책) vì nới lỏng hỗ trợ tăng trưởng có thể làm inflation xấu hơn, trong khi tightening chống inflation làm growth yếu thêm.
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **5. Deflationary bust** tiếp nhận điểm tựa từ **4. Stagflation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Soft landing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **5. Deflationary bust** nối từ **4. Stagflation** sang **6. Soft landing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Deflationary bust
 
@@ -86,7 +86,7 @@ Trong trạng thái này, deleveraging và demand destruction có thể quan tr�
 
 # Phần II — Soft landing và hard landing
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **6. Soft landing** tiếp nhận điểm tựa từ **5. Deflationary bust** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Hard landing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **6. Soft landing** nối từ **5. Deflationary bust** sang **7. Hard landing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Soft landing
 
@@ -99,7 +99,7 @@ Nó thường yêu cầu:
 - labor cooling có trật tự;
 - credit không đổ vỡ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **7. Hard landing** tiếp nhận điểm tựa từ **6. Soft landing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. No landing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **7. Hard landing** nối từ **6. Soft landing** sang **8. No landing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Hard landing
 
@@ -115,7 +115,7 @@ Credit
 
 mạnh hơn dự kiến.
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **8. No landing** tiếp nhận điểm tựa từ **7. Hard landing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. chính sách (policy / 정책) lỗi (error / 오류) không nên được kết luận bằng hindsight** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **8. No landing** nối từ **7. Hard landing** sang **9. chính sách (policy / 정책) lỗi (error / 오류) không nên được kết luận bằng hindsight**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. No landing
 
@@ -125,7 +125,7 @@ mạnh hơn dự kiến.
 
 # Phần III — chính sách (policy / 정책) lỗi (error / 오류)
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **9. chính sách (policy / 정책) lỗi (error / 오류) không nên được kết luận bằng hindsight** gom các mảnh từ **8. No landing** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **10. Tightening quá ít** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **9. chính sách (policy / 정책) lỗi (error / 오류) không nên được kết luận bằng hindsight** tổng hợp từ **8. No landing** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **10. Tightening quá ít** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. chính sách (policy / 정책) lỗi (error / 오류) không nên được kết luận bằng hindsight
 
@@ -142,7 +142,7 @@ Policy transmission có độ trễ nào?
 
 Không nên dùng kết quả (outcome / 결과) sau này để giả định quyết định lúc trước “rõ ràng sai”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **10. Tightening quá ít** gom các mảnh từ **9. chính sách (policy / 정책) lỗi (error / 오류) không nên được kết luận bằng hindsight** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **11. Tightening quá nhiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **10. Tightening quá ít** tổng hợp từ **9. chính sách (policy / 정책) lỗi (error / 오류) không nên được kết luận bằng hindsight** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **11. Tightening quá nhiều** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 10. Tightening quá ít
 
@@ -154,7 +154,7 @@ Inflation Persistence ↑
 → Later Tightening phải mạnh hơn
 ```
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **11. Tightening quá nhiều** tiếp nhận điểm tựa từ **10. Tightening quá ít** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Cơ chế chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **11. Tightening quá nhiều** nối từ **10. Tightening quá ít** sang **12. Cơ chế chính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Tightening quá nhiều
 
@@ -169,7 +169,7 @@ Refinancing Cost ↑
 
 # Phần IV — Lạm phát thập niên 1970
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **11. Tightening quá nhiều** xác định đầu vào; **12. Cơ chế chính** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **13. Volcker tightening** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **11. Tightening quá nhiều** đặt đầu vào cho **12. Cơ chế chính**, rồi **13. Volcker tightening** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. Cơ chế chính
 
@@ -183,7 +183,7 @@ Thập niên 1970 kết hợp:
 
 Bài học quan trọng là inflation supply-driven vẫn có thể trở nên bền nếu kỳ vọng và wage setting thích nghi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **12. Cơ chế chính** xác định đầu vào; **13. Volcker tightening** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. Bong bóng cuối thập niên 1980** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **12. Cơ chế chính** đặt đầu vào cho **13. Volcker tightening**, rồi **14. Bong bóng cuối thập niên 1980** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13. Volcker tightening
 
@@ -195,7 +195,7 @@ Bài học: chính sách (policy / 정책) credibility có giá trị kinh tế 
 
 # Phần V — Nhật Bản sau bong bóng tài sản
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **14. Bong bóng cuối thập niên 1980** tiếp nhận điểm tựa từ **13. Volcker tightening** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Balance-sheet recession** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **14. Bong bóng cuối thập niên 1980** nối từ **13. Volcker tightening** sang **15. Balance-sheet recession**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Bong bóng cuối thập niên 1980
 
@@ -210,7 +210,7 @@ Asset Price ↓
 → Credit / Investment ↓
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **15. Balance-sheet recession** tiếp nhận điểm tựa từ **14. Bong bóng cuối thập niên 1980** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Deflation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **15. Balance-sheet recession** nối từ **14. Bong bóng cuối thập niên 1980** sang **16. Deflation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Balance-sheet recession
 
@@ -218,7 +218,7 @@ Doanh nghiệp ưu tiên trả nợ thay vì tối đa hóa lợi nhuận hoặc
 
 Ngay cả lãi suất thấp cũng không tạo credit demand mạnh nếu private sector đang deleverage.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **16. Deflation** tiếp nhận điểm tựa từ **15. Balance-sheet recession** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Cấu trúc trước khủng hoảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **16. Deflation** nối từ **15. Balance-sheet recession** sang **17. Cấu trúc trước khủng hoảng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Deflation
 
@@ -228,7 +228,7 @@ Bài học là lãi suất danh nghĩa gần 0 không tự động nghĩa chính
 
 # Phần VI — Asian Financial Crisis 1997
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **17. Cấu trúc trước khủng hoảng** tiếp nhận điểm tựa từ **16. Deflation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Trigger và phản hồi (feedback / 피드백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **17. Cấu trúc trước khủng hoảng** nối từ **16. Deflation** sang **18. Trigger và phản hồi (feedback / 피드백)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Cấu trúc trước khủng hoảng
 
@@ -240,7 +240,7 @@ Nhiều nền kinh tế có:
 - reserve các ràng buộc (constraints / 제약조건들);
 - credit growth cao.
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **18. Trigger và phản hồi (feedback / 피드백)** tiếp nhận điểm tựa từ **17. Cấu trúc trước khủng hoảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **18. Trigger và phản hồi (feedback / 피드백)** nối từ **17. Cấu trúc trước khủng hoảng** sang **19. Bài học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Trigger và phản hồi (feedback / 피드백)
 
@@ -257,7 +257,7 @@ Capital Outflow
 
 Đây là ví dụ điển hình của sudden stop và balance-sheet tác động (effect / 효과).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **19. Bài học** tiếp nhận điểm tựa từ **18. Trigger và phản hồi (feedback / 피드백)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Công nghệ đúng không đồng nghĩa valuation đúng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **19. Bài học** nối từ **18. Trigger và phản hồi (feedback / 피드백)** sang **20. Công nghệ đúng không đồng nghĩa valuation đúng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Bài học
 
@@ -271,7 +271,7 @@ Không chỉ nhìn current-account deficit. Cần xem:
 
 # Phần VII — Dot-com bubble
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **20. Công nghệ đúng không đồng nghĩa valuation đúng** tiếp nhận điểm tựa từ **19. Bài học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Narrative và capital cycle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **20. Công nghệ đúng không đồng nghĩa valuation đúng** nối từ **19. Bài học** sang **21. Narrative và capital cycle**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Công nghệ đúng không đồng nghĩa valuation đúng
 
@@ -285,7 +285,7 @@ nhưng
 Price Paid vẫn có thể sai
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **21. Narrative và capital cycle** tiếp nhận điểm tựa từ **20. Công nghệ đúng không đồng nghĩa valuation đúng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Housing và leverage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **21. Narrative và capital cycle** nối từ **20. Công nghệ đúng không đồng nghĩa valuation đúng** sang **22. Housing và leverage**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Narrative và capital cycle
 
@@ -300,13 +300,13 @@ Một narrative đúng có thể tự tạo supply làm return kém đi.
 
 # Phần VIII — toàn cục (global / 전역) Financial Crisis 2008
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **22. Housing và leverage** tiếp nhận điểm tựa từ **21. Narrative và capital cycle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Securitization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **22. Housing và leverage** nối từ **21. Narrative và capital cycle** sang **23. Securitization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Housing và leverage
 
 Credit dễ, underwriting yếu và housing collateral tăng giá tạo leverage lớn.
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **23. Securitization** tiếp nhận điểm tựa từ **22. Housing và leverage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Short-term funding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **23. Securitization** nối từ **22. Housing và leverage** sang **24. Short-term funding**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Securitization
 
@@ -314,7 +314,7 @@ Mortgage loans được đóng gói thành securities và phân phối rộng.
 
 Rủi ro không biến mất; nó được chuyển và đôi khi trở nên khó nhìn hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **24. Short-term funding** tiếp nhận điểm tựa từ **23. Securitization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Financial accelerator** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **24. Short-term funding** nối từ **23. Securitization** sang **25. Financial accelerator**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Short-term funding
 
@@ -330,7 +330,7 @@ Funding Stops
 → More Funding Stress
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **25. Financial accelerator** tiếp nhận điểm tựa từ **24. Short-term funding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. chính sách (policy / 정책) phản hồi (response / 응답)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **25. Financial accelerator** nối từ **24. Short-term funding** sang **26. chính sách (policy / 정책) phản hồi (response / 응답)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Financial accelerator
 
@@ -338,7 +338,7 @@ Housing decline truyền tới bank capital, lending standards, household wealth
 
 Khủng hoảng tài chính trở thành recession thực.
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **26. chính sách (policy / 정책) phản hồi (response / 응답)** tiếp nhận điểm tựa từ **25. Financial accelerator** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Một currency, nhiều sovereign** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **26. chính sách (policy / 정책) phản hồi (response / 응답)** nối từ **25. Financial accelerator** sang **27. Một currency, nhiều sovereign**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. chính sách (policy / 정책) phản hồi (response / 응답)
 
@@ -355,7 +355,7 @@ Mỗi công cụ giải quyết một phần vấn đề khác nhau.
 
 # Phần IX — Eurozone sovereign crisis
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **27. Một currency, nhiều sovereign** tiếp nhận điểm tựa từ **26. chính sách (policy / 정책) phản hồi (response / 응답)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Sovereign–bank doom vòng lặp (loop / 루프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **27. Một currency, nhiều sovereign** nối từ **26. chính sách (policy / 정책) phản hồi (response / 응답)** sang **28. Sovereign–bank doom vòng lặp (loop / 루프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Một currency, nhiều sovereign
 
@@ -363,7 +363,7 @@ Các nước dùng cùng EUR nhưng không chia sẻ hoàn toàn fiscal balance 
 
 Điều này tạo rủi ro spread giữa sovereigns.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **28. Sovereign–bank doom vòng lặp (loop / 루프)** tiếp nhận điểm tựa từ **27. Một currency, nhiều sovereign** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Fragmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **28. Sovereign–bank doom vòng lặp (loop / 루프)** nối từ **27. Một currency, nhiều sovereign** sang **29. Fragmentation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Sovereign–bank doom vòng lặp (loop / 루프)
 
@@ -378,7 +378,7 @@ Sovereign Risk ↑
 → Fiscal Position ↓
 ```
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **29. Fragmentation** tiếp nhận điểm tựa từ **28. Sovereign–bank doom vòng lặp (loop / 루프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Giai đoạn đầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **29. Fragmentation** nối từ **28. Sovereign–bank doom vòng lặp (loop / 루프)** sang **30. Giai đoạn đầu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Fragmentation
 
@@ -386,7 +386,7 @@ Nếu lãi suất truyền dẫn khác nhau quá lớn giữa các quốc gia, m
 
 # Phần X — COVID shock
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **30. Giai đoạn đầu** tiếp nhận điểm tựa từ **29. Fragmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. chính sách (policy / 정책) phản hồi (response / 응답)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **30. Giai đoạn đầu** nối từ **29. Fragmentation** sang **31. chính sách (policy / 정책) phản hồi (response / 응답)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Giai đoạn đầu
 
@@ -397,13 +397,13 @@ COVID tạo đồng thời:
 - liquidity stress;
 - toàn cục (global / 전역) trade disruption.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **31. chính sách (policy / 정책) phản hồi (response / 응답)** tiếp nhận điểm tựa từ **30. Giai đoạn đầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Reopening** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **31. chính sách (policy / 정책) phản hồi (response / 응답)** nối từ **30. Giai đoạn đầu** sang **32. Reopening**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. chính sách (policy / 정책) phản hồi (response / 응답)
 
 Monetary easing kết hợp fiscal transfer rất lớn giúp household income và thị trường (market / 시장) liquidity phục hồi nhanh hơn nhiều cuộc suy thoái trước.
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **32. Reopening** tiếp nhận điểm tựa từ **31. chính sách (policy / 정책) phản hồi (response / 응답)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Bài học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **32. Reopening** nối từ **31. chính sách (policy / 정책) phản hồi (response / 응답)** sang **33. Bài học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Reopening
 
@@ -416,7 +416,7 @@ Goods Demand ↑
 → Inflation ↑
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **33. Bài học** tiếp nhận điểm tựa từ **32. Reopening** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Từ “temporary” tới persistence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **33. Bài học** nối từ **32. Reopening** sang **34. Từ “temporary” tới persistence**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Bài học
 
@@ -424,7 +424,7 @@ Một cú sốc có thể thay đổi bản chất theo thời gian. Phân tích
 
 # Phần XI — Inflation shock 2021–2023
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **34. Từ “temporary” tới persistence** tiếp nhận điểm tựa từ **33. Bài học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Rapid hikes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **34. Từ “temporary” tới persistence** nối từ **33. Bài học** sang **35. Rapid hikes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Từ “temporary” tới persistence
 
@@ -432,7 +432,7 @@ Ban đầu inflation tập trung ở goods và supply chuỗi (chain / 사슬), 
 
 Khi composition thay đổi, reaction hàm (function / 함수) cũng thay đổi.
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **35. Rapid hikes** tiếp nhận điểm tựa từ **34. Từ “temporary” tới persistence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Duration mất mát (loss / 손실)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **35. Rapid hikes** nối từ **34. Từ “temporary” tới persistence** sang **36. Duration mất mát (loss / 손실)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Rapid hikes
 
@@ -442,7 +442,7 @@ Tác động truyền không đồng đều do nhiều khoản nợ fixed tỷ l
 
 # Phần XII — Banking stress do duration
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **36. Duration mất mát (loss / 손실)** tiếp nhận điểm tựa từ **35. Rapid hikes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Deposit concentration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **36. Duration mất mát (loss / 손실)** nối từ **35. Rapid hikes** sang **37. Deposit concentration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Duration mất mát (loss / 손실)
 
@@ -450,7 +450,7 @@ Nếu ngân hàng giữ long-duration bonds khi rates tăng mạnh, giá trị t
 
 Lỗ chưa thực hiện trở thành vấn đề lớn khi deposit outflow buộc bán tài sản.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **37. Deposit concentration** tiếp nhận điểm tựa từ **36. Duration mất mát (loss / 손실)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Liquidity vs solvency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **37. Deposit concentration** nối từ **36. Duration mất mát (loss / 손실)** sang **38. Liquidity vs solvency**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Deposit concentration
 
@@ -458,7 +458,7 @@ Bank có nhiều uninsured corporate deposits có rủi ro (risk / 위험) run k
 
 Digital banking làm tốc độ run nhanh hơn.
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **38. Liquidity vs solvency** tiếp nhận điểm tựa từ **37. Deposit concentration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Debt mức (level / 수준) không đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **38. Liquidity vs solvency** nối từ **37. Deposit concentration** sang **39. Debt mức (level / 수준) không đủ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Liquidity vs solvency
 
@@ -466,7 +466,7 @@ Central-bank facility có thể giải quyết cash timing nhưng không xóa ec
 
 # Phần XIII — Sovereign debt stress
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **39. Debt mức (level / 수준) không đủ** tiếp nhận điểm tựa từ **38. Liquidity vs solvency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Maturity tạo độ trễ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **39. Debt mức (level / 수준) không đủ** nối từ **38. Liquidity vs solvency** sang **40. Maturity tạo độ trễ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Debt mức (level / 수준) không đủ
 
@@ -482,7 +482,7 @@ Investor Base
 Gross Financing Need
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **40. Maturity tạo độ trễ** tiếp nhận điểm tựa từ **39. Debt mức (level / 수준) không đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Domestic vs foreign currency debt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **40. Maturity tạo độ trễ** nối từ **39. Debt mức (level / 수준) không đủ** sang **41. Domestic vs foreign currency debt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Maturity tạo độ trễ
 
@@ -490,7 +490,7 @@ Nợ dài fixed-rate làm chi phí lãi tăng chậm hơn khi thị trường (m
 
 Nợ ngắn làm pressure truyền nhanh.
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **41. Domestic vs foreign currency debt** tiếp nhận điểm tựa từ **40. Maturity tạo độ trễ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Terms-of-trade shock** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **41. Domestic vs foreign currency debt** nối từ **40. Maturity tạo độ trễ** sang **42. Terms-of-trade shock**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Domestic vs foreign currency debt
 
@@ -500,7 +500,7 @@ Không nên dùng một debt/GDP threshold cho mọi quốc gia.
 
 # Phần XIV — Commodity shock
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **42. Terms-of-trade shock** tiếp nhận điểm tựa từ **41. Domestic vs foreign currency debt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Oil shock và stagflation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **42. Terms-of-trade shock** nối từ **41. Domestic vs foreign currency debt** sang **43. Oil shock và stagflation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Terms-of-trade shock
 
@@ -515,7 +515,7 @@ Real Income ↓
 FX Pressure ↑
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **43. Oil shock và stagflation** tiếp nhận điểm tựa từ **42. Terms-of-trade shock** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. Property-led growth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **43. Oil shock và stagflation** nối từ **42. Terms-of-trade shock** sang **44. Property-led growth**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. Oil shock và stagflation
 
@@ -523,7 +523,7 @@ Supply-driven oil shock có thể kéo inflation lên nhưng growth xuống, t�
 
 # Phần XV — China thuộc tính (property / 속성) và rebalancing
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **44. Property-led growth** tiếp nhận điểm tựa từ **43. Oil shock và stagflation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. Deleveraging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **44. Property-led growth** nối từ **43. Oil shock và stagflation** sang **45. Deleveraging**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. Property-led growth
 
@@ -535,7 +535,7 @@ Thuộc tính (property / 속성) ảnh hưởng:
 - steel/cement;
 - bank credit.
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **45. Deleveraging** tiếp nhận điểm tựa từ **44. Property-led growth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. Rebalancing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **45. Deleveraging** nối từ **44. Property-led growth** sang **46. Rebalancing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. Deleveraging
 
@@ -548,7 +548,7 @@ Land Sales ↓
 → Commodity Demand ↓
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **46. Rebalancing** tiếp nhận điểm tựa từ **45. Deleveraging** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **47. Growth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **46. Rebalancing** nối từ **45. Deleveraging** sang **47. Growth**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 46. Rebalancing
 
@@ -556,7 +556,7 @@ Chuyển từ thuộc tính (property / 속성)/investment sang consumption ho�
 
 # Phần XVI — Regime checklist
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **47. Growth** tiếp nhận điểm tựa từ **46. Rebalancing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **48. Inflation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **47. Growth** nối từ **46. Rebalancing** sang **48. Inflation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. Growth
 
@@ -568,7 +568,7 @@ Above hay below potential?
 Demand nội địa hay external?
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **48. Inflation** tiếp nhận điểm tựa từ **47. Growth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **49. chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **48. Inflation** nối từ **47. Growth** sang **49. chính sách (policy / 정책)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. Inflation
 
@@ -580,7 +580,7 @@ Demand hay Supply?
 Expectations anchored không?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **49. chính sách (policy / 정책)** tiếp nhận điểm tựa từ **48. Inflation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **50. Credit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **49. chính sách (policy / 정책)** nối từ **48. Inflation** sang **50. Credit**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. chính sách (policy / 정책)
 
@@ -593,7 +593,7 @@ Reaction function?
 Fiscal impulse?
 ```
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **50. Credit** tiếp nhận điểm tựa từ **49. chính sách (policy / 정책)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **51. Liquidity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **50. Credit** nối từ **49. chính sách (policy / 정책)** sang **51. Liquidity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 50. Credit
 
@@ -606,7 +606,7 @@ Credit Spread
 Default / Delinquency
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **51. Liquidity** tiếp nhận điểm tựa từ **50. Credit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **52. Valuation và positioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **51. Liquidity** nối từ **50. Credit** sang **52. Valuation và positioning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 51. Liquidity
 
@@ -620,7 +620,7 @@ Dealer Capacity
 USD Funding
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **52. Valuation và positioning** tiếp nhận điểm tựa từ **51. Liquidity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **53. Không tìm “mẫu giống hệt”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **52. Valuation và positioning** nối từ **51. Liquidity** sang **53. Không tìm “mẫu giống hệt”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 52. Valuation và positioning
 
@@ -628,7 +628,7 @@ Một regime thuận lợi không bảo đảm asset tăng nếu valuation đã 
 
 # Phần XVII — Cách sử dụng lịch sử
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **53. Không tìm “mẫu giống hệt”** tiếp nhận điểm tựa từ **52. Valuation và positioning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **54. Tách trigger và vulnerability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **53. Không tìm “mẫu giống hệt”** nối từ **52. Valuation và positioning** sang **54. Tách trigger và vulnerability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 53. Không tìm “mẫu giống hệt”
 
@@ -649,7 +649,7 @@ Collateral là gì?
 Policy space khác thế nào?
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **54. Tách trigger và vulnerability** tiếp nhận điểm tựa từ **53. Không tìm “mẫu giống hệt”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **55. Tách first-order và second-order tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **54. Tách trigger và vulnerability** nối từ **53. Không tìm “mẫu giống hệt”** sang **55. Tách first-order và second-order tác động (effect / 효과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 54. Tách trigger và vulnerability
 
@@ -662,7 +662,7 @@ Vulnerability
 = Crisis Severity
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **55. Tách first-order và second-order tác động (effect / 효과)** tiếp nhận điểm tựa từ **54. Tách trigger và vulnerability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **56. Bản đồ hiện tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **55. Tách first-order và second-order tác động (effect / 효과)** nối từ **54. Tách trigger và vulnerability** sang **56. Bản đồ hiện tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. Tách first-order và second-order tác động (effect / 효과)
 
@@ -682,7 +682,7 @@ airline tăng giá vé
 
 # Phần XVIII — Mẫu phân tích regime
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **56. Bản đồ hiện tại** tiếp nhận điểm tựa từ **55. Tách first-order và second-order tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **57. Kịch bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **56. Bản đồ hiện tại** nối từ **55. Tách first-order và second-order tác động (effect / 효과)** sang **57. Kịch bản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 56. Bản đồ hiện tại
 
@@ -701,7 +701,7 @@ FX:
 Commodity:
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **57. Kịch bản** tiếp nhận điểm tựa từ **56. Bản đồ hiện tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **58. Dấu hiệu chuyển regime** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **57. Kịch bản** nối từ **56. Bản đồ hiện tại** sang **58. Dấu hiệu chuyển regime**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 57. Kịch bản
 
@@ -718,7 +718,7 @@ Bear:
 Điều gì có thể phá vỡ hệ thống?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **58. Dấu hiệu chuyển regime** tiếp nhận điểm tựa từ **57. Kịch bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **58. Dấu hiệu chuyển regime** nối từ **57. Kịch bản** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 58. Dấu hiệu chuyển regime
 
@@ -736,7 +736,7 @@ Earnings Revisions ↓
 
 có ý nghĩa mạnh hơn một dữ liệu đơn lẻ.
 
-> **Chuyển mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **Kết luận** gom các mảnh từ **58. Dấu hiệu chuyển regime** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Chế độ vĩ mô, lịch sử chính sách và các cơ chế khủng hoảng**, **Kết luận** tổng hợp từ **58. Dấu hiệu chuyển regime** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

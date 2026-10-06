@@ -28,7 +28,7 @@ Một hedge tốt không được đánh giá bằng việc derivative có lãi 
 3. [03_GLOBAL_ASSET_MANAGER_CURRENCY_HEDGE.md](./03_GLOBAL_ASSET_MANAGER_CURRENCY_HEDGE.md) — portfolio foreign assets; tách local-asset return khỏi FX return, hedge ratio, hedge carry, rebalance và benchmark mismatch.
 4. [04_CROSS_CURRENCY_FUNDING_AND_DEBT_HEDGE.md](./04_CROSS_CURRENCY_FUNDING_AND_DEBT_HEDGE.md) — company/financial institution huy động một currency nhưng cần economic funding ở currency khác; nối debt, FX swap/cross-currency swap, basis, collateral và refinancing rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Trong **Institutional FX Hedging Trường hợp (case / 사례) Studies**, **Trường hợp (case / 사례) studies** cho ta quy tắc; **Không dùng hedge P/L riêng để đánh giá hedge** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Các loại rủi ro (risk / 위험) phải tách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Institutional FX Hedging Trường hợp (case / 사례) Studies**, **Trường hợp (case / 사례) studies** nêu quy tắc; **Không dùng hedge P/L riêng để đánh giá hedge** thử quy tắc trong tình huống, rồi **Các loại rủi ro (risk / 위험) phải tách** mở rộng hệ quả.
 
 ## Không dùng hedge P/L riêng để đánh giá hedge
 
@@ -52,7 +52,7 @@ KRW weakens
 
 Derivative mất mát (loss / 손실) không tự động là thất bại (failure / 실패).
 
-> **Chuyển mạch:** **Không dùng hedge P/L riêng** để tránh đánh giá sai; **Các loại rủi ro phải tách** phân rủi ro translation, transaction và economic trước khi viết **Hedge policy**.
+> **Nối mạch:** **Không dùng hedge P/L riêng** để tránh đánh giá sai; **Các loại rủi ro phải tách** phân rủi ro translation, transaction và economic trước khi viết **Hedge policy**.
 
 ## Các loại rủi ro (risk / 위험) phải tách
 
@@ -71,7 +71,7 @@ Funding / rollover risk
 
 Không một hedge instrument nào xóa tất cả.
 
-> **Chuyển mạch:** **Hedge policy** biến risk taxonomy thành authority, limit và review cadence; **Kết nối với các phần khác** đưa policy về treasury, accounting và market owners.
+> **Nối mạch:** **Hedge policy** biến risk taxonomy thành authority, limit và review cadence; **Kết nối với các phần khác** đưa policy về treasury, accounting và market owners.
 
 ## Hedge chính sách (policy / 정책) trước hedge trade
 
@@ -89,7 +89,7 @@ What is the treatment of over-hedge / under-hedge?
 How is hedge effectiveness measured?
 ```
 
-> **Chuyển mạch:** **Connections** xác định prerequisite và owner; **Output chuẩn cho mỗi case** ghi lại exposure, decision, hedge instrument và evidence theo cùng format.
+> **Nối mạch:** **Connections** xác định prerequisite và owner; **Output chuẩn cho mỗi case** ghi lại exposure, decision, hedge instrument và evidence theo cùng format.
 
 ## Kết nối với các phần khác
 
@@ -99,7 +99,7 @@ How is hedge effectiveness measured?
 - [FX options and hedging](../14_FX_OPTIONS_VOLATILITY_AND_HEDGING.md)
 - [Systematic risk/attribution project](../70_systematic_project/README.md)
 
-> **Chuyển mạch:** **Output chuẩn** khép case study bằng decision trail và boundary; chi tiết định giá, settlement hoặc accounting quay về canonical owner.
+> **Nối mạch:** **Output chuẩn** khép case study bằng decision trail và boundary; chi tiết định giá, settlement hoặc accounting quay về canonical owner.
 
 ## Đầu ra (output / 출력) chuẩn cho mỗi trường hợp (case / 사례)
 
