@@ -134,7 +134,7 @@ Bảng thuật ngữ này là điểm tra cứu sau khi đã đọc các chapter
 | Bài toán ngược | Inverse bài toán (problem / 문제) | 역문제 | `12_experimental_computational/03_data_inference_inverse_problems.md` |
 | Tính nhận dạng tham số | Identifiability | 식별가능성 | `12_experimental_computational/03_data_inference_inverse_problems.md` |
 
-> **Chuyển mạch:** Trong **Thuật ngữ Việt – Anh – Hàn và điều hướng theo câu hỏi**, **Một số khác biệt thuật ngữ tiếng Hàn đáng chú ý** tiếp nhận điểm tựa từ **Thuật ngữ nền tảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều hướng theo câu hỏi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thuật ngữ Việt – Anh – Hàn và điều hướng theo câu hỏi**, **Một số khác biệt thuật ngữ tiếng Hàn đáng chú ý** nối từ **Thuật ngữ nền tảng** sang **Điều hướng theo câu hỏi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Một số khác biệt thuật ngữ tiếng Hàn đáng chú ý
 
@@ -148,7 +148,7 @@ Hậu tố `장` có nghĩa là trường (field): `전기장` là điện trư�
 
 Trong vật lý nguyên tử, `에너지 준위` là mức năng lượng (energy level). Trong vật lý chất rắn thường gặp thêm `에너지 밴드` là dải năng lượng, `가전자대` là dải hóa trị, `전도대` là dải dẫn và `금지대` là vùng cấm.
 
-> **Chuyển mạch:** Ở chặng này của **Thuật ngữ Việt – Anh – Hàn và điều hướng theo câu hỏi**, **Điều hướng theo câu hỏi** tiếp nhận điểm tựa từ **Một số khác biệt thuật ngữ tiếng Hàn đáng chú ý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thuật ngữ Việt – Anh – Hàn và điều hướng theo câu hỏi**, **Điều hướng theo câu hỏi** nối từ **Một số khác biệt thuật ngữ tiếng Hàn đáng chú ý** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điều hướng theo câu hỏi
 
@@ -172,7 +172,7 @@ Nếu câu hỏi là “dữ liệu đo nói gì về tham số hoặc mô hình
 
 Nếu quan tâm sự hình thành cấu trúc lớn của Vũ trụ, một chuỗi hợp lý là [Hấp dẫn và quỹ đạo](../01_mechanics/06_gravitation_orbits.md) → [Thuyết tương đối rộng](../07_relativity/01_general_relativity.md) → [Thiên hà và vũ trụ học](../11_astrophysics_cosmology/01_galaxies_cosmology.md) → [Vũ trụ sơ khai](../11_astrophysics_cosmology/03_early_universe_dark_components.md) → [Bất ổn hấp dẫn và hình thành cấu trúc](../11_astrophysics_cosmology/04_gravitational_instability_structure_formation.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thuật ngữ Việt – Anh – Hàn và điều hướng theo câu hỏi**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Điều hướng theo câu hỏi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thuật ngữ Việt – Anh – Hàn và điều hướng theo câu hỏi**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Điều hướng theo câu hỏi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -180,7 +180,7 @@ Bảng thuật ngữ chỉ là công cụ nhận diện. Mục tiêu thật sự
 
 Các thuật ngữ nâng cao cũng nên được đọc theo cùng cách: `Green's function`, `그린 함수` và “hàm Green” không phải ba kiến thức khác nhau; chúng là ba nhãn ngôn ngữ cho cùng một công cụ toán–lý. Việc giữ English/Korean bên cạnh chỉ nhằm tăng khả năng đối chiếu tài liệu, không thay thế phần giải thích tiếng Việt.
 
-> **Chuyển mạch:** Trong **Thuật ngữ Việt – Anh – Hàn và điều hướng theo câu hỏi**, **Liên kết kiến thức (knowledge connection / 지식 연결)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Thuật ngữ Việt – Anh – Hàn và điều hướng theo câu hỏi**, **Liên kết kiến thức (knowledge connection / 지식 연결)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

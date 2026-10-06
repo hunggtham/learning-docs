@@ -38,7 +38,7 @@ Tức khối lượng hấp dẫn tiếp tục tăng ngoài vùng chứa phần 
 
 Vật chất tối (dark matter / 암흑물질) là tên cho thành phần đó trong mô hình chuẩn hiện nay. Bản chất vi mô chưa được xác định chắc chắn.
 
-> **Chuyển mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Từ thiên hà đến bằng chứng vật chất tối** nêu điều cần giải thích; **Nguyên lý vũ trụ học** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Quy mô (scale / 규모) factor và tọa độ đồng chuyển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Từ thiên hà đến bằng chứng vật chất tối** đặt vấn đề; **Nguyên lý vũ trụ học** đối chiếu bằng chứng, rồi **Quy mô (scale / 규모) factor và tọa độ đồng chuyển** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Nguyên lý vũ trụ học
 
@@ -48,7 +48,7 @@ Hai giả định này không nói vũ trụ đồng đều ở mọi quy mô (s
 
 Với các giả định đó, spacetime được mô tả bởi chỉ số (metric / 지표) Friedmann–Lemaître–Robertson–Walker (FLRW).
 
-> **Chuyển mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Quy mô (scale / 규모) factor và tọa độ đồng chuyển** tiếp nhận điểm tựa từ **Nguyên lý vũ trụ học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Redshift vũ trụ học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Quy mô (scale / 규모) factor và tọa độ đồng chuyển** nối từ **Nguyên lý vũ trụ học** sang **Redshift vũ trụ học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy mô (scale / 규모) factor và tọa độ đồng chuyển
 
@@ -82,7 +82,7 @@ v\approx H_0d.
 
 Đây là quan hệ Hubble–Lemaître gần đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Redshift vũ trụ học** tiếp nhận điểm tựa từ **Quy mô (scale / 규모) factor và tọa độ đồng chuyển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương trình Friedmann** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Redshift vũ trụ học** nối từ **Quy mô (scale / 규모) factor và tọa độ đồng chuyển** sang **Phương trình Friedmann**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Redshift vũ trụ học
 
@@ -110,7 +110,7 @@ Cosmological redshift không nên bị giản lược hoàn toàn thành Doppler
 
 Ở redshift rất nhỏ, Doppler intuition và Hubble law có thể gần tương đương về số, nhưng ở `z` lớn phải dùng cosmological mô hình (model / 모델) đầy đủ.
 
-> **Chuyển mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Phương trình Friedmann** tiếp nhận điểm tựa từ **Redshift vũ trụ học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương trình liên tục vũ trụ học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Phương trình Friedmann** nối từ **Redshift vũ trụ học** sang **Phương trình liên tục vũ trụ học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình Friedmann
 
@@ -137,7 +137,7 @@ Phương trình gia tốc là
 
 Pressure vì vậy tham gia trực tiếp vào gravity trong GR.
 
-> **Chuyển mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Phương trình liên tục vũ trụ học** tiếp nhận điểm tựa từ **Phương trình Friedmann** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mật độ tới hạn và các tham số Ω** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Phương trình liên tục vũ trụ học** nối từ **Phương trình Friedmann** sang **Mật độ tới hạn và các tham số Ω**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình liên tục vũ trụ học
 
@@ -188,7 +188,7 @@ thì
 
 Radiation giảm nhanh hơn matter vì ngoài dilution theo volume `a^3`, photon còn redshift mất năng lượng thêm một factor `a`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Mật độ tới hạn và các tham số Ω** tiếp nhận điểm tựa từ **Phương trình liên tục vũ trụ học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao Big Bang không phải vụ nổ từ một điểm?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Mật độ tới hạn và các tham số Ω** nối từ **Phương trình liên tục vũ trụ học** sang **Vì sao Big Bang không phải vụ nổ từ một điểm?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mật độ tới hạn và các tham số `Ω`
 
@@ -223,7 +223,7 @@ Phương trình Friedmann có thể viết
 
 `\Omega=1` không có nghĩa “vũ trụ chứa đúng một đơn vị vật chất”; nó là tỉ số với trọng yếu (critical / 중요) density.
 
-> **Chuyển mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Vì sao Big Bang không phải vụ nổ từ một điểm?** tiếp nhận điểm tựa từ **Mật độ tới hạn và các tham số Ω** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lookback thời gian (time / 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Vì sao Big Bang không phải vụ nổ từ một điểm?** nối từ **Mật độ tới hạn và các tham số Ω** sang **Lookback thời gian (time / 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao Big Bang không phải vụ nổ từ một điểm?
 
@@ -233,7 +233,7 @@ Nó không mô tả vật chất nổ từ một tâm vào không gian trống c
 
 Nếu không gian (space / 공간) đồng nhất, mọi comoving observer đều thấy các nguồn xa recede theo Hubble luồng (flow / 흐름); không có một center đặc biệt nằm trong không gian ba chiều.
 
-> **Chuyển mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Lookback thời gian (time / 시간)** tiếp nhận điểm tựa từ **Vì sao Big Bang không phải vụ nổ từ một điểm?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Comoving distance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Lookback thời gian (time / 시간)** nối từ **Vì sao Big Bang không phải vụ nổ từ một điểm?** sang **Comoving distance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lookback thời gian (time / 시간)
 
@@ -255,7 +255,7 @@ t_L(z)
 
 Ta không thể đổi redshift thành “bao nhiêu năm trước” nếu không có mô hình `H(z)`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Comoving distance** tiếp nhận điểm tựa từ **Lookback thời gian (time / 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Luminosity distance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Comoving distance** nối từ **Lookback thời gian (time / 시간)** sang **Luminosity distance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Comoving distance
 
@@ -268,7 +268,7 @@ D_C(z)
 
 Đây là một trong các distance measures cơ bản.
 
-> **Chuyển mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Luminosity distance** tiếp nhận điểm tựa từ **Comoving distance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Angular-diameter distance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Luminosity distance** nối từ **Comoving distance** sang **Angular-diameter distance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Luminosity distance
 
@@ -288,7 +288,7 @@ với `D_M` là transverse comoving distance.
 
 Factor `(1+z)` xuất hiện do photon năng lượng (energy / 에너지) redshift và arrival tỷ lệ (rate / 비율) bị thời gian (time / 시간) dilation.
 
-> **Chuyển mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Angular-diameter distance** tiếp nhận điểm tựa từ **Luminosity distance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Supernova Ia và lịch sử giãn nở** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Angular-diameter distance** nối từ **Luminosity distance** sang **Supernova Ia và lịch sử giãn nở**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Angular-diameter distance
 
@@ -308,7 +308,7 @@ nếu photon number được bảo toàn và ánh sáng truyền trên null geod
 
 Điểm thú vị là `D_A` không tăng đơn điệu với redshift trong cosmology chuẩn; vật ở rất xa có thể bắt đầu có angular kích thước (size / 크기) lớn hơn khi `z` tăng thêm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Supernova Ia và lịch sử giãn nở** tiếp nhận điểm tựa từ **Angular-diameter distance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CMB** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Supernova Ia và lịch sử giãn nở** nối từ **Angular-diameter distance** sang **CMB**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Supernova Ia và lịch sử giãn nở
 
@@ -324,7 +324,7 @@ sau đó được so với các cosmological các mô hình (models / 모델들)
 
 Dữ liệu cuối thế kỷ XX chỉ ra expansion gần hiện tại đang accelerating trong khung phần mềm (framework / 프레임워크) GR + FLRW, dẫn tới thành phần dark-energy-like trong mô hình chuẩn.
 
-> **Chuyển mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **CMB** tiếp nhận điểm tựa từ **Supernova Ia và lịch sử giãn nở** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BAO như thước chuẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **CMB** nối từ **Supernova Ia và lịch sử giãn nở** sang **BAO như thước chuẩn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CMB
 
@@ -344,7 +344,7 @@ mô tả variance của anisotropy theo angular quy mô (scale / 규모).
 
 Acoustic peaks phản ánh oscillations của photon–baryon plasma trước recombination và cung cấp các ràng buộc (constraints / 제약조건들) mạnh lên `\Omega_b`, `\Omega_m`, curvature và nhiều parameters khác.
 
-> **Chuyển mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **BAO như thước chuẩn** tiếp nhận điểm tựa từ **CMB** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vật chất tối và cấu trúc (structure / 구조) growth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **BAO như thước chuẩn** nối từ **CMB** sang **Vật chất tối và cấu trúc (structure / 구조) growth**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## BAO như thước chuẩn
 
@@ -364,7 +364,7 @@ H(z).
 
 BAO là ví dụ rõ của cách một hiện tượng plasma sớm trở thành ruler cho late-time cosmology.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Vật chất tối và cấu trúc (structure / 구조) growth** tiếp nhận điểm tựa từ **BAO như thước chuẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng tối và equation of trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Vật chất tối và cấu trúc (structure / 구조) growth** nối từ **BAO như thước chuẩn** sang **Năng lượng tối và equation of trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vật chất tối và cấu trúc (structure / 구조) growth
 
@@ -389,7 +389,7 @@ Dark năng lượng (energy / 에너지) dominance về sau làm cấu trúc (st
 
 Chi tiết được học sâu hơn trong chapter gravitational instability/cấu trúc (structure / 구조) formation.
 
-> **Chuyển mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Năng lượng tối và equation of trạng thái (state / 상태)** tiếp nhận điểm tựa từ **Vật chất tối và cấu trúc (structure / 구조) growth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hubble tension là gì về mặt phương pháp?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Năng lượng tối và equation of trạng thái (state / 상태)** nối từ **Vật chất tối và cấu trúc (structure / 구조) growth** sang **Hubble tension là gì về mặt phương pháp?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng tối và equation of trạng thái (state / 상태)
 
@@ -415,7 +415,7 @@ Nếu `w<-1/3`, thành phần đó có thể tạo accelerated expansion nếu �
 
 Hiện `\Lambda`CDM với `w=-1` là baseline mô hình (model / 모델) rất thành công, nhưng bản chất microscopic của vacuum năng lượng (energy / 에너지) và cosmological constant bài toán (problem / 문제) vẫn mở.
 
-> **Chuyển mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Hubble tension là gì về mặt phương pháp?** tiếp nhận điểm tựa từ **Năng lượng tối và equation of trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parameter suy luận (inference / 추론) trong cosmology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Hubble tension là gì về mặt phương pháp?** nối từ **Năng lượng tối và equation of trạng thái (state / 상태)** sang **Parameter suy luận (inference / 추론) trong cosmology**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hubble tension là gì về mặt phương pháp?
 
@@ -425,7 +425,7 @@ Các phương pháp “cục bộ (local / 로컬) distance ladder” và suy lu
 
 Một tension thống kê không tự động là bằng chứng vật lý mới; nó là tín hiệu cần kiểm tra (audit / 감사) cả dữ liệu (data / 데이터) lẫn mô hình (model / 모델).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Parameter suy luận (inference / 추론) trong cosmology** tiếp nhận điểm tựa từ **Hubble tension là gì về mặt phương pháp?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Selection effects** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Parameter suy luận (inference / 추론) trong cosmology** nối từ **Hubble tension là gì về mặt phương pháp?** sang **Selection effects**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Parameter suy luận (inference / 추론) trong cosmology
 
@@ -447,7 +447,7 @@ Parameters có thể degeneracy: hai tổ hợp khác nhau tạo observables g�
 
 Covariance giữa dữ liệu (data / 데이터) points phải được giữ trong likelihood; nếu xem các điểm tương quan như độc lập, bất định (uncertainty / 불확실성) sẽ bị đánh giá quá nhỏ.
 
-> **Chuyển mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Selection effects** tiếp nhận điểm tựa từ **Parameter suy luận (inference / 추론) trong cosmology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gravitational lensing như probe cosmology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Selection effects** nối từ **Parameter suy luận (inference / 추론) trong cosmology** sang **Gravitational lensing như probe cosmology**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Selection effects
 
@@ -455,7 +455,7 @@ Telescope có flux limit nên dễ phát hiện nguồn (source / 소스) sáng 
 
 Một population quan sát được không nhất thiết đại diện trực tiếp population thật. Đây là lý do cosmology và astrophysics phải mô hình hóa completeness và selection độ lệch (bias / 편향).
 
-> **Chuyển mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Gravitational lensing như probe cosmology** tiếp nhận điểm tựa từ **Selection effects** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sóng hấp dẫn và tiêu chuẩn (standard / 표준) siren** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Gravitational lensing như probe cosmology** nối từ **Selection effects** sang **Sóng hấp dẫn và tiêu chuẩn (standard / 표준) siren**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gravitational lensing như probe cosmology
 
@@ -465,7 +465,7 @@ Cosmic shear phụ thuộc integrated matter phân phối (distribution / 분포
 
 Strong lensing thời gian (time / 시간) delays có thể dùng như một distance probe nếu lens mass mô hình (model / 모델) được kiểm soát đủ tốt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Sóng hấp dẫn và tiêu chuẩn (standard / 표준) siren** tiếp nhận điểm tựa từ **Gravitational lensing như probe cosmology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multi-messenger astronomy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Sóng hấp dẫn và tiêu chuẩn (standard / 표준) siren** nối từ **Gravitational lensing như probe cosmology** sang **Multi-messenger astronomy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sóng hấp dẫn và tiêu chuẩn (standard / 표준) siren
 
@@ -475,7 +475,7 @@ Nếu có redshift từ electromagnetic counterpart hoặc statistical host asso
 
 Đây là một ví dụ multi-messenger nơi GR, nuclear physics, detector calibration và cosmology nối trực tiếp nhau.
 
-> **Chuyển mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Multi-messenger astronomy** tiếp nhận điểm tựa từ **Sóng hấp dẫn và tiêu chuẩn (standard / 표준) siren** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều kiện áp dụng của mô hình FLRW** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Multi-messenger astronomy** nối từ **Sóng hấp dẫn và tiêu chuẩn (standard / 표준) siren** sang **Điều kiện áp dụng của mô hình FLRW**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Multi-messenger astronomy
 
@@ -485,7 +485,7 @@ Mỗi messenger chịu tương tác (interaction / 상호작용) khác nhau và 
 
 GW170817 nối neutron-star dynamics, gravitational waves, gamma-ray burst, kilonova và heavy-element nucleosynthesis trong cùng một sự kiện (event / 이벤트).
 
-> **Chuyển mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Điều kiện áp dụng của mô hình FLRW** tiếp nhận điểm tựa từ **Multi-messenger astronomy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những gì ΛCDM giải thích và không giải thích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Điều kiện áp dụng của mô hình FLRW** nối từ **Multi-messenger astronomy** sang **Những gì ΛCDM giải thích và không giải thích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điều kiện áp dụng của mô hình FLRW
 
@@ -495,7 +495,7 @@ Trong cục bộ (local / 로컬) bound hệ thống (system / 시스템), expan
 
 Homogeneity/isotropy là statistical approximations cần được kiểm tra bằng survey observations.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Những gì ΛCDM giải thích và không giải thích** tiếp nhận điểm tựa từ **Điều kiện áp dụng của mô hình FLRW** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: redshift z=1 có nghĩa gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Những gì ΛCDM giải thích và không giải thích** nối từ **Điều kiện áp dụng của mô hình FLRW** sang **Ví dụ: redshift z=1 có nghĩa gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những gì `ΛCDM` giải thích và không giải thích
 
@@ -505,7 +505,7 @@ Nhưng mô hình không xác định microscopic định danh (identity / 식별
 
 Một mô hình thành công không có nghĩa mọi câu hỏi nền tảng đã đóng.
 
-> **Chuyển mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Những gì ΛCDM giải thích và không giải thích** cho ta quy tắc; **Ví dụ: redshift z=1 có nghĩa gì?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Những gì ΛCDM giải thích và không giải thích** nêu quy tắc; **Ví dụ: redshift z=1 có nghĩa gì?** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Ví dụ: redshift `z=1` có nghĩa gì?
 
@@ -533,7 +533,7 @@ Photon quan sát có bước sóng gấp đôi lúc phát.
 
 Nhưng không thể từ riêng `z=1` kết luận “nguồn cách đúng X tỷ năm ánh sáng”. Comoving distance, luminosity distance, angular-diameter distance và lookback thời gian (time / 시간) là các đại lượng khác nhau và cần `H(z)` để tính.
 
-> **Chuyển mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Ví dụ: redshift z=1 có nghĩa gì?** cho ta quy tắc; **Mô hình tư duy (mental model / 사고 모델)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Ví dụ: redshift z=1 có nghĩa gì?** nêu quy tắc; **Mô hình tư duy (mental model / 사고 모델)** thử quy tắc trong tình huống, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -547,7 +547,7 @@ cosmological distance/model nào nối observable với parameter?
 assumption và covariance nào được dùng trong inference?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -567,7 +567,7 @@ Không. Gravitational bằng chứng (evidence / 증거) cho một thành phần
 
 Không hoàn toàn. Các phương pháp khác nhau dùng calibration và mô hình (model / 모델) các giả định (assumptions / 가정들) khác nhau; suy luận (inference / 추론) phải ghi rõ population, covariance và cosmological khung phần mềm (framework / 프레임워크).
 
-> **Chuyển mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Thiên hà, sự giãn nở của vũ trụ và vũ trụ học hiện đại**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

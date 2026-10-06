@@ -43,7 +43,7 @@ trở thành
 
 Các hệ số xác suất `|c_n|^2` không đổi trong cơ sở năng lượng nếu Hamiltonian cố định, nhưng pha tương đối giữa các thành phần thay đổi và có thể ảnh hưởng đại lượng quan sát.
 
-> **Chuyển mạch:** Trong **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Toán tử tiến hóa thời gian** tiếp nhận điểm tựa từ **Phương trình Schrödinger phụ thuộc thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gói sóng và lan truyền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Toán tử tiến hóa thời gian** nối từ **Phương trình Schrödinger phụ thuộc thời gian** sang **Gói sóng và lan truyền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Toán tử tiến hóa thời gian
 
@@ -69,7 +69,7 @@ U^\dagger U=I.
 
 Nếu Hamiltonian phụ thuộc thời gian, các Hamiltonian tại hai thời điểm khác nhau có thể không giao hoán. Khi đó biểu thức mũ đơn giản không còn đủ và cần toán tử sắp thứ tự thời gian (time ordering).
 
-> **Chuyển mạch:** Ở chặng này của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Gói sóng và lan truyền** tiếp nhận điểm tựa từ **Toán tử tiến hóa thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vận tốc nhóm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Gói sóng và lan truyền** nối từ **Toán tử tiến hóa thời gian** sang **Vận tốc nhóm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gói sóng và lan truyền
 
@@ -97,7 +97,7 @@ Vì `\omega(k)` phụ thuộc phi tuyến vào `k`, các thành phần pha khác
 
 Đây là hiệu ứng động lực học lượng tử thực, không phải chỉ sai số phép đo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Vận tốc nhóm** tiếp nhận điểm tựa từ **Gói sóng và lan truyền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiễu loạn phụ thuộc thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Vận tốc nhóm** nối từ **Gói sóng và lan truyền** sang **Nhiễu loạn phụ thuộc thời gian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vận tốc nhóm
 
@@ -121,7 +121,7 @@ v_g=\frac{\hbar k}{m}=rac{p}{m}.
 
 Kết quả nối ngôn ngữ sóng với vận tốc hạt cổ điển.
 
-> **Chuyển mạch:** Trong **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Nhiễu loạn phụ thuộc thời gian** tiếp nhận điểm tựa từ **Vận tốc nhóm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cộng hưởng lượng tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Nhiễu loạn phụ thuộc thời gian** nối từ **Vận tốc nhóm** sang **Cộng hưởng lượng tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiễu loạn phụ thuộc thời gian
 
@@ -157,7 +157,7 @@ matrix element: nhiễu có ghép hai trạng thái hay không
 frequency matching: tần số kích thích có phù hợp chênh lệch năng lượng hay không
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Cộng hưởng lượng tử** tiếp nhận điểm tựa từ **Nhiễu loạn phụ thuộc thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy tắc chọn lọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Cộng hưởng lượng tử** nối từ **Nhiễu loạn phụ thuộc thời gian** sang **Quy tắc chọn lọc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cộng hưởng lượng tử
 
@@ -177,7 +177,7 @@ chuyển trạng thái mạnh khi
 
 Cấu trúc này rất giống dao động cưỡng bức cổ điển: hệ phản ứng mạnh khi kích thích có tần số phù hợp với một chênh lệch tần số tự nhiên. Nhưng trong lượng tử, “chế độ (mode / 모드)” tương ứng là các trạng thái năng lượng và quá trình chuyển giữa chúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Quy tắc chọn lọc** tiếp nhận điểm tựa từ **Cộng hưởng lượng tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy tắc vàng Fermi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Quy tắc chọn lọc** nối từ **Cộng hưởng lượng tử** sang **Quy tắc vàng Fermi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy tắc chọn lọc
 
@@ -193,7 +193,7 @@ Ví dụ trong chuyển mức lưỡng cực điện, cấu trúc đối xứng 
 
 Do đó phổ không chỉ đo khoảng cách mức năng lượng; nó còn tiết lộ đối xứng của trạng thái và dạng tương tác với trường ngoài.
 
-> **Chuyển mạch:** Trong **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Quy tắc vàng Fermi** tiếp nhận điểm tựa từ **Quy tắc chọn lọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bài toán tán xạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Quy tắc vàng Fermi** nối từ **Quy tắc chọn lọc** sang **Bài toán tán xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy tắc vàng Fermi
 
@@ -218,7 +218,7 @@ số lượng trạng thái cuối có thể tiếp cận
 
 Nó xuất hiện trong phân rã lượng tử, hấp thụ photon, tán xạ và vận chuyển điện tử.
 
-> **Chuyển mạch:** Ở chặng này của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Bài toán tán xạ** tiếp nhận điểm tựa từ **Quy tắc vàng Fermi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao dùng tiết diện?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Bài toán tán xạ** nối từ **Quy tắc vàng Fermi** sang **Vì sao dùng tiết diện?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bài toán tán xạ
 
@@ -244,7 +244,7 @@ Tiết diện vi phân là
 
 Nó cho biết xác suất tương đối để hạt bị tán xạ vào một góc nhất định.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Vì sao dùng tiết diện?** tiếp nhận điểm tựa từ **Bài toán tán xạ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xấp xỉ Born** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Vì sao dùng tiết diện?** nối từ **Bài toán tán xạ** sang **Xấp xỉ Born**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao dùng tiết diện?
 
@@ -254,7 +254,7 @@ Tiết diện (cross section) có đơn vị diện tích, nhưng nên hiểu nh
 
 Một hạt điểm vẫn có thể có tiết diện tán xạ khác không vì tương tác trường lượng tử hoặc thế năng.
 
-> **Chuyển mạch:** Trong **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Xấp xỉ Born** tiếp nhận điểm tựa từ **Vì sao dùng tiết diện?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Partial waves** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Xấp xỉ Born** nối từ **Vì sao dùng tiết diện?** sang **Partial waves**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xấp xỉ Born
 
@@ -273,7 +273,7 @@ V(\mathbf r)d^3r.
 
 Nhiễu xạ tia X, tán xạ neutron và nhiều kỹ thuật cấu trúc vật chất đều dùng nguyên lý tương tự.
 
-> **Chuyển mạch:** Ở chặng này của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Partial waves** tiếp nhận điểm tựa từ **Xấp xỉ Born** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Resonance trong tán xạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Partial waves** nối từ **Xấp xỉ Born** sang **Resonance trong tán xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Partial waves
 
@@ -289,7 +289,7 @@ Mỗi `\ell` là một kênh tán xạ riêng với độ dịch pha (phase shif
 
 Đây là một ví dụ khác của nguyên lý theo thang: khi bước sóng lớn hơn kích thước nguồn, hệ không “nhìn thấy” các chi tiết góc bậc cao.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Resonance trong tán xạ** tiếp nhận điểm tựa từ **Partial waves** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ma trận S** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Resonance trong tán xạ** nối từ **Partial waves** sang **Ma trận S**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Resonance trong tán xạ
 
@@ -308,7 +308,7 @@ Một dạng điển hình gần cộng hưởng là Breit–Wigner:
 
 Độ rộng lớn thường tương ứng thời gian sống ngắn, phản ánh quan hệ năng lượng–thời gian ở mức động lực học phổ.
 
-> **Chuyển mạch:** Trong **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Ma trận S** tiếp nhận điểm tựa từ **Resonance trong tán xạ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi mô tả trạng thái thuần không đủ?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Ma trận S** nối từ **Resonance trong tán xạ** sang **Khi mô tả trạng thái thuần không đủ?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ma trận S
 
@@ -322,7 +322,7 @@ Tính đơn nhất của `S` phản ánh bảo toàn tổng xác suất.
 
 Trong lý thuyết trường lượng tử, phần lớn dự đoán thực nghiệm cho collider cuối cùng được tổ chức dưới ngôn ngữ biên độ và ma trận `S`.
 
-> **Chuyển mạch:** Ở chặng này của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Khi mô tả trạng thái thuần không đủ?** tiếp nhận điểm tựa từ **Ma trận S** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Khi mô tả trạng thái thuần không đủ?** nối từ **Ma trận S** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khi mô tả trạng thái thuần không đủ?
 
@@ -335,7 +335,7 @@ hệ kín → tiến hóa unitary
 hệ mở → unitary toàn cục nhưng hệ con có decoherence và dissipation
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Khi mô tả trạng thái thuần không đủ?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Khi mô tả trạng thái thuần không đủ?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -343,7 +343,7 @@ Lượng tử phụ thuộc thời gian không chỉ là “cho `t` vào hàm s�
 
 Tán xạ thì đảo hướng tư duy: ta biết trạng thái tới và trạng thái đi ra, rồi suy ngược cấu trúc của tương tác ở giữa.
 
-> **Chuyển mạch:** Trong **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -359,7 +359,7 @@ Không. Nó là đại lượng xác suất hiệu dụng của quá trình tán
 
 Không. Còn phụ thuộc phần tử ma trận, đối xứng, thời gian tương tác, độ rộng phổ và các cơ chế cạnh tranh.
 
-> **Chuyển mạch:** Ở chặng này của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Động lực học lượng tử phụ thuộc thời gian và tán xạ**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
