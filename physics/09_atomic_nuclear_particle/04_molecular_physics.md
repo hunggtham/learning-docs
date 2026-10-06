@@ -10,7 +10,7 @@ Câu hỏi vật lý cốt lõi là: khi vị trí các hạt nhân thay đổi,
 
 Vật lý phân tử (Molecular Physics / 분자물리학) là cầu nối trực tiếp giữa cơ học lượng tử và hóa học. Liên kết hóa học, orbital phân tử và lai hóa đều là những ngôn ngữ khác nhau để tổ chức bài toán nhiều electron.
 
-> **Chuyển mạch:** Trong **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Xấp xỉ Born–Oppenheimer** tiếp nhận điểm tựa từ **Từ nguyên tử đến phân tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đường cong thế năng và liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Xấp xỉ Born–Oppenheimer** nối từ **Từ nguyên tử đến phân tử** sang **Đường cong thế năng và liên kết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xấp xỉ Born–Oppenheimer
 
@@ -27,7 +27,7 @@ Năng lượng điện tử `E_e` cùng lực đẩy giữa các hạt nhân t�
 
 Xấp xỉ này không luôn đúng. Gần các điểm suy biến điện tử hoặc trong chuyển mức không đoạn nhiệt (nonadiabatic transition), chuyển động electron và hạt nhân có thể liên kết mạnh. Tuy nhiên nó giải thích vì sao các khái niệm như độ dài liên kết, góc liên kết và chế độ (mode / 모드) dao động có ý nghĩa rõ ràng.
 
-> **Chuyển mạch:** Ở chặng này của **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, sau nội dung của **Xấp xỉ Born–Oppenheimer**, **Đường cong thế năng và liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Orbital liên kết và phản liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, sau nội dung của **Xấp xỉ Born–Oppenheimer**, **Đường cong thế năng và liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Orbital liên kết và phản liên kết** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Đường cong thế năng và liên kết
 
@@ -41,7 +41,7 @@ V(R)\approx V(R_0)+\frac12k(R-R_0)^2+\cdots.
 
 Số hạng tuyến tính biến mất tại cực tiểu. Vì vậy dao động nhỏ quanh cấu hình bền tự nhiên gần với dao động điều hòa. Đây là lý do mô hình dao động tử điều hòa xuất hiện rộng khắp vật lý, không chỉ vì nó dễ tính.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Orbital liên kết và phản liên kết** tiếp nhận điểm tựa từ **Đường cong thế năng và liên kết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cộng hóa trị, ion và van der Waals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Orbital liên kết và phản liên kết** nối từ **Đường cong thế năng và liên kết** sang **Cộng hóa trị, ion và van der Waals**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Orbital liên kết và phản liên kết
 
@@ -71,7 +71,7 @@ Trong mô hình orbital phân tử đơn giản, bậc liên kết (bond order) 
 
 với `N_b` và `N_a` là số electron ở orbital liên kết và phản liên kết. Đây là công cụ hữu ích nhưng không phải định nghĩa duy nhất cho mọi hệ phân tử phức tạp.
 
-> **Chuyển mạch:** Trong **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Cộng hóa trị, ion và van der Waals** tiếp nhận điểm tựa từ **Orbital liên kết và phản liên kết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái quay của phân tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Cộng hóa trị, ion và van der Waals** nối từ **Orbital liên kết và phản liên kết** sang **Trạng thái quay của phân tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cộng hóa trị, ion và van der Waals
 
@@ -81,7 +81,7 @@ Ngoài liên kết hóa học mạnh còn có tương tác lưỡng cực–lư�
 
 Điều này cho thấy “mômen lưỡng cực trung bình bằng không” không có nghĩa mọi thăng giáng tức thời đều bằng không.
 
-> **Chuyển mạch:** Ở chặng này của **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Trạng thái quay của phân tử** tiếp nhận điểm tựa từ **Cộng hóa trị, ion và van der Waals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái dao động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Trạng thái quay của phân tử** nối từ **Cộng hóa trị, ion và van der Waals** sang **Trạng thái dao động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trạng thái quay của phân tử
 
@@ -97,7 +97,7 @@ Khoảng cách giữa các mức quay phụ thuộc vào `1/I`, nên quang phổ
 
 Không phải mọi chuyển mức quay đều được phép. Quy tắc chọn phụ thuộc đối xứng phân tử và cách mômen lưỡng cực tương tác với trường điện từ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Trạng thái dao động** tiếp nhận điểm tựa từ **Trạng thái quay của phân tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chế độ (mode / 모드) chuẩn của phân tử nhiều nguyên tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Trạng thái dao động** nối từ **Trạng thái quay của phân tử** sang **Chế độ (mode / 모드) chuẩn của phân tử nhiều nguyên tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trạng thái dao động
 
@@ -113,7 +113,7 @@ Ngay cả trạng thái cơ bản `v=0` vẫn có năng lượng điểm không 
 
 Thế phân tử thật không hoàn toàn điều hòa. Khi kích thích tăng, khoảng cách mức thường thay đổi và cuối cùng phân tử có thể phân ly.
 
-> **Chuyển mạch:** Trong **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Chế độ (mode / 모드) chuẩn của phân tử nhiều nguyên tử** tiếp nhận điểm tựa từ **Trạng thái dao động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quang phổ hồng ngoại và Raman** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Chế độ (mode / 모드) chuẩn của phân tử nhiều nguyên tử** nối từ **Trạng thái dao động** sang **Quang phổ hồng ngoại và Raman**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chế độ (mode / 모드) chuẩn của phân tử nhiều nguyên tử
 
@@ -121,7 +121,7 @@ Một phân tử phi tuyến gồm `N` nguyên tử thường có `3N-6` bậc t
 
 Mỗi chế độ (mode / 모드) chuẩn (normal mode / 정상 모드) là một mẫu dao động tập thể của nhiều nguyên tử. Về mặt toán học, các chế độ (mode / 모드) được tìm bằng cách chéo hóa ma trận Hessian có trọng số khối lượng của thế năng. Vì vậy đại số tuyến tính và bài toán trị riêng xuất hiện trực tiếp trong quang phổ phân tử.
 
-> **Chuyển mạch:** Ở chặng này của **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Quang phổ hồng ngoại và Raman** tiếp nhận điểm tựa từ **Chế độ (mode / 모드) chuẩn của phân tử nhiều nguyên tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển mức điện tử và huỳnh quang** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Quang phổ hồng ngoại và Raman** nối từ **Chế độ (mode / 모드) chuẩn của phân tử nhiều nguyên tử** sang **Chuyển mức điện tử và huỳnh quang**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quang phổ hồng ngoại và Raman
 
@@ -131,7 +131,7 @@ Vì hai cơ chế có quy tắc chọn khác nhau, phổ hồng ngoại và Rama
 
 Trong kỹ thuật và sinh học, các phương pháp này cho phép phân tích khí, vật liệu, protein hay chất ô nhiễm mà không cần phá mẫu. Trong công nghệ bán dẫn, Raman còn được dùng để khảo sát ứng suất và dao động mạng tinh thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Chuyển mức điện tử và huỳnh quang** tiếp nhận điểm tựa từ **Quang phổ hồng ngoại và Raman** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Va chạm phân tử và quãng đường tự do trung bình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Chuyển mức điện tử và huỳnh quang** nối từ **Quang phổ hồng ngoại và Raman** sang **Va chạm phân tử và quãng đường tự do trung bình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển mức điện tử và huỳnh quang
 
@@ -141,7 +141,7 @@ Nguyên lý Franck–Condon phản ánh việc hạt nhân nặng gần như kh�
 
 Sau khi hồi phục một phần năng lượng bằng các quá trình không bức xạ, phân tử có thể phát photon năng lượng thấp hơn photon hấp thụ. Sự chênh lệch này liên hệ với dịch Stokes (Stokes shift) và là nền tảng của nhiều kỹ thuật huỳnh quang.
 
-> **Chuyển mạch:** Trong **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Va chạm phân tử và quãng đường tự do trung bình** tiếp nhận điểm tựa từ **Chuyển mức điện tử và huỳnh quang** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính toán cấu trúc phân tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Va chạm phân tử và quãng đường tự do trung bình** nối từ **Chuyển mức điện tử và huỳnh quang** sang **Tính toán cấu trúc phân tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Va chạm phân tử và quãng đường tự do trung bình
 
@@ -157,7 +157,7 @@ Tiết diện không đơn giản bằng diện tích hình học của phân t�
 
 Khi `\ell` nhỏ hơn nhiều kích thước hệ, mô hình chất lưu liên tục thường phù hợp. Khi `\ell` cùng bậc hoặc lớn hơn kích thước hệ, như trong chân không cao hay tầng khí quyển trên, mô tả động học phân tử trở nên cần thiết.
 
-> **Chuyển mạch:** Ở chặng này của **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Tính toán cấu trúc phân tử** tiếp nhận điểm tựa từ **Va chạm phân tử và quãng đường tự do trung bình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Tính toán cấu trúc phân tử** nối từ **Va chạm phân tử và quãng đường tự do trung bình** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính toán cấu trúc phân tử
 
@@ -165,7 +165,7 @@ Với phân tử nhiều electron, phương trình Schrödinger chính xác gầ
 
 Chi phí tính toán tăng rất nhanh theo kích thước hệ, nên lựa chọn mô hình vật lý và thuật toán luôn đi cùng nhau. Mô phỏng phân tử có thể dùng trường lực cổ điển, động lực học phân tử, phương pháp ab initio hoặc mô hình lai QM/MM tùy câu hỏi cần trả lời.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Tính toán cấu trúc phân tử** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Tính toán cấu trúc phân tử** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -173,7 +173,7 @@ Phân tử là một hệ lượng tử có cấu trúc phân tầng. Electron t
 
 Cùng một “cảnh quan năng lượng” giải thích hình học phân tử, độ bền liên kết, phổ và nhiều đường phản ứng hóa học.
 
-> **Chuyển mạch:** Trong **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -189,7 +189,7 @@ Không. Hạt nhân luôn có dao động điểm không và chuyển động nh
 
 Không. Tần số vạch cho chênh lệch năng lượng, còn mẫu vạch và cường độ có thể cho mômen quán tính, độ cứng liên kết, đối xứng và cấu trúc điện tử.
 
-> **Chuyển mạch:** Ở chặng này của **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Vật lý phân tử: liên kết, quay, dao động, orbital phân tử và quang phổ học**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

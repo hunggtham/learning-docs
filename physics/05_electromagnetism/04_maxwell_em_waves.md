@@ -30,7 +30,7 @@ Trong chân không có mật độ điện tích `\rho` và mật độ dòng `\
 
 Mỗi phương trình có một vai trò riêng.
 
-> **Chuyển mạch:** Trong **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Gauss cho điện trường** tiếp nhận điểm tựa từ **Bốn phương trình Maxwell** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gauss cho từ trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Gauss cho điện trường** nối từ **Bốn phương trình Maxwell** sang **Gauss cho từ trường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gauss cho điện trường
 
@@ -50,7 +50,7 @@ Mật độ điện tích là nguồn của divergence điện trường. Ở d�
 
 Nó nối nguồn điện tích bên trong một mặt kín với tổng thông lượng điện qua mặt đó.
 
-> **Chuyển mạch:** Ở chặng này của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Gauss cho từ trường** tiếp nhận điểm tựa từ **Gauss cho điện trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định luật Faraday** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Gauss cho từ trường** nối từ **Gauss cho điện trường** sang **Định luật Faraday**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gauss cho từ trường
 
@@ -68,7 +68,7 @@ Tổng thông lượng từ qua mọi mặt kín bằng không:
 
 Trong điện từ học cổ điển, điều này phản ánh việc chưa quan sát thấy đơn cực từ tự do. Đường sức từ không bắt đầu hoặc kết thúc ở một điện tích từ riêng lẻ; chúng tạo các vòng kín hoặc kéo dài vô hạn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Định luật Faraday** tiếp nhận điểm tựa từ **Gauss cho từ trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ampère–Maxwell** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Định luật Faraday** nối từ **Gauss cho từ trường** sang **Ampère–Maxwell**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định luật Faraday
 
@@ -94,7 +94,7 @@ Một từ thông biến thiên tạo điện trường xoáy. Đây là cơ s�
 \nabla\times\mathbf E\neq0.
 ```
 
-> **Chuyển mạch:** Trong **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Ampère–Maxwell** tiếp nhận điểm tựa từ **Định luật Faraday** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao hạng dòng dịch là cần thiết?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Ampère–Maxwell** nối từ **Định luật Faraday** sang **Vì sao hạng dòng dịch là cần thiết?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ampère–Maxwell
 
@@ -127,7 +127,7 @@ Phương trình đầy đủ là
 
 Một điện trường biến thiên cũng tạo từ trường xoáy.
 
-> **Chuyển mạch:** Ở chặng này của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Vì sao hạng dòng dịch là cần thiết?** tiếp nhận điểm tựa từ **Ampère–Maxwell** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ Maxwell tới phương trình sóng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Vì sao hạng dòng dịch là cần thiết?** nối từ **Ampère–Maxwell** sang **Từ Maxwell tới phương trình sóng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao hạng dòng dịch là cần thiết?
 
@@ -166,7 +166,7 @@ ta được
 
 Hạng dòng dịch vì vậy không phải “mẹo sửa công thức”; nó làm hệ Maxwell tương thích với bảo toàn điện tích.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Từ Maxwell tới phương trình sóng** tiếp nhận điểm tựa từ **Vì sao hạng dòng dịch là cần thiết?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sóng phẳng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Từ Maxwell tới phương trình sóng** nối từ **Vì sao hạng dòng dịch là cần thiết?** sang **Sóng phẳng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ Maxwell tới phương trình sóng
 
@@ -247,7 +247,7 @@ c=\frac{1}{\sqrt{\mu_0\varepsilon_0}}.
 
 Giá trị này trùng tốc độ ánh sáng. Đây là bước hợp nhất lịch sử: ánh sáng là sóng điện từ.
 
-> **Chuyển mạch:** Trong **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Sóng phẳng** tiếp nhận điểm tựa từ **Từ Maxwell tới phương trình sóng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ tần số và bước sóng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Sóng phẳng** nối từ **Từ Maxwell tới phương trình sóng** sang **Quan hệ tần số và bước sóng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sóng phẳng
 
@@ -283,7 +283,7 @@ vuông góc lẫn nhau.
 
 Sóng điện từ trong chân không là sóng ngang.
 
-> **Chuyển mạch:** Ở chặng này của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Quan hệ tần số và bước sóng** tiếp nhận điểm tựa từ **Sóng phẳng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân cực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Quan hệ tần số và bước sóng** nối từ **Sóng phẳng** sang **Phân cực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quan hệ tần số và bước sóng
 
@@ -303,7 +303,7 @@ Quan hệ tuyến tính `\omega(k)` cho biết vận tốc pha và vận tốc n
 
 Trong vật liệu phân tán, `\omega(k)` không còn tuyến tính và vận tốc pha, vận tốc nhóm có thể khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Phân cực** tiếp nhận điểm tựa từ **Quan hệ tần số và bước sóng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phổ điện từ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Phân cực** nối từ **Quan hệ tần số và bước sóng** sang **Phổ điện từ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân cực
 
@@ -313,7 +313,7 @@ Nếu `\mathbf E` luôn nằm theo một đường thẳng, ta có phân cực t
 
 Phân cực không phải “hướng photon quay như vật thể cổ điển”; nó là cấu trúc của trường điện từ và, trong mô tả lượng tử, liên hệ với trạng thái spin/helicity của photon.
 
-> **Chuyển mạch:** Trong **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Phổ điện từ** tiếp nhận điểm tựa từ **Phân cực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng của trường điện từ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Phổ điện từ** nối từ **Phân cực** sang **Năng lượng của trường điện từ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phổ điện từ
 
@@ -335,7 +335,7 @@ Vì vậy tần số cao hơn tương ứng photon năng lượng lớn hơn.
 
 Sự khác biệt trong cách các dải phổ tương tác với vật chất đến từ năng lượng photon, kích thước cấu trúc vật chất và các mức chuyển năng lượng cho phép.
 
-> **Chuyển mạch:** Ở chặng này của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Năng lượng của trường điện từ** tiếp nhận điểm tựa từ **Phổ điện từ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vectơ Poynting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Năng lượng của trường điện từ** nối từ **Phổ điện từ** sang **Vectơ Poynting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng của trường điện từ
 
@@ -357,7 +357,7 @@ E=cB,
 
 nên năng lượng điện và từ đóng góp bằng nhau theo trung bình.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Vectơ Poynting** tiếp nhận điểm tựa từ **Năng lượng của trường điện từ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định lý Poynting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Vectơ Poynting** nối từ **Năng lượng của trường điện từ** sang **Định lý Poynting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vectơ Poynting
 
@@ -387,7 +387,7 @@ Với sóng điều hòa phẳng, cường độ trung bình là
 
 Cường độ tỉ lệ bình phương biên độ trường.
 
-> **Chuyển mạch:** Trong **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Định lý Poynting** tiếp nhận điểm tựa từ **Vectơ Poynting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng đi trong mạch ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Định lý Poynting** nối từ **Vectơ Poynting** sang **Năng lượng đi trong mạch ở đâu?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định lý Poynting
 
@@ -407,7 +407,7 @@ Bảo toàn năng lượng điện từ có dạng
 
 Đây là phiên bản điện từ của cấu trúc conservation law chung.
 
-> **Chuyển mạch:** Ở chặng này của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Năng lượng đi trong mạch ở đâu?** tiếp nhận điểm tựa từ **Định lý Poynting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Áp suất bức xạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Năng lượng đi trong mạch ở đâu?** nối từ **Định lý Poynting** sang **Áp suất bức xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng đi trong mạch ở đâu?
 
@@ -415,7 +415,7 @@ Trong mô hình mạch, ta thường nói pin “gửi năng lượng qua dây�
 
 Điều này không làm mô hình mạch sai; nó cho thấy mô hình mạch là một trừu tượng hóa nén trường thành `V`, `I`, `R`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Áp suất bức xạ** tiếp nhận điểm tựa từ **Năng lượng đi trong mạch ở đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bức xạ từ điện tích gia tốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Áp suất bức xạ** nối từ **Năng lượng đi trong mạch ở đâu?** sang **Bức xạ từ điện tích gia tốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Áp suất bức xạ
 
@@ -435,7 +435,7 @@ P_{rad}=\frac{2I}{c}.
 
 Áp suất bức xạ nhỏ trong đời sống nhưng quan trọng trong vật lý laser, buồm Mặt Trời và động lực học bụi thiên văn.
 
-> **Chuyển mạch:** Trong **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Bức xạ từ điện tích gia tốc** tiếp nhận điểm tựa từ **Áp suất bức xạ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Anten phát sóng như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Bức xạ từ điện tích gia tốc** nối từ **Áp suất bức xạ** sang **Anten phát sóng như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bức xạ từ điện tích gia tốc
 
@@ -454,7 +454,7 @@ Bức xạ vì vậy gắn với gia tốc của nguồn.
 
 Đây là cơ sở của anten, synchrotron radiation và nhiều quá trình bức xạ thiên văn.
 
-> **Chuyển mạch:** Ở chặng này của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Anten phát sóng như thế nào?** tiếp nhận điểm tựa từ **Bức xạ từ điện tích gia tốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Near trường dữ liệu (field / 필드) và far trường dữ liệu (field / 필드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Anten phát sóng như thế nào?** nối từ **Bức xạ từ điện tích gia tốc** sang **Near trường dữ liệu (field / 필드) và far trường dữ liệu (field / 필드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Anten phát sóng như thế nào?
 
@@ -464,7 +464,7 @@ Dòng điện xoay chiều trong anten làm điện tích gia tốc qua lại. T
 
 Hình dạng và kích thước anten quyết định mẫu (pattern / 패턴) bức xạ và mức ghép với các chế độ (mode / 모드) trường.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Anten phát sóng như thế nào?** nêu điều cần giải thích; **Near trường dữ liệu (field / 필드) và far trường dữ liệu (field / 필드)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Sóng trong vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Anten phát sóng như thế nào?** đặt vấn đề; **Near trường dữ liệu (field / 필드) và far trường dữ liệu (field / 필드)** đối chiếu bằng chứng, rồi **Sóng trong vật liệu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Near trường dữ liệu (field / 필드) và far trường dữ liệu (field / 필드)
 
@@ -474,7 +474,7 @@ Xa nguồn, thành phần bức xạ `1/r` chi phối và năng lượng chảy 
 
 Do đó không nên dùng trực giác sóng phẳng far-field ngay sát anten.
 
-> **Chuyển mạch:** Trong **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Near trường dữ liệu (field / 필드) và far trường dữ liệu (field / 필드)** nêu điều cần giải thích; **Sóng trong vật liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Maxwell và thuyết tương đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Near trường dữ liệu (field / 필드) và far trường dữ liệu (field / 필드)** đặt vấn đề; **Sóng trong vật liệu** đối chiếu bằng chứng, rồi **Maxwell và thuyết tương đối** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Sóng trong vật liệu
 
@@ -494,7 +494,7 @@ Vật liệu thật thường có `\varepsilon` phụ thuộc tần số, gây d
 
 Đây là cầu nối tới quang học, điện môi và đường truyền.
 
-> **Chuyển mạch:** Ở chặng này của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Maxwell và thuyết tương đối** tiếp nhận điểm tựa từ **Sóng trong vật liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Maxwell và thuyết tương đối** nối từ **Sóng trong vật liệu** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Maxwell và thuyết tương đối
 
@@ -502,7 +502,7 @@ Các phương trình Maxwell dự đoán một tốc độ sóng `c` không ph�
 
 Sự bất biến của tốc độ ánh sáng là một trong những động lực lịch sử dẫn tới thuyết tương đối hẹp. Trong ngôn ngữ tương đối tính, `\mathbf E` và `\mathbf B` không phải hai thực thể hoàn toàn tách biệt; chúng là các thành phần khác nhau của cùng tensor điện từ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Maxwell và thuyết tương đối** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Maxwell và thuyết tương đối** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -518,7 +518,7 @@ sóng mang năng lượng và động lượng
 
 Điện trường biến thiên tạo từ trường; từ trường biến thiên tạo điện trường. Trong chân không, cấu trúc này tự duy trì và lan truyền như sóng với tốc độ `c`.
 
-> **Chuyển mạch:** Trong **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -538,7 +538,7 @@ Không. Gần nguồn có thành phần near-field lưu trữ năng lượng và
 
 Lực từ `q\mathbf v\times\mathbf B` vuông góc vận tốc tức thời nên không trực tiếp đổi động năng của một hạt điểm. Điện trường mới trực tiếp thực hiện công `q\mathbf E\cdot\mathbf v`.
 
-> **Chuyển mạch:** Ở chặng này của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Các phương trình Maxwell, sóng điện từ và dòng năng lượng**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

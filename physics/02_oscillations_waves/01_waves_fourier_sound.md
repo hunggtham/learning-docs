@@ -32,7 +32,7 @@ v=\frac{\omega}{k}=f\lambda
 
 Quan hệ `v=f\lambda` không có nghĩa tần số tự nó “gây ra” tốc độ truyền. Trong nhiều môi trường, tốc độ sóng chủ yếu do các tính chất của môi trường quyết định. Nếu nguồn thay đổi tần số trong cùng một môi trường, bước sóng thường thay đổi tương ứng.
 
-> **Chuyển mạch:** Trong **Sóng, chồng chập, Fourier và âm thanh**, **Phương trình sóng** tiếp nhận điểm tựa từ **Từ dao động cục bộ đến sóng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyên lý chồng chập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sóng, chồng chập, Fourier và âm thanh**, **Phương trình sóng** nối từ **Từ dao động cục bộ đến sóng** sang **Nguyên lý chồng chập**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình sóng
 
@@ -47,7 +47,7 @@ Một phương trình sóng (Wave Equation / 파동방정식) cơ bản trong m�
 
 Phương trình cho biết độ cong theo không gian của trường liên hệ với gia tốc theo thời gian của nó. Trong một môi trường cơ học, biến dạng cục bộ tạo lực lên vùng lân cận; vùng lân cận lại biến dạng và tác động tiếp lên vùng kế tiếp. Cơ chế liên kết cục bộ này khiến nhiễu động lan truyền thành sóng.
 
-> **Chuyển mạch:** Ở chặng này của **Sóng, chồng chập, Fourier và âm thanh**, **Nguyên lý chồng chập** tiếp nhận điểm tựa từ **Phương trình sóng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sóng dừng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sóng, chồng chập, Fourier và âm thanh**, **Nguyên lý chồng chập** nối từ **Phương trình sóng** sang **Sóng dừng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nguyên lý chồng chập
 
@@ -63,7 +63,7 @@ Nguyên lý chồng chập (Superposition / 중첩) là nền tảng của giao 
 
 Hai sóng cùng pha có thể làm biên độ tổng tăng lên; hai sóng ngược pha có thể triệt tiêu một phần hoặc hoàn toàn tại một vị trí. Trong giao thoa triệt tiêu, năng lượng không biến mất khỏi toàn hệ mà được phân bố lại trong không gian.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sóng, chồng chập, Fourier và âm thanh**, **Sóng dừng** tiếp nhận điểm tựa từ **Nguyên lý chồng chập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fourier: biểu diễn tín hiệu phức tạp bằng các chế độ (mode / 모드) đơn giản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sóng, chồng chập, Fourier và âm thanh**, **Sóng dừng** nối từ **Nguyên lý chồng chập** sang **Fourier: biểu diễn tín hiệu phức tạp bằng các chế độ (mode / 모드) đơn giản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sóng dừng
 
@@ -87,7 +87,7 @@ Ta thu được sóng dừng (Standing Wave / 정상파), với các nút (node 
 
 Điều kiện biên chỉ cho phép một số bước sóng hoặc chế độ (mode / 모드) nhất định. Đây là một trực giác quan trọng trước khi học lượng tử hóa: ràng buộc hình học và điều kiện biên có thể biến một miền giá trị liên tục thành một phổ chế độ (mode / 모드) rời rạc mà chưa cần đến cơ học lượng tử.
 
-> **Chuyển mạch:** Trong **Sóng, chồng chập, Fourier và âm thanh**, **Fourier: biểu diễn tín hiệu phức tạp bằng các chế độ (mode / 모드) đơn giản** tiếp nhận điểm tựa từ **Sóng dừng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Âm thanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sóng, chồng chập, Fourier và âm thanh**, **Fourier: biểu diễn tín hiệu phức tạp bằng các chế độ (mode / 모드) đơn giản** nối từ **Sóng dừng** sang **Âm thanh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Fourier: biểu diễn tín hiệu phức tạp bằng các chế độ (mode / 모드) đơn giản
 
@@ -105,7 +105,7 @@ Dạng số mũ phức gọn vì biên độ và pha được mã hóa tự nhi�
 
 FFT (Fast Fourier Transform) là nhóm thuật toán tính DFT hiệu quả, thường giảm độ phức tạp từ khoảng `O(N^2)` của phép tính trực tiếp xuống `O(N\log N)`.
 
-> **Chuyển mạch:** Ở chặng này của **Sóng, chồng chập, Fourier và âm thanh**, **Âm thanh** tiếp nhận điểm tựa từ **Fourier: biểu diễn tín hiệu phức tạp bằng các chế độ (mode / 모드) đơn giản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Decibel và thang logarit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sóng, chồng chập, Fourier và âm thanh**, **Âm thanh** nối từ **Fourier: biểu diễn tín hiệu phức tạp bằng các chế độ (mode / 모드) đơn giản** sang **Decibel và thang logarit**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Âm thanh
 
@@ -115,7 +115,7 @@ Tốc độ âm thanh phụ thuộc môi trường và trạng thái nhiệt đ�
 
 Cao độ (pitch) liên hệ chủ yếu với tần số. Độ to cảm nhận (loudness) liên hệ với cường độ nhưng còn phụ thuộc đáp ứng của tai người. Âm sắc (timbre) phụ thuộc phổ họa âm, pha và sự biến thiên theo thời gian của bao tín hiệu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sóng, chồng chập, Fourier và âm thanh**, **Decibel và thang logarit** tiếp nhận điểm tựa từ **Âm thanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng Doppler** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sóng, chồng chập, Fourier và âm thanh**, **Decibel và thang logarit** nối từ **Âm thanh** sang **Hiệu ứng Doppler**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Decibel và thang logarit
 
@@ -127,7 +127,7 @@ L=10\log_{10}\left(\frac{I}{I_0}\right)\,dB
 
 Thang logarit hữu ích vì cường độ âm trong thực tế trải rộng qua nhiều bậc độ lớn, đồng thời cảm nhận của con người không tuyến tính với cường độ vật lý. Tăng `10 dB` tương ứng cường độ tăng 10 lần, chứ không phải chỉ tăng thêm “10 đơn vị tuyến tính”.
 
-> **Chuyển mạch:** Trong **Sóng, chồng chập, Fourier và âm thanh**, **Hiệu ứng Doppler** tiếp nhận điểm tựa từ **Decibel và thang logarit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vận tốc pha và vận tốc nhóm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sóng, chồng chập, Fourier và âm thanh**, **Hiệu ứng Doppler** nối từ **Decibel và thang logarit** sang **Vận tốc pha và vận tốc nhóm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng Doppler
 
@@ -137,7 +137,7 @@ Hiệu ứng Doppler (Doppler Effect / 도플러 효과) là sự thay đổi t�
 
 Radar, siêu âm y khoa và thiên văn học đều khai thác dịch chuyển Doppler để suy ra thành phần vận tốc dọc theo phương quan sát.
 
-> **Chuyển mạch:** Ở chặng này của **Sóng, chồng chập, Fourier và âm thanh**, **Vận tốc pha và vận tốc nhóm** tiếp nhận điểm tựa từ **Hiệu ứng Doppler** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sóng, chồng chập, Fourier và âm thanh**, **Vận tốc pha và vận tốc nhóm** nối từ **Hiệu ứng Doppler** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vận tốc pha và vận tốc nhóm
 
@@ -157,13 +157,13 @@ v_g=\frac{d\omega}{dk}
 
 Vận tốc nhóm thường mô tả tốc độ lan truyền của bao sóng và, trong nhiều điều kiện thông thường, liên hệ với sự truyền năng lượng hoặc thông tin. Tuy nhiên trong các môi trường tán sắc mạnh hoặc bất thường, không nên đồng nhất máy móc vận tốc nhóm với tốc độ truyền tín hiệu nhân quả.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sóng, chồng chập, Fourier và âm thanh**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Vận tốc pha và vận tốc nhóm** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sóng, chồng chập, Fourier và âm thanh**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Vận tốc pha và vận tốc nhóm** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Dao động mô tả chuyển động quanh một trạng thái cân bằng. Sóng xuất hiện khi nhiều bậc tự do được liên kết với nhau, khiến nhiễu động ở một nơi tạo thay đổi ở nơi lân cận và tiếp tục lan truyền. Fourier bổ sung một góc nhìn khác: thay vì xem một dạng sóng phức tạp như một hình duy nhất, ta đổi cơ sở và phân tích nó thành tổ hợp của các chế độ (mode / 모드) đơn giản.
 
-> **Chuyển mạch:** Trong **Sóng, chồng chập, Fourier và âm thanh**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sóng, chồng chập, Fourier và âm thanh**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -175,7 +175,7 @@ Không. Âm thanh, sóng trên dây và nhiều loại sóng nước truyền n�
 
 Không. Trong một hệ có tắt dần, đáp ứng cộng hưởng có độ rộng hữu hạn. Vị trí đỉnh, biên độ và băng thông phụ thuộc vào mức tắt dần và cách hệ ghép với nguồn kích thích.
 
-> **Chuyển mạch:** Ở chặng này của **Sóng, chồng chập, Fourier và âm thanh**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Sóng, chồng chập, Fourier và âm thanh**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

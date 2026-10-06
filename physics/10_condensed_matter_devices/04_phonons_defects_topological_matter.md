@@ -10,7 +10,7 @@ Nếu tuyến tính hóa lực quanh trạng thái cân bằng và chéo hóa h�
 
 Phonon không phải một loại nguyên tử mới. Nó là quasiparticle: cách đóng gói một kích thích tập thể của rất nhiều nguyên tử thành một đối tượng hiệu dụng có năng lượng và động lượng tinh thể.
 
-> **Chuyển mạch:** Trong **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Nhánh acoustic và optical phonon** tiếp nhận điểm tựa từ **Tinh thể không phải một mạng nguyên tử đứng yên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình Debye và nhiệt dung mạng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Nhánh acoustic và optical phonon** nối từ **Tinh thể không phải một mạng nguyên tử đứng yên** sang **Mô hình Debye và nhiệt dung mạng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhánh acoustic và optical phonon
 
@@ -36,7 +36,7 @@ trong đó `v_s` là vận tốc âm trong tinh thể.
 
 Nếu ô cơ sở có nhiều nguyên tử, có thể xuất hiện nhánh quang học (optical), nơi các mạng con dao động tương đối với nhau. Một số chế độ (mode / 모드) quang học ghép mạnh với bức xạ hồng ngoại hoặc tán xạ Raman.
 
-> **Chuyển mạch:** Ở chặng này của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Mô hình Debye và nhiệt dung mạng** tiếp nhận điểm tựa từ **Nhánh acoustic và optical phonon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Electron–phonon scattering và điện trở** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Mô hình Debye và nhiệt dung mạng** nối từ **Nhánh acoustic và optical phonon** sang **Electron–phonon scattering và điện trở**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mô hình Debye và nhiệt dung mạng
 
@@ -60,7 +60,7 @@ Nguyên nhân là thống kê lượng tử làm các chế độ (mode / 모드
 
 Đây là một trong những thành công sớm cho thấy tính chất nhiệt của chất rắn phải được hiểu bằng các kích thích lượng tử tập thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Electron–phonon scattering và điện trở** tiếp nhận điểm tựa từ **Mô hình Debye và nhiệt dung mạng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khuyết tật là một phần bình thường của vật liệu thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Electron–phonon scattering và điện trở** nối từ **Mô hình Debye và nhiệt dung mạng** sang **Khuyết tật là một phần bình thường của vật liệu thật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Electron–phonon scattering và điện trở
 
@@ -80,7 +80,7 @@ Khi làm lạnh, số phonon giảm và điện trở của kim loại tinh khi�
 
 Quy tắc Matthiessen đôi khi xấp xỉ điện trở tổng bằng tổng các cơ chế độc lập, nhưng không phải định luật chính xác trong mọi vật liệu.
 
-> **Chuyển mạch:** Trong **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Khuyết tật là một phần bình thường của vật liệu thật** tiếp nhận điểm tựa từ **Electron–phonon scattering và điện trở** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dislocation và biến dạng dẻo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Khuyết tật là một phần bình thường của vật liệu thật** nối từ **Electron–phonon scattering và điện trở** sang **Dislocation và biến dạng dẻo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khuyết tật là một phần bình thường của vật liệu thật
 
@@ -96,7 +96,7 @@ Khuyết tật không nhất thiết là “xấu”.
 
 Pha tạp bán dẫn cố ý đưa impurity vào để điều khiển mật độ hạt tải. Dislocation chi phối biến dạng dẻo của kim loại. Color center tạo trạng thái quang học. Grain ranh giới (boundary / 경계) ảnh hưởng độ bền, khuếch tán và độ dẫn.
 
-> **Chuyển mạch:** Ở chặng này của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Dislocation và biến dạng dẻo** tiếp nhận điểm tựa từ **Khuyết tật là một phần bình thường của vật liệu thật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quasiparticle: electron trong vật liệu không còn là electron “trần”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Dislocation và biến dạng dẻo** nối từ **Khuyết tật là một phần bình thường của vật liệu thật** sang **Quasiparticle: electron trong vật liệu không còn là electron “trần”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dislocation và biến dạng dẻo
 
@@ -110,7 +110,7 @@ Biến cứng (work hardening) xảy ra khi biến dạng làm mật độ dislo
 
 Vì vậy tính cơ học vĩ mô của kim loại nổi lên từ cấu trúc và động lực của các khuyết tật vi mô.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Quasiparticle: electron trong vật liệu không còn là electron “trần”** tiếp nhận điểm tựa từ **Dislocation và biến dạng dẻo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Magnon và tính từ tập thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Quasiparticle: electron trong vật liệu không còn là electron “trần”** nối từ **Dislocation và biến dạng dẻo** sang **Magnon và tính từ tập thể**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quasiparticle: electron trong vật liệu không còn là electron “trần”
 
@@ -127,7 +127,7 @@ Electron dải, lỗ trống, phonon, magnon và exciton đều là ví dụ qua
 
 Ý tưởng này lặp lại xuyên suốt vật lý: mô hình ở đúng thang không nhất thiết dùng đối tượng cơ bản nhất của tự nhiên.
 
-> **Chuyển mạch:** Trong **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Magnon và tính từ tập thể** tiếp nhận điểm tựa từ **Quasiparticle: electron trong vật liệu không còn là electron “trần”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pha tô pô: khi cấu trúc toàn cục quan trọng hơn tham số trật tự cục bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Magnon và tính từ tập thể** nối từ **Quasiparticle: electron trong vật liệu không còn là electron “trần”** sang **Pha tô pô: khi cấu trúc toàn cục quan trọng hơn tham số trật tự cục bộ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Magnon và tính từ tập thể
 
@@ -137,7 +137,7 @@ Miền từ hình thành để giảm năng lượng từ tĩnh; lĩnh vực (do
 
 Công nghệ bộ nhớ khai thác việc chuyển trạng thái từ, còn spintronics sử dụng spin bên cạnh điện tích như một bậc tự do mang thông tin.
 
-> **Chuyển mạch:** Ở chặng này của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Pha tô pô: khi cấu trúc toàn cục quan trọng hơn tham số trật tự cục bộ** tiếp nhận điểm tựa từ **Magnon và tính từ tập thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bulk–ranh giới (boundary / 경계) correspondence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Pha tô pô: khi cấu trúc toàn cục quan trọng hơn tham số trật tự cục bộ** nối từ **Magnon và tính từ tập thể** sang **Bulk–ranh giới (boundary / 경계) correspondence**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pha tô pô: khi cấu trúc toàn cục quan trọng hơn tham số trật tự cục bộ
 
@@ -155,7 +155,7 @@ với `\nu` là số nguyên trong chế độ lý tưởng.
 
 Độ bền của lượng tử hóa liên hệ với topology của các trạng thái lượng tử đã chiếm, chứ không chỉ với từng tham số vật liệu vi mô.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Pha tô pô: khi cấu trúc toàn cục quan trọng hơn tham số trật tự cục bộ** đã nêu tiêu chí phân biệt, còn **Bulk–ranh giới (boundary / 경계) correspondence** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Chất cách điện tô pô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Pha tô pô: khi cấu trúc toàn cục quan trọng hơn tham số trật tự cục bộ** đặt tiêu chí; **Bulk–ranh giới (boundary / 경계) correspondence** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Chất cách điện tô pô** mở rộng hệ quả.
 
 ## Bulk–ranh giới (boundary / 경계) correspondence
 
@@ -165,7 +165,7 @@ Do đó biên có thể bắt buộc chứa các trạng thái đặc biệt.
 
 Đây là **bulk–ranh giới (boundary / 경계) correspondence**: bất biến tô pô của bulk dự đoán cấu trúc trạng thái ở biên.
 
-> **Chuyển mạch:** Trong **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Bulk–ranh giới (boundary / 경계) correspondence** đã nêu tiêu chí phân biệt, còn **Chất cách điện tô pô** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Vật liệu hai chiều và giảm số chiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Bulk–ranh giới (boundary / 경계) correspondence** đặt tiêu chí; **Chất cách điện tô pô** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Vật liệu hai chiều và giảm số chiều** mở rộng hệ quả.
 
 ## Chất cách điện tô pô
 
@@ -175,7 +175,7 @@ Từ “được bảo vệ” không có nghĩa hoàn toàn không tán xạ. N
 
 Nhiệt độ, tạp chất từ, tiếp xúc, tương tác và hình học mẫu vẫn có thể làm vận chuyển (transport / 전송) thực khác lý tưởng.
 
-> **Chuyển mạch:** Ở chặng này của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Vật liệu hai chiều và giảm số chiều** tiếp nhận điểm tựa từ **Chất cách điện tô pô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Siêu dẫn như trạng thái lượng tử tập thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Vật liệu hai chiều và giảm số chiều** nối từ **Chất cách điện tô pô** sang **Siêu dẫn như trạng thái lượng tử tập thể**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vật liệu hai chiều và giảm số chiều
 
@@ -191,7 +191,7 @@ Trong graphene, phổ năng lượng gần điểm Dirac gần tuyến tính. Qu
 
 Đây là phát biểu hiệu dụng ở năng lượng thấp, không có nghĩa electron cơ bản mất khối lượng nghỉ trong chân không.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Siêu dẫn như trạng thái lượng tử tập thể** tiếp nhận điểm tựa từ **Vật liệu hai chiều và giảm số chiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính toán vật liệu và kỹ thuật thiết bị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Siêu dẫn như trạng thái lượng tử tập thể** nối từ **Vật liệu hai chiều và giảm số chiều** sang **Tính toán vật liệu và kỹ thuật thiết bị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Siêu dẫn như trạng thái lượng tử tập thể
 
@@ -203,7 +203,7 @@ Siêu dẫn không chỉ là “điện trở bằng 0”. Hiệu ứng Meissner
 
 Lượng tử hóa từ thông và hiệu ứng Josephson phản ánh tính kết hợp pha lượng tử ở quy mô vĩ mô.
 
-> **Chuyển mạch:** Trong **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Tính toán vật liệu và kỹ thuật thiết bị** tiếp nhận điểm tựa từ **Siêu dẫn như trạng thái lượng tử tập thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với Hóa học và Kỹ thuật vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Tính toán vật liệu và kỹ thuật thiết bị** nối từ **Siêu dẫn như trạng thái lượng tử tập thể** sang **Liên hệ với Hóa học và Kỹ thuật vật liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính toán vật liệu và kỹ thuật thiết bị
 
@@ -220,7 +220,7 @@ Nhưng từ band cấu trúc (structure / 구조) lý tưởng tới thiết b�
 
 Đó là lý do vật lý chất rắn, khoa học vật liệu, kỹ thuật bán dẫn và vật lý tính toán chồng lấn sâu.
 
-> **Chuyển mạch:** Ở chặng này của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Liên hệ với Hóa học và Kỹ thuật vật liệu** tiếp nhận điểm tựa từ **Tính toán vật liệu và kỹ thuật thiết bị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Miền áp dụng và giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Liên hệ với Hóa học và Kỹ thuật vật liệu** nối từ **Tính toán vật liệu và kỹ thuật thiết bị** sang **Miền áp dụng và giới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với Hóa học và Kỹ thuật vật liệu
 
@@ -230,7 +230,7 @@ Khuyết tật, pha tạp và grain ranh giới (boundary / 경계) là nơi v�
 
 Trong kỹ thuật, mục tiêu hiếm khi là “tinh thể hoàn hảo nhất”. Mục tiêu là cấu trúc vi mô tạo đúng cơ tính, điện tính, nhiệt tính hoặc quang tính cần thiết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Liên hệ với Hóa học và Kỹ thuật vật liệu** đã nêu tiêu chí phân biệt, còn **Miền áp dụng và giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Liên hệ với Hóa học và Kỹ thuật vật liệu** đặt tiêu chí; **Miền áp dụng và giới hạn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Miền áp dụng và giới hạn
 
@@ -240,7 +240,7 @@ Phonon là quasiparticle tốt khi dao động mạng có thể được mô t�
 
 Khối lượng hiệu dụng cũng chỉ có ý nghĩa trong vùng `k` nơi dispersion có thể xấp xỉ phù hợp. Topological protection luôn phụ thuộc gap, symmetry và loại nhiễu loạn.
 
-> **Chuyển mạch:** Trong **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Miền áp dụng và giới hạn** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Miền áp dụng và giới hạn** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -257,7 +257,7 @@ microscopic atoms + electrons
 → device behavior
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -277,7 +277,7 @@ Không. Bảo vệ chỉ áp dụng cho những chế độ (mode / 모드) và 
 
 Không. giao diện (interface / 인터페이스), contact, disorder, phonon và vận chuyển không cân bằng có thể chi phối thiết bị.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phonon, khuyết tật, kích thích tập thể và vật chất tô pô**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

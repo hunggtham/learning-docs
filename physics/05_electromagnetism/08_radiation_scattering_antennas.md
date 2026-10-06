@@ -10,7 +10,7 @@ Bức xạ điện từ (electromagnetic radiation / 전자기 복사) xuất hi
 
 Gần nguồn, trường có thể chứa phần phản kháng (reactive field) lưu trữ năng lượng rồi trao đổi trở lại với nguồn. Ở vùng xa, thành phần bức xạ giảm theo `1/r` và mang dòng năng lượng ra ngoài.
 
-> **Chuyển mạch:** Trong **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Vì sao điện tích đứng yên không liên tục phát bức xạ?** nêu điều cần giải thích; **Thế trễ: trường phản ứng với trạng thái quá khứ của nguồn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Bức xạ từ lưỡng cực điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Vì sao điện tích đứng yên không liên tục phát bức xạ?** đặt vấn đề; **Thế trễ: trường phản ứng với trạng thái quá khứ của nguồn** đối chiếu bằng chứng, rồi **Bức xạ từ lưỡng cực điện** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Thế trễ: trường phản ứng với trạng thái quá khứ của nguồn
 
@@ -26,7 +26,7 @@ trong đó `R` là khoảng cách từ phần tử nguồn tới điểm quan s�
 
 Sự trễ này là nền tảng cho việc nguồn dao động tạo ra sóng lan truyền.
 
-> **Chuyển mạch:** Ở chặng này của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Thế trễ: trường phản ứng với trạng thái quá khứ của nguồn** nêu điều cần giải thích; **Bức xạ từ lưỡng cực điện** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Công thức Larmor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Thế trễ: trường phản ứng với trạng thái quá khứ của nguồn** đặt vấn đề; **Bức xạ từ lưỡng cực điện** đối chiếu bằng chứng, rồi **Công thức Larmor** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Bức xạ từ lưỡng cực điện
 
@@ -57,7 +57,7 @@ Từ cấu trúc này có ba kết luận quan trọng:
 
 Do đó đồ thị bức xạ của anten không nhất thiết đẳng hướng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Công thức Larmor** tiếp nhận điểm tựa từ **Bức xạ từ lưỡng cực điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Véc-tơ (vector / 벡터) Poynting và dòng năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Công thức Larmor** nối từ **Bức xạ từ lưỡng cực điện** sang **Véc-tơ (vector / 벡터) Poynting và dòng năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Công thức Larmor
 
@@ -73,7 +73,7 @@ Nó cho thấy gia tốc của điện tích là nguồn cơ bản của bức x
 
 Không thể luôn cộng đơn giản công suất của từng electron nếu chuyển động của chúng có tương quan pha.
 
-> **Chuyển mạch:** Trong **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Véc-tơ (vector / 벡터) Poynting và dòng năng lượng** tiếp nhận điểm tựa từ **Công thức Larmor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Anten không bắn electron tới máy thu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Véc-tơ (vector / 벡터) Poynting và dòng năng lượng** nối từ **Công thức Larmor** sang **Anten không bắn electron tới máy thu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Véc-tơ (vector / 벡터) Poynting và dòng năng lượng
 
@@ -94,7 +94,7 @@ Với sóng phẳng điều hòa,
 
 Định lý Poynting biểu diễn bảo toàn năng lượng giữa điện tích, dòng điện và trường. Trong anten phát, công điện từ nguồn được chuyển thành năng lượng trường rồi chảy ra không gian.
 
-> **Chuyển mạch:** Ở chặng này của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Anten không bắn electron tới máy thu** tiếp nhận điểm tựa từ **Véc-tơ (vector / 벡터) Poynting và dòng năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ghép trở kháng và công suất phản xạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Anten không bắn electron tới máy thu** nối từ **Véc-tơ (vector / 벡터) Poynting và dòng năng lượng** sang **Ghép trở kháng và công suất phản xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Anten không bắn electron tới máy thu
 
@@ -112,7 +112,7 @@ Lý do là phân bố dòng điện và điều kiện biên tạo cộng hưở
 
 Trong anten thực, chiều dài tối ưu còn phụ thuộc môi trường điện môi, đường kính dây, cấu trúc cấp nguồn, matching và các vật thể lân cận.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Ghép trở kháng và công suất phản xạ** tiếp nhận điểm tựa từ **Anten không bắn electron tới máy thu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tán xạ: vật chất tạo trường thứ cấp như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Ghép trở kháng và công suất phản xạ** nối từ **Anten không bắn electron tới máy thu** sang **Tán xạ: vật chất tạo trường thứ cấp như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ghép trở kháng và công suất phản xạ
 
@@ -128,7 +128,7 @@ Ghép trở kháng tốt giúp giảm phản xạ và truyền công suất hi�
 
 Trong kỹ thuật RF, VSWR là một cách biểu diễn mức mismatch. Phản xạ lớn không chỉ giảm công suất phát mà còn có thể tạo sóng đứng với điện áp hoặc dòng điện cục bộ cao trên đường truyền.
 
-> **Chuyển mạch:** Trong **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Tán xạ: vật chất tạo trường thứ cấp như thế nào?** tiếp nhận điểm tựa từ **Ghép trở kháng và công suất phản xạ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tán xạ Rayleigh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Tán xạ: vật chất tạo trường thứ cấp như thế nào?** nối từ **Ghép trở kháng và công suất phản xạ** sang **Tán xạ Rayleigh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tán xạ: vật chất tạo trường thứ cấp như thế nào?
 
@@ -136,7 +136,7 @@ Tán xạ (scattering / 산란) là sự phân bố lại năng lượng và hư
 
 Ở mức vi mô, điện trường tới làm các điện tích liên kết hoặc tự do dao động. Các điện tích gia tốc này tạo trường điện từ thứ cấp. Giao thoa giữa trường tới và trường thứ cấp tạo nên truyền qua, phản xạ và tán xạ.
 
-> **Chuyển mạch:** Ở chặng này của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Tán xạ Rayleigh** tiếp nhận điểm tựa từ **Tán xạ: vật chất tạo trường thứ cấp như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tán xạ Mie** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Tán xạ Rayleigh** nối từ **Tán xạ: vật chất tạo trường thứ cấp như thế nào?** sang **Tán xạ Mie**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tán xạ Rayleigh
 
@@ -150,7 +150,7 @@ Bước sóng ngắn bị tán xạ mạnh hơn, góp phần làm bầu trời n
 
 Khi Mặt Trời ở thấp gần chân trời, ánh sáng đi qua quãng đường khí quyển dài hơn. Thành phần xanh bị tán xạ khỏi đường nhìn trực tiếp nhiều hơn, nên ánh sáng còn lại giàu đỏ/cam hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Tán xạ Mie** tiếp nhận điểm tựa từ **Tán xạ Rayleigh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hấp thụ và phát xạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Tán xạ Mie** nối từ **Tán xạ Rayleigh** sang **Hấp thụ và phát xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tán xạ Mie
 
@@ -158,7 +158,7 @@ Khi kích thước hạt so sánh được với bước sóng, định luật `
 
 Lý thuyết Mie cho cấu trúc góc phức tạp và phụ thuộc màu yếu hơn. Các giọt nước trong mây nằm trong chế độ này, góp phần làm mây thường trắng hoặc xám thay vì xanh.
 
-> **Chuyển mạch:** Trong **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Hấp thụ và phát xạ** tiếp nhận điểm tựa từ **Tán xạ Mie** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản lực bức xạ và giới hạn của điện tích điểm cổ điển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Hấp thụ và phát xạ** nối từ **Tán xạ Mie** sang **Phản lực bức xạ và giới hạn của điện tích điểm cổ điển**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hấp thụ và phát xạ
 
@@ -168,7 +168,7 @@ Hệ số hấp thụ phụ thuộc tần số và vật liệu. Ở cân bằng
 
 Phổ vật đen vì vậy không chỉ là hiện tượng “vật nóng phát sáng”; nó phản ánh cân bằng thống kê giữa chế độ (mode / 모드) trường điện từ và vật chất.
 
-> **Chuyển mạch:** Ở chặng này của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Hấp thụ và phát xạ** đã nêu tiêu chí phân biệt, còn **Phản lực bức xạ và giới hạn của điện tích điểm cổ điển** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bức xạ tương đối tính: synchrotron và beaming** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Hấp thụ và phát xạ** đặt tiêu chí; **Phản lực bức xạ và giới hạn của điện tích điểm cổ điển** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Bức xạ tương đối tính: synchrotron và beaming** mở rộng hệ quả.
 
 ## Phản lực bức xạ và giới hạn của điện tích điểm cổ điển
 
@@ -178,7 +178,7 @@ Mô hình phản lực bức xạ của điện tích điểm cổ điển có t
 
 Đây là dấu hiệu cho thấy mô hình điện tích điểm cổ điển có giới hạn ở thang rất ngắn. Điện động lực học lượng tử mô tả phát xạ trong một khung sâu hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Phản lực bức xạ và giới hạn của điện tích điểm cổ điển** đã nêu tiêu chí phân biệt, còn **Bức xạ tương đối tính: synchrotron và beaming** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Radar, thông tin vô tuyến và viễn thám** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Phản lực bức xạ và giới hạn của điện tích điểm cổ điển** đặt tiêu chí; **Bức xạ tương đối tính: synchrotron và beaming** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Radar, thông tin vô tuyến và viễn thám** mở rộng hệ quả.
 
 ## Bức xạ tương đối tính: synchrotron và beaming
 
@@ -192,7 +192,7 @@ Bức xạ synchrotron có vai trò:
 - tạo nguồn tia X mạnh trong synchrotron facility;
 - là công cụ chẩn đoán jet thiên văn, pulsar và tàn dư siêu tân tinh.
 
-> **Chuyển mạch:** Trong **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Radar, thông tin vô tuyến và viễn thám** tiếp nhận điểm tựa từ **Bức xạ tương đối tính: synchrotron và beaming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Miền gần và miền xa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Radar, thông tin vô tuyến và viễn thám** nối từ **Bức xạ tương đối tính: synchrotron và beaming** sang **Miền gần và miền xa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Radar, thông tin vô tuyến và viễn thám
 
@@ -208,7 +208,7 @@ Viễn thám khai thác phụ thuộc theo tần số và phân cực của tán
 
 Đây là cầu nối trực tiếp giữa điện từ học, xử lý tín hiệu, estimation và phần cứng truyền thông.
 
-> **Chuyển mạch:** Ở chặng này của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Miền gần và miền xa** tiếp nhận điểm tựa từ **Radar, thông tin vô tuyến và viễn thám** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm tra thứ nguyên và bậc độ lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Miền gần và miền xa** nối từ **Radar, thông tin vô tuyến và viễn thám** sang **Kiểm tra thứ nguyên và bậc độ lớn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Miền gần và miền xa
 
@@ -225,7 +225,7 @@ r\gg\frac{2D^2}{\lambda}.
 
 Hệ số cụ thể phụ thuộc định nghĩa kỹ thuật, nhưng ý tưởng quan trọng là phải biết mình đang đo trường phản kháng gần nguồn hay trường bức xạ thật sự.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Kiểm tra thứ nguyên và bậc độ lớn** tiếp nhận điểm tựa từ **Miền gần và miền xa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Kiểm tra thứ nguyên và bậc độ lớn** nối từ **Miền gần và miền xa** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kiểm tra thứ nguyên và bậc độ lớn
 
@@ -239,7 +239,7 @@ vì nó biểu diễn công suất qua một đơn vị diện tích.
 
 Nếu cường độ vùng xa giảm theo `1/r^2`, tích cường độ trên mặt cầu `4\pi r^2` sẽ gần không đổi nếu bỏ hấp thụ. Đây là một kiểm tra trực tiếp của bảo toàn năng lượng.
 
-> **Chuyển mạch:** Trong **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Kiểm tra thứ nguyên và bậc độ lớn** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Kiểm tra thứ nguyên và bậc độ lớn** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -257,7 +257,7 @@ nguồn dòng/điện tích thay đổi
 → tán xạ / hấp thụ / thu anten
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -277,7 +277,7 @@ Không. Chuyển động thẳng đều trong hệ quán tính không tương đ
 
 Không. Ở miền gần, cấu trúc trường phụ thuộc nguồn và có thành phần phản kháng đáng kể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bức xạ điện từ, tán xạ và anten: khi điện tích gia tốc phát sóng**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

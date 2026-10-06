@@ -52,7 +52,7 @@ np=n_i^2.
 
 Nó cho thấy nếu doping làm electron tăng mạnh thì hole concentration giảm tương ứng ở equilibrium.
 
-> **Chuyển mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Pha tạp và mức Fermi** tiếp nhận điểm tựa từ **Bán dẫn nội tại và nồng độ hạt tải** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Drift và diffusion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Pha tạp và mức Fermi** nối từ **Bán dẫn nội tại và nồng độ hạt tải** sang **Drift và diffusion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pha tạp và mức Fermi
 
@@ -80,7 +80,7 @@ Tên N/P không có nghĩa toàn vật liệu mang net charge lớn. Bulk vẫn 
 
 Ở doping rất mạnh, semiconductor có thể trở thành **suy biến (degenerate semiconductor)** và Maxwell–Boltzmann approximation không còn đủ; cần dùng Fermi–Dirac statistics đầy đủ.
 
-> **Chuyển mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Drift và diffusion** tiếp nhận điểm tựa từ **Pha tạp và mức Fermi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mobility không phải hằng số tuyệt đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Drift và diffusion** nối từ **Pha tạp và mức Fermi** sang **Mobility không phải hằng số tuyệt đối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Drift và diffusion
 
@@ -121,7 +121,7 @@ D=\mu\frac{k_BT}{q}.
 
 Nó cho thấy drift và diffusion không phải hai cơ chế thống kê hoàn toàn độc lập; cả hai bắt nguồn từ vận chuyển (transport / 전송) của carrier trong môi trường nhiệt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Mobility không phải hằng số tuyệt đối** tiếp nhận điểm tựa từ **Drift và diffusion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiếp giáp P–N hình thành như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Mobility không phải hằng số tuyệt đối** nối từ **Drift và diffusion** sang **Tiếp giáp P–N hình thành như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mobility không phải hằng số tuyệt đối
 
@@ -141,7 +141,7 @@ Do đó phương trình drift đơn giản chỉ là mô hình low-field hiệu 
 
 Ở trường dữ liệu (field / 필드) cao, carrier velocity có thể tiến tới saturation thay vì tiếp tục tăng tuyến tính với `E`.
 
-> **Chuyển mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Tiếp giáp P–N hình thành như thế nào?** tiếp nhận điểm tựa từ **Mobility không phải hằng số tuyệt đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Band bending và electrostatic potential** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Tiếp giáp P–N hình thành như thế nào?** nối từ **Mobility không phải hằng số tuyệt đối** sang **Band bending và electrostatic potential**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tiếp giáp P–N hình thành như thế nào?
 
@@ -173,7 +173,7 @@ diffusion current + drift current = 0
 
 nhưng từng thành phần riêng không nhất thiết bằng zero.
 
-> **Chuyển mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Band bending và electrostatic potential** tiếp nhận điểm tựa từ **Tiếp giáp P–N hình thành như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện thế tiếp xúc nội tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Band bending và electrostatic potential** nối từ **Tiếp giáp P–N hình thành như thế nào?** sang **Điện thế tiếp xúc nội tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Band bending và electrostatic potential
 
@@ -191,7 +191,7 @@ Band diagram vì vậy là cách biểu diễn electrostatic potential bằng n�
 
 Ở equilibrium, Fermi mức (level / 수준) phải phẳng xuyên qua junction. Nếu `E_F` thay đổi theo vị trí ở một hệ cân bằng, carrier sẽ có xu hướng tái phân bố.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Điện thế tiếp xúc nội tại** tiếp nhận điểm tựa từ **Band bending và electrostatic potential** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Depletion approximation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Điện thế tiếp xúc nội tại** nối từ **Band bending và electrostatic potential** sang **Depletion approximation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điện thế tiếp xúc nội tại
 
@@ -215,7 +215,7 @@ doping concentration
 
 Nó không phải “pin ẩn” có thể lấy điện liên tục ra ngoài. Ở equilibrium, electrochemical potentials của toàn cấu trúc đã cân bằng nên không có net DC power đầu ra (output / 출력).
 
-> **Chuyển mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Depletion approximation** tiếp nhận điểm tựa từ **Điện thế tiếp xúc nội tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân cực thuận và phân cực ngược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Depletion approximation** nối từ **Điện thế tiếp xúc nội tại** sang **Phân cực thuận và phân cực ngược**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Depletion approximation
 
@@ -247,7 +247,7 @@ Khi reverse độ lệch (bias / 편향) tăng, `V` âm theo convention forward-
 
 Junction capacitance do đó phụ thuộc điện áp.
 
-> **Chuyển mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Phân cực thuận và phân cực ngược** tiếp nhận điểm tựa từ **Depletion approximation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương trình diode** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Phân cực thuận và phân cực ngược** nối từ **Depletion approximation** sang **Phương trình diode**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân cực thuận và phân cực ngược
 
@@ -268,7 +268,7 @@ avalanche multiplication
 
 Cơ chế trội phụ thuộc doping và trường dữ liệu (field / 필드) quy mô (scale / 규모).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Phương trình diode** tiếp nhận điểm tựa từ **Phân cực thuận và phân cực ngược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LED: band gap và photon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Phương trình diode** nối từ **Phân cực thuận và phân cực ngược** sang **LED: band gap và photon**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình diode
 
@@ -296,7 +296,7 @@ negligible series resistance
 
 Ở hiện tại (current / 현재) lớn, series resistance; ở voltage thấp hoặc defect-rich junction, recombination; và ở reverse breakdown, các cơ chế khác làm phương trình đơn giản không còn đúng.
 
-> **Chuyển mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **LED: band gap và photon** tiếp nhận điểm tựa từ **Phương trình diode** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Photodiode và pin mặt trời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **LED: band gap và photon** nối từ **Phương trình diode** sang **Photodiode và pin mặt trời**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## LED: band gap và photon
 
@@ -316,7 +316,7 @@ band gap quyết định quy mô (scale / 규모) của emission wavelength.
 
 Trong indirect-gap material như silicon, chuyển tiếp (transition / 전이) thường cần phonon để hỗ trợ crystal-momentum conservation, nên light emission kém hiệu quả hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Photodiode và pin mặt trời** tiếp nhận điểm tựa từ **LED: band gap và photon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ tiếp giáp P–N đến MOS capacitor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Photodiode và pin mặt trời** nối từ **LED: band gap và photon** sang **Từ tiếp giáp P–N đến MOS capacitor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Photodiode và pin mặt trời
 
@@ -342,7 +342,7 @@ optical reflection
 series/shunt losses
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Từ tiếp giáp P–N đến MOS capacitor** tiếp nhận điểm tựa từ **Photodiode và pin mặt trời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Accumulation, depletion và inversion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Từ tiếp giáp P–N đến MOS capacitor** nối từ **Photodiode và pin mặt trời** sang **Accumulation, depletion và inversion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ tiếp giáp P–N đến MOS capacitor
 
@@ -360,7 +360,7 @@ Gate voltage làm thay đổi surface potential trong semiconductor và do đó 
 
 Đây là bản chất electrostatic của field-effect điều khiển (control / 제어).
 
-> **Chuyển mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Accumulation, depletion và inversion** tiếp nhận điểm tựa từ **Từ tiếp giáp P–N đến MOS capacitor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Oxide capacitance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Accumulation, depletion và inversion** nối từ **Từ tiếp giáp P–N đến MOS capacitor** sang **Oxide capacitance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Accumulation, depletion và inversion
 
@@ -390,7 +390,7 @@ Ta đã tạo một **inversion tầng (layer / 계층)** N-like ngay dưới ox
 
 Đó chính là nền của kênh nMOS.
 
-> **Chuyển mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Oxide capacitance** tiếp nhận điểm tựa từ **Accumulation, depletion và inversion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện áp ngưỡng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Oxide capacitance** nối từ **Accumulation, depletion và inversion** sang **Điện áp ngưỡng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Oxide capacitance
 
@@ -406,7 +406,7 @@ High-k dielectric cho phép tăng effective capacitance mà không cần vật l
 
 Đây là ví dụ trực tiếp của sự đánh đổi (trade-off / 트레이드오프) giữa electrostatics và quantum tunneling.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Điện áp ngưỡng** tiếp nhận điểm tựa từ **Oxide capacitance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **MOSFET channel và drain độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Điện áp ngưỡng** nối từ **Oxide capacitance** sang **MOSFET channel và drain độ lệch (bias / 편향)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điện áp ngưỡng
 
@@ -427,7 +427,7 @@ temperature
 
 Vì vậy threshold là thuộc tính (property / 속성) của cả cấu trúc, không chỉ của material bulk.
 
-> **Chuyển mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **MOSFET channel và drain độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **Điện áp ngưỡng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Subthreshold conduction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **MOSFET channel và drain độ lệch (bias / 편향)** nối từ **Điện áp ngưỡng** sang **Subthreshold conduction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## MOSFET channel và drain độ lệch (bias / 편향)
 
@@ -469,7 +469,7 @@ I_{D,sat}
 
 Các công thức này không phải law phổ quát; chúng dựa trên long-channel, mobility gần constant và quasi-static các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Subthreshold conduction** tiếp nhận điểm tựa từ **MOSFET channel và drain độ lệch (bias / 편향)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Short-channel effects** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Subthreshold conduction** nối từ **MOSFET channel và drain độ lệch (bias / 편향)** sang **Short-channel effects**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Subthreshold conduction
 
@@ -487,7 +487,7 @@ trong điều kiện thích hợp.
 
 Kết quả này liên hệ trực tiếp với Boltzmann statistics và là một giới hạn quan trọng của low-voltage lô-gic (logic / 논리).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Short-channel effects** tiếp nhận điểm tựa từ **Subthreshold conduction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **FinFET và gate-all-around** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Short-channel effects** nối từ **Subthreshold conduction** sang **FinFET và gate-all-around**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Short-channel effects
 
@@ -508,7 +508,7 @@ DIBL (Drain-Induced Barrier Lowering) nghĩa là tăng drain voltage làm source
 
 Đây là lý do thiết bị (device / 장치) scaling không thể hiểu chỉ bằng việc “thu nhỏ hình học”. Electrostatic length scales phải giảm tương ứng.
 
-> **Chuyển mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **FinFET và gate-all-around** tiếp nhận điểm tựa từ **Short-channel effects** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CMOS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **FinFET và gate-all-around** nối từ **Short-channel effects** sang **CMOS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## FinFET và gate-all-around
 
@@ -518,7 +518,7 @@ FinFET bao quanh channel nhiều mặt hơn; gate-all-around tiếp tục tăng 
 
 Các kiến trúc này không thay đổi nguyên lý transistor cơ bản. Chúng thay đổi hình học (geometry / 기하학) để gate trường dữ liệu (field / 필드) kiểm soát channel tốt hơn so với nguồn (source / 소스)/drain fields.
 
-> **Chuyển mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **CMOS** tiếp nhận điểm tựa từ **FinFET và gate-all-around** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **RC delay và interconnect** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **CMOS** nối từ **FinFET và gate-all-around** sang **RC delay và interconnect**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CMOS
 
@@ -540,7 +540,7 @@ P_{dynamic}\approx\alpha CV^2f.
 
 Do phụ thuộc `V^2`, giảm supply voltage tiết kiệm năng lượng (energy / 에너지) rất mạnh. Nhưng voltage thấp làm giảm noise margin và drive hiện tại (current / 현재), nên xuất hiện sự đánh đổi (trade-off / 트레이드오프) power–hiệu năng (performance / 성능)–độ tin cậy (reliability / 신뢰성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **RC delay và interconnect** tiếp nhận điểm tựa từ **CMOS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quantum tunneling và scaling limit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **RC delay và interconnect** nối từ **CMOS** sang **Quantum tunneling và scaling limit**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## RC delay và interconnect
 
@@ -556,7 +556,7 @@ Khi transistor nhỏ dần, interconnect delay, parasitic capacitance, coupling,
 
 Vì vậy CPU speed không được quyết định chỉ bởi transistor switching thời gian (time / 시간).
 
-> **Chuyển mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **RC delay và interconnect** đã nêu tiêu chí phân biệt, còn **Quantum tunneling và scaling limit** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Nhiệt và độ tin cậy (reliability / 신뢰성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **RC delay và interconnect** đặt tiêu chí; **Quantum tunneling và scaling limit** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Nhiệt và độ tin cậy (reliability / 신뢰성)** mở rộng hệ quả.
 
 ## Quantum tunneling và scaling limit
 
@@ -568,7 +568,7 @@ Ngoài ra variability từ discrete dopants, line-edge roughness và atomic-scal
 
 Ở nanoscale, “thiết bị (device / 장치) parameter” không còn hoàn toàn là giá trị continuum deterministic; statistical variation trở thành vấn đề kỹ thuật (engineering / 엔지니어링) trực tiếp.
 
-> **Chuyển mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Quantum tunneling và scaling limit** đã nêu tiêu chí phân biệt, còn **Nhiệt và độ tin cậy (reliability / 신뢰성)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Các giả định (assumptions / 가정들) và giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Quantum tunneling và scaling limit** đặt tiêu chí; **Nhiệt và độ tin cậy (reliability / 신뢰성)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Các giả định (assumptions / 가정들) và giới hạn** mở rộng hệ quả.
 
 ## Nhiệt và độ tin cậy (reliability / 신뢰성)
 
@@ -580,7 +580,7 @@ Vì vậy semiconductor physics nối trực tiếp với heat vận chuyển (t
 
 Một chip không thể được tối ưu chỉ ở electrical mô hình (model / 모델); thermal ranh giới (boundary / 경계) conditions và gói (package / 패키지) cooling cũng quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Nhiệt và độ tin cậy (reliability / 신뢰성)** đã nêu tiêu chí phân biệt, còn **Các giả định (assumptions / 가정들) và giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Nhiệt và độ tin cậy (reliability / 신뢰성)** đặt tiêu chí; **Các giả định (assumptions / 가정들) và giới hạn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Các giả định (assumptions / 가정들) và giới hạn
 
@@ -600,7 +600,7 @@ Các square-law equations mất chính xác trong hiện đại (modern / 현대
 
 Basic semiconductor mô hình (model / 모델) thường dùng effective-mass/single-particle approximations. Strong interactions, disorder hoặc nanostructure có thể cần treatment khác.
 
-> **Chuyển mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Các giả định (assumptions / 가정들) và giới hạn** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Các giả định (assumptions / 가정들) và giới hạn** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -619,7 +619,7 @@ band structure
 
 Lô-gic (logic / 논리) digital `0/1` vì vậy nằm ở cuối một chuỗi physics liên tục, không phải ở đầu chuỗi.
 
-> **Chuyển mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -647,7 +647,7 @@ Không. Leakage, interconnect, electrostatic điều khiển (control / 제어),
 
 Sai. Hole là quasiparticle description của trạng thái thiếu electron trong band gần đầy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bán dẫn và thiết bị: pha tạp, tiếp giáp P–N, diode, MOSFET và CMOS**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
