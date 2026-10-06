@@ -56,7 +56,15 @@ FCFE (Free Cash Flow to Equity) là tiền còn lại cho cổ đông sau chi đ
 FCFF = FCFE + chi phí lãi sau thuế + dòng tiền trả nợ ròng
 ```
 
-FCFE thường chiết khấu bằng cost of equity; FCFF chiết khấu bằng WACC (Weighted Average Cost of Capital / 가중평균자본비용). WACC trộn cost of equity và cost of debt theo trọng số thị trường, đồng thời phản ánh lá chắn thuế của nợ trong mô hình textbook. Dùng FCFF với cost of equity hoặc FCFE với WACC là trộn đối tượng dòng tiền và discount rate.
+Ở đây **dòng tiền trả nợ ròng = nợ đã trả − nợ mới vay**. Vì vậy cách viết trên tương đương với công thức chuẩn `FCFF = FCFE + Interest×(1−T) − Net Borrowing` nếu `Net Borrowing = nợ mới vay − nợ đã trả`. Phải khóa quy ước dấu trước khi thay số; nếu không, cùng một transaction có thể bị cộng hai lần.
+
+FCFE thường chiết khấu bằng cost of equity; FCFF chiết khấu bằng WACC (Weighted Average Cost of Capital / 가중평균자본비용). Source cho cấu trúc WACC theo trọng số vốn chủ và nợ; viết rõ theo quy ước thị trường:
+
+```text
+WACC = [E/(D+E)] × Rₑ + [D/(D+E)] × R_d × (1−T)
+```
+
+Trong đó `E` và `D` là giá trị thị trường của equity/debt, `Rₑ` là cost of equity, `R_d` là cost of debt trước thuế và `T` là thuế suất dùng cho tax shield. Cơ chế là mỗi nguồn vốn đòi một required return khác nhau; WACC là blended hurdle rate cho **FCFF** khi cấu trúc vốn/thuế phù hợp với giả định. Dùng book-value weights, trộn kỳ hạn/risk regime hoặc dùng WACC cho FCFE đều làm sai ownership của discount rate.
 
 ## 4. EVA, NOPAT, invested capital và ROIC
 
