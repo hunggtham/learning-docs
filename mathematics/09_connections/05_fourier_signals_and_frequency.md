@@ -50,7 +50,7 @@ Sine/cosine xuất hiện tự nhiên vì uniform rotation projected lên coordi
 
 Chúng cũng là solutions/eigenmodes của nhiều tuyến tính (linear / 선형) differential equations.
 
-> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **2. Orthogonality biến functions thành coordinates** tiếp nhận điểm tựa từ **1. Sine và cosine là modes của rotation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Fourier series là tuyến tính (linear / 선형) algebra trong hàm (function / 함수) không gian (space / 공간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **2. Orthogonality biến functions thành coordinates** nối từ **1. Sine và cosine là modes của rotation** sang **3. Fourier series là tuyến tính (linear / 선형) algebra trong hàm (function / 함수) không gian (space / 공간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Orthogonality biến functions thành coordinates
 
@@ -78,7 +78,7 @@ thì periodic functions có thể dùng basis:
 
 Fourier coefficient là projection.
 
-> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **3. Fourier series là tuyến tính (linear / 선형) algebra trong hàm (function / 함수) không gian (space / 공간)** tiếp nhận điểm tựa từ **2. Orthogonality biến functions thành coordinates** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Complex exponential làm phase algebra đơn giản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **3. Fourier series là tuyến tính (linear / 선형) algebra trong hàm (function / 함수) không gian (space / 공간)** nối từ **2. Orthogonality biến functions thành coordinates** sang **4. Complex exponential làm phase algebra đơn giản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Fourier series là tuyến tính (linear / 선형) algebra trong hàm (function / 함수) không gian (space / 공간)
 
@@ -108,7 +108,7 @@ c_i=\langle x,e_i\rangle
 
 trong orthonormal basis.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **4. Complex exponential làm phase algebra đơn giản** tiếp nhận điểm tựa từ **3. Fourier series là tuyến tính (linear / 선형) algebra trong hàm (function / 함수) không gian (space / 공간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Fourier transform mở periodic basis thành continuum frequencies** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **4. Complex exponential làm phase algebra đơn giản** nối từ **3. Fourier series là tuyến tính (linear / 선형) algebra trong hàm (function / 함수) không gian (space / 공간)** sang **5. Fourier transform mở periodic basis thành continuum frequencies**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Complex exponential làm phase algebra đơn giản
 
@@ -134,7 +134,7 @@ f(t)=\sum_{k=-\infty}^{\infty}c_ke^{ik\omega_0t}.
 
 Complex numbers không thêm “imaginary physics”; chúng là biểu diễn (representation / 표현) tiện cho amplitude + phase.
 
-> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **5. Fourier transform mở periodic basis thành continuum frequencies** tiếp nhận điểm tựa từ **4. Complex exponential làm phase algebra đơn giản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Parseval: năng lượng (energy / 에너지) được bảo toàn qua biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **5. Fourier transform mở periodic basis thành continuum frequencies** nối từ **4. Complex exponential làm phase algebra đơn giản** sang **6. Parseval: năng lượng (energy / 에너지) được bảo toàn qua biểu diễn (representation / 표현)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Fourier transform mở periodic basis thành continuum frequencies
 
@@ -158,7 +158,7 @@ F(ω) = complex coefficient của frequency ω
 
 Magnitude spectrum nói strength; phase spectrum nói alignment/thời gian (time / 시간) cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **6. Parseval: năng lượng (energy / 에너지) được bảo toàn qua biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **5. Fourier transform mở periodic basis thành continuum frequencies** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Differentiation trở thành multiplication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **6. Parseval: năng lượng (energy / 에너지) được bảo toàn qua biểu diễn (representation / 표현)** nối từ **5. Fourier transform mở periodic basis thành continuum frequencies** sang **7. Differentiation trở thành multiplication**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Parseval: năng lượng (energy / 에너지) được bảo toàn qua biểu diễn (representation / 표현)
 
@@ -178,7 +178,7 @@ Mô hình tư duy (mental model / 사고 모델):
 
 Đây là direct liên kết (connection / 연결) với orthonormal tuyến tính (linear / 선형) algebra.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **7. Differentiation trở thành multiplication** tiếp nhận điểm tựa từ **6. Parseval: năng lượng (energy / 에너지) được bảo toàn qua biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Convolution theorem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **7. Differentiation trở thành multiplication** nối từ **6. Parseval: năng lượng (energy / 에너지) được bảo toàn qua biểu diễn (representation / 표현)** sang **8. Convolution theorem**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Differentiation trở thành multiplication
 
@@ -204,7 +204,7 @@ Differential operators trở thành algebraic multipliers trong frequency lĩnh 
 
 Đây là lý do Fourier cực mạnh cho tuyến tính (linear / 선형) PDE/ODE.
 
-> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **8. Convolution theorem** tiếp nhận điểm tựa từ **7. Differentiation trở thành multiplication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. tuyến tính (linear / 선형) time-invariant các hệ thống (systems / 시스템들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **8. Convolution theorem** nối từ **7. Differentiation trở thành multiplication** sang **9. tuyến tính (linear / 선형) time-invariant các hệ thống (systems / 시스템들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Convolution theorem
 
@@ -228,7 +228,7 @@ Một thao tác (operation / 연산) “trộn” phức tạp trong thời gian
 chọn representation nơi operator trở nên đơn giản
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **9. tuyến tính (linear / 선형) time-invariant các hệ thống (systems / 시스템들)** tiếp nhận điểm tựa từ **8. Convolution theorem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Frequency không tự nói “khi nào”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **9. tuyến tính (linear / 선형) time-invariant các hệ thống (systems / 시스템들)** nối từ **8. Convolution theorem** sang **10. Frequency không tự nói “khi nào”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. tuyến tính (linear / 선형) time-invariant các hệ thống (systems / 시스템들)
 
@@ -252,7 +252,7 @@ Low-pass filter có `|H(ω)|` lớn ở low frequencies và nhỏ ở high frequ
 
 Filtering trở thành shaping spectrum.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **10. Frequency không tự nói “khi nào”** tiếp nhận điểm tựa từ **9. tuyến tính (linear / 선형) time-invariant các hệ thống (systems / 시스템들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Time-frequency bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **10. Frequency không tự nói “khi nào”** nối từ **9. tuyến tính (linear / 선형) time-invariant các hệ thống (systems / 시스템들)** sang **11. Time-frequency bất định (uncertainty / 불확실성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Frequency không tự nói “khi nào”
 
@@ -274,7 +274,7 @@ window ngắn → tốt về time, kém frequency resolution
 window dài → tốt frequency, kém time localization
 ```
 
-> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **11. Time-frequency bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **10. Frequency không tự nói “khi nào”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Sampling biến continuous tín hiệu (signal / 신호) thành discrete chuỗi (sequence / 시퀀스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **11. Time-frequency bất định (uncertainty / 불확실성)** nối từ **10. Frequency không tự nói “khi nào”** sang **12. Sampling biến continuous tín hiệu (signal / 신호) thành discrete chuỗi (sequence / 시퀀스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Time-frequency bất định (uncertainty / 불확실성)
 
@@ -284,7 +284,7 @@ Pure sinusoid có chính xác (exact / 정확한) frequency nhưng tồn tại i
 
 Đây là structural sự đánh đổi (trade-off / 트레이드오프) của Fourier biểu diễn (representation / 표현), không chỉ limitation của instrument.
 
-> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **11. Time-frequency bất định (uncertainty / 불확실성)** xác định đầu vào; **12. Sampling biến continuous tín hiệu (signal / 신호) thành discrete chuỗi (sequence / 시퀀스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **13. Aliasing: different frequencies trở nên indistinguishable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **11. Time-frequency bất định (uncertainty / 불확실성)** đặt đầu vào cho **12. Sampling biến continuous tín hiệu (signal / 신호) thành discrete chuỗi (sequence / 시퀀스)**, rồi **13. Aliasing: different frequencies trở nên indistinguishable** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. Sampling biến continuous tín hiệu (signal / 신호) thành discrete chuỗi (sequence / 시퀀스)
 
@@ -304,7 +304,7 @@ Sampling không chỉ “ghi ít points hơn”; nó periodize spectrum theo fre
 
 Nếu spectral copies overlap, aliasing xảy ra.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **12. Sampling biến continuous tín hiệu (signal / 신호) thành discrete chuỗi (sequence / 시퀀스)** xác định đầu vào; **13. Aliasing: different frequencies trở nên indistinguishable** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. Nyquist theorem cần các giả định (assumptions / 가정들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **12. Sampling biến continuous tín hiệu (signal / 신호) thành discrete chuỗi (sequence / 시퀀스)** đặt đầu vào cho **13. Aliasing: different frequencies trở nên indistinguishable**, rồi **14. Nyquist theorem cần các giả định (assumptions / 가정들)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13. Aliasing: different frequencies trở nên indistinguishable
 
@@ -320,7 +320,7 @@ Vì vậy high frequency có thể masquerade thành low frequency.
 
 Aliasing là thông tin (information / 정보) mất mát (loss / 손실) from sampling.
 
-> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **14. Nyquist theorem cần các giả định (assumptions / 가정들)** tiếp nhận điểm tựa từ **13. Aliasing: different frequencies trở nên indistinguishable** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. DFT: Fourier coordinates cho finite discrete véc-tơ (vector / 벡터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **14. Nyquist theorem cần các giả định (assumptions / 가정들)** nối từ **13. Aliasing: different frequencies trở nên indistinguishable** sang **15. DFT: Fourier coordinates cho finite discrete véc-tơ (vector / 벡터)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Nyquist theorem cần các giả định (assumptions / 가정들)
 
@@ -336,7 +336,7 @@ Practical các hệ thống (systems / 시스템들) use margin + anti-alias fil
 
 “mẫu (sample / 표본) at twice frequency” không phải universal magic quy tắc (rule / 규칙).
 
-> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **15. DFT: Fourier coordinates cho finite discrete véc-tơ (vector / 벡터)** tiếp nhận điểm tựa từ **14. Nyquist theorem cần các giả định (assumptions / 가정들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. FFT không phải transform khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **15. DFT: Fourier coordinates cho finite discrete véc-tơ (vector / 벡터)** nối từ **14. Nyquist theorem cần các giả định (assumptions / 가정들)** sang **16. FFT không phải transform khác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. DFT: Fourier coordinates cho finite discrete véc-tơ (vector / 벡터)
 
@@ -356,7 +356,7 @@ Fourier ma trận (matrix / 행렬) entries là complex roots of unity.
 
 DFT vì vậy cũng là phép nhân ma trận (matrix multiplication / 행렬 곱셈) conceptually.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **16. FFT không phải transform khác** tiếp nhận điểm tựa từ **15. DFT: Fourier coordinates cho finite discrete véc-tơ (vector / 벡터)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Spectral leakage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **16. FFT không phải transform khác** nối từ **15. DFT: Fourier coordinates cho finite discrete véc-tơ (vector / 벡터)** sang **17. Spectral leakage**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. FFT không phải transform khác
 
@@ -380,7 +380,7 @@ same mathematics
 → radically lower compute cost
 ```
 
-> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **17. Spectral leakage** tiếp nhận điểm tựa từ **16. FFT không phải transform khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Frequency resolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **17. Spectral leakage** nối từ **16. FFT không phải transform khác** sang **18. Frequency resolution**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Spectral leakage
 
@@ -392,7 +392,7 @@ If sinusoid does not align DFT bins, năng lượng (energy / 에너지) spreads
 
 Cửa sổ (window / 윈도우) functions reduce some leakage patterns but trade main-lobe width vs side-lobe suppression.
 
-> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **18. Frequency resolution** tiếp nhận điểm tựa từ **17. Spectral leakage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Filtering và causality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **18. Frequency resolution** nối từ **17. Spectral leakage** sang **19. Filtering và causality**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Frequency resolution
 
@@ -408,7 +408,7 @@ Higher mẫu (sample / 표본) tỷ lệ (rate / 비율) increases captured freq
 
 Phạm vi (range / 범위) và resolution là different concepts.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **19. Filtering và causality** tiếp nhận điểm tựa từ **18. Frequency resolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Gibbs phenomenon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **19. Filtering và causality** nối từ **18. Frequency resolution** sang **20. Gibbs phenomenon**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Filtering và causality
 
@@ -420,7 +420,7 @@ Perfect frequency selectivity and perfect thời gian (time / 시간) localizati
 
 Kỹ thuật (engineering / 엔지니어링) filters live inside these trade-offs.
 
-> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **20. Gibbs phenomenon** tiếp nhận điểm tựa từ **19. Filtering và causality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Compression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **20. Gibbs phenomenon** nối từ **19. Filtering và causality** sang **21. Compression**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Gibbs phenomenon
 
@@ -430,7 +430,7 @@ Increasing number modes narrows oscillation region but maximum overshoot does no
 
 This is biểu diễn (representation / 표현) hành vi (behavior / 동작) near nonsmooth cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **21. Compression** tiếp nhận điểm tựa từ **20. Gibbs phenomenon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Fourier trong PDE** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **21. Compression** nối từ **20. Gibbs phenomenon** sang **22. Fourier trong PDE**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Compression
 
@@ -450,7 +450,7 @@ JPEG uses DCT-like khối (block / 블록) transforms; audio codecs combine tran
 
 Compression chất lượng (quality / 품질) depends on what thông tin (information / 정보) humans/tasks care about, not only coefficient magnitude.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **22. Fourier trong PDE** tiếp nhận điểm tựa từ **21. Compression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Fourier trong convolutional networks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **22. Fourier trong PDE** nối từ **21. Compression** sang **23. Fourier trong convolutional networks**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Fourier trong PDE
 
@@ -482,7 +482,7 @@ Higher frequencies decay faster, explaining diffusion as smoothing.
 
 Transform reveals qualitative hành vi (behavior / 동작) almost immediately.
 
-> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **23. Fourier trong convolutional networks** tiếp nhận điểm tựa từ **22. Fourier trong PDE** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Fourier features trong AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **23. Fourier trong convolutional networks** nối từ **22. Fourier trong PDE** sang **24. Fourier features trong AI**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Fourier trong convolutional networks
 
@@ -492,7 +492,7 @@ Early vision filters can behave like edge/high-frequency detectors or smoothing/
 
 But hiện đại (modern / 현대적) CNN hành vi (behavior / 동작) is nonlinear and data-dependent, so frequency-domain intuition is one lens, not complete explanation.
 
-> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **24. Fourier features trong AI** tiếp nhận điểm tựa từ **23. Fourier trong convolutional networks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Fourier vs Laplace vs Z-transform** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **24. Fourier features trong AI** nối từ **23. Fourier trong convolutional networks** sang **25. Fourier vs Laplace vs Z-transform**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Fourier features trong AI
 
@@ -510,7 +510,7 @@ coordinates
 
 Again, transform-style basis thiết kế (design / 설계) affects learnability.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **25. Fourier vs Laplace vs Z-transform** tiếp nhận điểm tựa từ **24. Fourier features trong AI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. dùng chung (common / 공통) thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **25. Fourier vs Laplace vs Z-transform** nối từ **24. Fourier features trong AI** sang **26. dùng chung (common / 공통) thất bại (failure / 실패) modes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Fourier vs Laplace vs Z-transform
 
@@ -524,7 +524,7 @@ Z-transform → discrete-time sequences/systems
 
 They overlap but answer different questions and have different convergence domains.
 
-> **Chuyển mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **26. dùng chung (common / 공통) thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **25. Fourier vs Laplace vs Z-transform** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **26. dùng chung (common / 공통) thất bại (failure / 실패) modes** nối từ **25. Fourier vs Laplace vs Z-transform** sang **Liên kết kiến thức (knowledge connection / 지식 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. dùng chung (common / 공통) thất bại (failure / 실패) modes
 
@@ -548,7 +548,7 @@ Band-limit giả định (assumption / 가정) matters.
 
 FFT only computes DFT efficiently.
 
-> **Chuyển mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** tiếp nhận điểm tựa từ **26. dùng chung (common / 공통) thất bại (failure / 실패) modes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** nối từ **26. dùng chung (common / 공통) thất bại (failure / 실패) modes** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
@@ -567,7 +567,7 @@ PDE → mode decomposition
 AI → convolution / Fourier features
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết kiến thức (knowledge connection / 지식 연결) — Fourier, Signals và Frequency: đổi biểu diễn (representation / 표현) để làm lộ cấu trúc (structure / 구조)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

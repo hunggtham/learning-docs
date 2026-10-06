@@ -42,7 +42,7 @@ khi `cosθ≠0`.
 
 Điểm cần nhớ không phải mnemonic SOH-CAH-TOA tự thân, mà là **similarity makes these ratios bất biến (invariant / 불변식) under quy mô (scale / 규모)**.
 
-> **Chuyển mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, **Right-triangle definition chưa đủ** tiếp nhận điểm tựa từ **Vì sao ratio trong tam giác chỉ phụ thuộc angle?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đơn vị (unit / 단위) circle: definition cốt lõi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, **Right-triangle definition chưa đủ** nối từ **Vì sao ratio trong tam giác chỉ phụ thuộc angle?** sang **Đơn vị (unit / 단위) circle: definition cốt lõi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Right-triangle definition chưa đủ
 
@@ -50,7 +50,7 @@ Triangle definition works naturally cho acute angles từ `0` đến `π/2`. Nh�
 
 Một robot arm có thể quay `-30°`; một tín hiệu (signal / 신호) có phase `5π`; một điểm (point / 지점) có thể rotate nhiều vòng. đơn vị (unit / 단위) circle mở rộng trigonometry sang toàn bộ real line.
 
-> **Chuyển mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Đơn vị (unit / 단위) circle: definition cốt lõi** tiếp nhận điểm tựa từ **Right-triangle definition chưa đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pythagorean định danh (identity / 식별자) xuất hiện từ circle hình học (geometry / 기하학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Đơn vị (unit / 단위) circle: definition cốt lõi** nối từ **Right-triangle definition chưa đủ** sang **Pythagorean định danh (identity / 식별자) xuất hiện từ circle hình học (geometry / 기하학)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đơn vị (unit / 단위) circle: definition cốt lõi
 
@@ -71,7 +71,7 @@ Với this viewpoint, dấu của sine/cosine tự nhiên thay đổi theo quadr
 
 Trong quadrant II, x-coordinate âm nên cosine âm, trong khi y-coordinate dương nên sine dương. Không cần memorize bảng dấu nếu hình dung điểm (point / 지점) trên circle.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Pythagorean định danh (identity / 식별자) xuất hiện từ circle hình học (geometry / 기하학)** tiếp nhận điểm tựa từ **Đơn vị (unit / 단위) circle: definition cốt lõi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Radian: measure angle bằng hình học (geometry / 기하학) tự nhiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Pythagorean định danh (identity / 식별자) xuất hiện từ circle hình học (geometry / 기하학)** nối từ **Đơn vị (unit / 단위) circle: definition cốt lõi** sang **Radian: measure angle bằng hình học (geometry / 기하학) tự nhiên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pythagorean định danh (identity / 식별자) xuất hiện từ circle hình học (geometry / 기하학)
 
@@ -103,7 +103,7 @@ Từ đó,
 
 cũng follow bằng cách chia cho `cos²θ` khi `cosθ≠0`.
 
-> **Chuyển mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, **Radian: measure angle bằng hình học (geometry / 기하학) tự nhiên** tiếp nhận điểm tựa từ **Pythagorean định danh (identity / 식별자) xuất hiện từ circle hình học (geometry / 기하학)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao calculus muốn radians?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, **Radian: measure angle bằng hình học (geometry / 기하학) tự nhiên** nối từ **Pythagorean định danh (identity / 식별자) xuất hiện từ circle hình học (geometry / 기하학)** sang **Vì sao calculus muốn radians?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Radian: measure angle bằng hình học (geometry / 기하학) tự nhiên
 
@@ -137,7 +137,7 @@ và
 
 Radian là dimensionless ratio và phù hợp trực tiếp với calculus.
 
-> **Chuyển mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Vì sao calculus muốn radians?** tiếp nhận điểm tựa từ **Radian: measure angle bằng hình học (geometry / 기하학) tự nhiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Periodicity đến từ quay trọn vòng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Vì sao calculus muốn radians?** nối từ **Radian: measure angle bằng hình học (geometry / 기하학) tự nhiên** sang **Periodicity đến từ quay trọn vòng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao calculus muốn radians?
 
@@ -161,7 +161,7 @@ Nếu `x` measured in degrees, conversion factor `π/180` sẽ xuất hiện:
 
 Vì vậy radian không chỉ là một đơn vị (unit / 단위) khác; nó là angle measure làm cục bộ (local / 로컬) hình học (geometry / 기하학) của circle có quy mô (scale / 규모) tự nhiên.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Periodicity đến từ quay trọn vòng** tiếp nhận điểm tựa từ **Vì sao calculus muốn radians?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tham chiếu (reference / 참조) angles và symmetry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Periodicity đến từ quay trọn vòng** nối từ **Vì sao calculus muốn radians?** sang **Tham chiếu (reference / 참조) angles và symmetry**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Periodicity đến từ quay trọn vòng
 
@@ -185,7 +185,7 @@ Tangent có period `π` vì direction slope lặp sau half-turn:
 
 Period không phải arbitrary thuộc tính (property / 속성) của đồ thị (graph / 그래프); nó đến từ rotational symmetry.
 
-> **Chuyển mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, sau nội dung của **Periodicity đến từ quay trọn vòng**, **Tham chiếu (reference / 참조) angles và symmetry** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Tangent như slope của direction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, sau nội dung của **Periodicity đến từ quay trọn vòng**, **Tham chiếu (reference / 참조) angles và symmetry** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Tangent như slope của direction** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tham chiếu (reference / 참조) angles và symmetry
 
@@ -209,7 +209,7 @@ vì x-coordinate đổi sign.
 
 Trigonometric identities thường trở nên dễ hiểu hơn khi nghĩ bằng transformations của circle thay vì symbolic manipulation thuần túy.
 
-> **Chuyển mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Tangent như slope của direction** tiếp nhận điểm tựa từ **Tham chiếu (reference / 참조) angles và symmetry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Inverse trigonometric functions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Tangent như slope của direction** nối từ **Tham chiếu (reference / 참조) angles và symmetry** sang **Inverse trigonometric functions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tangent như slope của direction
 
@@ -231,7 +231,7 @@ m=\tan\theta.
 
 Khi line vertical, `cosθ=0` và tangent undefined — đúng với fact vertical line có undefined/infinite slope trong tiêu chuẩn (standard / 표준) Cartesian biểu diễn (representation / 표현).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Inverse trigonometric functions** tiếp nhận điểm tựa từ **Tangent như slope của direction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **From circle motion to sinusoidal motion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Inverse trigonometric functions** nối từ **Tangent như slope của direction** sang **From circle motion to sinusoidal motion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Inverse trigonometric functions
 
@@ -259,7 +259,7 @@ Arctangent typically returns angle in `(-π/2,π/2)`.
 
 Notation `sin^{-1}x` thường nghĩa arcsin, **không phải** reciprocal `1/sin x`. Reciprocal của sine là cosecant `csc x`.
 
-> **Chuyển mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, **From circle motion to sinusoidal motion** tiếp nhận điểm tựa từ **Inverse trigonometric functions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Amplitude, angular frequency, phase** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, **From circle motion to sinusoidal motion** nối từ **Inverse trigonometric functions** sang **Amplitude, angular frequency, phase**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## From circle motion to sinusoidal motion
 
@@ -285,7 +285,7 @@ Một sinusoid vì thế là **projection của uniform circular motion lên m�
 
 Đây là mô hình tư duy (mental model / 사고 모델) mạnh cho waves và oscillations.
 
-> **Chuyển mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Amplitude, angular frequency, phase** tiếp nhận điểm tựa từ **From circle motion to sinusoidal motion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phase không chỉ là “dịch đồ thị (graph / 그래프)”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Amplitude, angular frequency, phase** nối từ **From circle motion to sinusoidal motion** sang **Phase không chỉ là “dịch đồ thị (graph / 그래프)”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Amplitude, angular frequency, phase
 
@@ -327,7 +327,7 @@ Do đó
 
 `f` đếm cycles; `ω` đo radians accumulated per đơn vị (unit / 단위) thời gian (time / 시간).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Phase không chỉ là “dịch đồ thị (graph / 그래프)”** tiếp nhận điểm tựa từ **Amplitude, angular frequency, phase** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Addition formulas từ rotation composition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Phase không chỉ là “dịch đồ thị (graph / 그래프)”** nối từ **Amplitude, angular frequency, phase** sang **Addition formulas từ rotation composition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phase không chỉ là “dịch đồ thị (graph / 그래프)”
 
@@ -349,7 +349,7 @@ Trong AC circuits, phase difference giữa voltage/hiện tại (current / 현�
 
 Phase vì thế represent timing/orientation trong periodic trạng thái (state / 상태), không chỉ cosmetic horizontal shift.
 
-> **Chuyển mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, **Addition formulas từ rotation composition** tiếp nhận điểm tựa từ **Phase không chỉ là “dịch đồ thị (graph / 그래프)”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rotation ma trận (matrix / 행렬): vì sao entries là sine và cosine?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, **Addition formulas từ rotation composition** nối từ **Phase không chỉ là “dịch đồ thị (graph / 그래프)”** sang **Rotation ma trận (matrix / 행렬): vì sao entries là sine và cosine?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Addition formulas từ rotation composition
 
@@ -389,7 +389,7 @@ Addition formulas vì vậy encode composition law của rotations.
 
 Đây là explanation structural tốt hơn memorizing sign patterns.
 
-> **Chuyển mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Rotation ma trận (matrix / 행렬): vì sao entries là sine và cosine?** tiếp nhận điểm tựa từ **Addition formulas từ rotation composition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rotation bảo toàn length và angle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Rotation ma trận (matrix / 행렬): vì sao entries là sine và cosine?** nối từ **Addition formulas từ rotation composition** sang **Rotation bảo toàn length và angle**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rotation ma trận (matrix / 행렬): vì sao entries là sine và cosine?
 
@@ -423,7 +423,7 @@ R(\theta)=
 
 Ma trận (matrix / 행렬) không phải formula được “phát minh” riêng; nó là coordinate biểu diễn (representation / 표현) của rotation transformation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Rotation bảo toàn length và angle** tiếp nhận điểm tựa từ **Rotation ma trận (matrix / 행렬): vì sao entries là sine và cosine?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dot sản phẩm (product / 제품) và cosine similarity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Rotation bảo toàn length và angle** nối từ **Rotation ma trận (matrix / 행렬): vì sao entries là sine và cosine?** sang **Dot sản phẩm (product / 제품) và cosine similarity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rotation bảo toàn length và angle
 
@@ -446,7 +446,7 @@ Rotation giữ Euclidean length. Nó cũng giữ dot products, nên giữ angles
 
 Đây là cầu nối (bridge / 브리지) giữa trigonometry và orthogonal matrices trong tuyến tính (linear / 선형) algebra.
 
-> **Chuyển mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, **Dot sản phẩm (product / 제품) và cosine similarity** tiếp nhận điểm tựa từ **Rotation bảo toàn length và angle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Law of cosines: Pythagoras với non-right angle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, **Dot sản phẩm (product / 제품) và cosine similarity** nối từ **Rotation bảo toàn length và angle** sang **Law of cosines: Pythagoras với non-right angle**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dot sản phẩm (product / 제품) và cosine similarity
 
@@ -470,7 +470,7 @@ Cosine đo alignment direction:
 
 Cosine similarity trong thông tin (information / 정보) retrieval/embeddings dùng same hình học (geometry / 기하학), dù high-dimensional vectors không thể visualise trực tiếp như arrows 2D.
 
-> **Chuyển mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Law of cosines: Pythagoras với non-right angle** tiếp nhận điểm tựa từ **Dot sản phẩm (product / 제품) và cosine similarity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Law of sines** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Law of cosines: Pythagoras với non-right angle** nối từ **Dot sản phẩm (product / 제품) và cosine similarity** sang **Law of sines**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Law of cosines: Pythagoras với non-right angle
 
@@ -501,7 +501,7 @@ u\cdot v=\|u\|\|v\|\cos C.
 
 Điều này cho thấy triangle hình học (geometry / 기하학) và véc-tơ (vector / 벡터) algebra là cùng cấu trúc (structure / 구조) được viết bằng hai languages.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Law of sines** tiếp nhận điểm tựa từ **Law of cosines: Pythagoras với non-right angle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Triangulation và localization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Law of sines** nối từ **Law of cosines: Pythagoras với non-right angle** sang **Triangulation và localization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Law of sines
 
@@ -520,7 +520,7 @@ trong đó `R` là circumradius.
 
 Law of sines useful khi biết angle-side pairs. Nó cũng nối triangle với circle vì constant `2R` đến từ circumcircle hình học (geometry / 기하학).
 
-> **Chuyển mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, **Triangulation và localization** tiếp nhận điểm tựa từ **Law of sines** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Small-angle approximation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, **Triangulation và localization** nối từ **Law of sines** sang **Small-angle approximation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Triangulation và localization
 
@@ -530,7 +530,7 @@ Surveying dùng triangulation từ lâu. Computer vision recover hình học (ge
 
 Modeling ngôn ngữ (language / 언어) quan trọng: angle measurements → trigonometric các ràng buộc (constraints / 제약조건들) → solve unknown hình học (geometry / 기하학).
 
-> **Chuyển mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Small-angle approximation** tiếp nhận điểm tựa từ **Triangulation và localization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Harmonic oscillator và trigonometry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Small-angle approximation** nối từ **Triangulation và localization** sang **Harmonic oscillator và trigonometry**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Small-angle approximation
 
@@ -560,7 +560,7 @@ rất gần `0.01`.
 
 Small-angle approximations simplify pendulum equations, optics và điều khiển (control / 제어) các mô hình (models / 모델들), nhưng chỉ hợp lệ khi angle đủ nhỏ. Dùng degree giá trị (value / 값) trực tiếp sẽ sai vì approximation assume radians.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Harmonic oscillator và trigonometry** tiếp nhận điểm tựa từ **Small-angle approximation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Euler's formula: rotation bằng complex exponential** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Harmonic oscillator và trigonometry** nối từ **Small-angle approximation** sang **Euler's formula: rotation bằng complex exponential**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Harmonic oscillator và trigonometry
 
@@ -585,7 +585,7 @@ Tại sao sine/cosine xuất hiện? Vì differentiation hai lần cho lại neg
 
 Rotation hình học (geometry / 기하학) và differential equations gặp nhau tại cùng periodic cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, **Euler's formula: rotation bằng complex exponential** tiếp nhận điểm tựa từ **Harmonic oscillator và trigonometry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fourier viewpoint: periodic mẫu (pattern / 패턴) như tổng của rotations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, **Euler's formula: rotation bằng complex exponential** nối từ **Harmonic oscillator và trigonometry** sang **Fourier viewpoint: periodic mẫu (pattern / 패턴) như tổng của rotations**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Euler's formula: rotation bằng complex exponential
 
@@ -611,7 +611,7 @@ Từ Euler's formula:
 
 Đây là nền cho Fourier phân tích (analysis / 분석) và tín hiệu (signal / 신호) processing.
 
-> **Chuyển mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Fourier viewpoint: periodic mẫu (pattern / 패턴) như tổng của rotations** tiếp nhận điểm tựa từ **Euler's formula: rotation bằng complex exponential** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Aliasing: sampling phải tôn trọng frequency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Fourier viewpoint: periodic mẫu (pattern / 패턴) như tổng của rotations** nối từ **Euler's formula: rotation bằng complex exponential** sang **Aliasing: sampling phải tôn trọng frequency**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Fourier viewpoint: periodic mẫu (pattern / 패턴) như tổng của rotations
 
@@ -627,7 +627,7 @@ A_k\cos(\omega_k t+\phi_k).
 
 Trigonometry vì thế không chỉ mô hình (model / 모델) one wave; nó cung cấp coordinate hệ thống (system / 시스템) cho whole tín hiệu (signal / 신호) không gian (space / 공간).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Aliasing: sampling phải tôn trọng frequency** tiếp nhận điểm tựa từ **Fourier viewpoint: periodic mẫu (pattern / 패턴) như tổng của rotations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Angles trong 3D: cần vectors/matrices hơn là một θ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Aliasing: sampling phải tôn trọng frequency** nối từ **Fourier viewpoint: periodic mẫu (pattern / 패턴) như tổng của rotations** sang **Angles trong 3D: cần vectors/matrices hơn là một θ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Aliasing: sampling phải tôn trọng frequency
 
@@ -641,7 +641,7 @@ f_s>2f_{max}.
 
 Liên kết (connection / 연결) này cho thấy frequency/period không chỉ là textbook parameters; chúng quyết định digital biểu diễn (representation / 표현) có preserve tín hiệu (signal / 신호) thông tin (information / 정보) hay không.
 
-> **Chuyển mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, **Angles trong 3D: cần vectors/matrices hơn là một θ** tiếp nhận điểm tựa từ **Aliasing: sampling phải tôn trọng frequency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Degree/radian bug là model-unit bug** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, **Angles trong 3D: cần vectors/matrices hơn là một θ** nối từ **Aliasing: sampling phải tôn trọng frequency** sang **Degree/radian bug là model-unit bug**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Angles trong 3D: cần vectors/matrices hơn là một `θ`
 
@@ -651,7 +651,7 @@ Euler angles, rotation matrices và quaternions là các representations phổ b
 
 Graphics, robotics và AR/VR vì thế nối trigonometry với tuyến tính (linear / 선형) algebra và group cấu trúc (structure / 구조) của rotations.
 
-> **Chuyển mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Degree/radian bug là model-unit bug** tiếp nhận điểm tựa từ **Angles trong 3D: cần vectors/matrices hơn là một θ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결) — trigonometry và embeddings** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Degree/radian bug là model-unit bug** nối từ **Angles trong 3D: cần vectors/matrices hơn là một θ** sang **Liên kết kiến thức (knowledge connection / 지식 연결) — trigonometry và embeddings**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Degree/radian bug là model-unit bug
 
@@ -673,7 +673,7 @@ Convert:
 
 Đơn vị (unit / 단위) mismatch là một trong những bugs dễ xảy ra nhất khi trigonometry đi vào mã (code / 코드).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, sau nội dung của **Degree/radian bug là model-unit bug**, **Liên kết kiến thức (knowledge connection / 지식 연결) — trigonometry và embeddings** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결) — phase và phân tán (distributed / 분산)/tín hiệu (signal / 신호) các hệ thống (systems / 시스템들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, sau nội dung của **Degree/radian bug là model-unit bug**, **Liên kết kiến thức (knowledge connection / 지식 연결) — trigonometry và embeddings** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결) — phase và phân tán (distributed / 분산)/tín hiệu (signal / 신호) các hệ thống (systems / 시스템들)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결) — trigonometry và embeddings
 
@@ -688,7 +688,7 @@ Trong embedding không gian (space / 공간), “angle” không phải vật l�
 
 Điều này là ví dụ classic của concept sinh ra từ circle/triangle nhưng generalize thành công cụ (tool / 도구) trong AI.
 
-> **Chuyển mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, **Liên kết kiến thức (knowledge connection / 지식 연결) — phase và phân tán (distributed / 분산)/tín hiệu (signal / 신호) các hệ thống (systems / 시스템들)** tiếp nhận điểm tựa từ **Liên kết kiến thức (knowledge connection / 지식 연결) — trigonometry và embeddings** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lượng giác: từ tam giác đến rotation, phase và wave**, **Liên kết kiến thức (knowledge connection / 지식 연결) — phase và phân tán (distributed / 분산)/tín hiệu (signal / 신호) các hệ thống (systems / 시스템들)** nối từ **Liên kết kiến thức (knowledge connection / 지식 연결) — trigonometry và embeddings** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결) — phase và phân tán (distributed / 분산)/tín hiệu (signal / 신호) các hệ thống (systems / 시스템들)
 
@@ -696,13 +696,13 @@ Hai periodic processes có same frequency nhưng phase lệch có thể reinforc
 
 Trong software, ta không nên kéo analogy quá xa, nhưng periodic jobs với same cadence cũng có phase/offset concept: staggering phase có thể tránh synchronized tải (load / 로드) spikes. Mathematical phase ngôn ngữ (language / 언어) giúp reason về cyclic timing.
 
-> **Chuyển mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết kiến thức (knowledge connection / 지식 연결) — phase và phân tán (distributed / 분산)/tín hiệu (signal / 신호) các hệ thống (systems / 시스템들)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết kiến thức (knowledge connection / 지식 연결) — phase và phân tán (distributed / 분산)/tín hiệu (signal / 신호) các hệ thống (systems / 시스템들)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Hãy xem sine và cosine như **coordinates của rotation**. Tam giác chỉ là một cục bộ (local / 로컬) geometric view; đơn vị (unit / 단위) circle mở rộng chúng cho mọi angle. Khi rotation diễn ra đều theo thời gian (time / 시간), projection tạo sinusoidal wave. Khi nhiều rotations/frequencies cộng lại, ta tiến tới Fourier phân tích (analysis / 분석). Trigonometry vì thế là cầu nối (bridge / 브리지) giữa hình học (geometry / 기하학), tuyến tính (linear / 선형) algebra, differential equations và tín hiệu (signal / 신호) processing.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lượng giác: từ tam giác đến rotation, phase và wave**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

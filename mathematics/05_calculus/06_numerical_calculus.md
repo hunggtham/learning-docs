@@ -32,7 +32,7 @@ Do đó numerical differentiation có một paradox:
 
 > smaller step reduces truncation lỗi (error / 오류) only until rounding/noise amplification starts to dominate.
 
-> **Chuyển mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **2. Derive forward difference từ Taylor expansion** tiếp nhận điểm tựa từ **1. Numerical derivative là inverse bài toán (problem / 문제) nhạy cảm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Backward difference** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **2. Derive forward difference từ Taylor expansion** nối từ **1. Numerical derivative là inverse bài toán (problem / 문제) nhạy cảm** sang **3. Backward difference**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Derive forward difference từ Taylor expansion
 
@@ -62,7 +62,7 @@ f'(x)
 
 Forward difference có first-order truncation lỗi (error / 오류).
 
-> **Chuyển mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **3. Backward difference** tiếp nhận điểm tựa từ **2. Derive forward difference từ Taylor expansion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Central difference: symmetry cancels lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **3. Backward difference** nối từ **2. Derive forward difference từ Taylor expansion** sang **4. Central difference: symmetry cancels lỗi (error / 오류)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Backward difference
 
@@ -78,7 +78,7 @@ Nó cũng first-order.
 
 Forward/backward formulas hữu ích gần boundaries khi samples chỉ available một phía.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **4. Central difference: symmetry cancels lỗi (error / 오류)** tiếp nhận điểm tựa từ **3. Backward difference** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Second derivative formula** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **4. Central difference: symmetry cancels lỗi (error / 오류)** nối từ **3. Backward difference** sang **5. Second derivative formula**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Central difference: symmetry cancels lỗi (error / 오류)
 
@@ -115,7 +115,7 @@ O(h^2).
 
 Symmetry làm even-order terms cancel.
 
-> **Chuyển mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **5. Second derivative formula** tiếp nhận điểm tựa từ **4. Central difference: symmetry cancels lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Step-size sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **5. Second derivative formula** nối từ **4. Central difference: symmetry cancels lỗi (error / 오류)** sang **6. Step-size sự đánh đổi (trade-off / 트레이드오프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Second derivative formula
 
@@ -138,7 +138,7 @@ với truncation lỗi (error / 오류) `O(h^2)`.
 
 Formula này là building khối (block / 블록) của finite-difference PDE solvers.
 
-> **Chuyển mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **6. Step-size sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **5. Second derivative formula** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Noise amplification trong measured dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **6. Step-size sự đánh đổi (trade-off / 트레이드오프)** nối từ **5. Second derivative formula** sang **7. Noise amplification trong measured dữ liệu (data / 데이터)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Step-size sự đánh đổi (trade-off / 트레이드오프)
 
@@ -165,7 +165,7 @@ Central difference có different balance because truncation is `O(h^2)`.
 
 Điểm chính: “use smallest possible h” là wrong quy tắc (rule / 규칙).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **6. Step-size sự đánh đổi (trade-off / 트레이드오프)** nêu điều cần giải thích; **7. Noise amplification trong measured dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. Higher-order finite differences** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **6. Step-size sự đánh đổi (trade-off / 트레이드오프)** đặt vấn đề; **7. Noise amplification trong measured dữ liệu (data / 데이터)** đối chiếu bằng chứng, rồi **8. Higher-order finite differences** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 7. Noise amplification trong measured dữ liệu (data / 데이터)
 
@@ -185,7 +185,7 @@ As `h→0`, noise term can explode.
 
 Derivative estimation từ experimental dữ liệu (data / 데이터) thường cần smoothing, regularization, cục bộ (local / 로컬) polynomial fit hoặc lĩnh vực (domain / 도메인) các mô hình (models / 모델들), không chỉ smaller spacing.
 
-> **Chuyển mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **7. Noise amplification trong measured dữ liệu (data / 데이터)** nêu điều cần giải thích; **8. Higher-order finite differences** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. Richardson extrapolation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **7. Noise amplification trong measured dữ liệu (data / 데이터)** đặt vấn đề; **8. Higher-order finite differences** đối chiếu bằng chứng, rồi **9. Richardson extrapolation** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8. Higher-order finite differences
 
@@ -200,7 +200,7 @@ Higher thứ tự (order / 순서) formulas giảm truncation lỗi (error / 오
 
 Thứ tự (order / 순서) cao không automatic nghĩa practical accuracy cao hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **9. Richardson extrapolation** tiếp nhận điểm tựa từ **8. Higher-order finite differences** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Numerical tích hợp (integration / 통합) khác numerical differentiation về stability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **9. Richardson extrapolation** nối từ **8. Higher-order finite differences** sang **10. Numerical tích hợp (integration / 통합) khác numerical differentiation về stability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Richardson extrapolation
 
@@ -216,7 +216,7 @@ và compute `D(h)` cùng `D(h/2)`, ta combine để cancel leading lỗi (error 
 
 Nó dùng kiến thức (knowledge / 지식) về lỗi (error / 오류) cấu trúc (structure / 구조) để improve estimate thay vì chỉ shrink step blindly.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **10. Numerical tích hợp (integration / 통합) khác numerical differentiation về stability** tiếp nhận điểm tựa từ **9. Richardson extrapolation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Trapezoidal quy tắc (rule / 규칙) từ tuyến tính (linear / 선형) interpolation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **10. Numerical tích hợp (integration / 통합) khác numerical differentiation về stability** nối từ **9. Richardson extrapolation** sang **11. Trapezoidal quy tắc (rule / 규칙) từ tuyến tính (linear / 선형) interpolation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Numerical tích hợp (integration / 통합) khác numerical differentiation về stability
 
@@ -236,7 +236,7 @@ bằng weighted sum of samples:
 
 Choice nodes/weights quyết định quadrature quy tắc (rule / 규칙).
 
-> **Chuyển mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **11. Trapezoidal quy tắc (rule / 규칙) từ tuyến tính (linear / 선형) interpolation** tiếp nhận điểm tựa từ **10. Numerical tích hợp (integration / 통합) khác numerical differentiation về stability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Simpson's quy tắc (rule / 규칙) từ quadratic interpolation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **11. Trapezoidal quy tắc (rule / 규칙) từ tuyến tính (linear / 선형) interpolation** nối từ **10. Numerical tích hợp (integration / 통합) khác numerical differentiation về stability** sang **12. Simpson's quy tắc (rule / 규칙) từ quadratic interpolation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Trapezoidal quy tắc (rule / 규칙) từ tuyến tính (linear / 선형) interpolation
 
@@ -254,7 +254,7 @@ Composite trapezoidal quy tắc (rule / 규칙) chia interval thành many subint
 
 Với smooth hàm (function / 함수) và uniform step `h`, toàn cục (global / 전역) lỗi (error / 오류) thường `O(h^2)`.
 
-> **Chuyển mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **12. Simpson's quy tắc (rule / 규칙) từ quadratic interpolation** tiếp nhận điểm tựa từ **11. Trapezoidal quy tắc (rule / 규칙) từ tuyến tính (linear / 선형) interpolation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Gaussian quadrature: choose nodes intelligently** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **12. Simpson's quy tắc (rule / 규칙) từ quadratic interpolation** nối từ **11. Trapezoidal quy tắc (rule / 규칙) từ tuyến tính (linear / 선형) interpolation** sang **13. Gaussian quadrature: choose nodes intelligently**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Simpson's quy tắc (rule / 규칙) từ quadratic interpolation
 
@@ -273,7 +273,7 @@ Composite Simpson thường có high accuracy for smooth functions, with toàn c
 
 Weights `1,4,1` không arbitrary; chúng đến từ integrating quadratic interpolation basis.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **13. Gaussian quadrature: choose nodes intelligently** tiếp nhận điểm tựa từ **12. Simpson's quy tắc (rule / 규칙) từ quadratic interpolation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Adaptive quadrature** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **13. Gaussian quadrature: choose nodes intelligently** nối từ **12. Simpson's quy tắc (rule / 규칙) từ quadratic interpolation** sang **14. Adaptive quadrature**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Gaussian quadrature: choose nodes intelligently
 
@@ -283,7 +283,7 @@ Gaussian quadrature chooses nodes/weights để integrate polynomials tới high
 
 Nó cho thấy numerical tích hợp (integration / 통합) không chỉ là “mẫu (sample / 표본) dày hơn”; placement của samples có mathematical cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **14. Adaptive quadrature** tiếp nhận điểm tựa từ **13. Gaussian quadrature: choose nodes intelligently** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Improper integrals cần transformation/truncation chiến lược (strategy / 전략)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **14. Adaptive quadrature** nối từ **13. Gaussian quadrature: choose nodes intelligently** sang **15. Improper integrals cần transformation/truncation chiến lược (strategy / 전략)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Adaptive quadrature
 
@@ -302,7 +302,7 @@ refined estimate
 
 Đây là general numerical principle: allocate computation where lỗi (error / 오류) indicators say it matters.
 
-> **Chuyển mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **15. Improper integrals cần transformation/truncation chiến lược (strategy / 전략)** tiếp nhận điểm tựa từ **14. Adaptive quadrature** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Highly oscillatory integrals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **15. Improper integrals cần transformation/truncation chiến lược (strategy / 전략)** nối từ **14. Adaptive quadrature** sang **16. Highly oscillatory integrals**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Improper integrals cần transformation/truncation chiến lược (strategy / 전략)
 
@@ -322,7 +322,7 @@ Strategies:
 
 Mathematical convergence không automatically cho numerical chiến lược (strategy / 전략) tốt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **16. Highly oscillatory integrals** tiếp nhận điểm tựa từ **15. Improper integrals cần transformation/truncation chiến lược (strategy / 전략)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Monte Carlo tích hợp (integration / 통합)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **16. Highly oscillatory integrals** nối từ **15. Improper integrals cần transformation/truncation chiến lược (strategy / 전략)** sang **17. Monte Carlo tích hợp (integration / 통합)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Highly oscillatory integrals
 
@@ -337,7 +337,7 @@ Methods may need:
 
 Liên kết (connection / 연결) với sampling lý thuyết (theory / 이론)/Fourier rất trực tiếp.
 
-> **Chuyển mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **17. Monte Carlo tích hợp (integration / 통합)** tiếp nhận điểm tựa từ **16. Highly oscillatory integrals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Quasi-Monte Carlo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **17. Monte Carlo tích hợp (integration / 통합)** nối từ **16. Highly oscillatory integrals** sang **18. Quasi-Monte Carlo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Monte Carlo tích hợp (integration / 통합)
 
@@ -366,7 +366,7 @@ slow compared with deterministic low-dimensional quadrature nhưng less sensitiv
 
 Đây là lý do Monte Carlo mạnh trong finance, Bayesian computation và high-dimensional physics.
 
-> **Chuyển mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **18. Quasi-Monte Carlo** tiếp nhận điểm tựa từ **17. Monte Carlo tích hợp (integration / 통합)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Automatic differentiation khác finite differences hoàn toàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **18. Quasi-Monte Carlo** nối từ **17. Monte Carlo tích hợp (integration / 통합)** sang **19. Automatic differentiation khác finite differences hoàn toàn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Quasi-Monte Carlo
 
@@ -374,7 +374,7 @@ Thay pseudorandom samples bằng low-discrepancy sequences để fill không gia
 
 Can improve convergence for sufficiently regular integrands, though guarantees/hành vi (behavior / 동작) depend dimension and variation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **19. Automatic differentiation khác finite differences hoàn toàn** tiếp nhận điểm tựa từ **18. Quasi-Monte Carlo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Forward-mode AD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **19. Automatic differentiation khác finite differences hoàn toàn** nối từ **18. Quasi-Monte Carlo** sang **20. Forward-mode AD**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Automatic differentiation khác finite differences hoàn toàn
 
@@ -392,7 +392,7 @@ AD propagates derivative thông tin (information / 정보) through this computat
 
 No truncation lỗi (error / 오류) from finite step exists, though floating-point rounding still exists.
 
-> **Chuyển mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **20. Forward-mode AD** tiếp nhận điểm tựa từ **19. Automatic differentiation khác finite differences hoàn toàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Reverse-mode AD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **20. Forward-mode AD** nối từ **19. Automatic differentiation khác finite differences hoàn toàn** sang **21. Reverse-mode AD**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Forward-mode AD
 
@@ -408,7 +408,7 @@ Efficient khi number of đầu vào (input / 입력) directions nhỏ relative t
 
 Mathematically it computes Jacobian-vector products (JVPs).
 
-> **Chuyển mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **21. Reverse-mode AD** tiếp nhận điểm tựa từ **20. Forward-mode AD** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Computational đồ thị (graph / 그래프) và chuỗi (chain / 사슬) quy tắc (rule / 규칙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **21. Reverse-mode AD** nối từ **20. Forward-mode AD** sang **22. Computational đồ thị (graph / 그래프) và chuỗi (chain / 사슬) quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Reverse-mode AD
 
@@ -420,7 +420,7 @@ It computes vector-Jacobian products (VJPs).
 
 Backpropagation is reverse-mode AD specialized to layered/computational-graph các mô hình (models / 모델들).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **21. Reverse-mode AD** xác định đầu vào; **22. Computational đồ thị (graph / 그래프) và chuỗi (chain / 사슬) quy tắc (rule / 규칙)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **23. bộ nhớ (memory / 메모리) sự đánh đổi (trade-off / 트레이드오프) của reverse chế độ (mode / 모드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **21. Reverse-mode AD** đặt đầu vào cho **22. Computational đồ thị (graph / 그래프) và chuỗi (chain / 사슬) quy tắc (rule / 규칙)**, rồi **23. bộ nhớ (memory / 메모리) sự đánh đổi (trade-off / 트레이드오프) của reverse chế độ (mode / 모드)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 22. Computational đồ thị (graph / 그래프) và chuỗi (chain / 사슬) quy tắc (rule / 규칙)
 
@@ -443,7 +443,7 @@ For many intermediate variables, reverse chế độ (mode / 모드) accumulates
 
 This is động (dynamic / 동적) programming on the đồ thị (graph / 그래프) of cục bộ (local / 로컬) derivatives.
 
-> **Chuyển mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **22. Computational đồ thị (graph / 그래프) và chuỗi (chain / 사슬) quy tắc (rule / 규칙)** xác định đầu vào; **23. bộ nhớ (memory / 메모리) sự đánh đổi (trade-off / 트레이드오프) của reverse chế độ (mode / 모드)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **24. Nondifferentiability và subgradients** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **22. Computational đồ thị (graph / 그래프) và chuỗi (chain / 사슬) quy tắc (rule / 규칙)** đặt đầu vào cho **23. bộ nhớ (memory / 메모리) sự đánh đổi (trade-off / 트레이드오프) của reverse chế độ (mode / 모드)**, rồi **24. Nondifferentiability và subgradients** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 23. bộ nhớ (memory / 메모리) sự đánh đổi (trade-off / 트레이드오프) của reverse chế độ (mode / 모드)
 
@@ -455,7 +455,7 @@ Checkpointing trades recomputation for bộ nhớ (memory / 메모리): save onl
 
 This links AD to time-memory trade-offs in CS.
 
-> **Chuyển mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **24. Nondifferentiability và subgradients** tiếp nhận điểm tựa từ **23. bộ nhớ (memory / 메모리) sự đánh đổi (trade-off / 트레이드오프) của reverse chế độ (mode / 모드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. độ dốc (gradient / 기울기) checking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **24. Nondifferentiability và subgradients** nối từ **23. bộ nhớ (memory / 메모리) sự đánh đổi (trade-off / 트레이드오프) của reverse chế độ (mode / 모드)** sang **25. độ dốc (gradient / 기울기) checking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Nondifferentiability và subgradients
 
@@ -471,7 +471,7 @@ Frameworks choose a convention/subgradient at such points.
 
 AD differentiates **implemented computation**, not an abstract smooth ideal. Branches, clipping, discrete operations and stop-gradient ngữ nghĩa (semantics / 의미론) matter.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **25. độ dốc (gradient / 기울기) checking** tiếp nhận điểm tựa từ **24. Nondifferentiability và subgradients** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Complex-step differentiation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **25. độ dốc (gradient / 기울기) checking** nối từ **24. Nondifferentiability và subgradients** sang **26. Complex-step differentiation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. độ dốc (gradient / 기울기) checking
 
@@ -492,7 +492,7 @@ Use relative lỗi (error / 오류), not bitwise equality:
 
 If `h` too small/large, finite-difference tham chiếu (reference / 참조) itself is bad.
 
-> **Chuyển mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **26. Complex-step differentiation** tiếp nhận điểm tựa từ **25. độ dốc (gradient / 기울기) checking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Physics and kỹ thuật (engineering / 엔지니어링)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **26. Complex-step differentiation** nối từ **25. độ dốc (gradient / 기울기) checking** sang **27. Physics and kỹ thuật (engineering / 엔지니어링)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Complex-step differentiation
 
@@ -508,7 +508,7 @@ This avoids subtractive cancellation and can achieve very high accuracy.
 
 But it requires hiện thực (implementation / 구현) compatible with complex arithmetic and analyticity các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **27. Physics and kỹ thuật (engineering / 엔지니어링)** tiếp nhận điểm tựa từ **26. Complex-step differentiation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Finance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **27. Physics and kỹ thuật (engineering / 엔지니어링)** nối từ **26. Complex-step differentiation** sang **28. Finance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Physics and kỹ thuật (engineering / 엔지니어링)
 
@@ -520,7 +520,7 @@ AD increasingly appears in differentiable simulation and inverse problems.
 
 Each phương thức (method / 메서드) addresses a different computational biểu diễn (representation / 표현) of calculus.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **28. Finance** tiếp nhận điểm tựa từ **27. Physics and kỹ thuật (engineering / 엔지니어링)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **28. Finance** nối từ **27. Physics and kỹ thuật (engineering / 엔지니어링)** sang **29. AI**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Finance
 
@@ -534,7 +534,7 @@ V=e^{-rT}E[\text{payoff}].
 
 Pathwise derivatives, likelihood-ratio methods and AD can estimate sensitivities more efficiently than naive finite differences.
 
-> **Chuyển mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **29. AI** tiếp nhận điểm tựa từ **28. Finance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Chapter ranh giới (boundary / 경계): what belongs elsewhere?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **29. AI** nối từ **28. Finance** sang **30. Chapter ranh giới (boundary / 경계): what belongs elsewhere?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. AI
 
@@ -544,7 +544,7 @@ Huấn luyện (training / 학습) neural networks relies on reverse-mode AD.
 
 Numerical tích hợp (integration / 통합) appears in continuous-time các mô hình (models / 모델들), diffusion/ODE các hệ thống (systems / 시스템들) and probabilistic suy luận (inference / 추론).
 
-> **Chuyển mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **29. AI** đã nêu tiêu chí phân biệt, còn **30. Chapter ranh giới (boundary / 경계): what belongs elsewhere?** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **29. AI** đặt tiêu chí; **30. Chapter ranh giới (boundary / 경계): what belongs elsewhere?** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## 30. Chapter ranh giới (boundary / 경계): what belongs elsewhere?
 
@@ -562,13 +562,13 @@ see `08_optimization_numerical/02_numerical_methods_and_error.md` and related ch
 
 The goal here is to keep numerical calculus conceptually focused rather than duplicate a second numerical-analysis survey.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **30. Chapter ranh giới (boundary / 경계): what belongs elsewhere?** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Numerical calculus: finite differences, quadrature và automatic differentiation**, **30. Chapter ranh giới (boundary / 경계): what belongs elsewhere?** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Numerical differentiation probes cục bộ (local / 로컬) thay đổi (change / 변경) and is inherently sensitive to noise/cancellation. Numerical tích hợp (integration / 통합) accumulates and is often smoother. Automatic differentiation does neither approximation: it executes the chuỗi (chain / 사슬) quy tắc (rule / 규칙) through a computational đồ thị (graph / 그래프). Choosing among them depends on what biểu diễn (representation / 표현) of the hàm (function / 함수) you actually possess.
 
-> **Chuyển mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Numerical calculus: finite differences, quadrature và automatic differentiation**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 
