@@ -36,7 +36,7 @@ Mục tiêu có thể là minimize total chi phí (cost / 비용)
 
 Nếu future consequence của past được summarize đầy đủ trong trạng thái hiện tại (current state / 현재 상태), ta có thể solve recursively theo trạng thái (state / 상태) thay vì enumerate toàn bộ lịch sử (history / 이력).
 
-> **Chuyển mạch:** Trong **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Principle of optimality** tiếp nhận điểm tựa từ **Trạng thái (state / 상태), hành động (action / 동작) và chuyển tiếp (transition / 전이)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bellman equation cho finite horizon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Principle of optimality** nối từ **Trạng thái (state / 상태), hành động (action / 동작) và chuyển tiếp (transition / 전이)** sang **Bellman equation cho finite horizon**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Principle of optimality
 
@@ -46,7 +46,7 @@ Nếu suffix không optimal, ta có thể thay suffix bằng một solution tố
 
 Đây là lý do optimal problems có thể tách thành optimal subproblems.
 
-> **Chuyển mạch:** Ở chặng này của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Bellman equation cho finite horizon** tiếp nhận điểm tựa từ **Principle of optimality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ shortest đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Bellman equation cho finite horizon** nối từ **Principle of optimality** sang **Ví dụ shortest đường dẫn (path / 경로)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bellman equation cho finite horizon
 
@@ -72,7 +72,7 @@ Ta solve backward từ terminal thời gian (time / 시간).
 
 Công thức này biến exponential enumeration của hành động (action / 동작) sequences thành reuse các subproblem values nếu số states manageable.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Bellman equation cho finite horizon** cho ta quy tắc; **Ví dụ shortest đường dẫn (path / 경로)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Memoization và tabulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Bellman equation cho finite horizon** nêu quy tắc; **Ví dụ shortest đường dẫn (path / 경로)** thử quy tắc trong tình huống, rồi **Memoization và tabulation** mở rộng hệ quả.
 
 ## Ví dụ shortest đường dẫn (path / 경로)
 
@@ -86,7 +86,7 @@ V(u)=\min_{v:(u,v)\in E}\left[w(u,v)+V(v)\right].
 
 Dijkstra cũng liên quan shortest-path optimal substructure nhưng khai thác nonnegative weights để chọn greedy thứ tự (order / 순서) hiệu quả hơn.
 
-> **Chuyển mạch:** Trong **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Ví dụ shortest đường dẫn (path / 경로)** cho ta quy tắc; **Memoization và tabulation** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ knapsack** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Ví dụ shortest đường dẫn (path / 경로)** nêu quy tắc; **Memoization và tabulation** thử quy tắc trong tình huống, rồi **Ví dụ knapsack** mở rộng hệ quả.
 
 ## Memoization và tabulation
 
@@ -98,7 +98,7 @@ Hai cách có cùng recurrence nhưng hiệu năng (performance / 성능) consta
 
 Quan trọng nhất là xác định **trạng thái (state / 상태) minimal nhưng sufficient**. trạng thái (state / 상태) quá nhỏ mất thông tin (information / 정보) và recurrence sai; trạng thái (state / 상태) quá lớn làm độ phức tạp (complexity / 복잡도) bùng nổ.
 
-> **Chuyển mạch:** Ở chặng này của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Memoization và tabulation** cho ta quy tắc; **Ví dụ knapsack** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Overlapping subproblems** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Memoization và tabulation** nêu quy tắc; **Ví dụ knapsack** thử quy tắc trong tình huống, rồi **Overlapping subproblems** mở rộng hệ quả.
 
 ## Ví dụ knapsack
 
@@ -123,7 +123,7 @@ Brute force xem `2^n` subsets. DP có khoảng `nC` states khi sức chứa (cap
 
 Điều này minh họa rằng DP efficiency đến từ number of distinct states chứ không phải number of possible histories.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Ví dụ knapsack** cho ta quy tắc; **Overlapping subproblems** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Stochastic động (dynamic / 동적) programming** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Ví dụ knapsack** nêu quy tắc; **Overlapping subproblems** thử quy tắc trong tình huống, rồi **Stochastic động (dynamic / 동적) programming** mở rộng hệ quả.
 
 ## Overlapping subproblems
 
@@ -135,7 +135,7 @@ Nếu hiện tại (current / 현재) best cục bộ (local / 로컬) hành đ�
 
 Chọn đúng paradigm cần nhìn cấu trúc (structure / 구조) chứ không dựa vào tên bài toán.
 
-> **Chuyển mạch:** Trong **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Stochastic động (dynamic / 동적) programming** tiếp nhận điểm tựa từ **Overlapping subproblems** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Infinite horizon và discounting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Stochastic động (dynamic / 동적) programming** nối từ **Overlapping subproblems** sang **Infinite horizon và discounting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Stochastic động (dynamic / 동적) programming
 
@@ -153,7 +153,7 @@ V_t(s)=\min_a\left[c(s,a)+\sum_{s'}P(s'\mid s,a)V_{t+1}(s')\right].
 
 Đây là cầu nối (bridge / 브리지) trực tiếp từ tối ưu hóa (optimization / 최적화) sang Markov quyết định (decision / 결정) processes.
 
-> **Chuyển mạch:** Ở chặng này của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Infinite horizon và discounting** tiếp nhận điểm tựa từ **Stochastic động (dynamic / 동적) programming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Markov quyết định (decision / 결정) tiến trình (process / 프로세스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Infinite horizon và discounting** nối từ **Stochastic động (dynamic / 동적) programming** sang **Markov quyết định (decision / 결정) tiến trình (process / 프로세스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Infinite horizon và discounting
 
@@ -177,7 +177,7 @@ V^*(s)=\max_a E\left[r(s,a)+\gamma V^*(S')\mid s,a\right].
 
 Discounting vừa encode preference cho reward sớm hơn vừa giúp infinite sum finite dưới bounded rewards.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Infinite horizon và discounting** xác định đầu vào; **Markov quyết định (decision / 결정) tiến trình (process / 프로세스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Giá trị (value / 값) iteration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Infinite horizon và discounting** đặt đầu vào cho **Markov quyết định (decision / 결정) tiến trình (process / 프로세스)**, rồi **Giá trị (value / 값) iteration** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Markov quyết định (decision / 결정) tiến trình (process / 프로세스)
 
@@ -195,7 +195,7 @@ mô tả cách chọn hành động (action / 동작) tại each trạng thái (
 
 Reinforcement học tập (learning / 학습) khác classical DP chủ yếu ở việc chuyển tiếp (transition / 전이)/reward mô hình (model / 모델) có thể unknown và phải học từ tương tác (interaction / 상호작용).
 
-> **Chuyển mạch:** Trong **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Markov quyết định (decision / 결정) tiến trình (process / 프로세스)** xác định đầu vào; **Giá trị (value / 값) iteration** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Chính sách (policy / 정책) iteration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Markov quyết định (decision / 결정) tiến trình (process / 프로세스)** đặt đầu vào cho **Giá trị (value / 값) iteration**, rồi **Chính sách (policy / 정책) iteration** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Giá trị (value / 값) iteration
 
@@ -210,7 +210,7 @@ Under finite discounted MDP conditions, Bellman operator là contraction với f
 
 Đây là liên kết (connection / 연결) sâu giữa fixed-point lý thuyết (theory / 이론) và sequential tối ưu hóa (optimization / 최적화).
 
-> **Chuyển mạch:** Ở chặng này của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Chính sách (policy / 정책) iteration** tiếp nhận điểm tựa từ **Giá trị (value / 값) iteration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bellman equation như fixed điểm (point / 지점)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Chính sách (policy / 정책) iteration** nối từ **Giá trị (value / 값) iteration** sang **Bellman equation như fixed điểm (point / 지점)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chính sách (policy / 정책) iteration
 
@@ -227,7 +227,7 @@ E[r+\gamma V^\pi(S')\mid s,a].
 
 Quá trình lặp tới khi chính sách (policy / 정책) không còn cải thiện.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Bellman equation như fixed điểm (point / 지점)** tiếp nhận điểm tựa từ **Chính sách (policy / 정책) iteration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deterministic optimal điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Bellman equation như fixed điểm (point / 지점)** nối từ **Chính sách (policy / 정책) iteration** sang **Deterministic optimal điều khiển (control / 제어)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bellman equation như fixed điểm (point / 지점)
 
@@ -245,7 +245,7 @@ V^*=TV^*.
 
 Nhìn theo fixed điểm (point / 지점) giúp kết nối động (dynamic / 동적) programming với phân tích (analysis / 분석) và numerical methods. giá trị (value / 값) iteration là repeated ứng dụng (application / 애플리케이션) của operator cho tới fixed điểm (point / 지점).
 
-> **Chuyển mạch:** Trong **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Deterministic optimal điều khiển (control / 제어)** tiếp nhận điểm tựa từ **Bellman equation như fixed điểm (point / 지점)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Curse of dimensionality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Deterministic optimal điều khiển (control / 제어)** nối từ **Bellman equation như fixed điểm (point / 지점)** sang **Curse of dimensionality**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Deterministic optimal điều khiển (control / 제어)
 
@@ -269,7 +269,7 @@ V_t(x)=\min_u\left[\ell(x,u)+V_{t+1}(f(x,u))\right].
 
 Nếu trạng thái (state / 상태) continuous và high-dimensional, chính xác (exact / 정확한) DP thường impossible do **curse of dimensionality**.
 
-> **Chuyển mạch:** Ở chặng này của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Curse of dimensionality** tiếp nhận điểm tựa từ **Deterministic optimal điều khiển (control / 제어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Relationship với greedy algorithms** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Curse of dimensionality** nối từ **Deterministic optimal điều khiển (control / 제어)** sang **Relationship với greedy algorithms**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Curse of dimensionality
 
@@ -285,7 +285,7 @@ Chỉ tăng dimension một chút có thể làm bộ nhớ (memory / 메모리)
 
 Neural networks trong RL có thể approximate giá trị (value / 값) hàm (function / 함수) thay vì lưu bảng (table / 테이블) cho từng trạng thái (state / 상태).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Relationship với greedy algorithms** tiếp nhận điểm tựa từ **Curse of dimensionality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Relationship với backtracking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Relationship với greedy algorithms** nối từ **Curse of dimensionality** sang **Relationship với backtracking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Relationship với greedy algorithms
 
@@ -301,7 +301,7 @@ bỏ future giá trị (value / 값) thường sai.
 
 Greedy đúng khi bài toán (problem / 문제) có stronger cấu trúc (structure / 구조) chứng minh rằng cục bộ (local / 로컬) choice safe, như matroid cấu trúc (structure / 구조) hoặc exchange arguments trong một số problems.
 
-> **Chuyển mạch:** Trong **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Relationship với backtracking** tiếp nhận điểm tựa từ **Relationship với greedy algorithms** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi (sequence / 시퀀스) alignment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Relationship với backtracking** nối từ **Relationship với greedy algorithms** sang **Chuỗi (sequence / 시퀀스) alignment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Relationship với backtracking
 
@@ -309,7 +309,7 @@ Backtracking enumerate possibilities nhưng prune khi partial solution impossibl
 
 Một bài toán (problem / 문제) có thể dùng cả hai: tìm kiếm (search / 검색) over high-level choices, DP solve repeated subproblem bên trong.
 
-> **Chuyển mạch:** Ở chặng này của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Relationship với backtracking** xác định đầu vào; **Chuỗi (sequence / 시퀀스) alignment** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Tài nguyên (resource / 자원) allocation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Relationship với backtracking** đặt đầu vào cho **Chuỗi (sequence / 시퀀스) alignment**, rồi **Tài nguyên (resource / 자원) allocation** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Chuỗi (sequence / 시퀀스) alignment
 
@@ -329,7 +329,7 @@ D(i-1,j-1)+[A_i\ne B_j]
 
 Trạng thái (state / 상태) `(i,j)` summarize toàn relevant past. Đây là lý do exponentially many edit sequences collapse vào `O(mn)` states.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Chuỗi (sequence / 시퀀스) alignment** nêu điều cần giải thích; **Tài nguyên (resource / 자원) allocation** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Optimal điều khiển (control / 제어) và Pontryagin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Chuỗi (sequence / 시퀀스) alignment** đặt vấn đề; **Tài nguyên (resource / 자원) allocation** đối chiếu bằng chứng, rồi **Optimal điều khiển (control / 제어) và Pontryagin** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tài nguyên (resource / 자원) allocation
 
@@ -348,7 +348,7 @@ V(i,b)=\max_{0\le x\le b}
 
 Đây là generic mẫu (pattern / 패턴): trạng thái (state / 상태) giữ remaining tài nguyên (resource / 자원), hành động (action / 동작) chọn lượng tài nguyên (resource / 자원) cấp hiện tại.
 
-> **Chuyển mạch:** Trong **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Tài nguyên (resource / 자원) allocation** nêu điều cần giải thích; **Optimal điều khiển (control / 제어) và Pontryagin** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hamilton–Jacobi–Bellman equation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Tài nguyên (resource / 자원) allocation** đặt vấn đề; **Optimal điều khiển (control / 제어) và Pontryagin** đối chiếu bằng chứng, rồi **Hamilton–Jacobi–Bellman equation** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Optimal điều khiển (control / 제어) và Pontryagin
 
@@ -356,7 +356,7 @@ V(i,b)=\max_{0\le x\le b}
 
 Hai approaches nhìn cùng bài toán (problem / 문제) từ góc khác nhau. Bellman/HJB equation thiên về toàn cục (global / 전역) giá trị (value / 값) hàm (function / 함수); Pontryagin conditions thiên về necessary conditions dọc optimal trajectory.
 
-> **Chuyển mạch:** Ở chặng này của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Hamilton–Jacobi–Bellman equation** tiếp nhận điểm tựa từ **Optimal điều khiển (control / 제어) và Pontryagin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Hamilton–Jacobi–Bellman equation** nối từ **Optimal điều khiển (control / 제어) và Pontryagin** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hamilton–Jacobi–Bellman equation
 
@@ -376,13 +376,13 @@ cộng thời gian (time / 시간) derivative nếu finite horizon.
 
 HJB nối tối ưu hóa (optimization / 최적화), calculus of variations, điều khiển (control / 제어) và PDE.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Hamilton–Jacobi–Bellman equation** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Hamilton–Jacobi–Bellman equation** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Động (dynamic / 동적) programming biến một “cây (tree / 트리) của histories” thành một “đồ thị (graph / 그래프) của states”. Nếu nhiều histories dẫn tới cùng trạng thái (state / 상태) và future chỉ phụ thuộc trạng thái (state / 상태), ta không cần solve future lại nhiều lần. Bellman equation là statement rằng optimal total giá trị (value / 값) bằng immediate giá trị (value / 값) cộng optimal future giá trị (value / 값).
 
-> **Chuyển mạch:** Trong **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -392,7 +392,7 @@ Một nhầm lẫn khác là nghĩ mọi recurrence đều là DP. Recurrence ch
 
 Bellman equation cũng không đảm bảo computation rẻ. Với continuous hoặc high-dimensional states, chính xác (exact / 정확한) DP có thể infeasible vì curse of dimensionality.
 
-> **Chuyển mạch:** Ở chặng này của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Động (dynamic / 동적) programming, Bellman equation và tối ưu quyết định theo nhiều bước**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức
 

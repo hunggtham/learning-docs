@@ -26,7 +26,7 @@ Statement `O(n)` không có nghĩa universal “nhanh”. Một scan `O(n)` trê
 
 Vì vậy phân tích (analysis / 분석) bắt đầu bằng input-size definition và chi phí (cost / 비용) mô hình (model / 모델).
 
-> **Chuyển mạch:** Trong **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Big-O là asymptotic upper bound** tiếp nhận điểm tựa từ **Trước Big-O phải chọn chi phí (cost / 비용) mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao constants và lower-order terms thường bị bỏ?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Big-O là asymptotic upper bound** nối từ **Trước Big-O phải chọn chi phí (cost / 비용) mô hình (model / 모델)** sang **Vì sao constants và lower-order terms thường bị bỏ?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Big-O là asymptotic upper bound
 
@@ -50,7 +50,7 @@ nếu `f` vừa upper-bounded vừa lower-bounded bởi constant multiples của
 
 `\Omega` biểu diễn lower asymptotic bound.
 
-> **Chuyển mạch:** Ở chặng này của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Vì sao constants và lower-order terms thường bị bỏ?** tiếp nhận điểm tựa từ **Big-O là asymptotic upper bound** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **O(1) không nghĩa “một instruction”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Vì sao constants và lower-order terms thường bị bỏ?** nối từ **Big-O là asymptotic upper bound** sang **O(1) không nghĩa “một instruction”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao constants và lower-order terms thường bị bỏ?
 
@@ -81,7 +81,7 @@ complexity: scaling shape là gì?
 benchmark: implementation này nhanh bao nhiêu trên workload/hardware cụ thể?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **O(1) không nghĩa “một instruction”** tiếp nhận điểm tựa từ **Vì sao constants và lower-order terms thường bị bỏ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến tính (linear / 선형) và quadratic growth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **O(1) không nghĩa “một instruction”** nối từ **Vì sao constants và lower-order terms thường bị bỏ?** sang **Tuyến tính (linear / 선형) và quadratic growth**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `O(1)` không nghĩa “một instruction”
 
@@ -91,7 +91,7 @@ Hash-table lookup average-case có thể được gọi expected `O(1)` under c�
 
 Cơ sở dữ liệu (database / 데이터베이스) indexed lookup có thể look constant ở ứng dụng (application / 애플리케이션) lớp trừu tượng (abstraction / 추상화) nhưng lưu trữ (storage / 저장소) engine thực tế dùng cây (tree / 트리)/page I/O. độ phức tạp (complexity / 복잡도) label chỉ meaningful khi mô hình (model / 모델) rõ.
 
-> **Chuyển mạch:** Trong **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Tuyến tính (linear / 선형) và quadratic growth** tiếp nhận điểm tựa từ **O(1) không nghĩa “một instruction”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Logarithm xuất hiện khi progress là multiplicative** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Tuyến tính (linear / 선형) và quadratic growth** nối từ **O(1) không nghĩa “một instruction”** sang **Logarithm xuất hiện khi progress là multiplicative**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tuyến tính (linear / 선형) và quadratic growth
 
@@ -117,7 +117,7 @@ Nếu `n` tăng 10×, tuyến tính (linear / 선형) công việc (work / 작�
 
 Đây là practical meaning của growth lớp (class / 클래스).
 
-> **Chuyển mạch:** Ở chặng này của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Logarithm xuất hiện khi progress là multiplicative** tiếp nhận điểm tựa từ **Tuyến tính (linear / 선형) và quadratic growth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Worked example — tìm kiếm nhị phân (binary search / 이진 탐색)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Logarithm xuất hiện khi progress là multiplicative** nối từ **Tuyến tính (linear / 선형) và quadratic growth** sang **Worked example — tìm kiếm nhị phân (binary search / 이진 탐색)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Logarithm xuất hiện khi progress là multiplicative
 
@@ -150,7 +150,7 @@ k\approx\log_b n.
 
 Vì vậy logarithmic độ phức tạp (complexity / 복잡도) không đến từ việc mã (code / 코드) gọi hàm `log`. Nó xuất hiện từ repeated multiplicative shrinkage.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Logarithm xuất hiện khi progress là multiplicative** cho ta quy tắc; **Worked example — tìm kiếm nhị phân (binary search / 이진 탐색)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Balanced trees và logarithmic height** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Logarithm xuất hiện khi progress là multiplicative** nêu quy tắc; **Worked example — tìm kiếm nhị phân (binary search / 이진 탐색)** thử quy tắc trong tình huống, rồi **Balanced trees và logarithmic height** mở rộng hệ quả.
 
 ## Worked example — tìm kiếm nhị phân (binary search / 이진 탐색)
 
@@ -196,7 +196,7 @@ Log cơ sở (base / 기반) không matter trong Big-O vì
 
 chỉ khác constant factor.
 
-> **Chuyển mạch:** Trong **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Worked example — tìm kiếm nhị phân (binary search / 이진 탐색)** cho ta quy tắc; **Balanced trees và logarithmic height** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Divide and conquer: vì sao n log n xuất hiện?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Worked example — tìm kiếm nhị phân (binary search / 이진 탐색)** nêu quy tắc; **Balanced trees và logarithmic height** thử quy tắc trong tình huống, rồi **Divide and conquer: vì sao n log n xuất hiện?** mở rộng hệ quả.
 
 ## Balanced trees và logarithmic height
 
@@ -214,7 +214,7 @@ h=O(\log n).
 
 Tìm kiếm (search / 검색)/cập nhật (update / 업데이트) độ phức tạp (complexity / 복잡도) xuất hiện từ same multiplicative hình học (geometry / 기하학) như tìm kiếm nhị phân (binary search / 이진 탐색).
 
-> **Chuyển mạch:** Ở chặng này của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Divide and conquer: vì sao n log n xuất hiện?** tiếp nhận điểm tựa từ **Balanced trees và logarithmic height** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Master theorem là mẫu (pattern / 패턴) recognition, không phải spell** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Divide and conquer: vì sao n log n xuất hiện?** nối từ **Balanced trees và logarithmic height** sang **Master theorem là mẫu (pattern / 패턴) recognition, không phải spell**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Divide and conquer: vì sao `n log n` xuất hiện?
 
@@ -234,7 +234,7 @@ T(n)=O(n\log n).
 
 Meaning: ta trả tuyến tính (linear / 선형) công việc (work / 작업) ở mỗi logarithmic mức (level / 수준) of decomposition.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Master theorem là mẫu (pattern / 패턴) recognition, không phải spell** tiếp nhận điểm tựa từ **Divide and conquer: vì sao n log n xuất hiện?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Exponential explosion: khi micro-optimization không cứu được mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Master theorem là mẫu (pattern / 패턴) recognition, không phải spell** nối từ **Divide and conquer: vì sao n log n xuất hiện?** sang **Exponential explosion: khi micro-optimization không cứu được mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Master theorem là mẫu (pattern / 패턴) recognition, không phải spell
 
@@ -248,7 +248,7 @@ so sánh công việc (work / 작업) trong recursive subproblems với nonrecur
 
 Master theorem useful khi cấu trúc (structure / 구조) match, nhưng không thay thế việc hiểu recursion cây (tree / 트리). Nếu recurrence không đúng form hoặc subproblem sizes irregular, theorem có thể không áp dụng.
 
-> **Chuyển mạch:** Trong **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Exponential explosion: khi micro-optimization không cứu được mô hình (model / 모델)** tiếp nhận điểm tựa từ **Master theorem là mẫu (pattern / 패턴) recognition, không phải spell** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Worst-case, average-case và expected độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Exponential explosion: khi micro-optimization không cứu được mô hình (model / 모델)** nối từ **Master theorem là mẫu (pattern / 패턴) recognition, không phải spell** sang **Worst-case, average-case và expected độ phức tạp (complexity / 복잡도)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Exponential explosion: khi micro-optimization không cứu được mô hình (model / 모델)
 
@@ -274,7 +274,7 @@ Dù xử lý one billion states mỗi second, exhaustive enumeration vẫn infea
 
 Khi growth lớp (class / 클래스) exponential/factorial, solution thường cần **algorithmic insight**: động (dynamic / 동적) programming, pruning, approximation, relaxations hoặc exploit bài toán (problem / 문제) cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Ở chặng này của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Exponential explosion: khi micro-optimization không cứu được mô hình (model / 모델)** cho ta quy tắc; **Worst-case, average-case và expected độ phức tạp (complexity / 복잡도)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Amortized phân tích (analysis / 분석): expensive thao tác (operation / 연산) nhưng cheap chuỗi (sequence / 시퀀스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Exponential explosion: khi micro-optimization không cứu được mô hình (model / 모델)** nêu quy tắc; **Worst-case, average-case và expected độ phức tạp (complexity / 복잡도)** thử quy tắc trong tình huống, rồi **Amortized phân tích (analysis / 분석): expensive thao tác (operation / 연산) nhưng cheap chuỗi (sequence / 시퀀스)** mở rộng hệ quả.
 
 ## Worst-case, average-case và expected độ phức tạp (complexity / 복잡도)
 
@@ -286,7 +286,7 @@ Băm (hash / 해시) tables often expected `O(1)` lookup, nhưng adversarial col
 
 Worst-case useful cho guarantees; expected/average useful khi probabilistic tải công việc (workload / 워크로드) các giả định (assumptions / 가정들) justified.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Worst-case, average-case và expected độ phức tạp (complexity / 복잡도)** cho ta quy tắc; **Amortized phân tích (analysis / 분석): expensive thao tác (operation / 연산) nhưng cheap chuỗi (sequence / 시퀀스)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Không gian (space / 공간) độ phức tạp (complexity / 복잡도) và time-space sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Worst-case, average-case và expected độ phức tạp (complexity / 복잡도)** nêu quy tắc; **Amortized phân tích (analysis / 분석): expensive thao tác (operation / 연산) nhưng cheap chuỗi (sequence / 시퀀스)** thử quy tắc trong tình huống, rồi **Không gian (space / 공간) độ phức tạp (complexity / 복잡도) và time-space sự đánh đổi (trade-off / 트레이드오프)** mở rộng hệ quả.
 
 ## Amortized phân tích (analysis / 분석): expensive thao tác (operation / 연산) nhưng cheap chuỗi (sequence / 시퀀스)
 
@@ -302,7 +302,7 @@ Across `n` appends, total resize công việc (work / 작업) `O(n)`, nên amort
 
 Amortized không phải probabilistic average; nó là deterministic accounting over thao tác (operation / 연산) chuỗi (sequence / 시퀀스).
 
-> **Chuyển mạch:** Trong **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Amortized phân tích (analysis / 분석): expensive thao tác (operation / 연산) nhưng cheap chuỗi (sequence / 시퀀스)** xác định đầu vào; **Không gian (space / 공간) độ phức tạp (complexity / 복잡도) và time-space sự đánh đổi (trade-off / 트레이드오프)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Lower bounds: có những giới hạn không thể vượt bằng clever coding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Amortized phân tích (analysis / 분석): expensive thao tác (operation / 연산) nhưng cheap chuỗi (sequence / 시퀀스)** đặt đầu vào cho **Không gian (space / 공간) độ phức tạp (complexity / 복잡도) và time-space sự đánh đổi (trade-off / 트레이드오프)**, rồi **Lower bounds: có những giới hạn không thể vượt bằng clever coding** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Không gian (space / 공간) độ phức tạp (complexity / 복잡도) và time-space sự đánh đổi (trade-off / 트레이드오프)
 
@@ -312,7 +312,7 @@ BFS giữ frontier có thể lớn; DFS dùng ngăn xếp (stack / 스택) độ
 
 Thuật toán (algorithm / 알고리즘) thiết kế (design / 설계) luôn là multi-resource bài toán (problem / 문제), không chỉ thời gian (time / 시간).
 
-> **Chuyển mạch:** Ở chặng này của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Không gian (space / 공간) độ phức tạp (complexity / 복잡도) và time-space sự đánh đổi (trade-off / 트레이드오프)** đã nêu tiêu chí phân biệt, còn **Lower bounds: có những giới hạn không thể vượt bằng clever coding** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ phức tạp (complexity / 복잡도) classes và tractability intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Không gian (space / 공간) độ phức tạp (complexity / 복잡도) và time-space sự đánh đổi (trade-off / 트레이드오프)** đặt tiêu chí; **Lower bounds: có những giới hạn không thể vượt bằng clever coding** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Độ phức tạp (complexity / 복잡도) classes và tractability intuition** mở rộng hệ quả.
 
 ## Lower bounds: có những giới hạn không thể vượt bằng clever coding
 
@@ -338,7 +338,7 @@ h\ge\log_2(n!)=\Omega(n\log n).
 
 Meaning: merge sort/heapsort are asymptotically optimal among comparison-based sorts. Muốn beat bound phải thay đổi (change / 변경) mô hình (model / 모델)/các giả định (assumptions / 가정들), như counting sort exploiting bounded integer keys.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Lower bounds: có những giới hạn không thể vượt bằng clever coding** đã nêu tiêu chí phân biệt, còn **Độ phức tạp (complexity / 복잡도) classes và tractability intuition** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Động (dynamic / 동적) programming: reduce trạng thái (state / 상태) explosion bằng overlapping cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Lower bounds: có những giới hạn không thể vượt bằng clever coding** đặt tiêu chí; **Độ phức tạp (complexity / 복잡도) classes và tractability intuition** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Động (dynamic / 동적) programming: reduce trạng thái (state / 상태) explosion bằng overlapping cấu trúc (structure / 구조)** mở rộng hệ quả.
 
 ## Độ phức tạp (complexity / 복잡도) classes và tractability intuition
 
@@ -346,7 +346,7 @@ Polynomial-time algorithms thường được xem là tractable baseline trong t
 
 Độ phức tạp (complexity / 복잡도) lý thuyết (theory / 이론) nói asymptotic cấu trúc (structure / 구조), kỹ thuật (engineering / 엔지니어링) feasibility cần actual quy mô (scale / 규모).
 
-> **Chuyển mạch:** Trong **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Động (dynamic / 동적) programming: reduce trạng thái (state / 상태) explosion bằng overlapping cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **Độ phức tạp (complexity / 복잡도) classes và tractability intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồ thị (graph / 그래프) algorithms: độ phức tạp (complexity / 복잡도) phụ thuộc biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Động (dynamic / 동적) programming: reduce trạng thái (state / 상태) explosion bằng overlapping cấu trúc (structure / 구조)** nối từ **Độ phức tạp (complexity / 복잡도) classes và tractability intuition** sang **Đồ thị (graph / 그래프) algorithms: độ phức tạp (complexity / 복잡도) phụ thuộc biểu diễn (representation / 표현)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Động (dynamic / 동적) programming: reduce trạng thái (state / 상태) explosion bằng overlapping cấu trúc (structure / 구조)
 
@@ -362,7 +362,7 @@ Memoization stores each `F(k)` once, reducing thời gian (time / 시간) to `O(
 
 DP không làm mọi exponential bài toán (problem / 문제) polynomial. It works when trạng thái (state / 상태) không gian (space / 공간) nhỏ enough và subproblems overlap with optimal substructure.
 
-> **Chuyển mạch:** Ở chặng này của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Đồ thị (graph / 그래프) algorithms: độ phức tạp (complexity / 복잡도) phụ thuộc biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **Động (dynamic / 동적) programming: reduce trạng thái (state / 상태) explosion bằng overlapping cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AI liên kết (connection / 연결) — huấn luyện (training / 학습) độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Đồ thị (graph / 그래프) algorithms: độ phức tạp (complexity / 복잡도) phụ thuộc biểu diễn (representation / 표현)** nối từ **Động (dynamic / 동적) programming: reduce trạng thái (state / 상태) explosion bằng overlapping cấu trúc (structure / 구조)** sang **AI liên kết (connection / 연결) — huấn luyện (training / 학습) độ phức tạp (complexity / 복잡도)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đồ thị (graph / 그래프) algorithms: độ phức tạp (complexity / 복잡도) phụ thuộc biểu diễn (representation / 표현)
 
@@ -376,7 +376,7 @@ Adjacency ma trận (matrix / 행렬) traversal có thể chi phí (cost / 비�
 
 Same thuật toán (algorithm / 알고리즘) idea có độ phức tạp (complexity / 복잡도) khác theo dữ liệu (data / 데이터) biểu diễn (representation / 표현). phân tích độ phức tạp (complexity analysis / 복잡도 분석) phải include biểu diễn (representation / 표현) choice.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, sau nội dung của **Đồ thị (graph / 그래프) algorithms: độ phức tạp (complexity / 복잡도) phụ thuộc biểu diễn (representation / 표현)**, **AI liên kết (connection / 연결) — huấn luyện (training / 학습) độ phức tạp (complexity / 복잡도)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Finance liên kết (connection / 연결) — Monte Carlo và scenario explosion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, sau nội dung của **Đồ thị (graph / 그래프) algorithms: độ phức tạp (complexity / 복잡도) phụ thuộc biểu diễn (representation / 표현)**, **AI liên kết (connection / 연결) — huấn luyện (training / 학습) độ phức tạp (complexity / 복잡도)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Finance liên kết (connection / 연결) — Monte Carlo và scenario explosion** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## AI liên kết (connection / 연결) — huấn luyện (training / 학습) độ phức tạp (complexity / 복잡도)
 
@@ -384,13 +384,13 @@ Huấn luyện (training / 학습) chi phí (cost / 비용) depends on samples, 
 
 Nhưng FLOP độ phức tạp (complexity / 복잡도) alone chưa đủ: bộ nhớ (memory / 메모리) bandwidth, communication và kernel utilization có thể dominate wall-clock.
 
-> **Chuyển mạch:** Trong **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Finance liên kết (connection / 연결) — Monte Carlo và scenario explosion** tiếp nhận điểm tựa từ **AI liên kết (connection / 연결) — huấn luyện (training / 학습) độ phức tạp (complexity / 복잡도)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Finance liên kết (connection / 연결) — Monte Carlo và scenario explosion** nối từ **AI liên kết (connection / 연결) — huấn luyện (training / 학습) độ phức tạp (complexity / 복잡도)** sang **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Finance liên kết (connection / 연결) — Monte Carlo và scenario explosion
 
 Rủi ro (risk / 위험) engines may simulate `N` scenarios across `M` instruments, roughly `O(NM)` valuation công việc (work / 작업) if no sharing. Path-dependent derivatives add thời gian (time / 시간) steps. Variance reduction can reduce scenarios needed for same accuracy, effectively improving cost-to-error quan hệ (relation / 관계) even if per-scenario độ phức tạp (complexity / 복잡도) same.
 
-> **Chuyển mạch:** Ở chặng này của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **Finance liên kết (connection / 연결) — Monte Carlo và scenario explosion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** nối từ **Finance liên kết (connection / 연결) — Monte Carlo và scenario explosion** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes
 
@@ -400,13 +400,13 @@ Input-size definition itself can be subtle. Integer arithmetic on very large num
 
 Parallel speedup limited by serial fractions and communication; công việc (work / 작업) độ phức tạp (complexity / 복잡도) và span/độ sâu (depth / 깊이) both matter.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > phân tích độ phức tạp (complexity analysis / 복잡도 분석) is growth accounting. Ask what trạng thái (state / 상태) shrinks or expands each step, what tài nguyên (resource / 자원) is counted, and how many structurally distinct steps are needed as đầu vào (input / 입력) quy mô (scale / 규모) grows. Logarithms appear when progress is multiplicative; polynomial/exponential distinctions tell when tối ưu hóa (optimization / 최적화) should mục tiêu (target / 대상) mã (code / 코드) constants versus algorithmic cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Trong **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Độ phức tạp thuật toán và ý nghĩa của logarithm: từ counting công việc (work / 작업) đến scalability**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

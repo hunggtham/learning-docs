@@ -34,7 +34,7 @@ Nhưng trong thực tế có ba vấn đề riêng:
 
 Do đó statement “equation có unique solution” không trả lời được “computed solution có accurate không?”.
 
-> **Chuyển mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Lỗi (error / 오류): absolute và relative** tiếp nhận điểm tựa từ **Chính xác (exact / 정확한) mathematics và computed number là hai tầng khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sai số đo lường (measurement error / 측정 오차), mô hình (model / 모델) lỗi (error / 오류) và numerical lỗi (error / 오류) không giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Lỗi (error / 오류): absolute và relative** nối từ **Chính xác (exact / 정확한) mathematics và computed number là hai tầng khác nhau** sang **Sai số đo lường (measurement error / 측정 오차), mô hình (model / 모델) lỗi (error / 오류) và numerical lỗi (error / 오류) không giống nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lỗi (error / 오류): absolute và relative
 
@@ -62,7 +62,7 @@ Ví dụ approximation `1000001` cho true giá trị (value / 값) `1000000` có
 
 Ngược lại approximation `0.0011` cho `0.0010` có absolute lỗi (error / 오류) rất nhỏ `0.0001`, nhưng relative lỗi (error / 오류) 10%.
 
-> **Chuyển mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Lỗi (error / 오류): absolute và relative** nêu điều cần giải thích; **Sai số đo lường (measurement error / 측정 오차), mô hình (model / 모델) lỗi (error / 오류) và numerical lỗi (error / 오류) không giống nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Floating điểm (point / 지점): tại sao 0.1+0.2 không chính xác (exact / 정확한)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Lỗi (error / 오류): absolute và relative** đặt vấn đề; **Sai số đo lường (measurement error / 측정 오차), mô hình (model / 모델) lỗi (error / 오류) và numerical lỗi (error / 오류) không giống nhau** đối chiếu bằng chứng, rồi **Floating điểm (point / 지점): tại sao 0.1+0.2 không chính xác (exact / 정확한)?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Sai số đo lường (measurement error / 측정 오차), mô hình (model / 모델) lỗi (error / 오류) và numerical lỗi (error / 오류) không giống nhau
 
@@ -80,7 +80,7 @@ Một kỹ thuật (engineering / 엔지니어링) computation có thể sai do:
 
 Không nên gộp tất cả thành “máy tính sai số”. Nếu mô hình (model / 모델) giả định (assumption / 가정) sai, tăng floating-point precision không cứu được kết quả (result / 결과).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Sai số đo lường (measurement error / 측정 오차), mô hình (model / 모델) lỗi (error / 오류) và numerical lỗi (error / 오류) không giống nhau** nêu điều cần giải thích; **Floating điểm (point / 지점): tại sao 0.1+0.2 không chính xác (exact / 정확한)?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Machine epsilon và spacing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Sai số đo lường (measurement error / 측정 오차), mô hình (model / 모델) lỗi (error / 오류) và numerical lỗi (error / 오류) không giống nhau** đặt vấn đề; **Floating điểm (point / 지점): tại sao 0.1+0.2 không chính xác (exact / 정확한)?** đối chiếu bằng chứng, rồi **Machine epsilon và spacing** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Floating điểm (point / 지점): tại sao `0.1+0.2` không chính xác (exact / 정확한)?
 
@@ -104,7 +104,7 @@ có thể không equal exactly `0.3` theo bit mẫu (pattern / 패턴).
 
 Điểm đúng không phải “floating điểm (point / 지점) tệ”, mà là **finite biểu diễn (representation / 표현) không thể represent mọi real number**.
 
-> **Chuyển mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Machine epsilon và spacing** tiếp nhận điểm tựa từ **Floating điểm (point / 지점): tại sao 0.1+0.2 không chính xác (exact / 정확한)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Associativity có thể mất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Machine epsilon và spacing** nối từ **Floating điểm (point / 지점): tại sao 0.1+0.2 không chính xác (exact / 정확한)?** sang **Associativity có thể mất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Machine epsilon và spacing
 
@@ -120,7 +120,7 @@ large + tiny == large
 
 nếu `tiny` nhỏ hơn resolution tại quy mô (scale / 규모) đó.
 
-> **Chuyển mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Associativity có thể mất** tiếp nhận điểm tựa từ **Machine epsilon và spacing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Catastrophic cancellation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Associativity có thể mất** nối từ **Machine epsilon và spacing** sang **Catastrophic cancellation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Associativity có thể mất
 
@@ -148,7 +148,7 @@ có thể round `b+c` về gần `b`, rồi cancel thành 0.
 
 Parallel reductions vì vậy có thể cho last-bit differences tùy thứ tự (order / 순서) summation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Catastrophic cancellation** tiếp nhận điểm tựa từ **Associativity có thể mất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conditioning: bài toán (problem / 문제) bản thân nhạy tới mức nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Catastrophic cancellation** nối từ **Associativity có thể mất** sang **Conditioning: bài toán (problem / 문제) bản thân nhạy tới mức nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Catastrophic cancellation
 
@@ -166,7 +166,7 @@ Algebraically equivalent reformulation có thể numerically tốt hơn.
 
 Đây là lesson quan trọng: **symbolically equivalent formulas không nhất thiết computationally equivalent**.
 
-> **Chuyển mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Conditioning: bài toán (problem / 문제) bản thân nhạy tới mức nào?** tiếp nhận điểm tựa từ **Catastrophic cancellation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều kiện (condition / 조건) number của hệ tuyến tính (linear system / 선형 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Conditioning: bài toán (problem / 문제) bản thân nhạy tới mức nào?** nối từ **Catastrophic cancellation** sang **Điều kiện (condition / 조건) number của hệ tuyến tính (linear system / 선형 시스템)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Conditioning: bài toán (problem / 문제) bản thân nhạy tới mức nào?
 
@@ -196,7 +196,7 @@ khi expression hợp lệ.
 
 Large `κ` nghĩa đầu vào (input / 입력) relative lỗi (error / 오류) có thể bị amplify mạnh trong đầu ra (output / 출력).
 
-> **Chuyển mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Điều kiện (condition / 조건) number của hệ tuyến tính (linear system / 선형 시스템)** tiếp nhận điểm tựa từ **Conditioning: bài toán (problem / 문제) bản thân nhạy tới mức nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stability: thuật toán (algorithm / 알고리즘) có thêm amplification không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Điều kiện (condition / 조건) number của hệ tuyến tính (linear system / 선형 시스템)** nối từ **Conditioning: bài toán (problem / 문제) bản thân nhạy tới mức nào?** sang **Stability: thuật toán (algorithm / 알고리즘) có thêm amplification không?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điều kiện (condition / 조건) number của hệ tuyến tính (linear system / 선형 시스템)
 
@@ -212,7 +212,7 @@ Geometrically, transformation `A` squash một số directions rất mạnh. Inv
 
 Đây là reason near-collinear features làm least squares nhạy và multicollinearity gây unstable coefficients.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Stability: thuật toán (algorithm / 알고리즘) có thêm amplification không?** tiếp nhận điểm tựa từ **Điều kiện (condition / 조건) number của hệ tuyến tính (linear system / 선형 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Forward lỗi (error / 오류) và backward lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Stability: thuật toán (algorithm / 알고리즘) có thêm amplification không?** nối từ **Điều kiện (condition / 조건) number của hệ tuyến tính (linear system / 선형 시스템)** sang **Forward lỗi (error / 오류) và backward lỗi (error / 오류)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Stability: thuật toán (algorithm / 알고리즘) có thêm amplification không?
 
@@ -228,7 +228,7 @@ Nếu bài toán (problem / 문제) well-conditioned, nearby đầu vào (input 
 
 Numerical tuyến tính (linear / 선형) algebra đánh giá algorithms theo lens này thay vì chỉ count arithmetic operations.
 
-> **Chuyển mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Forward lỗi (error / 오류) và backward lỗi (error / 오류)** tiếp nhận điểm tựa từ **Stability: thuật toán (algorithm / 알고리즘) có thêm amplification không?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Truncation lỗi (error / 오류): finite approximation của infinite tiến trình (process / 프로세스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Forward lỗi (error / 오류) và backward lỗi (error / 오류)** nối từ **Stability: thuật toán (algorithm / 알고리즘) có thêm amplification không?** sang **Truncation lỗi (error / 오류): finite approximation của infinite tiến trình (process / 프로세스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Forward lỗi (error / 오류) và backward lỗi (error / 오류)
 
@@ -240,7 +240,7 @@ Một kết quả (result / 결과) có forward lỗi (error / 오류) lớn nh�
 
 Distinction này giúp tránh blame thuật toán (algorithm / 알고리즘) cho sensitivity vốn nằm trong bài toán (problem / 문제).
 
-> **Chuyển mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Forward lỗi (error / 오류) và backward lỗi (error / 오류)** xác định đầu vào; **Truncation lỗi (error / 오류): finite approximation của infinite tiến trình (process / 프로세스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Tại sao “step càng nhỏ càng tốt” sai?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Forward lỗi (error / 오류) và backward lỗi (error / 오류)** đặt đầu vào cho **Truncation lỗi (error / 오류): finite approximation của infinite tiến trình (process / 프로세스)**, rồi **Tại sao “step càng nhỏ càng tốt” sai?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Truncation lỗi (error / 오류): finite approximation của infinite tiến trình (process / 프로세스)
 
@@ -268,7 +268,7 @@ thường có truncation lỗi (error / 오류) `O(h^2)`.
 
 Higher thứ tự (order / 순서) không có nghĩa luôn better: smaller `h` giảm truncation lỗi (error / 오류) nhưng có thể tăng rounding/cancellation lỗi (error / 오류).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Truncation lỗi (error / 오류): finite approximation của infinite tiến trình (process / 프로세스)** xác định đầu vào; **Tại sao “step càng nhỏ càng tốt” sai?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Gốc (root / 루트) finding: bisection từ continuity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Truncation lỗi (error / 오류): finite approximation của infinite tiến trình (process / 프로세스)** đặt đầu vào cho **Tại sao “step càng nhỏ càng tốt” sai?**, rồi **Gốc (root / 루트) finding: bisection từ continuity** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tại sao “step càng nhỏ càng tốt” sai?
 
@@ -282,7 +282,7 @@ Total lỗi (error / 오류) thường có U-shaped hành vi (behavior / 동작)
 
 Optimal step kích thước (size / 크기) cân bằng truncation và floating-point errors.
 
-> **Chuyển mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Gốc (root / 루트) finding: bisection từ continuity** tiếp nhận điểm tựa từ **Tại sao “step càng nhỏ càng tốt” sai?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Newton phương thức (method / 메서드): cục bộ (local / 로컬) mô hình tuyến tính (linear model / 선형 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Gốc (root / 루트) finding: bisection từ continuity** nối từ **Tại sao “step càng nhỏ càng tốt” sai?** sang **Newton phương thức (method / 메서드): cục bộ (local / 로컬) mô hình tuyến tính (linear model / 선형 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gốc (root / 루트) finding: bisection từ continuity
 
@@ -316,7 +316,7 @@ k\ge\log_2\frac{b-a}{\varepsilon}.
 
 Bisection chậm hơn Newton nhưng robust vì giữ bracket và dựa trên theorem rõ ràng.
 
-> **Chuyển mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Newton phương thức (method / 메서드): cục bộ (local / 로컬) mô hình tuyến tính (linear model / 선형 모델)** tiếp nhận điểm tựa từ **Gốc (root / 루트) finding: bisection từ continuity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hybrid gốc (root / 루트) solvers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Newton phương thức (method / 메서드): cục bộ (local / 로컬) mô hình tuyến tính (linear model / 선형 모델)** nối từ **Gốc (root / 루트) finding: bisection từ continuity** sang **Hybrid gốc (root / 루트) solvers**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Newton phương thức (method / 메서드): cục bộ (local / 로컬) mô hình tuyến tính (linear model / 선형 모델)
 
@@ -344,7 +344,7 @@ Near a simple gốc (root / 루트) và dưới smoothness/initialization condit
 
 Nhưng Newton có thất bại (failure / 실패) modes: derivative gần zero, initial guess xấu, oscillation hoặc convergence tới gốc (root / 루트) không mong muốn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Hybrid gốc (root / 루트) solvers** tiếp nhận điểm tựa từ **Newton phương thức (method / 메서드): cục bộ (local / 로컬) mô hình tuyến tính (linear model / 선형 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Interpolation và approximation không giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Hybrid gốc (root / 루트) solvers** nối từ **Newton phương thức (method / 메서드): cục bộ (local / 로컬) mô hình tuyến tính (linear model / 선형 모델)** sang **Interpolation và approximation không giống nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hybrid gốc (root / 루트) solvers
 
@@ -352,7 +352,7 @@ Môi trường vận hành (production / 운영 환경) numerical libraries thư
 
 Đây là recurring kỹ thuật (engineering / 엔지니어링) mẫu (pattern / 패턴): use fast phương thức (method / 메서드) khi conditions tốt, fallback sang safe phương thức (method / 메서드) khi bất biến (invariant / 불변식) bị đe dọa.
 
-> **Chuyển mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Interpolation và approximation không giống nhau** tiếp nhận điểm tựa từ **Hybrid gốc (root / 루트) solvers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Polynomial basis và conditioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Interpolation và approximation không giống nhau** nối từ **Hybrid gốc (root / 루트) solvers** sang **Polynomial basis và conditioning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Interpolation và approximation không giống nhau
 
@@ -366,7 +366,7 @@ Piecewise polynomial splines dùng cục bộ (local / 로컬) low-degree pieces
 
 Điều này minh họa nguyên tắc: **degree cao hơn không tự động là mô hình (model / 모델) tốt hơn**.
 
-> **Chuyển mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Polynomial basis và conditioning** tiếp nhận điểm tựa từ **Interpolation và approximation không giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Numerical tích hợp (integration / 통합)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Polynomial basis và conditioning** nối từ **Interpolation và approximation không giống nhau** sang **Numerical tích hợp (integration / 통합)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Polynomial basis và conditioning
 
@@ -384,7 +384,7 @@ Orthogonal polynomial bases như Chebyshev polynomials thường tốt hơn cho 
 
 Một lần nữa, mathematical không gian (space / 공간) giống nhau nhưng biểu diễn (representation / 표현)/basis khác có numerical hành vi (behavior / 동작) rất khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Numerical tích hợp (integration / 통합)** tiếp nhận điểm tựa từ **Polynomial basis và conditioning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Monte Carlo tích hợp (integration / 통합)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Numerical tích hợp (integration / 통합)** nối từ **Polynomial basis và conditioning** sang **Monte Carlo tích hợp (integration / 통합)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Numerical tích hợp (integration / 통합)
 
@@ -402,7 +402,7 @@ Adaptive quadrature refine interval nơi hàm (function / 함수) khó hơn thay
 
 Phương thức (method / 메서드) phù hợp phụ thuộc smoothness, singularities, oscillation và chi phí (cost / 비용) của evaluating `f`.
 
-> **Chuyển mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Monte Carlo tích hợp (integration / 통합)** tiếp nhận điểm tựa từ **Numerical tích hợp (integration / 통합)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Solve tuyến tính (linear / 선형) các hệ thống (systems / 시스템들): đừng mặc định invert ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Monte Carlo tích hợp (integration / 통합)** nối từ **Numerical tích hợp (integration / 통합)** sang **Solve tuyến tính (linear / 선형) các hệ thống (systems / 시스템들): đừng mặc định invert ma trận (matrix / 행렬)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Monte Carlo tích hợp (integration / 통합)
 
@@ -422,7 +422,7 @@ O(N^{-1/2}).
 
 Convergence tỷ lệ (rate / 비율) không nhanh theo `N`, nhưng không explode trực tiếp với dimension theo grid count, nên Monte Carlo rất quan trọng trong finance, Bayesian suy luận (inference / 추론) và physics simulations.
 
-> **Chuyển mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Solve tuyến tính (linear / 선형) các hệ thống (systems / 시스템들): đừng mặc định invert ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **Monte Carlo tích hợp (integration / 통합)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sparsity thay đổi computation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Solve tuyến tính (linear / 선형) các hệ thống (systems / 시스템들): đừng mặc định invert ma trận (matrix / 행렬)** nối từ **Monte Carlo tích hợp (integration / 통합)** sang **Sparsity thay đổi computation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Solve tuyến tính (linear / 선형) các hệ thống (systems / 시스템들): đừng mặc định invert ma trận (matrix / 행렬)
 
@@ -438,7 +438,7 @@ Dense hệ thống (system / 시스템) thường dùng LU decomposition. Symmet
 
 Thuật toán (algorithm / 알고리즘) choice nên exploit cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Sparsity thay đổi computation** tiếp nhận điểm tựa từ **Solve tuyến tính (linear / 선형) các hệ thống (systems / 시스템들): đừng mặc định invert ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Iterative tuyến tính (linear / 선형) solvers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Sparsity thay đổi computation** nối từ **Solve tuyến tính (linear / 선형) các hệ thống (systems / 시스템들): đừng mặc định invert ma trận (matrix / 행렬)** sang **Iterative tuyến tính (linear / 선형) solvers**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sparsity thay đổi computation
 
@@ -450,7 +450,7 @@ Sparse direct/iterative solvers có thể giảm bộ nhớ (memory / 메모리)
 
 “ma trận (matrix / 행렬) kích thước (size / 크기)” một mình không đủ dự đoán difficulty.
 
-> **Chuyển mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Iterative tuyến tính (linear / 선형) solvers** tiếp nhận điểm tựa từ **Sparsity thay đổi computation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Numerical ODE và stability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Iterative tuyến tính (linear / 선형) solvers** nối từ **Sparsity thay đổi computation** sang **Numerical ODE và stability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Iterative tuyến tính (linear / 선형) solvers
 
@@ -462,7 +462,7 @@ Convergence thường phụ thuộc spectrum/điều kiện (condition / 조건)
 
 Preconditioner tốt có thể quan trọng hơn micro-optimization mã (code / 코드).
 
-> **Chuyển mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Numerical ODE và stability** tiếp nhận điểm tựa từ **Iterative tuyến tính (linear / 선형) solvers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Convergence, consistency và stability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Numerical ODE và stability** nối từ **Iterative tuyến tính (linear / 선형) solvers** sang **Convergence, consistency và stability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Numerical ODE và stability
 
@@ -486,7 +486,7 @@ Nhưng differential equations có thể **stiff**: tường minh (explicit / 명
 
 Numerical stability của thời gian (time / 시간) tích hợp (integration / 통합) là concept riêng, không thể đánh giá chỉ bằng cục bộ (local / 로컬) truncation thứ tự (order / 순서).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Convergence, consistency và stability** tiếp nhận điểm tựa từ **Numerical ODE và stability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stopping criteria** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Convergence, consistency và stability** nối từ **Numerical ODE và stability** sang **Stopping criteria**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Convergence, consistency và stability
 
@@ -500,7 +500,7 @@ Trong discretized differential equations, ba ideas thường liên kết:
 
 Một scheme có cục bộ (local / 로컬) approximation đẹp nhưng unstable vẫn có thể diverge globally.
 
-> **Chuyển mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Stopping criteria** tiếp nhận điểm tựa từ **Convergence, consistency và stability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scaling và nondimensionalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Stopping criteria** nối từ **Convergence, consistency và stability** sang **Scaling và nondimensionalization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Stopping criteria
 
@@ -516,7 +516,7 @@ là residual. Small residual nói computed `\hat x` gần satisfy equation. Như
 
 Stopping criterion phải match quantity ta thật sự quan tâm.
 
-> **Chuyển mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Scaling và nondimensionalization** tiếp nhận điểm tựa từ **Stopping criteria** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reproducibility trong parallel computing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Scaling và nondimensionalization** nối từ **Stopping criteria** sang **Reproducibility trong parallel computing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Scaling và nondimensionalization
 
@@ -528,7 +528,7 @@ Trong vật lý (physical / 물리적) các mô hình (models / 모델들), nond
 
 Scaling không chỉ là cosmetic normalization; nó có thể thay numerical difficulty.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Reproducibility trong parallel computing** tiếp nhận điểm tựa từ **Scaling và nondimensionalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mixed precision** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Reproducibility trong parallel computing** nối từ **Scaling và nondimensionalization** sang **Mixed precision**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Reproducibility trong parallel computing
 
@@ -544,7 +544,7 @@ Trong ML/scientific computing, cần phân biệt:
 
 Không phải mọi nondeterminism đều là bug, nhưng yêu cầu (requirement / 요구사항) phải được định nghĩa rõ.
 
-> **Chuyển mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Mixed precision** tiếp nhận điểm tựa từ **Reproducibility trong parallel computing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Interval arithmetic và rigorous bounds** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Mixed precision** nối từ **Reproducibility trong parallel computing** sang **Interval arithmetic và rigorous bounds**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mixed precision
 
@@ -556,7 +556,7 @@ Mất mát (loss / 손실) scaling giúp tránh độ dốc (gradient / 기울�
 
 Đây là numerical phân tích (analysis / 분석) xuất hiện trực tiếp trong deep học tập (learning / 학습) kỹ thuật (engineering / 엔지니어링).
 
-> **Chuyển mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Interval arithmetic và rigorous bounds** tiếp nhận điểm tựa từ **Mixed precision** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결) — numerical phân tích (analysis / 분석) và tối ưu hóa (optimization / 최적화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Interval arithmetic và rigorous bounds** nối từ **Mixed precision** sang **Liên kết kiến thức (knowledge connection / 지식 연결) — numerical phân tích (analysis / 분석) và tối ưu hóa (optimization / 최적화)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Interval arithmetic và rigorous bounds
 
@@ -566,7 +566,7 @@ Nó hữu ích khi cần verified computation, nhưng intervals có thể widen 
 
 Không phải mọi ứng dụng (application / 애플리케이션) cần rigorous bounds, nhưng concept này cho thấy numerical đầu ra (output / 출력) có thể đi kèm certificate về bất định (uncertainty / 불확실성) thay vì chỉ một number.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, sau nội dung của **Interval arithmetic và rigorous bounds**, **Liên kết kiến thức (knowledge connection / 지식 연결) — numerical phân tích (analysis / 분석) và tối ưu hóa (optimization / 최적화)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결) — numerical phân tích (analysis / 분석) và kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, sau nội dung của **Interval arithmetic và rigorous bounds**, **Liên kết kiến thức (knowledge connection / 지식 연결) — numerical phân tích (analysis / 분석) và tối ưu hóa (optimization / 최적화)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결) — numerical phân tích (analysis / 분석) và kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결) — numerical phân tích (analysis / 분석) và tối ưu hóa (optimization / 최적화)
 
@@ -574,7 +574,7 @@ Không phải mọi ứng dụng (application / 애플리케이션) cần rigoro
 
 Preconditioning, normalization, adaptive optimizers và second-order methods đều có numerical-analysis flavor: reshape bài toán (problem / 문제) để thuật toán (algorithm / 알고리즘) thấy hình học (geometry / 기하학) dễ hơn.
 
-> **Chuyển mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Liên kết kiến thức (knowledge connection / 지식 연결) — numerical phân tích (analysis / 분석) và tối ưu hóa (optimization / 최적화)** nêu điều cần giải thích; **Liên kết kiến thức (knowledge connection / 지식 연결) — numerical phân tích (analysis / 분석) và kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Liên kết kiến thức (knowledge connection / 지식 연결) — numerical phân tích (analysis / 분석) và tối ưu hóa (optimization / 최적화)** đặt vấn đề; **Liên kết kiến thức (knowledge connection / 지식 연결) — numerical phân tích (analysis / 분석) và kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링)** đối chiếu bằng chứng, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결) — numerical phân tích (analysis / 분석) và kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링)
 
@@ -584,13 +584,13 @@ Financial các hệ thống (systems / 시스템들) thường tránh nhị phâ
 
 Biểu diễn (representation / 표현) choice vì thế là mathematical quyết định (decision / 결정), không chỉ programming detail.
 
-> **Chuyển mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, các dấu vết trong **Liên kết kiến thức (knowledge connection / 지식 연결) — numerical phân tích (analysis / 분석) và kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링)** được đọc cùng nhau ở **Mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, các dấu vết trong **Liên kết kiến thức (knowledge connection / 지식 연결) — numerical phân tích (analysis / 분석) và kỹ thuật dữ liệu (data engineering / 데이터 엔지니어링)** được đọc cùng nhau ở **Mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Numerical phân tích (analysis / 분석) là science của **độ tin cậy khi toán học đi qua máy tính hữu hạn**. Trước một number computed, hãy hỏi: đầu vào (input / 입력) có noise gì, bài toán (problem / 문제) nhạy tới đâu, approximation bỏ qua gì, arithmetic round thế nào, thuật toán (algorithm / 알고리즘) có amplify lỗi (error / 오류) không, và đầu ra (output / 출력) accuracy ta thật sự cần là gì. Một formula đúng chỉ là điểm bắt đầu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Toán số: approximation, conditioning và stability trên máy tính hữu hạn**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

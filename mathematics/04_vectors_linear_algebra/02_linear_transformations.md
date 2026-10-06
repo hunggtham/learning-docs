@@ -46,7 +46,7 @@ Ae_j.
 
 Nói cách khác, columns không phải những con số tùy ý: chúng cho biết từng coordinate axis bị gửi đi đâu.
 
-> **Chuyển mạch:** Trong **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Vì sao ma trận (matrix / 행렬) biểu diễn (representation / 표현) phụ thuộc basis?** tiếp nhận điểm tựa từ **Từ basis đến toàn bộ transformation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Worked example — rotation như tuyến tính (linear / 선형) transformation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Vì sao ma trận (matrix / 행렬) biểu diễn (representation / 표현) phụ thuộc basis?** nối từ **Từ basis đến toàn bộ transformation** sang **Worked example — rotation như tuyến tính (linear / 선형) transformation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao ma trận (matrix / 행렬) biểu diễn (representation / 표현) phụ thuộc basis?
 
@@ -64,7 +64,7 @@ Hai matrices này look khác nhau nhưng represent cùng operator.
 
 Đây là reason eigenbasis, PCA basis hay Fourier basis quan trọng: chúng không thay đổi underlying đối tượng (object / 객체); chúng chọn coordinate hệ thống (system / 시스템) khiến operator hoặc cấu trúc dữ liệu (data structure / 자료구조) dễ nhìn hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Vì sao ma trận (matrix / 행렬) biểu diễn (representation / 표현) phụ thuộc basis?** cho ta quy tắc; **Worked example — rotation như tuyến tính (linear / 선형) transformation** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Kernel: directions nào bị mất?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Vì sao ma trận (matrix / 행렬) biểu diễn (representation / 표현) phụ thuộc basis?** nêu quy tắc; **Worked example — rotation như tuyến tính (linear / 선형) transformation** thử quy tắc trong tình huống, rồi **Kernel: directions nào bị mất?** mở rộng hệ quả.
 
 ## Worked example — rotation như tuyến tính (linear / 선형) transformation
 
@@ -96,7 +96,7 @@ T(e_2)=(-\sin\theta,\cos\theta).
 
 Đặt hai images đó làm columns, ta nhận ma trận (matrix / 행렬) rotation. Đây là cách derive ma trận (matrix / 행렬) từ hành động (action / 동작) on basis, không cần học thuộc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Worked example — rotation như tuyến tính (linear / 선형) transformation** cho ta quy tắc; **Kernel: directions nào bị mất?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ảnh (image / 이미지): outputs nào reachable?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Worked example — rotation như tuyến tính (linear / 선형) transformation** nêu quy tắc; **Kernel: directions nào bị mất?** thử quy tắc trong tình huống, rồi **Ảnh (image / 이미지): outputs nào reachable?** mở rộng hệ quả.
 
 ## Kernel: directions nào bị mất?
 
@@ -126,7 +126,7 @@ T(x,y,z)=(x,y,0)
 
 có kernel là toàn bộ z-axis. Mọi khác biệt chỉ theo `z` bị projection xóa hoàn toàn.
 
-> **Chuyển mạch:** Trong **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Ảnh (image / 이미지): outputs nào reachable?** tiếp nhận điểm tựa từ **Kernel: directions nào bị mất?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rank-nullity: accounting của degrees of freedom** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Ảnh (image / 이미지): outputs nào reachable?** nối từ **Kernel: directions nào bị mất?** sang **Rank-nullity: accounting của degrees of freedom**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ảnh (image / 이미지): outputs nào reachable?
 
@@ -152,7 +152,7 @@ Rank chính là dimension của ảnh (image / 이미지):
 
 Nó đo số independent đầu ra (output / 출력) directions mà transformation có thể tạo.
 
-> **Chuyển mạch:** Ở chặng này của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Rank-nullity: accounting của degrees of freedom** tiếp nhận điểm tựa từ **Ảnh (image / 이미지): outputs nào reachable?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Injective, surjective và invertible dưới góc nhìn hình học (geometry / 기하학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Rank-nullity: accounting của degrees of freedom** nối từ **Ảnh (image / 이미지): outputs nào reachable?** sang **Injective, surjective và invertible dưới góc nhìn hình học (geometry / 기하학)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rank-nullity: accounting của degrees of freedom
 
@@ -174,7 +174,7 @@ Ví dụ map từ `R^3` xuống plane bằng projection có rank 2 và nullity 1
 
 Một dimension bị mất, hai dimensions sống sót.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Injective, surjective và invertible dưới góc nhìn hình học (geometry / 기하학)** tiếp nhận điểm tựa từ **Rank-nullity: accounting của degrees of freedom** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Affine transformation khác tuyến tính (linear / 선형) transformation ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Injective, surjective và invertible dưới góc nhìn hình học (geometry / 기하학)** nối từ **Rank-nullity: accounting của degrees of freedom** sang **Affine transformation khác tuyến tính (linear / 선형) transformation ở đâu?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Injective, surjective và invertible dưới góc nhìn hình học (geometry / 기하학)
 
@@ -188,7 +188,7 @@ Trong finite dimensions bằng nhau, injective và surjective trở thành equiv
 
 Nếu dimensions khác nhau, intuition thay đổi. Map từ `R^3` sang `R^2` không thể injective nếu tuyến tính (linear / 선형), vì phải collapse ít nhất một direction. Map từ `R^2` sang `R^3` không thể surjective, vì ảnh (image / 이미지) tối đa chỉ là 2D subspace.
 
-> **Chuyển mạch:** Trong **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Affine transformation khác tuyến tính (linear / 선형) transformation ở đâu?** tiếp nhận điểm tựa từ **Injective, surjective và invertible dưới góc nhìn hình học (geometry / 기하학)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Linearization: vì sao tuyến tính (linear / 선형) transformations còn quan trọng với nonlinear các hệ thống (systems / 시스템들)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Affine transformation khác tuyến tính (linear / 선형) transformation ở đâu?** nối từ **Injective, surjective và invertible dưới góc nhìn hình học (geometry / 기하학)** sang **Linearization: vì sao tuyến tính (linear / 선형) transformations còn quan trọng với nonlinear các hệ thống (systems / 시스템들)?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Affine transformation khác tuyến tính (linear / 선형) transformation ở đâu?
 
@@ -214,7 +214,7 @@ z=Wx+b.
 
 Khung phần mềm (framework / 프레임워크) có thể gọi đây là “tuyến tính (linear / 선형) tầng (layer / 계층)”, nhưng mathematically đó là affine map. Distinction này quan trọng khi lập luận (reasoning / 추론) về composition, symmetries và proofs.
 
-> **Chuyển mạch:** Ở chặng này của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Linearization: vì sao tuyến tính (linear / 선형) transformations còn quan trọng với nonlinear các hệ thống (systems / 시스템들)?** tiếp nhận điểm tựa từ **Affine transformation khác tuyến tính (linear / 선형) transformation ở đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Composition và phép nhân ma trận (matrix multiplication / 행렬 곱셈)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Linearization: vì sao tuyến tính (linear / 선형) transformations còn quan trọng với nonlinear các hệ thống (systems / 시스템들)?** nối từ **Affine transformation khác tuyến tính (linear / 선형) transformation ở đâu?** sang **Composition và phép nhân ma trận (matrix multiplication / 행렬 곱셈)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Linearization: vì sao tuyến tính (linear / 선형) transformations còn quan trọng với nonlinear các hệ thống (systems / 시스템들)?
 
@@ -238,7 +238,7 @@ Vì vậy tuyến tính (linear / 선형) algebra không chỉ áp dụng cho �
 
 Đây là cầu nối (bridge / 브리지) tới multivariable calculus, tối ưu hóa (optimization / 최적화), điều khiển (control / 제어) và neural-network backpropagation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Composition và phép nhân ma trận (matrix multiplication / 행렬 곱셈)** tiếp nhận điểm tựa từ **Linearization: vì sao tuyến tính (linear / 선형) transformations còn quan trọng với nonlinear các hệ thống (systems / 시스템들)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Eigenvectors: directions transformation không đổi hướng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Composition và phép nhân ma trận (matrix multiplication / 행렬 곱셈)** nối từ **Linearization: vì sao tuyến tính (linear / 선형) transformations còn quan trọng với nonlinear các hệ thống (systems / 시스템들)?** sang **Eigenvectors: directions transformation không đổi hướng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Composition và phép nhân ma trận (matrix multiplication / 행렬 곱셈)
 
@@ -258,7 +258,7 @@ thì
 
 Thứ tự (order / 순서) phản ánh tiến trình (process / 프로세스) thứ tự (order / 순서). Apply `T` trước, rồi `S`; ma trận (matrix / 행렬) sản phẩm (product / 제품) vì vậy đọc từ right sang left khi acting on vectors.
 
-> **Chuyển mạch:** Trong **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Eigenvectors: directions transformation không đổi hướng** tiếp nhận điểm tựa từ **Composition và phép nhân ma trận (matrix multiplication / 행렬 곱셈)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Physics liên kết (connection / 연결) — superposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Eigenvectors: directions transformation không đổi hướng** nối từ **Composition và phép nhân ma trận (matrix multiplication / 행렬 곱셈)** sang **Physics liên kết (connection / 연결) — superposition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Eigenvectors: directions transformation không đổi hướng
 
@@ -278,7 +278,7 @@ A^k=P D^k P^{-1}.
 
 Đây là reason eigen-analysis xuất hiện trong động (dynamic / 동적) các hệ thống (systems / 시스템들), Markov chains, PCA, vibrations và stability.
 
-> **Chuyển mạch:** Ở chặng này của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, sau nội dung của **Eigenvectors: directions transformation không đổi hướng**, **Physics liên kết (connection / 연결) — superposition** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **AI liên kết (connection / 연결) — representations và cục bộ (local / 로컬) hình học (geometry / 기하학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, sau nội dung của **Eigenvectors: directions transformation không đổi hướng**, **Physics liên kết (connection / 연결) — superposition** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **AI liên kết (connection / 연결) — representations và cục bộ (local / 로컬) hình học (geometry / 기하학)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Physics liên kết (connection / 연결) — superposition
 
@@ -290,7 +290,7 @@ T(au+bv)=aT(u)+bT(v).
 
 Điều này cho phép phân rã signals thành modes, frequencies hoặc basis states, xử lý từng thành phần (component / 컴포넌트) rồi combine lại. Fourier phân tích (analysis / 분석) dựa sâu vào lô-gic (logic / 논리) này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **AI liên kết (connection / 연결) — representations và cục bộ (local / 로컬) hình học (geometry / 기하학)** tiếp nhận điểm tựa từ **Physics liên kết (connection / 연결) — superposition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thất bại (failure / 실패) modes và các giả định (assumptions / 가정들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **AI liên kết (connection / 연결) — representations và cục bộ (local / 로컬) hình học (geometry / 기하학)** nối từ **Physics liên kết (connection / 연결) — superposition** sang **Thất bại (failure / 실패) modes và các giả định (assumptions / 가정들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AI liên kết (connection / 연결) — representations và cục bộ (local / 로컬) hình học (geometry / 기하학)
 
@@ -298,7 +298,7 @@ Embeddings là vectors; weight matrices transform representations giữa tính n
 
 Nhưng whole neural mạng (network / 네트워크) nonlinear vì có activations. tuyến tính (linear / 선형) transformations vẫn là building blocks và cục bộ (local / 로컬) sensitivity operators.
 
-> **Chuyển mạch:** Trong **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Thất bại (failure / 실패) modes và các giả định (assumptions / 가정들)** tiếp nhận điểm tựa từ **AI liên kết (connection / 연결) — representations và cục bộ (local / 로컬) hình học (geometry / 기하학)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Thất bại (failure / 실패) modes và các giả định (assumptions / 가정들)** nối từ **AI liên kết (connection / 연결) — representations và cục bộ (local / 로컬) hình học (geometry / 기하학)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thất bại (failure / 실패) modes và các giả định (assumptions / 가정들)
 
@@ -308,13 +308,13 @@ Một coordinate ma trận (matrix / 행렬) cũng không có intrinsic meaning 
 
 Trong numerical công việc (work / 작업), transformation có thể mathematically invertible nhưng practically unstable nếu near-singular. Structural lý thuyết (theory / 이론) cần đi cùng conditioning.
 
-> **Chuyển mạch:** Ở chặng này của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Thất bại (failure / 실패) modes và các giả định (assumptions / 가정들)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Thất bại (failure / 실패) modes và các giả định (assumptions / 가정들)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > tuyến tính (linear / 선형) transformation là một machine tôn trọng mixtures. Vì mọi véc-tơ (vector / 벡터) là mixture của basis vectors, chỉ cần biết machine làm gì với basis là đủ. Kernel nói thông tin (information / 정보) nào bị mất; ảnh (image / 이미지) nói outputs nào reachable; ma trận (matrix / 행렬) là coordinate encoding của machine; đổi basis là đổi cách mô tả chứ không đổi machine.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép biến đổi tuyến tính: cấu trúc, basis và thông tin (information / 정보) luồng (flow / 흐름)**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

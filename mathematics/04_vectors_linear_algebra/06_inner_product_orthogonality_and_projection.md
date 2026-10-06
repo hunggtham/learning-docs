@@ -49,7 +49,7 @@ cho mọi `v\ne0`.
 
 Điều này cho phép định nghĩa hình học (geometry / 기하학) mà không phụ thuộc vào coordinate biểu diễn (representation / 표현) cụ thể.
 
-> **Chuyển mạch:** Trong **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **2. Norm xuất hiện từ self-alignment** tiếp nhận điểm tựa từ **1. Inner sản phẩm (product / 제품) là generalized notion của alignment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Cauchy–Schwarz là theorem làm angle hợp lệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **2. Norm xuất hiện từ self-alignment** nối từ **1. Inner sản phẩm (product / 제품) là generalized notion của alignment** sang **3. Cauchy–Schwarz là theorem làm angle hợp lệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Norm xuất hiện từ self-alignment
 
@@ -93,7 +93,7 @@ Derivation:
 
 Cross term biến mất khi vectors orthogonal.
 
-> **Chuyển mạch:** Ở chặng này của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **3. Cauchy–Schwarz là theorem làm angle hợp lệ** tiếp nhận điểm tựa từ **2. Norm xuất hiện từ self-alignment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Orthogonality là independence theo hình học (geometry / 기하학) đang chọn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **3. Cauchy–Schwarz là theorem làm angle hợp lệ** nối từ **2. Norm xuất hiện từ self-alignment** sang **4. Orthogonality là independence theo hình học (geometry / 기하학) đang chọn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Cauchy–Schwarz là theorem làm angle hợp lệ
 
@@ -125,7 +125,7 @@ như một quadratic theo `t`. Discriminant không thể dương theo cách tạ
 
 Theorem này không chỉ technical; nó bảo đảm notion cosine/angle consistent.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **4. Orthogonality là independence theo hình học (geometry / 기하학) đang chọn** tiếp nhận điểm tựa từ **3. Cauchy–Schwarz là theorem làm angle hợp lệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Projection là nearest-point bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **4. Orthogonality là independence theo hình học (geometry / 기하학) đang chọn** nối từ **3. Cauchy–Schwarz là theorem làm angle hợp lệ** sang **5. Projection là nearest-point bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Orthogonality là independence theo hình học (geometry / 기하학) đang chọn
 
@@ -153,7 +153,7 @@ nên `c_j=0`.
 
 Orthogonality làm coefficients tách rời nhau rất mạnh.
 
-> **Chuyển mạch:** Trong **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **5. Projection là nearest-point bài toán (problem / 문제)** tiếp nhận điểm tựa từ **4. Orthogonality là independence theo hình học (geometry / 기하학) đang chọn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Orthogonal decomposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **5. Projection là nearest-point bài toán (problem / 문제)** nối từ **4. Orthogonality là independence theo hình học (geometry / 기하학) đang chọn** sang **6. Orthogonal decomposition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Projection là nearest-point bài toán (problem / 문제)
 
@@ -194,7 +194,7 @@ Nếu `u` đơn vị (unit / 단위) length:
 
 Projection formula không phải arbitrary formula; nó là solution của **closest điểm (point / 지점) in a subspace**.
 
-> **Chuyển mạch:** Ở chặng này của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **6. Orthogonal decomposition** tiếp nhận điểm tựa từ **5. Projection là nearest-point bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Projection theorem trên subspace** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **6. Orthogonal decomposition** nối từ **5. Projection là nearest-point bài toán (problem / 문제)** sang **7. Projection theorem trên subspace**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Orthogonal decomposition
 
@@ -230,7 +230,7 @@ vector = explainable component + residual component
 
 Đây chính là hình học (geometry / 기하학) của regression.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **7. Projection theorem trên subspace** tiếp nhận điểm tựa từ **6. Orthogonal decomposition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Least squares là projection, không phải regression trick** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **7. Projection theorem trên subspace** nối từ **6. Orthogonal decomposition** sang **8. Least squares là projection, không phải regression trick**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Projection theorem trên subspace
 
@@ -252,7 +252,7 @@ r\in U^\perp.
 
 Điều này giải thích vì sao least squares solution có residual orthogonal với column không gian (space / 공간).
 
-> **Chuyển mạch:** Trong **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **8. Least squares là projection, không phải regression trick** tiếp nhận điểm tựa từ **7. Projection theorem trên subspace** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Vì sao orthonormal basis đặc biệt?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **8. Least squares là projection, không phải regression trick** nối từ **7. Projection theorem trên subspace** sang **9. Vì sao orthonormal basis đặc biệt?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Least squares là projection, không phải regression trick
 
@@ -296,7 +296,7 @@ A^TA\hat x=A^Tb.
 
 Normal equations là consequence của orthogonality.
 
-> **Chuyển mạch:** Ở chặng này của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **9. Vì sao orthonormal basis đặc biệt?** tiếp nhận điểm tựa từ **8. Least squares là projection, không phải regression trick** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Gram–Schmidt: remove explained components** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **9. Vì sao orthonormal basis đặc biệt?** nối từ **8. Least squares là projection, không phải regression trick** sang **10. Gram–Schmidt: remove explained components**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Vì sao orthonormal basis đặc biệt?
 
@@ -335,7 +335,7 @@ Do đó norm được bảo toàn:
 
 Orthogonal matrices là geometry-preserving transforms.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **10. Gram–Schmidt: remove explained components** tiếp nhận điểm tựa từ **9. Vì sao orthonormal basis đặc biệt?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Classical Gram–Schmidt vs numerical stability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **10. Gram–Schmidt: remove explained components** nối từ **9. Vì sao orthonormal basis đặc biệt?** sang **11. Classical Gram–Schmidt vs numerical stability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Gram–Schmidt: remove explained components
 
@@ -374,7 +374,7 @@ q_i=\frac{u_i}{\|u_i\|}.
 
 Đây là conceptual foundation của QR decomposition.
 
-> **Chuyển mạch:** Trong **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **11. Classical Gram–Schmidt vs numerical stability** tiếp nhận điểm tựa từ **10. Gram–Schmidt: remove explained components** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Inner sản phẩm (product / 제품) không nhất thiết là ordinary dot sản phẩm (product / 제품)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **11. Classical Gram–Schmidt vs numerical stability** nối từ **10. Gram–Schmidt: remove explained components** sang **12. Inner sản phẩm (product / 제품) không nhất thiết là ordinary dot sản phẩm (product / 제품)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Classical Gram–Schmidt vs numerical stability
 
@@ -391,7 +391,7 @@ mathematically equivalent
 ≠ numerically equivalent
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **12. Inner sản phẩm (product / 제품) không nhất thiết là ordinary dot sản phẩm (product / 제품)** tiếp nhận điểm tựa từ **11. Classical Gram–Schmidt vs numerical stability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. hàm (function / 함수) spaces cũng có inner sản phẩm (product / 제품)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **12. Inner sản phẩm (product / 제품) không nhất thiết là ordinary dot sản phẩm (product / 제품)** nối từ **11. Classical Gram–Schmidt vs numerical stability** sang **13. hàm (function / 함수) spaces cũng có inner sản phẩm (product / 제품)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Inner sản phẩm (product / 제품) không nhất thiết là ordinary dot sản phẩm (product / 제품)
 
@@ -414,7 +414,7 @@ d(x,\mu)^2
 
 là Euclidean-like hình học (geometry / 기하학) sau khi account covariance scaling.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **13. hàm (function / 함수) spaces cũng có inner sản phẩm (product / 제품)** tiếp nhận điểm tựa từ **12. Inner sản phẩm (product / 제품) không nhất thiết là ordinary dot sản phẩm (product / 제품)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Cosine similarity và embeddings** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **13. hàm (function / 함수) spaces cũng có inner sản phẩm (product / 제품)** nối từ **12. Inner sản phẩm (product / 제품) không nhất thiết là ordinary dot sản phẩm (product / 제품)** sang **14. Cosine similarity và embeddings**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. hàm (function / 함수) spaces cũng có inner sản phẩm (product / 제품)
 
@@ -440,7 +440,7 @@ signal
 
 Fourier phân tích (analysis / 분석) vì vậy là tuyến tính (linear / 선형) algebra trong infinite-dimensional hàm (function / 함수) không gian (space / 공간).
 
-> **Chuyển mạch:** Trong **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **14. Cosine similarity và embeddings** tiếp nhận điểm tựa từ **13. hàm (function / 함수) spaces cũng có inner sản phẩm (product / 제품)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Projection ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **14. Cosine similarity và embeddings** nối từ **13. hàm (function / 함수) spaces cũng có inner sản phẩm (product / 제품)** sang **15. Projection ma trận (matrix / 행렬)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Cosine similarity và embeddings
 
@@ -456,7 +456,7 @@ Nó bỏ magnitude và đo directional alignment.
 
 Trong embedding không gian (space / 공간), interpretation phụ thuộc mô hình (model / 모델) huấn luyện (training / 학습) hình học (geometry / 기하학). High cosine similarity không universal đồng nghĩa “semantically same”; nó chỉ nói biểu diễn (representation / 표현) vectors align theo chỉ số (metric / 지표) được chọn.
 
-> **Chuyển mạch:** Ở chặng này của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **15. Projection ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **14. Cosine similarity và embeddings** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Pythagorean năng lượng (energy / 에너지) decomposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **15. Projection ma trận (matrix / 행렬)** nối từ **14. Cosine similarity và embeddings** sang **16. Pythagorean năng lượng (energy / 에너지) decomposition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Projection ma trận (matrix / 행렬)
 
@@ -490,7 +490,7 @@ P=A(A^TA)^{-1}A^T.
 
 Trong hiện thực (implementation / 구현), thường không form expression này tường minh (explicit / 명시적) nếu numerical stability quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **16. Pythagorean năng lượng (energy / 에너지) decomposition** tiếp nhận điểm tựa từ **15. Projection ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. PCA liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **16. Pythagorean năng lượng (energy / 에너지) decomposition** nối từ **15. Projection ma trận (matrix / 행렬)** sang **17. PCA liên kết (connection / 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Pythagorean năng lượng (energy / 에너지) decomposition
 
@@ -517,7 +517,7 @@ có geometric decomposition liên quan sum of squares dưới các giả định
 
 Trong tín hiệu (signal / 신호) processing, orthogonal basis cũng cho năng lượng (energy / 에너지) decomposition.
 
-> **Chuyển mạch:** Trong **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, sau nội dung của **16. Pythagorean năng lượng (energy / 에너지) decomposition**, **17. PCA liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **18. Physics liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, sau nội dung của **16. Pythagorean năng lượng (energy / 에너지) decomposition**, **17. PCA liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **18. Physics liên kết (connection / 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 17. PCA liên kết (connection / 연결)
 
@@ -534,7 +534,7 @@ Projection lên low-dimensional principal subspace giữ lại nhiều squared n
 
 Orthogonality làm selected directions không redundant theo Euclidean hình học (geometry / 기하학).
 
-> **Chuyển mạch:** Ở chặng này của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **18. Physics liên kết (connection / 연결)** tiếp nhận điểm tựa từ **17. PCA liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Proof idea: best projection vì residual orthogonal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **18. Physics liên kết (connection / 연결)** nối từ **17. PCA liên kết (connection / 연결)** sang **19. Proof idea: best projection vì residual orthogonal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Physics liên kết (connection / 연결)
 
@@ -554,7 +554,7 @@ force perpendicular to motion → zero work contribution
 
 Inner sản phẩm (product / 제품) là “alignment multiplier”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **19. Proof idea: best projection vì residual orthogonal** tiếp nhận điểm tựa từ **18. Physics liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. các giả định (assumptions / 가정들) và chỉ số (metric / 지표) choice** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **19. Proof idea: best projection vì residual orthogonal** nối từ **18. Physics liên kết (connection / 연결)** sang **20. các giả định (assumptions / 가정들) và chỉ số (metric / 지표) choice**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Proof idea: best projection vì residual orthogonal
 
@@ -578,7 +578,7 @@ Equality chỉ khi `u=p`.
 
 Đây là proof hình học rằng projection là nearest điểm (point / 지점).
 
-> **Chuyển mạch:** Trong **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **20. các giả định (assumptions / 가정들) và chỉ số (metric / 지표) choice** tiếp nhận điểm tựa từ **19. Proof idea: best projection vì residual orthogonal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **20. các giả định (assumptions / 가정들) và chỉ số (metric / 지표) choice** nối từ **19. Proof idea: best projection vì residual orthogonal** sang **Liên kết kiến thức (knowledge connection / 지식 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. các giả định (assumptions / 가정들) và chỉ số (metric / 지표) choice
 
@@ -588,7 +588,7 @@ Nếu tính năng (feature / 기능) scales khác nhau mạnh, ordinary Euclidea
 
 Standardization, whitening hoặc weighted metrics không chỉ preprocessing cosmetic; chúng thay notion length, angle và nearest điểm (point / 지점).
 
-> **Chuyển mạch:** Ở chặng này của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, sau nội dung của **20. các giả định (assumptions / 가정들) và chỉ số (metric / 지표) choice**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, sau nội dung của **20. các giả định (assumptions / 가정들) và chỉ số (metric / 지표) choice**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
@@ -607,13 +607,13 @@ Pythagoras
 → weighted statistical geometry
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Inner sản phẩm (product / 제품) là **máy đo alignment**. Orthogonality nghĩa “không share thành phần (component / 컴포넌트)” theo hình học (geometry / 기하학) đã chọn. Projection là **best approximation trong một subspace**. Least squares, Fourier coefficients, PCA và nhiều regression methods đều là các phiên bản của cùng một câu hỏi: phần nào của đối tượng (object / 객체) nằm trong không gian (space / 공간) ta có thể represent?
 
-> **Chuyển mạch:** Trong **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Inner sản phẩm (product / 제품), trực giao và phép chiếu: hình học (geometry / 기하학) từ một phép đo alignment**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

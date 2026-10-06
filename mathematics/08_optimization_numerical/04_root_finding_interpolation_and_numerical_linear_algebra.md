@@ -35,7 +35,7 @@ Gốc (root / 루트) finding tìm `x` sao cho residual `f(x)` gần zero.
 
 Nhưng residual nhỏ không luôn đồng nghĩa gốc (root / 루트) lỗi (error / 오류) nhỏ nếu derivative gần zero hoặc bài toán (problem / 문제) ill-conditioned.
 
-> **Chuyển mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **2. Bisection: theorem-driven robustness** tiếp nhận điểm tựa từ **1. gốc (root / 루트) finding: rewrite về f(x)=0** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Bisection strength và limitation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **2. Bisection: theorem-driven robustness** nối từ **1. gốc (root / 루트) finding: rewrite về f(x)=0** sang **3. Bisection strength và limitation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Bisection: theorem-driven robustness
 
@@ -64,7 +64,7 @@ After `n` steps:
 
 Absolute gốc (root / 루트) bất định (uncertainty / 불확실성) ≤ half interval width nếu gốc (root / 루트) bracketed uniquely enough for purpose.
 
-> **Chuyển mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **2. Bisection: theorem-driven robustness** đã nêu tiêu chí phân biệt, còn **3. Bisection strength và limitation** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4. Newton phương thức (method / 메서드) từ Taylor linearization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **2. Bisection: theorem-driven robustness** đặt tiêu chí; **3. Bisection strength và limitation** dùng tiêu chí đó để kiểm tra ranh giới, rồi **4. Newton phương thức (method / 메서드) từ Taylor linearization** mở rộng hệ quả.
 
 ## 3. Bisection strength và limitation
 
@@ -86,7 +86,7 @@ cannot directly detect even-multiplicity root with no sign change
 
 Example `f(x)=x^2` có gốc (root / 루트) at 0 nhưng sign không đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **3. Bisection strength và limitation** đã nêu tiêu chí phân biệt, còn **4. Newton phương thức (method / 메서드) từ Taylor linearization** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **5. Quadratic convergence near simple gốc (root / 루트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **3. Bisection strength và limitation** đặt tiêu chí; **4. Newton phương thức (method / 메서드) từ Taylor linearization** dùng tiêu chí đó để kiểm tra ranh giới, rồi **5. Quadratic convergence near simple gốc (root / 루트)** mở rộng hệ quả.
 
 ## 4. Newton phương thức (method / 메서드) từ Taylor linearization
 
@@ -108,7 +108,7 @@ x_{n+1}
 
 Newton is not arbitrary formula; it solves the tangent-line approximation exactly each iteration.
 
-> **Chuyển mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **5. Quadratic convergence near simple gốc (root / 루트)** tiếp nhận điểm tựa từ **4. Newton phương thức (method / 메서드) từ Taylor linearization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Newton thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **5. Quadratic convergence near simple gốc (root / 루트)** nối từ **4. Newton phương thức (method / 메서드) từ Taylor linearization** sang **6. Newton thất bại (failure / 실패) modes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Quadratic convergence near simple gốc (root / 루트)
 
@@ -130,7 +130,7 @@ Number of correct digits can roughly double each step once close enough.
 
 But this is cục bộ (local / 로컬) hành vi (behavior / 동작), not toàn cục (global / 전역) guarantee.
 
-> **Chuyển mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **6. Newton thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **5. Quadratic convergence near simple gốc (root / 루트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Secant phương thức (method / 메서드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **6. Newton thất bại (failure / 실패) modes** nối từ **5. Quadratic convergence near simple gốc (root / 루트)** sang **7. Secant phương thức (method / 메서드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Newton thất bại (failure / 실패) modes
 
@@ -149,7 +149,7 @@ For multiple gốc (root / 루트), convergence can degrade from quadratic to tu
 
 Modified Newton can use multiplicity thông tin (information / 정보) if known.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **7. Secant phương thức (method / 메서드)** tiếp nhận điểm tựa từ **6. Newton thất bại (failure / 실패) modes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Hybrid methods** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **7. Secant phương thức (method / 메서드)** nối từ **6. Newton thất bại (failure / 실패) modes** sang **8. Hybrid methods**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Secant phương thức (method / 메서드)
 
@@ -166,7 +166,7 @@ f(x_n)
 
 It avoids analytic derivative and often converges faster than bisection, but lacks same bracketing robustness.
 
-> **Chuyển mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **8. Hybrid methods** tiếp nhận điểm tựa từ **7. Secant phương thức (method / 메서드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Fixed-point iteration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **8. Hybrid methods** nối từ **7. Secant phương thức (method / 메서드)** sang **9. Fixed-point iteration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Hybrid methods
 
@@ -181,7 +181,7 @@ For example, stay inside bracket; use fast step when trustworthy, otherwise fall
 
 Kỹ thuật (engineering / 엔지니어링) lesson: robust software rarely uses the pure textbook phương thức (method / 메서드) blindly.
 
-> **Chuyển mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **9. Fixed-point iteration** tiếp nhận điểm tựa từ **8. Hybrid methods** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Contraction ánh xạ (mapping / 매핑) viewpoint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **9. Fixed-point iteration** nối từ **8. Hybrid methods** sang **10. Contraction ánh xạ (mapping / 매핑) viewpoint**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Fixed-point iteration
 
@@ -212,7 +212,7 @@ Near fixed điểm (point / 지점) `x^*`, if:
 
 Same equation can have convergent or divergent fixed-point forms depending on rearrangement.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **10. Contraction ánh xạ (mapping / 매핑) viewpoint** tiếp nhận điểm tựa từ **9. Fixed-point iteration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Stopping criteria** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **10. Contraction ánh xạ (mapping / 매핑) viewpoint** nối từ **9. Fixed-point iteration** sang **11. Stopping criteria**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Contraction ánh xạ (mapping / 매핑) viewpoint
 
@@ -220,7 +220,7 @@ In a complete chỉ số (metric / 지표) không gian (space / 공간), contrac
 
 This theorem connects numerical iteration with real phân tích (analysis / 분석) and động (dynamic / 동적) programming.
 
-> **Chuyển mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **11. Stopping criteria** tiếp nhận điểm tựa từ **10. Contraction ánh xạ (mapping / 매핑) viewpoint** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Interpolation: chính xác (exact / 정확한) fit tại known nodes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **11. Stopping criteria** nối từ **10. Contraction ánh xạ (mapping / 매핑) viewpoint** sang **12. Interpolation: chính xác (exact / 정확한) fit tại known nodes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Stopping criteria
 
@@ -238,7 +238,7 @@ No single criterion universally sufficient.
 
 Residual tolerance should reflect bài toán (problem / 문제) quy mô (scale / 규모) and conditioning.
 
-> **Chuyển mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **12. Interpolation: chính xác (exact / 정확한) fit tại known nodes** tiếp nhận điểm tựa từ **11. Stopping criteria** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Lagrange interpolation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **12. Interpolation: chính xác (exact / 정확한) fit tại known nodes** nối từ **11. Stopping criteria** sang **13. Lagrange interpolation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Interpolation: chính xác (exact / 정확한) fit tại known nodes
 
@@ -253,7 +253,7 @@ there is unique polynomial degree ≤ `n` passing through them.
 
 Interpolation assumes values are treated as chính xác (exact / 정확한) enough that matching them exactly is meaningful.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **13. Lagrange interpolation** tiếp nhận điểm tựa từ **12. Interpolation: chính xác (exact / 정확한) fit tại known nodes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Newton divided differences** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **13. Lagrange interpolation** nối từ **12. Interpolation: chính xác (exact / 정확한) fit tại known nodes** sang **14. Newton divided differences**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Lagrange interpolation
 
@@ -282,7 +282,7 @@ L_i(x_j)=\delta_{ij}.
 
 Each basis polynomial selects one mẫu (sample / 표본) giá trị (value / 값).
 
-> **Chuyển mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **14. Newton divided differences** tiếp nhận điểm tựa từ **13. Lagrange interpolation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Interpolation lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **14. Newton divided differences** nối từ **13. Lagrange interpolation** sang **15. Interpolation lỗi (error / 오류)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Newton divided differences
 
@@ -299,7 +299,7 @@ Coefficients come from divided differences.
 
 Advantage: adding a new nút (node / 노드) extends polynomial without rebuilding all basis terms.
 
-> **Chuyển mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **15. Interpolation lỗi (error / 오류)** tiếp nhận điểm tựa từ **14. Newton divided differences** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Runge phenomenon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **15. Interpolation lỗi (error / 오류)** nối từ **14. Newton divided differences** sang **16. Runge phenomenon**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Interpolation lỗi (error / 오류)
 
@@ -316,7 +316,7 @@ for some `\xi` in relevant interval.
 
 Lỗi (error / 오류) depends both hàm (function / 함수) derivatives and nút (node / 노드) placement.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **16. Runge phenomenon** tiếp nhận điểm tựa từ **15. Interpolation lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Chebyshev nodes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **16. Runge phenomenon** nối từ **15. Interpolation lỗi (error / 오류)** sang **17. Chebyshev nodes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Runge phenomenon
 
@@ -326,7 +326,7 @@ More degree does not automatically mean better approximation.
 
 This is a major lesson against “fit more exactly = improve mô hình (model / 모델)”.
 
-> **Chuyển mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **17. Chebyshev nodes** tiếp nhận điểm tựa từ **16. Runge phenomenon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Splines** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **17. Chebyshev nodes** nối từ **16. Runge phenomenon** sang **18. Splines**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Chebyshev nodes
 
@@ -336,7 +336,7 @@ Chebyshev nodes minimize growth related to interpolation sản phẩm (product /
 
 This shows **where** dữ liệu (data / 데이터) is sampled can matter as much as number of samples.
 
-> **Chuyển mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **18. Splines** tiếp nhận điểm tựa từ **17. Chebyshev nodes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Interpolation khác regression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **18. Splines** nối từ **17. Chebyshev nodes** sang **19. Interpolation khác regression**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Splines
 
@@ -354,7 +354,7 @@ stable interpolation
 
 CAD, graphics and numerical approximation use splines extensively.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **19. Interpolation khác regression** tiếp nhận điểm tựa từ **18. Splines** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Approximation bases** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **19. Interpolation khác regression** nối từ **18. Splines** sang **20. Approximation bases**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Interpolation khác regression
 
@@ -374,7 +374,7 @@ If measurements noisy, chính xác (exact / 정확한) interpolation may fit noi
 
 This is a modeling quyết định (decision / 결정), not merely mathematical preference.
 
-> **Chuyển mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **20. Approximation bases** tiếp nhận điểm tựa từ **19. Interpolation khác regression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. tuyến tính (linear / 선형) các hệ thống (systems / 시스템들): chính xác (exact / 정확한) algebra vs numerical solve** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **20. Approximation bases** nối từ **19. Interpolation khác regression** sang **21. tuyến tính (linear / 선형) các hệ thống (systems / 시스템들): chính xác (exact / 정확한) algebra vs numerical solve**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Approximation bases
 
@@ -392,7 +392,7 @@ orthogonal polynomials
 
 Basis choice should reflect smoothness, periodicity, locality and computational needs.
 
-> **Chuyển mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **21. tuyến tính (linear / 선형) các hệ thống (systems / 시스템들): chính xác (exact / 정확한) algebra vs numerical solve** tiếp nhận điểm tựa từ **20. Approximation bases** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Gaussian elimination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **21. tuyến tính (linear / 선형) các hệ thống (systems / 시스템들): chính xác (exact / 정확한) algebra vs numerical solve** nối từ **20. Approximation bases** sang **22. Gaussian elimination**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. tuyến tính (linear / 선형) các hệ thống (systems / 시스템들): chính xác (exact / 정확한) algebra vs numerical solve
 
@@ -410,7 +410,7 @@ x=A^{-1}b.
 
 Numerically, explicitly forming `A^{-1}` is usually unnecessary and often less stable/efficient than solving via factorization.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **22. Gaussian elimination** tiếp nhận điểm tựa từ **21. tuyến tính (linear / 선형) các hệ thống (systems / 시스템들): chính xác (exact / 정확한) algebra vs numerical solve** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Pivoting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **22. Gaussian elimination** nối từ **21. tuyến tính (linear / 선형) các hệ thống (systems / 시스템들): chính xác (exact / 정확한) algebra vs numerical solve** sang **23. Pivoting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Gaussian elimination
 
@@ -426,7 +426,7 @@ Back substitution then costs `O(n^2)`.
 
 This is practical for moderate dense các hệ thống (systems / 시스템들) but not huge sparse các hệ thống (systems / 시스템들).
 
-> **Chuyển mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **23. Pivoting** tiếp nhận điểm tựa từ **22. Gaussian elimination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. LU factorization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **23. Pivoting** nối từ **22. Gaussian elimination** sang **24. LU factorization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Pivoting
 
@@ -442,7 +442,7 @@ PA=LU.
 
 Pivoting is numerical stability chiến lược (strategy / 전략), not a thay đổi (change / 변경) to mathematical solution.
 
-> **Chuyển mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **24. LU factorization** tiếp nhận điểm tựa từ **23. Pivoting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. QR factorization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **24. LU factorization** nối từ **23. Pivoting** sang **25. QR factorization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. LU factorization
 
@@ -466,7 +466,7 @@ Ux=y.
 
 If many right-hand sides share same `A`, factorization reused, making solves cheaper.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **25. QR factorization** tiếp nhận điểm tựa từ **24. LU factorization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Cholesky** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **25. QR factorization** nối từ **24. LU factorization** sang **26. Cholesky**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. QR factorization
 
@@ -480,7 +480,7 @@ with `Q` orthogonal and `R` upper triangular.
 
 QR is especially useful for least squares because orthogonal transforms preserve 2-norm and avoid squaring điều kiện (condition / 조건) number as normal equations do.
 
-> **Chuyển mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **26. Cholesky** tiếp nhận điểm tựa từ **25. QR factorization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Sparse các hệ thống (systems / 시스템들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **26. Cholesky** nối từ **25. QR factorization** sang **27. Sparse các hệ thống (systems / 시스템들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Cholesky
 
@@ -494,7 +494,7 @@ Cholesky uses cấu trúc (structure / 구조) to reduce computation/lưu trữ 
 
 But applying Cholesky requires checking/knowing SPD các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **27. Sparse các hệ thống (systems / 시스템들)** tiếp nhận điểm tựa từ **26. Cholesky** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Iterative tuyến tính (linear / 선형) solvers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **27. Sparse các hệ thống (systems / 시스템들)** nối từ **26. Cholesky** sang **28. Iterative tuyến tính (linear / 선형) solvers**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Sparse các hệ thống (systems / 시스템들)
 
@@ -504,7 +504,7 @@ Dense algorithms waste bộ nhớ (memory / 메모리)/thời gian (time / 시�
 
 Thứ tự (ordering / 순서) strategies matter.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **28. Iterative tuyến tính (linear / 선형) solvers** tiếp nhận điểm tựa từ **27. Sparse các hệ thống (systems / 시스템들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Residual vs lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **28. Iterative tuyến tính (linear / 선형) solvers** nối từ **27. Sparse các hệ thống (systems / 시스템들)** sang **29. Residual vs lỗi (error / 오류)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Iterative tuyến tính (linear / 선형) solvers
 
@@ -523,7 +523,7 @@ Choice depends ma trận (matrix / 행렬) cấu trúc (structure / 구조).
 
 Conjugate độ dốc (gradient / 기울기) requires symmetric positive definite ma trận (matrix / 행렬) for tiêu chuẩn (standard / 표준) guarantee.
 
-> **Chuyển mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **29. Residual vs lỗi (error / 오류)** tiếp nhận điểm tựa từ **28. Iterative tuyến tính (linear / 선형) solvers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. điều kiện (condition / 조건) number** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **29. Residual vs lỗi (error / 오류)** nối từ **28. Iterative tuyến tính (linear / 선형) solvers** sang **30. điều kiện (condition / 조건) number**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Residual vs lỗi (error / 오류)
 
@@ -553,7 +553,7 @@ e=A^{-1}r.
 
 If `A^{-1}` has large norm, tiny residual may correspond to large lỗi (error / 오류).
 
-> **Chuyển mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **30. điều kiện (condition / 조건) number** tiếp nhận điểm tựa từ **29. Residual vs lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Conditioning vs stability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **30. điều kiện (condition / 조건) number** nối từ **29. Residual vs lỗi (error / 오류)** sang **31. Conditioning vs stability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. điều kiện (condition / 조건) number
 
@@ -569,7 +569,7 @@ Large `\kappa` means bài toán (problem / 문제) intrinsically sensitive.
 
 Even perfect thuật toán (algorithm / 알고리즘) cannot recover thông tin (information / 정보) absent from noisy/finite-precision đầu vào (input / 입력).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **31. Conditioning vs stability** tiếp nhận điểm tựa từ **30. điều kiện (condition / 조건) number** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Floating-point mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **31. Conditioning vs stability** nối từ **30. điều kiện (condition / 조건) number** sang **32. Floating-point mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Conditioning vs stability
 
@@ -586,7 +586,7 @@ Backward stable thuật toán (algorithm / 알고리즘) returns chính xác (ex
 
 This distinction is central to numerical phân tích (analysis / 분석).
 
-> **Chuyển mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **32. Floating-point mô hình (model / 모델)** tiếp nhận điểm tựa từ **31. Conditioning vs stability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Catastrophic cancellation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **32. Floating-point mô hình (model / 모델)** nối từ **31. Conditioning vs stability** sang **33. Catastrophic cancellation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Floating-point mô hình (model / 모델)
 
@@ -602,7 +602,7 @@ for thao tác (operation / 연산) `\circ` under normal conditions, where `u` is
 
 Small cục bộ (local / 로컬) errors can accumulate/amplify depending thuật toán (algorithm / 알고리즘)/bài toán (problem / 문제).
 
-> **Chuyển mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **33. Catastrophic cancellation** tiếp nhận điểm tựa từ **32. Floating-point mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Scaling và preconditioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **33. Catastrophic cancellation** nối từ **32. Floating-point mô hình (model / 모델)** sang **34. Scaling và preconditioning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Catastrophic cancellation
 
@@ -626,7 +626,7 @@ which is algebraically equivalent but numerically more stable.
 
 Biểu diễn (representation / 표현) affects computation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **34. Scaling và preconditioning** tiếp nhận điểm tựa từ **33. Catastrophic cancellation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Numerical eigenvalue liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **34. Scaling và preconditioning** nối từ **33. Catastrophic cancellation** sang **35. Numerical eigenvalue liên kết (connection / 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Scaling và preconditioning
 
@@ -642,7 +642,7 @@ M^{-1}Ax=M^{-1}b.
 
 Good preconditioner approximates inverse cheaply enough to accelerate convergence.
 
-> **Chuyển mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, sau nội dung của **34. Scaling và preconditioning**, **35. Numerical eigenvalue liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **36. Worked example: Newton for square gốc (root / 루트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, sau nội dung của **34. Scaling và preconditioning**, **35. Numerical eigenvalue liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **36. Worked example: Newton for square gốc (root / 루트)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 35. Numerical eigenvalue liên kết (connection / 연결)
 
@@ -652,7 +652,7 @@ Methods like power iteration, Lanczos/Arnoldi exploit matrix-vector products and
 
 This shows numerical tuyến tính (linear / 선형) algebra often uses iterative hình học (geometry / 기하학) rather than symbolic formulas.
 
-> **Chuyển mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **35. Numerical eigenvalue liên kết (connection / 연결)** cho ta quy tắc; **36. Worked example: Newton for square gốc (root / 루트)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **37. Worked example: ill-conditioned 2×2 intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **35. Numerical eigenvalue liên kết (connection / 연결)** nêu quy tắc; **36. Worked example: Newton for square gốc (root / 루트)** thử quy tắc trong tình huống, rồi **37. Worked example: ill-conditioned 2×2 intuition** mở rộng hệ quả.
 
 ## 36. Worked example: Newton for square gốc (root / 루트)
 
@@ -679,7 +679,7 @@ x_{n+1}
 
 This is classical Babylonian square-root iteration.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **36. Worked example: Newton for square gốc (root / 루트)** cho ta quy tắc; **37. Worked example: ill-conditioned 2×2 intuition** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **38. AI liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **36. Worked example: Newton for square gốc (root / 루트)** nêu quy tắc; **37. Worked example: ill-conditioned 2×2 intuition** thử quy tắc trong tình huống, rồi **38. AI liên kết (connection / 연결)** mở rộng hệ quả.
 
 ## 37. Worked example: ill-conditioned 2×2 intuition
 
@@ -689,7 +689,7 @@ Small perturbation in `b` can demand large coefficient changes in `x` to reprodu
 
 This is same hình học (geometry / 기하학) seen in rank/nullspace: near dependence ⇒ small singular giá trị (value / 값) ⇒ large điều kiện (condition / 조건) number.
 
-> **Chuyển mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **37. Worked example: ill-conditioned 2×2 intuition** cho ta quy tắc; **38. AI liên kết (connection / 연결)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **39. Scientific computing workflow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **37. Worked example: ill-conditioned 2×2 intuition** nêu quy tắc; **38. AI liên kết (connection / 연결)** thử quy tắc trong tình huống, rồi **39. Scientific computing workflow** mở rộng hệ quả.
 
 ## 38. AI liên kết (connection / 연결)
 
@@ -705,7 +705,7 @@ stable softmax/log-sum-exp
 
 Numerical tính đúng đắn (correctness / 정확성) matters because high-dimensional tối ưu hóa (optimization / 최적화) repeatedly amplifies small computational choices.
 
-> **Chuyển mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **38. AI liên kết (connection / 연결)** xác định đầu vào; **39. Scientific computing workflow** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **38. AI liên kết (connection / 연결)** đặt đầu vào cho **39. Scientific computing workflow**, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 39. Scientific computing workflow
 
@@ -723,13 +723,13 @@ compare against independent method when possible
 
 A number printed with many decimals is not bằng chứng (evidence / 증거) of accuracy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **39. Scientific computing workflow** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **39. Scientific computing workflow** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Numerical mathematics studies what thông tin (information / 정보) survives finite precision and finite computation. A good phương thức (method / 메서드) converges for the right structural reasons, exposes lỗi (error / 오류), respects conditioning and uses bài toán (problem / 문제) cấu trúc (structure / 구조) instead of blindly applying formulas.
 
-> **Chuyển mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Gốc (root / 루트) finding, interpolation và numerical tuyến tính (linear / 선형) algebra: approximation dưới finite precision**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 
