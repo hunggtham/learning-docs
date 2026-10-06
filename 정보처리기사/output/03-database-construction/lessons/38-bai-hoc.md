@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **19. 암호화 기법과 접근 통제 (Kỹ thuật Mã hóa và Kiểm soát Truy cập)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)**, **핵심 키워드 (Từ khóa)** nối từ **학습 목표 (Mục tiêu)** sang **선행·연결 개념 (Kiến thức liên kết)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 핵심 키워드 (Từ khóa)
 
 파티셔닝과, 암호화
 
-> **Chuyển mạch:** Ở chặng này của **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)**, **핵심 키워드 (Từ khóa)** dẫn sang **선행·연결 개념 (Kiến thức liên kết)**, nơi tài liệu chuẩn và vị trí sở hữu được chỉ rõ để biết chỗ đào sâu tiếp; **읽는 방법 (Cách đọc)** mở rộng hệ quả liên quan.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **17. 스토리지와 분산 데이터베이스 (Lưu trữ và CSDL Phân tán)**에서 만든 기준을 이어받아 **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)**, **읽는 방법 (Cách đọc)** nối từ **선행·연결 개념 (Kiến thức liên kết)** sang **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **18. 파티셔닝과 암호화 (Phân v
 
 ---
 
-> **Chuyển mạch:** Trong **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)**, **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)**, **18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)** nối từ **읽는 방법 (Cách đọc)** sang phần giải thích tiếp theo, vì phần trước cung cấp điểm tựa cho chủ đề này.
 
 ## 18. 파티셔닝과 암호화 (Phân vùng và Mã hóa)
 
@@ -60,7 +60,7 @@ Ta vừa chốt **파티셔닝 (Partitioning)** bằng các điều kiện và �
 
 ### 데이터베이스 암호화 (Mã hóa CSDL)
 
-Các ý ngay dưới **데이터베이스 암호화 (Mã hóa CSDL)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **데이터베이스 암호화 (Mã hóa CSDL)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “데이터베이스 암호화 (Mã hóa CSDL)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
