@@ -2,6 +2,10 @@
 
 [← Mục lục sách 1](./00-book1-index.md) · [Phần trước](./04-securities-institutions.md) · [Phần tiếp theo](./06-stock-market-trading.md)
 
+> **SOURCE / TEXTBOOK STATE:** Mọi ngưỡng, tỷ lệ, giờ giao dịch, điều kiện pháp lý hoặc quy tắc sản phẩm không có block current riêng đều là snapshot của sach1.md và ảnh nguồn tương ứng.
+>
+> **CURRENT VERIFIED STATE:** Không suy ra quy định 2026 từ các con số trong sách. Route này chỉ gọi một rule là current khi có nguồn chính thức và ngày snapshot; nếu không có block như vậy, phải tra nguồn chính thức phù hợp trước khi áp dụng thực tế.
+
 ## 한국어 핵심어 — Từ khóa đọc nhanh
 
 - `기업공개` — IPO/công khai doanh nghiệp; `기업` là doanh nghiệp, `공개` là
