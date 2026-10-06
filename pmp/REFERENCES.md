@@ -120,6 +120,32 @@ Nguồn này dùng để đối chiếu governance framework, roles, monitoring/
 
 > **Nối mạch:** Các nguồn bổ sung giải thích provenance của các mechanism mới; **Nguồn nội bộ repository** tiếp theo chỉ owner nơi chúng được dạy và cross-link.
 
+### Reference class forecasting và planning fallacy
+
+https://www.pmi.org/learning/library/nobel-project-management-reference-class-forecasting-8068
+
+PMI Research Conference paper của Bent Flyvbjerg giải thích reference class forecasting như một **outside view** dùng actual outcomes của comparable projects để challenge conventional inside-view forecast và optimism bias. [Quantitative Reasoning](./15_quantitative_reasoning_worked_examples.md) dùng cơ chế này để bổ sung base-rate reasoning, không thay bottom-up planning.
+
+Nguồn PMI bổ sung về estimating/reference-class approach:
+
+https://www.pmi.org/learning/library/estimating-science-uncertainty-10186
+
+Nguồn này mô tả reference class forecasting như việc tham chiếu project tương tự trước đây để phát triển estimate và xử lý optimism bias.
+
+### Probability uncertainty và evidence updating
+
+https://www.pmi.org/learning/library/overcoming-barriers-assessing-risk-probabilities-6083
+
+PMI lưu ý probability estimate thường không phải definitive number và có thể cần range/error-bar style representation khi uncertainty về probability còn lớn. Thư viện dùng điểm này để thêm **second-order uncertainty** quanh risk probability/EMV.
+
+Nền thống kê chính thức cho prior → evidence → posterior:
+
+https://www.itl.nist.gov/div898/handbook/apr/section2/apr1a.htm
+
+NIST Engineering Statistics Handbook giải thích Bayesian methodology: prior information được kết hợp với current data qua Bayes formula để tạo posterior distribution. Trong PMP library, cơ chế này chỉ được dùng ở mức decision reasoning—update risk belief khi evidence mới xuất hiện—không biến chapter thành khóa Bayesian statistics.
+
+> **Nối mạch:** Các nguồn này đóng provenance cho outside-view forecasting và evidence updating; **Nguồn nội bộ repository** tiếp theo giữ canonical ownership của prose học tập.
+
 ## Nguồn (source / 소스) nội bộ repository
 
 `./raw/` và `./workflow-output/` là provenance đã tồn tại trước thư viện kiến thức (knowledge library / 지식 라이브러리) này. Chúng được giữ nguyên, không coi là nguồn chuẩn cho thông tin exam 2026 nếu nội dung cũ hơn.
