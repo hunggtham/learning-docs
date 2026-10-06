@@ -19,7 +19,7 @@ Khi nghiên cứu lão hóa, cần quan tâm thêm đến:
 - môi trường xã hội;
 - lịch sử thế hệ (cohort history).
 
-> **Chuyển mạch:** Trong **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Tuổi theo lịch không nói hết toàn bộ câu chuyện** xác định đầu vào; **Tốc độ xử lý — processing speed** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Trí nhớ tình tiết và trí nhớ ngữ nghĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Tuổi theo lịch không nói hết toàn bộ câu chuyện** đặt đầu vào cho **Tốc độ xử lý — processing speed**, rồi **Trí nhớ tình tiết và trí nhớ ngữ nghĩa** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tốc độ xử lý — processing speed
 
@@ -29,7 +29,7 @@ Trong công việc, yêu cầu phản ứng cực nhanh có thể làm người 
 
 Đây là lý do không nên đồng nhất `tốc độ` với `năng lực tổng thể`.
 
-> **Chuyển mạch:** Ở chặng này của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Tốc độ xử lý — processing speed** xác định đầu vào; **Trí nhớ tình tiết và trí nhớ ngữ nghĩa** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Trí nhớ làm việc và chú ý chia sẻ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Tốc độ xử lý — processing speed** đặt đầu vào cho **Trí nhớ tình tiết và trí nhớ ngữ nghĩa**, rồi **Trí nhớ làm việc và chú ý chia sẻ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Trí nhớ tình tiết và trí nhớ ngữ nghĩa
 
@@ -39,7 +39,7 @@ Người lớn tuổi có thể khó nhớ nguồn của một thông tin mới 
 
 Điều này không có nghĩa mọi lần quên đều là dấu hiệu của sa sút trí tuệ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Trí nhớ làm việc và chú ý chia sẻ** tiếp nhận điểm tựa từ **Trí nhớ tình tiết và trí nhớ ngữ nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyên môn có thể bù cho tốc độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Trí nhớ làm việc và chú ý chia sẻ** nối từ **Trí nhớ tình tiết và trí nhớ ngữ nghĩa** sang **Chuyên môn có thể bù cho tốc độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trí nhớ làm việc và chú ý chia sẻ
 
@@ -55,7 +55,7 @@ Thiết kế môi trường có thể giảm tải bằng:
 
 Xem [[../02_learning_and_cognition/10_cognitive_offloading_external_memory_and_extended_cognition]].
 
-> **Chuyển mạch:** Trong **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Chuyên môn có thể bù cho tốc độ** tiếp nhận điểm tựa từ **Trí nhớ làm việc và chú ý chia sẻ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lực linh hoạt và năng lực kết tinh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Chuyên môn có thể bù cho tốc độ** nối từ **Trí nhớ làm việc và chú ý chia sẻ** sang **Năng lực linh hoạt và năng lực kết tinh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyên môn có thể bù cho tốc độ
 
@@ -63,7 +63,7 @@ Chuyên môn sâu tạo ra lược đồ (schema / 스키마) giúp nhận diệ
 
 Vì vậy hiệu suất thực tế không thể suy ra chỉ từ một bài kiểm tra reaction thời gian (time / 시간).
 
-> **Chuyển mạch:** Ở chặng này của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Năng lực linh hoạt và năng lực kết tinh** tiếp nhận điểm tựa từ **Chuyên môn có thể bù cho tốc độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Suy giảm giác quan có thể trông giống suy giảm nhận thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Năng lực linh hoạt và năng lực kết tinh** nối từ **Chuyên môn có thể bù cho tốc độ** sang **Suy giảm giác quan có thể trông giống suy giảm nhận thức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lực linh hoạt và năng lực kết tinh
 
@@ -73,7 +73,7 @@ Vì vậy hiệu suất thực tế không thể suy ra chỉ từ một bài ki
 
 Fluid ability thường suy giảm sớm hơn, còn crystallized ability có thể ổn định lâu hơn. Tuy nhiên đây là lớp trừu tượng (abstraction / 추상화); các nhiệm vụ đời thực thường dùng cả hai loại năng lực cùng lúc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Suy giảm giác quan có thể trông giống suy giảm nhận thức** tiếp nhận điểm tựa từ **Năng lực linh hoạt và năng lực kết tinh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lão hóa bình thường và suy giảm nhận thức nhẹ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Suy giảm giác quan có thể trông giống suy giảm nhận thức** nối từ **Năng lực linh hoạt và năng lực kết tinh** sang **Lão hóa bình thường và suy giảm nhận thức nhẹ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Suy giảm giác quan có thể trông giống suy giảm nhận thức
 
@@ -81,7 +81,7 @@ Thính lực hoặc thị lực kém làm đầu vào (input / 입력) khó xử
 
 Một người không nghe rõ hướng dẫn có thể bị hiểu nhầm là “không nhớ được”. Vì vậy assessment tốt cần xem cả sensory status.
 
-> **Chuyển mạch:** Trong **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Lão hóa bình thường và suy giảm nhận thức nhẹ** tiếp nhận điểm tựa từ **Suy giảm giác quan có thể trông giống suy giảm nhận thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dementia không phải lão hóa bình thường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Lão hóa bình thường và suy giảm nhận thức nhẹ** nối từ **Suy giảm giác quan có thể trông giống suy giảm nhận thức** sang **Dementia không phải lão hóa bình thường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lão hóa bình thường và suy giảm nhận thức nhẹ
 
@@ -91,7 +91,7 @@ MCI không tự động tiến triển thành dementia. Quỹ đạo có thể �
 
 Chẩn đoán cần đánh giá chuyên môn; không nên tự kết luận chỉ vì vài lần quên tên hoặc để đồ sai chỗ.
 
-> **Chuyển mạch:** Ở chặng này của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Dementia không phải lão hóa bình thường** tiếp nhận điểm tựa từ **Lão hóa bình thường và suy giảm nhận thức nhẹ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dự trữ nhận thức — cognitive reserve** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Dementia không phải lão hóa bình thường** nối từ **Lão hóa bình thường và suy giảm nhận thức nhẹ** sang **Dự trữ nhận thức — cognitive reserve**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dementia không phải lão hóa bình thường
 
@@ -101,7 +101,7 @@ Những nguyên nhân khác có thể liên quan đến bệnh mạch máu, Lewy
 
 `Dementia = già bình thường` là một hiểu lầm nguy hiểm vì có thể làm chậm việc đánh giá và can thiệp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Dự trữ nhận thức — cognitive reserve** tiếp nhận điểm tựa từ **Dementia không phải lão hóa bình thường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vận động thể chất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Dự trữ nhận thức — cognitive reserve** nối từ **Dementia không phải lão hóa bình thường** sang **Vận động thể chất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dự trữ nhận thức — cognitive reserve
 
@@ -111,7 +111,7 @@ Học tập, hoạt động nhận thức, vận động và tương tác xã h�
 
 Do đó không nên biến concept này thành khẩu hiệu kiểu “học nhiều thì sẽ không bị dementia”.
 
-> **Chuyển mạch:** Trong **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Vận động thể chất** tiếp nhận điểm tựa từ **Dự trữ nhận thức — cognitive reserve** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giấc ngủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Vận động thể chất** nối từ **Dự trữ nhận thức — cognitive reserve** sang **Giấc ngủ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vận động thể chất
 
@@ -119,7 +119,7 @@ Hoạt động thể chất có lợi cho sức khỏe tim mạch và có liên 
 
 Không cần tập cực đoan. Tính đều đặn, khả năng duy trì và mức phù hợp với tình trạng cơ thể quan trọng hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Giấc ngủ** tiếp nhận điểm tựa từ **Vận động thể chất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết nối xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Giấc ngủ** nối từ **Vận động thể chất** sang **Kết nối xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giấc ngủ
 
@@ -129,7 +129,7 @@ Sleep apnea cũng đáng chú ý vì có thể gây thiếu oxy từng đợt v�
 
 Xem [[../04_mental_health/11_sleep_insomnia_and_circadian_disorders]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Kết nối xã hội** tiếp nhận điểm tựa từ **Giấc ngủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trầm cảm và nhận thức ở tuổi già** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Kết nối xã hội** nối từ **Giấc ngủ** sang **Trầm cảm và nhận thức ở tuổi già**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kết nối xã hội
 
@@ -139,7 +139,7 @@ Hoạt động xã hội vừa cung cấp hỗ trợ vừa tạo kích thích nh
 
 Xem [[12_loneliness_social_connection_and_belonging]].
 
-> **Chuyển mạch:** Trong **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Trầm cảm và nhận thức ở tuổi già** tiếp nhận điểm tựa từ **Kết nối xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thuốc và polypharmacy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Trầm cảm và nhận thức ở tuổi già** nối từ **Kết nối xã hội** sang **Thuốc và polypharmacy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trầm cảm và nhận thức ở tuổi già
 
@@ -149,7 +149,7 @@ Nếu một người lớn tuổi đột nhiên than phiền trí nhớ, cần x
 
 Xem [[../04_mental_health/03_depression_bipolar_and_suicidality]].
 
-> **Chuyển mạch:** Ở chặng này của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Thuốc và polypharmacy** tiếp nhận điểm tựa từ **Trầm cảm và nhận thức ở tuổi già** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định kiến tuổi tác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Thuốc và polypharmacy** nối từ **Trầm cảm và nhận thức ở tuổi già** sang **Định kiến tuổi tác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thuốc và polypharmacy
 
@@ -157,7 +157,7 @@ Người lớn tuổi thường dùng nhiều loại thuốc hơn. Một số th
 
 Việc rà soát medication cần được thực hiện cùng clinician; không nên tự ý ngừng thuốc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Định kiến tuổi tác** tiếp nhận điểm tựa từ **Thuốc và polypharmacy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Socioemotional Selectivity lý thuyết (theory / 이론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Định kiến tuổi tác** nối từ **Thuốc và polypharmacy** sang **Socioemotional Selectivity lý thuyết (theory / 이론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định kiến tuổi tác
 
@@ -167,7 +167,7 @@ Nếu cùng một lỗi nhỏ nhưng lỗi của người trẻ được xem là
 
 Trong một số bối cảnh, stereotype threat cũng có thể ảnh hưởng kết quả bài kiểm tra nhận thức.
 
-> **Chuyển mạch:** Trong **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Socioemotional Selectivity lý thuyết (theory / 이론)** tiếp nhận điểm tựa từ **Định kiến tuổi tác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nghỉ hưu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Socioemotional Selectivity lý thuyết (theory / 이론)** nối từ **Định kiến tuổi tác** sang **Nghỉ hưu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Socioemotional Selectivity lý thuyết (theory / 이론)
 
@@ -177,7 +177,7 @@ Lý thuyết này đề xuất rằng khi một người cảm nhận thời gia
 
 Không phải người già “mất hứng thú xã hội”; priority có thể thay đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Nghỉ hưu** tiếp nhận điểm tựa từ **Socioemotional Selectivity lý thuyết (theory / 이론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đau buồn và mất mát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Nghỉ hưu** nối từ **Socioemotional Selectivity lý thuyết (theory / 이론)** sang **Đau buồn và mất mát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nghỉ hưu
 
@@ -187,7 +187,7 @@ Chuyển tiếp tốt cần thay thế một số chức năng đó, không ch�
 
 Xem [[../06_applied/22_career_vocational_psychology_and_person_environment_fit]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Đau buồn và mất mát** tiếp nhận điểm tựa từ **Nghỉ hưu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tự chủ và hỗ trợ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Đau buồn và mất mát** nối từ **Nghỉ hưu** sang **Tự chủ và hỗ trợ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đau buồn và mất mát
 
@@ -197,7 +197,7 @@ Grief không nên bị bệnh lý hóa tự động. Tuy nhiên nếu impairment
 
 Xem [[../04_mental_health/09_grief_loss_and_bereavement]].
 
-> **Chuyển mạch:** Trong **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Tự chủ và hỗ trợ** tiếp nhận điểm tựa từ **Đau buồn và mất mát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công nghệ và tuổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Tự chủ và hỗ trợ** nối từ **Đau buồn và mất mát** sang **Công nghệ và tuổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tự chủ và hỗ trợ
 
@@ -205,7 +205,7 @@ Hỗ trợ quá nhiều đôi khi vô tình làm giảm autonomy. Nếu gia đì
 
 Care tốt phải cân bằng **an toàn** và **quyền tự chủ**.
 
-> **Chuyển mạch:** Ở chặng này của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Công nghệ và tuổi** tiếp nhận điểm tựa từ **Tự chủ và hỗ trợ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Brain huấn luyện (training / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Công nghệ và tuổi** nối từ **Tự chủ và hỗ trợ** sang **Brain huấn luyện (training / 학습)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Công nghệ và tuổi
 
@@ -213,7 +213,7 @@ Kỹ năng số không cố định theo tuổi. huấn luyện (training / 학�
 
 Thiết kế tốt cho người lớn tuổi thường cũng tốt cho nhiều người khác: chữ rõ, độ tương phản tốt, lỗi (error / 오류) khôi phục (recovery / 복구) dễ và giảm gánh nặng trí nhớ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Brain huấn luyện (training / 학습)** tiếp nhận điểm tựa từ **Công nghệ và tuổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Brain huấn luyện (training / 학습)** nối từ **Công nghệ và tuổi** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Brain huấn luyện (training / 학습)
 
@@ -221,7 +221,7 @@ Các trò chơi luyện não thương mại thường tạo **near transfer** t�
 
 Một lối sống đa thành phần thường hợp lý hơn claim rằng một app đơn lẻ có thể ngăn lão hóa nhận thức.
 
-> **Chuyển mạch:** Trong **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Brain huấn luyện (training / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Những hiểu lầm phổ biến** nối từ **Brain huấn luyện (training / 학습)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -233,7 +233,7 @@ Một lối sống đa thành phần thường hợp lý hơn claim rằng một
 
 **“Người già không học được công nghệ.”** Học vẫn có thể diễn ra; thiết kế (design / 설계) và hỗ trợ (support / 지원) rất quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -250,7 +250,7 @@ lão hóa sinh học
 
 > Lão hóa là sự thay đổi của cả hệ thống, không phải một con số tuổi tác kéo mọi năng lực xuống cùng lúc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lão hóa, sức khỏe nhận thức và tuổi già — Aging, Cognitive Health & Late Life / 노화·인지건강**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

@@ -14,7 +14,7 @@ Con người có thể phản ứng đạo đức rất nhanh trước khi diễ
 
 Điều này tạo tranh luận lâu dài giữa các mô hình (model / 모델) nhấn mạnh lập luận (reasoning / 추론) có chủ ý và các mô hình (model / 모델) nhấn mạnh intuition. bằng chứng (evidence / 증거) hiện đại phù hợp hơn với cách nhìn tương tác: intuition, emotion và lập luận (reasoning / 추론) đều có vai trò, với trọng số thay đổi theo tác vụ (task / 작업) và ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Trong **Tâm lý học đạo đức và hành vi vì xã hội**, **2. Kohlberg và phát triển lập luận (reasoning / 추론) đạo đức** tiếp nhận điểm tựa từ **1. Moral judgment không phải lô-gic (logic / 논리) thuần túy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. xã hội (social / 사회적) Intuitionist mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý học đạo đức và hành vi vì xã hội**, **2. Kohlberg và phát triển lập luận (reasoning / 추론) đạo đức** nối từ **1. Moral judgment không phải lô-gic (logic / 논리) thuần túy** sang **3. xã hội (social / 사회적) Intuitionist mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Kohlberg và phát triển lập luận (reasoning / 추론) đạo đức
 
@@ -24,7 +24,7 @@ Lawrence Kohlberg đề xuất các giai đoạn dựa trên **cấu trúc lập
 
 Carol Gilligan mở rộng thảo luận bằng việc nhấn mạnh **care và responsibility trong relationship**. Đây là một critique lịch sử quan trọng, không phải bằng chứng rằng morality chia thành hai “kiểu nam/nữ” cứng.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý học đạo đức và hành vi vì xã hội**, **3. xã hội (social / 사회적) Intuitionist mô hình (model / 모델)** tiếp nhận điểm tựa từ **2. Kohlberg và phát triển lập luận (reasoning / 추론) đạo đức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Dual-process accounts** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý học đạo đức và hành vi vì xã hội**, **3. xã hội (social / 사회적) Intuitionist mô hình (model / 모델)** nối từ **2. Kohlberg và phát triển lập luận (reasoning / 추론) đạo đức** sang **4. Dual-process accounts**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. xã hội (social / 사회적) Intuitionist mô hình (model / 모델)
 
@@ -34,7 +34,7 @@ Xã hội (social / 사회적) Intuitionist mô hình (model / 모델) đề xu�
 
 Vì vậy không nên chuyển mô hình (model / 모델) thành slogan “con người luôn quyết định bằng cảm xúc rồi bịa lý do”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học đạo đức và hành vi vì xã hội**, **3. xã hội (social / 사회적) Intuitionist mô hình (model / 모델)** xác định đầu vào; **4. Dual-process accounts** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **5. Moral Foundations lý thuyết (theory / 이론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý học đạo đức và hành vi vì xã hội**, **3. xã hội (social / 사회적) Intuitionist mô hình (model / 모델)** đặt đầu vào cho **4. Dual-process accounts**, rồi **5. Moral Foundations lý thuyết (theory / 이론)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. Dual-process accounts
 
@@ -42,7 +42,7 @@ Một số mô hình (model / 모델) phân biệt processing nhanh/tự động
 
 > **bằng chứng (evidence / 증거) ranh giới (boundary / 경계):** distinction giữa fast và controlled processing hữu ích, nhưng ánh xạ (mapping / 매핑) `intuition = deontology` và `reasoning = utilitarianism` quá đơn giản nếu dùng như universal law. tác vụ (task / 작업) wording, familiarity, emotion và cognitive demand đều ảnh hưởng kết quả (outcome / 결과).
 
-> **Chuyển mạch:** Trong **Tâm lý học đạo đức và hành vi vì xã hội**, **4. Dual-process accounts** xác định đầu vào; **5. Moral Foundations lý thuyết (theory / 이론)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. Culture không chỉ thay content mà có thể thay cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý học đạo đức và hành vi vì xã hội**, **4. Dual-process accounts** đặt đầu vào cho **5. Moral Foundations lý thuyết (theory / 이론)**, rồi **6. Culture không chỉ thay content mà có thể thay cấu trúc (structure / 구조)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. Moral Foundations lý thuyết (theory / 이론)
 
@@ -54,7 +54,7 @@ Khung phần mềm (framework / 프레임워크) này hữu ích để nghiên c
 
 Đặc biệt, group difference trong moral-foundation score không đồng nghĩa một group “đạo đức hơn”. Nó chỉ mô tả mẫu (pattern / 패턴) endorsement dưới một đo lường (measurement / 측정) khung phần mềm (framework / 프레임워크) cụ thể.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý học đạo đức và hành vi vì xã hội**, **6. Culture không chỉ thay content mà có thể thay cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **5. Moral Foundations lý thuyết (theory / 이론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Empathy, compassion và prosocial hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý học đạo đức và hành vi vì xã hội**, **6. Culture không chỉ thay content mà có thể thay cấu trúc (structure / 구조)** nối từ **5. Moral Foundations lý thuyết (theory / 이론)** sang **7. Empathy, compassion và prosocial hành vi (behavior / 동작)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Culture không chỉ thay content mà có thể thay cấu trúc (structure / 구조)
 
@@ -62,7 +62,7 @@ Moral norm được học trong family, religion, institution và peer group. M�
 
 Điều đó không có nghĩa “mọi morality hoàn toàn tương đối”. Psychology ở đây chỉ phân biệt descriptive fact về variation với normative conclusion về điều gì nên đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học đạo đức và hành vi vì xã hội**, **6. Culture không chỉ thay content mà có thể thay cấu trúc (structure / 구조)** xác định đầu vào; **7. Empathy, compassion và prosocial hành vi (behavior / 동작)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **8. Prosocial hành vi (behavior / 동작) có nhiều động cơ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý học đạo đức và hành vi vì xã hội**, **6. Culture không chỉ thay content mà có thể thay cấu trúc (structure / 구조)** đặt đầu vào cho **7. Empathy, compassion và prosocial hành vi (behavior / 동작)**, rồi **8. Prosocial hành vi (behavior / 동작) có nhiều động cơ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 7. Empathy, compassion và prosocial hành vi (behavior / 동작)
 
@@ -72,7 +72,7 @@ Ba construct liên quan nhưng không đồng nhất. Một người có thể h
 
 > **Established bằng chứng (evidence / 증거):** empathy liên quan prosocial hành vi (behavior / 동작) trong nhiều ngữ cảnh (context / 맥락), nhưng quan hệ (relation / 관계) không deterministic và phụ thuộc group membership, emotion regulation và incentive.
 
-> **Chuyển mạch:** Trong **Tâm lý học đạo đức và hành vi vì xã hội**, **7. Empathy, compassion và prosocial hành vi (behavior / 동작)** xác định đầu vào; **8. Prosocial hành vi (behavior / 동작) có nhiều động cơ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. Reciprocity và cooperation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý học đạo đức và hành vi vì xã hội**, **7. Empathy, compassion và prosocial hành vi (behavior / 동작)** đặt đầu vào cho **8. Prosocial hành vi (behavior / 동작) có nhiều động cơ**, rồi **9. Reciprocity và cooperation** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8. Prosocial hành vi (behavior / 동작) có nhiều động cơ
 
@@ -90,7 +90,7 @@ hành vi quan sát được
 phẩm chất đạo đức toàn diện của người đó
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý học đạo đức và hành vi vì xã hội**, **9. Reciprocity và cooperation** tiếp nhận điểm tựa từ **8. Prosocial hành vi (behavior / 동작) có nhiều động cơ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Ultimatum Game và fairness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý học đạo đức và hành vi vì xã hội**, **9. Reciprocity và cooperation** nối từ **8. Prosocial hành vi (behavior / 동작) có nhiều động cơ** sang **10. Ultimatum Game và fairness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Reciprocity và cooperation
 
@@ -98,7 +98,7 @@ phẩm chất đạo đức toàn diện của người đó
 
 Psychology bổ sung rằng con người không tối ưu tiền đơn thuần. Fairness, reputation, định danh (identity / 식별자) và norm cũng có giá trị chủ quan.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học đạo đức và hành vi vì xã hội**, **10. Ultimatum Game và fairness** tiếp nhận điểm tựa từ **9. Reciprocity và cooperation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Bystander tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý học đạo đức và hành vi vì xã hội**, **10. Ultimatum Game và fairness** nối từ **9. Reciprocity và cooperation** sang **11. Bystander tác động (effect / 효과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Ultimatum Game và fairness
 
@@ -106,7 +106,7 @@ Trong Ultimatum Game, nhiều responder từ chối offer họ cho là bất cô
 
 > **Limitation:** stake kích thước (size / 크기), culture, anonymity, framing và procedure ảnh hưởng kết quả (result / 결과). Không nên dùng một laboratory game như proof của một universal moral motive.
 
-> **Chuyển mạch:** Trong **Tâm lý học đạo đức và hành vi vì xã hội**, **11. Bystander tác động (effect / 효과)** tiếp nhận điểm tựa từ **10. Ultimatum Game và fairness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Reputation và signaling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý học đạo đức và hành vi vì xã hội**, **11. Bystander tác động (effect / 효과)** nối từ **10. Ultimatum Game và fairness** sang **12. Reputation và signaling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Bystander tác động (effect / 효과)
 
@@ -116,7 +116,7 @@ Nhưng slogan “càng đông người càng không ai giúp” quá mạnh. Gro
 
 Trong emergency, giao nhiệm vụ cụ thể thường làm responsibility rõ hơn: gọi đúng một người thay vì kêu “ai đó giúp”.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý học đạo đức và hành vi vì xã hội**, **12. Reputation và signaling** tiếp nhận điểm tựa từ **11. Bystander tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Moral disengagement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý học đạo đức và hành vi vì xã hội**, **12. Reputation và signaling** nối từ **11. Bystander tác động (effect / 효과)** sang **13. Moral disengagement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Reputation và signaling
 
@@ -124,7 +124,7 @@ Con người thường thay hành vi (behavior / 동작) khi biết hành độn
 
 Một organization vì vậy không nên chỉ thưởng chỉ số (metric / 지표) thể hiện “đạo đức” nếu chỉ số (metric / 지표) có thể gaming.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học đạo đức và hành vi vì xã hội**, **13. Moral disengagement** tiếp nhận điểm tựa từ **12. Reputation và signaling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Dehumanization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý học đạo đức và hành vi vì xã hội**, **13. Moral disengagement** nối từ **12. Reputation và signaling** sang **14. Dehumanization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Moral disengagement
 
@@ -132,7 +132,7 @@ Bandura mô tả **moral disengagement** như nhóm tiến trình (process / 프
 
 Đây là khung phần mềm (framework / 프레임워크) có giá trị mô tả và có research hỗ trợ (support / 지원), nhưng không nên dùng như công cụ “đọc tâm trí” người khác sau một hành vi đơn lẻ.
 
-> **Chuyển mạch:** Trong **Tâm lý học đạo đức và hành vi vì xã hội**, **14. Dehumanization** tiếp nhận điểm tựa từ **13. Moral disengagement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Guilt và shame** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý học đạo đức và hành vi vì xã hội**, **14. Dehumanization** nối từ **13. Moral disengagement** sang **15. Guilt và shame**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Dehumanization
 
@@ -140,7 +140,7 @@ Bandura mô tả **moral disengagement** như nhóm tiến trình (process / 프
 
 Tuy nhiên dehumanization không phải explanation duy nhất của intergroup violence. Power, institution, norm, obedience, incentive và threat perception cũng quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý học đạo đức và hành vi vì xã hội**, **15. Guilt và shame** tiếp nhận điểm tựa từ **14. Dehumanization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Moral injury** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý học đạo đức và hành vi vì xã hội**, **15. Guilt và shame** nối từ **14. Dehumanization** sang **16. Moral injury**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Guilt và shame
 
@@ -150,7 +150,7 @@ Guilt phù hợp có thể thúc đẩy repair. Shame mạnh có thể dẫn đ�
 
 Xem [[../90_connections/04_moral_injury_shame_guilt_and_value_conflict]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học đạo đức và hành vi vì xã hội**, **16. Moral injury** tiếp nhận điểm tựa từ **15. Guilt và shame** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Ethical fading trong organization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý học đạo đức và hành vi vì xã hội**, **16. Moral injury** nối từ **15. Guilt và shame** sang **17. Ethical fading trong organization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Moral injury
 
@@ -158,7 +158,7 @@ Xem [[../90_connections/04_moral_injury_shame_guilt_and_value_conflict]].
 
 > **bằng chứng (evidence / 증거) ranh giới (boundary / 경계):** moral injury là construct nghiên cứu/clinical hữu ích nhưng không nên tự động coi là một diagnosis độc lập. Nó overlap với PTSD, depression, guilt, shame và giá trị (value / 값) xung đột (conflict / 충돌) nhưng không đồng nhất.
 
-> **Chuyển mạch:** Trong **Tâm lý học đạo đức và hành vi vì xã hội**, **17. Ethical fading trong organization** tiếp nhận điểm tựa từ **16. Moral injury** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Psychological an toàn (safety / 안전) và accountability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý học đạo đức và hành vi vì xã hội**, **17. Ethical fading trong organization** nối từ **16. Moral injury** sang **18. Psychological an toàn (safety / 안전) và accountability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Ethical fading trong organization
 
@@ -168,7 +168,7 @@ Ví dụ, nhóm (team / 팀) tối ưu conversion có thể nhìn thấy chỉ c
 
 Cơ chế (mechanism / 메커니즘) này nối moral psychology với incentive thiết kế (design / 설계) và organizational culture, không chỉ “character” cá nhân.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý học đạo đức và hành vi vì xã hội**, **18. Psychological an toàn (safety / 안전) và accountability** tiếp nhận điểm tựa từ **17. Ethical fading trong organization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. AI và moral responsibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý học đạo đức và hành vi vì xã hội**, **18. Psychological an toàn (safety / 안전) và accountability** nối từ **17. Ethical fading trong organization** sang **19. AI và moral responsibility**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Psychological an toàn (safety / 안전) và accountability
 
@@ -183,7 +183,7 @@ accountability       → xử lý trách nhiệm và sửa hệ thống
 
 Xem [[../06_applied/16_psychological_safety_team_learning_and_speaking_up]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học đạo đức và hành vi vì xã hội**, **19. AI và moral responsibility** tiếp nhận điểm tựa từ **18. Psychological an toàn (safety / 안전) và accountability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý học đạo đức và hành vi vì xã hội**, **19. AI và moral responsibility** nối từ **18. Psychological an toàn (safety / 안전) và accountability** sang **20. Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. AI và moral responsibility
 
@@ -193,7 +193,7 @@ Không nên suy từ ngôn ngữ (language / 언어) fluency của AI sang moral
 
 Xem [[../06_applied/02_hci_ai_and_human_decision_support]] và [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]].
 
-> **Chuyển mạch:** Trong **Tâm lý học đạo đức và hành vi vì xã hội**, **20. Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **19. AI và moral responsibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý học đạo đức và hành vi vì xã hội**, **20. Những hiểu lầm phổ biến** nối từ **19. AI và moral responsibility** sang **21. Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Những hiểu lầm phổ biến
 
@@ -207,7 +207,7 @@ Xem [[../06_applied/02_hci_ai_and_human_decision_support]] và [[../90_connectio
 
 **“Một hành vi xấu cho biết toàn bộ character.”** Không. Trait suy luận (inference / 추론) từ một sự kiện (event / 이벤트) rất dễ overattribute disposition.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý học đạo đức và hành vi vì xã hội**, **21. Mô hình tư duy** gom các mảnh từ **20. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý học đạo đức và hành vi vì xã hội**, **21. Mô hình tư duy** tổng hợp từ **20. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 21. Mô hình tư duy
 
@@ -227,7 +227,7 @@ identity + norm + incentive + culture
 
 Moral hành vi (behavior / 동작) là kết quả (outcome / 결과) của hệ thống người–nhóm–institution, không chỉ là “mức tốt bụng” bên trong cá nhân.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học đạo đức và hành vi vì xã hội**, **Kết nối kiến thức** gom các mảnh từ **21. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý học đạo đức và hành vi vì xã hội**, **Kết nối kiến thức** tổng hợp từ **21. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

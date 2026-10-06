@@ -22,7 +22,7 @@ Khoảng chênh có thể nằm ở số lượng quan hệ, độ sâu, sự ti
 
 Vì vậy giải pháp không phải lúc nào cũng là “gặp nhiều người hơn”.
 
-> **Chuyển mạch:** Trong **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Cô lập xã hội — xã hội (social / 사회적) isolation** tiếp nhận điểm tựa từ **Cô đơn là một sự chênh lệch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cảm giác thuộc về — belonging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Cô lập xã hội — xã hội (social / 사회적) isolation** nối từ **Cô đơn là một sự chênh lệch** sang **Cảm giác thuộc về — belonging**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cô lập xã hội — xã hội (social / 사회적) isolation
 
@@ -32,7 +32,7 @@ Isolation và loneliness có liên hệ nhưng không đồng nhất.
 
 Một người làm việc từ xa, ít gặp người nhưng có vài quan hệ rất thân có thể không cô đơn. Ngược lại, một người làm việc trong văn phòng đông người vẫn có thể cô đơn nếu các tương tác (interaction / 상호작용) chỉ mang tính giao dịch và hời hợt.
 
-> **Chuyển mạch:** Ở chặng này của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Cảm giác thuộc về — belonging** tiếp nhận điểm tựa từ **Cô lập xã hội — xã hội (social / 사회적) isolation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Góc nhìn tiến hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Cảm giác thuộc về — belonging** nối từ **Cô lập xã hội — xã hội (social / 사회적) isolation** sang **Góc nhìn tiến hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cảm giác thuộc về — belonging
 
@@ -46,7 +46,7 @@ Belonging không yêu cầu mọi người phải giống nhau. Nó thường c�
 - cơ hội đóng góp;
 - an toàn tâm lý (psychological safety).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Góc nhìn tiến hóa** tiếp nhận điểm tựa từ **Cảm giác thuộc về — belonging** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhạy cảm với bị từ chối — rejection sensitivity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Góc nhìn tiến hóa** nối từ **Cảm giác thuộc về — belonging** sang **Nhạy cảm với bị từ chối — rejection sensitivity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Góc nhìn tiến hóa
 
@@ -54,7 +54,7 @@ Loneliness có thể được xem như một tín hiệu thúc đẩy con ngư�
 
 Nhưng nếu cô đơn kéo dài, mức cảnh giác với rejection có thể tăng. Người cô đơn có thể chú ý mạnh hơn đến tín hiệu xã hội tiêu cực, diễn giải tình huống mơ hồ theo hướng từ chối rồi rút lui — tạo vòng phản hồi (feedback loop / 피드백 루프) tự duy trì loneliness.
 
-> **Chuyển mạch:** Trong **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Nhạy cảm với bị từ chối — rejection sensitivity** tiếp nhận điểm tựa từ **Góc nhìn tiến hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đau đớn xã hội — xã hội (social / 사회적) pain** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Nhạy cảm với bị từ chối — rejection sensitivity** nối từ **Góc nhìn tiến hóa** sang **Đau đớn xã hội — xã hội (social / 사회적) pain**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhạy cảm với bị từ chối — rejection sensitivity
 
@@ -64,7 +64,7 @@ Nếu một người mặc định mình sẽ bị từ chối, họ có thể p
 
 Cơ chế này gần với một vòng **self-fulfilling** hơn là câu chuyện “chỉ nghĩ tiêu cực”.
 
-> **Chuyển mạch:** Ở chặng này của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Đau đớn xã hội — xã hội (social / 사회적) pain** tiếp nhận điểm tựa từ **Nhạy cảm với bị từ chối — rejection sensitivity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ostracism — bị loại trừ khỏi tương tác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Đau đớn xã hội — xã hội (social / 사회적) pain** nối từ **Nhạy cảm với bị từ chối — rejection sensitivity** sang **Ostracism — bị loại trừ khỏi tương tác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đau đớn xã hội — xã hội (social / 사회적) pain
 
@@ -72,7 +72,7 @@ Bị loại trừ hoặc bị từ chối có thể gây distress mạnh vì xã
 
 Câu “chỉ là lời nói thôi” thường không phản ánh đúng cơ chế (mechanism / 메커니즘). xã hội (social / 사회적) threat có thể kích hoạt phản hồi (response / 응답) sinh lý và attentional rất thật.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Ostracism — bị loại trừ khỏi tương tác** tiếp nhận điểm tựa từ **Đau đớn xã hội — xã hội (social / 사회적) pain** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạng xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Ostracism — bị loại trừ khỏi tương tác** nối từ **Đau đớn xã hội — xã hội (social / 사회적) pain** sang **Mạng xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ostracism — bị loại trừ khỏi tương tác
 
@@ -80,7 +80,7 @@ Câu “chỉ là lời nói thôi” thường không phản ánh đúng cơ ch
 
 Trong workplace, bị âm thầm bỏ khỏi meeting, quyết định (decision / 결정) vòng lặp (loop / 루프) hoặc channel quan trọng có thể gây impact lớn dù không có insult trực tiếp.
 
-> **Chuyển mạch:** Trong **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Mạng xã hội** tiếp nhận điểm tựa từ **Ostracism — bị loại trừ khỏi tương tác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ cận xã hội — parasocial relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Mạng xã hội** nối từ **Ostracism — bị loại trừ khỏi tương tác** sang **Quan hệ cận xã hội — parasocial relationship**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mạng xã hội
 
@@ -94,7 +94,7 @@ Tác động phụ thuộc cách dùng:
 
 Xem [[../06_applied/05_digital_psychology_social_media_and_online_behavior]].
 
-> **Chuyển mạch:** Ở chặng này của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Quan hệ cận xã hội — parasocial relationship** tiếp nhận điểm tựa từ **Mạng xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hỗ trợ xã hội — xã hội (social / 사회적) hỗ trợ (support / 지원)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Quan hệ cận xã hội — parasocial relationship** nối từ **Mạng xã hội** sang **Hỗ trợ xã hội — xã hội (social / 사회적) hỗ trợ (support / 지원)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quan hệ cận xã hội — parasocial relationship
 
@@ -104,7 +104,7 @@ Parasocial bond có thể đem comfort và định danh (identity / 식별자) n
 
 Không nên mặc định loại liên kết (connection / 연결) này unhealthy; vấn đề nằm ở hàm (function / 함수) và mức độ nó thay thế các quan hệ khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Hỗ trợ xã hội — xã hội (social / 사회적) hỗ trợ (support / 지원)** tiếp nhận điểm tựa từ **Quan hệ cận xã hội — parasocial relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hỗ trợ được cảm nhận — perceived hỗ trợ (support / 지원)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Hỗ trợ xã hội — xã hội (social / 사회적) hỗ trợ (support / 지원)** nối từ **Quan hệ cận xã hội — parasocial relationship** sang **Hỗ trợ được cảm nhận — perceived hỗ trợ (support / 지원)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hỗ trợ xã hội — xã hội (social / 사회적) hỗ trợ (support / 지원)
 
@@ -117,7 +117,7 @@ Hỗ trợ (support / 지원) có nhiều dạng:
 
 Hỗ trợ (support / 지원) hiệu quả khi **phù hợp với nhu cầu**. Advice có thể làm người đang cần kiểm tra hợp lệ (validation / 검증) cảm thấy bị gạt đi.
 
-> **Chuyển mạch:** Trong **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Hỗ trợ được cảm nhận — perceived hỗ trợ (support / 지원)** tiếp nhận điểm tựa từ **Hỗ trợ xã hội — xã hội (social / 사회적) hỗ trợ (support / 지원)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồng điều chỉnh — co-regulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Hỗ trợ được cảm nhận — perceived hỗ trợ (support / 지원)** nối từ **Hỗ trợ xã hội — xã hội (social / 사회적) hỗ trợ (support / 지원)** sang **Đồng điều chỉnh — co-regulation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hỗ trợ được cảm nhận — perceived hỗ trợ (support / 지원)
 
@@ -125,7 +125,7 @@ Khả năng tin rằng “khi cần sẽ có người giúp” đôi khi dự đ
 
 Điều này liên quan trust và attachment: nếu một người có mạng (network / 네트워크) nhưng không tin mình có thể nhờ cậy, mạng (network / 네트워크) khách quan không chuyển thành cảm giác an toàn.
 
-> **Chuyển mạch:** Ở chặng này của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Đồng điều chỉnh — co-regulation** tiếp nhận điểm tựa từ **Hỗ trợ được cảm nhận — perceived hỗ trợ (support / 지원)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cô đơn sau di cư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Đồng điều chỉnh — co-regulation** nối từ **Hỗ trợ được cảm nhận — perceived hỗ trợ (support / 지원)** sang **Cô đơn sau di cư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đồng điều chỉnh — co-regulation
 
@@ -135,7 +135,7 @@ Con người điều chỉnh emotion thông qua relationship. Sự hiện diện
 
 Xem [[06_stress_coping_and_emotion_regulation]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Cô đơn sau di cư** tiếp nhận điểm tựa từ **Đồng điều chỉnh — co-regulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ngôn ngữ và belonging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Cô đơn sau di cư** nối từ **Đồng điều chỉnh — co-regulation** sang **Ngôn ngữ và belonging**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cô đơn sau di cư
 
@@ -145,7 +145,7 @@ Khác biệt văn hóa còn làm mỗi tương tác (interaction / 상호작용)
 
 Xem [[16_acculturation_migration_and_bicultural_identity]].
 
-> **Chuyển mạch:** Trong **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Ngôn ngữ và belonging** tiếp nhận điểm tựa từ **Cô đơn sau di cư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cô đơn tại nơi làm việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Ngôn ngữ và belonging** nối từ **Cô đơn sau di cư** sang **Cô đơn tại nơi làm việc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ngôn ngữ và belonging
 
@@ -155,7 +155,7 @@ Khi chưa đủ fluent, personality có thể biểu hiện khác. Người vố
 
 Belonging tăng khi môi trường cho phép accent, lỗi ngôn ngữ và code-switching mà không tạo shame.
 
-> **Chuyển mạch:** Ở chặng này của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Cô đơn tại nơi làm việc** tiếp nhận điểm tựa từ **Ngôn ngữ và belonging** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Romantic relationship không chữa mọi dạng cô đơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Cô đơn tại nơi làm việc** nối từ **Ngôn ngữ và belonging** sang **Romantic relationship không chữa mọi dạng cô đơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cô đơn tại nơi làm việc
 
@@ -167,7 +167,7 @@ Nhóm (team / 팀) ritual, peer hỗ trợ (support / 지원) và psychological 
 
 Xem [[../06_applied/16_psychological_safety_team_learning_and_speaking_up]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Romantic relationship không chữa mọi dạng cô đơn** tiếp nhận điểm tựa từ **Cô đơn tại nơi làm việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Solitude — ở một mình có chủ đích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Romantic relationship không chữa mọi dạng cô đơn** nối từ **Cô đơn tại nơi làm việc** sang **Solitude — ở một mình có chủ đích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Romantic relationship không chữa mọi dạng cô đơn
 
@@ -177,7 +177,7 @@ Partner có thể đáp ứng một số need nhưng không thay friend, communi
 
 Một mạng lưới quan hệ đa dạng thường resilient hơn.
 
-> **Chuyển mạch:** Trong **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Solitude — ở một mình có chủ đích** tiếp nhận điểm tựa từ **Romantic relationship không chữa mọi dạng cô đơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hướng nội không đồng nghĩa cô đơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Solitude — ở một mình có chủ đích** nối từ **Romantic relationship không chữa mọi dạng cô đơn** sang **Hướng nội không đồng nghĩa cô đơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Solitude — ở một mình có chủ đích
 
@@ -187,7 +187,7 @@ Loneliness thường liên quan tới disconnect không mong muốn.
 
 Cùng một hành vi (behavior / 동작) “ở nhà một mình” có psychological meaning rất khác tùy người.
 
-> **Chuyển mạch:** Ở chặng này của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Hướng nội không đồng nghĩa cô đơn** tiếp nhận điểm tựa từ **Solitude — ở một mình có chủ đích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sức khỏe** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Hướng nội không đồng nghĩa cô đơn** nối từ **Solitude — ở một mình có chủ đích** sang **Sức khỏe**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hướng nội không đồng nghĩa cô đơn
 
@@ -197,7 +197,7 @@ Loneliness là dissatisfaction với liên kết (connection / 연결); introver
 
 Trộn hai construct làm người hướng nội bị pathologize không cần thiết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Sức khỏe** tiếp nhận điểm tựa từ **Hướng nội không đồng nghĩa cô đơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Intervention phải đúng bottleneck** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Sức khỏe** nối từ **Hướng nội không đồng nghĩa cô đơn** sang **Intervention phải đúng bottleneck**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sức khỏe
 
@@ -207,7 +207,7 @@ Nhưng correlation không cho phép nói một pathway đơn giản. Health bài
 
 Vì vậy lập luận nhân quả (causal reasoning / 인과적 추론) rất quan trọng.
 
-> **Chuyển mạch:** Trong **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Intervention phải đúng bottleneck** tiếp nhận điểm tựa từ **Sức khỏe** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cơ hội xã hội và kỹ năng xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Intervention phải đúng bottleneck** nối từ **Sức khỏe** sang **Cơ hội xã hội và kỹ năng xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Intervention phải đúng bottleneck
 
@@ -222,7 +222,7 @@ Intervention có thể nhắm nhiều cơ chế (mechanism / 메커니즘):
 
 Chỉ nói “hãy ra ngoài kết bạn” là không đủ nếu bottleneck nằm ở rejection sensitivity, xã hội (social / 사회적) anxiety hoặc disability.
 
-> **Chuyển mạch:** Ở chặng này của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Cơ hội xã hội và kỹ năng xã hội** tiếp nhận điểm tựa từ **Intervention phải đúng bottleneck** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hình thành tình bạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Cơ hội xã hội và kỹ năng xã hội** nối từ **Intervention phải đúng bottleneck** sang **Hình thành tình bạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cơ hội xã hội và kỹ năng xã hội
 
@@ -232,7 +232,7 @@ Assessment cần hỏi:
 
 > “Nút thắt nằm ở opportunity, skill, expectation hay an toàn (safety / 안전)?”
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Hình thành tình bạn** tiếp nhận điểm tựa từ **Cơ hội xã hội và kỹ năng xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Duy trì relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Hình thành tình bạn** nối từ **Cơ hội xã hội và kỹ năng xã hội** sang **Duy trì relationship**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hình thành tình bạn
 
@@ -242,7 +242,7 @@ Adult friendship khó hơn thời đi học một phần vì thiếu repeated un
 
 Thiết kế môi trường lặp lại — lớp (class / 클래스), sport, volunteer, study group — thường hiệu quả hơn cố tạo intimacy ngay trong một lần gặp.
 
-> **Chuyển mạch:** Trong **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Duy trì relationship** tiếp nhận điểm tựa từ **Hình thành tình bạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Duy trì relationship** nối từ **Hình thành tình bạn** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Duy trì relationship
 
@@ -256,7 +256,7 @@ Liên kết (connection / 연결) cần maintenance:
 
 Nhiều relationship suy yếu không phải vì xung đột (conflict / 충돌) lớn mà vì contact friction tăng dần.
 
-> **Chuyển mạch:** Ở chặng này của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Duy trì relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Những hiểu lầm phổ biến** nối từ **Duy trì relationship** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -268,7 +268,7 @@ Nhiều relationship suy yếu không phải vì xung đột (conflict / 충돌)
 
 **“Muốn hết cô đơn chỉ cần tự tin hơn.”** Opportunity, culture, health và mạng (network / 네트워크) cấu trúc (structure / 구조) cũng quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -288,7 +288,7 @@ nhu cầu xã hội
 
 > Loneliness không chỉ hỏi “có bao nhiêu người quanh mình?”, mà hỏi “những relationship hiện có có đáp ứng loại liên kết (connection / 연결) mình cần không?”.
 
-> **Chuyển mạch:** Trong **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Cô đơn, kết nối xã hội và cảm giác thuộc về — Loneliness, xã hội (social / 사회적) liên kết (connection / 연결) & Belonging / 외로움·사회적 연결**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

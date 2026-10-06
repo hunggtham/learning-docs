@@ -26,7 +26,7 @@ Thu thập bằng chứng để loại trừ / củng cố
 Formulation và kế hoạch tiếp theo
 ```
 
-> **Chuyển mạch:** Trong **Đánh giá tâm lý và chẩn đoán**, **Phỏng vấn lâm sàng** tiếp nhận điểm tựa từ **Từ triệu chứng đến mô hình vấn đề** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm thử (test / 테스트) và thang đo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đánh giá tâm lý và chẩn đoán**, **Phỏng vấn lâm sàng** nối từ **Từ triệu chứng đến mô hình vấn đề** sang **Kiểm thử (test / 테스트) và thang đo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phỏng vấn lâm sàng
 
@@ -34,7 +34,7 @@ Phỏng vấn lâm sàng (clinical interview) là công cụ trung tâm vì nó 
 
 Điểm quan trọng là không chỉ hỏi “có hay không”, mà hỏi cấu trúc của hiện tượng. Với cơn hoảng sợ, cần biết nó xảy ra bất ngờ hay trong tình huống dự đoán trước, kéo dài bao lâu, người đó diễn giải cảm giác cơ thể như thế nào và sau đó có bắt đầu né tránh hay không. Với ý nghĩ xâm nhập, cần phân biệt nội dung của ý nghĩ với niềm tin, ý định và hành động.
 
-> **Chuyển mạch:** Ở chặng này của **Đánh giá tâm lý và chẩn đoán**, **Kiểm thử (test / 테스트) và thang đo** tiếp nhận điểm tựa từ **Phỏng vấn lâm sàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chẩn đoán phân biệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đánh giá tâm lý và chẩn đoán**, **Kiểm thử (test / 테스트) và thang đo** nối từ **Phỏng vấn lâm sàng** sang **Chẩn đoán phân biệt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kiểm thử (test / 테스트) và thang đo
 
@@ -42,7 +42,7 @@ Thang đo chuẩn hóa có thể giúp lượng hóa mức độ triệu chứng
 
 Một score cao có thể là tín hiệu cần khám sâu hơn, không phải bằng chứng rằng người đó chắc chắn mắc rối loạn. Đây là lý do phần psychometrics phải được đọc cùng [[../00_foundations/05_psychometrics_and_test_interpretation]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đánh giá tâm lý và chẩn đoán**, **Chẩn đoán phân biệt** tiếp nhận điểm tựa từ **Kiểm thử (test / 테스트) và thang đo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Formulation: tại sao vấn đề này tồn tại ở người này?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đánh giá tâm lý và chẩn đoán**, **Chẩn đoán phân biệt** nối từ **Kiểm thử (test / 테스트) và thang đo** sang **Formulation: tại sao vấn đề này tồn tại ở người này?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chẩn đoán phân biệt
 
@@ -54,7 +54,7 @@ Chẩn đoán phân biệt (differential diagnosis) là quá trình so sánh nhi
 
 Ví dụ, mất ngủ và kích động có thể xuất hiện trong lo âu, episode hưng cảm, tác dụng của stimulant, stress cấp hoặc rối loạn nhịp sinh học. Chỉ nhìn vào một triệu chứng sẽ tạo nguy cơ chẩn đoán sai.
 
-> **Chuyển mạch:** Trong **Đánh giá tâm lý và chẩn đoán**, **Formulation: tại sao vấn đề này tồn tại ở người này?** tiếp nhận điểm tựa từ **Chẩn đoán phân biệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đánh giá nguy cơ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đánh giá tâm lý và chẩn đoán**, **Formulation: tại sao vấn đề này tồn tại ở người này?** nối từ **Chẩn đoán phân biệt** sang **Đánh giá nguy cơ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Formulation: tại sao vấn đề này tồn tại ở người này?
 
@@ -67,7 +67,7 @@ Formulation thường có giá trị thực hành cao hơn việc chỉ biết t
 
 Ví dụ, một người có khuynh hướng nhạy với đe dọa, vừa trải qua thất bại nghề nghiệp, bắt đầu mất ngủ, tăng né tránh và dùng rượu để ngủ. Chẩn đoán cho biết mẫu (pattern / 패턴) rộng; formulation giải thích vòng lặp cụ thể đang duy trì vấn đề.
 
-> **Chuyển mạch:** Ở chặng này của **Đánh giá tâm lý và chẩn đoán**, **Đánh giá nguy cơ** tiếp nhận điểm tựa từ **Formulation: tại sao vấn đề này tồn tại ở người này?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cultural formulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đánh giá tâm lý và chẩn đoán**, **Đánh giá nguy cơ** nối từ **Formulation: tại sao vấn đề này tồn tại ở người này?** sang **Cultural formulation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đánh giá nguy cơ
 
@@ -75,13 +75,13 @@ Ví dụ, một người có khuynh hướng nhạy với đe dọa, vừa trả
 
 Một nguyên tắc quan trọng là nguy cơ thay đổi theo thời gian. Vì thế đánh giá nguy cơ là quá trình động (dynamic / 동적), không phải con số cố định.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đánh giá tâm lý và chẩn đoán**, **Cultural formulation** tiếp nhận điểm tựa từ **Đánh giá nguy cơ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đánh giá tâm lý và chẩn đoán**, **Cultural formulation** nối từ **Đánh giá nguy cơ** sang **Dùng chung (common / 공통) misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cultural formulation
 
 Bối cảnh văn hóa ảnh hưởng cách một người diễn giải đau khổ, cách họ biểu đạt triệu chứng và thái độ với điều trị. Một biểu hiện được xem là bất thường trong một môi trường có thể mang nghĩa khác trong môi trường khác. Với người di cư, ngôn ngữ, phân biệt đối xử, mất mạng lưới xã hội, áp lực thích nghi và khác biệt hệ thống y tế đều có thể tác động đến đánh giá.
 
-> **Chuyển mạch:** Trong **Đánh giá tâm lý và chẩn đoán**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Cultural formulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiến thức (knowledge / 지식) connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đánh giá tâm lý và chẩn đoán**, **Dùng chung (common / 공통) misconceptions** nối từ **Cultural formulation** sang **Kiến thức (knowledge / 지식) connections**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) misconceptions
 
@@ -91,7 +91,7 @@ Bối cảnh văn hóa ảnh hưởng cách một người diễn giải đau kh
 
 **“Hai người cùng diagnosis nên nhận cùng treatment.”** Không nhất thiết. Treatment cần xét severity, comorbidity, preference, rủi ro (risk / 위험), truy cập (access / 접근), lịch sử (history / 이력) và formulation.
 
-> **Chuyển mạch:** Ở chặng này của **Đánh giá tâm lý và chẩn đoán**, **Kiến thức (knowledge / 지식) connections** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Đánh giá tâm lý và chẩn đoán**, **Kiến thức (knowledge / 지식) connections** nối từ **Dùng chung (common / 공통) misconceptions** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kiến thức (knowledge / 지식) connections
 

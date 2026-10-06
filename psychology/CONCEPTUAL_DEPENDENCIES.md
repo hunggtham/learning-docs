@@ -25,7 +25,7 @@ graph TD
 
 Ý nghĩa của đồ thị (graph / 그래프) này: trước khi kết luận một tác động (effect / 효과) “real”, cần biết construct được đo ra sao, phân tích (analysis / 분석) dựa các giả định (assumptions / 가정들) nào, nhân quả (causal / 인과적) question có hợp lệ không và kết quả (result / 결과) có đứng vững qua replication/synthesis không.
 
-> **Chuyển mạch:** Trong **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **2. Brain & Mind** tiếp nhận điểm tựa từ **1. Trục khoa học nền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. học tập (learning / 학습) & Cognition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **2. Brain & Mind** nối từ **1. Trục khoa học nền** sang **3. học tập (learning / 학습) & Cognition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Brain & Mind
 
@@ -48,7 +48,7 @@ graph TD
 
 Neuroscience là một mức (level / 수준) of phân tích (analysis / 분석), không phải “final explanation” cho mọi psychological construct.
 
-> **Chuyển mạch:** Ở chặng này của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **3. học tập (learning / 학습) & Cognition** tiếp nhận điểm tựa từ **2. Brain & Mind** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Development, self và xã hội (social / 사회적) world** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **3. học tập (learning / 학습) & Cognition** nối từ **2. Brain & Mind** sang **4. Development, self và xã hội (social / 사회적) world**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. học tập (learning / 학습) & Cognition
 
@@ -81,7 +81,7 @@ Durable learning ngày mai
 
 Vì vậy applied education phải dựa vào bộ nhớ (memory / 메모리)/transfer bằng chứng (evidence / 증거), không chỉ cảm giác học “trôi chảy”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **4. Development, self và xã hội (social / 사회적) world** tiếp nhận điểm tựa từ **3. học tập (learning / 학습) & Cognition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Stress, emotion và regulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **4. Development, self và xã hội (social / 사회적) world** nối từ **3. học tập (learning / 학습) & Cognition** sang **5. Stress, emotion và regulation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Development, self và xã hội (social / 사회적) world
 
@@ -107,7 +107,7 @@ graph TD
 
 Attachment không nên dùng như internet personality label. định danh (identity / 식별자), culture và family ngữ cảnh (context / 맥락) có bidirectional influence; không có một nhân quả (causal / 인과적) arrow duy nhất giải thích development.
 
-> **Chuyển mạch:** Trong **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **5. Stress, emotion và regulation** tiếp nhận điểm tựa từ **4. Development, self và xã hội (social / 사회적) world** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Mental Health** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **5. Stress, emotion và regulation** nối từ **4. Development, self và xã hội (social / 사회적) world** sang **6. Mental Health**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Stress, emotion và regulation
 
@@ -132,7 +132,7 @@ Applied regulation content phải giữ ranh giới (boundary / 경계) giữa:
 - clinical treatment;
 - self-help claim chưa có bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Ở chặng này của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **6. Mental Health** tiếp nhận điểm tựa từ **5. Stress, emotion và regulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Historical Schools** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **6. Mental Health** nối từ **5. Stress, emotion và regulation** sang **7. Historical Schools**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Mental Health
 
@@ -155,7 +155,7 @@ graph TD
 
 Diagnosis là classification/suy luận (inference / 추론) công cụ (tool / 도구), không phải định danh (identity / 식별자) sentence. Treatment bằng chứng (evidence / 증거) phải được tách khỏi theoretical truth của trường phái.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **7. Historical Schools** tiếp nhận điểm tựa từ **6. Mental Health** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Applied Psychology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **7. Historical Schools** nối từ **6. Mental Health** sang **8. Applied Psychology**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Historical Schools
 
@@ -183,7 +183,7 @@ Modern scientific validation
 
 Freud, Adler và Jung phải được đọc qua [[EVIDENCE_STATUS_GUIDE]] và [[90_connections/06_historical_theories_and_modern_evidence_matrix]].
 
-> **Chuyển mạch:** Trong **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **8. Applied Psychology** tiếp nhận điểm tựa từ **7. Historical Schools** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Five-level bằng chứng (evidence / 증거) phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **8. Applied Psychology** nối từ **7. Historical Schools** sang **9. Five-level bằng chứng (evidence / 증거) phụ thuộc (dependency / 의존성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Applied Psychology
 
@@ -204,7 +204,7 @@ graph TD
 
 Ứng dụng chỉ nên mạnh bằng upstream bằng chứng (evidence / 증거) của nó. Một practical recommendation không được nâng status chỉ vì nghe hợp lý hoặc dễ nhớ.
 
-> **Chuyển mạch:** Ở chặng này của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **8. Applied Psychology** nêu điều cần giải thích; **9. Five-level bằng chứng (evidence / 증거) phụ thuộc (dependency / 의존성)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. quy tắc (rule / 규칙) khi tạo chapter mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **8. Applied Psychology** đặt vấn đề; **9. Five-level bằng chứng (evidence / 증거) phụ thuộc (dependency / 의존성)** đối chiếu bằng chứng, rồi **11. quy tắc (rule / 규칙) khi tạo chapter mới** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. Five-level bằng chứng (evidence / 증거) phụ thuộc (dependency / 의존성)
 
@@ -227,7 +227,7 @@ Phần điều hướng này bàn giao dependency giữa các domain và chỉ r
 - học tập (learning / 학습)/cognition: [[02_learning_and_cognition/00_learning_and_conditioning]] → [[02_learning_and_cognition/01_memory]] → [[02_learning_and_cognition/02_thinking_language_and_decision]] → [[02_learning_and_cognition/04_cognitive_biases_and_metacognition]].
 - Historical ngữ cảnh (context / 맥락): [[00_foundations/01_history_and_major_perspectives]] → [[90_connections/05_adler_individual_psychology_in_context]] / [[90_connections/00_freud_jung_and_depth_psychology_in_context]] → [[90_connections/06_historical_theories_and_modern_evidence_matrix]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **9. Five-level bằng chứng (evidence / 증거) phụ thuộc (dependency / 의존성)** nêu điều cần giải thích; **11. quy tắc (rule / 규칙) khi tạo chapter mới** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Conceptual Dependencies — Psychology thư viện kiến thức (knowledge library / 지식 라이브러리)**, **9. Five-level bằng chứng (evidence / 증거) phụ thuộc (dependency / 의존성)** đặt vấn đề; **11. quy tắc (rule / 규칙) khi tạo chapter mới** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 11. quy tắc (rule / 규칙) khi tạo chapter mới
 
