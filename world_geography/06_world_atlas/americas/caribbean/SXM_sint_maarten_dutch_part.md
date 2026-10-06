@@ -1,6 +1,6 @@
 # Sint Maarten — Dutch part
 
-> **Mạch đọc:** Đặt **Sint Maarten — Dutch part** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Sint Maarten — Dutch part**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Sint Maarten — Dutch part** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Sint Maarten chiếm phần phía nam đảo Saint Martin. Không gian đô thị–du lịch dày đặc trên một đảo nhỏ khiến land scarcity và coastal exposure đặc biệt rõ.
 
@@ -10,4 +10,4 @@ Hurricane có thể đánh đồng thời airport, cổng (port / 포트), hotel
 
 **Mô hình tư duy:** dense tourism nút (node / 노드) + dùng chung (shared / 공유) island hệ thống (system / 시스템) + concentrated hạ tầng (infrastructure / 인프라) + hurricane rủi ro (risk / 위험).
 
-> **Bàn giao:** Sau **Sint Maarten — Dutch part**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ABW aruba](./ABW_aruba.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Sint Maarten — Dutch part**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

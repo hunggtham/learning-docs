@@ -1,7 +1,6 @@
 # Electrical kỹ thuật (engineering / 엔지니어링) Glossary — Việt · English · 한국어
 
-> **Mạch đọc:** Đọc **Electrical kỹ thuật (engineering / 엔지니어링) Glossary — Việt · English · 한국어** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Electrical kỹ thuật (engineering / 엔지니어링) Glossary — Việt · English · 한국어**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Electrical kỹ thuật (engineering / 엔지니어링) Glossary — Việt · English · 한국어** để chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Glossary này ưu tiên các thuật ngữ xuất hiện trong thư viện (library / 라이브러리). English/Korean là từ khóa (keyword / 키워드) tra cứu; phần giải thích vẫn giữ tiếng Việt.
 
@@ -38,4 +37,4 @@ Glossary này ưu tiên các thuật ngữ xuất hiện trong thư viện (libr
 | vùng hoạt động an toàn | SOA | 안전 동작 영역 | miền voltage/hiện tại (current / 현재)/thời gian (time / 시간) thiết bị (device / 장치) chịu được |
 | giảm tải an toàn | derating | 디레이팅 | vận hành dưới giới hạn danh nghĩa để có margin |
 
-> **Bàn giao:** Sau **Electrical kỹ thuật (engineering / 엔지니어링) Glossary — Việt · English · 한국어**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 end to end temperature control case](./00_end_to_end_temperature_control_case.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Electrical kỹ thuật (engineering / 엔지니어링) Glossary — Việt · English · 한국어**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

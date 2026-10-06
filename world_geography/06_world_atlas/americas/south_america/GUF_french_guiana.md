@@ -1,6 +1,6 @@
 # French Guiana
 
-> **Mạch đọc:** Đặt **French Guiana** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **French Guiana**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **French Guiana** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 French Guiana nằm trên Guiana Shield, với Atlantic coastal strip thấp hơn và interior rainforest rộng, thưa dân. Cayenne–Kourou–Saint-Laurent tạo phần lớn urban mạng (network / 네트워크) dọc coast.
 
@@ -10,4 +10,4 @@ Flood, coastal erosion và pressure lên forest/tài nguyên (resource / 자원)
 
 **Mô hình tư duy:** populated Atlantic strip + vast forest hinterland + river truy cập (access / 접근) + specialized Kourou nút (node / 노드).
 
-> **Bàn giao:** Sau **French Guiana**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ARG argentina](./ARG_argentina.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **French Guiana**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

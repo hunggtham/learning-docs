@@ -1,7 +1,6 @@
 # United States Virgin Islands
 
-> **Mạch đọc:** Đặt **United States Virgin Islands** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **United States Virgin Islands**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **United States Virgin Islands** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Các đảo chính có địa hình đồi dốc, bờ biển chia cắt và ít đồng bằng lớn. Settlement và tourism vì thế tập trung vào một số bay, coastal corridor và urban nút (node / 노드).
 
@@ -11,4 +10,4 @@ Hurricane, storm surge, landslide và coral degradation là rủi ro liên kết
 
 **Mô hình tư duy:** hilly islands + bay-centered settlement + tourism/marine ecosystem dependence + hurricane vulnerability.
 
-> **Bàn giao:** Sau **United States Virgin Islands**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ABW aruba](./ABW_aruba.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **United States Virgin Islands**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

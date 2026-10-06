@@ -1,6 +1,6 @@
 # Micronesia (Federated States of)
 
-> **Mạch đọc:** Đặt **Micronesia (Federated States of)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Micronesia (Federated States of)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Micronesia (Federated States of)** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Federated States of Micronesia gồm nhiều island groups trải dài từ high volcanic islands tới low coral atolls. Do đó không có một geomorphology duy nhất đại diện toàn territory.
 
@@ -10,4 +10,4 @@ Agriculture, fisheries và tourism phụ thuộc reef–forest–watershed conne
 
 **Mô hình tư duy:** heterogeneous island federation + huge ocean distances + high-island/atoll contrast + maritime mạng (network / 네트워크) dependence.
 
-> **Bàn giao:** Sau **Micronesia (Federated States of)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [GUM guam](./GUM_guam.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Micronesia (Federated States of)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

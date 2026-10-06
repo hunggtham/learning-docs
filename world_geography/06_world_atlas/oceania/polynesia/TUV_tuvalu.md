@@ -1,6 +1,6 @@
 # Tuvalu
 
-> **Mạch đọc:** Đặt **Tuvalu** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Tuvalu**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Tuvalu** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Tuvalu gồm các atoll và reef islands cực thấp, phân tán trên Pacific. Funafuti tập trung dân cư và hạ tầng ở dải đất rất hẹp quanh lagoon.
 
@@ -10,4 +10,4 @@ Wave flooding, erosion, saltwater intrusion và sea-level rise là rủi ro (ris
 
 **Mô hình tư duy:** ultra-low atoll + tuyến tính (linear / 선형) crowded settlement + fragile freshwater + climate/coastal exposure.
 
-> **Bàn giao:** Sau **Tuvalu**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ASM american samoa](./ASM_american_samoa.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Tuvalu**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

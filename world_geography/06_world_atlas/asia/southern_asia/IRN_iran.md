@@ -1,6 +1,6 @@
 # Iran — Iran (Islamic Republic of) (IRN)
 
-> **Mạch đọc:** Đặt **Iran — Iran (Islamic Republic of) (IRN)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Iran — Iran (Islamic Republic of) (IRN)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Iran — Iran (Islamic Republic of) (IRN)** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Iran nằm trên một plateau cao được bao quanh bởi các hệ núi Zagros, Alborz và các vùng khô nội địa. Địa hình tạo basin kín, rain shadow và sự phân bố dân cư tập trung ở foothill, valley và đô thị có nguồn nước.
 
@@ -12,4 +12,4 @@ Oil/gas tập trung mạnh ở phía tây nam và Persian Gulf, nên chuỗi x�
 
 > Mô hình: **mountain-rimmed arid plateau + foot-slope cities + groundwater dependence + southwest hydrocarbon mạng (network / 네트워크)**.
 
-> **Bàn giao:** Sau **Iran — Iran (Islamic Republic of) (IRN)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [AFG afghanistan](./AFG_afghanistan.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Iran — Iran (Islamic Republic of) (IRN)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,6 +1,6 @@
 # Melanesia
 
-> **Mạch đọc:** Đọc **Melanesia** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Melanesia**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Melanesia** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Theo UN M49, Melanesia gồm Fiji, New Caledonia, Papua New Guinea, Solomon Islands và Vanuatu.
 
@@ -12,4 +12,4 @@ Các mẫu (pattern / 패턴) nổi bật là **active plate boundaries, volcani
 - [Solomon Islands](./SLB_solomon_islands.md)
 - [Vanuatu](./VUT_vanuatu.md)
 
-> **Bàn giao:** Sau **Melanesia**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [FJI fiji](./FJI_fiji.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Melanesia**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

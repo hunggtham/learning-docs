@@ -1,6 +1,6 @@
 # Polynesia
 
-> **Mạch đọc:** Đọc **Polynesia** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Polynesia**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Polynesia** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Theo UN M49, Polynesia gồm American Samoa, Cook Islands, French Polynesia, Niue, Pitcairn, Samoa, Tokelau, Tonga, Tuvalu và Wallis and Futuna Islands.
 
@@ -17,4 +17,4 @@ Theo UN M49, Polynesia gồm American Samoa, Cook Islands, French Polynesia, Niu
 - [Tuvalu](./TUV_tuvalu.md)
 - [Wallis and Futuna Islands](./WLF_wallis_futuna.md)
 
-> **Bàn giao:** Sau **Polynesia**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ASM american samoa](./ASM_american_samoa.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Polynesia**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

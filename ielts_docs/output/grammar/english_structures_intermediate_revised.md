@@ -1,5 +1,7 @@
 # English Grammar & Structures — Intermediate
 
+> **Mạch đọc:** [README](../../../README.md) là bản đồ owner của **English Grammar & Structures — Intermediate**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. **Quy ước** mở đối tượng chính của file và câu hỏi cần theo dõi; sau đó sang **Vị trí trong lộ trình** để mở rộng đối tượng sang phạm vi kế cận. Cách đi này giữ lại điểm tựa của section đầu và cho biết kết luận sẽ được dùng ở đâu, thay vì dừng ở định nghĩa đầu tiên.
+
 > **Phạm vi level:** **B1 → low B2**.  
 > File này nối trực tiếp từ `Beginner` và `Pre-Intermediate`, không lặp lại nguyên các cấu trúc đã học ở hai level trước.  
 > Trọng tâm: dùng tiếng Anh để **kể chuyện phức tạp hơn, nói giả định, hối tiếc, suy đoán, báo cáo lời nói, diễn đạt nguyên nhân-kết quả, mô tả quan hệ giữa các ý và viết/speaking ở mức B1–B2 rõ ràng hơn**.
@@ -17,6 +19,8 @@ Phần này hướng dẫn cách đọc tài liệu và vị trí của mục tr
 - **O** = Object
 - **Clause** = mệnh đề
 - **Prep** = Preposition
+
+> **Chuyển mạch:** Trong **English Grammar & Structures — Intermediate**, **Vị trí trong lộ trình** tiếp nhận điểm tựa từ **Quy ước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **01. Perfect Tenses nâng cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## Vị trí trong lộ trình
 
@@ -37,6 +41,8 @@ Phần này hướng dẫn cách đọc tài liệu và vị trí của mục tr
 
 > **Integrated mastery tracks:** Tenses • Verb Patterns • Prepositions & Collocations • Phrasal Verbs • Speaking Patterns • Common Grammar Mistakes • Grammar Transformation / Paraphrasing.
 
+> **Chuyển mạch:** Ở chặng này của **English Grammar & Structures — Intermediate**, **01. Perfect Tenses nâng cao** tiếp nhận điểm tựa từ **Vị trí trong lộ trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **02. Conditionals mở rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 01. Perfect Tenses nâng cao
 
 Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
@@ -50,6 +56,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 6 | Future Perfect | `S + will have + V3` | Nói một việc sẽ hoàn thành trước một thời điểm tương lai. | **By next year, I will have finished the course.** | Đến năm sau, tôi sẽ hoàn thành khóa học. | `will + V` chỉ nói hành động tương lai, không nhấn hoàn thành trước mốc. | — | Dấu hiệu: `by`, `by the time`, `before`. |
 | 7 | Future Continuous | `S + will be + V-ing` | Nói hành động sẽ đang diễn ra tại một thời điểm tương lai. | **This time tomorrow, I will be flying to Japan.** | Giờ này ngày mai tôi sẽ đang bay đến Nhật. | `will + V` là tương lai đơn. | — | Cũng dùng lịch sự để hỏi kế hoạch: `Will you be using the car tonight?` |
 | 8 | Future Perfect Continuous | `S + will have been + V-ing` | Nhấn thời lượng của hành động kéo dài đến một mốc tương lai. | **By December, I will have been working here for five years.** | Đến tháng 12, tôi sẽ làm ở đây được năm năm. | `Future Perfect` nhấn hoàn tất/kết quả hơn. | — | Đây là cấu trúc upper-B1/B2, nên học để nhận diện và dùng có kiểm soát. |
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **English Grammar & Structures — Intermediate**, **02. Conditionals mở rộng** tiếp nhận điểm tựa từ **01. Perfect Tenses nâng cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **03. Modal Perfect & suy đoán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 02. Conditionals mở rộng
 
@@ -66,6 +74,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 8 | In case | `in case + Present Simple/Past Simple` | Làm gì để đề phòng một khả năng. | **Take an umbrella in case it rains.** | Mang ô theo phòng khi trời mưa. | `if` = nếu điều kiện thực sự xảy ra; `in case` = chuẩn bị trước. | — | — |
 | 9 | Otherwise | `clause; otherwise, clause` | Nếu không thì. | **Leave now; otherwise, you will miss the train.** | Đi ngay đi, nếu không bạn sẽ lỡ tàu. | `or else` thân mật hơn. | — | — |
 
+> **Chuyển mạch:** Trong **English Grammar & Structures — Intermediate**, **03. Modal Perfect & suy đoán** tiếp nhận điểm tựa từ **02. Conditionals mở rộng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **04. Wish / If only** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 03. Modal Perfect & suy đoán
 
 Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
@@ -80,6 +90,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 7 | Needn't have + V3 | `S + needn't have + V3` | Đã làm một việc nhưng hóa ra không cần thiết. | **You needn't have bought any food.** | Bạn đã không cần phải mua đồ ăn đâu. | `didn't need to + V` thường có thể hàm ý không làm vì không cần. | — | Cặp này quan trọng ở B2. |
 | 8 | Would have + V3 | `S + would have + V3` | Kết quả giả định trong quá khứ hoặc hành động đã có thể xảy ra nếu điều kiện khác. | **I would have called, but I lost your number.** | Tôi đã định/có thể đã gọi, nhưng tôi làm mất số của bạn. | Thường gặp trong Third Conditional. | — | — |
 
+> **Chuyển mạch:** Ở chặng này của **English Grammar & Structures — Intermediate**, **04. Wish / If only** tiếp nhận điểm tựa từ **03. Modal Perfect & suy đoán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **05. Passive Voice mở rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 04. Wish / If only
 
 Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
@@ -90,6 +102,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 3 | Wish + would | `S + wish + S + would + V` | Muốn một người/tình huống thay đổi trong tương lai, thường có sắc thái khó chịu. | **I wish the neighbors would be quieter.** | Tôi ước hàng xóm yên tĩnh hơn. | Không thường dùng `I wish I would...` cho ý chí của chính mình. | — | — |
 | 4 | Wish + Past Perfect | `S + wish + S + had + V3` | Tiếc một việc trong quá khứ. | **I wish I had studied harder.** | Tôi ước mình đã học chăm hơn. | `should have + V3` cũng thể hiện hối tiếc nhưng dưới dạng đánh giá. | — | — |
 | 5 | If only | `If only + Past / Past Perfect` | Mạnh hơn `wish`, diễn tả mong ước/hối tiếc mạnh. | **If only I had listened to you.** | Giá mà tôi đã nghe lời bạn. | `I wish...` trung tính hơn. | — | — |
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **English Grammar & Structures — Intermediate**, **05. Passive Voice mở rộng** tiếp nhận điểm tựa từ **04. Wish / If only** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **06. Reported Speech mở rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 05. Passive Voice mở rộng
 
@@ -107,6 +121,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 9 | Have someone do something | `S + have + person + V` | Yêu cầu/sắp xếp để ai làm việc gì. | **I had the technician check the server.** | Tôi nhờ kỹ thuật viên kiểm tra server. | `get + person + to V` gần nghĩa. | — | — |
 | 10 | Get someone to do something | `S + get + person + to V` | Thuyết phục/sắp xếp để ai làm gì. | **I got him to help me.** | Tôi khiến/thuyết phục anh ấy giúp tôi. | `have + person + V` thường trung tính hơn. | — | — |
 
+> **Chuyển mạch:** Trong **English Grammar & Structures — Intermediate**, **06. Reported Speech mở rộng** tiếp nhận điểm tựa từ **05. Passive Voice mở rộng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **07. Relative Clauses mở rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 06. Reported Speech mở rộng
 
 Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
@@ -123,6 +139,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 9 | Suggest that + clause | `suggest + that + S + (should) + V` | Đề nghị rằng ai nên làm gì. | **He suggested that we leave early.** | Anh ấy đề nghị chúng tôi rời đi sớm. | `suggest + V-ing` không nêu chủ ngữ riêng của hành động. | — | — |
 | 10 | Advise + O + to V | `advise + O + to V` | Khuyên ai làm gì. | **The doctor advised me to rest.** | Bác sĩ khuyên tôi nghỉ ngơi. | `suggest` không dùng `suggest + O + to V`. | — | — |
 
+> **Chuyển mạch:** Ở chặng này của **English Grammar & Structures — Intermediate**, **07. Relative Clauses mở rộng** tiếp nhận điểm tựa từ **06. Reported Speech mở rộng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **08. Gerund & Infinitive – đổi nghĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 07. Relative Clauses mở rộng
 
 Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
@@ -134,6 +152,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 4 | When | `time + when + clause` | Mệnh đề quan hệ chỉ thời gian. | **I remember the day when we first met.** | Tôi nhớ ngày chúng ta gặp nhau lần đầu. | Có thể bỏ `when` trong một số trường hợp. | — | — |
 | 5 | Preposition + which/whom | `prep + which/whom` | Dạng trang trọng của mệnh đề quan hệ. | **The company for which I work is growing quickly.** | Công ty mà tôi làm việc cho đang phát triển nhanh. | Trong hội thoại thường: `the company I work for`. | — | — |
 | 6 | Relative clause with quantifier | `some/many/all of whom/which` | Nối thông tin về một phần/toàn bộ nhóm. | **There were ten applicants, three of whom were engineers.** | Có mười ứng viên, ba người trong số đó là kỹ sư. | — | — | Cấu trúc B2 quan trọng trong writing. |
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **English Grammar & Structures — Intermediate**, **08. Gerund & Infinitive – đổi nghĩa** tiếp nhận điểm tựa từ **07. Relative Clauses mở rộng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **09. Participle & Adjective Structures** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 08. Gerund & Infinitive – đổi nghĩa
 
@@ -156,6 +176,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 14 | Would rather | `would rather + V + than + V` | Thích làm A hơn B trong một tình huống. | **I'd rather stay home than go out tonight.** | Tối nay tôi thích ở nhà hơn ra ngoài. | `prefer` trung tính hơn. | — | — |
 | 15 | Would rather + person + Past Simple | `would rather + S + V2` | Muốn người khác làm gì ở hiện tại/tương lai. | **I'd rather you came tomorrow.** | Tôi muốn bạn đến vào ngày mai hơn. | — | — | Dạng này B2, cần nhớ là Past Simple mang nghĩa giả định. |
 
+> **Chuyển mạch:** Trong **English Grammar & Structures — Intermediate**, **09. Participle & Adjective Structures** tiếp nhận điểm tựa từ **08. Gerund & Infinitive – đổi nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Determiners & Quantity nâng cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 09. Participle & Adjective Structures
 
 Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
@@ -169,6 +191,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 6 | Appear to + V | `S + appear to + V` | Có vẻ như; trang trọng hơn `seem`. | **The system appears to be working normally.** | Hệ thống có vẻ đang hoạt động bình thường. | `seem to` tự nhiên hơn trong hội thoại. | — | — |
 | 7 | Find + O + adjective | `S + find + O + Adj` | Thấy/đánh giá thứ gì như thế nào. | **I find this book useful.** | Tôi thấy quyển sách này hữu ích. | `think + clause` diễn đạt ý kiến bằng mệnh đề. | — | — |
 | 8 | Find it + adjective + to V | `S + find it + Adj + to V` | Thấy việc gì dễ/khó/hữu ích... | **I find it difficult to concentrate at night.** | Tôi thấy khó tập trung vào ban đêm. | `It is difficult for me to...` gần nghĩa. | — | — |
+
+> **Chuyển mạch:** Ở chặng này của **English Grammar & Structures — Intermediate**, **10. Determiners & Quantity nâng cao** tiếp nhận điểm tựa từ **09. Participle & Adjective Structures** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Comparison nâng cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 10. Determiners & Quantity nâng cao
 
@@ -186,6 +210,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 9 | Both / Neither / Either of | `both/neither/either of + determiner/pronoun` | Nói về hai đối tượng cụ thể. | **Neither of the answers is correct.** | Không đáp án nào trong hai đáp án là đúng. | — | — | — |
 | 10 | None of | `none of + plural/uncountable N` | Không cái/người nào trong nhóm. | **None of my friends live nearby.** | Không người bạn nào của tôi sống gần đây. | `neither of` chỉ dùng cho hai. | — | — |
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **English Grammar & Structures — Intermediate**, **11. Comparison nâng cao** tiếp nhận điểm tựa từ **10. Determiners & Quantity nâng cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Linking Words B1–B2** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 11. Comparison nâng cao
 
 Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
@@ -198,6 +224,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 5 | Almost as...as | `almost as + Adj + as` | Gần bằng. | **The second test was almost as difficult as the first.** | Bài kiểm tra thứ hai gần khó bằng bài đầu. | `not nearly as...as` = kém xa. | — | — |
 | 6 | Twice/three times as...as | `twice/three times as + Adj + as` | Gấp hai/gấp ba về một đặc điểm. | **This room is twice as big as mine.** | Phòng này rộng gấp đôi phòng tôi. | — | — | — |
 | 7 | The more..., the less... | `The more + clause, the less + clause` | Càng nhiều... càng ít... | **The more I use social media, the less focused I feel.** | Tôi càng dùng mạng xã hội nhiều, tôi càng thấy ít tập trung. | — | — | — |
+
+> **Chuyển mạch:** Trong **English Grammar & Structures — Intermediate**, **12. Linking Words B1–B2** tiếp nhận điểm tựa từ **11. Comparison nâng cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Prepositions & Verb Patterns B1–B2** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 12. Linking Words B1–B2
 
@@ -217,6 +245,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 11 | In order to | `in order to + V` | Để làm gì, nhấn mục đích. | **I left early in order to avoid traffic.** | Tôi rời đi sớm để tránh tắc đường. | `to + V` ngắn gọn hơn. | — | — |
 | 12 | So that | `so that + S + can/could/will/would + V` | Để mà, nêu mục đích bằng mệnh đề. | **I wrote it down so that I wouldn't forget.** | Tôi ghi lại để không quên. | `in order to + V` không có chủ ngữ riêng. | — | — |
 
+> **Chuyển mạch:** Ở chặng này của **English Grammar & Structures — Intermediate**, **13. Prepositions & Verb Patterns B1–B2** tiếp nhận điểm tựa từ **12. Linking Words B1–B2** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Phrasal Verbs Intermediate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 13. Prepositions & Verb Patterns B1–B2
 
 Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
@@ -234,6 +264,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 10 | Accuse of | `accuse + O + of + V-ing` | Buộc tội ai làm gì. | **They accused him of lying.** | Họ buộc tội anh ấy nói dối. | — | — | — |
 | 11 | Congratulate on | `congratulate + O + on + N/V-ing` | Chúc mừng ai về việc gì. | **I congratulated her on passing the exam.** | Tôi chúc mừng cô ấy đã đỗ kỳ thi. | — | — | — |
 | 12 | Remind of/about/to | `remind + O + of/about N / to V` | Nhắc ai về việc gì hoặc nhắc làm gì. | **Remind me to call him tomorrow.** | Nhắc tôi gọi anh ấy ngày mai nhé. | `remember to V` = tự mình nhớ. | — | — |
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **English Grammar & Structures — Intermediate**, **14. Phrasal Verbs Intermediate** tiếp nhận điểm tựa từ **13. Prepositions & Verb Patterns B1–B2** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Cấu trúc nhận thức & đánh giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 14. Phrasal Verbs Intermediate
 
@@ -256,6 +288,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 14 | Bring up | `bring up + topic` | Đề cập một chủ đề. | **He brought up an important issue.** | Anh ấy đề cập một vấn đề quan trọng. | — | — | — |
 | 15 | Turn down | `turn down + offer/request` | Từ chối. | **I turned down the job offer.** | Tôi từ chối lời mời làm việc. | `accept` = chấp nhận. | — | — |
 
+> **Chuyển mạch:** Trong **English Grammar & Structures — Intermediate**, **15. Cấu trúc nhận thức & đánh giá** tiếp nhận điểm tựa từ **14. Phrasal Verbs Intermediate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Noun Clauses** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 15. Cấu trúc nhận thức & đánh giá
 
 Phần này hướng dẫn cách đọc tài liệu và vị trí của mục trong lộ trình. Hãy dùng nó để biết prerequisite, tiêu chí so sánh và bước luyện tập trước khi đi vào bảng hoặc ví dụ.
@@ -272,6 +306,8 @@ Phần này hướng dẫn cách đọc tài liệu và vị trí của mục tr
 | 9 | Be supposed to | `S + be supposed to + V` | Được kỳ vọng/đáng lẽ/phải theo quy định. | **You are supposed to submit the form by Friday.** | Bạn phải nộp mẫu trước thứ Sáu. | `should` là lời khuyên/kỳ vọng chung. | — | — |
 | 10 | Be meant to | `S + be meant to + V` | Được thiết kế/dự định để làm gì hoặc lẽ ra phải. | **This button is meant to reset the system.** | Nút này được thiết kế để reset hệ thống. | `be supposed to` gần nghĩa trong một số ngữ cảnh. | — | — |
 
+> **Chuyển mạch:** Ở chặng này của **English Grammar & Structures — Intermediate**, **16. Noun Clauses** tiếp nhận điểm tựa từ **15. Cấu trúc nhận thức & đánh giá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Tag Questions & Emphasis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 16. Noun Clauses
 
 Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
@@ -284,6 +320,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 5 | The fact that | `the fact that + clause` | Sự thật rằng. | **The fact that he apologized surprised me.** | Việc anh ấy xin lỗi khiến tôi bất ngờ. | `because` nêu nguyên nhân, không biến mệnh đề thành danh từ. | — | — |
 | 6 | It depends on whether | `It depends on whether + clause` | Phụ thuộc vào việc liệu... | **It depends on whether the client agrees.** | Điều đó phụ thuộc vào việc khách hàng có đồng ý hay không. | — | — | — |
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **English Grammar & Structures — Intermediate**, **17. Tag Questions & Emphasis** tiếp nhận điểm tựa từ **16. Noun Clauses** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Time Clauses nâng cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 17. Tag Questions & Emphasis
 
 Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
@@ -294,6 +332,8 @@ Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu h
 | 3 | So do I / Neither do I | `So + auxiliary + S / Neither + auxiliary + S` | Nói mình cũng vậy / cũng không. | **I love coffee. — So do I. / I don't smoke. — Neither do I.** | Tôi thích cà phê. — Tôi cũng vậy. / Tôi không hút thuốc. — Tôi cũng không. | `Me too / Me neither` thân mật hơn. | — | — |
 | 4 | Do/does/did for emphasis | `S + do/does/did + V` | Nhấn mạnh rằng điều gì thực sự đúng. | **I do understand your point.** | Tôi thực sự hiểu ý của bạn. | Không dùng trong câu bình thường nếu không cần nhấn. | — | — |
 | 5 | It was...that/who – basic cleft | `It was + focus + that/who + clause` | Nhấn mạnh một thành phần của câu. | **It was John who called me.** | Chính John là người đã gọi tôi. | Cleft nâng cao sẽ học ở Pre-Advanced. | — | — |
+
+> **Chuyển mạch:** Trong **English Grammar & Structures — Intermediate**, **18. Time Clauses nâng cao** tiếp nhận điểm tựa từ **17. Tag Questions & Emphasis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Articles nâng cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 18. Time Clauses nâng cao
 
@@ -308,6 +348,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 6 | Whenever | `whenever + clause` | Bất cứ khi nào. | **Call me whenever you need help.** | Hãy gọi tôi bất cứ khi nào bạn cần giúp. | `when` chỉ thời điểm cụ thể hơn. | — | — |
 | 7 | No sooner...than – recognition | `No sooner had + S + V3 + than + clause` | Vừa mới... thì...; ở Intermediate chủ yếu nhận diện. | **No sooner had I sat down than the phone rang.** | Tôi vừa ngồi xuống thì điện thoại reo. | `As soon as` tự nhiên hơn trong hội thoại. | — | Học sâu inversion ở Advanced. |
 
+> **Chuyển mạch:** Ở chặng này của **English Grammar & Structures — Intermediate**, **19. Articles nâng cao** tiếp nhận điểm tựa từ **18. Time Clauses nâng cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Speaking & Writing B1–B2** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 19. Articles nâng cao
 
 Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
@@ -318,6 +360,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 3 | A/an + job | `be + a/an + job` | Dùng mạo từ với nghề nghiệp số ít. | **She is an engineer.** | Cô ấy là kỹ sư. | — | — | — |
 | 4 | The + unique/specific context | `the + N` | Dùng khi danh từ là duy nhất trong ngữ cảnh. | **Please close the door.** | Hãy đóng cửa lại. | `a door` = một cánh cửa bất kỳ. | — | — |
 | 5 | Generic plural vs the plural | `plural N vs the + plural N` | Không có `the` khi nói chung; có `the` khi nói nhóm cụ thể. | **Cars are expensive. / The cars outside are new.** | Ô tô nói chung đắt. / Những chiếc xe ngoài kia đều mới. | — | — | — |
+
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **English Grammar & Structures — Intermediate**, **20. Speaking & Writing B1–B2** tiếp nhận điểm tựa từ **19. Articles nâng cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Verb Complement & Object Patterns** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 20. Speaking & Writing B1–B2
 
@@ -341,6 +385,8 @@ Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu h
 | 15 | It depends on | `It depends on + N/wh-clause` | Câu trả lời phụ thuộc yếu tố khác. | **It depends on how much time we have.** | Điều đó phụ thuộc chúng ta có bao nhiêu thời gian. | — | — | — |
 | 16 | That being said – recognition | `That being said, + clause` | Nói vậy nhưng; chuyển sang ý tương phản nhẹ. | **The job is demanding. That being said, I enjoy it.** | Công việc áp lực. Tuy vậy, tôi vẫn thích nó. | `however` trực tiếp hơn. | — | Ở Intermediate nên nhận diện và dùng có chọn lọc. |
 
+> **Chuyển mạch:** Trong **English Grammar & Structures — Intermediate**, **21. Verb Complement & Object Patterns** tiếp nhận điểm tựa từ **20. Speaking & Writing B1–B2** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Discourse & Natural English** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 21. Verb Complement & Object Patterns
 
 Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
@@ -354,6 +400,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 6 | Persuade + O + to V | `persuade + O + to V` | Thuyết phục ai làm gì. | **She persuaded me to apply for the job.** | Cô ấy thuyết phục tôi nộp đơn việc đó. | `convince + O + to V` gần nghĩa. | — | — |
 | 7 | Refuse to | `refuse to + V` | Từ chối làm gì. | **He refused to answer the question.** | Anh ấy từ chối trả lời câu hỏi. | `agree to + V` đối lập về thái độ. | — | — |
 | 8 | Agree to | `agree to + V / agree with + person/opinion` | Đồng ý làm gì; đồng ý với ai/ý kiến. | **She agreed to help me.** | Cô ấy đồng ý giúp tôi. | `agree with` khác cấu trúc. | `refuse to`. | — |
+
+> **Chuyển mạch:** Ở chặng này của **English Grammar & Structures — Intermediate**, **22. Discourse & Natural English** tiếp nhận điểm tựa từ **21. Verb Complement & Object Patterns** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Tenses Mastery – B1/B2** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 22. Discourse & Natural English
 
@@ -370,6 +418,7 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 8 | That is to say | `That is to say, + clause` | Nói cách khác; formal hơn. | **The policy applies to residents only; that is to say, tourists are excluded.** | Chính sách chỉ áp dụng cho cư dân; tức là khách du lịch không thuộc phạm vi. | `in other words` tự nhiên hơn. | — | — |
 | 9 | For instance | `For instance, + example` | Ví dụ như. | **Some tasks can be automated. For instance, data validation can run automatically.** | Một số việc có thể tự động hóa. Ví dụ, kiểm tra dữ liệu có thể chạy tự động. | `for example` phổ biến hơn. | — | — |
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **English Grammar & Structures — Intermediate**, **23. Tenses Mastery – B1/B2** tiếp nhận điểm tựa từ **22. Discourse & Natural English** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Verb Patterns Mastery – B1/B2** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 23. Tenses Mastery – B1/B2
 
@@ -385,6 +434,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 7 | Would vs Used to | `would + V ↔ used to + V` | Cả hai cho thói quen quá khứ; `used to` dùng được cho trạng thái, `would` không. | **We would visit every summer. / We used to live there.** | Mỗi hè chúng tôi thường đến. / Chúng tôi từng sống ở đó. | — | — | — |
 | 8 | Future in time clauses | `when/as soon as/until + Present Simple, will + V` | Không dùng `will` trong mệnh đề thời gian tương lai thông thường. | **I'll call you when I arrive.** | Tôi sẽ gọi khi tôi đến. | — | — | — |
 
+> **Chuyển mạch:** Trong **English Grammar & Structures — Intermediate**, **24. Verb Patterns Mastery – B1/B2** tiếp nhận điểm tựa từ **23. Tenses Mastery – B1/B2** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Prepositions & Collocations Mastery – B1/B2** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 24. Verb Patterns Mastery – B1/B2
 
 Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
@@ -398,6 +449,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 6 | Verb + O + prep + V-ing | `accuse O of / prevent O from / congratulate O on + V-ing` | Nhóm động từ có tân ngữ + giới từ cố định. | **They prevented us from entering.** | Họ ngăn chúng tôi vào. | — | — | — |
 | 7 | Would rather + V / S + Past | `would rather + V / would rather + S + V2` | Ưu tiên bản thân làm ↔ muốn người khác làm. | **I'd rather stay. / I'd rather you stayed.** | Tôi thà ở lại. / Tôi muốn bạn ở lại. | — | — | — |
 | 8 | Need + V-ing | `N + need + V-ing` | Mang nghĩa bị động: cần được làm. | **The car needs repairing.** | Xe cần được sửa. | `needs to be repaired` tương đương. | — | — |
+
+> **Chuyển mạch:** Ở chặng này của **English Grammar & Structures — Intermediate**, **25. Prepositions & Collocations Mastery – B1/B2** tiếp nhận điểm tựa từ **24. Verb Patterns Mastery – B1/B2** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Phrasal Verbs Mastery – Intermediate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 25. Prepositions & Collocations Mastery – B1/B2
 
@@ -413,6 +466,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 7 | In charge of | `be in charge of + N/V-ing` | Phụ trách. | **Who's in charge of the project?** | Ai phụ trách dự án? | — | — | — |
 | 8 | On behalf of | `on behalf of + person/group` | Thay mặt. | **She spoke on behalf of the team.** | Cô ấy nói thay mặt nhóm. | — | — | — |
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **English Grammar & Structures — Intermediate**, **26. Phrasal Verbs Mastery – Intermediate** tiếp nhận điểm tựa từ **25. Prepositions & Collocations Mastery – B1/B2** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Speaking Patterns Mastery – Intermediate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 26. Phrasal Verbs Mastery – Intermediate
 
 Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình thức → ví dụ → lỗi dễ nhầm → cách tự luyện. Đừng chỉ học bảng; hãy đọc vì sao cấu trúc được chọn trong ngữ cảnh đó.
@@ -427,6 +482,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 7 | Take up | `take up + hobby/time/space` | Bắt đầu sở thích; chiếm thời gian/không gian. | **I've taken up running.** | Tôi bắt đầu chạy bộ. | — | — | — |
 | 8 | Come up | `come up` | Xuất hiện/phát sinh. | **Something urgent came up.** | Có việc gấp phát sinh. | `come up with` = nghĩ ra. | — | — |
 
+> **Chuyển mạch:** Trong **English Grammar & Structures — Intermediate**, **27. Speaking Patterns Mastery – Intermediate** tiếp nhận điểm tựa từ **26. Phrasal Verbs Mastery – Intermediate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Common Grammar Mistakes – Intermediate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 27. Speaking Patterns Mastery – Intermediate
 
 Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu hỏi và chiến lược xử lý. Hãy đọc mục tiêu trước, sau đó đối chiếu ví dụ với lỗi thường gặp và cách tự kiểm tra.
@@ -440,6 +497,8 @@ Mục này chuyển yêu cầu bài thi thành cách nhận diện dạng câu h
 | 6 | On the one hand... | `On the one hand..., on the other hand...` | Cân bằng hai mặt trong speaking. | **On the one hand it's cheap; on the other hand it's slow.** | Một mặt nó rẻ, mặt khác nó chậm. | — | — | — |
 | 7 | I see your point, but... | `I see your point, but + clause` | Phản biện lịch sự. | **I see your point, but I don't think that's the main issue.** | Tôi hiểu ý bạn, nhưng không nghĩ đó là vấn đề chính. | — | — | — |
 | 8 | If I had to choose... | `If I had to choose, I'd + V` | Trả lời câu hỏi lựa chọn tự nhiên. | **If I had to choose, I'd take the second option.** | Nếu phải chọn, tôi sẽ chọn phương án hai. | — | — | — |
+
+> **Chuyển mạch:** Ở chặng này của **English Grammar & Structures — Intermediate**, **28. Common Grammar Mistakes – Intermediate** tiếp nhận điểm tựa từ **27. Speaking Patterns Mastery – Intermediate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Grammar Transformation & Paraphrasing – B1/B2** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 
 ## 28. Common Grammar Mistakes – Intermediate
 
@@ -457,6 +516,8 @@ Phần này dạy một cấu trúc tiếng Anh theo mạch: ý nghĩa → hình
 | 9 | ❌ according to me | `In my opinion / From my point of view` | `according to` thường dùng cho nguồn khác, không dùng để nêu ý kiến cá nhân. | **In my opinion, the plan is risky.** | Theo tôi, kế hoạch rủi ro. | — | — | — |
 | 10 | ❌ informations / researches | `information / research` | Nhiều danh từ học thuật phổ biến là không đếm được. | **We need more information and research.** | Chúng ta cần thêm thông tin và nghiên cứu. | — | — | — |
 
+> **Chuyển mạch:** Đặt trong câu hỏi lớn của **English Grammar & Structures — Intermediate**, **29. Grammar Transformation & Paraphrasing – B1/B2** tiếp nhận điểm tựa từ **28. Common Grammar Mistakes – Intermediate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tổng kết phạm vi Intermediate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+
 ## 29. Grammar Transformation & Paraphrasing – B1/B2
 
 Phần này hướng dẫn cách đọc tài liệu và vị trí của mục trong lộ trình. Hãy dùng nó để biết prerequisite, tiêu chí so sánh và bước luyện tập trước khi đi vào bảng hoặc ví dụ.
@@ -472,6 +533,8 @@ Phần này hướng dẫn cách đọc tài liệu và vị trí của mục tr
 | 8 | It takes ↔ spend | `It takes + O + time + to V ↔ S + spend + time + V-ing` | Hai cách nói thời gian dành cho hành động. | **It takes me an hour to commute. → I spend an hour commuting.** | Tôi mất một giờ đi làm. | — | — | — |
 
 ---
+
+> **Chuyển mạch:** Trong **English Grammar & Structures — Intermediate**, **Tổng kết phạm vi Intermediate** tiếp nhận điểm tựa từ **29. Grammar Transformation & Paraphrasing – B1/B2** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
 
 ## Tổng kết phạm vi Intermediate
 
@@ -495,3 +558,5 @@ File hiện có **201 cấu trúc/mẫu câu**, chia thành **22 nhóm**.
 14. Cấu trúc lập luận B1–B2 như **From my point of view, There are several reasons why, The main advantage is that, To some extent**.
 
 > Khi chuyển sang `Pre-Advanced`, nên tránh lặp lại các cấu trúc này ở dạng cơ bản. Chỉ mở rộng về **sắc thái, formal/informal register, inversion, ellipsis, advanced clause reduction, hedging, nominalisation, complex comparison và academic-style syntax**.
+
+> **Bàn giao:** Sau **Tổng kết phạm vi Intermediate**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../../../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

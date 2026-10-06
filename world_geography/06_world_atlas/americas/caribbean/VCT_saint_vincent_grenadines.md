@@ -1,6 +1,6 @@
 # Saint Vincent and the Grenadines
 
-> **Mạch đọc:** Đặt **Saint Vincent and the Grenadines** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Saint Vincent and the Grenadines**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Saint Vincent and the Grenadines** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Territory gồm đảo Saint Vincent núi lửa cao và chuỗi Grenadines nhỏ hơn kéo xuống phía nam. Vì vậy geography chuyển từ high volcanic island sang small-island maritime mạng (network / 네트워크).
 
@@ -10,4 +10,4 @@ Hurricane, volcanic eruption, landslide và coastal erosion tạo các hazard kh
 
 **Mô hình tư duy:** high volcanic main island + dispersed Grenadines + inter-island logistics + multi-hazard hệ thống (system / 시스템).
 
-> **Bàn giao:** Sau **Saint Vincent and the Grenadines**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ABW aruba](./ABW_aruba.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Saint Vincent and the Grenadines**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

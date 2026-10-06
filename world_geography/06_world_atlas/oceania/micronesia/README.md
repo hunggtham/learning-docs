@@ -1,6 +1,6 @@
 # Micronesia
 
-> **Mạch đọc:** Đọc **Micronesia** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Micronesia**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Micronesia** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Theo UN M49, Micronesia gồm Guam, Kiribati, Marshall Islands, Micronesia (Federated States of), Naoero/Nauru, Northern Mariana Islands, Palau và United States Minor Outlying Islands.
 
@@ -15,4 +15,4 @@ Theo UN M49, Micronesia gồm Guam, Kiribati, Marshall Islands, Micronesia (Fede
 - [Palau](./PLW_palau.md)
 - [United States Minor Outlying Islands](./UMI_us_minor_outlying_islands.md)
 
-> **Bàn giao:** Sau **Micronesia**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [FSM micronesia](./FSM_micronesia.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Micronesia**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

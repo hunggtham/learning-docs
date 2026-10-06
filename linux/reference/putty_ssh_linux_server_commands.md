@@ -1,7 +1,6 @@
 # PuTTY / SSH Linux máy chủ (server / 서버) Command Cheat Sheet — Extended
 
-> **Mạch đọc:** Đọc **PuTTY / SSH Linux máy chủ (server / 서버) Command Cheat Sheet — Extended** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Nội dung đi từ **Ví dụ cấp cao (senior / 시니어)** sang **Combo môi trường vận hành (production / 운영 환경)**; điểm nối này chuẩn bị câu hỏi cho các mục sau thay vì dừng ở định nghĩa đầu tiên.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **PuTTY / SSH Linux máy chủ (server / 서버) Command Cheat Sheet — Extended**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Ghi nhớ quan trọng** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 > Dùng khi SSH vào Linux máy chủ (server / 서버) bằng PuTTY, Terminal, iTerm, Windows Terminal...
 >
@@ -1101,4 +1100,4 @@ man rsync
   - luôn kiểm tra trước destructive thao tác (operation / 연산);
   - biết lấy bằng chứng trước khi restart/xoá/kill làm mất trạng thái lỗi.
 
-> **Bàn giao:** Sau **Ghi nhớ quan trọng**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp.
+> **Bàn giao:** Sau **Ghi nhớ quan trọng**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

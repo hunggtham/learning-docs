@@ -1,7 +1,6 @@
 # PMP Glossary — thuật ngữ cốt lõi
 
-> **Mạch đọc:** Đặt **PMP Glossary — thuật ngữ cốt lõi** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **PMP Glossary — thuật ngữ cốt lõi**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Cách dùng glossary** để chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Glossary này là chỉ mục (index / 인덱스) nhận diện thuật ngữ, không thay chapter giải thích. Định nghĩa cố ý ngắn; khi một khái niệm có giả định (assumption / 가정), ranh giới (boundary / 경계) hoặc cơ chế (mechanism / 메커니즘) quan trọng, hãy mở chapter chuẩn gốc (canonical / 정본) được link ở cột cuối.
 
@@ -179,4 +178,4 @@ Khi một term chỉ còn là “mẹo nhớ”, hãy quay lại chapter để p
 
 Nếu gặp term chưa có trong glossary nhưng xuất hiện lặp lại ở nhiều chapter, nên bổ sung vào chính tệp (file / 파일) này thay vì tạo một vocabulary tệp (file / 파일) cạnh tranh khác.
 
-> **Bàn giao:** Sau **Cách dùng glossary**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 foundations value and project system](./00_foundations_value_and_project_system.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Cách dùng glossary**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

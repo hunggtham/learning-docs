@@ -1,7 +1,6 @@
 # Ý thức, giấc ngủ và chú ý — bản đồ kết nối
 
-> **Mạch đọc:** Đọc **Ý thức, giấc ngủ và chú ý — bản đồ kết nối** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
-
+> **Mạch đọc:** [README](../README.md) là bản đồ owner của **Ý thức, giấc ngủ và chú ý — bản đồ kết nối**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Ý thức, giấc ngủ và chú ý — bản đồ kết nối** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Ba chủ đề **ý thức (consciousness)**, **chú ý (attention)** và **giấc ngủ (sleep)** thường được học chung vì chúng đều liên quan đến trạng thái xử lý thông tin của hệ thần kinh, nhưng chúng có ranh giới khái niệm khác nhau. Để tránh một chapter quá lớn, nội dung chuyên sâu được tách thành hai hướng.
 
@@ -13,4 +12,4 @@ Hai hệ thống liên hệ chặt chẽ: thiếu ngủ làm giảm vigilance v�
 
 Xem thêm [[01_sensation_and_perception]], [[05_neuroplasticity_brain_change_and_learning]], [[../02_learning_and_cognition/01_memory]] và [[../04_mental_health/11_sleep_insomnia_and_circadian_disorders]].
 
-> **Bàn giao:** Sau **Ý thức, giấc ngủ và chú ý — bản đồ kết nối**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [00 nervous system and brain](./00_nervous_system_and_brain.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Ý thức, giấc ngủ và chú ý — bản đồ kết nối**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](../README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

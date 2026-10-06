@@ -1,7 +1,6 @@
 # Turkmenistan — Turkmenistan (TKM)
 
-> **Mạch đọc:** Đặt **Turkmenistan — Turkmenistan (TKM)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Turkmenistan — Turkmenistan (TKM)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Turkmenistan — Turkmenistan (TKM)** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Phần lớn Turkmenistan nằm trong Karakum Desert, nên nước và hành lang định cư có giá trị đặc biệt cao. Quốc gia mở ra Caspian Sea ở phía tây nhưng không có lối ra đại dương mở; kết nối năng lượng chủ yếu dựa chuỗi xử lý (pipeline / 파이프라인) và mạng đất liền.
 
@@ -13,4 +12,4 @@ Ashgabat nằm gần dãy Kopet Dag phía nam, nơi địa hình và rìa núi t
 
 > Mô hình: **desert territory + imported/diverted water + gas nodes + chuỗi xử lý (pipeline / 파이프라인) corridors**.
 
-> **Bàn giao:** Sau **Turkmenistan — Turkmenistan (TKM)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [KAZ kazakhstan](./KAZ_kazakhstan.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Turkmenistan — Turkmenistan (TKM)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

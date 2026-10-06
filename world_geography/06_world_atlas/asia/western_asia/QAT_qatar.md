@@ -1,6 +1,6 @@
 # Qatar — Qatar (QAT)
 
-> **Mạch đọc:** Đặt **Qatar — Qatar (QAT)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Qatar — Qatar (QAT)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Qatar — Qatar (QAT)** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Qatar là peninsula thấp, phẳng và khô nhô vào Persian Gulf. Freshwater tự nhiên cực hạn chế nên desalination và power hệ thống (system / 시스템) là điều kiện nền của urban life.
 
@@ -10,4 +10,4 @@ Flat terrain và intense urbanization làm heat island, coastal exposure và dra
 
 > Mô hình: **small arid peninsula + LNG export nút (node / 노드) + desalinated-water metropolitan cốt lõi (core / 핵심) + coastal hạ tầng (infrastructure / 인프라) concentration**.
 
-> **Bàn giao:** Sau **Qatar — Qatar (QAT)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ARE united arab emirates](./ARE_united_arab_emirates.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Qatar — Qatar (QAT)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

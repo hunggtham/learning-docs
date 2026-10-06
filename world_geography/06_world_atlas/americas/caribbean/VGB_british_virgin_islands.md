@@ -1,6 +1,6 @@
 # British Virgin Islands
 
-> **Mạch đọc:** Đặt **British Virgin Islands** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **British Virgin Islands**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **British Virgin Islands** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Đây là quần đảo nhỏ với nhiều đảo đồi dốc và vịnh kín. Bờ biển chia cắt tạo điều kiện cho marina và boating nhưng cũng làm phần lớn hoạt động tập trung sát biển.
 
@@ -10,4 +10,4 @@ Hurricane tạo rủi ro hệ thống vì có thể đồng thời phá marina, 
 
 **Mô hình tư duy:** hilly archipelago + marina mạng (network / 네트워크) + limited flat land + cyclone-sensitive hạ tầng (infrastructure / 인프라).
 
-> **Bàn giao:** Sau **British Virgin Islands**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ABW aruba](./ABW_aruba.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **British Virgin Islands**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

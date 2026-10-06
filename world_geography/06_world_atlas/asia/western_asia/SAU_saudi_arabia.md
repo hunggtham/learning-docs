@@ -1,6 +1,6 @@
 # Saudi Arabia — Saudi Arabia (SAU)
 
-> **Mạch đọc:** Đặt **Saudi Arabia — Saudi Arabia (SAU)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Saudi Arabia — Saudi Arabia (SAU)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Saudi Arabia — Saudi Arabia (SAU)** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Saudi Arabia chiếm phần lớn Arabian Peninsula, với Red Sea escarpment ở west, interior plateau/desert và Persian Gulf lowlands ở east. Không gian rất lớn nhưng water và settlement tập trung không đều.
 
@@ -12,4 +12,4 @@ Heat, drought, flash flood in wadis và dust storm là hazard nền. Mountain we
 
 > Mô hình: **Red Sea escarpment + vast arid plateau + eastern oil province + coastal desalination/cổng (port / 포트) các hệ thống (systems / 시스템들)**.
 
-> **Bàn giao:** Sau **Saudi Arabia — Saudi Arabia (SAU)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ARE united arab emirates](./ARE_united_arab_emirates.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Saudi Arabia — Saudi Arabia (SAU)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

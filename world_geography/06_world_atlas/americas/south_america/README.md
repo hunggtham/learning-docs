@@ -1,6 +1,6 @@
 # South America
 
-> **Mạch đọc:** Đọc **South America** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **South America**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **South America** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 UN M49 xếp 16 country/area trong South America. Địa lý tiểu vùng bị chi phối bởi **Andes ở phía tây, Amazon–Orinoco–La Plata ở nội địa và phía đông, Brazilian/Guiana Highlands, các mặt tiền Atlantic–Pacific và độ dốc (gradient / 기울기) vĩ độ từ xích đạo tới cận Nam Cực**.
 
@@ -23,4 +23,4 @@ Một cách đọc hiệu quả là theo ba lát cắt: `mountain → basin → 
 - [Uruguay](./URY_uruguay.md)
 - [Venezuela](./VEN_venezuela.md)
 
-> **Bàn giao:** Sau **South America**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ARG argentina](./ARG_argentina.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **South America**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

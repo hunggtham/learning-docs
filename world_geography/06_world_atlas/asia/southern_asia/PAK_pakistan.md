@@ -1,6 +1,6 @@
 # Pakistan — Pakistan (PAK)
 
-> **Mạch đọc:** Đặt **Pakistan — Pakistan (PAK)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Pakistan — Pakistan (PAK)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Pakistan — Pakistan (PAK)** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Pakistan được tổ chức mạnh quanh Indus River hệ thống (system / 시스템). Từ mountain headwaters phía bắc, Indus chảy qua Punjab/Sindh plains tới Arabian Sea, tạo một agricultural corridor dài giữa các vùng khô hơn.
 
@@ -12,4 +12,4 @@ Pakistan phơi lộ với earthquake ở mountain/western tectonic zones, flood 
 
 > Mô hình: **mountain water sources → Indus irrigation spine → dense plains → Arabian Sea gateway**, bên cạnh arid peripheral regions.
 
-> **Bàn giao:** Sau **Pakistan — Pakistan (PAK)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [AFG afghanistan](./AFG_afghanistan.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Pakistan — Pakistan (PAK)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

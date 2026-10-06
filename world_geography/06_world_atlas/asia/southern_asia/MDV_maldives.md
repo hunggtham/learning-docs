@@ -1,6 +1,6 @@
 # Maldives — Maldives (MDV)
 
-> **Mạch đọc:** Đặt **Maldives — Maldives (MDV)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Maldives — Maldives (MDV)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Maldives — Maldives (MDV)** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Maldives là chuỗi atoll thấp trên Indian Ocean. Phần lớn land elevation chỉ cao rất ít so với sea mức (level / 수준), nên coastal tiến trình (process / 프로세스), groundwater lens và reef health quan trọng hơn topography trên đất.
 
@@ -12,4 +12,4 @@ Tourism và air/sea connectivity tạo economy rất network-dependent. Một is
 
 > Mô hình: **low coral atolls + reef protection + fragile freshwater lens + tourism/aviation mạng (network / 네트워크) + extreme relative sea-level exposure**.
 
-> **Bàn giao:** Sau **Maldives — Maldives (MDV)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [AFG afghanistan](./AFG_afghanistan.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Maldives — Maldives (MDV)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

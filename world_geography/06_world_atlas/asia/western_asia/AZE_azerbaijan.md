@@ -1,6 +1,6 @@
 # Azerbaijan — Azerbaijan (AZE)
 
-> **Mạch đọc:** Đặt **Azerbaijan — Azerbaijan (AZE)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Azerbaijan — Azerbaijan (AZE)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Azerbaijan — Azerbaijan (AZE)** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Azerbaijan nằm giữa Greater Caucasus, Lesser Caucasus và Caspian lowlands. Baku nằm trên Absheron Peninsula hướng ra Caspian Sea, nơi oil/gas geography đã định hình mạnh đô thị và hạ tầng.
 
@@ -12,4 +12,4 @@ Nakhchivan là exclave tách khỏi main territory, minh họa cách political h
 
 > Mô hình: **Caucasus mountains + Caspian lowland + hydrocarbon nút (node / 노드) + chuỗi xử lý (pipeline / 파이프라인) corridor + territorial discontinuity**.
 
-> **Bàn giao:** Sau **Azerbaijan — Azerbaijan (AZE)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ARE united arab emirates](./ARE_united_arab_emirates.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Azerbaijan — Azerbaijan (AZE)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

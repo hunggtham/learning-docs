@@ -1,6 +1,6 @@
 # United States Minor Outlying Islands
 
-> **Mạch đọc:** Đặt **United States Minor Outlying Islands** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **United States Minor Outlying Islands**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **United States Minor Outlying Islands** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Đây là một **statistical grouping** của nhiều đảo/atoll nhỏ, tách biệt và không tạo thành một single natural island hệ thống (system / 시스템). Vì vậy không nên gán một climate, geology hay settlement mẫu (pattern / 패턴) duy nhất cho toàn entry.
 
@@ -10,4 +10,4 @@ Bài học phương pháp quan trọng: một mã thống kê có thể gom các
 
 **Mô hình tư duy:** statistical bundle ≠ coherent geographic region.
 
-> **Bàn giao:** Sau **United States Minor Outlying Islands**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [FSM micronesia](./FSM_micronesia.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **United States Minor Outlying Islands**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

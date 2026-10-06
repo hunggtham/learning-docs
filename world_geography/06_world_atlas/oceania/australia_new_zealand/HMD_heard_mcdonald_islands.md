@@ -1,6 +1,6 @@
 # Heard Island and McDonald Islands
 
-> **Mạch đọc:** Đặt **Heard Island and McDonald Islands** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Heard Island and McDonald Islands**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Heard Island and McDonald Islands** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Đây là các đảo subantarctic rất biệt lập ở southern Indian Ocean. Heard Island có núi lửa hoạt động và băng hà; terrestrial khả năng tiếp cận (accessibility / 접근성) cực thấp.
 
@@ -10,4 +10,4 @@ Weather, sea trạng thái (state / 상태) và distance là các “barrier” 
 
 **Mô hình tư duy:** active subantarctic volcanism + glaciers + marine-dominated ecosystem + extreme remoteness.
 
-> **Bàn giao:** Sau **Heard Island and McDonald Islands**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [AUS australia](./AUS_australia.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Heard Island and McDonald Islands**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

@@ -1,8 +1,7 @@
 # Northern Africa
 
-> **Mạch đọc:** Đọc **Northern Africa** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Northern Africa**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Northern Africa** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Tiểu vùng này nối Địa Trung Hải, Sahara, lưu vực Nile và các hành lang xuyên sa mạc. Đọc từng profile theo tương tác giữa khô hạn, nước, dải dân cư ven biển/sông, đô thị, năng lượng và kết nối với châu Âu–Tây Á.
 
-> **Bàn giao:** Sau **Northern Africa**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [DZA algeria](./DZA_algeria.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Northern Africa**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

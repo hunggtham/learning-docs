@@ -1,7 +1,6 @@
 # DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) Glossary
 
-> **Mạch đọc:** Đặt **DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) Glossary** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) Glossary**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) Glossary** để chỉ đường quay lại owner và tài liệu chuẩn khi cần đào sâu, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Tệp (file / 파일) này dùng để tra nhanh thuật ngữ, không thay thế chapter giải thích cơ chế.
 
@@ -113,4 +112,4 @@ Tệp (file / 파일) này dùng để tra nhanh thuật ngữ, không thay th�
 | liên kết (connection / 연결) ngân sách (budget / 예산) | Giới hạn tính đồng thời (concurrency / 동시성)/trạng thái (state / 상태) cho socket, pool, tệp (file / 파일) descriptor, ephemeral/SNAT cổng (port / 포트), conntrack và downstream; cần tính cùng arrival tỷ lệ (rate / 비율) và holding thời gian (time / 시간). |
 | Stale liên kết (connection / 연결) | liên kết (connection / 연결) được reuse nhưng topology/peer trạng thái (state / 상태) đã thay đổi hoặc socket đã half-closed; thường gây lỗi rải rác sau cutover/failover cho tới khi pool refresh. |
 
-> **Bàn giao:** Sau **DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) Glossary**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [COVERAGE AUDIT](./COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) Glossary**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

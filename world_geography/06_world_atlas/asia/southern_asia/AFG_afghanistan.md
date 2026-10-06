@@ -1,6 +1,6 @@
 # Afghanistan — Afghanistan (AFG)
 
-> **Mạch đọc:** Đặt **Afghanistan — Afghanistan (AFG)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Afghanistan — Afghanistan (AFG)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Afghanistan — Afghanistan (AFG)** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Afghanistan là quốc gia nội lục nơi Hindu Kush chia không gian thành các thung lũng và basin có khả năng tiếp cận rất khác nhau. Núi vừa là water tower vừa là barrier, làm đường bộ tập trung qua một số đèo và corridor.
 
@@ -12,4 +12,4 @@ Kabul nằm trong basin cao; Herat hướng tới corridor phía tây; Kandahar 
 
 > Mô hình: **mountain-divided landlocked basins + snow-fed water + corridor dependence + arid rủi ro (risk / 위험)**.
 
-> **Bàn giao:** Sau **Afghanistan — Afghanistan (AFG)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [BGD bangladesh](./BGD_bangladesh.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Afghanistan — Afghanistan (AFG)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

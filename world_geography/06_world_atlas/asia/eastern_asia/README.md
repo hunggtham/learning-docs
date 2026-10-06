@@ -1,6 +1,6 @@
 # Eastern Asia
 
-> **Mạch đọc:** Đọc **Eastern Asia** như một mắt xích của lộ trình học (learning path / 학습 경로) hiện tại, không như một ghi chú tách rời. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Eastern Asia**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Eastern Asia** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Theo UN M49, Eastern Asia gồm China, Hong Kong SAR, Macao SAR, Democratic People's Republic of Korea, Japan, Mongolia và Republic of Korea. Atlas bổ sung một profile riêng cho Taiwan trong `../../supplemental/` vì đây là một không gian địa lý–kinh tế thường cần phân tích độc lập dù không là entry chính riêng trong M49.
 
@@ -8,4 +8,4 @@ Tiểu vùng này có một cấu trúc rất mạnh: **nội lục cao và khô
 
 Các profile trong folder không nhằm tóm tắt chính trị hiện thời mà giải thích cơ chế địa lý bền vững.
 
-> **Bàn giao:** Sau **Eastern Asia**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [CHN china](./CHN_china.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Eastern Asia**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

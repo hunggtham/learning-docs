@@ -1,6 +1,6 @@
 # French Polynesia
 
-> **Mạch đọc:** Đặt **French Polynesia** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **French Polynesia**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **French Polynesia** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 French Polynesia gồm nhiều archipelago rất xa nhau: high volcanic islands, barrier-reef islands và low atolls. Tahiti trong Society Islands tập trung phần lớn urban/services tại Papeete.
 
@@ -10,4 +10,4 @@ Tourism, pearl/fisheries và công khai (public / 공개) services phụ thuộc
 
 **Mô hình tư duy:** huge ocean territory + Tahiti primacy + multiple island morphologies + aviation-dependent mạng (network / 네트워크).
 
-> **Bàn giao:** Sau **French Polynesia**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ASM american samoa](./ASM_american_samoa.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **French Polynesia**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

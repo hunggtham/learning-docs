@@ -1,7 +1,6 @@
 # Wallis and Futuna Islands
 
-> **Mạch đọc:** Đặt **Wallis and Futuna Islands** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
-
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Wallis and Futuna Islands**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Wallis and Futuna Islands** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Wallis có relief thấp hơn và lagoon/reef rõ, trong khi Futuna cao, dốc và tectonically active hơn. Hai island groups vì vậy có hydrology và hazard profile khác nhau.
 
@@ -11,4 +10,4 @@ Cyclone, earthquake, landslide và coastal damage là các hazard chính.
 
 **Mô hình tư duy:** one statistical territory + contrasting island morphologies + small cục bộ (local / 로컬) networks + bên ngoài (external / 외부) vận chuyển (transport / 전송) dependence.
 
-> **Bàn giao:** Sau **Wallis and Futuna Islands**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [ASM american samoa](./ASM_american_samoa.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Wallis and Futuna Islands**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

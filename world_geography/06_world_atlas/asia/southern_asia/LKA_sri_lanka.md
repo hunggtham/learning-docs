@@ -1,6 +1,6 @@
 # Sri Lanka — Sri Lanka (LKA)
 
-> **Mạch đọc:** Đặt **Sri Lanka — Sri Lanka (LKA)** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Sri Lanka — Sri Lanka (LKA)**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Sri Lanka — Sri Lanka (LKA)** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Sri Lanka là đảo nằm gần mũi nam India, có central highlands và coastal plains. Địa hình trung tâm làm rainfall phân hóa mạnh theo monsoon exposure.
 
@@ -12,4 +12,4 @@ Tea plantation gắn với elevation và climate ở central highlands, cho th�
 
 > Mô hình: **central highlands divide rainfall → wet southwest/drier north-east → irrigation landscapes + Indian Ocean gateway**.
 
-> **Bàn giao:** Sau **Sri Lanka — Sri Lanka (LKA)**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [AFG afghanistan](./AFG_afghanistan.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Sri Lanka — Sri Lanka (LKA)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

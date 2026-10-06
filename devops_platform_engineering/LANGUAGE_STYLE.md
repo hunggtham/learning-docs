@@ -1,6 +1,6 @@
 # Quy ước ngôn ngữ
 
-> **Mạch đọc:** Đặt **Quy ước ngôn ngữ** trong bản đồ [README](./README.md) để thấy đơn vị sở hữu (owner / 오너) và vị trí của nó. Hãy xác định đối tượng và câu hỏi trung tâm trước, rồi dùng phần này để đối chiếu với mục liên quan sau khi đã nắm mô hình tư duy (mental model / 사고 모델) chính.
+> **Mạch đọc:** [README](./README.md) là bản đồ owner của **Quy ước ngôn ngữ**; nhìn vào vị trí đó trước để biết file này đang phục vụ nhánh kiến thức nào. Bắt đầu ở **Quy ước ngôn ngữ** để mở đối tượng chính của file và câu hỏi cần theo dõi, rồi dùng kết luận đó khi quay về lộ trình rộng hơn.
 
 Thư viện DevOps / kỹ thuật nền tảng (platform engineering / 플랫폼 엔지니어링) giải thích chủ yếu bằng tiếng Việt tự nhiên. Mỗi lần thuật ngữ quan trọng xuất hiện trong phần giải thích, dùng dạng `tiếng Việt (English term / 한국어 용어)`. Không dùng tiếng Anh thay cho phần giải thích tiếng Việt chỉ vì tài liệu kỹ thuật thường viết như vậy.
 
@@ -12,4 +12,4 @@ Các từ như `desired state`, `actual state`, `reconciliation`, `drift`, `blas
 
 Mục tiêu là người đọc có thể đọc liền mạch bằng tiếng Việt nhưng vẫn nhận ra thuật ngữ chuẩn khi đọc log, dashboard, RFC, tài liệu cloud provider hoặc trao đổi với nhóm (team / 팀) Hàn/Anh.
 
-> **Bàn giao:** Sau **Quy ước ngôn ngữ**, hãy chốt bất biến (invariant / 불변식) và giới hạn của mục này trước khi nối sang kiến thức kế tiếp. Có thể đọc tiếp [COVERAGE AUDIT](./COVERAGE_AUDIT.md) để đối chiếu ranh giới (boundary / 경계) gần nhất.
+> **Bàn giao:** Sau **Quy ước ngôn ngữ**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
