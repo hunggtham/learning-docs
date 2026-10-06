@@ -24,7 +24,7 @@ và phương trình Schrödinger mô tả tiến hóa của hệ kín, còn các
 
 Cấu trúc này có nét tương đồng với một hệ phần mềm có trạng thái: cần cách biểu diễn trạng thái, quy tắc chuyển trạng thái và đầu ra quan sát được. Điểm khác là trong vật lý, các quy tắc phải phù hợp với thí nghiệm và các đối xứng của tự nhiên.
 
-> **Chuyển mạch:** Trong **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **2. Đạo hàm: ngôn ngữ của tốc độ biến thiên** tiếp nhận điểm tựa từ **1. Trạng thái → tiến hóa → quan sát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Tích phân: cộng dồn những biến thiên nhỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **2. Đạo hàm: ngôn ngữ của tốc độ biến thiên** nối từ **1. Trạng thái → tiến hóa → quan sát** sang **3. Tích phân: cộng dồn những biến thiên nhỏ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Đạo hàm: ngôn ngữ của tốc độ biến thiên
 
@@ -43,7 +43,7 @@ P=\frac{dE}{dt}.
 
 Vận tốc, gia tốc, dòng điện, lực và công suất có nội dung vật lý khác nhau, nhưng cùng dùng một ý tưởng toán học: tốc độ thay đổi của một đại lượng theo một biến khác.
 
-> **Chuyển mạch:** Ở chặng này của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **3. Tích phân: cộng dồn những biến thiên nhỏ** tiếp nhận điểm tựa từ **2. Đạo hàm: ngôn ngữ của tốc độ biến thiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Bảo toàn: thay đổi bên trong gắn với dòng qua biên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **3. Tích phân: cộng dồn những biến thiên nhỏ** nối từ **2. Đạo hàm: ngôn ngữ của tốc độ biến thiên** sang **4. Bảo toàn: thay đổi bên trong gắn với dòng qua biên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Tích phân: cộng dồn những biến thiên nhỏ
 
@@ -71,7 +71,7 @@ Q=\int I\,dt,
 
 Tích phân đường, mặt và thể tích khác nhau ở miền cộng dồn. Trong dữ liệu rời rạc, phép tổng `SUM` có thể được xem là họ hàng của tích phân khi ta cộng nhiều phần tử nhỏ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **4. Bảo toàn: thay đổi bên trong gắn với dòng qua biên** tiếp nhận điểm tựa từ **3. Tích phân: cộng dồn những biến thiên nhỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Đối xứng và định luật bảo toàn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **4. Bảo toàn: thay đổi bên trong gắn với dòng qua biên** nối từ **3. Tích phân: cộng dồn những biến thiên nhỏ** sang **5. Đối xứng và định luật bảo toàn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Bảo toàn: thay đổi bên trong gắn với dòng qua biên
 
@@ -97,7 +97,7 @@ còn bảo toàn điện tích là
 
 Mô hình tư duy chung là: lượng chứa trong một vùng thay đổi vì nó đi qua biên hoặc vì có nguồn bên trong. Vì vậy lựa chọn **ranh giới của hệ (system boundary)** là một kỹ năng nền tảng. Một vật riêng lẻ có thể không bảo toàn động lượng do ngoại lực, nhưng một hệ lớn hơn chứa cả các vật tương tác có thể bảo toàn tổng động lượng.
 
-> **Chuyển mạch:** Trong **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **5. Đối xứng và định luật bảo toàn** tiếp nhận điểm tựa từ **4. Bảo toàn: thay đổi bên trong gắn với dòng qua biên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Trường: mô tả vật lý tại từng điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **5. Đối xứng và định luật bảo toàn** nối từ **4. Bảo toàn: thay đổi bên trong gắn với dòng qua biên** sang **6. Trường: mô tả vật lý tại từng điểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Đối xứng và định luật bảo toàn
 
@@ -105,7 +105,7 @@ Mô hình tư duy chung là: lượng chứa trong một vùng thay đổi vì n
 
 Nhờ đó, các định luật bảo toàn không còn giống ba công thức tình cờ. Chúng phản ánh cấu trúc đối xứng của không-thời gian và của lý thuyết. Trong vật lý hạt, đối xứng chuẩn (gauge symmetry) còn tổ chức cách các trường và tương tác được mô tả.
 
-> **Chuyển mạch:** Ở chặng này của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **6. Trường: mô tả vật lý tại từng điểm** tiếp nhận điểm tựa từ **5. Đối xứng và định luật bảo toàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. độ dốc (gradient / 기울기): dòng và lực thường phản ứng với độ chênh không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **6. Trường: mô tả vật lý tại từng điểm** nối từ **5. Đối xứng và định luật bảo toàn** sang **7. độ dốc (gradient / 기울기): dòng và lực thường phản ứng với độ chênh không gian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Trường: mô tả vật lý tại từng điểm
 
@@ -124,7 +124,7 @@ T(\vec r,t),\qquad
 
 Thay vì chỉ hỏi “vật A tác dụng lên vật B thế nào?”, cách nhìn theo trường hỏi “tại điểm này, môi trường vật lý có giá trị gì?”. Lý thuyết trường lượng tử (quantum field theory) đẩy ý tưởng này xa hơn: các hạt cơ bản được mô tả như những kích thích lượng tử của trường.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **7. độ dốc (gradient / 기울기): dòng và lực thường phản ứng với độ chênh không gian** tiếp nhận điểm tựa từ **6. Trường: mô tả vật lý tại từng điểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Thế năng, độ cong và cân bằng ổn định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **7. độ dốc (gradient / 기울기): dòng và lực thường phản ứng với độ chênh không gian** nối từ **6. Trường: mô tả vật lý tại từng điểm** sang **8. Thế năng, độ cong và cân bằng ổn định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. độ dốc (gradient / 기울기): dòng và lực thường phản ứng với độ chênh không gian
 
@@ -150,7 +150,7 @@ Nhiều quan hệ vật lý có cùng cấu trúc:
 
 Trong học máy, hạ độ dốc (gradient / 기울기) (gradient descent) cũng dùng cùng hình học để di chuyển trong không gian tham số theo hướng làm giảm hàm mất mát. Đây là sự tương đồng toán học, không có nghĩa độ dốc (gradient / 기울기) trong tối ưu hóa là một lực vật lý.
 
-> **Chuyển mạch:** Trong **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **8. Thế năng, độ cong và cân bằng ổn định** tiếp nhận điểm tựa từ **7. độ dốc (gradient / 기울기): dòng và lực thường phản ứng với độ chênh không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Tuyến tính hóa và nguyên lý chồng chập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **8. Thế năng, độ cong và cân bằng ổn định** nối từ **7. độ dốc (gradient / 기울기): dòng và lực thường phản ứng với độ chênh không gian** sang **9. Tuyến tính hóa và nguyên lý chồng chập**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Thế năng, độ cong và cân bằng ổn định
 
@@ -170,7 +170,7 @@ Vì vậy dao động điều hòa xuất hiện ở rất nhiều hệ khác nh
 
 Trong tối ưu hóa, ma trận Hessian cũng mô tả độ cong gần cực tiểu. Đây là một ví dụ rõ về cùng cấu trúc toán học xuất hiện ở hai lĩnh vực khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **9. Tuyến tính hóa và nguyên lý chồng chập** tiếp nhận điểm tựa từ **8. Thế năng, độ cong và cân bằng ổn định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Trị riêng và chế độ (mode / 모드) tự nhiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **9. Tuyến tính hóa và nguyên lý chồng chập** nối từ **8. Thế năng, độ cong và cân bằng ổn định** sang **10. Trị riêng và chế độ (mode / 모드) tự nhiên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Tuyến tính hóa và nguyên lý chồng chập
 
@@ -184,7 +184,7 @@ Xấp xỉ tuyến tính cho phép dùng nguyên lý chồng chập, đại số
 
 Khi nhiễu loạn không còn nhỏ, các hạng phi tuyến có thể tạo điều hòa bậc cao, ghép chế độ (mode / 모드), sốc, dòng rối hoặc hỗn loạn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **10. Trị riêng và chế độ (mode / 모드) tự nhiên** tiếp nhận điểm tựa từ **9. Tuyến tính hóa và nguyên lý chồng chập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Sóng, Fourier và thông tin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **10. Trị riêng và chế độ (mode / 모드) tự nhiên** nối từ **9. Tuyến tính hóa và nguyên lý chồng chập** sang **11. Sóng, Fourier và thông tin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Trị riêng và chế độ (mode / 모드) tự nhiên
 
@@ -204,7 +204,7 @@ các trạng thái riêng của Hamiltonian có năng lượng xác định.
 
 Câu hỏi chung là: “những dạng tự nhiên nào của hệ có thể tiến hóa hoặc đáp ứng tương đối độc lập?”.
 
-> **Chuyển mạch:** Trong **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **11. Sóng, Fourier và thông tin** tiếp nhận điểm tựa từ **10. Trị riêng và chế độ (mode / 모드) tự nhiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Hàm mũ: tốc độ thay đổi tỉ lệ với lượng hiện có** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **11. Sóng, Fourier và thông tin** nối từ **10. Trị riêng và chế độ (mode / 모드) tự nhiên** sang **12. Hàm mũ: tốc độ thay đổi tỉ lệ với lượng hiện có**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Sóng, Fourier và thông tin
 
@@ -218,7 +218,7 @@ Nhiễu xạ trong quang học, phân tích phổ âm thanh, thông tin vô tuy�
 
 còn trong xử lý tín hiệu tồn tại quan hệ đánh đổi tương tự giữa độ tập trung theo thời gian và tần số. Hai quan hệ không có cùng diễn giải vật lý, nhưng chia sẻ nền toán học Fourier.
 
-> **Chuyển mạch:** Ở chặng này của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **12. Hàm mũ: tốc độ thay đổi tỉ lệ với lượng hiện có** tiếp nhận điểm tựa từ **11. Sóng, Fourier và thông tin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Quy luật nghịch đảo bình phương và hình học ba chiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **12. Hàm mũ: tốc độ thay đổi tỉ lệ với lượng hiện có** nối từ **11. Sóng, Fourier và thông tin** sang **13. Quy luật nghịch đảo bình phương và hình học ba chiều**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Hàm mũ: tốc độ thay đổi tỉ lệ với lượng hiện có
 
@@ -238,7 +238,7 @@ Cấu trúc này xuất hiện trong phân rã phóng xạ, phóng điện RC, b
 
 Điểm quan trọng không phải ghi nhớ từng công thức riêng mà nhận ra cơ chế: tốc độ biến thiên hiện tại tỉ lệ với lượng đang còn lại.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **13. Quy luật nghịch đảo bình phương và hình học ba chiều** tiếp nhận điểm tựa từ **12. Hàm mũ: tốc độ thay đổi tỉ lệ với lượng hiện có** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Các số vô thứ nguyên quyết định chế độ vật lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **13. Quy luật nghịch đảo bình phương và hình học ba chiều** nối từ **12. Hàm mũ: tốc độ thay đổi tỉ lệ với lượng hiện có** sang **14. Các số vô thứ nguyên quyết định chế độ vật lý**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Quy luật nghịch đảo bình phương và hình học ba chiều
 
@@ -250,7 +250,7 @@ Một nguồn điểm đẳng hướng phát thông lượng bảo toàn qua m�
 
 Cấu trúc này xuất hiện trong trường hấp dẫn Newton, điện trường Coulomb và cường độ bức xạ của nguồn điểm đẳng hướng trong không gian tự do. Không phải mọi lực đều giảm theo `1/r^2`; quy luật này gắn với nguồn điểm, không gian ba chiều và bảo toàn thông lượng.
 
-> **Chuyển mạch:** Trong **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **14. Các số vô thứ nguyên quyết định chế độ vật lý** tiếp nhận điểm tựa từ **13. Quy luật nghịch đảo bình phương và hình học ba chiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Xấp xỉ là một phần của lý thuyết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **14. Các số vô thứ nguyên quyết định chế độ vật lý** nối từ **13. Quy luật nghịch đảo bình phương và hình học ba chiều** sang **15. Xấp xỉ là một phần của lý thuyết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Các số vô thứ nguyên quyết định chế độ vật lý
 
@@ -276,7 +276,7 @@ và tỉ số tương đối tính
 
 Đây là cơ sở của tương tự động lực học (dynamic similarity) trong mô hình thí nghiệm và kỹ thuật.
 
-> **Chuyển mạch:** Ở chặng này của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **15. Xấp xỉ là một phần của lý thuyết** tiếp nhận điểm tựa từ **14. Các số vô thứ nguyên quyết định chế độ vật lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Thang đo và lý thuyết hiệu dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **15. Xấp xỉ là một phần của lý thuyết** nối từ **14. Các số vô thứ nguyên quyết định chế độ vật lý** sang **16. Thang đo và lý thuyết hiệu dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Xấp xỉ là một phần của lý thuyết
 
@@ -308,7 +308,7 @@ chỉ hữu ích khi `v\ll c`.
 
 Trưởng thành trong vật lý không có nghĩa tránh xấp xỉ, mà là biết mình đã bỏ qua điều gì và khi nào phần bị bỏ qua trở nên quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **16. Thang đo và lý thuyết hiệu dụng** tiếp nhận điểm tựa từ **15. Xấp xỉ là một phần của lý thuyết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Xác suất cổ điển và xác suất lượng tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **16. Thang đo và lý thuyết hiệu dụng** nối từ **15. Xấp xỉ là một phần của lý thuyết** sang **17. Xác suất cổ điển và xác suất lượng tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Thang đo và lý thuyết hiệu dụng
 
@@ -334,7 +334,7 @@ máy tính và phần mềm
 
 Mỗi tầng dùng các bậc tự do hiệu dụng (effective degrees of freedom) và nén chi tiết tầng dưới thành các tham số như khối lượng, điện tích, hằng số điện môi, điện trở hay điện áp ngưỡng. Cách tư duy này gần với trừu tượng hóa trong kỹ nghệ phần mềm: một API che chi tiết thấp hơn nhưng vẫn bị giới hạn bởi chúng.
 
-> **Chuyển mạch:** Trong **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **17. Xác suất cổ điển và xác suất lượng tử** tiếp nhận điểm tựa từ **16. Thang đo và lý thuyết hiệu dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Entropy và thông tin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **17. Xác suất cổ điển và xác suất lượng tử** nối từ **16. Thang đo và lý thuyết hiệu dụng** sang **18. Entropy và thông tin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Xác suất cổ điển và xác suất lượng tử
 
@@ -342,7 +342,7 @@ Trong cơ học thống kê cổ điển, xác suất thường biểu diễn s�
 
 Hai trường hợp dùng nhiều công cụ xác suất giống nhau nhưng không có cùng cách diễn giải vật lý. Vì vậy không nên giản lược lượng tử thành “cổ điển cộng thêm ngẫu nhiên”.
 
-> **Chuyển mạch:** Ở chặng này của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **18. Entropy và thông tin** tiếp nhận điểm tựa từ **17. Xác suất cổ điển và xác suất lượng tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Nhân quả và tốc độ truyền tín hiệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **18. Entropy và thông tin** nối từ **17. Xác suất cổ điển và xác suất lượng tử** sang **19. Nhân quả và tốc độ truyền tín hiệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Entropy và thông tin
 
@@ -360,7 +360,7 @@ H=-\sum_i p_i\log p_i
 
 đều dùng logarit để biến số lượng trạng thái hoặc xác suất nhân với nhau thành đại lượng có tính cộng. Liên hệ giữa nhiệt động lực học và lý thuyết thông tin rất sâu, nhưng hai khái niệm không nên bị đồng nhất khi chưa chỉ rõ hệ vật lý và cách ánh xạ trạng thái.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **19. Nhân quả và tốc độ truyền tín hiệu** tiếp nhận điểm tựa từ **18. Entropy và thông tin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Nhiễu, thăng giáng và phép đo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **19. Nhân quả và tốc độ truyền tín hiệu** nối từ **18. Entropy và thông tin** sang **20. Nhiễu, thăng giáng và phép đo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Nhân quả và tốc độ truyền tín hiệu
 
@@ -368,7 +368,7 @@ Trong các mô hình cơ học cổ điển lý tưởng, đôi khi ràng buộc
 
 Trong hệ phân tán của khoa học máy tính, độ trễ mạng cũng làm khái niệm “trạng thái toàn cục tức thời” trở nên khó. Đây không phải cùng hiện tượng với tương đối tính, nhưng là một phép liên hệ hữu ích: thông tin luôn cần một cơ chế truyền.
 
-> **Chuyển mạch:** Trong **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **20. Nhiễu, thăng giáng và phép đo** tiếp nhận điểm tựa từ **19. Nhân quả và tốc độ truyền tín hiệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Nguyên lý biến phân và tối ưu hóa có ràng buộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **20. Nhiễu, thăng giáng và phép đo** nối từ **19. Nhân quả và tốc độ truyền tín hiệu** sang **21. Nguyên lý biến phân và tối ưu hóa có ràng buộc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Nhiễu, thăng giáng và phép đo
 
@@ -376,7 +376,7 @@ Mọi cảm biến thực đều có nhiễu. Chuyển động nhiệt tạo nhi
 
 Một phép đo tốt không chỉ trả về một giá trị. Nó phải đi kèm mô hình đáp ứng của thiết bị, hiệu chuẩn, độ bất định và các nguồn sai lệch có thể có.
 
-> **Chuyển mạch:** Ở chặng này của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **21. Nguyên lý biến phân và tối ưu hóa có ràng buộc** tiếp nhận điểm tựa từ **20. Nhiễu, thăng giáng và phép đo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Tọa độ suy rộng giúp hấp thụ ràng buộc hình học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **21. Nguyên lý biến phân và tối ưu hóa có ràng buộc** nối từ **20. Nhiễu, thăng giáng và phép đo** sang **22. Tọa độ suy rộng giúp hấp thụ ràng buộc hình học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Nguyên lý biến phân và tối ưu hóa có ràng buộc
 
@@ -407,7 +407,7 @@ Từ đó suy ra phương trình Euler–Lagrange
 
 Cấu trúc này liên hệ trực tiếp với phép tính biến phân (calculus of variations). Tuy nhiên không nên nhân cách hóa rằng tự nhiên “chạy một thuật toán tối ưu”; nguyên lý biến phân là một cách mã hóa toán học cô đọng cho động lực học.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **22. Tọa độ suy rộng giúp hấp thụ ràng buộc hình học** tiếp nhận điểm tựa từ **21. Nguyên lý biến phân và tối ưu hóa có ràng buộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Hamiltonian nối cơ học cổ điển với lượng tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **22. Tọa độ suy rộng giúp hấp thụ ràng buộc hình học** nối từ **21. Nguyên lý biến phân và tối ưu hóa có ràng buộc** sang **23. Hamiltonian nối cơ học cổ điển với lượng tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Tọa độ suy rộng giúp hấp thụ ràng buộc hình học
 
@@ -429,7 +429,7 @@ và phương trình Euler–Lagrange cho
 
 Với góc nhỏ, `\sin\theta\approx\theta`, ta thu được dao động điều hòa. Một ví dụ duy nhất nối cơ học giải tích, ràng buộc, xấp xỉ, phi tuyến và dao động.
 
-> **Chuyển mạch:** Trong **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **23. Hamiltonian nối cơ học cổ điển với lượng tử** tiếp nhận điểm tựa từ **22. Tọa độ suy rộng giúp hấp thụ ràng buộc hình học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Cùng phương trình không có nghĩa cùng hiện tượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **23. Hamiltonian nối cơ học cổ điển với lượng tử** nối từ **22. Tọa độ suy rộng giúp hấp thụ ràng buộc hình học** sang **24. Cùng phương trình không có nghĩa cùng hiện tượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Hamiltonian nối cơ học cổ điển với lượng tử
 
@@ -445,7 +445,7 @@ Trong cơ học Hamilton,
 
 Hamiltonian thường liên hệ với năng lượng toàn phần trong các hệ chuẩn. Trong cơ học lượng tử, Hamiltonian trở thành toán tử sinh tiến hóa theo thời gian. Đây là một cầu nối toán học quan trọng từ cơ học cổ điển sang lượng tử.
 
-> **Chuyển mạch:** Ở chặng này của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **24. Cùng phương trình không có nghĩa cùng hiện tượng** tiếp nhận điểm tựa từ **23. Hamiltonian nối cơ học cổ điển với lượng tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Khung giải quyết một hiện tượng mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **24. Cùng phương trình không có nghĩa cùng hiện tượng** nối từ **23. Hamiltonian nối cơ học cổ điển với lượng tử** sang **25. Khung giải quyết một hiện tượng mới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Cùng phương trình không có nghĩa cùng hiện tượng
 
@@ -459,7 +459,7 @@ có thể mô tả khối lượng–lò xo, con lắc góc nhỏ, điện tích
 
 Kỹ năng quan trọng là nhận ra sự đẳng cấu toán học (mathematical isomorphism) mà không đánh đồng bản chất vật lý.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **25. Khung giải quyết một hiện tượng mới** tiếp nhận điểm tựa từ **24. Cùng phương trình không có nghĩa cùng hiện tượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **25. Khung giải quyết một hiện tượng mới** nối từ **24. Cùng phương trình không có nghĩa cùng hiện tượng** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Khung giải quyết một hiện tượng mới
 
@@ -467,7 +467,7 @@ Khi gặp một hiện tượng chưa quen, hãy lần lượt hỏi: hệ và r
 
 Đây không phải một danh sách công thức. Nó là cách tổ chức tư duy để chuyển từ hiện tượng sang mô hình và từ mô hình trở lại quan sát.
 
-> **Chuyển mạch:** Trong **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **25. Khung giải quyết một hiện tượng mới** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **25. Khung giải quyết một hiện tượng mới** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -475,7 +475,7 @@ Khi gặp một hiện tượng chưa quen, hãy lần lượt hỏi: hệ và r
 
 > Hiểu sâu không có nghĩa luôn dùng lý thuyết phức tạp nhất. Hiểu sâu là biết vì sao mô hình hiện tại đủ dùng, giả định nào làm nó hợp lệ và dấu hiệu nào cho biết cần chuyển sang mô hình khác.
 
-> **Chuyển mạch:** Ở chặng này của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **Liên kết kiến thức (knowledge connection / 지식 연결)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Các liên kết kiến thức: những cấu trúc lặp lại xuyên suốt Vật lý**, **Liên kết kiến thức (knowledge connection / 지식 연결)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

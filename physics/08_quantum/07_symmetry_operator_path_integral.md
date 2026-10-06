@@ -23,7 +23,7 @@ Các ví dụ nền tảng:
 
 Đây là phiên bản lượng tử của mối liên hệ giữa đối xứng và đại lượng bảo toàn.
 
-> **Chuyển mạch:** Trong **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Tịnh tiến và toán tử động lượng** tiếp nhận điểm tựa từ **Đối xứng trong cơ học lượng tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Commutator và tính tương thích của đại lượng quan sát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Tịnh tiến và toán tử động lượng** nối từ **Đối xứng trong cơ học lượng tử** sang **Commutator và tính tương thích của đại lượng quan sát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tịnh tiến và toán tử động lượng
 
@@ -50,7 +50,7 @@ So sánh với khai triển của `\hat U(a)` cho thấy động lượng chính
 
 Điều này làm rõ một ý quan trọng: một đại lượng bảo toàn không chỉ là “con số không đổi”; nó còn có thể sinh ra một đối xứng liên tục của không gian trạng thái.
 
-> **Chuyển mạch:** Ở chặng này của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Commutator và tính tương thích của đại lượng quan sát** tiếp nhận điểm tựa từ **Tịnh tiến và toán tử động lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương trình Heisenberg** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Commutator và tính tương thích của đại lượng quan sát** nối từ **Tịnh tiến và toán tử động lượng** sang **Phương trình Heisenberg**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Commutator và tính tương thích của đại lượng quan sát
 
@@ -77,7 +77,7 @@ là nguồn gốc của quan hệ bất định
 
 Độ bất định này không chỉ đến từ thiết bị đo kém; nó phản ánh cấu trúc đại số của không gian trạng thái.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Phương trình Heisenberg** tiếp nhận điểm tựa từ **Commutator và tính tương thích của đại lượng quan sát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đối xứng và suy biến mức năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Phương trình Heisenberg** nối từ **Commutator và tính tương thích của đại lượng quan sát** sang **Đối xứng và suy biến mức năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình Heisenberg
 
@@ -101,7 +101,7 @@ ta thấy ngoặc Poisson và commutator có cấu trúc tương ứng sâu sắ
 
 Cơ học lượng tử vì vậy không xuất hiện như một lý thuyết hoàn toàn tách rời; nó thay đổi cách biểu diễn và đại số của các đại lượng động lực học.
 
-> **Chuyển mạch:** Trong **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Đối xứng và suy biến mức năng lượng** tiếp nhận điểm tựa từ **Phương trình Heisenberg** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đối xứng rời rạc và parity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Đối xứng và suy biến mức năng lượng** nối từ **Phương trình Heisenberg** sang **Đối xứng rời rạc và parity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đối xứng và suy biến mức năng lượng
 
@@ -119,7 +119,7 @@ Với thế xuyên tâm, Hamiltonian có đối xứng quay nên giao hoán vớ
 
 Khi đặt từ trường ngoài, đối xứng quay đầy đủ bị phá và suy biến có thể tách ra thành hiệu ứng Zeeman.
 
-> **Chuyển mạch:** Ở chặng này của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Đối xứng rời rạc và parity** tiếp nhận điểm tựa từ **Đối xứng và suy biến mức năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đối xứng hoán vị của hạt đồng nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Đối xứng rời rạc và parity** nối từ **Đối xứng và suy biến mức năng lượng** sang **Đối xứng hoán vị của hạt đồng nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đối xứng rời rạc và parity
 
@@ -145,7 +145,7 @@ Nhiều quy tắc chọn trong quang phổ học xuất phát từ đối xứng
 
 có thể bằng 0 nếu tính biến đổi parity hoặc symmetry làm các đóng góp triệt tiêu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Đối xứng hoán vị của hạt đồng nhất** tiếp nhận điểm tựa từ **Đối xứng rời rạc và parity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tích phân đường: một formulation khác của cơ học lượng tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Đối xứng hoán vị của hạt đồng nhất** nối từ **Đối xứng rời rạc và parity** sang **Tích phân đường: một formulation khác của cơ học lượng tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đối xứng hoán vị của hạt đồng nhất
 
@@ -156,7 +156,7 @@ có thể bằng 0 nếu tính biến đổi parity hoặc symmetry làm các đ
 
 Ràng buộc này dẫn tới thống kê Bose–Einstein, nguyên lý loại trừ Pauli và rất nhiều hiện tượng nhiều hạt.
 
-> **Chuyển mạch:** Trong **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Tích phân đường: một formulation khác của cơ học lượng tử** tiếp nhận điểm tựa từ **Đối xứng hoán vị của hạt đồng nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giới hạn cổ điển từ pha dừng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Tích phân đường: một formulation khác của cơ học lượng tử** nối từ **Đối xứng hoán vị của hạt đồng nhất** sang **Giới hạn cổ điển từ pha dừng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tích phân đường: một formulation khác của cơ học lượng tử
 
@@ -172,7 +172,7 @@ K(b,a)
 
 Ta không nên hiểu rằng hạt cổ điển thật sự tách thành vô số bản sao và đi qua mọi con đường. Phát biểu toán học là biên độ chuyển tiếp nhận đóng góp phức từ các lịch sử khả dĩ.
 
-> **Chuyển mạch:** Ở chặng này của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Tích phân đường: một formulation khác của cơ học lượng tử** đã nêu tiêu chí phân biệt, còn **Giới hạn cổ điển từ pha dừng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ví dụ hai khe dưới góc nhìn biên độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Tích phân đường: một formulation khác của cơ học lượng tử** đặt tiêu chí; **Giới hạn cổ điển từ pha dừng** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Ví dụ hai khe dưới góc nhìn biên độ** mở rộng hệ quả.
 
 ## Giới hạn cổ điển từ pha dừng
 
@@ -194,7 +194,7 @@ Phần lớn đóng góp triệt tiêu do giao thoa, trừ vùng quanh các lị
 
 Do đó quỹ đạo cổ điển xuất hiện như giới hạn pha dừng của tích phân đường, thay vì cần giả thuyết rằng “tự nhiên thử mọi đường rồi chọn đường tốt nhất”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Giới hạn cổ điển từ pha dừng** cho ta quy tắc; **Ví dụ hai khe dưới góc nhìn biên độ** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Propagator và tính chất ghép nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Giới hạn cổ điển từ pha dừng** nêu quy tắc; **Ví dụ hai khe dưới góc nhìn biên độ** thử quy tắc trong tình huống, rồi **Propagator và tính chất ghép nối** mở rộng hệ quả.
 
 ## Ví dụ hai khe dưới góc nhìn biên độ
 
@@ -214,7 +214,7 @@ Hạng chéo tạo giao thoa.
 
 Nếu môi trường ghi lại thông tin đường đi đủ rõ, trạng thái môi trường gắn với hai nhánh trở nên gần trực giao. Khi lấy dấu vết (trace / 추적) môi trường, giao thoa giảm: đây là mất kết hợp lượng tử (decoherence).
 
-> **Chuyển mạch:** Trong **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Ví dụ hai khe dưới góc nhìn biên độ** cho ta quy tắc; **Propagator và tính chất ghép nối** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Gauge trường dữ liệu (field / 필드) và pha lượng tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Ví dụ hai khe dưới góc nhìn biên độ** nêu quy tắc; **Propagator và tính chất ghép nối** thử quy tắc trong tình huống, rồi **Gauge trường dữ liệu (field / 필드) và pha lượng tử** mở rộng hệ quả.
 
 ## Propagator và tính chất ghép nối
 
@@ -231,7 +231,7 @@ Cấu trúc này tương ứng với việc toán tử tiến hóa có thể đ�
 
 Tích phân đường và phương trình Schrödinger không phải hai lý thuyết cạnh tranh. Chúng là hai formulation tương đương trong miền áp dụng phù hợp, mỗi cách thuận lợi cho loại bài toán khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Propagator và tính chất ghép nối** nêu điều cần giải thích; **Gauge trường dữ liệu (field / 필드) và pha lượng tử** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Gauge symmetry và pha cục bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Propagator và tính chất ghép nối** đặt vấn đề; **Gauge trường dữ liệu (field / 필드) và pha lượng tử** đối chiếu bằng chứng, rồi **Gauge symmetry và pha cục bộ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Gauge trường dữ liệu (field / 필드) và pha lượng tử
 
@@ -241,7 +241,7 @@ Do đó pha lượng tử phụ thuộc tích phân của thế dọc quỹ đ�
 
 Tích phân đường làm mối liên hệ giữa topology, gauge và pha lượng tử trở nên trực quan.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Gauge trường dữ liệu (field / 필드) và pha lượng tử** nêu điều cần giải thích; **Gauge symmetry và pha cục bộ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Đơn vị và giới hạn bán cổ điển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Gauge trường dữ liệu (field / 필드) và pha lượng tử** đặt vấn đề; **Gauge symmetry và pha cục bộ** đối chiếu bằng chứng, rồi **Đơn vị và giới hạn bán cổ điển** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Gauge symmetry và pha cục bộ
 
@@ -251,7 +251,7 @@ Gauge trường dữ liệu (field / 필드) cung cấp kết nối để so sá
 
 Đây là cầu nối từ redundancy toán học của pha tới điện từ học và lý thuyết trường lượng tử.
 
-> **Chuyển mạch:** Trong **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Gauge symmetry và pha cục bộ** đã nêu tiêu chí phân biệt, còn **Đơn vị và giới hạn bán cổ điển** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Khi formalism tích phân đường hữu ích?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Gauge symmetry và pha cục bộ** đặt tiêu chí; **Đơn vị và giới hạn bán cổ điển** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Khi formalism tích phân đường hữu ích?** mở rộng hệ quả.
 
 ## Đơn vị và giới hạn bán cổ điển
 
@@ -265,7 +265,7 @@ là đại lượng vô thứ nguyên xuất hiện trong pha.
 
 Khi `S/\hbar` rất lớn, pha dao động nhanh và xấp xỉ pha dừng hiệu quả. Khi tác dụng cùng bậc `\hbar`, nhiều lịch sử có thể đóng góp đáng kể và trực giác cổ điển mất hiệu lực.
 
-> **Chuyển mạch:** Ở chặng này của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Đơn vị và giới hạn bán cổ điển** đã nêu tiêu chí phân biệt, còn **Khi formalism tích phân đường hữu ích?** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Đơn vị và giới hạn bán cổ điển** đặt tiêu chí; **Khi formalism tích phân đường hữu ích?** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Khi formalism tích phân đường hữu ích?
 
@@ -279,7 +279,7 @@ Tích phân đường đặc biệt hữu ích khi:
 
 Tuy nhiên, đây không phải lúc nào là cách tính đơn giản nhất. Với giếng thế một chiều cơ bản, phương trình Schrödinger và phương pháp toán tử thường trực tiếp hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Khi formalism tích phân đường hữu ích?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Khi formalism tích phân đường hữu ích?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -300,7 +300,7 @@ symmetry
 → classical limit
 ```
 
-> **Chuyển mạch:** Trong **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -320,7 +320,7 @@ Không. Đối xứng vật lý có thể là tịnh tiến, quay pha nội tạ
 
 Không. Trong miền chuẩn của cơ học lượng tử không tương đối tính, chúng là các formulation tương đương.
 
-> **Chuyển mạch:** Ở chặng này của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Đối xứng, toán tử sinh, commutator và tích phân đường trong cơ học lượng tử**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

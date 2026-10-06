@@ -30,7 +30,7 @@ e\approx1.602\times10^{-19}\,\mathrm C.
 
 Electron mang `-e`, proton mang `+e`. Quark có điện tích phân số `e`, nhưng quark tự do không được quan sát cô lập trong điều kiện thông thường.
 
-> **Chuyển mạch:** Trong **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Định luật Coulomb** tiếp nhận điểm tựa từ **Điện tích là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyên lý chồng chập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Định luật Coulomb** nối từ **Điện tích là gì?** sang **Nguyên lý chồng chập**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định luật Coulomb
 
@@ -60,7 +60,7 @@ Cấu trúc `1/r^2` không phải ngẫu nhiên. Một nguồn điểm trong kh�
 
 Nếu tổng thông lượng được bảo toàn, mật độ thông lượng tự nhiên giảm theo `1/r^2`.
 
-> **Chuyển mạch:** Ở chặng này của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Nguyên lý chồng chập** tiếp nhận điểm tựa từ **Định luật Coulomb** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Nguyên lý chồng chập** nối từ **Định luật Coulomb** sang **Điện trường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nguyên lý chồng chập
 
@@ -85,7 +85,7 @@ Với phân bố điện tích liên tục,
 
 Đây là bước chuyển từ bài toán vài điện tích điểm sang vật thể có phân bố điện tích liên tục.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Điện trường** tiếp nhận điểm tựa từ **Nguyên lý chồng chập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đường sức điện không phải vật thể thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Điện trường** nối từ **Nguyên lý chồng chập** sang **Đường sức điện không phải vật thể thật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điện trường
 
@@ -119,7 +119,7 @@ Một điện tích `q` đặt trong trường chịu lực
 
 Nếu `q<0`, lực ngược hướng điện trường.
 
-> **Chuyển mạch:** Trong **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Đường sức điện không phải vật thể thật** tiếp nhận điểm tựa từ **Điện trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thông lượng điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Đường sức điện không phải vật thể thật** nối từ **Điện trường** sang **Thông lượng điện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đường sức điện không phải vật thể thật
 
@@ -127,7 +127,7 @@ Nếu `q<0`, lực ngược hướng điện trường.
 
 Đường sức không phải dây vật lý và cũng không nhất thiết là quỹ đạo của hạt mang điện. Một hạt có quán tính; nếu vận tốc ban đầu không song song với trường, quỹ đạo có thể cắt các đường sức.
 
-> **Chuyển mạch:** Ở chặng này của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Thông lượng điện** tiếp nhận điểm tựa từ **Đường sức điện không phải vật thể thật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định luật Gauss** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Thông lượng điện** nối từ **Đường sức điện không phải vật thể thật** sang **Định luật Gauss**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thông lượng điện
 
@@ -145,7 +145,7 @@ Với mặt kín,
 \Phi_E=\oint_S\mathbf E\cdot d\mathbf A.
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Định luật Gauss** tiếp nhận điểm tựa từ **Thông lượng điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: điện tích điểm từ định luật Gauss** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Định luật Gauss** nối từ **Thông lượng điện** sang **Ví dụ: điện tích điểm từ định luật Gauss**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định luật Gauss
 
@@ -169,7 +169,7 @@ Nó nói mật độ điện tích là nguồn của divergence điện trườn
 
 Điểm rất quan trọng: định luật Gauss luôn đúng trong điện từ học cổ điển, nhưng **chỉ trở thành công cụ tính trường đơn giản khi đối xứng đủ mạnh**.
 
-> **Chuyển mạch:** Trong **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Định luật Gauss** cho ta quy tắc; **Ví dụ: điện tích điểm từ định luật Gauss** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ: mặt phẳng điện tích vô hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Định luật Gauss** nêu quy tắc; **Ví dụ: điện tích điểm từ định luật Gauss** thử quy tắc trong tình huống, rồi **Ví dụ: mặt phẳng điện tích vô hạn** mở rộng hệ quả.
 
 ## Ví dụ: điện tích điểm từ định luật Gauss
 
@@ -196,7 +196,7 @@ E=\frac{1}{4\pi\varepsilon_0}\frac{q}{r^2}.
 
 Ta thu lại định luật Coulomb.
 
-> **Chuyển mạch:** Ở chặng này của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Ví dụ: điện tích điểm từ định luật Gauss** cho ta quy tắc; **Ví dụ: mặt phẳng điện tích vô hạn** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Điện thế và thế năng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Ví dụ: điện tích điểm từ định luật Gauss** nêu quy tắc; **Ví dụ: mặt phẳng điện tích vô hạn** thử quy tắc trong tình huống, rồi **Điện thế và thế năng** mở rộng hệ quả.
 
 ## Ví dụ: mặt phẳng điện tích vô hạn
 
@@ -214,7 +214,7 @@ E=\frac{\sigma}{2\varepsilon_0}.
 
 Kết quả không phụ thuộc khoảng cách. Điều này không mâu thuẫn với `1/r^2` của điện tích điểm vì hình học nguồn hoàn toàn khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Ví dụ: mặt phẳng điện tích vô hạn** cho ta quy tắc; **Điện thế và thế năng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Quan hệ giữa điện trường và điện thế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Ví dụ: mặt phẳng điện tích vô hạn** nêu quy tắc; **Điện thế và thế năng** thử quy tắc trong tình huống, rồi **Quan hệ giữa điện trường và điện thế** mở rộng hệ quả.
 
 ## Điện thế và thế năng
 
@@ -241,7 +241,7 @@ nên tích phân đường không phụ thuộc đường đi mà chỉ phụ th
 
 Đó là lý do ta có thể định nghĩa một điện thế vô hướng duy nhất.
 
-> **Chuyển mạch:** Trong **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Quan hệ giữa điện trường và điện thế** tiếp nhận điểm tựa từ **Điện thế và thế năng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện thế của điện tích điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Quan hệ giữa điện trường và điện thế** nối từ **Điện thế và thế năng** sang **Điện thế của điện tích điểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quan hệ giữa điện trường và điện thế
 
@@ -255,7 +255,7 @@ nên tích phân đường không phụ thuộc đường đi mà chỉ phụ th
 
 Điện thế có lợi vì là đại lượng vô hướng. Thay vì cộng ba thành phần vectơ của điện trường, ta có thể cộng các điện thế rồi lấy độ dốc (gradient / 기울기) ở cuối.
 
-> **Chuyển mạch:** Ở chặng này của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Điện thế của điện tích điểm** tiếp nhận điểm tựa từ **Quan hệ giữa điện trường và điện thế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mặt đẳng thế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Điện thế của điện tích điểm** nối từ **Quan hệ giữa điện trường và điện thế** sang **Mặt đẳng thế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điện thế của điện tích điểm
 
@@ -284,7 +284,7 @@ U(r)
 
 Nếu `q_1q_2>0`, đưa hai điện tích cùng dấu lại gần cần cung cấp công. Nếu `q_1q_2<0`, thế năng giảm khi chúng tiến gần nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Mặt đẳng thế** tiếp nhận điểm tựa từ **Điện thế của điện tích điểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vật dẫn ở cân bằng điện tĩnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Mặt đẳng thế** nối từ **Điện thế của điện tích điểm** sang **Vật dẫn ở cân bằng điện tĩnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mặt đẳng thế
 
@@ -298,7 +298,7 @@ Mặt đẳng thế là tập hợp điểm có cùng `V`. Vì
 
 Di chuyển một điện tích dọc mặt đẳng thế không làm thay đổi thế năng điện trong điện tĩnh.
 
-> **Chuyển mạch:** Trong **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Vật dẫn ở cân bằng điện tĩnh** tiếp nhận điểm tựa từ **Mặt đẳng thế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao điện tích tập trung ở đầu nhọn?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Vật dẫn ở cân bằng điện tĩnh** nối từ **Mặt đẳng thế** sang **Vì sao điện tích tập trung ở đầu nhọn?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vật dẫn ở cân bằng điện tĩnh
 
@@ -315,7 +315,7 @@ Hệ quả:
 3. điện trường ngay ngoài bề mặt vuông góc mặt dẫn;
 4. mật độ điện tích bề mặt lớn hơn ở vùng có độ cong lớn.
 
-> **Chuyển mạch:** Ở chặng này của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Vì sao điện tích tập trung ở đầu nhọn?** tiếp nhận điểm tựa từ **Vật dẫn ở cân bằng điện tĩnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lồng Faraday** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Vì sao điện tích tập trung ở đầu nhọn?** nối từ **Vật dẫn ở cân bằng điện tĩnh** sang **Lồng Faraday**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao điện tích tập trung ở đầu nhọn?
 
@@ -329,7 +329,7 @@ ngay ngoài vật dẫn lý tưởng trong chân không, trường lớn tương
 
 Hiệu ứng này liên quan tới phóng điện corona và thiết kế đầu kim cao áp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Lồng Faraday** tiếp nhận điểm tựa từ **Vì sao điện tích tập trung ở đầu nhọn?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tụ điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Lồng Faraday** nối từ **Vì sao điện tích tập trung ở đầu nhọn?** sang **Tụ điện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lồng Faraday
 
@@ -339,7 +339,7 @@ Nếu khoang bên trong không chứa điện tích và hệ ở cân bằng đi
 
 Tuy nhiên “lồng Faraday chặn mọi sóng điện từ ở mọi tần số” là cách nói quá mạnh. Hiệu quả che chắn động phụ thuộc vật liệu, độ dày, khe hở và tần số.
 
-> **Chuyển mạch:** Trong **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Tụ điện** tiếp nhận điểm tựa từ **Lồng Faraday** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng của tụ điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Tụ điện** nối từ **Lồng Faraday** sang **Năng lượng của tụ điện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tụ điện
 
@@ -376,7 +376,7 @@ Do đó
 C=\varepsilon\frac{A}{d}.
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Năng lượng của tụ điện** tiếp nhận điểm tựa từ **Tụ điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện môi làm tăng điện dung như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Năng lượng của tụ điện** nối từ **Tụ điện** sang **Điện môi làm tăng điện dung như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng của tụ điện
 
@@ -396,7 +396,7 @@ u_E=\frac12\varepsilon_0E^2.
 
 Đây là bước quan trọng về mặt tư duy: năng lượng điện không nhất thiết nên hình dung là “nằm trên các điện tích”; trường trong không gian mang năng lượng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Điện môi làm tăng điện dung như thế nào?** tiếp nhận điểm tựa từ **Năng lượng của tụ điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lực điện và năng lượng: chọn cách giải nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Điện môi làm tăng điện dung như thế nào?** nối từ **Năng lượng của tụ điện** sang **Lực điện và năng lượng: chọn cách giải nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điện môi làm tăng điện dung như thế nào?
 
@@ -418,7 +418,7 @@ Trong môi trường tuyến tính,
 
 Cơ chế này được phát triển sâu hơn trong chương trường điện từ trong vật chất.
 
-> **Chuyển mạch:** Trong **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Lực điện và năng lượng: chọn cách giải nào?** tiếp nhận điểm tựa từ **Điện môi làm tăng điện dung như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Lực điện và năng lượng: chọn cách giải nào?** nối từ **Điện môi làm tăng điện dung như thế nào?** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lực điện và năng lượng: chọn cách giải nào?
 
@@ -431,13 +431,13 @@ force picture ↔ energy picture
 E-field ↔ potential
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Lực điện và năng lượng: chọn cách giải nào?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Lực điện và năng lượng: chọn cách giải nào?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Điện tích tạo cấu trúc trường trong không gian. Trường cho lực cục bộ lên điện tích thử. Trong điện tĩnh, trường bảo toàn nên có thể nén thông tin thành điện thế vô hướng. Định luật Gauss nối nguồn với thông lượng, còn điều kiện biên của vật dẫn quyết định cách điện tích tái phân bố.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -457,7 +457,7 @@ Chỉ đúng trong cân bằng điện tĩnh lý tưởng. Dây đang dẫn dòn
 
 Điện tích tự do chủ yếu nằm trên các bản dẫn; điện môi phân cực và thay đổi trường cùng điện dung.
 
-> **Chuyển mạch:** Trong **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Điện tích, điện trường, định luật Gauss, điện thế và tụ điện**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

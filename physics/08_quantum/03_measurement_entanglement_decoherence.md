@@ -28,7 +28,7 @@ P(a_n)=|c_n|^2.
 
 Điều này khác một hỗn hợp xác suất cổ điển. Trong chồng chập lượng tử, các hệ số `c_n` là biên độ phức và pha tương đối giữa chúng có thể ảnh hưởng trực tiếp tới giao thoa.
 
-> **Chuyển mạch:** Trong **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Giá trị kỳ vọng và phương sai** tiếp nhận điểm tựa từ **Trạng thái chồng chập và phép đo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phép đo lý tưởng và projector** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Giá trị kỳ vọng và phương sai** nối từ **Trạng thái chồng chập và phép đo** sang **Phép đo lý tưởng và projector**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giá trị kỳ vọng và phương sai
 
@@ -58,7 +58,7 @@ Quan hệ bất định tổng quát
 
 cho thấy độ bất định không chỉ đến từ máy đo. Nó phản ánh cấu trúc không giao hoán của các toán tử lượng tử.
 
-> **Chuyển mạch:** Ở chặng này của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Phép đo lý tưởng và projector** tiếp nhận điểm tựa từ **Giá trị kỳ vọng và phương sai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **POVM: phép đo tổng quát hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Phép đo lý tưởng và projector** nối từ **Giá trị kỳ vọng và phương sai** sang **POVM: phép đo tổng quát hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phép đo lý tưởng và projector
 
@@ -79,7 +79,7 @@ Sau khi thu được kết quả đó, trạng thái được cập nhật thàn
 
 Quy tắc cập nhật này thường được gọi là “sụp đổ hàm sóng”. Tuy nhiên cần phân biệt rõ **formalism dự đoán kết quả đo** với **cách diễn giải bản thể học** xem sự sụp đổ là quá trình vật lý thực, cập nhật thông tin hay hiện tượng nổi lên từ tương tác hệ–môi trường.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **POVM: phép đo tổng quát hơn** tiếp nhận điểm tựa từ **Phép đo lý tưởng và projector** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ hợp thành và tensor sản phẩm (product / 제품)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **POVM: phép đo tổng quát hơn** nối từ **Phép đo lý tưởng và projector** sang **Hệ hợp thành và tensor sản phẩm (product / 제품)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## POVM: phép đo tổng quát hơn
 
@@ -103,7 +103,7 @@ P(i)=\mathrm{Tr}(\rho E_i).
 
 Cấu trúc này gọi là phép đo POVM (positive operator-valued measure). Nó rất hữu ích khi detector có hiệu suất hữu hạn, kết quả không hoàn toàn phân biệt được hoặc phép đo chỉ trích xuất một phần thông tin.
 
-> **Chuyển mạch:** Trong **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Hệ hợp thành và tensor sản phẩm (product / 제품)** tiếp nhận điểm tựa từ **POVM: phép đo tổng quát hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ma trận mật độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Hệ hợp thành và tensor sản phẩm (product / 제품)** nối từ **POVM: phép đo tổng quát hơn** sang **Ma trận mật độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ hợp thành và tensor sản phẩm (product / 제품)
 
@@ -132,7 +132,7 @@ là trạng thái rối.
 
 Trong trạng thái này, không thể gán một trạng thái thuần độc lập cho từng qubit mà vẫn giữ toàn bộ thông tin của hệ.
 
-> **Chuyển mạch:** Ở chặng này của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Ma trận mật độ** tiếp nhận điểm tựa từ **Hệ hợp thành và tensor sản phẩm (product / 제품)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái thuần và hỗn hợp khác nhau thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Ma trận mật độ** nối từ **Hệ hợp thành và tensor sản phẩm (product / 제품)** sang **Trạng thái thuần và hỗn hợp khác nhau thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ma trận mật độ
 
@@ -156,7 +156,7 @@ Giá trị kỳ vọng của toán tử `\hat A` là
 
 Ma trận mật độ là ngôn ngữ tự nhiên khi hệ con rối với môi trường hoặc khi ta không biết hệ đang ở trạng thái thuần nào trong một tập hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Trạng thái thuần và hỗn hợp khác nhau thế nào?** tiếp nhận điểm tựa từ **Ma trận mật độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Partial dấu vết (trace / 추적) và trạng thái của hệ con** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Trạng thái thuần và hỗn hợp khác nhau thế nào?** nối từ **Ma trận mật độ** sang **Partial dấu vết (trace / 추적) và trạng thái của hệ con**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trạng thái thuần và hỗn hợp khác nhau thế nào?
 
@@ -180,7 +180,7 @@ Với hỗn hợp thực sự,
 
 Đại lượng `\mathrm{Tr}(\rho^2)` gọi là độ tinh khiết (purity). Nó cho biết trạng thái gần thuần hay bị trộn mạnh đến mức nào.
 
-> **Chuyển mạch:** Trong **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Partial dấu vết (trace / 추적) và trạng thái của hệ con** tiếp nhận điểm tựa từ **Trạng thái thuần và hỗn hợp khác nhau thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bell inequality và giới hạn của mô hình biến ẩn cục bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Partial dấu vết (trace / 추적) và trạng thái của hệ con** nối từ **Trạng thái thuần và hỗn hợp khác nhau thế nào?** sang **Bell inequality và giới hạn của mô hình biến ẩn cục bộ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Partial dấu vết (trace / 추적) và trạng thái của hệ con
 
@@ -198,7 +198,7 @@ Ví dụ với trạng thái Bell, toàn hệ ở trạng thái thuần nhưng t
 
 Đây là một kết quả rất quan trọng: **toàn hệ có thể biết hoàn toàn nhưng hệ con vẫn được mô tả như một trạng thái trộn** vì thông tin nằm trong tương quan giữa các phần.
 
-> **Chuyển mạch:** Ở chặng này của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Partial dấu vết (trace / 추적) và trạng thái của hệ con** đã nêu tiêu chí phân biệt, còn **Bell inequality và giới hạn của mô hình biến ẩn cục bộ** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **No-signalling: vì sao entanglement không truyền thông tin tức thời?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Partial dấu vết (trace / 추적) và trạng thái của hệ con** đặt tiêu chí; **Bell inequality và giới hạn của mô hình biến ẩn cục bộ** dùng tiêu chí đó để kiểm tra ranh giới, rồi **No-signalling: vì sao entanglement không truyền thông tin tức thời?** mở rộng hệ quả.
 
 ## Bell inequality và giới hạn của mô hình biến ẩn cục bộ
 
@@ -220,7 +220,7 @@ Nhiều thí nghiệm đã quan sát vi phạm bất đẳng thức Bell phù h�
 
 Điều này không có nghĩa thông tin có thể được gửi nhanh hơn ánh sáng. Các tương quan chỉ được xác nhận sau khi so sánh dữ liệu bằng kênh cổ điển.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Bell inequality và giới hạn của mô hình biến ẩn cục bộ** đã nêu tiêu chí phân biệt, còn **No-signalling: vì sao entanglement không truyền thông tin tức thời?** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mất kết hợp lượng tử bắt đầu từ đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Bell inequality và giới hạn của mô hình biến ẩn cục bộ** đặt tiêu chí; **No-signalling: vì sao entanglement không truyền thông tin tức thời?** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mất kết hợp lượng tử bắt đầu từ đâu?** mở rộng hệ quả.
 
 ## No-signalling: vì sao entanglement không truyền thông tin tức thời?
 
@@ -230,7 +230,7 @@ Về mặt ma trận mật độ, phép biến đổi cục bộ của Alice kh�
 
 Đây là khác biệt quan trọng giữa **tương quan phi cổ điển** và **khả năng truyền thông tin có kiểm soát**.
 
-> **Chuyển mạch:** Trong **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Mất kết hợp lượng tử bắt đầu từ đâu?** tiếp nhận điểm tựa từ **No-signalling: vì sao entanglement không truyền thông tin tức thời?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao phần tử ngoài đường chéo quan trọng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Mất kết hợp lượng tử bắt đầu từ đâu?** nối từ **No-signalling: vì sao entanglement không truyền thông tin tức thời?** sang **Vì sao phần tử ngoài đường chéo quan trọng?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mất kết hợp lượng tử bắt đầu từ đâu?
 
@@ -258,7 +258,7 @@ thì khi lấy partial dấu vết (trace / 추적) trên môi trường, các p
 
 Đó là cơ chế cốt lõi của decoherence.
 
-> **Chuyển mạch:** Ở chặng này của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Vì sao phần tử ngoài đường chéo quan trọng?** tiếp nhận điểm tựa từ **Mất kết hợp lượng tử bắt đầu từ đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pointer states và cơ sở ưu tiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Vì sao phần tử ngoài đường chéo quan trọng?** nối từ **Mất kết hợp lượng tử bắt đầu từ đâu?** sang **Pointer states và cơ sở ưu tiên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao phần tử ngoài đường chéo quan trọng?
 
@@ -287,7 +287,7 @@ hệ bắt đầu có hành vi giống hỗn hợp cổ điển đối với cá
 
 Decoherence vì vậy giải thích tại sao giao thoa giữa các trạng thái vĩ mô khó quan sát.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Pointer states và cơ sở ưu tiên** tiếp nhận điểm tựa từ **Vì sao phần tử ngoài đường chéo quan trọng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Decoherence không tự giải quyết toàn bộ đo lường (measurement / 측정) bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Pointer states và cơ sở ưu tiên** nối từ **Vì sao phần tử ngoài đường chéo quan trọng?** sang **Decoherence không tự giải quyết toàn bộ đo lường (measurement / 측정) bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pointer states và cơ sở ưu tiên
 
@@ -297,7 +297,7 @@ Ví dụ vị trí thường được môi trường “theo dõi” mạnh thô
 
 Đây là một lý do thế giới vĩ mô biểu hiện gần cổ điển trong các biến quen thuộc.
 
-> **Chuyển mạch:** Trong **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Pointer states và cơ sở ưu tiên** nêu điều cần giải thích; **Decoherence không tự giải quyết toàn bộ đo lường (measurement / 측정) bài toán (problem / 문제)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Open quantum các hệ thống (systems / 시스템들) và phương trình Lindblad** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Pointer states và cơ sở ưu tiên** đặt vấn đề; **Decoherence không tự giải quyết toàn bộ đo lường (measurement / 측정) bài toán (problem / 문제)** đối chiếu bằng chứng, rồi **Open quantum các hệ thống (systems / 시스템들) và phương trình Lindblad** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Decoherence không tự giải quyết toàn bộ đo lường (measurement / 측정) bài toán (problem / 문제)
 
@@ -307,7 +307,7 @@ Nhưng từ ma trận mật độ gần chéo không tự động suy ra tại s
 
 Do đó không nên nói “decoherence đã chứng minh Copenhagen” hay “decoherence tự động sinh collapse thật”.
 
-> **Chuyển mạch:** Ở chặng này của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Decoherence không tự giải quyết toàn bộ đo lường (measurement / 측정) bài toán (problem / 문제)** nêu điều cần giải thích; **Open quantum các hệ thống (systems / 시스템들) và phương trình Lindblad** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **T1 và T2 trong qubit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Decoherence không tự giải quyết toàn bộ đo lường (measurement / 측정) bài toán (problem / 문제)** đặt vấn đề; **Open quantum các hệ thống (systems / 시스템들) và phương trình Lindblad** đối chiếu bằng chứng, rồi **T1 và T2 trong qubit** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Open quantum các hệ thống (systems / 시스템들) và phương trình Lindblad
 
@@ -330,7 +330,7 @@ Phần đầu là tiến hóa Schrödinger quen thuộc; các toán tử `L_k` m
 
 Đây là cầu nối trực tiếp tới qubit thực, laser, cộng hưởng từ, quantum sensing và vật lý chất rắn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **T1 và T2 trong qubit** tiếp nhận điểm tựa từ **Open quantum các hệ thống (systems / 시스템들) và phương trình Lindblad** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với tính toán lượng tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **T1 và T2 trong qubit** nối từ **Open quantum các hệ thống (systems / 시스템들) và phương trình Lindblad** sang **Liên hệ với tính toán lượng tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## T1 và T2 trong qubit
 
@@ -347,7 +347,7 @@ T_2\le2T_1.
 
 Một qubit có `T_1` dài nhưng `T_2` ngắn vẫn không hữu ích cho thuật toán lượng tử dài vì thông tin pha bị mất trước khi năng lượng suy giảm nhiều.
 
-> **Chuyển mạch:** Trong **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Liên hệ với tính toán lượng tử** tiếp nhận điểm tựa từ **T1 và T2 trong qubit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Liên hệ với tính toán lượng tử** nối từ **T1 và T2 trong qubit** sang **Những ngộ nhận thường gặp (Common Misconceptions)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với tính toán lượng tử
 
@@ -361,7 +361,7 @@ Thuật toán lượng tử không đơn giản “thử mọi đáp án song so
 
 Rối lượng tử là tài nguyên quan trọng trong nhiều giao thức, nhưng không phải mọi speedup đều có thể giải thích bằng một câu đơn giản “vì có entanglement”. Cấu trúc thuật toán, oracle, interference và độ phức tạp đều quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Những ngộ nhận thường gặp (Common Misconceptions)** tiếp nhận điểm tựa từ **Liên hệ với tính toán lượng tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Những ngộ nhận thường gặp (Common Misconceptions)** nối từ **Liên hệ với tính toán lượng tử** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -381,7 +381,7 @@ Không. Nó tạo tương quan phi cổ điển nhưng vẫn tuân nguyên lý n
 
 Decoherence làm mất khả năng quan sát coherence giữa các nhánh đối với hệ con, nhưng không tự chọn một kết quả (outcome / 결과) duy nhất trong mọi cách diễn giải.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Những ngộ nhận thường gặp (Common Misconceptions)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Những ngộ nhận thường gặp (Common Misconceptions)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -398,7 +398,7 @@ hệ lượng tử
 
 Ma trận mật độ là ngôn ngữ giúp mô tả chuỗi này mà không cần giả vờ rằng hệ con luôn có một hàm sóng thuần độc lập.
 
-> **Chuyển mạch:** Trong **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Liên kết kiến thức (knowledge connection / 지식 연결)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Phép đo, rối lượng tử, ma trận mật độ và mất kết hợp**, **Liên kết kiến thức (knowledge connection / 지식 연결)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

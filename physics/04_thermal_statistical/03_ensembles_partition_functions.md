@@ -22,7 +22,7 @@ grand canonical: T, V, μ cố định
 
 Mỗi ensemble tương ứng với một kiểu tương tác khác nhau giữa hệ và môi trường.
 
-> **Chuyển mạch:** Trong **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Ensemble vi chính tắc: hệ cô lập** tiếp nhận điểm tựa từ **Ensemble là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt độ xuất hiện từ entropy như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Ensemble vi chính tắc: hệ cô lập** nối từ **Ensemble là gì?** sang **Nhiệt độ xuất hiện từ entropy như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ensemble vi chính tắc: hệ cô lập
 
@@ -36,7 +36,7 @@ S(E,V,N)=k_B\ln\Omega.
 
 Công thức cho thấy entropy tăng khi số cách vi mô để hiện thực hóa trạng thái vĩ mô tăng.
 
-> **Chuyển mạch:** Ở chặng này của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Nhiệt độ xuất hiện từ entropy như thế nào?** tiếp nhận điểm tựa từ **Ensemble vi chính tắc: hệ cô lập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ensemble chính tắc: hệ tiếp xúc bể nhiệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Nhiệt độ xuất hiện từ entropy như thế nào?** nối từ **Ensemble vi chính tắc: hệ cô lập** sang **Ensemble chính tắc: hệ tiếp xúc bể nhiệt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệt độ xuất hiện từ entropy như thế nào?
 
@@ -77,7 +77,7 @@ T_A=T_B.
 
 Cân bằng nhiệt vì vậy xuất hiện như hệ quả của tối đa hóa số trạng thái vi mô có thể xảy ra.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Ensemble chính tắc: hệ tiếp xúc bể nhiệt** tiếp nhận điểm tựa từ **Nhiệt độ xuất hiện từ entropy như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao hệ số Boltzmann có dạng hàm mũ?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Ensemble chính tắc: hệ tiếp xúc bể nhiệt** nối từ **Nhiệt độ xuất hiện từ entropy như thế nào?** sang **Vì sao hệ số Boltzmann có dạng hàm mũ?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ensemble chính tắc: hệ tiếp xúc bể nhiệt
 
@@ -101,7 +101,7 @@ là **hàm phân hoạch (partition function / 분배함수)**.
 
 `Z` vừa chuẩn hóa xác suất, vừa chứa gần như toàn bộ thông tin nhiệt động lực học của hệ cân bằng chính tắc.
 
-> **Chuyển mạch:** Trong **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Vì sao hệ số Boltzmann có dạng hàm mũ?** tiếp nhận điểm tựa từ **Ensemble chính tắc: hệ tiếp xúc bể nhiệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàm phân hoạch là “máy phát” của nhiệt động lực học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Vì sao hệ số Boltzmann có dạng hàm mũ?** nối từ **Ensemble chính tắc: hệ tiếp xúc bể nhiệt** sang **Hàm phân hoạch là “máy phát” của nhiệt động lực học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao hệ số Boltzmann có dạng hàm mũ?
 
@@ -143,7 +143,7 @@ p_i\propto e^{-\beta E_i}.
 
 Hệ số Boltzmann không phải một công thức được đoán ra tùy ý; nó xuất hiện từ entropy của bể và điều kiện tổng năng lượng được bảo toàn.
 
-> **Chuyển mạch:** Ở chặng này của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Hàm phân hoạch là “máy phát” của nhiệt động lực học** tiếp nhận điểm tựa từ **Vì sao hệ số Boltzmann có dạng hàm mũ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: hệ hai mức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Hàm phân hoạch là “máy phát” của nhiệt động lực học** nối từ **Vì sao hệ số Boltzmann có dạng hàm mũ?** sang **Ví dụ: hệ hai mức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hàm phân hoạch là “máy phát” của nhiệt động lực học
 
@@ -182,7 +182,7 @@ C_V
 
 Kết quả này nối một đại lượng đáp ứng vĩ mô với mức thăng giáng vi mô của hệ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Hàm phân hoạch là “máy phát” của nhiệt động lực học** cho ta quy tắc; **Ví dụ: hệ hai mức** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Hệ gồm nhiều phần độc lập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Hàm phân hoạch là “máy phát” của nhiệt động lực học** nêu quy tắc; **Ví dụ: hệ hai mức** thử quy tắc trong tình huống, rồi **Hệ gồm nhiều phần độc lập** mở rộng hệ quả.
 
 ## Ví dụ: hệ hai mức
 
@@ -225,7 +225,7 @@ Năng lượng trung bình là
 
 Ví dụ nhỏ này cho thấy nhiệt độ điều khiển cách hệ phân bố trên các mức năng lượng như thế nào.
 
-> **Chuyển mạch:** Trong **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Ví dụ: hệ hai mức** cho ta quy tắc; **Hệ gồm nhiều phần độc lập** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ensemble đại chính tắc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Ví dụ: hệ hai mức** nêu quy tắc; **Hệ gồm nhiều phần độc lập** thử quy tắc trong tình huống, rồi **Ensemble đại chính tắc** mở rộng hệ quả.
 
 ## Hệ gồm nhiều phần độc lập
 
@@ -255,7 +255,7 @@ F=F_A+F_B.
 
 Đây là lý do logarit xuất hiện tự nhiên trong nhiệt động lực học: nó biến cấu trúc nhân của số trạng thái thành đại lượng cộng ở quy mô vĩ mô.
 
-> **Chuyển mạch:** Ở chặng này của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Ensemble đại chính tắc** tiếp nhận điểm tựa từ **Hệ gồm nhiều phần độc lập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thế hóa học có ý nghĩa gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Ensemble đại chính tắc** nối từ **Hệ gồm nhiều phần độc lập** sang **Thế hóa học có ý nghĩa gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ensemble đại chính tắc
 
@@ -283,7 +283,7 @@ Thế nhiệt động lực học tương ứng là
 
 Ensemble này đặc biệt tự nhiên cho khí lượng tử, hệ hạt trao đổi với reservoir và nhiều bài toán vật chất ngưng tụ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Thế hóa học có ý nghĩa gì?** tiếp nhận điểm tựa từ **Ensemble đại chính tắc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các thế nhiệt động lực học không phải công thức rời rạc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Thế hóa học có ý nghĩa gì?** nối từ **Ensemble đại chính tắc** sang **Các thế nhiệt động lực học không phải công thức rời rạc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thế hóa học có ý nghĩa gì?
 
@@ -300,7 +300,7 @@ Khi hai hệ có thể trao đổi hạt, cân bằng hạt đòi hỏi thế h�
 
 Điều này cho thấy `T`, `P` và `\mu` đều là những biến cường độ có vai trò điều khiển trao đổi giữa các hệ.
 
-> **Chuyển mạch:** Trong **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Các thế nhiệt động lực học không phải công thức rời rạc** tiếp nhận điểm tựa từ **Thế hóa học có ý nghĩa gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tương đương ensemble và giới hạn nhiệt động lực học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Các thế nhiệt động lực học không phải công thức rời rạc** nối từ **Thế hóa học có ý nghĩa gì?** sang **Tương đương ensemble và giới hạn nhiệt động lực học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các thế nhiệt động lực học không phải công thức rời rạc
 
@@ -327,7 +327,7 @@ G=U-TS+PV.
 
 Vì vậy việc chọn thế nhiệt động lực học phù hợp tương tự chọn hệ tọa độ phù hợp: cùng một vật lý nhưng cách mô tả được tối ưu cho các đại lượng được giữ cố định trong bài toán.
 
-> **Chuyển mạch:** Ở chặng này của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Các thế nhiệt động lực học không phải công thức rời rạc** đã nêu tiêu chí phân biệt, còn **Tương đương ensemble và giới hạn nhiệt động lực học** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Thăng giáng tương đối giảm khi hệ lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Các thế nhiệt động lực học không phải công thức rời rạc** đặt tiêu chí; **Tương đương ensemble và giới hạn nhiệt động lực học** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Thăng giáng tương đối giảm khi hệ lớn** mở rộng hệ quả.
 
 ## Tương đương ensemble và giới hạn nhiệt động lực học
 
@@ -335,7 +335,7 @@ Với hệ lớn, tương tác ngắn hạn và không có các hiệu ứng b�
 
 Tuy nhiên ở hệ nhỏ, hệ có tương tác tầm xa hoặc gần một số chuyển pha, khác biệt giữa ensemble có thể trở nên quan trọng. Vì vậy “chọn ensemble nào cũng được” không phải quy tắc tuyệt đối.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Tương đương ensemble và giới hạn nhiệt động lực học** đã nêu tiêu chí phân biệt, còn **Thăng giáng tương đối giảm khi hệ lớn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Tương đương ensemble và giới hạn nhiệt động lực học** đặt tiêu chí; **Thăng giáng tương đối giảm khi hệ lớn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Thăng giáng tương đối giảm khi hệ lớn
 
@@ -359,7 +359,7 @@ Do đó thăng giáng tương đối giảm gần
 
 Đây là một lý do các đại lượng vĩ mô của hệ có `10^{23}` hạt rất ổn định dù chuyển động vi mô liên tục hỗn loạn.
 
-> **Chuyển mạch:** Trong **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Thăng giáng tương đối giảm khi hệ lớn** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Thăng giáng tương đối giảm khi hệ lớn** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -367,7 +367,7 @@ Cơ học thống kê không cố dự đoán quỹ đạo của từng hạt. N
 
 Hàm phân hoạch là cầu nối từ **phổ năng lượng vi mô** tới **đại lượng nhiệt động lực học vĩ mô**. Các ensemble khác nhau không phải các lý thuyết khác nhau; chúng là những cách đặt điều kiện biên thống kê khác nhau cho cùng một hệ.
 
-> **Chuyển mạch:** Ở chặng này của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -383,7 +383,7 @@ Câu này chỉ đúng trong một số hệ đơn giản. Định nghĩa tổng
 
 Nó còn sinh ra năng lượng tự do, năng lượng trung bình, entropy, nhiệt dung và nhiều đại lượng đáp ứng thông qua đạo hàm của `\ln Z`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ensemble thống kê, hàm phân hoạch và thế nhiệt động lực học**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

@@ -18,7 +18,7 @@ Suy luận thống kê (statistical inference / 통계적 추론) là quá trìn
 
 Không tồn tại suy luận hoàn toàn “không mô hình”. Ngay cả phép lấy trung bình cũng giả sử các mẫu đang đo cùng một đại lượng có ý nghĩa và có cấu trúc thống kê phù hợp.
 
-> **Chuyển mạch:** Trong **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Luôn bắt đầu bằng mô hình thuận** tiếp nhận điểm tựa từ **Phép đo không kết thúc khi có một con số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Least squares xuất hiện từ giả định nhiễu Gaussian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Luôn bắt đầu bằng mô hình thuận** nối từ **Phép đo không kết thúc khi có một con số** sang **Least squares xuất hiện từ giả định nhiễu Gaussian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Luôn bắt đầu bằng mô hình thuận
 
@@ -44,7 +44,7 @@ Bài toán ngược (inverse problem) hỏi hướng ngược lại:
 
 Nếu forward mô hình (model / 모델) sai, optimizer tốt đến đâu cũng chỉ tìm tham số tốt nhất cho một mô hình sai.
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Least squares xuất hiện từ giả định nhiễu Gaussian** tiếp nhận điểm tựa từ **Luôn bắt đầu bằng mô hình thuận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sai số có tương quan và ma trận covariance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Least squares xuất hiện từ giả định nhiễu Gaussian** nối từ **Luôn bắt đầu bằng mô hình thuận** sang **Sai số có tương quan và ma trận covariance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Least squares xuất hiện từ giả định nhiễu Gaussian
 
@@ -72,7 +72,7 @@ Vì vậy least squares không phải “phương pháp mặc định luôn đú
 
 Nếu dữ liệu là số đếm Poisson, có outlier đuôi nặng hoặc có tương quan, hàm mất mát (loss function / 손실 함수) phù hợp sẽ khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Sai số có tương quan và ma trận covariance** tiếp nhận điểm tựa từ **Least squares xuất hiện từ giả định nhiễu Gaussian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ bất định của tham số và độ cong likelihood** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Sai số có tương quan và ma trận covariance** nối từ **Least squares xuất hiện từ giả định nhiễu Gaussian** sang **Độ bất định của tham số và độ cong likelihood**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sai số có tương quan và ma trận covariance
 
@@ -93,7 +93,7 @@ Bỏ qua correlation có thể:
 
 Sai số hiệu chuẩn chung là ví dụ điển hình tạo correlation giữa nhiều điểm dữ liệu.
 
-> **Chuyển mạch:** Trong **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Độ bất định của tham số và độ cong likelihood** tiếp nhận điểm tựa từ **Sai số có tương quan và ma trận covariance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Suy luận Bayes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Độ bất định của tham số và độ cong likelihood** nối từ **Sai số có tương quan và ma trận covariance** sang **Suy luận Bayes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ bất định của tham số và độ cong likelihood
 
@@ -111,7 +111,7 @@ Tuy nhiên xấp xỉ này có thể thất bại khi:
 
 Khi đó cần profile likelihood, bootstrap, Markov chuỗi (chain / 사슬) Monte Carlo hoặc phương pháp sampling khác.
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Suy luận Bayes** tiếp nhận điểm tựa từ **Độ bất định của tham số và độ cong likelihood** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Identifiability: dữ liệu có thật sự phân biệt được tham số không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Suy luận Bayes** nối từ **Độ bất định của tham số và độ cong likelihood** sang **Identifiability: dữ liệu có thật sự phân biệt được tham số không?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Suy luận Bayes
 
@@ -133,7 +133,7 @@ Prior không phải giấy phép để đưa ý kiến tùy ý vào kết quả.
 
 Khi dữ liệu yếu, prior có thể ảnh hưởng đáng kể. Khi dữ liệu rất mạnh, likelihood thường chi phối nhiều hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Suy luận Bayes** nêu điều cần giải thích; **Identifiability: dữ liệu có thật sự phân biệt được tham số không?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Bài toán ngược ill-posed** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Suy luận Bayes** đặt vấn đề; **Identifiability: dữ liệu có thật sự phân biệt được tham số không?** đối chiếu bằng chứng, rồi **Bài toán ngược ill-posed** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Identifiability: dữ liệu có thật sự phân biệt được tham số không?
 
@@ -151,7 +151,7 @@ Tính nhận dạng cục bộ liên hệ với ma trận độ nhạy hoặc Ja
 
 Thiết kế thí nghiệm tốt không chỉ nhằm giảm noise; nó chọn điều kiện đo sao cho các tham số ảnh hưởng dữ liệu theo những hướng khác nhau, phá degeneracy.
 
-> **Chuyển mạch:** Trong **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Identifiability: dữ liệu có thật sự phân biệt được tham số không?** nêu điều cần giải thích; **Bài toán ngược ill-posed** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Regularization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Identifiability: dữ liệu có thật sự phân biệt được tham số không?** đặt vấn đề; **Bài toán ngược ill-posed** đối chiếu bằng chứng, rồi **Regularization** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Bài toán ngược ill-posed
 
@@ -171,7 +171,7 @@ A\mathbf x=\mathbf y,
 
 nếu `A` có singular giá trị (value / 값) rất nhỏ, phép nghịch đảo trực tiếp sẽ khuếch đại mạnh thành phần noise theo các hướng tương ứng.
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Regularization** tiếp nhận điểm tựa từ **Bài toán ngược ill-posed** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Singular giá trị (value / 값) Decomposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Regularization** nối từ **Bài toán ngược ill-posed** sang **Singular giá trị (value / 값) Decomposition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Regularization
 
@@ -194,7 +194,7 @@ Hạng đầu buộc nghiệm khớp dữ liệu. Hạng thứ hai đưa vào gi
 
 Regularization không phục hồi thông tin đã mất một cách thần kỳ. Nó thêm cấu trúc tiên nghiệm để chọn một nghiệm ổn định trong tập nghiệm còn phù hợp với dữ liệu nhiễu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Singular giá trị (value / 값) Decomposition** tiếp nhận điểm tựa từ **Regularization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chọn mô hình và overfitting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Singular giá trị (value / 값) Decomposition** nối từ **Regularization** sang **Chọn mô hình và overfitting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Singular giá trị (value / 값) Decomposition
 
@@ -213,7 +213,7 @@ SVD vì vậy là công cụ quan trọng để chẩn đoán:
 - multicollinearity;
 - độ phân giải thực của bài toán ngược.
 
-> **Chuyển mạch:** Trong **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Chọn mô hình và overfitting** tiếp nhận điểm tựa từ **Singular giá trị (value / 값) Decomposition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân tích residual** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Chọn mô hình và overfitting** nối từ **Singular giá trị (value / 값) Decomposition** sang **Phân tích residual**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chọn mô hình và overfitting
 
@@ -230,7 +230,7 @@ Không tồn tại một quy tắc “score lớn nhất chính là mô hình th
 - độ phức tạp;
 - khả năng diễn giải vật lý.
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Phân tích residual** tiếp nhận điểm tựa từ **Chọn mô hình và overfitting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Detection significance và look-elsewhere tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Phân tích residual** nối từ **Chọn mô hình và overfitting** sang **Detection significance và look-elsewhere tác động (effect / 효과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân tích residual
 
@@ -258,7 +258,7 @@ Mẫu (pattern / 패턴) có cấu trúc trong residual thường là dấu hi�
 
 Reduced chi-square gần 1 không tự động chứng minh mô hình đúng. Một mô hình sai với bất định (uncertainty / 불확실성) bị thổi phồng cũng có thể cho chỉ số đẹp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Detection significance và look-elsewhere tác động (effect / 효과)** tiếp nhận điểm tựa từ **Phân tích residual** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khớp tham số không đồng nghĩa với suy luận nhân quả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Detection significance và look-elsewhere tác động (effect / 효과)** nối từ **Phân tích residual** sang **Khớp tham số không đồng nghĩa với suy luận nhân quả**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Detection significance và look-elsewhere tác động (effect / 효과)
 
@@ -270,7 +270,7 @@ Khi báo significance phải xét số lượng và correlation giữa các phé
 
 P-value cũng không phải xác suất giả thuyết null là đúng. Nó là xác suất thu được statistic ít nhất cực đoan như quan sát nếu giả thuyết null và các giả định mô hình là đúng.
 
-> **Chuyển mạch:** Trong **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Khớp tham số không đồng nghĩa với suy luận nhân quả** tiếp nhận điểm tựa từ **Detection significance và look-elsewhere tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Simulation-based suy luận (inference / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Khớp tham số không đồng nghĩa với suy luận nhân quả** nối từ **Detection significance và look-elsewhere tác động (effect / 효과)** sang **Simulation-based suy luận (inference / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khớp tham số không đồng nghĩa với suy luận nhân quả
 
@@ -285,7 +285,7 @@ Trong thiên văn hoặc địa vật lý quan sát, không thể tùy ý can th
 - natural experiment;
 - dự đoán có thể kiểm tra thêm.
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Simulation-based suy luận (inference / 추론)** tiếp nhận điểm tựa từ **Khớp tham số không đồng nghĩa với suy luận nhân quả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: đo thời gian sống của quá trình phân rã** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Simulation-based suy luận (inference / 추론)** nối từ **Khớp tham số không đồng nghĩa với suy luận nhân quả** sang **Ví dụ: đo thời gian sống của quá trình phân rã**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Simulation-based suy luận (inference / 추론)
 
@@ -304,7 +304,7 @@ Machine học tập (learning / 학습) có thể rất mạnh, nhưng giả đ�
 
 Nếu simulator không đại diện đúng thế giới thật, suy luận (inference / 추론) có thể rất chính xác về mặt số nhưng sai về vật lý.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Simulation-based suy luận (inference / 추론)** cho ta quy tắc; **Ví dụ: đo thời gian sống của quá trình phân rã** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ: deconvolution ảnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Simulation-based suy luận (inference / 추론)** nêu quy tắc; **Ví dụ: đo thời gian sống của quá trình phân rã** thử quy tắc trong tình huống, rồi **Ví dụ: deconvolution ảnh** mở rộng hệ quả.
 
 ## Ví dụ: đo thời gian sống của quá trình phân rã
 
@@ -333,7 +333,7 @@ Sau đó fit trực tiếp `N_0`, `\tau` và background `b` bằng likelihood Po
 
 Bài học là: **mô hình thống kê phải đi theo cơ chế tạo dữ liệu**, không chỉ theo phép biến đổi đại số thuận tiện.
 
-> **Chuyển mạch:** Trong **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Ví dụ: đo thời gian sống của quá trình phân rã** cho ta quy tắc; **Ví dụ: deconvolution ảnh** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Độ bất định phải được truyền qua chuỗi xử lý (pipeline / 파이프라인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Ví dụ: đo thời gian sống của quá trình phân rã** nêu quy tắc; **Ví dụ: deconvolution ảnh** thử quy tắc trong tình huống, rồi **Độ bất định phải được truyền qua chuỗi xử lý (pipeline / 파이프라인)** mở rộng hệ quả.
 
 ## Ví dụ: deconvolution ảnh
 
@@ -349,7 +349,7 @@ Nếu một số tần số không gian bị hệ quang học triệt tiêu mạ
 
 Regularization có thể ưu tiên nghiệm trơn hoặc sparse, nhưng kết quả cuối phản ánh cả dữ liệu và prior. Đây là lý do thuật toán sharpen không thể tạo lại duy nhất thông tin mà hệ quang học chưa từng ghi nhận.
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Ví dụ: deconvolution ảnh** cho ta quy tắc; **Độ bất định phải được truyền qua chuỗi xử lý (pipeline / 파이프라인)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Reproducibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Ví dụ: deconvolution ảnh** nêu quy tắc; **Độ bất định phải được truyền qua chuỗi xử lý (pipeline / 파이프라인)** thử quy tắc trong tình huống, rồi **Reproducibility** mở rộng hệ quả.
 
 ## Độ bất định phải được truyền qua chuỗi xử lý (pipeline / 파이프라인)
 
@@ -368,7 +368,7 @@ Bất định (uncertainty / 불확실성) ở bước đầu có thể lan truy
 
 Do đó không nên chỉ gắn lỗi (error / 오류) bar ở cuối. Cần theo dõi covariance hoặc sampling bất định (uncertainty / 불확실성) xuyên suốt chuỗi xử lý (pipeline / 파이프라인) khi nó có ảnh hưởng đáng kể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Độ bất định phải được truyền qua chuỗi xử lý (pipeline / 파이프라인)** xác định đầu vào; **Reproducibility** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Miền áp dụng và giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Độ bất định phải được truyền qua chuỗi xử lý (pipeline / 파이프라인)** đặt đầu vào cho **Reproducibility**, rồi **Miền áp dụng và giới hạn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Reproducibility
 
@@ -386,7 +386,7 @@ Một kết quả suy luận (inference / 추론) cần đi cùng:
 
 Một con số best-fit không có provenance và bất định (uncertainty / 불확실성) rất khó kiểm tra (audit / 감사) khoa học.
 
-> **Chuyển mạch:** Trong **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Reproducibility** đã nêu tiêu chí phân biệt, còn **Miền áp dụng và giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Reproducibility** đặt tiêu chí; **Miền áp dụng và giới hạn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Miền áp dụng và giới hạn
 
@@ -396,7 +396,7 @@ Bayesian posterior chỉ có ý nghĩa trong mô hình đã chỉ định; nếu
 
 Regularization cải thiện ổn định bằng cách thêm thông tin hoặc ràng buộc (constraint / 제약조건). Nó không loại bỏ tính không xác định cơ bản của dữ liệu.
 
-> **Chuyển mạch:** Ở chặng này của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Miền áp dụng và giới hạn** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Miền áp dụng và giới hạn** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -422,7 +422,7 @@ data
 
 Một suy luận (inference / 추론) tốt phải giữ lại bất định (uncertainty / 불확실성), degeneracy và mô hình (model / 모델) các giả định (assumptions / 가정들) thay vì ép mọi thứ thành một con số duy nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -442,7 +442,7 @@ Không. giả định (assumption / 가정) chuyển sang dữ liệu huấn luy
 
 Không. lỗi (error / 오류) bar có thể chỉ phản ánh bất định (uncertainty / 불확실성) bên trong một mô hình; systematic lỗi (error / 오류) hoặc mô hình (model / 모델) discrepancy có thể lớn hơn nhiều.
 
-> **Chuyển mạch:** Trong **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Suy luận dữ liệu, khớp mô hình và bài toán ngược trong Vật lý**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
