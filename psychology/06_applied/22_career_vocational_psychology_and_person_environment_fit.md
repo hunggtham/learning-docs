@@ -18,7 +18,7 @@ Có thể phân biệt:
 - **needs–supplies fit**: môi trường (environment / 환경) có cung cấp điều người đó cần không;
 - **demands–abilities fit**: person có năng lực (capability / 역량) đáp ứng demand không.
 
-> **Chuyển mạch:** Trong **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Interest không đủ** tiếp nhận điểm tựa từ **Person–môi trường (environment / 환경) fit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Skill và self-efficacy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Interest không đủ** nối từ **Person–môi trường (environment / 환경) fit** sang **Skill và self-efficacy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Interest không đủ
 
@@ -26,7 +26,7 @@ Career advice phổ biến hay hỏi “bạn thích gì?”. Interest quan tr�
 
 Một người có thể thích “AI” ở mức (level / 수준) concept nhưng không thích daily công việc (work / 작업) gồm dữ liệu (data / 데이터) cleaning, debugging, reading paper và triển khai (deployment / 배포). Vì vậy career exploration nên kiểm thử (test / 테스트) **tác vụ (task / 작업) reality**, không chỉ category label.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Skill và self-efficacy** tiếp nhận điểm tựa từ **Interest không đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Career định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Skill và self-efficacy** nối từ **Interest không đủ** sang **Career định danh (identity / 식별자)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Skill và self-efficacy
 
@@ -36,7 +36,7 @@ Nhưng self-efficacy không phải positive thinking. Nó tốt nhất khi đư�
 
 Một junior nhà phát triển (developer / 개발자) làm được tính năng (feature / 기능) từ đầu đến môi trường vận hành (production / 운영 환경) thường tăng self-efficacy mạnh hơn chỉ nghe encouragement.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Career định danh (identity / 식별자)** tiếp nhận điểm tựa từ **Skill và self-efficacy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Career adaptability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Career định danh (identity / 식별자)** nối từ **Skill và self-efficacy** sang **Career adaptability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Career định danh (identity / 식별자)
 
@@ -46,7 +46,7 @@ Khi role thay đổi hoặc job mất đi, person có thể không chỉ mất i
 
 Xem [[../03_human_development_and_person/09_self_concept_identity_and_self_regulation]].
 
-> **Chuyển mạch:** Trong **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Career adaptability** tiếp nhận điểm tựa từ **Career định danh (identity / 식별자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Transferable skill** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Career adaptability** nối từ **Career định danh (identity / 식별자)** sang **Transferable skill**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Career adaptability
 
@@ -54,7 +54,7 @@ Xem [[../03_human_development_and_person/09_self_concept_identity_and_self_regul
 
 Trong labor thị trường (market / 시장) thay đổi nhanh, goal không phải predict chính xác nghề nào tồn tại 20 năm, mà xây portfolio skill có khả năng chuyển giao và học tập (learning / 학습) sức chứa (capacity / 용량) đủ mạnh.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Transferable skill** tiếp nhận điểm tựa từ **Career adaptability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Job crafting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Transferable skill** nối từ **Career adaptability** sang **Job crafting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Transferable skill
 
@@ -64,7 +64,7 @@ Một skill có giá trị khi transfer được sang nhiều ngữ cảnh (cont
 
 Xem [[../02_learning_and_cognition/09_learning_transfer_forgetting_and_durable_knowledge]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Job crafting** tiếp nhận điểm tựa từ **Transferable skill** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Motivation và job thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Job crafting** nối từ **Transferable skill** sang **Motivation và job thiết kế (design / 설계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Job crafting
 
@@ -74,7 +74,7 @@ Ví dụ một nhà phát triển (developer / 개발자) có thể chủ độn
 
 Job crafting không thay thế structural bài toán (problem / 문제) như toxic leadership hoặc chronic understaffing; nó chỉ là một degree of freedom trong hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Trong **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Motivation và job thiết kế (design / 설계)** tiếp nhận điểm tựa từ **Job crafting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Plateau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Motivation và job thiết kế (design / 설계)** nối từ **Job crafting** sang **Plateau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Motivation và job thiết kế (design / 설계)
 
@@ -82,7 +82,7 @@ Autonomy, competence phản hồi (feedback / 피드백) và relatedness thườ
 
 Tuy nhiên “follow passion” cũng có giới hạn. Passion có thể phát triển sau mastery; không phải ai cũng bắt đầu career với calling rõ ràng.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Plateau** tiếp nhận điểm tựa từ **Motivation và job thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Burnout và career quyết định (decision / 결정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Plateau** nối từ **Motivation và job thiết kế (design / 설계)** sang **Burnout và career quyết định (decision / 결정)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Plateau
 
@@ -90,7 +90,7 @@ Career plateau có thể là hierarchical plateau — ít promotion — hoặc c
 
 Nếu title không tăng nhưng skill vẫn deepen và compensation tốt, plateau có thể không phải bài toán (problem / 문제). Ngược lại, title tăng nhưng tác vụ (task / 작업) không còn học tập (learning / 학습) có thể tạo fragility dài hạn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Burnout và career quyết định (decision / 결정)** tiếp nhận điểm tựa từ **Plateau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Status và prestige** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Burnout và career quyết định (decision / 결정)** nối từ **Plateau** sang **Status và prestige**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Burnout và career quyết định (decision / 결정)
 
@@ -98,7 +98,7 @@ Khi burnout cao, mọi option có thể trông xấu. Vì vậy quyết định 
 
 Xem [[14_work_stress_burnout_and_recovery]]. Một môi trường (environment / 환경) xấu có thể làm person nghĩ họ ghét cả profession.
 
-> **Chuyển mạch:** Trong **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Status và prestige** tiếp nhận điểm tựa từ **Burnout và career quyết định (decision / 결정)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Salary và adaptation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Status và prestige** nối từ **Burnout và career quyết định (decision / 결정)** sang **Salary và adaptation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Status và prestige
 
@@ -106,7 +106,7 @@ Career choice thường chịu influence từ family expectation và xã hội (
 
 Xem [[../03_human_development_and_person/15_power_status_hierarchy_and_inequality]] nếu chapter này có trong lộ trình học (learning path / 학습 경로) xã hội.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Salary và adaptation** tiếp nhận điểm tựa từ **Status và prestige** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Career experiment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Salary và adaptation** nối từ **Status và prestige** sang **Career experiment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Salary và adaptation
 
@@ -116,7 +116,7 @@ Một raise có thể tăng satisfaction rồi trở thành baseline mới. Vì 
 
 Xem [[18_financial_psychology_and_personal_decision_making]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Career experiment** tiếp nhận điểm tựa từ **Salary và adaptation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Opportunity chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Career experiment** nối từ **Salary và adaptation** sang **Opportunity chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Career experiment
 
@@ -124,7 +124,7 @@ Khi bất định (uncertainty / 불확실성) cao, thay vì cố chọn “đú
 
 Mục tiêu experiment là cập nhật belief bằng dữ liệu (data / 데이터) thật. Đây là Bayesian mindset: prior về “mình có hợp X không” nên thay đổi sau bằng chứng (evidence / 증거) mới.
 
-> **Chuyển mạch:** Trong **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Opportunity chi phí (cost / 비용)** tiếp nhận điểm tựa từ **Career experiment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Career capital** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Opportunity chi phí (cost / 비용)** nối từ **Career experiment** sang **Career capital**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Opportunity chi phí (cost / 비용)
 
@@ -132,7 +132,7 @@ Mỗi lựa chọn career đóng một số option và mở option khác. Opport
 
 Quyết định (decision / 결정) tốt cần horizon đủ dài để thấy compounding của skill nhưng cũng không giả định future quá chắc chắn.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Career capital** tiếp nhận điểm tựa từ **Opportunity chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Career chuyển tiếp (transition / 전이)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Career capital** nối từ **Opportunity chi phí (cost / 비용)** sang **Career chuyển tiếp (transition / 전이)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Career capital
 
@@ -142,7 +142,7 @@ Quyết định (decision / 결정) tốt cần horizon đủ dài để thấy 
 
 Xem [[20_negotiation_conflict_and_joint_decision_making]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Career chuyển tiếp (transition / 전이)** tiếp nhận điểm tựa từ **Career capital** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Retirement và late-life công việc (work / 작업)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Career chuyển tiếp (transition / 전이)** nối từ **Career capital** sang **Retirement và late-life công việc (work / 작업)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Career chuyển tiếp (transition / 전이)
 
@@ -150,7 +150,7 @@ Chuyển tiếp (transition / 전이) thường có định danh (identity / 식
 
 Chuyển tiếp (transition / 전이) plan tốt phân biệt **financial runway**, **học tập (learning / 학습) runway** và **định danh (identity / 식별자) runway**.
 
-> **Chuyển mạch:** Trong **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Retirement và late-life công việc (work / 작업)** tiếp nhận điểm tựa từ **Career chuyển tiếp (transition / 전이)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Retirement và late-life công việc (work / 작업)** nối từ **Career chuyển tiếp (transition / 전이)** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Retirement và late-life công việc (work / 작업)
 
@@ -158,7 +158,7 @@ Retirement không chỉ là dừng kiếm tiền. công việc (work / 작업) c
 
 Xem [[../03_human_development_and_person/11_aging_cognitive_health_and_late_life]].
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Retirement và late-life công việc (work / 작업)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Những hiểu lầm phổ biến** nối từ **Retirement và late-life công việc (work / 작업)** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -172,7 +172,7 @@ Xem [[../03_human_development_and_person/11_aging_cognitive_health_and_late_life
 
 **“Nếu job khó chịu thì chắc mình không hợp nghề.”** Cần tách profession, organization, nhóm (team / 팀), manager và hiện tại (current / 현재) tải công việc (workload / 워크로드).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -198,7 +198,7 @@ fit → performance → learning → future options
 
 > Career tốt không chỉ tối đa hóa salary hoặc passion; nó tối ưu một hệ động gồm fit, skill growth, health, financial bảo mật (security / 보안) và option giá trị (value / 값).
 
-> **Chuyển mạch:** Trong **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Tâm lý nghề nghiệp, lựa chọn nghề và độ phù hợp người–môi trường — Career & Vocational Psychology**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

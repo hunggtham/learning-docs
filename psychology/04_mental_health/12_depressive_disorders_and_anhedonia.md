@@ -22,7 +22,7 @@ Một người buồn sau khi thất bại không tự động có depressive di
 
 Xem [[01_assessment_and_diagnosis]].
 
-> **Chuyển mạch:** Trong **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **2. Anhedonia không chỉ là “không vui”** tiếp nhận điểm tựa từ **1. Mood khác emotion ngắn hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Behavioral withdrawal và vòng giảm reinforcement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **2. Anhedonia không chỉ là “không vui”** nối từ **1. Mood khác emotion ngắn hạn** sang **3. Behavioral withdrawal và vòng giảm reinforcement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Anhedonia không chỉ là “không vui”
 
@@ -37,7 +37,7 @@ Một người có thể vẫn thấy hoạt động “khá dễ chịu” nế
 
 > **Lý thuyết hiện đại:** reward-processing các mô hình (models / 모델들) giúp giải thích heterogeneity của anhedonia; không nên coi dopamine là “hormone hạnh phúc” hoặc nói depression = thiếu dopamine.
 
-> **Chuyển mạch:** Ở chặng này của **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **3. Behavioral withdrawal và vòng giảm reinforcement** tiếp nhận điểm tựa từ **2. Anhedonia không chỉ là “không vui”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Cognitive tiến trình (process / 프로세스): không phải mọi negative thought đều “sai”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **3. Behavioral withdrawal và vòng giảm reinforcement** nối từ **2. Anhedonia không chỉ là “không vui”** sang **4. Cognitive tiến trình (process / 프로세스): không phải mọi negative thought đều “sai”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Behavioral withdrawal và vòng giảm reinforcement
 
@@ -59,7 +59,7 @@ more withdrawal
 
 Đây là một cơ chế (mechanism / 메커니즘) nền của **hoạt hóa hành vi (behavioral activation)**. Intervention không yêu cầu “hãy vui lên”, mà thiết kế lại activity theo giá trị (value / 값), feasibility và phản hồi (feedback / 피드백).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **3. Behavioral withdrawal và vòng giảm reinforcement** xác định đầu vào; **4. Cognitive tiến trình (process / 프로세스): không phải mọi negative thought đều “sai”** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **5. Stress và allostasis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **3. Behavioral withdrawal và vòng giảm reinforcement** đặt đầu vào cho **4. Cognitive tiến trình (process / 프로세스): không phải mọi negative thought đều “sai”**, rồi **5. Stress và allostasis** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. Cognitive tiến trình (process / 프로세스): không phải mọi negative thought đều “sai”
 
@@ -77,7 +77,7 @@ Mood-congruent bộ nhớ (memory / 메모리) tạo vòng phản hồi: khi moo
 
 Xem [[../02_learning_and_cognition/11_emotion_memory_and_affective_cognition]].
 
-> **Chuyển mạch:** Trong **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **4. Cognitive tiến trình (process / 프로세스): không phải mọi negative thought đều “sai”** xác định đầu vào; **5. Stress và allostasis** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. Sleep và circadian rhythm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **4. Cognitive tiến trình (process / 프로세스): không phải mọi negative thought đều “sai”** đặt đầu vào cho **5. Stress và allostasis**, rồi **6. Sleep và circadian rhythm** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. Stress và allostasis
 
@@ -87,7 +87,7 @@ Stress physiology nên được hiểu theo hệ thống: autonomic regulation, 
 
 Xem [[../01_brain_and_mind/06_stress_allostasis_and_psychoneuroimmunology]].
 
-> **Chuyển mạch:** Ở chặng này của **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **6. Sleep và circadian rhythm** tiếp nhận điểm tựa từ **5. Stress và allostasis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Heterogeneity: cùng diagnosis, cơ chế (mechanism / 메커니즘) có thể khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **6. Sleep và circadian rhythm** nối từ **5. Stress và allostasis** sang **7. Heterogeneity: cùng diagnosis, cơ chế (mechanism / 메커니즘) có thể khác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Sleep và circadian rhythm
 
@@ -97,7 +97,7 @@ Circadian disruption quan trọng nhưng không nên biến thành claim rằng 
 
 Xem [[11_sleep_insomnia_and_circadian_disorders]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **6. Sleep và circadian rhythm** xác định đầu vào; **7. Heterogeneity: cùng diagnosis, cơ chế (mechanism / 메커니즘) có thể khác** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **8. Differential diagnosis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **6. Sleep và circadian rhythm** đặt đầu vào cho **7. Heterogeneity: cùng diagnosis, cơ chế (mechanism / 메커니즘) có thể khác**, rồi **8. Differential diagnosis** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 7. Heterogeneity: cùng diagnosis, cơ chế (mechanism / 메커니즘) có thể khác
 
@@ -111,7 +111,7 @@ Hai người cùng đáp ứng criteria depression có thể rất khác:
 
 Điều này giải thích vì sao diagnosis hữu ích cho communication nhưng không thay thế **trường hợp (case / 사례) formulation**.
 
-> **Chuyển mạch:** Trong **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **7. Heterogeneity: cùng diagnosis, cơ chế (mechanism / 메커니즘) có thể khác** xác định đầu vào; **8. Differential diagnosis** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. Treatment là multi-level** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **7. Heterogeneity: cùng diagnosis, cơ chế (mechanism / 메커니즘) có thể khác** đặt đầu vào cho **8. Differential diagnosis**, rồi **9. Treatment là multi-level** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8. Differential diagnosis
 
@@ -131,7 +131,7 @@ Assessment cần phân biệt hoặc xem comorbidity với:
 
 Xem [[13_bipolar_spectrum_and_mood_regulation]].
 
-> **Chuyển mạch:** Ở chặng này của **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **9. Treatment là multi-level** tiếp nhận điểm tựa từ **8. Differential diagnosis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. xã hội (social / 사회적) và structural ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **9. Treatment là multi-level** nối từ **8. Differential diagnosis** sang **10. xã hội (social / 사회적) và structural ngữ cảnh (context / 맥락)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Treatment là multi-level
 
@@ -147,7 +147,7 @@ Psychological treatments thường tác động lên nhiều cơ chế (mechanis
 
 Medication quyết định (decision / 결정) cần professional assessment về benefit, adverse tác động (effect / 효과), prior phản hồi (response / 응답) và comorbidity. Không có một medication “đúng cho depression nói chung” ở mọi người.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **10. xã hội (social / 사회적) và structural ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **9. Treatment là multi-level** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Recurrence và relapse prevention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **10. xã hội (social / 사회적) và structural ngữ cảnh (context / 맥락)** nối từ **9. Treatment là multi-level** sang **11. Recurrence và relapse prevention**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. xã hội (social / 사회적) và structural ngữ cảnh (context / 맥락)
 
@@ -162,7 +162,7 @@ Psychotherapy không thể “cognitive restructure” một structural bài to�
 
 Xem [[../06_applied/14_work_stress_burnout_and_recovery]] và [[../03_human_development_and_person/12_loneliness_social_connection_and_belonging]].
 
-> **Chuyển mạch:** Trong **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **11. Recurrence và relapse prevention** tiếp nhận điểm tựa từ **10. xã hội (social / 사회적) và structural ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. bằng chứng (evidence / 증거) ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **11. Recurrence và relapse prevention** nối từ **10. xã hội (social / 사회적) và structural ngữ cảnh (context / 맥락)** sang **12. bằng chứng (evidence / 증거) ranh giới (boundary / 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Recurrence và relapse prevention
 
@@ -178,7 +178,7 @@ Depressive disorders có thể recurrent. Sau improvement, care không chỉ h�
 
 Một lapse nhỏ không đồng nghĩa full relapse. Early phản hồi (response / 응답) có thể giảm duration và impairment.
 
-> **Chuyển mạch:** Ở chặng này của **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **11. Recurrence và relapse prevention** đã nêu tiêu chí phân biệt, còn **12. bằng chứng (evidence / 증거) ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **13. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **11. Recurrence và relapse prevention** đặt tiêu chí; **12. bằng chứng (evidence / 증거) ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **13. Những hiểu lầm phổ biến** mở rộng hệ quả.
 
 ## 12. bằng chứng (evidence / 증거) ranh giới (boundary / 경계)
 
@@ -190,7 +190,7 @@ Một lapse nhỏ không đồng nghĩa full relapse. Early phản hồi (respon
 
 **Không được nói:** “depression là chemical imbalance đơn giản”, “depression chỉ do suy nghĩ tiêu cực”, hoặc “một biomarker đã giải thích được disorder”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **12. bằng chứng (evidence / 증거) ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **13. Những hiểu lầm phổ biến** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **12. bằng chứng (evidence / 증거) ranh giới (boundary / 경계)** đặt tiêu chí; **13. Những hiểu lầm phổ biến** dùng tiêu chí đó để kiểm tra ranh giới, rồi **14. Mô hình tư duy** mở rộng hệ quả.
 
 ## 13. Những hiểu lầm phổ biến
 
@@ -202,7 +202,7 @@ Một lapse nhỏ không đồng nghĩa full relapse. Early phản hồi (respon
 
 **“Nếu therapy hiệu quả thì bài toán (problem / 문제) chỉ là psychological.”** Sai. Treatment mức (level / 수준) không quyết định ontology duy nhất của disorder.
 
-> **Chuyển mạch:** Trong **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **14. Mô hình tư duy** gom các mảnh từ **13. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **14. Mô hình tư duy** tổng hợp từ **13. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. Mô hình tư duy
 
@@ -222,7 +222,7 @@ maintaining loop
 
 > Depression nên được hiểu như một hệ thống (system / 시스템) trạng thái (state / 상태) có nhiều entry điểm (point / 지점) và maintaining vòng lặp (loop / 루프), không phải một “defect” đơn lẻ.
 
-> **Chuyển mạch:** Ở chặng này của **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **Kết nối kiến thức** gom các mảnh từ **14. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Rối loạn trầm cảm, anhedonia và hệ thống phần thưởng**, **Kết nối kiến thức** tổng hợp từ **14. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 
