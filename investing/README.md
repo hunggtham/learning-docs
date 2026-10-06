@@ -111,6 +111,18 @@ Forex có dedicated đường dẫn (path / 경로) tại [`05_trading_derivativ
 - [Macro → Rates → Liquidity → Company → Valuation → Portfolio](./07_integrated_case_studies/06_MACRO_RATES_LIQUIDITY_COMPANY_VALUATION_PORTFOLIO_CASE.md): buộc cùng một shock đi xuyên macro, funding, doanh nghiệp, valuation và portfolio exposure thay vì dừng ở thị trường (market / 시장) narrative.
 - [USD Funding / FX / Korea–Vietnam Cross-Border](./07_integrated_case_studies/07_USD_FUNDING_FX_KOREA_VIETNAM_CROSS_BORDER_CASE.md): toàn cục (global / 전역) USD funding → FX/basis → Korea/Vietnam balance-sheet/truy cập (access / 접근) channels → asset/company exposure → hedge/portfolio quyết định (decision / 결정).
 
+## Source-book learning routes
+
+Các route `90_*` là **learning bridges từ giáo trình/source cụ thể**, không phải canonical owner mới. Chúng giữ knowledge source-specific và cross-link sang owner chuyên sâu ở các domain phía trên.
+
+- [증권투자기초 — Sách 1](../증권투자기초/output/book1/00-book1-index.md): financial/securities market → instruments → issuance/listing → trading/venues → derivatives → tax/M&A → collective investment/funds. Provenance và coverage nằm tại [`../증권투자기초/output/`](../증권투자기초/output/README.md); raw authority là `../증권투자기초/raw_md/sach1.md` và `../증권투자기초/raw/sach1/`. Route này bảo toàn thứ tự giáo trình; canonical concept ownership vẫn thuộc các domain trong `investing/`.
+
+- [증권투자기초 — Sách 2](./90_securities_book2/README.md): macro/financial analysis → equity valuation → technical analysis → strategy/index → fixed income → yield/credit/duration/market. Provenance và coverage nằm tại [`../증권투자기초/sach2/`](../증권투자기초/sach2/README.md).
+
+- [증권투자기초 — Sách 3](./90_securities_book3/README.md): portfolio statistics → portfolio theory → CAPM/efficient markets → performance/valuation → derivatives → rates/FX/credit/commodity → OTC/structured products. Provenance, coverage và publication audit nằm tại [`../증권투자기초/sach3/`](../증권투자기초/sach3/README.md).
+
+Quy tắc ownership: nếu một topic đã có owner trong `01–07`, route source-book giải thích đủ để thay source khi học rồi bàn giao sang owner; không duplicate một chapter chuyên sâu thứ hai và cũng không dùng cross-link để che source knowledge bị thiếu.
+
 ## Lộ trình học khuyến nghị
 
 Nếu bắt đầu gần như từ số 0, dùng tệp (file / 파일) `00` như tài liệu tham chiếu rồi học theo:
