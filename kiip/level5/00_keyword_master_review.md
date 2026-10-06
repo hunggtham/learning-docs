@@ -1,6 +1,6 @@
 # KIIP 5단계 — Keyword Master Review
 
-> **Mạch đọc:** File này là bản ôn tập tổng hợp dùng **sau khi đã hiểu các chapter** và **trước khi làm mock/đi thi**. Nó gom keyword từ toàn bộ `kiip/level5`, đối chiếu phần KIIP legacy trong `korean_culture/kiip`, rồi bổ sung những concept có khả năng xuất hiện trong `영주용 종합평가` và `귀화용 종합평가`.  
+> **Mạch đọc:** File này là bản ôn tập hợp nhất dùng **sau khi đã hiểu các chapter** và **trước khi làm mock/đi thi**. Nó gom các kiến thức có giá trị ôn thi từ toàn bộ tài liệu KIIP trong repository thành một handbook duy nhất, tổ chức theo chủ đề thay vì theo file nguồn.  
 > Mục tiêu không phải học thuộc một danh sách Hàn–Việt. Với mỗi keyword, phải phản xạ được tối thiểu **nghĩa → chức năng/đặc điểm → cặp dễ nhầm → một câu giải thích ngắn bằng tiếng Hàn**.
 
 Nếu chỉ còn ít thời gian, học theo thứ tự: **A. phản xạ bắt buộc → B. 8 lĩnh vực 기본 → C. 심화 → D. con số/cơ quan → E. cặp dễ nhầm → F. lịch sử/địa lý theo chuỗi**.
@@ -839,7 +839,7 @@ Phần này bám theo 8 lĩnh vực của bộ `한국사회 이해 기본`. M�
 - `국민권익위원회`: 고충민원·부패방지·행정심판 등 국민 권익 관련 업무를 담당합니다. (Ủy ban Quyền lợi công dân/chống tham nhũng.)
 - `한국소비자원`: 소비자 피해 상담과 분쟁 해결을 지원합니다. (Cơ quan bảo vệ người tiêu dùng.)
 
-**주의 — 2026 형사사법 개편:** legacy 교재/문제에는 `경찰–검찰–법원` 구조가 남아 있을 수 있다. 2026-10-02부터 `검찰청`은 폐지되고 `공소청`과 `중대범죄수사청` 체계가 시행되었다. 현재 제도 질문이라면 `공소청 = 공소 제기·유지 중심`, `중대범죄수사청 = 중대범죄 수사`라는 새 구조를 확인해야 한다. 실제 시험에서는 **해당 회차 공지와 적용 교재의 표현**을 우선 확인한다.
+**주의 — 2026 형사사법 개편:** 이전 교재/문제에는 `경찰–검찰–법원` 구조가 남아 있을 수 있다. 2026-10-02부터 `검찰청`은 폐지되고 `공소청`과 `중대범죄수사청` 체계가 시행되었다. 현재 제도 질문이라면 `공소청 = 공소 제기·유지 중심`, `중대범죄수사청 = 중대범죄 수사`라는 새 구조를 확인해야 한다. 실제 시험에서는 **해당 회차 공지와 적용 교재의 표현**을 우선 확인한다.
 
 ---
 
@@ -1053,9 +1053,9 @@ Phần này bám theo 8 lĩnh vực của bộ `한국사회 이해 기본`. M�
 
 ---
 
-# B+. 기본 보완 — các keyword dễ bị bỏ sót
+# B+. 통합 보완 — các keyword dễ bị bỏ sót
 
-Phần này bổ sung những khái niệm **đã xuất hiện trong coverage/giáo trình hoặc rất gần với câu hỏi KIIP**, nhưng trước đây master mới nhắc gián tiếp, gộp chung hoặc chưa có câu giải thích song ngữ. Hãy học sau B1~B8 và trước khi chuyển sang 귀화용 심화.
+Phần này hợp nhất các khái niệm còn nằm rải rác trong những tài liệu KIIP khác của repository nhưng trước đây master mới nhắc gián tiếp, gộp chung hoặc chưa có câu giải thích song ngữ. Nội dung được tổ chức theo chủ đề để học liên tục, **không gắn nhãn nguồn cho từng keyword**.
 
 ## B+1. 국가·영토·국경일
 
@@ -1069,6 +1069,11 @@ Phần này bổ sung những khái niệm **đã xuất hiện trong coverage/g
 - `한글날`: 10월 9일이며 한글 창제·반포의 의미와 세종대왕의 업적을 기념합니다. (Ngày Hangul 9/10.)
 - `현충일`: 6월 6일이며 나라를 위해 희생한 사람들을 추모하는 날입니다. (Ngày Tưởng niệm 6/6.)
 - `조기`: 현충일처럼 조의를 표하는 날에는 태극기를 깃봉에서 내려 달아 애도를 나타냅니다. (Treo cờ rủ để tưởng niệm.)
+- `흰색 바탕`: 태극기의 흰색 바탕은 밝음·순수와 평화를 사랑하는 민족성을 상징하는 의미로 설명됩니다. (Nền trắng của Taegeukgi tượng trưng cho sự trong sáng và tinh thần yêu chuộng hòa bình.)
+- `건`: 하늘을 상징하는 괘입니다. (Quẻ Càn: trời.)
+- `곤`: 땅을 상징하는 괘입니다. (Quẻ Khôn: đất.)
+- `감`: 물을 상징하는 괘입니다. (Quẻ Khảm: nước.)
+- `리`: 불을 상징하는 괘입니다. (Quẻ Ly: lửa.)
 
 **Điểm bẫy:** `국경일` và `공휴일` không hoàn toàn giống nhau. `제헌절` là 국경일 nhưng hiện không nằm trong nhóm 국경일 공휴일; vì vậy đừng suy luận “mọi 국경일 đều là ngày nghỉ”.
 
@@ -1104,13 +1109,240 @@ Phần này bổ sung những khái niệm **đã xuất hiện trong coverage/g
 - `법무부`: 출입국·국적·교정·법무정책 등 법무행정을 담당하는 중앙행정기관입니다. (Bộ Tư pháp Hàn Quốc.)
 - `법률구조`: 경제적·법률적 어려움이 있는 사람에게 상담·소송지원 등 법률 도움을 제공하는 제도입니다. (Trợ giúp pháp lý.)
 
-Điểm chốt của phần B+ là các từ trên **không tạo một chapter mới**; chúng lấp các lỗ hổng giữa những chapter đã có. Khi gặp `국경일`, `세금`, `중앙은행` hay `정부24`, hãy route ngược về 국가상징, 경제 hoặc 법·행정 tương ứng.
+## B+6. 가족·돌봄·가구 변화
+
+- `조손가족`: 부모 대신 조부모가 손자녀를 주로 양육하는 가족 형태입니다. (Gia đình ông bà nuôi cháu.)
+- `조부모 육아`: 조부모가 손자녀의 일상 돌봄과 양육에 참여하는 것을 말합니다. (Ông bà tham gia chăm sóc, nuôi cháu.)
+- `이혼`: 법률상 혼인관계를 끝내는 것입니다. (Ly hôn.)
+- `재혼`: 이혼이나 사별 후 다시 혼인하는 것입니다. (Tái hôn.)
+- `워킹맘`: 자녀를 양육하면서 직장생활도 하는 어머니를 일상적으로 부르는 말입니다. (Mẹ vừa đi làm vừa nuôi con.)
+- `워킹대디`: 자녀를 양육하면서 직장생활도 하는 아버지를 일상적으로 부르는 말입니다. (Bố vừa đi làm vừa nuôi con.)
+- `직급`: 조직에서 책임과 권한의 수준을 나타내는 직위 체계입니다. (Cấp bậc/chức danh trong tổ chức.)
+- `호칭`: 상대방을 부를 때 사용하는 이름·직책·관계 표현입니다. (Cách xưng hô.)
+- `근무시간`: 직장에서 실제로 근무하도록 정해진 시간을 일상적으로 부르는 표현이며 법적 문맥에서는 `근로시간`과 구분해 확인할 수 있습니다. (Giờ làm việc theo cách nói đời thường; trong ngữ cảnh pháp lý cần phân biệt với khái niệm 근로시간.)
+
+**Phân biệt:** `조손가족`은 가족 형태이고, `조부모 육아`는 돌봄 방식입니다. (조손가족 là mô hình gia đình; 조부모 육아 là cách chăm sóc.)
+
+## B+7. 교통·의료·생활 인프라
+
+- `고속버스`: 고속도로를 이용해 주로 도시 사이를 운행하는 장거리 버스입니다. (Xe buýt cao tốc liên tỉnh/thành phố.)
+- `시외버스`: 서로 다른 시·군 지역을 연결하는 버스입니다. (Xe buýt liên tỉnh/liên thành phố.)
+- `환승`: 한 교통수단에서 다른 교통수단으로 갈아타는 것입니다. (Chuyển tuyến/chuyển phương tiện.)
+- `의원`: 비교적 가벼운 질환을 먼저 진료받는 소규모 의료기관입니다. (Phòng khám.)
+- `병원`: 입원시설 등을 갖추고 진료하는 의료기관입니다. (Bệnh viện.)
+- `보건소`: 예방접종·건강관리 등을 지원하는 지역 공공 보건기관입니다. (Trạm y tế công cộng.)
+- `종합병원`: 여러 진료과와 입원시설을 갖춘 큰 의료기관입니다. (Bệnh viện đa khoa.)
+- `건강보험`: 질병과 진료비 부담을 사회적으로 나누기 위한 보험 제도이며 한국의 대표적 공보험은 국민건강보험입니다. (Bảo hiểm y tế; ở Hàn Quốc hệ thống chính là 국민건강보험.)
+- `버스전용차로`: 버스의 통행을 우선하기 위해 지정한 차로입니다. (Làn đường ưu tiên/dành riêng cho xe buýt.)
+- `귀농`: 농촌으로 이주하여 농업에 종사하거나 농업을 주된 생활기반으로 시작하는 것을 말합니다. (Chuyển về nông thôn để làm nông.)
+- `귀촌`: 농업 종사 여부와 별개로 도시에서 농촌 지역으로 이주해 생활하는 것을 말합니다. (Chuyển về nông thôn để sinh sống; không nhất thiết làm nông.)
+
+**Mental model:** 가벼운 증상은 `의원` 등 1차 의료기관에서 시작하고, 필요에 따라 더 큰 병원이나 전문진료로 연결됩니다. 응급상황이면 일반 진료 순서보다 `119/응급실` 판단이 우선입니다.
+
+## B+8. 출산·학교생활·평생학습
+
+- `양육수당`: 가정에서 영유아를 양육하는 경우 등 일정 요건에서 제공되는 양육 지원을 가리키는 제도명입니다. (Trợ cấp nuôi trẻ tại gia theo điều kiện; điều kiện cụ thể cần kiểm tra theo thời điểm.)
+- `아동수당`: 일정 연령의 아동 양육을 지원하기 위해 지급하는 사회보장 급여입니다. (Trợ cấp trẻ em; tuổi/điều kiện cụ thể cần kiểm tra theo quy định hiện hành.)
+- `학교 배정`: 학생이 다닐 학교를 교육 행정 기준에 따라 정하는 과정입니다. (Phân trường.)
+- `입학 준비`: 입학 전 필요한 서류·준비물·생활 정보를 확인하는 과정입니다. (Chuẩn bị nhập học.)
+- `학교생활 적응`: 수업·규칙·친구 관계 등 학교환경에 익숙해지는 과정입니다. (Thích nghi đời sống học đường.)
+- `생활 습관`: 시간·위생·식사·학습처럼 일상에서 반복되는 행동 습관입니다. (Thói quen sinh hoạt.)
+- `사회성`: 다른 사람과 관계를 맺고 규칙을 이해하며 함께 생활하는 능력입니다. (Năng lực xã hội.)
+- `체험 활동`: 직접 경험을 통해 진로·문화·사회 등을 배우는 활동입니다. (Hoạt động trải nghiệm.)
+- `학교생활기록부`: 학교생활과 교과·활동 등의 기록을 담는 공식 학생 기록입니다. (Học bạ/hồ sơ sinh hoạt học đường.)
+- `원격대학`: 온라인·원격 방식으로 고등교육을 제공하는 대학입니다. (Đại học từ xa.)
+- `주민센터`: 지역 주민의 행정민원과 복지업무 등을 처리하는 가까운 행정기관입니다. (Trung tâm hành chính phường/xã.)
+- `도서관`: 책·자료·학습 공간을 제공하는 공공 문화·교육시설입니다. (Thư viện.)
+- `박물관`: 역사·문화·예술·과학 자료를 보존하고 전시하는 기관입니다. (Bảo tàng.)
+- `사회복지관`: 지역 주민에게 복지·상담·교육·돌봄 프로그램 등을 제공하는 시설입니다. (Trung tâm phúc lợi xã hội.)
+- `평생학습관`: 성인의 계속 학습을 위한 강좌와 학습 기회를 제공하는 시설입니다. (Trung tâm học tập suốt đời.)
+- `온라인 학습 플랫폼`: 인터넷으로 강의와 학습자료를 이용하는 서비스입니다. (Nền tảng học trực tuyến.)
+- `학번`: 학교에서 학생에게 부여하는 고유 번호이며 입학연도를 나타내는 표현으로도 사용됩니다. (Mã sinh viên/học sinh; đôi khi dùng để chỉ khóa nhập học.)
+- `선후배`: 학교나 조직에서 먼저 들어온 사람과 나중에 들어온 사람의 관계입니다. (Quan hệ tiền bối–hậu bối.)
+- `학과`: 대학에서 전공 분야별로 나눈 교육 조직입니다. (Khoa/ngành học.)
+- `교육`: 지식·기술·가치와 생활능력을 배우고 성장하도록 돕는 과정입니다. (Giáo dục.)
+- `읽기·쓰기·셈하기`: 기초교육에서 중요한 기본 문해·수리 능력입니다. (Kỹ năng cơ bản: đọc, viết, tính toán.)
+- `4년제 종합대학교`: 여러 전공 분야를 운영하며 일반적으로 학사과정이 4년인 대학교 유형입니다. (Đại học tổng hợp hệ 4 năm.)
+- `오답노트`: 틀린 문제와 이유를 기록해 같은 오류를 반복하지 않도록 복습하는 학습 방법입니다. (Sổ ghi câu sai để ôn lại.)
+
+외국인 자녀의 학교 입학은 일반적으로 **거주 확인·학력 관련 자료 → 학교/교육기관 확인 → 배정·입학 절차 → 필요 시 한국어 지원**의 흐름으로 이해하면 됩니다. 다만 실제 제출서류와 배정방식은 지역·학교·학생 상황에 따라 달라질 수 있습니다.
+
+## B+9. 전통생활·예절·의례·여가
+
+- `존댓말`: 상대방을 높이거나 예의를 나타내기 위해 사용하는 높임 표현입니다. (Kính ngữ.)
+- `인사`: 사람을 만나거나 헤어질 때 예의를 표현하는 말과 행동입니다. (Chào hỏi.)
+- `품앗이`: 개인이나 가구가 서로 일을 도와주고 나중에 도움을 주고받는 전통적 상호부조 방식입니다. (Hình thức đổi công/tương trợ giữa cá nhân hoặc hộ.)
+- `두레`: 농촌 공동체가 조직적으로 함께 노동하던 전통적 협동 조직입니다. (Tổ chức lao động cộng đồng truyền thống.)
+- `의식주`: 옷·음식·주거를 묶어 인간 생활의 기본 요소를 나타내는 말입니다. (Ăn–mặc–ở.)
+- `저고리`: 한복의 윗옷입니다. (Áo trên của hanbok.)
+- `치마`: 여성 한복의 대표적인 아래옷입니다. (Váy hanbok nữ.)
+- `바지`: 남성 한복 등에 사용하는 대표적인 아래옷입니다. (Quần hanbok.)
+- `돌`: 아기가 태어난 지 한 해가 되는 첫 생일입니다. (Thôi nôi/tròn một tuổi.)
+- `돌잡이`: 돌잔치에서 아기가 여러 물건 중 하나를 잡게 하는 전통 풍습입니다. (Nghi thức chọn đồ trong lễ thôi nôi.)
+- `성년의 날`: 성인이 된 것을 기념하는 날입니다. (Ngày thành niên.)
+- `혼례`: 결혼과 관련된 전통 의례입니다. (Hôn lễ.)
+- `관혼상제`: 전통적으로 성년·혼인·장례·제례를 묶어 부르는 말입니다. (Bốn nghi lễ lớn: trưởng thành, cưới, tang, tế lễ.)
+- `제사`: 조상을 기억하고 추모하는 전통 의례를 일상적으로 부르는 말입니다. (Lễ cúng/tưởng nhớ tổ tiên.)
+- `전통문화`: 오랜 시간 전승되어 온 생활양식·예술·관습 등을 말합니다. (Văn hóa truyền thống.)
+- `대중문화`: 많은 사람이 대중매체와 시장을 통해 소비하고 공유하는 문화입니다. (Văn hóa đại chúng.)
+- `여가`: 일이나 의무에서 벗어나 쉬거나 취미활동을 하는 시간입니다. (Thời gian giải trí.)
+- `동호회`: 같은 취미나 관심사를 가진 사람들이 만든 모임입니다. (Câu lạc bộ nhóm sở thích.)
+- `혼밥`: 혼자 밥을 먹는 생활방식을 일상적으로 표현하는 말입니다. (Ăn một mình.)
+- `할랄`: 이슬람 율법상 허용되는 음식·행위 등을 뜻합니다. (Halal.)
+- `보일러`: 현대 주택에서 물 등을 데워 난방과 온수를 공급하는 설비입니다. (Nồi hơi/hệ thống sưởi hiện đại.)
+- `장`: 된장·간장·고추장처럼 콩·곡물 등을 발효해 만든 한국의 전통 양념류를 넓게 가리키는 말입니다. (Tương/gia vị lên men truyền thống như doenjang, ganjang, gochujang.)
+- `공동체`: 일정한 지역·관계·목표를 공유하며 함께 살아가거나 활동하는 사람들의 집단입니다. (Cộng đồng.)
+
+**Phân biệt:** `품앗이`는 서로 도움을 주고받는 방식, `두레`는 더 조직적인 공동 노동 형태로 이해하면 쉽습니다. `관혼상제`의 `상`은 장례, `제`는 사후의 제례를 뜻합니다.
+
+**Ví dụ đời sống:** `효`는 무조건 복종이 아니라 부모·어른을 존중하고 돌보는 가치로 이해합니다. 안부를 묻기, 명절에 가족을 찾아뵙기, 어르신을 배려하기는 생활 속 예가 될 수 있습니다.
+
+## B+10. 민주정치·지방자치·사법 원리
+
+- `견제와 균형`: 국가기관들이 서로 권한을 제한하고 감시해 권력 집중을 막는 원리입니다. (Kiểm soát và cân bằng quyền lực.)
+- `다수결`: 여러 의견 중 더 많은 지지를 받은 안을 결정에 사용하는 방식입니다. (Nguyên tắc đa số.)
+- `국가원수`: 국가를 대외적으로 대표하는 최고 지위를 말하며 대한민국에서는 대통령이 국가원수입니다. (Nguyên thủ quốc gia.)
+- `행정부 수반`: 행정부를 이끄는 최고 책임자를 말하며 대한민국에서는 대통령입니다. (Người đứng đầu hành pháp.)
+- `선거구`: 선거에서 대표자를 뽑기 위해 나눈 지역 또는 선거 단위입니다. (Đơn vị/khu vực bầu cử.)
+- `지방자치단체장`: 지방자치단체의 행정을 이끄는 선출직 책임자입니다. (Người đứng đầu chính quyền địa phương.)
+- `지방의회`: 지역 주민을 대표해 조례·예산 등 지방의 중요한 일을 심의·의결하는 기관입니다. (Hội đồng địa phương.)
+- `사회 참여`: 시민이 선거·봉사·토론·청원 등으로 공동체 문제에 참여하는 활동입니다. (Tham gia xã hội/công dân.)
+- `재판의 독립`: 법관과 법원이 다른 권력의 부당한 간섭 없이 헌법과 법률에 따라 판단해야 한다는 원칙입니다. (Độc lập xét xử.)
+- `단임`: 한 사람이 같은 직위의 임기를 연속해서 다시 맡지 않는 제도입니다. 대한민국 대통령은 5년 단임입니다. (Chế độ một nhiệm kỳ; tổng thống Hàn Quốc nhiệm kỳ 5 năm, không tái nhiệm liên tiếp.)
+- `국정감사`: 국회가 정부와 국가기관의 업무를 정기적으로 감사하는 제도입니다. (Quốc hội kiểm tra hoạt động của chính phủ/cơ quan nhà nước.)
+- `법률 폐지`: 기존 법률의 효력을 없애는 입법 활동입니다. (Bãi bỏ luật.)
+
+**Điểm bẫy:** 민주주의는 `다수결`만으로 완성되지 않습니다. 기본권 보호, 법치주의, 소수 의견 존중, 권력 통제가 함께 필요합니다. `헌법재판소`는 `대법원`의 상급법원이 아닙니다.
+
+## B+11. 시장·소비·은행 업무·일자리
+
+- `수요`: 일정한 가격에서 소비자가 상품이나 서비스를 사고자 하는 양입니다. (Cầu.)
+- `공급`: 일정한 가격에서 생산자·판매자가 상품이나 서비스를 팔고자 하는 양입니다. (Cung.)
+- `가격`: 상품이나 서비스와 교환하기 위해 지불하는 돈의 수준입니다. (Giá.)
+- `수출 중심 성장`: 해외 판매를 늘려 생산·고용·외화 획득을 확대하는 성장 전략입니다. (Tăng trưởng hướng xuất khẩu.)
+- `노동력`: 생산활동에 참여할 수 있는 사람들의 노동 능력과 인력을 말합니다. (Lực lượng lao động.)
+- `흥정`: 물건의 가격이나 거래조건을 서로 이야기해 조정하는 것입니다. (Mặc cả.)
+- `표시 확인`: 가격·성분·원산지·주의사항 등 상품에 표시된 정보를 확인하는 것입니다. (Kiểm tra nhãn/thông tin sản phẩm.)
+- `유통기한/소비기한 확인`: 식품을 안전하게 이용하기 위해 표시된 기한을 확인하는 행동입니다. (Kiểm tra hạn dùng.)
+- `거래기록 보관`: 영수증·계약서·이체내역 등을 보관해 분쟁 시 거래 사실을 증명하는 것입니다. (Giữ bằng chứng giao dịch.)
+- `계좌 개설`: 은행에 자신의 금융계좌를 만드는 것입니다. (Mở tài khoản ngân hàng.)
+- `입금`: 계좌에 돈을 넣는 것입니다. (Nộp tiền.)
+- `출금`: 계좌에서 돈을 꺼내는 것입니다. (Rút tiền.)
+- `이체`: 한 계좌에서 다른 계좌로 돈을 보내는 것입니다. (Chuyển khoản.)
+- `잔액 조회`: 계좌에 남아 있는 금액을 확인하는 것입니다. (Kiểm tra số dư.)
+- `ATM`: 현금 입출금·이체 등 일부 은행 업무를 할 수 있는 자동화기기입니다. (Máy ATM.)
+- `스마트뱅킹`: 스마트폰을 이용해 은행 업무를 처리하는 서비스입니다. (Mobile banking.)
+- `직무`: 직장에서 개인이 맡아 수행하는 구체적인 업무 영역입니다. (Nhiệm vụ/chức năng công việc.)
+- `자영업`: 개인이 자신의 사업을 직접 운영해 소득을 얻는 경제활동입니다. (Tự kinh doanh.)
+- `학벌`: 출신 학교의 이름이나 서열을 중요하게 보는 사회적 인식을 가리키는 말입니다. (Quan niệm coi trọng danh tiếng/thứ hạng trường học.)
+- `갑·을`: 계약서의 당사자를 구분하는 중립적 표기이지만 일상에서는 힘의 우열 관계를 비유적으로 표현할 때도 쓰입니다. (Ký hiệu bên A/B trong hợp đồng; đời thường đôi khi hàm ý chênh lệch quyền lực.)
+- `예금자보호제도`: 금융회사가 영업정지·파산 등으로 예금을 지급하지 못할 때 법정 한도 안에서 보호하는 제도입니다. (Chế độ bảo vệ tiền gửi.)
+- `인증`: 거래나 서비스 이용에서 본인·상품·정보의 진위나 자격을 확인하는 절차입니다. (Xác thực/chứng nhận.)
+- `인터넷뱅킹`: 인터넷을 통해 계좌조회·이체 등 은행 업무를 처리하는 서비스입니다. (Internet banking.)
+- `송금`: 다른 사람이나 다른 계좌로 돈을 보내는 금융거래입니다. (Chuyển/gửi tiền.)
+- `공유경제`: 물건·공간·서비스를 반드시 소유하기보다 공유·대여하여 이용하는 경제활동입니다. (Kinh tế chia sẻ: ưu tiên sử dụng/chia sẻ thay vì sở hữu.)
+- `풍부한 노동력`: 산업화 초기에 생산활동에 투입될 수 있는 인력이 많았다는 설명에 쓰이는 표현입니다. (Nguồn lao động dồi dào.)
+- `높은 교육열`: 교육을 중시하고 교육에 많은 시간·자원을 투자하는 사회적 경향입니다. (Mức độ coi trọng giáo dục cao.)
+- `수출 중심 성장`: 해외시장 판매를 확대해 외화·생산·고용을 늘리는 성장 방식입니다. (Tăng trưởng hướng xuất khẩu.)
+
+**Bối cảnh 산업화:** `노동력·교육 확대·수출정책·기업투자·정부정책·국제환경` 등이 함께 작용했습니다. Một yếu tố riêng lẻ không đủ giải thích toàn bộ quá trình công nghiệp hóa.
+
+**Cơ chế giá cơ bản:** 다른 조건이 같다면 `수요 증가`는 가격 상승 압력을, `공급 증가`는 가격 하락 압력을 만들 수 있습니다. Đây là mô hình đơn giản để hiểu quan hệ cung–cầu, không phải quy tắc đảm bảo giá luôn di chuyển theo một chiều.
+
+## B+12. 체류·가족법·형사절차 thực tế
+
+- `체류기간 연장`: 허가된 체류기간이 끝나기 전에 더 머물 수 있도록 연장을 신청하는 절차입니다. (Gia hạn thời gian lưu trú.)
+- `체류자격 변경`: 체류 목적이 달라질 때 다른 체류자격으로 변경 허가를 받는 절차입니다. (Đổi tư cách lưu trú.)
+- `체류자격 외 활동`: 현재 체류자격의 기본 활동 범위를 벗어난 활동을 별도 허가 등 법정 요건 아래 하는 것을 말합니다. (Hoạt động ngoài phạm vi visa theo điều kiện/giấy phép.)
+- `불법체류`: 허가된 체류기간이나 체류조건을 위반해 적법한 체류 상태가 아닌 것을 말합니다. (Cư trú bất hợp pháp.)
+- `양육권`: 이혼 후 자녀를 실제로 보호하고 양육할 책임과 권한을 말합니다. (Quyền/trách nhiệm trực tiếp nuôi con.)
+- `양육비`: 자녀를 기르는 데 필요한 비용입니다. (Chi phí cấp dưỡng nuôi con.)
+- `면접교섭권`: 자녀와 함께 살지 않는 부모 등이 자녀를 만나고 교류할 수 있는 권리입니다. (Quyền thăm gặp/giao lưu với con.)
+- `개인정보`: 개인을 알아볼 수 있게 하는 이름·연락처·식별정보 등의 정보입니다. (Thông tin cá nhân.)
+- `피해자`: 범죄나 위법행위 등으로 피해를 입은 사람입니다. (Nạn nhân.)
+- `피의자`: 수사기관으로부터 범죄 혐의를 받아 수사 대상이 된 사람입니다. (Nghi phạm trong giai đoạn điều tra.)
+- `피고인`: 기소되어 형사재판을 받는 사람입니다. (Bị cáo trong vụ án hình sự.)
+- `소송`: 법원에 법적 판단과 권리구제를 요구하는 절차입니다. (Tố tụng/khởi kiện.)
+- `증거 보존`: 계약서·메시지·사진·영수증 등 사건과 관련된 자료를 없어지지 않게 보관하는 것입니다. (Bảo quản chứng cứ.)
+- `공식 절차`: 문제를 담당 기관의 신고·신청·심판·소송 등 정해진 절차로 해결하는 방식입니다. (Thủ tục chính thức.)
+- `체류`: 외국인이 허가된 자격과 기간에 따라 대한민국 안에 머무르는 것을 말합니다. (Lưu trú.)
+- `경찰`: 치안 유지, 범죄 예방·신고 대응과 법에 따른 수사 업무를 수행하는 기관입니다. (Cảnh sát.)
+- `분쟁 해결`: 당사자 간 갈등을 협의·조정·심판·소송 등 적절한 절차로 해결하는 것입니다. (Giải quyết tranh chấp.)
+- `사회 질서 유지`: 사람들이 안전하고 예측 가능하게 생활하도록 법과 규칙을 적용하는 법의 중요한 기능입니다. (Duy trì trật tự xã hội.)
+
+**Chuỗi:** `문제 발생 → 사실·증거 정리 → 담당 기관 확인 → 상담/신고/신청 → 필요 시 심판·소송`.
+
+**Bẫy:** `피의자`는 유죄가 확정된 사람이 아닙니다. 기소 전 수사 대상이 피의자이고, 기소되어 재판을 받는 사람은 피고인입니다.
+
+## B+13. 역사·문화유산 bổ sung
+
+- `한일병합`: 1910년 일본이 대한제국을 강제로 병합해 식민지 지배가 본격화된 사건입니다. (Nhật–Hàn sáp nhập năm 1910.)
+- `청자`: 푸른빛 유약이 특징인 도자기로 고려청자가 특히 유명합니다. (Gốm celadon; nổi bật thời Goryeo.)
+- `성리학`: 유교를 철학적으로 체계화한 사상으로 조선의 정치·교육·사회질서에 큰 영향을 주었습니다. (Tân Nho giáo/Neo-Confucianism.)
+- `탈놀이`: 탈을 쓰고 춤·연극·풍자를 결합한 전통 공연입니다. (Diễn xướng/múa mặt nạ.)
+- `민화`: 서민 생활과 소망 등을 자유롭게 표현한 조선 후기의 생활 그림을 넓게 가리킵니다. (Tranh dân gian Minhwa.)
+- `해인사`: 경상남도 합천에 있는 사찰로 팔만대장경 목판을 보관하는 곳으로 유명합니다. (Chùa Haeinsa, nơi lưu giữ mộc bản Tripitaka Koreana.)
+- `해시계`: 해의 그림자 위치로 시간을 측정하는 기구이며 조선의 `앙부일구`가 대표적입니다. (Đồng hồ mặt trời; ví dụ tiêu biểu là Angbuilgu.)
+- `물시계`: 물의 흐름을 이용해 시간을 재는 기구이며 조선의 `자격루`가 대표적입니다. (Đồng hồ nước; ví dụ tiêu biểu là Jagyeongnu.)
+- `냉전`: 제2차 세계대전 이후 미국 중심 진영과 소련 중심 진영의 정치·군사·이념 대립을 말하며 한반도 분단의 국제적 배경을 이해할 때 중요합니다. (Chiến tranh Lạnh, bối cảnh quốc tế quan trọng của chia cắt bán đảo.)
+
+## B+14. 지역·산업·지리 bổ sung
+
+- `항만`: 배가 사람과 화물을 싣고 내리며 물류가 이루어지는 시설과 지역입니다. (Cảng biển.)
+- `국제교류`: 국가·지역 사이에 사람·상품·문화·정보가 오가는 활동입니다. (Giao lưu quốc tế.)
+- `과학·연구`: 새로운 지식과 기술을 만들기 위한 연구개발 활동입니다. (Khoa học và nghiên cứu.)
+- `대덕연구단지`: 대전에 조성된 대표적인 과학·연구개발 집적지역입니다. (Cụm nghiên cứu Daedeok ở Daejeon.)
+- `평야`: 지형이 비교적 평평하고 넓어 농업과 도시 발달에 유리한 땅입니다. (Đồng bằng.)
+- `서남해안`: 한반도의 서쪽과 남서쪽 해안 지역을 말하며 섬과 갯벌이 많은 곳이 있습니다. (Bờ biển phía tây–tây nam.)
+- `농업`: 토지를 이용해 작물을 재배하거나 가축을 기르는 산업입니다. (Nông nghiệp.)
+- `음식문화`: 지역의 자연환경·생산물·역사와 연결되어 형성된 식생활 문화입니다. (Văn hóa ẩm thực.)
+- `전주 한옥마을`: 전주에 있는 대표적인 한옥 밀집 관광·문화 지역입니다. (Làng Hanok Jeonju.)
+- `DMZ`: 군사분계선을 중심으로 남북 사이에 설정된 비무장지대입니다. (Khu phi quân sự DMZ.)
+- `지역 정체성`: 한 지역의 자연환경·역사·산업·교통·인구 이동·문화 경험이 함께 만들어 내는 지역의 특징과 소속감입니다. (Bản sắc vùng hình thành từ tự nhiên, lịch sử, kinh tế, giao thông, di cư và văn hóa.)
+
+**Mental model địa lý:** 지역의 특징은 자연환경 하나로만 결정되지 않습니다. `교통 + 산업 + 인구 이동 + 역사적 경험`을 함께 봐야 지역 생활과 정체성을 이해할 수 있습니다.
+
+## B+15. 통합 mental model — nối các chapter thành một hệ thống
+
+Các dòng dưới đây là phần dễ mất nhất khi chỉ học keyword. Hãy dùng chúng để trả lời câu hỏi `왜?`, câu tình huống và 구술.
+
+- `교육 → 평가 → 경쟁 → 기회와 부담`: 성적·수능·내신 같은 평가는 선발과 기회를 조직하지만, 동시에 경쟁과 사교육 부담을 만들 수 있습니다. (Giáo dục và đánh giá tạo cơ chế tuyển chọn/cơ hội nhưng cũng có thể tạo cạnh tranh, áp lực.)
+- `보고 → 공유 → 인수인계 → 조직의 기억`: 정보가 사람 한 명에게만 머물면 조직이 불안정해질 수 있으므로, 보고·공유·인수인계는 업무 연속성을 만듭니다. (Báo cáo/chia sẻ/bàn giao tạo “trí nhớ tổ chức”.)
+- `전세·주택 → 자산·부채·유동성 → 가구 위험`: 큰 보증금이나 대출은 단순 주거비가 아니라 가구의 자산·부채 구조와 연결됩니다. (Nhà ở/jeonse liên quan trực tiếp đến bảng cân đối tài sản–nợ và rủi ro hộ gia đình.)
+- `고령화·1인 가구·이주 → 돌봄·주거·의료 수요 변화`: 인구구조가 바뀌면 필요한 공공서비스의 종류와 접근방식도 달라집니다. (Già hóa, hộ một người, di cư làm thay đổi nhu cầu chăm sóc, nhà ở và y tế.)
+- `교통수단 존재 ≠ 실제 접근 가능`: 환승, 이동약자 시설, 언어 안내, 비용과 대체 경로까지 있어야 실제 접근성이 높아집니다. (Có phương tiện chưa đồng nghĩa mọi người tiếp cận được.)
+- `디지털화 → 편리함 + 디지털 격차`: 키오스크·본인인증·온라인 행정은 편리하지만 언어·기기·인증 문제로 일부 사람에게 장벽이 될 수 있습니다. (Số hóa tăng tiện lợi nhưng có thể tạo khoảng cách số.)
+- `가족 ≠ 가구 ≠ 세대`: 가족은 친족 관계, 가구는 생활·소비 단위, 세대는 연령·역사 경험을 기준으로 봅니다. (Ba khái niệm gia đình–hộ–thế hệ có tiêu chí khác nhau.)
+- `기후·주거기술·생활양식`: 온돌·대청마루처럼 주거기술은 기후에 대응하면서 가족생활과 공간 사용방식에도 영향을 줍니다. (Khí hậu, kỹ thuật nhà ở và lối sống liên hệ với nhau.)
+- `전통문화 → 전승자·공간·관객`: 판소리·탈춤·농악 같은 전통예술은 작품만 보존해서 유지되는 것이 아니라 배우는 사람, 공연 공간과 관객이 함께 있어야 전승됩니다. (Di sản sống cần người truyền nghề, không gian và khán giả.)
+- `한류 → 제작 → 플랫폼 → 번역·현지화 → 팬덤 → 관광·상품 소비`: 한류는 콘텐츠 자체뿐 아니라 유통·번역·팬덤과 경제적 파급효과까지 연결됩니다. (Hallyu là chuỗi tạo nội dung–phân phối–bản địa hóa–fandom–du lịch/tiêu dùng.)
+- `대학생활 → 학점 + 관계 + 경험 + 취업준비`: 대학은 지식만 배우는 곳이 아니라 동아리·인턴·공모전·선후배 관계를 통해 사회생활을 준비하는 전환 공간이기도 합니다. (Đại học còn là giai đoạn chuyển tiếp sang đời sống nghề nghiệp/xã hội.)
+- `공론장·언론·집회·선거 → 시민 참여 → 민주주의`: 민주주의는 선거일 하루의 행동이 아니라 정보를 얻고 토론하고 의견을 표현하며 권력을 감시하는 과정입니다. (Dân chủ là quá trình tham gia công dân rộng hơn việc bỏ phiếu.)
+
+## B+16. 표기 변형·같이 알아볼 표현
+
+Đề và tài liệu có thể dùng cách gọi khác nhau cho cùng hoặc gần cùng một khái niệm. Nhìn thấy biến thể phải route về cùng mental model:
+
+- `사증 = 비자`: 사증은 법률·행정 용어, 비자는 일상적으로 많이 쓰는 외래어입니다. (Đều chỉ visa; 사증 trang trọng/pháp lý hơn.)
+- `영주권 ≈ 영주자격`: 일상에서는 영주권이라고 많이 말하지만 법적 문맥에서는 체류자격으로서 영주자격을 확인해야 합니다. (Thường trú/quyền thường trú; ngữ cảnh pháp lý dùng tư cách cư trú.)
+- `다문화가족 / 다문화가정`: 둘 다 일상에서 쓰이지만 법·정책 용어는 문맥에 따라 정확한 명칭을 확인합니다. (Gia đình đa văn hóa.)
+- `1인 가구 / 1인가구`: 띄어쓰기 차이일 뿐 같은 개념입니다. (Hộ một người.)
+- `원격대학교 / 원격대학`: 온라인·원격 방식의 고등교육기관을 가리키는 표현입니다. (Đại học từ xa.)
+- `스마트뱅킹 / 스마트폰뱅킹`: 스마트폰으로 은행 업무를 처리하는 서비스를 가리키는 표현입니다. (Mobile banking.)
+- `회갑 / 환갑`: 전통적으로 60세가 된 것을 기념하는 말로 함께 쓰입니다. (Mừng 60 tuổi.)
+- `제례 / 제사`: 조상을 추모하는 의례를 가리키며, 제례는 더 공식·범주적 표현으로 쓰일 수 있습니다. (Nghi lễ cúng/tưởng niệm tổ tiên.)
+- `6·25 전쟁 / 한국전쟁`: 1950년에 시작된 같은 전쟁을 가리키는 대표 표현입니다. (Chiến tranh Triều Tiên.)
+- `광복 / 8·15 광복`: 광복은 식민지 지배에서 벗어난 사건이고, 8월 15일은 그 역사적 날짜를 강조한 표현입니다. (Giải phóng 15/8/1945.)
+- `수능 / 대학수학능력시험`: 수능은 정식 명칭의 줄임말입니다. (CSAT.)
+- `국가(國家) / 국가(國歌)`: 같은 발음·표기지만 앞은 “nhà nước/quốc gia”, 뒤는 “quốc ca”; `애국가`를 설명할 때의 국가는 國歌입니다.
+
+Điểm chốt của phần B+ là các từ trên **không tạo một chapter mới**; chúng lấp các lỗ hổng giữa những chapter đã có. Khi gặp `국경일`, `세금`, `중앙은행`, `학교생활기록부`, `재판의 독립` hay `피의자`, hãy nối chúng về đúng hệ thống lớn thay vì học như từ đơn lẻ.
 
 ---
 
 # C. 귀화용 심화 — phải học thêm
 
-Phần 심화 không chỉ hỏi “đây là gì?” mà thường đòi hỏi **định nghĩa → lý do → quyền/nghĩa vụ → giới hạn → ví dụ**. Ngoài 5 trục chính thức trong tài liệu Bộ Tư pháp, repo legacy đã triển khai thành 20 cụm để dễ ôn sâu; bảng dưới đây giữ cả hai cách nhìn.
+Phần 심화 không chỉ hỏi “đây là gì?” mà thường đòi hỏi **định nghĩa → lý do → quyền/nghĩa vụ → giới hạn → ví dụ**. Để ôn sâu, master triển khai các trục chính thành nhiều cụm nhỏ hơn theo quan hệ khái niệm; mục tiêu là giúp phân biệt, giải thích và xử lý câu tình huống.
 
 ## C1. 대한민국의 국민
 
@@ -1164,6 +1396,8 @@ Mẫu nói:
 ## C4. 국민을 위한 복지
 
 **Keyword — 한국어 설명 (giải thích tiếng Việt):**
+
+- `복지`: 개인이 질병·실업·노령·빈곤 같은 위험을 혼자 감당하지 않도록 국가와 사회가 생활 안정과 기본적 삶을 지원하는 제도와 활동입니다. (Phúc lợi xã hội.)
 
 - `복지국가`: 국가가 사회적 위험과 기본생활 보장을 위해 적극적으로 복지정책을 운영하는 국가 모델입니다. (Nhà nước phúc lợi.)
 - `사회보험`: 보험료를 바탕으로 사회적 위험에 대비하는 제도입니다. (Bảo hiểm xã hội.)
@@ -1444,6 +1678,14 @@ Các số dưới đây đã từng xuất hiện khác trong tài liệu cũ. K
 - `법정 최고금리`: **연 20%**.
 - `검찰청`: **2026-10-02 폐지**; `공소청` và `중대범죄수사청` được vận hành theo cơ cấu mới.
 
+**Số cũ cần nhận diện nhưng không dùng làm fact hiện hành:**
+- `예금자보호 5천만원`: từng xuất hiện trong tài liệu cũ; current layer của master dùng `1억원`.
+- `법정 최고금리 연 24%`: dữ liệu cũ; current layer dùng `연 20%`.
+
+Ngoài ba mục trên, **không học cứng** các dữ liệu sau nếu không có timestamp: `1인 가구 비율`, dân số Seoul, tỷ lệ tôn giáo, tỷ lệ học đại học, số du học sinh, mức/trợ cấp sinh con–chăm trẻ, chi tiết visa–quốc tịch, quyền bầu cử của từng nhóm đối tượng và format kỳ thi. Các dữ liệu này có thể thay đổi theo năm, chính sách hoặc loại kỳ đánh giá.
+
+`시험 문항 수·시간·작문 분량·합격 기준`도 notice에 따라 달라질 수 있으므로, handbook chỉ giữ nguyên tắc và dùng thông báo kỳ thi hiện hành làm authority cuối cùng.
+
 Trước ngày thi, mở `00_current_facts_and_corrections.md` và notice mới nhất của `kiiptest.org`.
 
 ## D3. 기관 → 한국어 설명 (giải thích tiếng Việt)
@@ -1527,7 +1769,7 @@ Trước ngày thi, mở `00_current_facts_and_corrections.md` và notice mới 
 
 `범죄 발생 → 수사 → 공소 제기 → 재판 → 판결`
 
-Từ 2026-10-02, khi hỏi cơ quan hiện hành phải tách rõ hơn `수사기관` và `공소청`; legacy question có thể vẫn dùng từ `검찰`.
+Từ 2026-10-02, khi hỏi cơ quan hiện hành phải tách rõ hơn `수사기관` và `공소청`; câu hỏi/tài liệu cũ có thể vẫn dùng từ `검찰`.
 
 ---
 
@@ -1596,6 +1838,66 @@ Ví dụ:
 Ví dụ:
 `보이스피싱이 의심되면 먼저 송금을 멈추고 공식 채널로 확인해야 합니다.`
 
+## H7. Từ nối dùng cho 작문·구술
+
+Các từ này không phải kiến thức xã hội riêng lẻ, nhưng chúng giúp biến keyword thành câu trả lời có logic.
+
+- `먼저`: trước tiên.
+- `그리고`: và/sau đó.
+- `또한`: ngoài ra/cũng.
+- `예를 들면`: ví dụ.
+- `하지만`: nhưng.
+- `반면에`: ngược lại/trong khi đó.
+- `그래서`: vì vậy, thiên về kết quả tự nhiên.
+- `따라서`: do đó, mang sắc thái lập luận/formal hơn.
+- `왜냐하면`: bởi vì.
+- `다만`: tuy nhiên/có điều, dùng để thêm giới hạn hoặc ngoại lệ.
+- `첫째·둘째`: thứ nhất·thứ hai.
+- `마지막으로`: cuối cùng.
+
+Mẫu ngắn dễ dùng:
+`저는 _____이 중요하다고 생각합니다. 첫째, _____기 때문입니다. 둘째, _____에 도움이 됩니다. 다만, _____도 고려해야 합니다.`
+
+## H8. Từ vựng đời sống thường dùng trong đề viết/nói
+
+- `문화 차이`: 서로 다른 문화의 생활방식·가치·관습 차이입니다. (Khác biệt văn hóa.)
+- `존중`: 다른 사람의 권리·생각·문화를 가치 있게 대하는 태도입니다. (Tôn trọng.)
+- `적응`: 새로운 환경과 규칙에 익숙해지는 과정입니다. (Thích nghi.)
+- `의사소통`: 말·글·행동으로 정보와 생각을 주고받는 것입니다. (Giao tiếp.)
+- `배려`: 다른 사람의 상황과 필요를 생각해 행동하는 태도입니다. (Quan tâm/cân nhắc cho người khác.)
+- `이웃`: 가까운 지역에 함께 사는 사람들입니다. (Hàng xóm/cộng đồng lân cận.)
+- `규칙`: 공동생활을 위해 지키기로 한 기준입니다. (Quy tắc.)
+- `공공장소`: 여러 사람이 함께 이용하는 장소입니다. (Nơi công cộng.)
+- `분리배출`: 재활용·폐기물 종류에 따라 쓰레기를 나누어 버리는 것입니다. (Phân loại rác.)
+- `자원봉사/봉사활동`: 보수를 목적으로 하지 않고 공동체를 위해 자발적으로 돕는 활동입니다. (Hoạt động tình nguyện.)
+- `동료`: 직장이나 조직에서 함께 일하는 사람입니다. (Đồng nghiệp.)
+- `시간 약속`: 정한 시간과 일정을 지키는 약속입니다. (Giữ đúng giờ/hẹn giờ.)
+- `지역사회`: 같은 지역에서 생활하며 관계와 제도를 공유하는 공동체입니다. (Cộng đồng địa phương.)
+- `청원`: 국민 등이 국가기관에 의견이나 요구를 공식적으로 제기하는 제도적 참여 방식입니다. (Kiến nghị chính thức.)
+- `책임`: 자신의 역할과 행동의 결과를 맡고 감당하는 태도·의무입니다. (Trách nhiệm.)
+- `권리와 의무`: 보호받을 수 있는 권리와 함께 지켜야 할 책임·의무를 묶어 보는 관점입니다. (Quyền và nghĩa vụ.)
+- `자녀교육`: 자녀의 학습·생활습관·사회성 발달을 지원하는 교육과 양육 활동입니다. (Giáo dục con cái.)
+- `법`: 사회 질서를 유지하고 권리·의무를 정하기 위해 국가가 정한 규범입니다. (Pháp luật.)
+- `권리`: 법과 제도에 따라 보호받거나 요구할 수 있는 이익과 자유입니다. (Quyền.)
+- `의무`: 법·규칙·역할에 따라 해야 하는 책임입니다. (Nghĩa vụ.)
+- `분쟁`: 권리·이익·사실관계에 대한 의견이 충돌한 상태입니다. (Tranh chấp.)
+- `이유`: 어떤 주장이나 행동의 근거를 설명하는 내용입니다. (Lý do/căn cứ.)
+- `예시`: 개념이나 주장을 구체적으로 보여 주는 사례입니다. (Ví dụ.)
+- `이해하다`: 의미·상황·이유를 파악하는 것입니다. (Hiểu.)
+- `경험하다`: 어떤 일이나 상황을 직접 겪는 것입니다. (Trải nghiệm.)
+- `존중하다`: 다른 사람의 권리·생각·문화를 소중하게 대하는 것입니다. (Tôn trọng.)
+- `적응하다`: 새로운 환경과 규칙에 익숙해지는 것입니다. (Thích nghi.)
+
+## H9. Dạng câu hỏi phải nhận ra nhanh
+
+- `옳지 않은 것은?`: chọn phương án **không đúng**.
+- `관련이 없는 것은?`: chọn phương án **không liên quan**.
+- `알맞지 않은 것은?`: chọn phương án **không phù hợp**.
+- `주로`: chủ yếu; không có nghĩa là luôn luôn.
+- `일반적으로`: nói theo trường hợp thông thường; vẫn có thể có ngoại lệ.
+
+Khi thấy câu phủ định, hãy khoanh keyword `않은/없는/알맞지` trước rồi mới đọc lựa chọn. Đây là lỗi đọc đề rất dễ làm mất điểm dù đã biết kiến thức.
+
 ---
 
 # I. Những bẫy “đọc thấy hợp lý nhưng sai”
@@ -1615,6 +1917,21 @@ Ví dụ:
 - “`한류`는 K-pop만 의미한다.” → **Sai**.
 - “`지방소멸`은 단순히 한 해의 인구가 감소했다는 뜻이다.” → **Quá đơn giản**.
 - “`리뷰`가 많으면 내용은 객관적 사실이다.” → **Sai**.
+- “`민주주의`는 다수결만 있으면 된다.” → **Sai**; còn cần 기본권, 법치 và kiểm soát quyền lực.
+- “`헌법재판소`는 `대법원`보다 높은 상급법원이다.” → **Sai**; hai cơ quan có chức năng và hệ thống thẩm quyền khác nhau.
+- “`삼심제`이므로 모든 사건은 반드시 세 번 재판한다.” → **Sai**.
+- “외국인은 국민과 완전히 같은 선거권을 가진다.” → **Sai**; quyền bầu cử phụ thuộc tư cách và loại bầu cử theo pháp luật.
+- “`귀농`은 농촌으로 이사만 하면 된다.” → **Sai**; 귀농은 농업활동을 시작하는 의미가 중심이고, 귀촌은 농촌 이주·생활 자체가 중심입니다.
+- “`예금자보호`는 모든 투자손실을 보상한다.” → **Sai**.
+- “`피의자`는 이미 유죄가 확정된 사람이다.” → **Sai**.
+- “`품앗이`와 `두레`는 완전히 같은 제도다.” → **Sai**; 상호 도움 방식과 조직적 공동노동이라는 차이가 있습니다.
+- “`효`는 부모에게 무조건 복종하는 것이다.” → **Sai**.
+- “모든 한국인은 반드시 `차례/제사`를 지낸다.” → **Sai**; gia đình, tôn giáo và lối sống khác nhau.
+- “`한복`은 현재 한국인의 일반적인 일상복이다.” → **Sai**; ngày nay chủ yếu dùng trong dịp đặc biệt, văn hóa/truyền thống.
+- “한국에는 모든 국민이 따라야 하는 하나의 `국교`가 있다.” → **Sai**; `종교의 자유`가 보장됩니다.
+- “`김치`와 `김장`은 같은 뜻이다.” → **Sai**; 김치는 음식, 김장은 김치를 대량으로 담그는 활동·문화입니다.
+- “`장례`와 `제례`는 같은 의례다.” → **Sai**; 장례는 죽음 직후의 의례, 제례는 이후 조상을 추모하는 의례입니다.
+- “`전통문화`와 `대중문화`는 서로 관계가 없다.” → **Sai**; 현대 콘텐츠는 전통 요소를 재해석하고 유통할 수 있습니다.
 
 Đề thường dùng các từ tuyệt đối như `항상`, `모든`, `반드시`, `자동으로` để tạo đáp án gây nhiễu. Khi gặp các từ này, kiểm tra xem câu có ngoại lệ hoặc điều kiện pháp lý không.
 
@@ -1658,14 +1975,15 @@ Chi tiết văn hóa, món ăn, lễ hội, nhân vật lịch sử phụ, đị
 
 ---
 
-# L. Nguồn và quy tắc cập nhật
+# L. Phạm vi hợp nhất của master
 
-File này tổng hợp từ:
-- toàn bộ `kiip/level5/01_영주용_기본`;
-- toàn bộ `kiip/level5/02_귀화용_심화`;
-- `kiip/level5/90_cross_reference`;
-- coverage map và 심화 20과 trong `korean_culture/kiip`;
-- nguồn chính thức đã được repo dùng để đối chiếu.
+Master này nhằm bao phủ **nội dung kiến thức và output cần học** từ toàn bộ tài liệu KIIP trong repository: định nghĩa, cặp dễ nhầm, quy trình, tình huống, current-fact risk, mental model, active-recall concept và từ dùng cho viết/nói.
+
+Nó **không sao chép nguyên văn từng câu mock, từng đáp án lặp lại, metadata audit hoặc câu điều hướng repository**. Những phần đó vẫn nằm ở file luyện đề/audit; kiến thức mà chúng kiểm tra đã được hợp nhất ở đây. Vì vậy “bao gồm toàn bộ” trong file này nghĩa là **coverage nội dung học**, không phải duplicate từng dòng của mọi file.
+
+# M. Nguồn và quy tắc cập nhật
+
+File này được dùng như **bản hợp nhất cuối cùng** của toàn bộ tài liệu KIIP trong repository: chapter kiến thức, coverage audit, active recall, question pattern, mock, writing/oral và các cross-reference. Các keyword được đặt theo **chủ đề kiến thức**, không gắn nhãn chúng đến từ file KIIP nào. Khi cùng một khái niệm xuất hiện nhiều nơi, master giữ một định nghĩa chính rồi bổ sung cặp dễ nhầm, tình huống hoặc output cần nói.
 
 Nguồn chính thức cần kiểm tra khi fact có thể thay đổi:
 - 법무부 사회통합프로그램: https://www.moj.go.kr/moj/369/subview.do
@@ -1678,7 +1996,7 @@ Nguồn chính thức cần kiểm tra khi fact có thể thay đổi:
 - 법무부 출입국·외국인정책본부 이민자 사회통합: https://www.moj.go.kr/immigration/1518/subview.do
 
 **Verified-current layer:** 2026-10-06.  
-Đừng sửa một fact cũ trong giáo trình thành fact mới mà xóa dấu vết lịch sử. Nếu số/quy định thay đổi, giữ rõ hai lớp **교재/legacy state** và **current verified state**, rồi dùng notice kỳ thi để quyết định cách trả lời.
+Đừng sửa một fact cũ trong giáo trình thành fact mới mà xóa dấu vết lịch sử. Nếu số/quy định thay đổi, giữ rõ hai lớp **교재/기존 자료 state** và **current verified state**, rồi dùng notice kỳ thi để quyết định cách trả lời.
 
 ---
 
