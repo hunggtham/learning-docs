@@ -18,6 +18,12 @@ Corporate action phải được đưa vào sổ theo dõi riêng. Người sở
 
 Source đặt note, small-firm effect và formula plan dưới mục tiêu “Beat the Market”. Cần tách ba lớp: note/stock split/dividend là cơ chế hoặc sản phẩm; small-firm effect là quan sát thực nghiệm; formula plan là quy tắc phân bổ. Không lớp nào tự chứng minh rằng danh mục sẽ vượt benchmark. Hiệu ứng quy mô có thể biến mất sau phí, thay đổi cấu trúc thị trường hoặc dữ liệu mẫu. Formula plan cố định cách phân bổ theo điều kiện giá hoặc tỷ trọng; ưu điểm là kỷ luật, giới hạn là quy tắc cứng có thể gặp regime chưa từng thấy. Đánh giá chiến lược bằng chuỗi lợi suất, drawdown, turnover và rủi ro thanh khoản, không bằng vài giao dịch đẹp.
 
+### Worked formula plan: tái cân bằng theo tỷ trọng
+
+Một dạng formula plan đơn giản giữ tỷ trọng mục tiêu 50% cổ phiếu và 50% trái phiếu. Nếu ban đầu mỗi tài sản có giá trị 100, sau đó cổ phiếu giảm còn 80 còn trái phiếu giữ 100, danh mục trị giá 180 và tỷ trọng cổ phiếu chỉ còn 44,4%. Để quay về 50/50, bán 10 trái phiếu và mua 10 cổ phiếu, đưa cả hai tài sản về 90. Nếu kịch bản ngược lại làm cổ phiếu tăng lên 120, danh mục trị giá 220 và tỷ trọng cổ phiếu là 54,5%; quy tắc bán 10 cổ phiếu và mua 10 trái phiếu đưa cả hai về 110.
+
+Quy tắc này tự động mua tài sản đã giảm và bán tài sản đã tăng, nhưng đó là hệ quả của mục tiêu tỷ trọng chứ không phải dự báo giá sẽ đảo chiều. Nó có thể hoạt động kém khi một tài sản giảm dài hạn hoặc tương quan thay đổi; turnover, thuế, spread và giới hạn thanh khoản có thể làm lợi ích lý thuyết biến mất. Vì vậy trước khi dùng formula plan phải khóa biên tái cân bằng, tần suất, chi phí tối đa và điều kiện dừng khi thesis về tài sản đã hỏng.
+
 ## 3. Portfolio effect
 
 Portfolio effect xuất hiện vì tổng rủi ro phụ thuộc tương quan chứ không chỉ từng tài sản. Với hai tài sản, phương sai danh mục gồm phương sai riêng và hạng tử hiệp phương sai; khi tương quan thấp hơn 1, kết hợp có thể giảm biến động. Diversification không loại bỏ rủi ro thị trường, rủi ro thanh khoản hay tương quan tăng trong khủng hoảng. Vì vậy, “nhiều mã” không đồng nghĩa đa dạng hóa: các mã cùng ngành, cùng tiền tệ hoặc cùng factor vẫn có thể là một cược duy nhất.
