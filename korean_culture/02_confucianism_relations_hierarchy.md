@@ -8,7 +8,7 @@ Người học văn hoá Hàn thường sớm nghe rằng xã hội Hàn “coi 
 
 Một hệ thống xã hội phải giải quyết bài toán phối hợp: ai chịu trách nhiệm, ai được quyền quyết định, ai chăm sóc ai, nghĩa vụ đi theo hướng nào và xung đột được xử lý ra sao. **Nho giáo (유교 / Confucianism)** đưa ra một mô hình mà đơn vị đạo đức cơ bản không phải cá nhân cô lập, mà là con người nằm trong quan hệ: cha–con, vua–bề tôi, vợ–chồng, người lớn–người nhỏ, bạn bè. Phiên bản lịch sử của các quan hệ này có bất bình đẳng giới và địa vị rất rõ; xã hội hiện đại đã thay đổi mạnh, nhưng lô-gic (logic / 논리) “vai trò tạo ra nghĩa vụ khác nhau” vẫn để lại dấu vết.
 
-> **Chuyển mạch:** Trong **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **유교 không chỉ là “kính người lớn tuổi”** tiếp nhận điểm tựa từ **Từ “thứ bậc” tới câu hỏi sâu hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **삼강오륜: không phải danh sách để áp thẳng vào đời sống hiện đại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **유교 không chỉ là “kính người lớn tuổi”** nối từ **Từ “thứ bậc” tới câu hỏi sâu hơn** sang **삼강오륜: không phải danh sách để áp thẳng vào đời sống hiện đại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 유교 không chỉ là “kính người lớn tuổi”
 
@@ -18,7 +18,7 @@ Khái niệm **hiếu (효 / filial piety)** nói về nghĩa vụ và lòng kí
 
 Trong lý tưởng Nho giáo, người ở vị trí cao hơn không chỉ “được quyền”; họ còn có nghĩa vụ chăm sóc và hành xử đúng vai trò. Vì vậy thứ bậc có thể được hiểu như một hợp đồng bất đối xứng: quyền và nghĩa vụ không giống nhau ở hai phía.
 
-> **Chuyển mạch:** Ở chặng này của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **삼강오륜: không phải danh sách để áp thẳng vào đời sống hiện đại** tiếp nhận điểm tựa từ **유교 không chỉ là “kính người lớn tuổi”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **성리학 và Joseon: khi đạo đức trở thành thiết kế thiết chế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **삼강오륜: không phải danh sách để áp thẳng vào đời sống hiện đại** nối từ **유교 không chỉ là “kính người lớn tuổi”** sang **성리학 và Joseon: khi đạo đức trở thành thiết kế thiết chế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 삼강오륜: không phải danh sách để áp thẳng vào đời sống hiện đại
 
@@ -28,7 +28,7 @@ Giá trị của khung này nằm ở việc cho thấy đạo đức từng đ�
 
 Nhưng pháp luật hiện đại, quyền cá nhân, bình đẳng giới, luật lao động và thiết chế dân chủ tạo một lớp chuẩn tắc khác. Văn hoá hiện nay là kết quả của nhiều lớp cùng tồn tại và đôi khi xung đột.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **성리학 và Joseon: khi đạo đức trở thành thiết kế thiết chế** tiếp nhận điểm tựa từ **삼강오륜: không phải danh sách để áp thẳng vào đời sống hiện đại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuổi như siêu dữ liệu xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **성리학 và Joseon: khi đạo đức trở thành thiết kế thiết chế** nối từ **삼강오륜: không phải danh sách để áp thẳng vào đời sống hiện đại** sang **Tuổi như siêu dữ liệu xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 성리학 và Joseon: khi đạo đức trở thành thiết kế thiết chế
 
@@ -38,7 +38,7 @@ Khi một hệ tư tưởng đi vào trường học, kỳ thi, luật lệ và 
 
 Sự củng cố gia đình phụ hệ và nghi lễ tổ tiên trong Joseon cũng diễn ra qua thời gian, không phải một ngày triều đại mới lên ngôi là mọi hộ lập tức giống nhau. Vùng, tầng lớp và thời kỳ tạo khác biệt lớn.
 
-> **Chuyển mạch:** Trong **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **성리학 và Joseon: khi đạo đức trở thành thiết kế thiết chế** nêu điều cần giải thích; **Tuổi như siêu dữ liệu xã hội** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **선배–후배, 학번, 기수: thứ tự gia nhập trở thành toạ độ xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **성리학 và Joseon: khi đạo đức trở thành thiết kế thiết chế** đặt vấn đề; **Tuổi như siêu dữ liệu xã hội** đối chiếu bằng chứng, rồi **선배–후배, 학번, 기수: thứ tự gia nhập trở thành toạ độ xã hội** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tuổi như siêu dữ liệu xã hội
 
@@ -54,7 +54,7 @@ quan hệ = [tuổi, chức vụ, thâm niên, nhóm gia nhập, mức thân thi
 
 Cách nói phù hợp là hàm của toàn bộ véc-tơ (vector / 벡터), không phải chỉ tuổi. Liên hệ với học máy khá trực quan: nếu dự đoán hành vi bằng một đặc trưng duy nhất, mô hình sẽ quá đơn giản so với hiện thực xã hội.
 
-> **Chuyển mạch:** Ở chặng này của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Tuổi như siêu dữ liệu xã hội** nêu điều cần giải thích; **선배–후배, 학번, 기수: thứ tự gia nhập trở thành toạ độ xã hội** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Vì sao con người thường xác định quan hệ trước? (왜 사람들은 관계를 먼저 확인할까?)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Tuổi như siêu dữ liệu xã hội** đặt vấn đề; **선배–후배, 학번, 기수: thứ tự gia nhập trở thành toạ độ xã hội** đối chiếu bằng chứng, rồi **Vì sao con người thường xác định quan hệ trước? (왜 사람들은 관계를 먼저 확인할까?)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 선배–후배, 학번, 기수: thứ tự gia nhập trở thành toạ độ xã hội
 
@@ -66,7 +66,7 @@ Trong môi trường tốt, 선배 có thể truyền **tri thức ngầm (tacit
 
 Điều này giống quá trình rà soát mã (code review / 코드 리뷰) hoặc học nghề. Thâm niên hữu ích khi nó phản ánh kinh nghiệm tích luỹ; nó trở thành vấn đề khi thâm niên được dùng thay cho bằng chứng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Vì sao con người thường xác định quan hệ trước? (왜 사람들은 관계를 먼저 확인할까?)** tiếp nhận điểm tựa từ **선배–후배, 학번, 기수: thứ tự gia nhập trở thành toạ độ xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **집단주의: chủ nghĩa tập thể cần được dùng cẩn thận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Vì sao con người thường xác định quan hệ trước? (왜 사람들은 관계를 먼저 확인할까?)** nối từ **선배–후배, 학번, 기수: thứ tự gia nhập trở thành toạ độ xã hội** sang **집단주의: chủ nghĩa tập thể cần được dùng cẩn thận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao con người thường xác định quan hệ trước? (왜 사람들은 관계를 먼저 확인할까?)
 
@@ -76,7 +76,7 @@ Trong thiết kế giao thức, giai đoạn bắt tay dùng để thương lư�
 
 Điều này giải thích chức năng chứ không có nghĩa mọi câu hỏi cá nhân đều nên được chấp nhận. Chuẩn mực riêng tư thay đổi, đặc biệt giữa thế hệ trẻ và trong công sở quốc tế.
 
-> **Chuyển mạch:** Trong **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **집단주의: chủ nghĩa tập thể cần được dùng cẩn thận** tiếp nhận điểm tựa từ **Vì sao con người thường xác định quan hệ trước? (왜 사람들은 관계를 먼저 확인할까?)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **우리: “chúng ta/của chúng ta” và ranh giới nhóm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **집단주의: chủ nghĩa tập thể cần được dùng cẩn thận** nối từ **Vì sao con người thường xác định quan hệ trước? (왜 사람들은 관계를 먼저 확인할까?)** sang **우리: “chúng ta/của chúng ta” và ranh giới nhóm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 집단주의: chủ nghĩa tập thể cần được dùng cẩn thận
 
@@ -86,7 +86,7 @@ Tốt hơn nên hỏi: **nhóm nào đang có quyền tạo chuẩn mực trong 
 
 Khái niệm **chủ nghĩa quan hệ (관계주의 / relationalism)** đôi khi hữu ích hơn: quyết định phụ thuộc ai đang quan hệ với ai, mức thân thiết và nghĩa vụ tích luỹ ra sao. Nó không đồng nghĩa hy sinh cá nhân cho “tập thể” trừu tượng.
 
-> **Chuyển mạch:** Ở chặng này của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **우리: “chúng ta/của chúng ta” và ranh giới nhóm** tiếp nhận điểm tựa từ **집단주의: chủ nghĩa tập thể cần được dùng cẩn thận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **관계와 상호성: cho–nhận như một mạng lưới nghĩa vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **우리: “chúng ta/của chúng ta” và ranh giới nhóm** nối từ **집단주의: chủ nghĩa tập thể cần được dùng cẩn thận** sang **관계와 상호성: cho–nhận như một mạng lưới nghĩa vụ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 우리: “chúng ta/của chúng ta” và ranh giới nhóm
 
@@ -96,7 +96,7 @@ Tiếng Hàn dùng `우리` rất rộng: `우리 회사`, `우리 엄마`, `우
 
 Ranh giới của `우리` cũng tạo “bên trong/bên ngoài”. Tư cách nhóm có thể tăng niềm tin và nghĩa vụ, nhưng cũng có nguy cơ loại trừ nếu mạng quá đóng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **관계와 상호성: cho–nhận như một mạng lưới nghĩa vụ** tiếp nhận điểm tựa từ **우리: “chúng ta/của chúng ta” và ranh giới nhóm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **체면 và thứ bậc: quyền lực còn cần tính chính danh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **관계와 상호성: cho–nhận như một mạng lưới nghĩa vụ** nối từ **우리: “chúng ta/của chúng ta” và ranh giới nhóm** sang **체면 và thứ bậc: quyền lực còn cần tính chính danh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 관계와 상호성: cho–nhận như một mạng lưới nghĩa vụ
 
@@ -106,7 +106,7 @@ Trong lý thuyết đồ thị, có thể hình dung người là nút, quan h�
 
 Từ đây ta hiểu tại sao việc “có mặt” ở sự kiện quan trọng từng rất có ý nghĩa. Nhưng chuyển tiền số, thiệp mời di động và đám cưới nhỏ hơn đang thay đổi cấu trúc chi phí của tính có đi có lại.
 
-> **Chuyển mạch:** Trong **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **체면 và thứ bậc: quyền lực còn cần tính chính danh** tiếp nhận điểm tựa từ **관계와 상호성: cho–nhận như một mạng lưới nghĩa vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **갑–을 và bất cân xứng quyền lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **체면 và thứ bậc: quyền lực còn cần tính chính danh** nối từ **관계와 상호성: cho–nhận như một mạng lưới nghĩa vụ** sang **갑–을 và bất cân xứng quyền lực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 체면 và thứ bậc: quyền lực còn cần tính chính danh
 
@@ -116,7 +116,7 @@ Một thứ bậc bền không chỉ dựa vào cưỡng chế. Người ở tr�
 
 Thứ bậc do đó không chỉ là “ai ra lệnh cho ai”, mà còn là một nền kinh tế của sự công nhận.
 
-> **Chuyển mạch:** Ở chặng này của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **갑–을 và bất cân xứng quyền lực** tiếp nhận điểm tựa từ **체면 và thứ bậc: quyền lực còn cần tính chính danh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giới và thứ bậc: không thể tách khỏi lịch sử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **갑–을 và bất cân xứng quyền lực** nối từ **체면 và thứ bậc: quyền lực còn cần tính chính danh** sang **Giới và thứ bậc: không thể tách khỏi lịch sử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 갑–을 và bất cân xứng quyền lực
 
@@ -126,7 +126,7 @@ Trong hợp đồng Hàn, `갑` và `을` truyền thống chỉ hai bên hợp 
 
 Các cụm như `을의 입장`, `갑의 위치` đôi khi được dùng ẩn dụ ngoài hợp đồng để nói bên nào có sức thương lượng cao hơn. Khi phân tích, nên hỏi nguồn lực nào tạo quyền lực: tiền, việc làm, thông tin, quyền phê duyệt, mạng quan hệ hay tư cách pháp lý.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Giới và thứ bậc: không thể tách khỏi lịch sử** tiếp nhận điểm tựa từ **갑–을 và bất cân xứng quyền lực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thứ bậc và chuyên môn: khi hai hệ xếp hạng xung đột** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Giới và thứ bậc: không thể tách khỏi lịch sử** nối từ **갑–을 và bất cân xứng quyền lực** sang **Thứ bậc và chuyên môn: khi hai hệ xếp hạng xung đột**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giới và thứ bậc: không thể tách khỏi lịch sử
 
@@ -136,7 +136,7 @@ Nhưng xã hội Hàn hiện đại có bình đẳng pháp lý và cấu trúc 
 
 Di sản không đồng nghĩa số phận.
 
-> **Chuyển mạch:** Trong **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Thứ bậc và chuyên môn: khi hai hệ xếp hạng xung đột** tiếp nhận điểm tựa từ **Giới và thứ bậc: không thể tách khỏi lịch sử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: thứ bậc và hệ thống phân tán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Thứ bậc và chuyên môn: khi hai hệ xếp hạng xung đột** nối từ **Giới và thứ bậc: không thể tách khỏi lịch sử** sang **Liên hệ kiến thức: thứ bậc và hệ thống phân tán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thứ bậc và chuyên môn: khi hai hệ xếp hạng xung đột
 
@@ -146,7 +146,7 @@ Một tổ chức trưởng thành cần cơ chế cho chuyên gia lĩnh vực p
 
 Cách giải không nhất thiết xoá mọi chức danh; có thể tách “ai sở hữu quyết định” theo lĩnh vực và tạo kênh phản biện không gây đe doạ thể diện.
 
-> **Chuyển mạch:** Ở chặng này của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Liên hệ kiến thức: thứ bậc và hệ thống phân tán** tiếp nhận điểm tựa từ **Thứ bậc và chuyên môn: khi hai hệ xếp hạng xung đột** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyền lực chính thức và quyền lực thực tế không phải cùng một thứ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Liên hệ kiến thức: thứ bậc và hệ thống phân tán** nối từ **Thứ bậc và chuyên môn: khi hai hệ xếp hạng xung đột** sang **Quyền lực chính thức và quyền lực thực tế không phải cùng một thứ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ kiến thức: thứ bậc và hệ thống phân tán
 
@@ -154,7 +154,7 @@ Trong hệ thống phân tán, kiến trúc tập trung giúp quyết định nh
 
 Thứ bậc có thể làm rõ trách nhiệm và tăng tốc quyết định trong khủng hoảng. Nhưng nếu mọi quyết định nhỏ đều cần phê duyệt từ trên, hệ thống có độ trễ cao. Nhiều công ty Hàn hiện đại thử làm phẳng chức danh hoặc dùng nhóm phát triển linh hoạt (agile), nhưng nếu quyền ngân sách và đánh giá vẫn tập trung, kiến trúc thực tế chưa hoàn toàn thay đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Quyền lực chính thức và quyền lực thực tế không phải cùng một thứ** tiếp nhận điểm tựa từ **Liên hệ kiến thức: thứ bậc và hệ thống phân tán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính chính danh: tại sao người khác chấp nhận quyền của một người?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Quyền lực chính thức và quyền lực thực tế không phải cùng một thứ** nối từ **Liên hệ kiến thức: thứ bậc và hệ thống phân tán** sang **Tính chính danh: tại sao người khác chấp nhận quyền của một người?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quyền lực chính thức và quyền lực thực tế không phải cùng một thứ
 
@@ -174,7 +174,7 @@ quyền ra quyết định
 
 Hai người cùng cấp bậc có thể có quyền lực rất khác nếu một người kiểm soát nút quan trọng trong mạng. Vì vậy sơ đồ tổ chức chỉ là một lớp của hệ thống.
 
-> **Chuyển mạch:** Trong **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Tính chính danh: tại sao người khác chấp nhận quyền của một người?** tiếp nhận điểm tựa từ **Quyền lực chính thức và quyền lực thực tế không phải cùng một thứ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi thâm niên mất dần quyền giải thích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Tính chính danh: tại sao người khác chấp nhận quyền của một người?** nối từ **Quyền lực chính thức và quyền lực thực tế không phải cùng một thứ** sang **Khi thâm niên mất dần quyền giải thích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính chính danh: tại sao người khác chấp nhận quyền của một người?
 
@@ -194,7 +194,7 @@ quyền chính thức cao
 
 Vì vậy `체면` không chỉ là hình thức; nó có thể liên quan trực tiếp đến khả năng duy trì tính chính danh.
 
-> **Chuyển mạch:** Ở chặng này của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Khi thâm niên mất dần quyền giải thích** tiếp nhận điểm tựa từ **Tính chính danh: tại sao người khác chấp nhận quyền của một người?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thứ bậc đa trục: ai “ở trên” còn phụ thuộc câu hỏi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Khi thâm niên mất dần quyền giải thích** nối từ **Tính chính danh: tại sao người khác chấp nhận quyền của một người?** sang **Thứ bậc đa trục: ai “ở trên” còn phụ thuộc câu hỏi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khi thâm niên mất dần quyền giải thích
 
@@ -213,7 +213,7 @@ thâm niên ≠ năng lực hiện tại
 
 Khi tương quan giữa thâm niên và năng lực giảm, tổ chức cần bổ sung cơ chế đánh giá theo chuyên môn, bằng chứng và kết quả. Đây là một lý do thứ bậc hiện đại có xu hướng trở thành **đa trục** thay vì chỉ xếp theo tuổi hoặc số năm làm việc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Thứ bậc đa trục: ai “ở trên” còn phụ thuộc câu hỏi** tiếp nhận điểm tựa từ **Khi thâm niên mất dần quyền giải thích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiếng nói, rời bỏ và trung thành: cấp dưới phản ứng thế nào khi hệ thống không công bằng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Thứ bậc đa trục: ai “ở trên” còn phụ thuộc câu hỏi** nối từ **Khi thâm niên mất dần quyền giải thích** sang **Tiếng nói, rời bỏ và trung thành: cấp dưới phản ứng thế nào khi hệ thống không công bằng?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thứ bậc đa trục: ai “ở trên” còn phụ thuộc câu hỏi
 
@@ -230,7 +230,7 @@ thứ bậc hành chính
 
 Một tổ chức phức tạp không xoá thứ bậc; nó phân tách thứ bậc theo miền quyết định. Điều này giảm nguy cơ một biến như tuổi hoặc chức danh chi phối mọi quyết định.
 
-> **Chuyển mạch:** Trong **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Tiếng nói, rời bỏ và trung thành: cấp dưới phản ứng thế nào khi hệ thống không công bằng?** tiếp nhận điểm tựa từ **Thứ bậc đa trục: ai “ở trên” còn phụ thuộc câu hỏi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cố vấn và truyền nghề: quan hệ 선배–후배 cần có vòng đời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Tiếng nói, rời bỏ và trung thành: cấp dưới phản ứng thế nào khi hệ thống không công bằng?** nối từ **Thứ bậc đa trục: ai “ở trên” còn phụ thuộc câu hỏi** sang **Cố vấn và truyền nghề: quan hệ 선배–후배 cần có vòng đời**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tiếng nói, rời bỏ và trung thành: cấp dưới phản ứng thế nào khi hệ thống không công bằng?
 
@@ -244,7 +244,7 @@ Thứ bậc càng làm chi phí lên tiếng cao, tín hiệu vấn đề càng 
 
 Vì vậy khả năng nghe phản hồi là một cơ chế quản trị, không chỉ là phong cách giao tiếp.
 
-> **Chuyển mạch:** Ở chặng này của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Cố vấn và truyền nghề: quan hệ 선배–후배 cần có vòng đời** tiếp nhận điểm tựa từ **Tiếng nói, rời bỏ và trung thành: cấp dưới phản ứng thế nào khi hệ thống không công bằng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thay đổi thiết chế thường đi qua giai đoạn “giao diện mới, quyền lực cũ”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Cố vấn và truyền nghề: quan hệ 선배–후배 cần có vòng đời** nối từ **Tiếng nói, rời bỏ và trung thành: cấp dưới phản ứng thế nào khi hệ thống không công bằng?** sang **Thay đổi thiết chế thường đi qua giai đoạn “giao diện mới, quyền lực cũ”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cố vấn và truyền nghề: quan hệ 선배–후배 cần có vòng đời
 
@@ -262,7 +262,7 @@ Nếu quan hệ không chuyển trạng thái mà giữ hậu bối phụ thuộ
 
 Đây là khác biệt giữa **truyền năng lực** và **duy trì lệ thuộc**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, cơ chế trong **Cố vấn và truyền nghề: quan hệ 선배–후배 cần có vòng đời** cần được kiểm chứng bằng dấu vết cụ thể; **Thay đổi thiết chế thường đi qua giai đoạn “giao diện mới, quyền lực cũ”** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **Kiểm toán một hệ thống thứ bậc: năm câu hỏi thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, cơ chế trong **Cố vấn và truyền nghề: quan hệ 선배–후배 cần có vòng đời** cần được kiểm chứng bằng dấu vết cụ thể; **Thay đổi thiết chế thường đi qua giai đoạn “giao diện mới, quyền lực cũ”** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **Kiểm toán một hệ thống thứ bậc: năm câu hỏi thực tế** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Thay đổi thiết chế thường đi qua giai đoạn “giao diện mới, quyền lực cũ”
 
@@ -281,7 +281,7 @@ cơ chế phản biện / kháng nghị
 
 Chỉ thay lớp đầu tiên chưa đủ để kết luận cấu trúc đã phẳng.
 
-> **Chuyển mạch:** Trong **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Kiểm toán một hệ thống thứ bậc: năm câu hỏi thực tế** tiếp nhận điểm tựa từ **Thay đổi thiết chế thường đi qua giai đoạn “giao diện mới, quyền lực cũ”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Kiểm toán một hệ thống thứ bậc: năm câu hỏi thực tế** nối từ **Thay đổi thiết chế thường đi qua giai đoạn “giao diện mới, quyền lực cũ”** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kiểm toán một hệ thống thứ bậc: năm câu hỏi thực tế
 
@@ -295,13 +295,13 @@ Khi quan sát gia đình, trường học hoặc công sở, có thể hỏi:
 
 Một hệ thống có thứ bậc không tự động xấu. Vấn đề nằm ở việc quyền có đi cùng trách nhiệm, thông tin có đi tới người quyết định và người bị ảnh hưởng có kênh phản hồi hay không.
 
-> **Chuyển mạch:** Ở chặng này của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Kiểm toán một hệ thống thứ bậc: năm câu hỏi thực tế** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Kiểm toán một hệ thống thứ bậc: năm câu hỏi thực tế** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Đừng chỉ ghi nhớ “Hàn Quốc coi trọng thứ bậc”. Hãy ghi nhớ rằng nhiều môi trường Hàn Quốc truyền thống dùng **quan hệ** như cơ chế phân phối nghĩa vụ, sự công nhận và quyền. Tuổi, chức vụ, thâm niên, nhóm gia nhập và mức thân thiết là siêu dữ liệu giúp mọi người xác định giao thức. Xã hội hiện đại đang giữ lại một phần siêu dữ liệu này nhưng tranh luận mạnh hơn về việc nó có nên quyết định quyền lực hay không. Khi phân tích sâu hơn, phải tách quyền chính thức, chuyên môn, thông tin, tài nguyên và tính chính danh thay vì giả định tất cả cùng nằm ở một người.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Hiểu lầm phổ biến (common misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nho giáo, quan hệ và lô-gic (logic / 논리) thứ bậc trong xã hội Hàn Quốc**, **Hiểu lầm phổ biến (common misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Hiểu lầm phổ biến (common misconceptions)
 

@@ -8,7 +8,7 @@ Chương về giáo dục đã tập trung vào `수능`, `학원`, `학벌` và
 
 Vì vậy văn hoá campus không phải phần phụ của giáo dục. Nó là cây cầu giữa gia đình, nhóm đồng trang lứa và nơi làm việc. Nhiều mẫu sau này xuất hiện trong công sở — thâm niên, ăn nhóm, chat nhóm, báo cáo và xây mạng lưới — đã có hình thức thử nghiệm trong trường và đại học.
 
-> **Chuyển mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **학년, 학번 và hai kiểu “thâm niên” khác nhau** tiếp nhận điểm tựa từ **Trường học là nơi học kiến thức và học cách làm thành viên của một nhóm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **새내기: trạng thái “người mới” có giao thức riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **학년, 학번 và hai kiểu “thâm niên” khác nhau** nối từ **Trường học là nơi học kiến thức và học cách làm thành viên của một nhóm** sang **새내기: trạng thái “người mới” có giao thức riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 학년, 학번 và hai kiểu “thâm niên” khác nhau
 
@@ -18,7 +18,7 @@ Trong trường phổ thông, **năm học (grade/year / 학년)** là siêu d�
 
 Vì vậy quan hệ `선배–후배` trong campus không thể suy ra chỉ từ tuổi. Nó là hàm của khoá, khoa, câu lạc bộ và bối cảnh.
 
-> **Chuyển mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **새내기: trạng thái “người mới” có giao thức riêng** tiếp nhận điểm tựa từ **학년, 학번 và hai kiểu “thâm niên” khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **OT, 새터 và MT: một nhóm được “khởi tạo” như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **새내기: trạng thái “người mới” có giao thức riêng** nối từ **학년, 학번 và hai kiểu “thâm niên” khác nhau** sang **OT, 새터 và MT: một nhóm được “khởi tạo” như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 새내기: trạng thái “người mới” có giao thức riêng
 
@@ -28,7 +28,7 @@ Vì vậy quan hệ `선배–후배` trong campus không thể suy ra chỉ t�
 
 Nếu onboarding tốt, quy tắc ngầm được nói rõ. Nếu onboarding dựa hoàn toàn vào `눈치`, người mới phải tự suy luận và dễ mắc lỗi. Đây là liên hệ giữa văn hoá campus và văn hoá tổ chức.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **OT, 새터 và MT: một nhóm được “khởi tạo” như thế nào?** tiếp nhận điểm tựa từ **새내기: trạng thái “người mới” có giao thức riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선배–후배 trong trường: cố vấn và quyền lực cùng tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **OT, 새터 và MT: một nhóm được “khởi tạo” như thế nào?** nối từ **새내기: trạng thái “người mới” có giao thức riêng** sang **선배–후배 trong trường: cố vấn và quyền lực cùng tồn tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## OT, 새터 và MT: một nhóm được “khởi tạo” như thế nào?
 
@@ -44,7 +44,7 @@ Trong lý thuyết mạng, nếu nhóm có `n` người thì số cặp quan h�
 
 Không thể xây quan hệ sâu với mọi cặp, nhưng sự kiện tập trung giúp nhiều liên kết được khởi tạo nhanh hơn so với chỉ gặp trong giờ học.
 
-> **Chuyển mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **선배–후배 trong trường: cố vấn và quyền lực cùng tồn tại** tiếp nhận điểm tựa từ **OT, 새터 và MT: một nhóm được “khởi tạo” như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **동아리: câu lạc bộ như một “xã hội thu nhỏ”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **선배–후배 trong trường: cố vấn và quyền lực cùng tồn tại** nối từ **OT, 새터 và MT: một nhóm được “khởi tạo” như thế nào?** sang **동아리: câu lạc bộ như một “xã hội thu nhỏ”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 선배–후배 trong trường: cố vấn và quyền lực cùng tồn tại
 
@@ -54,7 +54,7 @@ Nhưng bất kỳ bất cân xứng nào cũng có rủi ro. Khi thâm niên bi�
 
 Thay đổi thế hệ, quy định của trường và độ nhạy với quyền cá nhân đã làm nhiều thực hành cũ giảm, nhưng mức thay đổi không đồng đều giữa khoa, câu lạc bộ và trường.
 
-> **Chuyển mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **동아리: câu lạc bộ như một “xã hội thu nhỏ”** tiếp nhận điểm tựa từ **선배–후배 trong trường: cố vấn và quyền lực cùng tồn tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **과, 학과 và bản sắc theo ngành học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **동아리: câu lạc bộ như một “xã hội thu nhỏ”** nối từ **선배–후배 trong trường: cố vấn và quyền lực cùng tồn tại** sang **과, 학과 và bản sắc theo ngành học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 동아리: câu lạc bộ như một “xã hội thu nhỏ”
 
@@ -64,7 +64,7 @@ Một câu lạc bộ thường có tuyển thành viên, ban điều hành, ng�
 
 Trong sự nghiệp, `동아리` cũng có thể trở thành tín hiệu nếu hoạt động tạo hồ sơ dự án hoặc mạng lưới, nhưng nếu chỉ nhìn câu lạc bộ như “một dòng CV” ta sẽ bỏ qua chức năng xã hội hoá.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **과, 학과 và bản sắc theo ngành học** tiếp nhận điểm tựa từ **동아리: câu lạc bộ như một “xã hội thu nhỏ”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **과잠: trang phục như dấu hiệu nhận diện nhóm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **과, 학과 và bản sắc theo ngành học** nối từ **동아리: câu lạc bộ như một “xã hội thu nhỏ”** sang **과잠: trang phục như dấu hiệu nhận diện nhóm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 과, 학과 và bản sắc theo ngành học
 
@@ -72,7 +72,7 @@ Trong sự nghiệp, `동아리` cũng có thể trở thành tín hiệu nếu 
 
 Điều này giống ranh giới nhóm trong công ty. Nhiệm vụ chung tạo ngôn ngữ chung; ngôn ngữ chung làm giao tiếp nhanh hơn; nhưng cũng có thể tạo các “ốc đảo” tách biệt.
 
-> **Chuyển mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **과잠: trang phục như dấu hiệu nhận diện nhóm** tiếp nhận điểm tựa từ **과, 학과 và bản sắc theo ngành học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **동기: người cùng khoá như mạng ngang** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **과잠: trang phục như dấu hiệu nhận diện nhóm** nối từ **과, 학과 và bản sắc theo ngành học** sang **동기: người cùng khoá như mạng ngang**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 과잠: trang phục như dấu hiệu nhận diện nhóm
 
@@ -82,7 +82,7 @@ Trang phục giảm chi phí nhận diện: nhìn áo có thể suy ra trường
 
 Không phải mọi sinh viên đều mặc hoặc coi trọng `과잠`, nhưng vật này cho thấy bản sắc được vật chất hoá qua thiết kế.
 
-> **Chuyển mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **동기: người cùng khoá như mạng ngang** tiếp nhận điểm tựa từ **과잠: trang phục như dấu hiệu nhận diện nhóm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **휴학, 군휴학 và 복학: dòng thời gian đại học không tuyến tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **동기: người cùng khoá như mạng ngang** nối từ **과잠: trang phục như dấu hiệu nhận diện nhóm** sang **휴학, 군휴학 và 복학: dòng thời gian đại học không tuyến tính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 동기: người cùng khoá như mạng ngang
 
@@ -92,7 +92,7 @@ Nếu mạng dọc truyền kinh nghiệm qua thâm niên, mạng ngang giúp so
 
 Một người chỉ có mạng dọc dễ phụ thuộc quyền lực; chỉ có mạng ngang có thể thiếu tri thức tích luỹ. Tổ chức mạnh thường cần cả hai.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **휴학, 군휴학 và 복학: dòng thời gian đại học không tuyến tính** tiếp nhận điểm tựa từ **동기: người cùng khoá như mạng ngang** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **취업준비생: trạng thái chuyển tiếp giữa sinh viên và người đi làm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **휴학, 군휴학 và 복학: dòng thời gian đại học không tuyến tính** nối từ **동기: người cùng khoá như mạng ngang** sang **취업준비생: trạng thái chuyển tiếp giữa sinh viên và người đi làm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 휴학, 군휴학 và 복학: dòng thời gian đại học không tuyến tính
 
@@ -109,7 +109,7 @@ Vì vậy mô hình “18 tuổi vào đại học → 22 tuổi tốt nghiệp�
 
 Hệ quả văn hoá là bản sắc khoá và tuổi theo năm sinh có thể lệch nhau. Một `복학생` có thể lớn tuổi hơn nhiều bạn cùng lớp và phải xây lại mạng quan hệ sau khi quay lại.
 
-> **Chuyển mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **취업준비생: trạng thái chuyển tiếp giữa sinh viên và người đi làm** tiếp nhận điểm tựa từ **휴학, 군휴학 và 복학: dòng thời gian đại học không tuyến tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **스펙, 공모전, 대외활동 và xã hội hồ sơ năng lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **취업준비생: trạng thái chuyển tiếp giữa sinh viên và người đi làm** nối từ **휴학, 군휴학 và 복학: dòng thời gian đại học không tuyến tính** sang **스펙, 공모전, 대외활동 và xã hội hồ sơ năng lực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 취업준비생: trạng thái chuyển tiếp giữa sinh viên và người đi làm
 
@@ -119,7 +119,7 @@ Hệ quả văn hoá là bản sắc khoá và tuổi theo năm sinh có thể l
 
 Khi quá trình tuyển dụng kéo dài, giai đoạn chuyển tiếp cũng dài theo. Điều này tác động thu nhập, hẹn hò, nhà ở và lòng tự trọng. Vì vậy tìm việc không chỉ là sự kiện thị trường lao động; nó là một giai đoạn của vòng đời.
 
-> **Chuyển mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **스펙, 공모전, 대외활동 và xã hội hồ sơ năng lực** tiếp nhận điểm tựa từ **취업준비생: trạng thái chuyển tiếp giữa sinh viên và người đi làm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **대학축제: trường học tạm thời biến thành không gian lễ hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **스펙, 공모전, 대외활동 và xã hội hồ sơ năng lực** nối từ **취업준비생: trạng thái chuyển tiếp giữa sinh viên và người đi làm** sang **대학축제: trường học tạm thời biến thành không gian lễ hội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 스펙, 공모전, 대외활동 và xã hội hồ sơ năng lực
 
@@ -129,7 +129,7 @@ Hệ thống này xuất hiện vì nhà tuyển dụng muốn bằng chứng ng
 
 Đây lại là một động lực gần Luật Goodhart. Khi hồ sơ dự án được dùng để đo tính chủ động, thị trường sẽ sinh thêm nhiều hoạt động được thiết kế để tối ưu hồ sơ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **대학축제: trường học tạm thời biến thành không gian lễ hội** tiếp nhận điểm tựa từ **스펙, 공모전, 대외활동 và xã hội hồ sơ năng lực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **미팅, 소개팅, CC: hình thành quan hệ trong văn hoá thanh niên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **대학축제: trường học tạm thời biến thành không gian lễ hội** nối từ **스펙, 공모전, 대외활동 và xã hội hồ sơ năng lực** sang **미팅, 소개팅, CC: hình thành quan hệ trong văn hoá thanh niên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 대학축제: trường học tạm thời biến thành không gian lễ hội
 
@@ -139,7 +139,7 @@ Nghệ sĩ nổi tiếng biểu diễn có thể biến sự kiện nội bộ t
 
 Tuy nhiên mỗi trường có quy định khác và hình thức thay theo thời kỳ. Không nên biến hình ảnh một lễ hội nổi tiếng thành mẫu mặc định của toàn bộ đại học Hàn Quốc.
 
-> **Chuyển mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **미팅, 소개팅, CC: hình thành quan hệ trong văn hoá thanh niên** tiếp nhận điểm tựa từ **대학축제: trường học tạm thời biến thành không gian lễ hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **단톡방 và cộng đồng campus ẩn danh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **미팅, 소개팅, CC: hình thành quan hệ trong văn hoá thanh niên** nối từ **대학축제: trường học tạm thời biến thành không gian lễ hội** sang **단톡방 và cộng đồng campus ẩn danh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 미팅, 소개팅, CC: hình thành quan hệ trong văn hoá thanh niên
 
@@ -149,7 +149,7 @@ Những nhãn này quan trọng vì chúng mã hoá bối cảnh hình thành qu
 
 Đây là **tác động ngoại biên của mạng lưới (network externality)** trong hẹn hò: quan hệ không chỉ nối hai cá nhân mà có thể nối hoặc làm căng cả đồ thị xung quanh.
 
-> **Chuyển mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **단톡방 và cộng đồng campus ẩn danh** tiếp nhận điểm tựa từ **미팅, 소개팅, CC: hình thành quan hệ trong văn hoá thanh niên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **학교폭력 và ký ức danh tiếng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **단톡방 và cộng đồng campus ẩn danh** nối từ **미팅, 소개팅, CC: hình thành quan hệ trong văn hoá thanh niên** sang **학교폭력 và ký ức danh tiếng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 단톡방 và cộng đồng campus ẩn danh
 
@@ -159,7 +159,7 @@ Các nền tảng campus ẩn danh cũng cho phép hỏi về giáo sư, môn h�
 
 Một lần nữa, kiến trúc nền tảng tạo ra văn hoá chứ không chỉ chứa văn hoá.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **학교폭력 và ký ức danh tiếng** tiếp nhận điểm tựa từ **단톡방 và cộng đồng campus ẩn danh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **수강신청: đăng ký môn như một hàng đợi số cho tài nguyên khan hiếm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **학교폭력 và ký ức danh tiếng** nối từ **단톡방 và cộng đồng campus ẩn danh** sang **수강신청: đăng ký môn như một hàng đợi số cho tài nguyên khan hiếm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 학교폭력 và ký ức danh tiếng
 
@@ -169,7 +169,7 @@ Trước đây nhiều xung đột biến mất khỏi ký ức công cộng khi
 
 Điều này có lợi cho trách nhiệm giải trình nhưng cũng tạo rủi ro **sụp đổ bối cảnh (context collapse)**: một mảnh thông tin thiếu bối cảnh có thể được một nhóm khán giả hoàn toàn khác xem nhiều năm sau.
 
-> **Chuyển mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **수강신청: đăng ký môn như một hàng đợi số cho tài nguyên khan hiếm** tiếp nhận điểm tựa từ **학교폭력 và ký ức danh tiếng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **학점: điểm đại học vừa là phản hồi học tập vừa là tín hiệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **수강신청: đăng ký môn như một hàng đợi số cho tài nguyên khan hiếm** nối từ **학교폭력 và ký ức danh tiếng** sang **학점: điểm đại học vừa là phản hồi học tập vừa là tín hiệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 수강신청: đăng ký môn như một hàng đợi số cho tài nguyên khan hiếm
 
@@ -186,7 +186,7 @@ Sinh viên học cách chuẩn bị mã môn, ưu tiên lớp cần thiết và 
 
 Điểm sâu hơn là: một chương trình học có thể “cho phép tự do chọn môn” trên giấy, nhưng mức tự do thực tế phụ thuộc số ghế, lịch, môn tiên quyết và năng lực hệ thống đăng ký.
 
-> **Chuyển mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **학점: điểm đại học vừa là phản hồi học tập vừa là tín hiệu** tiếp nhận điểm tựa từ **수강신청: đăng ký môn như một hàng đợi số cho tài nguyên khan hiếm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **조별과제: bài tập nhóm và bài toán người đi nhờ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **학점: điểm đại học vừa là phản hồi học tập vừa là tín hiệu** nối từ **수강신청: đăng ký môn như một hàng đợi số cho tài nguyên khan hiếm** sang **조별과제: bài tập nhóm và bài toán người đi nhờ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 학점: điểm đại học vừa là phản hồi học tập vừa là tín hiệu
 
@@ -196,7 +196,7 @@ Khi cùng một chỉ số phải phục vụ cả học tập lẫn sàng lọc
 
 Quy tắc chấm điểm khác theo trường, khoa và môn, nên không nên biến một hệ thống cụ thể thành quy luật chung. Điều cần hiểu là áp lực xuất hiện khi điểm vừa là phản hồi vừa là tín hiệu thị trường.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **조별과제: bài tập nhóm và bài toán người đi nhờ** tiếp nhận điểm tựa từ **학점: điểm đại học vừa là phản hồi học tập vừa là tín hiệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **발표문화: thuyết trình như năng lực biểu diễn tri thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **조별과제: bài tập nhóm và bài toán người đi nhờ** nối từ **학점: điểm đại học vừa là phản hồi học tập vừa là tín hiệu** sang **발표문화: thuyết trình như năng lực biểu diễn tri thức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 조별과제: bài tập nhóm và bài toán người đi nhờ
 
@@ -216,7 +216,7 @@ mục tiêu rõ
 
 Vì vậy `조별과제` không chỉ dạy nội dung môn học; nó dạy chi phí phối hợp. Một sinh viên giỏi chuyên môn nhưng không biết cập nhật trạng thái có thể làm nhóm khó vận hành như một nhân viên kỹ thuật giỏi nhưng không báo tiến độ.
 
-> **Chuyển mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **발표문화: thuyết trình như năng lực biểu diễn tri thức** tiếp nhận điểm tựa từ **조별과제: bài tập nhóm và bài toán người đi nhờ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **연구실 và quan hệ cố vấn học thuật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **발표문화: thuyết trình như năng lực biểu diễn tri thức** nối từ **조별과제: bài tập nhóm và bài toán người đi nhờ** sang **연구실 và quan hệ cố vấn học thuật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 발표문화: thuyết trình như năng lực biểu diễn tri thức
 
@@ -226,7 +226,7 @@ Thuyết trình tạo một lớp đánh giá khác bài thi viết: khả năng
 
 Nhưng kỹ năng trình bày và độ sâu kiến thức không đồng nhất. Một người nói trôi chảy có thể hiểu nông; người hiểu sâu có thể trình bày kém. Hệ thống đánh giá tốt cần tách **chất lượng nội dung** và **chất lượng truyền đạt** thay vì trộn chúng thành một ấn tượng duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **연구실 và quan hệ cố vấn học thuật** tiếp nhận điểm tựa từ **발표문화: thuyết trình như năng lực biểu diễn tri thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **인턴 và 경력직 문화 bắt đầu từ campus** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **연구실 và quan hệ cố vấn học thuật** nối từ **발표문화: thuyết trình như năng lực biểu diễn tri thức** sang **인턴 và 경력직 문화 bắt đầu từ campus**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 연구실 và quan hệ cố vấn học thuật
 
@@ -236,7 +236,7 @@ Quan hệ `지도교수–학생` có bất cân xứng lớn vì người hư�
 
 Đây là ví dụ cho thấy “đại học” không phải một môi trường duy nhất. Trải nghiệm sinh viên năm nhất học môn đại cương khác rất xa nghiên cứu sinh phụ thuộc vào phòng thí nghiệm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **인턴 và 경력직 문화 bắt đầu từ campus** tiếp nhận điểm tựa từ **연구실 và quan hệ cố vấn học thuật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **통학, 자취, 기숙사: nhà ở làm thay đổi đời sống campus** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **인턴 và 경력직 문화 bắt đầu từ campus** nối từ **연구실 và quan hệ cố vấn học thuật** sang **통학, 자취, 기숙사: nhà ở làm thay đổi đời sống campus**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 인턴 và 경력직 문화 bắt đầu từ campus
 
@@ -253,7 +253,7 @@ Giá trị của thực tập phụ thuộc việc sinh viên thực sự đư�
 
 Khi thị trường tuyển dụng coi kinh nghiệm thực hành quan trọng, sinh viên có động lực tìm thực tập sớm hơn. Điều này kéo “chuẩn bị việc làm” ngược vào những năm giữa đại học.
 
-> **Chuyển mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **통학, 자취, 기숙사: nhà ở làm thay đổi đời sống campus** tiếp nhận điểm tựa từ **인턴 và 경력직 문화 bắt đầu từ campus** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **교환학생 và quốc tế hoá như một lần thay đổi hệ quy chiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **통학, 자취, 기숙사: nhà ở làm thay đổi đời sống campus** nối từ **인턴 và 경력직 문화 bắt đầu từ campus** sang **교환학생 và quốc tế hoá như một lần thay đổi hệ quy chiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 통학, 자취, 기숙사: nhà ở làm thay đổi đời sống campus
 
@@ -271,7 +271,7 @@ khoảng cách nhà–trường
 
 Đây là lý do sinh viên cùng khoa có thể có đời sống xã hội hoàn toàn khác dù học cùng lớp.
 
-> **Chuyển mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **교환학생 và quốc tế hoá như một lần thay đổi hệ quy chiếu** tiếp nhận điểm tựa từ **통학, 자취, 기숙사: nhà ở làm thay đổi đời sống campus** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **복학생 và tái nhập cộng đồng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **교환학생 và quốc tế hoá như một lần thay đổi hệ quy chiếu** nối từ **통학, 자취, 기숙사: nhà ở làm thay đổi đời sống campus** sang **복학생 và tái nhập cộng đồng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 교환학생 và quốc tế hoá như một lần thay đổi hệ quy chiếu
 
@@ -281,7 +281,7 @@ khoảng cách nhà–trường
 
 Quốc tế hoá campus cũng diễn ra ngay trong Hàn Quốc khi sinh viên quốc tế tăng. Nhưng cùng học trong một toà nhà không tự động tạo hội nhập; ngôn ngữ, cấu trúc nhóm và thiết kế lớp quyết định mạng xã hội có thực sự trộn hay không.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **복학생 và tái nhập cộng đồng** tiếp nhận điểm tựa từ **교환학생 và quốc tế hoá như một lần thay đổi hệ quy chiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **취준의 장기화 và trạng thái “chưa bắt đầu cuộc đời thật”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **복학생 và tái nhập cộng đồng** nối từ **교환학생 và quốc tế hoá như một lần thay đổi hệ quy chiếu** sang **취준의 장기화 và trạng thái “chưa bắt đầu cuộc đời thật”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 복학생 và tái nhập cộng đồng
 
@@ -291,7 +291,7 @@ Người quay lại sau `휴학` hoặc quân đội thường phải cập nh�
 
 Mạng bạn cũ có thể đã tốt nghiệp; sinh viên phải xây liên kết mới với hậu bối. Vì vậy `복학생` là ví dụ rõ cho việc dòng thời gian không tuyến tính tạo một bản sắc xã hội riêng.
 
-> **Chuyển mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **취준의 장기화 và trạng thái “chưa bắt đầu cuộc đời thật”** tiếp nhận điểm tựa từ **복학생 và tái nhập cộng đồng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **정신건강과 고립: đông người không đồng nghĩa có mạng hỗ trợ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **취준의 장기화 và trạng thái “chưa bắt đầu cuộc đời thật”** nối từ **복학생 và tái nhập cộng đồng** sang **정신건강과 고립: đông người không đồng nghĩa có mạng hỗ trợ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 취준의 장기화 và trạng thái “chưa bắt đầu cuộc đời thật”
 
@@ -301,7 +301,7 @@ Khi chuẩn bị việc làm kéo dài, sinh viên hoặc người mới tốt n
 
 Vì vậy `취준` nằm ở giao điểm của giáo dục, lao động, nhà ở và gia đình, không chỉ ở “động lực cá nhân”.
 
-> **Chuyển mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **정신건강과 고립: đông người không đồng nghĩa có mạng hỗ trợ** tiếp nhận điểm tựa từ **취준의 장기화 và trạng thái “chưa bắt đầu cuộc đời thật”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đại học như hệ thống ghép nối, không chỉ hệ thống truyền kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **정신건강과 고립: đông người không đồng nghĩa có mạng hỗ trợ** nối từ **취준의 장기화 và trạng thái “chưa bắt đầu cuộc đời thật”** sang **Đại học như hệ thống ghép nối, không chỉ hệ thống truyền kiến thức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 정신건강과 고립: đông người không đồng nghĩa có mạng hỗ trợ
 
@@ -317,7 +317,7 @@ thiết chế → tư vấn / học vụ / hỗ trợ khẩn cấp
 
 Không nên biến mọi căng thẳng học tập thành chẩn đoán lâm sàng. Nhưng về văn hoá tổ chức, khả năng tìm người để hỏi và biết nơi nhận hỗ trợ là một phần của thiết kế campus tốt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **Đại học như hệ thống ghép nối, không chỉ hệ thống truyền kiến thức** tiếp nhận điểm tựa từ **정신건강과 고립: đông người không đồng nghĩa có mạng hỗ trợ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Văn hoá thanh niên không phải một khối thống nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **Đại học như hệ thống ghép nối, không chỉ hệ thống truyền kiến thức** nối từ **정신건강과 고립: đông người không đồng nghĩa có mạng hỗ trợ** sang **Văn hoá thanh niên không phải một khối thống nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đại học như hệ thống ghép nối, không chỉ hệ thống truyền kiến thức
 
@@ -337,7 +337,7 @@ tri thức chính thức
 
 Điều này cũng giải thích vì sao cùng nội dung bài giảng trực tuyến chưa chắc thay toàn bộ trải nghiệm đại học. Nội dung chỉ là một lớp của hệ thống.
 
-> **Chuyển mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **Văn hoá thanh niên không phải một khối thống nhất** tiếp nhận điểm tựa từ **Đại học như hệ thống ghép nối, không chỉ hệ thống truyền kiến thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: campus như môi trường thử của xã hội người lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **Văn hoá thanh niên không phải một khối thống nhất** nối từ **Đại học như hệ thống ghép nối, không chỉ hệ thống truyền kiến thức** sang **Liên hệ kiến thức: campus như môi trường thử của xã hội người lớn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Văn hoá thanh niên không phải một khối thống nhất
 
@@ -345,7 +345,7 @@ tri thức chính thức
 
 Nhãn thế hệ hữu ích để đặt giả thuyết, không phải để thay thế quan sát. Biến thiên theo tầng lớp, vùng, giới, ngành học, nhà ở và nền tảng gia đình có thể mạnh hơn nhãn thế hệ.
 
-> **Chuyển mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **Liên hệ kiến thức: campus như môi trường thử của xã hội người lớn** tiếp nhận điểm tựa từ **Văn hoá thanh niên không phải một khối thống nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **Liên hệ kiến thức: campus như môi trường thử của xã hội người lớn** nối từ **Văn hoá thanh niên không phải một khối thống nhất** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ kiến thức: campus như môi trường thử của xã hội người lớn
 
@@ -353,13 +353,13 @@ Trong phần mềm, **môi trường thử (staging environment)** cho phép h�
 
 Ẩn dụ này có giới hạn vì hậu quả trong campus vẫn có thể nghiêm trọng. Nhưng nó giúp hiểu vì sao nhiều thói quen tổ chức có thể được học trước khi một người có công việc chính thức.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **Mô hình tư duy** gom các mảnh từ **Liên hệ kiến thức: campus như môi trường thử của xã hội người lớn** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường học, đại học và văn hoá thanh niên**, **Mô hình tư duy** tổng hợp từ **Liên hệ kiến thức: campus như môi trường thử của xã hội người lớn** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
 > Đại học Hàn Quốc không chỉ là nơi nhận bằng. Nó là một **hệ điều hành xã hội** nơi khoá, thâm niên, câu lạc bộ, gián đoạn quân sự, đăng ký môn, dự án nhóm, nhà ở, cố vấn, chuẩn bị việc làm và nền tảng số cùng định hình bản sắc thanh niên. Giá trị đại học vì vậy nằm trong cả tri thức, ghép nối, tín hiệu và khả năng thử nhiều vai trò trước khi bước vào thị trường lao động.
 
-> **Chuyển mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường học, đại học và văn hoá thanh niên**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc tiếp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -377,7 +377,7 @@ Trong phần mềm, **môi trường thử (staging environment)** cho phép h�
 
 “Cùng học một trường thì có cùng trải nghiệm campus” bỏ qua nhà ở, thời gian đi lại, tài chính và mức tham gia mạng xã hội.
 
-> **Chuyển mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **Đọc tiếp** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Trường học, đại học và văn hoá thanh niên**, **Đọc tiếp** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Đọc tiếp
 
