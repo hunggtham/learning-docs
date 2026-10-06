@@ -76,6 +76,18 @@ Nếu stem hỏi “should have done”, lập luận (reasoning / 추론) quay 
 
 > **Nối mạch:** **Bộ lọc năm cổng khi hai đáp án đều có vẻ đúng** nối từ **Khung lập luận (reasoning / 추론) tám bước** sang **Phân biệt assess, act và escalate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
+## Question stem semantics: FIRST, NEXT, BEST và MOST LIKELY không giống nhau
+
+Scenario PMP thường chứa nhiều hành động đều hợp lý nếu nhìn trên toàn bộ timeline. Stem của câu hỏi quyết định **granularity và thời điểm** của đáp án. **FIRST** hỏi bước khởi đầu hợp lệ trước khi hành động khác có meaning; **NEXT** hỏi bước hợp lý sau trạng thái hiện tại; **BEST** cho phép so sánh nhiều lựa chọn hợp lệ theo objective/constraint; **MOST LIKELY** thường hỏi inference từ evidence thay vì prescription.
+
+Điểm khó là không biến các từ này thành mẹo. Ví dụ FIRST không mặc định luôn là “analyze” hay “talk to the team”. Nếu safety boundary đã bị breach và procedure yêu cầu immediate containment, hành động đầu tiên có thể là stop/contain. Ngược lại, nếu chỉ có complaint mơ hồ mà chưa biết fact, nhảy ngay tới corrective action là premature commitment.
+
+Cách đọc tốt là dịch stem thành câu hỏi vận hành: **“Ở trạng thái hiện tại, điều gì phải đúng trước khi bước sau có thể được biện minh?”** Với BEST, hỏi thêm **“lựa chọn nào bảo vệ objective và constraint tốt nhất với information hiện có?”** Với MOST LIKELY, hỏi **“evidence nào trong scenario làm hypothesis này mạnh hơn alternatives?”**
+
+Stem semantics vì vậy nối trực tiếp với lifecycle state, authority, information gap và reversibility trong khung tám bước. Nếu hai đáp án đều đúng ở hai thời điểm khác nhau, stem thường là thứ phân biệt chúng.
+
+> **Nối mạch:** Stem xác định loại quyết định đang được hỏi; **bộ lọc năm cổng** tiếp theo kiểm tra legality, ownership, information, reversibility và value trước khi chọn giữa các đáp án còn lại.
+
 ## Bộ lọc năm cổng khi hai đáp án đều có vẻ đúng
 
 Khi còn hai option hợp lý, đừng chọn theo câu chữ “nghe PMP hơn”. Hãy đưa chúng qua năm cổng.
@@ -93,6 +105,18 @@ Cổng thứ năm là **hệ thống (system / 시스템) fit**: option có gi�
 Nếu một option qua đủ năm cổng còn option kia thất bại (fail / 실패) một cổng quan trọng, quyết định (decision / 결정) thường rõ hơn nhiều.
 
 > **Nối mạch:** **Phân biệt assess, act và escalate** nối từ **Bộ lọc năm cổng khi hai đáp án đều có vẻ đúng** sang **Proactive không đồng nghĩa tự ý**, vì cơ chế trước tạo đầu vào cho bước sau.
+
+## Evidence ladder và weakest-sufficient-evidence
+
+Khi scenario chưa đủ fact, PM cần tăng information quality nhưng không phải lúc nào cũng cần “điều tra mọi thứ”. Có thể nghĩ theo một **evidence ladder**: allegation/signal → stakeholder report → observable data → authoritative artifact/system record → independently verified evidence. Càng lên cao, confidence thường tăng nhưng time/cost cũng tăng.
+
+Không nên dùng ladder như ranking tuyệt đối. Một live safety incident có observable evidence mạnh hơn một stale approved document; một signed contract có authority khác một dashboard aggregate. Câu hỏi là **evidence nào đủ mạnh cho decision đang đứng trước mặt**.
+
+Đây là nguyên tắc **weakest-sufficient-evidence**: lấy mức bằng chứng thấp nhất nhưng vẫn đủ để hành động an toàn, đúng authority và có thể defend. Nếu quyết định reversible, blast radius nhỏ và feedback nhanh, một experiment nhỏ có thể tốt hơn chờ full certainty. Nếu quyết định irreversible, compliance-heavy hoặc external commitment lớn, threshold bằng chứng phải cao hơn.
+
+Trong exam, distractor thường rơi vào hai cực. Một đáp án hành động quá sớm khi signal còn yếu; đáp án khác trì hoãn vô hạn bằng “collect more data” dù đã đủ evidence. PM tốt không tối đa hóa information; PM tối ưu **value of information** so với cost of delay và decision risk.
+
+> **Nối mạch:** Evidence ladder trả lời “cần biết đến mức nào”; **assess, act và escalate** tiếp theo chuyển mức evidence đó thành đúng loại hành động.
 
 ## Phân biệt assess, act và escalate
 
@@ -113,6 +137,23 @@ PMP thường đánh giá cao proactive hành vi (behavior / 동작), nhưng pro
 Tư duy tốt là “chủ động trong ranh giới (boundary / 경계), escalate khi vượt ranh giới (boundary / 경계)”.
 
 > **Nối mạch:** **Nhóm (team / 팀) xung đột (conflict / 충돌)** nối từ **Proactive không đồng nghĩa tự ý** sang **Stakeholder dissatisfaction**, vì cơ chế trước tạo đầu vào cho bước sau.
+
+## Authority × reversibility matrix
+
+Một cách sâu hơn để chọn next action là đặt hai biến cạnh nhau: **authority** và **reversibility**. Authority hỏi “PM/team có quyền quyết định việc này không?”; reversibility hỏi “nếu sai, có quay lại với chi phí/blast radius chấp nhận được không?”. Hai biến tạo bốn vùng reasoning:
+
+| | Dễ đảo ngược | Khó đảo ngược |
+|---|---|---|
+| **Trong authority** | act/experiment nhanh, đo feedback | phân tích sâu hơn, dùng governance phù hợp trước commitment |
+| **Ngoài authority** | đề xuất/align owner, tránh tự ý | escalate/seek approval sớm vì vừa thiếu quyền vừa khó phục hồi |
+
+Bảng này không thay process cụ thể; nó giải thích **vì sao** một số đáp án “proactive” lại sai. PM có thể chủ động chuẩn bị impact analysis, facilitate alignment hoặc create option nhưng không được biến preparation thành unauthorized commitment.
+
+Reversibility cũng thay đổi theo thời gian. Một architecture choice ở prototype có thể rẻ để undo; sau procurement, migration và training, cùng choice có switching cost lớn. Vì vậy câu hỏi exam về “what should the PM do next?” thường kiểm tra whether candidate nhận ra decision đã vượt point of cheap reversal chưa.
+
+Khi uncertainty cao, prefer action tạo information mà không phá option space: pilot, spike, workshop, impact analysis, negotiation draft. Khi compliance/safety boundary bị đe dọa, reversibility thấp có thể khiến containment/escalation được ưu tiên hơn collaborative optimization.
+
+> **Nối mạch:** Authority × reversibility biến “proactive” thành decision rule cụ thể; **team conflict** tiếp theo áp dụng rule này trong môi trường people nơi PM cần can thiệp mà vẫn giữ ownership đúng chỗ.
 
 ## Nhóm (team / 팀) xung đột (conflict / 충돌)
 
@@ -266,6 +307,18 @@ Ngoài ra có distractor **administratively correct but decision-useless**: cậ
 Đọc option theo hành động (action / 동작) thứ tự (ordering / 순서), authority, bằng chứng (evidence / 증거) và hệ thống (system / 시스템) tác động (effect / 효과) thường giúp loại chúng mà không cần nhớ phrase template.
 
 > **Nối mạch:** **Không thêm fact không có trong scenario** nối từ **Loại distractor thường gặp** sang **Sáu mini-scenario để luyện lập luận (reasoning / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
+
+## Counterfactual test cho distractor
+
+Khi một đáp án có vẻ “luôn đúng”, hãy thử **counterfactual test**: đổi đúng một biến quan trọng của scenario và xem lựa chọn có nên đổi không. Nếu answer vẫn giữ nguyên bất kể delivery approach, authority, severity, reversibility hoặc compliance boundary thay đổi, bạn có thể đang dùng slogan thay vì reasoning.
+
+Ví dụ “luôn nói chuyện với team trước” nghe hợp lý. Nhưng nếu đổi biến thành immediate safety breach với mandated shutdown procedure, answer phải đổi. “Luôn escalate” cũng sai: nếu issue nằm trong team authority, reversible và có đủ evidence để xử lý, escalation sớm tạo governance noise.
+
+Một counterfactual tốt chỉ thay một dimension để nhìn causal dependency. Giữ nguyên facts nhưng đổi authority: next action có đổi không? Giữ nguyên issue nhưng đổi reversible thành irreversible: evidence threshold có tăng không? Giữ nguyên stakeholder request nhưng đổi predictive baseline thành adaptive backlog: change path có đổi không?
+
+Kỹ thuật này rất mạnh khi review practice questions. Thay vì nhớ đáp án, hãy ghi variable nào làm decision flip. Error log lúc đó chuyển từ “sai câu vendor” thành “không nhận ra authority boundary” hoặc “không phân biệt signal với verified issue”.
+
+> **Nối mạch:** Counterfactual test làm lộ rule thật phía sau distractor; **không thêm fact** tiếp theo bảo đảm rule đó chỉ dùng trên evidence có trong scenario, không trên assumption do người làm bài tự bịa.
 
 ## Không thêm fact không có trong scenario
 
