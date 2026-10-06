@@ -2,11 +2,11 @@
 
 ## Final verdict
 
-**PENDING FINAL REPOSITORY CHECKS**
+**NOT PASS — repository command gate unresolved**
 
 This audit does not inherit the previous Book 2 `PASS` claim. Book 2 was re-audited from the content authority `증권투자기초/raw/sach2.md` under the current `BOOK_MD_TO_LEARNING_DOCS_PROMPT.md` contract. The semantic inventory, Korean terminology, source questions, formula/table/figure handling and reverse audit were rebuilt or independently re-checked.
 
-The final verdict is intentionally held until the latest-main clean-branch check, internal-link/heading audit and literal `git diff --check` have completed.
+The content/publication audits are complete, and the clean-branch, link and heading checks pass. The only unresolved Definition-of-Done gate is literal execution of `git diff --check`: the available shell cannot resolve `github.com`, so the repository cannot be cloned/fetched locally in this environment. An equivalent changed-file whitespace/conflict scan passes, but it is not represented as the literal Git command. Under the requested contract, this prevents a `PASS` verdict.
 
 ## 1. Source / architecture / ownership
 
@@ -181,12 +181,19 @@ Result: **PASS**.
 
 ## 11. Navigation / links / repository checks
 
-Pending final branch checks:
+Final branch checks on `fix/securities-book2-publication-pass-v3`:
 
-- internal-link audit;
-- heading/navigation audit;
-- latest-main branch status;
-- changed-file scope;
-- literal `git diff --check`.
+- latest-main status: **PASS** — branch is `ahead 15 / behind 0` relative to current `main`;
+- changed-file scope: **PASS** — 14 changed files, all limited to `investing/90_securities_book2/` and `증권투자기초/sach2/`; no unrelated files from `feat/securities-investment-book2-learning-edition` were merged;
+- internal-link audit: **PASS** — every relative Markdown file target referenced by the changed files resolves on the branch;
+- heading/navigation audit: **PASS** — each changed Markdown file has exactly one H1, no heading-level jump was detected, and the six-lesson README route resolves;
+- changed-file whitespace/conflict scan: **PASS** — no trailing whitespace and no merge-conflict markers were found in changed files;
+- literal `git diff --check origin/main...HEAD`: **NOT EXECUTED** — local shell clone/fetch failed because the execution environment could not resolve `github.com`.
 
-The final verdict above must not be changed from PENDING until all four pass.
+The static scan above checks the main whitespace/conflict failure class that `git diff --check` would expose, but it is not a substitute for claiming that the literal Git command ran.
+
+## Final verdict
+
+**NOT PASS**
+
+Reason: semantic coverage, terminology, reconstruction, source-question mapping, ambiguity handling, navigation and clean-branch scope all pass, but the explicit Definition of Done requires `git diff --check`. Because that exact command could not be executed in the available environment, the publication gate remains formally unresolved. Do not promote this audit to `PASS` until that command runs successfully on a checkout of the branch.
