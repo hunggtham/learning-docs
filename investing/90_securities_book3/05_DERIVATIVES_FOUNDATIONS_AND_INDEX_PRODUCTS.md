@@ -18,6 +18,8 @@ Phải giữ đúng dấu vị thế trước khi đọc bất kỳ biểu đồ
 
 **Đánh dấu theo thị trường hằng ngày (daily mark-to-market / 일일정산)** biến lãi/lỗ chưa thực hiện thành dòng tiền hàng ngày. Nếu equity trong tài khoản xuống dưới maintenance margin, clearing member có thể phát hành margin call; người nắm vị thế phải nộp variation margin hoặc giảm/đóng vị thế. Forced liquidation trong lúc thị trường biến động có thể khóa lỗ ở mức bất lợi. Đây là khác biệt thực hành giữa một payoff cuối kỳ “đúng” và một hedge có thể sống sót qua đường đi của giá.
 
+Source còn đặt **trái phiếu chuyển đổi (convertible bond / 전환사채)** và **warrant (워런트)** cạnh derivatives vì chúng nhúng quyền chọn vào security: convertible bond có conversion right, còn warrant là option được phát hành dưới dạng security. Đây là positioning để nhận ra embedded option; không có nghĩa mọi bond hay mọi listed security đều là derivative.
+
 ## 2. Index futures: beta, alpha, hedge và basis
 
 KOSPI200 index futures là ví dụ nguồn dùng xuyên suốt. Nhà đầu tư có thể:
@@ -41,6 +43,12 @@ với (F_0,S_0) cùng đơn vị index/price, (r) là funding rate năm, (q) là
 Giả sử spot index là 300, funding rate 3%, dividend yield 2% và còn nửa năm; công thức đơn giản cho futures khoảng 301,5. Nếu hợp đồng thực tế ở 304, chênh lệch 2,5 điểm không tự động là arbitrage: phải trừ bid–ask, thuế, funding thực tế, dividend không chắc chắn, margin và khả năng mua/rút danh mục index. Với một hedge bán futures, lãi từ futures chỉ bù đúng phần giảm của danh mục nếu beta, thời hạn và basis khớp; beta khác 1 hoặc basis đổi sẽ để lại residual risk.
 
 Tick value = tick size × contract multiplier. Đây là cách chuyển một bước giá nhỏ thành won lãi/lỗ; không được nhìn mỗi phần trăm mà quên multiplier. Margin làm vốn ban đầu nhỏ, nhưng daily settlement làm dòng tiền quản trị khó hơn và có thể gây forced liquidation.
+
+**Open interest (미결제약정)** là số hợp đồng còn mở/chưa được offset, khác **volume (거래량)** là số hợp đồng đã giao dịch trong kỳ. Một trade mới giữa buyer mới và seller mới có thể làm open interest tăng; một bên đóng vị thế với bên mở mới có thể giữ open interest gần như không đổi. Vì vậy open interest cho biết quy mô exposure còn tồn tại, không phải trực tiếp cho biết bullish/bearish direction.
+
+Settlement cũng là một semantic unit riêng. **Cash settlement (현금결제)** chỉ thanh toán chênh lệch tiền; **physical delivery (실물인수도)** giao tài sản/ngoại tệ theo contract. Raw source-state mô tả KOSPI200 futures là cash-settled, trong khi nhiều currency/commodity contracts dùng physical delivery; contract specification hiện hành phải kiểm tra tại exchange trước khi giao dịch.
+
+Trên **forward curve (선물 선도곡선)**, hợp đồng gần đáo hạn là **near month (근월물)** và hợp đồng xa hơn là **far month (원월물)**. Chênh lệch giữa các tháng tạo calendar spread; contango/backwardation ở đây mô tả cấu trúc theo maturity, khác với market basis của một hợp đồng so với spot.
 
 Delta hedge của dealer ELS thường bán futures khi index tăng và mua khi index giảm để bù thay đổi delta của liability. Vì vậy flow futures lớn không tự động là “nhà đầu tư đang bullish”; phải tách directional flow khỏi arbitrage/program hedge.
 
@@ -113,6 +121,10 @@ Ví dụ short strangle bán call strike 110 nhận 2 và put strike 90 nhận 2
 Put–call parity là cầu nối giữa option và vị thế tổng hợp: long stock + long put tạo payoff như long call (portfolio insurance); long stock + short call là covered call, có payoff tương đương short put trong điều kiện parity và cùng strike/maturity. Conversion/reversal và index arbitrage khai thác chênh giá giữa spot, futures và option; sau phí, funding, dividend và borrow cost, “arbitrage” vẫn cần kiểm tra khả năng thực thi.
 
 Luôn vẽ payoff tại expiry trước, rồi mới thêm thời gian, volatility, margin và early exercise. Payoff tĩnh không phải P&L đầy đủ trong thời gian sống của option.
+
+### Các index-linked product khác trong source
+
+Raw còn đặt KOSPI200 futures/options cạnh mini-index contracts, KOSDAQ150 products, **single-stock futures/options (개별주식선물·옵션)**, **volatility-index futures (변동성지수선물)**, warrant và structured securities. Ý nghĩa của inventory này không phải học thuộc danh sách niêm yết năm source: mỗi sản phẩm đổi underlying, multiplier, liquidity, settlement và contract spec. Danh sách/số lượng hợp đồng là **TEXTBOOK/SOURCE STATE**; cơ chế chung vẫn là đọc underlying → notional → payoff → settlement → liquidity trước.
 
 ## 4. Source-question test và ranh giới
 
