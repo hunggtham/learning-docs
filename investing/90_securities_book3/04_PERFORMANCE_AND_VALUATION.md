@@ -24,7 +24,7 @@ Với return dương, geometric mean không vượt arithmetic mean; volatility 
 
 ## 2. Ba thước đo risk-adjusted performance
 
-Với portfolio return (r_p), risk-free (r_f), độ lệch chuẩn (sigma_p) và beta (eta_p): các return phải cùng horizon và cùng scale, (sigma_p) là total volatility cùng horizon, còn (eta_p) không có đơn vị. Sharpe vì thế có dạng “excess return trên một đơn vị volatility”; Treynor có dạng return trên một đơn vị beta, nên trị số của hai chỉ số không được so trực tiếp như cùng đơn vị.
+Với portfolio return (r_p), risk-free (r_f), độ lệch chuẩn (sigma_p) và beta (\beta_p): các return phải cùng horizon và cùng scale, (sigma_p) là total volatility cùng horizon, còn (\beta_p) không có đơn vị. Sharpe vì thế có dạng “excess return trên một đơn vị volatility”; Treynor có dạng return trên một đơn vị beta, nên trị số của hai chỉ số không được so trực tiếp như cùng đơn vị.
 
 \[
 \text{Sharpe}=\frac{r_p-r_f}{\sigma_p},\qquad
