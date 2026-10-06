@@ -22,7 +22,7 @@ nhiệt độ là một trường phụ thuộc cả vị trí lẫn thời gian
 
 Điểm quan trọng của ký hiệu hàm không nằm ở dấu ngoặc mà ở việc nó buộc ta khai báo sự phụ thuộc. Nếu `P=P(V,T)`, áp suất có thể thay đổi vì thể tích hoặc nhiệt độ. Do đó khi lấy đạo hàm phải nói rõ biến nào thay đổi và biến nào được giữ cố định.
 
-> **Chuyển mạch:** Hàm số khai báo đại lượng phụ thuộc vào biến nào và biến nào được giữ cố định; **đạo hàm** đo tốc độ thay đổi cục bộ của quan hệ đó. Khi đạo hàm trở thành một phần của luật tiến hóa, **phương trình vi phân** sẽ mô tả quỹ đạo thay vì chỉ một thời điểm.
+> **Nối mạch:** Hàm số khai báo đại lượng phụ thuộc vào biến nào và biến nào được giữ cố định; **đạo hàm** đo tốc độ thay đổi cục bộ của quan hệ đó. Khi đạo hàm trở thành một phần của luật tiến hóa, **phương trình vi phân** sẽ mô tả quỹ đạo thay vì chỉ một thời điểm.
 
 ## Đạo hàm: đo tốc độ biến thiên cục bộ
 
@@ -44,7 +44,7 @@ cho biết nhiệt độ thay đổi theo `x` khi `y`, `z` và `t` được gi�
 
 Đạo hàm còn mang ý nghĩa hình học. `dx/dt` là độ dốc của đồ thị `x(t)`, còn đạo hàm bậc hai mô tả cách độ dốc đó tiếp tục thay đổi.
 
-> **Chuyển mạch:** Đạo hàm cho biết tốc độ và độ cong cục bộ, còn **phương trình vi phân** gắn chúng với lực, điều kiện ban đầu và diễn tiến theo thời gian. Với trường phụ thuộc nhiều tọa độ, **gradient** chuyển câu hỏi từ “đổi theo thời gian bao nhiêu” sang “tăng nhanh nhất theo hướng nào”.
+> **Nối mạch:** Đạo hàm cho biết tốc độ và độ cong cục bộ, còn **phương trình vi phân** gắn chúng với lực, điều kiện ban đầu và diễn tiến theo thời gian. Với trường phụ thuộc nhiều tọa độ, **gradient** chuyển câu hỏi từ “đổi theo thời gian bao nhiêu” sang “tăng nhanh nhất theo hướng nào”.
 
 ## Phương trình vi phân: quy luật về sự tiến hóa
 
@@ -58,7 +58,7 @@ không trực tiếp cho ta `x(t)`. Nó đặt một quy luật lên độ cong 
 
 Điểm này rất quan trọng: **định luật tiến hóa không đồng nghĩa với trạng thái hiện tại**. Cùng một phương trình chuyển động có thể tạo vô số nghiệm khác nhau tùy trạng thái ban đầu.
 
-> **Chuyển mạch:** Phương trình vi phân mô tả quy luật biến đổi; **gradient** chỉ hướng tăng nhanh nhất của một trường và nối thế năng với lực hoặc điện thế với điện trường. Khi trường là vectơ và cần hỏi dòng ròng đi ra hay đi vào một điểm, **divergence** là phép đo kế tiếp.
+> **Nối mạch:** Phương trình vi phân mô tả quy luật biến đổi; **gradient** chỉ hướng tăng nhanh nhất của một trường và nối thế năng với lực hoặc điện thế với điện trường. Khi trường là vectơ và cần hỏi dòng ròng đi ra hay đi vào một điểm, **divergence** là phép đo kế tiếp.
 
 ## Độ dốc (gradient / 기울기): hướng tăng nhanh nhất
 
@@ -91,7 +91,7 @@ nối điện trường với độ biến thiên không gian của điện th�
 
 Độ dốc (gradient / 기울기) không chỉ xuất hiện trong Vật lý. Trong tối ưu hóa, hạ độ dốc (gradient / 기울기) (gradient descent) di chuyển trong không gian tham số theo hướng giảm nhanh hàm mất mát. Đây là cùng cấu trúc toán học nhưng có cách diễn giải khác.
 
-> **Chuyển mạch:** Gradient mô tả hướng tăng của trường vô hướng; **divergence** lấy trường vectơ và đo dòng ròng như một nguồn hoặc hố cục bộ. Nếu divergence trả lời “bao nhiêu đi ra”, **curl** tiếp theo trả lời “trường có xu hướng quay quanh điểm hay không”.
+> **Nối mạch:** Gradient mô tả hướng tăng của trường vô hướng; **divergence** lấy trường vectơ và đo dòng ròng như một nguồn hoặc hố cục bộ. Nếu divergence trả lời “bao nhiêu đi ra”, **curl** tiếp theo trả lời “trường có xu hướng quay quanh điểm hay không”.
 
 ## Divergence: nguồn và dòng ra cục bộ
 
@@ -119,7 +119,7 @@ Với dòng chất lưu không nén được,
 
 nghĩa là tại mỗi vùng nhỏ không có sự tích tụ hoặc thất thoát thể tích do mất cân bằng dòng vào–ra.
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Divergence: nguồn và dòng ra cục bộ** nêu điều cần giải thích; **Curl: xu hướng quay cục bộ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Từ cục bộ đến toàn cục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Divergence: nguồn và dòng ra cục bộ** đặt vấn đề; **Curl: xu hướng quay cục bộ** đối chiếu bằng chứng, rồi **Từ cục bộ đến toàn cục** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Curl: xu hướng quay cục bộ
 
@@ -141,7 +141,7 @@ cho biết từ trường biến thiên theo thời gian tạo ra một điện 
 
 Độ dốc (gradient / 기울기), divergence và curl không phải ba phép toán rời rạc được đặt tên tùy ý. Chúng mô tả ba loại cấu trúc cục bộ khác nhau: độ dốc của trường vô hướng, nguồn của trường vectơ và xu hướng quay của trường vectơ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Từ cục bộ đến toàn cục** tiếp nhận điểm tựa từ **Curl: xu hướng quay cục bộ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tích phân: cộng dồn các phần tử vô cùng nhỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Từ cục bộ đến toàn cục** nối từ **Curl: xu hướng quay cục bộ** sang **Tích phân: cộng dồn các phần tử vô cùng nhỏ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ cục bộ đến toàn cục
 
@@ -169,7 +169,7 @@ còn định lý Stokes cho
 
 Nhờ các định lý này, phương trình Maxwell có thể được viết ở dạng vi phân hoặc dạng tích phân. Một dạng nói điều gì xảy ra tại từng điểm, dạng kia nói tổng thông lượng hoặc tuần hoàn trên một vùng hữu hạn.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Tích phân: cộng dồn các phần tử vô cùng nhỏ** tiếp nhận điểm tựa từ **Từ cục bộ đến toàn cục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số phức và pha** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Tích phân: cộng dồn các phần tử vô cùng nhỏ** nối từ **Từ cục bộ đến toàn cục** sang **Số phức và pha**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tích phân: cộng dồn các phần tử vô cùng nhỏ
 
@@ -189,7 +189,7 @@ cho tổng khối lượng trong thể tích.
 
 Ý nghĩa vật lý của tích phân phụ thuộc vào thứ đang được cộng và miền tích phân. Vì vậy luôn cần hỏi: phần tử vi phân `dt`, `dx`, `dA` hay `dV` đại diện cho cái gì?
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Số phức và pha** tiếp nhận điểm tựa từ **Tích phân: cộng dồn các phần tử vô cùng nhỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ma trận và phép biến đổi tuyến tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Số phức và pha** nối từ **Tích phân: cộng dồn các phần tử vô cùng nhỏ** sang **Ma trận và phép biến đổi tuyến tính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Số phức và pha
 
@@ -213,7 +213,7 @@ A\cos(\omega t+\phi)=\Re\left(Ae^{i(\omega t+\phi)}\right).
 
 Trong mạch xoay chiều, sóng, quang học và cơ học lượng tử, biểu diễn phức giúp giữ cả biên độ lẫn pha. Đại lượng quan sát cuối cùng thường là số thực hoặc được lấy từ môđun bình phương, nhưng phần phức ở bước trung gian chứa thông tin pha cần thiết để mô tả giao thoa.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Ma trận và phép biến đổi tuyến tính** tiếp nhận điểm tựa từ **Số phức và pha** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vectơ riêng và trị riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Ma trận và phép biến đổi tuyến tính** nối từ **Số phức và pha** sang **Vectơ riêng và trị riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ma trận và phép biến đổi tuyến tính
 
@@ -227,7 +227,7 @@ không chỉ là phép nhân một bảng số; `A` mô tả cách vectơ đầu
 
 Phép quay, tensor ứng suất, hệ dao động ghép, phân cực ánh sáng, toán tử lượng tử và đồ họa máy tính đều dùng cấu trúc ma trận.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Vectơ riêng và trị riêng** tiếp nhận điểm tựa từ **Ma trận và phép biến đổi tuyến tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khai triển Taylor và tuyến tính hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Vectơ riêng và trị riêng** nối từ **Ma trận và phép biến đổi tuyến tính** sang **Khai triển Taylor và tuyến tính hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vectơ riêng và trị riêng
 
@@ -243,7 +243,7 @@ Trong dao động cơ học, các vectơ riêng thường biểu diễn chế đ
 
 Cùng một đại số tuyến tính được tái sử dụng, nhưng ý nghĩa vật lý của vectơ và trị riêng phụ thuộc vào bài toán.
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Khai triển Taylor và tuyến tính hóa** tiếp nhận điểm tựa từ **Vectơ riêng và trị riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô tả liên tục và mô tả rời rạc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Khai triển Taylor và tuyến tính hóa** nối từ **Vectơ riêng và trị riêng** sang **Mô tả liên tục và mô tả rời rạc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khai triển Taylor và tuyến tính hóa
 
@@ -270,7 +270,7 @@ nên khi `|\theta|\ll1` rad,
 
 Ta không nên chỉ nói “góc có vẻ nhỏ”. Hạng bị bỏ đầu tiên `\theta^3/6` cho phép ước lượng định lượng sai số của xấp xỉ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Mô tả liên tục và mô tả rời rạc** tiếp nhận điểm tựa từ **Khai triển Taylor và tuyến tính hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Mô tả liên tục và mô tả rời rạc** nối từ **Khai triển Taylor và tuyến tính hóa** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mô tả liên tục và mô tả rời rạc
 
@@ -284,7 +284,7 @@ Khi `\Delta t` hữu hạn, sai số rời rạc hóa (discretization error) xu�
 
 Do đó trong vật lý tính toán luôn có hai câu hỏi riêng: mô hình vật lý có phù hợp với hệ thật không, và phương pháp số có giải mô hình đó đủ chính xác không. Máy tính có thể giải rất chính xác một mô hình sai, hoặc giải sai một mô hình đúng.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Mô tả liên tục và mô tả rời rạc** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Mô tả liên tục và mô tả rời rạc** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -292,13 +292,13 @@ Do đó trong vật lý tính toán luôn có hai câu hỏi riêng: mô hình v
 
 Khi gặp một biểu thức toán học trong Vật lý, đừng chỉ hỏi “tính thế nào?”. Hãy hỏi thêm: biến này đại diện cho đại lượng gì, nó sống trong không gian nào, đạo hàm đang giữ biến nào cố định, tích phân đang cộng trên miền nào và phép xấp xỉ đang bỏ qua bậc nào.
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
 Biết thao tác ký hiệu không đồng nghĩa với hiểu mô hình. Một đạo hàm không có ý nghĩa nếu không biết biến độc lập; một tích phân không đầy đủ nếu không biết miền; một vectơ không đầy đủ nếu không biết hệ tọa độ hoặc không gian của nó; một phương trình vi phân không chọn được nghiệm vật lý duy nhất nếu thiếu điều kiện đầu hoặc điều kiện biên.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ Toán học tối thiểu để đọc Vật lý**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

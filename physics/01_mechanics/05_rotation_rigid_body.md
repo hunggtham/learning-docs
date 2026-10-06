@@ -20,7 +20,7 @@ Một số cặp tương ứng hữu ích là:
 
 Sự tương tự này hữu ích nhưng không hoàn hảo. Ví dụ mômen động lượng và vận tốc góc của một vật rắn tổng quát không nhất thiết cùng phương. Muốn hiểu chuyển động quay ba chiều cần tensor quán tính chứ không chỉ một số `I`.
 
-> **Chuyển mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Radian là đơn vị tự nhiên của góc** tiếp nhận điểm tựa từ **Từ tịnh tiến sang quay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Động học quay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Radian là đơn vị tự nhiên của góc** nối từ **Từ tịnh tiến sang quay** sang **Động học quay**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Radian là đơn vị tự nhiên của góc
 
@@ -40,7 +40,7 @@ Giải tích lượng giác có dạng tự nhiên khi góc đo bằng radian:
 
 Đây là lý do các công thức `v=\omega r` hay `a_t=\alpha r` sử dụng trực tiếp `\theta` theo radian.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Động học quay** tiếp nhận điểm tựa từ **Radian là đơn vị tự nhiên của góc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mômen lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Động học quay** nối từ **Radian là đơn vị tự nhiên của góc** sang **Mômen lực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Động học quay
 
@@ -72,7 +72,7 @@ Ngay cả khi `\omega` không đổi, hướng vận tốc vẫn thay đổi nê
 a_c=\omega^2r=\frac{v^2}{r}.
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Mômen lực** tiếp nhận điểm tựa từ **Động học quay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao τ=Iα xuất hiện?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Mômen lực** nối từ **Động học quay** sang **Vì sao τ=Iα xuất hiện?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mômen lực
 
@@ -92,7 +92,7 @@ trong đó `\ell` là cánh tay đòn vuông góc từ trục tới đường t�
 
 Cùng một lực có thể tạo hiệu ứng quay rất khác nhau tùy vị trí đặt lực. Đây là lý do tay nắm cửa đặt xa bản lề.
 
-> **Chuyển mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Vì sao τ=Iα xuất hiện?** tiếp nhận điểm tựa từ **Mômen lực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mômen quán tính phụ thuộc trục quay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Vì sao τ=Iα xuất hiện?** nối từ **Mômen lực** sang **Mômen quán tính phụ thuộc trục quay**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao `τ=Iα` xuất hiện?
 
@@ -134,7 +134,7 @@ I=\sum_i m_ir_i^2.
 
 `I` xuất hiện vì khối lượng ở xa trục khó tăng tốc góc hơn theo hệ số `r^2`.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Mômen quán tính phụ thuộc trục quay** tiếp nhận điểm tựa từ **Vì sao τ=Iα xuất hiện?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định lý trục song song** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Mômen quán tính phụ thuộc trục quay** nối từ **Vì sao τ=Iα xuất hiện?** sang **Định lý trục song song**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mômen quán tính phụ thuộc trục quay
 
@@ -154,7 +154,7 @@ Ví dụ:
 
 Cùng `M` và `R`, vành có `I` lớn hơn đĩa vì nhiều khối lượng nằm xa trục hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Định lý trục song song** tiếp nhận điểm tựa từ **Mômen quán tính phụ thuộc trục quay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Động năng quay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Định lý trục song song** nối từ **Mômen quán tính phụ thuộc trục quay** sang **Động năng quay**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định lý trục song song
 
@@ -168,7 +168,7 @@ với `d` là khoảng cách giữa hai trục song song.
 
 Định lý này rất hữu ích khi vật quay quanh bản lề hoặc trục không đi qua tâm khối.
 
-> **Chuyển mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Động năng quay** tiếp nhận điểm tựa từ **Định lý trục song song** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mômen động lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Động năng quay** nối từ **Định lý trục song song** sang **Mômen động lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Động năng quay
 
@@ -199,7 +199,7 @@ P=\tau\omega.
 
 Đây là phiên bản quay của `dW=Fdx` và `P=Fv`.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Mômen động lượng** tiếp nhận điểm tựa từ **Động năng quay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tensor quán tính và trục chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Mômen động lượng** nối từ **Động năng quay** sang **Tensor quán tính và trục chính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mômen động lượng
 
@@ -223,7 +223,7 @@ Nếu mômen lực ngoài bằng không,
 
 Bảo toàn mômen động lượng là nguyên lý tổng quát hơn công thức `L=I\omega`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Tensor quán tính và trục chính** tiếp nhận điểm tựa từ **Mômen động lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiện tượng “vợt tennis”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Tensor quán tính và trục chính** nối từ **Mômen động lượng** sang **Hiện tượng “vợt tennis”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tensor quán tính và trục chính
 
@@ -241,7 +241,7 @@ L=I\omega.
 
 Tensor quán tính giải thích vì sao một vật có hình dạng bất đối xứng có thể có chuyển động quay phức tạp dù không chịu mômen lực ngoài.
 
-> **Chuyển mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Hiện tượng “vợt tennis”** tiếp nhận điểm tựa từ **Tensor quán tính và trục chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo toàn mômen động lượng và người trượt băng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Hiện tượng “vợt tennis”** nối từ **Tensor quán tính và trục chính** sang **Bảo toàn mômen động lượng và người trượt băng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiện tượng “vợt tennis”
 
@@ -251,7 +251,7 @@ Một vật rắn tự do có ba trục chính với ba mômen quán tính `I_1<
 
 Hiện tượng này cho thấy chuyển động quay ba chiều không thể hiểu đầy đủ chỉ bằng trực giác `τ=Iα` một chiều.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Bảo toàn mômen động lượng và người trượt băng** tiếp nhận điểm tựa từ **Hiện tượng “vợt tennis”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Con quay và tiến động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Bảo toàn mômen động lượng và người trượt băng** nối từ **Hiện tượng “vợt tennis”** sang **Con quay và tiến động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bảo toàn mômen động lượng và người trượt băng
 
@@ -265,7 +265,7 @@ Do `I_f<I_i`, ta có `\omega_f>\omega_i`.
 
 Động năng không nhất thiết bảo toàn trong thao tác này. Người trượt băng thực hiện công bằng cơ bắp để kéo tay vào, nên năng lượng quay có thể tăng dù mômen động lượng bảo toàn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Con quay và tiến động** tiếp nhận điểm tựa từ **Bảo toàn mômen động lượng và người trượt băng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lăn không trượt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Con quay và tiến động** nối từ **Bảo toàn mômen động lượng và người trượt băng** sang **Lăn không trượt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Con quay và tiến động
 
@@ -279,7 +279,7 @@ Kết quả là trục quay tiến động (precession). Trong mô hình đơn g
 
 Hiện tượng này xuất hiện trong con quay hồi chuyển, vệ tinh, động lực học hành tinh và cảm biến quán tính.
 
-> **Chuyển mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Lăn không trượt** tiếp nhận điểm tựa từ **Con quay và tiến động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vai trò của ma sát tĩnh khi lăn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Lăn không trượt** nối từ **Con quay và tiến động** sang **Vai trò của ma sát tĩnh khi lăn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lăn không trượt
 
@@ -309,7 +309,7 @@ v^2=\frac{2gh}{1+I/(MR^2)}.
 
 Vật có `I/(MR^2)` lớn hơn sẽ có tốc độ tâm khối nhỏ hơn tại cùng độ cao vì nhiều năng lượng nằm trong chuyển động quay.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Vai trò của ma sát tĩnh khi lăn** tiếp nhận điểm tựa từ **Lăn không trượt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: đĩa đặc lăn xuống dốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Vai trò của ma sát tĩnh khi lăn** nối từ **Lăn không trượt** sang **Ví dụ: đĩa đặc lăn xuống dốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vai trò của ma sát tĩnh khi lăn
 
@@ -317,7 +317,7 @@ Trong lăn không trượt trên bề mặt cố định, điểm tiếp xúc t�
 
 Hướng của ma sát không thể đoán chỉ từ hướng chuyển động tâm khối; phải xét xu hướng trượt tương đối tại điểm tiếp xúc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Vai trò của ma sát tĩnh khi lăn** cho ta quy tắc; **Ví dụ: đĩa đặc lăn xuống dốc** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, **Vai trò của ma sát tĩnh khi lăn** nêu quy tắc; **Ví dụ: đĩa đặc lăn xuống dốc** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Ví dụ: đĩa đặc lăn xuống dốc
 
@@ -365,13 +365,13 @@ a=\frac23g\sin\theta.
 
 Gia tốc nhỏ hơn `g\sin\theta` của một vật trượt không ma sát vì một phần năng lượng đi vào quay.
 
-> **Chuyển mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Ví dụ: đĩa đặc lăn xuống dốc** cho ta quy tắc; **Mô hình tư duy (mental model / 사고 모델)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chuyển động quay, mômen lực và mômen động lượng**, **Ví dụ: đĩa đặc lăn xuống dốc** nêu quy tắc; **Mô hình tư duy (mental model / 사고 모델)** thử quy tắc trong tình huống, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Chuyển động quay là cơ học của **phân bố khối lượng và hình học quanh trục**. Mômen lực đo khả năng thay đổi mômen động lượng; mômen quán tính đo cách khối lượng được phân bố; còn bảo toàn mômen động lượng là hệ quả sâu hơn của đối xứng quay.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chuyển động quay, mômen lực và mômen động lượng**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -391,7 +391,7 @@ Không. Ma sát tĩnh trong lăn không trượt có thể không sinh công t�
 
 Chỉ đúng đơn giản khi quay quanh trục chính hoặc trong những hình học đủ đối xứng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển động quay, mômen lực và mômen động lượng**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

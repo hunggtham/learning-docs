@@ -19,7 +19,7 @@ U(x)
 
 Mỗi thành phần `k_x` tương ứng với một sóng phẳng có hướng truyền khác nhau. Nhờ đó một ảnh phức tạp được phân rã thành những “chế độ (mode / 모드) không gian” đơn giản.
 
-> **Chuyển mạch:** Trong **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Nhiễu xạ Fraunhofer và biến đổi Fourier** tiếp nhận điểm tựa từ **Tần số không gian là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thấu kính như bộ biến đổi Fourier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Nhiễu xạ Fraunhofer và biến đổi Fourier** nối từ **Tần số không gian là gì?** sang **Thấu kính như bộ biến đổi Fourier**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiễu xạ Fraunhofer và biến đổi Fourier
 
@@ -41,7 +41,7 @@ với
 
 Khe càng hẹp, vân nhiễu xạ càng rộng. Đây là đánh đổi Fourier: định xứ mạnh trong không gian làm phổ góc hoặc phổ tần số không gian rộng hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Thấu kính như bộ biến đổi Fourier** tiếp nhận điểm tựa từ **Nhiễu xạ Fraunhofer và biến đổi Fourier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàm truyền của hệ tạo ảnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Thấu kính như bộ biến đổi Fourier** nối từ **Nhiễu xạ Fraunhofer và biến đổi Fourier** sang **Hàm truyền của hệ tạo ảnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thấu kính như bộ biến đổi Fourier
 
@@ -51,7 +51,7 @@ Một sóng phẳng có góc truyền khác nhau sẽ hội tụ tại vị trí
 
 Điều này cho phép thực hiện **lọc không gian quang học** bằng cách đặt khẩu độ hoặc mặt nạ tại mặt phẳng Fourier.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Hàm truyền của hệ tạo ảnh** tiếp nhận điểm tựa từ **Thấu kính như bộ biến đổi Fourier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **MTF và “độ nét”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Hàm truyền của hệ tạo ảnh** nối từ **Thấu kính như bộ biến đổi Fourier** sang **MTF và “độ nét”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hàm truyền của hệ tạo ảnh
 
@@ -76,7 +76,7 @@ I(k_x,k_y)
 
 Điều này cho thấy hệ tạo ảnh hoạt động giống một bộ lọc: một số tần số không gian được truyền tốt, một số bị suy giảm hoặc mất hoàn toàn.
 
-> **Chuyển mạch:** Trong **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **MTF và “độ nét”** tiếp nhận điểm tựa từ **Hàm truyền của hệ tạo ảnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đĩa Airy và giới hạn nhiễu xạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **MTF và “độ nét”** nối từ **Hàm truyền của hệ tạo ảnh** sang **Đĩa Airy và giới hạn nhiễu xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## MTF và “độ nét”
 
@@ -86,7 +86,7 @@ MTF cho biết độ tương phản của các mẫu ở tần số không gian 
 
 Vì vậy độ nét không nên chỉ mô tả bằng “số megapixel”. Cảm biến, thấu kính, nhiễu xạ, rung, lấy mẫu và xử lý số cùng quyết định thông tin thực sự được giữ lại.
 
-> **Chuyển mạch:** Ở chặng này của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **MTF và “độ nét”** đã nêu tiêu chí phân biệt, còn **Đĩa Airy và giới hạn nhiễu xạ** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Tiêu chuẩn Rayleigh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **MTF và “độ nét”** đặt tiêu chí; **Đĩa Airy và giới hạn nhiễu xạ** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Tiêu chuẩn Rayleigh** mở rộng hệ quả.
 
 ## Đĩa Airy và giới hạn nhiễu xạ
 
@@ -102,7 +102,7 @@ trong đó `D` là đường kính khẩu độ.
 
 Khẩu độ lớn hơn làm mẫu Airy hẹp hơn và tăng khả năng phân giải góc. Đây là lý do kính thiên văn đường kính lớn có thể phân biệt các nguồn gần nhau tốt hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Đĩa Airy và giới hạn nhiễu xạ** đã nêu tiêu chí phân biệt, còn **Tiêu chuẩn Rayleigh** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Kính hiển vi và khẩu độ số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Đĩa Airy và giới hạn nhiễu xạ** đặt tiêu chí; **Tiêu chuẩn Rayleigh** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Kính hiển vi và khẩu độ số** mở rộng hệ quả.
 
 ## Tiêu chuẩn Rayleigh
 
@@ -116,7 +116,7 @@ Khoảng phân giải góc gần
 
 Đây không phải một biên tuyệt đối của thông tin trong mọi bài toán. Với mô hình nguồn, SNR cao và thuật toán suy luận phù hợp, ta có thể ước lượng vị trí nguồn với độ chính xác tốt hơn độ rộng PSF. Nhưng khả năng tái tạo cấu trúc tùy ý vẫn bị giới hạn mạnh bởi băng thông quang học và nhiễu.
 
-> **Chuyển mạch:** Trong **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Kính hiển vi và khẩu độ số** tiếp nhận điểm tựa từ **Tiêu chuẩn Rayleigh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phóng đại không đồng nghĩa với phân giải** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Kính hiển vi và khẩu độ số** nối từ **Tiêu chuẩn Rayleigh** sang **Phóng đại không đồng nghĩa với phân giải**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kính hiển vi và khẩu độ số
 
@@ -136,7 +136,7 @@ Tăng `NA` cho phép thu các thành phần góc lớn hơn, tương ứng giữ
 
 Dầu nhúng có chiết suất lớn giúp tăng `NA`, vì vậy có thể cải thiện độ phân giải mà không chỉ dựa vào tăng độ phóng đại.
 
-> **Chuyển mạch:** Ở chặng này của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Phóng đại không đồng nghĩa với phân giải** tiếp nhận điểm tựa từ **Kính hiển vi và khẩu độ số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sampling của cảm biến ảnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Phóng đại không đồng nghĩa với phân giải** nối từ **Kính hiển vi và khẩu độ số** sang **Sampling của cảm biến ảnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phóng đại không đồng nghĩa với phân giải
 
@@ -151,7 +151,7 @@ resolution = phân biệt được chi tiết gần nhau đến đâu
 
 “Zoom số” chủ yếu nội suy điểm ảnh; nó không tương đương việc tăng khẩu độ hoặc thu thêm thông tin quang học.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Sampling của cảm biến ảnh** tiếp nhận điểm tựa từ **Phóng đại không đồng nghĩa với phân giải** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deconvolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Sampling của cảm biến ảnh** nối từ **Phóng đại không đồng nghĩa với phân giải** sang **Deconvolution**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sampling của cảm biến ảnh
 
@@ -165,7 +165,7 @@ Nếu hệ quang truyền tần số cao hơn mức cảm biến có thể lấy
 
 Do đó thiết kế camera phải ghép hợp lý MTF của thấu kính, kích thước điểm ảnh (pixel / 픽셀) và bộ lọc chống aliasing nếu cần.
 
-> **Chuyển mạch:** Trong **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Deconvolution** tiếp nhận điểm tựa từ **Sampling của cảm biến ảnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Aberration và phase** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Deconvolution** nối từ **Sampling của cảm biến ảnh** sang **Aberration và phase**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Deconvolution
 
@@ -181,7 +181,7 @@ Nhưng nếu `H` rất nhỏ ở một tần số, phép chia khuếch đại nh
 
 Đây là ví dụ điển hình của bài toán ngược: khôi phục nguồn từ dữ liệu đã bị hệ đo làm mờ và thêm nhiễu.
 
-> **Chuyển mạch:** Ở chặng này của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Aberration và phase** tiếp nhận điểm tựa từ **Deconvolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coherent và incoherent imaging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Aberration và phase** nối từ **Deconvolution** sang **Coherent và incoherent imaging**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Aberration và phase
 
@@ -191,7 +191,7 @@ Trong ngôn ngữ Fourier, quang sai làm thay đổi hàm pupil phức và từ
 
 Điều này cho thấy “hình ảnh bị mờ” có thể đến từ nhiều cơ chế: nhiễu xạ, defocus, quang sai, chuyển động hoặc sampling.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Coherent và incoherent imaging** tiếp nhận điểm tựa từ **Aberration và phase** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Spatial filtering** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Coherent và incoherent imaging** nối từ **Aberration và phase** sang **Spatial filtering**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Coherent và incoherent imaging
 
@@ -201,7 +201,7 @@ Hai trường hợp có hàm truyền khác nhau. Vì vậy không thể luôn d
 
 Laser microscopy và imaging với ánh sáng trắng có thể có hành vi rất khác dù dùng cùng hệ thấu kính.
 
-> **Chuyển mạch:** Trong **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Spatial filtering** tiếp nhận điểm tựa từ **Coherent và incoherent imaging** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với thị giác máy tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Spatial filtering** nối từ **Coherent và incoherent imaging** sang **Liên hệ với thị giác máy tính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Spatial filtering
 
@@ -211,7 +211,7 @@ Chặn tần số cao tạo lọc thông thấp và làm ảnh mượt hơn. Ch�
 
 Thí nghiệm lọc không gian quang học cho thấy nhiều thao tác quen thuộc trong xử lý ảnh số có thể được thực hiện trực tiếp bằng lan truyền sóng và thấu kính.
 
-> **Chuyển mạch:** Ở chặng này của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Liên hệ với thị giác máy tính** tiếp nhận điểm tựa từ **Spatial filtering** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Liên hệ với thị giác máy tính** nối từ **Spatial filtering** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với thị giác máy tính
 
@@ -231,7 +231,7 @@ cảnh thật
 
 Mô hình AI chỉ nhìn thấy dữ liệu ở cuối chuỗi này; hiểu vật lý cảm biến giúp phân biệt đặc trưng của thế giới với sản phẩm tạo ra (artifact / 산출물) của hệ đo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên hệ với thị giác máy tính** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên hệ với thị giác máy tính** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -239,7 +239,7 @@ Một hệ tạo ảnh là một **kênh truyền thông tin không gian**. Kh�
 
 Độ phân giải vì vậy không phải một con số độc lập của thấu kính hay sensor mà là kết quả của toàn hệ.
 
-> **Chuyển mạch:** Trong **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -255,7 +255,7 @@ Không. Trước khi tới sensor, khẩu độ đã biến nguồn điểm thà
 
 Không. Nếu hàm truyền bằng gần không ở một dải tần số và dữ liệu bị chìm trong nhiễu, thông tin đó không thể được tái tạo duy nhất nếu không thêm giả định hoặc prior.
 
-> **Chuyển mạch:** Ở chặng này của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Quang học Fourier, giới hạn nhiễu xạ và hệ tạo ảnh**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

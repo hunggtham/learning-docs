@@ -10,7 +10,7 @@ Sự khác biệt đó có thể được mã hóa bởi **bất biến tô pô 
 
 Để hiểu nguồn gốc của bất biến này, trước tiên cần hiểu pha hình học.
 
-> **Chuyển mạch:** Trong **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Tiến hóa đoạn nhiệt và pha Berry** tiếp nhận điểm tựa từ **Vì sao topology cần nhiều hơn khái niệm band gap?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Berry liên kết (connection / 연결) và Berry curvature** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Tiến hóa đoạn nhiệt và pha Berry** nối từ **Vì sao topology cần nhiều hơn khái niệm band gap?** sang **Berry liên kết (connection / 연결) và Berry curvature**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tiến hóa đoạn nhiệt và pha Berry
 
@@ -46,7 +46,7 @@ Pha của véc-tơ (vector / 벡터) riêng tại từng điểm có tự do gau
 
 Nhưng pha Berry quanh vòng kín, modulo `2\pi`, có nội dung vật lý gauge-invariant.
 
-> **Chuyển mạch:** Ở chặng này của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Berry liên kết (connection / 연결) và Berry curvature** tiếp nhận điểm tựa từ **Tiến hóa đoạn nhiệt và pha Berry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hình học của dải Bloch trong không gian k** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Berry liên kết (connection / 연결) và Berry curvature** nối từ **Tiến hóa đoạn nhiệt và pha Berry** sang **Hình học của dải Bloch trong không gian k**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Berry liên kết (connection / 연결) và Berry curvature
 
@@ -80,7 +80,7 @@ Cấu trúc này rất giống điện từ học:
 
 Không gian tham số ở đây có thể là không gian động lượng `\mathbf k`, hướng từ trường hoặc tập tham số điều khiển khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Hình học của dải Bloch trong không gian k** tiếp nhận điểm tựa từ **Berry liên kết (connection / 연결) và Berry curvature** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng Hall lượng tử nguyên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Hình học của dải Bloch trong không gian k** nối từ **Berry liên kết (connection / 연결) và Berry curvature** sang **Hiệu ứng Hall lượng tử nguyên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hình học của dải Bloch trong không gian k
 
@@ -106,7 +106,7 @@ Trong động lực bán cổ điển của wavepacket electron,
 
 Hạng thứ hai là vận tốc dị thường (anomalous velocity), có thể tạo đáp ứng ngang mà mô hình Drude đơn giản không có.
 
-> **Chuyển mạch:** Trong **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Hiệu ứng Hall lượng tử nguyên** tiếp nhận điểm tựa từ **Hình học của dải Bloch trong không gian k** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số Chern là thuộc tính toàn cục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Hiệu ứng Hall lượng tử nguyên** nối từ **Hình học của dải Bloch trong không gian k** sang **Số Chern là thuộc tính toàn cục**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng Hall lượng tử nguyên
 
@@ -133,7 +133,7 @@ Vì `C_n` là số nguyên, nhiễu nhỏ hoặc thay đổi tham số liên t�
 
 Đây là nguồn gốc của độ bền đáng kinh ngạc của lượng tử hóa Hall.
 
-> **Chuyển mạch:** Ở chặng này của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Số Chern là thuộc tính toàn cục** tiếp nhận điểm tựa từ **Hiệu ứng Hall lượng tử nguyên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bulk–ranh giới (boundary / 경계) correspondence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Số Chern là thuộc tính toàn cục** nối từ **Hiệu ứng Hall lượng tử nguyên** sang **Bulk–ranh giới (boundary / 경계) correspondence**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Số Chern là thuộc tính toàn cục
 
@@ -147,7 +147,7 @@ Một trực giác đơn giản là winding number: một vòng có số lần q
 
 Trong band topology, đóng gap đóng vai trò như điểm singular cho phép bất biến đổi giá trị.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Số Chern là thuộc tính toàn cục** đã nêu tiêu chí phân biệt, còn **Bulk–ranh giới (boundary / 경계) correspondence** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Topological insulator và đối xứng đảo thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Số Chern là thuộc tính toàn cục** đặt tiêu chí; **Bulk–ranh giới (boundary / 경계) correspondence** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Topological insulator và đối xứng đảo thời gian** mở rộng hệ quả.
 
 ## Bulk–ranh giới (boundary / 경계) correspondence
 
@@ -159,7 +159,7 @@ Trong hiệu ứng Hall lượng tử, bulk có gap nhưng cạnh có kênh dẫ
 
 Đây là bulk–ranh giới (boundary / 경계) correspondence: topology của bulk quyết định sự tồn tại của chế độ (mode / 모드) biên.
 
-> **Chuyển mạch:** Trong **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Bulk–ranh giới (boundary / 경계) correspondence** đã nêu tiêu chí phân biệt, còn **Topological insulator và đối xứng đảo thời gian** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Spin–orbit coupling: từ tương đối tính nguyên tử đến topology vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Bulk–ranh giới (boundary / 경계) correspondence** đặt tiêu chí; **Topological insulator và đối xứng đảo thời gian** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Spin–orbit coupling: từ tương đối tính nguyên tử đến topology vật liệu** mở rộng hệ quả.
 
 ## Topological insulator và đối xứng đảo thời gian
 
@@ -171,7 +171,7 @@ Topological insulator 2D hoặc 3D có thể có bulk gap nhờ spin–orbit cou
 
 Tạp chất từ, tương tác, nhiệt độ, ghép giữa hai bề mặt hoặc đóng gap vẫn có thể phá hành vi lý tưởng.
 
-> **Chuyển mạch:** Ở chặng này của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Spin–orbit coupling: từ tương đối tính nguyên tử đến topology vật liệu** tiếp nhận điểm tựa từ **Topological insulator và đối xứng đảo thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pha Berry trong graphene** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Spin–orbit coupling: từ tương đối tính nguyên tử đến topology vật liệu** nối từ **Topological insulator và đối xứng đảo thời gian** sang **Pha Berry trong graphene**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Spin–orbit coupling: từ tương đối tính nguyên tử đến topology vật liệu
 
@@ -189,7 +189,7 @@ special relativity
 → topological material
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Pha Berry trong graphene** tiếp nhận điểm tựa từ **Spin–orbit coupling: từ tương đối tính nguyên tử đến topology vật liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dirac và Weyl semimetal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Pha Berry trong graphene** nối từ **Spin–orbit coupling: từ tương đối tính nguyên tử đến topology vật liệu** sang **Dirac và Weyl semimetal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pha Berry trong graphene
 
@@ -204,7 +204,7 @@ Pha này ảnh hưởng:
 
 Câu “electron graphene là hạt tương đối tính không khối lượng” chỉ là mô tả hiệu dụng năng lượng thấp. Electron cơ bản trong chân không vẫn có khối lượng nghỉ.
 
-> **Chuyển mạch:** Trong **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Dirac và Weyl semimetal** tiếp nhận điểm tựa từ **Pha Berry trong graphene** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lý thuyết hiện đại của phân cực điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Dirac và Weyl semimetal** nối từ **Pha Berry trong graphene** sang **Lý thuyết hiện đại của phân cực điện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dirac và Weyl semimetal
 
@@ -216,7 +216,7 @@ Trên bề mặt, có thể xuất hiện Fermi arc nối hình chiếu của c�
 
 Đây là ví dụ pha tô pô khi bulk không có gap hoàn toàn.
 
-> **Chuyển mạch:** Ở chặng này của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Lý thuyết hiện đại của phân cực điện** tiếp nhận điểm tựa từ **Dirac và Weyl semimetal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bơm Thouless** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Lý thuyết hiện đại của phân cực điện** nối từ **Dirac và Weyl semimetal** sang **Bơm Thouless**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lý thuyết hiện đại của phân cực điện
 
@@ -226,7 +226,7 @@ Thay đổi phân cực của vật rắn có thể được biểu diễn bằn
 
 Điều này cho thấy pha Berry không chỉ xuất hiện trong các vật liệu “kỳ lạ”; nó còn tham gia mô tả một đại lượng quen thuộc như phân cực điện.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Bơm Thouless** tiếp nhận điểm tựa từ **Lý thuyết hiện đại của phân cực điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng Hall lượng tử phân số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Bơm Thouless** nối từ **Lý thuyết hiện đại của phân cực điện** sang **Hiệu ứng Hall lượng tử phân số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bơm Thouless
 
@@ -238,7 +238,7 @@ Trong điều kiện lý tưởng, điện tích bơm bị lượng tử hóa.
 
 Đây là ví dụ trực tiếp nối bất biến tô pô với đại lượng vận chuyển đo được.
 
-> **Chuyển mạch:** Trong **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Hiệu ứng Hall lượng tử phân số** tiếp nhận điểm tựa từ **Bơm Thouless** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Berry curvature và anomalous Hall tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Hiệu ứng Hall lượng tử phân số** nối từ **Bơm Thouless** sang **Berry curvature và anomalous Hall tác động (effect / 효과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng Hall lượng tử phân số
 
@@ -248,7 +248,7 @@ Không thể giải thích đầy đủ bằng dải một hạt và số Chern 
 
 Hiệu ứng Hall lượng tử phân số mở đường tới khái niệm **topological thứ tự (order / 순서)**, nơi phân loại pha không chỉ dựa trên phá vỡ đối xứng Landau.
 
-> **Chuyển mạch:** Ở chặng này của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Berry curvature và anomalous Hall tác động (effect / 효과)** tiếp nhận điểm tựa từ **Hiệu ứng Hall lượng tử phân số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính topology bằng số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Berry curvature và anomalous Hall tác động (effect / 효과)** nối từ **Hiệu ứng Hall lượng tử phân số** sang **Tính topology bằng số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Berry curvature và anomalous Hall tác động (effect / 효과)
 
@@ -258,7 +258,7 @@ Phần nội tại của anomalous Hall conductivity liên hệ với tích phâ
 
 Do đó hình học của hàm sóng lượng tử có thể tạo hệ quả vận chuyển vĩ mô trực tiếp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Tính topology bằng số** tiếp nhận điểm tựa từ **Berry curvature và anomalous Hall tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao bất biến chỉ đổi khi gap đóng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Tính topology bằng số** nối từ **Berry curvature và anomalous Hall tác động (effect / 효과)** sang **Vì sao bất biến chỉ đổi khi gap đóng?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính topology bằng số
 
@@ -270,7 +270,7 @@ Các thuật toán tốt dùng overlap gauge-covariant, Wilson vòng lặp (loop
 
 Đây là bài học quan trọng cho scientific computing: biểu diễn số phải tôn trọng đối xứng và bất biến của lý thuyết, nếu không kết quả có thể phụ thuộc quy ước tùy ý.
 
-> **Chuyển mạch:** Trong **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Vì sao bất biến chỉ đổi khi gap đóng?** tiếp nhận điểm tựa từ **Tính topology bằng số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều kiện đoạn nhiệt và giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Vì sao bất biến chỉ đổi khi gap đóng?** nối từ **Tính topology bằng số** sang **Điều kiện đoạn nhiệt và giới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao bất biến chỉ đổi khi gap đóng?
 
@@ -282,7 +282,7 @@ Khi đó eigenstate có thể biến dạng trơn theo `\lambda`. Một số ngu
 
 Sau đó gap có thể mở lại với topology mới.
 
-> **Chuyển mạch:** Ở chặng này của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Vì sao bất biến chỉ đổi khi gap đóng?** đã nêu tiêu chí phân biệt, còn **Điều kiện đoạn nhiệt và giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Vì sao bất biến chỉ đổi khi gap đóng?** đặt tiêu chí; **Điều kiện đoạn nhiệt và giới hạn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Điều kiện đoạn nhiệt và giới hạn
 
@@ -292,7 +292,7 @@ Bất biến band một hạt rất mạnh với hệ electron gần độc lậ
 
 Topological protection cũng không loại bỏ mọi nguồn điện trở thực nghiệm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, các dấu vết trong **Điều kiện đoạn nhiệt và giới hạn** được đọc cùng nhau ở **Mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, các dấu vết trong **Điều kiện đoạn nhiệt và giới hạn** được đọc cùng nhau ở **Mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -309,7 +309,7 @@ Bloch states
 
 Pha Berry là thông tin hình học; số Chern là thông tin toàn cục.
 
-> **Chuyển mạch:** Trong **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -329,7 +329,7 @@ Không. Lượng tử hóa Hall, trạng thái biên, dao động lượng tử 
 
 Không. Cần xét symmetry, gap, cấu trúc toàn cục của các dải và bất biến thích hợp.
 
-> **Chuyển mạch:** Ở chặng này của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Pha Berry, hiệu ứng Hall lượng tử và vật chất tô pô**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
