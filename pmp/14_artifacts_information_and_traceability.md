@@ -134,6 +134,18 @@ Không phải mọi dự án (project / 프로젝트) cần zero traceability de
 
 > **Nối mạch:** **Dự án (project / 프로젝트) management plan và subsidiary plans** nối từ **Traceability debt** sang **Baseline và working document**, vì cơ chế trước tạo đầu vào cho bước sau.
 
+## Traceability state machine và orphan detection
+
+Traceability mạnh hơn khi mỗi node không chỉ có link mà còn có **state**. Một requirement có thể proposed → analyzed → approved → implemented → verified → accepted → retired; risk có thể identified → assessed → response planned → monitored → materialized/retired; change request có thể submitted → analyzed → decided → implemented → verified → closed.
+
+Khi state transition được mô hình hóa, dự án có thể tìm **orphan** và **stuck transition**. Requirement đã implemented nhưng chưa có verification evidence là orphan ở chiều downstream. Test case còn active nhưng requirement upstream đã superseded là orphan ngược. Change đã approved nhưng baseline/configuration chưa update là propagation gap.
+
+Điểm sâu ở đây là traceability không chỉ trả lời “A link tới B không?” mà còn “trạng thái của A có tương thích với trạng thái của B không?”. Link graph đầy đủ nhưng state inconsistency vẫn tạo false confidence.
+
+Một kiểm tra thực dụng là hỏi cho mỗi critical node: predecessor nào biện minh sự tồn tại của nó, successor nào chứng minh nó đã được xử lý, transition nào cần authority, và evidence nào đóng transition. Đây là cách biến RTM từ bảng compliance thành control system.
+
+> **Nối mạch:** State-aware traceability phát hiện orphan/stuck work; **management plan và subsidiary plans** tiếp theo cho thấy các artifact quản trị giữ policy/rule nào điều khiển những transition đó.
+
 ## Dự án (project / 프로젝트) management plan và subsidiary plans
 
 Dự án (project / 프로젝트) management plan là integrated điều khiển (control / 제어) mô hình (model / 모델). Các subsidiary plan như phạm vi (scope / 범위), schedule, chi phí (cost / 비용), chất lượng (quality / 품질), tài nguyên (resource / 자원), communication, rủi ro (risk / 위험), procurement hoặc stakeholder engagement chỉ nên tách khi độ phức tạp (complexity / 복잡도) cần separation. Chúng trả lời “chúng ta sẽ quản lý lĩnh vực (domain / 도메인) này như thế nào?”, không phải “trạng thái (state / 상태) hiện tại là gì?”.
@@ -163,6 +175,18 @@ Trọng yếu (critical / 중요) sản phẩm tạo ra (artifact / 산출물) n
 Superseded sản phẩm tạo ra (artifact / 산출물) vẫn có historical giá trị (value / 값). Xóa phiên bản (version / 버전) cũ làm mất kiểm tra (audit / 감사) trail và khiến quyết định (decision / 결정) cũ khó hiểu.
 
 > **Nối mạch:** Artifact lifecycle tạo lịch sử có thể truy nguyên; **Immutable history và audit trail** giữ bằng chứng. **Change request như information packet** kiểm tra ai đổi gì, vì sao và với tác động nào.
+
+## Artifact conflict, precedence và reconciliation
+
+Trong dự án thực tế, nhiều artifact có thể cùng nói về một fact nhưng không đồng nhất. Contract ghi delivery 30/6, schedule forecast 15/7, steering minutes nói “team aims for 5/7”, còn customer email nhắc “đã cam kết 30/6”. Bài toán không phải chọn document mới nhất một cách máy móc mà xác định **semantic role và authority** của từng artifact.
+
+Conflict resolution cần ít nhất bốn câu hỏi: artifact nào là authoritative cho loại fact này; version/effective date nào đang có hiệu lực; artifact nào chỉ là view/forecast chứ không tạo obligation; và change nào lẽ ra phải propagate nhưng chưa propagate. **Newest** không luôn thắng: một draft mới không override approved baseline; dashboard aggregate không override signed agreement; meeting note không tự thay contract.
+
+Khi conflict được phát hiện, không nên sửa từng file độc lập để “cho giống nhau”. Cần reconcile tại source-of-truth, thực hiện đúng approval/change path, rồi propagate downstream views. Nếu không, organization chỉ che inconsistency thay vì sửa trạng thái.
+
+Có thể nghĩ đây là **precedence graph**: legal/contractual authority, governance-approved baseline, operational source system và derived report có quan hệ khác nhau. Precedence phụ thuộc loại decision; cùng artifact có thể authoritative cho một field nhưng không authoritative cho field khác.
+
+> **Nối mạch:** Artifact precedence giải quyết nhiều “truth” cạnh tranh; **immutable history/audit trail** tiếp theo bảo đảm quá trình reconcile không xóa bằng chứng về trạng thái và quyết định trước đó.
 
 ## Immutable lịch sử (history / 이력) và kiểm tra (audit / 감사) trail
 
@@ -216,6 +240,18 @@ Trong sự cố (incident / 인시던트) hoặc kiểm tra (audit / 감사), pr
 
 > **Nối mạch:** **Thông tin (information / 정보) radiator và dashboard** nối từ **Quyết định (decision / 결정) provenance** sang **Thông tin (information / 정보) compression luôn làm mất detail**, vì cơ chế trước tạo đầu vào cho bước sau.
 
+## Evidence strength và provenance chain
+
+Một artifact chỉ thuyết phục đến mức ta biết **nó được tạo từ đâu, theo rule nào và có thể kiểm chứng ra sao**. Vì vậy provenance chain nên nối source event/data → transformation → interpretation → decision. Khi chain bị đứt, report có thể đúng về mặt số học nhưng yếu về mặt evidence.
+
+Evidence strength phụ thuộc nhiều dimension: source có trực tiếp không, data có current không, transformation có reproducible không, semantic definition có stable không, approval/authority có phù hợp không, và có independent corroboration khi consequence lớn không. Một screenshot không có timestamp/source có evidence value thấp hơn raw system record; nhưng raw record cũng không đủ nếu metric definition sai.
+
+Điểm quan trọng là **evidence quality phải proportional với decision consequence**. Daily prioritization có thể dùng approximate operational data. Regulatory attestation hoặc contractual claim cần chain mạnh hơn, retention rõ hơn và auditability cao hơn.
+
+Provenance cũng giúp tranh luận productive hơn. Thay vì “số của tôi khác số của bạn”, hai bên có thể trace khác biệt đến source, cutoff time, filter hoặc semantic definition. Khi disagreement được chuyển thành lineage problem, nó trở thành thứ có thể sửa.
+
+> **Nối mạch:** Provenance xác định độ mạnh của evidence; **information radiator và dashboard** tiếp theo là lớp presentation nén evidence đó cho decision cadence, nên phải giữ đường quay lại nguồn.
+
 ## Thông tin (information / 정보) radiator và dashboard
 
 Adaptive nhóm (team / 팀) thường dùng visual board, burnup/burndown, cumulative luồng (flow / 흐름) hoặc bản phát hành (release / 릴리스) forecast như thông tin (information / 정보) radiator. Predictive dự án (project / 프로젝트) dùng milestone/Gantt/EVM/dashboard. công cụ (tool / 도구) khác nhau nhưng bài toán (problem / 문제) giống nhau: làm trạng thái (state / 상태) và deviation visible đủ nhanh.
@@ -243,6 +279,18 @@ Dashboard thường dùng cutoff thời gian (time / 시간) và transform. Mộ
 Trọng yếu (critical / 중요) quyết định (decision / 결정) nên kiểm tra freshness và underlying bằng chứng (evidence / 증거), đặc biệt khi trạng thái (state / 상태) đang thay đổi nhanh.
 
 > **Nối mạch:** **Thông tin (information / 정보) độ trễ (latency / 지연 시간)** nối từ **Dashboard là view, không phải reality** sang **Communication channels formula và giới hạn của nó**, vì cơ chế trước tạo đầu vào cho bước sau.
+
+## Decision-grade data quality
+
+“Data quality tốt” chỉ có meaning khi gắn với quyết định. Một dataset có thể accurate nhưng quá stale; complete nhưng sai semantic; current nhưng không representative. Với project information, nên kiểm tra tối thiểu **accuracy, completeness, timeliness, consistency, representativeness và lineage**.
+
+Các dimension tạo trade-off. Status dashboard real-time có thể timely nhưng noisy; monthly finance close chậm hơn nhưng authoritative cho actual cost. Stakeholder survey có thể rich nhưng sampling biased. PM không cần một dataset hoàn hảo; cần biết dimension nào critical cho decision đang xét.
+
+Một cách operational là hỏi: nếu dimension này sai, quyết định nào có thể flip? Nếu milestone decision phụ thuộc external approval đã hết hạn, timeliness là critical. Nếu forecast dùng “done” với definition khác nhau giữa team, semantic consistency là critical. Nếu executive report aggregate average che một vendor tail-risk, representativeness/segmentation là critical.
+
+Quality gate vì vậy không chỉ là schema validation. Nó gồm semantic contract, freshness threshold, reconciliation rule và exception handling. Dashboard nên làm visible khi dữ liệu stale/partial thay vì silently render một con số có vẻ precise.
+
+> **Nối mạch:** Decision-grade quality xác định dữ liệu đủ dùng hay chưa; **information latency** tiếp theo giải thích vì sao dữ liệu đúng nhưng đến muộn vẫn có thể tạo quyết định sai.
 
 ## Thông tin (information / 정보) độ trễ (latency / 지연 시간)
 
