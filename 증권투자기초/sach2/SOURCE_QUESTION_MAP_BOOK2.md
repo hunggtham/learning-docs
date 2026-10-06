@@ -11,7 +11,7 @@
 | stock review, early true/false block | distinguish price index, valuation and basic market-analysis statements | B2-U152–U159; B2-U079–U090 | 02 §5–8; 04 §4–5 | PASS |
 | p.200 item 2 / answer explanation | KOSPI200 source example and base/index interpretation | B2-U152, B2-U156, B2-U256 | 04 §4 | PASS |
 | p.201 item 15 / answer explanation | Nikkei 225 source example | B2-U258 | 04 §4 | PASS |
-| p.201 item 16 | distinguish KOSPI, KOSDAQ, S&P 500 and Nikkei 225 as different index examples | B2-U158, B2-U157, B2-U159, B2-U258 | 04 §4–5 | PASS |
+| p.201 item 16 | distinguish KOSPI, KOSDAQ, S&P 500 and Nikkei 225 as different index examples | B2-U158, B2-U257, B2-U159, B2-U258 | 04 §4–5 | PASS |
 | pp.202–203 items around 23–26 | company/industry classification and BCG cell recognition | B2-U035–U040 | 01 §4 | PASS |
 | p.203 item 26 | BCG Question Mark / Star / Cash Cow / Barking Dog distinction | B2-U036–U040 | 01 §4 | PASS |
 | pp.203–204 items around 30–34 | PBR, PER, PSR and related denominator/interpretation distinctions | B2-U079–U090 | 02 §5–9 | PASS |
