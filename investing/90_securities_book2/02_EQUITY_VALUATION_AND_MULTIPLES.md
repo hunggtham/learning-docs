@@ -2,7 +2,7 @@
 
 Bài 1 đã tách quyền sở hữu, dòng tiền và tỷ số hiệu quả. Bài này dùng chúng để giải quyết câu hỏi trung tâm của định giá (valuation / 가치평가): với rủi ro và thời điểm đã biết, một dòng tiền tương lai đáng giá bao nhiêu hôm nay? Các công thức trong source không phải máy tạo giá mục tiêu; chúng là cách làm lộ giả định về tăng trưởng, rủi ro, tái đầu tư và cấu trúc vốn.
 
-## 1. Lãi kép, suất sinh lợi yêu cầu (required return / 요구수익률) và CAPM
+## 1. Lãi kép, tỷ suất sinh lợi (rate of return / 수익률), suất sinh lợi yêu cầu (required return / 요구수익률) và CAPM
 
 Một khoản tiền tăng theo lãi kép:
 
@@ -56,7 +56,15 @@ FCFE (Free Cash Flow to Equity) là tiền còn lại cho cổ đông sau chi đ
 FCFF = FCFE + chi phí lãi sau thuế + dòng tiền trả nợ ròng
 ```
 
-FCFE thường chiết khấu bằng cost of equity; FCFF chiết khấu bằng WACC (Weighted Average Cost of Capital). WACC trộn cost of equity và cost of debt theo trọng số thị trường, đồng thời phản ánh lá chắn thuế của nợ trong mô hình textbook. Dùng FCFF với cost of equity hoặc FCFE với WACC là trộn đối tượng dòng tiền và discount rate.
+Ở đây **dòng tiền trả nợ ròng = nợ đã trả − nợ mới vay**. Vì vậy cách viết trên tương đương với công thức chuẩn `FCFF = FCFE + Interest×(1−T) − Net Borrowing` nếu `Net Borrowing = nợ mới vay − nợ đã trả`. Phải khóa quy ước dấu trước khi thay số; nếu không, cùng một transaction có thể bị cộng hai lần.
+
+FCFE thường chiết khấu bằng cost of equity; FCFF chiết khấu bằng WACC (Weighted Average Cost of Capital / 가중평균자본비용). Source cho cấu trúc WACC theo trọng số vốn chủ và nợ; viết rõ theo quy ước thị trường:
+
+```text
+WACC = [E/(D+E)] × Rₑ + [D/(D+E)] × R_d × (1−T)
+```
+
+Trong đó `E` và `D` là giá trị thị trường của equity/debt, `Rₑ` là cost of equity, `R_d` là cost of debt trước thuế và `T` là thuế suất dùng cho tax shield. Cơ chế là mỗi nguồn vốn đòi một required return khác nhau; WACC là blended hurdle rate cho **FCFF** khi cấu trúc vốn/thuế phù hợp với giả định. Dùng book-value weights, trộn kỳ hạn/risk regime hoặc dùng WACC cho FCFE đều làm sai ownership của discount rate.
 
 ## 4. EVA, NOPAT, invested capital và ROIC
 
@@ -69,7 +77,7 @@ EVA = NOPAT − (Invested Capital × WACC)
 
 `NOPAT` là Net Operating Profit After Tax; `Invested Capital` là vốn hoạt động đã đầu tư; `ROIC = NOPAT / Invested Capital`. Khi ROIC lớn hơn WACC, mỗi đồng vốn mới tạo giá trị kinh tế; khi thấp hơn, tăng trưởng có thể phá hủy giá trị dù doanh thu tăng. Đây là cơ chế giải thích vì sao “tăng trưởng” không tự động tốt.
 
-## 5. PER/EPS
+## 5. PER/EPS: hệ số giá trên lợi nhuận (Price-Earnings Ratio / 주가수익비율)
 
 PER (Price–Earnings Ratio / 주가수익비율) là:
 
@@ -79,7 +87,7 @@ PER = giá thị trường mỗi cổ phiếu / EPS
 
 EPS (Earnings Per Share) là lợi nhuận quy cho một cổ phiếu theo mẫu số phù hợp. Có thể diễn giải giá = EPS × PER: thị trường vừa định giá mức lợi nhuận, vừa định giá mức multiple cho tăng trưởng và rủi ro. EPS âm, lợi nhuận chu kỳ hoặc một khoản bất thường làm PER kém ổn định; hãy dùng lợi nhuận chuẩn hóa và so sánh với doanh nghiệp cùng mô hình.
 
-## 6. PBR và ROE
+## 6. PBR (Price-to-Book Ratio / 주가순자산비율) và ROE
 
 PBR (Price-to-Book Ratio / 주가순자산비율) so giá thị trường với BPS (Book Value Per Share):
 
@@ -90,7 +98,7 @@ EPS = BPS × ROE
 
 Vì vậy, cùng một PBR có thể hợp lý hoặc đắt tùy ROE và chi phí vốn. PBR thấp không tự động là rẻ: tài sản ghi sổ có thể suy giảm, ROE có thể thấp hơn cost of equity, hoặc doanh nghiệp đang phá hủy giá trị. PBR–ROE là đối chiếu giữa giá trị ghi sổ và khả năng sinh lời, không phải công thức thay thế phân tích tài sản.
 
-## 7. PSR và margin
+## 7. PSR (Price-to-Sales Ratio / 주가매출비율) và margin
 
 PSR (Price-to-Sales Ratio / 주가매출액비율) dùng doanh thu trên mỗi cổ phiếu (SPS):
 
