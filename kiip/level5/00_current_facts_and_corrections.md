@@ -123,7 +123,7 @@ Sau khi học các trường hợp dễ thay đổi, ta cần một nhóm đối
 - câu hỏi dẫn tài liệu/thời điểm cũ: có thể gặp `경찰 ↔ 검찰 ↔ 법원`;  
 - đừng nói “검찰청 chỉ đổi tên thành 공소청”, vì **chức năng và cấu trúc quyền hạn cũng thay đổi**.
 
-Nguồn chính thức: 국가법령정보센터, `중대범죄수사청 조직 및 운영에 관한 법률`, 시행 2026-10-02.
+Nguồn chính thức: 국가법령정보센터, `중대범죄수사청 조직 및 운영에 관한 법률`, 시행 2026-10-02. https://www.law.go.kr/lsRvsRsnListP.do?lsId=015090
 
 ## 8. 식품 날짜표시 — 유통기한 → 소비기한
 
@@ -139,7 +139,7 @@ Nguồn chính thức: 국가법령정보센터, `중대범죄수사청 조직 �
 
 Ngoại lệ/chuyển tiếp có thể tồn tại theo loại sản phẩm; ví dụ 냉장보관 우유류에는 별도 적용시기가 있습니다. Vì vậy không suy rằng mọi sản phẩm đều chuyển cùng một ngày trong mọi chi tiết pháp lý.
 
-Nguồn: 식품의약품안전처 / 식품 등의 표시·광고에 관한 법률 시행규칙.
+Nguồn: 식품의약품안전처 / 식품 등의 표시·광고에 관한 법률 시행규칙. https://www.korea.kr/news/healthView.do?newsId=148911057
 
 ## 9. 고교학점제 — 단계 도입 → 2025학년도 전면 적용
 
@@ -157,7 +157,7 @@ Mental model hiện hành:
 
 Theo lộ trình chính sách, 기준 졸업학점은 종전 `204단위` 체계에서 `192학점` 체계로 조정되었습니다. Khi thi KIIP, ưu tiên hiểu **학생 선택과 학점 누적** hơn là thuộc chi tiết kỹ thuật nếu giáo trình không nhấn mạnh.
 
-Nguồn: 교육부 / 고교학점제 정책자료.
+Nguồn: 교육부 / 고교학점제 정책자료. https://www.korea.kr/special/policyCurationView.do?newsId=148866513
 
 ## 10. 외국인등록증 — 실물 중심 → 모바일 외국인등록증
 
@@ -173,7 +173,7 @@ Nguồn: 교육부 / 고교학점제 정책자료.
 
 Điểm thi: `외국인등록` 제도 자체가 없어진 것이 아니라 **신분증의 디지털 형태가 추가된 것**입니다.
 
-Nguồn: 법무부 출입국·외국인정책본부, 2025-01-10 시행.
+Nguồn: 법무부 출입국·외국인정책본부, 2025-01-10 시행. https://www.immigration.go.kr/bbs/immigration/220/591020/artclView.do
 
 ## 11. 사회통합프로그램 교육비 — 무상 운영 → 일부 유료화
 
@@ -199,7 +199,7 @@ Nguồn: 법무부 출입국·외국인정책본부, 2025-01-10 시행.
 
 Đây là ví dụ cho xu hướng `출입국 행정의 디지털화`. Tuy nhiên 대상·면제·제출방법 có thể thay đổi theo loại người nhập cảnh, nên đây là current-practice fact chứ không phải “quy tắc vĩnh viễn”.
 
-Nguồn: 법무부 `2026년 외국인정책 시행계획` (2025년 주요정책 추진결과).
+Nguồn: 법무부 `2026년 외국인정책 시행계획` (2025년 주요정책 추진결과; 모바일 외국인등록증, KIIP 교육비 일부 유료화, 전자입국신고 포함).
 
 ## 13. Cách học fact có version
 
