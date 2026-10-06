@@ -1,10 +1,10 @@
 # 1. Nền tảng đầu tư, chứng khoán và phân tích kinh tế–tài chính
 
-Sách mở bằng một phân biệt nền tảng: đầu tư là từ bỏ tiêu dùng hiện tại để nhận dòng lợi ích tương lai, còn phân tích chứng khoán là tìm xem quyền lợi đó được tạo ra và định giá qua cơ chế nào. Bài này nối khái niệm đầu tư với chu kỳ kinh doanh, chỉ báo kinh tế, báo cáo tài chính và các tỷ số hiệu quả. Khi nắm được chuỗi đó, người học có thể đọc các công thức định giá ở bài 2 mà không nhầm giá thị trường với giá trị kinh tế.
+Sách mở bằng một phân biệt nền tảng: đầu tư là từ bỏ tiêu dùng hiện tại để nhận dòng lợi ích tương lai, còn phân tích chứng khoán (securities analysis / 증권분석) là tìm xem quyền lợi đó được tạo ra và định giá qua cơ chế nào. Bài này nối khái niệm đầu tư với chu kỳ kinh doanh, chỉ báo kinh tế, báo cáo tài chính và các tỷ số hiệu quả. Khi nắm được chuỗi đó, người học có thể đọc các công thức định giá ở bài 2 mà không nhầm giá thị trường với giá trị kinh tế.
 
 ## 1. Đầu tư, tài sản và chứng khoán
 
-Đầu tư thực (real investment / 실물투자) tạo ra hoặc mở rộng năng lực sản xuất, như máy móc, nhà xưởng hay hàng tồn kho. Đầu tư tài chính (financial investment / 금융투자) mua một quyền đòi hỏi đối với dòng tiền hoặc tài sản của tổ chức khác. Cổ phiếu (stock / 주식) đại diện cho quyền sở hữu residual: cổ đông nhận phần còn lại sau khi doanh nghiệp thanh toán nghĩa vụ. Trái phiếu (bond / 채권) là quyền đòi hỏi theo hợp đồng: coupon và gốc được ưu tiên hơn cổ tức nhưng bị giới hạn theo điều khoản.
+Đầu tư thực (real investment / 실물투자) tạo ra hoặc mở rộng năng lực sản xuất, như máy móc, nhà xưởng hay hàng tồn kho. Đầu tư tài chính (financial investment / 금융투자) mua một quyền đòi hỏi đối với dòng tiền hoặc tài sản của tổ chức khác. Chứng khoán (securities / 증권) là quyền tài chính được phát hành theo một cấu trúc pháp lý; trong source, hai dạng nền tảng là cổ phiếu và trái phiếu. Cổ phiếu (stock / 주식) đại diện cho quyền sở hữu residual: cổ đông nhận phần còn lại sau khi doanh nghiệp thanh toán nghĩa vụ. Trái phiếu (bond / 채권) là quyền đòi hỏi theo hợp đồng: coupon và gốc được ưu tiên hơn cổ tức nhưng bị giới hạn theo điều khoản.
 
 Vì hai loại quyền lợi có cơ chế khác nhau, cùng một “lợi suất” không có nghĩa cùng một rủi ro. Cổ phiếu phụ thuộc vào lợi nhuận tương lai, pha loãng và định giá kỳ vọng; trái phiếu phụ thuộc vào khả năng trả nợ, lãi suất và thời hạn. Chứng chỉ, quỹ và chỉ số gom các quyền lợi đó thành sản phẩm hoặc thước đo. Đọc phần sau theo câu hỏi “dòng tiền nào trả cho ai, trong điều kiện nào?”; đó là invariant cần mang sang định giá.
 
@@ -43,7 +43,7 @@ Tỷ giá đi vào phân tích chứng khoán qua doanh thu, chi phí nhập kh�
 
 ## 3. Chỉ báo tâm lý và khảo sát
 
-Source có công thức cho CSI (Consumer Sentiment Index / 소비자심리지수) và BSI (Business Survey Index / 기업경기실사지수). BSI được xây từ số câu trả lời tích cực và tiêu cực; một dạng chuẩn hóa đọc được là:
+Trong nhóm chỉ báo kinh tế (economic indicators / 경제지표), source có công thức cho CSI (Consumer Sentiment Index / 소비자심리지수) và BSI (Business Survey Index / 기업경기실사지수). BSI được xây từ số câu trả lời tích cực và tiêu cực; một dạng chuẩn hóa đọc được là:
 
 ```text
 BSI = [(số tích cực − số tiêu cực) / tổng số trả lời] × 100 + 100
@@ -123,7 +123,7 @@ Ma trận này không tự đo profitability, ROIC, chất lượng tài sản h
 
 Ví dụ, nếu một mảng có tăng trưởng thị trường 15% nhưng thị phần tương đối 0,6, nó nằm gần `Question Mark`: bước tiếp theo không phải mua vì “tăng trưởng cao”, mà là kiểm tra chi phí giành khách hàng, khả năng nâng thị phần và vốn cần bỏ ra. Nếu một mảng khác tăng trưởng 3% nhưng thị phần tương đối 1,4, nó gần `Cash Cow`; hãy kiểm tra liệu dòng tiền thực sự dương sau capex và vốn lưu động. Các ngưỡng cụ thể phụ thuộc cách doanh nghiệp định nghĩa thị trường, nên đây là ví dụ mental model, không phải chuẩn phân loại phổ quát.
 
-### Các họ financial ratio trong source
+### Các họ tỷ số tài chính (financial ratios / 재무비율) trong source
 
 Source có một block tỷ số lớn trước ROI/ROE. OCR của một số nhãn và mẫu số bị hỏng, nên learning route không gán tên công thức khi evidence không đủ; nhưng mục đích kinh tế của bốn họ tỷ số vẫn đọc được:
 
@@ -138,7 +138,7 @@ Các công thức OCR xác nhận chắc nhất trong block này là ROI và ROE
 
 ## 5. ROI và ROE
 
-ROI (Return on Investment) đo lợi nhuận so với khoản đầu tư; ROE (Return on Equity) đo lợi nhuận quy cho vốn chủ sở hữu. Dạng khái quát:
+Tỷ suất sinh lợi trên đầu tư (Return on Investment, ROI / 투자수익률) đo lợi nhuận so với khoản đầu tư; tỷ suất sinh lợi trên vốn chủ sở hữu (Return on Equity, ROE / 자기자본이익률) đo lợi nhuận quy cho vốn chủ sở hữu. Dạng khái quát:
 
 ```text
 ROI = lợi nhuận / vốn đầu tư × 100%
