@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **086. 프로세스 스케줄링 (Process Scheduling)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **086. 프로세스 스케줄링 (Process Scheduling)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **086. 프로세스 스케줄링 (Process Scheduling)**, **핵심 키워드 (Từ khóa)** nối từ **학습 목표 (Mục tiêu)** sang **선행·연결 개념 (Kiến thức liên kết)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 핵심 키워드 (Từ khóa)
 
 프로세스, 스케줄링
 
-> **Chuyển mạch:** Ở chặng này của **086. 프로세스 스케줄링 (Process Scheduling)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **086. 프로세스 스케줄링 (Process Scheduling)**, **핵심 키워드 (Từ khóa)** dẫn sang **선행·연결 개념 (Kiến thức liên kết)**, nơi tài liệu chuẩn và vị trí sở hữu được chỉ rõ để biết chỗ đào sâu tiếp; **읽는 방법 (Cách đọc)** mở rộng hệ quả liên quan.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **085. 프로세스 및 스레드 (Process & Thread)**에서 만든 기준을 이어받아 **086. 프로세스 스케줄링 (Process Scheduling)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **086. 프로세스 스케줄링 (Process Scheduling)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **086. 프로세스 스케줄링 (Process Scheduling)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **086. 프로세스 스케줄링 (Process Scheduling)**, **읽는 방법 (Cách đọc)** nối từ **선행·연결 개념 (Kiến thức liên kết)** sang **086. 프로세스 스케줄링 (Process Scheduling)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **086. 프로세스 스케줄링 (Proces
 
 ---
 
-> **Chuyển mạch:** Trong **086. 프로세스 스케줄링 (Process Scheduling)**, **읽는 방법 (Cách đọc)** xác định đầu vào; **086. 프로세스 스케줄링 (Process Scheduling)** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **086. 프로세스 스케줄링 (Process Scheduling)**, **읽는 방법 (Cách đọc)** đặt đầu vào cho **086. 프로세스 스케줄링 (Process Scheduling)**, rồi nối sang phần giải thích tiếp theo.
 
 ## 086. 프로세스 스케줄링 (Process Scheduling)
 
