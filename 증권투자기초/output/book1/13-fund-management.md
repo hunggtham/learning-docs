@@ -116,6 +116,12 @@ Có thể biến việc chọn quỹ thành một chuỗi kiểm tra:
 5. **Kiểm tra con người và quy trình:** năng lực, lịch sử tuân thủ, thay đổi
    quản lý, xung đột lợi ích và tính minh bạch.
 
+Source tách ba lớp lợi suất dùng cho so sánh: `펀드별 수익률` (lợi suất từng
+quỹ), `운용사별 평균수익률` (lợi suất trung bình theo công ty quản lý) và
+`유형수익률` (category return, gộp các quỹ cùng loại theo cách source mô tả).
+Ba con số trả lời ba câu hỏi khác nhau; không dùng average của manager như một
+thước đo rủi ro của một quỹ cụ thể.
+
 Lợi nhuận cao đơn độc có thể chỉ là phần thưởng cho rủi ro cao. Trong cùng một
 nhóm, một quỹ có Sharpe ratio cao hơn tạo nhiều lợi nhuận vượt lãi suất phi rủi
 ro hơn trên mỗi đơn vị biến động. Công thức cơ bản:
@@ -215,6 +221,11 @@ Ví dụ source: `R_p = 10%`, `R_f = 3%`, `σ_p = 14%` cho Sharpe `0,50`. Khi so
 sánh, phải giữ cùng kỳ đo, cùng benchmark và cùng cách tính lợi suất; nếu không,
 một con số cao hơn có thể chỉ do chọn khoảng thời gian thuận lợi.
 
+**Checkpoint câu 29:** answer key chọn **①**. `운용사별 평균수익률` là thước
+đo kết quả trung bình của manager, không phải trực tiếp là một risk metric.
+Source đặt `표준편차`, `베타`, benchmark/category excess return và độ bền của
+thứ hạng vào nhóm tín hiệu dùng để đọc rủi ro/hiệu quả.
+
 ### 10. Kiểm tra hiểu phần quản lý quỹ
 
 1. Beta bằng 1 có chứng minh quỹ không biến động không? Hãy phân biệt “nhạy với
@@ -224,7 +235,7 @@ một con số cao hơn có thể chỉ do chọn khoảng thời gian thuận l
 3. Hãy chọn một mục tiêu 2 năm và một mục tiêu 20 năm, rồi giải thích vì sao cùng
    một kết quả khảo sát khẩu vị có thể dẫn đến hai danh mục khác nhau.
 
-### 12. Bài tập source — reasoning cần có trước khi chọn quỹ
+### 11. Bài tập source — reasoning cần có trước khi chọn quỹ
 
 Các câu hỏi ôn tập cuối chương không kiểm tra việc nhớ tên đơn lẻ. Muốn tự trả
 lời, người học phải nối các quan hệ sau:
@@ -243,7 +254,7 @@ Bảng này là cầu nối giữa lesson và câu hỏi source: nếu chỉ nh�
 không giải thích được cơ chế ở cột phải, câu hỏi vẫn chưa được cover về mặt học
 tập.
 
-### 11. Bảng kiểm tài liệu quỹ theo source
+### 12. Bảng kiểm tài liệu quỹ theo source
 
 | Tài liệu | Trường cần tìm trước khi quyết định |
 |---|---|
