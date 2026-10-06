@@ -1282,6 +1282,9 @@ Phần này hợp nhất các khái niệm còn nằm rải rác trong những t
 - `탈놀이`: 탈을 쓰고 춤·연극·풍자를 결합한 전통 공연입니다. (Diễn xướng/múa mặt nạ.)
 - `민화`: 서민 생활과 소망 등을 자유롭게 표현한 조선 후기의 생활 그림을 넓게 가리킵니다. (Tranh dân gian Minhwa.)
 - `해인사`: 경상남도 합천에 있는 사찰로 팔만대장경 목판을 보관하는 곳으로 유명합니다. (Chùa Haeinsa, nơi lưu giữ mộc bản Tripitaka Koreana.)
+- `해시계`: 해의 그림자 위치로 시간을 측정하는 기구이며 조선의 `앙부일구`가 대표적입니다. (Đồng hồ mặt trời; ví dụ tiêu biểu là Angbuilgu.)
+- `물시계`: 물의 흐름을 이용해 시간을 재는 기구이며 조선의 `자격루`가 대표적입니다. (Đồng hồ nước; ví dụ tiêu biểu là Jagyeongnu.)
+- `냉전`: 제2차 세계대전 이후 미국 중심 진영과 소련 중심 진영의 정치·군사·이념 대립을 말하며 한반도 분단의 국제적 배경을 이해할 때 중요합니다. (Chiến tranh Lạnh, bối cảnh quốc tế quan trọng của chia cắt bán đảo.)
 
 ## B+14. 지역·산업·지리 bổ sung
 
@@ -1295,6 +1298,9 @@ Phần này hợp nhất các khái niệm còn nằm rải rác trong những t
 - `음식문화`: 지역의 자연환경·생산물·역사와 연결되어 형성된 식생활 문화입니다. (Văn hóa ẩm thực.)
 - `전주 한옥마을`: 전주에 있는 대표적인 한옥 밀집 관광·문화 지역입니다. (Làng Hanok Jeonju.)
 - `DMZ`: 군사분계선을 중심으로 남북 사이에 설정된 비무장지대입니다. (Khu phi quân sự DMZ.)
+- `지역 정체성`: 한 지역의 자연환경·역사·산업·교통·인구 이동·문화 경험이 함께 만들어 내는 지역의 특징과 소속감입니다. (Bản sắc vùng hình thành từ tự nhiên, lịch sử, kinh tế, giao thông, di cư và văn hóa.)
+
+**Mental model địa lý:** 지역의 특징은 자연환경 하나로만 결정되지 않습니다. `교통 + 산업 + 인구 이동 + 역사적 경험`을 함께 봐야 지역 생활과 정체성을 이해할 수 있습니다.
 
 ## B+15. 통합 mental model — nối các chapter thành một hệ thống
 
@@ -1312,6 +1318,23 @@ Các dòng dưới đây là phần dễ mất nhất khi chỉ học keyword. H
 - `한류 → 제작 → 플랫폼 → 번역·현지화 → 팬덤 → 관광·상품 소비`: 한류는 콘텐츠 자체뿐 아니라 유통·번역·팬덤과 경제적 파급효과까지 연결됩니다. (Hallyu là chuỗi tạo nội dung–phân phối–bản địa hóa–fandom–du lịch/tiêu dùng.)
 - `대학생활 → 학점 + 관계 + 경험 + 취업준비`: 대학은 지식만 배우는 곳이 아니라 동아리·인턴·공모전·선후배 관계를 통해 사회생활을 준비하는 전환 공간이기도 합니다. (Đại học còn là giai đoạn chuyển tiếp sang đời sống nghề nghiệp/xã hội.)
 - `공론장·언론·집회·선거 → 시민 참여 → 민주주의`: 민주주의는 선거일 하루의 행동이 아니라 정보를 얻고 토론하고 의견을 표현하며 권력을 감시하는 과정입니다. (Dân chủ là quá trình tham gia công dân rộng hơn việc bỏ phiếu.)
+
+## B+16. 표기 변형·같이 알아볼 표현
+
+Đề và tài liệu có thể dùng cách gọi khác nhau cho cùng hoặc gần cùng một khái niệm. Nhìn thấy biến thể phải route về cùng mental model:
+
+- `사증 = 비자`: 사증은 법률·행정 용어, 비자는 일상적으로 많이 쓰는 외래어입니다. (Đều chỉ visa; 사증 trang trọng/pháp lý hơn.)
+- `영주권 ≈ 영주자격`: 일상에서는 영주권이라고 많이 말하지만 법적 문맥에서는 체류자격으로서 영주자격을 확인해야 합니다. (Thường trú/quyền thường trú; ngữ cảnh pháp lý dùng tư cách cư trú.)
+- `다문화가족 / 다문화가정`: 둘 다 일상에서 쓰이지만 법·정책 용어는 문맥에 따라 정확한 명칭을 확인합니다. (Gia đình đa văn hóa.)
+- `1인 가구 / 1인가구`: 띄어쓰기 차이일 뿐 같은 개념입니다. (Hộ một người.)
+- `원격대학교 / 원격대학`: 온라인·원격 방식의 고등교육기관을 가리키는 표현입니다. (Đại học từ xa.)
+- `스마트뱅킹 / 스마트폰뱅킹`: 스마트폰으로 은행 업무를 처리하는 서비스를 가리키는 표현입니다. (Mobile banking.)
+- `회갑 / 환갑`: 전통적으로 60세가 된 것을 기념하는 말로 함께 쓰입니다. (Mừng 60 tuổi.)
+- `제례 / 제사`: 조상을 추모하는 의례를 가리키며, 제례는 더 공식·범주적 표현으로 쓰일 수 있습니다. (Nghi lễ cúng/tưởng niệm tổ tiên.)
+- `6·25 전쟁 / 한국전쟁`: 1950년에 시작된 같은 전쟁을 가리키는 대표 표현입니다. (Chiến tranh Triều Tiên.)
+- `광복 / 8·15 광복`: 광복은 식민지 지배에서 벗어난 사건이고, 8월 15일은 그 역사적 날짜를 강조한 표현입니다. (Giải phóng 15/8/1945.)
+- `수능 / 대학수학능력시험`: 수능은 정식 명칭의 줄임말입니다. (CSAT.)
+- `국가(國家) / 국가(國歌)`: 같은 발음·표기지만 앞은 “nhà nước/quốc gia”, 뒤는 “quốc ca”; `애국가`를 설명할 때의 국가는 國歌입니다.
 
 Điểm chốt của phần B+ là các từ trên **không tạo một chapter mới**; chúng lấp các lỗ hổng giữa những chapter đã có. Khi gặp `국경일`, `세금`, `중앙은행`, `학교생활기록부`, `재판의 독립` hay `피의자`, hãy nối chúng về đúng hệ thống lớn thay vì học như từ đơn lẻ.
 
@@ -1373,6 +1396,8 @@ Mẫu nói:
 ## C4. 국민을 위한 복지
 
 **Keyword — 한국어 설명 (giải thích tiếng Việt):**
+
+- `복지`: 개인이 질병·실업·노령·빈곤 같은 위험을 혼자 감당하지 않도록 국가와 사회가 생활 안정과 기본적 삶을 지원하는 제도와 활동입니다. (Phúc lợi xã hội.)
 
 - `복지국가`: 국가가 사회적 위험과 기본생활 보장을 위해 적극적으로 복지정책을 운영하는 국가 모델입니다. (Nhà nước phúc lợi.)
 - `사회보험`: 보험료를 바탕으로 사회적 위험에 대비하는 제도입니다. (Bảo hiểm xã hội.)
@@ -1652,6 +1677,10 @@ Các số dưới đây đã từng xuất hiện khác trong tài liệu cũ. K
 - `예금보호한도`: **1억원** (원금+이자 합산 보호한도, 2025-09-01 시행).
 - `법정 최고금리`: **연 20%**.
 - `검찰청`: **2026-10-02 폐지**; `공소청` và `중대범죄수사청` được vận hành theo cơ cấu mới.
+
+**Số cũ cần nhận diện nhưng không dùng làm fact hiện hành:**
+- `예금자보호 5천만원`: từng xuất hiện trong tài liệu cũ; current layer của master dùng `1억원`.
+- `법정 최고금리 연 24%`: dữ liệu cũ; current layer dùng `연 20%`.
 
 Ngoài ba mục trên, **không học cứng** các dữ liệu sau nếu không có timestamp: `1인 가구 비율`, dân số Seoul, tỷ lệ tôn giáo, tỷ lệ học đại học, số du học sinh, mức/trợ cấp sinh con–chăm trẻ, chi tiết visa–quốc tịch, quyền bầu cử của từng nhóm đối tượng và format kỳ thi. Các dữ liệu này có thể thay đổi theo năm, chính sách hoặc loại kỳ đánh giá.
 
