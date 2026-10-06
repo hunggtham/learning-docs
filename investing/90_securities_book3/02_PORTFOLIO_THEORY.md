@@ -4,9 +4,9 @@ Phần thống kê đã cho ta kỳ vọng, phương sai và covariance. Markowi
 
 ## 1. Markowitz và bộ giả định
 
-**Portfolio (포트폴리오, danh mục)** là một tập hợp tài sản. Mô hình Markowitz (1952) giả định nhà đầu tư hợp lý, có cùng phân phối dự báo về lợi suất tương lai (**homogeneous expectations**), chỉ quan tâm đến kỳ vọng và phương sai trong một kỳ đầu tư. Đây là mô hình hóa để suy luận, không phải mô tả đầy đủ hành vi thật: nhà đầu tư có thể khác nhau về thông tin, mục tiêu, thuế, thanh khoản và thời hạn.
+**Danh mục (portfolio / 포트폴리오)** là một tập hợp tài sản. **Lý thuyết danh mục Markowitz (Markowitz portfolio theory / 마코위츠 포트폴리오 이론)** (1952) giả định nhà đầu tư hợp lý, có cùng phân phối dự báo về lợi suất tương lai (**homogeneous expectations / 동질적 예측**), chỉ quan tâm đến kỳ vọng và phương sai trong một kỳ đầu tư. Đây là mô hình hóa để suy luận, không phải mô tả đầy đủ hành vi thật: nhà đầu tư có thể khác nhau về thông tin, mục tiêu, thuế, thanh khoản và thời hạn.
 
-Tiêu chí **mean–variance** nói rằng nếu hai tài sản có cùng lợi suất kỳ vọng, chọn tài sản có rủi ro thấp hơn; nếu cùng rủi ro, chọn lợi suất kỳ vọng cao hơn. Các điểm còn lại tạo thành tập cơ hội; điểm không bị một điểm khác “lợi suất cao hơn và rủi ro thấp hơn” chi phối mới đáng xét. Phần biên còn lại là **efficient frontier (효율적 투자선)**.
+Tiêu chí **trung bình–phương sai (mean–variance / 평균-분산 기준)** nói rằng nếu hai tài sản có cùng lợi suất kỳ vọng, chọn tài sản có rủi ro thấp hơn; nếu cùng rủi ro, chọn lợi suất kỳ vọng cao hơn. Các điểm còn lại tạo thành tập cơ hội; điểm không bị một điểm khác “lợi suất cao hơn và rủi ro thấp hơn” chi phối mới đáng xét. Phần biên còn lại là **biên hiệu quả (efficient frontier / 효율적 투자선)**.
 
 ## 2. Kỳ vọng và rủi ro của danh mục hai tài sản
 
@@ -17,6 +17,8 @@ E(r_p)=w_AE(r_A)+w_BE(r_B).
 \]
 
 Nếu A có kỳ vọng 10%, B 20%, tỷ trọng 40/60 thì danh mục có kỳ vọng 16%. Phần này tuyến tính; điều khó nằm ở rủi ro:
+
+Trong các công thức dưới đây, (w_i) là tỷ trọng vốn (không có đơn vị), (E(r_i)) là expected return theo cùng một kỳ và cùng scale (ví dụ 0,10 hoặc 10%, không trộn hai cách), (sigma_i) là độ lệch chuẩn cùng kỳ, (sigma_i^2) là phương sai và (ho_{AB}) là hệ số tương quan trong [-1,1]. Công thức hai tài sản giả định các đại lượng này được ước lượng cho cùng horizon; nếu covariance/correlation thay đổi theo regime, kết quả tối ưu cũng thay đổi.
 
 \[
 \sigma_p^2=w_A^2\sigma_A^2+w_B^2\sigma_B^2
@@ -50,13 +52,13 @@ Một mã có variance 0,13, độ lệch chuẩn khoảng 36,1%; 25 mã có var
 
 ## 3. Rủi ro hệ thống và rủi ro riêng lẻ
 
-**Rủi ro phi hệ thống (unsystematic/idiosyncratic risk)** đến từ một doanh nghiệp hoặc ngành riêng; đa dạng hóa có thể giảm nó. **Rủi ro hệ thống (systematic/market risk)** tác động đồng thời đến nhiều tài sản; đa dạng hóa trong cùng thị trường không loại bỏ được nó. Đường cong nguồn minh họa tổng rủi ro giảm nhanh rồi tiệm cận một mức sàn: phần giảm là idiosyncratic, phần sàn là systematic.
+**Rủi ro phi hệ thống (unsystematic/idiosyncratic risk / 비체계적 위험)** đến từ một doanh nghiệp hoặc ngành riêng; đa dạng hóa có thể giảm nó. **Rủi ro hệ thống (systematic/market risk / 체계적 위험)** tác động đồng thời đến nhiều tài sản; đa dạng hóa trong cùng thị trường không loại bỏ được nó. Đường cong nguồn minh họa tổng rủi ro giảm nhanh rồi tiệm cận một mức sàn: phần giảm là idiosyncratic, phần sàn là systematic.
 
 Đây là một boundary quan trọng: phân tán không đồng nghĩa an toàn tuyệt đối. Một danh mục gồm nhiều cổ phiếu ngân hàng vẫn có thể cùng chịu một cú sốc lãi suất; nhiều tài sản cùng phụ thuộc USD vẫn có thể cùng chịu funding shock. Vì vậy sau danh mục, CAPM sẽ đo phần rủi ro mà thị trường định giá bằng beta.
 
 ## 3A. Từ opportunity set đến minimum-variance portfolio
 
-Với hai tài sản, thay \(w_B=1-w_A\) vào phương sai sẽ cho một hàm bậc hai theo \(w_A\). Điểm đáy của hàm đó là **minimum-variance portfolio** (MVP), không nhất thiết là danh mục có lợi suất cao nhất. Với covariance viết theo correlation, trọng số MVP của A là:
+Với hai tài sản, thay \(w_B=1-w_A\) vào phương sai sẽ cho một hàm bậc hai theo \(w_A\). Điểm đáy của hàm đó là **danh mục phương sai tối thiểu (minimum-variance portfolio, MVP / 최소분산 포트폴리오)**, không nhất thiết là danh mục có lợi suất cao nhất. Với covariance viết theo correlation, trọng số MVP của A là:
 
 \[
 w_A^{MVP}=\frac{\sigma_B^2-\rho_{AB}\sigma_A\sigma_B}
@@ -80,11 +82,11 @@ Vì vậy khi trình bày “efficient”, phải ghi rõ efficient trong **tậ
 
 ## 4. Utility và thái độ với rủi ro
 
-Chỉ tối đa hóa kỳ vọng có thể xếp ba khoản đầu tư có cùng kỳ vọng là như nhau dù phương sai rất khác. **Expected utility** đưa thái độ với rủi ro vào quyết định. Với tài sản cuối kỳ \(W\), nhà đầu tư:
+Chỉ tối đa hóa kỳ vọng có thể xếp ba khoản đầu tư có cùng kỳ vọng là như nhau dù phương sai rất khác. **Kỳ vọng hữu dụng (expected utility / 기대효용)** đưa thái độ với rủi ro vào quyết định. Với tài sản cuối kỳ \(W\), nhà đầu tư:
 
-- **Risk-averse (위험회피형)** có utility tăng nhưng tăng chậm dần; tại cùng kỳ vọng, thích rủi ro thấp hơn.
-- **Risk-neutral (위험중립형)** có utility tuyến tính; chỉ nhìn kỳ vọng.
-- **Risk-seeking (위험선호형)** có utility tăng nhanh dần; chấp nhận thêm rủi ro để đổi lấy cơ hội.
+- **Ngại rủi ro (risk-averse / 위험회피형)** có utility tăng nhưng tăng chậm dần; tại cùng kỳ vọng, thích rủi ro thấp hơn.
+- **Trung lập rủi ro (risk-neutral / 위험중립형)** có utility tuyến tính; chỉ nhìn kỳ vọng.
+- **Ưa rủi ro (risk-seeking / 위험선호형)** có utility tăng nhanh dần; chấp nhận thêm rủi ro để đổi lấy cơ hội.
 
 Đường cong bàng quan trong mặt phẳng expected return–risk nối các điểm có cùng utility. Mô hình đầu tư thông thường dùng risk aversion, nhưng đó là giả định cần nói rõ, không phải bản chất của mọi người.
 
@@ -98,20 +100,20 @@ Raw dùng ba phương án có expected return đều bằng 30: A nhận 20 ho�
 
 ## 5. Vô rủi ro và đường phân bổ vốn
 
-Tài sản vô rủi ro có lợi suất thực hiện đúng bằng lợi suất kỳ vọng, nên phương sai bằng 0. Ghép tài sản vô rủi ro với tài sản rủi ro có kỳ vọng \(E(r_A)\), độ lệch chuẩn \(\sigma_A\), tỷ trọng tài sản rủi ro \(w_A\):
+**Tài sản vô rủi ro (risk-free asset / 무위험자산)** có lợi suất thực hiện đúng bằng lợi suất kỳ vọng, nên phương sai bằng 0. Ghép tài sản vô rủi ro với tài sản rủi ro có kỳ vọng \(E(r_A)\), độ lệch chuẩn \(\sigma_A\), tỷ trọng tài sản rủi ro \(w_A\):
 
 \[
 E(r_p)=r_f+w_A[E(r_A)-r_f],\qquad
 \sigma_p=w_A\sigma_A.
 \]
 
-Suy ra **capital allocation line (CAL)**:
+Suy ra **đường phân bổ vốn (capital allocation line, CAL / 자본배분선)**:
 
 \[
 E(r_p)=r_f+\frac{E(r_A)-r_f}{\sigma_A}\sigma_p.
 \]
 
-Độ dốc là risk-reward ratio: phần bù rủi ro trên một đơn vị độ lệch chuẩn. Khi A được thay bằng market portfolio tối ưu, CAL trở thành **capital market line**, sẽ học ở bài CAPM.
+Độ dốc là risk-reward ratio: phần bù rủi ro trên một đơn vị độ lệch chuẩn. Ở đây (r_f), (E(r_A)) và (E(r_p)) phải cùng kỳ/đơn vị; (sigma_A,sigma_p) là độ lệch chuẩn cùng kỳ. Quan hệ tuyến tính này dựa trên giả định có thể vay/cho vay ở (r_f) và scale exposure bằng tỷ trọng; khi borrowing rate khác lending rate, leverage bị giới hạn hoặc có chi phí giao dịch, CAL thực tế không còn là một đường thẳng duy nhất. Khi A được thay bằng market portfolio tối ưu, CAL trở thành **capital market line**, sẽ học ở bài CAPM.
 
 ## 6. Bài tập nguồn và bàn giao
 
