@@ -26,7 +26,7 @@ Balance Sheet
 Cash Flow Statement
 ```
 
-> **Chuyển mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **2. Chất lượng lợi nhuận là gì?** tiếp nhận điểm tựa từ **1. Lợi nhuận kế toán không đồng nghĩa tiền mặt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Kiểm tra chuyển đổi lợi nhuận thành tiền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **2. Chất lượng lợi nhuận là gì?** nối từ **1. Lợi nhuận kế toán không đồng nghĩa tiền mặt** sang **3. Kiểm tra chuyển đổi lợi nhuận thành tiền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Chất lượng lợi nhuận là gì?
 
@@ -40,7 +40,7 @@ Chất lượng lợi nhuận (earnings quality) cao khi lợi nhuận:
 
 Lợi nhuận đến từ tăng sản lượng, tăng giá hợp lý và nâng hiệu quả vận hành thường bền hơn lợi nhuận từ bán tài sản, ưu đãi thuế một lần hoặc hoàn nhập dự phòng bất thường.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **3. Kiểm tra chuyển đổi lợi nhuận thành tiền** tiếp nhận điểm tựa từ **2. Chất lượng lợi nhuận là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Phải thu và DSO** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **3. Kiểm tra chuyển đổi lợi nhuận thành tiền** nối từ **2. Chất lượng lợi nhuận là gì?** sang **4. Phải thu và DSO**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Kiểm tra chuyển đổi lợi nhuận thành tiền
 
@@ -50,7 +50,7 @@ Nếu lợi nhuận tăng đều nhưng CFO tăng chậm hơn đáng kể, cần
 
 Dòng tiền tự do còn cần trừ capex. Một doanh nghiệp CFO cao nhưng phải tái đầu tư rất lớn để duy trì công suất có khả năng tạo tiền kinh tế thấp hơn doanh nghiệp ít tài sản.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **4. Phải thu và DSO** tiếp nhận điểm tựa từ **3. Kiểm tra chuyển đổi lợi nhuận thành tiền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Hàng tồn kho và chu kỳ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **4. Phải thu và DSO** nối từ **3. Kiểm tra chuyển đổi lợi nhuận thành tiền** sang **5. Hàng tồn kho và chu kỳ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Phải thu và DSO
 
@@ -74,7 +74,7 @@ thì cần hỏi:
 
 Đây là tín hiệu cần nghiên cứu, không phải bằng chứng gian lận.
 
-> **Chuyển mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **5. Hàng tồn kho và chu kỳ** tiếp nhận điểm tựa từ **4. Phải thu và DSO** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Phải trả và vốn lưu động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **5. Hàng tồn kho và chu kỳ** nối từ **4. Phải thu và DSO** sang **6. Phải trả và vốn lưu động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Hàng tồn kho và chu kỳ
 
@@ -93,7 +93,7 @@ Cần đọc theo ngành. Ví dụ:
 
 Khoản giảm giá tồn kho (inventory write-down) thường cho thấy giá trị kinh tế của hàng thấp hơn trước.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **6. Phải trả và vốn lưu động** tiếp nhận điểm tựa từ **5. Hàng tồn kho và chu kỳ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Chu kỳ chuyển đổi tiền mặt — CCC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **6. Phải trả và vốn lưu động** nối từ **5. Hàng tồn kho và chu kỳ** sang **7. Chu kỳ chuyển đổi tiền mặt — CCC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Phải trả và vốn lưu động
 
@@ -108,7 +108,7 @@ Thay đổi này có lặp lại được không?
 Hay chỉ là lợi ích tạm thời?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **7. Chu kỳ chuyển đổi tiền mặt — CCC** tiếp nhận điểm tựa từ **6. Phải trả và vốn lưu động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Doanh thu nhận trước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **7. Chu kỳ chuyển đổi tiền mặt — CCC** nối từ **6. Phải trả và vốn lưu động** sang **8. Doanh thu nhận trước**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Chu kỳ chuyển đổi tiền mặt — CCC
 
@@ -126,7 +126,7 @@ Trong đó:
 
 CCC tăng kéo dài có thể báo hiệu vốn lưu động xấu đi. Tuy nhiên mô hình kinh doanh như siêu thị hoặc marketplace có thể có CCC âm một cách lành mạnh.
 
-> **Chuyển mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **8. Doanh thu nhận trước** tiếp nhận điểm tựa từ **7. Chu kỳ chuyển đổi tiền mặt — CCC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Vốn hóa và ghi chi phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **8. Doanh thu nhận trước** nối từ **7. Chu kỳ chuyển đổi tiền mặt — CCC** sang **9. Vốn hóa và ghi chi phí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Doanh thu nhận trước
 
@@ -136,7 +136,7 @@ Với phần mềm thuê bao, doanh thu nhận trước tăng có thể phản �
 
 Cần hiểu thời hạn hợp đồng, tỷ lệ gia hạn và điều kiện hoàn tiền trước khi kết luận.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **9. Vốn hóa và ghi chi phí** tiếp nhận điểm tựa từ **8. Doanh thu nhận trước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Khấu hao và capex duy trì** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **9. Vốn hóa và ghi chi phí** nối từ **8. Doanh thu nhận trước** sang **10. Khấu hao và capex duy trì**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Vốn hóa và ghi chi phí
 
@@ -149,7 +149,7 @@ Khi một doanh nghiệp vốn hóa chi phí phát triển nhiều hơn đối t
 - thời gian khấu hao;
 - tác động lên lợi nhuận và tài sản.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **10. Khấu hao và capex duy trì** tiếp nhận điểm tựa từ **9. Vốn hóa và ghi chi phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. SBC và pha loãng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **10. Khấu hao và capex duy trì** nối từ **9. Vốn hóa và ghi chi phí** sang **11. SBC và pha loãng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Khấu hao và capex duy trì
 
@@ -159,7 +159,7 @@ Một nhà máy cũ có thể có khấu hao thấp nhưng cần đầu tư thay
 
 Đây là lý do EBITDA không phải dòng tiền tự do.
 
-> **Chuyển mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **11. SBC và pha loãng** tiếp nhận điểm tựa từ **10. Khấu hao và capex duy trì** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Theo dõi số cổ phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **11. SBC và pha loãng** nối từ **10. Khấu hao và capex duy trì** sang **12. Theo dõi số cổ phiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. SBC và pha loãng
 
@@ -172,7 +172,7 @@ Nếu doanh nghiệp loại SBC khỏi lợi nhuận điều chỉnh, nhà đầ
 
 Mua lại cổ phiếu chỉ để bù SBC khác với mua lại thực sự làm giảm số cổ phiếu.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **12. Theo dõi số cổ phiếu** tiếp nhận điểm tựa từ **11. SBC và pha loãng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Lợi nhuận điều chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **12. Theo dõi số cổ phiếu** nối từ **11. SBC và pha loãng** sang **13. Lợi nhuận điều chỉnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Theo dõi số cổ phiếu
 
@@ -194,7 +194,7 @@ Cần theo dõi:
 - RSUs;
 - convertibles.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **13. Lợi nhuận điều chỉnh** tiếp nhận điểm tựa từ **12. Theo dõi số cổ phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Khoản bất thường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **13. Lợi nhuận điều chỉnh** nối từ **12. Theo dõi số cổ phiếu** sang **14. Khoản bất thường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Lợi nhuận điều chỉnh
 
@@ -204,7 +204,7 @@ Nhưng nếu “chi phí tái cấu trúc” xuất hiện năm nào cũng có t
 
 Tốt hơn nên tự xây **lợi nhuận chuẩn hóa (normalized earnings)** thay vì dùng nguyên số điều chỉnh của ban quản lý.
 
-> **Chuyển mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **14. Khoản bất thường** tiếp nhận điểm tựa từ **13. Lợi nhuận điều chỉnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Giao dịch bên liên quan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **14. Khoản bất thường** nối từ **13. Lợi nhuận điều chỉnh** sang **15. Giao dịch bên liên quan**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Khoản bất thường
 
@@ -226,7 +226,7 @@ và
 khoản ngoài hoạt động hoặc một lần
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **15. Giao dịch bên liên quan** tiếp nhận điểm tựa từ **14. Khoản bất thường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Tập trung khách hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **15. Giao dịch bên liên quan** nối từ **14. Khoản bất thường** sang **16. Tập trung khách hàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Giao dịch bên liên quan
 
@@ -239,7 +239,7 @@ Cần đọc kỹ khi doanh nghiệp:
 - bảo lãnh nghĩa vụ;
 - có doanh thu lớn với công ty cùng nhóm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **16. Tập trung khách hàng** tiếp nhận điểm tựa từ **15. Giao dịch bên liên quan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Tập trung nhà cung cấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **16. Tập trung khách hàng** nối từ **15. Giao dịch bên liên quan** sang **17. Tập trung nhà cung cấp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Tập trung khách hàng
 
@@ -254,7 +254,7 @@ Khách hàng lớn có thể:
 
 Trong chuỗi bán dẫn, rủi ro này đặc biệt quan trọng vì quy trình qualification dài và vài khách hàng lớn có thể chi phối nhu cầu.
 
-> **Chuyển mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **17. Tập trung nhà cung cấp** tiếp nhận điểm tựa từ **16. Tập trung khách hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Lịch đáo hạn nợ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **17. Tập trung nhà cung cấp** nối từ **16. Tập trung khách hàng** sang **18. Lịch đáo hạn nợ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Tập trung nhà cung cấp
 
@@ -272,7 +272,7 @@ nhà cung cấp chính
 → quyền định giá
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **18. Lịch đáo hạn nợ** tiếp nhận điểm tựa từ **17. Tập trung nhà cung cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Covenant** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **18. Lịch đáo hạn nợ** nối từ **17. Tập trung nhà cung cấp** sang **19. Covenant**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Lịch đáo hạn nợ
 
@@ -293,7 +293,7 @@ Cần xem:
 - khả năng tái cấp vốn;
 - lãi suất vay mới.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **19. Covenant** tiếp nhận điểm tựa từ **18. Lịch đáo hạn nợ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Hạn mức tín dụng quay vòng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **19. Covenant** nối từ **18. Lịch đáo hạn nợ** sang **20. Hạn mức tín dụng quay vòng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Covenant
 
@@ -308,7 +308,7 @@ Khoảng cách còn lại trước khi vi phạm gọi là **covenant headroom**
 
 Doanh nghiệp có thể chưa cạn tiền nhưng vẫn gặp vấn đề nếu lợi nhuận giảm đủ mạnh để vi phạm covenant.
 
-> **Chuyển mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **20. Hạn mức tín dụng quay vòng** tiếp nhận điểm tựa từ **19. Covenant** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Goodwill và mua lại doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **20. Hạn mức tín dụng quay vòng** nối từ **19. Covenant** sang **21. Goodwill và mua lại doanh nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Hạn mức tín dụng quay vòng
 
@@ -322,7 +322,7 @@ Nhưng không nên chỉ nhìn số hạn mức danh nghĩa. Cần kiểm tra:
 - ngân hàng cấp hạn mức;
 - tài sản bảo đảm.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **21. Goodwill và mua lại doanh nghiệp** tiếp nhận điểm tựa từ **20. Hạn mức tín dụng quay vòng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Tăng trưởng hữu cơ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **21. Goodwill và mua lại doanh nghiệp** nối từ **20. Hạn mức tín dụng quay vòng** sang **22. Tăng trưởng hữu cơ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Goodwill và mua lại doanh nghiệp
 
@@ -332,7 +332,7 @@ Goodwill lớn không tự động xấu. Nhưng chuỗi mua lại liên tục v
 
 Impairment sau này không làm tiền mặt mất đi ở thời điểm ghi nhận, nhưng thường phản ánh quyết định phân bổ vốn kém đã xảy ra trước đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **22. Tăng trưởng hữu cơ** tiếp nhận điểm tựa từ **21. Goodwill và mua lại doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Cầu nối giá – sản lượng – cơ cấu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **22. Tăng trưởng hữu cơ** nối từ **21. Goodwill và mua lại doanh nghiệp** sang **23. Cầu nối giá – sản lượng – cơ cấu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Tăng trưởng hữu cơ
 
@@ -346,7 +346,7 @@ tăng trưởng hữu cơ
 
 Cần tách ba phần này. Một công ty có doanh thu +20% nhưng tăng trưởng hữu cơ chỉ +3% sẽ có chất lượng tăng trưởng khác doanh nghiệp tự tăng +20%.
 
-> **Chuyển mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **23. Cầu nối giá – sản lượng – cơ cấu** tiếp nhận điểm tựa từ **22. Tăng trưởng hữu cơ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Biên gộp và biên tăng thêm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **23. Cầu nối giá – sản lượng – cơ cấu** nối từ **22. Tăng trưởng hữu cơ** sang **24. Biên gộp và biên tăng thêm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Cầu nối giá – sản lượng – cơ cấu
 
@@ -360,7 +360,7 @@ Cơ cấu sản phẩm thay đổi bao nhiêu?
 
 Biên lợi nhuận tăng nhờ tăng giá thường khác về độ bền so với tăng nhờ mix tốt hoặc nguyên liệu giảm.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **24. Biên gộp và biên tăng thêm** tiếp nhận điểm tựa từ **23. Cầu nối giá – sản lượng – cơ cấu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. ROIC và ROIC tăng thêm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **24. Biên gộp và biên tăng thêm** nối từ **23. Cầu nối giá – sản lượng – cơ cấu** sang **25. ROIC và ROIC tăng thêm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Biên gộp và biên tăng thêm
 
@@ -368,7 +368,7 @@ Biên gộp hiện tại cho biết mức lợi nhuận trên doanh thu. **Biên
 
 Nếu doanh thu tăng nhanh nhưng incremental margin giảm, tăng trưởng có thể đang kém hiệu quả hơn trước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **25. ROIC và ROIC tăng thêm** tiếp nhận điểm tựa từ **24. Biên gộp và biên tăng thêm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. đơn vị (unit / 단위) economics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **25. ROIC và ROIC tăng thêm** nối từ **24. Biên gộp và biên tăng thêm** sang **26. đơn vị (unit / 단위) economics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. ROIC và ROIC tăng thêm
 
@@ -383,7 +383,7 @@ Incremental ROIC
 
 Nếu doanh nghiệp cần ngày càng nhiều vốn để tạo cùng mức tăng NOPAT, hiệu quả kinh tế đang xấu đi.
 
-> **Chuyển mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **26. đơn vị (unit / 단위) economics** tiếp nhận điểm tựa từ **25. ROIC và ROIC tăng thêm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Phân tích cohort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **26. đơn vị (unit / 단위) economics** nối từ **25. ROIC và ROIC tăng thêm** sang **27. Phân tích cohort**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. đơn vị (unit / 단위) economics
 
@@ -399,7 +399,7 @@ Ví dụ:
 
 Mô hình tài chính tốt nên bắt đầu từ những động lực phù hợp với ngành.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **27. Phân tích cohort** tiếp nhận điểm tựa từ **26. đơn vị (unit / 단위) economics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Mô hình theo động lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **27. Phân tích cohort** nối từ **26. đơn vị (unit / 단위) economics** sang **28. Mô hình theo động lực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Phân tích cohort
 
@@ -407,7 +407,7 @@ Phân tích nhóm khách hàng theo thời điểm bắt đầu (cohort analysis
 
 Nếu cohort cũ tiếp tục mua nhiều hơn và tỷ lệ giữ chân cao, tăng trưởng thường có chất lượng cao hơn doanh nghiệp phải liên tục mua khách hàng mới để bù churn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **28. Mô hình theo động lực** tiếp nhận điểm tựa từ **27. Phân tích cohort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Ba báo cáo phải liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **28. Mô hình theo động lực** nối từ **27. Phân tích cohort** sang **29. Ba báo cáo phải liên kết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Mô hình theo động lực
 
@@ -428,7 +428,7 @@ số khách hàng
 
 Mô hình theo động lực (driver-based model) giúp biết chính xác giả định nào phải đúng để dự báo xảy ra.
 
-> **Chuyển mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, sau nội dung của **28. Mô hình theo động lực**, **29. Ba báo cáo phải liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **30. Kiểm soát lỗi mô hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, sau nội dung của **28. Mô hình theo động lực**, **29. Ba báo cáo phải liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **30. Kiểm soát lỗi mô hình** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 29. Ba báo cáo phải liên kết
 
@@ -446,7 +446,7 @@ Income Statement
 
 Nếu tiền mặt âm nhưng thu nhập lãi vẫn tăng, hoặc nợ tăng mà chi phí lãi không đổi, mô hình đang sai lô-gic (logic / 논리).
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **30. Kiểm soát lỗi mô hình** tiếp nhận điểm tựa từ **29. Ba báo cáo phải liên kết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. cơ sở (base / 기반) / Bull / Bear** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **30. Kiểm soát lỗi mô hình** nối từ **29. Ba báo cáo phải liên kết** sang **31. cơ sở (base / 기반) / Bull / Bear**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Kiểm soát lỗi mô hình
 
@@ -462,7 +462,7 @@ Share count khớp SBC / issuance / buyback
 
 Các kiểm tra đơn giản này ngăn rất nhiều lỗi mô hình.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **31. cơ sở (base / 기반) / Bull / Bear** tiếp nhận điểm tựa từ **30. Kiểm soát lỗi mô hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Phân tích độ nhạy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **31. cơ sở (base / 기반) / Bull / Bear** nối từ **30. Kiểm soát lỗi mô hình** sang **32. Phân tích độ nhạy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. cơ sở (base / 기반) / Bull / Bear
 
@@ -483,7 +483,7 @@ doanh thu yếu + margin giảm + vốn lưu động xấu + tài trợ khó hơ
 
 Không nên chỉ cộng/trừ 20% mọi biến.
 
-> **Chuyển mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **32. Phân tích độ nhạy** tiếp nhận điểm tựa từ **31. cơ sở (base / 기반) / Bull / Bear** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Reverse DCF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **32. Phân tích độ nhạy** nối từ **31. cơ sở (base / 기반) / Bull / Bear** sang **33. Reverse DCF**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Phân tích độ nhạy
 
@@ -498,7 +498,7 @@ Không nên chỉ cộng/trừ 20% mọi biến.
 
 Nếu kết luận đầu tư chỉ đúng khi mọi biến đều rất lạc quan, biên an toàn thấp.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **33. Reverse DCF** tiếp nhận điểm tựa từ **32. Phân tích độ nhạy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Channel stuffing và ghi nhận doanh thu sớm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **33. Reverse DCF** nối từ **32. Phân tích độ nhạy** sang **34. Channel stuffing và ghi nhận doanh thu sớm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Reverse DCF
 
@@ -511,7 +511,7 @@ bao nhiêu tăng trưởng, biên lợi nhuận và ROIC?
 
 Đây đặc biệt hữu ích với doanh nghiệp tăng trưởng cao, nơi P/E hiện tại có thể khó diễn giải.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **34. Channel stuffing và ghi nhận doanh thu sớm** tiếp nhận điểm tựa từ **33. Reverse DCF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Returns, rebates và reserves** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **34. Channel stuffing và ghi nhận doanh thu sớm** nối từ **33. Reverse DCF** sang **35. Returns, rebates và reserves**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Channel stuffing và ghi nhận doanh thu sớm
 
@@ -530,7 +530,7 @@ doanh thu tăng mạnh
 
 Không một tín hiệu đơn lẻ nào đủ để kết luận.
 
-> **Chuyển mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **35. Returns, rebates và reserves** tiếp nhận điểm tựa từ **34. Channel stuffing và ghi nhận doanh thu sớm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Supplier finance và factoring** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **35. Returns, rebates và reserves** nối từ **34. Channel stuffing và ghi nhận doanh thu sớm** sang **36. Supplier finance và factoring**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Returns, rebates và reserves
 
@@ -538,7 +538,7 @@ Doanh nghiệp có thể phải ước tính hàng trả lại, rebate, warranty
 
 Nếu các tỷ lệ này giảm bất thường đúng lúc lợi nhuận cần đạt mục tiêu, cần kiểm tra footnote và xu hướng nhiều kỳ.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **36. Supplier finance và factoring** tiếp nhận điểm tựa từ **35. Returns, rebates và reserves** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Lãi vay vốn hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **36. Supplier finance và factoring** nối từ **35. Returns, rebates và reserves** sang **37. Lãi vay vốn hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Supplier finance và factoring
 
@@ -555,7 +555,7 @@ Cần hỏi:
 Hay chỉ thay đổi thời điểm dòng tiền?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **37. Lãi vay vốn hóa** tiếp nhận điểm tựa từ **36. Supplier finance và factoring** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Thuế và chất lượng lợi nhuận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **37. Lãi vay vốn hóa** nối từ **36. Supplier finance và factoring** sang **38. Thuế và chất lượng lợi nhuận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Lãi vay vốn hóa
 
@@ -570,7 +570,7 @@ Cần theo dõi đồng thời:
 - tổng nợ;
 - chi phí vốn bình quân.
 
-> **Chuyển mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **38. Thuế và chất lượng lợi nhuận** tiếp nhận điểm tựa từ **37. Lãi vay vốn hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Dấu hiệu từ kiểm toán và kiểm soát nội bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **38. Thuế và chất lượng lợi nhuận** nối từ **37. Lãi vay vốn hóa** sang **39. Dấu hiệu từ kiểm toán và kiểm soát nội bộ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Thuế và chất lượng lợi nhuận
 
@@ -578,7 +578,7 @@ Lợi nhuận có thể tăng vì thuế suất hiệu dụng giảm chứ khôn
 
 Khi thuế giảm do khoản một lần, deferred tax asset hoặc ưu đãi sắp hết hạn, cần chuẩn hóa lại lợi nhuận.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **39. Dấu hiệu từ kiểm toán và kiểm soát nội bộ** tiếp nhận điểm tựa từ **38. Thuế và chất lượng lợi nhuận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Consensus revisions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **39. Dấu hiệu từ kiểm toán và kiểm soát nội bộ** nối từ **38. Thuế và chất lượng lợi nhuận** sang **40. Consensus revisions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Dấu hiệu từ kiểm toán và kiểm soát nội bộ
 
@@ -593,7 +593,7 @@ Các tín hiệu cần đọc kỹ:
 
 Đây không phải bằng chứng sai phạm, nhưng làm tăng nhu cầu kiểm tra.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **40. Consensus revisions** tiếp nhận điểm tựa từ **39. Dấu hiệu từ kiểm toán và kiểm soát nội bộ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Mô hình theo phân khúc và địa lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **40. Consensus revisions** nối từ **39. Dấu hiệu từ kiểm toán và kiểm soát nội bộ** sang **41. Mô hình theo phân khúc và địa lý**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Consensus revisions
 
@@ -611,7 +611,7 @@ Breadth of revisions
 
 Nếu số liệu hiện tại tốt nhưng dự báo tương lai liên tục bị hạ, thị trường có thể tập trung vào điểm ngoặt phía trước.
 
-> **Chuyển mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **41. Mô hình theo phân khúc và địa lý** tiếp nhận điểm tựa từ **40. Consensus revisions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Dữ liệu point-in-time và versioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **41. Mô hình theo phân khúc và địa lý** nối từ **40. Consensus revisions** sang **42. Dữ liệu point-in-time và versioning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Mô hình theo phân khúc và địa lý
 
@@ -630,7 +630,7 @@ Margin khác nhau
 
 Điều này giúp xác định mảng nào thật sự tạo tăng trưởng và mảng nào đang che vấn đề.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **41. Mô hình theo phân khúc và địa lý** nêu điều cần giải thích; **42. Dữ liệu point-in-time và versioning** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **43. Kiểm tra forensic theo ngành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **41. Mô hình theo phân khúc và địa lý** đặt vấn đề; **42. Dữ liệu point-in-time và versioning** đối chiếu bằng chứng, rồi **43. Kiểm tra forensic theo ngành** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 42. Dữ liệu point-in-time và versioning
 
@@ -649,7 +649,7 @@ Dữ liệu đã được restate sau này không được đưa ngược vào q
 
 Mô hình cũng nên có phiên bản (version / 버전) để biết giả định thay đổi khi nào và vì sao.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **42. Dữ liệu point-in-time và versioning** nêu điều cần giải thích; **43. Kiểm tra forensic theo ngành** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **44. Red flag không phải bằng chứng gian lận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **42. Dữ liệu point-in-time và versioning** đặt vấn đề; **43. Kiểm tra forensic theo ngành** đối chiếu bằng chứng, rồi **44. Red flag không phải bằng chứng gian lận** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 43. Kiểm tra forensic theo ngành
 
@@ -674,7 +674,7 @@ Bất động sản:
 legal status, presales, debt maturity, capitalized interest
 ```
 
-> **Chuyển mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **43. Kiểm tra forensic theo ngành** nêu điều cần giải thích; **44. Red flag không phải bằng chứng gian lận** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **45. Mẫu rà soát (review / 검토) hàng quý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **43. Kiểm tra forensic theo ngành** đặt vấn đề; **44. Red flag không phải bằng chứng gian lận** đối chiếu bằng chứng, rồi **45. Mẫu rà soát (review / 검토) hàng quý** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 44. Red flag không phải bằng chứng gian lận
 
@@ -694,7 +694,7 @@ Phát hiện bất thường
 
 Không nên nhảy thẳng từ “DSO tăng” sang “doanh nghiệp gian lận”.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **44. Red flag không phải bằng chứng gian lận** nêu điều cần giải thích; **45. Mẫu rà soát (review / 검토) hàng quý** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **44. Red flag không phải bằng chứng gian lận** đặt vấn đề; **45. Mẫu rà soát (review / 검토) hàng quý** đối chiếu bằng chứng, rồi **Kết luận** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 45. Mẫu rà soát (review / 검토) hàng quý
 
@@ -715,7 +715,7 @@ Sau mỗi kỳ báo cáo, có thể dùng chuỗi:
 12. Thesis update / invalidation
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **Kết luận** gom các mảnh từ **45. Mẫu rà soát (review / 검토) hàng quý** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng lợi nhuận, mô hình tài chính và phân tích forensic**, **Kết luận** tổng hợp từ **45. Mẫu rà soát (review / 검토) hàng quý** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

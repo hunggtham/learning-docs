@@ -21,7 +21,7 @@ Cần bao nhiêu vốn để tăng trưởng?
 
 Nếu chưa trả lời được các câu này, mọi mô hình DCF phía sau chỉ là bảng tính đẹp.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **2. Xây cây động lực doanh thu** tiếp nhận điểm tựa từ **1. Không bắt đầu bằng P/E** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Tách tăng trưởng giá, sản lượng và cơ cấu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **2. Xây cây động lực doanh thu** nối từ **1. Không bắt đầu bằng P/E** sang **3. Tách tăng trưởng giá, sản lượng và cơ cấu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Xây cây động lực doanh thu
 
@@ -59,7 +59,7 @@ Sản lượng bit / đơn vị
 
 Cây động lực tốt giúp kiểm tra mô hình bằng dữ liệu vận hành thay vì chỉ nhìn doanh thu tổng.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **3. Tách tăng trưởng giá, sản lượng và cơ cấu** tiếp nhận điểm tựa từ **2. Xây cây động lực doanh thu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Từ doanh thu tới biên gộp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **3. Tách tăng trưởng giá, sản lượng và cơ cấu** nối từ **2. Xây cây động lực doanh thu** sang **4. Từ doanh thu tới biên gộp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Tách tăng trưởng giá, sản lượng và cơ cấu
 
@@ -75,7 +75,7 @@ Ba nguồn này có chất lượng khác nhau. Tăng giá có thể phản ánh
 
 Khi không tách được ba phần, rất dễ ngoại suy sai.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **4. Từ doanh thu tới biên gộp** tiếp nhận điểm tựa từ **3. Tách tăng trưởng giá, sản lượng và cơ cấu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Biên hoạt động và đòn bẩy vận hành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **4. Từ doanh thu tới biên gộp** nối từ **3. Tách tăng trưởng giá, sản lượng và cơ cấu** sang **5. Biên hoạt động và đòn bẩy vận hành**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Từ doanh thu tới biên gộp
 
@@ -92,7 +92,7 @@ Giá bán
 
 Với ngành chu kỳ, công suất sử dụng là biến đặc biệt quan trọng vì chi phí cố định trên mỗi đơn vị thay đổi mạnh.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **5. Biên hoạt động và đòn bẩy vận hành** tiếp nhận điểm tựa từ **4. Từ doanh thu tới biên gộp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Tách chi phí duy trì và chi phí tăng trưởng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **5. Biên hoạt động và đòn bẩy vận hành** nối từ **4. Từ doanh thu tới biên gộp** sang **6. Tách chi phí duy trì và chi phí tăng trưởng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Biên hoạt động và đòn bẩy vận hành
 
@@ -108,7 +108,7 @@ Doanh thu giảm
 
 Vì vậy không nên áp dụng biên lợi nhuận trung bình ổn định cho ngành có đòn bẩy vận hành cao.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **6. Tách chi phí duy trì và chi phí tăng trưởng** tiếp nhận điểm tựa từ **5. Biên hoạt động và đòn bẩy vận hành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Vốn lưu động là cầu nối giữa lợi nhuận và tiền mặt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **6. Tách chi phí duy trì và chi phí tăng trưởng** nối từ **5. Biên hoạt động và đòn bẩy vận hành** sang **7. Vốn lưu động là cầu nối giữa lợi nhuận và tiền mặt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Tách chi phí duy trì và chi phí tăng trưởng
 
@@ -122,7 +122,7 @@ Câu hỏi quan trọng:
 Nếu ngừng đầu tư hôm nay, dòng tiền hiện tại có duy trì được bao lâu?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **7. Vốn lưu động là cầu nối giữa lợi nhuận và tiền mặt** tiếp nhận điểm tựa từ **6. Tách chi phí duy trì và chi phí tăng trưởng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Chất lượng doanh thu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **7. Vốn lưu động là cầu nối giữa lợi nhuận và tiền mặt** nối từ **6. Tách chi phí duy trì và chi phí tăng trưởng** sang **8. Chất lượng doanh thu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Vốn lưu động là cầu nối giữa lợi nhuận và tiền mặt
 
@@ -144,7 +144,7 @@ Tiền khách hàng ứng trước
 
 Mô hình cần nối DSO, DIO, DPO hoặc tỷ lệ vốn lưu động với tốc độ tăng trưởng.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **8. Chất lượng doanh thu** tiếp nhận điểm tựa từ **7. Vốn lưu động là cầu nối giữa lợi nhuận và tiền mặt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Xây cầu nối lợi nhuận chuẩn hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **8. Chất lượng doanh thu** nối từ **7. Vốn lưu động là cầu nối giữa lợi nhuận và tiền mặt** sang **9. Xây cầu nối lợi nhuận chuẩn hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Chất lượng doanh thu
 
@@ -160,7 +160,7 @@ Cần hỏi:
 
 Tăng doanh thu cùng phải thu tăng nhanh và tiền mặt yếu là tín hiệu cần điều tra thêm.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **9. Xây cầu nối lợi nhuận chuẩn hóa** tiếp nhận điểm tựa từ **8. Chất lượng doanh thu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Three-statement mô hình (model / 모델) phải tự khóa lô-gic (logic / 논리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **9. Xây cầu nối lợi nhuận chuẩn hóa** nối từ **8. Chất lượng doanh thu** sang **10. Three-statement mô hình (model / 모델) phải tự khóa lô-gic (logic / 논리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Xây cầu nối lợi nhuận chuẩn hóa
 
@@ -185,7 +185,7 @@ Lợi nhuận báo cáo
 
 Nhưng không được loại mọi chi phí “khó chịu”. Nếu tái cấu trúc xuất hiện mỗi năm, nó là một phần kinh tế thực.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **10. Three-statement mô hình (model / 모델) phải tự khóa lô-gic (logic / 논리)** tiếp nhận điểm tựa từ **9. Xây cầu nối lợi nhuận chuẩn hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Lập lịch nợ riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **10. Three-statement mô hình (model / 모델) phải tự khóa lô-gic (logic / 논리)** nối từ **9. Xây cầu nối lợi nhuận chuẩn hóa** sang **11. Lập lịch nợ riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Three-statement mô hình (model / 모델) phải tự khóa lô-gic (logic / 논리)
 
@@ -215,7 +215,7 @@ Debt
 
 Nếu bảng cân đối không cân hoặc tiền mặt không nối đúng, mô hình chưa đáng tin.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **11. Lập lịch nợ riêng** tiếp nhận điểm tựa từ **10. Three-statement mô hình (model / 모델) phải tự khóa lô-gic (logic / 논리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Dự báo lãi vay đúng cơ chế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **11. Lập lịch nợ riêng** nối từ **10. Three-statement mô hình (model / 모델) phải tự khóa lô-gic (logic / 논리)** sang **12. Dự báo lãi vay đúng cơ chế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Lập lịch nợ riêng
 
@@ -239,7 +239,7 @@ Covenant
 
 Điều này cho phép mô phỏng refinancing stress thay vì chỉ nhìn Debt/EBITDA hiện tại.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **11. Lập lịch nợ riêng** xác định đầu vào; **12. Dự báo lãi vay đúng cơ chế** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **13. ROIC phải tách quá khứ và phần vốn mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **11. Lập lịch nợ riêng** đặt đầu vào cho **12. Dự báo lãi vay đúng cơ chế**, rồi **13. ROIC phải tách quá khứ và phần vốn mới** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. Dự báo lãi vay đúng cơ chế
 
@@ -247,7 +247,7 @@ Chi phí lãi vay nên dựa vào nợ bình quân và lãi suất thực tế, 
 
 Khi lãi suất thị trường tăng, chi phí lãi thường chỉ tăng khi nợ thả nổi tái định giá hoặc nợ cũ đáo hạn. Đây là độ trễ quan trọng trong phân tích doanh nghiệp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **12. Dự báo lãi vay đúng cơ chế** xác định đầu vào; **13. ROIC phải tách quá khứ và phần vốn mới** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. Reinvestment runway** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **12. Dự báo lãi vay đúng cơ chế** đặt đầu vào cho **13. ROIC phải tách quá khứ và phần vốn mới**, rồi **14. Reinvestment runway** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13. ROIC phải tách quá khứ và phần vốn mới
 
@@ -263,7 +263,7 @@ Incremental NOPAT
 
 Nếu ROIC tăng thêm giảm mạnh khi doanh nghiệp mở rộng, lợi thế kinh tế có thể đang bão hòa.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **14. Reinvestment runway** tiếp nhận điểm tựa từ **13. ROIC phải tách quá khứ và phần vốn mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Moat phải được kiểm chứng bằng dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **14. Reinvestment runway** nối từ **13. ROIC phải tách quá khứ và phần vốn mới** sang **15. Moat phải được kiểm chứng bằng dữ liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Reinvestment runway
 
@@ -273,7 +273,7 @@ Một công ty có ROIC 40% nhưng chỉ tái đầu tư được 5% lợi nhu�
 
 Giá trị phụ thuộc cả **chất lượng** và **quy mô cơ hội**.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **14. Reinvestment runway** nêu điều cần giải thích; **15. Moat phải được kiểm chứng bằng dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. Dấu hiệu moat suy yếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **14. Reinvestment runway** đặt vấn đề; **15. Moat phải được kiểm chứng bằng dữ liệu** đối chiếu bằng chứng, rồi **16. Dấu hiệu moat suy yếu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. Moat phải được kiểm chứng bằng dữ liệu
 
@@ -294,7 +294,7 @@ Network density tăng
 
 Lợi thế cạnh tranh phải xuất hiện trong số liệu kinh tế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **15. Moat phải được kiểm chứng bằng dữ liệu** nêu điều cần giải thích; **16. Dấu hiệu moat suy yếu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. Quản trị phải nhìn qua phân bổ vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **15. Moat phải được kiểm chứng bằng dữ liệu** đặt vấn đề; **16. Dấu hiệu moat suy yếu** đối chiếu bằng chứng, rồi **17. Quản trị phải nhìn qua phân bổ vốn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 16. Dấu hiệu moat suy yếu
 
@@ -312,7 +312,7 @@ R&D phải tăng mạnh chỉ để giữ vị trí
 
 Giá cổ phiếu có thể chưa phản ánh ngay sự suy yếu này.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **17. Quản trị phải nhìn qua phân bổ vốn** tiếp nhận điểm tựa từ **16. Dấu hiệu moat suy yếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Mua lại cổ phiếu chỉ tốt khi giá hợp lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **17. Quản trị phải nhìn qua phân bổ vốn** nối từ **16. Dấu hiệu moat suy yếu** sang **18. Mua lại cổ phiếu chỉ tốt khi giá hợp lý**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Quản trị phải nhìn qua phân bổ vốn
 
@@ -331,7 +331,7 @@ SBC
 
 và hỏi mỗi đồng vốn được dùng có tạo giá trị trên mỗi cổ phiếu hay không.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **18. Mua lại cổ phiếu chỉ tốt khi giá hợp lý** tiếp nhận điểm tựa từ **17. Quản trị phải nhìn qua phân bổ vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. M&A phải được phân tích như một khoản đầu tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **18. Mua lại cổ phiếu chỉ tốt khi giá hợp lý** nối từ **17. Quản trị phải nhìn qua phân bổ vốn** sang **19. M&A phải được phân tích như một khoản đầu tư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Mua lại cổ phiếu chỉ tốt khi giá hợp lý
 
@@ -341,7 +341,7 @@ Nếu công ty mua cổ phiếu ở định giá quá cao rồi phát hành lạ
 
 Theo dõi **số cổ phiếu pha loãng thực tế**, không chỉ số tiền buyback.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **19. M&A phải được phân tích như một khoản đầu tư** tiếp nhận điểm tựa từ **18. Mua lại cổ phiếu chỉ tốt khi giá hợp lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Xây kịch bản từ driver, không từ phần trăm tùy ý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **19. M&A phải được phân tích như một khoản đầu tư** nối từ **18. Mua lại cổ phiếu chỉ tốt khi giá hợp lý** sang **20. Xây kịch bản từ driver, không từ phần trăm tùy ý**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. M&A phải được phân tích như một khoản đầu tư
 
@@ -357,7 +357,7 @@ ROIC sau mua lại so với WACC?
 
 Nếu thương vụ chỉ tăng EPS nhờ dùng nợ rẻ nhưng ROIC dưới chi phí vốn, tăng EPS không đồng nghĩa tạo giá trị.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **20. Xây kịch bản từ driver, không từ phần trăm tùy ý** tiếp nhận điểm tựa từ **19. M&A phải được phân tích như một khoản đầu tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Reverse DCF để đọc kỳ vọng trong giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **20. Xây kịch bản từ driver, không từ phần trăm tùy ý** nối từ **19. M&A phải được phân tích như một khoản đầu tư** sang **21. Reverse DCF để đọc kỳ vọng trong giá**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Xây kịch bản từ driver, không từ phần trăm tùy ý
 
@@ -376,7 +376,7 @@ Sản lượng -3%, ASP -7%, inventory tăng, biên giảm
 
 Sau đó mô hình tự truyền xuống EPS và FCF.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **21. Reverse DCF để đọc kỳ vọng trong giá** tiếp nhận điểm tựa từ **20. Xây kịch bản từ driver, không từ phần trăm tùy ý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Định giá phải nhất quán với giai đoạn chu kỳ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **21. Reverse DCF để đọc kỳ vọng trong giá** nối từ **20. Xây kịch bản từ driver, không từ phần trăm tùy ý** sang **22. Định giá phải nhất quán với giai đoạn chu kỳ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Reverse DCF để đọc kỳ vọng trong giá
 
@@ -388,7 +388,7 @@ Nếu giá chỉ hợp lý khi doanh nghiệp duy trì 25% tăng trưởng 10 n�
 
 Reverse DCF biến định giá thành bài toán về kỳ vọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **22. Định giá phải nhất quán với giai đoạn chu kỳ** tiếp nhận điểm tựa từ **21. Reverse DCF để đọc kỳ vọng trong giá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Từ định giá tới lợi suất kỳ vọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **22. Định giá phải nhất quán với giai đoạn chu kỳ** nối từ **21. Reverse DCF để đọc kỳ vọng trong giá** sang **23. Từ định giá tới lợi suất kỳ vọng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Định giá phải nhất quán với giai đoạn chu kỳ
 
@@ -406,7 +406,7 @@ EV/EBITDA chuẩn hóa
 
 thay vì trailing P/E máy móc.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **23. Từ định giá tới lợi suất kỳ vọng** tiếp nhận điểm tựa từ **22. Định giá phải nhất quán với giai đoạn chu kỳ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Luận điểm đầu tư phải có cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **23. Từ định giá tới lợi suất kỳ vọng** nối từ **22. Định giá phải nhất quán với giai đoạn chu kỳ** sang **24. Luận điểm đầu tư phải có cấu trúc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Từ định giá tới lợi suất kỳ vọng
 
@@ -422,7 +422,7 @@ Giá hiện tại
 
 Điều này giúp so doanh nghiệp với tài sản thay thế thay vì chỉ nói “upside 20%”.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **24. Luận điểm đầu tư phải có cấu trúc** tiếp nhận điểm tựa từ **23. Từ định giá tới lợi suất kỳ vọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Catalyst không thay thế giá trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **24. Luận điểm đầu tư phải có cấu trúc** nối từ **23. Từ định giá tới lợi suất kỳ vọng** sang **25. Catalyst không thay thế giá trị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Luận điểm đầu tư phải có cấu trúc
 
@@ -438,7 +438,7 @@ Catalyst nào có thể làm kỳ vọng đổi?
 
 Nếu không thể viết ngắn gọn năm phần này, luận điểm có thể chưa đủ rõ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **25. Catalyst không thay thế giá trị** tiếp nhận điểm tựa từ **24. Luận điểm đầu tư phải có cấu trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. vô hiệu hóa (invalidation / 무효화) phải liên quan cơ chế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **25. Catalyst không thay thế giá trị** nối từ **24. Luận điểm đầu tư phải có cấu trúc** sang **26. vô hiệu hóa (invalidation / 무효화) phải liên quan cơ chế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Catalyst không thay thế giá trị
 
@@ -456,7 +456,7 @@ Thay đổi chính sách
 Kết quả quý xác nhận thesis
 ```
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **25. Catalyst không thay thế giá trị** xác định đầu vào; **26. vô hiệu hóa (invalidation / 무효화) phải liên quan cơ chế** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **27. Bảng theo dõi sau đầu tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **25. Catalyst không thay thế giá trị** đặt đầu vào cho **26. vô hiệu hóa (invalidation / 무효화) phải liên quan cơ chế**, rồi **27. Bảng theo dõi sau đầu tư** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 26. vô hiệu hóa (invalidation / 무효화) phải liên quan cơ chế
 
@@ -472,7 +472,7 @@ Nợ không tái cấp vốn được
 Biên lợi nhuận cấu trúc giảm
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **26. vô hiệu hóa (invalidation / 무효화) phải liên quan cơ chế** xác định đầu vào; **27. Bảng theo dõi sau đầu tư** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **28. Phân biệt thesis drift và thesis evolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **26. vô hiệu hóa (invalidation / 무효화) phải liên quan cơ chế** đặt đầu vào cho **27. Bảng theo dõi sau đầu tư**, rồi **28. Phân biệt thesis drift và thesis evolution** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 27. Bảng theo dõi sau đầu tư
 
@@ -491,7 +491,7 @@ Invalidation
 
 Không cần xây lại toàn bộ thesis nếu chỉ một chỉ tiêu phụ thay đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **28. Phân biệt thesis drift và thesis evolution** tiếp nhận điểm tựa từ **27. Bảng theo dõi sau đầu tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Bài tập tích hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **28. Phân biệt thesis drift và thesis evolution** nối từ **27. Bảng theo dõi sau đầu tư** sang **29. Bài tập tích hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Phân biệt thesis drift và thesis evolution
 
@@ -503,7 +503,7 @@ Khi dữ liệu mới xuất hiện, luận điểm có thể được cập nh�
 
 Nhật ký phiên bản giúp phân biệt hai việc này.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **29. Bài tập tích hợp** tiếp nhận điểm tựa từ **28. Phân biệt thesis drift và thesis evolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Liên kết đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **29. Bài tập tích hợp** nối từ **28. Phân biệt thesis drift và thesis evolution** sang **30. Liên kết đọc tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Bài tập tích hợp
 
@@ -523,7 +523,7 @@ Chọn một doanh nghiệp và hoàn thành:
 
 Nếu làm được bài này mà không dựa vào một bội số duy nhất, người đọc đã tiến từ “đọc báo cáo” sang **phân tích doanh nghiệp tích hợp**.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, sau nội dung của **29. Bài tập tích hợp**, **30. Liên kết đọc tiếp** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, sau nội dung của **29. Bài tập tích hợp**, **30. Liên kết đọc tiếp** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Kết luận** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 30. Liên kết đọc tiếp
 
@@ -535,7 +535,7 @@ Nếu làm được bài này mà không dựa vào một bội số duy nhất,
 - [Chất lượng lợi nhuận và forensic](./04_EARNINGS_QUALITY_MODELING_AND_FORENSICS.md)
 - [Quản trị và phân bổ vốn](./06_GOVERNANCE_CAPITAL_ALLOCATION_MA_AND_MANAGEMENT_QUALITY.md)
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **Kết luận** gom các mảnh từ **30. Liên kết đọc tiếp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: mô hình doanh nghiệp tích hợp và quản trị luận điểm đầu tư**, **Kết luận** tổng hợp từ **30. Liên kết đọc tiếp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 
