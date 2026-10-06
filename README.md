@@ -11,6 +11,7 @@ Danh mục lĩnh vực (domain / 도메인) đầy đủ, siêu dữ liệu (met
 Phần này là bản đồ của toàn bộ kho học tập. Hãy chọn một bộ theo mục tiêu, rồi đi vào tài liệu liên quan để theo dõi mạch khái niệm → cơ chế → ví dụ → ôn tập.
 
 - [정보처리기사](정보처리기사/output/README.md): 5 môn, tài liệu Hàn–Anh–Việt, sắp xếp theo mạch kiến thức.
+- [컴퓨터활용능력](컴퓨터활용능력/README.md): skeleton học 컴퓨터활용능력 2급, tách 필기 (컴퓨터 일반 + 스프레드시트 일반) và 실기 (스프레드시트 실무), có version note cho 출제기준 2024–2026 và 2027–2029.
 - [SQLD](sql/output/README.md): mô hình dữ liệu và SQL cơ bản/nâng cao, có ví dụ truy vấn và quy tắc dễ nhầm.
 - [Mathematics Master Knowledge Book](mathematics/README.md): 87 chủ đề Toán theo conceptual phụ thuộc (dependency / 의존성) và first-principles, có glossary Việt–Anh–Hàn, kiến thức (knowledge / 지식) connections và coverage kiểm tra (audit / 감사); bao phủ thêm phân tích (analysis / 분석), tensor/autodiff, stochastic processes, Bayesian suy luận (inference / 추론) và động (dynamic / 동적) programming/điều khiển (control / 제어).
 - [Physics Knowledge Library](physics/README.md): thư viện Vật lý theo conceptual phụ thuộc (dependency / 의존성) từ phép đo, cơ học, sóng, chất lưu, nhiệt, điện từ và quang học đến tương đối tính, lượng tử, nguyên tử–hạt nhân, vật chất ngưng tụ, điện tử và vật lý thiên văn; có kiến thức (knowledge / 지식) connections và độ sâu (depth / 깊이)/coverage kiểm tra (audit / 감사).
