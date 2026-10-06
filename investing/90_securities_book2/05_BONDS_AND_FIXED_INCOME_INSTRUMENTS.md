@@ -6,7 +6,7 @@ Trái phiếu (bond / 채권) là bước chuyển từ quyền sở hữu resid
 
 Một trái phiếu thường có mệnh giá (face value), ngày đáo hạn (maturity date), lãi coupon (coupon) và coupon rate. Coupon = face value × coupon rate theo kỳ trả. Zero-coupon/discount bond không trả coupon định kỳ; nhà đầu tư mua dưới mệnh giá và nhận mệnh giá khi đáo hạn. Coupon bond trả dòng tiền định kỳ và mệnh giá ở cuối kỳ. Perpetuity bond không có ngày đáo hạn hữu hạn trong mô hình.
 
-Giá trái phiếu là giá trị hiện tại của coupon và gốc:
+Định giá trái phiếu (bond valuation / 채권평가) bắt đầu từ giá trị hiện tại của coupon và gốc:
 
 ```text
 P = Σ [C / (1 + y)^t] + [F / (1 + y)^n]
@@ -16,7 +16,9 @@ P = Σ [C / (1 + y)^t] + [F / (1 + y)^n]
 
 ## 2. Trái phiếu có quyền chọn hoặc cấu trúc lai
 
-Convertible bond (전환사채) cho người sở hữu quyền chuyển thành cổ phiếu theo điều khoản; giá chịu ảnh hưởng của cả trái phiếu và quyền chọn cổ phiếu. Bond with warrant (신주인수권부사채) gắn quyền mua riêng hoặc đi kèm; exchangeable bond (교환사채) cho phép đổi sang chứng khoán của tổ chức khác. Callable bond cho tổ chức phát hành quyền mua lại trước hạn; puttable bond cho nhà đầu tư quyền bán lại. Quyền chọn thay đổi thời hạn dòng tiền và làm duration không còn đơn giản.
+Convertible bond (전환사채) cho người sở hữu quyền chuyển thành cổ phiếu theo điều khoản; giá chịu ảnh hưởng của cả trái phiếu và quyền chọn cổ phiếu. Bond with warrant (신주인수권부사채) gắn quyền mua riêng hoặc đi kèm; exchangeable bond (교환사채) cho phép đổi sang chứng khoán của tổ chức khác.
+
+Callable bond cho **tổ chức phát hành** quyền mua lại trước hạn theo call schedule/price; khi lãi suất giảm, quyền này có thể cắt ngắn upside của nhà đầu tư và tạo reinvestment risk. Puttable bond cho **nhà đầu tư** quyền bán lại theo put date/price; quyền put tạo một mức bảo vệ có điều kiện nhưng giá trị phụ thuộc đúng điều khoản. Hai sản phẩm không được gộp thành “bond có option”: bên nắm quyền khác nhau, nên hướng convexity và rủi ro dòng tiền cũng khác nhau. Quyền chọn nói chung làm thời hạn dòng tiền và duration không còn cố định.
 
 ## 3. Sản phẩm dựa trên tài sản hoặc chỉ số
 
@@ -61,10 +63,15 @@ Tên nhóm sản phẩm chỉ cho biết lớp tài sản; muốn đánh giá ph
 | --- | --- | --- | --- |
 | Trái phiếu coupon thông thường | Coupon cố định + hoàn gốc | Lãi suất, tín dụng issuer, thanh khoản | YTM dựa trên giá nào và thứ tự ưu tiên khi vỡ nợ ra sao? |
 | Zero-coupon | Khoản hoàn gốc duy nhất ở đáo hạn | Duration dài, nhạy với lãi suất, không có dòng tiền giữa kỳ | Khoảng thời gian khóa vốn và giá trị chiết khấu là bao nhiêu? |
-| Convertible / warrant | Coupon hoặc gốc + quyền tham gia upside của tài sản cơ sở | Biến động cổ phiếu, dilution, điều khoản chuyển đổi | Quyền chuyển đổi thuộc ai, tỷ lệ chuyển đổi và ngày khóa quyền thế nào? |
-| Callable / puttable | Dòng tiền trái phiếu + quyền mua lại/bán lại | Reinvestment risk hoặc extension risk | Ai có quyền kích hoạt, tại mức giá và thời điểm nào? |
-| ABS / MBS / CMO | Dòng tiền từ pool tài sản và waterfall | Default pool, prepayment, tranche, pháp lý cấu trúc | Tiền trả theo pass-through hay waterfall; tranche chịu lỗ trước hay sau? |
-| Floating-rate / reverse floater | Coupon gắn với benchmark, theo cùng chiều hoặc ngược chiều | Basis risk, reset, leverage coupon | Benchmark, spread, kỳ reset và floor/cap cụ thể là gì? |
+| Convertible bond | Coupon/gốc + quyền chuyển thành cổ phiếu issuer | Biến động cổ phiếu, dilution, conversion terms | Conversion ratio/price, period và điều kiện điều chỉnh là gì? |
+| Bond with warrant | Trái phiếu + warrant mua cổ phiếu | Giá warrant, dilution, khả năng tách rời | Warrant có tách rời không và strike/exercise period là gì? |
+| Callable bond | Dòng tiền trái phiếu + quyền call của issuer | Reinvestment risk, negative convexity | Call price/date và notice rule là gì? |
+| Puttable bond | Dòng tiền trái phiếu + quyền put của holder | Giá trị put, extension/credit protection có điều kiện | Put price/date và điều kiện exercise là gì? |
+| ABS | Dòng tiền từ pool tài sản securitize | Default pool, servicing, waterfall | Credit enhancement và thứ tự chịu lỗ ra sao? |
+| MBS | Dòng tiền từ mortgage pool | Prepayment và extension risk | Tốc độ trả trước làm timing principal đổi thế nào? |
+| CMO | Mortgage cash flow được chia thành tranche | Tranche timing/loss khác nhau | Tranche nào nhận principal/loss trước? |
+| Floating-rate bond | Coupon đi cùng benchmark ± spread | Basis risk, reset lag, floor/cap | Benchmark, spread và kỳ reset là gì? |
+| Reverse floater | Coupon đi ngược benchmark, thường `constant − rate` | Leverage coupon, cap/floor | Benchmark tăng đến đâu thì coupon chạm floor? |
 | Structured note | Trái phiếu issuer + payoff phái sinh | Issuer risk, barrier/trigger, định giá khó và thanh khoản thấp | Nếu barrier/trigger xảy ra thì mất coupon, gốc hay cả hai? |
 
 Điểm cần nhớ là **nguồn dòng tiền** và **quyền thay đổi dòng tiền** là hai trục khác nhau. Một MBS có thể có tài sản thế chấp nhưng vẫn chịu prepayment; một structured note có thể hứa coupon cao nhưng phần bù nằm ở rủi ro issuer hoặc quyền chọn bán cho nhà đầu tư. Vì thế không nên dùng một chỉ tiêu duy nhất (coupon, rating hay duration) để kết luận sản phẩm “an toàn”.
@@ -78,6 +85,8 @@ Raw source đặt các heading sản phẩm riêng; vì vậy coverage không d�
 | Convertible bond | 전환사채 (CB) | trái phiếu + quyền chuyển thành cổ phiếu của issuer | conversion ratio/price, period và dilution quyết định payoff |
 | Bond with warrant | 신주인수권부사채 (BW) | trái phiếu + quyền mua cổ phiếu | warrant có thể tách rời tùy điều khoản; không đồng nhất với CB |
 | Exchangeable bond | 교환사채 (EB) | đổi sang chứng khoán đã chỉ định, thường không phải cổ phiếu mới của chính issuer | phải đọc exchange asset và exchange ratio |
+| Callable bond | source English label | issuer có quyền mua lại trước hạn theo lịch/giá call | call schedule, reinvestment risk và negative convexity phải đọc riêng |
+| Puttable bond | source English label | holder có quyền bán lại theo lịch/giá put | put date/price và điều kiện exercise quyết định mức bảo vệ |
 | ABS | 자산유동화증권 | dòng tiền từ pool tài sản được securitize | credit enhancement, waterfall và servicing quan trọng hơn tên “asset-backed” |
 | MBS | 주택저당증권 | ABS dựa trên khoản vay thế chấp | prepayment/extension risk làm timing dòng tiền thay đổi |
 | CMO | CMO | chia dòng tiền mortgage thành các tranche | tranche khác nhau nhận principal/loss khác nhau |
