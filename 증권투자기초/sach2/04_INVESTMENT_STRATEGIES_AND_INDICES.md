@@ -52,6 +52,20 @@ Khi so sánh với benchmark, phải đồng nhất ba thứ: cách tính lợi 
 
 Buy-and-hold thất bại nếu tài sản mất khả năng tạo dòng tiền; DCA thất bại về mục tiêu nếu nhà đầu tư không chịu được drawdown kéo dài; small-firm/formula effect thất bại nếu premium bị phí, thanh khoản hoặc data-mining ăn hết. Mỗi chiến lược cần một kill condition: thay đổi quyền lợi pháp lý, suy giảm chất lượng lợi nhuận, turnover vượt ngân sách hoặc benchmark-adjusted return không còn bù rủi ro. Bài 5 sẽ cho thấy cùng logic này áp dụng vào sản phẩm trái phiếu có payoff phức tạp hơn.
 
+## 8. Đo lường chiến lược bằng đường đi, không chỉ điểm cuối
+
+Một chiến lược có thể kết thúc cùng giá trị tài sản nhưng trải qua rủi ro rất khác. Vì vậy hãy ghi cả lợi suất, drawdown, turnover và active return:
+
+```
+CAGR = (giá trị cuối / giá trị đầu)^(1 / số năm) − 1
+Max drawdown = min[(giá trị hiện tại / đỉnh lịch sử trước đó) − 1]
+Active return = total return danh mục − total return benchmark
+```
+
+Ví dụ, 100 tăng lên 121 sau hai năm có CAGR 10%, nhưng nếu đường đi là 100 → 80 → 121 thì max drawdown là −20%. Hai chiến lược có cùng CAGR không có cùng trải nghiệm rủi ro; chiến lược có drawdown sâu hơn có thể buộc nhà đầu tư bán ra trước khi lợi nhuận xuất hiện.
+
+Turnover và chi phí phải được trừ trước khi kết luận có lợi thế. Nếu active return dương chỉ vì danh mục dùng benchmark price-return còn danh mục nhận cổ tức, đó là lỗi đo lường chứ không phải alpha. Đây là lý do benchmark, currency và total-return convention phải được khóa trước khi so sánh.
+
 ## Chốt và bàn giao
 
 Invariant là “kết quả đầu tư = exposure × cơ chế lợi suất − chi phí và rủi ro”. Benchmark chỉ có ý nghĩa khi cùng định nghĩa lợi suất, tiền tệ và thời hạn. Bài 5 chuyển sang trái phiếu, nơi exposure được trả theo coupon, gốc, quyền chọn và thứ tự ưu tiên thay vì residual claim của cổ phiếu. Xem [Trái phiếu và sản phẩm thu nhập cố định](./05_BONDS_AND_FIXED_INCOME_INSTRUMENTS.md).

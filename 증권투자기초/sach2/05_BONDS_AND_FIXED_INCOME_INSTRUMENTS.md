@@ -64,6 +64,18 @@ Convertible bond có một phần trái phiếu và một quyền chọn chuyể
 
 Khi đọc structured note, hãy tách payoff thành trái phiếu nền + quyền chọn + rủi ro issuer + điều kiện trigger. Coupon cao có thể là tiền bán quyền chọn hoặc bù cho thanh khoản thấp, không phải “free yield”. Đây là mental model giúp người học không nhầm tên sản phẩm với mức an toàn.
 
+## 8. Thứ tự ưu tiên, recovery và expected loss
+
+Khi issuer gặp stress, câu hỏi không còn chỉ là coupon bao nhiêu mà là ai chịu lỗ trước và tài sản nào còn lại để thu hồi. Senior secured, senior unsecured và subordinated có thể có thứ tự ưu tiên khác nhau; thứ tự cụ thể phụ thuộc prospectus và luật phá sản, nên không được coi bảng phân loại textbook là quy tắc pháp lý phổ quát.
+
+Một mental model đơn giản là:
+
+Expected loss ≈ xác suất vỡ nợ × tỷ lệ mất mát khi vỡ nợ × exposure
+
+Nếu xác suất vỡ nợ một kỳ là 2%, tỷ lệ mất mát sau recovery là 60% và exposure là 100, expected loss giản lược là `0,02 × 0,60 × 100 = 1,2`. Đây không phải giá trái phiếu hay spread quan sát được: spread còn chứa premium thanh khoản, risk appetite, kỳ hạn, thuế và sai số mô hình. Nhưng phép nhân giúp người học hiểu vì sao cùng rating mà recovery hoặc collateral khác nhau vẫn tạo payoff khác nhau.
+
+Khi đọc ABS/MBS hoặc structured note, hãy hỏi thêm waterfall phân phối tiền và tranche nào hấp thụ lỗ đầu tiên. Khi đọc trái phiếu doanh nghiệp thông thường, hãy tách issuer risk khỏi rate risk; coupon cao có thể bù cho expected loss và liquidity, nhưng không biến principal thành chắc chắn.
+
 ## Chốt và bàn giao
 
 Invariant là “trái phiếu là gói dòng tiền có thời điểm, ưu tiên và quyền chọn”. Giá phụ thuộc discount rate và xác suất dòng tiền thực sự nhận được. Bài 6 dùng invariant này để giải YTM, đường cong lợi suất, spread, duration và chỉ số trái phiếu. Xem [Lợi suất và rủi ro trái phiếu](./06_BOND_YIELDS_RISK_DURATION_AND_INDICES.md).

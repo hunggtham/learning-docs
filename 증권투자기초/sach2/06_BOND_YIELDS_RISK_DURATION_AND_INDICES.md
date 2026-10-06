@@ -75,6 +75,15 @@ Giả sử một trái phiếu có modified duration bằng 4. Khi lợi suất 
 
 Nếu convexity dương, số lỗ thực tế thường nhỏ hơn một chút so với approximation tuyến tính khi cú sốc không quá lớn. Nhưng nếu spread tín dụng đồng thời tăng 100 điểm cơ bản, chỉ dùng duration của đường cong chính phủ sẽ đánh giá thiếu rủi ro. Nhà đầu tư cần tách rate duration, spread duration và khả năng dòng tiền thay đổi.
 
+Có thể lượng hóa tách rủi ro bằng hai duration:
+
+```
+ΔP/P ≈ −D_rate·Δy_rate − D_spread·Δspread
+```
+
+Ví dụ, nếu `D_rate = 4`, `D_spread = 3`, lợi suất chính phủ tăng 50 điểm cơ bản và spread tăng 100 điểm cơ bản, tác động bậc một xấp xỉ là `−4 × 0,005 − 3 × 0,01 = −5%`. Con số này chưa tính convexity, default thực tế hay thay đổi dòng tiền; nó chỉ cho biết một danh mục có thể lỗ vì hai kênh cùng lúc. Nếu chỉ nhìn yield curve chính phủ, người học sẽ quy toàn bộ −5% cho lãi suất và bỏ sót credit exposure.
+
+
 Với trái phiếu callable, lãi suất giảm có thể khiến issuer gọi lại trái phiếu; nhà đầu tư nhận tiền sớm đúng lúc cơ hội tái đầu tư có lợi suất thấp. Với MBS, lãi suất giảm có thể làm prepayment tăng và duration rút ngắn. Vì vậy duration là trạng thái của dòng tiền tại một kịch bản, không phải nhãn cố định trên sản phẩm.
 
 ## 8. Từ benchmark đến attribution
