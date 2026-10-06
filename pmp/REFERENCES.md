@@ -4,7 +4,7 @@
 
 ## Phạm vi và thời điểm kiểm chứng
 
-Các thông tin certification/exam có thể thay đổi. Những chi tiết hiện hành trong thư viện này được kiểm chứng lại ngày 2026-09-22 từ nguồn chính thức của dự án (project / 프로젝트) Management Institute (PMI). Khi dùng thư viện ở thời điểm xa hơn, ưu tiên kiểm tra lại PMI trước khi dựa vào số câu, thời lượng, eligibility, huấn luyện (training / 학습) yêu cầu (requirement / 요구사항), item format hoặc exam weighting.
+Các thông tin certification/exam có thể thay đổi. Những chi tiết hiện hành trong thư viện này được kiểm chứng lại ngày 2026-10-06 từ nguồn chính thức của dự án (project / 프로젝트) Management Institute (PMI). Khi dùng thư viện ở thời điểm xa hơn, ưu tiên kiểm tra lại PMI trước khi dựa vào số câu, thời lượng, eligibility, huấn luyện (training / 학습) yêu cầu (requirement / 요구사항), item format hoặc exam weighting.
 
 Thư viện (library / 라이브러리) cố ý tách `exam fact` khỏi `project-management mental model`. Những thứ như weighting, thời lượng hay eligibility có thể thay đổi theo chính sách (policy / 정책); các mô hình tư duy (mental model / 사고 모델) như giá trị (value / 값), bất định (uncertainty / 불확실성), quản trị (governance / 거버넌스), phản hồi (feedback / 피드백) hay quyết định (decision / 결정) rights bền hơn và không nên bị học như siêu dữ liệu (metadata / 메타데이터) của một exam phiên bản (version / 버전).
 
@@ -77,6 +77,48 @@ https://www.pmi.org/certifications/project-management-pmp/pmp-exam-prep
 PMI lưu ý PMP exam không được xây từ một cuốn sách duy nhất; tham chiếu (reference / 참조) danh sách (list / 목록) là các nguồn được question writers trích dẫn thường xuyên. Điều này là lý do thư viện kiến thức (knowledge library / 지식 라이브러리) tổ chức theo conceptual phụ thuộc (dependency / 의존성) và ECO thay vì cố “chép PMBOK thành syllabus”.
 
 > **Nối mạch:** Nguồn chuẩn chính cung cấp phiên bản và phạm vi; nguồn nội bộ repository ánh xạ claim về owner và cấu trúc bài học. **Nguyên tắc sử dụng nguồn** quy định cách giữ hai lớp này nhất quán.
+
+## Nguồn PMI bổ sung cho depth refinement
+
+Các nguồn dưới đây không thay ECO/PMBOK làm canonical exam/standards source. Chúng được dùng để kiểm chứng các cơ chế cụ thể đã bổ sung trong depth pass ngày 2026-10-06.
+
+### PMI Lexicon of Project Management Terms — Version 5.0
+
+https://www.pmi.org/-/media/pmi/documents/registered/pdf/pmbok-standards/pmi-lexicon-pm-terms.pdf
+
+Lexicon phân biệt `risk action` và `risk action owner`, hỗ trợ ranh giới giữa người sở hữu exposure và người chịu trách nhiệm thực hiện response action trong [Risk & Decisions](./08_risk_uncertainty_issues_and_decisions.md).
+
+### Managing overall project risk
+
+https://www.pmi.org/learning/library/overall-project-risk-assessment-models-1386?id=1386
+
+Nguồn PMI này phân biệt overall project risk với individual risks và nêu accountability ở cấp project objectives. Thư viện dùng distinction này để tránh suy luận “overall risk = tổng cơ học risk-register items”.
+
+### How risky is your project — And what are you doing about it?
+
+https://www.pmi.org/learning/library/risky-project-doing-it-9351
+
+Nguồn này củng cố cùng distinction về overall project risk và responsibility ở cấp sponsor/project manager, đồng thời nhấn mạnh exposure của toàn dự án thay đổi theo thời gian.
+
+### Putting quality in project risk management, part 2
+
+https://www.pmi.org/learning/library/2019/04/07/15/16/quality-project-risk-management-part2-4957
+
+PMI giải thích control chart, common-cause/special-cause variation và control limits. Thư viện dùng nguồn này để đào sâu distinction giữa process behavior và requirement/specification boundary trong [Quality, Resources & Procurement](./07_quality_resources_and_procurement.md).
+
+### Product Management Mindset — Disciplined Agile
+
+https://www.pmi.org/disciplined-agile/process/product-management/product-management-mindset
+
+Nguồn Disciplined Agile nhấn mạnh experiment-driven decisions, incremental release và feedback loop. Thư viện mở rộng từ đây sang feedback validity: tốc độ feedback không tự chứng minh sample/measurement đủ đại diện cho decision cần đưa ra.
+
+### Project governance
+
+https://www.pmi.org/learning/library/project-governance-critical-success-9945
+
+Nguồn này dùng để đối chiếu governance framework, roles, monitoring/control và assurance xuyên vòng đời. Phần exception debt trong [Governance & Environment](./09_governance_compliance_and_business_environment.md) là editorial enrichment dựa trên cùng mục tiêu: governance phải tiếp tục kiểm tra effectiveness thay vì coi một approval/exception ban đầu là trạng thái vĩnh viễn.
+
+> **Nối mạch:** Các nguồn bổ sung giải thích provenance của các mechanism mới; **Nguồn nội bộ repository** tiếp theo chỉ owner nơi chúng được dạy và cross-link.
 
 ## Nguồn (source / 소스) nội bộ repository
 
