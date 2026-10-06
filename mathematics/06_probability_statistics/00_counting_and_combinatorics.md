@@ -40,7 +40,7 @@ Ví dụ password gồm 8 lowercase letters:
 
 possible strings, nếu repetition được phép.
 
-> **Chuyển mạch:** Trong **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **2. Khi nào sản phẩm (product / 제품) quy tắc (rule / 규칙) sai?** tiếp nhận điểm tựa từ **1. quy tắc (rule / 규칙) of sum và quy tắc (rule / 규칙) of sản phẩm (product / 제품)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Permutation: thứ tự (order / 순서) tạo cấu hình (configuration / 구성) mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **2. Khi nào sản phẩm (product / 제품) quy tắc (rule / 규칙) sai?** nối từ **1. quy tắc (rule / 규칙) of sum và quy tắc (rule / 규칙) of sản phẩm (product / 제품)** sang **3. Permutation: thứ tự (order / 순서) tạo cấu hình (configuration / 구성) mới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Khi nào sản phẩm (product / 제품) quy tắc (rule / 규칙) sai?
 
@@ -60,7 +60,7 @@ Ví dụ chọn two distinct digits: digit đầu có 10 choices, digit sau ch�
 
 Không thể dùng `10^2` nếu repetition bị cấm.
 
-> **Chuyển mạch:** Ở chặng này của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **3. Permutation: thứ tự (order / 순서) tạo cấu hình (configuration / 구성) mới** tiếp nhận điểm tựa từ **2. Khi nào sản phẩm (product / 제품) quy tắc (rule / 규칙) sai?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Combination: quotient out thứ tự (order / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **3. Permutation: thứ tự (order / 순서) tạo cấu hình (configuration / 구성) mới** nối từ **2. Khi nào sản phẩm (product / 제품) quy tắc (rule / 규칙) sai?** sang **4. Combination: quotient out thứ tự (order / 순서)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Permutation: thứ tự (order / 순서) tạo cấu hình (configuration / 구성) mới
 
@@ -82,7 +82,7 @@ Key question luôn là:
 
 Nếu có, permutation-like counting phù hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **4. Combination: quotient out thứ tự (order / 순서)** tiếp nhận điểm tựa từ **3. Permutation: thứ tự (order / 순서) tạo cấu hình (configuration / 구성) mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Binomial coefficient như nhiều thứ cùng lúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **4. Combination: quotient out thứ tự (order / 순서)** nối từ **3. Permutation: thứ tự (order / 순서) tạo cấu hình (configuration / 구성) mới** sang **5. Binomial coefficient như nhiều thứ cùng lúc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Combination: quotient out thứ tự (order / 순서)
 
@@ -100,7 +100,7 @@ Combination có symmetry:
 
 Lý do: chọn `k` phần tử để giữ tương đương chọn `n-k` phần tử để bỏ.
 
-> **Chuyển mạch:** Trong **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **5. Binomial coefficient như nhiều thứ cùng lúc** tiếp nhận điểm tựa từ **4. Combination: quotient out thứ tự (order / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Binomial theorem từ counting choices** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **5. Binomial coefficient như nhiều thứ cùng lúc** nối từ **4. Combination: quotient out thứ tự (order / 순서)** sang **6. Binomial theorem từ counting choices**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Binomial coefficient như nhiều thứ cùng lúc
 
@@ -115,7 +115,7 @@ number of paths với k moves theo một direction
 
 Connections này rất quan trọng vì cùng một cấu trúc (structure / 구조) xuất hiện dưới nhiều representations.
 
-> **Chuyển mạch:** Ở chặng này của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **6. Binomial theorem từ counting choices** tiếp nhận điểm tựa từ **5. Binomial coefficient như nhiều thứ cùng lúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Pascal định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **6. Binomial theorem từ counting choices** nối từ **5. Binomial coefficient như nhiều thứ cùng lúc** sang **7. Pascal định danh (identity / 식별자)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Binomial theorem từ counting choices
 
@@ -137,7 +137,7 @@ Muốn term chứa `b^k`, ta chọn `k` trong `n` factors lấy `b`:
 
 Coefficient không xuất hiện magic; nó đếm số ways tạo cùng monomial.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **7. Pascal định danh (identity / 식별자)** tiếp nhận điểm tựa từ **6. Binomial theorem từ counting choices** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Stars and bars** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **7. Pascal định danh (identity / 식별자)** nối từ **6. Binomial theorem từ counting choices** sang **8. Stars and bars**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Pascal định danh (identity / 식별자)
 
@@ -164,7 +164,7 @@ Hai cases rời nhau và cover toàn bộ possibilities.
 
 Đây là classic combinatorial proof: chứng minh định danh (identity / 식별자) bằng cách đếm cùng một set theo hai cách.
 
-> **Chuyển mạch:** Trong **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **8. Stars and bars** tiếp nhận điểm tựa từ **7. Pascal định danh (identity / 식별자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Inclusion–exclusion: sửa double counting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **8. Stars and bars** nối từ **7. Pascal định danh (identity / 식별자)** sang **9. Inclusion–exclusion: sửa double counting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Stars and bars
 
@@ -194,7 +194,7 @@ Giả định (assumption / 가정) quan trọng: items identical, boxes disting
 
 Nếu các ràng buộc (constraints / 제약조건들) đổi, formula cũng đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **9. Inclusion–exclusion: sửa double counting** tiếp nhận điểm tựa từ **8. Stars and bars** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Complement counting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **9. Inclusion–exclusion: sửa double counting** nối từ **8. Stars and bars** sang **10. Complement counting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Inclusion–exclusion: sửa double counting
 
@@ -219,7 +219,7 @@ Mẫu (pattern / 패턴) alternating signs vì intersections bị đếm thừa 
 
 Inclusion–exclusion là một thành phần nguyên thủy (primitive / 기본 요소) rất quan trọng trong xác suất (probability / 확률) và discrete mathematics.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **10. Complement counting** tiếp nhận điểm tựa từ **9. Inclusion–exclusion: sửa double counting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Pigeonhole principle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **10. Complement counting** nối từ **9. Inclusion–exclusion: sửa double counting** sang **11. Pigeonhole principle**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Complement counting
 
@@ -245,7 +245,7 @@ P(\text{no collision})
 
 Complement chiến lược (strategy / 전략) là mẫu (pattern / 패턴) general: “at least one” thường dễ xử lý qua “none”.
 
-> **Chuyển mạch:** Trong **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **11. Pigeonhole principle** tiếp nhận điểm tựa từ **10. Complement counting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Bijection proof** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **11. Pigeonhole principle** nối từ **10. Complement counting** sang **12. Bijection proof**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Pigeonhole principle
 
@@ -261,7 +261,7 @@ objects.
 
 Trong hashing, collision là unavoidable nếu key không gian (space / 공간) lớn hơn bucket không gian (space / 공간). Good băm (hash / 해시) chỉ phân bố collisions tốt hơn; không loại được định lý.
 
-> **Chuyển mạch:** Ở chặng này của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **12. Bijection proof** tiếp nhận điểm tựa từ **11. Pigeonhole principle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Recurrence trong counting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **12. Bijection proof** nối từ **11. Pigeonhole principle** sang **13. Recurrence trong counting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Bijection proof
 
@@ -271,7 +271,7 @@ Ví dụ `k`-subsets của `n` objects biject với `(n-k)`-subsets bằng compl
 
 Bijection không chỉ chứng minh count; nó giải thích **vì sao** hai quantities giống nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **13. Recurrence trong counting** tiếp nhận điểm tựa từ **12. Bijection proof** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Generating functions intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **13. Recurrence trong counting** nối từ **12. Bijection proof** sang **14. Generating functions intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Recurrence trong counting
 
@@ -294,7 +294,7 @@ a_n=a_{n-1}+a_{n-2}.
 
 Combinatorics và recurrence/DP gặp nhau ở đây.
 
-> **Chuyển mạch:** Trong **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **14. Generating functions intuition** tiếp nhận điểm tựa từ **13. Recurrence trong counting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Asymptotic counting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **14. Generating functions intuition** nối từ **13. Recurrence trong counting** sang **15. Asymptotic counting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Generating functions intuition
 
@@ -308,7 +308,7 @@ Nó encode whole count chuỗi (sequence / 시퀀스) vào một algebraic đố
 
 Operations trên generating functions có thể transform recurrence thành algebra. Đây là advanced cầu nối (bridge / 브리지) giữa combinatorics, power series và thuật toán (algorithm / 알고리즘) phân tích (analysis / 분석).
 
-> **Chuyển mạch:** Ở chặng này của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **15. Asymptotic counting** tiếp nhận điểm tựa từ **14. Generating functions intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Search-space explosion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **15. Asymptotic counting** nối từ **14. Generating functions intuition** sang **16. Search-space explosion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Asymptotic counting
 
@@ -336,7 +336,7 @@ Nó cho logarithm của factorial gần:
 
 Điều này xuất hiện trong entropy, counting states và độ phức tạp (complexity / 복잡도).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **16. Search-space explosion** tiếp nhận điểm tựa từ **15. Asymptotic counting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Counting và xác suất (probability / 확률)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **16. Search-space explosion** nối từ **15. Asymptotic counting** sang **17. Counting và xác suất (probability / 확률)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Search-space explosion
 
@@ -358,7 +358,7 @@ possibilities.
 
 Đây là lý do brute force nhanh chóng bất khả thi. độ phức tạp (complexity / 복잡도) thường bắt đầu từ combinatorial count của tìm kiếm (search / 검색) không gian (space / 공간).
 
-> **Chuyển mạch:** Trong **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **17. Counting và xác suất (probability / 확률)** tiếp nhận điểm tựa từ **16. Search-space explosion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Hypergeometric vs binomial liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **17. Counting và xác suất (probability / 확률)** nối từ **16. Search-space explosion** sang **18. Hypergeometric vs binomial liên kết (connection / 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Counting và xác suất (probability / 확률)
 
@@ -372,7 +372,7 @@ Nhưng combinatorics chỉ cung cấp counts. giả định (assumption / 가정
 
 Sai lầm phổ biến là đếm đúng nhưng mô hình (model / 모델) xác suất sai.
 
-> **Chuyển mạch:** Ở chặng này của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, sau nội dung của **17. Counting và xác suất (probability / 확률)**, **18. Hypergeometric vs binomial liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **19. Worked example: committee ràng buộc (constraint / 제약조건)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, sau nội dung của **17. Counting và xác suất (probability / 확률)**, **18. Hypergeometric vs binomial liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **19. Worked example: committee ràng buộc (constraint / 제약조건)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. Hypergeometric vs binomial liên kết (connection / 연결)
 
@@ -391,7 +391,7 @@ Binomial phù hợp hơn khi trials independent với constant success xác su�
 
 Combinatorial cấu trúc (structure / 구조) giúp thấy giả định (assumption / 가정) difference ngay lập tức.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **18. Hypergeometric vs binomial liên kết (connection / 연결)** cho ta quy tắc; **19. Worked example: committee ràng buộc (constraint / 제약조건)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **20. AI, coding và combinatorics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **18. Hypergeometric vs binomial liên kết (connection / 연결)** nêu quy tắc; **19. Worked example: committee ràng buộc (constraint / 제약조건)** thử quy tắc trong tình huống, rồi **20. AI, coding và combinatorics** mở rộng hệ quả.
 
 ## 19. Worked example: committee ràng buộc (constraint / 제약조건)
 
@@ -417,7 +417,7 @@ Vậy valid:
 
 Complement counting đơn giản hơn sum cases theo number designers.
 
-> **Chuyển mạch:** Trong **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **19. Worked example: committee ràng buộc (constraint / 제약조건)** cho ta quy tắc; **20. AI, coding và combinatorics** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **19. Worked example: committee ràng buộc (constraint / 제약조건)** nêu quy tắc; **20. AI, coding và combinatorics** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## 20. AI, coding và combinatorics
 
@@ -425,13 +425,13 @@ Tính năng (feature / 기능) subset selection có `2^d` subsets. chuỗi (sequ
 
 Trong AI, combinatorial explosion giải thích vì sao tìm kiếm (search / 검색) cần heuristics, động (dynamic / 동적) programming, branch-and-bound hoặc approximation.
 
-> **Chuyển mạch:** Ở chặng này của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **20. AI, coding và combinatorics** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **20. AI, coding và combinatorics** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Combinatorics là algebra của finite possibility spaces. sản phẩm (product / 제품) quy tắc (rule / 규칙) tạo choices; symmetry loại overcount; inclusion–exclusion sửa overlap; bijection giải thích equal counts; asymptotics cho biết không gian (space / 공간) lớn nhanh đến mức nào.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đếm và tổ hợp: cấu trúc của không gian khả năng**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 
