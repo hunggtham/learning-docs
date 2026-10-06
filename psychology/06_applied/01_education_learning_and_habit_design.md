@@ -10,7 +10,7 @@ Luyện truy hồi (retrieval practice) là cố gắng lấy thông tin từ tr
 
 Retrieval có hai vai trò: đo xem mình thực sự biết gì và làm bộ nhớ (memory / 메모리) dấu vết (trace / 추적) dễ truy cập hơn. Điều quan trọng là retrieval cần phản hồi (feedback / 피드백); nếu người học nhớ sai mà không sửa, lỗi có thể được củng cố.
 
-> **Chuyển mạch:** Trong **Tâm lý học học tập và thiết kế thói quen**, **Spacing** tiếp nhận điểm tựa từ **Retrieval practice** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Interleaving** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý học học tập và thiết kế thói quen**, **Spacing** nối từ **Retrieval practice** sang **Interleaving**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Spacing
 
@@ -18,13 +18,13 @@ Lặp lại cách quãng (spacing) phân phối các lần học theo thời gia
 
 Spacing không có một lịch duy nhất tối ưu cho mọi nội dung. Khoảng cách phụ thuộc độ khó, thời gian đến kỳ thi và mức retention cần giữ.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý học học tập và thiết kế thói quen**, **Interleaving** tiếp nhận điểm tựa từ **Spacing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Elaborative explanation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý học học tập và thiết kế thói quen**, **Interleaving** nối từ **Spacing** sang **Elaborative explanation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Interleaving
 
 Xen kẽ (interleaving) trộn các dạng bài hoặc concept gần nhau để buộc người học phân biệt khi nào dùng phương pháp nào. Nó thường khó chịu hơn blocked practice vì hiệu năng (performance / 성능) tức thời có thể thấp hơn, nhưng chính việc phải chọn chiến lược (strategy / 전략) có thể hỗ trợ transfer.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học học tập và thiết kế thói quen**, **Interleaving** cho ta quy tắc; **Elaborative explanation** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Illusion of competence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý học học tập và thiết kế thói quen**, **Interleaving** nêu quy tắc; **Elaborative explanation** thử quy tắc trong tình huống, rồi **Illusion of competence** mở rộng hệ quả.
 
 ## Elaborative explanation
 
@@ -32,7 +32,7 @@ Giải thích bằng lời của mình giúp nối kiến thức mới với pri
 
 Ví dụ khi học cơ sở dữ liệu (database / 데이터베이스) chỉ mục (index / 인덱스), thay vì ghi “chỉ mục (index / 인덱스) giúp truy vấn nhanh hơn”, hãy giải thích cấu trúc nào được tạo, lookup đường dẫn (path / 경로) thay đổi ra sao, chi phí ghi (write / 쓰기) tăng thế nào và khi nào full scan vẫn hợp lý.
 
-> **Chuyển mạch:** Trong **Tâm lý học học tập và thiết kế thói quen**, **Elaborative explanation** cho ta quy tắc; **Illusion of competence** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Transfer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý học học tập và thiết kế thói quen**, **Elaborative explanation** nêu quy tắc; **Illusion of competence** thử quy tắc trong tình huống, rồi **Transfer** mở rộng hệ quả.
 
 ## Illusion of competence
 
@@ -40,7 +40,7 @@ Cảm giác quen (familiarity) rất dễ bị nhầm với mastery. Highlight, 
 
 Một kiểm thử (test / 테스트) đơn giản: nếu bỏ tài liệu đi, bạn có thể tự dựng lại cấu trúc hay giải một bài toán (problem / 문제) mới không?
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý học học tập và thiết kế thói quen**, **Transfer** tiếp nhận điểm tựa từ **Illusion of competence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Habit: cue, phản hồi (response / 응답) và reward** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý học học tập và thiết kế thói quen**, **Transfer** nối từ **Illusion of competence** sang **Habit: cue, phản hồi (response / 응답) và reward**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Transfer
 
@@ -53,7 +53,7 @@ Chuyển giao (transfer) là khả năng dùng kiến thức trong ngữ cảnh 
 - giải thích vì sao một chiến lược (strategy / 전략) áp dụng được;
 - luyện chọn chiến lược (strategy / 전략), không chỉ thực thi chiến lược (strategy / 전략) đã được chỉ sẵn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học học tập và thiết kế thói quen**, **Habit: cue, phản hồi (response / 응답) và reward** tiếp nhận điểm tựa từ **Transfer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiện thực (implementation / 구현) intention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý học học tập và thiết kế thói quen**, **Habit: cue, phản hồi (response / 응답) và reward** nối từ **Transfer** sang **Hiện thực (implementation / 구현) intention**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Habit: cue, phản hồi (response / 응답) và reward
 
@@ -73,7 +73,7 @@ Association mạnh dần qua lặp lại
 
 Điều này giải thích tại sao chỉ đặt goal “tôi sẽ học mỗi tối” thường yếu. Một plan tốt xác định cue: “sau khi rửa bát lúc 21:00, tôi mở bàn học và làm 10 phút retrieval trước”.
 
-> **Chuyển mạch:** Trong **Tâm lý học học tập và thiết kế thói quen**, **Hiện thực (implementation / 구현) intention** tiếp nhận điểm tựa từ **Habit: cue, phản hồi (response / 응답) và reward** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Môi trường (environment / 환경) thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý học học tập và thiết kế thói quen**, **Hiện thực (implementation / 구현) intention** nối từ **Habit: cue, phản hồi (response / 응답) và reward** sang **Môi trường (environment / 환경) thiết kế (design / 설계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiện thực (implementation / 구현) intention
 
@@ -85,7 +85,7 @@ Nếu X xảy ra → tôi sẽ làm Y.
 
 Nó giảm số quyết định (decision / 결정) cần thực hiện tại thời điểm hành động. Ví dụ: “Nếu tôi muốn nằm xuống sau khi về nhà, tôi sẽ tắm trước và ngồi ở bàn 10 phút rồi mới quyết định có nghỉ hay không.”
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý học học tập và thiết kế thói quen**, **Môi trường (environment / 환경) thiết kế (design / 설계)** tiếp nhận điểm tựa từ **Hiện thực (implementation / 구현) intention** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Motivation và hành động (action / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý học học tập và thiết kế thói quen**, **Môi trường (environment / 환경) thiết kế (design / 설계)** nối từ **Hiện thực (implementation / 구현) intention** sang **Motivation và hành động (action / 동작)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Môi trường (environment / 환경) thiết kế (design / 설계)
 
@@ -99,7 +99,7 @@ Các intervention nhỏ:
 - mở sẵn tác vụ (task / 작업) đầu tiên;
 - dùng website blocker cho thời gian (time / 시간) khối (block / 블록) cụ thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học học tập và thiết kế thói quen**, **Motivation và hành động (action / 동작)** tiếp nhận điểm tựa từ **Môi trường (environment / 환경) thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thiết kế session học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý học học tập và thiết kế thói quen**, **Motivation và hành động (action / 동작)** nối từ **Môi trường (environment / 환경) thiết kế (design / 설계)** sang **Thiết kế session học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Motivation và hành động (action / 동작)
 
@@ -115,7 +115,7 @@ Phân biệt:
 
 Mỗi cơ chế cần intervention khác nhau.
 
-> **Chuyển mạch:** Trong **Tâm lý học học tập và thiết kế thói quen**, **Thiết kế session học** tiếp nhận điểm tựa từ **Motivation và hành động (action / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ứng dụng với lập trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý học học tập và thiết kế thói quen**, **Thiết kế session học** nối từ **Motivation và hành động (action / 동작)** sang **Ứng dụng với lập trình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thiết kế session học
 
@@ -130,7 +130,7 @@ Một session có thể theo luồng (flow / 흐름):
 6. Lên lịch retrieval tiếp theo
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý học học tập và thiết kế thói quen**, **Ứng dụng với lập trình** tiếp nhận điểm tựa từ **Thiết kế session học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý học học tập và thiết kế thói quen**, **Ứng dụng với lập trình** nối từ **Thiết kế session học** sang **Dùng chung (common / 공통) misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ứng dụng với lập trình
 
@@ -147,7 +147,7 @@ Ví dụ khi học Java Stream:
 
 Đó là retrieval + discrimination + transfer.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý học học tập và thiết kế thói quen**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Ứng dụng với lập trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiến thức (knowledge / 지식) connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý học học tập và thiết kế thói quen**, **Dùng chung (common / 공통) misconceptions** nối từ **Ứng dụng với lập trình** sang **Kiến thức (knowledge / 지식) connections**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) misconceptions
 
@@ -159,7 +159,7 @@ Ví dụ khi học Java Stream:
 
 **“Kỷ luật mạnh thì không cần thiết kế môi trường.”** Ngược lại, môi trường (environment / 환경) thiết kế (design / 설계) thường làm self-control rẻ hơn.
 
-> **Chuyển mạch:** Trong **Tâm lý học học tập và thiết kế thói quen**, **Kiến thức (knowledge / 지식) connections** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Tâm lý học học tập và thiết kế thói quen**, **Kiến thức (knowledge / 지식) connections** nối từ **Dùng chung (common / 공통) misconceptions** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kiến thức (knowledge / 지식) connections
 

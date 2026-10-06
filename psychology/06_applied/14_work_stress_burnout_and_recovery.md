@@ -12,7 +12,7 @@ Các frameworks phổ biến thường mô tả burnout qua các dimensions như
 
 Burnout should not be inferred from one bad week.
 
-> **Chuyển mạch:** Trong **Căng thẳng nghề nghiệp, burnout và phục hồi**, **2. Occupational ngữ cảnh (context / 맥락) là cốt lõi (core / 핵심)** tiếp nhận điểm tựa từ **1. Burnout không đơn giản là “mệt”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Job Demands–Resources mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Căng thẳng nghề nghiệp, burnout và phục hồi**, **2. Occupational ngữ cảnh (context / 맥락) là cốt lõi (core / 핵심)** nối từ **1. Burnout không đơn giản là “mệt”** sang **3. Job Demands–Resources mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Occupational ngữ cảnh (context / 맥락) là cốt lõi (core / 핵심)
 
@@ -20,7 +20,7 @@ Burnout concept specifically links suffering to công việc (work / 작업) ng�
 
 Burnout and depression overlap but are not identical constructs.
 
-> **Chuyển mạch:** Ở chặng này của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **2. Occupational ngữ cảnh (context / 맥락) là cốt lõi (core / 핵심)** nêu điều cần giải thích; **3. Job Demands–Resources mô hình (model / 모델)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. tải công việc (workload / 워크로드) và điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **2. Occupational ngữ cảnh (context / 맥락) là cốt lõi (core / 핵심)** đặt vấn đề; **3. Job Demands–Resources mô hình (model / 모델)** đối chiếu bằng chứng, rồi **4. tải công việc (workload / 워크로드) và điều khiển (control / 제어)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3. Job Demands–Resources mô hình (model / 모델)
 
@@ -48,7 +48,7 @@ Resources include:
 
 > **hiện tại (current / 현재) lý thuyết (theory / 이론)/mô hình (model / 모델):** JD-R is useful organizing khung phần mềm (framework / 프레임워크), not a universal nhân quả (causal / 인과적) law with one fixed equation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **3. Job Demands–Resources mô hình (model / 모델)** nêu điều cần giải thích; **4. tải công việc (workload / 워크로드) và điều khiển (control / 제어)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. Effort–reward imbalance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **3. Job Demands–Resources mô hình (model / 모델)** đặt vấn đề; **4. tải công việc (workload / 워크로드) và điều khiển (control / 제어)** đối chiếu bằng chứng, rồi **5. Effort–reward imbalance** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. tải công việc (workload / 워크로드) và điều khiển (control / 제어)
 
@@ -56,7 +56,7 @@ High tải công việc (workload / 워크로드) is not always harmful if time-
 
 Điều khiển (control / 제어) matters because same tải công việc (workload / 워크로드) feels different when worker can chuỗi (sequence / 시퀀스) tasks, negotiate deadline or ask for help.
 
-> **Chuyển mạch:** Trong **Căng thẳng nghề nghiệp, burnout và phục hồi**, **5. Effort–reward imbalance** tiếp nhận điểm tựa từ **4. tải công việc (workload / 워크로드) và điều khiển (control / 제어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Organizational justice** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Căng thẳng nghề nghiệp, burnout và phục hồi**, **5. Effort–reward imbalance** nối từ **4. tải công việc (workload / 워크로드) và điều khiển (control / 제어)** sang **6. Organizational justice**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Effort–reward imbalance
 
@@ -64,7 +64,7 @@ When high effort is paired with low reward, low recognition or unfair return, st
 
 This mô hình (model / 모델) captures important association, but individual/ngữ cảnh (context / 맥락) differences still matter.
 
-> **Chuyển mạch:** Ở chặng này của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **6. Organizational justice** tiếp nhận điểm tựa từ **5. Effort–reward imbalance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Burnout is not a personal-resilience thất bại (failure / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **6. Organizational justice** nối từ **5. Effort–reward imbalance** sang **7. Burnout is not a personal-resilience thất bại (failure / 실패)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Organizational justice
 
@@ -72,7 +72,7 @@ This mô hình (model / 모델) captures important association, but individual/n
 
 Unfair decision-making can create chronic bất định (uncertainty / 불확실성) and giá trị (value / 값) xung đột (conflict / 충돌) even when tải công việc (workload / 워크로드) is moderate.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **7. Burnout is not a personal-resilience thất bại (failure / 실패)** tiếp nhận điểm tựa từ **6. Organizational justice** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Psychological an toàn (safety / 안전)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **7. Burnout is not a personal-resilience thất bại (failure / 실패)** nối từ **6. Organizational justice** sang **8. Psychological an toàn (safety / 안전)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Burnout is not a personal-resilience thất bại (failure / 실패)
 
@@ -80,7 +80,7 @@ If five people in one nhóm (team / 팀) show escalating exhaustion after staffi
 
 Individual coping can help symptoms, but it does not repair impossible tải công việc (workload / 워크로드), abusive management or chronic understaffing.
 
-> **Chuyển mạch:** Trong **Căng thẳng nghề nghiệp, burnout và phục hồi**, **8. Psychological an toàn (safety / 안전)** tiếp nhận điểm tựa từ **7. Burnout is not a personal-resilience thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Moral distress and moral injury** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Căng thẳng nghề nghiệp, burnout và phục hồi**, **8. Psychological an toàn (safety / 안전)** nối từ **7. Burnout is not a personal-resilience thất bại (failure / 실패)** sang **9. Moral distress and moral injury**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Psychological an toàn (safety / 안전)
 
@@ -90,7 +90,7 @@ Psychological an toàn (safety / 안전) does not eliminate tải công việc (
 
 Xem [[16_psychological_safety_team_learning_and_speaking_up]].
 
-> **Chuyển mạch:** Ở chặng này của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **9. Moral distress and moral injury** tiếp nhận điểm tựa từ **8. Psychological an toàn (safety / 안전)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. khôi phục (recovery / 복구)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **9. Moral distress and moral injury** nối từ **8. Psychological an toàn (safety / 안전)** sang **10. khôi phục (recovery / 복구)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Moral distress and moral injury
 
@@ -100,7 +100,7 @@ This can produce guilt, shame, anger or betrayal that tiêu chuẩn (standard / 
 
 Xem [[../90_connections/04_moral_injury_shame_guilt_and_value_conflict]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **10. khôi phục (recovery / 복구)** tiếp nhận điểm tựa từ **9. Moral distress and moral injury** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Sleep and burnout** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **10. khôi phục (recovery / 복구)** nối từ **9. Moral distress and moral injury** sang **11. Sleep and burnout**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. khôi phục (recovery / 복구)
 
@@ -110,7 +110,7 @@ Khôi phục (recovery / 복구) is not only “sleep enough”. Psychological d
 
 People most depleted may have least sức chứa (capacity / 용량) to initiate healthy khôi phục (recovery / 복구), instead doomscrolling, staying awake or using numbing hành vi (behavior / 동작). Therefore môi trường (environment / 환경) thiết kế (design / 설계) matters.
 
-> **Chuyển mạch:** Trong **Căng thẳng nghề nghiệp, burnout và phục hồi**, **11. Sleep and burnout** tiếp nhận điểm tựa từ **10. khôi phục (recovery / 복구)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Rumination after công việc (work / 작업)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Căng thẳng nghề nghiệp, burnout và phục hồi**, **11. Sleep and burnout** nối từ **10. khôi phục (recovery / 복구)** sang **12. Rumination after công việc (work / 작업)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Sleep and burnout
 
@@ -128,7 +128,7 @@ Work stress
 
 Xem [[../01_brain_and_mind/08_sleep_circadian_and_recovery]].
 
-> **Chuyển mạch:** Ở chặng này của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **12. Rumination after công việc (work / 작업)** tiếp nhận điểm tựa từ **11. Sleep and burnout** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Digital công việc (work / 작업) and interruption** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **12. Rumination after công việc (work / 작업)** nối từ **11. Sleep and burnout** sang **13. Digital công việc (work / 작업) and interruption**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Rumination after công việc (work / 작업)
 
@@ -138,7 +138,7 @@ Rumination is not simply “thinking too much”; it often reflects unresolved g
 
 Interventions can mục tiêu (target / 대상) closure rituals, planning, ranh giới (boundary / 경계) and cognitive chiến lược (strategy / 전략), but gốc (root / 루트) công việc (work / 작업) điều kiện (condition / 조건) still matters.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **13. Digital công việc (work / 작업) and interruption** tiếp nhận điểm tựa từ **12. Rumination after công việc (work / 작업)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Remote công việc (work / 작업)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **13. Digital công việc (work / 작업) and interruption** nối từ **12. Rumination after công việc (work / 작업)** sang **14. Remote công việc (work / 작업)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Digital công việc (work / 작업) and interruption
 
@@ -146,7 +146,7 @@ Chat, email and notification create fragmented attention and expectation of avai
 
 A culture that expects instant phản hồi (response / 응답) may create chronic low-level vigilance even without tường minh (explicit / 명시적) overtime.
 
-> **Chuyển mạch:** Trong **Căng thẳng nghề nghiệp, burnout và phục hồi**, **14. Remote công việc (work / 작업)** tiếp nhận điểm tựa từ **13. Digital công việc (work / 작업) and interruption** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Individual interventions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Căng thẳng nghề nghiệp, burnout và phục hồi**, **14. Remote công việc (work / 작업)** nối từ **13. Digital công việc (work / 작업) and interruption** sang **15. Individual interventions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Remote công việc (work / 작업)
 
@@ -154,7 +154,7 @@ Remote công việc (work / 작업) can improve autonomy and reduce commute, but
 
 > **bằng chứng (evidence / 증거) status:** effects are heterogeneous and depend on tác vụ (task / 작업), home môi trường (environment / 환경), nhóm (team / 팀) practice, autonomy and individual preference. “Remote công việc (work / 작업) causes burnout” is too broad.
 
-> **Chuyển mạch:** Ở chặng này của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **15. Individual interventions** tiếp nhận điểm tựa từ **14. Remote công việc (work / 작업)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Organizational interventions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **15. Individual interventions** nối từ **14. Remote công việc (work / 작업)** sang **16. Organizational interventions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Individual interventions
 
@@ -162,7 +162,7 @@ Examples include stress-management huấn luyện (training / 학습), CBT-based
 
 Bằng chứng (evidence / 증거) suggests some individual interventions can reduce burnout symptoms, but tác động (effect / 효과) kích thước (size / 크기) and durability vary. They should not be treated as substitute for organizational thay đổi (change / 변경) when demands are structural.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **16. Organizational interventions** tiếp nhận điểm tựa từ **15. Individual interventions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Multilevel intervention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **16. Organizational interventions** nối từ **15. Individual interventions** sang **17. Multilevel intervention**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Organizational interventions
 
@@ -179,7 +179,7 @@ Potential strategies:
 
 Recent reviews hỗ trợ (support / 지원) importance of organizational approaches, though intervention designs and populations remain heterogeneous.
 
-> **Chuyển mạch:** Trong **Căng thẳng nghề nghiệp, burnout và phục hồi**, **17. Multilevel intervention** tiếp nhận điểm tựa từ **16. Organizational interventions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. đo lường (measurement / 측정) caveat** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Căng thẳng nghề nghiệp, burnout và phục hồi**, **17. Multilevel intervention** nối từ **16. Organizational interventions** sang **18. đo lường (measurement / 측정) caveat**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Multilevel intervention
 
@@ -194,7 +194,7 @@ Individual skills
 
 No single mức (level / 수준) explains all burnout.
 
-> **Chuyển mạch:** Ở chặng này của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **17. Multilevel intervention** nêu điều cần giải thích; **18. đo lường (measurement / 측정) caveat** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. Burnout vs depression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **17. Multilevel intervention** đặt vấn đề; **18. đo lường (measurement / 측정) caveat** đối chiếu bằng chứng, rồi **19. Burnout vs depression** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. đo lường (measurement / 측정) caveat
 
@@ -204,7 +204,7 @@ Score should be interpreted with instrument validity, occupational ngữ cảnh 
 
 Xem [[../00_foundations/05_psychometrics_and_test_interpretation]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **18. đo lường (measurement / 측정) caveat** nêu điều cần giải thích; **19. Burnout vs depression** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. Everyday self-regulation ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **18. đo lường (measurement / 측정) caveat** đặt vấn đề; **19. Burnout vs depression** đối chiếu bằng chứng, rồi **20. Everyday self-regulation ranh giới (boundary / 경계)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. Burnout vs depression
 
@@ -212,7 +212,7 @@ Overlap includes fatigue, low motivation and cognitive difficulty. Depression of
 
 A burnout label should not delay mental-health assessment when symptoms are severe or pervasive.
 
-> **Chuyển mạch:** Trong **Căng thẳng nghề nghiệp, burnout và phục hồi**, **19. Burnout vs depression** đã nêu tiêu chí phân biệt, còn **20. Everyday self-regulation ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **21. dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Căng thẳng nghề nghiệp, burnout và phục hồi**, **19. Burnout vs depression** đặt tiêu chí; **20. Everyday self-regulation ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **21. dùng chung (common / 공통) misconceptions** mở rộng hệ quả.
 
 ## 20. Everyday self-regulation ranh giới (boundary / 경계)
 
@@ -222,7 +222,7 @@ But thư viện (library / 라이브러리) should trạng thái (state / 상태
 
 > These are mechanism-informed strategies, not guaranteed treatments for clinical or organizational burnout.
 
-> **Chuyển mạch:** Ở chặng này của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **20. Everyday self-regulation ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **21. dùng chung (common / 공통) misconceptions** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **22. mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **20. Everyday self-regulation ranh giới (boundary / 경계)** đặt tiêu chí; **21. dùng chung (common / 공통) misconceptions** dùng tiêu chí đó để kiểm tra ranh giới, rồi **22. mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## 21. dùng chung (common / 공통) misconceptions
 
@@ -242,7 +242,7 @@ It may help some people, but cannot replace staffing/fairness/tải công việc
 
 They overlap but are not interchangeable constructs.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **22. mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **21. dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Căng thẳng nghề nghiệp, burnout và phục hồi**, **22. mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **21. dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 22. mô hình tư duy (mental model / 사고 모델)
 
@@ -262,7 +262,7 @@ behavior & performance changes
 feedback into job demands
 ```
 
-> **Chuyển mạch:** Trong **Căng thẳng nghề nghiệp, burnout và phục hồi**, **Kết nối kiến thức** gom các mảnh từ **22. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Căng thẳng nghề nghiệp, burnout và phục hồi**, **Kết nối kiến thức** tổng hợp từ **22. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 
