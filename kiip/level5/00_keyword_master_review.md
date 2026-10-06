@@ -1195,6 +1195,8 @@ Phần này hợp nhất các khái niệm còn nằm rải rác trong những t
 
 **Phân biệt:** `품앗이`는 서로 도움을 주고받는 방식, `두레`는 더 조직적인 공동 노동 형태로 이해하면 쉽습니다. `관혼상제`의 `상`은 장례, `제`는 사후의 제례를 뜻합니다.
 
+**Ví dụ đời sống:** `효`는 무조건 복종이 아니라 부모·어른을 존중하고 돌보는 가치로 이해합니다. 안부를 묻기, 명절에 가족을 찾아뵙기, 어르신을 배려하기는 생활 속 예가 될 수 있습니다.
+
 ## B+10. 민주정치·지방자치·사법 원리
 
 - `견제와 균형`: 국가기관들이 서로 권한을 제한하고 감시해 권력 집중을 막는 원리입니다. (Kiểm soát và cân bằng quyền lực.)
@@ -1206,6 +1208,9 @@ Phần này hợp nhất các khái niệm còn nằm rải rác trong những t
 - `지방의회`: 지역 주민을 대표해 조례·예산 등 지방의 중요한 일을 심의·의결하는 기관입니다. (Hội đồng địa phương.)
 - `사회 참여`: 시민이 선거·봉사·토론·청원 등으로 공동체 문제에 참여하는 활동입니다. (Tham gia xã hội/công dân.)
 - `재판의 독립`: 법관과 법원이 다른 권력의 부당한 간섭 없이 헌법과 법률에 따라 판단해야 한다는 원칙입니다. (Độc lập xét xử.)
+- `단임`: 한 사람이 같은 직위의 임기를 연속해서 다시 맡지 않는 제도입니다. 대한민국 대통령은 5년 단임입니다. (Chế độ một nhiệm kỳ; tổng thống Hàn Quốc nhiệm kỳ 5 năm, không tái nhiệm liên tiếp.)
+- `국정감사`: 국회가 정부와 국가기관의 업무를 정기적으로 감사하는 제도입니다. (Quốc hội kiểm tra hoạt động của chính phủ/cơ quan nhà nước.)
+- `법률 폐지`: 기존 법률의 효력을 없애는 입법 활동입니다. (Bãi bỏ luật.)
 
 **Điểm bẫy:** 민주주의는 `다수결`만으로 완성되지 않습니다. 기본권 보호, 법치주의, 소수 의견 존중, 권력 통제가 함께 필요합니다. `헌법재판소`는 `대법원`의 상급법원이 아닙니다.
 
@@ -1234,6 +1239,13 @@ Phần này hợp nhất các khái niệm còn nằm rải rác trong những t
 - `예금자보호제도`: 금융회사가 영업정지·파산 등으로 예금을 지급하지 못할 때 법정 한도 안에서 보호하는 제도입니다. (Chế độ bảo vệ tiền gửi.)
 - `인증`: 거래나 서비스 이용에서 본인·상품·정보의 진위나 자격을 확인하는 절차입니다. (Xác thực/chứng nhận.)
 - `인터넷뱅킹`: 인터넷을 통해 계좌조회·이체 등 은행 업무를 처리하는 서비스입니다. (Internet banking.)
+- `송금`: 다른 사람이나 다른 계좌로 돈을 보내는 금융거래입니다. (Chuyển/gửi tiền.)
+- `공유경제`: 물건·공간·서비스를 반드시 소유하기보다 공유·대여하여 이용하는 경제활동입니다. (Kinh tế chia sẻ: ưu tiên sử dụng/chia sẻ thay vì sở hữu.)
+- `풍부한 노동력`: 산업화 초기에 생산활동에 투입될 수 있는 인력이 많았다는 설명에 쓰이는 표현입니다. (Nguồn lao động dồi dào.)
+- `높은 교육열`: 교육을 중시하고 교육에 많은 시간·자원을 투자하는 사회적 경향입니다. (Mức độ coi trọng giáo dục cao.)
+- `수출 중심 성장`: 해외시장 판매를 확대해 외화·생산·고용을 늘리는 성장 방식입니다. (Tăng trưởng hướng xuất khẩu.)
+
+**Bối cảnh 산업화:** `노동력·교육 확대·수출정책·기업투자·정부정책·국제환경` 등이 함께 작용했습니다. Một yếu tố riêng lẻ không đủ giải thích toàn bộ quá trình công nghiệp hóa.
 
 **Cơ chế giá cơ bản:** 다른 조건이 같다면 `수요 증가`는 가격 상승 압력을, `공급 증가`는 가격 하락 압력을 만들 수 있습니다. Đây là mô hình đơn giản để hiểu quan hệ cung–cầu, không phải quy tắc đảm bảo giá luôn di chuyển theo một chiều.
 
@@ -1835,6 +1847,17 @@ Mẫu ngắn dễ dùng:
 - `청원`: 국민 등이 국가기관에 의견이나 요구를 공식적으로 제기하는 제도적 참여 방식입니다. (Kiến nghị chính thức.)
 - `책임`: 자신의 역할과 행동의 결과를 맡고 감당하는 태도·의무입니다. (Trách nhiệm.)
 - `권리와 의무`: 보호받을 수 있는 권리와 함께 지켜야 할 책임·의무를 묶어 보는 관점입니다. (Quyền và nghĩa vụ.)
+- `자녀교육`: 자녀의 학습·생활습관·사회성 발달을 지원하는 교육과 양육 활동입니다. (Giáo dục con cái.)
+- `법`: 사회 질서를 유지하고 권리·의무를 정하기 위해 국가가 정한 규범입니다. (Pháp luật.)
+- `권리`: 법과 제도에 따라 보호받거나 요구할 수 있는 이익과 자유입니다. (Quyền.)
+- `의무`: 법·규칙·역할에 따라 해야 하는 책임입니다. (Nghĩa vụ.)
+- `분쟁`: 권리·이익·사실관계에 대한 의견이 충돌한 상태입니다. (Tranh chấp.)
+- `이유`: 어떤 주장이나 행동의 근거를 설명하는 내용입니다. (Lý do/căn cứ.)
+- `예시`: 개념이나 주장을 구체적으로 보여 주는 사례입니다. (Ví dụ.)
+- `이해하다`: 의미·상황·이유를 파악하는 것입니다. (Hiểu.)
+- `경험하다`: 어떤 일이나 상황을 직접 겪는 것입니다. (Trải nghiệm.)
+- `존중하다`: 다른 사람의 권리·생각·문화를 소중하게 대하는 것입니다. (Tôn trọng.)
+- `적응하다`: 새로운 환경과 규칙에 익숙해지는 것입니다. (Thích nghi.)
 
 ## H9. Dạng câu hỏi phải nhận ra nhanh
 
@@ -1873,6 +1896,13 @@ Khi thấy câu phủ định, hãy khoanh keyword `않은/없는/알맞지` tr�
 - “`예금자보호`는 모든 투자손실을 보상한다.” → **Sai**.
 - “`피의자`는 이미 유죄가 확정된 사람이다.” → **Sai**.
 - “`품앗이`와 `두레`는 완전히 같은 제도다.” → **Sai**; 상호 도움 방식과 조직적 공동노동이라는 차이가 있습니다.
+- “`효`는 부모에게 무조건 복종하는 것이다.” → **Sai**.
+- “모든 한국인은 반드시 `차례/제사`를 지낸다.” → **Sai**; gia đình, tôn giáo và lối sống khác nhau.
+- “`한복`은 현재 한국인의 일반적인 일상복이다.” → **Sai**; ngày nay chủ yếu dùng trong dịp đặc biệt, văn hóa/truyền thống.
+- “한국에는 모든 국민이 따라야 하는 하나의 `국교`가 있다.” → **Sai**; `종교의 자유`가 보장됩니다.
+- “`김치`와 `김장`은 같은 뜻이다.” → **Sai**; 김치는 음식, 김장은 김치를 대량으로 담그는 활동·문화입니다.
+- “`장례`와 `제례`는 같은 의례다.” → **Sai**; 장례는 죽음 직후의 의례, 제례는 이후 조상을 추모하는 의례입니다.
+- “`전통문화`와 `대중문화`는 서로 관계가 없다.” → **Sai**; 현대 콘텐츠는 전통 요소를 재해석하고 유통할 수 있습니다.
 
 Đề thường dùng các từ tuyệt đối như `항상`, `모든`, `반드시`, `자동으로` để tạo đáp án gây nhiễu. Khi gặp các từ này, kiểm tra xem câu có ngoại lệ hoặc điều kiện pháp lý không.
 
@@ -1916,7 +1946,13 @@ Chi tiết văn hóa, món ăn, lễ hội, nhân vật lịch sử phụ, đị
 
 ---
 
-# L. Nguồn và quy tắc cập nhật
+# L. Phạm vi hợp nhất của master
+
+Master này nhằm bao phủ **nội dung kiến thức và output cần học** từ toàn bộ tài liệu KIIP trong repository: định nghĩa, cặp dễ nhầm, quy trình, tình huống, current-fact risk, mental model, active-recall concept và từ dùng cho viết/nói.
+
+Nó **không sao chép nguyên văn từng câu mock, từng đáp án lặp lại, metadata audit hoặc câu điều hướng repository**. Những phần đó vẫn nằm ở file luyện đề/audit; kiến thức mà chúng kiểm tra đã được hợp nhất ở đây. Vì vậy “bao gồm toàn bộ” trong file này nghĩa là **coverage nội dung học**, không phải duplicate từng dòng của mọi file.
+
+# M. Nguồn và quy tắc cập nhật
 
 File này được dùng như **bản hợp nhất cuối cùng** của toàn bộ tài liệu KIIP trong repository: chapter kiến thức, coverage audit, active recall, question pattern, mock, writing/oral và các cross-reference. Các keyword được đặt theo **chủ đề kiến thức**, không gắn nhãn chúng đến từ file KIIP nào. Khi cùng một khái niệm xuất hiện nhiều nơi, master giữ một định nghĩa chính rồi bổ sung cặp dễ nhầm, tình huống hoặc output cần nói.
 
