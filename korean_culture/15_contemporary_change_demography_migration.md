@@ -12,7 +12,7 @@ Một nguyên tắc xuyên suốt là:
 
 `효` có thể vẫn được coi trọng nhưng chăm sóc người cao tuổi chuyển từ con cái trực tiếp sang sự kết hợp giữa gia đình, bảo hiểm, bệnh viện và dịch vụ chăm sóc. `결혼` vẫn có trọng lượng biểu tượng nhưng không còn là bước chuyển bắt buộc đối với mọi người. Văn hoá ở đây là một hệ thống đang tìm trạng thái cân bằng mới.
 
-> **Chuyển mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **Đọc số liệu dân số: số tại một thời điểm, dòng biến động và dự báo không giống nhau** tiếp nhận điểm tựa từ **Văn hoá thay đổi khi ràng buộc thay đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **초고령사회: xã hội siêu già là thay đổi cấu trúc, không chỉ có nhiều người già** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **Đọc số liệu dân số: số tại một thời điểm, dòng biến động và dự báo không giống nhau** nối từ **Văn hoá thay đổi khi ràng buộc thay đổi** sang **초고령사회: xã hội siêu già là thay đổi cấu trúc, không chỉ có nhiều người già**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đọc số liệu dân số: số tại một thời điểm, dòng biến động và dự báo không giống nhau
 
@@ -20,7 +20,7 @@ Trước khi học số, cần tách ba loại dữ liệu. **Số tại một t
 
 Sai lầm phổ biến là trộn ba loại: dùng dự báo năm 2050 như dữ kiện hiện tại, hoặc lấy một năm tăng sinh rồi kết luận xu hướng dài hạn đã đảo chiều hoàn toàn.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **초고령사회: xã hội siêu già là thay đổi cấu trúc, không chỉ có nhiều người già** tiếp nhận điểm tựa từ **Đọc số liệu dân số: số tại một thời điểm, dòng biến động và dự báo không giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuổi thọ tăng làm vòng đời dài hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **초고령사회: xã hội siêu già là thay đổi cấu trúc, không chỉ có nhiều người già** nối từ **Đọc số liệu dân số: số tại một thời điểm, dòng biến động và dự báo không giống nhau** sang **Tuổi thọ tăng làm vòng đời dài hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 초고령사회: xã hội siêu già là thay đổi cấu trúc, không chỉ có nhiều người già
 
@@ -40,7 +40,7 @@ nhiều người cao tuổi
 
 Đây là lý do già hoá là vấn đề văn hoá chứ không chỉ là biểu đồ dân số. Nó thay đổi câu hỏi con cái “nên” chăm cha mẹ bằng cách nào, hộ gia đình có cần sống gần nhau không, người cao tuổi có tiếp tục làm việc không và công nghệ phải dễ tiếp cận đến mức nào.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **Tuổi thọ tăng làm vòng đời dài hơn** tiếp nhận điểm tựa từ **초고령사회: xã hội siêu già là thay đổi cấu trúc, không chỉ có nhiều người già** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **노인 1인가구: sống một mình ở tuổi già không giống người trẻ độc thân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **Tuổi thọ tăng làm vòng đời dài hơn** nối từ **초고령사회: xã hội siêu già là thay đổi cấu trúc, không chỉ có nhiều người già** sang **노인 1인가구: sống một mình ở tuổi già không giống người trẻ độc thân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tuổi thọ tăng làm vòng đời dài hơn
 
@@ -48,7 +48,7 @@ Khi nhiều người sống lâu sau nghỉ hưu, nhóm “người già” tr�
 
 Do đó ngưỡng tuổi chỉ là một cách phân loại hành chính; khả năng hoạt động, sức khoẻ và tình trạng hộ gia đình mới quyết định đời sống hằng ngày. Văn hoá cũng cần từ vựng mới cho người cao tuổi năng động, người chăm sóc, việc làm tuổi già và lập kế hoạch cuối đời.
 
-> **Chuyển mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **노인 1인가구: sống một mình ở tuổi già không giống người trẻ độc thân** tiếp nhận điểm tựa từ **Tuổi thọ tăng làm vòng đời dài hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **저출산: mức sinh thấp là đầu ra của cả hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **노인 1인가구: sống một mình ở tuổi già không giống người trẻ độc thân** nối từ **Tuổi thọ tăng làm vòng đời dài hơn** sang **저출산: mức sinh thấp là đầu ra của cả hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 노인 1인가구: sống một mình ở tuổi già không giống người trẻ độc thân
 
@@ -56,7 +56,7 @@ Hộ một người ở người cao tuổi có nguyên nhân khác người tr�
 
 Vì vậy cùng nhãn `1인가구` chứa nhiều nhóm dân số. Thiết kế sản phẩm và chính sách tốt không thể coi mọi hộ một người là một kiểu người dùng duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **저출산: mức sinh thấp là đầu ra của cả hệ thống** tiếp nhận điểm tựa từ **노인 1인가구: sống một mình ở tuổi già không giống người trẻ độc thân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao hôn nhân và sinh con liên kết chặt với nhau? (왜 결혼과 출산이 연결되어 있는가?)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **저출산: mức sinh thấp là đầu ra của cả hệ thống** nối từ **노인 1인가구: sống một mình ở tuổi già không giống người trẻ độc thân** sang **Vì sao hôn nhân và sinh con liên kết chặt với nhau? (왜 결혼과 출산이 연결되어 있는가?)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 저출산: mức sinh thấp là đầu ra của cả hệ thống
 
@@ -72,7 +72,7 @@ P(\text{birth})=\sigma(\beta_0+\beta_1H+\beta_2J+\beta_3C+\beta_4G+\beta_5E+\cdo
 
 Ở đây `H` đại diện nhà ở, `J` độ ổn định việc làm, `C` chăm trẻ, `G` gánh nặng chăm sóc theo giới, `E` chi phí giáo dục dự kiến. Mô hình tư duy này giúp tránh cách giải thích một nguyên nhân như “giới trẻ không thích trẻ con”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, sau nội dung của **저출산: mức sinh thấp là đầu ra của cả hệ thống**, **Vì sao hôn nhân và sinh con liên kết chặt với nhau? (왜 결혼과 출산이 연결되어 있는가?)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **비혼, 미혼 và độc lập khỏi kịch bản đời sống cũ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, sau nội dung của **저출산: mức sinh thấp là đầu ra của cả hệ thống**, **Vì sao hôn nhân và sinh con liên kết chặt với nhau? (왜 결혼과 출산이 연결되어 있는가?)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **비혼, 미혼 và độc lập khỏi kịch bản đời sống cũ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Vì sao hôn nhân và sinh con liên kết chặt với nhau? (왜 결혼과 출산이 연결되어 있는가?)
 
@@ -91,7 +91,7 @@ giáo dục kéo dài
 
 Đây là lý do `만혼` không chỉ là nhãn lối sống; nó nối với toàn bộ dòng thời gian của vòng đời.
 
-> **Chuyển mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **비혼, 미혼 và độc lập khỏi kịch bản đời sống cũ** tiếp nhận điểm tựa từ **Vì sao hôn nhân và sinh con liên kết chặt với nhau? (왜 결혼과 출산이 연결되어 있는가?)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1인가구: hộ một người buộc thị trường phải thiết kế lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **비혼, 미혼 và độc lập khỏi kịch bản đời sống cũ** nối từ **Vì sao hôn nhân và sinh con liên kết chặt với nhau? (왜 결혼과 출산이 연결되어 있는가?)** sang **1인가구: hộ một người buộc thị trường phải thiết kế lại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 비혼, 미혼 và độc lập khỏi kịch bản đời sống cũ
 
@@ -103,7 +103,7 @@ Trong mô hình đời sống cũ, tuổi trưởng thành thường được k�
 
 Khi phần thưởng và ràng buộc của thị trường lao động/nhà ở thay đổi, nhiều người tách các bước: có sự nghiệp nhưng không kết hôn, kết hôn nhưng không sinh con, hoặc sống độc lập lâu dài. Văn hoá chuyển từ một **máy trạng thái cố định (fixed state machine)** sang **vòng đời có nhiều nhánh (branching lifecycle)**.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **1인가구: hộ một người buộc thị trường phải thiết kế lại** tiếp nhận điểm tựa từ **비혼, 미혼 và độc lập khỏi kịch bản đời sống cũ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **혼밥·혼술: từ dấu hiệu bất thường thành một cách sống bình thường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **1인가구: hộ một người buộc thị trường phải thiết kế lại** nối từ **비혼, 미혼 và độc lập khỏi kịch bản đời sống cũ** sang **혼밥·혼술: từ dấu hiệu bất thường thành một cách sống bình thường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1인가구: hộ một người buộc thị trường phải thiết kế lại
 
@@ -113,7 +113,7 @@ Hộ một người kéo theo nhu cầu về phần ăn nhỏ và `혼밥`, stud
 
 Khi tỷ lệ nền tăng, kỳ thị giảm. Ăn một mình không còn tự động phát tín hiệu “không có bạn”. Đây là **thay đổi tỷ lệ nền (base-rate shift)** trong cách diễn giải xã hội.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **혼밥·혼술: từ dấu hiệu bất thường thành một cách sống bình thường** tiếp nhận điểm tựa từ **1인가구: hộ một người buộc thị trường phải thiết kế lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **세대 담론: thế hệ là trải nghiệm lịch sử chung, không phải tử vi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **혼밥·혼술: từ dấu hiệu bất thường thành một cách sống bình thường** nối từ **1인가구: hộ một người buộc thị trường phải thiết kế lại** sang **세대 담론: thế hệ là trải nghiệm lịch sử chung, không phải tử vi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 혼밥·혼술: từ dấu hiệu bất thường thành một cách sống bình thường
 
@@ -128,7 +128,7 @@ hộ gia đình thay đổi
 → chuẩn mực trở nên bình thường hơn
 ```
 
-> **Chuyển mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **세대 담론: thế hệ là trải nghiệm lịch sử chung, không phải tử vi** tiếp nhận điểm tựa từ **혼밥·혼술: từ dấu hiệu bất thường thành một cách sống bình thường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **이주배경인구: Hàn Quốc ngày càng có nhiều người có nền tảng di cư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **세대 담론: thế hệ là trải nghiệm lịch sử chung, không phải tử vi** nối từ **혼밥·혼술: từ dấu hiệu bất thường thành một cách sống bình thường** sang **이주배경인구: Hàn Quốc ngày càng có nhiều người có nền tảng di cư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 세대 담론: thế hệ là trải nghiệm lịch sử chung, không phải tử vi
 
@@ -146,7 +146,7 @@ hiệu ứng thời kỳ (period effect) = sự kiện tác động nhiều lứ
 
 Ba hiệu ứng thường bị trộn. Ví dụ thích video ngắn có thể vừa là hiệu ứng thế hệ, vừa do thay đổi công nghệ của cả thời kỳ.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **이주배경인구: Hàn Quốc ngày càng có nhiều người có nền tảng di cư** tiếp nhận điểm tựa từ **세대 담론: thế hệ là trải nghiệm lịch sử chung, không phải tử vi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **상주 외국인: dân số nước ngoài cư trú và hội nhập hằng ngày** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **이주배경인구: Hàn Quốc ngày càng có nhiều người có nền tảng di cư** nối từ **세대 담론: thế hệ là trải nghiệm lịch sử chung, không phải tử vi** sang **상주 외국인: dân số nước ngoài cư trú và hội nhập hằng ngày**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 이주배경인구: Hàn Quốc ngày càng có nhiều người có nền tảng di cư
 
@@ -161,7 +161,7 @@ Sự phân biệt thuật ngữ rất quan trọng:
 
 Nếu dùng sai mẫu số, ta dễ tạo tiêu đề gây hiểu lầm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **상주 외국인: dân số nước ngoài cư trú và hội nhập hằng ngày** tiếp nhận điểm tựa từ **이주배경인구: Hàn Quốc ngày càng có nhiều người có nền tảng di cư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **노동이주: lao động di cư như hạ tầng khó nhìn thấy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **상주 외국인: dân số nước ngoài cư trú và hội nhập hằng ngày** nối từ **이주배경인구: Hàn Quốc ngày càng có nhiều người có nền tảng di cư** sang **노동이주: lao động di cư như hạ tầng khó nhìn thấy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 상주 외국인: dân số nước ngoài cư trú và hội nhập hằng ngày
 
@@ -171,7 +171,7 @@ Di cư đến Hàn Quốc qua nhiều kênh: lao động, du học, kết hôn, 
 
 Mỗi nhóm có tư cách pháp lý, vị trí thị trường lao động và con đường hội nhập khác nhau. “Người nước ngoài ở Hàn” không phải một nhóm đồng nhất.
 
-> **Chuyển mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **노동이주: lao động di cư như hạ tầng khó nhìn thấy** tiếp nhận điểm tựa từ **상주 외국인: dân số nước ngoài cư trú và hội nhập hằng ngày** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **유학생: quốc tế hoá đại học và di cư tạm thời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **노동이주: lao động di cư như hạ tầng khó nhìn thấy** nối từ **상주 외국인: dân số nước ngoài cư trú và hội nhập hằng ngày** sang **유학생: quốc tế hoá đại học và di cư tạm thời**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 노동이주: lao động di cư như hạ tầng khó nhìn thấy
 
@@ -179,7 +179,7 @@ Sản xuất, nông nghiệp, xây dựng, logistics và chăm sóc ở nhiều 
 
 Hình ảnh “Hàn Quốc toàn cầu” có hai mặt: văn phòng đa quốc gia ở Seoul và lao động di cư tại khu công nghiệp/nông thôn. Tầng lớp, hợp đồng và tư cách pháp lý có thể giải thích trải nghiệm mạnh hơn quốc tịch.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **유학생: quốc tế hoá đại học và di cư tạm thời** tiếp nhận điểm tựa từ **노동이주: lao động di cư như hạ tầng khó nhìn thấy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **다문화가정: nhãn chính sách và vấn đề bị xem như “người ngoài”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **유학생: quốc tế hoá đại học và di cư tạm thời** nối từ **노동이주: lao động di cư như hạ tầng khó nhìn thấy** sang **다문화가정: nhãn chính sách và vấn đề bị xem như “người ngoài”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 유학생: quốc tế hoá đại học và di cư tạm thời
 
@@ -187,7 +187,7 @@ Sinh viên quốc tế làm tăng đa dạng trong trường đại học và ki
 
 Đây là khác biệt giữa **cùng hiện diện (co-presence)** và **hội nhập (integration)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **다문화가정: nhãn chính sách và vấn đề bị xem như “người ngoài”** tiếp nhận điểm tựa từ **유학생: quốc tế hoá đại học và di cư tạm thời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **조선족, 고려인, 재외동포: sắc tộc và quốc tịch không ánh xạ 1:1** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **다문화가정: nhãn chính sách và vấn đề bị xem như “người ngoài”** nối từ **유학생: quốc tế hoá đại học và di cư tạm thời** sang **조선족, 고려인, 재외동포: sắc tộc và quốc tịch không ánh xạ 1:1**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 다문화가정: nhãn chính sách và vấn đề bị xem như “người ngoài”
 
@@ -195,7 +195,7 @@ Sinh viên quốc tế làm tăng đa dạng trong trường đại học và ki
 
 Danh tính thế hệ thứ hai làm câu hỏi “Korean là gì?” phức tạp hơn mô hình huyết thống. Quốc tịch, ngôn ngữ, tham gia văn hoá và tự nhận diện có thể không hoàn toàn trùng nhau.
 
-> **Chuyển mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **조선족, 고려인, 재외동포: sắc tộc và quốc tịch không ánh xạ 1:1** tiếp nhận điểm tựa từ **다문화가정: nhãn chính sách và vấn đề bị xem như “người ngoài”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **여성·남성 역할: hộ gia đình và công sở cập nhật không cùng tốc độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **조선족, 고려인, 재외동포: sắc tộc và quốc tịch không ánh xạ 1:1** nối từ **다문화가정: nhãn chính sách và vấn đề bị xem như “người ngoài”** sang **여성·남성 역할: hộ gia đình và công sở cập nhật không cùng tốc độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 조선족, 고려인, 재외동포: sắc tộc và quốc tịch không ánh xạ 1:1
 
@@ -203,7 +203,7 @@ Các cộng đồng người gốc Hàn ngoài bán đảo có lịch sử riên
 
 Vì vậy **nguồn gốc sắc tộc ≠ quốc tịch ≠ năng lực văn hoá**. Một người có tổ tiên Hàn có thể vẫn phải học tiếng Hàn công sở; một người nước ngoài sống lâu ở Seoul có thể hiểu giao thức đời thường rất sâu nhưng không có tổ tiên Hàn.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **여성·남성 역할: hộ gia đình và công sở cập nhật không cùng tốc độ** tiếp nhận điểm tựa từ **조선족, 고려인, 재외동포: sắc tộc và quốc tịch không ánh xạ 1:1** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **돌봄경제: kinh tế chăm sóc trở thành hạ tầng trung tâm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **여성·남성 역할: hộ gia đình và công sở cập nhật không cùng tốc độ** nối từ **조선족, 고려인, 재외동포: sắc tộc và quốc tịch không ánh xạ 1:1** sang **돌봄경제: kinh tế chăm sóc trở thành hạ tầng trung tâm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 여성·남성 역할: hộ gia đình và công sở cập nhật không cùng tốc độ
 
@@ -218,7 +218,7 @@ kỳ vọng công việc cao
 
 Tranh luận giới có thể phân cực, nhưng chương văn hoá nên giữ phân tích ở tầng thiết chế và động lực, không gán một quan điểm cho toàn bộ nam giới, phụ nữ hay thế hệ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **돌봄경제: kinh tế chăm sóc trở thành hạ tầng trung tâm** tiếp nhận điểm tựa từ **여성·남성 역할: hộ gia đình và công sở cập nhật không cùng tốc độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **고령층과 디지털: khoảng cách số chuyển từ “có thiết bị” sang “có khả năng sử dụng”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **돌봄경제: kinh tế chăm sóc trở thành hạ tầng trung tâm** nối từ **여성·남성 역할: hộ gia đình và công sở cập nhật không cùng tốc độ** sang **고령층과 디지털: khoảng cách số chuyển từ “có thiết bị” sang “có khả năng sử dụng”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 돌봄경제: kinh tế chăm sóc trở thành hạ tầng trung tâm
 
@@ -226,7 +226,7 @@ Tranh luận giới có thể phân cực, nhưng chương văn hoá nên giữ 
 
 Kinh tế chăm sóc khó tự động hoá hoàn toàn vì nhiều công việc cần hiện diện vật lý, niềm tin và **lao động cảm xúc (emotional labour)**. Vì vậy già hoá có thể làm nhu cầu tăng đúng lúc dân số trong độ tuổi lao động giảm — một điểm nghẽn cấu trúc lớn.
 
-> **Chuyển mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **고령층과 디지털: khoảng cách số chuyển từ “có thiết bị” sang “có khả năng sử dụng”** tiếp nhận điểm tựa từ **돌봄경제: kinh tế chăm sóc trở thành hạ tầng trung tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **지방소멸: suy giảm địa phương như một vòng phản hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **고령층과 디지털: khoảng cách số chuyển từ “có thiết bị” sang “có khả năng sử dụng”** nối từ **돌봄경제: kinh tế chăm sóc trở thành hạ tầng trung tâm** sang **지방소멸: suy giảm địa phương như một vòng phản hồi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 고령층과 디지털: khoảng cách số chuyển từ “có thiết bị” sang “có khả năng sử dụng”
 
@@ -236,7 +236,7 @@ Do đó định kiến “người cao tuổi = ngoại tuyến” ngày càng k
 
 Hoà nhập số không chỉ là phát điện thoại thông minh mà là thiết kế hệ thống dễ dùng và có phương án thay thế.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **지방소멸: suy giảm địa phương như một vòng phản hồi** tiếp nhận điểm tựa từ **고령층과 디지털: khoảng cách số chuyển từ “có thiết bị” sang “có khả năng sử dụng”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **수도권 집중 và mức sinh có liên hệ gián tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **지방소멸: suy giảm địa phương như một vòng phản hồi** nối từ **고령층과 디지털: khoảng cách số chuyển từ “có thiết bị” sang “có khả năng sử dụng”** sang **수도권 집중 và mức sinh có liên hệ gián tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 지방소멸: suy giảm địa phương như một vòng phản hồi
 
@@ -253,7 +253,7 @@ Hoà nhập số không chỉ là phát điện thoại thông minh mà là thi�
 
 Giao thông và làm việc từ xa có thể giảm một phần chi phí khoảng cách, nhưng không thay thế toàn bộ bệnh viện, trường học, mạng xã hội và cụm doanh nghiệp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **수도권 집중 và mức sinh có liên hệ gián tiếp** tiếp nhận điểm tựa từ **지방소멸: suy giảm địa phương như một vòng phản hồi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **반려동물: thú cưng như quan hệ gần với gia đình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **수도권 집중 và mức sinh có liên hệ gián tiếp** nối từ **지방소멸: suy giảm địa phương như một vòng phản hồi** sang **반려동물: thú cưng như quan hệ gần với gia đình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 수도권 집중 và mức sinh có liên hệ gián tiếp
 
@@ -261,7 +261,7 @@ Tập trung vào vùng thủ đô làm cơ hội nghề nghiệp tốt hơn như
 
 Đây là nghịch lý hệ thống: tập tụ đô thị có thể tăng năng suất nhưng đồng thời tăng chi phí hình thành hộ gia đình.
 
-> **Chuyển mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **반려동물: thú cưng như quan hệ gần với gia đình** tiếp nhận điểm tựa từ **수도권 집중 và mức sinh có liên hệ gián tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **환경·기후와 인구구조** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **반려동물: thú cưng như quan hệ gần với gia đình** nối từ **수도권 집중 và mức sinh có liên hệ gián tiếp** sang **환경·기후와 인구구조**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 반려동물: thú cưng như quan hệ gần với gia đình
 
@@ -269,7 +269,7 @@ Hộ gia đình nhỏ và kết hôn muộn làm ngành thú cưng nổi bật h
 
 Chăm sóc thú cưng, quán cà phê thân thiện với thú cưng, bảo hiểm và dịch vụ tang lễ cho thú cưng cho thấy thị trường tạo hạ tầng quanh một quan hệ cảm xúc mới. Điều này không chứng minh thú cưng “thay thế trẻ em” theo nghĩa nhân quả; hai xu hướng có thể cùng xuất hiện do thay đổi hộ gia đình mà không phải quan hệ nguyên nhân–kết quả trực tiếp.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **환경·기후와 인구구조** tiếp nhận điểm tựa từ **반려동물: thú cưng như quan hệ gần với gia đình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **부양비: “nhiều người già” chưa tự động bằng “gánh nặng không thể chịu nổi”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **환경·기후와 인구구조** nối từ **반려동물: thú cưng như quan hệ gần với gia đình** sang **부양비: “nhiều người già” chưa tự động bằng “gánh nặng không thể chịu nổi”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 환경·기후와 인구구조
 
@@ -277,7 +277,7 @@ Rủi ro khí hậu không tác động mọi nhóm giống nhau. Nắng nóng n
 
 Vì vậy cấu trúc dân số làm thay đổi hồ sơ dễ tổn thương của quá trình thích nghi khí hậu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **부양비: “nhiều người già” chưa tự động bằng “gánh nặng không thể chịu nổi”** tiếp nhận điểm tựa từ **환경·기후와 인구구조** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **세대계약: xã hội vận hành bằng một “hợp đồng giữa các thế hệ” ngầm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **부양비: “nhiều người già” chưa tự động bằng “gánh nặng không thể chịu nổi”** nối từ **환경·기후와 인구구조** sang **세대계약: xã hội vận hành bằng một “hợp đồng giữa các thế hệ” ngầm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 부양비: “nhiều người già” chưa tự động bằng “gánh nặng không thể chịu nổi”
 
@@ -296,7 +296,7 @@ cấu trúc tuổi
 
 Điều này giúp tránh biến già hoá thành câu chuyện đạo đức “thế hệ này là gánh nặng cho thế hệ kia”.
 
-> **Chuyển mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **세대계약: xã hội vận hành bằng một “hợp đồng giữa các thế hệ” ngầm** tiếp nhận điểm tựa từ **부양비: “nhiều người già” chưa tự động bằng “gánh nặng không thể chịu nổi”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **압축고령화: tốc độ thay đổi quan trọng ngang mức độ thay đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **세대계약: xã hội vận hành bằng một “hợp đồng giữa các thế hệ” ngầm** nối từ **부양비: “nhiều người già” chưa tự động bằng “gánh nặng không thể chịu nổi”** sang **압축고령화: tốc độ thay đổi quan trọng ngang mức độ thay đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 세대계약: xã hội vận hành bằng một “hợp đồng giữa các thế hệ” ngầm
 
@@ -306,7 +306,7 @@ Hệ thống bền khi người tham gia tin rằng đóng góp hôm nay có li�
 
 Tranh luận thế hệ vì vậy thường là tranh luận về **phân phối rủi ro theo vòng đời**, không chỉ khác biệt giá trị.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **압축고령화: tốc độ thay đổi quan trọng ngang mức độ thay đổi** tiếp nhận điểm tựa từ **세대계약: xã hội vận hành bằng một “hợp đồng giữa các thế hệ” ngầm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **주거와 생애주기: nhà ở là hạ tầng của vòng đời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **압축고령화: tốc độ thay đổi quan trọng ngang mức độ thay đổi** nối từ **세대계약: xã hội vận hành bằng một “hợp đồng giữa các thế hệ” ngầm** sang **주거와 생애주기: nhà ở là hạ tầng của vòng đời**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 압축고령화: tốc độ thay đổi quan trọng ngang mức độ thay đổi
 
@@ -323,7 +323,7 @@ cấu trúc dân số đổi nhanh
 
 Vì vậy câu hỏi không chỉ là “Hàn Quốc già tới mức nào?” mà còn là “các hệ thống có bao nhiêu thời gian để tái thiết kế?”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **주거와 생애주기: nhà ở là hạ tầng của vòng đời** tiếp nhận điểm tựa từ **압축고령화: tốc độ thay đổi quan trọng ngang mức độ thay đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **이민의 단계: di cư là một đường ống, không phải khoảnh khắc vượt biên giới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **주거와 생애주기: nhà ở là hạ tầng của vòng đời** nối từ **압축고령화: tốc độ thay đổi quan trọng ngang mức độ thay đổi** sang **이민의 단계: di cư là một đường ống, không phải khoảnh khắc vượt biên giới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 주거와 생애주기: nhà ở là hạ tầng của vòng đời
 
@@ -341,7 +341,7 @@ việc làm
 
 Vòng phản hồi này nối trực tiếp chương nhà ở và kinh tế. Chính sách nhà ở có thể tác động dân số gián tiếp ngay cả khi không được gắn nhãn “chính sách sinh”.
 
-> **Chuyển mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **이민의 단계: di cư là một đường ống, không phải khoảnh khắc vượt biên giới** tiếp nhận điểm tựa từ **주거와 생애주기: nhà ở là hạ tầng của vòng đời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **언어와 제도문해력: biết tiếng chưa đủ, phải biết đọc hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **이민의 단계: di cư là một đường ống, không phải khoảnh khắc vượt biên giới** nối từ **주거와 생애주기: nhà ở là hạ tầng của vòng đời** sang **언어와 제도문해력: biết tiếng chưa đủ, phải biết đọc hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 이민의 단계: di cư là một đường ống, không phải khoảnh khắc vượt biên giới
 
@@ -361,7 +361,7 @@ Mỗi giai đoạn có điểm nghẽn khác nhau. Một người có việc nh�
 
 Do đó “hội nhập thành công” không nên đo bằng một biến duy nhất như năng lực ngôn ngữ.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **언어와 제도문해력: biết tiếng chưa đủ, phải biết đọc hệ thống** tiếp nhận điểm tựa từ **이민의 단계: di cư là một đường ống, không phải khoảnh khắc vượt biên giới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2세 và 정체성: thế hệ sau không phải “bản sao nhẹ hơn” của người nhập cư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **언어와 제도문해력: biết tiếng chưa đủ, phải biết đọc hệ thống** nối từ **이민의 단계: di cư là một đường ống, không phải khoảnh khắc vượt biên giới** sang **2세 và 정체성: thế hệ sau không phải “bản sao nhẹ hơn” của người nhập cư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 언어와 제도문해력: biết tiếng chưa đủ, phải biết đọc hệ thống
 
@@ -371,7 +371,7 @@ Một người TOPIK cao vẫn có thể gặp khó nếu chưa biết quy trìn
 
 Điều này giải thích vai trò của đồng nghiệp, cộng đồng địa phương, trung tâm hỗ trợ và người phiên dịch văn hoá: họ cung cấp **bản đồ hệ thống**, không chỉ dịch từ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **2세 và 정체성: thế hệ sau không phải “bản sao nhẹ hơn” của người nhập cư** tiếp nhận điểm tựa từ **언어와 제도문해력: biết tiếng chưa đủ, phải biết đọc hệ thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **돌봄이주: già hoá và di cư có thể nối nhau qua thị trường chăm sóc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **2세 và 정체성: thế hệ sau không phải “bản sao nhẹ hơn” của người nhập cư** nối từ **언어와 제도문해력: biết tiếng chưa đủ, phải biết đọc hệ thống** sang **돌봄이주: già hoá và di cư có thể nối nhau qua thị trường chăm sóc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2세 và 정체성: thế hệ sau không phải “bản sao nhẹ hơn” của người nhập cư
 
@@ -381,7 +381,7 @@ Trẻ sinh hoặc lớn lên lâu dài ở Hàn Quốc có thể nói tiếng H�
 
 Danh tính thế hệ sau có thể gồm nhiều lớp cùng lúc: Hàn Quốc, nguồn gốc gia đình, địa phương, ngôn ngữ và cộng đồng xuyên quốc gia. Không cần ép các lớp đó thành một lựa chọn duy nhất.
 
-> **Chuyển mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **돌봄이주: già hoá và di cư có thể nối nhau qua thị trường chăm sóc** tiếp nhận điểm tựa từ **2세 và 정체성: thế hệ sau không phải “bản sao nhẹ hơn” của người nhập cư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **지역 서비스 임계점: dịch vụ địa phương không giảm tuyến tính với dân số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **돌봄이주: già hoá và di cư có thể nối nhau qua thị trường chăm sóc** nối từ **2세 và 정체성: thế hệ sau không phải “bản sao nhẹ hơn” của người nhập cư** sang **지역 서비스 임계점: dịch vụ địa phương không giảm tuyến tính với dân số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 돌봄이주: già hoá và di cư có thể nối nhau qua thị trường chăm sóc
 
@@ -391,7 +391,7 @@ Nhưng chăm sóc không giống sản xuất đơn giản. Công việc cần n
 
 Có thể xem đây là **chuỗi chăm sóc xuyên biên giới (transnational care chain)**: nhu cầu của một xã hội được đáp ứng một phần bởi lao động đến từ xã hội khác, trong khi chính người lao động di cư cũng có gia đình cần được chăm ở nơi xuất phát.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **지역 서비스 임계점: dịch vụ địa phương không giảm tuyến tính với dân số** tiếp nhận điểm tựa từ **돌봄이주: già hoá và di cư có thể nối nhau qua thị trường chăm sóc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **생활인구: ai “sử dụng” một địa phương không nhất thiết là người đăng ký thường trú ở đó** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **지역 서비스 임계점: dịch vụ địa phương không giảm tuyến tính với dân số** nối từ **돌봄이주: già hoá và di cư có thể nối nhau qua thị trường chăm sóc** sang **생활인구: ai “sử dụng” một địa phương không nhất thiết là người đăng ký thường trú ở đó**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 지역 서비스 임계점: dịch vụ địa phương không giảm tuyến tính với dân số
 
@@ -411,7 +411,7 @@ qua ngưỡng tối thiểu
 
 Điều này giải thích vì sao suy giảm địa phương có thể tăng tốc sau một điểm, thay vì giảm đều đặn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **생활인구: ai “sử dụng” một địa phương không nhất thiết là người đăng ký thường trú ở đó** tiếp nhận điểm tựa từ **지역 서비스 임계점: dịch vụ địa phương không giảm tuyến tính với dân số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **정책평가: chính sách dân số phải đo cơ chế trung gian, không chỉ kết quả cuối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **생활인구: ai “sử dụng” một địa phương không nhất thiết là người đăng ký thường trú ở đó** nối từ **지역 서비스 임계점: dịch vụ địa phương không giảm tuyến tính với dân số** sang **정책평가: chính sách dân số phải đo cơ chế trung gian, không chỉ kết quả cuối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 생활인구: ai “sử dụng” một địa phương không nhất thiết là người đăng ký thường trú ở đó
 
@@ -421,7 +421,7 @@ Vì vậy để hiểu kinh tế địa phương cần phân biệt **dân cư �
 
 Đây là cách nhìn động hơn: thành phố không chỉ là một bảng đếm người ở, mà là mạng luồng di chuyển theo giờ, ngày và mùa.
 
-> **Chuyển mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **생활인구: ai “sử dụng” một địa phương không nhất thiết là người đăng ký thường trú ở đó** xác định đầu vào; **정책평가: chính sách dân số phải đo cơ chế trung gian, không chỉ kết quả cuối** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Vòng phản hồi toàn cầu hoá: Hallyu quay lại định nghĩa “Korean”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **생활인구: ai “sử dụng” một địa phương không nhất thiết là người đăng ký thường trú ở đó** đặt đầu vào cho **정책평가: chính sách dân số phải đo cơ chế trung gian, không chỉ kết quả cuối**, rồi **Vòng phản hồi toàn cầu hoá: Hallyu quay lại định nghĩa “Korean”** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 정책평가: chính sách dân số phải đo cơ chế trung gian, không chỉ kết quả cuối
 
@@ -440,7 +440,7 @@ Nếu chỉ hỏi “chi nhiều tiền mà TFR có tăng ngay không?”, ta c�
 
 Đây là bài học về **chuỗi nhân quả chính sách (policy causal chain)**.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **정책평가: chính sách dân số phải đo cơ chế trung gian, không chỉ kết quả cuối** xác định đầu vào; **Vòng phản hồi toàn cầu hoá: Hallyu quay lại định nghĩa “Korean”** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Liên hệ kiến thức: chuyển đổi dân số như di chuyển lược đồ dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **정책평가: chính sách dân số phải đo cơ chế trung gian, không chỉ kết quả cuối** đặt đầu vào cho **Vòng phản hồi toàn cầu hoá: Hallyu quay lại định nghĩa “Korean”**, rồi **Liên hệ kiến thức: chuyển đổi dân số như di chuyển lược đồ dữ liệu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Vòng phản hồi toàn cầu hoá: Hallyu quay lại định nghĩa “Korean”
 
@@ -450,7 +450,7 @@ Dòng chảy không còn chỉ là `Korea → world` mà là:
 
 `Sáng tạo địa phương → diễn giải toàn cầu → phản hồi trong nước → hình thức lai mới`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **Vòng phản hồi toàn cầu hoá: Hallyu quay lại định nghĩa “Korean”** nêu điều cần giải thích; **Liên hệ kiến thức: chuyển đổi dân số như di chuyển lược đồ dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **Vòng phản hồi toàn cầu hoá: Hallyu quay lại định nghĩa “Korean”** đặt vấn đề; **Liên hệ kiến thức: chuyển đổi dân số như di chuyển lược đồ dữ liệu** đối chiếu bằng chứng, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên hệ kiến thức: chuyển đổi dân số như di chuyển lược đồ dữ liệu
 
@@ -458,13 +458,13 @@ Trong cơ sở dữ liệu, lược đồ cũ có thể chạy tốt khi hình d
 
 Xã hội cũng tương tự. Lương hưu, trường học, nhà ở và thiết chế chăm sóc gia đình từng được thiết kế cho dân số trẻ hơn và hộ lớn hơn. Khi “hình dạng dữ liệu” chuyển sang nhiều người cao tuổi + hộ một người + người có nền tảng di cư, thiết chế phải “di chuyển lược đồ”. Nếu không, căng thẳng văn hoá xuất hiện tại chỗ không khớp giữa hệ thống cũ và thực tế mới.
 
-> **Chuyển mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, các dấu vết trong **Liên hệ kiến thức: chuyển đổi dân số như di chuyển lược đồ dữ liệu** được đọc cùng nhau ở **Mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, các dấu vết trong **Liên hệ kiến thức: chuyển đổi dân số như di chuyển lược đồ dữ liệu** được đọc cùng nhau ở **Mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
 > Văn hoá đương đại Hàn Quốc là trạng thái cân bằng tạm thời giữa **cấu trúc dân số, hộ gia đình, thị trường lao động, di cư, công nghệ và ký ức**. Khi nền dân số thay đổi, chuẩn mực về hôn nhân, chăm sóc, công việc, vùng miền và danh tính cũng buộc phải thương lượng lại. Muốn hiểu sâu, cần nhìn cả tốc độ thay đổi, độ trễ thiết chế, hợp đồng giữa các thế hệ và chuỗi hội nhập của người di cư; không nên giải thích đầu ra của cả hệ thống bằng một “tính cách thế hệ” duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **Hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dữ liệu và nguồn cần ghi mốc thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **Hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dữ liệu và nguồn cần ghi mốc thời gian** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Hiểu lầm phổ biến
 
@@ -488,7 +488,7 @@ Xã hội cũng tương tự. Lương hưu, trường học, nhà ở và thiế
 
 “Dân số địa phương giảm 10% thì mọi dịch vụ cũng chỉ giảm 10%” bỏ qua các hiệu ứng ngưỡng khiến dịch vụ có thể đóng hoàn toàn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **Hiểu lầm phổ biến** nêu điều cần giải thích; **Dữ liệu và nguồn cần ghi mốc thời gian** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Biến đổi đương đại: dân số, thế hệ, di cư và tái cấu trúc chuẩn mực**, **Hiểu lầm phổ biến** đặt vấn đề; **Dữ liệu và nguồn cần ghi mốc thời gian** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dữ liệu và nguồn cần ghi mốc thời gian
 
