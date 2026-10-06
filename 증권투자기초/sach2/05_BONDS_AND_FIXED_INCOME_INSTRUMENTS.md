@@ -62,6 +62,21 @@ P = 60/1,08 + (60 + 1.000)/(1,08)^2 ≈ 964,33
 
 Giá thấp hơn mệnh giá vì coupon 6% thấp hơn lợi suất yêu cầu 8%. Nếu lợi suất giảm xuống 4%, cùng dòng tiền sẽ có giá cao hơn mệnh giá. Ví dụ này cho thấy coupon rate cố định nhưng market yield thay đổi; không được gọi coupon 6% là “lợi suất chắc chắn” khi mua trên thị trường thứ cấp.
 
+### Worked indexed bond: gốc và coupon cùng đổi theo chỉ số
+
+Một bảng trong raw minh họa trái phiếu có mệnh giá gốc 10.000, coupon danh nghĩa 4% và principal được điều chỉnh theo chỉ số. Nếu chỉ số tăng lần lượt 2%, 3% và 1%, principal điều chỉnh là:
+
+| Kỳ | Mức tăng chỉ số | Principal điều chỉnh | Coupon 4% trên principal |
+|---:|---:|---:|---:|
+| 0 | — | 10.000,0 | — |
+| 1 | 2% | 10.200,0 | 408,0 |
+| 2 | 3% | 10.506,0 | 420,2 |
+| 3 | 1% | 10.611,1 | 424,4 |
+
+Ở kỳ cuối, nhà đầu tư nhận coupon khoảng 424,4 và principal khoảng 10.611,1, tổng khoảng 11.035,5 trước thuế và phí. Cách tính cho thấy “coupon 4%” không còn là 400 cố định mỗi kỳ; nó được áp trên gốc đã index. Nếu prospectus chỉ index coupon mà không index principal, payoff sẽ khác hoàn toàn. Vì vậy phải kiểm tra chỉ số tham chiếu, lag, công thức làm tròn, floor/deflation protection và thời điểm điều chỉnh trước khi so sánh với trái phiếu thường.
+
+Đây là ví dụ textbook được reconstruct từ bảng raw, không phải điều khoản của một sản phẩm hiện hành. Indexed bond có thể giảm rủi ro lạm phát danh nghĩa nhưng vẫn có issuer risk, basis risk và rủi ro chỉ số không phản ánh đúng chi phí của người nắm giữ.
+
 ## 7. Payoff map cho sản phẩm lai
 
 Convertible bond có một phần trái phiếu và một quyền chọn chuyển đổi; khi giá cổ phiếu tăng, quyền chọn có thể làm giá sản phẩm tăng nhanh hơn trái phiếu thuần. Callable bond trao quyền cho issuer mua lại khi lãi suất giảm, nên nhà đầu tư bị giới hạn upside và chịu reinvestment risk. Puttable bond trao quyền ngược lại cho nhà đầu tư, thường có giá trị bảo vệ khi lãi suất tăng hoặc credit xấu đi. ABS/MBS thêm prepayment và waterfall risk: dòng tiền có thể đến sớm, đến muộn hoặc bị phân tầng khác dự kiến.
