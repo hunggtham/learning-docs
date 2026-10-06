@@ -26,6 +26,20 @@ Ví dụ source dùng 300 tích cực, 200 tiêu cực trên 500 câu trả lờ
 
 Composite Index (CI) gộp nhiều chỉ báo; Diffusion Index (DI) quan sát độ rộng số thành phần đang cải thiện. CI trả lời mức độ tổng hợp, DI trả lời mức độ lan tỏa. Hai chỉ số có thể lệch nhau: một vài thành phần lớn kéo CI lên trong khi phần lớn thành phần vẫn yếu. Đây là lý do cần đặt khảo sát cạnh dữ liệu thực tế và chu kỳ, thay vì thay thế chúng.
 
+### Độ trễ của chỉ báo và bài kiểm tra lệch pha
+
+Không phải chỉ báo nào cũng đo cùng một thời điểm. Hãy phân loại trước khi suy luận:
+
+| Loại chỉ báo | Quan hệ với chu kỳ | Cách dùng thận trọng |
+|---|---|---|
+| Dẫn dắt (leading) | thường đổi trước hoạt động thực | dùng để tạo giả thuyết, không xác nhận kết quả |
+| Đồng thời (coincident) | vận động gần cùng thời điểm với hoạt động | dùng để kiểm tra trạng thái hiện tại |
+| Trễ (lagging) | phản ứng sau khi chu kỳ đã đổi | dùng để xác nhận hậu nghiệm, không timing sớm |
+
+Nếu BSI tăng lên 120 trong khi GDP hoặc doanh số hiện tại còn giảm, có ít nhất hai cách đọc: kỳ vọng doanh nghiệp đang quay đầu trước dữ liệu cứng, hoặc mẫu khảo sát chưa đại diện cho ngành chịu suy yếu. Cách phân biệt là kiểm tra độ rộng theo ngành, thời điểm khảo sát, đơn hàng, sản lượng, vốn lưu động và dòng tiền; không chọn cách giải thích thuận lợi chỉ vì chỉ số vượt 100.
+
+Mental model là `kỳ vọng → dữ liệu hoạt động → báo cáo tài chính → định giá`. Chỉ báo dẫn dắt mở ra câu hỏi, chỉ báo đồng thời kiểm tra hiện trạng, còn chỉ báo trễ giúp biết giả thuyết trước đó có đúng không. Nhờ vậy CSI/BSI được dùng như một mắt xích trong chuỗi, không phải tín hiệu mua bán độc lập.
+
 ## 4. Phân tích doanh nghiệp và báo cáo tài chính
 
 Phân tích cơ bản đi từ ngành và môi trường kinh tế đến doanh nghiệp, rồi từ doanh thu đến lợi nhuận và dòng tiền. Báo cáo tài chính là ngôn ngữ đo lường của quá trình đó: bảng cân đối cho biết nguồn lực và nghĩa vụ tại một thời điểm; báo cáo kết quả kinh doanh cho biết doanh thu, chi phí và lợi nhuận trong kỳ; báo cáo lưu chuyển tiền tệ kiểm tra lợi nhuận có chuyển thành tiền hay không. Source nhấn mạnh IFRS (International Financial Reporting Standards), IASC/IAS và K-IFRS; đây là khuôn khổ ghi nhận và trình bày, không phải bảo đảm chất lượng kinh tế của doanh nghiệp.
