@@ -42,7 +42,7 @@ Bảng này là semantic inventory cấp route. Mỗi ID đại diện cho một
 | B2-C06-S01-U002 | pp.258–282 | yield curve, expectations, liquidity premium, market segmentation, preferred habitat | THEORY, RELATIONSHIP | 06 §2 | FULL | Bốn theory được đối chiếu. |
 | B2-C06-S01-U003 | pp.274–282 | default risk, credit rating, spread, junk bond | RISK, INSTITUTION | 06 §3 | FULL | Rating không phải xác suất chắc chắn. |
 | B2-C06-S02-U001 | pp.306–318 | duration, Macaulay, modified duration, convexity | FORMULA, SENSITIVITY | 06 §4 | FULL | Có worked Macaulay/modified duration, approximation và giới hạn. |
-| B2-C06-S03-U001 | pp.318–356 | benchmark, bond index, price/coupon/yield/total return index | INDEX, CLASSIFICATION | 06 §5 | FULL | Giải thích index construction ở mức source. |
+| B2-C06-S03-U001 | pp.318–356 | benchmark, bond index, price/coupon/yield/total return index | INDEX, CLASSIFICATION | 06 §5 | FULL | Có worked price/total return, broad/sub/customized index và tracking error; giữ boundary construction ở mức source. |
 | B2-C06-S03-U002 | pp.352–366 | repo và thị trường trái phiếu Hàn Quốc | MARKET_RULE, INSTITUTION | 06 §6 | FULL | Repo, KSDA-BLP, base 100.00 và ví dụ BBB- đã được ghi ở textbook-state; current state vẫn tách riêng. |
 | B2-Q-001 | pp.198–216, review block | câu hỏi nhận diện chỉ số và multiples | EXERCISE | 04 §5 | SOURCE_AMBIGUITY | Có đủ nguyên tắc giải; số OCR/ảnh còn mơ hồ. |
 | B2-Q-002 | pp.374–390, review block | câu hỏi trái phiếu, PER/PBR/PSR/EVA | EXERCISE | 02 §9, 05 §4 | SOURCE_AMBIGUITY | Không chép đáp án không đọc chắc được. |

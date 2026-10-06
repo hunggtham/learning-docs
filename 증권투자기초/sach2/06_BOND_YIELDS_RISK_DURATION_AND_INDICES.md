@@ -96,6 +96,20 @@ Một bond index phải xác định universe, maturity, rating, currency, trọ
 
 Source nhắc các bond index Hàn Quốc, gồm KSDA-BLP Korean Bond Index và các phân nhóm market/bond subindex. Tên mã, thành phần và phương pháp hiện tại cần xác minh lại trước khi sử dụng; route chỉ giữ nguyên tắc construction vì OCR không đủ cho mọi chi tiết.
 
+### Worked bond index và tracking error
+
+Giả sử một trái phiếu có giá đầu kỳ 100, giá cuối kỳ 101 và trả coupon 3 trong kỳ. Nếu chỉ đo price return, chỉ số cơ sở 100 tăng lên 101, tức `+1%`. Coupon return trong ví dụ là `3/100 = 3%`; nếu nhận đủ coupon và chưa xét tái đầu tư, total return là `(101 + 3)/100 − 1 = 4%`, nên total-return index cơ sở 100 sẽ ở khoảng 104. Hai con số khác nhau không phải mâu thuẫn: price index trả lời “giá thay đổi thế nào?”, còn total-return index trả lời “nhà đầu tư nhận được bao nhiêu từ giá và income?”.
+
+Trong chỉ số thật, cần ghi rõ clean/dirty price, accrued interest, ngày nhận coupon, giả định tái đầu tư và xử lý trái phiếu đáo hạn hoặc vỡ nợ. Nếu một quỹ nhận coupon nhưng benchmark chỉ là price index, active return sẽ bị thổi phồng giả tạo. Ngược lại, dùng benchmark total return cho danh mục không được phép tái đầu tư coupon sẽ làm so sánh lệch theo hướng ngược lại.
+
+Raw cũng phân biệt broad market index, bond subindex và customized index. Customized index có thể khóa universe, rating, maturity hoặc duration theo mục tiêu danh mục; đổi quy tắc này đồng nghĩa đổi exposure, không chỉ đổi tên benchmark. Sau khi chọn benchmark, tracking error đo độ lệch biến động của lợi suất danh mục so với benchmark:
+
+```text
+Tracking error = độ lệch chuẩn(R_danh mục − R_benchmark)
+```
+
+Tracking error thấp không chứng minh danh mục tốt; nó chỉ nói danh mục bám benchmark sát. Cần đọc cùng active return, chi phí, duration, rating và currency để biết phần lệch là chủ ý hay sai lệch không được kiểm soát.
+
 ## 6. Repo và cơ chế thị trường
 
 Repo là giao dịch bán và mua lại, về kinh tế gần khoản vay có tài sản thế chấp. Haircut, margin, collateral quality và haircut change quyết định đòn bẩy và liquidity. Khi giá tài sản giảm hoặc haircut tăng, bên vay có thể phải bổ sung tài sản hoặc bán cưỡng bức. Vì vậy repo nối đường cong lợi suất với funding và stress thị trường; không nên đọc bond market như một bảng giá tĩnh.
