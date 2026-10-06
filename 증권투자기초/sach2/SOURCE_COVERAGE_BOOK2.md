@@ -9,6 +9,7 @@
 - `FULL` chỉ được dùng khi unit giữ được meaning + relationship/condition/boundary cần thiết; keyword xuất hiện một mình không đủ.
 - Một hàng chỉ đại diện cho **một semantic unit có thể fail độc lập**. Product, formula, indicator, pattern, theory và auction mechanism không được gom thành mega-row.
 - Source questions được audit riêng trong [`SOURCE_QUESTION_MAP_BOOK2.md`](./SOURCE_QUESTION_MAP_BOOK2.md); câu hỏi không được dùng như semantic row để che nhiều concept.
+- ID gaps `B2-U160`–`B2-U164` và `B2-U242`–`B2-U248` là **retired exercise mega-rows** từ inventory cũ. Chúng không phải missing knowledge; review/exercise coverage đã được chuyển sang source-question map để semantic inventory chỉ chứa knowledge units.
 
 ## Inventory
 
