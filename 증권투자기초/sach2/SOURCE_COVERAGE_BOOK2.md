@@ -30,7 +30,7 @@ Bảng này là semantic inventory cấp route. Mỗi ID đại diện cho một
 | B2-C03-S03-U001 | pp.142–154 | candlestick và mẫu đảo chiều/tiếp diễn | FIGURE, TERMINOLOGY | 03 §4 | FULL | Doji, Harami, morning/evening star và điều kiện đọc đã được reconstruct bằng prose. |
 | B2-C03-S03-U002 | pp.154–168 | MACD, RSI, stochastic, Bollinger, envelope, OBV, VR, P&F | FORMULA, INDICATOR | 03 §5 | FULL | Nêu biến, cách đọc, VR với volume tăng/giảm và P&F với box/reversal; giữ giới hạn tham số. |
 | B2-C03-S04-U001 | pp.170–180 | Dow theory và Elliott wave | THEORY, CLASSIFICATION | 03 §6 | FULL | Đã bổ sung Dow, wave principle, Fibonacci sequence và các tỷ lệ source đọc được. |
-| B2-C04-S01-U001 | pp.182–186 | buy-and-hold, dollar-cost averaging, dividend, stock split | PROCESS, STRATEGY | 04 §1 | FULL | Phân biệt cơ chế với kết quả đảm bảo. |
+| B2-C04-S01-U001 | pp.182–186 | buy-and-hold, dollar-cost averaging, dividend, stock split | PROCESS, STRATEGY | 04 §1 | FULL | Có worked DCA, adjusted price và phân biệt price return với total return; không coi kết quả là bảo đảm. |
 | B2-C04-S01-U002 | pp.184–186 | note, small-firm effect, formula plan | EFFECT, STRATEGY | 04 §2 | SOURCE_AMBIGUITY | Một số tên OCR mờ; chỉ giữ thuật ngữ đọc chắc và ghi boundary. |
 | B2-C04-S02-U001 | pp.186–188 | portfolio effect và diversification | MECHANISM, RELATIONSHIP | 04 §3 | FULL | Cross-link portfolio canonical. |
 | B2-C04-S03-U001 | pp.188–198 | stock-price index, KOSPI, KOSPI200, KOSDAQ, S&P500, Nikkei225 | INSTITUTION, INDEX | 04 §4 | FULL | Không cập nhật constituent/current value. |

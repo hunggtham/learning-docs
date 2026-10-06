@@ -8,6 +8,12 @@ Buy-and-hold giữ tài sản qua thời gian, dựa vào tăng trưởng dòng 
 
 Cổ tức là phân phối tiền hoặc tài sản cho cổ đông; stock split thay đổi số cổ phiếu và giá danh nghĩa theo tỷ lệ nhưng không tự tạo giá trị kinh tế. Hãy điều chỉnh dữ liệu giá cho split và cổ tức khi tính total return, nếu không sẽ nhầm thay đổi kỹ thuật với lợi nhuận thật.
 
+### Worked DCA và điều chỉnh corporate action
+
+Giả sử đầu tư 100 ở mỗi kỳ khi giá lần lượt là 100, 80 và 120. Số cổ phiếu mua được là `1 + 1,25 + 0,8333 = 3,0833`; tổng vốn là 300 nên giá vốn bình quân khoảng `300/3,0833 = 97,30` mỗi cổ phiếu. Nếu giá cuối kỳ là 120, giá trị danh mục khoảng 370 và lợi suất trước phí là `370/300 − 1 = 23,3%`. Với cùng 300 bỏ toàn bộ ở giá 100, nhà đầu tư có 3 cổ phiếu và giá trị cuối là 360, tức 20%. Trong chuỗi này DCA có lợi vì nó mua được nhiều đơn vị hơn khi giá giảm; nếu giá tăng đều, đầu tư một lần thường có lợi thế thời gian trên thị trường. DCA giảm rủi ro timing, không tạo ra lợi thế chắc chắn.
+
+Corporate action phải được đưa vào sổ theo dõi riêng. Người sở hữu 10 cổ phiếu giá 100 trước split 2:1 sẽ thành 20 cổ phiếu giá tham chiếu 50; tổng giá trị lý thuyết vẫn là 1.000. Nếu sau đó nhận cổ tức tiền mặt 2 mỗi cổ phiếu, price return chỉ nhìn giá sẽ bỏ qua 40 tiền cổ tức, còn total return phải cộng khoản này (và giả định tái đầu tư nếu benchmark yêu cầu). Vì vậy khi so sánh DCA, buy-and-hold hoặc quỹ với chỉ số, hãy khóa quy ước adjusted price, ngày corporate action, cổ tức tiền mặt và thuế trước khi kết luận chiến lược nào tốt hơn.
+
 ## 2. Hiệu ứng và quy tắc chiến lược
 
 Source đặt note, small-firm effect và formula plan dưới mục tiêu “Beat the Market”. Cần tách ba lớp: note/stock split/dividend là cơ chế hoặc sản phẩm; small-firm effect là quan sát thực nghiệm; formula plan là quy tắc phân bổ. Không lớp nào tự chứng minh rằng danh mục sẽ vượt benchmark. Hiệu ứng quy mô có thể biến mất sau phí, thay đổi cấu trúc thị trường hoặc dữ liệu mẫu. Formula plan cố định cách phân bổ theo điều kiện giá hoặc tỷ trọng; ưu điểm là kỷ luật, giới hạn là quy tắc cứng có thể gặp regime chưa từng thấy. Đánh giá chiến lược bằng chuỗi lợi suất, drawdown, turnover và rủi ro thanh khoản, không bằng vài giao dịch đẹp.
