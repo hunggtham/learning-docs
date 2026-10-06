@@ -12,6 +12,23 @@ Economics hiện là chuẩn gốc (canonical / 정본) thư viện (library / �
 
 `investing/04_economics/` giữ ứng dụng (application / 애플리케이션) tầng (layer / 계층) cho macro dữ liệu (data / 데이터), monetary/funding conditions, capital flows, crisis transmission, công khai (public / 공개) debt, demographics, productivity, chính sách (policy / 정책) regime và cách chúng truyền vào asset/company/portfolio. Hai nhánh cross-link theo quyền sở hữu (ownership / 소유권) này; không duplicate hàng loạt lý thuyết (theory / 이론) general-purpose.
 
+## Source-specific routes và canonical ownership
+
+`investing/` là **canonical concept owner** cho kiến thức đầu tư theo domain.
+Các bộ giáo trình nguồn giữ route riêng để bảo toàn provenance và thứ tự học,
+rồi cross-link về đây thay vì tạo canonical owner thứ hai.
+
+- [증권투자기초 — Sách 1](../증권투자기초/output/book1/00-book1-index.md):
+  source-specific learning route từ `raw_md/sach1.md`; raw/provenance nằm tại
+  `증권투자기초/raw_md/` và `증권투자기초/raw/`.
+- Các concept về market mechanics, asset classes/funds và derivatives tiếp tục
+  thuộc các chapter tương ứng trong `investing/`; việc một concept xuất hiện
+  trong textbook route không chuyển ownership canonical sang `증권투자기초/`.
+
+Convention cho bộ `증권투자기초` là `output/bookN/` khi từng sách được convert.
+Sách 2/3 chưa có learning route publication-ready nên không tạo placeholder hoặc
+di chuyển Book 1 chỉ để đồng nhất hình thức.
+
 ## 00 — Thuật ngữ, công thức và quy chuẩn nghiên cứu
 
 [00_GLOSSARY_FORMULAS_AND_RESEARCH_CONVENTIONS.md](./00_GLOSSARY_FORMULAS_AND_RESEARCH_CONVENTIONS.md)
