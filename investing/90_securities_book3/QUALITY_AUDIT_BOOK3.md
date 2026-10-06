@@ -1,94 +1,225 @@
-# Đánh giá chất lượng — Sách 3
+# QUALITY AUDIT — 증권투자기초 Sách 3
 
-## Kết luận hiện tại
+## Final verdict
 
-Bản route trước đã đạt mức **foundation pass**: architecture theo dependency đúng, raw OCR đã được tái tạo, 19 semantic rows có target lesson, link nội bộ sạch và không duplicate cả thư viện `investing/`. Tuy nhiên chưa nên gọi là learning edition hoàn chỉnh theo chuẩn “dễ hiểu hơn nhưng không biết ít hơn”. Với 381 trang nguồn và khoảng 7.600 từ lesson, bản cũ còn nén quá mạnh các cơ chế mà câu hỏi nguồn yêu cầu tính hoặc phân biệt.
+**PUBLICATION PASS**
 
-## Gap audit trước khi update
+Verdict này không kế thừa 19 row `FULL` cũ. Sách 3 được audit lại từ source authority `증권투자기초/sach3/raw_md/sach3.md`, tách semantic inventory theo knowledge-bearing unit, map lại source questions, kiểm tra formula/table/figure, terminology và source-state boundary.
 
-| Khu vực | Vấn đề | Mức độ | Cách sửa |
-|---|---|---:|---|
-| Statistics | Có công thức nền nhưng thiếu geometric/harmonic mean, cách đọc sai số và assumptions của hồi quy | P1 | Bổ sung ví dụ và boundary |
-| Portfolio | Chưa dẫn đủ từ correlation cases → minimum variance → efficient frontier → CAL | P0 | Thêm đạo hàm/trực giác và bài số |
-| CAPM/EMH | Có CML/SML nhưng nén price adjustment, equilibrium và test matrix | P0 | Thêm cơ chế định giá và kiểm định |
-| Performance/valuation | FCFF/FCFE, WACC, terminal value, EVA và multiple procedure còn quá ngắn | P0 | Thêm mô hình nhất quán và counter-example |
-| Derivatives foundation | Thiếu zero-sum, long/short, ITM/ATM/OTM, daily settlement, financial-institution use | P0 | Mở rộng lesson 05 |
-| Rates/FX/credit/commodity | Chưa có case hedge theo dấu exposure và cash/synthetic/CDS đủ chi tiết | P0 | Thêm payoff/sign table và roll/basis |
-| OTC/structured | Có taxonomy nhưng thiếu coupon drivers, investor suitability, KIKO/no-knock-in, fees/tax | P0 | Thêm term-sheet walkthrough |
-| QA | Coverage status “FULL” cần kiểm tra lại sau khi mở rộng | P1 | Chạy link/whitespace/keyword/source-question audit lại |
+Publication pass ở đây có nghĩa: learning route có thể thay raw OCR cho mục đích học và giải câu hỏi nguồn; những exact cell/label mà OCR không đủ evidence được cô lập thành `SOURCE_AMBIGUITY`, không bị đoán hoặc gọi là `FULL`.
 
-## Nguyên tắc update
+## 1. Architecture / canonical ownership
 
-Update này giữ canonical ownership hiện tại. Phần nào đã có owner sâu hơn trong `investing/` chỉ nhận learning bridge; phần nào Sách 3 dạy riêng (CAPM, Markowitz, derivative payoff, Korean structured products) được mở rộng tại route này. Claims về thuế, margin, luật và product rules vẫn là source-state và phải xác minh theo snapshot chính thức trước giao dịch.
+- Source + provenance + coverage owner: `증권투자기초/sach3/`.
+- Canonical learning owner: `investing/90_securities_book3/`.
+- Không tái tạo route mới vì dependency architecture hiện tại vẫn hợp lý.
+- Lesson 01–07 giữ source-derived learning content; lesson 08 là synthesis/reconstruction layer.
+- Enrichment/canonical bridge không được dùng để chứng minh source completeness. Ví dụ: FCFE bridge, BPV/DV01 label/worked hedge, một số execution/data-bias controls.
 
-## Verdict sau đợt đào sâu 2026-10-04
+Result: **PASS**.
 
-Bảy lesson đã được cập nhật theo gap audit: portfolio có các trường hợp tương quan và MVP; CAPM/EMH có cơ chế price adjustment và ma trận kiểm định; valuation có FCFF/FCFE, WACC, terminal value và quy trình multiples; phái sinh có zero-sum, ITM/ATM/OTM, mark-to-market và margin call; các lesson 06–07 có sign hedge, cap/floor, CDS basis, roll yield, coupon drivers, worst-of, funded/unfunded swap và phí/điều kiện sản phẩm.
+## 2. Semantic coverage: source → output
 
-Verdict hiện tại: **deepening pass cho learning route, chưa phải bản xuất bản cuối**. Nội dung đã đủ để thay thế bản tóm tắt mỏng và cho phép người học dựng lại cơ chế, nhưng các claim về thuế, margin, 숙려기간, contract specification và suitability vẫn phải được snapshot-check nếu dùng cho giao dịch thực tế. Raw OCR vẫn là provenance; những bảng/hình bị lỗi OCR chưa được coi là dữ kiện mới.
+| Metric | Before | After |
+|---|---:|---:|
+| Semantic rows | 19 | **312** |
+| FULL | 19 inherited/coarse | **302 independently re-checked** |
+| PARTIAL | not trustworthy under old granularity | **0** |
+| MISSING | not trustworthy under old granularity | **0** |
+| SOURCE_AMBIGUITY | not separated rigorously | **10** |
 
-## Worked-example audit sau đợt cập nhật tiếp theo
+Coverage owner: [SOURCE_COVERAGE_BOOK3.md](../../증권투자기초/sach3/SOURCE_COVERAGE_BOOK3.md).
 
-Đợt này bổ sung các phép kiểm tra có số cho covariance/correlation, MVP, abnormal return, DCF terminal value, futures basis, option P&L, rate/FX hedge, CDS loss-given-default, commodity roll yield và autocall stepdown. Trong quá trình kiểm tra đã sửa một lỗi nội dung ở lesson 02: với \(\sigma_A=12\%\), \(\sigma_B=7\%\), \(\rho=0,5\), trọng số MVP của A là khoảng 0,064 (không phải 0,64); độ lệch chuẩn 6,97% mới là kết quả đúng.
+The split covers statistics, Markowitz/utility/diversification, CAPM/CML/SML, three EMH forms/tests/anomalies, performance, valuation, futures/options, rates, FX, credit, commodity and OTC/structured-product units without grouping independent distinctions into a single `FULL` row.
 
-Verdict mới: **learning-depth pass** cho các khái niệm và cơ chế chính; tám lesson hiện có 17.921 từ. Vẫn **chưa phải publication pass** vì nguồn OCR còn bảng/hình không đọc chắc chắn và các claim hiện hành cần nguồn chính thức theo ngày hiệu lực. Tài liệu hiện đã có thể dùng để học, tính lại và stress-test các cơ chế, thay vì chỉ đọc tóm tắt.
+Result: **PASS** because `PARTIAL=0` and `MISSING=0`; all non-readable exact-source artifacts are explicitly marked ambiguity.
 
-Integrated case lab bổ sung reconstruction layer chứ không tạo thêm semantic source claim: nó dùng lại CAPM, DCF, futures và structured-product mechanics trong một quyết định duy nhất, có sensitivity và hedge residual risk. Vì vậy coverage nguồn vẫn giữ 19 semantic rows; case được xem là learning synthesis/assessment layer.
+## 3. SOURCE_AMBIGUITY / OCR verification
 
-Đợt đào sâu kế tiếp bổ sung harmonic-mean example, expected-utility comparison, dynamic delta/gamma hedge và các boundary về việc hedge theo đường đi của giá. Đây là các phần nguồn thường bị rút thành định nghĩa; hiện đã có số liệu để người học kiểm tra lại bằng tay.
+Remaining exact-source ambiguities: **10**.
 
-Audit tiếp tục xác nhận ba điểm còn thiếu đã được xử lý: (1) duration/BPV và hedge theo DV01 thay cho chia notional đơn giản; (2) interest-rate parity được trình bày như mốc kiểm tra forward, không phải dự báo tỷ giá; (3) Black–Scholes và implied volatility được đặt trong đúng boundary về volatility surface, early exercise, jump và transaction cost.
+1. p.251 KOSPI200 futures quote screenshot cells.
+2. p.264–267 option theoretical-price / Greeks table and chart cells.
+3. p.268 KOSPI200 option historical contract-spec table.
+4. p.293 vs p.373 IFR English expansion: “Internal” vs “Implied”.
+5. p.297 10Y Treasury-futures historical contract-spec cells.
+6. p.308 USD-futures historical contract-spec cells.
+7. p.320 pooled credit-product acronym corrupted by OCR while CLO/mechanism remain readable.
+8. p.328 crude-futures historical contract-spec screenshot.
+9. p.352 exact acronyms for some trust/deposit wrappers.
+10. p.357–359 exact cells/graph labels in structured-product prospectus figures.
 
-Batch hiện tại bổ sung thêm downside deviation, frontier có constraint/no-short, worked comparison của Sharpe–Treynor–Jensen, calendar spread futures và range-forward FX. Những phần này làm rõ câu hỏi mà mỗi công thức trả lời và tránh biến một cấu trúc hedge thành tuyên bố “an toàn” chung chung.
+Exact locations and handling: [SOURCE_AMBIGUITIES_BOOK3.md](../../증권투자기초/sach3/SOURCE_AMBIGUITIES_BOOK3.md).
 
-Đợt audit tiếp theo sửa một cách diễn đạt dễ gây hiểu sai: basis dương/âm không đồng nhất tuyệt đối với contango/backwardation; basis còn bao gồm carry, dividend, storage và convenience yield. Đồng thời bổ sung EV-to-equity bridge và ba bias chính trong kiểm định EMH: survivorship, look-ahead và multiple testing.
+Repository branch does not contain the original Book 3 PDF/image set required to visually recover these cells. None was reconstructed from outside knowledge. Mechanisms supported by surrounding prose are tracked in separate `FULL` rows.
 
-Structured-product audit tiếp tục bổ sung Lizard, Ejectable, Swing và daily-rebalanced leverage, cùng phần economics phía issuer (model inputs, funding spread, hedge slippage, giá phát hành và giá mua lại). Đây là phần cần thiết để người học không đánh đồng coupon với expected return hoặc gọi mọi cấu trúc barrier là cùng một sản phẩm.
+Result: **PASS with 10 declared SOURCE_AMBIGUITY rows**.
 
-Đợt trích xuất trực tiếp từ raw Markdown tiếp theo bổ sung cho derivatives lesson: delta-neutral/put–call parity, simulation và liquidity boundary của option; FRA/IFR, cross-hedge và asset-liability matching của rate products. Các điểm này được ghi vào coverage như source-derived additions, không phải kiến thức chèn ngoài phạm vi Sách 3.
+## 4. Formula / table / figure audit
 
-Batch mới bổ sung thêm cash/physical settlement và CTD của interest-rate futures, cùng NDF và FX margin. Các khái niệm này được giữ ở mức cơ chế và source-state; không đưa thông số hợp đồng hiện hành vào learning prose.
+[FORMULA_TABLE_FIGURE_AUDIT_BOOK3.md](../../증권투자기초/sach3/FORMULA_TABLE_FIGURE_AUDIT_BOOK3.md) contains:
 
-Raw extraction mới nhất bổ sung TRS/CLN và phân biệt chúng với CDS; giải thích credit spread lớn như phí bảo hiểm có recovery/liquidity component; đồng thời đưa vào commodity lesson physical-delivery/negative-price boundary, commercial vs non-commercial flow và price–roll–collateral total-return decomposition.
+- **42 formula-contract rows**: 41 source-backed PASS + 1 explicitly labeled enrichment (BPV/DV01 bridge; source itself teaches duration).
+- **16 knowledge-bearing table/figure rows**.
+- **9 table/figure rows** whose exact cells remain `SOURCE_AMBIGUITY`; their mechanisms are verified independently.
 
-Derivatives foundation tiếp tục nhận thêm covered call và short strangle từ raw: payoff được tính ở vùng giữa và hai tail, để người học thấy premium income hữu hạn không bù được lỗ mở rộng khi underlying vượt strike.
+The contract now covers variables, unit/scale, assumption, mechanism/example and failure boundary for the formulas that control the route: variance/covariance, regression, portfolio variance/MVP/CAL, beta/CML/SML, MWR/TWR, Sharpe/Treynor/Jensen, WACC/DCF/terminal value/EVA, futures basis/theoretical price, option payoff/breakeven/parity/delta-gamma hedge, duration, IFR, FX parity, CDS LGD, commodity carry/roll return and autocall branch payoff.
 
-Structured-product extraction bổ sung taxonomy hai lớp: underlying/principal condition (ELS, ELB, DLS, DLB) và wrapper phân phối (security, fund, trust, deposit). Lesson giữ đây là source-state để người học không suy ra “bảo toàn vốn” hay tax/liquidity chỉ từ acronym.
+Result: **PASS**.
 
-Valuation extraction bổ sung worked EVA case: cùng một tăng trưởng doanh thu có thể tạo giá trị hoặc phá hủy giá trị tùy ROIC biên có vượt WACC hay không.
+## 5. Korean / English terminology audit
 
-Credit/commodity extraction bổ sung bảng payoff CDS–TRS–CLN và worked roll-return từ raw (price return khác continuous-futures return). Coverage hiện ghi rõ đây là cơ chế source-derived, không phải quote thị trường hiện hành.
+[TERMINOLOGY_AUDIT_BOOK3.md](../../증권투자기초/sach3/TERMINOLOGY_AUDIT_BOOK3.md) verifies **117 source-confirmed Korean terms** that are now present at useful occurrences in the learning route; missing audited terms: **0**.
 
-Structured-product extraction tiếp tục thêm suitability map theo wrapper: listed derivative, OTC derivative, structured security và fund/trust. Bảng này được gắn source-state để giữ chiều sâu khái niệm mà không khẳng định quy định hiện hành.
+Examples newly normalized or made explicit include:
 
-Commodity extraction bổ sung margin/notional worked example từ raw, có nhãn source-state, để người học thấy leverage và liquidity pressure trước khi đọc payoff cuối kỳ.
+- statistics: `모집단`, `표본`, `확률변수`, `기하평균`, `조화평균`, `공분산`, `상관계수`, `최소자승법`;
+- portfolio/CAPM: `기대효용`, `최소분산 포트폴리오`, `자본배분선`, `시장포트폴리오`, `자본시장선`, `베타`, `증권시장선`;
+- performance/valuation: `금액가중수익률`, `시간가중수익률`, `가중평균자본비용`, `여유현금흐름`, `잔여가치`, `경제적 부가가치`, `투하자본이익률`;
+- derivatives: `장내파생상품`, `장외파생상품`, `일일정산`, `미결제약정`, `실물인수도`, `내가격/등가격/외가격`, `델타/감마/세타/베가`;
+- rates/FX/commodity: `내재선도금리`, `최저인도가 채권`, `스트립헤지`, `스택헤지`, `교차헤지`, `범위 선물환`, `편의수익`, `콘탱고`, `백워데이션`;
+- structured products: `주가연계증권`, `숙려기간`, `자체헤징`, `아웃소싱`, `낙인/낙아웃`.
 
-Option extraction bổ sung tick-cost example từ raw: option giá 0,20 với tick 0,01 có chi phí tương đối 5% mỗi tick; turnover cao có thể tiêu hết gross return. Đây là bridge giữa payoff lý thuyết và khả năng thực thi.
+Unverified Korean wording is not invented. NDF, for example, keeps the source description around `실물인수도`, `매매차액` and `현금결제` rather than inserting an unverified source acronym expansion.
 
-Raw option section cũng được chuyển thêm thành currency-delta boundary: option quốc tế có thể tạo FX exposure qua margin và settlement, nên delta hedge underlying chưa đủ để khóa P&L.
+Result: **PASS**.
 
-Commodity extraction bổ sung asset-allocation/global-hedge boundary: correlation lịch sử không cố định, còn index fund vẫn chịu roll rule và contango. Đây là cầu nối trực tiếp từ commodity lesson về lại portfolio theory.
+## 6. Structured-product audit
 
-Rate extraction bổ sung worked IFR calculation từ raw: người học suy ra forward rate từ hai spot rates, đồng thời phân biệt no-arbitrage benchmark với macro forecast.
+The route now separates, rather than conflates:
 
-Rate derivatives extraction tiếp tục thêm swaption: quyền chọn payer/receiver swap cho phép giữ flexibility trước khi khoản vay hoặc tài sản floating thực sự phát sinh.
+- underlying;
+- wrapper;
+- issuer;
+- principal condition;
+- coupon driver;
+- barrier;
+- path dependence;
+- maturity / early redemption;
+- liquidity;
+- issuer/counterparty risk;
+- fees / hedge economics;
+- tax/source-state rule;
+- suitability.
 
-Lesson rate/FX bổ sung worked cap–floor–collar case từ raw, làm rõ dòng tiền được giới hạn ở đâu và phần convexity bị bán để giảm premium.
+ELS/ELB/DLS/DLB are compared product-by-product. Security/fund/trust/deposit wrappers are a separate layer. `원금보장` in the textbook taxonomy is explicitly not translated into government guarantee or immunity from issuer default.
 
-Raw FX section tiếp tục được chuyển thành KIKO/zero-cost payoff walkthrough với ba nhánh range, downside protection và upper-barrier tail; nội dung được gắn textbook warning, không coi là mẫu hợp đồng hiện hành.
+A substantive semantic bug was corrected: the p.360 `주가연계예금` knock-out example no longer borrows a principal-loss branch from an ELS/barrier note. In the source example the +20% barrier locks/caps the deposit return branch; it is not the trigger for principal loss.
 
-Valuation extraction bổ sung normalized-EPS/P-E và EV–EBITDA bridge case, giúp người học kiểm tra multiple ngầm định thay vì kết luận “rẻ” từ một denominator ở đỉnh chu kỳ.
+Coupon is consistently separated from expected return and after-tax realized return.
 
-Index-futures extraction bổ sung worked synthetic-flow case từ raw: stock/futures/option legs phải được quy đổi về delta/notional ròng trước khi suy ra market view hoặc gọi là program trading.
+Result: **PASS**.
 
-Portfolio extraction bổ sung worked systematic-risk floor, biến đường cong diversification trong raw thành phép tính variance theo số lượng tài sản.
+## 7. Source-question test
 
-Utility extraction bổ sung case A/B/C cùng expected return nhưng variance khác nhau, với expected utility cho risk-averse, risk-neutral và risk-seeking investor.
+[SOURCE_QUESTION_MAP_BOOK3.md](../../증권투자기초/sach3/SOURCE_QUESTION_MAP_BOOK3.md) maps **172** source review/exercise/comprehensive questions or validation items:
 
-Statistics extraction tiếp tục chuyển thêm worked linear-transform check từ raw: biến đổi \(Y=aX+b\) làm mean dịch theo \(aE(X)+b\), độ lệch chuẩn nhân bởi \(|a|\) và covariance đổi theo slope. Ví dụ này nối trực tiếp phép tính thống kê với leverage, beta và exposure, để người học không chỉ nhớ công thức mà còn thấy notional thay đổi đồng thời cả expected return và risk.
+`source question → required semantic units → lesson/section`
 
-CAPM extraction tiếp tục chuyển worked CML check từ raw: với rf = 5%, market expected return = 20%, market standard deviation = 3% và portfolio standard deviation = 4%, danh mục trên CML có expected return 25%; nếu correlation với market là 0,5 thì covariance là 6 theo đơn vị phần trăm bình phương. Phần này giữ ranh giới giữa vị trí trên CML và covariance, tránh dùng một đại lượng thay cho đại lượng kia.
+- mapped: **172**
+- PASS: **172**
+- FAIL: **0**
 
-EMH extraction tiếp tục chuyển worked expectation-surprise case từ raw: doanh thu tăng 30% vẫn có thể làm giá giảm nếu consensus đã là 50%. Bản học giữ phép tính surprise, timestamp, benchmark và event window để người học không nhầm headline tốt với abnormal return dương.
+This includes statistics, portfolio, CAPM, EMH, performance, valuation, the integrated Chapter 1 set and all 30 comprehensive derivatives questions. The artifact summarizes question intent rather than copying the source into an answer bank.
 
-EMH extraction bổ sung worked winner/loser reversal từ raw: 47% cho nhóm losers và -8% cho nhóm winners trong giai đoạn nghiên cứu được trình bày như source-state observation, không annualize và không gọi là alpha hiện tại; lesson ghi rõ formation/holding window, delisting, chi phí và out-of-sample là điều kiện để kiểm định lại.
+Result: **PASS**.
+
+## 8. Reverse audit: output → source
+
+| Learning output | Source owner / provenance | Reverse-audit result |
+|---|---|---|
+| 01 Statistics | pp.12–41 | source-derived core; enrichment not used as coverage evidence |
+| 02 Portfolio | pp.42–79 | source-derived Markowitz/utility/MVP/frontier/CAL |
+| 03 CAPM/EMH | pp.80–134 | source-derived CAPM + EMH; modern data-bias controls remain enrichment |
+| 04 Performance/valuation | pp.135–200 | source-derived performance/DCF/EVA/relative valuation; FCFE explicitly labeled bridge |
+| 05 Index derivatives | pp.202–288 | source-derived mechanics; exact historical exchange specs quarantined |
+| 06 Rates/FX/credit/commodity | pp.289–332 | source-derived mechanics; BPV/DV01 explicitly enrichment; historical specs quarantined |
+| 07 OTC/structured | pp.333–381 | source-derived taxonomy/payoff/risk; rules/tax kept source-state |
+| 08 Integrated case lab | cross-chapter synthesis | editorial reconstruction layer; creates no new source claim |
+
+Result: **PASS**.
+
+## 9. Reconstruction test
+
+A learner can reconstruct the required chains without opening another textbook for missing mechanism:
+
+1. distribution → expected value/variance/covariance → regression;
+2. covariance/correlation → portfolio variance → diversification → MVP → efficient frontier → CAL;
+3. market portfolio → CML → beta → SML/CAPM → pricing adjustment;
+4. EMH form → information set → test design → anomaly/interpretation boundary;
+5. cash-flow timing → MWR/TWR → risk-adjusted performance;
+6. operating cash flow → cost of capital → WACC → DCF/terminal value → EVA/relative valuation;
+7. exposure sign → futures basis/carry → option payoff/Greeks/parity → hedge residual risk;
+8. rate/FX exposure → IFR/interest parity → cap/floor/collar/swap → KIKO branch payoff;
+9. credit event → CDS/TRS/CLN → cash/synthetic securitization;
+10. commodity spot/carry → curve → roll return → collateral return;
+11. underlying + wrapper + issuer → structured payoff → barrier/path dependence → early redemption/principal/counterparty/liquidity/tax boundary.
+
+Exact OCR-broken historical screenshot cells are not needed to reconstruct these mechanisms and remain explicit ambiguity.
+
+Result: **PASS**.
+
+## 10. Learner-replacement test
+
+For the pedagogical scope of Book 3, the route now satisfies the replacement test:
+
+- concepts needed by mapped source questions are present;
+- important formulas have variables/units/assumptions/boundaries;
+- worked checks force sign/numeric reasoning;
+- Korean terms needed to return to the source are present;
+- source-state rules are distinguished from current rules;
+- exact historical tables that cannot be recovered are disclosed rather than hidden.
+
+The only reason to reopen the raw/PDF is provenance checking or recovery of the ten exact ambiguous artifacts—not because a core learning mechanism is missing.
+
+Result: **PASS**.
+
+## 11. Current-state / source-state audit
+
+No attempt was made to make every textbook rule “current as of 2026” merely to obtain a pass.
+
+**Current official-state claims newly asserted as current: 0.**
+
+The following remain explicitly `TEXTBOOK/SOURCE STATE` or historical examples unless separately verified later:
+
+- KRX margin / contract specifications / listing details;
+- p.337–338 `숙려기간`, loss threshold, age threshold and investor-classification process;
+- tax and withholding examples;
+- exchange/product eligibility rules;
+- historical coupon, rate, notional and contract examples.
+
+Thus the learning route does not present textbook-state regulation as current legal/trading guidance.
+
+Result: **PASS**.
+
+## 12. Link and whitespace audit
+
+- Markdown link occurrences checked: **27**.
+- Unique relative targets checked on branch: **21**.
+- Broken relative targets: **0**.
+- Changed Book 3 files scanned for trailing whitespace, space-before-tab and merge-conflict markers: **17 files, 0 issues**.
+
+The GitHub connector used in this session has no repository shell, so the literal CLI command `git diff --check` could not be invoked. Because all changed Book 3 files were fetched from the branch and their full contents were scanned, the equivalent whitespace/conflict check is clean. Run the literal CLI command once more in a local checkout/CI before merge if the workflow requires the command itself rather than equivalent content validation.
+
+Branch comparison at audit time: Book 3 branch is ahead of `main` with Book 3 work but also behind current `main`; synchronize/rebase according to repository workflow before merge. This is a Git integration state, not a semantic publication failure.
+
+## Acceptance summary
+
+| Gate | Result |
+|---|---|
+| SOURCE → output semantic audit | PASS |
+| output → SOURCE reverse audit | PASS |
+| source-question test | PASS — 172/172 |
+| reconstruction test | PASS |
+| learner replacement test | PASS |
+| formula audit | PASS |
+| table/figure audit | PASS with 9 exact artifact ambiguities declared |
+| KR/EN terminology audit | PASS — 117 source-confirmed terms |
+| current/source-state audit | PASS |
+| link audit | PASS — 0 broken |
+| whitespace/conflict equivalent of diff-check | PASS — 0 issues |
+| PARTIAL | **0** |
+| MISSING | **0** |
+| SOURCE_AMBIGUITY | **10** |
+
+# PUBLICATION PASS
