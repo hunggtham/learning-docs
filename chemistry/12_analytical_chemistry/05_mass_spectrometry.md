@@ -28,7 +28,7 @@ Do đó mọi phép MS đều bắt đầu bằng ion hóa.
 
 Hệ quả quan trọng là: **phổ quan sát được không chỉ phụ thuộc phân tử ban đầu mà còn phụ thuộc cách ion được tạo**.
 
-> **Chuyển mạch:** Mass spectrometry cần ion hóa trước khi phân tích m/z; kiến trúc nguồn–analyzer–detector quyết định tín hiệu, còn mức fragmentation phải cân bằng độ nhạy với thông tin cấu trúc.
+> **Nối mạch:** Mass spectrometry cần ion hóa trước khi phân tích m/z; kiến trúc nguồn–analyzer–detector quyết định tín hiệu, còn mức fragmentation phải cân bằng độ nhạy với thông tin cấu trúc.
 
 ## Kiến trúc chung của thiết bị
 
@@ -46,7 +46,7 @@ Nguồn ion quyết định những ion nào được tạo. Bộ phân tích qu
 
 Nếu một mô-đun tạo thiên lệch, mô-đun phía sau không thể tự động “sửa” hoàn toàn thiên lệch đó.
 
-> **Chuyển mạch:** Ở chặng này của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Ion hóa — chọn mức phân mảnh phù hợp** tiếp nhận điểm tựa từ **Kiến trúc chung của thiết bị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ phân tích khối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Ion hóa — chọn mức phân mảnh phù hợp** nối từ **Kiến trúc chung của thiết bị** sang **Bộ phân tích khối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ion hóa — chọn mức phân mảnh phù hợp
 
@@ -109,7 +109,7 @@ MALDI thường tạo chủ yếu ion đơn điện tích và ghép thuận lợ
 
 Lựa chọn nguồn ion phải dựa trên độ phân cực, độ bay hơi, kích thước phân tử, nhóm chức và mục tiêu phân tích.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Bộ phân tích khối** tiếp nhận điểm tựa từ **Ion hóa — chọn mức phân mảnh phù hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ phân giải và độ chính xác khối lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Bộ phân tích khối** nối từ **Ion hóa — chọn mức phân mảnh phù hợp** sang **Độ phân giải và độ chính xác khối lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ phân tích khối
 
@@ -163,7 +163,7 @@ Orbitrap giữ ion trong trường tĩnh điện. Tần số dao động dọc t
 
 Nó có thể đạt độ phân giải rất cao nhưng đổi lại cần nam châm mạnh, thiết bị phức tạp và chi phí cao.
 
-> **Chuyển mạch:** Trong **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Độ phân giải và độ chính xác khối lượng** tiếp nhận điểm tựa từ **Bộ phân tích khối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khối lượng chính xác và công thức nguyên tố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Độ phân giải và độ chính xác khối lượng** nối từ **Bộ phân tích khối** sang **Khối lượng chính xác và công thức nguyên tố**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ phân giải và độ chính xác khối lượng
 
@@ -193,7 +193,7 @@ Hai khái niệm khác nhau:
 
 Một hệ có thể rất phân giải nhưng hiệu chuẩn kém, hoặc ngược lại.
 
-> **Chuyển mạch:** Ở chặng này của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Khối lượng chính xác và công thức nguyên tố** tiếp nhận điểm tựa từ **Độ phân giải và độ chính xác khối lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu đồng vị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Khối lượng chính xác và công thức nguyên tố** nối từ **Độ phân giải và độ chính xác khối lượng** sang **Mẫu đồng vị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khối lượng chính xác và công thức nguyên tố
 
@@ -203,7 +203,7 @@ Ví dụ CO và `N2` cùng có khối lượng danh nghĩa 28 nhưng khối lư�
 
 Khối lượng chính xác kết hợp mẫu đồng vị có thể giới hạn tập công thức phân tử ứng viên, nhưng hiếm khi tự chứng minh một cấu trúc duy nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Mẫu đồng vị** tiếp nhận điểm tựa từ **Khối lượng chính xác và công thức nguyên tố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân mảnh — suy cấu trúc từ cách ion bị vỡ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Mẫu đồng vị** nối từ **Khối lượng chính xác và công thức nguyên tố** sang **Phân mảnh — suy cấu trúc từ cách ion bị vỡ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mẫu đồng vị
 
@@ -225,7 +225,7 @@ Với `z = 2`, khoảng cách gần 0.5; với `z = 3`, gần 0.333.
 
 Do đó phổ độ phân giải cao có thể suy trạng thái điện tích từ chính khoảng cách đồng vị.
 
-> **Chuyển mạch:** Trong **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Phân mảnh — suy cấu trúc từ cách ion bị vỡ** tiếp nhận điểm tựa từ **Mẫu đồng vị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phổ khối nối tiếp — MS/MS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Phân mảnh — suy cấu trúc từ cách ion bị vỡ** nối từ **Mẫu đồng vị** sang **Phổ khối nối tiếp — MS/MS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân mảnh — suy cấu trúc từ cách ion bị vỡ
 
@@ -241,7 +241,7 @@ Phổ EI hữu cơ thường có cắt α gần dị nguyên tử, mảnh benzyl
 
 Các nguyên lý này nối trực tiếp với [cơ chế phản ứng hữu cơ](../11_organic_chemistry/03_organic_reaction_mechanisms.md), nhưng pha khí có điều kiện năng lượng và solvat hóa rất khác dung dịch nên không thể áp dụng máy móc mọi cơ chế dung dịch.
 
-> **Chuyển mạch:** Ở chặng này của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Phổ khối nối tiếp — MS/MS** tiếp nhận điểm tựa từ **Phân mảnh — suy cấu trúc từ cách ion bị vỡ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Proteomics — từ phổ mảnh tới trình tự peptide** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Phổ khối nối tiếp — MS/MS** nối từ **Phân mảnh — suy cấu trúc từ cách ion bị vỡ** sang **Proteomics — từ phổ mảnh tới trình tự peptide**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phổ khối nối tiếp — MS/MS
 
@@ -269,7 +269,7 @@ Q1 chọn ion tiền chất, q2 tạo mảnh, Q3 phân tích ion sản phẩm.
 
 Trong **theo dõi phản ứng chọn lọc/nhiều phản ứng (SRM/MRM)**, thiết bị theo dõi các cặp chuyển tiếp tiền chất → mảnh cụ thể. Điều này tạo độ chọn lọc và độ nhạy cao cho định lượng mục tiêu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Proteomics — từ phổ mảnh tới trình tự peptide** tiếp nhận điểm tựa từ **Phổ khối nối tiếp — MS/MS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Metabolomics và nhận diện phân tử nhỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Proteomics — từ phổ mảnh tới trình tự peptide** nối từ **Phổ khối nối tiếp — MS/MS** sang **Metabolomics và nhận diện phân tử nhỏ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Proteomics — từ phổ mảnh tới trình tự peptide
 
@@ -290,7 +290,7 @@ hóa học mẫu
 + thuật toán cơ sở dữ liệu
 ```
 
-> **Chuyển mạch:** Trong **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Metabolomics và nhận diện phân tử nhỏ** tiếp nhận điểm tựa từ **Proteomics — từ phổ mảnh tới trình tự peptide** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định lượng — số ion không tự động bằng nồng độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Metabolomics và nhận diện phân tử nhỏ** nối từ **Proteomics — từ phổ mảnh tới trình tự peptide** sang **Định lượng — số ion không tự động bằng nồng độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Metabolomics và nhận diện phân tử nhỏ
 
@@ -308,7 +308,7 @@ khối lượng chính xác
 
 Đây là điểm quan trọng về bằng chứng: **khối lượng chính xác không đồng nghĩa nhận diện cấu trúc duy nhất**.
 
-> **Chuyển mạch:** Ở chặng này của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Định lượng — số ion không tự động bằng nồng độ** tiếp nhận điểm tựa từ **Metabolomics và nhận diện phân tử nhỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng nền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Định lượng — số ion không tự động bằng nồng độ** nối từ **Metabolomics và nhận diện phân tử nhỏ** sang **Hiệu ứng nền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định lượng — số ion không tự động bằng nồng độ
 
@@ -324,7 +324,7 @@ Vì vậy không nên so trực tiếp diện tích đỉnh thô của hai chấ
 
 Tỉ số chất phân tích/chuẩn nội giúp bù nhiều biến thiên trong chuẩn bị mẫu và ion hóa.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Hiệu ứng nền** tiếp nhận điểm tựa từ **Định lượng — số ion không tự động bằng nồng độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ion cộng hợp và hóa học trong nguồn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Hiệu ứng nền** nối từ **Định lượng — số ion không tự động bằng nồng độ** sang **Ion cộng hợp và hóa học trong nguồn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng nền
 
@@ -342,7 +342,7 @@ Các chiến lược gồm:
 
 Xem thêm [Thẩm định phương pháp và hóa lượng học](./07_method_validation_and_chemometrics.md).
 
-> **Chuyển mạch:** Trong **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Hiệu ứng nền** nêu điều cần giải thích; **Ion cộng hợp và hóa học trong nguồn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hiệu chuẩn và khối lượng khóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Hiệu ứng nền** đặt vấn đề; **Ion cộng hợp và hóa học trong nguồn** đối chiếu bằng chứng, rồi **Hiệu chuẩn và khối lượng khóa** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Ion cộng hợp và hóa học trong nguồn
 
@@ -360,7 +360,7 @@ Một hợp chất vì vậy có thể tạo nhiều đỉnh.
 
 Nếu coi mỗi đỉnh là một phân tử khác nhau sẽ tạo độ phức tạp giả. Mẫu ion cộng hợp, khoảng cách đồng vị và đồng rửa giải sắc ký giúp nhóm các đỉnh liên quan.
 
-> **Chuyển mạch:** Ở chặng này của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Ion cộng hợp và hóa học trong nguồn** nêu điều cần giải thích; **Hiệu chuẩn và khối lượng khóa** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Khoảng động và bão hòa bộ phát hiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Ion cộng hợp và hóa học trong nguồn** đặt vấn đề; **Hiệu chuẩn và khối lượng khóa** đối chiếu bằng chứng, rồi **Khoảng động và bão hòa bộ phát hiện** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Hiệu chuẩn và khối lượng khóa
 
@@ -372,7 +372,7 @@ Một ion tham chiếu nội hoặc **khối lượng khóa (lock mass)** có th
 
 Thông số “độ chính xác danh nghĩa” của thiết bị không có nhiều ý nghĩa nếu hiệu chuẩn thực tế không được kiểm soát.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Khoảng động và bão hòa bộ phát hiện** tiếp nhận điểm tựa từ **Hiệu chuẩn và khối lượng khóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phổ khối tạo ảnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Khoảng động và bão hòa bộ phát hiện** nối từ **Hiệu chuẩn và khối lượng khóa** sang **Phổ khối tạo ảnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khoảng động và bão hòa bộ phát hiện
 
@@ -387,7 +387,7 @@ Do đó phát triển phương pháp phải tối ưu **khoảng động (dynami
 ↔ nguy cơ bão hòa / phi tuyến / nhiễu nền lớn hơn
 ```
 
-> **Chuyển mạch:** Trong **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Phổ khối tạo ảnh** tiếp nhận điểm tựa từ **Khoảng động và bão hòa bộ phát hiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xử lý dữ liệu và khoa học dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Phổ khối tạo ảnh** nối từ **Khoảng động và bão hòa bộ phát hiện** sang **Xử lý dữ liệu và khoa học dữ liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phổ khối tạo ảnh
 
@@ -395,7 +395,7 @@ Do đó phát triển phương pháp phải tối ưu **khoảng động (dynami
 
 Phương pháp kết hợp hóa phân tích với thông tin không gian giống hiển vi, dù thiên lệch ion hóa và độ chắc chắn của định danh vẫn là thách thức.
 
-> **Chuyển mạch:** Ở chặng này của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Phổ khối tạo ảnh** nêu điều cần giải thích; **Xử lý dữ liệu và khoa học dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Ví dụ suy luận: vì sao cùng nồng độ nhưng hai chất có diện tích đỉnh rất khác?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Phổ khối tạo ảnh** đặt vấn đề; **Xử lý dữ liệu và khoa học dữ liệu** đối chiếu bằng chứng, rồi **Ví dụ suy luận: vì sao cùng nồng độ nhưng hai chất có diện tích đỉnh rất khác?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Xử lý dữ liệu và khoa học dữ liệu
 
@@ -416,7 +416,7 @@ chuyển phổ sang dạng centroid
 
 Thuật toán không thể bù hoàn toàn cho hóa học không được kiểm soát. Chiết mẫu kém, ức chế ion hóa hoặc sắc ký không ổn định sẽ lan sai số tới mọi bước xử lý dữ liệu phía sau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Xử lý dữ liệu và khoa học dữ liệu** cho ta quy tắc; **Ví dụ suy luận: vì sao cùng nồng độ nhưng hai chất có diện tích đỉnh rất khác?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ suy luận: vì sao khối lượng chính xác rất cao vẫn chưa đủ xác định cấu trúc?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Xử lý dữ liệu và khoa học dữ liệu** nêu quy tắc; **Ví dụ suy luận: vì sao cùng nồng độ nhưng hai chất có diện tích đỉnh rất khác?** thử quy tắc trong tình huống, rồi **Ví dụ suy luận: vì sao khối lượng chính xác rất cao vẫn chưa đủ xác định cấu trúc?** mở rộng hệ quả.
 
 ## Ví dụ suy luận: vì sao cùng nồng độ nhưng hai chất có diện tích đỉnh rất khác?
 
@@ -426,7 +426,7 @@ Do đó một chất tạo ion hiệu quả hơn có thể cho tín hiệu lớn
 
 Kết luận đúng không phải “chất đó nhiều hơn”, mà là **hệ số đáp ứng khác nhau**. Đây là lý do cần hiệu chuẩn riêng hoặc chuẩn nội phù hợp.
 
-> **Chuyển mạch:** Trong **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Ví dụ suy luận: vì sao cùng nồng độ nhưng hai chất có diện tích đỉnh rất khác?** cho ta quy tắc; **Ví dụ suy luận: vì sao khối lượng chính xác rất cao vẫn chưa đủ xác định cấu trúc?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Ví dụ suy luận: vì sao cùng nồng độ nhưng hai chất có diện tích đỉnh rất khác?** nêu quy tắc; **Ví dụ suy luận: vì sao khối lượng chính xác rất cao vẫn chưa đủ xác định cấu trúc?** thử quy tắc trong tình huống, rồi **Những hiểu lầm thường gặp** mở rộng hệ quả.
 
 ## Ví dụ suy luận: vì sao khối lượng chính xác rất cao vẫn chưa đủ xác định cấu trúc?
 
@@ -438,7 +438,7 @@ Cần thêm phổ mảnh, thời gian lưu, phản ứng đặc hiệu, phổ kh
 
 MS vì vậy tạo **bằng chứng mạnh**, nhưng cấu trúc hóa học vẫn là bài toán tích hợp nhiều nguồn dữ liệu.
 
-> **Chuyển mạch:** Ở chặng này của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Ví dụ suy luận: vì sao khối lượng chính xác rất cao vẫn chưa đủ xác định cấu trúc?** cho ta quy tắc; **Những hiểu lầm thường gặp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Ví dụ suy luận: vì sao khối lượng chính xác rất cao vẫn chưa đủ xác định cấu trúc?** nêu quy tắc; **Những hiểu lầm thường gặp** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Những hiểu lầm thường gặp
 
@@ -466,7 +466,7 @@ Không. Nó chỉ làm giảm xu hướng phân mảnh; phân mảnh trong ngu�
 
 Không. Dữ liệu lặp lại cùng một thiên lệch hóa học chỉ làm thiên lệch được đo chính xác hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phổ khối — đo tỉ số khối lượng trên điện tích của ion**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

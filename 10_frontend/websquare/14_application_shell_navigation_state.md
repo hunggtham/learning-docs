@@ -26,7 +26,7 @@ Shell cung cấp năng lực (capability / 역량) chung. Screen nghiệp vụ g
 
 Shell nên biết **screen đặc tả hợp đồng (contract / 계약)**, không biết **screen internals**.
 
-> **Chuyển mạch:** Shell là runtime host; screen definition mô tả loại màn hình, còn screen instance mang lifecycle cụ thể. Navigation identity tiếp theo phải gắn với instance đó.
+> **Nối mạch:** Shell là runtime host; screen definition mô tả loại màn hình, còn screen instance mang lifecycle cụ thể. Navigation identity tiếp theo phải gắn với instance đó.
 
 ## 2. Screen definition khác screen instance
 
@@ -43,7 +43,7 @@ Trong WFrame/phạm vi (scope / 범위) kiến trúc (architecture / 아키텍�
 
 Nếu điều hướng (navigation / 내비게이션) registry chỉ key theo nguồn (source / 소스) đường dẫn (path / 경로), instance B có thể vô tình activate A. Vì vậy cần quyết định định danh (identity / 식별자) chính sách (policy / 정책) của screen.
 
-> **Chuyển mạch:** Screen instance là đối tượng runtime; navigation identity phải được tạo từ rule ổn định để `openAction/reuse` không mở nhầm hoặc nhân bản màn hình.
+> **Nối mạch:** Screen instance là đối tượng runtime; navigation identity phải được tạo từ rule ổn định để `openAction/reuse` không mở nhầm hoặc nhân bản màn hình.
 
 ## 3. điều hướng (navigation / 내비게이션) định danh (identity / 식별자) là sản phẩm (product / 제품) quy tắc (rule / 규칙)
 
@@ -62,7 +62,7 @@ key = ORDER_DETAIL:ORD-1002
 
 Không có một key chiến lược (strategy / 전략) đúng cho mọi screen. Nhưng chiến lược (strategy / 전략) phải tường minh (explicit / 명시적) để tránh duplicate tab hoặc reuse nhầm trạng thái (state / 상태).
 
-> **Chuyển mạch:** Navigation identity quyết định reuse policy; TabControl và WindowContainer tiếp theo là hai host có lifecycle khác nhau, nên phải chọn owner instance rõ.
+> **Nối mạch:** Navigation identity quyết định reuse policy; TabControl và WindowContainer tiếp theo là hai host có lifecycle khác nhau, nên phải chọn owner instance rõ.
 
 ## 4. `openAction`/reuse chính sách (policy / 정책) phải khớp định danh (identity / 식별자) chính sách (policy / 정책)
 
@@ -78,7 +78,7 @@ logical key đã tồn tại?
 → không: create instance mới
 ```
 
-> **Chuyển mạch:** Trong **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **4. openAction/reuse chính sách (policy / 정책) phải khớp định danh (identity / 식별자) chính sách (policy / 정책)** xác định đầu vào; **5. TabControl và WindowContainer là host có vòng đời (lifecycle / 생명주기)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. dataObject là điều hướng (navigation / 내비게이션) đầu vào (input / 입력) đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **4. openAction/reuse chính sách (policy / 정책) phải khớp định danh (identity / 식별자) chính sách (policy / 정책)** đặt đầu vào cho **5. TabControl và WindowContainer là host có vòng đời (lifecycle / 생명주기)**, rồi **6. dataObject là điều hướng (navigation / 내비게이션) đầu vào (input / 입력) đặc tả hợp đồng (contract / 계약)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. TabControl và WindowContainer là host có vòng đời (lifecycle / 생명주기)
 
@@ -98,7 +98,7 @@ container created
 
 Nếu shell cần gọi screen sau tải (load / 로드), hãy dùng ready đặc tả hợp đồng (contract / 계약) phù hợp thay vì timer.
 
-> **Chuyển mạch:** Ở chặng này của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, cơ chế trong **5. TabControl và WindowContainer là host có vòng đời (lifecycle / 생명주기)** cần được kiểm chứng bằng dấu vết cụ thể; **6. dataObject là điều hướng (navigation / 내비게이션) đầu vào (input / 입력) đặc tả hợp đồng (contract / 계약)** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **7. điều hướng (navigation / 내비게이션) command tốt hơn direct bộ chứa (container / 컨테이너) manipulation rải rác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, cơ chế trong **5. TabControl và WindowContainer là host có vòng đời (lifecycle / 생명주기)** cần được kiểm chứng bằng dấu vết cụ thể; **6. dataObject là điều hướng (navigation / 내비게이션) đầu vào (input / 입력) đặc tả hợp đồng (contract / 계약)** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **7. điều hướng (navigation / 내비게이션) command tốt hơn direct bộ chứa (container / 컨테이너) manipulation rải rác** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 6. `dataObject` là điều hướng (navigation / 내비게이션) đầu vào (input / 입력) đặc tả hợp đồng (contract / 계약)
 
@@ -119,7 +119,7 @@ Screen đọc bằng `$p.getParameter()` theo đặc tả hợp đồng (contrac
 
 Parameter nên mô tả **ý định mở screen**, không truyền thành phần (component / 컴포넌트) instance hoặc mutable đối tượng (object / 객체) của parent. Điều này cho phép cùng screen được host bởi TabControl, WindowContainer hoặc popup mà không biết topology cụ thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **7. điều hướng (navigation / 내비게이션) command tốt hơn direct bộ chứa (container / 컨테이너) manipulation rải rác** tiếp nhận điểm tựa từ **6. dataObject là điều hướng (navigation / 내비게이션) đầu vào (input / 입력) đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. toàn cục (global / 전역) trạng thái (state / 상태) phải nhỏ và có đơn vị sở hữu (owner / 오너) rõ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **7. điều hướng (navigation / 내비게이션) command tốt hơn direct bộ chứa (container / 컨테이너) manipulation rải rác** nối từ **6. dataObject là điều hướng (navigation / 내비게이션) đầu vào (input / 입력) đặc tả hợp đồng (contract / 계약)** sang **8. toàn cục (global / 전역) trạng thái (state / 상태) phải nhỏ và có đơn vị sở hữu (owner / 오너) rõ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. điều hướng (navigation / 내비게이션) command tốt hơn direct bộ chứa (container / 컨테이너) manipulation rải rác
 
@@ -139,7 +139,7 @@ Bên trong dịch vụ (service / 서비스) mới quyết định bộ chứa (
 
 Điểm quan trọng là dùng chung (common / 공통) dịch vụ (service / 서비스) không được biết `grdOrder` hoặc `dmSearch` của screen. Nó quản điều hướng (navigation / 내비게이션), không quản nghiệp vụ (business / 비즈니스) UI.
 
-> **Chuyển mạch:** Trong **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, sau nội dung của **7. điều hướng (navigation / 내비게이션) command tốt hơn direct bộ chứa (container / 컨테이너) manipulation rải rác**, **8. toàn cục (global / 전역) trạng thái (state / 상태) phải nhỏ và có đơn vị sở hữu (owner / 오너) rõ** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **9. Permission menu khác authorization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, sau nội dung của **7. điều hướng (navigation / 내비게이션) command tốt hơn direct bộ chứa (container / 컨테이너) manipulation rải rác**, **8. toàn cục (global / 전역) trạng thái (state / 상태) phải nhỏ và có đơn vị sở hữu (owner / 오너) rõ** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **9. Permission menu khác authorization** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8. toàn cục (global / 전역) trạng thái (state / 상태) phải nhỏ và có đơn vị sở hữu (owner / 오너) rõ
 
@@ -166,7 +166,7 @@ pending Save flag của một page
 
 Toàn cục (global / 전역) mutable trạng thái (state / 상태) làm nhiều instance ghi đè nhau và kéo thời gian tồn tại (lifetime / 수명) đối tượng (object / 객체) dài hơn cần thiết.
 
-> **Chuyển mạch:** Ở chặng này của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **9. Permission menu khác authorization** tiếp nhận điểm tựa từ **8. toàn cục (global / 전역) trạng thái (state / 상태) phải nhỏ và có đơn vị sở hữu (owner / 오너) rõ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Unsaved-change guard thuộc điều hướng (navigation / 내비게이션) giao thức (protocol / 프로토콜)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **9. Permission menu khác authorization** nối từ **8. toàn cục (global / 전역) trạng thái (state / 상태) phải nhỏ và có đơn vị sở hữu (owner / 오너) rõ** sang **10. Unsaved-change guard thuộc điều hướng (navigation / 내비게이션) giao thức (protocol / 프로토콜)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Permission menu khác authorization
 
@@ -181,7 +181,7 @@ Người dùng (user / 사용자) có thể gọi endpoint trực tiếp hoặc 
 
 Menu bộ nhớ đệm (cache / 캐시) cũng cần vô hiệu hóa (invalidation / 무효화) chính sách (policy / 정책) nếu quyền có thể thay đổi trong session.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **10. Unsaved-change guard thuộc điều hướng (navigation / 내비게이션) giao thức (protocol / 프로토콜)** tiếp nhận điểm tựa từ **9. Permission menu khác authorization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Close không đồng nghĩa đối tượng (object / 객체) đã garbage-collected** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **10. Unsaved-change guard thuộc điều hướng (navigation / 내비게이션) giao thức (protocol / 프로토콜)** nối từ **9. Permission menu khác authorization** sang **11. Close không đồng nghĩa đối tượng (object / 객체) đã garbage-collected**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Unsaved-change guard thuộc điều hướng (navigation / 내비게이션) giao thức (protocol / 프로토콜)
 
@@ -208,7 +208,7 @@ scwin.canClose = function () {
 
 Chính xác (exact / 정확한) invocation qua phạm vi (scope / 범위)/bộ chứa (container / 컨테이너) phụ thuộc topology, nhưng quyền sở hữu (ownership / 소유권) rõ: screen đánh giá nghiệp vụ (business / 비즈니스) trạng thái (state / 상태), shell điều phối điều hướng (navigation / 내비게이션).
 
-> **Chuyển mạch:** Trong **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **11. Close không đồng nghĩa đối tượng (object / 객체) đã garbage-collected** tiếp nhận điểm tựa từ **10. Unsaved-change guard thuộc điều hướng (navigation / 내비게이션) giao thức (protocol / 프로토콜)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Reuse tab và refresh trạng thái (state / 상태) phải có đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **11. Close không đồng nghĩa đối tượng (object / 객체) đã garbage-collected** nối từ **10. Unsaved-change guard thuộc điều hướng (navigation / 내비게이션) giao thức (protocol / 프로토콜)** sang **12. Reuse tab và refresh trạng thái (state / 상태) phải có đặc tả hợp đồng (contract / 계약)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Close không đồng nghĩa đối tượng (object / 객체) đã garbage-collected
 
@@ -224,7 +224,7 @@ mà không remove entry khi close, child phạm vi (scope / 범위) có thể b�
 
 Đây là liên kết (connection / 연결) trực tiếp với chapter 10 về tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명).
 
-> **Chuyển mạch:** Ở chặng này của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **12. Reuse tab và refresh trạng thái (state / 상태) phải có đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **11. Close không đồng nghĩa đối tượng (object / 객체) đã garbage-collected** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Back/forward lịch sử (history / 이력) cần định nghĩa ngữ nghĩa (semantic / 의미적)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **12. Reuse tab và refresh trạng thái (state / 상태) phải có đặc tả hợp đồng (contract / 계약)** nối từ **11. Close không đồng nghĩa đối tượng (object / 객체) đã garbage-collected** sang **13. Back/forward lịch sử (history / 이력) cần định nghĩa ngữ nghĩa (semantic / 의미적)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Reuse tab và refresh trạng thái (state / 상태) phải có đặc tả hợp đồng (contract / 계약)
 
@@ -247,7 +247,7 @@ scwin.applyNavigation = function (params) {
 };
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **13. Back/forward lịch sử (history / 이력) cần định nghĩa ngữ nghĩa (semantic / 의미적)** tiếp nhận điểm tựa từ **12. Reuse tab và refresh trạng thái (state / 상태) phải có đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Deep link cần tách tuyến (route / 경로) định danh (identity / 식별자) và thời gian chạy (runtime / 런타임) instance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **13. Back/forward lịch sử (history / 이력) cần định nghĩa ngữ nghĩa (semantic / 의미적)** nối từ **12. Reuse tab và refresh trạng thái (state / 상태) phải có đặc tả hợp đồng (contract / 계약)** sang **14. Deep link cần tách tuyến (route / 경로) định danh (identity / 식별자) và thời gian chạy (runtime / 런타임) instance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Back/forward lịch sử (history / 이력) cần định nghĩa ngữ nghĩa (semantic / 의미적)
 
@@ -264,7 +264,7 @@ filter/search có history không?
 
 Không cố map mọi UI trạng thái (state / 상태) vào URL/lịch sử (history / 이력). Chỉ trạng thái (state / 상태) cần deep-link/khôi phục (recovery / 복구)/share mới nên có điều hướng (navigation / 내비게이션) biểu diễn (representation / 표현) ổn định.
 
-> **Chuyển mạch:** Trong **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **14. Deep link cần tách tuyến (route / 경로) định danh (identity / 식별자) và thời gian chạy (runtime / 런타임) instance** tiếp nhận điểm tựa từ **13. Back/forward lịch sử (history / 이력) cần định nghĩa ngữ nghĩa (semantic / 의미적)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Menu siêu dữ liệu (metadata / 메타데이터) không nên trở thành god cấu hình (configuration / 구성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **14. Deep link cần tách tuyến (route / 경로) định danh (identity / 식별자) và thời gian chạy (runtime / 런타임) instance** nối từ **13. Back/forward lịch sử (history / 이력) cần định nghĩa ngữ nghĩa (semantic / 의미적)** sang **15. Menu siêu dữ liệu (metadata / 메타데이터) không nên trở thành god cấu hình (configuration / 구성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Deep link cần tách tuyến (route / 경로) định danh (identity / 식별자) và thời gian chạy (runtime / 런타임) instance
 
@@ -279,7 +279,7 @@ Khi app boot, shell resolve permission, tải (load / 로드) screen definition,
 
 Stable tuyến (route / 경로) dùng nghiệp vụ (business / 비즈니스)/điều hướng (navigation / 내비게이션) định danh (identity / 식별자); thời gian chạy (runtime / 런타임) ID chỉ là hiện thực (implementation / 구현) detail.
 
-> **Chuyển mạch:** Ở chặng này của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **14. Deep link cần tách tuyến (route / 경로) định danh (identity / 식별자) và thời gian chạy (runtime / 런타임) instance** nêu điều cần giải thích; **15. Menu siêu dữ liệu (metadata / 메타데이터) không nên trở thành god cấu hình (configuration / 구성)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. Loading indicator cần đúng ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **14. Deep link cần tách tuyến (route / 경로) định danh (identity / 식별자) và thời gian chạy (runtime / 런타임) instance** đặt vấn đề; **15. Menu siêu dữ liệu (metadata / 메타데이터) không nên trở thành god cấu hình (configuration / 구성)** đối chiếu bằng chứng, rồi **16. Loading indicator cần đúng ranh giới (boundary / 경계)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. Menu siêu dữ liệu (metadata / 메타데이터) không nên trở thành god cấu hình (configuration / 구성)
 
@@ -292,7 +292,7 @@ menu config: screenId, src, title, single/multi-instance
 screen code: validation, DataCollection, Submission, CRUD
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **15. Menu siêu dữ liệu (metadata / 메타데이터) không nên trở thành god cấu hình (configuration / 구성)** đã nêu tiêu chí phân biệt, còn **16. Loading indicator cần đúng ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **17. Concurrent tabs làm race điều kiện (condition / 조건) rõ hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **15. Menu siêu dữ liệu (metadata / 메타데이터) không nên trở thành god cấu hình (configuration / 구성)** đặt tiêu chí; **16. Loading indicator cần đúng ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **17. Concurrent tabs làm race điều kiện (condition / 조건) rõ hơn** mở rộng hệ quả.
 
 ## 16. Loading indicator cần đúng ranh giới (boundary / 경계)
 
@@ -308,7 +308,7 @@ application-level
 
 TabControl/WindowContainer có cơ chế (mechanism / 메커니즘) hiển thị tiến trình (process / 프로세스) message trong frame ở các cấu hình (configuration / 구성) tương ứng. Hãy dùng ranh giới (boundary / 경계) phù hợp thay vì một toàn cục (global / 전역) boolean duy nhất.
 
-> **Chuyển mạch:** Trong **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **16. Loading indicator cần đúng ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **17. Concurrent tabs làm race điều kiện (condition / 조건) rõ hơn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **18. Cross-screen communication nên qua intent/sự kiện (event / 이벤트), không qua internals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **16. Loading indicator cần đúng ranh giới (boundary / 경계)** đặt tiêu chí; **17. Concurrent tabs làm race điều kiện (condition / 조건) rõ hơn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **18. Cross-screen communication nên qua intent/sự kiện (event / 이벤트), không qua internals** mở rộng hệ quả.
 
 ## 17. Concurrent tabs làm race điều kiện (condition / 조건) rõ hơn
 
@@ -323,7 +323,7 @@ Tab B cũng edit C001
 
 Máy khách (client / 클라이언트) phạm vi (scope / 범위) isolation giữ hai form riêng, nhưng máy chủ (server / 서버) vẫn cần optimistic locking/phiên bản (version / 버전). WFrame isolation không giải quyết cơ sở dữ liệu (database / 데이터베이스) tính đồng thời (concurrency / 동시성).
 
-> **Chuyển mạch:** Ở chặng này của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **18. Cross-screen communication nên qua intent/sự kiện (event / 이벤트), không qua internals** tiếp nhận điểm tựa từ **17. Concurrent tabs làm race điều kiện (condition / 조건) rõ hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Broadcast sự kiện (event / 이벤트) cũng có sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **18. Cross-screen communication nên qua intent/sự kiện (event / 이벤트), không qua internals** nối từ **17. Concurrent tabs làm race điều kiện (condition / 조건) rõ hơn** sang **19. Broadcast sự kiện (event / 이벤트) cũng có sự đánh đổi (trade-off / 트레이드오프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Cross-screen communication nên qua intent/sự kiện (event / 이벤트), không qua internals
 
@@ -347,7 +347,7 @@ Detail finds top tab
 
 Đặc tả hợp đồng (contract / 계약) tốt giữ quyền sở hữu (ownership / 소유권) và cho danh sách (list / 목록) quyết định re-query hay cục bộ (local / 로컬) patch.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **19. Broadcast sự kiện (event / 이벤트) cũng có sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **18. Cross-screen communication nên qua intent/sự kiện (event / 이벤트), không qua internals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Screen registry nên lưu siêu dữ liệu (metadata / 메타데이터) hơn đối tượng (object / 객체) đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **19. Broadcast sự kiện (event / 이벤트) cũng có sự đánh đổi (trade-off / 트레이드오프)** nối từ **18. Cross-screen communication nên qua intent/sự kiện (event / 이벤트), không qua internals** sang **20. Screen registry nên lưu siêu dữ liệu (metadata / 메타데이터) hơn đối tượng (object / 객체) đồ thị (graph / 그래프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Broadcast sự kiện (event / 이벤트) cũng có sự đánh đổi (trade-off / 트레이드오프)
 
@@ -357,7 +357,7 @@ Nếu `ORDER_CHANGED` có 12 subscriber, một Save có thể trigger nhiều y�
 
 Đừng thay `parent().parent()` coupling bằng “magic toàn cục (global / 전역) sự kiện (event / 이벤트)” coupling khó dấu vết (trace / 추적) hơn.
 
-> **Chuyển mạch:** Trong **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **19. Broadcast sự kiện (event / 이벤트) cũng có sự đánh đổi (trade-off / 트레이드오프)** nêu điều cần giải thích; **20. Screen registry nên lưu siêu dữ liệu (metadata / 메타데이터) hơn đối tượng (object / 객체) đồ thị (graph / 그래프)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **21. Adaptive frame và responsive responsibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **19. Broadcast sự kiện (event / 이벤트) cũng có sự đánh đổi (trade-off / 트레이드오프)** đặt vấn đề; **20. Screen registry nên lưu siêu dữ liệu (metadata / 메타데이터) hơn đối tượng (object / 객체) đồ thị (graph / 그래프)** đối chiếu bằng chứng, rồi **21. Adaptive frame và responsive responsibility** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. Screen registry nên lưu siêu dữ liệu (metadata / 메타데이터) hơn đối tượng (object / 객체) đồ thị (graph / 그래프)
 
@@ -376,7 +376,7 @@ Cẩn thận khi lưu direct phạm vi (scope / 범위)/thành phần (component
 
 Resolve phạm vi (scope / 범위) gần thời điểm sử dụng qua bộ chứa (container / 컨테이너)/API công khai (public API / 공개 API) khi topology động (dynamic / 동적).
 
-> **Chuyển mạch:** Ở chặng này của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **20. Screen registry nên lưu siêu dữ liệu (metadata / 메타데이터) hơn đối tượng (object / 객체) đồ thị (graph / 그래프)** nêu điều cần giải thích; **21. Adaptive frame và responsive responsibility** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **22. ứng dụng (application / 애플리케이션) shell cũng cần khả năng quan sát (observability / 관측 가능성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **20. Screen registry nên lưu siêu dữ liệu (metadata / 메타데이터) hơn đối tượng (object / 객체) đồ thị (graph / 그래프)** đặt vấn đề; **21. Adaptive frame và responsive responsibility** đối chiếu bằng chứng, rồi **22. ứng dụng (application / 애플리케이션) shell cũng cần khả năng quan sát (observability / 관측 가능성)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 21. Adaptive frame và responsive responsibility
 
@@ -391,7 +391,7 @@ browser viewport size
 
 Responsive lô-gic (logic / 논리) cần biết ranh giới (boundary / 경계) nào quyết định bố cục (layout / 레이아웃). Đừng hard-code `window.innerWidth` nếu screen thực tế phải thích ứng theo bộ chứa (container / 컨테이너).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **22. ứng dụng (application / 애플리케이션) shell cũng cần khả năng quan sát (observability / 관측 가능성)** tiếp nhận điểm tựa từ **21. Adaptive frame và responsive responsibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Shell failure-mode ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **22. ứng dụng (application / 애플리케이션) shell cũng cần khả năng quan sát (observability / 관측 가능성)** nối từ **21. Adaptive frame và responsive responsibility** sang **23. Shell failure-mode ma trận (matrix / 행렬)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. ứng dụng (application / 애플리케이션) shell cũng cần khả năng quan sát (observability / 관측 가능성)
 
@@ -410,7 +410,7 @@ per-screen memory/request growth
 
 Khi người dùng (user / 사용자) nói “mở càng nhiều tab càng chậm”, cần bằng chứng (evidence / 증거) shell-level chứ không chỉ profile một screen riêng lẻ.
 
-> **Chuyển mạch:** Trong **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **23. Shell failure-mode ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **22. ứng dụng (application / 애플리케이션) shell cũng cần khả năng quan sát (observability / 관측 가능성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. trường hợp (case / 사례) study: menu → multi-tab detail → save → refresh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **23. Shell failure-mode ma trận (matrix / 행렬)** nối từ **22. ứng dụng (application / 애플리케이션) shell cũng cần khả năng quan sát (observability / 관측 가능성)** sang **24. trường hợp (case / 사례) study: menu → multi-tab detail → save → refresh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Shell failure-mode ma trận (matrix / 행렬)
 
@@ -436,7 +436,7 @@ Mở 30 tab memory tăng không giảm
 
 Mỗi triệu chứng nên được gỡ lỗi (debug / 디버그) bằng topology + thời gian tồn tại (lifetime / 수명) bằng chứng (evidence / 증거) trước khi sửa ngẫu nhiên.
 
-> **Chuyển mạch:** Ở chặng này của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **23. Shell failure-mode ma trận (matrix / 행렬)** cho ta quy tắc; **24. trường hợp (case / 사례) study: menu → multi-tab detail → save → refresh** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **25. Master quy tắc (rule / 규칙) cho multi-screen WebSquare** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **23. Shell failure-mode ma trận (matrix / 행렬)** nêu quy tắc; **24. trường hợp (case / 사례) study: menu → multi-tab detail → save → refresh** thử quy tắc trong tình huống, rồi **25. Master quy tắc (rule / 규칙) cho multi-screen WebSquare** mở rộng hệ quả.
 
 ## 24. trường hợp (case / 사례) study: menu → multi-tab detail → save → refresh
 
@@ -448,7 +448,7 @@ Detail page giữ DataMap/DataList và Submission trong phạm vi (scope / 범�
 
 Khi người dùng (user / 사용자) đóng Detail còn dirty, shell gọi công khai (public / 공개) `canClose()` của instance. Nếu được đóng, registry xóa siêu dữ liệu (metadata / 메타데이터)/tham chiếu (reference / 참조) và page cleanup timer/listener. Đây là một luồng (flow / 흐름) hoàn chỉnh trong đó điều hướng (navigation / 내비게이션), nghiệp vụ (business / 비즈니스) trạng thái (state / 상태), máy chủ (server / 서버) tính đồng thời (concurrency / 동시성) và thời gian tồn tại (lifetime / 수명) có đơn vị sở hữu (owner / 오너) khác nhau nhưng đặc tả hợp đồng (contract / 계약) nối chúng rõ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **24. trường hợp (case / 사례) study: menu → multi-tab detail → save → refresh** cho ta quy tắc; **25. Master quy tắc (rule / 규칙) cho multi-screen WebSquare** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **26. Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **24. trường hợp (case / 사례) study: menu → multi-tab detail → save → refresh** nêu quy tắc; **25. Master quy tắc (rule / 규칙) cho multi-screen WebSquare** thử quy tắc trong tình huống, rồi **26. Kết nối** mở rộng hệ quả.
 
 ## 25. Master quy tắc (rule / 규칙) cho multi-screen WebSquare
 
@@ -465,7 +465,7 @@ Nhiều bug enterprise xuất hiện vì bốn định danh (identity / 식별�
 
 Khi kiến trúc (architecture / 아키텍처) rõ, shell có thể thay TabControl bằng WindowContainer hoặc đổi điều hướng (navigation / 내비게이션) chính sách (policy / 정책) mà nghiệp vụ (business / 비즈니스) screen ít bị ảnh hưởng.
 
-> **Chuyển mạch:** Trong **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **26. Kết nối** tiếp nhận điểm tựa từ **25. Master quy tắc (rule / 규칙) cho multi-screen WebSquare** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **14 — ứng dụng (application / 애플리케이션) Shell, điều hướng (navigation / 내비게이션) & Multi-Screen trạng thái (state / 상태)**, **26. Kết nối** nối từ **25. Master quy tắc (rule / 규칙) cho multi-screen WebSquare** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 26. Kết nối
 

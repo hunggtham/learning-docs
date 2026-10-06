@@ -12,7 +12,7 @@ Mutex bảo vệ trọng yếu (critical / 중요) section; điều kiện (cond
 
 Điểm khó là tính đúng đắn (correctness / 정확성) phụ thuộc **happens-before quan hệ (relation / 관계)**, không chỉ source-code thứ tự (order / 순서).
 
-> **Chuyển mạch:** Shared-memory threading cần memory model và synchronization để giữ invariant; actor model cô lập mutable state và giao tiếp bằng message, đổi race risk lấy coordination semantics.
+> **Nối mạch:** Shared-memory threading cần memory model và synchronization để giữ invariant; actor model cô lập mutable state và giao tiếp bằng message, đổi race risk lấy coordination semantics.
 
 ## Bộ nhớ (memory / 메모리) mô hình (model / 모델)
 
@@ -22,7 +22,7 @@ Trình biên dịch (compiler / 컴파일러) và CPU có thể reorder operatio
 
 Đây là lý do từ khóa (keyword / 키워드) giống nhau không nên được suy luận qua languages.
 
-> **Chuyển mạch:** Ở chặng này của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **Actors: isolate mutable trạng thái (state / 상태)** tiếp nhận điểm tựa từ **Bộ nhớ (memory / 메모리) mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CSP và channels** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Actors: isolate mutable trạng thái (state / 상태)** nối từ **Bộ nhớ (memory / 메모리) mô hình (model / 모델)** sang **CSP và channels**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Actors: isolate mutable trạng thái (state / 상태)
 
@@ -30,7 +30,7 @@ Actor mô hình (model / 모델) tổ chức hệ thống (system / 시스템) t
 
 Nhưng phân tán (distributed / 분산) actors vẫn có message thứ tự (ordering / 순서), thất bại (failure / 실패), duplication và mailbox overload. Actor mô hình (model / 모델) di chuyển độ phức tạp (complexity / 복잡도), không xóa độ phức tạp (complexity / 복잡도).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **CSP và channels** tiếp nhận điểm tựa từ **Actors: isolate mutable trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Async/await và structured tính đồng thời (concurrency / 동시성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **CSP và channels** nối từ **Actors: isolate mutable trạng thái (state / 상태)** sang **Async/await và structured tính đồng thời (concurrency / 동시성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CSP và channels
 
@@ -38,7 +38,7 @@ Communicating Sequential Processes (CSP) nhấn mạnh processes giao tiếp qua
 
 Unbuffered channel có thể đồng bộ sender/receiver; buffered channel thêm hàng đợi (queue / 큐). Channel sức chứa (capacity / 용량) vì vậy trở thành backpressure điều khiển (control / 제어) chứ không chỉ cú pháp (syntax / 문법) communication.
 
-> **Chuyển mạch:** Trong **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **Async/await và structured tính đồng thời (concurrency / 동시성)** tiếp nhận điểm tựa từ **CSP và channels** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyền sở hữu (ownership / 소유권) và borrowing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Async/await và structured tính đồng thời (concurrency / 동시성)** nối từ **CSP và channels** sang **Quyền sở hữu (ownership / 소유권) và borrowing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Async/await và structured tính đồng thời (concurrency / 동시성)
 
@@ -46,7 +46,7 @@ Async tác vụ (task / 작업) thường phù hợp I/O tính đồng thời (c
 
 Structured tính đồng thời (concurrency / 동시성) cố gắn thời gian tồn tại (lifetime / 수명) child tasks vào lexical/tác vụ (task / 작업) phạm vi (scope / 범위): parent không silently kết thúc trong khi children bị bỏ quên. Điều này làm cancellation, lan truyền lỗi (error propagation / 오류 전파) và tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) dễ lập luận (reasoning / 추론) hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, sau nội dung của **Async/await và structured tính đồng thời (concurrency / 동시성)**, **Quyền sở hữu (ownership / 소유권) và borrowing** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Bộ nhớ (memory / 메모리) an toàn (safety / 안전) và kiểu (type / 타입) an toàn (safety / 안전)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** sau nội dung của **Async/await và structured tính đồng thời (concurrency / 동시성)**, **Quyền sở hữu (ownership / 소유권) và borrowing** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu; **Bộ nhớ (memory / 메모리) an toàn (safety / 안전) và kiểu (type / 타입) an toàn (safety / 안전)** mở rộng hệ quả hoặc giới hạn của cơ chế này.
 
 ## Quyền sở hữu (ownership / 소유권) và borrowing
 
@@ -54,7 +54,7 @@ Quyền sở hữu (ownership / 소유권) mô hình (model / 모델) như Rust 
 
 Điều quan trọng không phải học cú pháp (syntax / 문법) Rust ở đây mà thấy quyền sở hữu (ownership / 소유권) là một **static giao thức (protocol / 프로토콜) cho tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) và aliasing**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **Bộ nhớ (memory / 메모리) an toàn (safety / 안전) và kiểu (type / 타입) an toàn (safety / 안전)** tiếp nhận điểm tựa từ **Quyền sở hữu (ownership / 소유권) và borrowing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cancellation là control-flow cross-cutting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bộ nhớ (memory / 메모리) an toàn (safety / 안전) và kiểu (type / 타입) an toàn (safety / 안전)** nối từ **Quyền sở hữu (ownership / 소유권) và borrowing** sang **Cancellation là control-flow cross-cutting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ nhớ (memory / 메모리) an toàn (safety / 안전) và kiểu (type / 타입) an toàn (safety / 안전)
 
@@ -62,7 +62,7 @@ Bộ nhớ (memory / 메모리) an toàn (safety / 안전) nghĩa program không
 
 Bounds checks, GC, quyền sở hữu (ownership / 소유권), safe references và sandboxing là các mechanisms khác nhau hướng tới bộ nhớ (memory / 메모리) an toàn (safety / 안전).
 
-> **Chuyển mạch:** Trong **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **Bộ nhớ (memory / 메모리) an toàn (safety / 안전) và kiểu (type / 타입) an toàn (safety / 안전)** xác định đầu vào; **Cancellation là control-flow cross-cutting** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bộ nhớ (memory / 메모리) an toàn (safety / 안전) và kiểu (type / 타입) an toàn (safety / 안전)** đặt đầu vào cho **Cancellation là control-flow cross-cutting**, rồi **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả.
 
 ## Cancellation là control-flow cross-cutting
 
@@ -70,7 +70,7 @@ Concurrent tác vụ (task / 작업) có thể bị cancel trong khi giữ khóa
 
 Async cancellation vì vậy liên quan exception an toàn (safety / 안전) và tài nguyên (resource / 자원) management. RAII, `finally`, defer-style constructs và structured tính đồng thời (concurrency / 동시성) đều cố làm thời gian tồn tại (lifetime / 수명) tường minh (explicit / 명시적).
 
-> **Chuyển mạch:** Ở chặng này của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **Cancellation là control-flow cross-cutting** xác định đầu vào; **Dùng chung (common / 공통) Misconceptions** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cancellation là control-flow cross-cutting** đặt đầu vào cho **Dùng chung (common / 공통) Misconceptions**, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -80,13 +80,13 @@ Async cancellation vì vậy liên quan exception an toàn (safety / 안전) và
 
 **“GC làm program memory-safe hoàn toàn.”** GC ngăn nhiều thời gian tồn tại (lifetime / 수명) errors nhưng không ngăn out-of-bounds trong unsafe/bản địa (native / 네이티브) mã (code / 코드) hoặc logical tài nguyên (resource / 자원) leaks.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > tính đồng thời (concurrency / 동시성) mô hình (model / 모델) là bộ quy tắc trả lời ba câu: ai sở hữu trạng thái (state / 상태), những thực thi (execution / 실행) units giao tiếp thế nào, và thứ tự (ordering / 순서)/thời gian tồn tại (lifetime / 수명) nào được guarantee.
 
-> **Chuyển mạch:** Trong **Tính đồng thời (concurrency / 동시성) các mô hình (models / 모델들) và bộ nhớ (memory / 메모리) an toàn (safety / 안전)**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

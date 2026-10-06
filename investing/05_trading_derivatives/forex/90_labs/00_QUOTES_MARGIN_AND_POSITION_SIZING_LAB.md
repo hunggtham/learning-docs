@@ -35,7 +35,7 @@ Không bắt đầu bằng lot kích thước (size / 크기). Hãy tính theo �
 
 Sau đó trả lời: nếu broker cho leverage tối đa 1:100 thì thông tin đó có làm thay đổi position kích thước (size / 크기) vừa tính không? Giải thích tại sao.
 
-> **Chuyển mạch:** Trong **Lab 00 — Quotes, Margin và Position Sizing**, **Trường hợp (case / 사례) A — EUR/USD, account USD** cho ta quy tắc; **Trường hợp (case / 사례) B — USD/JPY, account USD** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) C — EUR/GBP, account KRW** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lab 00 — Quotes, Margin và Position Sizing**, **Trường hợp (case / 사례) A — EUR/USD, account USD** nêu quy tắc; **Trường hợp (case / 사례) B — USD/JPY, account USD** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례) C — EUR/GBP, account KRW** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례) B — USD/JPY, account USD
 
@@ -58,7 +58,7 @@ Pip value in USD
 
 Sau đó thay tỷ giá USD/JPY thành 120 và 170 nhưng giữ `100,000 USD` position. Quan sát vì sao pip giá trị (value / 값) theo USD thay đổi dù đặc tả hợp đồng (contract / 계약) kích thước (size / 크기) không đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Lab 00 — Quotes, Margin và Position Sizing**, **Trường hợp (case / 사례) B — USD/JPY, account USD** cho ta quy tắc; **Trường hợp (case / 사례) C — EUR/GBP, account KRW** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) D — Margin stress** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lab 00 — Quotes, Margin và Position Sizing**, **Trường hợp (case / 사례) B — USD/JPY, account USD** nêu quy tắc; **Trường hợp (case / 사례) C — EUR/GBP, account KRW** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례) D — Margin stress** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례) C — EUR/GBP, account KRW
 
@@ -80,7 +80,7 @@ GBP
 
 Sau đó giải thích tại sao account return còn phụ thuộc conversion đường dẫn (path / 경로) dù trade thesis ban đầu chỉ là EUR so với GBP.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab 00 — Quotes, Margin và Position Sizing**, **Trường hợp (case / 사례) C — EUR/GBP, account KRW** cho ta quy tắc; **Trường hợp (case / 사례) D — Margin stress** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) E — Portfolio heat** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lab 00 — Quotes, Margin và Position Sizing**, **Trường hợp (case / 사례) C — EUR/GBP, account KRW** nêu quy tắc; **Trường hợp (case / 사례) D — Margin stress** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례) E — Portfolio heat** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례) D — Margin stress
 
@@ -114,7 +114,7 @@ Effective Gross Leverage
 
 Mục tiêu là thấy margin stress có thể tăng dù chiến lược (strategy / 전략) chưa chạm stop.
 
-> **Chuyển mạch:** Trong **Lab 00 — Quotes, Margin và Position Sizing**, **Trường hợp (case / 사례) D — Margin stress** cho ta quy tắc; **Trường hợp (case / 사례) E — Portfolio heat** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Đầu ra bắt buộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lab 00 — Quotes, Margin và Position Sizing**, **Trường hợp (case / 사례) D — Margin stress** nêu quy tắc; **Trường hợp (case / 사례) E — Portfolio heat** thử quy tắc trong tình huống, rồi **Đầu ra bắt buộc** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례) E — Portfolio heat
 
@@ -137,7 +137,7 @@ USD exposure
 
 Sau đó tạo stress `USD strengthens rapidly` và mô tả vì sao ba vị thế có thể cùng bị adverse move và cùng chịu spread/slippage cao hơn bình thường.
 
-> **Chuyển mạch:** Ở chặng này của **Lab 00 — Quotes, Margin và Position Sizing**, **Trường hợp (case / 사례) E — Portfolio heat** cho ta quy tắc; **Đầu ra bắt buộc** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Tự chấm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lab 00 — Quotes, Margin và Position Sizing**, **Trường hợp (case / 사례) E — Portfolio heat** nêu quy tắc; **Đầu ra bắt buộc** thử quy tắc trong tình huống, rồi **Tự chấm** mở rộng hệ quả.
 
 ## Đầu ra bắt buộc
 
@@ -160,7 +160,7 @@ Currency-factor exposure
 Portfolio heat contribution
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab 00 — Quotes, Margin và Position Sizing**, **Tự chấm** tiếp nhận điểm tựa từ **Đầu ra bắt buộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lab 00 — Quotes, Margin và Position Sizing**, **Tự chấm** nối từ **Đầu ra bắt buộc** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Tự chấm
 

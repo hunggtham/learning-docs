@@ -20,7 +20,7 @@ Chapter này tập trung vào cách phân biệt phenomenon, đo lường (measu
 
 Những câu hỏi này liên quan nhau nhưng không đồng nhất. Một lý thuyết (theory / 이론) có thể giải thích truy cập (access / 접근) tốt hơn phenomenal experience hoặc ngược lại.
 
-> **Chuyển mạch:** Trong **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Neural correlate không phải full explanation** tiếp nhận điểm tựa từ **Consciousness là một từ bao phủ nhiều câu hỏi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Toàn cục (global / 전역) Neuronal Workspace lý thuyết (theory / 이론) — GNWT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Neural correlate không phải full explanation** nối từ **Consciousness là một từ bao phủ nhiều câu hỏi** sang **Toàn cục (global / 전역) Neuronal Workspace lý thuyết (theory / 이론) — GNWT**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Neural correlate không phải full explanation
 
@@ -32,7 +32,7 @@ Những câu hỏi này liên quan nhau nhưng không đồng nhất. Một lý 
 
 Một tín hiệu (signal / 신호) có thể là prerequisite, consequence, report-related tiến trình (process / 프로세스) hoặc part of the cơ chế (mechanism / 메커니즘). Vì vậy experiment cần tách consciousness khỏi attention, tác vụ (task / 작업) demand, quyết định (decision / 결정) và motor report càng tốt.
 
-> **Chuyển mạch:** Ở chặng này của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Toàn cục (global / 전역) Neuronal Workspace lý thuyết (theory / 이론) — GNWT** tiếp nhận điểm tựa từ **Neural correlate không phải full explanation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Integrated thông tin (information / 정보) lý thuyết (theory / 이론) — IIT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Toàn cục (global / 전역) Neuronal Workspace lý thuyết (theory / 이론) — GNWT** nối từ **Neural correlate không phải full explanation** sang **Integrated thông tin (information / 정보) lý thuyết (theory / 이론) — IIT**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Toàn cục (global / 전역) Neuronal Workspace lý thuyết (theory / 이론) — GNWT
 
@@ -44,7 +44,7 @@ Lý thuyết (theory / 이론) này thường gắn với **ignition**: một ch
 
 GNWT giải thích tốt một số phenomenon về reportability, flexible use và toàn cục (global / 전역) truy cập (access / 접근). Nhưng việc tín hiệu (signal / 신호) frontal phản ánh consciousness hay tác vụ (task / 작업)/report demand là câu hỏi thực nghiệm quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Integrated thông tin (information / 정보) lý thuyết (theory / 이론) — IIT** tiếp nhận điểm tựa từ **Toàn cục (global / 전역) Neuronal Workspace lý thuyết (theory / 이론) — GNWT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Recurrent Processing lý thuyết (theory / 이론) — RPT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Integrated thông tin (information / 정보) lý thuyết (theory / 이론) — IIT** nối từ **Toàn cục (global / 전역) Neuronal Workspace lý thuyết (theory / 이론) — GNWT** sang **Recurrent Processing lý thuyết (theory / 이론) — RPT**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Integrated thông tin (information / 정보) lý thuyết (theory / 이론) — IIT
 
@@ -58,7 +58,7 @@ IIT có formal ambition mạnh, nhưng gặp tranh luận về testability, inte
 
 Không nên viết `IIT đã chứng minh consciousness là integrated information`.
 
-> **Chuyển mạch:** Trong **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Integrated thông tin (information / 정보) lý thuyết (theory / 이론) — IIT** xác định đầu vào; **Recurrent Processing lý thuyết (theory / 이론) — RPT** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Higher-Order Theories — HOT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Integrated thông tin (information / 정보) lý thuyết (theory / 이론) — IIT** đặt đầu vào cho **Recurrent Processing lý thuyết (theory / 이론) — RPT**, rồi **Higher-Order Theories — HOT** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Recurrent Processing lý thuyết (theory / 이론) — RPT
 
@@ -70,7 +70,7 @@ Theo cách nhìn này, cục bộ (local / 로컬) recurrent processing có th�
 
 Điểm mạnh là tạo prediction cụ thể về timing và recurrent activity. Điểm tranh luận là ranh giới (boundary / 경계) giữa cục bộ (local / 로컬) awareness và truy cập (access / 접근)/report, cũng như cách loại tác vụ (task / 작업) confound.
 
-> **Chuyển mạch:** Ở chặng này của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Recurrent Processing lý thuyết (theory / 이론) — RPT** xác định đầu vào; **Higher-Order Theories — HOT** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Predictive Processing và consciousness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Recurrent Processing lý thuyết (theory / 이론) — RPT** đặt đầu vào cho **Higher-Order Theories — HOT**, rồi **Predictive Processing và consciousness** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Higher-Order Theories — HOT
 
@@ -80,7 +80,7 @@ Theo cách nhìn này, cục bộ (local / 로컬) recurrent processing có th�
 
 Lý thuyết (theory / 이론) này hấp dẫn vì cố giải thích distinction giữa first-order biểu diễn (representation / 표현) và conscious awareness. Nhưng neural hiện thực (implementation / 구현), definition của higher-order trạng thái (state / 상태) và necessity của prefrontal involvement vẫn còn tranh luận.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Higher-Order Theories — HOT** xác định đầu vào; **Predictive Processing và consciousness** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Attention và consciousness không đồng nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Higher-Order Theories — HOT** đặt đầu vào cho **Predictive Processing và consciousness**, rồi **Attention và consciousness không đồng nhất** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Predictive Processing và consciousness
 
@@ -92,7 +92,7 @@ Predictive-processing khung phần mềm (framework / 프레임워크) xem brain
 
 Không nên đồng nhất `brain predicts` với `prediction tạo ra consciousness` nếu không có prediction riêng phân biệt conscious và nonconscious processing.
 
-> **Chuyển mạch:** Trong **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Predictive Processing và consciousness** xác định đầu vào; **Attention và consciousness không đồng nhất** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Report là đo lường (measurement / 측정) nhưng cũng là confound** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Predictive Processing và consciousness** đặt đầu vào cho **Attention và consciousness không đồng nhất**, rồi **Report là đo lường (measurement / 측정) nhưng cũng là confound** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Attention và consciousness không đồng nhất
 
@@ -106,7 +106,7 @@ Một stimulus có thể được processed một phần ngoài awareness; ngư�
 
 Xem [[07_attention_consciousness_and_awareness]].
 
-> **Chuyển mạch:** Ở chặng này của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Attention và consciousness không đồng nhất** nêu điều cần giải thích; **Report là đo lường (measurement / 측정) nhưng cũng là confound** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **2025 adversarial collaboration: một bài học lớn về lý thuyết (theory / 이론) testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Attention và consciousness không đồng nhất** đặt vấn đề; **Report là đo lường (measurement / 측정) nhưng cũng là confound** đối chiếu bằng chứng, rồi **2025 adversarial collaboration: một bài học lớn về lý thuyết (theory / 이론) testing** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Report là đo lường (measurement / 측정) nhưng cũng là confound
 
@@ -118,7 +118,7 @@ Do đó **no-report paradigms** cố đo consciousness bằng eye movement, auto
 
 Đây là ví dụ điển hình cho [[../00_foundations/03_measurement_statistics]]: đo lường (measurement / 측정) luôn là cửa sổ vào construct, không phải construct itself.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Report là đo lường (measurement / 측정) nhưng cũng là confound** cho ta quy tắc; **2025 adversarial collaboration: một bài học lớn về lý thuyết (theory / 이론) testing** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Vì sao trường dữ liệu (field / 필드) chưa hội tụ?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Report là đo lường (measurement / 측정) nhưng cũng là confound** nêu quy tắc; **2025 adversarial collaboration: một bài học lớn về lý thuyết (theory / 이론) testing** thử quy tắc trong tình huống, rồi **Vì sao trường dữ liệu (field / 필드) chưa hội tụ?** mở rộng hệ quả.
 
 ## 2025 adversarial collaboration: một bài học lớn về lý thuyết (theory / 이론) testing
 
@@ -144,7 +144,7 @@ Interpret result against commitments made before data
 
 Đây là một mô hình (model / 모델) tốt cho science nói chung và liên kết trực tiếp với [[../00_foundations/06_open_science_and_evidence_evaluation]].
 
-> **Chuyển mạch:** Trong **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **2025 adversarial collaboration: một bài học lớn về lý thuyết (theory / 이론) testing** cho ta quy tắc; **Vì sao trường dữ liệu (field / 필드) chưa hội tụ?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Disorders of consciousness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **2025 adversarial collaboration: một bài học lớn về lý thuyết (theory / 이론) testing** nêu quy tắc; **Vì sao trường dữ liệu (field / 필드) chưa hội tụ?** thử quy tắc trong tình huống, rồi **Disorders of consciousness** mở rộng hệ quả.
 
 ## Vì sao trường dữ liệu (field / 필드) chưa hội tụ?
 
@@ -160,7 +160,7 @@ Nếu hai lý thuyết (theory / 이론) không giải thích cùng explanandum,
 
 > **Trạng thái:** Debated interpretation / active lý thuyết (theory / 이론) development.
 
-> **Chuyển mạch:** Ở chặng này của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Vì sao trường dữ liệu (field / 필드) chưa hội tụ?** nêu điều cần giải thích; **Disorders of consciousness** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Anesthesia và sleep** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Vì sao trường dữ liệu (field / 필드) chưa hội tụ?** đặt vấn đề; **Disorders of consciousness** đối chiếu bằng chứng, rồi **Anesthesia và sleep** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Disorders of consciousness
 
@@ -172,7 +172,7 @@ Nhưng diagnosis ở đây khó: absence of hành vi (behavior / 동작) không 
 >
 > **hiện tại (current / 현재) clinical challenge:** đo lường (measurement / 측정) sensitivity và interpretation từng trường hợp (case / 사례).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Anesthesia và sleep** tiếp nhận điểm tựa từ **Disorders of consciousness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Consciousness không nên bị biến thành “quantum mystery” mặc định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Anesthesia và sleep** nối từ **Disorders of consciousness** sang **Consciousness không nên bị biến thành “quantum mystery” mặc định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Anesthesia và sleep
 
@@ -180,7 +180,7 @@ Anesthesia và sleep cho phép nghiên cứu chuyển tiếp (transition / 전�
 
 Xem [[08_sleep_circadian_and_recovery]] và [[../04_mental_health/11_sleep_insomnia_and_circadian_disorders]].
 
-> **Chuyển mạch:** Trong **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Consciousness không nên bị biến thành “quantum mystery” mặc định** tiếp nhận điểm tựa từ **Anesthesia và sleep** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Consciousness không nên bị biến thành “quantum mystery” mặc định** nối từ **Anesthesia và sleep** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Consciousness không nên bị biến thành “quantum mystery” mặc định
 
@@ -190,7 +190,7 @@ Việc science chưa có consensus lý thuyết (theory / 이론) không cho ph�
 
 Một lý thuyết (theory / 이론) mới vẫn phải operationalize claim, tạo prediction riêng và chịu rủi ro (risk / 위험) bị falsify.
 
-> **Chuyển mạch:** Ở chặng này của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Consciousness không nên bị biến thành “quantum mystery” mặc định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Những hiểu lầm phổ biến** nối từ **Consciousness không nên bị biến thành “quantum mystery” mặc định** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -204,7 +204,7 @@ Một lý thuyết (theory / 이론) mới vẫn phải operationalize claim, t�
 
 **“Neuroscience đã giải quyết hard bài toán (problem / 문제).”** Không. Empirical neuroscience tiến bộ mạnh về cơ chế (mechanism / 메커니즘)/correlate nhưng philosophical explanatory questions vẫn còn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -228,13 +228,13 @@ Theory revision
 
 Consciousness là ví dụ lý tưởng cho cách đọc science hiện đại: **bằng chứng (evidence / 증거) có thể mạnh trong khi theory-level conclusion vẫn chưa settled**.
 
-> **Chuyển mạch:** Trong **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nguồn nền nên đọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nguồn nền nên đọc** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Kết nối
 
 Xem [[07_attention_consciousness_and_awareness]], [[01_sensation_and_perception]], [[08_sleep_circadian_and_recovery]], [[../00_foundations/02_research_methods]], [[../00_foundations/06_open_science_and_evidence_evaluation]], [[../00_foundations/08_causal_inference_and_psychological_evidence]] và [[../EVIDENCE_STATUS_GUIDE]].
 
-> **Chuyển mạch:** Ở chặng này của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Kết nối** nêu điều cần giải thích; **Nguồn nền nên đọc** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Consciousness: các lý thuyết hiện đại và mức bằng chứng**, **Kết nối** đặt vấn đề; **Nguồn nền nên đọc** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn nền nên đọc
 

@@ -18,7 +18,7 @@ Bắt đầu từ thời điểm nào?
 Có triển khai hoặc thay đổi cấu hình nào gần thời điểm đó không?
 ```
 
-> **Chuyển mạch:** Trong **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Quan sát trước khi thay đổi trạng thái** tiếp nhận điểm tựa từ **Triệu chứng không phải nguyên nhân gốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chẩn đoán theo từng lớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Quan sát trước khi thay đổi trạng thái** nối từ **Triệu chứng không phải nguyên nhân gốc** sang **Chẩn đoán theo từng lớp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quan sát trước khi thay đổi trạng thái
 
@@ -42,7 +42,7 @@ Với Java bị treo hoặc dùng CPU cao, nếu chính sách cho phép nên l�
 jcmd <PID> Thread.print > /tmp/thread-$(date +%s).txt
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Chẩn đoán theo từng lớp** tiếp nhận điểm tựa từ **Quan sát trước khi thay đổi trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dịch vụ không khởi động được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Chẩn đoán theo từng lớp** nối từ **Quan sát trước khi thay đổi trạng thái** sang **Dịch vụ không khởi động được**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chẩn đoán theo từng lớp
 
@@ -63,7 +63,7 @@ Nếu `curl localhost` thất bại, chưa cần bắt đầu ở firewall bên 
 
 Cách tiếp cận này gần với tìm kiếm nhị phân: ưu tiên quan sát có **lượng thông tin thu được cao (information gain)** để loại bỏ nhiều giả thuyết cùng lúc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Dịch vụ không khởi động được** tiếp nhận điểm tựa từ **Chẩn đoán theo từng lớp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiến trình tồn tại nhưng API không hoạt động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Dịch vụ không khởi động được** nối từ **Chẩn đoán theo từng lớp** sang **Tiến trình tồn tại nhưng API không hoạt động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dịch vụ không khởi động được
 
@@ -84,7 +84,7 @@ namei -l /opt/app/app.jar
 
 Không nên sửa `chmod` trước khi biết chính xác thao tác nào đang bị từ chối.
 
-> **Chuyển mạch:** Trong **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Tiến trình tồn tại nhưng API không hoạt động** tiếp nhận điểm tựa từ **Dịch vụ không khởi động được** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CPU cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Tiến trình tồn tại nhưng API không hoạt động** nối từ **Dịch vụ không khởi động được** sang **CPU cao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tiến trình tồn tại nhưng API không hoạt động
 
@@ -98,7 +98,7 @@ curl -fsS -v http://127.0.0.1:8080/health
 
 Nếu không có listener, hãy kiểm tra nhật ký khởi động, cấu hình và địa chỉ bind. Nếu listener tồn tại nhưng `curl` bị treo, các giả thuyết có thể là cạn luồng thực thi (thread / 스레드) pool, deadlock, phụ thuộc bên ngoài hoặc trạng thái ứng dụng. Nếu `curl` cục bộ thành công, chuyển sang định tuyến, firewall, bộ cân bằng tải (load balancer / 로드 밸런서) và DNS.
 
-> **Chuyển mạch:** Ở chặng này của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **CPU cao** tiếp nhận điểm tựa từ **Tiến trình tồn tại nhưng API không hoạt động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ tăng hoặc tiến trình bị kết thúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **CPU cao** nối từ **Tiến trình tồn tại nhưng API không hoạt động** sang **Bộ nhớ tăng hoặc tiến trình bị kết thúc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CPU cao
 
@@ -116,7 +116,7 @@ Với Java, cần đối chiếu luồng dùng CPU cao với luồng thực thi 
 
 Không nên tăng CPU ngay nếu CPU cao chỉ là hệ quả của một cơn bão thử lại (retry / 재시도) do dịch vụ phụ thuộc đang lỗi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Bộ nhớ tăng hoặc tiến trình bị kết thúc** tiếp nhận điểm tựa từ **CPU cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ thống tệp hết dung lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Bộ nhớ tăng hoặc tiến trình bị kết thúc** nối từ **CPU cao** sang **Hệ thống tệp hết dung lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ nhớ tăng hoặc tiến trình bị kết thúc
 
@@ -132,7 +132,7 @@ Nếu ứng dụng chạy trong bộ chứa (container / 컨테이너), cần ki
 
 Rò rỉ bộ nhớ cần xu hướng theo thời gian và bằng chứng ở thời gian chạy (runtime / 런타임); một ảnh chụp RSS không thể chỉ ra đối tượng Java nào đang bị giữ lại.
 
-> **Chuyển mạch:** Trong **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Hệ thống tệp hết dung lượng** tiếp nhận điểm tựa từ **Bộ nhớ tăng hoặc tiến trình bị kết thúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lỗi mạng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Hệ thống tệp hết dung lượng** nối từ **Bộ nhớ tăng hoặc tiến trình bị kết thúc** sang **Lỗi mạng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ thống tệp hết dung lượng
 
@@ -149,7 +149,7 @@ Chuỗi này giúp phân biệt hết byte lưu trữ, hết inode, tệp còn n
 
 Nếu nhật ký quá lớn, hãy tìm nguyên nhân tăng trưởng trước khi chỉ xóa tệp. Một vòng lặp thử lại (retry / 재시도) có thể tạo bão log, và việc đầy đĩa khi đó chỉ là triệu chứng phía sau.
 
-> **Chuyển mạch:** Ở chặng này của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Lỗi mạng** tiếp nhận điểm tựa từ **Hệ thống tệp hết dung lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đối chiếu theo dòng thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Lỗi mạng** nối từ **Hệ thống tệp hết dung lượng** sang **Đối chiếu theo dòng thời gian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lỗi mạng
 
@@ -171,7 +171,7 @@ sudo tcpdump -ni any port PORT
 
 Nếu gói tin không tới host, khởi động lại ứng dụng không sửa được đường truyền mạng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Lỗi mạng** đã nêu tiêu chí phân biệt, còn **Đối chiếu theo dòng thời gian** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Chẩn đoán so sánh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Lỗi mạng** đặt tiêu chí; **Đối chiếu theo dòng thời gian** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Chẩn đoán so sánh** mở rộng hệ quả.
 
 ## Đối chiếu theo dòng thời gian
 
@@ -186,7 +186,7 @@ find /opt/app -type f -newermt '2026-09-20 15:30' -ls
 
 Tương quan không tự động chứng minh quan hệ nhân quả, nhưng một thay đổi xảy ra sát thời điểm lỗi là giả thuyết mạnh để kiểm tra tiếp.
 
-> **Chuyển mạch:** Trong **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Đối chiếu theo dòng thời gian** đã nêu tiêu chí phân biệt, còn **Chẩn đoán so sánh** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Phục hồi khác với tìm nguyên nhân gốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Đối chiếu theo dòng thời gian** đặt tiêu chí; **Chẩn đoán so sánh** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Phục hồi khác với tìm nguyên nhân gốc** mở rộng hệ quả.
 
 ## Chẩn đoán so sánh
 
@@ -210,7 +210,7 @@ diff -u config-A config-B
 
 So với một máy khỏe mạnh thường giúp thu hẹp không gian tìm kiếm nhanh hơn việc đọc hàng nghìn dòng log mà không có giả thuyết.
 
-> **Chuyển mạch:** Ở chặng này của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Chẩn đoán so sánh** đã nêu tiêu chí phân biệt, còn **Phục hồi khác với tìm nguyên nhân gốc** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Chọn công cụ theo câu hỏi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Chẩn đoán so sánh** đặt tiêu chí; **Phục hồi khác với tìm nguyên nhân gốc** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Chọn công cụ theo câu hỏi** mở rộng hệ quả.
 
 ## Phục hồi khác với tìm nguyên nhân gốc
 
@@ -218,7 +218,7 @@ So với một máy khỏe mạnh thường giúp thu hẹp không gian tìm ki�
 
 Một phân tích sau sự cố tốt nên hỏi: yếu tố kích hoạt là gì? điều kiện tiềm ẩn nào cho phép lỗi lan rộng? hệ thống phát hiện và phục hồi ra sao? thay đổi nào làm giảm khả năng tái diễn?
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Chọn công cụ theo câu hỏi** tiếp nhận điểm tựa từ **Phục hồi khác với tìm nguyên nhân gốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Chọn công cụ theo câu hỏi** nối từ **Phục hồi khác với tìm nguyên nhân gốc** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chọn công cụ theo câu hỏi
 
@@ -242,7 +242,7 @@ Phần này chuyển khái niệm Linux thành thao tác hoặc bằng chứng c
 
 Bảng này không thay thế suy luận; nó chỉ ánh xạ **câu hỏi** sang **nguồn bằng chứng** phù hợp.
 
-> **Chuyển mạch:** Trong **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Chọn công cụ theo câu hỏi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Chọn công cụ theo câu hỏi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -250,7 +250,7 @@ Troubleshooting có thể xem như quá trình **cắt tỉa đồ thị nguyên
 
 Thay vì chạy 30 câu lệnh theo thói quen, hãy xác định trước: "Nếu kết quả là A thì tôi sẽ nghi X; nếu là B thì chuyển sang Y." Khi đó terminal trở thành công cụ đo lường theo phương pháp khoa học thay vì một nghi thức lặp lại.
 
-> **Chuyển mạch:** Ở chặng này của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Những hiểu lầm phổ biến (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Checklist môi trường vận hành (production / 운영 환경) ngắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Những hiểu lầm phổ biến (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Checklist môi trường vận hành (production / 운영 환경) ngắn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -264,7 +264,7 @@ Thay vì chạy 30 câu lệnh theo thói quen, hãy xác định trước: "N�
 
 **"Gỡ lỗi môi trường vận hành (production / 운영 환경) nên thay đổi nhanh để thử."** Thay đổi không kiểm soát có thể làm mất bằng chứng và tăng phạm vi ảnh hưởng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Checklist môi trường vận hành (production / 운영 환경) ngắn** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến (Common Misconceptions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Xử lý sự cố Linux trong môi trường vận hành (production / 운영 환경)**, **Checklist môi trường vận hành (production / 운영 환경) ngắn** nối từ **Những hiểu lầm phổ biến (Common Misconceptions)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Checklist môi trường vận hành (production / 운영 환경) ngắn
 

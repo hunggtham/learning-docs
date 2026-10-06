@@ -6,7 +6,7 @@
 
 Madagascar tách khỏi các khối lục địa lớn từ rất lâu về mặt địa chất, tạo mức **đặc hữu (endemism)** rất cao. Điều này làm đảo vừa là hotspot đa dạng sinh học vừa rất dễ tổn thương trước mất sinh cảnh và loài xâm lấn.
 
-> **Chuyển mạch:** Trong **Madagascar**, **Cao nguyên trung tâm và độ dốc (gradient / 기울기) đông–tây** tiếp nhận điểm tựa từ **Đảo lục địa biệt lập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Antananarivo và mạng đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Madagascar là đảo lớn nhưng relief và biệt lập làm **Cao nguyên trung tâm và độ dốc (gradient / 기울기) đông–tây** chia mưa, đất và access giữa bờ đông, cao nguyên và tây nam. **Antananarivo và mạng đô thị** tiếp theo cho thấy các nút bám địa hình nào.
 
 ## Cao nguyên trung tâm và độ dốc (gradient / 기울기) đông–tây
 
@@ -14,7 +14,7 @@ Madagascar tách khỏi các khối lục địa lớn từ rất lâu về mặ
 
 Vì thế Madagascar có độ dốc (gradient / 기울기) từ rừng mưa ẩm phía đông tới rừng khô và vùng bán khô phía tây–nam.
 
-> **Chuyển mạch:** Ở chặng này của **Madagascar**, **Antananarivo và mạng đô thị** tiếp nhận điểm tựa từ **Cao nguyên trung tâm và độ dốc (gradient / 기울기) đông–tây** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nông nghiệp và đất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Antananarivo nằm trên cao nguyên và giữ administrative–services role, còn các coastal towns và ports nối đảo với bên ngoài; **Antananarivo và mạng đô thị** phản ánh access không đều. **Nông nghiệp và đất** tiếp theo đặt dân cư vào gradient đất–nước.
 
 ## Antananarivo và mạng đô thị
 
@@ -22,7 +22,7 @@ Antananarivo nằm trên cao nguyên nội địa, khác với mô hình thủ �
 
 Điều này làm road chất lượng (quality / 품질) và landslide rủi ro (risk / 위험) đặc biệt quan trọng với logistics.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Madagascar**, **Nông nghiệp và đất** tiếp nhận điểm tựa từ **Antananarivo và mạng đô thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cyclone và coastal exposure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Rice, vanilla, clove, livestock và forest products phân bố theo cao độ, mưa và soil; **Nông nghiệp và đất** vì thế vừa là sinh kế vừa là pressure lên rừng. **Cyclone và coastal exposure** tiếp theo kiểm tra vùng bờ chịu bão thế nào.
 
 ## Nông nghiệp và đất
 
@@ -30,19 +30,19 @@ Ruộng bậc thang, lúa ở cao nguyên và các cây hàng hóa nhiệt đớ
 
 Các lớp đất đỏ lộ ra sau xói mòn tạo hình ảnh nổi bật nhưng không nên nhầm màu đỏ với độ phì cao.
 
-> **Chuyển mạch:** Trong **Madagascar**, **Cyclone và coastal exposure** tiếp nhận điểm tựa từ **Nông nghiệp và đất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biogeography như một phần của địa lý kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cyclone, storm surge, erosion và flood tác động lên farm, towns và ports; **Cyclone và coastal exposure** cho thấy island exposure không tách khỏi sinh kế. **Biogeography như một phần của địa lý kinh tế** tiếp theo nối biodiversity với giá trị sản xuất.
 
 ## Cyclone và coastal exposure
 
 Bờ đông và bắc thường chịu ảnh hưởng cyclone từ Ấn Độ Dương. Bão kết hợp với địa hình dốc có thể gây lũ, sạt lở và hỏng đường, khiến vùng bị cô lập sau thiên tai.
 
-> **Chuyển mạch:** Ở chặng này của **Madagascar**, **Biogeography như một phần của địa lý kinh tế** tiếp nhận điểm tựa từ **Cyclone và coastal exposure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Endemism, forest, fisheries và ecotourism làm **Biogeography như một phần của địa lý kinh tế** gắn bảo tồn với access, jobs và land-use. **Mô hình tư duy** sẽ tổng hợp đảo, gradient và exposure.
 
 ## Biogeography như một phần của địa lý kinh tế
 
 Lemur và các hệ sinh thái đặc hữu tạo giá trị du lịch và nghiên cứu, nhưng conservation phải cân bằng với sinh kế địa phương. Đây là nơi ecology, land use và poverty geography giao nhau trực tiếp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Madagascar**, **Mô hình tư duy** gom các mảnh từ **Biogeography như một phần của địa lý kinh tế** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi island isolation → central highlands/east–west gradient → Antananarivo → agriculture/land → cyclone/coast → biogeography economics, rồi bàn giao cho owner **Eastern Africa** trong [README](./README.md).
 
 ## Mô hình tư duy
 

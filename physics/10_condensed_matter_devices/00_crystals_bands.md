@@ -42,7 +42,7 @@ Một **ô nguyên thủy (primitive cell)** chứa đúng một điểm mạng 
 
 Tinh thể thật luôn có defect, thermal vibration và bề mặt. Periodic lattice là mô hình nền để tách phần cấu trúc lý tưởng khỏi các hiệu ứng đó.
 
-> **Chuyển mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Basis và crystal cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **Tinh thể và mạng Bravais** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạng đảo (reciprocal lattice)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Basis và crystal cấu trúc (structure / 구조)** nối từ **Tinh thể và mạng Bravais** sang **Mạng đảo (reciprocal lattice)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Basis và crystal cấu trúc (structure / 구조)
 
@@ -56,7 +56,7 @@ Ví dụ silicon có cấu trúc diamond, có thể xem như FCC lattice cộng 
 
 Phân biệt lattice và basis giúp tránh nhầm rằng mọi điểm lặp trong mạng đều tương ứng đúng một nguyên tử.
 
-> **Chuyển mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Mạng đảo (reciprocal lattice)** tiếp nhận điểm tựa từ **Basis và crystal cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Diffraction và cấu trúc tinh thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Mạng đảo (reciprocal lattice)** nối từ **Basis và crystal cấu trúc (structure / 구조)** sang **Diffraction và cấu trúc tinh thể**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mạng đảo (reciprocal lattice)
 
@@ -78,7 +78,7 @@ Reciprocal lattice không phải “một tinh thể khác”. Nó là không gi
 
 Nó đặc biệt hữu ích cho diffraction vì điều kiện giao thoa xây dựng có thể viết bằng reciprocal vectors.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Diffraction và cấu trúc tinh thể** tiếp nhận điểm tựa từ **Mạng đảo (reciprocal lattice)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định lý Bloch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Diffraction và cấu trúc tinh thể** nối từ **Mạng đảo (reciprocal lattice)** sang **Định lý Bloch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Diffraction và cấu trúc tinh thể
 
@@ -96,7 +96,7 @@ Nhờ diffraction, ta có thể suy ra lattice spacing, symmetry và atomic cấ
 
 Đây là cầu nối trực tiếp giữa wave physics, Fourier transform và crystallography.
 
-> **Chuyển mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Định lý Bloch** tiếp nhận điểm tựa từ **Diffraction và cấu trúc tinh thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Crystal momentum không hoàn toàn là momentum cơ học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Định lý Bloch** nối từ **Diffraction và cấu trúc tinh thể** sang **Crystal momentum không hoàn toàn là momentum cơ học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định lý Bloch
 
@@ -118,7 +118,7 @@ u_{n\mathbf k}(\mathbf r+\mathbf R)
 
 Bloch theorem là kết quả của translational symmetry rời rạc của crystal lattice.
 
-> **Chuyển mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Crystal momentum không hoàn toàn là momentum cơ học** tiếp nhận điểm tựa từ **Định lý Bloch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Brillouin zone** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Crystal momentum không hoàn toàn là momentum cơ học** nối từ **Định lý Bloch** sang **Brillouin zone**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Crystal momentum không hoàn toàn là momentum cơ học
 
@@ -142,7 +142,7 @@ có thể mô tả trạng thái tương đương theo symmetry của lattice.
 
 Điều này dẫn tự nhiên tới Brillouin zone.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Brillouin zone** tiếp nhận điểm tựa từ **Crystal momentum không hoàn toàn là momentum cơ học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ orbital nguyên tử đến dải năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Brillouin zone** nối từ **Crystal momentum không hoàn toàn là momentum cơ học** sang **Từ orbital nguyên tử đến dải năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Brillouin zone
 
@@ -154,7 +154,7 @@ Biên Brillouin zone quan trọng vì tại đó Bragg reflection của electron
 
 Đây là cơ chế toán–vật lý sâu hơn cho câu nói đơn giản “mức nguyên tử tách thành dải”.
 
-> **Chuyển mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Từ orbital nguyên tử đến dải năng lượng** tiếp nhận điểm tựa từ **Brillouin zone** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao band gap xuất hiện?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Từ orbital nguyên tử đến dải năng lượng** nối từ **Brillouin zone** sang **Vì sao band gap xuất hiện?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ orbital nguyên tử đến dải năng lượng
 
@@ -179,7 +179,7 @@ Cách nhìn tight-binding phù hợp khi trạng thái còn mang tính atomic-lo
 
 Hai mô hình đi từ hai giới hạn khác nhau nhưng cùng dẫn tới band cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Vì sao band gap xuất hiện?** tiếp nhận điểm tựa từ **Từ orbital nguyên tử đến dải năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Band cấu trúc (structure / 구조) En(k)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Vì sao band gap xuất hiện?** nối từ **Từ orbital nguyên tử đến dải năng lượng** sang **Band cấu trúc (structure / 구조) En(k)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao band gap xuất hiện?
 
@@ -191,7 +191,7 @@ Sự ghép này tách degeneracy thành hai tổ hợp có năng lượng khác 
 
 Vì vậy vùng cấm năng lượng không phải khoảng trống vật lý giữa các nguyên tử. Nó là khoảng trong **phổ năng lượng** không có trạng thái một hạt được phép trong ideal band mô hình (model / 모델).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Band cấu trúc (structure / 구조) En(k)** tiếp nhận điểm tựa từ **Vì sao band gap xuất hiện?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khối lượng hiệu dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Band cấu trúc (structure / 구조) En(k)** nối từ **Vì sao band gap xuất hiện?** sang **Khối lượng hiệu dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Band cấu trúc (structure / 구조) `E_n(k)`
 
@@ -212,7 +212,7 @@ Do đó carrier velocity không đơn giản là `p/m` với electron tự do; n
 
 Đây là lý do crystal cấu trúc (structure / 구조) có thể thay đổi carrier dynamics mạnh dù electron vẫn có cùng điện tích cơ bản.
 
-> **Chuyển mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Khối lượng hiệu dụng** tiếp nhận điểm tựa từ **Band cấu trúc (structure / 구조) En(k)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Density of states** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Khối lượng hiệu dụng** nối từ **Band cấu trúc (structure / 구조) En(k)** sang **Density of states**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khối lượng hiệu dụng
 
@@ -237,7 +237,7 @@ Nó không có nghĩa electron cơ bản thay đổi rest mass. Đây là tham s
 
 Trong crystal anisotropic, effective mass có thể là tensor.
 
-> **Chuyển mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Density of states** tiếp nhận điểm tựa từ **Khối lượng hiệu dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mức Fermi và chemical potential** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Density of states** nối từ **Khối lượng hiệu dụng** sang **Mức Fermi và chemical potential**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Density of states
 
@@ -259,7 +259,7 @@ n=\int g_c(E)f(E)\,dE.
 
 Do đó chỉ biết band gap chưa đủ để tính carrier density; còn cần DOS và occupancy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Mức Fermi và chemical potential** tiếp nhận điểm tựa từ **Density of states** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kim loại, bán dẫn và chất cách điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Mức Fermi và chemical potential** nối từ **Density of states** sang **Kim loại, bán dẫn và chất cách điện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mức Fermi và chemical potential
 
@@ -277,7 +277,7 @@ Trong nhiều solid-state ngữ cảnh (context / 맥락), `\mu` được gọi 
 
 Fermi mức (level / 수준) không nhất thiết phải trùng với một trạng thái năng lượng (energy / 에너지) thực. Trong semiconductor, nó có thể nằm trong band gap.
 
-> **Chuyển mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Kim loại, bán dẫn và chất cách điện** tiếp nhận điểm tựa từ **Mức Fermi và chemical potential** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fermi surface** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Kim loại, bán dẫn và chất cách điện** nối từ **Mức Fermi và chemical potential** sang **Fermi surface**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kim loại, bán dẫn và chất cách điện
 
@@ -297,7 +297,7 @@ Cũng có band gap, nhưng gap và doping cho phép carrier concentration đư�
 
 Sự khác biệt giữa semiconductor và insulator không phải một ranh giới (boundary / 경계) tuyệt đối chỉ dựa vào một con số gap; material ngữ cảnh (context / 맥락) và operating điều kiện (condition / 조건) cũng quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Fermi surface** tiếp nhận điểm tựa từ **Kim loại, bán dẫn và chất cách điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lỗ trống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Fermi surface** nối từ **Kim loại, bán dẫn và chất cách điện** sang **Lỗ trống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Fermi surface
 
@@ -307,7 +307,7 @@ Nhiều tính chất low-energy của kim loại được quyết định bởi 
 
 Đây là ví dụ của effective-theory thinking: low-temperature vận chuyển (transport / 전송) thường chỉ cần degrees of freedom gần chemical potential.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Lỗ trống** tiếp nhận điểm tựa từ **Fermi surface** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phonon từ dao động mạng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Lỗ trống** nối từ **Fermi surface** sang **Phonon từ dao động mạng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lỗ trống
 
@@ -317,7 +317,7 @@ Một trạng thái thiếu electron có thể được mô tả như một quas
 
 Hole không phải proton di chuyển trong lattice. Nó là cách biểu diễn collective phản hồi (response / 응답) của nhiều electron trong band gần đầy.
 
-> **Chuyển mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Phonon từ dao động mạng** tiếp nhận điểm tựa từ **Lỗ trống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Acoustic và optical phonon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Phonon từ dao động mạng** nối từ **Lỗ trống** sang **Acoustic và optical phonon**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phonon từ dao động mạng
 
@@ -337,7 +337,7 @@ Mỗi lượng tử excitation được gọi là phonon.
 
 Phonon là quasiparticle, không phải elementary particle trong vacuum.
 
-> **Chuyển mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Acoustic và optical phonon** tiếp nhận điểm tựa từ **Phonon từ dao động mạng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phonon và nhiệt dung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Acoustic và optical phonon** nối từ **Phonon từ dao động mạng** sang **Phonon và nhiệt dung**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Acoustic và optical phonon
 
@@ -349,7 +349,7 @@ Optical branch có thể có frequency khác zero gần `k=0` do các atom trong
 
 Tên “optical” đến từ khả năng một số chế độ (mode / 모드) tương tác mạnh với electromagnetic radiation trong ionic crystals.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Phonon và nhiệt dung** tiếp nhận điểm tựa từ **Acoustic và optical phonon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Electron–phonon scattering** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Phonon và nhiệt dung** nối từ **Acoustic và optical phonon** sang **Electron–phonon scattering**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phonon và nhiệt dung
 
@@ -365,7 +365,7 @@ Kết quả này là một thành công quan trọng của quantum statistical p
 
 Classical equipartition chỉ được khôi phục ở nhiệt độ đủ cao so với characteristic phonon năng lượng (energy / 에너지) scales.
 
-> **Chuyển mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Electron–phonon scattering** tiếp nhận điểm tựa từ **Phonon và nhiệt dung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Defect và vì sao crystal thật không hoàn hảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Electron–phonon scattering** nối từ **Phonon và nhiệt dung** sang **Defect và vì sao crystal thật không hoàn hảo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Electron–phonon scattering
 
@@ -377,7 +377,7 @@ Lattice vibration làm potential mà electron cảm nhận thay đổi theo th�
 
 Vì vậy phonon là cầu nối giữa mechanical vibration, thermodynamics và electronic vận chuyển (transport / 전송).
 
-> **Chuyển mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Defect và vì sao crystal thật không hoàn hảo** tiếp nhận điểm tựa từ **Electron–phonon scattering** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Direct và indirect band gap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Defect và vì sao crystal thật không hoàn hảo** nối từ **Electron–phonon scattering** sang **Direct và indirect band gap**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Defect và vì sao crystal thật không hoàn hảo
 
@@ -398,7 +398,7 @@ Trong semiconductor, impurity được dùng có chủ đích để doping. Tron
 
 Do đó “không hoàn hảo” không phải chỉ là nuisance; nhiều thiết bị (device / 장치) hàm (function / 함수) tồn tại nhờ defect được kiểm soát.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Direct và indirect band gap** tiếp nhận điểm tựa từ **Defect và vì sao crystal thật không hoàn hảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các giả định (assumptions / 가정들) và giới hạn của band picture** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Direct và indirect band gap** nối từ **Defect và vì sao crystal thật không hoàn hảo** sang **Các giả định (assumptions / 가정들) và giới hạn của band picture**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Direct và indirect band gap
 
@@ -410,7 +410,7 @@ Nếu chúng nằm ở `k` khác nhau, optical chuyển tiếp (transition / 전
 
 Đây là lý do material như GaAs phát sáng hiệu quả hơn silicon trong nhiều LED applications.
 
-> **Chuyển mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Direct và indirect band gap** đã nêu tiêu chí phân biệt, còn **Các giả định (assumptions / 가정들) và giới hạn của band picture** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Direct và indirect band gap** đặt tiêu chí; **Các giả định (assumptions / 가정들) và giới hạn của band picture** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Các giả định (assumptions / 가정들) và giới hạn của band picture
 
@@ -424,7 +424,7 @@ Crystal periodicity cũng bị phá tại surface, giao diện (interface / 인�
 
 Vì vậy band cấu trúc (structure / 구조) là baseline mạnh, không phải lời giải hoàn chỉnh cho mọi solid.
 
-> **Chuyển mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Các giả định (assumptions / 가정들) và giới hạn của band picture** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Các giả định (assumptions / 가정들) và giới hạn của band picture** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -451,7 +451,7 @@ coupled atomic oscillations
 
 Hai chuỗi gặp nhau qua electron–phonon tương tác (interaction / 상호작용) và tạo phần lớn physics của material thật.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -475,7 +475,7 @@ Không. Phonon là lượng tử của collective lattice vibration.
 
 Không. Doping, giao diện (interface / 인터페이스) và defect được kiểm soát là nền tảng của semiconductor technology.
 
-> **Chuyển mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Vật lý chất rắn: mạng tinh thể, dải năng lượng, mức Fermi và phonon**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

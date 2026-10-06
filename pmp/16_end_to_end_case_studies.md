@@ -58,7 +58,7 @@ Closure chỉ xảy ra khi operations có quyền sở hữu (ownership / 소유
 
 Mọi construction tác vụ (task / 작업) có thể “green” nhưng failover rehearsal thất bại vì ứng dụng (application / 애플리케이션) phụ thuộc (dependency / 의존성) chưa được map. Đây là ví dụ cục bộ (local / 로컬) completion không bằng hệ thống (system / 시스템) readiness.
 
-> **Chuyển mạch:** Trong **16 — End-to-end trường hợp (case / 사례) studies: predictive, adaptive và hybrid**, **Trường hợp (case / 사례) A — Predictive: mở trung tâm dữ liệu dự phòng** cho ta quy tắc; **Trường hợp (case / 사례) B — Adaptive: xây sản phẩm mobile mới trong thị trường chưa chắc chắn** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) C — Hybrid: ngân hàng triển khai eKYC với bên ngoài (external / 외부) vendor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Trường hợp (case / 사례) A — Predictive: mở trung tâm dữ liệu dự phòng** nêu quy tắc; **Trường hợp (case / 사례) B — Adaptive: xây sản phẩm mobile mới trong thị trường chưa chắc chắn** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례) C — Hybrid: ngân hàng triển khai eKYC với bên ngoài (external / 외부) vendor** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례) B — Adaptive: xây sản phẩm mobile mới trong thị trường chưa chắc chắn
 
@@ -114,7 +114,7 @@ Nếu initiative chứng minh product-market tín hiệu (signal / 신호), temp
 
 Nhóm (team / 팀) chạy sprint, daily và retrospective nhưng founder khóa roadmap sáu tháng và mọi yêu cầu (request / 요청) đều “must-have”. phản hồi (feedback / 피드백) không thay quyết định (decision / 결정); hệ thống (system / 시스템) chỉ có ceremony, không có adaptation.
 
-> **Chuyển mạch:** Ở chặng này của **16 — End-to-end trường hợp (case / 사례) studies: predictive, adaptive và hybrid**, **Trường hợp (case / 사례) B — Adaptive: xây sản phẩm mobile mới trong thị trường chưa chắc chắn** cho ta quy tắc; **Trường hợp (case / 사례) C — Hybrid: ngân hàng triển khai eKYC với bên ngoài (external / 외부) vendor** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) D — Troubled dự án (project / 프로젝트) khôi phục (recovery / 복구): ERP rollout đang đỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Trường hợp (case / 사례) B — Adaptive: xây sản phẩm mobile mới trong thị trường chưa chắc chắn** nêu quy tắc; **Trường hợp (case / 사례) C — Hybrid: ngân hàng triển khai eKYC với bên ngoài (external / 외부) vendor** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례) D — Troubled dự án (project / 프로젝트) khôi phục (recovery / 복구): ERP rollout đang đỏ** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례) C — Hybrid: ngân hàng triển khai eKYC với bên ngoài (external / 외부) vendor
 
@@ -164,7 +164,7 @@ Operations cần dashboard, alert, vendor escalation, manual fallback, privacy s
 
 Nếu nhóm (team / 팀) vừa giữ full upfront specification, vừa có sprint ceremony, vừa phải submit mọi backlog reorder cho CCB, overhead tăng mà phản hồi (feedback / 피드백) không nhanh hơn. Hybrid tốt chọn cơ chế (mechanism / 메커니즘) theo ràng buộc (constraint / 제약조건); hybrid xấu cộng tất cả ceremony.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **16 — End-to-end trường hợp (case / 사례) studies: predictive, adaptive và hybrid**, **Trường hợp (case / 사례) C — Hybrid: ngân hàng triển khai eKYC với bên ngoài (external / 외부) vendor** cho ta quy tắc; **Trường hợp (case / 사례) D — Troubled dự án (project / 프로젝트) khôi phục (recovery / 복구): ERP rollout đang đỏ** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) E — AI-assisted claims processing với sustainability và quản trị (governance / 거버넌스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Trường hợp (case / 사례) C — Hybrid: ngân hàng triển khai eKYC với bên ngoài (external / 외부) vendor** nêu quy tắc; **Trường hợp (case / 사례) D — Troubled dự án (project / 프로젝트) khôi phục (recovery / 복구): ERP rollout đang đỏ** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례) E — AI-assisted claims processing với sustainability và quản trị (governance / 거버넌스)** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례) D — Troubled dự án (project / 프로젝트) khôi phục (recovery / 복구): ERP rollout đang đỏ
 
@@ -212,7 +212,7 @@ Một khôi phục (recovery / 복구) proposal tốt có option: phased rollout
 
 “Red dự án (project / 프로젝트)” thường bị cứu bằng kế hoạch đẹp hơn mà không sửa thông tin (information / 정보) chất lượng (quality / 품질), quản trị (governance / 거버넌스) hoặc phạm vi (scope / 범위) coupling. Khi sensor vẫn sai, khôi phục (recovery / 복구) plan cũng chỉ là fiction mới.
 
-> **Chuyển mạch:** Trong **16 — End-to-end trường hợp (case / 사례) studies: predictive, adaptive và hybrid**, **Trường hợp (case / 사례) D — Troubled dự án (project / 프로젝트) khôi phục (recovery / 복구): ERP rollout đang đỏ** cho ta quy tắc; **Trường hợp (case / 사례) E — AI-assisted claims processing với sustainability và quản trị (governance / 거버넌스)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례) F — Portfolio/PMO: nhiều initiative cùng tranh một thay đổi (change / 변경) sức chứa (capacity / 용량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Trường hợp (case / 사례) D — Troubled dự án (project / 프로젝트) khôi phục (recovery / 복구): ERP rollout đang đỏ** nêu quy tắc; **Trường hợp (case / 사례) E — AI-assisted claims processing với sustainability và quản trị (governance / 거버넌스)** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례) F — Portfolio/PMO: nhiều initiative cùng tranh một thay đổi (change / 변경) sức chứa (capacity / 용량)** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례) E — AI-assisted claims processing với sustainability và quản trị (governance / 거버넌스)
 
@@ -256,7 +256,7 @@ Pilot giảm handling 28%, serious lỗi (error / 오류) dưới threshold ở 
 
 Sau rollout cần đo actual handling thời gian (time / 시간), assessor adoption, override tỷ lệ (rate / 비율), complaint, lỗi (error / 오류), vendor spend và sự cố (incident / 인시던트). Pilot success không chứng minh môi trường vận hành (production / 운영 환경) benefit nếu hành vi (behavior / 동작) thay đổi ở quy mô (scale / 규모).
 
-> **Chuyển mạch:** Ở chặng này của **16 — End-to-end trường hợp (case / 사례) studies: predictive, adaptive và hybrid**, sau khi thấy quy trình trong **Trường hợp (case / 사례) E — AI-assisted claims processing với sustainability và quản trị (governance / 거버넌스)**, **Trường hợp (case / 사례) F — Portfolio/PMO: nhiều initiative cùng tranh một thay đổi (change / 변경) sức chứa (capacity / 용량)** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **Cross-case synthesis: bất biến (invariant / 불변식) nào giữ nguyên, variable nào làm quyết định (decision / 결정) đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Case E cho thấy AI-assisted claims processing phải nối sustainability với governance; **Case F** thử cùng logic khi nhiều initiative tranh một change capacity. **Cross-case synthesis** rút ra invariant và variable làm quyết định đổi.
 
 ## Trường hợp (case / 사례) F — Portfolio/PMO: nhiều initiative cùng tranh một thay đổi (change / 변경) sức chứa (capacity / 용량)
 
@@ -308,7 +308,7 @@ PMO thất bại khi trở thành reporting bureaucracy mà không cải thiện
 
 Trường hợp (case / 사례) này nối [Governance & Business Environment](./09_governance_compliance_and_business_environment.md), [Stakeholders](./03_stakeholders_communication_and_knowledge.md), [Schedule & Flow](./05_schedule_estimation_and_flow.md), [Risk](./08_risk_uncertainty_issues_and_decisions.md) và [Measurement](./11_measurement_status_closure_and_continuous_improvement.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **16 — End-to-end trường hợp (case / 사례) studies: predictive, adaptive và hybrid**, **Trường hợp (case / 사례) F — Portfolio/PMO: nhiều initiative cùng tranh một thay đổi (change / 변경) sức chứa (capacity / 용량)** cho ta quy tắc; **Cross-case synthesis: bất biến (invariant / 불변식) nào giữ nguyên, variable nào làm quyết định (decision / 결정) đổi** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cross-case synthesis: bottleneck di chuyển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Trường hợp (case / 사례) F — Portfolio/PMO: nhiều initiative cùng tranh một thay đổi (change / 변경) sức chứa (capacity / 용량)** nêu quy tắc; **Cross-case synthesis: bất biến (invariant / 불변식) nào giữ nguyên, variable nào làm quyết định (decision / 결정) đổi** thử quy tắc trong tình huống, rồi **Cross-case synthesis: bottleneck di chuyển** mở rộng hệ quả.
 
 ## Cross-case synthesis: bất biến (invariant / 불변식) nào giữ nguyên, variable nào làm quyết định (decision / 결정) đổi
 
@@ -324,7 +324,7 @@ Nhưng nhiều variable làm next hành động (action / 동작) đổi mạnh.
 
 Mô hình tư duy (mental model / 사고 모델) tốt giữ bất biến (invariant / 불변식) nhưng thay hành động (action / 동작) theo variable. Đây là cách tránh slogan kiểu “luôn assess trước”, “luôn nhóm (team / 팀) first” hoặc “luôn follow thay đổi (change / 변경) điều khiển (control / 제어)”.
 
-> **Chuyển mạch:** Trong **16 — End-to-end trường hợp (case / 사례) studies: predictive, adaptive và hybrid**, **Cross-case synthesis: bất biến (invariant / 불변식) nào giữ nguyên, variable nào làm quyết định (decision / 결정) đổi** cho ta quy tắc; **Cross-case synthesis: bottleneck di chuyển** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cross-case synthesis: rủi ro (risk / 위험) chuyển hình khi dự án (project / 프로젝트) tiến triển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cross-case synthesis: bất biến (invariant / 불변식) nào giữ nguyên, variable nào làm quyết định (decision / 결정) đổi** nêu quy tắc; **Cross-case synthesis: bottleneck di chuyển** thử quy tắc trong tình huống, rồi **Cross-case synthesis: rủi ro (risk / 위험) chuyển hình khi dự án (project / 프로젝트) tiến triển** mở rộng hệ quả.
 
 ## Cross-case synthesis: bottleneck di chuyển
 
@@ -334,7 +334,7 @@ Khi nhóm (team / 팀) tiếp tục optimize bottleneck cũ, effort mất levera
 
 Vì vậy mỗi status cycle nên hỏi: ràng buộc (constraint / 제약조건) hiện tại của hệ thống (system / 시스템) là gì, bằng chứng (evidence / 증거) nào chứng minh, và nếu ràng buộc (constraint / 제약조건) được giải thì ràng buộc (constraint / 제약조건) kế tiếp có khả năng ở đâu?
 
-> **Chuyển mạch:** Ở chặng này của **16 — End-to-end trường hợp (case / 사례) studies: predictive, adaptive và hybrid**, **Cross-case synthesis: bottleneck di chuyển** cho ta quy tắc; **Cross-case synthesis: rủi ro (risk / 위험) chuyển hình khi dự án (project / 프로젝트) tiến triển** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cross-case synthesis: cục bộ (local / 로컬) success có thể tạo toàn cục (global / 전역) thất bại (failure / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cross-case synthesis: bottleneck di chuyển** nêu quy tắc; **Cross-case synthesis: rủi ro (risk / 위험) chuyển hình khi dự án (project / 프로젝트) tiến triển** thử quy tắc trong tình huống, rồi **Cross-case synthesis: cục bộ (local / 로컬) success có thể tạo toàn cục (global / 전역) thất bại (failure / 실패)** mở rộng hệ quả.
 
 ## Cross-case synthesis: rủi ro (risk / 위험) chuyển hình khi dự án (project / 프로젝트) tiến triển
 
@@ -344,7 +344,7 @@ Trường hợp (case / 사례) E minh họa rõ: ban đầu bất định (unce
 
 Rủi ro (risk / 위험) management tốt theo chuyển tiếp trạng thái (state transition / 상태 전이), không chỉ giữ register lịch sử (history / 이력).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **16 — End-to-end trường hợp (case / 사례) studies: predictive, adaptive và hybrid**, **Cross-case synthesis: rủi ro (risk / 위험) chuyển hình khi dự án (project / 프로젝트) tiến triển** cho ta quy tắc; **Cross-case synthesis: cục bộ (local / 로컬) success có thể tạo toàn cục (global / 전역) thất bại (failure / 실패)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cross-case synthesis: quyết định (decision / 결정) chất lượng (quality / 품질) và kết quả (outcome / 결과) chất lượng (quality / 품질)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cross-case synthesis: rủi ro (risk / 위험) chuyển hình khi dự án (project / 프로젝트) tiến triển** nêu quy tắc; **Cross-case synthesis: cục bộ (local / 로컬) success có thể tạo toàn cục (global / 전역) thất bại (failure / 실패)** thử quy tắc trong tình huống, rồi **Cross-case synthesis: quyết định (decision / 결정) chất lượng (quality / 품질) và kết quả (outcome / 결과) chất lượng (quality / 품질)** mở rộng hệ quả.
 
 ## Cross-case synthesis: cục bộ (local / 로컬) success có thể tạo toàn cục (global / 전역) thất bại (failure / 실패)
 
@@ -352,7 +352,7 @@ Trường hợp (case / 사례) A: facility complete nhưng failover unusable. t
 
 Đây là mẫu (pattern / 패턴) quan trọng nhất của hệ thống (system / 시스템) thinking: chỉ số (metric / 지표)/cục bộ (local / 로컬) deliverable chỉ là proxy. Mỗi thời gian (time / 시간) bạn thấy một cục bộ (local / 로컬) success, hỏi downstream kết quả (outcome / 결과) và dùng chung (shared / 공유) ràng buộc (constraint / 제약조건) có còn healthy không.
 
-> **Chuyển mạch:** Trong **16 — End-to-end trường hợp (case / 사례) studies: predictive, adaptive và hybrid**, **Cross-case synthesis: cục bộ (local / 로컬) success có thể tạo toàn cục (global / 전역) thất bại (failure / 실패)** cho ta quy tắc; **Cross-case synthesis: quyết định (decision / 결정) chất lượng (quality / 품질) và kết quả (outcome / 결과) chất lượng (quality / 품질)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cách dùng trường hợp (case / 사례) study để tự luyện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cross-case synthesis: cục bộ (local / 로컬) success có thể tạo toàn cục (global / 전역) thất bại (failure / 실패)** nêu quy tắc; **Cross-case synthesis: quyết định (decision / 결정) chất lượng (quality / 품질) và kết quả (outcome / 결과) chất lượng (quality / 품질)** thử quy tắc trong tình huống, rồi **Cách dùng trường hợp (case / 사례) study để tự luyện** mở rộng hệ quả.
 
 ## Cross-case synthesis: quyết định (decision / 결정) chất lượng (quality / 품질) và kết quả (outcome / 결과) chất lượng (quality / 품질)
 
@@ -362,7 +362,7 @@ Rà soát (review / 검토) sau kết quả (outcome / 결과) phải hỏi thô
 
 Trường hợp (case / 사례) study nên được dùng để luyện chất lượng (quality / 품질) của lập luận (reasoning / 추론), không đo khả năng đoán kết quả.
 
-> **Chuyển mạch:** Ở chặng này của **16 — End-to-end trường hợp (case / 사례) studies: predictive, adaptive và hybrid**, **Cross-case synthesis: quyết định (decision / 결정) chất lượng (quality / 품질) và kết quả (outcome / 결과) chất lượng (quality / 품질)** cho ta quy tắc; **Cách dùng trường hợp (case / 사례) study để tự luyện** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Coverage của các trường hợp (case / 사례)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cross-case synthesis: quyết định (decision / 결정) chất lượng (quality / 품질) và kết quả (outcome / 결과) chất lượng (quality / 품질)** nêu quy tắc; **Cách dùng trường hợp (case / 사례) study để tự luyện** thử quy tắc trong tình huống, rồi **Coverage của các trường hợp (case / 사례)** mở rộng hệ quả.
 
 ## Cách dùng trường hợp (case / 사례) study để tự luyện
 
@@ -412,7 +412,7 @@ Tự tạo hai ending: một ending tốt sau quyết định (decision / 결정
 
 Bài tập này chống hindsight độ lệch (bias / 편향) và giúp lập luận (reasoning / 추론) giống dự án (project / 프로젝트) manager hơn người kể chuyện sau sự kiện.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **16 — End-to-end trường hợp (case / 사례) studies: predictive, adaptive và hybrid**, **Cách dùng trường hợp (case / 사례) study để tự luyện** cho ta quy tắc; **Coverage của các trường hợp (case / 사례)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Một micro-case về contractual claim** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cách dùng trường hợp (case / 사례) study để tự luyện** nêu quy tắc; **Coverage của các trường hợp (case / 사례)** thử quy tắc trong tình huống, rồi **Một micro-case về contractual claim** mở rộng hệ quả.
 
 ## Coverage của các trường hợp (case / 사례)
 
@@ -420,7 +420,7 @@ Trường hợp (case / 사례) A chủ yếu ép bạn nối predictive plannin
 
 Không trường hợp (case / 사례) nào chỉ thuộc một chapter. Đó chính là mục đích của tầng (layer / 계층) consolidation này.
 
-> **Chuyển mạch:** Trong **16 — End-to-end trường hợp (case / 사례) studies: predictive, adaptive và hybrid**, **Coverage của các trường hợp (case / 사례)** cho ta quy tắc; **Một micro-case về contractual claim** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cross-domain liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Coverage của các trường hợp (case / 사례)** nêu quy tắc; **Một micro-case về contractual claim** thử quy tắc trong tình huống, rồi **Cross-domain liên kết (connection / 연결)** mở rộng hệ quả.
 
 ## Một micro-case về contractual claim
 
@@ -430,7 +430,7 @@ Không nên nhảy thẳng sang “approve claim” hoặc “reject claim”. T
 
 Micro-case này giúp nối đặc tả hợp đồng (contract / 계약) mechanics trong [07](./07_quality_resources_and_procurement.md) với schedule bằng chứng (evidence / 증거) trong [05](./05_schedule_estimation_and_flow.md) và quản trị (governance / 거버넌스) trong [09](./09_governance_compliance_and_business_environment.md).
 
-> **Chuyển mạch:** Ở chặng này của **16 — End-to-end trường hợp (case / 사례) studies: predictive, adaptive và hybrid**, **Một micro-case về contractual claim** cho ta quy tắc; **Cross-domain liên kết (connection / 연결)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Một micro-case về contractual claim** nêu quy tắc; **Cross-domain liên kết (connection / 연결)** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Cross-domain liên kết (connection / 연결)
 
@@ -440,7 +440,7 @@ AI hiện thực (implementation / 구현) detail không được duplicate tron
 
 Finance chuyên sâu như corporate valuation/portfolio lý thuyết (theory / 이론) tiếp tục thuộc [Investing Knowledge Library](../investing/README.md); PMP chỉ lấy phần cần cho dự án (project / 프로젝트)/portfolio quyết định (decision / 결정).
 
-> **Chuyển mạch:** **Cross-domain liên kết** gom các ràng buộc và trade-off của từng miền; **Mô hình tư duy** biến chúng thành tiêu chí chọn predictive, adaptive hoặc hybrid trong case end-to-end.
+> **Nối mạch:** **Cross-domain liên kết** gom các ràng buộc và trade-off của từng miền; **Mô hình tư duy** biến chúng thành tiêu chí chọn predictive, adaptive hoặc hybrid trong case end-to-end.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

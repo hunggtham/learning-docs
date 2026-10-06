@@ -10,7 +10,7 @@ Australia là một quốc gia có quy mô lục địa nhưng phần lớn dân
 
 Australia là trường hợp (case / 사례) rất tốt để học cách geography của tài nguyên và geography của dân cư có thể tách xa nhau nhưng vẫn được nối bởi hạ tầng (infrastructure / 인프라).
 
-> **Chuyển mạch:** Trong **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên**, **Nền địa chất cổ và relief tương đối thấp** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khí hậu: khô, biến động và khác biệt vùng rất lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Quy mô lục địa đặt nền, còn **Nền địa chất cổ và relief tương đối thấp** giải thích vì sao khoảng cách và thiếu nước quan trọng hơn độ dốc ở nhiều nơi. **Khí hậu: khô, biến động và khác biệt vùng rất lớn** tiếp theo sẽ biến nền địa chất thành giới hạn cư trú cụ thể.
 
 ## Nền địa chất cổ và relief tương đối thấp
 
@@ -20,7 +20,7 @@ Phần lớn Australia nằm trên nền lục địa cổ và ổn định hơn
 
 Vì vậy một vùng “địa hình thuận” vẫn có thể có effective distance cao nếu rất xa labor thị trường (market / 시장), cổng (port / 포트) hoặc water nguồn (source / 소스).
 
-> **Chuyển mạch:** Ở chặng này của **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên**, **Khí hậu: khô, biến động và khác biệt vùng rất lớn** tiếp nhận điểm tựa từ **Nền địa chất cổ và relief tương đối thấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Murray–Darling: một lưu vực nối nông nghiệp, đô thị và hệ sinh thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Relief thấp không bảo đảm nước ổn định; **Khí hậu: khô, biến động và khác biệt vùng rất lớn** đặt ENSO, Indian Ocean variability và timing mưa vào trung tâm. **Murray–Darling: một lưu vực nối nông nghiệp, đô thị và hệ sinh thái** tiếp theo cho thấy basin-scale allocation phản ứng ra sao.
 
 ## Khí hậu: khô, biến động và khác biệt vùng rất lớn
 
@@ -30,7 +30,7 @@ Rainfall không chỉ thấp ở nhiều nơi mà còn biến động mạnh gi�
 
 Điều này có nghĩa average rainfall là chỉ báo chưa đủ cho agriculture hay urban water planning. **độ tin cậy (reliability / 신뢰성) và timing** quan trọng gần như tổng lượng mưa.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên**, **Murray–Darling: một lưu vực nối nông nghiệp, đô thị và hệ sinh thái** tiếp nhận điểm tựa từ **Khí hậu: khô, biến động và khác biệt vùng rất lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nội địa rộng không đồng nghĩa khả năng định cư cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Dry climate và inflow biến động khiến **Murray–Darling: một lưu vực nối nông nghiệp, đô thị và hệ sinh thái** phải cân farm, town, ecosystem và downstream need. **Nội địa rộng không đồng nghĩa khả năng định cư cao** tiếp theo tách diện tích vật lý khỏi usable space.
 
 ## Murray–Darling: một lưu vực nối nông nghiệp, đô thị và hệ sinh thái
 
@@ -40,7 +40,7 @@ Trong dry climate, evaporation mất mát (loss / 손실) có thể lớn. Reser
 
 Nếu groundwater được dùng để bù surface-water shortage, áp lực có thể chuyển từ river stock sang aquifer stock. Đây là ứng dụng trực tiếp của [Water–Food–Energy Nexus](../../../04_global_systems/01_water_food_energy_nexus.md).
 
-> **Chuyển mạch:** Trong **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên**, **Nội địa rộng không đồng nghĩa khả năng định cư cao** tiếp nhận điểm tựa từ **Murray–Darling: một lưu vực nối nông nghiệp, đô thị và hệ sinh thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạng đô thị ven biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Water, climate, soil, distance và infrastructure làm **Nội địa rộng không đồng nghĩa khả năng định cư cao** dù mining/pastoralism vẫn quan trọng. **Mạng đô thị ven biển** tiếp theo cho thấy population tập trung vào những dải nào.
 
 ## Nội địa rộng không đồng nghĩa khả năng định cư cao
 
@@ -50,7 +50,7 @@ Do đó population tập trung mạnh ở coastal metropolitan regions. Đây l�
 
 Nội địa có thể rất quan trọng về mining hoặc pastoralism dù population density thấp. Economic significance và population density không nhất thiết đi cùng nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên**, **Mạng đô thị ven biển** tiếp nhận điểm tựa từ **Nội địa rộng không đồng nghĩa khả năng định cư cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mining geography: mỏ xa, cảng chuyên dụng và city điều phối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sydney, Melbourne, Brisbane, Perth và các đô thị ven biển gom labour, services và ports; **Mạng đô thị ven biển** điều phối hinterland xa. **Mining geography: mỏ xa, cảng chuyên dụng và city điều phối** tiếp theo nối đô thị với resource frontiers.
 
 ## Mạng đô thị ven biển
 
@@ -60,7 +60,7 @@ Các city này nằm gần coast nhưng không chỉ vì cổng (port / 포트) 
 
 Vì vậy vật lý (physical / 물리적) coast tạo opportunity ban đầu; urban mạng (network / 네트워크) và institution duy trì lợi thế lâu dài.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên**, **Mining geography: mỏ xa, cảng chuyên dụng và city điều phối** tiếp nhận điểm tựa từ **Mạng đô thị ven biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài nguyên không tự động tạo cục bộ (local / 로컬) development** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Iron ore, coal và gas nằm xa metro, nên **Mining geography: mỏ xa, cảng chuyên dụng và city điều phối** phụ thuộc rail, port, finance và command functions. **Tài nguyên không tự động tạo cục bộ (local / 로컬) development** tiếp theo kiểm tra phần giá trị ở lại.
 
 ## Mining geography: mỏ xa, cảng chuyên dụng và city điều phối
 
@@ -72,7 +72,7 @@ Một region khai thác có thể tạo export giá trị (value / 값) rất l�
 
 Đây là khác biệt giữa **material geography** và **command/dịch vụ (service / 서비스) geography**.
 
-> **Chuyển mạch:** Trong **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên**, **Tài nguyên không tự động tạo cục bộ (local / 로컬) development** tiếp nhận điểm tựa từ **Mining geography: mỏ xa, cảng chuyên dụng và city điều phối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Agriculture: đất rộng nhưng môi trường vận hành (production / 운영 환경) phụ thuộc water và logistics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Resource revenue có thể tập trung ở owner, port hoặc metro thay vì cộng đồng mỏ; **Tài nguyên không tự động tạo cục bộ (local / 로컬) development** vì thế cần đọc cùng capability và hạ tầng. **Agriculture: đất rộng nhưng môi trường vận hành (production / 운영 환경) phụ thuộc water và logistics** tiếp theo chuyển sang nền sản xuất khác.
 
 ## Tài nguyên không tự động tạo cục bộ (local / 로컬) development
 
@@ -82,7 +82,7 @@ Vì vậy cần hỏi bao nhiêu giá trị (value / 값) được giữ lại q
 
 Australia là trường hợp (case / 사례) hữu ích để nối [Industry, Energy & Resources](../../../02_human_geography/07_industry_energy_resources.md) với [Development & Inequality](../../../02_human_geography/09_development_inequality.md).
 
-> **Chuyển mạch:** Ở chặng này của **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên**, **Agriculture: đất rộng nhưng môi trường vận hành (production / 운영 환경) phụ thuộc water và logistics** tiếp nhận điểm tựa từ **Tài nguyên không tự động tạo cục bộ (local / 로컬) development** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Indigenous geography và lớp lịch sử không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Agriculture có đất nhưng phụ thuộc water allocation, timing mưa và logistics; **Agriculture: đất rộng nhưng môi trường vận hành (production / 운영 환경) phụ thuộc water và logistics** đặt production trong ràng buộc khô hạn. **Indigenous geography và lớp lịch sử không gian** tiếp theo bổ sung lớp quyền, sử dụng đất và lịch sử.
 
 ## Agriculture: đất rộng nhưng môi trường vận hành (production / 운영 환경) phụ thuộc water và logistics
 
@@ -92,7 +92,7 @@ Agricultural export còn phụ thuộc lưu trữ (storage / 저장소), rail/tr
 
 Do đó agriculture phải được đọc như **farm + water + năng lượng (energy / 에너지) + logistics + cổng (port / 포트)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên**, **Indigenous geography và lớp lịch sử không gian** tiếp nhận điểm tựa từ **Agriculture: đất rộng nhưng môi trường vận hành (production / 운영 환경) phụ thuộc water và logistics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bushfire: hazard gặp settlement mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Indigenous geography và lớp lịch sử không gian** nhắc rằng land không chỉ là resource surface mà còn là Country, quyền và memory. **Bushfire: hazard gặp settlement mẫu (pattern / 패턴)** tiếp theo cho thấy risk hình thành khi settlement chồng lên ecology và lịch sử đó.
 
 ## Indigenous geography và lớp lịch sử không gian
 
@@ -100,7 +100,7 @@ Australia có các hệ tri thức, land quan hệ (relation / 관계) và mobil
 
 Fire management, seasonal kiến thức (knowledge / 지식) và cultural liên kết (connection / 연결) to Country cho thấy geography có cả lớp sinh thái, lịch sử và xã hội. Phân tích tốt không biến Indigenous geography thành footnote văn hóa, cũng không giả định mọi community có một mẫu (pattern / 패턴) giống nhau.
 
-> **Chuyển mạch:** Trong **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên**, **Bushfire: hazard gặp settlement mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **Indigenous geography và lớp lịch sử không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Flood và cyclone: nước vẫn là hazard ở lục địa khô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khí hậu khô, vegetation fuel và đô thị ven rừng làm **Bushfire: hazard gặp settlement mẫu (pattern / 패턴)** thành hazard gắn với land-use; Indigenous fire knowledge cũng là một phần bối cảnh. **Flood và cyclone: nước vẫn là hazard ở lục địa khô** tiếp theo mở rộng risk ngoài lửa.
 
 ## Bushfire: hazard gặp settlement mẫu (pattern / 패턴)
 
@@ -110,7 +110,7 @@ Khi housing tiến sâu vào bushland, exposure tăng ngay cả nếu hazard reg
 
 Rủi ro (risk / 위험) phân tích (analysis / 분석) phải tách **hazard trend** khỏi **exposure trend**, đúng khung phần mềm (framework / 프레임워크) của [Natural Hazards & Risk](../../../01_physical_geography/07_natural_hazards_risk.md).
 
-> **Chuyển mạch:** Ở chặng này của **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên**, **Flood và cyclone: nước vẫn là hazard ở lục địa khô** tiếp nhận điểm tựa từ **Bushfire: hazard gặp settlement mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng và mismatch giữa tài nguyên (resource / 자원) với demand** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Lục địa khô vẫn có flood, cyclone và coastal surge; **Flood và cyclone: nước vẫn là hazard ở lục địa khô** nhắc rằng average aridity không loại bỏ extreme water. **Năng lượng và mismatch giữa tài nguyên (resource / 자원) với demand** tiếp theo chuyển sang hạ tầng quy mô lớn.
 
 ## Flood và cyclone: nước vẫn là hazard ở lục địa khô
 
@@ -120,7 +120,7 @@ Phía bắc và northeast chịu tropical cyclone rủi ro (risk / 위험) cao h
 
 Đây là ví dụ vì sao national climate label không đủ để mô tả hazard mosaic.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên**, **Flood và cyclone: nước vẫn là hazard ở lục địa khô** nêu điều cần giải thích; **Năng lượng và mismatch giữa tài nguyên (resource / 자원) với demand** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Cảng và vai trò của bờ biển trong economy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mỏ và basin năng lượng ở xa demand ven biển tạo **Năng lượng và mismatch giữa tài nguyên (resource / 자원) với demand**; transmission, export và reliability nối hai phía. **Cảng và vai trò của bờ biển trong economy** tiếp theo cho thấy bờ biển là hạ tầng chứ không chỉ là biên.
 
 ## Năng lượng và mismatch giữa tài nguyên (resource / 자원) với demand
 
@@ -130,7 +130,7 @@ Australia có renewable potential lớn ở nhiều vùng, nhưng demand tập t
 
 Năng lượng (energy / 에너지) chuyển tiếp (transition / 전이) vì thế là bài toán geography của grid, land, mineral supply, industrial skill và old năng lượng (energy / 에너지) region, không chỉ thay generator technology.
 
-> **Chuyển mạch:** Trong **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên**, **Năng lượng và mismatch giữa tài nguyên (resource / 자원) với demand** nêu điều cần giải thích; **Cảng và vai trò của bờ biển trong economy** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Australia–East Asia: complementary geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ports gom resource hinterland, shipping và coastal cities; **Cảng và vai trò của bờ biển trong economy** biến khoảng cách nội địa thành trade gateway. **Australia–East Asia: complementary geography** tiếp theo đặt gateway ấy vào mạng châu Á.
 
 ## Cảng và vai trò của bờ biển trong economy
 
@@ -140,7 +140,7 @@ Cổng (port / 포트) không phải điểm (point / 지점) độc lập. Mỗ
 
 Nếu inland corridor bị gián đoạn, natural harbor tốt vẫn không đủ duy trì luồng (flow / 흐름).
 
-> **Chuyển mạch:** Ở chặng này của **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên**, **Australia–East Asia: complementary geography** tiếp nhận điểm tựa từ **Cảng và vai trò của bờ biển trong economy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khoảng cách tới thế giới không chỉ là kilomet** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khoáng sản, energy, food và shipping bổ sung cho manufacturing demand của East Asia; **Australia–East Asia: complementary geography** cho thấy xa về kilomet vẫn gần về network. **Khoảng cách tới thế giới không chỉ là kilomet** tiếp theo phân biệt distance vật lý với effective access.
 
 ## Australia–East Asia: complementary geography
 
@@ -152,7 +152,7 @@ Australia có tài nguyên (resource / 자원) hinterland rộng và export corr
 
 Không cần ghi nhớ một trade share theo năm để hiểu cấu trúc này. Điều quan trọng là phụ thuộc (dependency / 의존성), substitute tuyến (route / 경로), processing location và inventory.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên**, **Khoảng cách tới thế giới không chỉ là kilomet** tiếp nhận điểm tựa từ **Australia–East Asia: complementary geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vai trò khu vực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Shipping frequency, port efficiency, cable/air links và demand làm **Khoảng cách tới thế giới không chỉ là kilomet**; effective distance thay đổi theo hạ tầng và network. **Vai trò khu vực** tiếp theo tổng hợp vị trí Australia trong Indo-Pacific.
 
 ## Khoảng cách tới thế giới không chỉ là kilomet
 
@@ -160,7 +160,7 @@ Australia thường được mô tả là xa nhiều thị trường (market / �
 
 Đồng thời remoteness vẫn quan trọng với spare part, medical supply hoặc time-sensitive goods. Geography không “biến mất”; technology làm ma sát của từng loại luồng (flow / 흐름) thay đổi khác nhau.
 
-> **Chuyển mạch:** Trong **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên**, **Vai trò khu vực** tiếp nhận điểm tựa từ **Khoảng cách tới thế giới không chỉ là kilomet** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Vai trò khu vực** của Australia đến từ ports, resources, cities và links với East Asia, không chỉ từ diện tích; thế mạnh vẫn đi cùng climate và distance constraints. **Những hiểu lầm phổ biến** tiếp theo loại bỏ các cách đọc giản lược.
 
 ## Vai trò khu vực
 
@@ -168,13 +168,13 @@ Australia vừa là phần của Oceania vừa kết nối sâu với East/South
 
 Không nên đọc role này như kết quả của “vị trí chiến lược” trừu tượng. Nó được tạo bởi **tài nguyên (resource / 자원) + cổng (port / 포트) + city + institution + mạng (network / 네트워크)**.
 
-> **Chuyển mạch:** Ở chặng này của **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Vai trò khu vực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Những hiểu lầm phổ biến** nhắc rằng Australia không chỉ là sa mạc, đất rộng không đồng nghĩa dễ định cư, resource không tự tạo local development và bờ biển không xóa distance nội địa. **Mô hình tư duy** sẽ khép profile theo chuỗi địa lý–hạ tầng–mạng.
 
 ## Những hiểu lầm phổ biến
 
 “Australia có diện tích lớn nên dư không gian định cư” bỏ qua water/climate/khả năng tiếp cận (accessibility / 접근성). “Mining export cao nghĩa mining region đông dân và giàu rộng khắp” bỏ capital intensity và giá trị (value / 값) capture. “Có nhiều renewable tài nguyên (resource / 자원) nghĩa chuyển tiếp (transition / 전이) dễ” bỏ grid và spatial mismatch. “Khô hạn nghĩa flood không quan trọng” bỏ extreme rainfall và river/urban exposure.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Australia — lục địa khô, đô thị ven biển và hành lang tài nguyên**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi ancient continent → dry climate/water → coastal cities → resource/agriculture corridors → Indigenous geography, hazards, ports và East Asia links, rồi bàn giao cho owner **Australia and New Zealand** trong [README](./README.md).
 
 ## Mô hình tư duy
 

@@ -115,4 +115,6 @@ Một chuỗi xử lý (pipeline / 파이프라인) tốt không được địn
 
 Vì vậy thư viện (library / 라이브러리) này ưu tiên lập luận (reasoning / 추론) về tính đúng đắn (correctness / 정확성), replayability, khả năng quan sát (observability / 관측 가능성) và quyền sở hữu (ownership / 소유권) trước cú pháp (syntax / 문법) của công cụ. Khi hiểu các bất biến (invariant / 불변식) đó, việc học Spark, Kafka, Airflow, dbt hoặc một cloud dữ liệu (data / 데이터) nền tảng (platform / 플랫폼) trở thành việc ánh xạ một công cụ vào mô hình tư duy (mental model / 사고 모델) đã có thay vì ghi nhớ hàng loạt API.
 
+[Thinking Toolkit](../thinking/README.md) bổ sung workflow framing, evidence mapping và model selection khi pipeline có nhiều giả thuyết; data engineering vẫn là owner của data contracts, correctness và runtime lineage.
+
 > **Bàn giao:** Sau **Mô hình tư duy (mental model / 사고 모델) xuyên suốt**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.

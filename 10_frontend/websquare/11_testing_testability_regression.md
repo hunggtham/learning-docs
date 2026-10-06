@@ -24,7 +24,7 @@ Khi user sửa NAME của row có USER_ID=U100
 
 Kiểm thử (test / 테스트) không nên chỉ phát biểu “click Save rồi thấy popup thành công”. UI message là một observation, không phải toàn bộ tính đúng đắn (correctness / 정확성).
 
-> **Chuyển mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **1. kiểm thử (test / 테스트) không phải là “click được”** đã nêu tiêu chí phân biệt, còn **2. Testing portfolio theo ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **3. Testability bắt đầu từ kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **1. kiểm thử (test / 테스트) không phải là “click được”** đặt tiêu chí; **2. Testing portfolio theo ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **3. Testability bắt đầu từ kiến trúc (architecture / 아키텍처)** mở rộng hệ quả.
 
 ## 2. Testing portfolio theo ranh giới (boundary / 경계)
 
@@ -51,7 +51,7 @@ pure logic
 
 Càng xuống dưới càng gần môi trường vận hành (production / 운영 환경) nhưng chi phí setup, thời gian chạy (runtime / 런타임) và diagnosis càng lớn.
 
-> **Chuyển mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **2. Testing portfolio theo ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **3. Testability bắt đầu từ kiến trúc (architecture / 아키텍처)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4. Không mock WebSquare ở mọi nơi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **2. Testing portfolio theo ranh giới (boundary / 경계)** đặt tiêu chí; **3. Testability bắt đầu từ kiến trúc (architecture / 아키텍처)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **4. Không mock WebSquare ở mọi nơi** mở rộng hệ quả.
 
 ## 3. Testability bắt đầu từ kiến trúc (architecture / 아키텍처)
 
@@ -92,7 +92,7 @@ scwin.search = function () {
 
 `normalizeSearchCondition()` và `validateSearchCondition()` có thể được kiểm tra mà không cần Grid hay mạng (network / 네트워크). `search()` giữ vai trò orchestration. Đây không phải “viết mã (code / 코드) để kiểm thử (test / 테스트)”; đây là tách responsibility để lập luận (reasoning / 추론) tốt hơn, và testability là hệ quả.
 
-> **Chuyển mạch:** Testability bắt đầu từ boundary kiến trúc; chỉ mock integration boundary cần thiết, rồi dùng fixture DataMap/DataList để kiểm tra state transition thực.
+> **Nối mạch:** Testability bắt đầu từ boundary kiến trúc; chỉ mock integration boundary cần thiết, rồi dùng fixture DataMap/DataList để kiểm tra state transition thực.
 
 ## 4. Không mock WebSquare ở mọi nơi
 
@@ -110,7 +110,7 @@ Nếu đang kiểm thử (test / 테스트) nghiệp vụ (business / 비즈니�
 
 Cấp cao (senior / 시니어) ghi chú (note / 노트): mock phải bảo toàn ngữ nghĩa (semantics / 의미론) quan trọng của ranh giới (boundary / 경계). Một fake Submission gọi callback synchronously có thể làm kiểm thử (test / 테스트) xanh trong khi môi trường vận hành (production / 운영 환경) callback asynchronous và có race điều kiện (condition / 조건).
 
-> **Chuyển mạch:** Sau khi giới hạn mock ở integration boundary, fixture DataMap/DataList cung cấp state thật để kiểm thử row-status transition có thể lặp lại.
+> **Nối mạch:** Sau khi giới hạn mock ở integration boundary, fixture DataMap/DataList cung cấp state thật để kiểm thử row-status transition có thể lặp lại.
 
 ## 5. Fixture cho DataMap và DataList
 
@@ -129,7 +129,7 @@ Sau thao tác (operation / 연산), assert theo **nghiệp vụ (business / 비�
 
 Nếu kiểm thử (test / 테스트) CRUD, cần quan sát cả giá trị (value / 값) lẫn row status. Chỉ assert `NAME === "Kim"` có thể bỏ sót việc row vẫn ở status không phù hợp để Save serialize.
 
-> **Chuyển mạch:** Fixture làm rõ trạng thái đầu vào; row status tiếp theo được kiểm thử như state machine, rồi submission test bao phủ UI, mapping, transport và server outcome.
+> **Nối mạch:** Fixture làm rõ trạng thái đầu vào; row status tiếp theo được kiểm thử như state machine, rồi submission test bao phủ UI, mapping, transport và server outcome.
 
 ## 6. Row status là một máy trạng thái (state machine / 상태 머신) cần kiểm thử (test / 테스트) chuyển tiếp (transition / 전이)
 
@@ -156,7 +156,7 @@ save success
 
 Không hard-code giả định (assumption / 가정) về ký tự status nếu dự án (project / 프로젝트) wrapper đã abstract nó. kiểm thử (test / 테스트) nghiệp vụ (business / 비즈니스) chuyển tiếp (transition / 전이) mà ứng dụng (application / 애플리케이션) dựa vào, rồi kiểm tra chính xác (exact / 정확한) API/status theo engine bản dựng (build / 빌드).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **7. Submission kiểm thử (test / 테스트) phải kiểm tra bốn lớp** tiếp nhận điểm tựa từ **6. Row status là một máy trạng thái (state machine / 상태 머신) cần kiểm thử (test / 테스트) chuyển tiếp (transition / 전이)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Async kiểm thử (test / 테스트) không dùng sleep làm synchronization chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **7. Submission kiểm thử (test / 테스트) phải kiểm tra bốn lớp** nối từ **6. Row status là một máy trạng thái (state machine / 상태 머신) cần kiểm thử (test / 테스트) chuyển tiếp (transition / 전이)** sang **8. Async kiểm thử (test / 테스트) không dùng sleep làm synchronization chính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Submission kiểm thử (test / 테스트) phải kiểm tra bốn lớp
 
@@ -173,7 +173,7 @@ Kiểm thử (test / 테스트) chỉ thấy HTTP 200 mới chứng minh vận c
 
 Nếu save mutation có duplicate protection, kiểm thử (test / 테스트) double-click hoặc repeated trigger phải chứng minh chỉ một logical thao tác (operation / 연산) được lần ghi nhận (commit / 커밋) hoặc máy chủ (server / 서버) idempotency xử lý đúng.
 
-> **Chuyển mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **8. Async kiểm thử (test / 테스트) không dùng sleep làm synchronization chính** tiếp nhận điểm tựa từ **7. Submission kiểm thử (test / 테스트) phải kiểm tra bốn lớp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. kiểm thử (test / 테스트) latest-intent và race điều kiện (condition / 조건)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **8. Async kiểm thử (test / 테스트) không dùng sleep làm synchronization chính** nối từ **7. Submission kiểm thử (test / 테스트) phải kiểm tra bốn lớp** sang **9. kiểm thử (test / 테스트) latest-intent và race điều kiện (condition / 조건)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Async kiểm thử (test / 테스트) không dùng sleep làm synchronization chính
 
@@ -199,7 +199,7 @@ business result xuất hiện
 
 `waitForTimeout` chỉ nên dùng khi chính timing là thứ đang kiểm thử (test / 테스트), không phải cách che thiếu vòng đời (lifecycle / 생명주기) đặc tả hợp đồng (contract / 계약).
 
-> **Chuyển mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **9. kiểm thử (test / 테스트) latest-intent và race điều kiện (condition / 조건)** tiếp nhận điểm tựa từ **8. Async kiểm thử (test / 테스트) không dùng sleep làm synchronization chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. WFrame và phạm vi (scope / 범위) kiểm thử (test / 테스트) cần kiểm tra topology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **9. kiểm thử (test / 테스트) latest-intent và race điều kiện (condition / 조건)** nối từ **8. Async kiểm thử (test / 테스트) không dùng sleep làm synchronization chính** sang **10. WFrame và phạm vi (scope / 범위) kiểm thử (test / 테스트) cần kiểm tra topology**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. kiểm thử (test / 테스트) latest-intent và race điều kiện (condition / 조건)
 
@@ -225,7 +225,7 @@ response A về
 
 Phản hồi (response / 응답) cũ không được mutate trạng thái (state / 상태) của page đã disposed hoặc page mới không liên quan.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **10. WFrame và phạm vi (scope / 범위) kiểm thử (test / 테스트) cần kiểm tra topology** tiếp nhận điểm tựa từ **9. kiểm thử (test / 테스트) latest-intent và race điều kiện (condition / 조건)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. UDC kiểm thử (test / 테스트) theo công khai (public / 공개) đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **10. WFrame và phạm vi (scope / 범위) kiểm thử (test / 테스트) cần kiểm tra topology** nối từ **9. kiểm thử (test / 테스트) latest-intent và race điều kiện (condition / 조건)** sang **11. UDC kiểm thử (test / 테스트) theo công khai (public / 공개) đặc tả hợp đồng (contract / 계약)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. WFrame và phạm vi (scope / 범위) kiểm thử (test / 테스트) cần kiểm tra topology
 
@@ -244,7 +244,7 @@ setSrc/navigation không gọi child trước readiness phù hợp
 
 Nếu mã (code / 코드) chỉ pass khi page là direct child của main frame, kiểm thử (test / 테스트) nested topology sẽ lộ hidden phụ thuộc (dependency / 의존성) vào `parent().parent()`.
 
-> **Chuyển mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **11. UDC kiểm thử (test / 테스트) theo công khai (public / 공개) đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **10. WFrame và phạm vi (scope / 범위) kiểm thử (test / 테스트) cần kiểm tra topology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. End-to-end selector phải bền với rendering internals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **11. UDC kiểm thử (test / 테스트) theo công khai (public / 공개) đặc tả hợp đồng (contract / 계약)** nối từ **10. WFrame và phạm vi (scope / 범위) kiểm thử (test / 테스트) cần kiểm tra topology** sang **12. End-to-end selector phải bền với rendering internals**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. UDC kiểm thử (test / 테스트) theo công khai (public / 공개) đặc tả hợp đồng (contract / 계약)
 
@@ -263,7 +263,7 @@ Kiểm thử (test / 테스트) không nên truy vấn (query / 쿼리) nội b�
 
 Khi refactor nội bộ (internal / 내부) bố cục (layout / 레이아웃) từ đầu vào (input / 입력) + Button sang AutoComplete, đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) vẫn giữ nguyên. Đây là lợi ích trực tiếp của lớp trừu tượng (abstraction / 추상화) ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **12. End-to-end selector phải bền với rendering internals** tiếp nhận điểm tựa từ **11. UDC kiểm thử (test / 테스트) theo công khai (public / 공개) đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트) là functional kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **12. End-to-end selector phải bền với rendering internals** nối từ **11. UDC kiểm thử (test / 테스트) theo công khai (public / 공개) đặc tả hợp đồng (contract / 계약)** sang **13. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트) là functional kiểm thử (test / 테스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. End-to-end selector phải bền với rendering internals
 
@@ -279,7 +279,7 @@ sẽ dễ vỡ khi bố cục (layout / 레이아웃) thay đổi dù hành vi (
 
 Nếu cần thêm `data-*` hook cho automation, hook phải ngữ nghĩa (semantic / 의미적) và ổn định, ví dụ `data-testid="employee-search-submit"`, không phải `div-17-child-2`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **13. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트) là functional kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **12. End-to-end selector phải bền với rendering internals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Internationalization kiểm thử (test / 테스트) cần thay đổi dữ liệu, không chỉ locale flag** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **13. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트) là functional kiểm thử (test / 테스트)** nối từ **12. End-to-end selector phải bền với rendering internals** sang **14. Internationalization kiểm thử (test / 테스트) cần thay đổi dữ liệu, không chỉ locale flag**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트) là functional kiểm thử (test / 테스트)
 
@@ -298,7 +298,7 @@ validation error có thể được nhận biết không chỉ bằng màu
 
 Automation có thể hỗ trợ một phần, nhưng keyboard-only exploratory kiểm thử (test / 테스트) và screen-reader xác minh (verification / 확인) vẫn cần cho luồng (flow / 흐름) quan trọng.
 
-> **Chuyển mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **13. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트) là functional kiểm thử (test / 테스트)** nêu điều cần giải thích; **14. Internationalization kiểm thử (test / 테스트) cần thay đổi dữ liệu, không chỉ locale flag** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. kiểm tra hợp lệ (validation / 검증) kiểm thử (test / 테스트) theo ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **13. khả năng tiếp cận (accessibility / 접근성) kiểm thử (test / 테스트) là functional kiểm thử (test / 테스트)** đặt vấn đề; **14. Internationalization kiểm thử (test / 테스트) cần thay đổi dữ liệu, không chỉ locale flag** đối chiếu bằng chứng, rồi **15. kiểm tra hợp lệ (validation / 검증) kiểm thử (test / 테스트) theo ranh giới (boundary / 경계)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. Internationalization kiểm thử (test / 테스트) cần thay đổi dữ liệu, không chỉ locale flag
 
@@ -318,7 +318,7 @@ number/date locale case
 
 Mục tiêu là tìm giả định (assumption / 가정) “văn bản (text / 텍스트) luôn ngắn như Korean hiện tại”.
 
-> **Chuyển mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **14. Internationalization kiểm thử (test / 테스트) cần thay đổi dữ liệu, không chỉ locale flag** đã nêu tiêu chí phân biệt, còn **15. kiểm tra hợp lệ (validation / 검증) kiểm thử (test / 테스트) theo ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **16. bảo mật (security / 보안) negative kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **14. Internationalization kiểm thử (test / 테스트) cần thay đổi dữ liệu, không chỉ locale flag** đặt tiêu chí; **15. kiểm tra hợp lệ (validation / 검증) kiểm thử (test / 테스트) theo ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **16. bảo mật (security / 보안) negative kiểm thử (test / 테스트)** mở rộng hệ quả.
 
 ## 15. kiểm tra hợp lệ (validation / 검증) kiểm thử (test / 테스트) theo ranh giới (boundary / 경계)
 
@@ -332,7 +332,7 @@ Máy chủ (server / 서버) kiểm tra hợp lệ (validation / 검증) kiểm 
 
 Nếu chỉ kiểm thử (test / 테스트) máy khách (client / 클라이언트), bạn chưa kiểm thử (test / 테스트) trust ranh giới (boundary / 경계). Nếu chỉ kiểm thử (test / 테스트) máy chủ (server / 서버), UX regression có thể vẫn xảy ra.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **15. kiểm tra hợp lệ (validation / 검증) kiểm thử (test / 테스트) theo ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **16. bảo mật (security / 보안) negative kiểm thử (test / 테스트)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **17. hiệu năng (performance / 성능) regression kiểm thử (test / 테스트) cần ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **15. kiểm tra hợp lệ (validation / 검증) kiểm thử (test / 테스트) theo ranh giới (boundary / 경계)** đặt tiêu chí; **16. bảo mật (security / 보안) negative kiểm thử (test / 테스트)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **17. hiệu năng (performance / 성능) regression kiểm thử (test / 테스트) cần ngân sách (budget / 예산)** mở rộng hệ quả.
 
 ## 16. bảo mật (security / 보안) negative kiểm thử (test / 테스트)
 
@@ -349,7 +349,7 @@ Excel/CSV cell có formula-like prefix
 
 Kết quả đúng phải đến từ máy chủ (server / 서버) chính sách (policy / 정책) và safe rendering, không từ việc button bị ẩn.
 
-> **Chuyển mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **17. hiệu năng (performance / 성능) regression kiểm thử (test / 테스트) cần ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **16. bảo mật (security / 보안) negative kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. bộ nhớ (memory / 메모리) regression cần repeated vòng đời (lifecycle / 생명주기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **17. hiệu năng (performance / 성능) regression kiểm thử (test / 테스트) cần ngân sách (budget / 예산)** nối từ **16. bảo mật (security / 보안) negative kiểm thử (test / 테스트)** sang **18. bộ nhớ (memory / 메모리) regression cần repeated vòng đời (lifecycle / 생명주기)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. hiệu năng (performance / 성능) regression kiểm thử (test / 테스트) cần ngân sách (budget / 예산)
 
@@ -367,7 +367,7 @@ request count sau N vòng navigation
 
 Regression kiểm thử (test / 테스트) có giá trị khi môi trường (environment / 환경) đủ ổn định và threshold có ý nghĩa. Một threshold 500 ms trên CI noisy có thể tạo false alarm; trend hoặc relative comparison đôi khi phù hợp hơn absolute number.
 
-> **Chuyển mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **17. hiệu năng (performance / 성능) regression kiểm thử (test / 테스트) cần ngân sách (budget / 예산)** xác định đầu vào; **18. bộ nhớ (memory / 메모리) regression cần repeated vòng đời (lifecycle / 생명주기)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **19. kiểm thử (test / 테스트) dữ liệu (data / 데이터) phải có quyền sở hữu (ownership / 소유권)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **17. hiệu năng (performance / 성능) regression kiểm thử (test / 테스트) cần ngân sách (budget / 예산)** đặt đầu vào cho **18. bộ nhớ (memory / 메모리) regression cần repeated vòng đời (lifecycle / 생명주기)**, rồi **19. kiểm thử (test / 테스트) dữ liệu (data / 데이터) phải có quyền sở hữu (ownership / 소유권)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. bộ nhớ (memory / 메모리) regression cần repeated vòng đời (lifecycle / 생명주기)
 
@@ -388,7 +388,7 @@ so heap/listener/request behavior
 
 Không chỉ nhìn vùng nhớ động (heap / 힙) tổng. Tìm retained phạm vi (scope / 범위)/thành phần (component / 컴포넌트)/listener hoặc duplicate mạng (network / 네트워크) tác động (effect / 효과). Chapter [10](10_rendering_lazy_loading_lifetime.md) giải thích thời gian tồn tại (lifetime / 수명) mô hình (model / 모델) phía sau kiểm thử (test / 테스트) này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, cơ chế trong **18. bộ nhớ (memory / 메모리) regression cần repeated vòng đời (lifecycle / 생명주기)** cần được kiểm chứng bằng dấu vết cụ thể; **19. kiểm thử (test / 테스트) dữ liệu (data / 데이터) phải có quyền sở hữu (ownership / 소유권)** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **20. môi trường (environment / 환경) parity và deterministic cấu hình (config / 설정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, cơ chế trong **18. bộ nhớ (memory / 메모리) regression cần repeated vòng đời (lifecycle / 생명주기)** cần được kiểm chứng bằng dấu vết cụ thể; **19. kiểm thử (test / 테스트) dữ liệu (data / 데이터) phải có quyền sở hữu (ownership / 소유권)** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **20. môi trường (environment / 환경) parity và deterministic cấu hình (config / 설정)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. kiểm thử (test / 테스트) dữ liệu (data / 데이터) phải có quyền sở hữu (ownership / 소유권)
 
@@ -406,7 +406,7 @@ Chọn theo backend kiến trúc (architecture / 아키텍처). Điều quan tr�
 
 Đừng để CI phụ thuộc “cơ sở dữ liệu (database / 데이터베이스) UAT hiện đang có USER_ID=TEST01”. Đó không phải fixture; đó là environmental accident.
 
-> **Chuyển mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **19. kiểm thử (test / 테스트) dữ liệu (data / 데이터) phải có quyền sở hữu (ownership / 소유권)** nêu điều cần giải thích; **20. môi trường (environment / 환경) parity và deterministic cấu hình (config / 설정)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **21. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) cho phản hồi (response / 응답) lược đồ (schema / 스키마)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **19. kiểm thử (test / 테스트) dữ liệu (data / 데이터) phải có quyền sở hữu (ownership / 소유권)** đặt vấn đề; **20. môi trường (environment / 환경) parity và deterministic cấu hình (config / 설정)** đối chiếu bằng chứng, rồi **21. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) cho phản hồi (response / 응답) lược đồ (schema / 스키마)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. môi trường (environment / 환경) parity và deterministic cấu hình (config / 설정)
 
@@ -425,7 +425,7 @@ test data version hoặc seed
 
 Đây là provenance của bằng chứng (evidence / 증거). Không có provenance, screenshot “pass” khó tái hiện.
 
-> **Chuyển mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **21. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) cho phản hồi (response / 응답) lược đồ (schema / 스키마)** tiếp nhận điểm tựa từ **20. môi trường (environment / 환경) parity và deterministic cấu hình (config / 설정)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. lỗi (error / 오류) đường dẫn (path / 경로) phải được kiểm thử (test / 테스트) như first-class hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **21. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) cho phản hồi (response / 응답) lược đồ (schema / 스키마)** nối từ **20. môi trường (environment / 환경) parity và deterministic cấu hình (config / 설정)** sang **22. lỗi (error / 오류) đường dẫn (path / 경로) phải được kiểm thử (test / 테스트) như first-class hành vi (behavior / 동작)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) cho phản hồi (response / 응답) lược đồ (schema / 스키마)
 
@@ -445,7 +445,7 @@ thì đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스�
 
 TypeScript có thể giúp mô hình (model / 모델) đặc tả hợp đồng (contract / 계약) nếu dự án (project / 프로젝트) dùng TypeScript, nhưng thời gian chạy (runtime / 런타임) phản hồi (response / 응답) vẫn cần kiểm tra hợp lệ (validation / 검증)/đặc tả hợp đồng (contract / 계약) bằng chứng (evidence / 증거). Với JavaScript WebSquare, lược đồ (schema / 스키마) fixture và kiểm thử tích hợp (integration test / 통합 테스트) càng quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **21. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) cho phản hồi (response / 응답) lược đồ (schema / 스키마)** xác định đầu vào; **22. lỗi (error / 오류) đường dẫn (path / 경로) phải được kiểm thử (test / 테스트) như first-class hành vi (behavior / 동작)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **23. kiểm thử (test / 테스트) gỡ lỗi (debug / 디버그) menu và thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거) trong exploratory testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **21. đặc tả hợp đồng (contract / 계약) kiểm thử (test / 테스트) cho phản hồi (response / 응답) lược đồ (schema / 스키마)** đặt đầu vào cho **22. lỗi (error / 오류) đường dẫn (path / 경로) phải được kiểm thử (test / 테스트) như first-class hành vi (behavior / 동작)**, rồi **23. kiểm thử (test / 테스트) gỡ lỗi (debug / 디버그) menu và thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거) trong exploratory testing** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 22. lỗi (error / 오류) đường dẫn (path / 경로) phải được kiểm thử (test / 테스트) như first-class hành vi (behavior / 동작)
 
@@ -465,7 +465,7 @@ session expiration
 
 Sau mỗi lỗi, assert cả UI trạng thái (state / 상태): loading indicator có tắt không, button có được enable lại không, DataList cũ có bị xóa sai không, người dùng (user / 사용자) có thể thử lại (retry / 재시도) không.
 
-> **Chuyển mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **22. lỗi (error / 오류) đường dẫn (path / 경로) phải được kiểm thử (test / 테스트) như first-class hành vi (behavior / 동작)** nêu điều cần giải thích; **23. kiểm thử (test / 테스트) gỡ lỗi (debug / 디버그) menu và thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거) trong exploratory testing** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **24. CI chuỗi xử lý (pipeline / 파이프라인): thất bại (fail / 실패) càng sớm càng rẻ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **22. lỗi (error / 오류) đường dẫn (path / 경로) phải được kiểm thử (test / 테스트) như first-class hành vi (behavior / 동작)** đặt vấn đề; **23. kiểm thử (test / 테스트) gỡ lỗi (debug / 디버그) menu và thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거) trong exploratory testing** đối chiếu bằng chứng, rồi **24. CI chuỗi xử lý (pipeline / 파이프라인): thất bại (fail / 실패) càng sớm càng rẻ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 23. kiểm thử (test / 테스트) gỡ lỗi (debug / 디버그) menu và thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거) trong exploratory testing
 
@@ -484,7 +484,7 @@ console exception = ...
 
 Như vậy nhà phát triển (developer / 개발자) bắt đầu từ ranh giới (boundary / 경계) đã khoanh vùng thay vì tái hiện mù.
 
-> **Chuyển mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **23. kiểm thử (test / 테스트) gỡ lỗi (debug / 디버그) menu và thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거) trong exploratory testing** nêu điều cần giải thích; **24. CI chuỗi xử lý (pipeline / 파이프라인): thất bại (fail / 실패) càng sớm càng rẻ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **25. Smoke kiểm thử (test / 테스트) sau deploy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **23. kiểm thử (test / 테스트) gỡ lỗi (debug / 디버그) menu và thời gian chạy (runtime / 런타임) bằng chứng (evidence / 증거) trong exploratory testing** đặt vấn đề; **24. CI chuỗi xử lý (pipeline / 파이프라인): thất bại (fail / 실패) càng sớm càng rẻ** đối chiếu bằng chứng, rồi **25. Smoke kiểm thử (test / 테스트) sau deploy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 24. CI chuỗi xử lý (pipeline / 파이프라인): thất bại (fail / 실패) càng sớm càng rẻ
 
@@ -502,7 +502,7 @@ syntax/static checks
 
 W-Pack có stand-alone mô-đun (module / 모듈) phục vụ CI/server-side batch conversion trong SP5, vì vậy hiện vật bản dựng (build artifact / 빌드 산출물) không nhất thiết phụ thuộc thao tác thủ công trong Studio. Chapter [12](12_build_config_deployment.md) đi sâu source-to-artifact chuỗi xử lý (pipeline / 파이프라인).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **24. CI chuỗi xử lý (pipeline / 파이프라인): thất bại (fail / 실패) càng sớm càng rẻ** xác định đầu vào; **25. Smoke kiểm thử (test / 테스트) sau deploy** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **26. Regression suite theo rủi ro (risk / 위험), không theo số màn hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **24. CI chuỗi xử lý (pipeline / 파이프라인): thất bại (fail / 실패) càng sớm càng rẻ** đặt đầu vào cho **25. Smoke kiểm thử (test / 테스트) sau deploy**, rồi **26. Regression suite theo rủi ro (risk / 위험), không theo số màn hình** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 25. Smoke kiểm thử (test / 테스트) sau deploy
 
@@ -520,7 +520,7 @@ một static/common resource từ _wpack_
 
 Nếu bản phát hành (release / 릴리스) có di chuyển (migration / 마이그레이션) lớn, thêm luồng (flow / 흐름) đặc thù như UDC, Excel hoặc multilingual tài nguyên (resource / 자원).
 
-> **Chuyển mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **26. Regression suite theo rủi ro (risk / 위험), không theo số màn hình** tiếp nhận điểm tựa từ **25. Smoke kiểm thử (test / 테스트) sau deploy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Flaky kiểm thử (test / 테스트) là defect của kiểm thử (test / 테스트) hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **26. Regression suite theo rủi ro (risk / 위험), không theo số màn hình** nối từ **25. Smoke kiểm thử (test / 테스트) sau deploy** sang **27. Flaky kiểm thử (test / 테스트) là defect của kiểm thử (test / 테스트) hệ thống (system / 시스템)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Regression suite theo rủi ro (risk / 위험), không theo số màn hình
 
@@ -537,7 +537,7 @@ security/data sensitivity
 
 Một UDC dùng ở 80 screen có thể đáng được kiểm thử (test / 테스트) sâu hơn một page độc lập ít dùng.
 
-> **Chuyển mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **27. Flaky kiểm thử (test / 테스트) là defect của kiểm thử (test / 테스트) hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **26. Regression suite theo rủi ro (risk / 위험), không theo số màn hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Anti-pattern: assert hiện thực (implementation / 구현) detail** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **27. Flaky kiểm thử (test / 테스트) là defect của kiểm thử (test / 테스트) hệ thống (system / 시스템)** nối từ **26. Regression suite theo rủi ro (risk / 위험), không theo số màn hình** sang **28. Anti-pattern: assert hiện thực (implementation / 구현) detail**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Flaky kiểm thử (test / 테스트) là defect của kiểm thử (test / 테스트) hệ thống (system / 시스템)
 
@@ -557,7 +557,7 @@ cleanup thiếu
 
 Thử lại (retry / 재시도) có thể dùng để thu thập bằng chứng (evidence / 증거) tạm thời, nhưng không được biến nondeterminism thành “pass”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **28. Anti-pattern: assert hiện thực (implementation / 구현) detail** tiếp nhận điểm tựa từ **27. Flaky kiểm thử (test / 테스트) là defect của kiểm thử (test / 테스트) hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Anti-pattern: một E2E khổng lồ cho cả ngày làm việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **28. Anti-pattern: assert hiện thực (implementation / 구현) detail** nối từ **27. Flaky kiểm thử (test / 테스트) là defect của kiểm thử (test / 테스트) hệ thống (system / 시스템)** sang **29. Anti-pattern: một E2E khổng lồ cho cả ngày làm việc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Anti-pattern: assert hiện thực (implementation / 구현) detail
 
@@ -565,7 +565,7 @@ Ví dụ kiểm thử (test / 테스트) rằng `scwin.tempFlag === 2` trong khi
 
 Kiểm thử (test / 테스트) nên bám vào công khai (public / 공개) đặc tả hợp đồng (contract / 계약) hoặc bất biến (invariant / 불변식). Implementation-level kiểm thử (test / 테스트) chỉ hợp lý khi hiện thực (implementation / 구현) đó chính là thứ cần bảo vệ, ví dụ row-status chuyển tiếp (transition / 전이) hoặc serialization adapter.
 
-> **Chuyển mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **29. Anti-pattern: một E2E khổng lồ cho cả ngày làm việc** tiếp nhận điểm tựa từ **28. Anti-pattern: assert hiện thực (implementation / 구현) detail** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Practical kiểm thử (test / 테스트) ma trận (matrix / 행렬) cho màn hình CRUD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **29. Anti-pattern: một E2E khổng lồ cho cả ngày làm việc** nối từ **28. Anti-pattern: assert hiện thực (implementation / 구현) detail** sang **30. Practical kiểm thử (test / 테스트) ma trận (matrix / 행렬) cho màn hình CRUD**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Anti-pattern: một E2E khổng lồ cho cả ngày làm việc
 
@@ -573,7 +573,7 @@ Một script login → tìm kiếm (search / 검색) → edit → popup → expo
 
 Tách journey theo bounded năng lực (capability / 역량), nhưng giữ một số end-to-end đường găng (critical path / 임계 경로) ngắn để chứng minh tích hợp (integration / 통합) xuyên hệ thống.
 
-> **Chuyển mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **30. Practical kiểm thử (test / 테스트) ma trận (matrix / 행렬) cho màn hình CRUD** tiếp nhận điểm tựa từ **29. Anti-pattern: một E2E khổng lồ cho cả ngày làm việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. cấp cao (senior / 시니어) ghi chú (note / 노트): testability là chỉ báo coupling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **30. Practical kiểm thử (test / 테스트) ma trận (matrix / 행렬) cho màn hình CRUD** nối từ **29. Anti-pattern: một E2E khổng lồ cho cả ngày làm việc** sang **31. cấp cao (senior / 시니어) ghi chú (note / 노트): testability là chỉ báo coupling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Practical kiểm thử (test / 테스트) ma trận (matrix / 행렬) cho màn hình CRUD
 
@@ -591,7 +591,7 @@ Một màn hình truy vấn (query / 쿼리)/edit/save nên có regression ma tr
 
 Đây là ma trận (matrix / 행렬) theo dạng thất bại (failure mode / 실패 모드), không phải checklist API.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **31. cấp cao (senior / 시니어) ghi chú (note / 노트): testability là chỉ báo coupling** tiếp nhận điểm tựa từ **30. Practical kiểm thử (test / 테스트) ma trận (matrix / 행렬) cho màn hình CRUD** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. mô hình tư duy (mental model / 사고 모델) cuối chapter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **31. cấp cao (senior / 시니어) ghi chú (note / 노트): testability là chỉ báo coupling** nối từ **30. Practical kiểm thử (test / 테스트) ma trận (matrix / 행렬) cho màn hình CRUD** sang **32. mô hình tư duy (mental model / 사고 모델) cuối chapter**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. cấp cao (senior / 시니어) ghi chú (note / 노트): testability là chỉ báo coupling
 
@@ -603,7 +603,7 @@ Nếu muốn kiểm thử (test / 테스트) page B nhưng phải tạo toàn c�
 
 Testing vì vậy không chỉ bắt bug. Nó cho phản hồi (feedback / 피드백) về kiến trúc (architecture / 아키텍처).
 
-> **Chuyển mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **32. mô hình tư duy (mental model / 사고 모델) cuối chapter** gom các mảnh từ **31. cấp cao (senior / 시니어) ghi chú (note / 노트): testability là chỉ báo coupling** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nguồn đối chiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **32. mô hình tư duy (mental model / 사고 모델) cuối chapter** tổng hợp từ **31. cấp cao (senior / 시니어) ghi chú (note / 노트): testability là chỉ báo coupling** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nguồn đối chiếu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 32. mô hình tư duy (mental model / 사고 모델) cuối chapter
 
@@ -621,7 +621,7 @@ business invariant
 
 Khi kiểm thử (test / 테스트) thất bại (fail / 실패), câu hỏi đầu tiên không phải “thử lại (retry / 재시도) có pass không?”. Hãy hỏi đặc tả hợp đồng (contract / 계약) nào vừa bị phá, bằng chứng (evidence / 증거) nằm ở tầng (layer / 계층) nào và kiểm thử (test / 테스트) có đang quan sát đúng nguồn chuẩn (source of truth / 정본) không.
 
-> **Chuyển mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **32. mô hình tư duy (mental model / 사고 모델) cuối chapter** đã nêu tiêu chí phân biệt, còn **Nguồn đối chiếu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **11 — Testing, Testability & Regression kỹ thuật (engineering / 엔지니어링)**, **32. mô hình tư duy (mental model / 사고 모델) cuối chapter** đã nêu tiêu chí phân biệt, còn **Nguồn đối chiếu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn đối chiếu
 

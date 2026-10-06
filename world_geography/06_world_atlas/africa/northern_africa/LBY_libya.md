@@ -8,7 +8,7 @@ Libya có một trong những tương phản dân cư rõ nhất Bắc Phi: ph�
 
 Hai cực đô thị lớn là Tripoli ở phía tây và Benghazi ở phía đông. Giữa chúng là một bờ biển dài nhưng mạng định cư không liên tục như một corridor đô thị dày đặc.
 
-> **Chuyển mạch:** Trong **Libya**, **Địa hình, khí hậu và nước** tiếp nhận điểm tựa từ **Ven biển Địa Trung Hải và nội địa Sahara** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dầu khí và mạng không gian riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Libya là một dải Mediterranean mỏng trước Sahara rộng; **Địa hình, khí hậu và nước** làm dân cư, agriculture và hạ tầng tập trung ven biển, phụ thuộc aquifer và desalination. **Dầu khí và mạng không gian riêng** tiếp theo giải thích cực tài nguyên nằm ở đâu.
 
 ## Địa hình, khí hậu và nước
 
@@ -16,7 +16,7 @@ Ven biển có mùa đông tương đối ẩm hơn, nhưng chỉ cần đi sâu
 
 Đưa nước ngầm từ sa mạc tới vùng đô thị có thể thay đổi geography of supply, nhưng không biến nguồn nước thành vô hạn. Nếu tốc độ khai thác lớn hơn khả năng bổ cập, đó thực chất là sử dụng một stock hữu hạn.
 
-> **Chuyển mạch:** Ở chặng này của **Libya**, **Dầu khí và mạng không gian riêng** tiếp nhận điểm tựa từ **Địa hình, khí hậu và nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tripoli, Benghazi và các cửa ngõ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mỏ dầu, pipeline và terminal tạo **Dầu khí và mạng không gian riêng** tách khỏi nhiều settlement; revenue phụ thuộc các tuyến ven biển và governance. **Tripoli, Benghazi và các cửa ngõ** tiếp theo cho thấy các cực đô thị phân vai.
 
 ## Dầu khí và mạng không gian riêng
 
@@ -24,7 +24,7 @@ Các mỏ dầu khí nằm sâu trong nội địa hoặc offshore, trong khi te
 
 Vì vậy Libya có hai mạng khác nhau: mạng dân cư ven biển và mạng năng lượng nối Sahara với biển. Không nên giả định nơi tạo GDP lớn cũng là nơi tập trung dân số.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Libya**, **Tripoli, Benghazi và các cửa ngõ** tiếp nhận điểm tựa từ **Dầu khí và mạng không gian riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro và môi trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Tripoli và Benghazi là coastal gateways với hinterland và mạng dầu khí khác nhau; **Tripoli, Benghazi và các cửa ngõ** cho thấy urban centrality không đồng nhất. **Rủi ro và môi trường** tiếp theo đặt bờ biển, nước và extraction vào cùng khung.
 
 ## Tripoli, Benghazi và các cửa ngõ
 
@@ -32,13 +32,13 @@ Tripoli hướng mạnh về phía tây Địa Trung Hải và Maghreb, còn Ben
 
 Các cảng và đường ven biển là trọng yếu (critical / 중요) hạ tầng (infrastructure / 인프라) vì nhiều vùng nội địa thiếu mạng thay thế dày đặc.
 
-> **Chuyển mạch:** Trong **Libya**, **Rủi ro và môi trường** tiếp nhận điểm tựa từ **Tripoli, Benghazi và các cửa ngõ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khô hạn, water stress, xói lở bờ biển, ô nhiễm extraction và đứt gãy hạ tầng làm **Rủi ro và môi trường** gắn với cả Sahara lẫn Mediterranean. **Mô hình tư duy** sẽ tổng hợp resource, coast và remoteness.
 
 ## Rủi ro và môi trường
 
 Nắng nóng, hạn, khan hiếm nước, sa mạc hóa cục bộ và rủi ro ven biển đều đáng chú ý. Dust storm cũng có thể ảnh hưởng giao thông và chất lượng không khí trên khoảng cách lớn.
 
-> **Chuyển mạch:** Ở chặng này của **Libya**, **Mô hình tư duy** gom các mảnh từ **Rủi ro và môi trường** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi Mediterranean strip–Sahara → water constraint → oil network → Tripoli/Benghazi gateways → environmental and infrastructure risk, rồi bàn giao cho owner **Northern Africa** trong [README](./README.md).
 
 ## Mô hình tư duy
 

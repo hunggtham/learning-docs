@@ -14,7 +14,7 @@ Nhóm giúp chia sẻ nguồn lực, thông tin và rủi ro. Hợp tác cho ph�
 
 Nhưng nhóm cũng tạo chi phí: phối hợp, xung đột, free-riding, cạnh tranh địa vị và méo thông tin. Một nhóm (team / 팀) tốt không phải nhóm (team / 팀) không có chi phí, mà là nhóm (team / 팀) có cấu trúc làm lợi ích hợp tác lớn hơn chi phí phối hợp.
 
-> **Chuyển mạch:** Trong **Động lực nhóm, hành vi tập thể và hợp tác**, **2. xã hội (social / 사회적) facilitation và yêu cầu nhiệm vụ** tiếp nhận điểm tựa từ **1. Vì sao nhóm tồn tại?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. xã hội (social / 사회적) loafing và visibility của đóng góp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động lực nhóm, hành vi tập thể và hợp tác**, **2. xã hội (social / 사회적) facilitation và yêu cầu nhiệm vụ** nối từ **1. Vì sao nhóm tồn tại?** sang **3. xã hội (social / 사회적) loafing và visibility của đóng góp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. xã hội (social / 사회적) facilitation và yêu cầu nhiệm vụ
 
@@ -22,7 +22,7 @@ Sự hiện diện của người khác có thể làm hiệu suất tăng ở n
 
 Vì vậy open office, pair programming hay trình bày trước nhóm không tự động tốt hoặc xấu; tác động (effect / 효과) phụ thuộc độ khó nhiệm vụ và mức thành thạo.
 
-> **Chuyển mạch:** Ở chặng này của **Động lực nhóm, hành vi tập thể và hợp tác**, **3. xã hội (social / 사회적) loafing và visibility của đóng góp** tiếp nhận điểm tựa từ **2. xã hội (social / 사회적) facilitation và yêu cầu nhiệm vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Coordination mất mát (loss / 손실)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Động lực nhóm, hành vi tập thể và hợp tác**, **3. xã hội (social / 사회적) loafing và visibility của đóng góp** nối từ **2. xã hội (social / 사회적) facilitation và yêu cầu nhiệm vụ** sang **4. Coordination mất mát (loss / 손실)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. xã hội (social / 사회적) loafing và visibility của đóng góp
 
@@ -32,7 +32,7 @@ Cơ chế có thể gồm trách nhiệm bị phân tán, niềm tin rằng ngư
 
 Giải pháp không chỉ là giám sát mạnh hơn. Role clarity, tác vụ (task / 작업) định danh (identity / 식별자), phản hồi (feedback / 피드백) và quy mô nhóm hợp lý cũng quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động lực nhóm, hành vi tập thể và hợp tác**, **4. Coordination mất mát (loss / 손실)** tiếp nhận điểm tựa từ **3. xã hội (social / 사회적) loafing và visibility của đóng góp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Vai trò và chuẩn mực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực nhóm, hành vi tập thể và hợp tác**, **4. Coordination mất mát (loss / 손실)** nối từ **3. xã hội (social / 사회적) loafing và visibility của đóng góp** sang **5. Vai trò và chuẩn mực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Coordination mất mát (loss / 손실)
 
@@ -42,7 +42,7 @@ Nhiều nhà phát triển (developer / 개발자) cùng sửa một mô-đun (m
 
 Điểm này nối trực tiếp với kiến trúc (architecture / 아키텍처) quyền sở hữu (ownership / 소유권), sự cố (incident / 인시던트) phản hồi (response / 응답) và dự án (project / 프로젝트) management.
 
-> **Chuyển mạch:** Trong **Động lực nhóm, hành vi tập thể và hợp tác**, **5. Vai trò và chuẩn mực** tiếp nhận điểm tựa từ **4. Coordination mất mát (loss / 손실)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Status và thông tin (information / 정보) pooling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động lực nhóm, hành vi tập thể và hợp tác**, **5. Vai trò và chuẩn mực** nối từ **4. Coordination mất mát (loss / 손실)** sang **6. Status và thông tin (information / 정보) pooling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Vai trò và chuẩn mực
 
@@ -50,7 +50,7 @@ Nhiều nhà phát triển (developer / 개발자) cùng sửa một mô-đun (m
 
 **Chuẩn mực (norm)** thường được học từ hành vi được thưởng/phạt hơn là từ chính sách (policy / 정책). Nếu công ty nói “chất lượng (quality / 품질) first” nhưng chỉ thưởng tốc độ giao hàng, chuẩn mực thực sẽ nghiêng về speed.
 
-> **Chuyển mạch:** Ở chặng này của **Động lực nhóm, hành vi tập thể và hợp tác**, **6. Status và thông tin (information / 정보) pooling** tiếp nhận điểm tựa từ **5. Vai trò và chuẩn mực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Groupthink nên được hiểu như mẫu (pattern / 패턴), không phải nhãn ma thuật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Động lực nhóm, hành vi tập thể và hợp tác**, **6. Status và thông tin (information / 정보) pooling** nối từ **5. Vai trò và chuẩn mực** sang **7. Groupthink nên được hiểu như mẫu (pattern / 패턴), không phải nhãn ma thuật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Status và thông tin (information / 정보) pooling
 
@@ -62,7 +62,7 @@ Nhóm chỉ có lợi từ đa dạng thông tin nếu unique thông tin (inform
 
 Xem [[15_power_status_hierarchy_and_inequality]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động lực nhóm, hành vi tập thể và hợp tác**, **7. Groupthink nên được hiểu như mẫu (pattern / 패턴), không phải nhãn ma thuật** tiếp nhận điểm tựa từ **6. Status và thông tin (information / 정보) pooling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Group polarization và môi trường số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực nhóm, hành vi tập thể và hợp tác**, **7. Groupthink nên được hiểu như mẫu (pattern / 패턴), không phải nhãn ma thuật** nối từ **6. Status và thông tin (information / 정보) pooling** sang **8. Group polarization và môi trường số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Groupthink nên được hiểu như mẫu (pattern / 패턴), không phải nhãn ma thuật
 
@@ -72,7 +72,7 @@ Các guardrail hữu ích gồm pre-mortem, independent rà soát (review / 검�
 
 > **Giới hạn:** không nên nhìn một quyết định sai rồi retroactively gắn nhãn groupthink mà không kiểm tra tiến trình (process / 프로세스) thực tế.
 
-> **Chuyển mạch:** Trong **Động lực nhóm, hành vi tập thể và hợp tác**, **8. Group polarization và môi trường số** tiếp nhận điểm tựa từ **7. Groupthink nên được hiểu như mẫu (pattern / 패턴), không phải nhãn ma thuật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Deindividuation và accountability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động lực nhóm, hành vi tập thể và hợp tác**, **8. Group polarization và môi trường số** nối từ **7. Groupthink nên được hiểu như mẫu (pattern / 패턴), không phải nhãn ma thuật** sang **9. Deindividuation và accountability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Group polarization và môi trường số
 
@@ -82,7 +82,7 @@ Thuật toán mạng xã hội có thể làm một số tiến trình (process 
 
 Xem [[../06_applied/05_digital_psychology_social_media_and_online_behavior]].
 
-> **Chuyển mạch:** Ở chặng này của **Động lực nhóm, hành vi tập thể và hợp tác**, **9. Deindividuation và accountability** tiếp nhận điểm tựa từ **8. Group polarization và môi trường số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. thông tin (information / 정보) cascade** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Động lực nhóm, hành vi tập thể và hợp tác**, **9. Deindividuation và accountability** nối từ **8. Group polarization và môi trường số** sang **10. thông tin (information / 정보) cascade**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Deindividuation và accountability
 
@@ -90,7 +90,7 @@ Trong crowd hoặc môi trường ẩn danh, self-awareness và accountability c
 
 Anonymous community có thể toxic nếu aggression được reward, nhưng cũng có thể hỗ trợ disclosure an toàn nếu norm prosocial.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động lực nhóm, hành vi tập thể và hợp tác**, **10. thông tin (information / 정보) cascade** tiếp nhận điểm tựa từ **9. Deindividuation và accountability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Cooperation dilemma** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực nhóm, hành vi tập thể và hợp tác**, **10. thông tin (information / 정보) cascade** nối từ **9. Deindividuation và accountability** sang **11. Cooperation dilemma**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. thông tin (information / 정보) cascade
 
@@ -105,7 +105,7 @@ quan sát người khác
 
 Một cascade có thể đúng hoặc sai. Khi bằng chứng (evidence / 증거) gốc yếu nhưng visibility cao, sai lệch có thể khuếch đại.
 
-> **Chuyển mạch:** Trong **Động lực nhóm, hành vi tập thể và hợp tác**, **11. Cooperation dilemma** tiếp nhận điểm tựa từ **10. thông tin (information / 정보) cascade** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Trust phải được hiệu chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động lực nhóm, hành vi tập thể và hợp tác**, **11. Cooperation dilemma** nối từ **10. thông tin (information / 정보) cascade** sang **12. Trust phải được hiệu chỉnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Cooperation dilemma
 
@@ -113,7 +113,7 @@ Hợp tác thường có tension giữa lợi ích cá nhân ngắn hạn và l�
 
 Hợp tác bền vững thường cần repeated tương tác (interaction / 상호작용), reputation, monitoring, sanction công bằng và dùng chung (shared / 공유) định danh (identity / 식별자).
 
-> **Chuyển mạch:** Ở chặng này của **Động lực nhóm, hành vi tập thể và hợp tác**, **12. Trust phải được hiệu chỉnh** tiếp nhận điểm tựa từ **11. Cooperation dilemma** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Psychological an toàn (safety / 안전) và accountability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Động lực nhóm, hành vi tập thể và hợp tác**, **12. Trust phải được hiệu chỉnh** nối từ **11. Cooperation dilemma** sang **13. Psychological an toàn (safety / 안전) và accountability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Trust phải được hiệu chỉnh
 
@@ -121,7 +121,7 @@ Trust giảm giao dịch (transaction / 트랜잭션) chi phí (cost / 비용). 
 
 Nhưng blind trust tạo vulnerability. nhóm (team / 팀) lành mạnh cần **niềm tin được hiệu chỉnh (calibrated trust)**: autonomy tăng khi bằng chứng (evidence / 증거) về độ tin cậy tăng, còn rà soát (review / 검토) mạnh hơn khi bất định (uncertainty / 불확실성) hoặc rủi ro (risk / 위험) cao.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động lực nhóm, hành vi tập thể và hợp tác**, **13. Psychological an toàn (safety / 안전) và accountability** tiếp nhận điểm tựa từ **12. Trust phải được hiệu chỉnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. tác vụ (task / 작업), tiến trình (process / 프로세스) và relationship xung đột (conflict / 충돌)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực nhóm, hành vi tập thể và hợp tác**, **13. Psychological an toàn (safety / 안전) và accountability** nối từ **12. Trust phải được hiệu chỉnh** sang **14. tác vụ (task / 작업), tiến trình (process / 프로세스) và relationship xung đột (conflict / 충돌)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Psychological an toàn (safety / 안전) và accountability
 
@@ -131,7 +131,7 @@ An toàn (safety / 안전) không phải comfort và không loại bỏ accounta
 
 Xem [[../06_applied/16_psychological_safety_team_learning_and_speaking_up]].
 
-> **Chuyển mạch:** Trong **Động lực nhóm, hành vi tập thể và hợp tác**, **13. Psychological an toàn (safety / 안전) và accountability** xác định đầu vào; **14. tác vụ (task / 작업), tiến trình (process / 프로세스) và relationship xung đột (conflict / 충돌)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **15. Minority influence và dissent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động lực nhóm, hành vi tập thể và hợp tác**, **13. Psychological an toàn (safety / 안전) và accountability** đặt đầu vào cho **14. tác vụ (task / 작업), tiến trình (process / 프로세스) và relationship xung đột (conflict / 충돌)**, rồi **15. Minority influence và dissent** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. tác vụ (task / 작업), tiến trình (process / 프로세스) và relationship xung đột (conflict / 충돌)
 
@@ -145,7 +145,7 @@ Tác vụ (task / 작업) disagreement có thể hữu ích nếu không trượ
 
 Xem [[../06_applied/03_interpersonal_communication_and_conflict]].
 
-> **Chuyển mạch:** Ở chặng này của **Động lực nhóm, hành vi tập thể và hợp tác**, **14. tác vụ (task / 작업), tiến trình (process / 프로세스) và relationship xung đột (conflict / 충돌)** xác định đầu vào; **15. Minority influence và dissent** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. Leadership tạo norm qua attention và reward** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Động lực nhóm, hành vi tập thể và hợp tác**, **14. tác vụ (task / 작업), tiến trình (process / 프로세스) và relationship xung đột (conflict / 충돌)** đặt đầu vào cho **15. Minority influence và dissent**, rồi **16. Leadership tạo norm qua attention và reward** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. Minority influence và dissent
 
@@ -153,7 +153,7 @@ Majority influence mạnh, nhưng minority nhất quán có thể buộc nhóm k
 
 Một nhóm (team / 팀) không có disagreement chưa chắc đồng thuận thật; có thể chỉ thiếu psychological an toàn (safety / 안전).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động lực nhóm, hành vi tập thể và hợp tác**, **16. Leadership tạo norm qua attention và reward** tiếp nhận điểm tựa từ **15. Minority influence và dissent** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델) và transactive bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực nhóm, hành vi tập thể và hợp tác**, **16. Leadership tạo norm qua attention và reward** nối từ **15. Minority influence và dissent** sang **17. dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델) và transactive bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Leadership tạo norm qua attention và reward
 
@@ -163,7 +163,7 @@ Hành vi (behavior / 동작) của leader thường là tín hiệu mạnh hơn 
 
 Xem [[../06_applied/00_work_organization_and_leadership]].
 
-> **Chuyển mạch:** Trong **Động lực nhóm, hành vi tập thể và hợp tác**, **17. dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델) và transactive bộ nhớ (memory / 메모리)** gom các mảnh từ **16. Leadership tạo norm qua attention và reward** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **18. Ranh giới bằng chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Động lực nhóm, hành vi tập thể và hợp tác**, **17. dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델) và transactive bộ nhớ (memory / 메모리)** tổng hợp từ **16. Leadership tạo norm qua attention và reward** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **18. Ranh giới bằng chứng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 17. dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델) và transactive bộ nhớ (memory / 메모리)
 
@@ -173,7 +173,7 @@ Xem [[../06_applied/00_work_organization_and_leadership]].
 
 Documentation, quyền sở hữu (ownership / 소유권) map và kiến thức (knowledge / 지식) sharing giúp hai hệ thống này hoạt động tốt hơn và giảm bus factor.
 
-> **Chuyển mạch:** Ở chặng này của **Động lực nhóm, hành vi tập thể và hợp tác**, **17. dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델) và transactive bộ nhớ (memory / 메모리)** nêu điều cần giải thích; **18. Ranh giới bằng chứng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Động lực nhóm, hành vi tập thể và hợp tác**, **17. dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델) và transactive bộ nhớ (memory / 메모리)** đặt vấn đề; **18. Ranh giới bằng chứng** đối chiếu bằng chứng, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. Ranh giới bằng chứng
 
@@ -183,7 +183,7 @@ Documentation, quyền sở hữu (ownership / 소유권) map và kiến thức 
 
 **Không được nói:** nhóm luôn kém cá nhân, consensus nghĩa là quyết định đúng, hoặc anonymous setting tự động làm con người mất đạo đức.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Động lực nhóm, hành vi tập thể và hợp tác**, các dấu vết trong **18. Ranh giới bằng chứng** được đọc cùng nhau ở **Mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Động lực nhóm, hành vi tập thể và hợp tác**, các dấu vết trong **18. Ranh giới bằng chứng** được đọc cùng nhau ở **Mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -201,7 +201,7 @@ member ability + information diversity
 
 > Hiệu suất nhóm không chỉ phụ thuộc “ai giỏi”, mà phụ thuộc hệ thống biến năng lực và thông tin của họ thành quyết định chung như thế nào.
 
-> **Chuyển mạch:** Trong **Động lực nhóm, hành vi tập thể và hợp tác**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Động lực nhóm, hành vi tập thể và hợp tác**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

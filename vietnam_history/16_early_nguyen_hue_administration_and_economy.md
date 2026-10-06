@@ -10,7 +10,7 @@ Câu hỏi khó hơn là: **làm thế nào biến một territory dài, có nhi
 
 Đây là bài toán (problem / 문제) of trạng thái (state / 상태) tích hợp (integration / 통합), không chỉ dynastic succession.
 
-> **Chuyển mạch:** Trong **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Vì sao Huế trở thành capital?** tiếp nhận điểm tựa từ **Điểm tựa và câu hỏi trung tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh thành Huế: kiến trúc (architecture / 아키텍처) như operating mô hình (model / 모델) của monarchy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Vì sao Huế trở thành capital?** nối từ **Điểm tựa và câu hỏi trung tâm** sang **Kinh thành Huế: kiến trúc (architecture / 아키텍처) như operating mô hình (model / 모델) của monarchy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao Huế trở thành capital?
 
@@ -32,7 +32,7 @@ roads / stations / records / regional officials
 
 Địa lý tiếp tục là ràng buộc (constraint / 제약조건) mà institution phải xử lý.
 
-> **Chuyển mạch:** Ở chặng này của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Kinh thành Huế: kiến trúc (architecture / 아키텍처) như operating mô hình (model / 모델) của monarchy** tiếp nhận điểm tựa từ **Vì sao Huế trở thành capital?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gia Long: unify nhưng chưa centralize hoàn toàn theo mô hình (model / 모델) Minh Mạng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Kinh thành Huế: kiến trúc (architecture / 아키텍처) như operating mô hình (model / 모델) của monarchy** nối từ **Vì sao Huế trở thành capital?** sang **Gia Long: unify nhưng chưa centralize hoàn toàn theo mô hình (model / 모델) Minh Mạng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kinh thành Huế: kiến trúc (architecture / 아키텍처) như operating mô hình (model / 모델) của monarchy
 
@@ -44,7 +44,7 @@ Nếu đứng ở Huế, hãy hỏi movement tuyến (route / 경로) của offi
 
 UNESCO ghi nhận Huế là political, cultural và religious centre của Nguyễn dynasty từ 1802 đến 1945, cho phép site trở thành checkpoint xuyên nhiều chapter chứ không chỉ chapter này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Gia Long: unify nhưng chưa centralize hoàn toàn theo mô hình (model / 모델) Minh Mạng** tiếp nhận điểm tựa từ **Kinh thành Huế: kiến trúc (architecture / 아키텍처) như operating mô hình (model / 모델) của monarchy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Minh Mạng và provincial reform 1831–1832** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Gia Long: unify nhưng chưa centralize hoàn toàn theo mô hình (model / 모델) Minh Mạng** nối từ **Kinh thành Huế: kiến trúc (architecture / 아키텍처) như operating mô hình (model / 모델) của monarchy** sang **Minh Mạng và provincial reform 1831–1832**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gia Long: unify nhưng chưa centralize hoàn toàn theo mô hình (model / 모델) Minh Mạng
 
@@ -66,7 +66,7 @@ more centralized architecture
 
 Minh Mạng về sau push mạnh bước standardization.
 
-> **Chuyển mạch:** Trong **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Minh Mạng và provincial reform 1831–1832** tiếp nhận điểm tựa từ **Gia Long: unify nhưng chưa centralize hoàn toàn theo mô hình (model / 모델) Minh Mạng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Census, land register và tax: trạng thái (state / 상태) “nhìn” society bằng bản ghi (record / 레코드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Minh Mạng và provincial reform 1831–1832** nối từ **Gia Long: unify nhưng chưa centralize hoàn toàn theo mô hình (model / 모델) Minh Mạng** sang **Census, land register và tax: trạng thái (state / 상태) “nhìn” society bằng bản ghi (record / 레코드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Minh Mạng và provincial reform 1831–1832
 
@@ -76,7 +76,7 @@ Mốc **1831–1832** quan trọng vì administrative map được standardized 
 
 Centralization giải quyết một số bài toán (problem / 문제): giảm power của semi-autonomous regional bosses, chuẩn hóa reporting, tăng court visibility. Nhưng nó cũng tăng burden lên central bureaucracy và có thể tạo friction ở regions có institutional lịch sử (history / 이력) khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Census, land register và tax: trạng thái (state / 상태) “nhìn” society bằng bản ghi (record / 레코드)** tiếp nhận điểm tựa từ **Minh Mạng và provincial reform 1831–1832** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Agriculture vẫn là fiscal cơ sở (base / 기반)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Census, land register và tax: trạng thái (state / 상태) “nhìn” society bằng bản ghi (record / 레코드)** nối từ **Minh Mạng và provincial reform 1831–1832** sang **Agriculture vẫn là fiscal cơ sở (base / 기반)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Census, land register và tax: trạng thái (state / 상태) “nhìn” society bằng bản ghi (record / 레코드)
 
@@ -98,7 +98,7 @@ court decision
 
 Mỗi arrow có lỗi (error / 오류), delay và incentive bài toán (problem / 문제).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Agriculture vẫn là fiscal cơ sở (base / 기반)** tiếp nhận điểm tựa từ **Census, land register và tax: trạng thái (state / 상태) “nhìn” society bằng bản ghi (record / 레코드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Canal, road và granary: hạ tầng (infrastructure / 인프라) là trạng thái (state / 상태) sức chứa (capacity / 용량) vật chất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Agriculture vẫn là fiscal cơ sở (base / 기반)** nối từ **Census, land register và tax: trạng thái (state / 상태) “nhìn” society bằng bản ghi (record / 레코드)** sang **Canal, road và granary: hạ tầng (infrastructure / 인프라) là trạng thái (state / 상태) sức chứa (capacity / 용량) vật chất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Agriculture vẫn là fiscal cơ sở (base / 기반)
 
@@ -108,7 +108,7 @@ Mekong Delta tiếp tục expand agricultural môi trường vận hành (produc
 
 Trạng thái (state / 상태) chính sách (policy / 정책) phải balance extraction với keeping household productive. Over-extraction có thể shrink future revenue—một classic fiscal ràng buộc (constraint / 제약조건).
 
-> **Chuyển mạch:** Trong **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Canal, road và granary: hạ tầng (infrastructure / 인프라) là trạng thái (state / 상태) sức chứa (capacity / 용량) vật chất** tiếp nhận điểm tựa từ **Agriculture vẫn là fiscal cơ sở (base / 기반)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Labour chi phí (cost / 비용) và mặt trái của monument/hạ tầng (infrastructure / 인프라)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Canal, road và granary: hạ tầng (infrastructure / 인프라) là trạng thái (state / 상태) sức chứa (capacity / 용량) vật chất** nối từ **Agriculture vẫn là fiscal cơ sở (base / 기반)** sang **Labour chi phí (cost / 비용) và mặt trái của monument/hạ tầng (infrastructure / 인프라)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Canal, road và granary: hạ tầng (infrastructure / 인프라) là trạng thái (state / 상태) sức chứa (capacity / 용량) vật chất
 
@@ -118,7 +118,7 @@ Hạ tầng (infrastructure / 인프라) dưới Nguyễn không chỉ “công 
 
 Do đó khi đọc các công trình như Vĩnh Tế canal, cần tránh chia cứng “kinh tế” và “quân sự”. Premodern hạ tầng (infrastructure / 인프라) thường multi-purpose.
 
-> **Chuyển mạch:** Ở chặng này của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Canal, road và granary: hạ tầng (infrastructure / 인프라) là trạng thái (state / 상태) sức chứa (capacity / 용량) vật chất** cho ta quy tắc; **Labour chi phí (cost / 비용) và mặt trái của monument/hạ tầng (infrastructure / 인프라)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Nho giáo, examination và ideological centralization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Canal, road và granary: hạ tầng (infrastructure / 인프라) là trạng thái (state / 상태) sức chứa (capacity / 용량) vật chất** nêu quy tắc; **Labour chi phí (cost / 비용) và mặt trái của monument/hạ tầng (infrastructure / 인프라)** thử quy tắc trong tình huống, rồi **Nho giáo, examination và ideological centralization** mở rộng hệ quả.
 
 ## Labour chi phí (cost / 비용) và mặt trái của monument/hạ tầng (infrastructure / 인프라)
 
@@ -133,7 +133,7 @@ state coercion      → household labour burden
 
 Hai điều có thể cùng đúng. Không cần romanticize hoặc demonize để thấy cơ chế (mechanism / 메커니즘).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Labour chi phí (cost / 비용) và mặt trái của monument/hạ tầng (infrastructure / 인프라)** cho ta quy tắc; **Nho giáo, examination và ideological centralization** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Law và imperial thứ tự (order / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Labour chi phí (cost / 비용) và mặt trái của monument/hạ tầng (infrastructure / 인프라)** nêu quy tắc; **Nho giáo, examination và ideological centralization** thử quy tắc trong tình huống, rồi **Law và imperial thứ tự (order / 순서)** mở rộng hệ quả.
 
 ## Nho giáo, examination và ideological centralization
 
@@ -143,7 +143,7 @@ Examination giúp centre recruit beyond hereditary military coalition, nhưng tr
 
 Ideological standardization làm administrative communication dễ hơn, nhưng không erase cục bộ (local / 로컬) belief các hệ thống (systems / 시스템들). Buddhism, village cult, Cham and Khmer religious traditions cùng Christianity vẫn tồn tại với relationships khác nhau với trạng thái (state / 상태).
 
-> **Chuyển mạch:** Trong **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Law và imperial thứ tự (order / 순서)** tiếp nhận điểm tựa từ **Nho giáo, examination và ideological centralization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ethnic/frontier quản trị (governance / 거버넌스): centralization gặp diversity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Law và imperial thứ tự (order / 순서)** nối từ **Nho giáo, examination và ideological centralization** sang **Ethnic/frontier quản trị (governance / 거버넌스): centralization gặp diversity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Law và imperial thứ tự (order / 순서)
 
@@ -151,7 +151,7 @@ Gia Long Mã (code / 코드) thường được xem như major legal codificatio
 
 Nhưng written law ≠ actual practice. Enforcement phụ thuộc magistrate, bằng chứng (evidence / 증거), cục bộ (local / 로컬) mediation và distance. Đây là ranh giới (boundary / 경계) đã gặp ở Lê sơ: legal văn bản (text / 텍스트) cho biết trạng thái (state / 상태) muốn thứ tự (order / 순서) society thế nào; trường hợp (case / 사례)/practice mới cho biết society vận hành thực tế ra sao.
 
-> **Chuyển mạch:** Ở chặng này của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Ethnic/frontier quản trị (governance / 거버넌스): centralization gặp diversity** tiếp nhận điểm tựa từ **Law và imperial thứ tự (order / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gia Định: southern autonomy bị thu hẹp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Ethnic/frontier quản trị (governance / 거버넌스): centralization gặp diversity** nối từ **Law và imperial thứ tự (order / 순서)** sang **Gia Định: southern autonomy bị thu hẹp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ethnic/frontier quản trị (governance / 거버넌스): centralization gặp diversity
 
@@ -161,7 +161,7 @@ Minh Mạng centralization có xu hướng push stronger uniformity. Điều nà
 
 Không nên dùng một word “assimilation” thay thế toàn bộ tiến trình (process / 프로세스). Cần tách administrative category, land điều khiển (control / 제어), ngôn ngữ (language / 언어), religious practice và elite incorporation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Gia Định: southern autonomy bị thu hẹp** tiếp nhận điểm tựa từ **Ethnic/frontier quản trị (governance / 거버넌스): centralization gặp diversity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Foreign trade và world ngữ cảnh (context / 맥락) đầu thế kỷ XIX** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Gia Định: southern autonomy bị thu hẹp** nối từ **Ethnic/frontier quản trị (governance / 거버넌스): centralization gặp diversity** sang **Foreign trade và world ngữ cảnh (context / 맥락) đầu thế kỷ XIX**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gia Định: southern autonomy bị thu hẹp
 
@@ -169,7 +169,7 @@ Gia Định từng là cốt lõi (core / 핵심) của Nguyễn Ánh khôi ph�
 
 Điều này giúp giải thích một số later southern unrest. Institutional reform luôn tạo losers và winners; map đẹp hơn ở centre có thể đồng nghĩa cục bộ (local / 로컬) elite mất quyền.
 
-> **Chuyển mạch:** Trong **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Foreign trade và world ngữ cảnh (context / 맥락) đầu thế kỷ XIX** tiếp nhận điểm tựa từ **Gia Định: southern autonomy bị thu hẹp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Christianity: religion, mạng (network / 네트워크) và trạng thái (state / 상태) bảo mật (security / 보안)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Foreign trade và world ngữ cảnh (context / 맥락) đầu thế kỷ XIX** nối từ **Gia Định: southern autonomy bị thu hẹp** sang **Christianity: religion, mạng (network / 네트워크) và trạng thái (state / 상태) bảo mật (security / 보안)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Foreign trade và world ngữ cảnh (context / 맥락) đầu thế kỷ XIX
 
@@ -181,7 +181,7 @@ Sai lầm là dùng nhị phân (binary / 이진) **open vs closed**. Câu hỏi
 
 Chapter 17 sẽ cho thấy khi European industrial-military gap và colonial expansion tăng, những choices này trở nên increasingly consequential.
 
-> **Chuyển mạch:** Ở chặng này của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Christianity: religion, mạng (network / 네트워크) và trạng thái (state / 상태) bảo mật (security / 보안)** tiếp nhận điểm tựa từ **Foreign trade và world ngữ cảnh (context / 맥락) đầu thế kỷ XIX** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Di tích: đọc Huế theo hệ thống chứ không theo từng cung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Christianity: religion, mạng (network / 네트워크) và trạng thái (state / 상태) bảo mật (security / 보안)** nối từ **Foreign trade và world ngữ cảnh (context / 맥락) đầu thế kỷ XIX** sang **Di tích: đọc Huế theo hệ thống chứ không theo từng cung**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Christianity: religion, mạng (network / 네트워크) và trạng thái (state / 상태) bảo mật (security / 보안)
 
@@ -191,7 +191,7 @@ Từ court perspective, issue không chỉ theology. Transnational missionary m�
 
 Một historical explanation cần giữ cả institutional perspective và lived experience, không reduce xung đột (conflict / 충돌) thành “tôn giáo vs mê tín” hay “trạng thái (state / 상태) vs foreign tác nhân (agent / 에이전트)”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Di tích: đọc Huế theo hệ thống chứ không theo từng cung** tiếp nhận điểm tựa từ **Christianity: religion, mạng (network / 네트워크) và trạng thái (state / 상태) bảo mật (security / 보안)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Việt Nam đầu thế kỷ XIX mạnh hay yếu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Di tích: đọc Huế theo hệ thống chứ không theo từng cung** nối từ **Christianity: religion, mạng (network / 네트워크) và trạng thái (state / 상태) bảo mật (security / 보안)** sang **Việt Nam đầu thế kỷ XIX mạnh hay yếu?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Di tích: đọc Huế theo hệ thống chứ không theo từng cung
 
@@ -199,7 +199,7 @@ Một historical explanation cần giữ cả institutional perspective và live
 
 Một site tốt là nơi có thể nối abstract concept với vật lý (physical / 물리적) ràng buộc (constraint / 제약조건).
 
-> **Chuyển mạch:** Trong **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Việt Nam đầu thế kỷ XIX mạnh hay yếu?** tiếp nhận điểm tựa từ **Di tích: đọc Huế theo hệ thống chứ không theo từng cung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Recap và bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Việt Nam đầu thế kỷ XIX mạnh hay yếu?** nối từ **Di tích: đọc Huế theo hệ thống chứ không theo từng cung** sang **Recap và bàn giao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Việt Nam đầu thế kỷ XIX mạnh hay yếu?
 
@@ -207,7 +207,7 @@ Một site tốt là nơi có thể nối abstract concept với vật lý (phys
 
 Historical phương thức (method / 메서드) tốt hơn là tách sức chứa (capacity / 용량) theo dimension: fiscal, administrative, military, technological, diplomatic và informational. Một trạng thái (state / 상태) có thể mạnh ở dimension này nhưng yếu ở dimension khác.
 
-> **Chuyển mạch:** Ở chặng này của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Recap và bàn giao** tiếp nhận điểm tựa từ **Việt Nam đầu thế kỷ XIX mạnh hay yếu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Nhà Nguyễn đầu thế kỷ XIX: Huế, centralization và bài toán quản lý một lãnh thổ dài**, **Recap và bàn giao** nối từ **Việt Nam đầu thế kỷ XIX mạnh hay yếu?** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

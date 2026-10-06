@@ -417,7 +417,7 @@ Không. Nhiều mechanisms có thể tạo cùng tỷ lệ (rate / 비율) law h
 
 Không. Detection phụ thuộc thời gian tồn tại (lifetime / 수명), concentration và thời gian (time / 시간) resolution.
 
-> **Chuyển mạch:** Trong **Cơ chế phản ứng — từ phương trình tổng tới con đường vi mô**, **Mô hình tư duy** gom các mảnh từ **Molecularity khác reaction thứ tự (order / 순서)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Cơ chế phản ứng — từ phương trình tổng tới con đường vi mô**, **Mô hình tư duy** tổng hợp từ **Molecularity khác reaction thứ tự (order / 순서)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

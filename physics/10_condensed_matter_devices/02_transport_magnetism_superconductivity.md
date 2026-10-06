@@ -25,7 +25,7 @@ Vận tốc nhóm của wave packet là
 
 Ở nhiệt độ thấp, phần lớn trạng thái sâu dưới mức Fermi đã bị Pauli blocking; đáp ứng điện chủ yếu đến từ các trạng thái trong một cửa sổ năng lượng cỡ `k_BT` quanh `E_F`.
 
-> **Chuyển mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Mô hình Drude và ý nghĩa vật lý của thời gian hồi phục** tiếp nhận điểm tựa từ **Từ cấu trúc dải đến vận chuyển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ linh động và điện trở suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Mô hình Drude và ý nghĩa vật lý của thời gian hồi phục** nối từ **Từ cấu trúc dải đến vận chuyển** sang **Độ linh động và điện trở suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mô hình Drude và ý nghĩa vật lý của thời gian hồi phục
 
@@ -63,7 +63,7 @@ với
 
 `\tau` là thời gian hồi phục động lượng hiệu dụng, không nhất thiết bằng thời gian giữa mọi va chạm vi mô. Các quá trình tán xạ theo góc nhỏ có thể làm đổi quỹ đạo nhưng đóng góp khác nhau vào relaxation của dòng.
 
-> **Chuyển mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Độ linh động và điện trở suất** tiếp nhận điểm tựa từ **Mô hình Drude và ý nghĩa vật lý của thời gian hồi phục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương trình Boltzmann và phân bố ngoài cân bằng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Độ linh động và điện trở suất** nối từ **Mô hình Drude và ý nghĩa vật lý của thời gian hồi phục** sang **Phương trình Boltzmann và phân bố ngoài cân bằng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ linh động và điện trở suất
 
@@ -87,7 +87,7 @@ cho
 
 Nếu một vật liệu có carrier density cao nhưng scattering mạnh, conductivity vẫn có thể thấp. Vì vậy “nhiều electron tự do” không đủ để quyết định độ dẫn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Phương trình Boltzmann và phân bố ngoài cân bằng** tiếp nhận điểm tựa từ **Độ linh động và điện trở suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quãng đường tự do trung bình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Phương trình Boltzmann và phân bố ngoài cân bằng** nối từ **Độ linh động và điện trở suất** sang **Quãng đường tự do trung bình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình Boltzmann và phân bố ngoài cân bằng
 
@@ -119,7 +119,7 @@ Trong relaxation-time approximation,
 
 Cách nhìn này giải thích tại sao Drude chỉ là giới hạn đơn giản của một lý thuyết vận chuyển tổng quát hơn.
 
-> **Chuyển mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Quãng đường tự do trung bình** tiếp nhận điểm tựa từ **Phương trình Boltzmann và phân bố ngoài cân bằng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ Ohm sang Landauer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Quãng đường tự do trung bình** nối từ **Phương trình Boltzmann và phân bố ngoài cân bằng** sang **Từ Ohm sang Landauer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quãng đường tự do trung bình
 
@@ -151,7 +151,7 @@ L\lesssim\ell,
 
 vận chuyển đạn đạo (ballistic transport) trở nên quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Từ Ohm sang Landauer** tiếp nhận điểm tựa từ **Quãng đường tự do trung bình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tán xạ electron–phonon và Matthiessen** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Từ Ohm sang Landauer** nối từ **Quãng đường tự do trung bình** sang **Tán xạ electron–phonon và Matthiessen**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ Ohm sang Landauer
 
@@ -175,7 +175,7 @@ là quantum of conductance có spin degeneracy 2.
 
 Landauer cho thấy resistance có thể xuất hiện từ contact và transmission xác suất (probability / 확률) ngay cả khi vùng giữa gần ballistic.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Tán xạ electron–phonon và Matthiessen** tiếp nhận điểm tựa từ **Từ Ohm sang Landauer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vận chuyển nhiệt và định luật Wiedemann–Franz** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Tán xạ electron–phonon và Matthiessen** nối từ **Từ Ohm sang Landauer** sang **Vận chuyển nhiệt và định luật Wiedemann–Franz**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tán xạ electron–phonon và Matthiessen
 
@@ -194,7 +194,7 @@ Trong một xấp xỉ đơn giản, các tỷ lệ (rate / 비율) cộng gần
 
 Đây là dạng Matthiessen. Nó hữu ích nhưng không phải định luật tuyệt đối; nếu các cơ chế scattering không độc lập hoặc band cấu trúc (structure / 구조) phức tạp, phép cộng đơn giản có thể thất bại.
 
-> **Chuyển mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Vận chuyển nhiệt và định luật Wiedemann–Franz** tiếp nhận điểm tựa từ **Tán xạ electron–phonon và Matthiessen** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng nhiệt điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Vận chuyển nhiệt và định luật Wiedemann–Franz** nối từ **Tán xạ electron–phonon và Matthiessen** sang **Hiệu ứng nhiệt điện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vận chuyển nhiệt và định luật Wiedemann–Franz
 
@@ -214,7 +214,7 @@ L_0\approx2.44\times10^{-8}\,W\Omega K^{-2}.
 
 Quan hệ này hoạt động tốt khi cùng quasiparticles và cùng scattering physics kiểm soát cả hai dòng. Gần phase chuyển tiếp (transition / 전이) hoặc trong strongly correlated materials, deviations có thể chứa thông tin vật lý quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Hiệu ứng nhiệt điện** tiếp nhận điểm tựa từ **Vận chuyển nhiệt và định luật Wiedemann–Franz** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng Hall cổ điển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Hiệu ứng nhiệt điện** nối từ **Vận chuyển nhiệt và định luật Wiedemann–Franz** sang **Hiệu ứng Hall cổ điển**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng nhiệt điện
 
@@ -236,7 +236,7 @@ ZT=\frac{S^2\sigma T}{\kappa}.
 
 Muốn `ZT` lớn cần `S` lớn, `\sigma` cao và `\kappa` thấp. Nhưng các đại lượng này không độc lập, tạo sự đánh đổi (trade-off / 트레이드오프) vật liệu khó tối ưu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Hiệu ứng Hall cổ điển** tiếp nhận điểm tựa từ **Hiệu ứng nhiệt điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Magnetoresistance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Hiệu ứng Hall cổ điển** nối từ **Hiệu ứng nhiệt điện** sang **Magnetoresistance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng Hall cổ điển
 
@@ -273,7 +273,7 @@ Dấu của `R_H` cho biết dấu charge hiệu dụng, còn độ lớn cho ư
 
 Trong multiband material, công thức đơn giản này có thể sai mạnh vì nhiều carrier types cùng đóng góp.
 
-> **Chuyển mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Magnetoresistance** tiếp nhận điểm tựa từ **Hiệu ứng Hall cổ điển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ tính lượng tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Magnetoresistance** nối từ **Hiệu ứng Hall cổ điển** sang **Từ tính lượng tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Magnetoresistance
 
@@ -281,7 +281,7 @@ Từ trường bẻ quỹ đạo carrier và thay đổi scattering/trajectories
 
 Trong một số vật liệu nhiều lớp từ, giant magnetoresistance (GMR) xuất hiện do spin-dependent scattering. Hiệu ứng này là nền tảng lịch sử quan trọng của đầu đọc ổ cứng và spintronics.
 
-> **Chuyển mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Từ tính lượng tử** tiếp nhận điểm tựa từ **Magnetoresistance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tương tác trao đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Từ tính lượng tử** nối từ **Magnetoresistance** sang **Tương tác trao đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ tính lượng tử
 
@@ -291,7 +291,7 @@ Nghịch từ (diamagnetism) phản ứng theo hướng chống lại trường 
 
 Sắt từ (ferromagnetism) không chỉ là “nhiều dipole cùng hướng”. Exchange tương tác (interaction / 상호작용) lượng tử tạo xu hướng sắp xếp spin, còn anisotropy và lĩnh vực (domain / 도메인) cấu trúc (structure / 구조) quyết định trạng thái vĩ mô.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Tương tác trao đổi** tiếp nhận điểm tựa từ **Từ tính lượng tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lĩnh vực (domain / 도메인) và hysteresis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Tương tác trao đổi** nối từ **Từ tính lượng tử** sang **Lĩnh vực (domain / 도메인) và hysteresis**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tương tác trao đổi
 
@@ -319,7 +319,7 @@ nó ưu tiên phản song song, dẫn đến antiferromagnetic thứ tự (order
 
 `J` không phải lực từ cổ điển giữa hai nam châm nhỏ; nó phát sinh từ wavefunction overlap, Coulomb tương tác (interaction / 상호작용) và Pauli principle.
 
-> **Chuyển mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Lĩnh vực (domain / 도메인) và hysteresis** tiếp nhận điểm tựa từ **Tương tác trao đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mức Landau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Lĩnh vực (domain / 도메인) và hysteresis** nối từ **Tương tác trao đổi** sang **Mức Landau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lĩnh vực (domain / 도메인) và hysteresis
 
@@ -329,7 +329,7 @@ Khi áp từ trường ngoài, lĩnh vực (domain / 도메인) walls di chuyể
 
 Các đại lượng như coercive trường dữ liệu (field / 필드) và remanent magnetization quan trọng trong thiết kế vật liệu nhớ từ.
 
-> **Chuyển mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Mức Landau** tiếp nhận điểm tựa từ **Lĩnh vực (domain / 도메인) và hysteresis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hall lượng tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Mức Landau** nối từ **Lĩnh vực (domain / 도메인) và hysteresis** sang **Hall lượng tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mức Landau
 
@@ -347,7 +347,7 @@ với cyclotron frequency
 
 Trong hệ hai chiều ở nhiệt độ thấp, Landau levels tạo nền tảng cho quantum Hall tác động (effect / 효과).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Hall lượng tử** tiếp nhận điểm tựa từ **Mức Landau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Siêu dẫn: hơn cả điện trở bằng không** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Hall lượng tử** nối từ **Mức Landau** sang **Siêu dẫn: hơn cả điện trở bằng không**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hall lượng tử
 
@@ -363,7 +363,7 @@ Giá trị lượng tử hóa có độ chính xác cao và bền với disorder
 
 Do đó Hall lượng tử là ví dụ mạnh cho việc một observable vĩ mô được bảo vệ bởi topology chứ không chỉ bởi chi tiết vật liệu cục bộ.
 
-> **Chuyển mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Siêu dẫn: hơn cả điện trở bằng không** tiếp nhận điểm tựa từ **Hall lượng tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **London penetration độ sâu (depth / 깊이)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Siêu dẫn: hơn cả điện trở bằng không** nối từ **Hall lượng tử** sang **London penetration độ sâu (depth / 깊이)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Siêu dẫn: hơn cả điện trở bằng không
 
@@ -374,7 +374,7 @@ Một superconductor dưới trọng yếu (critical / 중요) temperature có h
 
 Meissner tác động (effect / 효과) phân biệt superconductor với một conductor lý tưởng chỉ có `\rho=0`.
 
-> **Chuyển mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **London penetration độ sâu (depth / 깊이)** tiếp nhận điểm tựa từ **Siêu dẫn: hơn cả điện trở bằng không** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cooper pair và BCS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **London penetration độ sâu (depth / 깊이)** nối từ **Siêu dẫn: hơn cả điện trở bằng không** sang **Cooper pair và BCS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## London penetration độ sâu (depth / 깊이)
 
@@ -388,7 +388,7 @@ trong đó `\lambda_L` là London penetration độ sâu (depth / 깊이).
 
 Do đó trường không biến mất ngay tại mặt; nó xuyên vào một lớp mỏng hữu hạn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Cooper pair và BCS** tiếp nhận điểm tựa từ **London penetration độ sâu (depth / 깊이)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Flux quantization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Cooper pair và BCS** nối từ **London penetration độ sâu (depth / 깊이)** sang **Flux quantization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cooper pair và BCS
 
@@ -406,7 +406,7 @@ Một năng lượng (energy / 에너지) gap `\Delta` mở quanh Fermi mức (l
 
 Gap làm low-energy single-particle excitations bị suppress, góp phần tạo dòng không tiêu tán.
 
-> **Chuyển mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Flux quantization** tiếp nhận điểm tựa từ **Cooper pair và BCS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Type-I và Type-II** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Flux quantization** nối từ **Cooper pair và BCS** sang **Type-I và Type-II**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Flux quantization
 
@@ -418,7 +418,7 @@ Thứ tự (order / 순서) parameter siêu dẫn có pha lượng tử vĩ mô.
 
 `2e` phản ánh charge của Cooper pair.
 
-> **Chuyển mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Type-I và Type-II** tiếp nhận điểm tựa từ **Flux quantization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Josephson tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Type-I và Type-II** nối từ **Flux quantization** sang **Josephson tác động (effect / 효과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Type-I và Type-II
 
@@ -434,7 +434,7 @@ Giữa chúng, magnetic flux xuyên vào dưới dạng vortices lượng tử h
 
 Mỗi vortex mang gần một flux quantum. Nếu vortices chuyển động dưới tác dụng dòng điện, dissipation xuất hiện. Vì vậy vortex pinning quan trọng trong magnet công suất cao.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Josephson tác động (effect / 효과)** tiếp nhận điểm tựa từ **Type-I và Type-II** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SQUID** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Josephson tác động (effect / 효과)** nối từ **Type-I và Type-II** sang **SQUID**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Josephson tác động (effect / 효과)
 
@@ -462,7 +462,7 @@ f=\frac{2e}{h}V.
 
 Quan hệ này tạo liên kết chính xác giữa voltage và frequency và được dùng trong voltage standards.
 
-> **Chuyển mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **SQUID** tiếp nhận điểm tựa từ **Josephson tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với qubit siêu dẫn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **SQUID** nối từ **Josephson tác động (effect / 효과)** sang **Liên hệ với qubit siêu dẫn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## SQUID
 
@@ -470,7 +470,7 @@ SQUID dùng Josephson junctions trong vòng lặp (loop / 루프) siêu dẫn. F
 
 Đây là lý do SQUID có thể đo từ trường rất nhỏ trong vật lý vật chất ngưng tụ, biomagnetism và các thí nghiệm precision đo lường (measurement / 측정).
 
-> **Chuyển mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Liên hệ với qubit siêu dẫn** tiếp nhận điểm tựa từ **SQUID** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt và giới hạn vật lý của điện toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Liên hệ với qubit siêu dẫn** nối từ **SQUID** sang **Nhiệt và giới hạn vật lý của điện toán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với qubit siêu dẫn
 
@@ -480,7 +480,7 @@ Nhờ anharmonicity này, hai mức thấp nhất có thể được điều khi
 
 Đây là cầu nối từ condensed-matter superconductivity sang quantum thông tin (information / 정보) kỹ thuật (engineering / 엔지니어링).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Liên hệ với qubit siêu dẫn** đã nêu tiêu chí phân biệt, còn **Nhiệt và giới hạn vật lý của điện toán** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Ví dụ: mean free đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Liên hệ với qubit siêu dẫn** đặt tiêu chí; **Nhiệt và giới hạn vật lý của điện toán** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Ví dụ: mean free đường dẫn (path / 경로)** mở rộng hệ quả.
 
 ## Nhiệt và giới hạn vật lý của điện toán
 
@@ -500,7 +500,7 @@ Do đó hiệu năng (performance / 성능) computing bị ràng buộc bởi po
 
 Không thể tăng clock tỷ lệ (rate / 비율) vô hạn chỉ bằng thiết kế lô-gic (logic / 논리) nếu heat flux vượt khả năng loại nhiệt.
 
-> **Chuyển mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Nhiệt và giới hạn vật lý của điện toán** cho ta quy tắc; **Ví dụ: mean free đường dẫn (path / 경로)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Điều kiện áp dụng và giới hạn mô hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Nhiệt và giới hạn vật lý của điện toán** nêu quy tắc; **Ví dụ: mean free đường dẫn (path / 경로)** thử quy tắc trong tình huống, rồi **Điều kiện áp dụng và giới hạn mô hình** mở rộng hệ quả.
 
 ## Ví dụ: mean free đường dẫn (path / 경로)
 
@@ -526,7 +526,7 @@ Khi đó
 
 Một dây rộng hàng micromet ở regime diffusive rõ ràng hơn, nhưng channel vài chục nanomet bắt đầu cảm nhận ranh giới (boundary / 경계)/ballistic effects.
 
-> **Chuyển mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, trường hợp ở **Ví dụ: mean free đường dẫn (path / 경로)** cho thấy quy tắc hoạt động; **Điều kiện áp dụng và giới hạn mô hình** kiểm tra nơi quy tắc ấy không còn áp dụng hoặc dễ bị hiểu nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, trường hợp ở **Ví dụ: mean free đường dẫn (path / 경로)** cho thấy quy tắc hoạt động; **Điều kiện áp dụng và giới hạn mô hình** kiểm tra nơi quy tắc ấy không còn áp dụng hoặc dễ bị hiểu nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Điều kiện áp dụng và giới hạn mô hình
 
@@ -536,13 +536,13 @@ BCS mô tả conventional superconductors rất thành công nhưng không tự 
 
 Vì vậy mỗi công thức nên được đọc kèm regime của nó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Điều kiện áp dụng và giới hạn mô hình** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Điều kiện áp dụng và giới hạn mô hình** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Vận chuyển trong chất rắn là bài toán **trạng thái lượng tử + lực ngoài + tán xạ + hình học (geometry / 기하학)**. Từ tính là **cách spin/orbital moments tổ chức tập thể**. Siêu dẫn là **pha lượng tử vĩ mô có phase coherence**, không chỉ là vật liệu có điện trở nhỏ.
 
-> **Chuyển mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -558,7 +558,7 @@ Không. Meissner tác động (effect / 효과), flux quantization và phase coh
 
 Không. Chúng là effective excitations xuất hiện trong môi trường vật chất.
 
-> **Chuyển mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Vận chuyển trong chất rắn, hiệu ứng Hall, từ tính và siêu dẫn**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

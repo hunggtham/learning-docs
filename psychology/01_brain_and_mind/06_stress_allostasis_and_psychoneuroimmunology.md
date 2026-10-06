@@ -14,7 +14,7 @@ Xem [[../EVIDENCE_STATUS_GUIDE]], [[00_nervous_system_and_brain]], [[04_interoce
 
 **Cân bằng động thích nghi (allostasis)** nhấn mạnh “ổn định thông qua thay đổi”. Trước một buổi thuyết trình, cơ thể có thể tăng nhịp tim, huy động glucose và tăng cảnh giác trước khi sự kiện bắt đầu. Điều này không phải malfunction; nó là adaptation.
 
-> **Chuyển mạch:** Trong **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **2. Stress cấp không đồng nghĩa stress có hại** tiếp nhận điểm tựa từ **1. Homeostasis và allostasis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Hệ giao cảm và trục HPA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **2. Stress cấp không đồng nghĩa stress có hại** nối từ **1. Homeostasis và allostasis** sang **3. Hệ giao cảm và trục HPA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Stress cấp không đồng nghĩa stress có hại
 
@@ -22,7 +22,7 @@ Một phản ứng stress ngắn có thể hỗ trợ chú ý, huy động năng
 
 Vì vậy câu “stress luôn xấu” là sai. Câu phù hợp hơn là hỏi **cường độ, thời gian, tần suất, khả năng phục hồi và bối cảnh**.
 
-> **Chuyển mạch:** Ở chặng này của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **3. Hệ giao cảm và trục HPA** tiếp nhận điểm tựa từ **2. Stress cấp không đồng nghĩa stress có hại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Phục hồi là một phần của stress phản hồi (response / 응답)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **3. Hệ giao cảm và trục HPA** nối từ **2. Stress cấp không đồng nghĩa stress có hại** sang **4. Phục hồi là một phần của stress phản hồi (response / 응답)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Hệ giao cảm và trục HPA
 
@@ -34,7 +34,7 @@ Cortisol không phải “hormone độc”. Nó cần thiết cho chuyển hóa
 
 Một mẫu cortisol đơn lẻ hiếm khi đủ để kết luận một người đang “cortisol cao mãn tính”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **4. Phục hồi là một phần của stress phản hồi (response / 응답)** tiếp nhận điểm tựa từ **3. Hệ giao cảm và trục HPA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Allostatic tải (load / 로드) là khung nghiên cứu, không phải xét nghiệm phổ quát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **4. Phục hồi là một phần của stress phản hồi (response / 응답)** nối từ **3. Hệ giao cảm và trục HPA** sang **5. Allostatic tải (load / 로드) là khung nghiên cứu, không phải xét nghiệm phổ quát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Phục hồi là một phần của stress phản hồi (response / 응답)
 
@@ -42,7 +42,7 @@ Một hệ thống thích nghi tốt không chỉ biết bật phản ứng mà 
 
 Khi một stressor lặp lại, một số phản hồi (response / 응답) có thể **quen dần (habituation)**. Tuy nhiên habituation không xảy ra giống nhau ở mọi hệ sinh lý. Vì vậy không nên dùng một marker để đại diện toàn bộ “stress hệ thống (system / 시스템)”.
 
-> **Chuyển mạch:** Trong **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **5. Allostatic tải (load / 로드) là khung nghiên cứu, không phải xét nghiệm phổ quát** tiếp nhận điểm tựa từ **4. Phục hồi là một phần của stress phản hồi (response / 응답)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Appraisal, kiểm soát và khả năng dự đoán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **5. Allostatic tải (load / 로드) là khung nghiên cứu, không phải xét nghiệm phổ quát** nối từ **4. Phục hồi là một phần của stress phản hồi (response / 응답)** sang **6. Appraisal, kiểm soát và khả năng dự đoán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Allostatic tải (load / 로드) là khung nghiên cứu, không phải xét nghiệm phổ quát
 
@@ -52,7 +52,7 @@ Khi một stressor lặp lại, một số phản hồi (response / 응답) có 
 
 Vì vậy không nên lấy một “allostatic tải (load / 로드) score” trên mạng để tự chẩn đoán sức khỏe.
 
-> **Chuyển mạch:** Ở chặng này của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **6. Appraisal, kiểm soát và khả năng dự đoán** tiếp nhận điểm tựa từ **5. Allostatic tải (load / 로드) là khung nghiên cứu, không phải xét nghiệm phổ quát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Stress, sleep và cognition tạo vòng lặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **6. Appraisal, kiểm soát và khả năng dự đoán** nối từ **5. Allostatic tải (load / 로드) là khung nghiên cứu, không phải xét nghiệm phổ quát** sang **7. Stress, sleep và cognition tạo vòng lặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Appraisal, kiểm soát và khả năng dự đoán
 
@@ -62,7 +62,7 @@ Một tải công việc (workload / 워크로드) giống nhau có thể tạo 
 
 Cảm giác ít kiểm soát và khó dự đoán thường liên quan stress cao hơn, nhưng tác động (effect / 효과) phụ thuộc ngữ cảnh (context / 맥락) và individual difference.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **7. Stress, sleep và cognition tạo vòng lặp** tiếp nhận điểm tựa từ **6. Appraisal, kiểm soát và khả năng dự đoán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Psychoneuroimmunology nghiên cứu gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **7. Stress, sleep và cognition tạo vòng lặp** nối từ **6. Appraisal, kiểm soát và khả năng dự đoán** sang **8. Psychoneuroimmunology nghiên cứu gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Stress, sleep và cognition tạo vòng lặp
 
@@ -72,7 +72,7 @@ Stress có thể làm ngủ kém; ngủ kém làm attention và emotion regulati
 
 Xem [[08_sleep_circadian_and_recovery]], [[../02_learning_and_cognition/04_cognitive_biases_and_metacognition]] và [[../06_applied/14_work_stress_burnout_and_recovery]].
 
-> **Chuyển mạch:** Trong **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **8. Psychoneuroimmunology nghiên cứu gì?** tiếp nhận điểm tựa từ **7. Stress, sleep và cognition tạo vòng lặp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Stress và miễn dịch: association không phải một câu chuyện duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **8. Psychoneuroimmunology nghiên cứu gì?** nối từ **7. Stress, sleep và cognition tạo vòng lặp** sang **9. Stress và miễn dịch: association không phải một câu chuyện duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Psychoneuroimmunology nghiên cứu gì?
 
@@ -82,7 +82,7 @@ Các đường liên lạc là hai chiều. Hormone stress có thể ảnh hư�
 
 Điều này cho phép nghiên cứu cơ chế, nhưng không cho phép rút gọn thành khẩu hiệu “suy nghĩ tiêu cực gây viêm”.
 
-> **Chuyển mạch:** Ở chặng này của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **9. Stress và miễn dịch: association không phải một câu chuyện duy nhất** tiếp nhận điểm tựa từ **8. Psychoneuroimmunology nghiên cứu gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Sickness hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **9. Stress và miễn dịch: association không phải một câu chuyện duy nhất** nối từ **8. Psychoneuroimmunology nghiên cứu gì?** sang **10. Sickness hành vi (behavior / 동작)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Stress và miễn dịch: association không phải một câu chuyện duy nhất
 
@@ -92,7 +92,7 @@ Stress cấp có thể tái phân bố tế bào miễn dịch và làm thay đ�
 
 Các yếu tố như smoking, obesity, infection, medication, socioeconomic stress và sleep có thể vừa là mediator vừa là confounder tùy câu hỏi nghiên cứu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **10. Sickness hành vi (behavior / 동작)** tiếp nhận điểm tựa từ **9. Stress và miễn dịch: association không phải một câu chuyện duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Inflammation và mental health** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **10. Sickness hành vi (behavior / 동작)** nối từ **9. Stress và miễn dịch: association không phải một câu chuyện duy nhất** sang **11. Inflammation và mental health**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Sickness hành vi (behavior / 동작)
 
@@ -100,7 +100,7 @@ Khi hệ miễn dịch được kích hoạt trong infection, con người thư�
 
 Đây là ví dụ cho thấy cảm giác và hành vi có thể phản ánh trạng thái miễn dịch, nhưng không nên đảo ngược lô-gic (logic / 논리) để nói mọi fatigue hoặc low mood là do inflammation.
 
-> **Chuyển mạch:** Trong **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **11. Inflammation và mental health** tiếp nhận điểm tựa từ **10. Sickness hành vi (behavior / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Stress sinh học không thay thế stress xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **11. Inflammation và mental health** nối từ **10. Sickness hành vi (behavior / 동작)** sang **12. Stress sinh học không thay thế stress xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Inflammation và mental health
 
@@ -110,7 +110,7 @@ Có literature lớn về association giữa marker viêm và depression, stress
 
 Nhân quả (causal / 인과적) direction còn phức tạp vì hành vi (behavior / 동작), sleep, medication, metabolic health và illness có thể ảnh hưởng cả mood lẫn inflammation.
 
-> **Chuyển mạch:** Ở chặng này của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **12. Stress sinh học không thay thế stress xã hội** tiếp nhận điểm tựa từ **11. Inflammation và mental health** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Individual difference và resilience** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **12. Stress sinh học không thay thế stress xã hội** nối từ **11. Inflammation và mental health** sang **13. Individual difference và resilience**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Stress sinh học không thay thế stress xã hội
 
@@ -124,7 +124,7 @@ stressor khó thay đổi      → regulation / support / recovery
 pattern đã thành disorder  → assessment / treatment phù hợp
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **13. Individual difference và resilience** tiếp nhận điểm tựa từ **12. Stress sinh học không thay thế stress xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Stress và công việc (work / 작업)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **13. Individual difference và resilience** nối từ **12. Stress sinh học không thay thế stress xã hội** sang **14. Stress và công việc (work / 작업)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Individual difference và resilience
 
@@ -132,7 +132,7 @@ Không có một “stress threshold” giống nhau cho mọi người. Genetic
 
 **Resilience** không phải trait cố định “người mạnh thì không stress”. Nó là kết quả (outcome / 결과) từ tương tác (interaction / 상호작용) giữa người và môi trường (environment / 환경), có thể thay đổi theo thời gian.
 
-> **Chuyển mạch:** Trong **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **14. Stress và công việc (work / 작업)** tiếp nhận điểm tựa từ **13. Individual difference và resilience** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Everyday regulation: cơ chế trước, mẹo sau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **14. Stress và công việc (work / 작업)** nối từ **13. Individual difference và resilience** sang **15. Everyday regulation: cơ chế trước, mẹo sau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Stress và công việc (work / 작업)
 
@@ -142,7 +142,7 @@ Burnout là occupational construct, không nên đồng nhất với “cortisol
 
 Xem [[../06_applied/00_work_organization_and_leadership]] và [[../06_applied/14_work_stress_burnout_and_recovery]].
 
-> **Chuyển mạch:** Ở chặng này của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **14. Stress và công việc (work / 작업)** xác định đầu vào; **15. Everyday regulation: cơ chế trước, mẹo sau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **14. Stress và công việc (work / 작업)** đặt đầu vào cho **15. Everyday regulation: cơ chế trước, mẹo sau**, rồi **16. Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. Everyday regulation: cơ chế trước, mẹo sau
 
@@ -150,7 +150,7 @@ Trong đời sống, điều hữu ích là xác định nút duy trì vòng str
 
 Không có một technique phổ quát. Breathing, exercise, scheduling hoặc xã hội (social / 사회적) hỗ trợ (support / 지원) có thể hữu ích trong ngữ cảnh (context / 맥락) phù hợp, nhưng không nên trình bày chúng như cách “hạ cortisol” chắc chắn cho mọi người.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **15. Everyday regulation: cơ chế trước, mẹo sau** xác định đầu vào; **16. Những hiểu lầm phổ biến** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **17. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **15. Everyday regulation: cơ chế trước, mẹo sau** đặt đầu vào cho **16. Những hiểu lầm phổ biến**, rồi **17. Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 16. Những hiểu lầm phổ biến
 
@@ -164,7 +164,7 @@ Không có một technique phổ quát. Breathing, exercise, scheduling hoặc x
 
 **“Chịu stress tốt là do ý chí.”** Sai. Khả năng thích nghi phụ thuộc nhiều tầng sinh học, tâm lý và xã hội.
 
-> **Chuyển mạch:** Trong **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **17. Mô hình tư duy** gom các mảnh từ **16. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **17. Mô hình tư duy** tổng hợp từ **16. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 17. Mô hình tư duy
 
@@ -186,7 +186,7 @@ long-term physiological / behavioral burden
 
 Stress nên được hiểu như một hệ động, không phải một chất độc đơn lẻ.
 
-> **Chuyển mạch:** Ở chặng này của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **Kết nối kiến thức** gom các mảnh từ **17. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Stress, allostasis và tương tác não–nội tiết–miễn dịch**, **Kết nối kiến thức** tổng hợp từ **17. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

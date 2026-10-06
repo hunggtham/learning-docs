@@ -24,7 +24,7 @@ thì `S` bị chặn trên và supremum của nó là `sqrt(2)`.
 
 Completeness là nền móng của rất nhiều convergence theorems.
 
-> **Chuyển mạch:** Trong **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Completeness của real numbers** xác định đầu vào; **Chuỗi (sequence / 시퀀스) và convergence** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Bounded và monotone chuỗi (sequence / 시퀀스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Completeness của real numbers** đặt đầu vào cho **Chuỗi (sequence / 시퀀스) và convergence**, rồi **Bounded và monotone chuỗi (sequence / 시퀀스)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Chuỗi (sequence / 시퀀스) và convergence
 
@@ -52,7 +52,7 @@ Muốn `|1/n|<ε`, chỉ cần chọn `N>1/ε`.
 
 Định nghĩa epsilon này biến câu “1/n tiến về 0” thành một claim có thể chứng minh.
 
-> **Chuyển mạch:** Ở chặng này của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Chuỗi (sequence / 시퀀스) và convergence** xác định đầu vào; **Bounded và monotone chuỗi (sequence / 시퀀스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Cauchy chuỗi (sequence / 시퀀스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Chuỗi (sequence / 시퀀스) và convergence** đặt đầu vào cho **Bounded và monotone chuỗi (sequence / 시퀀스)**, rồi **Cauchy chuỗi (sequence / 시퀀스)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Bounded và monotone chuỗi (sequence / 시퀀스)
 
@@ -62,7 +62,7 @@ Nếu chuỗi (sequence / 시퀀스) tăng dần và bị chặn trên, nó hộ
 
 Ví dụ iterative algorithms đôi khi tạo chuỗi (sequence / 시퀀스) mục tiêu (objective / 목표) values giảm dần và bị chặn dưới bởi 0. Điều đó cho biết values hội tụ, dù chưa đủ để kết luận parameters hội tụ tới toàn cục (global / 전역) optimum.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Bounded và monotone chuỗi (sequence / 시퀀스)** xác định đầu vào; **Cauchy chuỗi (sequence / 시퀀스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Subsequences và Bolzano–Weierstrass** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Bounded và monotone chuỗi (sequence / 시퀀스)** đặt đầu vào cho **Cauchy chuỗi (sequence / 시퀀스)**, rồi **Subsequences và Bolzano–Weierstrass** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Cauchy chuỗi (sequence / 시퀀스)
 
@@ -78,7 +78,7 @@ Trong `R`, mọi Cauchy chuỗi (sequence / 시퀀스) đều hội tụ. Đây 
 
 Trong numerical computation, Cauchy-like stopping criteria rất tự nhiên: nếu successive iterates thay đổi ngày càng nhỏ, ta nghi ngờ thuật toán (algorithm / 알고리즘) đang ổn định. Tuy nhiên “successive difference nhỏ” trong finite computation không tự động chứng minh convergence về nghiệm đúng; conditioning và lỗi (error / 오류) phân tích (analysis / 분석) vẫn quan trọng.
 
-> **Chuyển mạch:** Trong **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Cauchy chuỗi (sequence / 시퀀스)** xác định đầu vào; **Subsequences và Bolzano–Weierstrass** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Limit superior và limit inferior** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Cauchy chuỗi (sequence / 시퀀스)** đặt đầu vào cho **Subsequences và Bolzano–Weierstrass**, rồi **Limit superior và limit inferior** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Subsequences và Bolzano–Weierstrass
 
@@ -88,7 +88,7 @@ Bolzano–Weierstrass theorem nói rằng mọi bounded chuỗi (sequence / 시�
 
 Theorem này quan trọng trong tối ưu hóa (optimization / 최적화). Nếu iterates nằm trong một bounded region, ta có thể tìm convergent subsequences; từ đó phân tích cluster points và stationary conditions.
 
-> **Chuyển mạch:** Ở chặng này của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Subsequences và Bolzano–Weierstrass** đã nêu tiêu chí phân biệt, còn **Limit superior và limit inferior** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Continuity theo epsilon-delta** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Subsequences và Bolzano–Weierstrass** đặt tiêu chí; **Limit superior và limit inferior** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Continuity theo epsilon-delta** mở rộng hệ quả.
 
 ## Limit superior và limit inferior
 
@@ -114,7 +114,7 @@ và
 
 Nếu hai values bằng nhau và finite, chuỗi (sequence / 시퀀스) hội tụ về dùng chung (common / 공통) giá trị (value / 값) đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Limit superior và limit inferior** đã nêu tiêu chí phân biệt, còn **Continuity theo epsilon-delta** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Sequential characterization của continuity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Limit superior và limit inferior** đặt tiêu chí; **Continuity theo epsilon-delta** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Sequential characterization của continuity** mở rộng hệ quả.
 
 ## Continuity theo epsilon-delta
 
@@ -129,7 +129,7 @@ Hàm (function / 함수) `f` continuous tại `x_0` nếu
 
 Continuity có thể hiểu là small đầu vào (input / 입력) perturbations tạo small đầu ra (output / 출력) perturbations, nhưng epsilon-delta làm phát biểu này precise.
 
-> **Chuyển mạch:** Trong **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Sequential characterization của continuity** tiếp nhận điểm tựa từ **Continuity theo epsilon-delta** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Intermediate giá trị (value / 값) Theorem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Sequential characterization của continuity** nối từ **Continuity theo epsilon-delta** sang **Intermediate giá trị (value / 값) Theorem**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sequential characterization của continuity
 
@@ -141,7 +141,7 @@ f(x_n)\to f(x).
 
 Cách nhìn này đặc biệt hữu ích vì nhiều proofs về continuity có thể chuyển thành proofs về sequences.
 
-> **Chuyển mạch:** Ở chặng này của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Intermediate giá trị (value / 값) Theorem** tiếp nhận điểm tựa từ **Sequential characterization của continuity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Extreme giá trị (value / 값) Theorem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Intermediate giá trị (value / 값) Theorem** nối từ **Sequential characterization của continuity** sang **Extreme giá trị (value / 값) Theorem**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Intermediate giá trị (value / 값) Theorem
 
@@ -153,7 +153,7 @@ f(c)=y.
 
 Root-finding methods như bisection dựa trên cấu trúc (structure / 구조) này. Nếu `f(a)` và `f(b)` trái dấu, continuity đảm bảo có ít nhất một gốc (root / 루트) giữa chúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Extreme giá trị (value / 값) Theorem** tiếp nhận điểm tựa từ **Intermediate giá trị (value / 값) Theorem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Compactness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Extreme giá trị (value / 값) Theorem** nối từ **Intermediate giá trị (value / 값) Theorem** sang **Compactness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Extreme giá trị (value / 값) Theorem
 
@@ -163,7 +163,7 @@ Không chỉ tồn tại supremum abstract; có điểm thực sự đạt nó.
 
 Điều này cho thấy vì sao compactness quan trọng trong tối ưu hóa (optimization / 최적화): continuity cộng compact feasible set thường cho existence của optimum.
 
-> **Chuyển mạch:** Trong **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Compactness** tiếp nhận điểm tựa từ **Extreme giá trị (value / 값) Theorem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pointwise và uniform convergence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Compactness** nối từ **Extreme giá trị (value / 값) Theorem** sang **Pointwise và uniform convergence**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Compactness
 
@@ -173,7 +173,7 @@ Compactness có thể hình dung là “không chạy ra infinity và không b�
 
 Nhiều theorem mạnh trở nên đúng trên compact sets: continuous functions uniformly continuous, extrema tồn tại, mọi chuỗi (sequence / 시퀀스) có convergent subsequence nằm trong set.
 
-> **Chuyển mạch:** Ở chặng này của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Pointwise và uniform convergence** tiếp nhận điểm tựa từ **Compactness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao pointwise convergence có thể gây bất ngờ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Pointwise và uniform convergence** nối từ **Compactness** sang **Vì sao pointwise convergence có thể gây bất ngờ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pointwise và uniform convergence
 
@@ -198,7 +198,7 @@ cho mọi `x` trong lĩnh vực (domain / 도메인).
 
 Uniform convergence mạnh hơn và thường cho phép bảo toàn continuity khi lấy limit.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Vì sao pointwise convergence có thể gây bất ngờ** tiếp nhận điểm tựa từ **Pointwise và uniform convergence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Differentiability mạnh hơn continuity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Vì sao pointwise convergence có thể gây bất ngờ** nối từ **Pointwise và uniform convergence** sang **Differentiability mạnh hơn continuity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao pointwise convergence có thể gây bất ngờ
 
@@ -224,7 +224,7 @@ Mỗi `f_n` continuous nhưng limit hàm (function / 함수) không continuous. 
 
 Đây là ví dụ cho thấy không thể tùy tiện chuyển mọi thuộc tính (property / 속성) qua limit.
 
-> **Chuyển mạch:** Trong **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Differentiability mạnh hơn continuity** tiếp nhận điểm tựa từ **Vì sao pointwise convergence có thể gây bất ngờ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mean giá trị (value / 값) Theorem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Differentiability mạnh hơn continuity** nối từ **Vì sao pointwise convergence có thể gây bất ngờ** sang **Mean giá trị (value / 값) Theorem**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Differentiability mạnh hơn continuity
 
@@ -234,7 +234,7 @@ Nếu `f` differentiable tại một điểm thì nó continuous tại đó. Con
 
 Trong nhiều chiều, differentiability còn mạnh hơn việc tất cả partial derivatives tồn tại. Ta cần một single tuyến tính (linear / 선형) map approximates hàm (function / 함수) theo mọi direction cùng lúc.
 
-> **Chuyển mạch:** Ở chặng này của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Mean giá trị (value / 값) Theorem** tiếp nhận điểm tựa từ **Differentiability mạnh hơn continuity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Riemann integral và partitions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Mean giá trị (value / 값) Theorem** nối từ **Differentiability mạnh hơn continuity** sang **Riemann integral và partitions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mean giá trị (value / 값) Theorem
 
@@ -254,7 +254,7 @@ Ví dụ nếu `|f'(x)|≤M`, thì
 
 Đây là một Lipschitz-type bound.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Riemann integral và partitions** tiếp nhận điểm tựa từ **Mean giá trị (value / 값) Theorem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fundamental Theorem of Calculus dưới góc nhìn phân tích (analysis / 분석)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Riemann integral và partitions** nối từ **Mean giá trị (value / 값) Theorem** sang **Fundamental Theorem of Calculus dưới góc nhìn phân tích (analysis / 분석)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Riemann integral và partitions
 
@@ -276,7 +276,7 @@ Integral tồn tại khi các sums hội tụ về cùng giá trị (value / 값
 
 Continuous functions trên closed bounded interval là Riemann integrable.
 
-> **Chuyển mạch:** Trong **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Fundamental Theorem of Calculus dưới góc nhìn phân tích (analysis / 분석)** tiếp nhận điểm tựa từ **Riemann integral và partitions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Interchanging limits, derivatives và integrals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Fundamental Theorem of Calculus dưới góc nhìn phân tích (analysis / 분석)** nối từ **Riemann integral và partitions** sang **Interchanging limits, derivatives và integrals**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Fundamental Theorem of Calculus dưới góc nhìn phân tích (analysis / 분석)
 
@@ -294,7 +294,7 @@ F'(x)=f(x).
 
 Đây không chỉ là formula. Nó khẳng định hai processes tưởng khác nhau — cục bộ (local / 로컬) tỷ lệ (rate / 비율) và toàn cục (global / 전역) accumulation — là inverses theo một nghĩa precise dưới appropriate conditions.
 
-> **Chuyển mạch:** Ở chặng này của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Fundamental Theorem of Calculus dưới góc nhìn phân tích (analysis / 분석)** đã nêu tiêu chí phân biệt, còn **Interchanging limits, derivatives và integrals** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Normed spaces và convergence không chỉ trong R** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Fundamental Theorem of Calculus dưới góc nhìn phân tích (analysis / 분석)** đặt tiêu chí; **Interchanging limits, derivatives và integrals** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Normed spaces và convergence không chỉ trong R** mở rộng hệ quả.
 
 ## Interchanging limits, derivatives và integrals
 
@@ -315,7 +315,7 @@ Các operations này không tự động hợp lệ. Cần conditions như unifo
 
 Phân tích (analysis / 분석) dạy một principle quan trọng: trước khi đổi thứ tự two limiting operations, phải hỏi theorem nào cho phép.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Interchanging limits, derivatives và integrals** đã nêu tiêu chí phân biệt, còn **Normed spaces và convergence không chỉ trong R** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Interchanging limits, derivatives và integrals** đặt tiêu chí; **Normed spaces và convergence không chỉ trong R** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Normed spaces và convergence không chỉ trong R
 
@@ -333,13 +333,13 @@ nếu
 
 Điều này mở đường tới functional phân tích (analysis / 분석), tối ưu hóa (optimization / 최적화) và numerical tuyến tính (linear / 선형) algebra. Một thuật toán (algorithm / 알고리즘) có thể hội tụ theo Euclidean norm, operator norm hoặc hàm (function / 함수) norm tùy bài toán (problem / 문제).
 
-> **Chuyển mạch:** Trong **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Normed spaces và convergence không chỉ trong R** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Normed spaces và convergence không chỉ trong R** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Real phân tích (analysis / 분석) là “hệ kiểu (type system / 타입 시스템)” cho các thao tác vô hạn. Nó buộc ta xác định lĩnh vực (domain / 도메인), notion of distance, convergence chế độ (mode / 모드) và các giả định (assumptions / 가정들) trước khi chuyển limits, derivatives hay integrals qua nhau. Calculus cho ta powerful operations; phân tích (analysis / 분석) cho biết operations đó hợp lệ ở đâu.
 
-> **Chuyển mạch:** Ở chặng này của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -347,7 +347,7 @@ Real phân tích (analysis / 분석) là “hệ kiểu (type system / 타입 �
 
 Một misconception khác là nghĩ epsilon-delta chỉ là formalism không thực dụng. Thực ra robust numerical bounds, stability, conditioning và lỗi (error / 오류) guarantees đều dựa trên cùng tư duy: đầu vào (input / 입력) perturbation bao nhiêu thì đầu ra (output / 출력) thay đổi bao nhiêu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Real phân tích (analysis / 분석): giới hạn, hội tụ và nền tảng chặt chẽ của calculus**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức
 

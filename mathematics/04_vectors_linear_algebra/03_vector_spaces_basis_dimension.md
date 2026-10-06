@@ -31,7 +31,7 @@ ta có vẻ bước sang lĩnh vực khác. Nhưng algebra bên dưới giống 
 
 Nếu bỏ qua bề ngoài và giữ lại operations, ta thấy cùng một tuyến tính (linear / 선형) cấu trúc (structure / 구조). véc-tơ (vector / 벡터) không gian (space / 공간) lớp trừu tượng (abstraction / 추상화) cho phép một theorem về basis, projection hoặc tuyến tính (linear / 선형) transformation áp dụng đồng thời cho hình học (geometry / 기하학), signals, dữ liệu (data / 데이터) và differential equations.
 
-> **Chuyển mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Véc-tơ (vector / 벡터) không gian (space / 공간) cần những properties nào?** tiếp nhận điểm tựa từ **Tại sao cần lớp trừu tượng (abstraction / 추상화) này?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến tính (linear / 선형) combination: building khối (block / 블록) trung tâm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Véc-tơ (vector / 벡터) không gian (space / 공간) cần những properties nào?** nối từ **Tại sao cần lớp trừu tượng (abstraction / 추상화) này?** sang **Tuyến tính (linear / 선형) combination: building khối (block / 블록) trung tâm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Véc-tơ (vector / 벡터) không gian (space / 공간) cần những properties nào?
 
@@ -59,7 +59,7 @@ a(u+v)=au+av,
 
 Điểm của axioms không phải để memorize một danh sách. Chúng xác định minimum cấu trúc (structure / 구조) cần để algebra của tuyến tính (linear / 선형) combinations hoạt động đáng tin cậy.
 
-> **Chuyển mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Tuyến tính (linear / 선형) combination: building khối (block / 블록) trung tâm** tiếp nhận điểm tựa từ **Véc-tơ (vector / 벡터) không gian (space / 공간) cần những properties nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Span: những gì ta có thể tạo ra** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Tuyến tính (linear / 선형) combination: building khối (block / 블록) trung tâm** nối từ **Véc-tơ (vector / 벡터) không gian (space / 공간) cần những properties nào?** sang **Span: những gì ta có thể tạo ra**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tuyến tính (linear / 선형) combination: building khối (block / 블록) trung tâm
 
@@ -87,7 +87,7 @@ thì mọi véc-tơ (vector / 벡터) `(x,y)` có thể viết
 
 Hai vectors đó đủ để generate toàn plane.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Span: những gì ta có thể tạo ra** tiếp nhận điểm tựa từ **Tuyến tính (linear / 선형) combination: building khối (block / 블록) trung tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tuyến tính (linear / 선형) dependence: khi có redundancy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Span: những gì ta có thể tạo ra** nối từ **Tuyến tính (linear / 선형) combination: building khối (block / 블록) trung tâm** sang **Tuyến tính (linear / 선형) dependence: khi có redundancy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Span: những gì ta có thể tạo ra
 
@@ -109,7 +109,7 @@ Trong `R^3`:
 
 Nếu một dataset có tính năng (feature / 기능) vectors nằm gần một low-dimensional span, dimensionality reduction có thể compress dữ liệu (data / 데이터) bằng cách tìm basis thích hợp cho subspace đó.
 
-> **Chuyển mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Tuyến tính (linear / 선형) dependence: khi có redundancy** tiếp nhận điểm tựa từ **Span: những gì ta có thể tạo ra** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Basis: spanning mà không dư thừa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Tuyến tính (linear / 선형) dependence: khi có redundancy** nối từ **Span: những gì ta có thể tạo ra** sang **Basis: spanning mà không dư thừa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tuyến tính (linear / 선형) dependence: khi có redundancy
 
@@ -147,7 +147,7 @@ Tức `v_j` có thể được tạo từ những vectors còn lại. Nó không
 
 Trong regression, nếu một tính năng (feature / 기능) là chính xác (exact / 정확한) tuyến tính (linear / 선형) combination của others, thiết kế (design / 설계) ma trận (matrix / 행렬) mất full column rank. Parameters có thể không unique. Trong cơ sở dữ liệu (database / 데이터베이스)/reporting, nếu một derived column hoàn toàn được determine bởi các columns khác, nó không thêm independent thông tin (information / 정보) theo tuyến tính (linear / 선형) sense.
 
-> **Chuyển mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Basis: spanning mà không dư thừa** tiếp nhận điểm tựa từ **Tuyến tính (linear / 선형) dependence: khi có redundancy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Basis không phải duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Basis: spanning mà không dư thừa** nối từ **Tuyến tính (linear / 선형) dependence: khi có redundancy** sang **Basis không phải duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Basis: spanning mà không dư thừa
 
@@ -180,7 +180,7 @@ Tính **unique biểu diễn (representation / 표현)** này là consequence tr
 
 Nếu biểu diễn (representation / 표현) không unique, basis vectors dependent. Nếu một số véc-tơ (vector / 벡터) không represent được, collection chưa span toàn không gian (space / 공간).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Basis không phải duy nhất** tiếp nhận điểm tựa từ **Basis: spanning mà không dư thừa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thay đổi (change / 변경) of basis: cùng đối tượng (object / 객체), ngôn ngữ tọa độ khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Basis không phải duy nhất** nối từ **Basis: spanning mà không dư thừa** sang **Thay đổi (change / 변경) of basis: cùng đối tượng (object / 객체), ngôn ngữ tọa độ khác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Basis không phải duy nhất
 
@@ -204,7 +204,7 @@ cũng là basis vì hai vectors independent và span plane.
 
 > coordinates không phải véc-tơ (vector / 벡터); chúng là description của véc-tơ (vector / 벡터) relative to a chosen basis.
 
-> **Chuyển mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Thay đổi (change / 변경) of basis: cùng đối tượng (object / 객체), ngôn ngữ tọa độ khác** tiếp nhận điểm tựa từ **Basis không phải duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao chọn basis tốt có thể thay đổi toàn bộ bài toán (problem / 문제)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Thay đổi (change / 변경) of basis: cùng đối tượng (object / 객체), ngôn ngữ tọa độ khác** nối từ **Basis không phải duy nhất** sang **Vì sao chọn basis tốt có thể thay đổi toàn bộ bài toán (problem / 문제)?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thay đổi (change / 변경) of basis: cùng đối tượng (object / 객체), ngôn ngữ tọa độ khác
 
@@ -250,7 +250,7 @@ Nếu `P` invertible,
 
 Thay đổi (change / 변경) of basis vì thế là ma trận (matrix / 행렬) transformation giữa hai coordinate descriptions của cùng abstract véc-tơ (vector / 벡터).
 
-> **Chuyển mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Vì sao chọn basis tốt có thể thay đổi toàn bộ bài toán (problem / 문제)?** tiếp nhận điểm tựa từ **Thay đổi (change / 변경) of basis: cùng đối tượng (object / 객체), ngôn ngữ tọa độ khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dimension: số degrees of freedom độc lập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Vì sao chọn basis tốt có thể thay đổi toàn bộ bài toán (problem / 문제)?** nối từ **Thay đổi (change / 변경) of basis: cùng đối tượng (object / 객체), ngôn ngữ tọa độ khác** sang **Dimension: số degrees of freedom độc lập**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao chọn basis tốt có thể thay đổi toàn bộ bài toán (problem / 문제)?
 
@@ -258,7 +258,7 @@ Một operator phức tạp trong tiêu chuẩn (standard / 표준) basis có th
 
 Đây không phải cosmetic coordinate thay đổi (change / 변경). biểu diễn (representation / 표현) phù hợp có thể biến computation từ coupled thành gần independent, làm mẫu (pattern / 패턴) rõ hơn và giảm dimension cần thiết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Dimension: số degrees of freedom độc lập** tiếp nhận điểm tựa từ **Vì sao chọn basis tốt có thể thay đổi toàn bộ bài toán (problem / 문제)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Subspace: một tuyến tính (linear / 선형) universe nhỏ hơn bên trong không gian (space / 공간) lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Dimension: số degrees of freedom độc lập** nối từ **Vì sao chọn basis tốt có thể thay đổi toàn bộ bài toán (problem / 문제)?** sang **Subspace: một tuyến tính (linear / 선형) universe nhỏ hơn bên trong không gian (space / 공간) lớn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dimension: số degrees of freedom độc lập
 
@@ -295,7 +295,7 @@ cần bốn independent coefficients.
 
 Dimension không phải “số values đang lưu” một cách máy móc. Nó là số independent coordinates cần để specify arbitrary véc-tơ (vector / 벡터) trong không gian (space / 공간).
 
-> **Chuyển mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Subspace: một tuyến tính (linear / 선형) universe nhỏ hơn bên trong không gian (space / 공간) lớn** tiếp nhận điểm tựa từ **Dimension: số degrees of freedom độc lập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Column không gian (space / 공간) và null không gian (space / 공간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Subspace: một tuyến tính (linear / 선형) universe nhỏ hơn bên trong không gian (space / 공간) lớn** nối từ **Dimension: số degrees of freedom độc lập** sang **Column không gian (space / 공간) và null không gian (space / 공간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Subspace: một tuyến tính (linear / 선형) universe nhỏ hơn bên trong không gian (space / 공간) lớn
 
@@ -325,7 +325,7 @@ Ax=b
 
 với `b≠0` thường tạo affine set.
 
-> **Chuyển mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Column không gian (space / 공간) và null không gian (space / 공간)** tiếp nhận điểm tựa từ **Subspace: một tuyến tính (linear / 선형) universe nhỏ hơn bên trong không gian (space / 공간) lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rank-nullity: accounting của dimensions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Column không gian (space / 공간) và null không gian (space / 공간)** nối từ **Subspace: một tuyến tính (linear / 선형) universe nhỏ hơn bên trong không gian (space / 공간) lớn** sang **Rank-nullity: accounting của dimensions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Column không gian (space / 공간) và null không gian (space / 공간)
 
@@ -354,7 +354,7 @@ Hai spaces này trả lời hai questions khác nhau:
 - transformation có thể tạo ra outputs nào?
 - transformation làm mất những đầu vào (input / 입력) directions nào?
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Rank-nullity: accounting của dimensions** tiếp nhận điểm tựa từ **Column không gian (space / 공간) và null không gian (space / 공간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coordinates như compression khi cấu trúc (structure / 구조) tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Rank-nullity: accounting của dimensions** nối từ **Column không gian (space / 공간) và null không gian (space / 공간)** sang **Coordinates như compression khi cấu trúc (structure / 구조) tồn tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rank-nullity: accounting của dimensions
 
@@ -376,7 +376,7 @@ Ví dụ nếu `A:R^5→R^3` có rank 3, thì nullity là 2. Transformation gi�
 
 Đây là một dạng conservation/accounting law cho tuyến tính (linear / 선형) thông tin (information / 정보).
 
-> **Chuyển mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Coordinates như compression khi cấu trúc (structure / 구조) tồn tại** tiếp nhận điểm tựa từ **Rank-nullity: accounting của dimensions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Orthogonal và orthonormal basis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Coordinates như compression khi cấu trúc (structure / 구조) tồn tại** nối từ **Rank-nullity: accounting của dimensions** sang **Orthogonal và orthonormal basis**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Coordinates như compression khi cấu trúc (structure / 구조) tồn tại
 
@@ -386,7 +386,7 @@ Ví dụ ảnh (image / 이미지) 100×100 pixels có 10,000 raw dimensions, nh
 
 Đây là lý do dimension reduction không chỉ là “xóa columns”. Nó tìm coordinate hệ thống (system / 시스템) nơi thông tin (information / 정보) relevant concentrate hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Orthogonal và orthonormal basis** tiếp nhận điểm tựa từ **Coordinates như compression khi cấu trúc (structure / 구조) tồn tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàm (function / 함수) spaces: véc-tơ (vector / 벡터) spaces có thể vô hạn chiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Orthogonal và orthonormal basis** nối từ **Coordinates như compression khi cấu trúc (structure / 구조) tồn tại** sang **Hàm (function / 함수) spaces: véc-tơ (vector / 벡터) spaces có thể vô hạn chiều**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Orthogonal và orthonormal basis
 
@@ -414,7 +414,7 @@ Không cần solve full hệ tuyến tính (linear system / 선형 시스템). P
 
 Orthonormal bases cũng thường numerically stable hơn vì basis vectors không gần dependent.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Hàm (function / 함수) spaces: véc-tơ (vector / 벡터) spaces có thể vô hạn chiều** tiếp nhận điểm tựa từ **Orthogonal và orthonormal basis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính năng (feature / 기능) không gian (space / 공간) trong machine học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Hàm (function / 함수) spaces: véc-tơ (vector / 벡터) spaces có thể vô hạn chiều** nối từ **Orthogonal và orthonormal basis** sang **Tính năng (feature / 기능) không gian (space / 공간) trong machine học tập (learning / 학습)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hàm (function / 함수) spaces: véc-tơ (vector / 벡터) spaces có thể vô hạn chiều
 
@@ -436,7 +436,7 @@ Fourier phân tích (analysis / 분석) nhìn hàm (function / 함수) như comb
 
 Vì vậy idea basis/dimension mở đường từ elementary tuyến tính (linear / 선형) algebra sang phân tích (analysis / 분석) và mathematical physics.
 
-> **Chuyển mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Tính năng (feature / 기능) không gian (space / 공간) trong machine học tập (learning / 학습)** tiếp nhận điểm tựa từ **Hàm (function / 함수) spaces: véc-tơ (vector / 벡터) spaces có thể vô hạn chiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Curse of dimensionality: tại sao nhiều dimensions khó?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Tính năng (feature / 기능) không gian (space / 공간) trong machine học tập (learning / 학습)** nối từ **Hàm (function / 함수) spaces: véc-tơ (vector / 벡터) spaces có thể vô hạn chiều** sang **Curse of dimensionality: tại sao nhiều dimensions khó?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính năng (feature / 기능) không gian (space / 공간) trong machine học tập (learning / 학습)
 
@@ -452,7 +452,7 @@ Nếu features strongly correlated, effective thông tin (information / 정보) 
 
 Điều này nối trực tiếp tuyến tính (linear / 선형) independence, rank và conditioning với practical ML issues như multicollinearity.
 
-> **Chuyển mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Curse of dimensionality: tại sao nhiều dimensions khó?** tiếp nhận điểm tựa từ **Tính năng (feature / 기능) không gian (space / 공간) trong machine học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Basis và biểu diễn (representation / 표현) trong software/dữ liệu (data / 데이터) các hệ thống (systems / 시스템들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Curse of dimensionality: tại sao nhiều dimensions khó?** nối từ **Tính năng (feature / 기능) không gian (space / 공간) trong machine học tập (learning / 학습)** sang **Basis và biểu diễn (representation / 표현) trong software/dữ liệu (data / 데이터) các hệ thống (systems / 시스템들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Curse of dimensionality: tại sao nhiều dimensions khó?
 
@@ -478,7 +478,7 @@ Distance hình học (geometry / 기하학) cũng thay đổi. Trong many high-d
 
 Đây là lý do algorithms dựa trên cục bộ (local / 로컬) density hoặc nearest neighbors cần careful scaling, regularization, dimensionality reduction hoặc structural các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Curse of dimensionality: tại sao nhiều dimensions khó?** nêu điều cần giải thích; **Basis và biểu diễn (representation / 표현) trong software/dữ liệu (data / 데이터) các hệ thống (systems / 시스템들)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Khi tuyến tính (linear / 선형) không gian (space / 공간) mô hình (model / 모델) không đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Curse of dimensionality: tại sao nhiều dimensions khó?** đặt vấn đề; **Basis và biểu diễn (representation / 표현) trong software/dữ liệu (data / 데이터) các hệ thống (systems / 시스템들)** đối chiếu bằng chứng, rồi **Khi tuyến tính (linear / 선형) không gian (space / 공간) mô hình (model / 모델) không đủ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Basis và biểu diễn (representation / 표현) trong software/dữ liệu (data / 데이터) các hệ thống (systems / 시스템들)
 
@@ -488,7 +488,7 @@ One-hot encoding chọn tiêu chuẩn (standard / 표준) basis-like biểu di�
 
 Không phải mọi biểu diễn (representation / 표현) là literal tuyến tính (linear / 선형) basis, nhưng mô hình tư duy (mental model / 사고 모델) giống nhau: **cùng đối tượng (object / 객체) có thể dễ hiểu hơn trong coordinate hệ thống (system / 시스템) phù hợp**.
 
-> **Chuyển mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Basis và biểu diễn (representation / 표현) trong software/dữ liệu (data / 데이터) các hệ thống (systems / 시스템들)** nêu điều cần giải thích; **Khi tuyến tính (linear / 선형) không gian (space / 공간) mô hình (model / 모델) không đủ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결) — basis và eigenvectors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Basis và biểu diễn (representation / 표현) trong software/dữ liệu (data / 데이터) các hệ thống (systems / 시스템들)** đặt vấn đề; **Khi tuyến tính (linear / 선형) không gian (space / 공간) mô hình (model / 모델) không đủ** đối chiếu bằng chứng, rồi **Liên kết kiến thức (knowledge connection / 지식 연결) — basis và eigenvectors** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Khi tuyến tính (linear / 선형) không gian (space / 공간) mô hình (model / 모델) không đủ
 
@@ -500,7 +500,7 @@ Trong các trường hợp đó, forcing vector-space intuition có thể gây s
 
 Biết khi nào tuyến tính (linear / 선형) cấu trúc (structure / 구조) không phù hợp cũng quan trọng như biết dùng nó.
 
-> **Chuyển mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, sau nội dung của **Khi tuyến tính (linear / 선형) không gian (space / 공간) mô hình (model / 모델) không đủ**, **Liên kết kiến thức (knowledge connection / 지식 연결) — basis và eigenvectors** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결) — basis và Fourier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, sau nội dung của **Khi tuyến tính (linear / 선형) không gian (space / 공간) mô hình (model / 모델) không đủ**, **Liên kết kiến thức (knowledge connection / 지식 연결) — basis và eigenvectors** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결) — basis và Fourier** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결) — basis và eigenvectors
 
@@ -514,7 +514,7 @@ Trong eigenbasis, operator trở thành diagonal scaling. Đây là ultimate exa
 
 Nếu ma trận (matrix / 행렬) defective và không có đủ eigenvectors, diagonal basis không tồn tại; ta cần richer structures như Jordan form. Vì vậy basis availability ảnh hưởng trực tiếp cách ta simplify transformation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Liên kết kiến thức (knowledge connection / 지식 연결) — basis và Fourier** tiếp nhận điểm tựa từ **Liên kết kiến thức (knowledge connection / 지식 연결) — basis và eigenvectors** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Liên kết kiến thức (knowledge connection / 지식 연결) — basis và Fourier** nối từ **Liên kết kiến thức (knowledge connection / 지식 연결) — basis và eigenvectors** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결) — basis và Fourier
 
@@ -524,13 +524,13 @@ Cùng tín hiệu (signal / 신호) không thay đổi; chỉ coordinate ngôn n
 
 Đây là lý do basis không phải một khái niệm abstract tách khỏi kỹ thuật (engineering / 엔지니어링) — nó quyết định biểu diễn (representation / 표현) nơi thao tác (operation / 연산) trở nên đơn giản.
 
-> **Chuyển mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết kiến thức (knowledge connection / 지식 연결) — basis và Fourier** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết kiến thức (knowledge connection / 지식 연결) — basis và Fourier** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > véc-tơ (vector / 벡터) không gian (space / 공간) là một universe của những objects có thể được kết hợp tuyến tính. Span hỏi “ta tạo được những gì?”, independence hỏi “có redundancy không?”, basis là vocabulary tối thiểu đủ để diễn đạt mọi véc-tơ (vector / 벡터), còn dimension là số degrees of freedom độc lập. Đổi basis không đổi đối tượng (object / 객체); nó đổi ngôn ngữ mô tả đối tượng (object / 객체), và một ngôn ngữ tốt có thể làm cấu trúc (structure / 구조) ẩn trở nên hiển nhiên.
 
-> **Chuyển mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Không gian véc-tơ (vector / 벡터), cơ sở và số chiều**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

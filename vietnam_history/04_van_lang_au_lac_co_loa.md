@@ -8,7 +8,7 @@
 
 Đây là nơi dễ nhầm nhất giữa tradition và lịch sử (history / 이력), nên cần giữ hai tầng (layer / 계층) song song thay vì ép chúng thành một câu chuyện duy nhất.
 
-> **Chuyển mạch:** Trong **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Văn Lang: rất quan trọng trong historical bộ nhớ (memory / 메모리), nhưng chronology truyền thống không phải mốc khảo cổ chắc chắn** tiếp nhận điểm tựa từ **Điểm tựa và câu hỏi trung tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đền Hùng: nơi tốt để học “bộ nhớ (memory / 메모리) lịch sử (history / 이력)” hơn là dùng như máy đo chronology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Văn Lang: rất quan trọng trong historical bộ nhớ (memory / 메모리), nhưng chronology truyền thống không phải mốc khảo cổ chắc chắn** nối từ **Điểm tựa và câu hỏi trung tâm** sang **Đền Hùng: nơi tốt để học “bộ nhớ (memory / 메모리) lịch sử (history / 이력)” hơn là dùng như máy đo chronology**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Văn Lang: rất quan trọng trong historical bộ nhớ (memory / 메모리), nhưng chronology truyền thống không phải mốc khảo cổ chắc chắn
 
@@ -24,7 +24,7 @@ Trong truyền thống sử Việt, **Văn Lang** gắn với các vua Hùng và
 
 Ba câu trả lời có thể cùng tồn tại mà không cần giả vờ chúng có cùng độ chắc chắn.
 
-> **Chuyển mạch:** Ở chặng này của **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Đền Hùng: nơi tốt để học “bộ nhớ (memory / 메모리) lịch sử (history / 이력)” hơn là dùng như máy đo chronology** tiếp nhận điểm tựa từ **Văn Lang: rất quan trọng trong historical bộ nhớ (memory / 메모리), nhưng chronology truyền thống không phải mốc khảo cổ chắc chắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Âu Lạc và Cổ Loa: bằng chứng (evidence / 증거) vật chất trở nên dày hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Đền Hùng: nơi tốt để học “bộ nhớ (memory / 메모리) lịch sử (history / 이력)” hơn là dùng như máy đo chronology** nối từ **Văn Lang: rất quan trọng trong historical bộ nhớ (memory / 메모리), nhưng chronology truyền thống không phải mốc khảo cổ chắc chắn** sang **Âu Lạc và Cổ Loa: bằng chứng (evidence / 증거) vật chất trở nên dày hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đền Hùng: nơi tốt để học “bộ nhớ (memory / 메모리) lịch sử (history / 이력)” hơn là dùng như máy đo chronology
 
@@ -32,7 +32,7 @@ Ba câu trả lời có thể cùng tồn tại mà không cần giả vờ chú
 
 Vì vậy câu hỏi tốt không chỉ là “vua Hùng đã đứng ở chỗ nào?”, mà còn là “vì sao nhiều thế hệ sau tiếp tục coi Hùng Vương là ancestor figure và việc tưởng niệm đó giúp cộng đồng diễn đạt định danh (identity / 식별자) như thế nào?”. Đây là **công khai (public / 공개) lịch sử (history / 이력)** và **bộ nhớ (memory / 메모리) studies (nghiên cứu ký ức)**, không phải phần phụ của lịch sử chính trị.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Đền Hùng: nơi tốt để học “bộ nhớ (memory / 메모리) lịch sử (history / 이력)” hơn là dùng như máy đo chronology** nêu điều cần giải thích; **Âu Lạc và Cổ Loa: bằng chứng (evidence / 증거) vật chất trở nên dày hơn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Vì sao Cổ Loa đặt ở đây?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Đền Hùng: nơi tốt để học “bộ nhớ (memory / 메모리) lịch sử (history / 이력)” hơn là dùng như máy đo chronology** đặt vấn đề; **Âu Lạc và Cổ Loa: bằng chứng (evidence / 증거) vật chất trở nên dày hơn** đối chiếu bằng chứng, rồi **Vì sao Cổ Loa đặt ở đây?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Âu Lạc và Cổ Loa: bằng chứng (evidence / 증거) vật chất trở nên dày hơn
 
@@ -40,7 +40,7 @@ Truyền thống gắn **Âu Lạc** với Thục Phán – An Dương Vương v
 
 Điểm quan trọng không phải tranh nhau một label “nhà nước đầu tiên”, mà là quy mô (scale / 규모). Massive earthworks đòi hỏi rất nhiều labor; moat/rampart hệ thống (system / 시스템) đòi hỏi planning; metallurgy và weapon môi trường vận hành (production / 운영 환경) đòi hỏi skilled môi trường vận hành (production / 운영 환경) mạng (network / 네트워크). Khi các đầu ra (output / 출력) này xuất hiện cùng nhau, hypothesis về centralized political sức chứa (capacity / 용량) mạnh hơn rất nhiều so với khi chỉ thấy một sản phẩm tạo ra (artifact / 산출물) elite riêng lẻ.
 
-> **Chuyển mạch:** Trong **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Âu Lạc và Cổ Loa: bằng chứng (evidence / 증거) vật chất trở nên dày hơn** nêu điều cần giải thích; **Vì sao Cổ Loa đặt ở đây?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **“Nỏ thần” và hàng vạn mũi tên: truyền thuyết có thể đứng cạnh archaeology mà không bị trộn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Âu Lạc và Cổ Loa: bằng chứng (evidence / 증거) vật chất trở nên dày hơn** đặt vấn đề; **Vì sao Cổ Loa đặt ở đây?** đối chiếu bằng chứng, rồi **“Nỏ thần” và hàng vạn mũi tên: truyền thuyết có thể đứng cạnh archaeology mà không bị trộn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Vì sao Cổ Loa đặt ở đây?
 
@@ -62,7 +62,7 @@ Cổ Loa as a political center
 
 Đây là explanatory mô hình (model / 모델), không phải deterministic proof. Geography giải thích vì sao location có advantage; archaeology mới giúp kiểm tra liệu society thật sự đã huy động tài nguyên (resource / 자원) ở quy mô (scale / 규모) đó hay chưa.
 
-> **Chuyển mạch:** Ở chặng này của **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **“Nỏ thần” và hàng vạn mũi tên: truyền thuyết có thể đứng cạnh archaeology mà không bị trộn** tiếp nhận điểm tựa từ **Vì sao Cổ Loa đặt ở đây?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Economy của Âu Lạc: không có ngân sách nhà nước để xem, vậy reconstruct thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **“Nỏ thần” và hàng vạn mũi tên: truyền thuyết có thể đứng cạnh archaeology mà không bị trộn** nối từ **Vì sao Cổ Loa đặt ở đây?** sang **Economy của Âu Lạc: không có ngân sách nhà nước để xem, vậy reconstruct thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## “Nỏ thần” và hàng vạn mũi tên: truyền thuyết có thể đứng cạnh archaeology mà không bị trộn
 
@@ -70,7 +70,7 @@ Câu chuyện nỏ thần Kim Quy, Cao Lỗ và hàng loạt quân địch bị 
 
 Cách đọc tốt hơn là hỏi liệu bộ nhớ (memory / 메모리) về một trung tâm có năng lực sản xuất vũ khí đáng kể có thể đã góp phần nuôi dưỡng later narrative hay không. Đây là hypothesis về bộ nhớ (memory / 메모리) formation, cần thận trọng hơn claim archaeological trực tiếp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Economy của Âu Lạc: không có ngân sách nhà nước để xem, vậy reconstruct thế nào?** tiếp nhận điểm tựa từ **“Nỏ thần” và hàng vạn mũi tên: truyền thuyết có thể đứng cạnh archaeology mà không bị trộn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xã hội: elite, commoners và điều chưa biết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Economy của Âu Lạc: không có ngân sách nhà nước để xem, vậy reconstruct thế nào?** nối từ **“Nỏ thần” và hàng vạn mũi tên: truyền thuyết có thể đứng cạnh archaeology mà không bị trộn** sang **Xã hội: elite, commoners và điều chưa biết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Economy của Âu Lạc: không có ngân sách nhà nước để xem, vậy reconstruct thế nào?
 
@@ -78,7 +78,7 @@ Ta không có tax ledger của Cổ Loa. Tuy nhiên quy mô (scale / 규모) c�
 
 Một early trạng thái (state / 상태) muốn duy trì center lớn phải giải quyết ít nhất bốn ràng buộc (constraint / 제약조건): feed people, mobilize labor, secure material, và coordinate defense. Cổ Loa đáng học vì material bản ghi (record / 레코드) cho phép biến những ràng buộc (constraint / 제약조건) trừu tượng này thành câu hỏi cụ thể.
 
-> **Chuyển mạch:** Trong **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Xã hội: elite, commoners và điều chưa biết** tiếp nhận điểm tựa từ **Economy của Âu Lạc: không có ngân sách nhà nước để xem, vậy reconstruct thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mỵ Châu – Trọng Thủy và sự kết thúc Âu Lạc: đọc plot như bộ nhớ (memory / 메모리), còn geopolitics như bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Xã hội: elite, commoners và điều chưa biết** nối từ **Economy của Âu Lạc: không có ngân sách nhà nước để xem, vậy reconstruct thế nào?** sang **Mỵ Châu – Trọng Thủy và sự kết thúc Âu Lạc: đọc plot như bộ nhớ (memory / 메모리), còn geopolitics như bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xã hội: elite, commoners và điều chưa biết
 
@@ -86,7 +86,7 @@ Monumental construction và differential material culture cho thấy hierarchy, 
 
 Đây là ranh giới (boundary / 경계) giữa **trạng thái (state / 상태) formation (hình thành nhà nước)** và **bureaucratic trạng thái (state / 상태) (nhà nước quan liêu)**. Chapter sau về Han administration sẽ cho thấy một loại apparatus thành văn, census/tax và commandery khác hẳn.
 
-> **Chuyển mạch:** Ở chặng này của **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Mỵ Châu – Trọng Thủy và sự kết thúc Âu Lạc: đọc plot như bộ nhớ (memory / 메모리), còn geopolitics như bài toán (problem / 문제)** tiếp nhận điểm tựa từ **Xã hội: elite, commoners và điều chưa biết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nếu đứng ở Cổ Loa hôm nay, hãy nhìn gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Mỵ Châu – Trọng Thủy và sự kết thúc Âu Lạc: đọc plot như bộ nhớ (memory / 메모리), còn geopolitics như bài toán (problem / 문제)** nối từ **Xã hội: elite, commoners và điều chưa biết** sang **Nếu đứng ở Cổ Loa hôm nay, hãy nhìn gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mỵ Châu – Trọng Thủy và sự kết thúc Âu Lạc: đọc plot như bộ nhớ (memory / 메모리), còn geopolitics như bài toán (problem / 문제)
 
@@ -94,7 +94,7 @@ Truyền thuyết kể việc bí mật quân sự bị lộ qua Mỵ Châu – 
 
 Điều chắc hơn cho nhân quả (causal / 인과적) luồng (flow / 흐름) là: Cổ Loa/Âu Lạc không tồn tại trong isolation; nó nằm trong mạng (network / 네트워크) military–political rộng hơn. Đến thế kỷ II TCN, khu vực Bắc Bộ bị hút vào Nam Việt, rồi sau đó vào imperial hệ thống (system / 시스템) của nhà Hán. Đó là handoff sang một kiểu (type / 타입) of trạng thái (state / 상태) và archive hoàn toàn khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Nếu đứng ở Cổ Loa hôm nay, hãy nhìn gì?** tiếp nhận điểm tựa từ **Mỵ Châu – Trọng Thủy và sự kết thúc Âu Lạc: đọc plot như bộ nhớ (memory / 메모리), còn geopolitics như bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với Việt Nam hiện nay — continuity phải có cơ chế (mechanism / 메커니즘)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Nếu đứng ở Cổ Loa hôm nay, hãy nhìn gì?** nối từ **Mỵ Châu – Trọng Thủy và sự kết thúc Âu Lạc: đọc plot như bộ nhớ (memory / 메모리), còn geopolitics như bài toán (problem / 문제)** sang **Liên hệ với Việt Nam hiện nay — continuity phải có cơ chế (mechanism / 메커니즘)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nếu đứng ở Cổ Loa hôm nay, hãy nhìn gì?
 
@@ -102,7 +102,7 @@ Truyền thuyết kể việc bí mật quân sự bị lộ qua Mỵ Châu – 
 
 Cục Di sản Văn hóa ghi nhận Cổ Loa gồm nhiều lớp di tích và một hệ thống ba vòng thành lớn. Nghiên cứu khảo cổ của Nam C. Kim và đồng nghiệp dùng excavation cùng dating để đặt phần monumental construction quan trọng vào cuối thiên niên kỷ I TCN. Hai loại nguồn bổ sung nhau: heritage bản ghi (record / 레코드) giúp đọc site hiện tại, scholarship giúp giải thích chronology và trạng thái (state / 상태) formation.
 
-> **Chuyển mạch:** Trong **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Nếu đứng ở Cổ Loa hôm nay, hãy nhìn gì?** xác định đầu vào; **Liên hệ với Việt Nam hiện nay — continuity phải có cơ chế (mechanism / 메커니즘)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Recap và bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Nếu đứng ở Cổ Loa hôm nay, hãy nhìn gì?** đặt đầu vào cho **Liên hệ với Việt Nam hiện nay — continuity phải có cơ chế (mechanism / 메커니즘)**, rồi **Recap và bàn giao** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên hệ với Việt Nam hiện nay — continuity phải có cơ chế (mechanism / 메커니즘)
 
@@ -110,7 +110,7 @@ Cổ Loa vẫn tồn tại như landscape, làng cư trú và bộ nhớ (memory
 
 Điểm thú vị chính là **past survives through transformation**, không phải vì xã hội đứng yên.
 
-> **Chuyển mạch:** Ở chặng này của **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Liên hệ với Việt Nam hiện nay — continuity phải có cơ chế (mechanism / 메커니즘)** xác định đầu vào; **Recap và bàn giao** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Văn Lang, Âu Lạc và Cổ Loa: truyền thống gặp archaeology**, **Liên hệ với Việt Nam hiện nay — continuity phải có cơ chế (mechanism / 메커니즘)** xác định đầu vào; **Recap và bàn giao** giải thích bước vận hành tạo ra kết quả kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

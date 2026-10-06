@@ -12,7 +12,7 @@ Kết luận hiện tại: **17 chuẩn gốc (canonical / 정본) học tập (
 
 Full-depth pass đầu tiên tập trung `00`, `07–12` và `16`. Follow-up refinement sau đó tiếp tục đóng các gap có giá trị ở `01–04` và `15`: bất định (uncertainty / 불확실성) profile/tailoring debt, people quyết định (decision / 결정) kiến trúc (architecture / 아키텍처)/nhóm (team / 팀) resilience, stakeholder sensing/thông tin (information / 정보) validity, giả định (assumption / 가정)/change-collision/tích hợp (integration / 통합) debt và quantitative mô hình (model / 모델) robustness. Các chapter còn lại chỉ nên sửa khi xuất hiện missing cơ chế (mechanism / 메커니즘) thật; line count không phải proxy cho chất lượng.
 
-> **Chuyển mạch:** Trong **PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage & độ sâu (depth / 깊이) kiểm tra (audit / 감사)**, sau nội dung của **Trạng thái kiểm tra (audit / 감사)**, **Chuẩn gốc (canonical / 정본) độ sâu (depth / 깊이) status** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Ánh xạ (mapping / 매핑) với PMP 2026** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trạng thái audit ghi bằng chứng hiện có; **Chuẩn gốc depth status** chỉ tài liệu và owner cần quay lại khi đào sâu. **Ánh xạ với PMP 2026** đặt coverage vào outline hiện hành.
 
 ## Chuẩn gốc (canonical / 정본) độ sâu (depth / 깊이) status
 
@@ -38,7 +38,7 @@ Full-depth pass đầu tiên tập trung `00`, `07–12` và `16`. Follow-up ref
 
 `Deepened+` chỉ có nghĩa chapter đã có đủ cơ chế (mechanism / 메커니즘)/hệ thống (system / 시스템) tầng (layer / 계층) cho kiểm tra (audit / 감사) hiện tại; đây không phải ranking chất lượng giữa chapter.
 
-> **Chuyển mạch:** **Chuẩn gốc depth status** cho biết nội dung đã có bằng chứng nào; **Ánh xạ với PMP 2026** đặt nó vào outline hiện hành, rồi **Ánh xạ với PMBOK Eighth Edition** kiểm tra độ bao phủ theo chuẩn.
+> **Nối mạch:** **Chuẩn gốc depth status** cho biết nội dung đã có bằng chứng nào; **Ánh xạ với PMP 2026** đặt nó vào outline hiện hành, rồi **Ánh xạ với PMBOK Eighth Edition** kiểm tra độ bao phủ theo chuẩn.
 
 ## Ánh xạ (mapping / 매핑) với PMP 2026
 
@@ -66,7 +66,7 @@ Full-depth pass đầu tiên tập trung `00`, `07–12` và `16`. Follow-up ref
 | Predictive, adaptive/agile, hybrid across domains | [01 Lifecycle](./01_lifecycle_delivery_approaches_and_tailoring.md), [10 Adaptive & Hybrid](./10_agile_hybrid_and_adaptive_delivery.md), [16 Cases](./16_end_to_end_case_studies.md) |
 | Scenario/practicum/ứng dụng (application / 애플리케이션) | [13 Scenario Reasoning](./13_pmp_scenario_reasoning_and_exam_strategy.md), [14 Artifacts](./14_artifacts_information_and_traceability.md), [16 Cases](./16_end_to_end_case_studies.md) |
 
-> **Chuyển mạch:** Sau khi đối chiếu hai khung chuẩn, **Formula và worked-example audit** kiểm tra năng lực áp dụng; coverage chỉ đạt khi người học giải thích được cơ chế chứ không chỉ thấy heading.
+> **Nối mạch:** Sau khi đối chiếu hai khung chuẩn, **Formula và worked-example audit** kiểm tra năng lực áp dụng; coverage chỉ đạt khi cơ chế được giải thích, không chỉ có heading.
 
 ## Ánh xạ (mapping / 매핑) với PMBOK Eighth Edition
 
@@ -74,7 +74,7 @@ PMBOK 8 giữ principles/hiệu năng (performance / 성능) domains và mở r�
 
 Điểm khác biệt có chủ ý là thư viện (library / 라이브러리) dùng các **liên kết (connection / 연결) tầng (layer / 계층)** làm spine: investment/giá trị (value / 값) (`00`), commitment/học tập (learning / 학습) (`01`), quyết định (decision / 결정)/incentive (`02`), influence/thông tin (information / 정보) (`03`), trạng thái (state / 상태)/thay đổi (change / 변경) propagation (`04`), nhân quả (causal / 인과적) luồng (flow / 흐름) (`05`), economic trạng thái (state / 상태) (`06`), năng lực (capability / 역량)/organizational ranh giới (boundary / 경계) (`07`), bất định (uncertainty / 불확실성)/resilience (`08`), quản trị (governance / 거버넌스)/capital allocation (`09`), adaptive option economics (`10`), sensor/học tập (learning / 학습) (`11`), socio-technical/vòng đời (lifecycle / 생명주기) externality (`12`), scenario máy trạng thái (state machine / 상태 머신) (`13`), bằng chứng (evidence / 증거) lineage (`14`), quantitative mô hình (model / 모델) validity (`15`) và cross-case transfer (`16`).
 
-> **Chuyển mạch:** Trong **PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage & độ sâu (depth / 깊이) kiểm tra (audit / 감사)**, **Ánh xạ (mapping / 매핑) với PMBOK Eighth Edition** cho ta quy tắc; **Formula và worked-example kiểm tra (audit / 감사)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ranh giới (boundary / 경계) và duplicate kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Ánh xạ (mapping / 매핑) với PMBOK Eighth Edition** nêu tiêu chí; **Formula và worked-example kiểm tra (audit / 감사)** thử tiêu chí trong tình huống, rồi **Ranh giới (boundary / 경계) và duplicate kiểm tra (audit / 감사)** kiểm tra giới hạn.
 
 ## Formula và worked-example kiểm tra (audit / 감사)
 
@@ -82,7 +82,7 @@ Các phép tính được giữ vì chúng tạo quyết định (decision / 결
 
 [Quantitative Reasoning](./15_quantitative_reasoning_worked_examples.md) là consolidation tầng (layer / 계층). Follow-up refinement bổ sung robustness, decision-reversal threshold, mô hình (model / 모델) rủi ro (risk / 위험), calibration, cross-metric consistency và dimensional sanity để tránh lỗi “arithmetic đúng nhưng quyết định (decision / 결정) mô hình (model / 모델) sai”. Arithmetic không được xem là đủ nếu mô hình (model / 모델) validity, phụ thuộc (dependency / 의존성)/correlation, sensitivity ranh giới (boundary / 경계) và interpretation chưa rõ.
 
-> **Chuyển mạch:** Ở chặng này của **PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage & độ sâu (depth / 깊이) kiểm tra (audit / 감사)**, trường hợp ở **Formula và worked-example kiểm tra (audit / 감사)** cho thấy quy tắc hoạt động; **Ranh giới (boundary / 경계) và duplicate kiểm tra (audit / 감사)** kiểm tra nơi quy tắc ấy không còn áp dụng hoặc dễ bị hiểu nhầm. Từ đây, **Readability kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Formula và worked-example audit cho thấy quy tắc hoạt động; Ranh giới và duplicate audit chỉ nơi dễ hiểu nhầm. **Readability audit** kiểm tra người học có thể theo dõi lập luận hay không.
 
 ## Ranh giới (boundary / 경계) và duplicate kiểm tra (audit / 감사)
 
@@ -92,7 +92,7 @@ Software requirements/testing/bản phát hành (release / 릴리스)/technical 
 
 Các độ sâu (depth / 깊이) pass chủ động **không tạo chapter mới**, vì mọi cơ chế (mechanism / 메커니즘) mới đều có conceptual home rõ trong chapter hiện hữu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage & độ sâu (depth / 깊이) kiểm tra (audit / 감사)**, **Ranh giới (boundary / 경계) và duplicate kiểm tra (audit / 감사)** đã nêu tiêu chí phân biệt, còn **Readability kiểm tra (audit / 감사)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Phụ thuộc (dependency / 의존성) kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Ranh giới (boundary / 경계) và duplicate kiểm tra (audit / 감사)** đặt tiêu chí; **Readability kiểm tra (audit / 감사)** dùng nó để kiểm tra ranh giới, rồi **Phụ thuộc (dependency / 의존성) kiểm tra (audit / 감사)** mở rộng cơ chế.
 
 ## Readability kiểm tra (audit / 감사)
 
@@ -102,7 +102,7 @@ Mỗi phần ưu tiên bài toán (problem / 문제) → cơ chế (mechanism / 
 
 Độ sâu (depth / 깊이) pass kiểm tra (audit / 감사) mọi chapter nhưng không rewrite chapter đã đủ sâu chỉ để đổi wording. Đây là tiêu chí bảo vệ signal-to-noise của thư viện (library / 라이브러리).
 
-> **Chuyển mạch:** **Readability audit** xác nhận prose có thể học; **Dependency audit** kiểm tra prerequisite, rồi **Internal-link audit** xác nhận người đọc quay được về đúng owner.
+> **Nối mạch:** **Readability audit** xác nhận prose có thể học; **Dependency audit** kiểm tra prerequisite, rồi **Internal-link audit** xác nhận người đọc quay được về đúng owner.
 
 ## Phụ thuộc (dependency / 의존성) kiểm tra (audit / 감사)
 
@@ -128,7 +128,7 @@ Deepening không làm thay conceptual tuyến (route / 경로). Nó chỉ làm m
 
 README hiện có full conceptual tuyến (route / 경로), scenario tuyến (route / 경로), software-project tuyến (route / 경로), leadership/quản trị (governance / 거버넌스) tuyến (route / 경로) và last-mile exam consolidation. Không cần thêm competing tuyến (route / 경로).
 
-> **Chuyển mạch:** Khi dependency và link đã đúng, **Nguồn/provenance audit** kiểm tra claim có thể truy nguyên về tài liệu chính thức, phiên bản và ngày đối chiếu.
+> **Nối mạch:** Khi dependency và link đã đúng, **Nguồn/provenance audit** kiểm tra claim có thể truy nguyên về tài liệu chính thức, phiên bản và ngày đối chiếu.
 
 ## Internal-link kiểm tra (audit / 감사)
 
@@ -138,7 +138,7 @@ Cross-domain links chỉ dùng ở ranh giới (boundary / 경계) có giá tr�
 
 `raw/` và `workflow-output/` không được đưa vào học tập (learning / 학습) tuyến (route / 경로).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage & độ sâu (depth / 깊이) kiểm tra (audit / 감사)**, **Internal-link kiểm tra (audit / 감사)** nêu điều cần giải thích; **Nguồn (source / 소스)/provenance kiểm tra (audit / 감사)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Modern-source kiểm tra (audit / 감사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Internal-link kiểm tra (audit / 감사)** đặt vấn đề; **Nguồn (source / 소스)/provenance kiểm tra (audit / 감사)** kiểm tra bằng chứng, rồi **Modern-source kiểm tra (audit / 감사)** mở rộng hệ quả.
 
 ## Nguồn (source / 소스)/provenance kiểm tra (audit / 감사)
 
@@ -146,7 +146,7 @@ Cross-domain links chỉ dùng ở ranh giới (boundary / 경계) có giá tr�
 
 Chuẩn gốc (canonical / 정본) học tập (learning / 학습) tầng (layer / 계층) vẫn nằm trực tiếp ở `pmp/*.md`: 17 chapter + README + Glossary + References + Coverage kiểm tra (audit / 감사).
 
-> **Chuyển mạch:** Trong **PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage & độ sâu (depth / 깊이) kiểm tra (audit / 감사)**, **Nguồn (source / 소스)/provenance kiểm tra (audit / 감사)** nêu điều cần giải thích; **Modern-source kiểm tra (audit / 감사)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Gap rà soát (review / 검토) sau các độ sâu (depth / 깊이) pass** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Nguồn (source / 소스)/provenance kiểm tra (audit / 감사)** đặt vấn đề; **Modern-source kiểm tra (audit / 감사)** kiểm tra bằng chứng, rồi **Gap rà soát (review / 검토) sau các độ sâu (depth / 깊이) pass** mở rộng hệ quả.
 
 ## Modern-source kiểm tra (audit / 감사)
 
@@ -156,7 +156,7 @@ Tại kiểm tra (audit / 감사) 2026-09-22, exam siêu dữ liệu (metadata /
 
 AI và sustainability deepening chỉ mở rộng conceptual quản trị (governance / 거버넌스)/vòng đời (lifecycle / 생명주기) lập luận (reasoning / 추론), không thêm claim mới về hiện tại (current / 현재) PMI siêu dữ liệu (metadata / 메타데이터).
 
-> **Chuyển mạch:** Ở chặng này của **PMP thư viện kiến thức (knowledge library / 지식 라이브러리) — Coverage & độ sâu (depth / 깊이) kiểm tra (audit / 감사)**, **Modern-source kiểm tra (audit / 감사)** nêu điều cần giải thích; **Gap rà soát (review / 검토) sau các độ sâu (depth / 깊이) pass** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Tiêu chí cho vòng tiếp theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Modern-source kiểm tra (audit / 감사)** đặt vấn đề; **Gap rà soát (review / 검토) sau các độ sâu (depth / 깊이) pass** kiểm tra bằng chứng, rồi **Tiêu chí cho vòng tiếp theo** mở rộng hệ quả.
 
 ## Gap rà soát (review / 검토) sau các độ sâu (depth / 깊이) pass
 
@@ -188,7 +188,7 @@ AI và sustainability deepening chỉ mở rộng conceptual quản trị (gover
 
 Các chapter `05–06`, `13–14` vẫn được giữ ở trạng thái hiện tại vì kiểm tra (audit / 감사) chưa tìm thấy missing cơ chế (mechanism / 메커니즘) đủ lớn để biện minh cho thêm prose. Đây là quyết định giữ signal-to-noise, không phải bỏ qua chúng.
 
-> **Chuyển mạch:** **Gap review sau depth pass** gom các issue còn mở; **Tiêu chí cho vòng tiếp theo** biến chúng thành bằng chứng và hành động cụ thể cho lần audit kế tiếp.
+> **Nối mạch:** **Gap review sau depth pass** gom các issue còn mở; **Tiêu chí cho vòng tiếp theo** biến chúng thành bằng chứng và hành động cụ thể cho lần audit kế tiếp.
 
 ## Tiêu chí cho vòng tiếp theo
 

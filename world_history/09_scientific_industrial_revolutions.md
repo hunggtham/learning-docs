@@ -21,7 +21,7 @@ Không gộp mọi phát minh vào một “cách mạng” đồng thời: chro
 
 Đo lường (measurement / 측정), experiment, instrument, print, correspondence, university, navy và commercial patronage tạo một ecology của tri thức. “Khoa học” có thể tăng khả năng dự báo và kiểm soát, nhưng taxonomy, race science và colonial survey cũng được dùng để quản trị và phân cấp con người. Cần phân biệt claim về tự nhiên với institution quyết định ai được công nhận là knower.
 
-> **Chuyển mạch:** **Scientific practice** giải thích cách tri thức được tổ chức; **Industrialization như hệ thống năng lượng** nối tri thức đó với than, máy móc, lao động và hạ tầng trước khi so sánh các trajectory.
+> **Nối mạch:** Scientific practice giải thích cách tri thức được tổ chức; **Industrialization như hệ thống năng lượng** nối tri thức đó với than, máy móc, lao động và hạ tầng trước khi so sánh các trajectory.
 
 ## Industrialization như hệ thống năng lượng
 
@@ -39,19 +39,19 @@ Factory chỉ là nút (node / 노드) cuối: mỏ, cảng, machine tools, cott
 
 Productivity tăng không tự động thành wage tăng. Chủ sở hữu máy, merchant và trạng thái (state / 상태) có bargaining power khác workers, children, migrants và women làm việc tại nhà. Union, strike, factory law, công khai (public / 공개) health và education là các institution phản ứng với externality, không phải quà tặng tự nhiên của tăng trưởng.
 
-> **Chuyển mạch:** **Các trajectory khác nhau** kiểm tra vì sao cùng công nghệ nhưng kết quả về đô thị, lao động và môi trường khác nhau; **Bằng chứng, giới hạn và cầu nối** nêu dữ liệu cần để phân biệt các nguyên nhân.
+> **Nối mạch:** Các trajectory khác nhau kiểm tra vì sao cùng công nghệ nhưng kết quả về đô thị, lao động và môi trường khác nhau; **Bằng chứng, giới hạn và cầu nối** nêu dữ liệu cần để phân biệt các nguyên nhân.
 
 ## Các trajectory khác nhau
 
 Britain có coal/ports/finance và textile đường dẫn (path / 경로); Germany dùng chemistry, rail và bank–industry; Japan kết hợp state-led industrialization; nhiều thuộc địa cung cấp raw material nhưng bị hạn chế machine năng lực (capability / 역량). So sánh phải hỏi ai kiểm soát năng lượng (energy / 에너지), capital, skill và thị trường (market / 시장).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09 — Scientific + Industrial Revolutions: tri thức, năng lượng và sản xuất**, **Các trajectory khác nhau** đã nêu tiêu chí phân biệt, còn **Bằng chứng, giới hạn và cầu nối** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Độ sâu (depth / 깊이) pass: từ kiến thức (knowledge / 지식) practice đến fossil lock-in** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Các trajectory cho thấy công nghệ không tự quyết định kết quả; **Bằng chứng, giới hạn và cầu nối** kiểm tra vai trò của năng lượng, lao động và thể chế trước depth pass về fossil lock-in.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Wage/price series, mine đầu ra (output / 출력), factory inspection, patent, correspondence, năng lượng (energy / 에너지) statistics và pollution proxies cho phép kiểm tra productivity nhưng coverage theo giới và thuộc địa không đều. Counterfactual: nếu coal rẻ nhưng patent/finance yếu, invention có thể không đạt quy mô (scale / 규모); nếu labor law sớm hơn, health chi phí (cost / 비용) có thể phân phối khác. Cầu nối sang 10 là **industrial sức chứa (capacity / 용량) biến raw material, thị trường (market / 시장) và strategic cơ sở (base / 기반) thành động lực đế quốc**.
 
-> **Chuyển mạch:** **Bằng chứng, giới hạn và cầu nối** đưa claim về practice và năng lượng vào kiểm tra; phần **Độ sâu pass** theo dõi khi fossil lock-in biến lựa chọn lịch sử thành ràng buộc dài hạn.
+> **Nối mạch:** Bằng chứng đưa claim về practice và năng lượng vào kiểm tra; **Độ sâu pass** theo dõi khi fossil lock-in biến lựa chọn lịch sử thành ràng buộc dài hạn.
 
 ## Độ sâu (depth / 깊이) pass: từ kiến thức (knowledge / 지식) practice đến fossil lock-in
 

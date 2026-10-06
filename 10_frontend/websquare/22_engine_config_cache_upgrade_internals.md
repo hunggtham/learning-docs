@@ -30,7 +30,7 @@ browser cache/state
 
 Khi chỉ một tầng (layer / 계층) stale, symptom có thể trông như mã (code / 코드) bug.
 
-> **Chuyển mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **1. thời gian chạy (runtime / 런타임) không phải một tệp (file / 파일)** xác định đầu vào; **2. trình duyệt (browser / 브라우저) lời gọi (call / 호출) chuỗi (chain / 사슬)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. nguồn (source / 소스) đồ thị (graph / 그래프) và thời gian chạy (runtime / 런타임) đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **1. thời gian chạy (runtime / 런타임) không phải một tệp (file / 파일)** đặt đầu vào cho **2. trình duyệt (browser / 브라우저) lời gọi (call / 호출) chuỗi (chain / 사슬)**, rồi **3. nguồn (source / 소스) đồ thị (graph / 그래프) và thời gian chạy (runtime / 런타임) đồ thị (graph / 그래프)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2. trình duyệt (browser / 브라우저) lời gọi (call / 호출) chuỗi (chain / 사슬)
 
@@ -46,7 +46,7 @@ browser calls page
 
 Điều quan trọng là XML authoring nguồn (source / 소스) và JS thời gian chạy (runtime / 런타임) sản phẩm tạo ra (artifact / 산출물) không phải cùng định danh (identity / 식별자).
 
-> **Chuyển mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **2. trình duyệt (browser / 브라우저) lời gọi (call / 호출) chuỗi (chain / 사슬)** nêu điều cần giải thích; **3. nguồn (source / 소스) đồ thị (graph / 그래프) và thời gian chạy (runtime / 런타임) đồ thị (graph / 그래프)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Engine bản dựng (build / 빌드) là phụ thuộc (dependency / 의존성) thực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **2. trình duyệt (browser / 브라우저) lời gọi (call / 호출) chuỗi (chain / 사슬)** đặt vấn đề; **3. nguồn (source / 소스) đồ thị (graph / 그래프) và thời gian chạy (runtime / 런타임) đồ thị (graph / 그래프)** đối chiếu bằng chứng, rồi **4. Engine bản dựng (build / 빌드) là phụ thuộc (dependency / 의존성) thực** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3. nguồn (source / 소스) đồ thị (graph / 그래프) và thời gian chạy (runtime / 런타임) đồ thị (graph / 그래프)
 
@@ -71,7 +71,7 @@ cached resources
 
 Gỡ lỗi (debug / 디버그) môi trường vận hành (production / 운영 환경) phải quan sát thời gian chạy (runtime / 런타임) đồ thị (graph / 그래프).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **3. nguồn (source / 소스) đồ thị (graph / 그래프) và thời gian chạy (runtime / 런타임) đồ thị (graph / 그래프)** nêu điều cần giải thích; **4. Engine bản dựng (build / 빌드) là phụ thuộc (dependency / 의존성) thực** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. engineType và dev/prod hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **3. nguồn (source / 소스) đồ thị (graph / 그래프) và thời gian chạy (runtime / 런타임) đồ thị (graph / 그래프)** đặt vấn đề; **4. Engine bản dựng (build / 빌드) là phụ thuộc (dependency / 의존성) thực** đối chiếu bằng chứng, rồi **5. engineType và dev/prod hành vi (behavior / 동작)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. Engine bản dựng (build / 빌드) là phụ thuộc (dependency / 의존성) thực
 
@@ -89,7 +89,7 @@ W-Pack build identity
 browser version
 ```
 
-> **Chuyển mạch:** Engine build là dependency thực; engineType và dev/prod behavior phải được kiểm chứng trước khi tách client config khỏi server config.
+> **Nối mạch:** Engine build là dependency thực; engineType và dev/prod behavior phải được kiểm chứng trước khi tách client config khỏi server config.
 
 ## 5. `engineType` và dev/prod hành vi (behavior / 동작)
 
@@ -107,7 +107,7 @@ production engine
 
 Nếu PROD dấu vết ngăn xếp (stack trace / 스택 트레이스) khác DEV, có thể do engine bản dựng (build / 빌드)/kiểu (type / 타입) chứ không phải exception khác.
 
-> **Chuyển mạch:** `engineType` giải thích behavior theo environment; tách client/server config tiếp theo để xác định phần nào có thể public và phần nào là operational code.
+> **Nối mạch:** `engineType` giải thích behavior theo environment; tách client/server config tiếp theo để xác định phần nào có thể public và phần nào là operational code.
 
 ## 6. máy khách (client / 클라이언트) cấu hình (config / 설정) vs máy chủ (server / 서버) cấu hình (config / 설정)
 
@@ -119,7 +119,7 @@ SP5 tách cấu hình (configuration / 구성) phía máy khách (client / 클�
 
 Tên tệp (file / 파일)/generated biểu diễn (representation / 표현) có thể khác theo dự án (project / 프로젝트)/tooling; hãy dựa vào Studio/official guide đúng bản dựng (build / 빌드).
 
-> **Chuyển mạch:** Config là operational code nên phải review như code; provenance tiếp theo ghi nguồn, version và override chain để debug reproducibly.
+> **Nối mạch:** Config là operational code nên phải review như code; provenance tiếp theo ghi nguồn, version và override chain để debug reproducibly.
 
 ## 7. cấu hình (configuration / 구성) là mã (code / 코드) vận hành
 
@@ -135,7 +135,7 @@ PROD có XML khác nhưng không commit
 
 Khi sự cố (incident / 인시던트) xảy ra không ai biết chuẩn gốc (canonical / 정본) cấu hình (config / 설정).
 
-> **Chuyển mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **8. cấu hình (config / 설정) provenance** tiếp nhận điểm tựa từ **7. cấu hình (configuration / 구성) là mã (code / 코드) vận hành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. ngữ cảnh (context / 맥락) gốc (root / 루트) là part of tài nguyên (resource / 자원) định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **8. cấu hình (config / 설정) provenance** nối từ **7. cấu hình (configuration / 구성) là mã (code / 코드) vận hành** sang **9. ngữ cảnh (context / 맥락) gốc (root / 루트) là part of tài nguyên (resource / 자원) định danh (identity / 식별자)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. cấu hình (config / 설정) provenance
 
@@ -152,7 +152,7 @@ source commit
 
 Nếu cấu hình (config / 설정) được inject theo môi trường (environment / 환경), cần biết đầu vào (input / 입력) nào tạo thời gian chạy (runtime / 런타임) cấu hình (config / 설정) cuối cùng.
 
-> **Chuyển mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **8. cấu hình (config / 설정) provenance** nêu điều cần giải thích; **9. ngữ cảnh (context / 맥락) gốc (root / 루트) là part of tài nguyên (resource / 자원) định danh (identity / 식별자)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. W-Pack là compiler-like ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **8. cấu hình (config / 설정) provenance** đặt vấn đề; **9. ngữ cảnh (context / 맥락) gốc (root / 루트) là part of tài nguyên (resource / 자원) định danh (identity / 식별자)** đối chiếu bằng chứng, rồi **10. W-Pack là compiler-like ranh giới (boundary / 경계)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. ngữ cảnh (context / 맥락) gốc (root / 루트) là part of tài nguyên (resource / 자원) định danh (identity / 식별자)
 
@@ -169,7 +169,7 @@ Hard-coded absolute/relative đường dẫn (path / 경로) có thể hoạt đ
 
 Không fix bằng thêm `../` ngẫu nhiên. Hãy xác định chuẩn gốc (canonical / 정본) path-resolution quy tắc (rule / 규칙).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **9. ngữ cảnh (context / 맥락) gốc (root / 루트) là part of tài nguyên (resource / 자원) định danh (identity / 식별자)** đã nêu tiêu chí phân biệt, còn **10. W-Pack là compiler-like ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **11. Generated sản phẩm tạo ra (artifact / 산출물) không nên sửa tay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **9. ngữ cảnh (context / 맥락) gốc (root / 루트) là part of tài nguyên (resource / 자원) định danh (identity / 식별자)** đặt tiêu chí; **10. W-Pack là compiler-like ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **11. Generated sản phẩm tạo ra (artifact / 산출물) không nên sửa tay** mở rộng hệ quả.
 
 ## 10. W-Pack là compiler-like ranh giới (boundary / 경계)
 
@@ -186,7 +186,7 @@ source
 
 Bug có thể ở nguồn (source / 소스), transform cấu hình (config / 설정), stale sản phẩm tạo ra (artifact / 산출물) hoặc thời gian chạy (runtime / 런타임) engine.
 
-> **Chuyển mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **10. W-Pack là compiler-like ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **11. Generated sản phẩm tạo ra (artifact / 산출물) không nên sửa tay** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **12. Clean bản dựng (build / 빌드) khi nào cần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **10. W-Pack là compiler-like ranh giới (boundary / 경계)** đặt tiêu chí; **11. Generated sản phẩm tạo ra (artifact / 산출물) không nên sửa tay** dùng tiêu chí đó để kiểm tra ranh giới, rồi **12. Clean bản dựng (build / 빌드) khi nào cần** mở rộng hệ quả.
 
 ## 11. Generated sản phẩm tạo ra (artifact / 산출물) không nên sửa tay
 
@@ -200,7 +200,7 @@ next build returns A
 
 Fix phải ở chuẩn gốc (canonical / 정본) nguồn (source / 소스)/cấu hình (config / 설정)/bản dựng (build / 빌드) chuỗi xử lý (pipeline / 파이프라인).
 
-> **Chuyển mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **12. Clean bản dựng (build / 빌드) khi nào cần** tiếp nhận điểm tựa từ **11. Generated sản phẩm tạo ra (artifact / 산출물) không nên sửa tay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. bộ nhớ đệm (cache / 캐시) có nhiều tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **12. Clean bản dựng (build / 빌드) khi nào cần** nối từ **11. Generated sản phẩm tạo ra (artifact / 산출물) không nên sửa tay** sang **13. bộ nhớ đệm (cache / 캐시) có nhiều tầng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Clean bản dựng (build / 빌드) khi nào cần
 
@@ -217,7 +217,7 @@ capture evidence
 
 Không biến “clean everything” thành nghi thức cho mọi bug; dùng khi sản phẩm tạo ra (artifact / 산출물) provenance đáng nghi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **13. bộ nhớ đệm (cache / 캐시) có nhiều tầng** tiếp nhận điểm tựa từ **12. Clean bản dựng (build / 빌드) khi nào cần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. bộ nhớ đệm (cache / 캐시) key là đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **13. bộ nhớ đệm (cache / 캐시) có nhiều tầng** nối từ **12. Clean bản dựng (build / 빌드) khi nào cần** sang **14. bộ nhớ đệm (cache / 캐시) key là đặc tả hợp đồng (contract / 계약)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. bộ nhớ đệm (cache / 캐시) có nhiều tầng
 
@@ -236,7 +236,7 @@ application cache riêng
 
 “Đã Ctrl+F5” không chứng minh mọi tầng đã invalidated.
 
-> **Chuyển mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **14. bộ nhớ đệm (cache / 캐시) key là đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **13. bộ nhớ đệm (cache / 캐시) có nhiều tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Postfix per tài nguyên (resource / 자원)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **14. bộ nhớ đệm (cache / 캐시) key là đặc tả hợp đồng (contract / 계약)** nối từ **13. bộ nhớ đệm (cache / 캐시) có nhiều tầng** sang **15. Postfix per tài nguyên (resource / 자원)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. bộ nhớ đệm (cache / 캐시) key là đặc tả hợp đồng (contract / 계약)
 
@@ -252,7 +252,7 @@ resource URL + version/postfix/hash
 
 SP5 có engine bộ nhớ đệm (cache / 캐시)/postfix cấu hình (configuration / 구성) và các bản dựng (build / 빌드) mới hỗ trợ ánh xạ (mapping / 매핑) postfix theo tệp (file / 파일). chính xác (exact / 정확한) option phải kiểm tra bản phát hành (release / 릴리스) ghi chú (note / 노트)/bản dựng (build / 빌드).
 
-> **Chuyển mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **14. bộ nhớ đệm (cache / 캐시) key là đặc tả hợp đồng (contract / 계약)** nêu điều cần giải thích; **15. Postfix per tài nguyên (resource / 자원)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. config.js cũng có bộ nhớ đệm (cache / 캐시) định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **14. bộ nhớ đệm (cache / 캐시) key là đặc tả hợp đồng (contract / 계약)** đặt vấn đề; **15. Postfix per tài nguyên (resource / 자원)** đối chiếu bằng chứng, rồi **16. config.js cũng có bộ nhớ đệm (cache / 캐시) định danh (identity / 식별자)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. Postfix per tài nguyên (resource / 자원)
 
@@ -265,7 +265,7 @@ artifact B hash/version → URL B?v=B7
 
 Điều này giảm vô hiệu hóa (invalidation / 무효화) toàn bộ khi chỉ một tài nguyên (resource / 자원) đổi, nhưng tăng yêu cầu bản dựng (build / 빌드) manifest/provenance rõ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **15. Postfix per tài nguyên (resource / 자원)** nêu điều cần giải thích; **16. config.js cũng có bộ nhớ đệm (cache / 캐시) định danh (identity / 식별자)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. thành phần (component / 컴포넌트) bộ nhớ đệm (cache / 캐시) và reusable tài nguyên (resource / 자원)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **15. Postfix per tài nguyên (resource / 자원)** đặt vấn đề; **16. config.js cũng có bộ nhớ đệm (cache / 캐시) định danh (identity / 식별자)** đối chiếu bằng chứng, rồi **17. thành phần (component / 컴포넌트) bộ nhớ đệm (cache / 캐시) và reusable tài nguyên (resource / 자원)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 16. `config.js` cũng có bộ nhớ đệm (cache / 캐시) định danh (identity / 식별자)
 
@@ -280,7 +280,7 @@ browser vẫn dùng config cũ
 
 Do đó verify mạng (network / 네트워크) phản hồi (response / 응답)/thời gian chạy (runtime / 런타임) giá trị (value / 값), không chỉ tệp (file / 파일) trên máy chủ (server / 서버).
 
-> **Chuyển mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **16. config.js cũng có bộ nhớ đệm (cache / 캐시) định danh (identity / 식별자)** nêu điều cần giải thích; **17. thành phần (component / 컴포넌트) bộ nhớ đệm (cache / 캐시) và reusable tài nguyên (resource / 자원)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. API công khai (public API / 공개 API) vs observed nội bộ (internal / 내부) API** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **16. config.js cũng có bộ nhớ đệm (cache / 캐시) định danh (identity / 식별자)** đặt vấn đề; **17. thành phần (component / 컴포넌트) bộ nhớ đệm (cache / 캐시) và reusable tài nguyên (resource / 자원)** đối chiếu bằng chứng, rồi **18. API công khai (public API / 공개 API) vs observed nội bộ (internal / 내부) API** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 17. thành phần (component / 컴포넌트) bộ nhớ đệm (cache / 캐시) và reusable tài nguyên (resource / 자원)
 
@@ -288,7 +288,7 @@ Một số SP5 bản phát hành (release / 릴리스) thay đổi cách UDC/TTC
 
 Nếu hành vi (behavior / 동작) đổi sau engine upgrade, kiểm tra bản phát hành (release / 릴리스) ghi chú (note / 노트) trước khi workaround bằng toàn cục (global / 전역) reset/hack.
 
-> **Chuyển mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **17. thành phần (component / 컴포넌트) bộ nhớ đệm (cache / 캐시) và reusable tài nguyên (resource / 자원)** nêu điều cần giải thích; **18. API công khai (public API / 공개 API) vs observed nội bộ (internal / 내부) API** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. Evergreen trình duyệt (browser / 브라우저) làm thời gian chạy (runtime / 런타임) tiếp tục thay đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **17. thành phần (component / 컴포넌트) bộ nhớ đệm (cache / 캐시) và reusable tài nguyên (resource / 자원)** đặt vấn đề; **18. API công khai (public API / 공개 API) vs observed nội bộ (internal / 내부) API** đối chiếu bằng chứng, rồi **19. Evergreen trình duyệt (browser / 브라우저) làm thời gian chạy (runtime / 런타임) tiếp tục thay đổi** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. API công khai (public API / 공개 API) vs observed nội bộ (internal / 내부) API
 
@@ -307,7 +307,7 @@ official public API
 
 Private nội bộ (internal / 내부) chỉ nên dùng khi vendor hỗ trợ (support / 지원) xác nhận và có tính tương thích (compatibility / 호환성) plan.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **19. Evergreen trình duyệt (browser / 브라우저) làm thời gian chạy (runtime / 런타임) tiếp tục thay đổi** tiếp nhận điểm tựa từ **18. API công khai (public API / 공개 API) vs observed nội bộ (internal / 내부) API** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Upgrade là phụ thuộc (dependency / 의존성) di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **19. Evergreen trình duyệt (browser / 브라우저) làm thời gian chạy (runtime / 런타임) tiếp tục thay đổi** nối từ **18. API công khai (public API / 공개 API) vs observed nội bộ (internal / 내부) API** sang **20. Upgrade là phụ thuộc (dependency / 의존성) di chuyển (migration / 마이그레이션)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Evergreen trình duyệt (browser / 브라우저) làm thời gian chạy (runtime / 런타임) tiếp tục thay đổi
 
@@ -328,7 +328,7 @@ performance scheduling
 
 Vì vậy tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬) phải có trình duyệt (browser / 브라우저) dimension.
 
-> **Chuyển mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **20. Upgrade là phụ thuộc (dependency / 의존성) di chuyển (migration / 마이그레이션)** tiếp nhận điểm tựa từ **19. Evergreen trình duyệt (browser / 브라우저) làm thời gian chạy (runtime / 런타임) tiếp tục thay đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. bản phát hành (release / 릴리스) ghi chú (note / 노트) phải đọc theo impact, không theo số lượng tính năng (feature / 기능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **20. Upgrade là phụ thuộc (dependency / 의존성) di chuyển (migration / 마이그레이션)** nối từ **19. Evergreen trình duyệt (browser / 브라우저) làm thời gian chạy (runtime / 런타임) tiếp tục thay đổi** sang **21. bản phát hành (release / 릴리스) ghi chú (note / 노트) phải đọc theo impact, không theo số lượng tính năng (feature / 기능)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Upgrade là phụ thuộc (dependency / 의존성) di chuyển (migration / 마이그레이션)
 
@@ -351,7 +351,7 @@ browser support
 
 Sau đó map bản phát hành (release / 릴리스) ghi chú (note / 노트) vào phụ thuộc (dependency / 의존성) thực của dự án (project / 프로젝트).
 
-> **Chuyển mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **21. bản phát hành (release / 릴리스) ghi chú (note / 노트) phải đọc theo impact, không theo số lượng tính năng (feature / 기능)** tiếp nhận điểm tựa từ **20. Upgrade là phụ thuộc (dependency / 의존성) di chuyển (migration / 마이그레이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **21. bản phát hành (release / 릴리스) ghi chú (note / 노트) phải đọc theo impact, không theo số lượng tính năng (feature / 기능)** nối từ **20. Upgrade là phụ thuộc (dependency / 의존성) di chuyển (migration / 마이그레이션)** sang **22. tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. bản phát hành (release / 릴리스) ghi chú (note / 노트) phải đọc theo impact, không theo số lượng tính năng (feature / 기능)
 
@@ -368,7 +368,7 @@ IRRELEVANT — project không có boundary đó
 
 Regression priority dựa trên impact.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **22. tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **21. bản phát hành (release / 릴리스) ghi chú (note / 노트) phải đọc theo impact, không theo số lượng tính năng (feature / 기능)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Canary/smoke trước full rollout** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **22. tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** nối từ **21. bản phát hành (release / 릴리스) ghi chú (note / 노트) phải đọc theo impact, không theo số lượng tính năng (feature / 기능)** sang **23. Canary/smoke trước full rollout**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)
 
@@ -385,7 +385,7 @@ Ví dụ:
 
 Ma trận (matrix / 행렬) buộc nhóm (team / 팀) nhìn upgrade như hệ thống (system / 시스템) thay đổi (change / 변경).
 
-> **Chuyển mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **23. Canary/smoke trước full rollout** tiếp nhận điểm tựa từ **22. tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. bộ nhớ đệm (cache / 캐시) rollout và backward tính tương thích (compatibility / 호환성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **23. Canary/smoke trước full rollout** nối từ **22. tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** sang **24. bộ nhớ đệm (cache / 캐시) rollout và backward tính tương thích (compatibility / 호환성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Canary/smoke trước full rollout
 
@@ -407,7 +407,7 @@ hybrid capability nếu có
 
 Không chỉ mở homepage rồi kết luận pass.
 
-> **Chuyển mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **24. bộ nhớ đệm (cache / 캐시) rollout và backward tính tương thích (compatibility / 호환성)** tiếp nhận điểm tựa từ **23. Canary/smoke trước full rollout** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. bản dựng (build / 빌드) định danh (identity / 식별자) phải visible** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **24. bộ nhớ đệm (cache / 캐시) rollout và backward tính tương thích (compatibility / 호환성)** nối từ **23. Canary/smoke trước full rollout** sang **25. bản dựng (build / 빌드) định danh (identity / 식별자) phải visible**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. bộ nhớ đệm (cache / 캐시) rollout và backward tính tương thích (compatibility / 호환성)
 
@@ -417,7 +417,7 @@ Do đó API/cấu hình (config / 설정)/tài nguyên (resource / 자원) đặ
 
 Không giả định deploy là atomic đối với mọi trình duyệt (browser / 브라우저).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **25. bản dựng (build / 빌드) định danh (identity / 식별자) phải visible** tiếp nhận điểm tựa từ **24. bộ nhớ đệm (cache / 캐시) rollout và backward tính tương thích (compatibility / 호환성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. thời gian chạy (runtime / 런타임) manifest** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **25. bản dựng (build / 빌드) định danh (identity / 식별자) phải visible** nối từ **24. bộ nhớ đệm (cache / 캐시) rollout và backward tính tương thích (compatibility / 호환성)** sang **26. thời gian chạy (runtime / 런타임) manifest**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. bản dựng (build / 빌드) định danh (identity / 식별자) phải visible
 
@@ -434,7 +434,7 @@ Có thể expose qua diagnostics screen/log header tùy bảo mật (security / 
 
 Không bắt hỗ trợ (support / 지원) hỏi người dùng (user / 사용자) “anh đã clear bộ nhớ đệm (cache / 캐시) chưa?” như bước đầu tiên.
 
-> **Chuyển mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **26. thời gian chạy (runtime / 런타임) manifest** tiếp nhận điểm tựa từ **25. bản dựng (build / 빌드) định danh (identity / 식별자) phải visible** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Diagnostic page** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **26. thời gian chạy (runtime / 런타임) manifest** nối từ **25. bản dựng (build / 빌드) định danh (identity / 식별자) phải visible** sang **27. Diagnostic page**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. thời gian chạy (runtime / 런타임) manifest
 
@@ -454,7 +454,7 @@ Một dự án (project / 프로젝트) mature có thể tạo thời gian chạ
 
 Mục tiêu là provenance.
 
-> **Chuyển mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **27. Diagnostic page** tiếp nhận điểm tựa từ **26. thời gian chạy (runtime / 런타임) manifest** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. hiệu năng (performance / 성능) cấu hình (config / 설정) và bộ nhớ đệm (cache / 캐시)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **27. Diagnostic page** nối từ **26. thời gian chạy (runtime / 런타임) manifest** sang **28. hiệu năng (performance / 성능) cấu hình (config / 설정) và bộ nhớ đệm (cache / 캐시)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Diagnostic page
 
@@ -473,7 +473,7 @@ hybrid capability version
 
 Không hiển thị đơn vị từ (token / 토큰)/session secret.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **28. hiệu năng (performance / 성능) cấu hình (config / 설정) và bộ nhớ đệm (cache / 캐시)** tiếp nhận điểm tựa từ **27. Diagnostic page** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. engineCache không phải nghiệp vụ (business / 비즈니스) bộ nhớ đệm (cache / 캐시)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **28. hiệu năng (performance / 성능) cấu hình (config / 설정) và bộ nhớ đệm (cache / 캐시)** nối từ **27. Diagnostic page** sang **29. engineCache không phải nghiệp vụ (business / 비즈니스) bộ nhớ đệm (cache / 캐시)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. hiệu năng (performance / 성능) cấu hình (config / 설정) và bộ nhớ đệm (cache / 캐시)
 
@@ -491,7 +491,7 @@ render
 
 Bật bộ nhớ đệm (cache / 캐시) không sửa formatter O(n²).
 
-> **Chuyển mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **29. engineCache không phải nghiệp vụ (business / 비즈니스) bộ nhớ đệm (cache / 캐시)** tiếp nhận điểm tựa từ **28. hiệu năng (performance / 성능) cấu hình (config / 설정) và bộ nhớ đệm (cache / 캐시)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. cấu hình (config / 설정) precedence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **29. engineCache không phải nghiệp vụ (business / 비즈니스) bộ nhớ đệm (cache / 캐시)** nối từ **28. hiệu năng (performance / 성능) cấu hình (config / 설정) và bộ nhớ đệm (cache / 캐시)** sang **30. cấu hình (config / 설정) precedence**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. `engineCache` không phải nghiệp vụ (business / 비즈니스) bộ nhớ đệm (cache / 캐시)
 
@@ -508,7 +508,7 @@ business entity cache
 
 Mỗi bộ nhớ đệm (cache / 캐시) có đơn vị sở hữu (owner / 오너)/vô hiệu hóa (invalidation / 무효화) khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **30. cấu hình (config / 설정) precedence** tiếp nhận điểm tựa từ **29. engineCache không phải nghiệp vụ (business / 비즈니스) bộ nhớ đệm (cache / 캐시)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. môi trường (environment / 환경) drift** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **30. cấu hình (config / 설정) precedence** nối từ **29. engineCache không phải nghiệp vụ (business / 비즈니스) bộ nhớ đệm (cache / 캐시)** sang **31. môi trường (environment / 환경) drift**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. cấu hình (config / 설정) precedence
 
@@ -524,7 +524,7 @@ inspect component explicit value
 → engine default/build behavior
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **31. môi trường (environment / 환경) drift** tiếp nhận điểm tựa từ **30. cấu hình (config / 설정) precedence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): nguồn (source / 소스) mới, UI cũ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **31. môi trường (environment / 환경) drift** nối từ **30. cấu hình (config / 설정) precedence** sang **32. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): nguồn (source / 소스) mới, UI cũ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. môi trường (environment / 환경) drift
 
@@ -544,7 +544,7 @@ thì chúng không phải cùng thời gian chạy (runtime / 런타임) hệ th
 
 Diff môi trường (environment / 환경) phải bao gồm những tầng (layer / 계층) này.
 
-> **Chuyển mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **31. môi trường (environment / 환경) drift** nêu điều cần giải thích; **32. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): nguồn (source / 소스) mới, UI cũ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **33. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): chỉ một người dùng (user / 사용자) lỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **31. môi trường (environment / 환경) drift** đặt vấn đề; **32. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): nguồn (source / 소스) mới, UI cũ** đối chiếu bằng chứng, rồi **33. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): chỉ một người dùng (user / 사용자) lỗi** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 32. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): nguồn (source / 소스) mới, UI cũ
 
@@ -562,7 +562,7 @@ Git commit correct
 
 Không dừng ở “GitHub đã có mã (code / 코드)”.
 
-> **Chuyển mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **32. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): nguồn (source / 소스) mới, UI cũ** nêu điều cần giải thích; **33. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): chỉ một người dùng (user / 사용자) lỗi** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **34. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): chỉ PROD lỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **32. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): nguồn (source / 소스) mới, UI cũ** đặt vấn đề; **33. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): chỉ một người dùng (user / 사용자) lỗi** đối chiếu bằng chứng, rồi **34. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): chỉ PROD lỗi** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 33. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): chỉ một người dùng (user / 사용자) lỗi
 
@@ -579,7 +579,7 @@ hybrid app version
 
 So sánh thời gian chạy (runtime / 런타임) định danh (identity / 식별자) giữa người dùng (user / 사용자) lỗi và người dùng (user / 사용자) bình thường trước khi quay lui (rollback / 롤백) máy chủ (server / 서버).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **34. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): chỉ PROD lỗi** tiếp nhận điểm tựa từ **33. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): chỉ một người dùng (user / 사용자) lỗi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): engine upgrade làm Grid khác hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **34. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): chỉ PROD lỗi** nối từ **33. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): chỉ một người dùng (user / 사용자) lỗi** sang **35. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): engine upgrade làm Grid khác hành vi (behavior / 동작)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): chỉ PROD lỗi
 
@@ -598,7 +598,7 @@ browser policy
 
 Nếu UAT và PROD nguồn (source / 소스) giống nhau nhưng thời gian chạy (runtime / 런타임) inputs khác, nguồn (source / 소스) diff không giúp nhiều.
 
-> **Chuyển mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **35. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): engine upgrade làm Grid khác hành vi (behavior / 동작)** tiếp nhận điểm tựa từ **34. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): chỉ PROD lỗi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. quay lui (rollback / 롤백) phải quay lui (rollback / 롤백) đúng tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **35. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): engine upgrade làm Grid khác hành vi (behavior / 동작)** nối từ **34. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): chỉ PROD lỗi** sang **36. quay lui (rollback / 롤백) phải quay lui (rollback / 롤백) đúng tầng (layer / 계층)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): engine upgrade làm Grid khác hành vi (behavior / 동작)
 
@@ -615,7 +615,7 @@ capture old/new event trace
 
 Không pin engine cũ vô thời hạn chỉ vì chưa hiểu nguyên nhân gốc (root cause / 근본 원인).
 
-> **Chuyển mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **36. quay lui (rollback / 롤백) phải quay lui (rollback / 롤백) đúng tầng (layer / 계층)** tiếp nhận điểm tựa từ **35. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): engine upgrade làm Grid khác hành vi (behavior / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. bảo mật (security / 보안) patch và tính tương thích (compatibility / 호환성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **36. quay lui (rollback / 롤백) phải quay lui (rollback / 롤백) đúng tầng (layer / 계층)** nối từ **35. môi trường vận hành (production / 운영 환경) sự cố (incident / 인시던트): engine upgrade làm Grid khác hành vi (behavior / 동작)** sang **37. bảo mật (security / 보안) patch và tính tương thích (compatibility / 호환성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. quay lui (rollback / 롤백) phải quay lui (rollback / 롤백) đúng tầng (layer / 계층)
 
@@ -632,7 +632,7 @@ backend API
 hybrid native release
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **37. bảo mật (security / 보안) patch và tính tương thích (compatibility / 호환성)** tiếp nhận điểm tựa từ **36. quay lui (rollback / 롤백) phải quay lui (rollback / 롤백) đúng tầng (layer / 계층)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Reproducible bản dựng (build / 빌드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **37. bảo mật (security / 보안) patch và tính tương thích (compatibility / 호환성)** nối từ **36. quay lui (rollback / 롤백) phải quay lui (rollback / 롤백) đúng tầng (layer / 계층)** sang **38. Reproducible bản dựng (build / 빌드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. bảo mật (security / 보안) patch và tính tương thích (compatibility / 호환성)
 
@@ -640,7 +640,7 @@ Bảo mật (security / 보안) bản phát hành (release / 릴리스) có th�
 
 Không bỏ bảo mật (security / 보안) patch chỉ vì regression kiểm thử (test / 테스트) thất bại (fail / 실패). Cần xác định phụ thuộc (dependency / 의존성) sai/hack nào bị lộ và migrate sang supported đặc tả hợp đồng (contract / 계약).
 
-> **Chuyển mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **38. Reproducible bản dựng (build / 빌드)** tiếp nhận điểm tựa từ **37. bảo mật (security / 보안) patch và tính tương thích (compatibility / 호환성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Branch/bản phát hành (release / 릴리스) hygiene cho thư viện kiến thức (knowledge library / 지식 라이브러리) này** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **38. Reproducible bản dựng (build / 빌드)** nối từ **37. bảo mật (security / 보안) patch và tính tương thích (compatibility / 호환성)** sang **39. Branch/bản phát hành (release / 릴리스) hygiene cho thư viện kiến thức (knowledge library / 지식 라이브러리) này**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Reproducible bản dựng (build / 빌드)
 
@@ -650,7 +650,7 @@ Nếu bản dựng (build / 빌드) phụ thuộc tệp (file / 파일) cục b�
 
 W-Pack command-line/CI workflow có giá trị vì giảm hidden workstation trạng thái (state / 상태).
 
-> **Chuyển mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **39. Branch/bản phát hành (release / 릴리스) hygiene cho thư viện kiến thức (knowledge library / 지식 라이브러리) này** tiếp nhận điểm tựa từ **38. Reproducible bản dựng (build / 빌드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Master thời gian chạy (runtime / 런타임) equation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **39. Branch/bản phát hành (release / 릴리스) hygiene cho thư viện kiến thức (knowledge library / 지식 라이브러리) này** nối từ **38. Reproducible bản dựng (build / 빌드)** sang **40. Master thời gian chạy (runtime / 런타임) equation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Branch/bản phát hành (release / 릴리스) hygiene cho thư viện kiến thức (knowledge library / 지식 라이브러리) này
 
@@ -665,7 +665,7 @@ project workaround → project runbook, không canonicalize mù
 
 Thư viện (library / 라이브러리) không nên trở thành bản bản sao (copy / 복사) bản phát hành (release / 릴리스) ghi chú (note / 노트).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **40. Master thời gian chạy (runtime / 런타임) equation** tiếp nhận điểm tựa từ **39. Branch/bản phát hành (release / 릴리스) hygiene cho thư viện kiến thức (knowledge library / 지식 라이브러리) này** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Upgrade kiểm thử (test / 테스트) ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **40. Master thời gian chạy (runtime / 런타임) equation** nối từ **39. Branch/bản phát hành (release / 릴리스) hygiene cho thư viện kiến thức (knowledge library / 지식 라이브러리) này** sang **41. Upgrade kiểm thử (test / 테스트) ma trận (matrix / 행렬)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Master thời gian chạy (runtime / 런타임) equation
 
@@ -688,7 +688,7 @@ Observed Behavior
 
 Nếu chỉ kiểm tra `Source`, bạn mới kiểm tra một biến.
 
-> **Chuyển mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **41. Upgrade kiểm thử (test / 테스트) ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **40. Master thời gian chạy (runtime / 런타임) equation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. liên kết (connection / 연결) map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **41. Upgrade kiểm thử (test / 테스트) ma trận (matrix / 행렬)** nối từ **40. Master thời gian chạy (runtime / 런타임) equation** sang **42. liên kết (connection / 연결) map**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Upgrade kiểm thử (test / 테스트) ma trận (matrix / 행렬)
 
@@ -708,7 +708,7 @@ browser current/current-1 theo support policy
 hybrid app old/new capability nếu có
 ```
 
-> **Chuyển mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **42. liên kết (connection / 연결) map** tiếp nhận điểm tựa từ **41. Upgrade kiểm thử (test / 테스트) ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Master synthesis: 20–22 nối vào toàn thư viện (library / 라이브러리) như thế nào** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **42. liên kết (connection / 연결) map** nối từ **41. Upgrade kiểm thử (test / 테스트) ma trận (matrix / 행렬)** sang **43. Master synthesis: 20–22 nối vào toàn thư viện (library / 라이브러리) như thế nào**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. liên kết (connection / 연결) map
 
@@ -728,7 +728,7 @@ Khả năng quan sát (observability / 관측 가능성): [19 — Observability,
 
 Tích hợp (integration / 통합)/máy khách (client / 클라이언트) phiên bản (version / 버전) skew: [21 — Integration Topology, MSA, Real-Time & Resilience](21_integration_topology_msa_realtime_resilience.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **43. Master synthesis: 20–22 nối vào toàn thư viện (library / 라이브러리) như thế nào** gom các mảnh từ **42. liên kết (connection / 연결) map** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **44. Capstone Master mở rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **43. Master synthesis: 20–22 nối vào toàn thư viện (library / 라이브러리) như thế nào** tổng hợp từ **42. liên kết (connection / 연결) map** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **44. Capstone Master mở rộng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 43. Master synthesis: 20–22 nối vào toàn thư viện (library / 라이브러리) như thế nào
 
@@ -757,7 +757,7 @@ Runtime graph: browser tab vẫn giữ page/artifact cũ
 
 Nếu chỉ nhìn một đồ thị (graph / 그래프), fix dễ sai.
 
-> **Chuyển mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **44. Capstone Master mở rộng** gom các mảnh từ **43. Master synthesis: 20–22 nối vào toàn thư viện (library / 라이브러리) như thế nào** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **45. Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **44. Capstone Master mở rộng** tổng hợp từ **43. Master synthesis: 20–22 nối vào toàn thư viện (library / 라이브러리) như thế nào** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **45. Kết luận** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 44. Capstone Master mở rộng
 
@@ -788,7 +788,7 @@ evidence nào chứng minh root cause?
 regression test nào ngăn tái diễn?
 ```
 
-> **Chuyển mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **45. Kết luận** gom các mảnh từ **44. Capstone Master mở rộng** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **22 — Engine, cấu hình (configuration / 구성), bộ nhớ đệm (cache / 캐시) & Upgrade Internals**, **45. Kết luận** tổng hợp từ **44. Capstone Master mở rộng** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 45. Kết luận
 

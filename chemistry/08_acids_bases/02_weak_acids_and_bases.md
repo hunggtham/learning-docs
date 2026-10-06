@@ -40,7 +40,7 @@ x\approx\sqrt{K_aC}
 
 Xấp xỉ phải được kiểm tra sau khi tính, không nên dùng tự động.
 
-> **Chuyển mạch:** Với acid yếu, nghiệm (x) của cân bằng quyết định cả lượng ion hóa lẫn phần trăm so với nồng độ ban đầu. **Phần trăm ion hóa** làm rõ vì sao cùng một (K_a) lại cho tỉ lệ khác khi pha loãng; sau đó **Cơ sở yếu** áp dụng cùng khung cân bằng theo chiều tạo (OH^-).
+> **Nối mạch:** Với acid yếu, nghiệm (x) của cân bằng quyết định cả lượng ion hóa lẫn phần trăm so với nồng độ ban đầu. **Phần trăm ion hóa** làm rõ vì sao cùng một (K_a) lại cho tỉ lệ khác khi pha loãng; sau đó **Cơ sở yếu** áp dụng cùng khung cân bằng theo chiều tạo (OH^-).
 
 ## Phần trăm ion hóa
 
@@ -52,7 +52,7 @@ Với cùng một acid yếu, phần trăm ion hóa thường tăng khi pha loã
 
 Điều này không có nghĩa tổng số ion hydrogen nhất thiết tăng. **Tỉ lệ** phân tử bị ion hóa tăng trong khi nồng độ tổng giảm.
 
-> **Chuyển mạch:** Phần trăm ion hóa tăng khi pha loãng nhưng nồng độ ion tuyệt đối không nhất thiết tăng. Với **Cơ sở yếu**, ta đổi (K_a) thành (K_b) và theo dõi (BH^+), (OH^-); hai mô tả này gặp nhau ở **quan hệ giữa cặp liên hợp**.
+> **Nối mạch:** Phần trăm ion hóa tăng khi pha loãng nhưng nồng độ ion tuyệt đối không nhất thiết tăng. Với **Cơ sở yếu**, ta đổi (K_a) thành (K_b) và theo dõi (BH^+), (OH^-); hai mô tả này gặp nhau ở **quan hệ giữa cặp liên hợp**.
 
 ## Cơ sở (base / 기반) yếu
 
@@ -68,7 +68,7 @@ K_b=\frac{a_{BH^+}a_{OH^-}}{a_B}
 
 Trong dung dịch loãng gần lý tưởng, có thể thay hoạt độ bằng nồng độ để lập bảng cân bằng tương tự acid yếu.
 
-> **Chuyển mạch:** (K_a) của acid và (K_b) của base liên hợp không độc lập vì (K_aK_b=K_w). Khi một cặp liên hợp xuất hiện dưới dạng ion của muối, **Thủy phân muối** sẽ biến quan hệ cân bằng đó thành thay đổi pH quan sát được.
+> **Nối mạch:** (K_a) của acid và (K_b) của base liên hợp không độc lập vì (K_aK_b=K_w). Khi một cặp liên hợp xuất hiện dưới dạng ion của muối, **Thủy phân muối** sẽ biến quan hệ cân bằng đó thành thay đổi pH quan sát được.
 
 ## Quan hệ giữa cặp liên hợp
 
@@ -88,7 +88,7 @@ khi dùng cùng dung môi và nhiệt độ.
 
 Acid càng mạnh thì cơ sở (base / 기반) liên hợp càng yếu, và ngược lại.
 
-> **Chuyển mạch:** Từ (K_aK_b=K_w), acetate và ammonium cho thấy ion liên hợp có thể phản ứng với nước nên dung dịch muối không luôn trung tính. Khi thêm chính một ion đang có trong cân bằng, **Ion chung** sẽ mô tả cách hệ dịch chuyển để khôi phục (Q=K).
+> **Nối mạch:** Từ (K_aK_b=K_w), acetate và ammonium cho thấy ion liên hợp có thể phản ứng với nước nên dung dịch muối không luôn trung tính. Khi thêm chính một ion đang có trong cân bằng, **Ion chung** sẽ mô tả cách hệ dịch chuyển để khôi phục (Q=K).
 
 ## Thủy phân muối
 
@@ -108,7 +108,7 @@ NH_4^++H_2O\rightleftharpoons NH_3+H_3O^+
 
 Vì vậy “dung dịch muối luôn trung tính” là sai. Phải xét tính acid–cơ sở (base / 기반) của các ion tạo thành.
 
-> **Chuyển mạch:** Thủy phân cho thấy ion của muối tạo cân bằng acid–base mới; hiệu ứng ion chung cho thấy một thành phần ban đầu có thể ép cân bằng về phía còn lại. Với nhiều nấc cho proton, **Acid nhiều proton** cần theo dõi đồng thời nhiều (K_a) và các dạng phân bố.
+> **Nối mạch:** Thủy phân cho thấy ion của muối tạo cân bằng acid–base mới; hiệu ứng ion chung cho thấy một thành phần ban đầu có thể ép cân bằng về phía còn lại. Với nhiều nấc cho proton, **Acid nhiều proton** cần theo dõi đồng thời nhiều (K_a) và các dạng phân bố.
 
 ## Ion chung
 
@@ -130,7 +130,7 @@ ban đầu tăng. Hệ dịch về phía `HA` cho tới khi `Q=K_a` trở lại.
 
 **Hiệu ứng ion chung (common-ion effect)** vì thế là hệ quả trực tiếp của `Q` và `K`, không phải một quy tắc riêng biệt bí ẩn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Acid nhiều proton** tiếp nhận điểm tựa từ **Ion chung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiểu phần lưỡng tính proton** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Acid nhiều proton** nối từ **Ion chung** sang **Tiểu phần lưỡng tính proton**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Acid nhiều proton
 
@@ -156,7 +156,7 @@ K_{a1}\gg K_{a2}\gg K_{a3}
 
 Mỗi lần mất proton làm tiểu phần mang điện âm hơn, nên việc mất proton tiếp theo thường kém thuận lợi hơn.
 
-> **Chuyển mạch:** Trong **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Tiểu phần lưỡng tính proton** tiếp nhận điểm tựa từ **Acid nhiều proton** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ carbonate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Tiểu phần lưỡng tính proton** nối từ **Acid nhiều proton** sang **Hệ carbonate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tiểu phần lưỡng tính proton
 
@@ -170,7 +170,7 @@ pH\approx\frac12(pK_{a1}+pK_{a2})
 
 Đây là một xấp xỉ có điều kiện, không phải công thức chung cho mọi hệ lưỡng tính.
 
-> **Chuyển mạch:** Ở chặng này của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Hệ carbonate** tiếp nhận điểm tựa từ **Tiểu phần lưỡng tính proton** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Amino acid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Hệ carbonate** nối từ **Tiểu phần lưỡng tính proton** sang **Amino acid**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ carbonate
 
@@ -188,7 +188,7 @@ HCO_3^-\rightleftharpoons H^++CO_3^{2-}
 
 Sự phân bố này kiểm soát độ kiềm, độ bão hòa khoáng carbonate và nhiều quá trình môi trường.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Amino acid** tiếp nhận điểm tựa từ **Hệ carbonate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái proton hóa làm thay đổi tính chất phân tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Amino acid** nối từ **Hệ carbonate** sang **Trạng thái proton hóa làm thay đổi tính chất phân tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Amino acid
 
@@ -207,7 +207,7 @@ H2N–CHR–CO2−
 
 Dạng zwitterion không phải “không có điện tích”; nó có cả điện tích dương và âm nhưng tổng điện tích bằng 0.
 
-> **Chuyển mạch:** Trong **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Trạng thái proton hóa làm thay đổi tính chất phân tử** tiếp nhận điểm tựa từ **Amino acid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cân bằng ghép** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Trạng thái proton hóa làm thay đổi tính chất phân tử** nối từ **Amino acid** sang **Cân bằng ghép**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trạng thái proton hóa làm thay đổi tính chất phân tử
 
@@ -223,7 +223,7 @@ Thay đổi pH có thể làm thay đổi:
 
 Do đó acid–cơ sở (base / 기반) không chỉ là bài toán chuẩn độ; nó ảnh hưởng trực tiếp tới hóa sinh, dược hóa và hóa học phân tích.
 
-> **Chuyển mạch:** Ở chặng này của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Cân bằng ghép** tiếp nhận điểm tựa từ **Trạng thái proton hóa làm thay đổi tính chất phân tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cân bằng vật chất và cân bằng điện tích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Cân bằng ghép** nối từ **Trạng thái proton hóa làm thay đổi tính chất phân tử** sang **Cân bằng vật chất và cân bằng điện tích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cân bằng ghép
 
@@ -243,7 +243,7 @@ HL\rightleftharpoons H^++L^-
 
 Vì vậy cân bằng acid–cơ sở (base / 기반) và cân bằng phối trí không phải lúc nào cũng có thể giải độc lập.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Cân bằng vật chất và cân bằng điện tích** tiếp nhận điểm tựa từ **Cân bằng ghép** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giải bằng phương pháp số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Cân bằng vật chất và cân bằng điện tích** nối từ **Cân bằng ghép** sang **Giải bằng phương pháp số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cân bằng vật chất và cân bằng điện tích
 
@@ -263,7 +263,7 @@ Ngoài ra, dung dịch phải thỏa **điện trung hòa (electroneutrality)**:
 
 Kết hợp cân bằng vật chất, cân bằng điện tích, `K_a`, `K_w` và các cân bằng liên quan ta có một hệ phương trình hoàn chỉnh cho phân bố tiểu phần.
 
-> **Chuyển mạch:** Trong **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Giải bằng phương pháp số** tiếp nhận điểm tựa từ **Cân bằng vật chất và cân bằng điện tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Giải bằng phương pháp số** nối từ **Cân bằng vật chất và cân bằng điện tích** sang **Các hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giải bằng phương pháp số
 
@@ -281,7 +281,7 @@ xác định các tiểu phần
 
 Đây là mối nối trực tiếp giữa hóa học dung dịch và phương pháp số.
 
-> **Chuyển mạch:** Ở chặng này của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Các hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Giải bằng phương pháp số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Các hiểu lầm thường gặp** nối từ **Giải bằng phương pháp số** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các hiểu lầm thường gặp
 
@@ -301,7 +301,7 @@ Không. Dung dịch acid yếu đủ đậm đặc vẫn có thể có pH thấp
 
 Không. Nó chỉ là một công cụ hạch toán; bản chất nằm ở bảo toàn và điều kiện cân bằng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid và cơ sở (base / 기반) yếu — cân bằng, xấp xỉ và phân bố tiểu phần**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

@@ -42,7 +42,7 @@ Residual uncertainty
 
 Không dùng một sự kiện (event / 이벤트) lịch sử làm bằng chứng rằng cùng price mẫu (pattern / 패턴) sẽ lặp lại.
 
-> **Chuyển mạch:** Trong **Lab 07 — Cross-Regime FX Stress Synthesis**, **1. sản phẩm tạo ra (artifact / 산출물) đặc tả hợp đồng (contract / 계약)** cho ta quy tắc; **2. trường hợp (case / 사례) universe** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **3. Regime comparison ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lab 07 — Cross-Regime FX Stress Synthesis**, **1. sản phẩm tạo ra (artifact / 산출물) đặc tả hợp đồng (contract / 계약)** nêu quy tắc; **2. trường hợp (case / 사례) universe** thử quy tắc trong tình huống, rồi **3. Regime comparison ma trận (matrix / 행렬)** mở rộng hệ quả.
 
 ## 2. trường hợp (case / 사례) universe
 
@@ -60,7 +60,7 @@ Dùng đủ bảy trường hợp (case / 사례):
 
 Nếu bỏ một trường hợp (case / 사례), phải ghi rõ vì sao cơ chế (mechanism / 메커니즘) của nó không liên quan đến câu hỏi nghiên cứu.
 
-> **Chuyển mạch:** Ở chặng này của **Lab 07 — Cross-Regime FX Stress Synthesis**, **2. trường hợp (case / 사례) universe** cho ta quy tắc; **3. Regime comparison ma trận (matrix / 행렬)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **4. Vulnerability–trigger–amplifier decomposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lab 07 — Cross-Regime FX Stress Synthesis**, **2. trường hợp (case / 사례) universe** nêu quy tắc; **3. Regime comparison ma trận (matrix / 행렬)** thử quy tắc trong tình huống, rồi **4. Vulnerability–trigger–amplifier decomposition** mở rộng hệ quả.
 
 ## 3. Regime comparison ma trận (matrix / 행렬)
 
@@ -90,7 +90,7 @@ Korea 2008 USD shortage
 ≠ Global 2020 dash for cash
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab 07 — Cross-Regime FX Stress Synthesis**, **4. Vulnerability–trigger–amplifier decomposition** tiếp nhận điểm tựa từ **3. Regime comparison ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Same shock, different regime** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lab 07 — Cross-Regime FX Stress Synthesis**, **4. Vulnerability–trigger–amplifier decomposition** nối từ **3. Regime comparison ma trận (matrix / 행렬)** sang **5. Same shock, different regime**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Vulnerability–trigger–amplifier decomposition
 
@@ -112,7 +112,7 @@ Amplifier: basis widening and collateral demand forced more USD buying.
 
 Không dùng trigger để thay thế vulnerability. Một tỷ lệ (rate / 비율) quyết định (decision / 결정) có thể là trigger, nhưng fragility thường đã tồn tại trước headline.
 
-> **Chuyển mạch:** Trong **Lab 07 — Cross-Regime FX Stress Synthesis**, **5. Same shock, different regime** tiếp nhận điểm tựa từ **4. Vulnerability–trigger–amplifier decomposition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Balance-sheet transmission dấu vết (trace / 추적)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lab 07 — Cross-Regime FX Stress Synthesis**, **5. Same shock, different regime** nối từ **4. Vulnerability–trigger–amplifier decomposition** sang **6. Balance-sheet transmission dấu vết (trace / 추적)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Same shock, different regime
 
@@ -150,7 +150,7 @@ main falsifier
 
 Không ép tất cả pairs đi cùng hướng. JPY có thể phản ứng khác tùy tỷ lệ (rate / 비율) divergence hay carry unwind; VND có thể chuyển adjustment sang reserve, band, liquidity hoặc quote availability.
 
-> **Chuyển mạch:** Ở chặng này của **Lab 07 — Cross-Regime FX Stress Synthesis**, **6. Balance-sheet transmission dấu vết (trace / 추적)** tiếp nhận điểm tựa từ **5. Same shock, different regime** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Policy-tool map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lab 07 — Cross-Regime FX Stress Synthesis**, **6. Balance-sheet transmission dấu vết (trace / 추적)** nối từ **5. Same shock, different regime** sang **7. Policy-tool map**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Balance-sheet transmission dấu vết (trace / 추적)
 
@@ -185,7 +185,7 @@ B. spot moves less, but funding/collateral market freezes
 
 Mục tiêu là chứng minh rằng điều kiện (condition / 조건) B có thể nguy hiểm hơn dù chart spot ít dramatic hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab 07 — Cross-Regime FX Stress Synthesis**, **7. Policy-tool map** tiếp nhận điểm tựa từ **6. Balance-sheet transmission dấu vết (trace / 추적)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Cross-regime monitoring dashboard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lab 07 — Cross-Regime FX Stress Synthesis**, **7. Policy-tool map** nối từ **6. Balance-sheet transmission dấu vết (trace / 추적)** sang **8. Cross-regime monitoring dashboard**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Policy-tool map
 
@@ -214,7 +214,7 @@ Với từng công cụ (tool / 도구), ghi:
 
 Không đánh giá chính sách (policy / 정책) chỉ bằng spot close cuối ngày.
 
-> **Chuyển mạch:** Trong **Lab 07 — Cross-Regime FX Stress Synthesis**, **8. Cross-regime monitoring dashboard** tiếp nhận điểm tựa từ **7. Policy-tool map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lab 07 — Cross-Regime FX Stress Synthesis**, **8. Cross-regime monitoring dashboard** nối từ **7. Policy-tool map** sang **9. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Cross-regime monitoring dashboard
 
@@ -247,7 +247,7 @@ what it does not measure
 
 Một dashboard có nhiều series nhưng không ghi thông tin (information / 정보) thời gian (time / 시간) vẫn không đạt point-in-time tiêu chuẩn (standard / 표준).
 
-> **Chuyển mạch:** Ở chặng này của **Lab 07 — Cross-Regime FX Stress Synthesis**, **9. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)** tiếp nhận điểm tựa từ **8. Cross-regime monitoring dashboard** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Counterfactual kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lab 07 — Cross-Regime FX Stress Synthesis**, **9. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)** nối từ **8. Cross-regime monitoring dashboard** sang **10. Counterfactual kiểm thử (test / 테스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)
 
@@ -273,7 +273,7 @@ liquidity haircut required
 
 Tạo ít nhất một reverse stress không cần spot move cực lớn. Điều này kiểm tra xem funding và collateral có đang bị bỏ quên hay không.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab 07 — Cross-Regime FX Stress Synthesis**, **10. Counterfactual kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **9. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. quyết định (decision / 결정) memo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lab 07 — Cross-Regime FX Stress Synthesis**, **10. Counterfactual kiểm thử (test / 테스트)** nối từ **9. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트)** sang **11. quyết định (decision / 결정) memo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Counterfactual kiểm thử (test / 테스트)
 
@@ -298,7 +298,7 @@ observable nào sẽ báo regime khác đi?
 
 Counterfactual không nhằm viết lại lịch sử; nó kiểm tra bạn có hiểu nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘) hay chỉ nhớ kết quả (outcome / 결과).
 
-> **Chuyển mạch:** Trong **Lab 07 — Cross-Regime FX Stress Synthesis**, **11. quyết định (decision / 결정) memo** tiếp nhận điểm tựa từ **10. Counterfactual kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Scoring rubric** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lab 07 — Cross-Regime FX Stress Synthesis**, **11. quyết định (decision / 결정) memo** nối từ **10. Counterfactual kiểm thử (test / 테스트)** sang **12. Scoring rubric**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. quyết định (decision / 결정) memo
 
@@ -318,7 +318,7 @@ Invalidation and kill condition
 
 Memo chưa đạt nếu chỉ viết “giống 1997”, “giống 2008” hoặc “central bank sẽ can thiệp”. Phải nêu nút (node / 노드) nào giống, nút (node / 노드) nào khác và dữ liệu nào xác nhận.
 
-> **Chuyển mạch:** Ở chặng này của **Lab 07 — Cross-Regime FX Stress Synthesis**, **12. Scoring rubric** tiếp nhận điểm tựa từ **11. quyết định (decision / 결정) memo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lab 07 — Cross-Regime FX Stress Synthesis**, **12. Scoring rubric** nối từ **11. quyết định (decision / 결정) memo** sang **13. Đọc tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Scoring rubric
 
@@ -333,7 +333,7 @@ Memo chưa đạt nếu chỉ viết “giống 1997”, “giống 2008” ho�
 
 Điểm đạt tối thiểu là `80/100`, đồng thời không được thất bại (fail / 실패) cơ chế (mechanism / 메커니즘) separation hoặc point-in-time bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab 07 — Cross-Regime FX Stress Synthesis**, **13. Đọc tiếp** tiếp nhận điểm tựa từ **12. Scoring rubric** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lab 07 — Cross-Regime FX Stress Synthesis**, **13. Đọc tiếp** nối từ **12. Scoring rubric** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 13. Đọc tiếp
 

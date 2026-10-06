@@ -22,7 +22,7 @@ Nếu một short-term psychodynamic treatment giúp một nhóm người trầm
 
 Nguyên tắc này cũng áp dụng cho CBT, ACT, DBT, systemic therapy và medication: effectiveness của intervention không tự động chứng minh toàn bộ explanatory lý thuyết (theory / 이론).
 
-> **Chuyển mạch:** Trong **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **2. Psychodynamic therapy hiện đại khác classical psychoanalysis** tiếp nhận điểm tựa từ **1. Treatment efficacy khác theoretical truth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Historical roots của psychoanalysis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **2. Psychodynamic therapy hiện đại khác classical psychoanalysis** nối từ **1. Treatment efficacy khác theoretical truth** sang **3. Historical roots của psychoanalysis**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Psychodynamic therapy hiện đại khác classical psychoanalysis
 
@@ -37,7 +37,7 @@ Nguyên tắc này cũng áp dụng cho CBT, ACT, DBT, systemic therapy và medi
 
 Nhiều treatment hiện đại không yêu cầu clinician hoặc máy khách (client / 클라이언트) chấp nhận toàn bộ Freudian metapsychology.
 
-> **Chuyển mạch:** Ở chặng này của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **3. Historical roots của psychoanalysis** tiếp nhận điểm tựa từ **2. Psychodynamic therapy hiện đại khác classical psychoanalysis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Chuyển di (transference)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **3. Historical roots của psychoanalysis** nối từ **2. Psychodynamic therapy hiện đại khác classical psychoanalysis** sang **4. Chuyển di (transference)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Historical roots của psychoanalysis
 
@@ -49,7 +49,7 @@ Hiện đại (modern / 현대적) research hỗ trợ nhiều phenomenon liên 
 
 Xem [[../90_connections/00_freud_jung_and_depth_psychology_in_context]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **4. Chuyển di (transference)** tiếp nhận điểm tựa từ **3. Historical roots của psychoanalysis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Cơ chế phòng vệ (defense mechanisms)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **4. Chuyển di (transference)** nối từ **3. Historical roots của psychoanalysis** sang **5. Cơ chế phòng vệ (defense mechanisms)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Chuyển di (transference)
 
@@ -59,7 +59,7 @@ Hiện đại (modern / 현대적) interpersonal research hỗ trợ ý tưởng
 
 Một cách hiện đại và kiểm tra được hơn là hỏi: máy khách (client / 클라이언트) đang dự đoán phản ứng nào từ therapist? Dự đoán đó có lặp lại ở các mối quan hệ khác không? Experience mới trong therapy có làm expectation thay đổi không?
 
-> **Chuyển mạch:** Trong **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **4. Chuyển di (transference)** xác định đầu vào; **5. Cơ chế phòng vệ (defense mechanisms)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. Insight và giới hạn của insight** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **4. Chuyển di (transference)** đặt đầu vào cho **5. Cơ chế phòng vệ (defense mechanisms)**, rồi **6. Insight và giới hạn của insight** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. Cơ chế phòng vệ (defense mechanisms)
 
@@ -69,7 +69,7 @@ Defense concepts mô tả cách con người quản lý threat, affect hoặc se
 
 Nếu một thuật ngữ defense được dùng trong assessment hoặc treatment, cần operationalize hành vi (behavior / 동작)/tiến trình (process / 프로세스) cụ thể thay vì chỉ gán nhãn.
 
-> **Chuyển mạch:** Ở chặng này của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **5. Cơ chế phòng vệ (defense mechanisms)** đã nêu tiêu chí phân biệt, còn **6. Insight và giới hạn của insight** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **7. Corrective emotional experience** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **5. Cơ chế phòng vệ (defense mechanisms)** đặt tiêu chí; **6. Insight và giới hạn của insight** dùng tiêu chí đó để kiểm tra ranh giới, rồi **7. Corrective emotional experience** mở rộng hệ quả.
 
 ## 6. Insight và giới hạn của insight
 
@@ -79,7 +79,7 @@ Nhưng hiểu “vì sao mình làm vậy” không bảo đảm hành vi (behav
 
 Đây là nơi psychodynamic formulation có thể nối với học tập (learning / 학습) science thay vì đứng tách biệt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **6. Insight và giới hạn của insight** đã nêu tiêu chí phân biệt, còn **7. Corrective emotional experience** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **8. Liên minh trị liệu (therapeutic alliance)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **6. Insight và giới hạn của insight** đặt tiêu chí; **7. Corrective emotional experience** dùng tiêu chí đó để kiểm tra ranh giới, rồi **8. Liên minh trị liệu (therapeutic alliance)** mở rộng hệ quả.
 
 ## 7. Corrective emotional experience
 
@@ -89,7 +89,7 @@ Có thể diễn giải tiến trình (process / 프로세스) này bằng học
 
 > **Lý thuyết hiện đại / hypothesis về cơ chế (mechanism / 메커니즘):** corrective interpersonal học tập (learning / 학습) là cơ chế (mechanism / 메커니즘) hợp lý và được nghiên cứu, nhưng strength của mediation và tính đặc hiệu cho từng therapy còn phụ thuộc study.
 
-> **Chuyển mạch:** Trong **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **8. Liên minh trị liệu (therapeutic alliance)** tiếp nhận điểm tựa từ **7. Corrective emotional experience** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Humanistic therapy và Carl Rogers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **8. Liên minh trị liệu (therapeutic alliance)** nối từ **7. Corrective emotional experience** sang **9. Humanistic therapy và Carl Rogers**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Liên minh trị liệu (therapeutic alliance)
 
@@ -99,7 +99,7 @@ Alliance có association khá ổn định với kết quả (outcome / 결과) 
 
 > **Bằng chứng tương đối vững:** alliance–kết quả (outcome / 결과) association. **nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘) và magnitude:** phụ thuộc ngữ cảnh (context / 맥락) và vẫn cần nghiên cứu tiến trình (process / 프로세스) tốt.
 
-> **Chuyển mạch:** Ở chặng này của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **9. Humanistic therapy và Carl Rogers** tiếp nhận điểm tựa từ **8. Liên minh trị liệu (therapeutic alliance)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Empathy không phải “chỉ cần lắng nghe”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **9. Humanistic therapy và Carl Rogers** nối từ **8. Liên minh trị liệu (therapeutic alliance)** sang **10. Empathy không phải “chỉ cần lắng nghe”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Humanistic therapy và Carl Rogers
 
@@ -109,7 +109,7 @@ Humanistic approaches, đặc biệt person-centered therapy của Carl Rogers, 
 
 Ví dụ, OCD thường cần structured exposure/phản hồi (response / 응답) prevention; bipolar disorder có thể cần medication và relapse management; severe eating disorder thường cần multidisciplinary care.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **9. Humanistic therapy và Carl Rogers** xác định đầu vào; **10. Empathy không phải “chỉ cần lắng nghe”** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. Maslow và self-actualization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **9. Humanistic therapy và Carl Rogers** đặt đầu vào cho **10. Empathy không phải “chỉ cần lắng nghe”**, rồi **11. Maslow và self-actualization** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 10. Empathy không phải “chỉ cần lắng nghe”
 
@@ -117,7 +117,7 @@ Empathy có thể giảm threat và tạo điều kiện để máy khách (clie
 
 Một therapist có thể vừa empathic vừa structured. Humanistic stance và evidence-based giao thức (protocol / 프로토콜) không phải hai cực loại trừ nhau.
 
-> **Chuyển mạch:** Trong **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **10. Empathy không phải “chỉ cần lắng nghe”** xác định đầu vào; **11. Maslow và self-actualization** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **12. Systemic therapy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **10. Empathy không phải “chỉ cần lắng nghe”** đặt đầu vào cho **11. Maslow và self-actualization**, rồi **12. Systemic therapy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 11. Maslow và self-actualization
 
@@ -125,7 +125,7 @@ Maslow có ảnh hưởng lịch sử lớn, nhưng hình ảnh “pyramid năm 
 
 > **Historical/hiện tại (current / 현재) distinction:** nhu cầu về belonging, autonomy, competence, meaning và bảo mật (security / 보안) đều là topic nghiên cứu hiện đại. Một universal rigid hierarchy theo đúng thứ tự không phải established law.
 
-> **Chuyển mạch:** Ở chặng này của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **12. Systemic therapy** tiếp nhận điểm tựa từ **11. Maslow và self-actualization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Circular causality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **12. Systemic therapy** nối từ **11. Maslow và self-actualization** sang **13. Circular causality**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Systemic therapy
 
@@ -135,7 +135,7 @@ Nó thường quan tâm đến vòng phản hồi (feedback loop / 피드백 루
 
 Systemic thinking đặc biệt hữu ích khi bài toán (problem / 문제) được duy trì bởi tương tác (interaction / 상호작용), nhưng không được dùng để phủ nhận biological vulnerability, individual psychopathology hoặc structural stressor.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **13. Circular causality** tiếp nhận điểm tựa từ **12. Systemic therapy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Couple và family interventions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **13. Circular causality** nối từ **12. Systemic therapy** sang **14. Couple và family interventions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Circular causality
 
@@ -156,7 +156,7 @@ A ảnh hưởng B
 
 Đây là một mô hình tư duy (mental model / 사고 모델) mạnh để tránh blame đơn giản. Tuy nhiên mỗi nhân quả (causal / 인과적) claim cụ thể vẫn phải được kiểm thử (test / 테스트) bằng research thiết kế (design / 설계) phù hợp.
 
-> **Chuyển mạch:** Trong **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **14. Couple và family interventions** tiếp nhận điểm tựa từ **13. Circular causality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Narrative approaches** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **14. Couple và family interventions** nối từ **13. Circular causality** sang **15. Narrative approaches**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Couple và family interventions
 
@@ -166,7 +166,7 @@ Couple/family interventions có thể hữu ích cho relationship distress và l
 
 Trong bối cảnh abuse hoặc coercive điều khiển (control / 제어), một “systemic neutrality” ngây thơ có thể nguy hiểm nếu làm mờ asymmetry về power và responsibility.
 
-> **Chuyển mạch:** Ở chặng này của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **15. Narrative approaches** tiếp nhận điểm tựa từ **14. Couple và family interventions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Jung và Adler trong treatment ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **15. Narrative approaches** nối từ **14. Couple và family interventions** sang **16. Jung và Adler trong treatment ngữ cảnh (context / 맥락)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Narrative approaches
 
@@ -176,7 +176,7 @@ Một số humanistic/systemic traditions quan tâm cách con người xây dự
 
 Xem [[../02_learning_and_cognition/07_memory_distortion_eyewitness_and_false_memory]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **16. Jung và Adler trong treatment ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **15. Narrative approaches** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. dùng chung (common / 공통) factors và specific techniques** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **16. Jung và Adler trong treatment ngữ cảnh (context / 맥락)** nối từ **15. Narrative approaches** sang **17. dùng chung (common / 공통) factors và specific techniques**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Jung và Adler trong treatment ngữ cảnh (context / 맥락)
 
@@ -186,7 +186,7 @@ Hiện đại (modern / 현대적) concepts như định danh (identity / 식별
 
 Xem [[../90_connections/05_adler_individual_psychology_in_context]] và [[../90_connections/06_historical_theories_and_modern_evidence_matrix]].
 
-> **Chuyển mạch:** Trong **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **17. dùng chung (common / 공통) factors và specific techniques** tiếp nhận điểm tựa từ **16. Jung và Adler trong treatment ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Cách đánh giá một therapy claim** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **17. dùng chung (common / 공통) factors và specific techniques** nối từ **16. Jung và Adler trong treatment ngữ cảnh (context / 맥락)** sang **18. Cách đánh giá một therapy claim**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. dùng chung (common / 공통) factors và specific techniques
 
@@ -201,7 +201,7 @@ Sai lầm là chọn một cực:
 
 Contribution của mỗi thành phần (component / 컴포넌트) phụ thuộc điều kiện (condition / 조건), comparator và study thiết kế (design / 설계).
 
-> **Chuyển mạch:** Ở chặng này của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **18. Cách đánh giá một therapy claim** tiếp nhận điểm tựa từ **17. dùng chung (common / 공통) factors và specific techniques** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Measurement-based care** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **18. Cách đánh giá một therapy claim** nối từ **17. dùng chung (common / 공통) factors và specific techniques** sang **19. Measurement-based care**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Cách đánh giá một therapy claim
 
@@ -217,7 +217,7 @@ Nên tách ít nhất bảy câu hỏi:
 
 Đây là cách tránh lấy citation của một RCT làm “con dấu xác nhận” cho toàn bộ school.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **18. Cách đánh giá một therapy claim** nêu điều cần giải thích; **19. Measurement-based care** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. Clinical humility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **18. Cách đánh giá một therapy claim** đặt vấn đề; **19. Measurement-based care** đối chiếu bằng chứng, rồi **20. Clinical humility** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. Measurement-based care
 
@@ -227,7 +227,7 @@ Một formulation psychodynamic, humanistic hoặc systemic chỉ hữu ích n�
 
 Xem [[00_psychotherapy_and_change]].
 
-> **Chuyển mạch:** Trong **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **19. Measurement-based care** nêu điều cần giải thích; **20. Clinical humility** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **21. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **19. Measurement-based care** đặt vấn đề; **20. Clinical humility** đối chiếu bằng chứng, rồi **21. Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. Clinical humility
 
@@ -241,7 +241,7 @@ Không school nào nên trở thành identity-based dogma. Một clinician cần
 
 Một khung phần mềm (framework / 프레임워크) có thể hữu ích mà không cần được coi là explanation tuyệt đối.
 
-> **Chuyển mạch:** Ở chặng này của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **21. Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **20. Clinical humility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **21. Những hiểu lầm phổ biến** nối từ **20. Clinical humility** sang **22. Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Những hiểu lầm phổ biến
 
@@ -253,7 +253,7 @@ Một khung phần mềm (framework / 프레임워크) có thể hữu ích mà 
 
 **“Các school hiện đại hoàn toàn tách biệt.”** Không. Nhiều cơ chế (mechanism / 메커니즘), therapist hành vi (behavior / 동작) và tiến trình (process / 프로세스) overlap.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **22. Mô hình tư duy** gom các mảnh từ **21. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **22. Mô hình tư duy** tổng hợp từ **21. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 22. Mô hình tư duy
 
@@ -273,7 +273,7 @@ Clinical decision
 
 > Historical influence quan trọng, nhưng scientific status đến từ hiện đại (modern / 현대적) operationalization, đo lường (measurement / 측정) và testing.
 
-> **Chuyển mạch:** Trong **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **Kết nối kiến thức** gom các mảnh từ **22. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Trị liệu psychodynamic, humanistic và systemic trong bối cảnh bằng chứng (evidence / 증거) hiện đại**, **Kết nối kiến thức** tổng hợp từ **22. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

@@ -10,7 +10,7 @@ Ta có examples `(x, y)` và muốn học hàm (function / 함수) `f(x) ≈ y`.
 
 Huấn luyện (training / 학습) chọn parameters giảm mất mát (loss / 손실) trên dữ liệu huấn luyện (training data / 학습 데이터); mục tiêu thật là generalization trên unseen dữ liệu (data / 데이터) từ mục tiêu (target / 대상) phân phối (distribution / 분포).
 
-> **Chuyển mạch:** Supervised learning học từ nhãn; unsupervised tìm cấu trúc không nhãn, còn self-supervised tạo tín hiệu từ chính dữ liệu. Features và representation quyết định mô hình thấy được tín hiệu nào.
+> **Nối mạch:** Supervised learning học từ nhãn; unsupervised tìm cấu trúc không nhãn, còn self-supervised tạo tín hiệu từ chính dữ liệu. Features và representation quyết định mô hình thấy được tín hiệu nào.
 
 ## Unsupervised và self-supervised
 
@@ -18,7 +18,7 @@ Unsupervised học tập (learning / 학습) tìm cấu trúc (structure / 구�
 
 Self-supervised học tập (learning / 학습) tạo supervision từ cấu trúc (structure / 구조) của dữ liệu (data / 데이터), ví dụ predict masked đơn vị từ (token / 토큰)/next đơn vị từ (token / 토큰). Labels không cần manual nhưng mục tiêu (objective / 목표) vẫn được designer chọn.
 
-> **Chuyển mạch:** Ở chặng này của **Machine học tập (learning / 학습) foundations**, **Features và biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **Unsupervised và self-supervised** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàm mất mát (loss function / 손실 함수)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Features và biểu diễn (representation / 표현)** nối từ **Unsupervised và self-supervised** sang **Hàm mất mát (loss function / 손실 함수)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Features và biểu diễn (representation / 표현)
 
@@ -26,7 +26,7 @@ Traditional ML phụ thuộc tính năng (feature / 기능) kỹ thuật (engine
 
 Nhưng biểu diễn (representation / 표현) vẫn quyết định what thông tin (information / 정보) available. Timestamp bị bỏ hoặc leakage tính năng (feature / 기능) được thêm có thể thay mô hình (model / 모델) hành vi (behavior / 동작) mạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Machine học tập (learning / 학습) foundations**, **Hàm mất mát (loss function / 손실 함수)** tiếp nhận điểm tựa từ **Features và biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Huấn luyện (training / 학습), kiểm tra hợp lệ (validation / 검증) và kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Hàm mất mát (loss function / 손실 함수)** nối từ **Features và biểu diễn (representation / 표현)** sang **Huấn luyện (training / 학습), kiểm tra hợp lệ (validation / 검증) và kiểm thử (test / 테스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hàm mất mát (loss function / 손실 함수)
 
@@ -34,7 +34,7 @@ Mất mát (loss / 손실) biến prediction lỗi (error / 오류) thành scala
 
 Mất mát (loss / 손실) không phải nghiệp vụ (business / 비즈니스) chỉ số (metric / 지표). Một mô hình (model / 모델) giảm log-loss có thể không tối ưu fraud chi phí (cost / 비용) hoặc medical utility nếu threshold/chi phí (cost / 비용) asymmetry khác.
 
-> **Chuyển mạch:** Trong **Machine học tập (learning / 학습) foundations**, **Huấn luyện (training / 학습), kiểm tra hợp lệ (validation / 검증) và kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **Hàm mất mát (loss function / 손실 함수)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Overfitting và underfitting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Huấn luyện (training / 학습), kiểm tra hợp lệ (validation / 검증) và kiểm thử (test / 테스트)** nối từ **Hàm mất mát (loss function / 손실 함수)** sang **Overfitting và underfitting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Huấn luyện (training / 학습), kiểm tra hợp lệ (validation / 검증) và kiểm thử (test / 테스트)
 
@@ -42,7 +42,7 @@ Dữ liệu huấn luyện (training data / 학습 데이터) fit parameters. ki
 
 Repeatedly nhìn kiểm thử (test / 테스트) results rồi tune biến kiểm thử (test / 테스트) thành kiểm tra hợp lệ (validation / 검증) de facto.
 
-> **Chuyển mạch:** Ở chặng này của **Machine học tập (learning / 학습) foundations**, **Overfitting và underfitting** tiếp nhận điểm tựa từ **Huấn luyện (training / 학습), kiểm tra hợp lệ (validation / 검증) và kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regularization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Overfitting và underfitting** nối từ **Huấn luyện (training / 학습), kiểm tra hợp lệ (validation / 검증) và kiểm thử (test / 테스트)** sang **Regularization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Overfitting và underfitting
 
@@ -50,7 +50,7 @@ Underfit: mô hình (model / 모델) quá hạn chế hoặc huấn luyện (tra
 
 Bias-variance intuition giúp lập luận (reasoning / 추론): mô hình (model / 모델) sức chứa (capacity / 용량)/regularization/dữ liệu (data / 데이터) amount ảnh hưởng sự đánh đổi (trade-off / 트레이드오프).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Machine học tập (learning / 학습) foundations**, **Regularization** tiếp nhận điểm tựa từ **Overfitting và underfitting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân phối (distribution / 분포) shift** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Regularization** nối từ **Overfitting và underfitting** sang **Phân phối (distribution / 분포) shift**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Regularization
 
@@ -58,7 +58,7 @@ L1/L2 penalties, dropout, early stopping, dữ liệu (data / 데이터) augment
 
 Regularization không chỉ “chống overfit”; nó độ lệch (bias / 편향) học tập (learning / 학습) toward solutions được cho là plausible/simpler theo cơ chế (mechanism / 메커니즘).
 
-> **Chuyển mạch:** Trong **Machine học tập (learning / 학습) foundations**, **Phân phối (distribution / 분포) shift** tiếp nhận điểm tựa từ **Regularization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu (data / 데이터) leakage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Phân phối (distribution / 분포) shift** nối từ **Regularization** sang **Dữ liệu (data / 데이터) leakage**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân phối (distribution / 분포) shift
 
@@ -66,7 +66,7 @@ Mô hình (model / 모델) trained trên phân phối (distribution / 분포) A 
 
 Monitoring cần nhìn đầu vào (input / 입력) phân phối (distribution / 분포), đầu ra (output / 출력) confidence, kết quả (outcome / 결과) labels nếu có và nghiệp vụ (business / 비즈니스) metrics.
 
-> **Chuyển mạch:** Ở chặng này của **Machine học tập (learning / 학습) foundations**, **Phân phối (distribution / 분포) shift** nêu điều cần giải thích; **Dữ liệu (data / 데이터) leakage** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Phân phối (distribution / 분포) shift** đặt vấn đề; **Dữ liệu (data / 데이터) leakage** kiểm tra bằng chứng, rồi **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả.
 
 ## Dữ liệu (data / 데이터) leakage
 
@@ -74,7 +74,7 @@ Leakage xảy ra khi huấn luyện (training / 학습) features chứa thông t
 
 Mô hình (model / 모델) metrics có thể cực cao nhưng môi trường vận hành (production / 운영 환경) thất bại (fail / 실패). Split chiến lược (strategy / 전략) phải phản ánh triển khai (deployment / 배포) timeline/thực thể (entity / 엔터티) cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Machine học tập (learning / 학습) foundations**, **Dữ liệu (data / 데이터) leakage** nêu điều cần giải thích; **Dùng chung (common / 공통) Misconceptions** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dữ liệu (data / 데이터) leakage** đặt vấn đề; **Dùng chung (common / 공통) Misconceptions** kiểm tra bằng chứng, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -84,13 +84,13 @@ Mô hình (model / 모델) metrics có thể cực cao nhưng môi trường v�
 
 **“mô hình (model / 모델) học mục tiêu (objective / 목표) chúng ta muốn.”** Nó tối ưu proxy mất mát (loss / 손실) trên dữ liệu (data / 데이터); proxy mismatch là nguồn thất bại (failure / 실패) lớn.
 
-> **Chuyển mạch:** Trong **Machine học tập (learning / 학습) foundations**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > ML là tối ưu hóa (optimization / 최적화) trên dữ liệu (data / 데이터) dưới các giả định (assumptions / 가정들). Generalization—not huấn luyện (training / 학습) fit—is mục tiêu; evaluation phải mô phỏng triển khai (deployment / 배포) reality.
 
-> **Chuyển mạch:** Ở chặng này của **Machine học tập (learning / 학습) foundations**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

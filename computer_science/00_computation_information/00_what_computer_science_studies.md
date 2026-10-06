@@ -16,7 +16,7 @@ Mô hình này rất mạnh vì nó nối nhiều lĩnh vực tưởng như tác
 
 > mô hình tư duy (mental model / 사고 모델): **Khoa học máy tính (computer science / 컴퓨터 과학) nghiên cứu những cách biểu diễn trạng thái (state / 상태) và những quy tắc biến đổi trạng thái (state / 상태) sao cho ta có thể lập luận (reasoning / 추론) về tính đúng đắn (correctness / 정확성), chi phí (cost / 비용) và thất bại (failure / 실패).**
 
-> **Chuyển mạch:** Computation biến đổi state theo rule; information là representation chưa phải meaning, nên algorithm tiếp theo phải tách specification khỏi program implementation.
+> **Nối mạch:** Computation biến đổi state theo rule; information là representation chưa phải meaning, nên algorithm tiếp theo phải tách specification khỏi program implementation.
 
 ## Thông tin (information / 정보) không đồng nghĩa với ý nghĩa
 
@@ -26,7 +26,7 @@ Computer xử lý biểu diễn (representation / 표현) chứ không trực ti
 
 Xem sâu hơn: [Information, bit và encoding](./01_information_bits_and_encoding.md) và [machine representation](./02_numbers_and_machine_representation.md).
 
-> **Chuyển mạch:** Ở chặng này của **Khoa học máy tính (computer science / 컴퓨터 과학) thực sự nghiên cứu gì?**, **Thuật toán (algorithm / 알고리즘) khác program ở đâu?** tiếp nhận điểm tựa từ **Thông tin (information / 정보) không đồng nghĩa với ý nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính đúng đắn (correctness / 정확성) trước hiệu năng (performance / 성능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Thuật toán (algorithm / 알고리즘) khác program ở đâu?** nối từ **Thông tin (information / 정보) không đồng nghĩa với ý nghĩa** sang **Tính đúng đắn (correctness / 정확성) trước hiệu năng (performance / 성능)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thuật toán (algorithm / 알고리즘) khác program ở đâu?
 
@@ -36,7 +36,7 @@ Tìm kiếm nhị phân (binary search / 이진 탐색) là một thuật toán 
 
 Tách hai tầng này giúp lập luận (reasoning / 추론). Ta có thể chứng minh tìm kiếm nhị phân (binary search / 이진 탐색) cần `O(log n)` comparisons mà chưa cần chọn Java hay C. Sau đó mới hỏi hiện thực (implementation / 구현) trên hardware cụ thể có bộ nhớ đệm (cache / 캐시) locality tốt không, branch prediction ra sao, generic comparator tốn bao nhiêu chi phí.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khoa học máy tính (computer science / 컴퓨터 과학) thực sự nghiên cứu gì?**, **Tính đúng đắn (correctness / 정확성) trước hiệu năng (performance / 성능)** tiếp nhận điểm tựa từ **Thuật toán (algorithm / 알고리즘) khác program ở đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài nguyên (resource / 자원): thời gian, không gian và những thứ khó nhìn thấy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tính đúng đắn (correctness / 정확성) trước hiệu năng (performance / 성능)** nối từ **Thuật toán (algorithm / 알고리즘) khác program ở đâu?** sang **Tài nguyên (resource / 자원): thời gian, không gian và những thứ khó nhìn thấy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính đúng đắn (correctness / 정확성) trước hiệu năng (performance / 성능)
 
@@ -48,7 +48,7 @@ Ví dụ, một hàm (function / 함수) `withdraw(account, amount)` không th�
 
 Xem thêm: [Logic, state, abstraction và invariants](./03_logic_state_abstraction_and_invariants.md).
 
-> **Chuyển mạch:** Trong **Khoa học máy tính (computer science / 컴퓨터 과학) thực sự nghiên cứu gì?**, **Tính đúng đắn (correctness / 정확성) trước hiệu năng (performance / 성능)** nêu điều cần giải thích; **Tài nguyên (resource / 자원): thời gian, không gian và những thứ khó nhìn thấy** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Lớp trừu tượng (abstraction / 추상화): lý do hệ thống lớn có thể tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tính đúng đắn (correctness / 정확성) trước hiệu năng (performance / 성능)** đặt vấn đề; **Tài nguyên (resource / 자원): thời gian, không gian và những thứ khó nhìn thấy** kiểm tra bằng chứng, rồi **Lớp trừu tượng (abstraction / 추상화): lý do hệ thống lớn có thể tồn tại** mở rộng hệ quả.
 
 ## Tài nguyên (resource / 자원): thời gian, không gian và những thứ khó nhìn thấy
 
@@ -58,7 +58,7 @@ Một thuật toán (algorithm / 알고리즘) có độ phức tạp (complexit
 
 Điều này sẽ quay lại trong [complexity analysis](../01_algorithms_data_structures/01_complexity_and_asymptotic_analysis.md), [memory hierarchy](../02_computer_architecture/02_memory_hierarchy_and_cache.md) và [cross-cutting trade-offs](../90_connections/03_cross_cutting_tradeoffs.md).
 
-> **Chuyển mạch:** Ở chặng này của **Khoa học máy tính (computer science / 컴퓨터 과학) thực sự nghiên cứu gì?**, **Tài nguyên (resource / 자원): thời gian, không gian và những thứ khó nhìn thấy** nêu điều cần giải thích; **Lớp trừu tượng (abstraction / 추상화): lý do hệ thống lớn có thể tồn tại** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Ba lớp câu hỏi nên hỏi khi học một concept CS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tài nguyên (resource / 자원): thời gian, không gian và những thứ khó nhìn thấy** đặt vấn đề; **Lớp trừu tượng (abstraction / 추상화): lý do hệ thống lớn có thể tồn tại** kiểm tra bằng chứng, rồi **Ba lớp câu hỏi nên hỏi khi học một concept CS** mở rộng hệ quả.
 
 ## Lớp trừu tượng (abstraction / 추상화): lý do hệ thống lớn có thể tồn tại
 
@@ -68,7 +68,7 @@ Tệp (file / 파일) là lớp trừu tượng (abstraction / 추상화) trên 
 
 Lớp trừu tượng (abstraction / 추상화) không có nghĩa chi tiết phía dưới biến mất. Nó chỉ tạo một ranh giới (boundary / 경계). Khi hiệu năng hoặc thất bại (failure / 실패) vượt qua ranh giới (boundary / 경계), lớp trừu tượng (abstraction / 추상화) có thể “leak”: truy vấn (query / 쿼리) chậm buộc ta hiểu chỉ mục (index / 인덱스); bộ nhớ (memory / 메모리) pressure buộc ta hiểu GC và virtual bộ nhớ (memory / 메모리); hết thời gian chờ (timeout / 타임아웃) buộc ta hiểu mạng (network / 네트워크) và queueing.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khoa học máy tính (computer science / 컴퓨터 과학) thực sự nghiên cứu gì?**, **Ba lớp câu hỏi nên hỏi khi học một concept CS** tiếp nhận điểm tựa từ **Lớp trừu tượng (abstraction / 추상화): lý do hệ thống lớn có thể tồn tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khoa học máy tính (computer science / 컴퓨터 과학) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Ba lớp câu hỏi nên hỏi khi học một concept CS** nối từ **Lớp trừu tượng (abstraction / 추상화): lý do hệ thống lớn có thể tồn tại** sang **Khoa học máy tính (computer science / 컴퓨터 과학) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ba lớp câu hỏi nên hỏi khi học một concept CS
 
@@ -76,7 +76,7 @@ Khi gặp một thuật ngữ mới, thay vì chỉ học definition, hãy thử
 
 Ví dụ với bộ nhớ đệm (cache / 캐시): mô hình (model / 모델) là một lớp nhớ nhỏ nhưng nhanh giữ bản sao dữ liệu; cơ chế (mechanism / 메커니즘) là bộ nhớ đệm (cache / 캐시) line, tag, replacement và coherence; sự đánh đổi (trade-off / 트레이드오프) là sức chứa (capacity / 용량) nhỏ, consistency phức tạp và nguy cơ trượt bộ nhớ đệm (cache miss / 캐시 미스). Với cơ sở dữ liệu (database / 데이터베이스) giao dịch (transaction / 트랜잭션): mô hình (model / 모델) là một nhóm thao tác như một đơn vị lô-gic (logic / 논리); cơ chế (mechanism / 메커니즘) có khóa (lock / 잠금)/MVCC/WAL; sự đánh đổi (trade-off / 트레이드오프) là thông lượng (throughput / 처리량), độ trễ (latency / 지연 시간), isolation và contention.
 
-> **Chuyển mạch:** Trong **Khoa học máy tính (computer science / 컴퓨터 과학) thực sự nghiên cứu gì?**, **Khoa học máy tính (computer science / 컴퓨터 과학) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)** tiếp nhận điểm tựa từ **Ba lớp câu hỏi nên hỏi khi học một concept CS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Khoa học máy tính (computer science / 컴퓨터 과학) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)** nối từ **Ba lớp câu hỏi nên hỏi khi học một concept CS** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khoa học máy tính (computer science / 컴퓨터 과학) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)
 
@@ -84,7 +84,7 @@ Khoa học máy tính (computer science / 컴퓨터 과학) tập trung nhiều 
 
 Hiểu độ phức tạp (complexity / 복잡도) lý thuyết (theory / 이론) không tự động khiến codebase dễ maintain. Ngược lại, biết clean kiến trúc (architecture / 아키텍처) mà không hiểu tính đồng thời (concurrency / 동시성), bộ nhớ (memory / 메모리), giao dịch (transaction / 트랜잭션) hoặc mạng (network / 네트워크) thất bại (failure / 실패) sẽ tạo ra những lớp trừu tượng (abstraction / 추상화) đẹp nhưng sai về hành vi (behavior / 동작). Thư viện này cố tình nối hai phía thay vì tách chúng.
 
-> **Chuyển mạch:** Ở chặng này của **Khoa học máy tính (computer science / 컴퓨터 과학) thực sự nghiên cứu gì?**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Khoa học máy tính (computer science / 컴퓨터 과학) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết nối tiếp theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Khoa học máy tính (computer science / 컴퓨터 과학) và Kỹ nghệ phần mềm (software engineering / 소프트웨어 공학)** sang **Kết nối tiếp theo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -94,7 +94,7 @@ Hiểu độ phức tạp (complexity / 복잡도) lý thuyết (theory / 이론
 
 **“Hardware không còn quan trọng với ứng dụng (application / 애플리케이션) nhà phát triển (developer / 개발자).”** Hardware được che tốt hơn, nhưng bộ nhớ đệm (cache / 캐시) locality, CPU cores, bộ nhớ (memory / 메모리) bandwidth, SSD hành vi (behavior / 동작) và mạng (network / 네트워크) vẫn ảnh hưởng trực tiếp tới độ trễ (latency / 지연 시간) và thông lượng (throughput / 처리량) của software.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Khoa học máy tính (computer science / 컴퓨터 과학) thực sự nghiên cứu gì?**, **Kết nối tiếp theo** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối tiếp theo** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối tiếp theo
 

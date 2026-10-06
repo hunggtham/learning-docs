@@ -12,7 +12,7 @@ Bảng tuần hoàn xuất hiện vì electron phải điền vào các trạng 
 
 Vì vậy tính tuần hoàn hóa học là một mẫu hình nổi lên từ vật lý lượng tử, chứ không phải một bảng quy tắc độc lập được đặt ra riêng cho Hóa học.
 
-> **Chuyển mạch:** Quantum mechanics explains atomic structure; electromagnetism explains bonding forces, and statistical mechanics turns microscopic states into temperature, entropy and bulk behavior.
+> **Nối mạch:** Quantum mechanics explains atomic structure; electromagnetism explains bonding forces, and statistical mechanics turns microscopic states into temperature, entropy and bulk behavior.
 
 ## Điện từ học → liên kết
 
@@ -22,7 +22,7 @@ Tuy nhiên điện tĩnh cổ điển không đủ để giải thích nguyên t
 
 Mômen lưỡng cực, phân cực và lực liên phân tử là ví dụ cho cách phân bố electron vi mô tạo ra tính chất điện môi và tương tác vật chất ở cấp lớn hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học và Vật lý — cùng một thế giới ở hai mức mô tả**, **Cơ học thống kê → nhiệt độ và entropy** tiếp nhận điểm tựa từ **Điện từ học → liên kết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt động lực học → chiều biến đổi hóa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học và Vật lý — cùng một thế giới ở hai mức mô tả**, **Cơ học thống kê → nhiệt độ và entropy** nối từ **Điện từ học → liên kết** sang **Nhiệt động lực học → chiều biến đổi hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cơ học thống kê → nhiệt độ và entropy
 
@@ -38,7 +38,7 @@ kết nối entropy với số vi trạng thái tương thích với trạng th�
 
 Đây là cầu nối quan trọng giữa chuyển động của hạt và những đại lượng ta đo bằng nhiệt kế, áp kế hoặc phép đo nhiệt lượng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học và Vật lý — cùng một thế giới ở hai mức mô tả**, **Nhiệt động lực học → chiều biến đổi hóa học** tiếp nhận điểm tựa từ **Cơ học thống kê → nhiệt độ và entropy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phổ học → chuyển mức lượng tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Vật lý — cùng một thế giới ở hai mức mô tả**, **Nhiệt động lực học → chiều biến đổi hóa học** nối từ **Cơ học thống kê → nhiệt độ và entropy** sang **Phổ học → chuyển mức lượng tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệt động lực học → chiều biến đổi hóa học
 
@@ -52,7 +52,7 @@ Năng lượng tự do Gibbs đặc biệt hữu ích vì nhiều thí nghiệm 
 
 cho biết chiều biến đổi thuận lợi về mặt nhiệt động trong các điều kiện đó, nhưng không cho biết quá trình nhanh hay chậm.
 
-> **Chuyển mạch:** Trong **Hóa học và Vật lý — cùng một thế giới ở hai mức mô tả**, **Phổ học → chuyển mức lượng tử** tiếp nhận điểm tựa từ **Nhiệt động lực học → chiều biến đổi hóa học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vật lý chất rắn → hóa học vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học và Vật lý — cùng một thế giới ở hai mức mô tả**, **Phổ học → chuyển mức lượng tử** nối từ **Nhiệt động lực học → chiều biến đổi hóa học** sang **Vật lý chất rắn → hóa học vật liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phổ học → chuyển mức lượng tử
 
@@ -62,7 +62,7 @@ Hồng ngoại (**IR**) chủ yếu thăm dò dao động phân tử; tử ngo�
 
 Phổ vì vậy là dấu vết thực nghiệm của cấu trúc mức năng lượng lượng tử.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học và Vật lý — cùng một thế giới ở hai mức mô tả**, **Vật lý chất rắn → hóa học vật liệu** tiếp nhận điểm tựa từ **Phổ học → chuyển mức lượng tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vật lý hạt nhân → hóa học hạt nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học và Vật lý — cùng một thế giới ở hai mức mô tả**, **Vật lý chất rắn → hóa học vật liệu** nối từ **Phổ học → chuyển mức lượng tử** sang **Vật lý hạt nhân → hóa học hạt nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vật lý chất rắn → hóa học vật liệu
 
@@ -72,7 +72,7 @@ Thành phần hóa học, cấu trúc tinh thể và khuyết tật quyết đ�
 
 Đây là nơi Hóa học chất rắn và Vật lý vật chất ngưng tụ gặp nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học và Vật lý — cùng một thế giới ở hai mức mô tả**, **Vật lý hạt nhân → hóa học hạt nhân** tiếp nhận điểm tựa từ **Vật lý chất rắn → hóa học vật liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Vật lý — cùng một thế giới ở hai mức mô tả**, **Vật lý hạt nhân → hóa học hạt nhân** nối từ **Vật lý chất rắn → hóa học vật liệu** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vật lý hạt nhân → hóa học hạt nhân
 
@@ -80,7 +80,7 @@ Phản ứng hạt nhân phụ thuộc lực hạt nhân mạnh, lực yếu và
 
 Vì vậy hóa học hạt nhân là ví dụ rõ cho việc một hiện tượng có thể cần vật lý để giải thích nguồn gốc và cần hóa học để xử lý hệ thực tế.
 
-> **Chuyển mạch:** Trong **Hóa học và Vật lý — cùng một thế giới ở hai mức mô tả**, **Mô hình tư duy** gom các mảnh từ **Vật lý hạt nhân → hóa học hạt nhân** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Hóa học và Vật lý — cùng một thế giới ở hai mức mô tả**, **Mô hình tư duy** tổng hợp từ **Vật lý hạt nhân → hóa học hạt nhân** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

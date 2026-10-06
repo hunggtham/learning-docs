@@ -67,7 +67,7 @@ mechanism thấp hơn nào giải thích behavior?
 
 Dấu vết (trace / 추적) cho nhân quả (causal / 인과적) cấu trúc (structure / 구조); metrics cho population/saturation; profiler/counters cho cơ chế (mechanism / 메커니즘); logs cho sự kiện (event / 이벤트)/ngữ cảnh (context / 맥락). Không công cụ (tool / 도구) nào một mình là “truth”.
 
-> **Chuyển mạch:** Evidence type narrows ownership: metrics reveal saturation, traces reveal causal timing, logs reveal events. The first case separates a slow request from a fast query by locating queue wait before execution.
+> **Nối mạch:** Loại bằng chứng giúp khoanh vùng owner: metric cho thấy bão hòa, trace cho thấy thời điểm nhân quả, log cho thấy sự kiện. Tình huống đầu tiên tách request chậm khỏi query nhanh bằng cách xác định thời gian chờ trước khi thực thi.
 
 ## 5. Ví dụ: yêu cầu (request / 요청) chậm nhưng truy vấn (query / 쿼리) nhanh
 
@@ -87,7 +87,7 @@ Mã nguồn (source code / 소스 코드) nhìn ordered, kiểm thử (test / �
 
 Đi xuống ngôn ngữ (language / 언어) bộ nhớ (memory / 메모리) mô hình (model / 모델) → trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) → ISA thứ tự (ordering / 순서) → bộ nhớ đệm (cache / 캐시)/coherence để giải thích hành vi (behavior / 동작), nhưng fix phải quay lại tầng sở hữu bất biến (invariant / 불변식) đồng bộ. Xem [đường correctness xuyên tầng](./02_correctness_path_language_os_cpu_memory_ordering.md).
 
-> **Chuyển mạch:** Hai ví dụ về durability và concurrency cho thấy việc đi xuống tầng thấp chỉ có ích khi đã viết invariant. Từ đó, **8. bảo mật đường dẫn** mở rộng cùng quy tắc sang authority và trust boundary.
+> **Nối mạch:** Hai ví dụ về durability và concurrency cho thấy việc đi xuống tầng thấp chỉ có ích khi đã viết invariant. Từ đó, **8. bảo mật đường dẫn** mở rộng cùng quy tắc sang authority và trust boundary.
 
 ## 8. bảo mật (security / 보안) đường dẫn (path / 경로): định danh (identity / 식별자) → authorization → secret → TLS → dịch vụ (service / 서비스) ranh giới (boundary / 경계)
 

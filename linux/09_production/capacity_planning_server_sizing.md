@@ -33,7 +33,7 @@ Cần biết:
 
 Hai applications cùng 100 requests/second có thể cần tài nguyên khác nhau hàng chục lần.
 
-> **Chuyển mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Thông lượng (throughput / 처리량) và độ trễ (latency / 지연 시간)** tiếp nhận điểm tựa từ **Bắt đầu từ tải công việc (workload / 워크로드), không bắt đầu từ hardware** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Utilization không nên luôn ở 100%** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Thông lượng (throughput / 처리량) và độ trễ (latency / 지연 시간)** nối từ **Bắt đầu từ tải công việc (workload / 워크로드), không bắt đầu từ hardware** sang **Utilization không nên luôn ở 100%**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thông lượng (throughput / 처리량) và độ trễ (latency / 지연 시간)
 
@@ -58,7 +58,7 @@ Sức chứa (capacity / 용량) planning môi trường vận hành (production
 
 Tăng tính đồng thời (concurrency / 동시성) có thể tăng thông lượng (throughput / 처리량) đến một điểm, sau đó queueing làm độ trễ (latency / 지연 시간) tăng mạnh.
 
-> **Chuyển mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Utilization không nên luôn ở 100%** tiếp nhận điểm tựa từ **Thông lượng (throughput / 처리량) và độ trễ (latency / 지연 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sức chứa (capacity / 용량) khác với utilization snapshot** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Utilization không nên luôn ở 100%** nối từ **Thông lượng (throughput / 처리량) và độ trễ (latency / 지연 시간)** sang **Sức chứa (capacity / 용량) khác với utilization snapshot**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Utilization không nên luôn ở 100%
 
@@ -72,7 +72,7 @@ Headroom là phần sức chứa (capacity / 용량) chưa dùng trong trạng t
 
 Không có một tỷ lệ headroom universal cho mọi hệ thống.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Sức chứa (capacity / 용량) khác với utilization snapshot** tiếp nhận điểm tựa từ **Utilization không nên luôn ở 100%** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Little's Law** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Sức chứa (capacity / 용량) khác với utilization snapshot** nối từ **Utilization không nên luôn ở 100%** sang **Little's Law**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sức chứa (capacity / 용량) khác với utilization snapshot
 
@@ -90,7 +90,7 @@ Cần nhìn:
 
 Sức chứa (capacity / 용량) planning dựa thời gian (time / 시간) series, không dựa một snapshot.
 
-> **Chuyển mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Little's Law** tiếp nhận điểm tựa từ **Sức chứa (capacity / 용량) khác với utilization snapshot** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dịch vụ (service / 서비스) thời gian (time / 시간) và queueing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Little's Law** nối từ **Sức chứa (capacity / 용량) khác với utilization snapshot** sang **Dịch vụ (service / 서비스) thời gian (time / 시간) và queueing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Little's Law
 
@@ -118,7 +118,7 @@ Nếu độ trễ (latency / 지연 시간) tăng lên 1 giây mà thông lượ
 
 Điều này giải thích tại sao độ trễ (latency / 지연 시간) degradation kéo theo luồng thực thi (thread / 스레드)/socket/bộ nhớ (memory / 메모리) pressure.
 
-> **Chuyển mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Dịch vụ (service / 서비스) thời gian (time / 시간) và queueing** tiếp nhận điểm tựa từ **Little's Law** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CPU sizing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Dịch vụ (service / 서비스) thời gian (time / 시간) và queueing** nối từ **Little's Law** sang **CPU sizing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dịch vụ (service / 서비스) thời gian (time / 시간) và queueing
 
@@ -137,7 +137,7 @@ Khi tài nguyên (resource / 자원) utilization gần saturation, hàng đợi 
 
 Đó là lý do tail độ trễ (latency / 지연 시간) thường xấu đi mạnh trước khi hệ thống (system / 시스템) hoàn toàn thất bại (fail / 실패).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **CPU sizing** tiếp nhận điểm tựa từ **Dịch vụ (service / 서비스) thời gian (time / 시간) và queueing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **vCPU không phải đơn vị (unit / 단위) hiệu năng (performance / 성능) tuyệt đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **CPU sizing** nối từ **Dịch vụ (service / 서비스) thời gian (time / 시간) và queueing** sang **vCPU không phải đơn vị (unit / 단위) hiệu năng (performance / 성능) tuyệt đối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CPU sizing
 
@@ -169,7 +169,7 @@ Có thể mục tiêu (target / 대상) 6–8 vCPU tùy benchmark/kiến trúc (
 
 Đây chỉ là mô hình (model / 모델) khởi đầu. CPU kiến trúc (architecture / 아키텍처) và cloud vCPU hiệu năng (performance / 성능) khác nhau.
 
-> **Chuyển mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **vCPU không phải đơn vị (unit / 단위) hiệu năng (performance / 성능) tuyệt đối** tiếp nhận điểm tựa từ **CPU sizing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CPU saturation signals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **vCPU không phải đơn vị (unit / 단위) hiệu năng (performance / 성능) tuyệt đối** nối từ **CPU sizing** sang **CPU saturation signals**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## vCPU không phải đơn vị (unit / 단위) hiệu năng (performance / 성능) tuyệt đối
 
@@ -186,7 +186,7 @@ Khác biệt có thể đến từ:
 
 Sức chứa (capacity / 용량) phải benchmark trên instance family thật nếu hiệu năng (performance / 성능) quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **CPU saturation signals** tiếp nhận điểm tựa từ **vCPU không phải đơn vị (unit / 단위) hiệu năng (performance / 성능) tuyệt đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ (memory / 메모리) sizing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **CPU saturation signals** nối từ **vCPU không phải đơn vị (unit / 단위) hiệu năng (performance / 성능) tuyệt đối** sang **Bộ nhớ (memory / 메모리) sizing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CPU saturation signals
 
@@ -208,7 +208,7 @@ Cần xem:
 
 CPU 80% không tự động nghĩa chỉ còn 20% sức chứa (capacity / 용량) vì tail độ trễ (latency / 지연 시간) có thể bắt đầu tăng trước 100%.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Bộ nhớ (memory / 메모리) sizing** tiếp nhận điểm tựa từ **CPU saturation signals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vùng nhớ vùng nhớ động (heap / 힙) headroom** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Bộ nhớ (memory / 메모리) sizing** nối từ **CPU saturation signals** sang **Vùng nhớ vùng nhớ động (heap / 힙) headroom**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ nhớ (memory / 메모리) sizing
 
@@ -232,7 +232,7 @@ Nếu bộ chứa (container / 컨테이너) limit 4 GiB và `-Xmx4g`, gần nh�
 
 Đây là cấu hình dễ OOMKill.
 
-> **Chuyển mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Vùng nhớ vùng nhớ động (heap / 힙) headroom** tiếp nhận điểm tựa từ **Bộ nhớ (memory / 메모리) sizing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Page bộ nhớ đệm (cache / 캐시) là sức chứa (capacity / 용량) hữu ích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Vùng nhớ vùng nhớ động (heap / 힙) headroom** nối từ **Bộ nhớ (memory / 메모리) sizing** sang **Page bộ nhớ đệm (cache / 캐시) là sức chứa (capacity / 용량) hữu ích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vùng nhớ vùng nhớ động (heap / 힙) headroom
 
@@ -252,7 +252,7 @@ Có thể cần để một phần cho bản địa (native / 네이티브) bộ
 
 Theo dõi RSS, bản địa (native / 네이티브) bộ nhớ (memory / 메모리) tracking và cgroup bộ nhớ (memory / 메모리) thay vì chỉ vùng nhớ động (heap / 힙) metrics.
 
-> **Chuyển mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Page bộ nhớ đệm (cache / 캐시) là sức chứa (capacity / 용량) hữu ích** tiếp nhận điểm tựa từ **Vùng nhớ vùng nhớ động (heap / 힙) headroom** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Swap trong sức chứa (capacity / 용량) planning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Page bộ nhớ đệm (cache / 캐시) là sức chứa (capacity / 용량) hữu ích** nối từ **Vùng nhớ vùng nhớ động (heap / 힙) headroom** sang **Swap trong sức chứa (capacity / 용량) planning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Page bộ nhớ đệm (cache / 캐시) là sức chứa (capacity / 용량) hữu ích
 
@@ -264,7 +264,7 @@ Sizing RAM quá sát tiến trình (process / 프로세스) RSS có thể làm b
 
 Vì vậy RAM headroom không nhất thiết là “lãng phí”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Swap trong sức chứa (capacity / 용량) planning** tiếp nhận điểm tựa từ **Page bộ nhớ đệm (cache / 캐시) là sức chứa (capacity / 용량) hữu ích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lưu trữ (storage / 저장소) sức chứa (capacity / 용량) có nhiều dimensions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Swap trong sức chứa (capacity / 용량) planning** nối từ **Page bộ nhớ đệm (cache / 캐시) là sức chứa (capacity / 용량) hữu ích** sang **Lưu trữ (storage / 저장소) sức chứa (capacity / 용량) có nhiều dimensions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Swap trong sức chứa (capacity / 용량) planning
 
@@ -280,7 +280,7 @@ vmstat 1
 
 Sustained swap in/out (`si/so`) là tín hiệu (signal / 신호) pressure.
 
-> **Chuyển mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Lưu trữ (storage / 저장소) sức chứa (capacity / 용량) có nhiều dimensions** tiếp nhận điểm tựa từ **Swap trong sức chứa (capacity / 용량) planning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **IOPS sizing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Lưu trữ (storage / 저장소) sức chứa (capacity / 용량) có nhiều dimensions** nối từ **Swap trong sức chứa (capacity / 용량) planning** sang **IOPS sizing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lưu trữ (storage / 저장소) sức chứa (capacity / 용량) có nhiều dimensions
 
@@ -299,7 +299,7 @@ Các dimensions:
 
 Một 1 TB disk có thể không đủ hiệu năng (performance / 성능) nếu tải công việc (workload / 워크로드) cần nhiều random IOPS.
 
-> **Chuyển mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **IOPS sizing** tiếp nhận điểm tựa từ **Lưu trữ (storage / 저장소) sức chứa (capacity / 용량) có nhiều dimensions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sequential và random I/O** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **IOPS sizing** nối từ **Lưu trữ (storage / 저장소) sức chứa (capacity / 용량) có nhiều dimensions** sang **Sequential và random I/O**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## IOPS sizing
 
@@ -313,7 +313,7 @@ chưa tính background writes, logs, compaction, backups.
 
 Nếu provisioned disk chỉ 3000 IOPS, lưu trữ (storage / 저장소) có thể thành bottleneck dù còn rất nhiều free không gian (space / 공간).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Sequential và random I/O** tiếp nhận điểm tựa từ **IOPS sizing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạng (network / 네트워크) sizing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Sequential và random I/O** nối từ **IOPS sizing** sang **Mạng (network / 네트워크) sizing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sequential và random I/O
 
@@ -325,7 +325,7 @@ Sức chứa (capacity / 용량) kiểm thử (test / 테스트) phải giống 
 
 `dd` sequential benchmark không đại diện cơ sở dữ liệu (database / 데이터베이스) random I/O đầy đủ.
 
-> **Chuyển mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Mạng (network / 네트워크) sizing** tiếp nhận điểm tựa từ **Sequential và random I/O** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Packet tỷ lệ (rate / 비율) cũng quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Mạng (network / 네트워크) sizing** nối từ **Sequential và random I/O** sang **Packet tỷ lệ (rate / 비율) cũng quan trọng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mạng (network / 네트워크) sizing
 
@@ -349,7 +349,7 @@ Ví dụ phản hồi (response / 응답) trung bình 100 KB với 1000 requests
 
 Một giao diện (interface / 인터페이스) 1 Gbps có thể đã gần saturation sau overhead và traffic khác.
 
-> **Chuyển mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Packet tỷ lệ (rate / 비율) cũng quan trọng** tiếp nhận điểm tựa từ **Mạng (network / 네트워크) sizing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết (connection / 연결) sức chứa (capacity / 용량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Packet tỷ lệ (rate / 비율) cũng quan trọng** nối từ **Mạng (network / 네트워크) sizing** sang **Liên kết (connection / 연결) sức chứa (capacity / 용량)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Packet tỷ lệ (rate / 비율) cũng quan trọng
 
@@ -359,7 +359,7 @@ Rất nhiều small packets có thể giới hạn packets per second, interrupt
 
 Một API trả 1 KB ở 100k req/s có bandwidth không quá lớn nhưng packet tỷ lệ (rate / 비율) và liên kết (connection / 연결) handling rất cao.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, sau nội dung của **Packet tỷ lệ (rate / 비율) cũng quan trọng**, **Liên kết (connection / 연결) sức chứa (capacity / 용량)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Tệp (file / 파일) descriptor sức chứa (capacity / 용량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, sau nội dung của **Packet tỷ lệ (rate / 비율) cũng quan trọng**, **Liên kết (connection / 연결) sức chứa (capacity / 용량)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Tệp (file / 파일) descriptor sức chứa (capacity / 용량)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết (connection / 연결) sức chứa (capacity / 용량)
 
@@ -381,7 +381,7 @@ cat /proc/sys/fs/file-nr
 
 và tiến trình (process / 프로세스) limits.
 
-> **Chuyển mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Tệp (file / 파일) descriptor sức chứa (capacity / 용량)** tiếp nhận điểm tựa từ **Liên kết (connection / 연결) sức chứa (capacity / 용량)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Luồng thực thi (thread / 스레드) sức chứa (capacity / 용량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Tệp (file / 파일) descriptor sức chứa (capacity / 용량)** nối từ **Liên kết (connection / 연결) sức chứa (capacity / 용량)** sang **Luồng thực thi (thread / 스레드) sức chứa (capacity / 용량)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tệp (file / 파일) descriptor sức chứa (capacity / 용량)
 
@@ -393,7 +393,7 @@ cat /proc/<PID>/limits
 
 Nhưng tăng FD limit không giải quyết leak. Nếu descriptors tăng vô hạn, nguyên nhân gốc (root cause / 근본 원인) là vòng đời (lifecycle / 생명주기) bug.
 
-> **Chuyển mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Luồng thực thi (thread / 스레드) sức chứa (capacity / 용량)** tiếp nhận điểm tựa từ **Tệp (file / 파일) descriptor sức chứa (capacity / 용량)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결) pool** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Luồng thực thi (thread / 스레드) sức chứa (capacity / 용량)** nối từ **Tệp (file / 파일) descriptor sức chứa (capacity / 용량)** sang **Cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결) pool**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Luồng thực thi (thread / 스레드) sức chứa (capacity / 용량)
 
@@ -408,7 +408,7 @@ Một máy chủ (server / 서버) “còn RAM” không nghĩa có thể tăng 
 
 Luồng thực thi (thread / 스레드) pool sizing phải dựa CPU/wait ratio và downstream sức chứa (capacity / 용량).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Luồng thực thi (thread / 스레드) sức chứa (capacity / 용량)** nêu điều cần giải thích; **Cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결) pool** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Phụ thuộc (dependency / 의존성) ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Luồng thực thi (thread / 스레드) sức chứa (capacity / 용량)** đặt vấn đề; **Cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결) pool** đối chiếu bằng chứng, rồi **Phụ thuộc (dependency / 의존성) ngân sách (budget / 예산)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결) pool
 
@@ -424,7 +424,7 @@ Nếu cơ sở dữ liệu (database / 데이터베이스) chỉ chịu tốt 30
 
 Sức chứa (capacity / 용량) planning phải end-to-end.
 
-> **Chuyển mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결) pool** nêu điều cần giải thích; **Phụ thuộc (dependency / 의존성) ngân sách (budget / 예산)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Horizontal scaling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결) pool** đặt vấn đề; **Phụ thuộc (dependency / 의존성) ngân sách (budget / 예산)** đối chiếu bằng chứng, rồi **Horizontal scaling** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Phụ thuộc (dependency / 의존성) ngân sách (budget / 예산)
 
@@ -442,7 +442,7 @@ Quy mô (scale / 규모) tầng (layer / 계층) A không tự quy mô (scale / 
 
 Đây là lý do kiểm thử tải (load test / 부하 테스트) phải quan sát toàn đồ thị (graph / 그래프) chứ không chỉ dịch vụ (service / 서비스) đang kiểm thử (test / 테스트).
 
-> **Chuyển mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Horizontal scaling** tiếp nhận điểm tựa từ **Phụ thuộc (dependency / 의존성) ngân sách (budget / 예산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vertical scaling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Horizontal scaling** nối từ **Phụ thuộc (dependency / 의존성) ngân sách (budget / 예산)** sang **Vertical scaling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Horizontal scaling
 
@@ -465,7 +465,7 @@ Có thể bị giới hạn bởi:
 
 Scale-out efficiency cần đo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Vertical scaling** tiếp nhận điểm tựa từ **Horizontal scaling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **N+1 sức chứa (capacity / 용량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Vertical scaling** nối từ **Horizontal scaling** sang **N+1 sức chứa (capacity / 용량)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vertical scaling
 
@@ -475,7 +475,7 @@ Một JVM vùng nhớ động (heap / 힙) quá lớn cũng làm GC hành vi (be
 
 Vertical và horizontal scaling là sự đánh đổi (trade-off / 트레이드오프), không phải “cloud luôn quy mô (scale / 규모) horizontal”.
 
-> **Chuyển mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **N+1 sức chứa (capacity / 용량)** tiếp nhận điểm tựa từ **Vertical scaling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Availability Zone thất bại (failure / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **N+1 sức chứa (capacity / 용량)** nối từ **Vertical scaling** sang **Availability Zone thất bại (failure / 실패)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## N+1 sức chứa (capacity / 용량)
 
@@ -491,7 +491,7 @@ capacity của 3 nodes >= peak required capacity
 
 Nếu normal tải (load / 로드) mỗi nút (node / 노드) đã 90%, mất một nút (node / 노드) sẽ làm ba nút (node / 노드) còn lại quá tải.
 
-> **Chuyển mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **N+1 sức chứa (capacity / 용량)** cho ta quy tắc; **Availability Zone thất bại (failure / 실패)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Autoscaling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **N+1 sức chứa (capacity / 용량)** nêu quy tắc; **Availability Zone thất bại (failure / 실패)** thử quy tắc trong tình huống, rồi **Autoscaling** mở rộng hệ quả.
 
 ## Availability Zone thất bại (failure / 실패)
 
@@ -501,7 +501,7 @@ Nếu có 3 AZ và yêu cầu (requirement / 요구사항) chịu mất 1 AZ, ha
 
 Không chỉ có instance count; cơ sở dữ liệu (database / 데이터베이스)/mạng (network / 네트워크) phụ thuộc (dependency / 의존성) cũng cần redundancy tương ứng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Availability Zone thất bại (failure / 실패)** cho ta quy tắc; **Autoscaling** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Quy mô (scale / 규모) chỉ số (metric / 지표)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Availability Zone thất bại (failure / 실패)** nêu quy tắc; **Autoscaling** thử quy tắc trong tình huống, rồi **Quy mô (scale / 규모) chỉ số (metric / 지표)** mở rộng hệ quả.
 
 ## Autoscaling
 
@@ -522,7 +522,7 @@ Nếu traffic spike nhanh hơn startup thời gian (time / 시간), autoscaling 
 
 Cần baseline sức chứa (capacity / 용량)/headroom trước khi autoscaling cứu được hệ thống.
 
-> **Chuyển mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Quy mô (scale / 규모) chỉ số (metric / 지표)** tiếp nhận điểm tựa từ **Autoscaling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tải (load / 로드) testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Quy mô (scale / 규모) chỉ số (metric / 지표)** nối từ **Autoscaling** sang **Tải (load / 로드) testing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy mô (scale / 규모) chỉ số (metric / 지표)
 
@@ -540,7 +540,7 @@ Alternative metrics:
 
 Scaling chỉ số (metric / 지표) nên phản ánh bottleneck/tài nguyên (resource / 자원) demand thật.
 
-> **Chuyển mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Tải (load / 로드) testing** tiếp nhận điểm tựa từ **Quy mô (scale / 규모) chỉ số (metric / 지표)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Warm-up** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Tải (load / 로드) testing** nối từ **Quy mô (scale / 규모) chỉ số (metric / 지표)** sang **Warm-up**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tải (load / 로드) testing
 
@@ -559,7 +559,7 @@ Kiểm thử tải (load test / 부하 테스트) nên mô phỏng:
 
 Một benchmark endpoint `/health` không đại diện nghiệp vụ (business / 비즈니스) API.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Warm-up** tiếp nhận điểm tựa từ **Tải (load / 로드) testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coordinated omission** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Warm-up** nối từ **Tải (load / 로드) testing** sang **Coordinated omission**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Warm-up
 
@@ -569,7 +569,7 @@ Kiểm thử tải (load test / 부하 테스트) ngay từ cold start có thể
 
 Nhưng môi trường vận hành (production / 운영 환경) có rolling deploy/cold start, nên cả hai scenarios đều cần kiểm thử (test / 테스트) tùy yêu cầu (requirement / 요구사항).
 
-> **Chuyển mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Coordinated omission** tiếp nhận điểm tựa từ **Warm-up** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Percentile thay vì average** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Coordinated omission** nối từ **Warm-up** sang **Percentile thay vì average**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Coordinated omission
 
@@ -579,7 +579,7 @@ Hiện tượng này gọi là **coordinated omission**.
 
 Một kiểm thử (test / 테스트) tốt phải hiểu traffic mô hình (model / 모델) và đo lường (measurement / 측정) ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Percentile thay vì average** tiếp nhận điểm tựa từ **Coordinated omission** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SLO và lỗi (error / 오류) ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Percentile thay vì average** nối từ **Coordinated omission** sang **SLO và lỗi (error / 오류) ngân sách (budget / 예산)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Percentile thay vì average
 
@@ -596,7 +596,7 @@ Average vẫn có thể trông không quá lớn, nhưng người dùng (user / 
 
 Theo dõi p95/p99/p99.9 khi SLO cần.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **SLO và lỗi (error / 오류) ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **Percentile thay vì average** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Growth planning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **SLO và lỗi (error / 오류) ngân sách (budget / 예산)** nối từ **Percentile thay vì average** sang **Growth planning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## SLO và lỗi (error / 오류) ngân sách (budget / 예산)
 
@@ -611,7 +611,7 @@ availability 99.95%
 
 Máy chủ (server / 서버) có thể vẫn trả phản hồi (response / 응답) nhưng p99 3s — theo SLO vẫn là sức chứa (capacity / 용량) bài toán (problem / 문제).
 
-> **Chuyển mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Growth planning** tiếp nhận điểm tựa từ **SLO và lỗi (error / 오류) ngân sách (budget / 예산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sức chứa (capacity / 용량) trend** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Growth planning** nối từ **SLO và lỗi (error / 오류) ngân sách (budget / 예산)** sang **Sức chứa (capacity / 용량) trend**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Growth planning
 
@@ -627,7 +627,7 @@ với `g` là growth tỷ lệ (rate / 비율) theo kỳ.
 
 Đây chỉ là mô hình (model / 모델) nếu growth tương đối ổn định. sản phẩm (product / 제품) launch/sự kiện (event / 이벤트) có thể tạo step thay đổi (change / 변경).
 
-> **Chuyển mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Sức chứa (capacity / 용량) trend** tiếp nhận điểm tựa từ **Growth planning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Saturation chỉ số (metric / 지표)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Sức chứa (capacity / 용량) trend** nối từ **Growth planning** sang **Saturation chỉ số (metric / 지표)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sức chứa (capacity / 용량) trend
 
@@ -646,7 +646,7 @@ error rate
 
 theo tuần/tháng giúp phát hiện approaching limit trước sự cố (incident / 인시던트).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Saturation chỉ số (metric / 지표)** tiếp nhận điểm tựa từ **Sức chứa (capacity / 용량) trend** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **RED phương thức (method / 메서드) ở dịch vụ (service / 서비스) tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Saturation chỉ số (metric / 지표)** nối từ **Sức chứa (capacity / 용량) trend** sang **RED phương thức (method / 메서드) ở dịch vụ (service / 서비스) tầng (layer / 계층)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Saturation chỉ số (metric / 지표)
 
@@ -674,7 +674,7 @@ errors      → I/O errors
 
 Mô hình tư duy (mental model / 사고 모델) này tốt hơn chỉ một chỉ số (metric / 지표) utilization.
 
-> **Chuyển mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **RED phương thức (method / 메서드) ở dịch vụ (service / 서비스) tầng (layer / 계층)** tiếp nhận điểm tựa từ **Saturation chỉ số (metric / 지표)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sức chứa (capacity / 용량) worksheet thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **RED phương thức (method / 메서드) ở dịch vụ (service / 서비스) tầng (layer / 계층)** nối từ **Saturation chỉ số (metric / 지표)** sang **Sức chứa (capacity / 용량) worksheet thực tế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## RED phương thức (method / 메서드) ở dịch vụ (service / 서비스) tầng (layer / 계층)
 
@@ -686,7 +686,7 @@ Với request-driven dịch vụ (service / 서비스), RED thường nhìn:
 
 Kết hợp RED ở dịch vụ (service / 서비스) tầng (layer / 계층) với USE ở tài nguyên (resource / 자원) tầng (layer / 계층) giúp nối symptom nghiệp vụ (business / 비즈니스) với bottleneck Linux.
 
-> **Chuyển mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Sức chứa (capacity / 용량) worksheet thực tế** tiếp nhận điểm tựa từ **RED phương thức (method / 메서드) ở dịch vụ (service / 서비스) tầng (layer / 계층)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trường hợp (case / 사례): Java API CPU 70%, p99 tăng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Sức chứa (capacity / 용량) worksheet thực tế** nối từ **RED phương thức (method / 메서드) ở dịch vụ (service / 서비스) tầng (layer / 계층)** sang **Trường hợp (case / 사례): Java API CPU 70%, p99 tăng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sức chứa (capacity / 용량) worksheet thực tế
 
@@ -710,7 +710,7 @@ Target headroom:
 
 Sau đó kiểm chứng bằng kiểm thử tải (load test / 부하 테스트) và môi trường vận hành (production / 운영 환경) metrics.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Sức chứa (capacity / 용량) worksheet thực tế** cho ta quy tắc; **Trường hợp (case / 사례): Java API CPU 70%, p99 tăng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례): RAM luôn 90%** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Sức chứa (capacity / 용량) worksheet thực tế** nêu quy tắc; **Trường hợp (case / 사례): Java API CPU 70%, p99 tăng** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례): RAM luôn 90%** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례): Java API CPU 70%, p99 tăng
 
@@ -730,7 +730,7 @@ Nếu CPU 70% nhưng luồng thực thi (thread / 스레드) dump cho thấy nhi
 
 Sức chứa (capacity / 용량) planning cần đúng tài nguyên (resource / 자원).
 
-> **Chuyển mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Trường hợp (case / 사례): Java API CPU 70%, p99 tăng** cho ta quy tắc; **Trường hợp (case / 사례): RAM luôn 90%** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례): quy mô (scale / 규모) từ 2 lên 8 app instances nhưng thông lượng (throughput / 처리량) không tăng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Trường hợp (case / 사례): Java API CPU 70%, p99 tăng** nêu quy tắc; **Trường hợp (case / 사례): RAM luôn 90%** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례): quy mô (scale / 규모) từ 2 lên 8 app instances nhưng thông lượng (throughput / 처리량) không tăng** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례): RAM luôn 90%
 
@@ -740,7 +740,7 @@ Nếu cgroup bộ nhớ (memory / 메모리) gần limit, swap/reclaim mạnh ho
 
 Không dùng “RAM used %” đơn lẻ.
 
-> **Chuyển mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Trường hợp (case / 사례): RAM luôn 90%** cho ta quy tắc; **Trường hợp (case / 사례): quy mô (scale / 규모) từ 2 lên 8 app instances nhưng thông lượng (throughput / 처리량) không tăng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Cost-performance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Trường hợp (case / 사례): RAM luôn 90%** nêu quy tắc; **Trường hợp (case / 사례): quy mô (scale / 규모) từ 2 lên 8 app instances nhưng thông lượng (throughput / 처리량) không tăng** thử quy tắc trong tình huống, rồi **Cost-performance** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례): quy mô (scale / 규모) từ 2 lên 8 app instances nhưng thông lượng (throughput / 처리량) không tăng
 
@@ -755,7 +755,7 @@ Potential dùng chung (shared / 공유) bottleneck:
 
 Quy mô (scale / 규모) ứng dụng (application / 애플리케이션) chỉ tăng tải (load / 로드) xuống bottleneck chung.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Trường hợp (case / 사례): quy mô (scale / 규모) từ 2 lên 8 app instances nhưng thông lượng (throughput / 처리량) không tăng** cho ta quy tắc; **Cost-performance** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Trường hợp (case / 사례): quy mô (scale / 규모) từ 2 lên 8 app instances nhưng thông lượng (throughput / 처리량) không tăng** nêu quy tắc; **Cost-performance** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Cost-performance
 
@@ -777,7 +777,7 @@ Profiling/tuning ứng dụng (application / 애플리케이션) có thể rẻ 
 
 Nhưng tối ưu hóa (optimization / 최적화) kỹ thuật (engineering / 엔지니어링) cũng có chi phí (cost / 비용). Cần balance.
 
-> **Chuyển mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Cost-performance** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Cost-performance** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -799,7 +799,7 @@ Mỗi tài nguyên (resource / 자원) có sức chứa (capacity / 용량) và 
 
 Khi một tài nguyên (resource / 자원) đạt giới hạn, hàng đợi (queue / 큐)/độ trễ (latency / 지연 시간)/lỗi (error / 오류) thường tăng trước khi toàn hệ thống “down”.
 
-> **Chuyển mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Xem thêm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Xem thêm** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -817,7 +817,7 @@ Khi một tài nguyên (resource / 자원) đạt giới hạn, hàng đợi (qu
 
 **“máy chủ (server / 서버) không crash nghĩa sizing đúng.”** SLO về độ trễ (latency / 지연 시간)/lỗi (error / 오류) có thể đã bị vi phạm từ lâu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Xem thêm** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sức chứa (capacity / 용량) Planning, máy chủ (server / 서버) Sizing và Headroom trong môi trường vận hành (production / 운영 환경)**, **Xem thêm** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Xem thêm
 

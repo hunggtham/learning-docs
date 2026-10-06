@@ -27,7 +27,7 @@ Nếu power mất mát (loss / 손실) xảy ra sau bất kỳ bước nào, fil
 
 Đây là bất biến (invariant / 불변식) mạnh hơn “ghi (write / 쓰기) thường hoàn tất”.
 
-> **Chuyển mạch:** Một logical operation có thể gồm nhiều physical writes; atomicity, visibility và durability vì thế tách biệt, và page cache khiến `write()` thành công chưa đồng nghĩa dữ liệu đã bền.
+> **Nối mạch:** Một logical operation có thể gồm nhiều physical writes; atomicity, visibility và durability vì thế tách biệt, và page cache khiến `write()` thành công chưa đồng nghĩa dữ liệu đã bền.
 
 ## 2. Atomicity, visibility và durability là ba thuộc tính (property / 속성) khác nhau
 
@@ -45,7 +45,7 @@ durability : state nào sống sót failure đã công bố?
 
 Một API có thể mạnh ở một trục và yếu ở trục khác.
 
-> **Chuyển mạch:** Ở chặng này của **Filesystem crash consistency, journaling và sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, **3. Page bộ nhớ đệm (cache / 캐시) làm write() chưa đồng nghĩa persistence** tiếp nhận điểm tựa từ **2. Atomicity, visibility và durability là ba thuộc tính (property / 속성) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. bất biến (invariant / 불변식) ghi (write / 쓰기) thứ tự (ordering / 순서): pointer không được durable trước đối tượng (object / 객체) nó làm reachable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Page bộ nhớ đệm (cache / 캐시) làm write() chưa đồng nghĩa persistence** nối từ **2. Atomicity, visibility và durability là ba thuộc tính (property / 속성) khác nhau** sang **4. bất biến (invariant / 불변식) ghi (write / 쓰기) thứ tự (ordering / 순서): pointer không được durable trước đối tượng (object / 객체) nó làm reachable**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Page bộ nhớ đệm (cache / 캐시) làm `write()` chưa đồng nghĩa persistence
 
@@ -65,7 +65,7 @@ user buffer
 
 Thành phần nguyên thủy (primitive / 기본 요소) như `fsync()`/`fdatasync()` yêu cầu durability mạnh hơn, nhưng chính xác (exact / 정확한) đặc tả hợp đồng (contract / 계약) vẫn phụ thuộc filesystem và thiết bị (device / 장치) ngăn xếp (stack / 스택). cơ sở dữ liệu (database / 데이터베이스) WAL dựa mạnh vào ranh giới (boundary / 경계) này, nên “OS sẽ tự flush sớm thôi” không phải tính đúng đắn (correctness / 정확성) argument.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Filesystem crash consistency, journaling và sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, **4. bất biến (invariant / 불변식) ghi (write / 쓰기) thứ tự (ordering / 순서): pointer không được durable trước đối tượng (object / 객체) nó làm reachable** tiếp nhận điểm tựa từ **3. Page bộ nhớ đệm (cache / 캐시) làm write() chưa đồng nghĩa persistence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Journaling biến arbitrary cập nhật (update / 업데이트) thành một log giao thức (protocol / 프로토콜) có ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. bất biến (invariant / 불변식) ghi (write / 쓰기) thứ tự (ordering / 순서): pointer không được durable trước đối tượng (object / 객체) nó làm reachable** nối từ **3. Page bộ nhớ đệm (cache / 캐시) làm write() chưa đồng nghĩa persistence** sang **5. Journaling biến arbitrary cập nhật (update / 업데이트) thành một log giao thức (protocol / 프로토콜) có ranh giới (boundary / 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. bất biến (invariant / 불변식) ghi (write / 쓰기) thứ tự (ordering / 순서): pointer không được durable trước đối tượng (object / 객체) nó làm reachable
 
@@ -84,7 +84,7 @@ Nếu step 3 durable trước step 1, khôi phục (recovery / 복구) có thể
 
 Filesystem journaling, sao chép khi ghi (copy-on-write / 쓰기 시 복사) cây (tree / 트리) và cơ sở dữ liệu (database / 데이터베이스) WAL dùng hiện thực (implementation / 구현) khác nhau nhưng cùng family bất biến (invariant / 불변식): **publication siêu dữ liệu (metadata / 메타데이터) không được vượt quá trạng thái (state / 상태) mà khôi phục (recovery / 복구) dựa vào**.
 
-> **Chuyển mạch:** Trong **Filesystem crash consistency, journaling và sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, **4. bất biến (invariant / 불변식) ghi (write / 쓰기) thứ tự (ordering / 순서): pointer không được durable trước đối tượng (object / 객체) nó làm reachable** đã nêu tiêu chí phân biệt, còn **5. Journaling biến arbitrary cập nhật (update / 업데이트) thành một log giao thức (protocol / 프로토콜) có ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **6. siêu dữ liệu (metadata / 메타데이터) journaling và dữ liệu (data / 데이터) journaling bảo vệ những thứ khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. bất biến (invariant / 불변식) ghi (write / 쓰기) thứ tự (ordering / 순서): pointer không được durable trước đối tượng (object / 객체) nó làm reachable** đặt tiêu chí; **5. Journaling biến arbitrary cập nhật (update / 업데이트) thành một log giao thức (protocol / 프로토콜) có ranh giới (boundary / 경계)** dùng nó để kiểm tra ranh giới, rồi **6. siêu dữ liệu (metadata / 메타데이터) journaling và dữ liệu (data / 데이터) journaling bảo vệ những thứ khác nhau** mở rộng hệ quả.
 
 ## 5. Journaling biến arbitrary cập nhật (update / 업데이트) thành một log giao thức (protocol / 프로토콜) có ranh giới (boundary / 경계)
 
@@ -103,7 +103,7 @@ prepare journal records
 
 Bất biến (invariant / 불변식) không phải “home blocks luôn mới nhất”. bất biến (invariant / 불변식) là **journal + home trạng thái (state / 상태) luôn đủ để khôi phục (recovery / 복구) một lịch sử (history / 이력) hợp lệ**.
 
-> **Chuyển mạch:** Ở chặng này của **Filesystem crash consistency, journaling và sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, **5. Journaling biến arbitrary cập nhật (update / 업데이트) thành một log giao thức (protocol / 프로토콜) có ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **6. siêu dữ liệu (metadata / 메타데이터) journaling và dữ liệu (data / 데이터) journaling bảo vệ những thứ khác nhau** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **7. Barriers, flush và FUA: thứ tự (ordering / 순서) phải sống xuống thiết bị (device / 장치)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Journaling biến arbitrary cập nhật (update / 업데이트) thành một log giao thức (protocol / 프로토콜) có ranh giới (boundary / 경계)** đặt tiêu chí; **6. siêu dữ liệu (metadata / 메타데이터) journaling và dữ liệu (data / 데이터) journaling bảo vệ những thứ khác nhau** dùng nó để kiểm tra ranh giới, rồi **7. Barriers, flush và FUA: thứ tự (ordering / 순서) phải sống xuống thiết bị (device / 장치)** mở rộng hệ quả.
 
 ## 6. siêu dữ liệu (metadata / 메타데이터) journaling và dữ liệu (data / 데이터) journaling bảo vệ những thứ khác nhau
 
@@ -113,7 +113,7 @@ Dữ liệu (data / 데이터) journaling có thể log cả người dùng (use
 
 Do đó câu “filesystem có journal nên không mất dữ liệu (data / 데이터)” quá mạnh. Phải hỏi journal chế độ (mode / 모드) và ứng dụng (application / 애플리케이션) đã đặt durability ranh giới (boundary / 경계) ở đâu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Filesystem crash consistency, journaling và sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, **6. siêu dữ liệu (metadata / 메타데이터) journaling và dữ liệu (data / 데이터) journaling bảo vệ những thứ khác nhau** nêu điều cần giải thích; **7. Barriers, flush và FUA: thứ tự (ordering / 순서) phải sống xuống thiết bị (device / 장치)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. Torn ghi (write / 쓰기) và atomic ghi (write / 쓰기) granularity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. siêu dữ liệu (metadata / 메타데이터) journaling và dữ liệu (data / 데이터) journaling bảo vệ những thứ khác nhau** đặt vấn đề; **7. Barriers, flush và FUA: thứ tự (ordering / 순서) phải sống xuống thiết bị (device / 장치)** kiểm tra bằng chứng, rồi **8. Torn ghi (write / 쓰기) và atomic ghi (write / 쓰기) granularity** mở rộng hệ quả.
 
 ## 7. Barriers, flush và FUA: thứ tự (ordering / 순서) phải sống xuống thiết bị (device / 장치)
 
@@ -130,7 +130,7 @@ filesystem wants A before B
 
 Tính đúng đắn (correctness / 정확성) yêu cầu thứ tự (ordering / 순서) intent phải được truyền đủ qua các tầng (layer / 계층) nằm trong đặc tả hợp đồng (contract / 계약). Một filesystem thuật toán (algorithm / 알고리즘) đúng không cứu được thiết bị (device / 장치)/firmware vi phạm persistence guarantee mà upper tầng (layer / 계층) dựa vào.
 
-> **Chuyển mạch:** Trong **Filesystem crash consistency, journaling và sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, **8. Torn ghi (write / 쓰기) và atomic ghi (write / 쓰기) granularity** tiếp nhận điểm tựa từ **7. Barriers, flush và FUA: thứ tự (ordering / 순서) phải sống xuống thiết bị (device / 장치)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. sao chép khi ghi (copy-on-write / 쓰기 시 복사): publish gốc (root / 루트) sau khi subtree mới đã tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Torn ghi (write / 쓰기) và atomic ghi (write / 쓰기) granularity** nối từ **7. Barriers, flush và FUA: thứ tự (ordering / 순서) phải sống xuống thiết bị (device / 장치)** sang **9. sao chép khi ghi (copy-on-write / 쓰기 시 복사): publish gốc (root / 루트) sau khi subtree mới đã tồn tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Torn ghi (write / 쓰기) và atomic ghi (write / 쓰기) granularity
 
@@ -140,7 +140,7 @@ Checksum giúp **detect** corruption nhưng không tự recover. khôi phục (r
 
 Vì vậy bất biến (invariant / 불변식) thường không phải “khối (block / 블록) ghi (write / 쓰기) là atomic”; bất biến (invariant / 불변식) là **partial vật lý (physical / 물리적) cập nhật (update / 업데이트) không được âm thầm trở thành logical trạng thái (state / 상태) được tin là hoàn chỉnh**.
 
-> **Chuyển mạch:** Ở chặng này của **Filesystem crash consistency, journaling và sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, **9. sao chép khi ghi (copy-on-write / 쓰기 시 복사): publish gốc (root / 루트) sau khi subtree mới đã tồn tại** tiếp nhận điểm tựa từ **8. Torn ghi (write / 쓰기) và atomic ghi (write / 쓰기) granularity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Rename-based replace: atomic không gian tên (namespace / 네임스페이스) thay đổi (change / 변경) chưa đủ cho durable replace** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. sao chép khi ghi (copy-on-write / 쓰기 시 복사): publish gốc (root / 루트) sau khi subtree mới đã tồn tại** nối từ **8. Torn ghi (write / 쓰기) và atomic ghi (write / 쓰기) granularity** sang **10. Rename-based replace: atomic không gian tên (namespace / 네임스페이스) thay đổi (change / 변경) chưa đủ cho durable replace**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. sao chép khi ghi (copy-on-write / 쓰기 시 복사): publish gốc (root / 루트) sau khi subtree mới đã tồn tại
 
@@ -161,7 +161,7 @@ Nếu crash trước gốc (root / 루트) publication, old cây (tree / 트리)
 
 COW làm snapshot tự nhiên vì old blocks vẫn còn reachable từ old roots, nhưng trả chi phí (cost / 비용) bằng fragmentation, siêu dữ liệu (metadata / 메타데이터) churn và ghi (write / 쓰기) amplification.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Filesystem crash consistency, journaling và sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, **10. Rename-based replace: atomic không gian tên (namespace / 네임스페이스) thay đổi (change / 변경) chưa đủ cho durable replace** tiếp nhận điểm tựa từ **9. sao chép khi ghi (copy-on-write / 쓰기 시 복사): publish gốc (root / 루트) sau khi subtree mới đã tồn tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Writeback lan truyền lỗi (error propagation / 오류 전파) cũng là một tính đúng đắn (correctness / 정확성) bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Rename-based replace: atomic không gian tên (namespace / 네임스페이스) thay đổi (change / 변경) chưa đủ cho durable replace** nối từ **9. sao chép khi ghi (copy-on-write / 쓰기 시 복사): publish gốc (root / 루트) sau khi subtree mới đã tồn tại** sang **11. Writeback lan truyền lỗi (error propagation / 오류 전파) cũng là một tính đúng đắn (correctness / 정확성) bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Rename-based replace: atomic không gian tên (namespace / 네임스페이스) thay đổi (change / 변경) chưa đủ cho durable replace
 
@@ -178,7 +178,7 @@ Chi tiết chính xác (exact / 정확한) phụ thuộc nền tảng (platform 
 
 Nếu chỉ fsync tệp (file / 파일) rồi rename nhưng crash trước directory cập nhật (update / 업데이트) durable, sau reboot tên mới có thể không tồn tại theo đặc tả hợp đồng (contract / 계약). “Rename atomic” chỉ trả lời visibility của không gian tên (namespace / 네임스페이스) chuyển tiếp (transition / 전이), không tự trả lời toàn bộ power-failure durability.
 
-> **Chuyển mạch:** Trong **Filesystem crash consistency, journaling và sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, **11. Writeback lan truyền lỗi (error propagation / 오류 전파) cũng là một tính đúng đắn (correctness / 정확성) bài toán (problem / 문제)** tiếp nhận điểm tựa từ **10. Rename-based replace: atomic không gian tên (namespace / 네임스페이스) thay đổi (change / 변경) chưa đủ cho durable replace** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Dirty-page pressure làm timing thay đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Writeback lan truyền lỗi (error propagation / 오류 전파) cũng là một tính đúng đắn (correctness / 정확성) bài toán (problem / 문제)** nối từ **10. Rename-based replace: atomic không gian tên (namespace / 네임스페이스) thay đổi (change / 변경) chưa đủ cho durable replace** sang **12. Dirty-page pressure làm timing thay đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Writeback lan truyền lỗi (error propagation / 오류 전파) cũng là một tính đúng đắn (correctness / 정확성) bài toán (problem / 문제)
 
@@ -186,7 +186,7 @@ Buffered ghi (write / 쓰기) có thể return trước khi actual thiết bị 
 
 Nếu hệ thống (system / 시스템) log “save successful” trước durability ranh giới (boundary / 경계), nghiệp vụ (business / 비즈니스) acknowledgement có thể mạnh hơn lưu trữ (storage / 저장소) trạng thái (state / 상태) thật. Đây là cùng bất biến (invariant / 불변식) với cơ sở dữ liệu (database / 데이터베이스) lần ghi nhận (commit / 커밋): **acknowledgement không được mạnh hơn bằng chứng (evidence / 증거) đã đạt**.
 
-> **Chuyển mạch:** Ở chặng này của **Filesystem crash consistency, journaling và sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, **12. Dirty-page pressure làm timing thay đổi** tiếp nhận điểm tựa từ **11. Writeback lan truyền lỗi (error propagation / 오류 전파) cũng là một tính đúng đắn (correctness / 정확성) bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Journaling/COW có background công việc (work / 작업) và amplification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Dirty-page pressure làm timing thay đổi** nối từ **11. Writeback lan truyền lỗi (error propagation / 오류 전파) cũng là một tính đúng đắn (correctness / 정확성) bài toán (problem / 문제)** sang **13. Journaling/COW có background công việc (work / 작업) và amplification**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Dirty-page pressure làm timing thay đổi
 
@@ -205,7 +205,7 @@ write rate ↑
 
 Vì vậy lưu trữ (storage / 저장소) sự cố (incident / 인시던트) có thể xuất hiện ở API p99 dù CPU thấp. Lower tầng (layer / 계층) thực sự quyết định hành vi (behavior / 동작) là dirty writeback + thiết bị (device / 장치) hàng đợi (queue / 큐), không phải ứng dụng (application / 애플리케이션) handler.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Filesystem crash consistency, journaling và sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, **13. Journaling/COW có background công việc (work / 작업) và amplification** tiếp nhận điểm tựa từ **12. Dirty-page pressure làm timing thay đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. cơ sở dữ liệu (database / 데이터베이스) WAL và filesystem journal là hai protocols xếp chồng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Journaling/COW có background công việc (work / 작업) và amplification** nối từ **12. Dirty-page pressure làm timing thay đổi** sang **14. cơ sở dữ liệu (database / 데이터베이스) WAL và filesystem journal là hai protocols xếp chồng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Journaling/COW có background công việc (work / 작업) và amplification
 
@@ -213,7 +213,7 @@ Journal checkpointing, COW siêu dữ liệu (metadata / 메타데이터) rewrit
 
 Tối ưu hóa (optimization / 최적화) tạo thông lượng (throughput / 처리량) tốt ở steady trạng thái (state / 상태) có thể tạo độ trễ (latency / 지연 시간) burst khi background debt được trả. môi trường vận hành (production / 운영 환경) benchmark cần chạy đủ lâu để quan sát maintenance cycle, không chỉ đo vài giây warm bộ nhớ đệm (cache / 캐시).
 
-> **Chuyển mạch:** Trong **Filesystem crash consistency, journaling và sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, **13. Journaling/COW có background công việc (work / 작업) và amplification** nêu điều cần giải thích; **14. cơ sở dữ liệu (database / 데이터베이스) WAL và filesystem journal là hai protocols xếp chồng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. thất bại (failure / 실패) injection là cách kiểm tra crash bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Journaling/COW có background công việc (work / 작업) và amplification** đặt vấn đề; **14. cơ sở dữ liệu (database / 데이터베이스) WAL và filesystem journal là hai protocols xếp chồng** kiểm tra bằng chứng, rồi **15. thất bại (failure / 실패) injection là cách kiểm tra crash bất biến (invariant / 불변식)** mở rộng hệ quả.
 
 ## 14. cơ sở dữ liệu (database / 데이터베이스) WAL và filesystem journal là hai protocols xếp chồng
 
@@ -231,7 +231,7 @@ Hai logs không duplicate cùng bất biến (invariant / 불변식). DB vẫn c
 
 Đọc [MVCC, WAL và recovery internals](../../05_data_databases/advanced/00_mvcc_visibility_wal_and_recovery_internals.md) và [durability path xuyên tầng](../../90_connections/advanced/03_durability_path_application_commit_wal_filesystem_device.md).
 
-> **Chuyển mạch:** Ở chặng này của **Filesystem crash consistency, journaling và sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, **14. cơ sở dữ liệu (database / 데이터베이스) WAL và filesystem journal là hai protocols xếp chồng** nêu điều cần giải thích; **15. thất bại (failure / 실패) injection là cách kiểm tra crash bất biến (invariant / 불변식)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. bằng chứng vận hành (production evidence / 운영 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. cơ sở dữ liệu (database / 데이터베이스) WAL và filesystem journal là hai protocols xếp chồng** đặt vấn đề; **15. thất bại (failure / 실패) injection là cách kiểm tra crash bất biến (invariant / 불변식)** kiểm tra bằng chứng, rồi **16. bằng chứng vận hành (production evidence / 운영 증거)** mở rộng hệ quả.
 
 ## 15. thất bại (failure / 실패) injection là cách kiểm tra crash bất biến (invariant / 불변식)
 
@@ -248,7 +248,7 @@ replay recovery nhiều lần
 
 Sau mỗi thất bại (failure / 실패), kiểm tra filesystem mount/khôi phục (recovery / 복구) thành công, không gian tên (namespace / 네임스페이스) không chứa impossible trạng thái (state / 상태), dữ liệu (data / 데이터) được giữ đúng theo durability đặc tả hợp đồng (contract / 계약), và khôi phục (recovery / 복구) idempotent.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Filesystem crash consistency, journaling và sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, **15. thất bại (failure / 실패) injection là cách kiểm tra crash bất biến (invariant / 불변식)** nêu điều cần giải thích; **16. bằng chứng vận hành (production evidence / 운영 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. thất bại (failure / 실패) injection là cách kiểm tra crash bất biến (invariant / 불변식)** đặt vấn đề; **16. bằng chứng vận hành (production evidence / 운영 증거)** kiểm tra bằng chứng, rồi **17. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** mở rộng hệ quả.
 
 ## 16. bằng chứng vận hành (production evidence / 운영 증거)
 
@@ -263,7 +263,7 @@ block/device: latency distribution, queue depth, utilization, flush latency, err
 
 Một đồ thị (graph / 그래프) “disk utilization 70%” không đủ. Cần nối yêu cầu (request / 요청)/giao dịch (transaction / 트랜잭션) độ trễ (latency / 지연 시간) với writeback/flush hàng đợi (queue / 큐) và background công việc (work / 작업) để chứng minh cơ chế (mechanism / 메커니즘).
 
-> **Chuyển mạch:** Trong **Filesystem crash consistency, journaling và sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, **16. bằng chứng vận hành (production evidence / 운영 증거)** nêu điều cần giải thích; **17. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. bằng chứng vận hành (production evidence / 운영 증거)** đặt vấn đề; **17. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** kiểm tra bằng chứng, rồi **18. Mô hình tư duy** mở rộng hệ quả.
 
 ## 17. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?
 
@@ -271,13 +271,13 @@ Nếu symptom là tệp (file / 파일) biến mất sau reboot, bắt đầu t�
 
 Không cần học mọi filesystem hiện thực (implementation / 구현) để lập luận (reasoning / 추론). Cần xác định **publication điểm (point / 지점), persistence ranh giới (boundary / 경계), khôi phục (recovery / 복구) siêu dữ liệu (metadata / 메타데이터) và thất bại (failure / 실패) mô hình (model / 모델)** của hiện thực (implementation / 구현) đang dùng.
 
-> **Chuyển mạch:** Ở chặng này của **Filesystem crash consistency, journaling và sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, **18. Mô hình tư duy** gom các mảnh từ **17. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Mô hình tư duy** tổng hợp từ **17. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 18. Mô hình tư duy
 
 > Filesystem crash consistency là một state-transition giao thức (protocol / 프로토콜) dưới khả năng interruption tùy ý. `write()` tạo dirty trạng thái (state / 상태); journaling/COW tạo khôi phục (recovery / 복구) cấu trúc (structure / 구조); barriers/flush đưa thứ tự (ordering / 순서) intent xuống lưu trữ (storage / 저장소); khôi phục (recovery / 복구) chọn lịch sử (history / 이력) hợp lệ sau crash. **Atomic visibility không tự bằng durability, và acknowledgement chỉ an toàn khi tầng dưới đã đạt persistence đặc tả hợp đồng (contract / 계약) mà tầng trên đang hứa.**
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Filesystem crash consistency, journaling và sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, **Kết nối** gom các mảnh từ **18. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **18. Mô hình tư duy**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

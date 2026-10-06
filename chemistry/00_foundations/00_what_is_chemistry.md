@@ -16,7 +16,7 @@ Một cục muối ăn có màu trắng, giòn và tan trong nước. Nếu ch�
 
 Một hiện tượng đơn giản như “muối tan” vì vậy đã cần nhiều khái niệm: điện tích, lực hút tĩnh điện, cấu trúc chất rắn, tính phân cực của nước, năng lượng và **entropy (độ hỗn loạn vi mô / 엔트로피)**. Đây là đặc trưng quan trọng của Hóa học: một hiện tượng vĩ mô thường là kết quả tổng hợp của nhiều cơ chế vi mô.
 
-> **Chuyển mạch:** Quan sát vật chất dẫn tới cấu trúc vi mô; chemistry nối physics với biology bằng cơ chế, rồi ba câu hỏi cốt lõi định hướng cách suy luận.
+> **Nối mạch:** Quan sát vật chất dẫn tới cấu trúc vi mô; chemistry nối physics với biology bằng cơ chế, rồi ba câu hỏi cốt lõi định hướng cách suy luận.
 
 ## Hóa học nằm giữa Vật lý và Sinh học như thế nào?
 
@@ -26,7 +26,7 @@ Sinh học (**Biology / 생물학**) nghiên cứu các hệ sống. Tuy nhiên,
 
 Ví dụ, để hiểu vì sao enzyme tăng tốc phản ứng, ta cần **động học hóa học (chemical kinetics)** và **bề mặt năng lượng (energy landscape)**. Để hiểu vì sao DNA có cấu trúc xoắn kép ổn định, ta cần liên kết hydro (**hydrogen bonding**), tương tác tĩnh điện (**electrostatic interaction**), hiệu ứng kỵ nước (**hydrophobic effect**) và hình học phân tử (**molecular geometry**). Để hiểu pin lithium-ion, ta cần hóa học oxi hóa–khử (**redox chemistry**), nhiệt động lực học (**thermodynamics**), hóa học chất rắn (**solid-state chemistry**) và khoa học vật liệu (**materials science**).
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học nghiên cứu điều gì?**, **Ba câu hỏi cốt lõi của Hóa học** tiếp nhận điểm tựa từ **Hóa học nằm giữa Vật lý và Sinh học như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bản sắc hóa học: khi nào một chất vẫn là chính nó?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học nghiên cứu điều gì?**, **Ba câu hỏi cốt lõi của Hóa học** nối từ **Hóa học nằm giữa Vật lý và Sinh học như thế nào?** sang **Bản sắc hóa học: khi nào một chất vẫn là chính nó?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ba câu hỏi cốt lõi của Hóa học
 
@@ -40,7 +40,7 @@ Thứ ba, **làm sao đo, dự đoán và điều khiển các biến đổi đ�
 
 Ba nhóm này không độc lập. Ta không thể hiểu phản ứng nếu không hiểu cấu trúc; cũng không thể dự đoán cấu trúc bền nếu không hiểu năng lượng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học nghiên cứu điều gì?**, **Bản sắc hóa học: khi nào một chất vẫn là chính nó?** tiếp nhận điểm tựa từ **Ba câu hỏi cốt lõi của Hóa học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa học không chỉ là “học phản ứng”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học nghiên cứu điều gì?**, **Bản sắc hóa học: khi nào một chất vẫn là chính nó?** nối từ **Ba câu hỏi cốt lõi của Hóa học** sang **Hóa học không chỉ là “học phản ứng”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bản sắc hóa học: khi nào một chất vẫn là chính nó?
 
@@ -58,7 +58,7 @@ các liên kết trong methane và oxygen bị phá vỡ, sau đó electron và 
 
 Tuy nhiên, ranh giới vật lý–hóa học không phải lúc nào cũng hoàn toàn đơn giản. Sự hòa tan (**dissolution**), chuyển pha (**phase transition**), ion hóa (**ionization**) hoặc hấp phụ (**adsorption**) có thể cần mô tả sâu hơn. Cách hỏi hữu ích hơn là: **cấu trúc electron và cách các nguyên tử nối với nhau có thay đổi không, hay chỉ cách sắp xếp và trạng thái của hệ thay đổi?**
 
-> **Chuyển mạch:** Trong **Hóa học nghiên cứu điều gì?**, **Hóa học không chỉ là “học phản ứng”** tiếp nhận điểm tựa từ **Bản sắc hóa học: khi nào một chất vẫn là chính nó?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình trong Hóa học không phải bản thân thực tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học nghiên cứu điều gì?**, **Hóa học không chỉ là “học phản ứng”** nối từ **Bản sắc hóa học: khi nào một chất vẫn là chính nó?** sang **Mô hình trong Hóa học không phải bản thân thực tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học không chỉ là “học phản ứng”
 
@@ -76,7 +76,7 @@ Một phản ứng có thể thuận lợi về nhiệt động lực học như
 
 Đây là ví dụ điển hình cho việc không thể dùng một khái niệm duy nhất để giải thích toàn bộ hiện tượng.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học nghiên cứu điều gì?**, **Mô hình trong Hóa học không phải bản thân thực tại** tiếp nhận điểm tựa từ **Hóa học không chỉ là “học phản ứng”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các định luật bảo toàn: những thứ không tự nhiên biến mất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học nghiên cứu điều gì?**, **Mô hình trong Hóa học không phải bản thân thực tại** nối từ **Hóa học không chỉ là “học phản ứng”** sang **Các định luật bảo toàn: những thứ không tự nhiên biến mất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mô hình trong Hóa học không phải bản thân thực tại
 
@@ -92,7 +92,7 @@ Vì vậy, câu hỏi đúng không phải “mô hình nào là thật?”, mà
 
 Đây là một **mô hình tư duy (mental model / 사고 모델)** quan trọng cho toàn bộ thư viện kiến thức.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học nghiên cứu điều gì?**, **Các định luật bảo toàn: những thứ không tự nhiên biến mất** tiếp nhận điểm tựa từ **Mô hình trong Hóa học không phải bản thân thực tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa học và các thang kích thước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học nghiên cứu điều gì?**, **Các định luật bảo toàn: những thứ không tự nhiên biến mất** nối từ **Mô hình trong Hóa học không phải bản thân thực tại** sang **Hóa học và các thang kích thước**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các định luật bảo toàn: những thứ không tự nhiên biến mất
 
@@ -106,7 +106,7 @@ Năng lượng cũng được bảo toàn, dù nó có thể đổi dạng giữ
 
 Hiểu các định luật bảo toàn giúp ta suy luận thay vì ghi nhớ. Khi một phương trình phản ứng không cân bằng về nguyên tử hoặc điện tích, ta biết ngay biểu diễn đang sai.
 
-> **Chuyển mạch:** Trong **Hóa học nghiên cứu điều gì?**, **Hóa học và các thang kích thước** tiếp nhận điểm tựa từ **Các định luật bảo toàn: những thứ không tự nhiên biến mất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ tích hợp: vì sao xăng cháy nhưng không tự bốc cháy ngay?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học nghiên cứu điều gì?**, **Hóa học và các thang kích thước** nối từ **Các định luật bảo toàn: những thứ không tự nhiên biến mất** sang **Ví dụ tích hợp: vì sao xăng cháy nhưng không tự bốc cháy ngay?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học và các thang kích thước
 
@@ -119,7 +119,7 @@ Do đó Hóa học luôn phải nối hai thế giới:
 
 Khái niệm **mol (mole / 몰)** tồn tại chính để tạo cầu nối giữa hai thang này. Ta sẽ phát triển ý tưởng đó chi tiết trong phần đại lượng hóa học.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học nghiên cứu điều gì?**, **Hóa học và các thang kích thước** cho ta quy tắc; **Ví dụ tích hợp: vì sao xăng cháy nhưng không tự bốc cháy ngay?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học nghiên cứu điều gì?**, **Hóa học và các thang kích thước** nêu quy tắc; **Ví dụ tích hợp: vì sao xăng cháy nhưng không tự bốc cháy ngay?** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Ví dụ tích hợp: vì sao xăng cháy nhưng không tự bốc cháy ngay?
 
@@ -129,7 +129,7 @@ Nhưng ở nhiệt độ phòng, các phân tử không phải cứ va chạm l�
 
 Một hiện tượng quen thuộc vì vậy nối trực tiếp cấu trúc hóa học, va chạm, năng lượng hoạt hóa, nhiệt động lực học và động học hóa học.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học nghiên cứu điều gì?**, **Ví dụ tích hợp: vì sao xăng cháy nhưng không tự bốc cháy ngay?** cho ta quy tắc; **Mô hình tư duy** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học nghiên cứu điều gì?**, **Ví dụ tích hợp: vì sao xăng cháy nhưng không tự bốc cháy ngay?** nêu quy tắc; **Mô hình tư duy** thử quy tắc trong tình huống, rồi **Các hiểu lầm thường gặp** mở rộng hệ quả.
 
 ## Mô hình tư duy
 
@@ -139,7 +139,7 @@ Nguyên tử và electron không được sắp xếp tùy ý. Chúng chịu rà
 
 Mô hình tư duy này giúp nối nhiều chương tưởng như rời nhau: tính tuần hoàn là quy luật trong cách electron sắp xếp; liên kết là cách sắp xếp làm giảm năng lượng; phản ứng là sự tái tổ chức electron và hạt nhân; cân bằng là sự phân bố giữa nhiều cấu hình khả dĩ; xúc tác cung cấp con đường tái tổ chức có hàng rào năng lượng thấp hơn.
 
-> **Chuyển mạch:** Trong **Hóa học nghiên cứu điều gì?**, **Các hiểu lầm thường gặp** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học nghiên cứu điều gì?**, **Các hiểu lầm thường gặp** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Các hiểu lầm thường gặp
 
@@ -159,7 +159,7 @@ Không. Mô hình tốt là mô hình đủ chi tiết cho câu hỏi đang xét
 
 Trong phản ứng hóa học thông thường, nguyên tử được sắp xếp lại. Biến đổi nguyên tố thuộc phạm vi phản ứng hạt nhân, không phải phản ứng hóa học thông thường.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học nghiên cứu điều gì?**, sau nội dung của **Các hiểu lầm thường gặp**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Hóa học nghiên cứu điều gì?**, sau nội dung của **Các hiểu lầm thường gặp**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức
 

@@ -10,7 +10,7 @@ Mỗi tiến trình (process / 프로세스) thường thấy một virtual addr
 
 Virtual bộ nhớ (memory / 메모리) không có nghĩa OS “tạo RAM vô hạn”. Nó là ánh xạ (mapping / 매핑) lớp trừu tượng (abstraction / 추상화); khi working set vượt vật lý (physical / 물리적) bộ nhớ (memory / 메모리), paging/lưu trữ (storage / 저장소) pressure làm hiệu năng (performance / 성능) giảm mạnh.
 
-> **Chuyển mạch:** Address space là private coordinate system; pages/page tables map virtual → physical, còn TLB cache mapping để giảm translation cost.
+> **Nối mạch:** Address space là private coordinate system; pages/page tables map virtual → physical, còn TLB cache mapping để giảm translation cost.
 
 ## Pages và page tables
 
@@ -18,13 +18,13 @@ Address không gian (space / 공간) chia thành virtual pages; vật lý (physi
 
 Page kích thước (size / 크기) thường vài KiB nhưng huge pages lớn hơn. Smaller pages giảm nội bộ (internal / 내부) fragmentation; larger pages giảm page-table/TLB overhead.
 
-> **Chuyển mạch:** Ở chặng này của **Virtual bộ nhớ (memory / 메모리) và address spaces**, **TLB** tiếp nhận điểm tựa từ **Pages và page tables** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Page fault và demand paging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **TLB** nối từ **Pages và page tables** sang **Page fault và demand paging**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## TLB
 
 Bảng trang (page table / 페이지 테이블) walk qua multiple levels tốn bộ nhớ (memory / 메모리) accesses. TLB bộ nhớ đệm (cache / 캐시) translations gần đây. TLB miss không phải page fault: page có thể resident nhưng translation chưa bộ nhớ đệm (cache / 캐시). Page fault xảy ra khi hiện tại (current / 현재) ánh xạ (mapping / 매핑) cần OS intervention.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Virtual bộ nhớ (memory / 메모리) và address spaces**, **Page fault và demand paging** tiếp nhận điểm tựa từ **TLB** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sao chép khi ghi (copy-on-write / 쓰기 시 복사)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Page fault và demand paging** nối từ **TLB** sang **Sao chép khi ghi (copy-on-write / 쓰기 시 복사)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Page fault và demand paging
 
@@ -32,7 +32,7 @@ Khi tiến trình (process / 프로세스) truy cập (access / 접근) virtual 
 
 Major page fault có thể cần lưu trữ (storage / 저장소) I/O; minor fault chỉ ánh xạ (mapping / 매핑)/bộ nhớ (memory / 메모리) công việc (work / 작업). Vì vậy “page fault count” cần ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Trong **Virtual bộ nhớ (memory / 메모리) và address spaces**, **Sao chép khi ghi (copy-on-write / 쓰기 시 복사)** tiếp nhận điểm tựa từ **Page fault và demand paging** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Memory-mapped files** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sao chép khi ghi (copy-on-write / 쓰기 시 복사)** nối từ **Page fault và demand paging** sang **Memory-mapped files**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sao chép khi ghi (copy-on-write / 쓰기 시 복사)
 
@@ -40,37 +40,37 @@ Fork/snapshot có thể share vật lý (physical / 물리적) pages read-only g
 
 COW xuất hiện cả filesystem snapshots và dữ liệu (data / 데이터) structures: same mô hình tư duy (mental model / 사고 모델) “share until mutation”.
 
-> **Chuyển mạch:** Ở chặng này của **Virtual bộ nhớ (memory / 메모리) và address spaces**, **Memory-mapped files** tiếp nhận điểm tựa từ **Sao chép khi ghi (copy-on-write / 쓰기 시 복사)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vùng nhớ vùng nhớ động (heap / 힙) và ngăn xếp (stack / 스택) growth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Memory-mapped files** nối từ **Sao chép khi ghi (copy-on-write / 쓰기 시 복사)** sang **Vùng nhớ vùng nhớ động (heap / 힙) và ngăn xếp (stack / 스택) growth**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Memory-mapped files
 
 `mmap` map tệp (file / 파일) pages vào address không gian (space / 공간). Reads/writes trở thành bộ nhớ (memory / 메모리) accesses và OS page bộ nhớ đệm (cache / 캐시) quản lý loading/dirty pages. Nó có thể giảm copying và đơn giản random truy cập (access / 접근), nhưng durability, truncation và lỗi (error / 오류) ngữ nghĩa (semantics / 의미론) cần hiểu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Virtual bộ nhớ (memory / 메모리) và address spaces**, **Vùng nhớ vùng nhớ động (heap / 힙) và ngăn xếp (stack / 스택) growth** tiếp nhận điểm tựa từ **Memory-mapped files** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Swapping và thrashing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Vùng nhớ vùng nhớ động (heap / 힙) và ngăn xếp (stack / 스택) growth** nối từ **Memory-mapped files** sang **Swapping và thrashing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vùng nhớ vùng nhớ động (heap / 힙) và ngăn xếp (stack / 스택) growth
 
 Ngôn ngữ (language / 언어) thời gian chạy (runtime / 런타임) vùng nhớ động (heap / 힙) allocator quản lý virtual regions đã được OS cấp. ngăn xếp (stack / 스택) thường có mapped region/guard page và grow chính sách (policy / 정책). “Out of bộ nhớ (memory / 메모리)” có thể đến từ address-space limits, lần ghi nhận (commit / 커밋), cgroup, vật lý (physical / 물리적) bộ nhớ (memory / 메모리) hoặc thời gian chạy (runtime / 런타임) vùng nhớ động (heap / 힙) chính sách (policy / 정책).
 
-> **Chuyển mạch:** Trong **Virtual bộ nhớ (memory / 메모리) và address spaces**, **Swapping và thrashing** tiếp nhận điểm tựa từ **Vùng nhớ vùng nhớ động (heap / 힙) và ngăn xếp (stack / 스택) growth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Protection bits và NX** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Swapping và thrashing** nối từ **Vùng nhớ vùng nhớ động (heap / 힙) và ngăn xếp (stack / 스택) growth** sang **Protection bits và NX**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Swapping và thrashing
 
 Nếu active working set lớn hơn RAM, OS liên tục evict/tải (load / 로드) pages. Thrashing xảy ra khi thời gian (time / 시간) dành cho paging nhiều hơn useful computation. Locality chính là yếu tố cứu hierarchy.
 
-> **Chuyển mạch:** Ở chặng này của **Virtual bộ nhớ (memory / 메모리) và address spaces**, **Protection bits và NX** tiếp nhận điểm tựa từ **Swapping và thrashing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Protection bits và NX** nối từ **Swapping và thrashing** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Protection bits và NX
 
 Page permissions read/ghi (write / 쓰기)/execute giúp enforce isolation. W^X chính sách (policy / 정책) tránh page vừa writable vừa executable; NX bit giúp chặn một lớp (class / 클래스) mã (code / 코드) injection. ASLR randomize mappings để tăng khó exploitation, dù không phải bảo mật (security / 보안) guarantee độc lập.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Virtual bộ nhớ (memory / 메모리) và address spaces**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Protection bits và NX** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Protection bits và NX**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Virtual address là **tên lô-gic (logic / 논리)**, vật lý (physical / 물리적) frame là **vị trí hiện tại**. Bảng trang (page table / 페이지 테이블) là ánh xạ (mapping / 매핑) + permissions; TLB bộ nhớ đệm (cache / 캐시) ánh xạ (mapping / 매핑); page fault là lúc ánh xạ (mapping / 매핑) cần kernel xử lý.
 
-> **Chuyển mạch:** Trong **Virtual bộ nhớ (memory / 메모리) và address spaces**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -80,7 +80,7 @@ Page permissions read/ghi (write / 쓰기)/execute giúp enforce isolation. W^X 
 
 **“Malloc 1 GB nghĩa ngay lập tức dùng 1 GB vật lý (physical / 물리적) RAM.”** Overcommit/lazy allocation/hành vi thời gian chạy (runtime behavior / 런타임 동작) có thể khác; actual committed/resident pages thay đổi khi touched.
 
-> **Chuyển mạch:** Ở chặng này của **Virtual bộ nhớ (memory / 메모리) và address spaces**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

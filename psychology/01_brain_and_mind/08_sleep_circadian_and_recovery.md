@@ -10,7 +10,7 @@ Giấc ngủ người trưởng thành thường luân phiên giữa **NREM** v�
 
 Tỷ lệ các giai đoạn thay đổi theo tuổi, áp lực ngủ trước đó và thời điểm trong đêm. Phần đầu đêm thường có nhiều slow-wave sleep hơn, trong khi các chu kỳ gần sáng có xu hướng chứa nhiều REM hơn. Vì vậy các khẩu hiệu kiểu “một giờ ngủ trước nửa đêm bằng hai giờ sau nửa đêm” là cách diễn giải quá đơn giản.
 
-> **Chuyển mạch:** Trong **Giấc ngủ, nhịp sinh học và phục hồi**, **Hai lực lớn điều khiển thời điểm ngủ** tiếp nhận điểm tựa từ **Kiến trúc giấc ngủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chronotype và lệch múi giờ xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giấc ngủ, nhịp sinh học và phục hồi**, **Hai lực lớn điều khiển thời điểm ngủ** nối từ **Kiến trúc giấc ngủ** sang **Chronotype và lệch múi giờ xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hai lực lớn điều khiển thời điểm ngủ
 
@@ -20,7 +20,7 @@ Một mô hình cơ bản phân biệt **áp lực ngủ nội môi (homeostatic
 
 Caffeine chủ yếu chặn thụ thể adenosine và làm giảm cảm nhận áp lực ngủ; nó không trả lại lượng ngủ đã thiếu. Thời gian bán hủy của caffeine khác nhau đáng kể giữa người với người, vì vậy đồ uống chứa caffeine vào chiều/tối có thể ảnh hưởng thời điểm bắt đầu ngủ và tính liên tục của sleep ngay cả khi người dùng nói “tôi vẫn ngủ được”.
 
-> **Chuyển mạch:** Ở chặng này của **Giấc ngủ, nhịp sinh học và phục hồi**, **Chronotype và lệch múi giờ xã hội** tiếp nhận điểm tựa từ **Hai lực lớn điều khiển thời điểm ngủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thiếu ngủ và hiệu suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giấc ngủ, nhịp sinh học và phục hồi**, **Chronotype và lệch múi giờ xã hội** nối từ **Hai lực lớn điều khiển thời điểm ngủ** sang **Thiếu ngủ và hiệu suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chronotype và lệch múi giờ xã hội
 
@@ -28,7 +28,7 @@ Caffeine chủ yếu chặn thụ thể adenosine và làm giảm cảm nhận �
 
 Khi lịch xã hội buộc một người sống lệch xa khỏi nhịp sinh học của mình, có thể xuất hiện **lệch múi giờ xã hội (social jetlag)**. Đây là lý do đánh giá năng suất không nên chỉ gán mọi khó khăn buổi sáng cho “thiếu kỷ luật”; cần xem đồng thời sleep opportunity, light exposure, chronotype và yêu cầu công việc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giấc ngủ, nhịp sinh học và phục hồi**, **Thiếu ngủ và hiệu suất** tiếp nhận điểm tựa từ **Chronotype và lệch múi giờ xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quán tính sau ngủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giấc ngủ, nhịp sinh học và phục hồi**, **Thiếu ngủ và hiệu suất** nối từ **Chronotype và lệch múi giờ xã hội** sang **Quán tính sau ngủ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thiếu ngủ và hiệu suất
 
@@ -36,13 +36,13 @@ Thiếu ngủ làm suy giảm vigilance, reaction thời gian (time / 시간), t
 
 Với lái xe, vận hành máy móc hoặc quyết định có hậu quả lớn, sleep vì vậy là yếu tố an toàn chứ không chỉ là lifestyle preference.
 
-> **Chuyển mạch:** Trong **Giấc ngủ, nhịp sinh học và phục hồi**, **Quán tính sau ngủ** tiếp nhận điểm tựa từ **Thiếu ngủ và hiệu suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giấc ngủ và củng cố trí nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giấc ngủ, nhịp sinh học và phục hồi**, **Quán tính sau ngủ** nối từ **Thiếu ngủ và hiệu suất** sang **Giấc ngủ và củng cố trí nhớ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quán tính sau ngủ
 
 Ngay sau khi thức, nhận thức có thể tạm thời chậm và kém chính xác hơn; hiện tượng này gọi là **quán tính sau ngủ (sleep inertia)**. Mức độ phụ thuộc giai đoạn ngủ lúc bị đánh thức, mức thiếu ngủ trước đó và pha circadian. Trong những công việc trực ca, việc bị đánh thức rồi lập tức yêu cầu quyết định phức tạp có thể tạo rủi ro đáng kể.
 
-> **Chuyển mạch:** Ở chặng này của **Giấc ngủ, nhịp sinh học và phục hồi**, **Giấc ngủ và củng cố trí nhớ** tiếp nhận điểm tựa từ **Quán tính sau ngủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giấc ngủ và cảm xúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giấc ngủ, nhịp sinh học và phục hồi**, **Giấc ngủ và củng cố trí nhớ** nối từ **Quán tính sau ngủ** sang **Giấc ngủ và cảm xúc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giấc ngủ và củng cố trí nhớ
 
@@ -50,7 +50,7 @@ Sleep liên quan đến **củng cố trí nhớ (memory consolidation)**, nhưn
 
 Điều này nối trực tiếp với [[../02_learning_and_cognition/01_memory]] và [[../02_learning_and_cognition/09_learning_transfer_forgetting_and_durable_knowledge]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giấc ngủ, nhịp sinh học và phục hồi**, **Giấc ngủ và cảm xúc** tiếp nhận điểm tựa từ **Giấc ngủ và củng cố trí nhớ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giấc ngủ, nhịp sinh học và phục hồi**, **Giấc ngủ và cảm xúc** nối từ **Giấc ngủ và củng cố trí nhớ** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giấc ngủ và cảm xúc
 
@@ -58,7 +58,7 @@ Thiếu ngủ thường làm khả năng điều chỉnh cảm xúc kém hơn v�
 
 Khi difficulty trở thành mẫu (pattern / 패턴) dai dẳng, xem [[../04_mental_health/11_sleep_insomnia_and_circadian_disorders]].
 
-> **Chuyển mạch:** Trong **Giấc ngủ, nhịp sinh học và phục hồi**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Giấc ngủ và cảm xúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giấc ngủ, nhịp sinh học và phục hồi**, **Những hiểu lầm phổ biến** nối từ **Giấc ngủ và cảm xúc** sang **Kết nối kiến thức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -72,7 +72,7 @@ Khi difficulty trở thành mẫu (pattern / 패턴) dai dẳng, xem [[../04_men
 
 > **Mô hình tư duy:** Sleep chất lượng (quality / 품질) không chỉ là một score. Hãy nghĩ theo ba chiều: đủ cơ hội ngủ, đúng thời điểm sinh học và đủ tính liên tục để các chu kỳ diễn ra.
 
-> **Chuyển mạch:** Ở chặng này của **Giấc ngủ, nhịp sinh học và phục hồi**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Giấc ngủ, nhịp sinh học và phục hồi**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

@@ -43,7 +43,7 @@ expansion of bits
 
 PRNG mở rộng một seed ngắn thành stream dài có statistical properties tốt. Entropy nguồn (source / 소스) mới là nơi bất định (uncertainty / 불확실성) đi vào hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Trong **Randomness, entropy sources và computational unpredictability**, **1. Deterministic computation không tự tạo entropy** nêu điều cần giải thích; **2. Entropy nguồn (source / 소스) là nguồn bất định (uncertainty / 불확실성), không phải API tên random** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Shannon entropy và min-entropy phục vụ câu hỏi khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **1. Deterministic computation không tự tạo entropy** đặt vấn đề; **2. Entropy nguồn (source / 소스) là nguồn bất định (uncertainty / 불확실성), không phải API tên random** kiểm tra bằng chứng, rồi **3. Shannon entropy và min-entropy phục vụ câu hỏi khác nhau** mở rộng hệ quả.
 
 ## 2. Entropy nguồn (source / 소스) là nguồn bất định (uncertainty / 불확실성), không phải API tên random
 
@@ -61,7 +61,7 @@ source behavior
 
 Không nên chỉ hỏi “đã gọi `/dev/random` hay API SecureRandom chưa?”. Cần hiểu thời gian chạy (runtime / 런타임)/OS đó seed generator như thế nào và vòng đời (lifecycle / 생명주기) trạng thái (state / 상태) ra sao.
 
-> **Chuyển mạch:** Ở chặng này của **Randomness, entropy sources và computational unpredictability**, **2. Entropy nguồn (source / 소스) là nguồn bất định (uncertainty / 불확실성), không phải API tên random** nêu điều cần giải thích; **3. Shannon entropy và min-entropy phục vụ câu hỏi khác nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Conditioning và extractor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. Entropy nguồn (source / 소스) là nguồn bất định (uncertainty / 불확실성), không phải API tên random** đặt vấn đề; **3. Shannon entropy và min-entropy phục vụ câu hỏi khác nhau** kiểm tra bằng chứng, rồi **4. Conditioning và extractor** mở rộng hệ quả.
 
 ## 3. Shannon entropy và min-entropy phục vụ câu hỏi khác nhau
 
@@ -77,7 +77,7 @@ Nếu một nguồn (source / 소스) có nhiều kết quả (outcome / 결과)
 
 Vì vậy bảo mật (security / 보안) entropy estimation thường conservative hơn việc nhìn histogram “khá đều”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Randomness, entropy sources và computational unpredictability**, **4. Conditioning và extractor** tiếp nhận điểm tựa từ **3. Shannon entropy và min-entropy phục vụ câu hỏi khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. PRNG và CSPRNG** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Conditioning và extractor** nối từ **3. Shannon entropy và min-entropy phục vụ câu hỏi khác nhau** sang **5. PRNG và CSPRNG**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Conditioning và extractor
 
@@ -95,7 +95,7 @@ Digest có thể trông uniform nhưng attacker biết đầu vào (input / 입�
 
 Đây là lỗi tư duy phổ biến: **appearance of randomness** không đồng nghĩa **unpredictability**.
 
-> **Chuyển mạch:** Trong **Randomness, entropy sources và computational unpredictability**, **5. PRNG và CSPRNG** tiếp nhận điểm tựa từ **4. Conditioning và extractor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Forward bảo mật (security / 보안) và backtracking resistance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. PRNG và CSPRNG** nối từ **4. Conditioning và extractor** sang **6. Forward bảo mật (security / 보안) và backtracking resistance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. PRNG và CSPRNG
 
@@ -113,7 +113,7 @@ secret state S_i
 
 Bảo mật (security / 보안) phụ thuộc seed chất lượng (quality / 품질), trạng thái (state / 상태) secrecy, cập nhật (update / 업데이트) thiết kế (design / 설계) và vòng đời (lifecycle / 생명주기).
 
-> **Chuyển mạch:** Ở chặng này của **Randomness, entropy sources và computational unpredictability**, **6. Forward bảo mật (security / 보안) và backtracking resistance** tiếp nhận điểm tựa từ **5. PRNG và CSPRNG** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Seed vòng đời (lifecycle / 생명주기) quan trọng hơn độ dài đầu ra (output / 출력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Forward bảo mật (security / 보안) và backtracking resistance** nối từ **5. PRNG và CSPRNG** sang **7. Seed vòng đời (lifecycle / 생명주기) quan trọng hơn độ dài đầu ra (output / 출력)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Forward bảo mật (security / 보안) và backtracking resistance
 
@@ -130,7 +130,7 @@ Nếu generator sau đó nhận entropy mới và reseed, nó có thể lấy l�
 
 Không có generator nào cứu được giao thức (protocol / 프로토콜) nếu attacker đọc trực tiếp random bytes ngay khi ứng dụng (application / 애플리케이션) sử dụng chúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Randomness, entropy sources và computational unpredictability**, **6. Forward bảo mật (security / 보안) và backtracking resistance** xác định đầu vào; **7. Seed vòng đời (lifecycle / 생명주기) quan trọng hơn độ dài đầu ra (output / 출력)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **8. Boot-time entropy và early-start thất bại (failure / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Forward bảo mật (security / 보안) và backtracking resistance** đặt đầu vào cho **7. Seed vòng đời (lifecycle / 생명주기) quan trọng hơn độ dài đầu ra (output / 출력)**, rồi **8. Boot-time entropy và early-start thất bại (failure / 실패)** mở rộng hệ quả.
 
 ## 7. Seed vòng đời (lifecycle / 생명주기) quan trọng hơn độ dài đầu ra (output / 출력)
 
@@ -148,7 +148,7 @@ secret/token
 
 Đây là **entropy provenance**. Khi sự cố (incident / 인시던트) xảy ra, cần biết secret được sinh ở đâu, khi nào, trên machine trạng thái (state / 상태) nào và generator đã seed/reseed chưa.
 
-> **Chuyển mạch:** Trong **Randomness, entropy sources và computational unpredictability**, **7. Seed vòng đời (lifecycle / 생명주기) quan trọng hơn độ dài đầu ra (output / 출력)** xác định đầu vào; **8. Boot-time entropy và early-start thất bại (failure / 실패)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. VM snapshot, fork và cloned trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Seed vòng đời (lifecycle / 생명주기) quan trọng hơn độ dài đầu ra (output / 출력)** đặt đầu vào cho **8. Boot-time entropy và early-start thất bại (failure / 실패)**, rồi **9. VM snapshot, fork và cloned trạng thái (state / 상태)** mở rộng hệ quả.
 
 ## 8. Boot-time entropy và early-start thất bại (failure / 실패)
 
@@ -158,7 +158,7 @@ Hiện đại (modern / 현대적) OS cố giải quyết seed readiness trong k
 
 Timestamp, tiến trình (process / 프로세스) ID, MAC address hoặc username có thể khác nhau nhưng thường dễ đoán; uniqueness không đồng nghĩa entropy.
 
-> **Chuyển mạch:** Ở chặng này của **Randomness, entropy sources và computational unpredictability**, **9. VM snapshot, fork và cloned trạng thái (state / 상태)** tiếp nhận điểm tựa từ **8. Boot-time entropy và early-start thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Nonce, salt, IV và secret đơn vị từ (token / 토큰) có đặc tả hợp đồng (contract / 계약) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. VM snapshot, fork và cloned trạng thái (state / 상태)** nối từ **8. Boot-time entropy và early-start thất bại (failure / 실패)** sang **10. Nonce, salt, IV và secret đơn vị từ (token / 토큰) có đặc tả hợp đồng (contract / 계약) khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. VM snapshot, fork và cloned trạng thái (state / 상태)
 
@@ -177,7 +177,7 @@ Tương tự, tiến trình (process / 프로세스) fork có thể bản sao (c
 
 Thất bại (failure / 실패) này không được phát hiện bằng statistical kiểm thử (test / 테스트) trên từng stream riêng; mỗi stream vẫn trông random. Vấn đề nằm ở **correlation giữa replicas**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Randomness, entropy sources và computational unpredictability**, **10. Nonce, salt, IV và secret đơn vị từ (token / 토큰) có đặc tả hợp đồng (contract / 계약) khác nhau** tiếp nhận điểm tựa từ **9. VM snapshot, fork và cloned trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Birthday bound và collision** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Nonce, salt, IV và secret đơn vị từ (token / 토큰) có đặc tả hợp đồng (contract / 계약) khác nhau** nối từ **9. VM snapshot, fork và cloned trạng thái (state / 상태)** sang **11. Birthday bound và collision**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Nonce, salt, IV và secret đơn vị từ (token / 토큰) có đặc tả hợp đồng (contract / 계약) khác nhau
 
@@ -200,7 +200,7 @@ value name
 → generation strategy
 ```
 
-> **Chuyển mạch:** Trong **Randomness, entropy sources và computational unpredictability**, **11. Birthday bound và collision** tiếp nhận điểm tựa từ **10. Nonce, salt, IV và secret đơn vị từ (token / 토큰) có đặc tả hợp đồng (contract / 계약) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Modulo độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Birthday bound và collision** nối từ **10. Nonce, salt, IV và secret đơn vị từ (token / 토큰) có đặc tả hợp đồng (contract / 계약) khác nhau** sang **12. Modulo độ lệch (bias / 편향)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Birthday bound và collision
 
@@ -212,7 +212,7 @@ Với `b` random bits, collision xác suất (probability / 확률) tăng theo b
 
 Nếu collision tuyệt đối không được phép theo nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식), random ID một mình vẫn là probabilistic guarantee; có thể cần uniqueness ràng buộc (constraint / 제약조건) hoặc coordinated không gian tên (namespace / 네임스페이스).
 
-> **Chuyển mạch:** Ở chặng này của **Randomness, entropy sources và computational unpredictability**, **12. Modulo độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **11. Birthday bound và collision** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Sampling và tải (load / 로드) balancing không phải lúc nào cần crypto randomness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Modulo độ lệch (bias / 편향)** nối từ **11. Birthday bound và collision** sang **13. Sampling và tải (load / 로드) balancing không phải lúc nào cần crypto randomness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Modulo độ lệch (bias / 편향)
 
@@ -224,7 +224,7 @@ Một số kết quả (outcome / 결과) sẽ có nhiều preimage hơn kết q
 
 Đây là ví dụ nhỏ nhưng quan trọng: high-quality random bytes có thể bị ứng dụng (application / 애플리케이션) transform làm mất phân phối (distribution / 분포) đặc tả hợp đồng (contract / 계약).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Randomness, entropy sources và computational unpredictability**, **13. Sampling và tải (load / 로드) balancing không phải lúc nào cần crypto randomness** tiếp nhận điểm tựa từ **12. Modulo độ lệch (bias / 편향)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Deterministic randomness trong testing là tính năng (feature / 기능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Sampling và tải (load / 로드) balancing không phải lúc nào cần crypto randomness** nối từ **12. Modulo độ lệch (bias / 편향)** sang **14. Deterministic randomness trong testing là tính năng (feature / 기능)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Sampling và tải (load / 로드) balancing không phải lúc nào cần crypto randomness
 
@@ -243,7 +243,7 @@ lottery/fairness → auditability + manipulation resistance
 
 Dùng CSPRNG cho mọi thứ có thể đơn giản hóa API nhưng không thay thế việc xác định threat mô hình (model / 모델).
 
-> **Chuyển mạch:** Trong **Randomness, entropy sources và computational unpredictability**, **14. Deterministic randomness trong testing là tính năng (feature / 기능)** tiếp nhận điểm tựa từ **13. Sampling và tải (load / 로드) balancing không phải lúc nào cần crypto randomness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Statistical tests không chứng minh cryptographic bảo mật (security / 보안)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Deterministic randomness trong testing là tính năng (feature / 기능)** nối từ **13. Sampling và tải (load / 로드) balancing không phải lúc nào cần crypto randomness** sang **15. Statistical tests không chứng minh cryptographic bảo mật (security / 보안)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Deterministic randomness trong testing là tính năng (feature / 기능)
 
@@ -260,7 +260,7 @@ Khi thất bại (fail / 실패), log seed hoặc shrink trường hợp (case /
 
 Property-based testing vì vậy thường cố ý dùng pseudorandom deterministic stream. “Không random thật” ở đây là lợi ích, không phải bảo mật (security / 보안) bug, vì bất biến (invariant / 불변식) của testing là reproducibility.
 
-> **Chuyển mạch:** Ở chặng này của **Randomness, entropy sources và computational unpredictability**, **15. Statistical tests không chứng minh cryptographic bảo mật (security / 보안)** tiếp nhận điểm tựa từ **14. Deterministic randomness trong testing là tính năng (feature / 기능)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Randomness trong hệ thống phân tán (distributed system / 분산 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Statistical tests không chứng minh cryptographic bảo mật (security / 보안)** nối từ **14. Deterministic randomness trong testing là tính năng (feature / 기능)** sang **16. Randomness trong hệ thống phân tán (distributed system / 분산 시스템)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Statistical tests không chứng minh cryptographic bảo mật (security / 보안)
 
@@ -275,7 +275,7 @@ passes randomness tests
 ≠ cryptographically unpredictable
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Randomness, entropy sources và computational unpredictability**, **16. Randomness trong hệ thống phân tán (distributed system / 분산 시스템)** tiếp nhận điểm tựa từ **15. Statistical tests không chứng minh cryptographic bảo mật (security / 보안)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Randomness và cryptographic key generation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Randomness trong hệ thống phân tán (distributed system / 분산 시스템)** nối từ **15. Statistical tests không chứng minh cryptographic bảo mật (security / 보안)** sang **17. Randomness và cryptographic key generation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Randomness trong hệ thống phân tán (distributed system / 분산 시스템)
 
@@ -293,7 +293,7 @@ Jitter chỉ có tác dụng nếu randomization thực sự tạo đủ diversi
 
 Với giao thức (protocol / 프로토콜) fairness hoặc công khai (public / 공개) randomness, threat mô hình (model / 모델) khó hơn: participant có thể cố độ lệch (bias / 편향) đầu ra (output / 출력) bằng cách chọn khi nào reveal contribution. Các construction như commit-reveal hoặc verifiable random hàm (function / 함수) tồn tại để hạn chế manipulation, nhưng mỗi construction có liveness/trust giả định (assumption / 가정) riêng.
 
-> **Chuyển mạch:** Trong **Randomness, entropy sources và computational unpredictability**, **17. Randomness và cryptographic key generation** tiếp nhận điểm tựa từ **16. Randomness trong hệ thống phân tán (distributed system / 분산 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. khả năng quan sát (observability / 관측 가능성) mà không làm lộ secret** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Randomness và cryptographic key generation** nối từ **16. Randomness trong hệ thống phân tán (distributed system / 분산 시스템)** sang **18. khả năng quan sát (observability / 관측 가능성) mà không làm lộ secret**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Randomness và cryptographic key generation
 
@@ -308,7 +308,7 @@ key length
 
 Đây là distinction quan trọng khi kiểm tra (audit / 감사) secret-generation mã (code / 코드).
 
-> **Chuyển mạch:** Ở chặng này của **Randomness, entropy sources và computational unpredictability**, **18. khả năng quan sát (observability / 관측 가능성) mà không làm lộ secret** tiếp nhận điểm tựa từ **17. Randomness và cryptographic key generation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. thất bại (failure / 실패) investigation đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. khả năng quan sát (observability / 관측 가능성) mà không làm lộ secret** nối từ **17. Randomness và cryptographic key generation** sang **19. thất bại (failure / 실패) investigation đường dẫn (path / 경로)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. khả năng quan sát (observability / 관측 가능성) mà không làm lộ secret
 
@@ -324,7 +324,7 @@ Không log random đơn vị từ (token / 토큰)/key để “gỡ lỗi (debu
 
 Secret bytes phải được redacted. khả năng quan sát (observability / 관측 가능성) không được phá chính bảo mật (security / 보안) bất biến (invariant / 불변식) đang kiểm tra.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Randomness, entropy sources và computational unpredictability**, **18. khả năng quan sát (observability / 관측 가능성) mà không làm lộ secret** xác định đầu vào; **19. thất bại (failure / 실패) investigation đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **20. liên kết (connection / 연결) với Kolmogorov độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. khả năng quan sát (observability / 관측 가능성) mà không làm lộ secret** đặt đầu vào cho **19. thất bại (failure / 실패) investigation đường dẫn (path / 경로)**, rồi **20. liên kết (connection / 연결) với Kolmogorov độ phức tạp (complexity / 복잡도)** mở rộng hệ quả.
 
 ## 19. thất bại (failure / 실패) investigation đường dẫn (path / 경로)
 
@@ -346,7 +346,7 @@ Hypothesis có thể gồm ứng dụng (application / 애플리케이션) trunc
 
 Bằng chứng (evidence / 증거) phải phân biệt collision xác suất bình thường với deterministic duplication.
 
-> **Chuyển mạch:** Trong **Randomness, entropy sources và computational unpredictability**, **19. thất bại (failure / 실패) investigation đường dẫn (path / 경로)** xác định đầu vào; **20. liên kết (connection / 연결) với Kolmogorov độ phức tạp (complexity / 복잡도)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **21. liên kết (connection / 연결) với thông tin (information / 정보) lý thuyết (theory / 이론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. thất bại (failure / 실패) investigation đường dẫn (path / 경로)** đặt đầu vào cho **20. liên kết (connection / 연결) với Kolmogorov độ phức tạp (complexity / 복잡도)**, rồi **21. liên kết (connection / 연결) với thông tin (information / 정보) lý thuyết (theory / 이론)** mở rộng hệ quả.
 
 ## 20. liên kết (connection / 연결) với Kolmogorov độ phức tạp (complexity / 복잡도)
 
@@ -364,7 +364,7 @@ Attacker giới hạn tài nguyên có phân biệt/dự đoán được không?
 
 Đọc [Kolmogorov complexity, compression và incompressibility](./03_kolmogorov_complexity_compression_and_incompressibility.md).
 
-> **Chuyển mạch:** Ở chặng này của **Randomness, entropy sources và computational unpredictability**, **21. liên kết (connection / 연결) với thông tin (information / 정보) lý thuyết (theory / 이론)** tiếp nhận điểm tựa từ **20. liên kết (connection / 연결) với Kolmogorov độ phức tạp (complexity / 복잡도)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Những nhầm lẫn thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. liên kết (connection / 연결) với thông tin (information / 정보) lý thuyết (theory / 이론)** nối từ **20. liên kết (connection / 연결) với Kolmogorov độ phức tạp (complexity / 복잡도)** sang **22. Những nhầm lẫn thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. liên kết (connection / 연결) với thông tin (information / 정보) lý thuyết (theory / 이론)
 
@@ -372,7 +372,7 @@ Entropy nguồn (source / 소스) cung cấp bất định (uncertainty / 불확
 
 Đọc [Information theory, coding bounds và noisy channels](./04_information_theory_coding_bounds_and_noisy_channels.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Randomness, entropy sources và computational unpredictability**, **21. liên kết (connection / 연결) với thông tin (information / 정보) lý thuyết (theory / 이론)** đã nêu tiêu chí phân biệt, còn **22. Những nhầm lẫn thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **23. Checklist lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. liên kết (connection / 연결) với thông tin (information / 정보) lý thuyết (theory / 이론)** đặt tiêu chí; **22. Những nhầm lẫn thường gặp** dùng nó để kiểm tra ranh giới, rồi **23. Checklist lập luận (reasoning / 추론)** mở rộng hệ quả.
 
 ## 22. Những nhầm lẫn thường gặp
 
@@ -388,7 +388,7 @@ Entropy nguồn (source / 소스) cung cấp bất định (uncertainty / 불확
 
 **“Entropy nguồn (source / 소스) và CSPRNG là một thứ.”** Không. Một bên đưa bất định (uncertainty / 불확실성) vào; một bên quản lý/mở rộng trạng thái (state / 상태) để sinh đầu ra (output / 출력) hiệu quả.
 
-> **Chuyển mạch:** Trong **Randomness, entropy sources và computational unpredictability**, **22. Những nhầm lẫn thường gặp** đã nêu tiêu chí phân biệt, còn **23. Checklist lập luận (reasoning / 추론)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. Những nhầm lẫn thường gặp** đặt tiêu chí; **23. Checklist lập luận (reasoning / 추론)** dùng nó để kiểm tra ranh giới, rồi **Kết luận** mở rộng hệ quả.
 
 ## 23. Checklist lập luận (reasoning / 추론)
 
@@ -404,7 +404,7 @@ Sample volume có làm collision risk đáng kể không?
 Evidence nào kiểm tra provenance mà không log secret?
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Randomness, entropy sources và computational unpredictability**, **Kết luận** gom các mảnh từ **23. Checklist lập luận (reasoning / 추론)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết luận** tổng hợp từ **23. Checklist lập luận (reasoning / 추론)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết luận
 

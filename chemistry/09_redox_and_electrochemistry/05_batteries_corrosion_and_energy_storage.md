@@ -12,7 +12,7 @@ Ghép nối tiếp làm tăng điện áp; ghép song song làm tăng dung lư�
 
 Lưu trữ điện hóa khác tụ điện ở chỗ năng lượng chủ yếu được lưu trong trạng thái hóa học và điện tử của vật liệu, thay vì chỉ trong sự phân tách điện tích tĩnh điện. Siêu tụ điện (supercapacitor) nằm ở vùng trung gian giữa các cơ chế này.
 
-> **Chuyển mạch:** Cell và battery mô tả kiến trúc chuyển hóa điện hóa; năng lượng cho biết tổng công có thể cung cấp, công suất cho biết tốc độ cung cấp, còn capacity/state of charge nối hai khái niệm với vận hành thực.
+> **Nối mạch:** Cell và battery mô tả kiến trúc chuyển hóa điện hóa; năng lượng cho biết tổng công có thể cung cấp, công suất cho biết tốc độ cung cấp, còn capacity/state of charge nối hai khái niệm với vận hành thực.
 
 ## Năng lượng và công suất là hai đại lượng khác nhau
 
@@ -32,7 +32,7 @@ Một pin có mật độ năng lượng cao chưa chắc có mật độ công 
 
 Đây là một đánh đổi trung tâm trong thiết kế cell.
 
-> **Chuyển mạch:** Ở chặng này của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Dung lượng và trạng thái sạc** tiếp nhận điểm tựa từ **Năng lượng và công suất là hai đại lượng khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pin lithium-ion như một ví dụ điển hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Dung lượng và trạng thái sạc** nối từ **Năng lượng và công suất là hai đại lượng khác nhau** sang **Pin lithium-ion như một ví dụ điển hình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dung lượng và trạng thái sạc
 
@@ -46,7 +46,7 @@ Khi biểu diễn dưới dạng điện lượng trên khối lượng cần đ
 
 **Trạng thái sạc (state of charge, SOC / 충전 상태)** là tỉ lệ dung lượng khả dụng còn lại. SOC không được đo trực tiếp bằng một cảm biến duy nhất; hệ thống quản lý pin (battery management system, BMS) thường ước lượng từ điện áp, tích phân dòng điện, nhiệt độ và mô hình của pin.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Dung lượng và trạng thái sạc** cho ta quy tắc; **Pin lithium-ion như một ví dụ điển hình** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Xen cài ion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Dung lượng và trạng thái sạc** nêu quy tắc; **Pin lithium-ion như một ví dụ điển hình** thử quy tắc trong tình huống, rồi **Xen cài ion** mở rộng hệ quả.
 
 ## Pin lithium-ion như một ví dụ điển hình
 
@@ -63,7 +63,7 @@ Hóa học thực tế phụ thuộc vật liệu cathode, thành phần và tr�
 
 Điểm quan trọng là lithium kim loại không nhất thiết được tạo và hòa tan liên tục trong chế độ lithium-ion xen cài thông thường. Lithium được lưu trong mạng tinh thể của vật liệu vật chủ.
 
-> **Chuyển mạch:** Trong **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Pin lithium-ion như một ví dụ điển hình** cho ta quy tắc; **Xen cài ion** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Hóa học cathode và điện áp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Pin lithium-ion như một ví dụ điển hình** nêu quy tắc; **Xen cài ion** thử quy tắc trong tình huống, rồi **Hóa học cathode và điện áp** mở rộng hệ quả.
 
 ## Xen cài ion
 
@@ -73,7 +73,7 @@ Graphite có cấu trúc lớp phù hợp cho lithium xen cài. Oxide kim loại
 
 Điện thế điện cực phụ thuộc thay đổi năng lượng tự do khi thế hóa học của lithium trong vật chủ thay đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Hóa học cathode và điện áp** tiếp nhận điểm tựa từ **Xen cài ion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất điện ly không phải chất lỏng thụ động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Hóa học cathode và điện áp** nối từ **Xen cài ion** sang **Chất điện ly không phải chất lỏng thụ động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học cathode và điện áp
 
@@ -87,7 +87,7 @@ năng lượng (energy / 에너지)\approx Voltage\times sức chứa (capacity 
 
 nhưng vận hành ở điện áp cao cũng làm quá trình oxy hóa chất điện ly và suy giảm bề mặt phân cách nghiêm trọng hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Chất điện ly không phải chất lỏng thụ động** tiếp nhận điểm tựa từ **Hóa học cathode và điện áp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bề mặt phân cách quyết định tuổi thọ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Chất điện ly không phải chất lỏng thụ động** nối từ **Hóa học cathode và điện áp** sang **Bề mặt phân cách quyết định tuổi thọ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất điện ly không phải chất lỏng thụ động
 
@@ -97,7 +97,7 @@ Trong pin lithium-ion, chất điện ly carbonate hữu cơ thường không ho
 
 SEI là một sản phẩm phân hủy nhưng có thể hữu ích: nếu đủ bền, dẫn ion tốt và chặn electron, nó bảo vệ điện cực khỏi tiếp tục phân hủy chất điện ly.
 
-> **Chuyển mạch:** Trong **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Bề mặt phân cách quyết định tuổi thọ** tiếp nhận điểm tựa từ **Chất điện ly không phải chất lỏng thụ động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khả năng làm việc ở dòng cao và khuếch tán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Bề mặt phân cách quyết định tuổi thọ** nối từ **Chất điện ly không phải chất lỏng thụ động** sang **Khả năng làm việc ở dòng cao và khuếch tán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bề mặt phân cách quyết định tuổi thọ
 
@@ -105,7 +105,7 @@ Nhiều cơ chế suy giảm bắt đầu tại vùng tiếp xúc giữa điện
 
 Vì vậy lão hóa pin là bài toán ghép nối giữa hóa học bề mặt, cơ học vật liệu và vận chuyển khối.
 
-> **Chuyển mạch:** Ở chặng này của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Khả năng làm việc ở dòng cao và khuếch tán** tiếp nhận điểm tựa từ **Bề mặt phân cách quyết định tuổi thọ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **C-rate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Khả năng làm việc ở dòng cao và khuếch tán** nối từ **Bề mặt phân cách quyết định tuổi thọ** sang **C-rate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khả năng làm việc ở dòng cao và khuếch tán
 
@@ -119,7 +119,7 @@ với \(L\) là chiều dài khuếch tán và \(D\) là hệ số khuếch tán
 
 Giảm kích thước hạt giúp rút ngắn đường khuếch tán nhưng lại làm tăng diện tích bề mặt và có thể làm phản ứng phụ mạnh hơn. Một cải tiến về vận chuyển có thể tạo bất lợi về độ bền bề mặt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **C-rate** tiếp nhận điểm tựa từ **Khả năng làm việc ở dòng cao và khuếch tán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu suất Coulomb và hiệu suất năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **C-rate** nối từ **Khả năng làm việc ở dòng cao và khuếch tán** sang **Hiệu suất Coulomb và hiệu suất năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## C-rate
 
@@ -127,7 +127,7 @@ Giảm kích thước hạt giúp rút ngắn đường khuếch tán nhưng l�
 
 Ở C-rate cao, dung lượng sử dụng thường giảm do phân cực và giới hạn vận chuyển.
 
-> **Chuyển mạch:** Trong **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Hiệu suất Coulomb và hiệu suất năng lượng** tiếp nhận điểm tựa từ **C-rate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạ lithium và sạc nhanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Hiệu suất Coulomb và hiệu suất năng lượng** nối từ **C-rate** sang **Mạ lithium và sạc nhanh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu suất Coulomb và hiệu suất năng lượng
 
@@ -141,7 +141,7 @@ Pin sạc lại cần hiệu suất Coulomb rất cao ở mỗi chu kỳ để d
 
 Hiệu suất năng lượng thường thấp hơn vì điện áp khi sạc cao hơn điện áp khi phóng do hiện tượng trễ và các tổn thất điện hóa.
 
-> **Chuyển mạch:** Ở chặng này của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Mạ lithium và sạc nhanh** tiếp nhận điểm tựa từ **Hiệu suất Coulomb và hiệu suất năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mất kiểm soát nhiệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Mạ lithium và sạc nhanh** nối từ **Hiệu suất Coulomb và hiệu suất năng lượng** sang **Mất kiểm soát nhiệt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mạ lithium và sạc nhanh
 
@@ -151,7 +151,7 @@ Mạ lithium làm mất lithium có thể tuần hoàn và có thể tạo cấu
 
 Vì vậy sạc nhanh là bài toán động học và vận chuyển, không đơn giản chỉ là dùng bộ sạc có công suất cao hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Mất kiểm soát nhiệt** tiếp nhận điểm tựa từ **Mạ lithium và sạc nhanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sodium-ion và các hệ hóa học khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Mất kiểm soát nhiệt** nối từ **Mạ lithium và sạc nhanh** sang **Sodium-ion và các hệ hóa học khác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mất kiểm soát nhiệt
 
@@ -161,7 +161,7 @@ Pin chứa năng lượng hóa học và nhiều bề mặt phản ứng. Khi nh
 
 Thiết kế an toàn sử dụng cơ chế ngắt màng ngăn, ngắt dòng, quản lý nhiệt, khoảng cách giữa cell và thuật toán điều khiển để phá vòng phản hồi này.
 
-> **Chuyển mạch:** Trong **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Sodium-ion và các hệ hóa học khác** tiếp nhận điểm tựa từ **Mất kiểm soát nhiệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pin dòng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Sodium-ion và các hệ hóa học khác** nối từ **Mất kiểm soát nhiệt** sang **Pin dòng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sodium-ion và các hệ hóa học khác
 
@@ -171,7 +171,7 @@ LFP, NMC, LCO, sodium-ion, sulfur, pin trạng thái rắn và pin dòng đều 
 
 Lưu trữ lưới điện ưu tiên chi phí, tuổi thọ và an toàn khác với điện thoại hoặc xe điện.
 
-> **Chuyển mạch:** Ở chặng này của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Pin dòng** tiếp nhận điểm tựa từ **Sodium-ion và các hệ hóa học khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Siêu tụ điện và điện dung giả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Pin dòng** nối từ **Sodium-ion và các hệ hóa học khác** sang **Siêu tụ điện và điện dung giả**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pin dòng
 
@@ -179,7 +179,7 @@ Trong **pin dòng oxy hóa-khử (redox-flow battery)**, chất hoạt tính ch�
 
 Công suất chủ yếu tăng theo diện tích bộ cell; năng lượng chủ yếu tăng theo thể tích bồn và nồng độ chất hoạt tính. Kiến trúc này tách việc mở rộng năng lượng và công suất rõ hơn pin kín truyền thống.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Siêu tụ điện và điện dung giả** tiếp nhận điểm tựa từ **Pin dòng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ăn mòn — một pin ngoài ý muốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Siêu tụ điện và điện dung giả** nối từ **Pin dòng** sang **Ăn mòn — một pin ngoài ý muốn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Siêu tụ điện và điện dung giả
 
@@ -187,7 +187,7 @@ Tụ điện lớp điện kép lưu điện tích tại bề mặt mà không c
 
 Siêu tụ điện thường có mật độ công suất cao nhưng mật độ năng lượng thấp hơn pin.
 
-> **Chuyển mạch:** Trong **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Ăn mòn — một pin ngoài ý muốn** tiếp nhận điểm tựa từ **Siêu tụ điện và điện dung giả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ăn mòn Galvani** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Ăn mòn — một pin ngoài ý muốn** nối từ **Siêu tụ điện và điện dung giả** sang **Ăn mòn Galvani**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ăn mòn — một pin ngoài ý muốn
 
@@ -207,7 +207,7 @@ O_2+2H_2O+4e^-\rightarrow4OH^-
 
 Các vùng khác nhau trên cùng bề mặt có thể đóng vai trò anode và cathode cục bộ. Nước hoặc chất điện ly tạo đường dẫn ion giữa các vùng đó.
 
-> **Chuyển mạch:** Ở chặng này của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Ăn mòn Galvani** tiếp nhận điểm tựa từ **Ăn mòn — một pin ngoài ý muốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ăn mòn do chênh lệch oxygen** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Ăn mòn Galvani** nối từ **Ăn mòn — một pin ngoài ý muốn** sang **Ăn mòn do chênh lệch oxygen**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ăn mòn Galvani
 
@@ -215,7 +215,7 @@ Khi hai kim loại khác nhau tiếp xúc điện với nhau trong môi trườn
 
 Mức độ phụ thuộc chênh lệch điện thế, môi trường và đặc biệt là tỉ lệ diện tích. Anode nhỏ ghép với cathode lớn có thể chịu mật độ dòng ăn mòn rất cao và hỏng nhanh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Ăn mòn do chênh lệch oxygen** tiếp nhận điểm tựa từ **Ăn mòn Galvani** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thụ động hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Ăn mòn do chênh lệch oxygen** nối từ **Ăn mòn Galvani** sang **Thụ động hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ăn mòn do chênh lệch oxygen
 
@@ -223,7 +223,7 @@ Ngay cả một kim loại duy nhất cũng có thể tạo vi pin nếu nồng 
 
 Đây là lý do ăn mòn cục bộ thường nguy hiểm hơn việc toàn bộ bề mặt mỏng dần đồng đều.
 
-> **Chuyển mạch:** Trong **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Thụ động hóa** tiếp nhận điểm tựa từ **Ăn mòn do chênh lệch oxygen** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo vệ chống ăn mòn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Thụ động hóa** nối từ **Ăn mòn do chênh lệch oxygen** sang **Bảo vệ chống ăn mòn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thụ động hóa
 
@@ -231,13 +231,13 @@ Một số kim loại tạo màng oxide bảo vệ. Nhôm và thép không gỉ 
 
 Tuy nhiên chloride có thể phá màng thụ động tại chỗ và gây **ăn mòn rỗ (pitting corrosion)**. Hình học của hố ăn mòn có thể làm môi trường bên trong acid hơn và tập trung chloride, khiến quá trình tự tăng tốc.
 
-> **Chuyển mạch:** Ở chặng này của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Bảo vệ chống ăn mòn** tiếp nhận điểm tựa từ **Thụ động hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pin và ăn mòn dùng cùng một khung lý thuyết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Bảo vệ chống ăn mòn** nối từ **Thụ động hóa** sang **Pin và ăn mòn dùng cùng một khung lý thuyết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bảo vệ chống ăn mòn
 
 Các chiến lược bảo vệ xuất phát trực tiếp từ cơ chế điện hóa: lớp phủ ngăn chất điện ly hoặc oxygen; hợp kim hóa tạo màng thụ động bền hơn; bảo vệ cathode cung cấp electron để cấu trúc cần bảo vệ trở thành cathode; anode hi sinh bị oxy hóa thay cho kim loại chính; chất ức chế làm chậm phản ứng anode hoặc cathode; thiết kế cơ khí tránh khe hẹp và cặp kim loại bất lợi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Pin và ăn mòn dùng cùng một khung lý thuyết** tiếp nhận điểm tựa từ **Bảo vệ chống ăn mòn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Pin và ăn mòn dùng cùng một khung lý thuyết** nối từ **Bảo vệ chống ăn mòn** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pin và ăn mòn dùng cùng một khung lý thuyết
 
@@ -245,7 +245,7 @@ Kỹ sư pin muốn phản ứng oxy hóa-khử xảy ra thuận nghịch, có k
 
 Cả hai lĩnh vực cùng sử dụng phương trình Nernst, động học điện cực, vận chuyển khối, thụ động hóa, khoa học bề mặt và lựa chọn vật liệu.
 
-> **Chuyển mạch:** Trong **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Pin và ăn mòn dùng cùng một khung lý thuyết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Những hiểu lầm thường gặp** nối từ **Pin và ăn mòn dùng cùng một khung lý thuyết** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -265,7 +265,7 @@ Không. Cần có con đường điện hóa và môi trường phù hợp; pH, 
 
 Không. Chất điện ly rắn có thể giảm một số rủi ro nhưng bề mặt phân cách, xuyên nhánh kim loại, khuyết tật cơ học và điện cực năng lượng cao vẫn cần kiểm soát.
 
-> **Chuyển mạch:** Ở chặng này của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Pin, ăn mòn và lưu trữ năng lượng — điện hóa học như một hệ kỹ thuật**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

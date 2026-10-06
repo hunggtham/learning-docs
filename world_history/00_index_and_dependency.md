@@ -26,7 +26,7 @@ graph TD
   P --> Q[Post-Cold-War world]
 ```
 
-> **Chuyển mạch:** **Phụ thuộc đồ thị** cho biết chapter nào cần đọc trước; **Câu hỏi xuyên suốt** chuyển đồ thị đó thành các câu hỏi về cơ chế và bằng chứng, rồi **Lộ trình đọc** biến chúng thành thứ tự học có thể kiểm tra.
+> **Nối mạch:** Phụ thuộc đồ thị xác định prerequisite; **Câu hỏi xuyên suốt** biến prerequisite thành câu hỏi cơ chế và bằng chứng. **Lộ trình đọc** đưa chúng vào thứ tự học theo owner.
 
 ## Câu hỏi xuyên suốt
 
@@ -40,7 +40,7 @@ graph TD
 | Demography | Dân số, di cư, đô thị, dịch bệnh và cơ cấu tuổi biến đổi quyền lực ra sao? |
 | Ideas | Tôn giáo, khoa học, dân tộc, chủ quyền, giai cấp và nhân quyền làm hợp thức hoá hành động nào? |
 
-> **Chuyển mạch:** Sau khi xác định câu hỏi xuyên suốt, **Lộ trình đọc** xếp các chapter theo tiền đề–hệ quả; **Chapter map** tiếp tục gắn từng điểm dừng với chủ đề và owner cụ thể.
+> **Nối mạch:** Lộ trình đọc xếp chapter theo tiền đề–hệ quả; **Chapter map** gắn từng điểm dừng với topic thật và owner cụ thể để không lạc domain.
 
 ## Lộ trình đọc
 
@@ -53,7 +53,7 @@ graph TD
 
 Một mũi tên chỉ **phụ thuộc (dependency / 의존성) để hiểu**, không khẳng định mọi xã hội trải qua cùng thứ tự hay cùng kết quả.
 
-> **Chuyển mạch:** **Chapter map** cho biết mỗi chapter đóng góp cơ chế nào vào tuyến học; **Tài liệu điều hướng** dùng mapping đó để đưa người đọc tới nguồn, case và audit tương ứng.
+> **Nối mạch:** Chapter map cho biết cơ chế của từng chapter; **Tài liệu điều hướng** đưa người đọc tới nguồn, case và audit tương ứng mà vẫn giữ đường dẫn owner.
 
 ## Chapter map
 
@@ -83,7 +83,7 @@ Một mũi tên chỉ **phụ thuộc (dependency / 의존성) để hiểu**, k
 | 22 | nguồn (source / 소스) workbench | [Source workbench](22_source_workbench.md) |
 | 23 | Annotated bibliography | [Annotated bibliography](23_annotated_bibliography.md) |
 
-> **Chuyển mạch:** Khi chapter map đã chỉ rõ quan hệ phụ thuộc, **Tài liệu điều hướng** là điểm tra cứu để chọn tuyến đọc, nguồn đối chiếu và bước quay lại audit mà không lạc owner.
+> **Nối mạch:** Khi map đã rõ, Tài liệu điều hướng là điểm tra cứu cho tuyến đọc, nguồn đối chiếu và bước quay lại audit; mọi nhánh vẫn quay về owner trong README.
 
 ## Tài liệu điều hướng
 

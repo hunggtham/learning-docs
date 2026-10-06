@@ -33,7 +33,7 @@ CEO có thể điều hành doanh nghiệp rất tốt nhưng phân bổ vốn k
 
 Hai nhóm kỹ năng phải được đánh giá riêng.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **2. Chiến lược có rõ ràng không?** tiếp nhận điểm tựa từ **1. Kỹ năng vận hành và kỹ năng phân bổ vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Lịch sử thực thi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **2. Chiến lược có rõ ràng không?** nối từ **1. Kỹ năng vận hành và kỹ năng phân bổ vốn** sang **3. Lịch sử thực thi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Chiến lược có rõ ràng không?
 
@@ -48,7 +48,7 @@ Khi nào công ty sẽ ngừng đầu tư vào một dự án?
 
 Những câu như “tăng trưởng toàn cầu nhờ đổi mới” quá rộng để kiểm chứng.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **3. Lịch sử thực thi** tiếp nhận điểm tựa từ **2. Chiến lược có rõ ràng không?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Cách phản ứng trong khủng hoảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **3. Lịch sử thực thi** nối từ **2. Chiến lược có rõ ràng không?** sang **4. Cách phản ứng trong khủng hoảng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Lịch sử thực thi
 
@@ -64,7 +64,7 @@ So lời hứa với kết quả trong nhiều năm:
 
 Một lần hụt mục tiêu không chứng minh quản lý kém. Việc liên tục hụt mục tiêu mà không giải thích hợp lý mới là thông tin quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **4. Cách phản ứng trong khủng hoảng** tiếp nhận điểm tựa từ **3. Lịch sử thực thi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Sự thẳng thắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **4. Cách phản ứng trong khủng hoảng** nối từ **3. Lịch sử thực thi** sang **5. Sự thẳng thắn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Cách phản ứng trong khủng hoảng
 
@@ -79,7 +79,7 @@ Hãy xem ban lãnh đạo có:
 - giao tiếp trung thực về bất định;
 - tránh phát hành cổ phần ở đáy nếu có thể.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **5. Sự thẳng thắn** tiếp nhận điểm tựa từ **4. Cách phản ứng trong khủng hoảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Thứ tự sử dụng vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **5. Sự thẳng thắn** nối từ **4. Cách phản ứng trong khủng hoảng** sang **6. Thứ tự sử dụng vốn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Sự thẳng thắn
 
@@ -89,7 +89,7 @@ Nếu mọi điều tích cực đều được nhận công, còn mọi điều
 
 # Phần II — Phân bổ vốn
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **6. Thứ tự sử dụng vốn** tiếp nhận điểm tựa từ **5. Sự thẳng thắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Maintenance capex phải được ưu tiên trước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **6. Thứ tự sử dụng vốn** nối từ **5. Sự thẳng thắn** sang **7. Maintenance capex phải được ưu tiên trước**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Thứ tự sử dụng vốn
 
@@ -109,7 +109,7 @@ Cash Retention
 
 Mỗi đồng vốn có chi phí cơ hội.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **7. Maintenance capex phải được ưu tiên trước** tiếp nhận điểm tựa từ **6. Thứ tự sử dụng vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Growth capex** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **7. Maintenance capex phải được ưu tiên trước** nối từ **6. Thứ tự sử dụng vốn** sang **8. Growth capex**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Maintenance capex phải được ưu tiên trước
 
@@ -117,7 +117,7 @@ Trước khi gọi dòng tiền là “tiền dư”, doanh nghiệp phải đ�
 
 Cắt maintenance capex có thể làm FCF ngắn hạn đẹp hơn nhưng phá khả năng tạo tiền tương lai.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **8. Growth capex** tiếp nhận điểm tựa từ **7. Maintenance capex phải được ưu tiên trước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Incremental ROIC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **8. Growth capex** nối từ **7. Maintenance capex phải được ưu tiên trước** sang **9. Incremental ROIC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Growth capex
 
@@ -125,7 +125,7 @@ Capex tăng trưởng chỉ tạo giá trị khi lợi nhuận kỳ vọng trên
 
 Tăng doanh thu không tự chứng minh rằng capex là tốt.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **9. Incremental ROIC** tiếp nhận điểm tựa từ **8. Growth capex** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Tỷ lệ tái đầu tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **9. Incremental ROIC** nối từ **8. Growth capex** sang **10. Tỷ lệ tái đầu tư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Incremental ROIC
 
@@ -133,7 +133,7 @@ ROIC lịch sử phản ánh vốn cũ. Giá trị tương lai phụ thuộc nhi
 
 Nếu tài sản cũ tạo ROIC 25% nhưng dự án mới chỉ 7%, tăng trưởng có thể kéo chất lượng toàn doanh nghiệp đi xuống.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **10. Tỷ lệ tái đầu tư** tiếp nhận điểm tựa từ **9. Incremental ROIC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. ROIC so với WACC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **10. Tỷ lệ tái đầu tư** nối từ **9. Incremental ROIC** sang **11. ROIC so với WACC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Tỷ lệ tái đầu tư
 
@@ -147,7 +147,7 @@ Growth
 
 Tái đầu tư nhiều ở mức sinh lời thấp phá giá trị. Tái đầu tư vừa phải ở mức sinh lời rất cao có thể tạo compounding tốt.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **11. ROIC so với WACC** tiếp nhận điểm tựa từ **10. Tỷ lệ tái đầu tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Cường độ vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **11. ROIC so với WACC** nối từ **10. Tỷ lệ tái đầu tư** sang **12. Cường độ vốn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. ROIC so với WACC
 
@@ -160,7 +160,7 @@ ROIC - WACC > 0
 
 Nhưng cả ROIC và WACC đều là ước tính, vì vậy nên dùng khoảng và tư duy xuyên chu kỳ.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **12. Cường độ vốn** tiếp nhận điểm tựa từ **11. ROIC so với WACC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Vốn lưu động cũng là tái đầu tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **12. Cường độ vốn** nối từ **11. ROIC so với WACC** sang **13. Vốn lưu động cũng là tái đầu tư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Cường độ vốn
 
@@ -168,7 +168,7 @@ Doanh nghiệp ít tài sản có thể tăng trưởng với ít vốn mới. N
 
 Hai doanh nghiệp cùng tăng doanh thu 15% có thể tạo giá trị trên mỗi cổ phiếu hoàn toàn khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **13. Vốn lưu động cũng là tái đầu tư** tiếp nhận điểm tựa từ **12. Cường độ vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. R&D như một khoản đầu tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **13. Vốn lưu động cũng là tái đầu tư** nối từ **12. Cường độ vốn** sang **14. R&D như một khoản đầu tư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Vốn lưu động cũng là tái đầu tư
 
@@ -176,7 +176,7 @@ Tăng trưởng có thể hút tiền qua phải thu và tồn kho.
 
 Nếu chỉ nhìn capex, nhà phân tích có thể đánh giá thấp lượng vốn thật sự cần để tăng trưởng.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **14. R&D như một khoản đầu tư** tiếp nhận điểm tựa từ **13. Vốn lưu động cũng là tái đầu tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Marketing như một khoản đầu tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **14. R&D như một khoản đầu tư** nối từ **13. Vốn lưu động cũng là tái đầu tư** sang **15. Marketing như một khoản đầu tư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. R&D như một khoản đầu tư
 
@@ -190,7 +190,7 @@ Cần đánh giá hiệu quả R&D qua:
 - gross profit tạo ra;
 - tốc độ thương mại hóa.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **15. Marketing như một khoản đầu tư** tiếp nhận điểm tựa từ **14. R&D như một khoản đầu tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Cổ tức là một quyết định phân bổ vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **15. Marketing như một khoản đầu tư** nối từ **14. R&D như một khoản đầu tư** sang **16. Cổ tức là một quyết định phân bổ vốn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Marketing như một khoản đầu tư
 
@@ -206,7 +206,7 @@ customer-acquisition spend cho tăng trưởng
 
 # Phần III — Cổ tức
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **16. Cổ tức là một quyết định phân bổ vốn** tiếp nhận điểm tựa từ **15. Marketing như một khoản đầu tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Payout ratio** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **16. Cổ tức là một quyết định phân bổ vốn** nối từ **15. Marketing như một khoản đầu tư** sang **17. Payout ratio**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Cổ tức là một quyết định phân bổ vốn
 
@@ -214,7 +214,7 @@ Cổ tức hợp lý khi doanh nghiệp không có đủ cơ hội tái đầu t
 
 Tỷ lệ trả cổ tức cao không tự động thân thiện với cổ đông nếu bảng cân đối đang yếu.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **17. Payout ratio** tiếp nhận điểm tựa từ **16. Cổ tức là một quyết định phân bổ vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Bẫy dividend yield** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **17. Payout ratio** nối từ **16. Cổ tức là một quyết định phân bổ vốn** sang **18. Bẫy dividend yield**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Payout ratio
 
@@ -228,7 +228,7 @@ nhưng với doanh nghiệp phi tài chính, tỷ lệ trên FCF thường phả
 
 Lợi nhuận đỉnh chu kỳ có thể làm payout ratio nhìn thấp ngay trước khi lợi nhuận giảm mạnh.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **17. Payout ratio** đã nêu tiêu chí phân biệt, còn **18. Bẫy dividend yield** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **19. Cổ tức ổn định và cổ tức biến đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **17. Payout ratio** đặt tiêu chí; **18. Bẫy dividend yield** dùng tiêu chí đó để kiểm tra ranh giới, rồi **19. Cổ tức ổn định và cổ tức biến đổi** mở rộng hệ quả.
 
 ## 18. Bẫy dividend yield
 
@@ -242,7 +242,7 @@ Cần kiểm tra:
 - chính sách (policy / 정책);
 - covenant.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **18. Bẫy dividend yield** đã nêu tiêu chí phân biệt, còn **19. Cổ tức ổn định và cổ tức biến đổi** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **20. Khi nào buyback tạo giá trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **18. Bẫy dividend yield** đặt tiêu chí; **19. Cổ tức ổn định và cổ tức biến đổi** dùng tiêu chí đó để kiểm tra ranh giới, rồi **20. Khi nào buyback tạo giá trị** mở rộng hệ quả.
 
 ## 19. Cổ tức ổn định và cổ tức biến đổi
 
@@ -252,7 +252,7 @@ Không nên ngoại suy một khoản cổ tức bất thường thành mức d�
 
 # Phần IV — Mua lại cổ phiếu
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **20. Khi nào buyback tạo giá trị** tiếp nhận điểm tựa từ **19. Cổ tức ổn định và cổ tức biến đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. EPS accretion không bằng giá trị (value / 값) creation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **20. Khi nào buyback tạo giá trị** nối từ **19. Cổ tức ổn định và cổ tức biến đổi** sang **21. EPS accretion không bằng giá trị (value / 값) creation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Khi nào buyback tạo giá trị
 
@@ -266,7 +266,7 @@ không có lựa chọn sử dụng vốn tốt hơn
 
 Mua cổ phiếu quá đắt có thể phá giá trị dù EPS tăng.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **21. EPS accretion không bằng giá trị (value / 값) creation** tiếp nhận điểm tựa từ **20. Khi nào buyback tạo giá trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Buyback chỉ để bù SBC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **21. EPS accretion không bằng giá trị (value / 값) creation** nối từ **20. Khi nào buyback tạo giá trị** sang **22. Buyback chỉ để bù SBC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. EPS accretion không bằng giá trị (value / 값) creation
 
@@ -276,7 +276,7 @@ Nhưng nếu doanh nghiệp vay nợ đắt để mua cổ phiếu định giá 
 
 Không nên đánh giá buyback chỉ qua EPS accretion.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **22. Buyback chỉ để bù SBC** tiếp nhận điểm tựa từ **21. EPS accretion không bằng giá trị (value / 값) creation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Sai lầm mua lại ở đỉnh chu kỳ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **22. Buyback chỉ để bù SBC** nối từ **21. EPS accretion không bằng giá trị (value / 값) creation** sang **23. Sai lầm mua lại ở đỉnh chu kỳ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Buyback chỉ để bù SBC
 
@@ -290,7 +290,7 @@ Gross Buyback
 → Net Share Reduction
 ```
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **23. Sai lầm mua lại ở đỉnh chu kỳ** tiếp nhận điểm tựa từ **22. Buyback chỉ để bù SBC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Tender offer và accelerated repurchase** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **23. Sai lầm mua lại ở đỉnh chu kỳ** nối từ **22. Buyback chỉ để bù SBC** sang **24. Tender offer và accelerated repurchase**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Sai lầm mua lại ở đỉnh chu kỳ
 
@@ -298,7 +298,7 @@ Nhiều công ty mua lại mạnh khi lợi nhuận và giá cổ phiếu ở đ
 
 Phân bổ vốn ngược chu kỳ có giá trị nhưng đòi hỏi bảng cân đối khỏe.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **24. Tender offer và accelerated repurchase** tiếp nhận điểm tựa từ **23. Sai lầm mua lại ở đỉnh chu kỳ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Phát hành cổ phiếu không luôn xấu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **24. Tender offer và accelerated repurchase** nối từ **23. Sai lầm mua lại ở đỉnh chu kỳ** sang **25. Phát hành cổ phiếu không luôn xấu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Tender offer và accelerated repurchase
 
@@ -308,7 +308,7 @@ Giao dịch lớn thực hiện nhanh sẽ tập trung rủi ro nếu định gi
 
 # Phần V — Phát hành cổ phiếu và pha loãng
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **25. Phát hành cổ phiếu không luôn xấu** tiếp nhận điểm tựa từ **24. Tender offer và accelerated repurchase** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Toán học pha loãng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **25. Phát hành cổ phiếu không luôn xấu** nối từ **24. Tender offer và accelerated repurchase** sang **26. Toán học pha loãng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Phát hành cổ phiếu không luôn xấu
 
@@ -320,7 +320,7 @@ Câu hỏi là:
 Mỗi cổ phiếu mới phát hành nhận lại bao nhiêu giá trị?
 ```
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **26. Toán học pha loãng** tiếp nhận điểm tựa từ **25. Phát hành cổ phiếu không luôn xấu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. SBC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **26. Toán học pha loãng** nối từ **25. Phát hành cổ phiếu không luôn xấu** sang **27. SBC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Toán học pha loãng
 
@@ -328,7 +328,7 @@ Khi có cổ phiếu mới, tỷ lệ sở hữu của cổ đông cũ giảm n�
 
 Do đó cần theo dõi tăng trưởng **trên mỗi cổ phiếu**, không chỉ tăng trưởng tổng doanh nghiệp.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **27. SBC** tiếp nhận điểm tựa từ **26. Toán học pha loãng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Options và RSUs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **27. SBC** nối từ **26. Toán học pha loãng** sang **28. Options và RSUs**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. SBC
 
@@ -336,7 +336,7 @@ SBC là thù lao kinh tế thực. Cash-flow statement cộng lại vì không p
 
 FCF không điều chỉnh pha loãng có thể đánh giá quá cao giá trị cổ đông.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **28. Options và RSUs** tiếp nhận điểm tựa từ **27. SBC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Trả nợ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **28. Options và RSUs** nối từ **27. SBC** sang **29. Trả nợ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Options và RSUs
 
@@ -346,7 +346,7 @@ Số cổ phiếu pha loãng nên phản ánh các công cụ có ý nghĩa kinh
 
 # Phần VI — Nợ và cấu trúc bảng cân đối
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **29. Trả nợ** tiếp nhận điểm tựa từ **28. Options và RSUs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Nợ cố định và thả nổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **29. Trả nợ** nối từ **28. Options và RSUs** sang **30. Nợ cố định và thả nổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Trả nợ
 
@@ -354,7 +354,7 @@ Trả nợ có thể là lựa chọn sinh lời hấp dẫn khi chi phí vay ca
 
 Giảm nợ còn tăng khả năng linh hoạt khi cơ hội mới xuất hiện.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **30. Nợ cố định và thả nổi** tiếp nhận điểm tựa từ **29. Trả nợ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Maturity wall** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **30. Nợ cố định và thả nổi** nối từ **29. Trả nợ** sang **31. Maturity wall**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Nợ cố định và thả nổi
 
@@ -362,7 +362,7 @@ Nợ thả nổi phản ứng nhanh với lãi suất. Nợ cố định giữ c
 
 Cần xem cả số nợ và maturity ladder.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **31. Maturity wall** tiếp nhận điểm tựa từ **30. Nợ cố định và thả nổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Credit rating và tối ưu vốn chủ sở hữu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **31. Maturity wall** nối từ **30. Nợ cố định và thả nổi** sang **32. Credit rating và tối ưu vốn chủ sở hữu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Maturity wall
 
@@ -370,7 +370,7 @@ Nếu lượng nợ lớn đáo hạn trong cùng một khoảng thời gian, do
 
 Ban lãnh đạo phân tán đáo hạn tốt giúp giảm rủi ro này.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **32. Credit rating và tối ưu vốn chủ sở hữu** tiếp nhận điểm tựa từ **31. Maturity wall** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Giữ tiền mặt quá nhiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **32. Credit rating và tối ưu vốn chủ sở hữu** nối từ **31. Maturity wall** sang **33. Giữ tiền mặt quá nhiều**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Credit rating và tối ưu vốn chủ sở hữu
 
@@ -383,7 +383,7 @@ Ban lãnh đạo phân tán đáo hạn tốt giúp giảm rủi ro này.
 
 Khả năng lựa chọn chiến lược (optionality) có giá trị.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **33. Giữ tiền mặt quá nhiều** tiếp nhận điểm tựa từ **32. Credit rating và tối ưu vốn chủ sở hữu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Net cash không tự động là quản trị tốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **33. Giữ tiền mặt quá nhiều** nối từ **32. Credit rating và tối ưu vốn chủ sở hữu** sang **34. Net cash không tự động là quản trị tốt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Giữ tiền mặt quá nhiều
 
@@ -391,7 +391,7 @@ Tiền mặt giúp doanh nghiệp sống qua khủng hoảng và tận dụng c�
 
 Một rủi ro khác là ban lãnh đạo dùng tiền dư để mua lại doanh nghiệp quá đắt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **34. Net cash không tự động là quản trị tốt** tiếp nhận điểm tựa từ **33. Giữ tiền mặt quá nhiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Vì sao doanh nghiệp mua lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **34. Net cash không tự động là quản trị tốt** nối từ **33. Giữ tiền mặt quá nhiều** sang **35. Vì sao doanh nghiệp mua lại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Net cash không tự động là quản trị tốt
 
@@ -406,7 +406,7 @@ Tiền nhàn rỗi không có kế hoạch có thể xứng đáng bị chiết 
 
 # Phần VII — M&A
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **35. Vì sao doanh nghiệp mua lại** tiếp nhận điểm tựa từ **34. Net cash không tự động là quản trị tốt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Giá mua quyết định nhiều thứ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **35. Vì sao doanh nghiệp mua lại** nối từ **34. Net cash không tự động là quản trị tốt** sang **36. Giá mua quyết định nhiều thứ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Vì sao doanh nghiệp mua lại
 
@@ -422,7 +422,7 @@ M&A có thể nhằm:
 
 Từ “strategic” chỉ có ý nghĩa khi nối được với dòng tiền tương lai.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **36. Giá mua quyết định nhiều thứ** tiếp nhận điểm tựa từ **35. Vì sao doanh nghiệp mua lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Acquisition premium** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **36. Giá mua quyết định nhiều thứ** nối từ **35. Vì sao doanh nghiệp mua lại** sang **37. Acquisition premium**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Giá mua quyết định nhiều thứ
 
@@ -438,7 +438,7 @@ so với
 Total Purchase Price
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **37. Acquisition premium** tiếp nhận điểm tựa từ **36. Giá mua quyết định nhiều thứ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Synergy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **37. Acquisition premium** nối từ **36. Giá mua quyết định nhiều thứ** sang **38. Synergy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Acquisition premium
 
@@ -446,7 +446,7 @@ Premium cao hơn giá thị trường trước thương vụ không tự động
 
 Nhưng premium càng lớn thì synergy cần đạt càng cao.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **38. Synergy** tiếp nhận điểm tựa từ **37. Acquisition premium** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Chi phí tích hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **38. Synergy** nối từ **37. Acquisition premium** sang **39. Chi phí tích hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Synergy
 
@@ -460,7 +460,7 @@ Revenue synergy phụ thuộc:
 
 Cần mô hình hóa cả thời gian và xác suất thực hiện.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **39. Chi phí tích hợp** tiếp nhận điểm tựa từ **38. Synergy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Goodwill** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **39. Chi phí tích hợp** nối từ **38. Synergy** sang **40. Goodwill**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Chi phí tích hợp
 
@@ -475,7 +475,7 @@ M&A có thể cần:
 
 Không nên nhìn synergy mà bỏ tích hợp (integration / 통합) chi phí (cost / 비용).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **40. Goodwill** tiếp nhận điểm tựa từ **39. Chi phí tích hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Tài sản vô hình sau M&A** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **40. Goodwill** nối từ **39. Chi phí tích hợp** sang **41. Tài sản vô hình sau M&A**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Goodwill
 
@@ -483,7 +483,7 @@ Goodwill xuất hiện khi giá mua cao hơn giá trị hợp lý của tài s�
 
 Goodwill impairment lặp lại có thể là bằng chứng lịch sử của việc trả giá quá cao, dù thời điểm ghi impairment có yếu tố phán đoán kế toán.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **41. Tài sản vô hình sau M&A** tiếp nhận điểm tựa từ **40. Goodwill** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Bẫy “EPS accretive”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **41. Tài sản vô hình sau M&A** nối từ **40. Goodwill** sang **42. Bẫy “EPS accretive”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Tài sản vô hình sau M&A
 
@@ -496,7 +496,7 @@ Thương vụ có thể ghi nhận:
 
 Adjusted earnings có thể loại amortization, nhưng không nên quên rằng người mua đã trả tiền thật cho các tài sản đó.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **41. Tài sản vô hình sau M&A** đã nêu tiêu chí phân biệt, còn **42. Bẫy “EPS accretive”** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **43. Tăng trưởng hữu cơ và tăng trưởng mua lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **41. Tài sản vô hình sau M&A** đặt tiêu chí; **42. Bẫy “EPS accretive”** dùng tiêu chí đó để kiểm tra ranh giới, rồi **43. Tăng trưởng hữu cơ và tăng trưởng mua lại** mở rộng hệ quả.
 
 ## 42. Bẫy “EPS accretive”
 
@@ -504,7 +504,7 @@ Một công ty P/E cao dùng nợ mua công ty P/E thấp có thể làm EPS tă
 
 Accretion chỉ là phép toán, không phải bằng chứng thương vụ tốt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **42. Bẫy “EPS accretive”** đã nêu tiêu chí phân biệt, còn **43. Tăng trưởng hữu cơ và tăng trưởng mua lại** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **44. Serial acquirer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **42. Bẫy “EPS accretive”** đặt tiêu chí; **43. Tăng trưởng hữu cơ và tăng trưởng mua lại** dùng tiêu chí đó để kiểm tra ranh giới, rồi **44. Serial acquirer** mở rộng hệ quả.
 
 ## 43. Tăng trưởng hữu cơ và tăng trưởng mua lại
 
@@ -520,7 +520,7 @@ Reported Growth
 
 Serial acquirer có thể che hoạt động cốt lõi yếu bằng dòng thương vụ liên tục.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **44. Serial acquirer** tiếp nhận điểm tựa từ **43. Tăng trưởng hữu cơ và tăng trưởng mua lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. Roll-up rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **44. Serial acquirer** nối từ **43. Tăng trưởng hữu cơ và tăng trưởng mua lại** sang **45. Roll-up rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. Serial acquirer
 
@@ -533,7 +533,7 @@ Chiến lược mua lại liên tục có thể tốt khi doanh nghiệp có:
 
 Nhưng nó cũng có thể tạo nợ, goodwill và adjusted metrics ngày càng phức tạp.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **45. Roll-up rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **44. Serial acquirer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. Divestiture** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **45. Roll-up rủi ro (risk / 위험)** nối từ **44. Serial acquirer** sang **46. Divestiture**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. Roll-up rủi ro (risk / 위험)
 
@@ -549,7 +549,7 @@ Rủi ro gồm:
 
 Theo dõi organic growth và FCF trên mỗi cổ phần.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **46. Divestiture** tiếp nhận điểm tựa từ **45. Roll-up rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **47. Spin-off** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **46. Divestiture** nối từ **45. Roll-up rủi ro (risk / 위험)** sang **47. Spin-off**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 46. Divestiture
 
@@ -564,7 +564,7 @@ Cần đánh giá:
 
 Thu nhỏ quy mô đôi khi là phân bổ vốn tốt.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **47. Spin-off** tiếp nhận điểm tựa từ **46. Divestiture** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **48. Hội đồng quản trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **47. Spin-off** nối từ **46. Divestiture** sang **48. Hội đồng quản trị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. Spin-off
 
@@ -580,7 +580,7 @@ Phải đánh giá kinh tế độc lập sau khi tách.
 
 # Phần VIII — Cấu trúc quản trị
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **48. Hội đồng quản trị** tiếp nhận điểm tựa từ **47. Spin-off** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **49. Các ủy ban** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **48. Hội đồng quản trị** nối từ **47. Spin-off** sang **49. Các ủy ban**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. Hội đồng quản trị
 
@@ -594,7 +594,7 @@ Không chỉ nhìn nhãn “independent”. Cần xem:
 - sở hữu cổ phần;
 - quan hệ với management.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **49. Các ủy ban** tiếp nhận điểm tựa từ **48. Hội đồng quản trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **50. Chair và CEO** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **49. Các ủy ban** nối từ **48. Hội đồng quản trị** sang **50. Chair và CEO**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. Các ủy ban
 
@@ -606,7 +606,7 @@ Kiểm tra (audit / 감사) committee đặc biệt quan trọng với:
 - nội bộ (internal / 내부) điều khiển (control / 제어);
 - related-party giao dịch (transaction / 트랜잭션).
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **50. Chair và CEO** tiếp nhận điểm tựa từ **49. Các ủy ban** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **51. Cổ đông kiểm soát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **50. Chair và CEO** nối từ **49. Các ủy ban** sang **51. Cổ đông kiểm soát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 50. Chair và CEO
 
@@ -614,7 +614,7 @@ Tách chức Chủ tịch và CEO có thể tăng giám sát nhưng cấu trúc 
 
 Phải đánh giá bằng bằng chứng vận hành và lịch sử quyết định.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **51. Cổ đông kiểm soát** tiếp nhận điểm tựa từ **50. Chair và CEO** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **52. Cấu trúc kim tự tháp và sở hữu chéo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **51. Cổ đông kiểm soát** nối từ **50. Chair và CEO** sang **52. Cấu trúc kim tự tháp và sở hữu chéo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 51. Cổ đông kiểm soát
 
@@ -627,7 +627,7 @@ Cần kiểm tra lịch sử:
 - private placement;
 - merger terms.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **52. Cấu trúc kim tự tháp và sở hữu chéo** tiếp nhận điểm tựa từ **51. Cổ đông kiểm soát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **53. Dual-class shares** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **52. Cấu trúc kim tự tháp và sở hữu chéo** nối từ **51. Cổ đông kiểm soát** sang **53. Dual-class shares**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 52. Cấu trúc kim tự tháp và sở hữu chéo
 
@@ -635,7 +635,7 @@ Cấu trúc phức tạp có thể cho phép kiểm soát doanh nghiệp với l
 
 Cần vẽ sơ đồ quyền sở hữu (ownership / 소유권) để biết ai thực sự kiểm soát dòng tiền và quyền biểu quyết.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **53. Dual-class shares** tiếp nhận điểm tựa từ **52. Cấu trúc kim tự tháp và sở hữu chéo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **54. Cách đối xử với cổ đông thiểu số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **53. Dual-class shares** nối từ **52. Cấu trúc kim tự tháp và sở hữu chéo** sang **54. Cách đối xử với cổ đông thiểu số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 53. Dual-class shares
 
@@ -643,7 +643,7 @@ Cổ phiếu nhiều lớp có thể cho founder quyền biểu quyết lớn h�
 
 Nó có thể bảo vệ tầm nhìn dài hạn nhưng cũng làm giảm khả năng cổ đông buộc management chịu trách nhiệm.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **54. Cách đối xử với cổ đông thiểu số** tiếp nhận điểm tựa từ **53. Dual-class shares** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **55. Related-party giao dịch (transaction / 트랜잭션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **54. Cách đối xử với cổ đông thiểu số** nối từ **53. Dual-class shares** sang **55. Related-party giao dịch (transaction / 트랜잭션)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 54. Cách đối xử với cổ đông thiểu số
 
@@ -658,7 +658,7 @@ thường đáng tin hơn các tuyên bố quản trị trên website.
 
 # Phần IX — Giao dịch bên liên quan
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **55. Related-party giao dịch (transaction / 트랜잭션)** tiếp nhận điểm tựa từ **54. Cách đối xử với cổ đông thiểu số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **56. Tunneling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **55. Related-party giao dịch (transaction / 트랜잭션)** nối từ **54. Cách đối xử với cổ đông thiểu số** sang **56. Tunneling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. Related-party giao dịch (transaction / 트랜잭션)
 
@@ -670,7 +670,7 @@ Giao dịch với công ty liên quan không tự động xấu nhưng phải c�
 
 Các khoản vay, bảo lãnh, mua bán tài sản và hợp đồng dịch vụ cần được kiểm tra.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **56. Tunneling** tiếp nhận điểm tựa từ **55. Related-party giao dịch (transaction / 트랜잭션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **57. Bảo lãnh và nghĩa vụ tiềm ẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **56. Tunneling** nối từ **55. Related-party giao dịch (transaction / 트랜잭션)** sang **57. Bảo lãnh và nghĩa vụ tiềm ẩn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 56. Tunneling
 
@@ -680,7 +680,7 @@ Tunneling là rủi ro giá trị bị chuyển khỏi cổ đông thiểu số 
 
 Nếu rủi ro này lặp lại, chiết khấu quản trị (governance discount) có thể hợp lý về kinh tế.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **57. Bảo lãnh và nghĩa vụ tiềm ẩn** tiếp nhận điểm tựa từ **56. Tunneling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **58. Thiết kế compensation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **57. Bảo lãnh và nghĩa vụ tiềm ẩn** nối từ **56. Tunneling** sang **58. Thiết kế compensation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 57. Bảo lãnh và nghĩa vụ tiềm ẩn
 
@@ -690,7 +690,7 @@ Dù chưa phải chi tiền ngay, đây vẫn là rủi ro kinh tế có thể t
 
 # Phần X — Incentive của lãnh đạo
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **58. Thiết kế compensation** tiếp nhận điểm tựa từ **57. Bảo lãnh và nghĩa vụ tiềm ẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **59. Incentive ngắn hạn và dài hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **58. Thiết kế compensation** nối từ **57. Bảo lãnh và nghĩa vụ tiềm ẩn** sang **59. Incentive ngắn hạn và dài hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 58. Thiết kế compensation
 
@@ -712,7 +712,7 @@ ROIC / FCF / per-share metric
 
 Không chỉ số (metric / 지표) nào miễn nhiễm với gaming.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **59. Incentive ngắn hạn và dài hạn** tiếp nhận điểm tựa từ **58. Thiết kế compensation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **60. Relative TSR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **59. Incentive ngắn hạn và dài hạn** nối từ **58. Thiết kế compensation** sang **60. Relative TSR**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 59. Incentive ngắn hạn và dài hạn
 
@@ -720,7 +720,7 @@ Bonus hàng năm có thể khuyến khích tối ưu theo quý. Vesting nhiều 
 
 Nhưng long-term plan vẫn phải xem dilution và điều kiện grant.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **60. Relative TSR** tiếp nhận điểm tựa từ **59. Incentive ngắn hạn và dài hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **61. Clawback** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **60. Relative TSR** nối từ **59. Incentive ngắn hạn và dài hạn** sang **61. Clawback**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 60. Relative TSR
 
@@ -728,7 +728,7 @@ Relative Total Shareholder Return so với peer group có thể giảm việc th
 
 Tuy nhiên peer group có thể được chọn theo hướng dễ đạt mục tiêu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **61. Clawback** tiếp nhận điểm tựa từ **60. Relative TSR** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **62. Insider quyền sở hữu (ownership / 소유권)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **61. Clawback** nối từ **60. Relative TSR** sang **62. Insider quyền sở hữu (ownership / 소유권)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 61. Clawback
 
@@ -736,7 +736,7 @@ Clawback cho phép thu hồi một phần compensation trong một số trườn
 
 Hiệu lực thực tế phụ thuộc điều khoản và luật áp dụng.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, sau nội dung của **61. Clawback**, **62. Insider quyền sở hữu (ownership / 소유권)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **63. Giao dịch của insider** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, sau nội dung của **61. Clawback**, **62. Insider quyền sở hữu (ownership / 소유권)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **63. Giao dịch của insider** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 62. Insider quyền sở hữu (ownership / 소유권)
 
@@ -744,7 +744,7 @@ Sở hữu thực của management có thể giúp đồng bộ lợi ích.
 
 Nhưng quyền kiểm soát quá lớn lại có thể làm management khó bị thay thế dù hiệu quả kém.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **63. Giao dịch của insider** tiếp nhận điểm tựa từ **62. Insider quyền sở hữu (ownership / 소유권)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **64. Chất lượng guidance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **63. Giao dịch của insider** nối từ **62. Insider quyền sở hữu (ownership / 소유권)** sang **64. Chất lượng guidance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 63. Giao dịch của insider
 
@@ -754,7 +754,7 @@ Mẫu hành vi của nhiều insider qua thời gian có ý nghĩa hơn một gi
 
 # Phần XI — Giao tiếp và công bố thông tin
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **64. Chất lượng guidance** tiếp nhận điểm tựa từ **63. Giao dịch của insider** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **65. KPI biến mất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **64. Chất lượng guidance** nối từ **63. Giao dịch của insider** sang **65. KPI biến mất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 64. Chất lượng guidance
 
@@ -767,7 +767,7 @@ Guidance tốt thường giải thích:
 
 Nếu doanh nghiệp liên tục đổi định nghĩa KPI, khả năng so sánh giảm.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **65. KPI biến mất** tiếp nhận điểm tựa từ **64. Chất lượng guidance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **66. Adjusted metrics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **65. KPI biến mất** nối từ **64. Chất lượng guidance** sang **66. Adjusted metrics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 65. KPI biến mất
 
@@ -775,7 +775,7 @@ Nếu một KPI từng được công bố đều đặn nhưng biến mất đ�
 
 So các investor presentation qua nhiều năm thường rất hữu ích.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **66. Adjusted metrics** tiếp nhận điểm tựa từ **65. KPI biến mất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **67. Earnings lời gọi (call / 호출)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **66. Adjusted metrics** nối từ **65. KPI biến mất** sang **67. Earnings lời gọi (call / 호출)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 66. Adjusted metrics
 
@@ -783,7 +783,7 @@ Adjusted chỉ số (metric / 지표) hữu ích khi loại khoản thật sự 
 
 Nếu năm nào cũng loại một danh sách “one-off” giống nhau, normalized earnings có thể đang bị thổi phồng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **67. Earnings lời gọi (call / 호출)** tiếp nhận điểm tựa từ **66. Adjusted metrics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **68. Capital Markets Day** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **67. Earnings lời gọi (call / 호출)** nối từ **66. Adjusted metrics** sang **68. Capital Markets Day**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 67. Earnings lời gọi (call / 호출)
 
@@ -796,7 +796,7 @@ Transcript hữu ích để so:
 
 Không nên cố suy đoán cảm xúc từ giọng nói; hãy tập trung nội dung và dữ liệu.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **68. Capital Markets Day** tiếp nhận điểm tựa từ **67. Earnings lời gọi (call / 호출)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **69. Thay kiểm toán viên thường xuyên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **68. Capital Markets Day** nối từ **67. Earnings lời gọi (call / 호출)** sang **69. Thay kiểm toán viên thường xuyên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 68. Capital Markets Day
 
@@ -806,19 +806,19 @@ Việc liên tục reset mục tiêu nên làm giảm mức tin cậy dành cho 
 
 # Phần XII — Các tín hiệu quản trị cần kiểm tra
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **69. Thay kiểm toán viên thường xuyên** tiếp nhận điểm tựa từ **68. Capital Markets Day** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **70. CFO thay liên tục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **69. Thay kiểm toán viên thường xuyên** nối từ **68. Capital Markets Day** sang **70. CFO thay liên tục**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 69. Thay kiểm toán viên thường xuyên
 
 Không phải bằng chứng sai phạm nhưng cần tìm nguyên nhân, đặc biệt nếu đi cùng tranh luận kế toán hoặc filing trễ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **70. CFO thay liên tục** tiếp nhận điểm tựa từ **69. Thay kiểm toán viên thường xuyên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **71. Filing trễ và restatement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **70. CFO thay liên tục** nối từ **69. Thay kiểm toán viên thường xuyên** sang **71. Filing trễ và restatement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 70. CFO thay liên tục
 
 CFO turnover lặp lại có thể liên quan tới chiến lược, nội bộ (internal / 내부) điều khiển (control / 제어) hoặc văn hóa quản lý. Cần xem bối cảnh cụ thể.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **71. Filing trễ và restatement** tiếp nhận điểm tựa từ **70. CFO thay liên tục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **72. Cấu trúc bên liên quan phức tạp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **71. Filing trễ và restatement** nối từ **70. CFO thay liên tục** sang **72. Cấu trúc bên liên quan phức tạp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 71. Filing trễ và restatement
 
@@ -831,25 +831,25 @@ Cần đánh giá:
 - nội bộ (internal / 내부) điều khiển (control / 제어);
 - có lặp lại không.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **72. Cấu trúc bên liên quan phức tạp** tiếp nhận điểm tựa từ **71. Filing trễ và restatement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **73. Pha loãng kéo dài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **72. Cấu trúc bên liên quan phức tạp** nối từ **71. Filing trễ và restatement** sang **73. Pha loãng kéo dài**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 72. Cấu trúc bên liên quan phức tạp
 
 Affiliate mạng (network / 네트워크), SPV và giao dịch vòng tròn làm tăng gánh nặng phân tích và rủi ro quản trị.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **73. Pha loãng kéo dài** tiếp nhận điểm tựa từ **72. Cấu trúc bên liên quan phức tạp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **74. Chuỗi chi phí “một lần” sau M&A** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **73. Pha loãng kéo dài** nối từ **72. Cấu trúc bên liên quan phức tạp** sang **74. Chuỗi chi phí “một lần” sau M&A**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 73. Pha loãng kéo dài
 
 Nếu công ty tuyên bố FCF mạnh nhưng liên tục phát hành cổ phiếu, cần đối chiếu tiền đang được dùng vào đâu.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **73. Pha loãng kéo dài** xác định đầu vào; **74. Chuỗi chi phí “một lần” sau M&A** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **75. Trả tiền cho cổ đông bằng nợ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **73. Pha loãng kéo dài** đặt đầu vào cho **74. Chuỗi chi phí “một lần” sau M&A**, rồi **75. Trả tiền cho cổ đông bằng nợ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 74. Chuỗi chi phí “một lần” sau M&A
 
 Nếu doanh nghiệp liên tục mua lại và năm nào cũng có tích hợp (integration / 통합) chi phí (cost / 비용) “một lần”, nên xem các chi phí đó như một phần của mô hình kinh doanh.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **74. Chuỗi chi phí “một lần” sau M&A** xác định đầu vào; **75. Trả tiền cho cổ đông bằng nợ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **76. FCF trên mỗi cổ phần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **74. Chuỗi chi phí “một lần” sau M&A** đặt đầu vào cho **75. Trả tiền cho cổ đông bằng nợ**, rồi **76. FCF trên mỗi cổ phần** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 75. Trả tiền cho cổ đông bằng nợ
 
@@ -857,7 +857,7 @@ Vay để trả cổ tức hoặc buyback đôi khi hợp lý nhưng nguy hiểm
 
 # Phần XIII — Đánh giá phân bổ vốn bằng số liệu
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **76. FCF trên mỗi cổ phần** tiếp nhận điểm tựa từ **75. Trả tiền cho cổ đông bằng nợ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **77. Incremental ROIC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **76. FCF trên mỗi cổ phần** nối từ **75. Trả tiền cho cổ đông bằng nợ** sang **77. Incremental ROIC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 76. FCF trên mỗi cổ phần
 
@@ -870,7 +870,7 @@ FCF Per Share
 
 Đây là cầu nối trực tiếp hơn tới giá trị cổ đông.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **77. Incremental ROIC** tiếp nhận điểm tựa từ **76. FCF trên mỗi cổ phần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **78. Lợi nhuận thương vụ M&A** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **77. Incremental ROIC** nối từ **76. FCF trên mỗi cổ phần** sang **78. Lợi nhuận thương vụ M&A**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 77. Incremental ROIC
 
@@ -884,7 +884,7 @@ nên dùng nhiều năm để giảm nhiễu.
 
 Mục tiêu là xem vốn mới có tạo lợi nhuận ngày càng tốt hay xấu đi.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **78. Lợi nhuận thương vụ M&A** tiếp nhận điểm tựa từ **77. Incremental ROIC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **79. Buyback yield ròng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **78. Lợi nhuận thương vụ M&A** nối từ **77. Incremental ROIC** sang **79. Buyback yield ròng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 78. Lợi nhuận thương vụ M&A
 
@@ -898,7 +898,7 @@ giá mua + nợ nhận + integration cost
 
 sau đó so với chi phí (cost / 비용) of capital.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **79. Buyback yield ròng** tiếp nhận điểm tựa từ **78. Lợi nhuận thương vụ M&A** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **80. Capital-return yield** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **79. Buyback yield ròng** nối từ **78. Lợi nhuận thương vụ M&A** sang **80. Capital-return yield**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 79. Buyback yield ròng
 
@@ -906,7 +906,7 @@ Mức giảm số cổ phiếu thực tế quan trọng hơn số tiền công b
 
 Cần kết hợp với mức giá mà công ty đã trả.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **80. Capital-return yield** tiếp nhận điểm tựa từ **79. Buyback yield ròng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **81. Giá trị của việc giảm nợ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **80. Capital-return yield** nối từ **79. Buyback yield ròng** sang **81. Giá trị của việc giảm nợ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 80. Capital-return yield
 
@@ -919,7 +919,7 @@ Dividend Yield
 
 nhưng phải điều chỉnh pha loãng và nợ dùng để tài trợ.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **81. Giá trị của việc giảm nợ** tiếp nhận điểm tựa từ **80. Capital-return yield** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **82. Giai đoạn boom** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **81. Giá trị của việc giảm nợ** nối từ **80. Capital-return yield** sang **82. Giai đoạn boom**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 81. Giá trị của việc giảm nợ
 
@@ -929,7 +929,7 @@ Cần so lợi ích tương đối chắc chắn này với một dự án mới
 
 # Phần XIV — Phân bổ vốn qua chu kỳ
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **82. Giai đoạn boom** tiếp nhận điểm tựa từ **81. Giá trị của việc giảm nợ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **83. Giai đoạn suy giảm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **82. Giai đoạn boom** nối từ **81. Giá trị của việc giảm nợ** sang **83. Giai đoạn suy giảm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 82. Giai đoạn boom
 
@@ -942,7 +942,7 @@ Khi tiền mặt dồi dào và định giá cao, rủi ro lớn nhất là:
 
 Kỷ luật vốn có giá trị nhất lúc mọi thứ trông dễ dàng.
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **83. Giai đoạn suy giảm** tiếp nhận điểm tựa từ **82. Giai đoạn boom** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **84. Phân bổ vốn ngược chu kỳ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **83. Giai đoạn suy giảm** nối từ **82. Giai đoạn boom** sang **84. Phân bổ vốn ngược chu kỳ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 83. Giai đoạn suy giảm
 
@@ -955,7 +955,7 @@ Doanh nghiệp có bảng cân đối khỏe có thể:
 
 Doanh nghiệp buộc phải phát hành cổ phần ở đáy thường cho thấy cấu trúc vốn trước đó quá mong manh.
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **84. Phân bổ vốn ngược chu kỳ** tiếp nhận điểm tựa từ **83. Giai đoạn suy giảm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **85. Scorecard phân bổ vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **84. Phân bổ vốn ngược chu kỳ** nối từ **83. Giai đoạn suy giảm** sang **85. Scorecard phân bổ vốn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 84. Phân bổ vốn ngược chu kỳ
 
@@ -965,7 +965,7 @@ Ngược chu kỳ không đồng nghĩa đầu tư bất chấp rủi ro.
 
 # Phần XV — Scorecard thực hành
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **85. Scorecard phân bổ vốn** tiếp nhận điểm tựa từ **84. Phân bổ vốn ngược chu kỳ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **86. Mẫu rà soát (review / 검토) hàng năm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **85. Scorecard phân bổ vốn** nối từ **84. Phân bổ vốn ngược chu kỳ** sang **86. Mẫu rà soát (review / 검토) hàng năm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 85. Scorecard phân bổ vốn
 
@@ -984,7 +984,7 @@ Có thể đánh giá theo các câu hỏi:
 10. Value tạo ở business có đến được minority shareholder không?
 ```
 
-> **Chuyển mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **86. Mẫu rà soát (review / 검토) hàng năm** tiếp nhận điểm tựa từ **85. Scorecard phân bổ vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **87. Những câu hỏi trước khi đầu tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **86. Mẫu rà soát (review / 검토) hàng năm** nối từ **85. Scorecard phân bổ vốn** sang **87. Những câu hỏi trước khi đầu tư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 86. Mẫu rà soát (review / 검토) hàng năm
 
@@ -1006,7 +1006,7 @@ Governance events
 Management promises vs outcomes
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **87. Những câu hỏi trước khi đầu tư** tiếp nhận điểm tựa từ **86. Mẫu rà soát (review / 검토) hàng năm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **87. Những câu hỏi trước khi đầu tư** nối từ **86. Mẫu rà soát (review / 검토) hàng năm** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 87. Những câu hỏi trước khi đầu tư
 
@@ -1022,7 +1022,7 @@ Số cổ phiếu có bị pha loãng không?
 Cổ đông thiểu số có được đối xử công bằng không?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **Kết luận** gom các mảnh từ **87. Những câu hỏi trước khi đầu tư** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quản trị doanh nghiệp, phân bổ vốn, M&A và chất lượng ban lãnh đạo**, **Kết luận** tổng hợp từ **87. Những câu hỏi trước khi đầu tư** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

@@ -20,7 +20,7 @@ năng lượng của một tương tác nhỏ
 
 Vì vậy từ “yếu” chỉ mô tả năng lượng của từng tương tác riêng lẻ, không nói rằng tương tác đó không quan trọng.
 
-> **Chuyển mạch:** Trong **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Nền vật lý: điện tích và trường điện** tiếp nhận điểm tựa từ **Vì sao lực yếu vẫn có thể tạo hiệu ứng rất lớn?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lực phân tán London** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Nền vật lý: điện tích và trường điện** nối từ **Vì sao lực yếu vẫn có thể tạo hiệu ứng rất lớn?** sang **Lực phân tán London**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nền vật lý: điện tích và trường điện
 
@@ -30,7 +30,7 @@ Khi phân bố điện tích không đối xứng, phân tử có thể có **m�
 
 Các khái niệm này tạo nền chung cho tương tác lưỡng cực–lưỡng cực, ion–lưỡng cực, lực cảm ứng và lực phân tán London.
 
-> **Chuyển mạch:** Ở chặng này của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Lực phân tán London** tiếp nhận điểm tựa từ **Nền vật lý: điện tích và trường điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều gì làm lực phân tán mạnh hơn?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Lực phân tán London** nối từ **Nền vật lý: điện tích và trường điện** sang **Điều gì làm lực phân tán mạnh hơn?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lực phân tán London
 
@@ -48,7 +48,7 @@ U_{disp}\propto-\frac{C_6}{r^6}
 
 Hệ số \(C_6\) lớn hơn khi các đám mây electron dễ bị phân cực hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Điều gì làm lực phân tán mạnh hơn?** tiếp nhận điểm tựa từ **Lực phân tán London** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tương tác lưỡng cực–lưỡng cực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Điều gì làm lực phân tán mạnh hơn?** nối từ **Lực phân tán London** sang **Tương tác lưỡng cực–lưỡng cực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điều gì làm lực phân tán mạnh hơn?
 
@@ -58,7 +58,7 @@ Hình dạng phân tử cũng quan trọng. Hai phân tử có cùng công thứ
 
 Không nên rút gọn thành “khối lượng mol càng lớn thì lực London càng mạnh”. Khối lượng mol chỉ thường đi cùng số electron và kích thước; đại lượng vật lý cốt lõi hơn là độ phân cực hóa và hình học tiếp xúc.
 
-> **Chuyển mạch:** Trong **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Tương tác lưỡng cực–lưỡng cực** tiếp nhận điểm tựa từ **Điều gì làm lực phân tán mạnh hơn?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tương tác ion–lưỡng cực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Tương tác lưỡng cực–lưỡng cực** nối từ **Điều gì làm lực phân tán mạnh hơn?** sang **Tương tác ion–lưỡng cực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tương tác lưỡng cực–lưỡng cực
 
@@ -68,7 +68,7 @@ Nếu phân tử có mômen lưỡng cực vĩnh viễn, vùng giàu electron c�
 
 Do đó không nên hình dung chất lỏng phân cực như một mạng nam châm nhỏ đứng cố định. Nó là một hệ động, trong đó định hướng thuận lợi liên tục hình thành rồi mất đi.
 
-> **Chuyển mạch:** Ở chặng này của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Tương tác ion–lưỡng cực** tiếp nhận điểm tựa từ **Tương tác lưỡng cực–lưỡng cực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tương tác ion–lưỡng cực cảm ứng và lưỡng cực cảm ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Tương tác ion–lưỡng cực** nối từ **Tương tác lưỡng cực–lưỡng cực** sang **Tương tác ion–lưỡng cực cảm ứng và lưỡng cực cảm ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tương tác ion–lưỡng cực
 
@@ -91,7 +91,7 @@ thay đổi entropy
 
 Vì vậy độ tan của muối không thể giải thích chỉ bằng “ion hút nước mạnh”. Phải so toàn bộ đóng góp năng lượng và entropy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Tương tác ion–lưỡng cực cảm ứng và lưỡng cực cảm ứng** tiếp nhận điểm tựa từ **Tương tác ion–lưỡng cực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết hydro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Tương tác ion–lưỡng cực cảm ứng và lưỡng cực cảm ứng** nối từ **Tương tác ion–lưỡng cực** sang **Liên kết hydro**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tương tác ion–lưỡng cực cảm ứng và lưỡng cực cảm ứng
 
@@ -101,7 +101,7 @@ Các tương tác cảm ứng này đặc biệt đáng kể khi đối tác có
 
 Điều này giúp giải thích vì sao những tiểu phần không có lưỡng cực vĩnh viễn vẫn có thể tương tác mạnh với ion hoặc bề mặt mang điện.
 
-> **Chuyển mạch:** Trong **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, sau nội dung của **Tương tác ion–lưỡng cực cảm ứng và lưỡng cực cảm ứng**, **Liên kết hydro** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Nước và mạng liên kết hydro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, sau nội dung của **Tương tác ion–lưỡng cực cảm ứng và lưỡng cực cảm ứng**, **Liên kết hydro** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Nước và mạng liên kết hydro** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết hydro
 
@@ -119,7 +119,7 @@ Liên kết hydro không chỉ là “dipole–dipole mạnh”. Nó có đóng 
 
 Hình học gần thẳng `D–H···A` thường thuận lợi hơn vì làm tương tác orbital và điện tĩnh phù hợp hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Nước và mạng liên kết hydro** tiếp nhận điểm tựa từ **Liên kết hydro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính hợp tác của mạng tương tác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Nước và mạng liên kết hydro** nối từ **Liên kết hydro** sang **Tính hợp tác của mạng tương tác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nước và mạng liên kết hydro
 
@@ -135,7 +135,7 @@ Mạng này góp phần vào:
 
 Băng `Ih` có mạng tetrahedral khá mở nên khối lượng riêng thấp hơn nước lỏng. Đây là lý do băng nổi và có ý nghĩa lớn với hệ sinh thái nước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Tính hợp tác của mạng tương tác** tiếp nhận điểm tựa từ **Nước và mạng liên kết hydro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lực đẩy ở khoảng cách ngắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Tính hợp tác của mạng tương tác** nối từ **Nước và mạng liên kết hydro** sang **Lực đẩy ở khoảng cách ngắn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính hợp tác của mạng tương tác
 
@@ -145,7 +145,7 @@ Hiện tượng đó gọi chung là **tính hợp tác (cooperativity)**.
 
 Trong protein, nhiều liên kết hydro, tương tác ion và hiệu ứng kỵ nước phối hợp để ổn định một cấu dạng. Không nên cộng cơ học từng “năng lượng liên kết” như những phần hoàn toàn độc lập.
 
-> **Chuyển mạch:** Trong **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Lực đẩy ở khoảng cách ngắn** tiếp nhận điểm tựa từ **Tính hợp tác của mạng tương tác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ lực liên phân tử đến nhiệt độ sôi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Lực đẩy ở khoảng cách ngắn** nối từ **Tính hợp tác của mạng tương tác** sang **Từ lực liên phân tử đến nhiệt độ sôi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lực đẩy ở khoảng cách ngắn
 
@@ -169,7 +169,7 @@ U(r)=4\varepsilon\left[\left(\frac{\sigma}{r}\right)^{12}-\left(\frac{\sigma}{r}
 
 Đây là mô hình tiện dụng cho mô phỏng, không phải định luật cơ bản tuyệt đối. Số mũ 12 chủ yếu được chọn vì thuận tiện tính toán.
 
-> **Chuyển mạch:** Ở chặng này của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Từ lực liên phân tử đến nhiệt độ sôi** tiếp nhận điểm tựa từ **Lực đẩy ở khoảng cách ngắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao không thể xếp hạng IMF bằng một bảng duy nhất?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Từ lực liên phân tử đến nhiệt độ sôi** nối từ **Lực đẩy ở khoảng cách ngắn** sang **Vì sao không thể xếp hạng IMF bằng một bảng duy nhất?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ lực liên phân tử đến nhiệt độ sôi
 
@@ -188,7 +188,7 @@ cấu trúc phân tử
 → nhiệt độ sôi
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Vì sao không thể xếp hạng IMF bằng một bảng duy nhất?** tiếp nhận điểm tựa từ **Từ lực liên phân tử đến nhiệt độ sôi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ nhớt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Vì sao không thể xếp hạng IMF bằng một bảng duy nhất?** nối từ **Từ lực liên phân tử đến nhiệt độ sôi** sang **Độ nhớt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao không thể xếp hạng IMF bằng một bảng duy nhất?
 
@@ -205,7 +205,7 @@ Khi so hai chất, cần xét đồng thời:
 5. khả năng tạo mạng;
 6. entropy của các cấu hình khả dĩ.
 
-> **Chuyển mạch:** Trong **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Độ nhớt** tiếp nhận điểm tựa từ **Vì sao không thể xếp hạng IMF bằng một bảng duy nhất?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sức căng bề mặt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Độ nhớt** nối từ **Vì sao không thể xếp hạng IMF bằng một bảng duy nhất?** sang **Sức căng bề mặt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ nhớt
 
@@ -215,7 +215,7 @@ Tuy nhiên độ nhớt không chỉ do “lực mạnh”. Hình dạng, độ 
 
 Glycerol nhớt hơn nước không chỉ vì có nhiều liên kết hydro; phân tử lớn hơn và có nhiều nhóm hydroxyl tạo mạng tương tác phức tạp hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Sức căng bề mặt** tiếp nhận điểm tựa từ **Độ nhớt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ tan: enthalpy và entropy cùng quyết định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Sức căng bề mặt** nối từ **Độ nhớt** sang **Độ tan: enthalpy và entropy cùng quyết định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sức căng bề mặt
 
@@ -229,7 +229,7 @@ dG=\gamma\,dA
 
 Đây là cầu nối trực tiếp từ lực liên phân tử tới hiện tượng giọt, mao dẫn, thấm ướt và bọt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Độ tan: enthalpy và entropy cùng quyết định** tiếp nhận điểm tựa từ **Sức căng bề mặt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng kỵ nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Độ tan: enthalpy và entropy cùng quyết định** nối từ **Sức căng bề mặt** sang **Hiệu ứng kỵ nước**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ tan: enthalpy và entropy cùng quyết định
 
@@ -251,7 +251,7 @@ Tiêu chuẩn cuối là:
 
 Vì vậy một quá trình hơi thu nhiệt vẫn có thể tự xảy ra nếu entropy tăng đủ lớn.
 
-> **Chuyển mạch:** Trong **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Hiệu ứng kỵ nước** tiếp nhận điểm tựa từ **Độ tan: enthalpy và entropy cùng quyết định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tự lắp ráp trong sinh học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Hiệu ứng kỵ nước** nối từ **Độ tan: enthalpy và entropy cùng quyết định** sang **Tự lắp ráp trong sinh học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng kỵ nước
 
@@ -261,7 +261,7 @@ Khi các bề mặt không phân cực tụ lại, diện tích tiếp xúc vớ
 
 Hiệu ứng này không phải một “lực hút dầu–dầu” đơn giản. Nó là hệ quả tập thể của tương tác giữa nước, bề mặt không phân cực và entropy.
 
-> **Chuyển mạch:** Ở chặng này của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Tự lắp ráp trong sinh học** tiếp nhận điểm tựa từ **Hiệu ứng kỵ nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tương tác trong vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Tự lắp ráp trong sinh học** nối từ **Hiệu ứng kỵ nước** sang **Tương tác trong vật liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tự lắp ráp trong sinh học
 
@@ -278,7 +278,7 @@ Protein gấp cuộn nhờ tổ hợp nhiều hiệu ứng:
 
 DNA được ổn định không chỉ bởi liên kết hydro giữa cơ sở (base / 기반) mà còn bởi **xếp chồng cơ sở (base / 기반) (base stacking)** và tương tác với ion/dung môi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Tương tác trong vật liệu** tiếp nhận điểm tựa từ **Tự lắp ráp trong sinh học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô phỏng phân tử và force trường dữ liệu (field / 필드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Tương tác trong vật liệu** nối từ **Tự lắp ráp trong sinh học** sang **Mô phỏng phân tử và force trường dữ liệu (field / 필드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tương tác trong vật liệu
 
@@ -288,7 +288,7 @@ Ví dụ, thêm nhóm có khả năng tạo liên kết hydro vào polymer có t
 
 Trong chất điện ly pin, tương tác ion–dung môi mạnh giúp hòa tan muối nhưng nếu quá mạnh có thể làm việc tách lớp solvat hóa khi ion đi vào điện cực trở nên khó hơn. Vì vậy thiết kế dung môi phải cân bằng độ tan, độ dẫn ion, ổn định điện hóa và động học giao diện.
 
-> **Chuyển mạch:** Trong **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Tương tác trong vật liệu** nêu điều cần giải thích; **Mô phỏng phân tử và force trường dữ liệu (field / 필드)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Tương tác trong vật liệu** đặt vấn đề; **Mô phỏng phân tử và force trường dữ liệu (field / 필드)** đối chiếu bằng chứng, rồi **Các hiểu lầm thường gặp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô phỏng phân tử và force trường dữ liệu (field / 필드)
 
@@ -303,7 +303,7 @@ Mô hình cổ điển có thể dự đoán nhiều tính chất vật liệu v
 
 Khi đó cần mô hình phản ứng, force trường dữ liệu (field / 필드) phân cực hoặc phương pháp lượng tử.
 
-> **Chuyển mạch:** Ở chặng này của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Mô phỏng phân tử và force trường dữ liệu (field / 필드)** nêu điều cần giải thích; **Các hiểu lầm thường gặp** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Mô phỏng phân tử và force trường dữ liệu (field / 필드)** đặt vấn đề; **Các hiểu lầm thường gặp** đối chiếu bằng chứng, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Các hiểu lầm thường gặp
 
@@ -327,7 +327,7 @@ Không. Trong hệ lớn, nhiều tương tác yếu cộng lại thường quy�
 
 Không hoàn toàn. Hiệu ứng nhiều hạt và tính hợp tác có thể làm tổng tương tác khác phép cộng đơn giản từng cặp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lực liên phân tử — từ phân bố electron đến tính chất tập thể**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

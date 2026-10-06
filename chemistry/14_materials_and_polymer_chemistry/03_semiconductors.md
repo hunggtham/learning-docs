@@ -22,7 +22,7 @@ Vùng chứa phần lớn electron hóa trị được gọi là **vùng hóa tr
 
 Lý thuyết vùng vì vậy không tách khỏi hóa học liên kết; nó là phần mở rộng của tư duy orbital phân tử tới chất rắn gồm rất nhiều nguyên tử tương tác tuần hoàn.
 
-> **Chuyển mạch:** Trong **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Kim loại, chất bán dẫn và chất cách điện** tiếp nhận điểm tựa từ **Từ orbital phân tử tới vùng năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bán dẫn nội tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Kim loại, chất bán dẫn và chất cách điện** nối từ **Từ orbital phân tử tới vùng năng lượng** sang **Bán dẫn nội tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kim loại, chất bán dẫn và chất cách điện
 
@@ -32,7 +32,7 @@ Không tồn tại một giá trị `Eg` duy nhất phân chia ba loại vật l
 
 Đây là một ví dụ quan trọng của nguyên tắc xuyên suốt thư viện: **một thông số riêng lẻ hiếm khi quyết định toàn bộ hành vi của hệ**.
 
-> **Chuyển mạch:** Ở chặng này của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Bán dẫn nội tại** tiếp nhận điểm tựa từ **Kim loại, chất bán dẫn và chất cách điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dẫn điện: mật độ hạt tải chưa phải toàn bộ câu chuyện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Bán dẫn nội tại** nối từ **Kim loại, chất bán dẫn và chất cách điện** sang **Độ dẫn điện: mật độ hạt tải chưa phải toàn bộ câu chuyện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bán dẫn nội tại
 
@@ -62,7 +62,7 @@ n_i\propto e^{-E_g/(2k_BT)}
 
 Biểu thức này cho thấy vì sao chỉ thay đổi vừa phải nhiệt độ hoặc vùng cấm cũng có thể làm mật độ hạt tải thay đổi nhiều bậc độ lớn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Độ dẫn điện: mật độ hạt tải chưa phải toàn bộ câu chuyện** tiếp nhận điểm tựa từ **Bán dẫn nội tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mức Fermi — thế hóa học của electron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Độ dẫn điện: mật độ hạt tải chưa phải toàn bộ câu chuyện** nối từ **Bán dẫn nội tại** sang **Mức Fermi — thế hóa học của electron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ dẫn điện: mật độ hạt tải chưa phải toàn bộ câu chuyện
 
@@ -87,7 +87,7 @@ nhưng đồng thời
 
 Thiết kế vật liệu phải tối ưu cả hai phía.
 
-> **Chuyển mạch:** Trong **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Mức Fermi — thế hóa học của electron** tiếp nhận điểm tựa từ **Độ dẫn điện: mật độ hạt tải chưa phải toàn bộ câu chuyện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pha tạp — thiết kế khuyết tật có chủ ý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Mức Fermi — thế hóa học của electron** nối từ **Độ dẫn điện: mật độ hạt tải chưa phải toàn bộ câu chuyện** sang **Pha tạp — thiết kế khuyết tật có chủ ý**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mức Fermi — thế hóa học của electron
 
@@ -101,7 +101,7 @@ Trong bán dẫn nội tại, `EF` thường nằm gần giữa vùng cấm. Pha
 
 Điểm cần hiểu là mức Fermi không phải “một electron cụ thể”. Nó là đại lượng nhiệt động thống kê mô tả quần thể trạng thái điện tử.
 
-> **Chuyển mạch:** Ở chặng này của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Pha tạp — thiết kế khuyết tật có chủ ý** tiếp nhận điểm tựa từ **Mức Fermi — thế hóa học của electron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trung hòa điện tích và quan hệ tác dụng khối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Pha tạp — thiết kế khuyết tật có chủ ý** nối từ **Mức Fermi — thế hóa học của electron** sang **Trung hòa điện tích và quan hệ tác dụng khối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pha tạp — thiết kế khuyết tật có chủ ý
 
@@ -121,7 +121,7 @@ Nguyên tử kiểu này là **chất nhận electron (acceptor)**. Sau khi nh�
 
 Pha tạp vì thế nên được hiểu là **hóa học khuyết tật điểm có kiểm soát**, không phải đơn giản “làm bẩn tinh thể”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Trung hòa điện tích và quan hệ tác dụng khối** tiếp nhận điểm tựa từ **Pha tạp — thiết kế khuyết tật có chủ ý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiếp giáp p–n — khuếch tán tự tạo điện trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Trung hòa điện tích và quan hệ tác dụng khối** nối từ **Pha tạp — thiết kế khuyết tật có chủ ý** sang **Tiếp giáp p–n — khuếch tán tự tạo điện trường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trung hòa điện tích và quan hệ tác dụng khối
 
@@ -141,7 +141,7 @@ p\approx\frac{n_i^2}{n}
 
 Nghĩa là tăng hạt tải đa số đồng thời làm hạt tải thiểu số giảm. Quan hệ này trở nên rất quan trọng khi xét tiếp giáp, tái hợp và dòng rò.
 
-> **Chuyển mạch:** Trong **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Tiếp giáp p–n — khuếch tán tự tạo điện trường** tiếp nhận điểm tựa từ **Trung hòa điện tích và quan hệ tác dụng khối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ suy luận: vì sao một lượng tạp chất rất nhỏ vẫn có tác động lớn?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Tiếp giáp p–n — khuếch tán tự tạo điện trường** nối từ **Trung hòa điện tích và quan hệ tác dụng khối** sang **Ví dụ suy luận: vì sao một lượng tạp chất rất nhỏ vẫn có tác động lớn?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tiếp giáp p–n — khuếch tán tự tạo điện trường
 
@@ -168,7 +168,7 @@ Cân bằng được thiết lập khi xu hướng khuếch tán do độ dốc 
 
 Tính bất đối xứng này là nền của diode.
 
-> **Chuyển mạch:** Ở chặng này của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Tiếp giáp p–n — khuếch tán tự tạo điện trường** cho ta quy tắc; **Ví dụ suy luận: vì sao một lượng tạp chất rất nhỏ vẫn có tác động lớn?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Sinh hạt tải và tái hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Tiếp giáp p–n — khuếch tán tự tạo điện trường** nêu quy tắc; **Ví dụ suy luận: vì sao một lượng tạp chất rất nhỏ vẫn có tác động lớn?** thử quy tắc trong tình huống, rồi **Sinh hạt tải và tái hợp** mở rộng hệ quả.
 
 ## Ví dụ suy luận: vì sao một lượng tạp chất rất nhỏ vẫn có tác động lớn?
 
@@ -176,7 +176,7 @@ Một tinh thể Si chứa số nguyên tử cực lớn. Dù chỉ một phần
 
 Do đó “nồng độ nguyên tử nhỏ” không đồng nghĩa “ảnh hưởng điện tử nhỏ”. Điều đúng hơn là so mật độ chất pha tạp với `ni` và với mật độ trạng thái điện tử liên quan.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Ví dụ suy luận: vì sao một lượng tạp chất rất nhỏ vẫn có tác động lớn?** cho ta quy tắc; **Sinh hạt tải và tái hợp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Vùng cấm trực tiếp và gián tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Ví dụ suy luận: vì sao một lượng tạp chất rất nhỏ vẫn có tác động lớn?** nêu quy tắc; **Sinh hạt tải và tái hợp** thử quy tắc trong tình huống, rồi **Vùng cấm trực tiếp và gián tiếp** mở rộng hệ quả.
 
 ## Sinh hạt tải và tái hợp
 
@@ -190,7 +190,7 @@ Ba cơ chế tái hợp quan trọng gồm:
 
 Khuyết tật tạo mức năng lượng nằm sâu trong vùng cấm có thể bắt electron hoặc lỗ trống và rút ngắn **thời gian sống hạt tải (carrier lifetime)**. Vì thế tạp nhiễm rất nhỏ vẫn có thể làm thiết bị suy giảm rõ rệt.
 
-> **Chuyển mạch:** Trong **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Vùng cấm trực tiếp và gián tiếp** tiếp nhận điểm tựa từ **Sinh hạt tải và tái hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hấp thụ ánh sáng và pin mặt trời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Vùng cấm trực tiếp và gián tiếp** nối từ **Sinh hạt tải và tái hợp** sang **Hấp thụ ánh sáng và pin mặt trời**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vùng cấm trực tiếp và gián tiếp
 
@@ -202,7 +202,7 @@ GaAs và GaN là ví dụ quan trọng trong LED và laser.
 
 Silicon có vùng cấm gián tiếp. Tái hợp bức xạ thường cần thêm phonon để bảo toàn xung lượng, nên Si rất hữu ích cho điện tử nhưng không phải vật liệu phát sáng hiệu quả như nhiều bán dẫn III–V.
 
-> **Chuyển mạch:** Ở chặng này của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Hấp thụ ánh sáng và pin mặt trời** tiếp nhận điểm tựa từ **Vùng cấm trực tiếp và gián tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LED — thành phần hóa học quyết định màu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Hấp thụ ánh sáng và pin mặt trời** nối từ **Vùng cấm trực tiếp và gián tiếp** sang **LED — thành phần hóa học quyết định màu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hấp thụ ánh sáng và pin mặt trời
 
@@ -229,7 +229,7 @@ Eg quá nhỏ
 
 Vì vậy thiết kế vật liệu quang điện là bài toán tối ưu giữa hấp thụ, tái hợp, điện áp và khả năng thu hạt tải.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **LED — thành phần hóa học quyết định màu** tiếp nhận điểm tựa từ **Hấp thụ ánh sáng và pin mặt trời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bán dẫn hợp chất và vùng cấm rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **LED — thành phần hóa học quyết định màu** nối từ **Hấp thụ ánh sáng và pin mặt trời** sang **Bán dẫn hợp chất và vùng cấm rộng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## LED — thành phần hóa học quyết định màu
 
@@ -250,7 +250,7 @@ thành phần nguyên tử
 → màu phát xạ
 ```
 
-> **Chuyển mạch:** Trong **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Bán dẫn hợp chất và vùng cấm rộng** tiếp nhận điểm tựa từ **LED — thành phần hóa học quyết định màu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiếp giáp dị thể và độ lệch vùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Bán dẫn hợp chất và vùng cấm rộng** nối từ **LED — thành phần hóa học quyết định màu** sang **Tiếp giáp dị thể và độ lệch vùng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bán dẫn hợp chất và vùng cấm rộng
 
@@ -260,7 +260,7 @@ GaN và SiC là ví dụ vật liệu vùng cấm rộng. Chúng chịu điện 
 
 Nhưng vùng cấm rộng không tự động làm thiết bị “tốt hơn”. Chất lượng tinh thể, tiếp xúc điện, độ linh động, độ dẫn nhiệt và công nghệ chế tạo vẫn quyết định hiệu năng thực.
 
-> **Chuyển mạch:** Ở chặng này của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Tiếp giáp dị thể và độ lệch vùng** tiếp nhận điểm tựa từ **Bán dẫn hợp chất và vùng cấm rộng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tinh thể đơn và độ tinh khiết cực cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Tiếp giáp dị thể và độ lệch vùng** nối từ **Bán dẫn hợp chất và vùng cấm rộng** sang **Tinh thể đơn và độ tinh khiết cực cao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tiếp giáp dị thể và độ lệch vùng
 
@@ -270,7 +270,7 @@ Khi ghép hai chất bán dẫn khác nhau, biên vùng hóa trị và vùng d�
 
 Lợi ích điện tử chỉ đạt được khi mặt phân cách có mật độ khuyết tật thấp và sai khác hằng số mạng được kiểm soát. Nếu không, mặt phân cách có thể trở thành nơi tái hợp thay vì nơi điều khiển hạt tải.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Tinh thể đơn và độ tinh khiết cực cao** tiếp nhận điểm tựa từ **Tiếp giáp dị thể và độ lệch vùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Oxy hóa silicon và vai trò của SiO₂** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Tinh thể đơn và độ tinh khiết cực cao** nối từ **Tiếp giáp dị thể và độ lệch vùng** sang **Oxy hóa silicon và vai trò của SiO₂**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tinh thể đơn và độ tinh khiết cực cao
 
@@ -286,7 +286,7 @@ Nếu một tạp chất ưu tiên pha lỏng hơn pha rắn, một vùng nóng 
 
 Đây là ứng dụng trực tiếp của cân bằng pha và hệ số phân bố vào sản xuất vật liệu siêu tinh khiết.
 
-> **Chuyển mạch:** Trong **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Oxy hóa silicon và vai trò của SiO₂** tiếp nhận điểm tựa từ **Tinh thể đơn và độ tinh khiết cực cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lắng đọng màng — hóa học bề mặt trở thành công nghệ chế tạo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Oxy hóa silicon và vai trò của SiO₂** nối từ **Tinh thể đơn và độ tinh khiết cực cao** sang **Lắng đọng màng — hóa học bề mặt trở thành công nghệ chế tạo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Oxy hóa silicon và vai trò của SiO₂
 
@@ -304,7 +304,7 @@ Si+2H_2O\rightarrow SiO_2+2H_2
 
 `SiO2` từng và vẫn đóng nhiều vai trò quan trọng như điện môi, lớp thụ động và lớp hỗ trợ công nghệ chế tạo. Chất lượng mặt phân cách Si/SiO₂ là một lý do nền công nghệ silicon phát triển mạnh.
 
-> **Chuyển mạch:** Ở chặng này của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Lắng đọng màng — hóa học bề mặt trở thành công nghệ chế tạo** tiếp nhận điểm tựa từ **Oxy hóa silicon và vai trò của SiO₂** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khắc vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Lắng đọng màng — hóa học bề mặt trở thành công nghệ chế tạo** nối từ **Oxy hóa silicon và vai trò của SiO₂** sang **Khắc vật liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lắng đọng màng — hóa học bề mặt trở thành công nghệ chế tạo
 
@@ -340,7 +340,7 @@ Vì mỗi nửa chu kỳ dừng khi các tâm phản ứng trên bề mặt đã
 
 Đánh đổi là tốc độ lắng đọng thường thấp hơn nhiều phương pháp khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Khắc vật liệu** tiếp nhận điểm tựa từ **Lắng đọng màng — hóa học bề mặt trở thành công nghệ chế tạo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa học chất cản quang** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Khắc vật liệu** nối từ **Lắng đọng màng — hóa học bề mặt trở thành công nghệ chế tạo** sang **Hóa học chất cản quang**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khắc vật liệu
 
@@ -354,7 +354,7 @@ Plasma tạo gốc tự do và ion hoạt tính. Thành phần hóa học tạo 
 
 Khắc kích thước nanomet vì vậy là bài toán ghép giữa hóa học plasma và vật lý bề mặt.
 
-> **Chuyển mạch:** Trong **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Hóa học chất cản quang** tiếp nhận điểm tựa từ **Khắc vật liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện môi hằng số cao và cổng kim loại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Hóa học chất cản quang** nối từ **Khắc vật liệu** sang **Điện môi hằng số cao và cổng kim loại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học chất cản quang
 
@@ -366,7 +366,7 @@ Các hệ khuếch đại hóa học tạo **acid quang sinh (photoacid)**; mộ
 
 Đây là một sự đánh đổi (trade-off / 트레이드오프) điển hình giữa **độ nhạy và độ phân giải không gian**.
 
-> **Chuyển mạch:** Ở chặng này của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Điện môi hằng số cao và cổng kim loại** tiếp nhận điểm tựa từ **Hóa học chất cản quang** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khuyết tật — có loại hữu ích, có loại gây hại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Điện môi hằng số cao và cổng kim loại** nối từ **Hóa học chất cản quang** sang **Khuyết tật — có loại hữu ích, có loại gây hại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điện môi hằng số cao và cổng kim loại
 
@@ -376,7 +376,7 @@ Vật liệu điện môi hằng số cao như `HfO2` cho phép đạt điện d
 
 Nhưng thay vật liệu tạo ra hóa học mặt phân cách mới, trạng thái bẫy mới và yêu cầu lắng đọng mới. Khi kích thước thiết bị tiến tới cấp nguyên tử, nhiều vấn đề vốn tưởng là “điện tử” thực chất trở thành bài toán hóa học vật liệu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Khuyết tật — có loại hữu ích, có loại gây hại** tiếp nhận điểm tựa từ **Điện môi hằng số cao và cổng kim loại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giam giữ lượng tử ở kích thước nano** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Khuyết tật — có loại hữu ích, có loại gây hại** nối từ **Điện môi hằng số cao và cổng kim loại** sang **Giam giữ lượng tử ở kích thước nano**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khuyết tật — có loại hữu ích, có loại gây hại
 
@@ -386,7 +386,7 @@ Hydrogen có thể thụ động hóa một số liên kết treo.
 
 Mục tiêu kỹ thuật không phải “tinh thể hoàn hảo tuyệt đối”, mà là **đúng loại khuyết tật, ở đúng vị trí, với nồng độ phù hợp**.
 
-> **Chuyển mạch:** Trong **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Giam giữ lượng tử ở kích thước nano** tiếp nhận điểm tựa từ **Khuyết tật — có loại hữu ích, có loại gây hại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy trình chế tạo chip là một hệ hóa học tích hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Giam giữ lượng tử ở kích thước nano** nối từ **Khuyết tật — có loại hữu ích, có loại gây hại** sang **Quy trình chế tạo chip là một hệ hóa học tích hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giam giữ lượng tử ở kích thước nano
 
@@ -396,7 +396,7 @@ Trong **chấm lượng tử (quantum dot)**, hạt nhỏ hơn thường có kho
 
 Cùng thành phần hóa học nhưng kích thước khác nhau có thể cho màu khác. Đây là ví dụ rõ cho việc kích thước trở thành một biến thiết kế vật liệu, bên cạnh thành phần hóa học.
 
-> **Chuyển mạch:** Ở chặng này của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Giam giữ lượng tử ở kích thước nano** xác định đầu vào; **Quy trình chế tạo chip là một hệ hóa học tích hợp** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Ví dụ suy luận: vì sao điện áp hở mạch tốt nhưng pin mặt trời vẫn có hiệu suất thấp?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Giam giữ lượng tử ở kích thước nano** đặt đầu vào cho **Quy trình chế tạo chip là một hệ hóa học tích hợp**, rồi **Ví dụ suy luận: vì sao điện áp hở mạch tốt nhưng pin mặt trời vẫn có hiệu suất thấp?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Quy trình chế tạo chip là một hệ hóa học tích hợp
 
@@ -418,7 +418,7 @@ Mỗi bước thay đổi bề mặt, mặt phân cách, phân bố chất pha t
 
 Vì vậy chế tạo bán dẫn là hệ tích hợp của hóa bề mặt, hóa phân tích, plasma, polymer, điện hóa, động học, vận chuyển và khoa học vật liệu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, sau khi thấy quy trình trong **Quy trình chế tạo chip là một hệ hóa học tích hợp**, **Ví dụ suy luận: vì sao điện áp hở mạch tốt nhưng pin mặt trời vẫn có hiệu suất thấp?** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, sau khi thấy quy trình trong **Quy trình chế tạo chip là một hệ hóa học tích hợp**, **Ví dụ suy luận: vì sao điện áp hở mạch tốt nhưng pin mặt trời vẫn có hiệu suất thấp?** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **Những hiểu lầm thường gặp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Ví dụ suy luận: vì sao điện áp hở mạch tốt nhưng pin mặt trời vẫn có hiệu suất thấp?
 
@@ -426,7 +426,7 @@ Vì vậy chế tạo bán dẫn là hệ tích hợp của hóa bề mặt, hó
 
 Do đó một chỉ số điện áp không đủ để đánh giá toàn thiết bị. Đây cũng là lô-gic (logic / 논리) tương tự trong pin điện hóa: thermodynamics đặt giới hạn, còn kinetics và vận chuyển (transport / 전송) quyết định hiệu suất vận hành.
 
-> **Chuyển mạch:** Trong **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Ví dụ suy luận: vì sao điện áp hở mạch tốt nhưng pin mặt trời vẫn có hiệu suất thấp?** cho ta quy tắc; **Những hiểu lầm thường gặp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Ví dụ suy luận: vì sao điện áp hở mạch tốt nhưng pin mặt trời vẫn có hiệu suất thấp?** nêu quy tắc; **Những hiểu lầm thường gặp** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Những hiểu lầm thường gặp
 
@@ -454,7 +454,7 @@ Không. Nó có thể có liên kết chưa bão hòa, điện tích, dipole, kh
 
 Quang khắc chỉ là một phần. Lắng đọng, khắc, làm sạch, oxy hóa, pha tạp, kiểm soát mặt phân cách và nhiễm bẩn đều có vai trò nền tảng.
 
-> **Chuyển mạch:** Ở chặng này của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Chất bán dẫn — hóa học của vùng năng lượng, khuyết tật và pha tạp**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

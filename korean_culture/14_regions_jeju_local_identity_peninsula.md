@@ -24,7 +24,7 @@ vùng miền
 
 Không có một biến đơn lẻ nào tự nó “tạo ra tính cách vùng”.
 
-> **Chuyển mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **행정구역 và vùng văn hoá không hoàn toàn trùng nhau** tiếp nhận điểm tựa từ **“Văn hoá Hàn Quốc” luôn chứa nhiều Hàn Quốc bên trong** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **수도권: một mạng đô thị liên kết chứ không chỉ Seoul** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **행정구역 và vùng văn hoá không hoàn toàn trùng nhau** nối từ **“Văn hoá Hàn Quốc” luôn chứa nhiều Hàn Quốc bên trong** sang **수도권: một mạng đô thị liên kết chứ không chỉ Seoul**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 행정구역 và vùng văn hoá không hoàn toàn trùng nhau
 
@@ -40,7 +40,7 @@ ranh giới hành chính
 
 Ba lớp có phần chồng lấn nhưng không đồng nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, sau nội dung của **행정구역 và vùng văn hoá không hoàn toàn trùng nhau**, **수도권: một mạng đô thị liên kết chứ không chỉ Seoul** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **서울말, 표준어 và quá trình chuẩn hoá ngôn ngữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, sau nội dung của **행정구역 và vùng văn hoá không hoàn toàn trùng nhau**, **수도권: một mạng đô thị liên kết chứ không chỉ Seoul** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **서울말, 표준어 và quá trình chuẩn hoá ngôn ngữ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 수도권: một mạng đô thị liên kết chứ không chỉ Seoul
 
@@ -50,7 +50,7 @@ Một người sống ở Goyang hoặc Seongnam nhưng đi Seoul mỗi ngày c�
 
 Vì vậy cách chia “Seoul vs 지방” nhiều khi quá thô. Mật độ dân cư, khả năng tiếp cận tàu điện và mạng lưới việc làm thường có sức giải thích mạnh hơn tên tỉnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **서울말, 표준어 và quá trình chuẩn hoá ngôn ngữ** tiếp nhận điểm tựa từ **수도권: một mạng đô thị liên kết chứ không chỉ Seoul** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **방언 và 사투리: phương ngữ như lịch sử được lưu trong âm thanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **서울말, 표준어 và quá trình chuẩn hoá ngôn ngữ** nối từ **수도권: một mạng đô thị liên kết chứ không chỉ Seoul** sang **방언 và 사투리: phương ngữ như lịch sử được lưu trong âm thanh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 서울말, 표준어 và quá trình chuẩn hoá ngôn ngữ
 
@@ -65,7 +65,7 @@ Vì vậy cách chia “Seoul vs 지방” nhiều khi quá thô. Mật độ d�
 
 Hai khái niệm chồng lấn nhưng không phải một.
 
-> **Chuyển mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **방언 và 사투리: phương ngữ như lịch sử được lưu trong âm thanh** tiếp nhận điểm tựa từ **서울말, 표준어 và quá trình chuẩn hoá ngôn ngữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển đổi mã: một người có thể có nhiều giọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **방언 và 사투리: phương ngữ như lịch sử được lưu trong âm thanh** nối từ **서울말, 표준어 và quá trình chuẩn hoá ngôn ngữ** sang **Chuyển đổi mã: một người có thể có nhiều giọng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 방언 và 사투리: phương ngữ như lịch sử được lưu trong âm thanh
 
@@ -75,7 +75,7 @@ Có thể hình dung phương ngữ như một nhánh trong hệ thống quản 
 
 Truyền thông thường dùng giọng vùng để báo hiệu quê quán hoặc tính cách nhân vật. Đây là lối tắt kể chuyện nhưng có thể củng cố định kiến. Việc một giọng bị gắn với hình ảnh “mạnh”, “chậm” hay “hài” không có nghĩa mọi người nói giọng đó đều có tính cách tương ứng.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Chuyển đổi mã: một người có thể có nhiều giọng** tiếp nhận điểm tựa từ **방언 và 사투리: phương ngữ như lịch sử được lưu trong âm thanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **사투리와 친밀감: phương ngữ như tín hiệu thành viên nhóm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Chuyển đổi mã: một người có thể có nhiều giọng** nối từ **방언 và 사투리: phương ngữ như lịch sử được lưu trong âm thanh** sang **사투리와 친밀감: phương ngữ như tín hiệu thành viên nhóm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển đổi mã: một người có thể có nhiều giọng
 
@@ -85,7 +85,7 @@ Người nói phương ngữ không nhất thiết dùng `사투리` trong mọi
 
 Một lập trình viên từ Busan có thể nói gần `표준어` trong cuộc họp tại Seoul rồi chuyển sang giọng Gyeongsang khi nói với bạn. Cả hai đều chân thực; bản sắc không chỉ có một chế độ duy nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **사투리와 친밀감: phương ngữ như tín hiệu thành viên nhóm** tiếp nhận điểm tựa từ **Chuyển đổi mã: một người có thể có nhiều giọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **경상도와 전라도: bản sắc vùng và diễn ngôn vùng miền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **사투리와 친밀감: phương ngữ như tín hiệu thành viên nhóm** nối từ **Chuyển đổi mã: một người có thể có nhiều giọng** sang **경상도와 전라도: bản sắc vùng và diễn ngôn vùng miền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 사투리와 친밀감: phương ngữ như tín hiệu thành viên nhóm
 
@@ -93,7 +93,7 @@ Phương ngữ có thể tạo cảm giác gần gũi khi gặp người cùng v
 
 Trong lý thuyết mạng, phương ngữ chung giống một đặc trưng có lượng thông tin cao giúp suy đoán nền tảng nhanh. Tuy nhiên suy đoán vẫn có thể sai, nên không nên dùng nó để gán tính cách.
 
-> **Chuyển mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **경상도와 전라도: bản sắc vùng và diễn ngôn vùng miền** tiếp nhận điểm tựa từ **사투리와 친밀감: phương ngữ như tín hiệu thành viên nhóm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **영남: hành lang công nghiệp và đô thị đông nam** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **경상도와 전라도: bản sắc vùng và diễn ngôn vùng miền** nối từ **사투리와 친밀감: phương ngữ như tín hiệu thành viên nhóm** sang **영남: hành lang công nghiệp và đô thị đông nam**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 경상도와 전라도: bản sắc vùng và diễn ngôn vùng miền
 
@@ -103,7 +103,7 @@ Bản sắc vùng trở nên nổi bật khi phân bổ nguồn lực, đại di
 
 Khi cần đọc lịch sử chính trị hoặc các sự kiện gây tranh luận theo vùng, nên dùng [`../korean_history/README.md`](../korean_history/README.md) thay vì suy từ định kiến địa phương.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **영남: hành lang công nghiệp và đô thị đông nam** tiếp nhận điểm tựa từ **경상도와 전라도: bản sắc vùng và diễn ngôn vùng miền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **호남: nông nghiệp, danh tiếng ẩm thực và xây dựng thương hiệu địa phương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **영남: hành lang công nghiệp và đô thị đông nam** nối từ **경상도와 전라도: bản sắc vùng và diễn ngôn vùng miền** sang **호남: nông nghiệp, danh tiếng ẩm thực và xây dựng thương hiệu địa phương**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 영남: hành lang công nghiệp và đô thị đông nam
 
@@ -113,7 +113,7 @@ Cảng biển, đóng tàu, ô tô, hoá dầu, dệt và lịch sử sản xu�
 
 Điểm quan trọng là **kinh tế vùng tạo nhịp sống vùng**. Làm ca trong vành đai công nghiệp, logistics cảng hoặc du lịch tạo cấu trúc thời gian khác khu văn phòng tại Seoul.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **호남: nông nghiệp, danh tiếng ẩm thực và xây dựng thương hiệu địa phương** tiếp nhận điểm tựa từ **영남: hành lang công nghiệp và đô thị đông nam** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **충청도: vị trí trung tâm và định kiến về cách nói** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **호남: nông nghiệp, danh tiếng ẩm thực và xây dựng thương hiệu địa phương** nối từ **영남: hành lang công nghiệp và đô thị đông nam** sang **충청도: vị trí trung tâm và định kiến về cách nói**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 호남: nông nghiệp, danh tiếng ẩm thực và xây dựng thương hiệu địa phương
 
@@ -123,7 +123,7 @@ Nhưng danh tiếng không phải quy luật ẩm thực cố định. Di chuy�
 
 `전주비빔밥`, `남도 음식` hoặc lễ hội địa phương là ví dụ của **xây dựng thương hiệu địa điểm (place branding)**: món ăn trở thành giao diện để thành phố hoặc vùng kể câu chuyện về mình.
 
-> **Chuyển mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **충청도: vị trí trung tâm và định kiến về cách nói** tiếp nhận điểm tựa từ **호남: nông nghiệp, danh tiếng ẩm thực và xây dựng thương hiệu địa phương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **강원: núi, mùa đông và hướng ra bờ biển phía đông** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **충청도: vị trí trung tâm và định kiến về cách nói** nối từ **호남: nông nghiệp, danh tiếng ẩm thực và xây dựng thương hiệu địa phương** sang **강원: núi, mùa đông và hướng ra bờ biển phía đông**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 충청도: vị trí trung tâm và định kiến về cách nói
 
@@ -133,7 +133,7 @@ Về địa lý, vị trí trung tâm và kết nối giao thông khiến vùng 
 
 Cách tiếp cận từ nguyên lý đầu tiên nên hỏi về giao thông, cấu trúc việc làm, mật độ dân cư và di cư thay vì suy rằng “người Chungcheong có tính cách X”.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **강원: núi, mùa đông và hướng ra bờ biển phía đông** tiếp nhận điểm tựa từ **충청도: vị trí trung tâm và định kiến về cách nói** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **부산: thành phố cảng và hướng mở ra bên ngoài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **강원: núi, mùa đông và hướng ra bờ biển phía đông** nối từ **충청도: vị trí trung tâm và định kiến về cách nói** sang **부산: thành phố cảng và hướng mở ra bên ngoài**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 강원: núi, mùa đông và hướng ra bờ biển phía đông
 
@@ -143,7 +143,7 @@ Gangwon có địa hình núi và môi trường bờ biển phía đông rõ n�
 
 Du lịch còn tạo tính mùa vụ: một khu có thể rất đông vào mùa đông hoặc mùa hè nhưng yên hơn ngoài mùa. Lao động và nhu cầu nhà ở địa phương vì vậy cũng biến động theo mùa.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **부산: thành phố cảng và hướng mở ra bên ngoài** tiếp nhận điểm tựa từ **강원: núi, mùa đông và hướng ra bờ biển phía đông** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **부산의 산복도로: địa hình đi vào hình thái đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **부산: thành phố cảng và hướng mở ra bên ngoài** nối từ **강원: núi, mùa đông và hướng ra bờ biển phía đông** sang **부산의 산복도로: địa hình đi vào hình thái đô thị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 부산: thành phố cảng và hướng mở ra bên ngoài
 
@@ -153,7 +153,7 @@ Giọng Busan thuộc nhóm phương ngữ Gyeongsang, nhưng bản sắc thành
 
 Lô-gic (logic / 논리) của thành phố cảng tạo mô hình rộng hơn: logistics, dòng người, chợ hải sản, tiếp xúc quốc tế và khu dân cư trên sườn đồi cùng định hình hình ảnh đô thị.
 
-> **Chuyển mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **부산의 산복도로: địa hình đi vào hình thái đô thị** tiếp nhận điểm tựa từ **부산: thành phố cảng và hướng mở ra bên ngoài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **대구, 울산, 포항: công nghiệp và bản sắc đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **부산의 산복도로: địa hình đi vào hình thái đô thị** nối từ **부산: thành phố cảng và hướng mở ra bên ngoài** sang **대구, 울산, 포항: công nghiệp và bản sắc đô thị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 부산의 산복도로: địa hình đi vào hình thái đô thị
 
@@ -161,7 +161,7 @@ Một số khu Busan phát triển trên sườn đồi, tạo `산복도로` v�
 
 Nếu thành phố bằng phẳng, đường phố có thể tối ưu theo cách khác; nếu dốc lớn, tuyến đi bộ, cầu thang, tầm nhìn và loại nhà ở đều thay đổi. Nhiều khi “văn hoá địa phương” bắt đầu từ chính độ dốc địa hình.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **대구, 울산, 포항: công nghiệp và bản sắc đô thị** tiếp nhận điểm tựa từ **부산의 산복도로: địa hình đi vào hình thái đô thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **전주, 광주 và hạ tầng văn hoá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **대구, 울산, 포항: công nghiệp và bản sắc đô thị** nối từ **부산의 산복도로: địa hình đi vào hình thái đô thị** sang **전주, 광주 và hạ tầng văn hoá**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 대구, 울산, 포항: công nghiệp và bản sắc đô thị
 
@@ -171,7 +171,7 @@ Không nên đồng nhất một thành phố với một ngành duy nhất, nh�
 
 Một thành phố nhà máy và một thành phố đại học–du lịch có lịch xã hội rất khác nhau ngay cả khi cùng vùng ngôn ngữ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **전주, 광주 và hạ tầng văn hoá** tiếp nhận điểm tựa từ **대구, 울산, 포항: công nghiệp và bản sắc đô thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **인천: thành phố cửa ngõ và di cư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **전주, 광주 và hạ tầng văn hoá** nối từ **대구, 울산, 포항: công nghiệp và bản sắc đô thị** sang **인천: thành phố cửa ngõ và di cư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 전주, 광주 và hạ tầng văn hoá
 
@@ -179,7 +179,7 @@ Jeonju gắn với làng hanok, thương hiệu ẩm thực và du lịch văn h
 
 Bản sắc một thành phố được tạo bởi bảo tàng, biennale, lễ hội, khu ẩm thực, đại học và truyền thông địa phương — không chỉ bởi “truyền thống từ xa xưa”. Thành phố có thể **chủ động kiến tạo và tuyển chọn bản sắc (curate identity)**.
 
-> **Chuyển mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **인천: thành phố cửa ngõ và di cư** tiếp nhận điểm tựa từ **전주, 광주 và hạ tầng văn hoá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **제주: sinh thái đảo tạo một hệ văn hoá rõ nét** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **인천: thành phố cửa ngõ và di cư** nối từ **전주, 광주 và hạ tầng văn hoá** sang **제주: sinh thái đảo tạo một hệ văn hoá rõ nét**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 인천: thành phố cửa ngõ và di cư
 
@@ -187,7 +187,7 @@ Incheon vừa thuộc vùng thủ đô vừa có chức năng cảng và sân ba
 
 Khi sân bay hoặc cảng là một nút lớn, kinh tế địa phương có cấu trúc dịch vụ–logistics khác thành phố nội địa. Đây là ví dụ vị trí trong mạng lưới quan trọng hơn kích thước địa lý đơn thuần.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **제주: sinh thái đảo tạo một hệ văn hoá rõ nét** tiếp nhận điểm tựa từ **인천: thành phố cửa ngõ và di cư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **삼다도·삼무도: khẩu hiệu dễ nhớ nhưng không phải mô hình khoa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **제주: sinh thái đảo tạo một hệ văn hoá rõ nét** nối từ **인천: thành phố cửa ngõ và di cư** sang **삼다도·삼무도: khẩu hiệu dễ nhớ nhưng không phải mô hình khoa học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 제주: sinh thái đảo tạo một hệ văn hoá rõ nét
 
@@ -195,7 +195,7 @@ Khi sân bay hoặc cảng là một nút lớn, kinh tế địa phương có c
 
 Tường đá `돌담`, đá núi lửa, gió mạnh và hạn chế nước mặt là ví dụ môi trường đi vào kiến trúc. Nhà ở và nông nghiệp phải thích nghi với đá bazan xốp và bão.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **삼다도·삼무도: khẩu hiệu dễ nhớ nhưng không phải mô hình khoa học** tiếp nhận điểm tựa từ **제주: sinh thái đảo tạo một hệ văn hoá rõ nét** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **제주어: mất ngôn ngữ là một vấn đề mạng lưới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **삼다도·삼무도: khẩu hiệu dễ nhớ nhưng không phải mô hình khoa học** nối từ **제주: sinh thái đảo tạo một hệ văn hoá rõ nét** sang **제주어: mất ngôn ngữ là một vấn đề mạng lưới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 삼다도·삼무도: khẩu hiệu dễ nhớ nhưng không phải mô hình khoa học
 
@@ -203,7 +203,7 @@ Jeju thường được mô tả bằng các khẩu hiệu như `삼다도` — 
 
 Khẩu hiệu là dạng **nén thông tin (compression)**. Nó chọn vài đặc điểm để tạo hình ảnh vùng và có thể phản ánh lịch sử lao động hoặc sinh thái, nhưng không nên dùng làm mô hình đầy đủ của xã hội Jeju.
 
-> **Chuyển mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **제주어: mất ngôn ngữ là một vấn đề mạng lưới** tiếp nhận điểm tựa từ **삼다도·삼무도: khẩu hiệu dễ nhớ nhưng không phải mô hình khoa học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **해녀: lao động, giới và sinh thái biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **제주어: mất ngôn ngữ là một vấn đề mạng lưới** nối từ **삼다도·삼무도: khẩu hiệu dễ nhớ nhưng không phải mô hình khoa học** sang **해녀: lao động, giới và sinh thái biển**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 제주어: mất ngôn ngữ là một vấn đề mạng lưới
 
@@ -218,7 +218,7 @@ cha mẹ dùng ngôn ngữ
 
 Nếu ngôn ngữ chỉ còn trong bảo tàng hoặc lớp học, nó có thể được ghi chép nhưng khả năng truyền tự nhiên trong đời sống suy yếu. Đây là khác biệt giữa **bảo tồn (preservation)** và **sử dụng sống (living use)**.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **해녀: lao động, giới và sinh thái biển** tiếp nhận điểm tựa từ **제주어: mất ngôn ngữ là một vấn đề mạng lưới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **불턱 và nút chia sẻ tri thức cộng đồng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **해녀: lao động, giới và sinh thái biển** nối từ **제주어: mất ngôn ngữ là một vấn đề mạng lưới** sang **불턱 và nút chia sẻ tri thức cộng đồng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 해녀: lao động, giới và sinh thái biển
 
@@ -228,7 +228,7 @@ Lặn tự do buộc cơ thể quản lý dự trữ oxy; lặn lặp lại cầ
 
 Hình ảnh phụ nữ đảm nhận lao động biển nặng cũng làm lịch sử giới của Jeju khác một số định kiến phụ hệ ở đất liền. Tuy nhiên không nên lý tưởng hoá thành “Jeju hoàn toàn mẫu hệ”; quyền lực trong gia đình vẫn phức tạp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **불턱 và nút chia sẻ tri thức cộng đồng** tiếp nhận điểm tựa từ **해녀: lao động, giới và sinh thái biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **제주4·3 và ký ức địa phương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **불턱 và nút chia sẻ tri thức cộng đồng** nối từ **해녀: lao động, giới và sinh thái biển** sang **제주4·3 và ký ức địa phương**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 불턱 và nút chia sẻ tri thức cộng đồng
 
@@ -236,7 +236,7 @@ Hình ảnh phụ nữ đảm nhận lao động biển nặng cũng làm lịch
 
 Thợ lặn có kinh nghiệm truyền kiến thức về thủy triều, thời tiết, điểm lặn và an toàn thông qua cùng làm việc. Đây là hệ tri thức ngầm (tacit knowledge) gần với mô hình học nghề.
 
-> **Chuyển mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **제주4·3 và ký ức địa phương** tiếp nhận điểm tựa từ **불턱 và nút chia sẻ tri thức cộng đồng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **서울–지방: trung tâm và ngoại vi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **제주4·3 và ký ức địa phương** nối từ **불턱 và nút chia sẻ tri thức cộng đồng** sang **서울–지방: trung tâm và ngoại vi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 제주4·3 và ký ức địa phương
 
@@ -244,7 +244,7 @@ Thợ lặn có kinh nghiệm truyền kiến thức về thủy triều, thời
 
 Để xem chi tiết niên đại, chủ thể, ước tính thương vong và các cách diễn giải sử học, nên đọc nguồn lịch sử chuyên sâu thay vì dùng chương văn hoá này như tài liệu duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **서울–지방: trung tâm và ngoại vi** tiếp nhận điểm tựa từ **제주4·3 và ký ức địa phương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **지방소멸: “biến mất địa phương” là cách nói tắt cho suy giảm mạng lưới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **서울–지방: trung tâm và ngoại vi** nối từ **제주4·3 và ký ức địa phương** sang **지방소멸: “biến mất địa phương” là cách nói tắt cho suy giảm mạng lưới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 서울–지방: trung tâm và ngoại vi
 
@@ -260,7 +260,7 @@ việc làm tập trung
 
 Đây là một vòng phản hồi không gian. Đọc thêm về dân số tại [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **지방소멸: “biến mất địa phương” là cách nói tắt cho suy giảm mạng lưới** tiếp nhận điểm tựa từ **서울–지방: trung tâm và ngoại vi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **고향: quê nhà như bản sắc xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **지방소멸: “biến mất địa phương” là cách nói tắt cho suy giảm mạng lưới** nối từ **서울–지방: trung tâm và ngoại vi** sang **고향: quê nhà như bản sắc xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 지방소멸: “biến mất địa phương” là cách nói tắt cho suy giảm mạng lưới
 
@@ -276,7 +276,7 @@ việc làm tập trung
 
 Đây là sự suy giảm của mạng lưới, không chỉ là một con số dân số.
 
-> **Chuyển mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **고향: quê nhà như bản sắc xã hội** tiếp nhận điểm tựa từ **지방소멸: “biến mất địa phương” là cách nói tắt cho suy giảm mạng lưới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **지역 음식: sinh thái được nấu thành ký ức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **고향: quê nhà như bản sắc xã hội** nối từ **지방소멸: “biến mất địa phương” là cách nói tắt cho suy giảm mạng lưới** sang **지역 음식: sinh thái được nấu thành ký ức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 고향: quê nhà như bản sắc xã hội
 
@@ -286,7 +286,7 @@ Bản sắc quê nhà có thể nổi lên qua món ăn, phương ngữ, đội 
 
 Tuy nhiên thế hệ trẻ sinh tại 수도권 có thể có gắn bó yếu hơn với tỉnh quê của cha mẹ. Bản sắc không tự động truyền nguyên vẹn.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **지역 음식: sinh thái được nấu thành ký ức** tiếp nhận điểm tựa từ **고향: quê nhà như bản sắc xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **지역축제: thương hiệu địa điểm và kinh tế theo mùa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **지역 음식: sinh thái được nấu thành ký ức** nối từ **고향: quê nhà như bản sắc xã hội** sang **지역축제: thương hiệu địa điểm và kinh tế theo mùa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 지역 음식: sinh thái được nấu thành ký ức
 
@@ -302,7 +302,7 @@ khí hậu / đất / bờ biển
 
 Khi tủ lạnh và logistics toàn quốc làm nguồn cung ít mang tính địa phương hơn, nhà hàng và du lịch dùng câu chuyện, xuất xứ và kỹ thuật để duy trì sự khác biệt vùng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **지역축제: thương hiệu địa điểm và kinh tế theo mùa** tiếp nhận điểm tựa từ **지역 음식: sinh thái được nấu thành ký ức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Du lịch và “tính chân thực”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **지역축제: thương hiệu địa điểm và kinh tế theo mùa** nối từ **지역 음식: sinh thái được nấu thành ký ức** sang **Du lịch và “tính chân thực”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 지역축제: thương hiệu địa điểm và kinh tế theo mùa
 
@@ -312,7 +312,7 @@ Vì vậy lễ hội vừa là sự kiện di sản–cộng đồng vừa là c
 
 Một lễ hội vùng bền vững cần tri thức địa phương thật, cộng đồng tham gia và lý do gắn rõ với địa điểm.
 
-> **Chuyển mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Du lịch và “tính chân thực”** tiếp nhận điểm tựa từ **지역축제: thương hiệu địa điểm và kinh tế theo mùa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **남북한: chung nguồn gốc nhưng hiện đại hoá khác hướng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Du lịch và “tính chân thực”** nối từ **지역축제: thương hiệu địa điểm và kinh tế theo mùa** sang **남북한: chung nguồn gốc nhưng hiện đại hoá khác hướng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Du lịch và “tính chân thực”
 
@@ -322,7 +322,7 @@ Cần hỏi cư dân có còn sống và làm việc ở đó không, tri thức
 
 Tính chân thực (authenticity) là một vấn đề quản trị, không chỉ là vấn đề hình ảnh.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Du lịch và “tính chân thực”** nêu điều cần giải thích; **남북한: chung nguồn gốc nhưng hiện đại hoá khác hướng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Cộng đồng người Hàn ở nước ngoài và bản sắc ngoài bán đảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Du lịch và “tính chân thực”** đặt vấn đề; **남북한: chung nguồn gốc nhưng hiện đại hoá khác hướng** đối chiếu bằng chứng, rồi **Cộng đồng người Hàn ở nước ngoài và bản sắc ngoài bán đảo** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 남북한: chung nguồn gốc nhưng hiện đại hoá khác hướng
 
@@ -330,7 +330,7 @@ Hàn Quốc và Triều Tiên chia sẻ nhiều nền tảng văn hoá, di sản
 
 Không nên dùng chuẩn mực Hàn Quốc đương đại để suy trực tiếp đời sống Triều Tiên, cũng không nên nói hai xã hội “hoàn toàn cùng văn hoá”. Nguồn gốc chung và quá trình hiện đại hoá phân kỳ cùng tồn tại.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **남북한: chung nguồn gốc nhưng hiện đại hoá khác hướng** nêu điều cần giải thích; **Cộng đồng người Hàn ở nước ngoài và bản sắc ngoài bán đảo** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **교포, 동포 và các từ định danh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **남북한: chung nguồn gốc nhưng hiện đại hoá khác hướng** đặt vấn đề; **Cộng đồng người Hàn ở nước ngoài và bản sắc ngoài bán đảo** đối chiếu bằng chứng, rồi **교포, 동포 và các từ định danh** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Cộng đồng người Hàn ở nước ngoài và bản sắc ngoài bán đảo
 
@@ -338,7 +338,7 @@ Bản sắc Hàn Quốc còn tồn tại trong nhiều cộng đồng hải ngo�
 
 Văn hoá vì vậy không ánh xạ một-một với lãnh thổ. Một người có thể mang bản sắc văn hoá Hàn nhưng không dùng tiếng Hàn hằng ngày; ngược lại một người nước ngoài sống lâu tại Hàn có thể rất hiểu quy tắc công sở nhưng không tự nhận mình là người Hàn.
 
-> **Chuyển mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **교포, 동포 và các từ định danh** tiếp nhận điểm tựa từ **Cộng đồng người Hàn ở nước ngoài và bản sắc ngoài bán đảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giao thông nén khoảng cách nhưng không xoá khoảng cách xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **교포, 동포 và các từ định danh** nối từ **Cộng đồng người Hàn ở nước ngoài và bản sắc ngoài bán đảo** sang **Giao thông nén khoảng cách nhưng không xoá khoảng cách xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 교포, 동포 và các từ định danh
 
@@ -346,7 +346,7 @@ Văn hoá vì vậy không ánh xạ một-một với lãnh thổ. Một ngư�
 
 Nhãn định danh vừa mô tả quan hệ với quê hương vừa có lớp lịch sử và chính trị. Khi viết hoặc dịch, cần xem người nói dùng từ nào và trong bối cảnh pháp lý, truyền thông hay đời thường.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Giao thông nén khoảng cách nhưng không xoá khoảng cách xã hội** tiếp nhận điểm tựa từ **교포, 동포 và các từ định danh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đại học, bệnh viện và cơ quan công như “thiết chế neo” của địa phương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Giao thông nén khoảng cách nhưng không xoá khoảng cách xã hội** nối từ **교포, 동포 và các từ định danh** sang **Đại học, bệnh viện và cơ quan công như “thiết chế neo” của địa phương**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giao thông nén khoảng cách nhưng không xoá khoảng cách xã hội
 
@@ -366,7 +366,7 @@ Hai thành phố có thể gần nhau về kilomet nhưng xa về cơ hội nế
 
 Đây là **nén không gian–thời gian (time-space compression)**, nhưng lợi ích phân bố không đều. Khu gần ga lớn có thể nhận thêm khách, nhà ở và đầu tư; khu nằm ngoài mạng chính có thể bị bỏ lại tương đối.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Đại học, bệnh viện và cơ quan công như “thiết chế neo” của địa phương** tiếp nhận điểm tựa từ **Giao thông nén khoảng cách nhưng không xoá khoảng cách xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thị trường lao động địa phương: nghề nghiệp định hình ai ở lại và ai rời đi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Đại học, bệnh viện và cơ quan công như “thiết chế neo” của địa phương** nối từ **Giao thông nén khoảng cách nhưng không xoá khoảng cách xã hội** sang **Thị trường lao động địa phương: nghề nghiệp định hình ai ở lại và ai rời đi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đại học, bệnh viện và cơ quan công như “thiết chế neo” của địa phương
 
@@ -376,7 +376,7 @@ Khi một trường đại học địa phương thu hút sinh viên, nó còn d
 
 Tương tự, bệnh viện khu vực không chỉ là nơi điều trị. Nó quyết định người cao tuổi có thể sống tiếp tại quê hay phải chuyển gần thành phố lớn để tiếp cận chăm sóc. Vì vậy **hạ tầng xã hội** là một phần của bản sắc và khả năng sống còn của vùng.
 
-> **Chuyển mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Thị trường lao động địa phương: nghề nghiệp định hình ai ở lại và ai rời đi** tiếp nhận điểm tựa từ **Đại học, bệnh viện và cơ quan công như “thiết chế neo” của địa phương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **대학–취업 연결: đại học địa phương không tự động giữ người trẻ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Thị trường lao động địa phương: nghề nghiệp định hình ai ở lại và ai rời đi** nối từ **Đại học, bệnh viện và cơ quan công như “thiết chế neo” của địa phương** sang **대학–취업 연결: đại học địa phương không tự động giữ người trẻ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thị trường lao động địa phương: nghề nghiệp định hình ai ở lại và ai rời đi
 
@@ -400,7 +400,7 @@ lợi ích rời đi
 
 Không có một kết quả đúng cho mọi người. Vấn đề hệ thống xuất hiện khi quá nhiều ngành nghề có giá trị cao chỉ tồn tại tại một vài nút.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **대학–취업 연결: đại học địa phương không tự động giữ người trẻ** tiếp nhận điểm tựa từ **Thị trường lao động địa phương: nghề nghiệp định hình ai ở lại và ai rời đi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **귀향, 귀촌, 귀농: trở về địa phương là một loại di cư khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **대학–취업 연결: đại học địa phương không tự động giữ người trẻ** nối từ **Thị trường lao động địa phương: nghề nghiệp định hình ai ở lại và ai rời đi** sang **귀향, 귀촌, 귀농: trở về địa phương là một loại di cư khác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 대학–취업 연결: đại học địa phương không tự động giữ người trẻ
 
@@ -418,7 +418,7 @@ Nếu chuỗi đứt ở bước việc làm, trường có thể trở thành �
 
 Đây là lý do chính sách vùng cần nhìn **hệ thống ghép nối**, không chỉ số lượng cơ sở.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **귀향, 귀촌, 귀농: trở về địa phương là một loại di cư khác** tiếp nhận điểm tựa từ **대학–취업 연결: đại học địa phương không tự động giữ người trẻ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bản sắc đa địa phương: một người có thể thuộc về nhiều nơi cùng lúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **귀향, 귀촌, 귀농: trở về địa phương là một loại di cư khác** nối từ **대학–취업 연결: đại học địa phương không tự động giữ người trẻ** sang **Bản sắc đa địa phương: một người có thể thuộc về nhiều nơi cùng lúc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 귀향, 귀촌, 귀농: trở về địa phương là một loại di cư khác
 
@@ -428,7 +428,7 @@ Nhưng “về quê” không đơn giản là đảo ngược di cư cũ. Ngư�
 
 Một người sinh ở địa phương nhưng sống Seoul 20 năm có thể vừa là “người quê” vừa là “người mới” khi trở lại. Đây là ví dụ bản sắc địa phương có **độ phụ thuộc thời gian cư trú**, không chỉ nơi sinh.
 
-> **Chuyển mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Bản sắc đa địa phương: một người có thể thuộc về nhiều nơi cùng lúc** tiếp nhận điểm tựa từ **귀향, 귀촌, 귀농: trở về địa phương là một loại di cư khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **생활인구 và dân số “thật sự sử dụng” một địa phương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Bản sắc đa địa phương: một người có thể thuộc về nhiều nơi cùng lúc** nối từ **귀향, 귀촌, 귀농: trở về địa phương là một loại di cư khác** sang **생활인구 và dân số “thật sự sử dụng” một địa phương**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bản sắc đa địa phương: một người có thể thuộc về nhiều nơi cùng lúc
 
@@ -445,7 +445,7 @@ Một người sinh ở địa phương nhưng sống Seoul 20 năm có thể v�
 
 Nhìn theo mạng, cá nhân không chỉ nằm trong một nút; họ giữ nhiều cạnh nối nhiều địa phương.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **생활인구 và dân số “thật sự sử dụng” một địa phương** tiếp nhận điểm tựa từ **Bản sắc đa địa phương: một người có thể thuộc về nhiều nơi cùng lúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng ngưỡng: dịch vụ không suy giảm tuyến tính với dân số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **생활인구 và dân số “thật sự sử dụng” một địa phương** nối từ **Bản sắc đa địa phương: một người có thể thuộc về nhiều nơi cùng lúc** sang **Hiệu ứng ngưỡng: dịch vụ không suy giảm tuyến tính với dân số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 생활인구 và dân số “thật sự sử dụng” một địa phương
 
@@ -462,7 +462,7 @@ dân số đăng ký
 
 Đây là một ví dụ tốt về việc lựa chọn mẫu số làm thay đổi cách ta hiểu vùng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Hiệu ứng ngưỡng: dịch vụ không suy giảm tuyến tính với dân số** tiếp nhận điểm tựa từ **생활인구 và dân số “thật sự sử dụng” một địa phương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Truyền thông số có thể làm một nơi “gần” hơn về chú ý nhưng không gần hơn về hạ tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Hiệu ứng ngưỡng: dịch vụ không suy giảm tuyến tính với dân số** nối từ **생활인구 và dân số “thật sự sử dụng” một địa phương** sang **Truyền thông số có thể làm một nơi “gần” hơn về chú ý nhưng không gần hơn về hạ tầng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng ngưỡng: dịch vụ không suy giảm tuyến tính với dân số
 
@@ -480,7 +480,7 @@ dân số giảm nhẹ
 
 Đây là lý do `지방소멸` nên được hiểu như bài toán mạng và ngưỡng, không chỉ đường biểu đồ dân số.
 
-> **Chuyển mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Truyền thông số có thể làm một nơi “gần” hơn về chú ý nhưng không gần hơn về hạ tầng** tiếp nhận điểm tựa từ **Hiệu ứng ngưỡng: dịch vụ không suy giảm tuyến tính với dân số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giá nhà và giáo dục có thể tái cấu trúc vùng đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Truyền thông số có thể làm một nơi “gần” hơn về chú ý nhưng không gần hơn về hạ tầng** nối từ **Hiệu ứng ngưỡng: dịch vụ không suy giảm tuyến tính với dân số** sang **Giá nhà và giáo dục có thể tái cấu trúc vùng đô thị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Truyền thông số có thể làm một nơi “gần” hơn về chú ý nhưng không gần hơn về hạ tầng
 
@@ -497,7 +497,7 @@ nội dung lan truyền
 
 Do đó thương hiệu địa phương không chỉ là bài toán tiếp thị; nó cần quản trị năng lực tiếp nhận.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Giá nhà và giáo dục có thể tái cấu trúc vùng đô thị** tiếp nhận điểm tựa từ **Truyền thông số có thể làm một nơi “gần” hơn về chú ý nhưng không gần hơn về hạ tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khả năng phục hồi vùng: chuyên môn hoá mạnh vừa là lợi thế vừa là rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Giá nhà và giáo dục có thể tái cấu trúc vùng đô thị** nối từ **Truyền thông số có thể làm một nơi “gần” hơn về chú ý nhưng không gần hơn về hạ tầng** sang **Khả năng phục hồi vùng: chuyên môn hoá mạnh vừa là lợi thế vừa là rủi ro**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giá nhà và giáo dục có thể tái cấu trúc vùng đô thị
 
@@ -515,7 +515,7 @@ hạ tầng / trường tốt
 
 Đọc cùng [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md) để thấy địa lý và bất bình đẳng tài sản nối nhau ra sao.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Khả năng phục hồi vùng: chuyên môn hoá mạnh vừa là lợi thế vừa là rủi ro** tiếp nhận điểm tựa từ **Giá nhà và giáo dục có thể tái cấu trúc vùng đô thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: vùng là một đặc trưng, không phải nhãn định mệnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Khả năng phục hồi vùng: chuyên môn hoá mạnh vừa là lợi thế vừa là rủi ro** nối từ **Giá nhà và giáo dục có thể tái cấu trúc vùng đô thị** sang **Liên hệ kiến thức: vùng là một đặc trưng, không phải nhãn định mệnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khả năng phục hồi vùng: chuyên môn hoá mạnh vừa là lợi thế vừa là rủi ro
 
@@ -534,7 +534,7 @@ nhưng nếu nhu cầu ngành giảm
 
 Vì vậy khả năng phục hồi không có nghĩa mỗi nơi phải có mọi ngành. Nó nghĩa vùng cần đủ đa dạng về doanh nghiệp, kỹ năng và kết nối để hấp thụ cú sốc.
 
-> **Chuyển mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Liên hệ kiến thức: vùng là một đặc trưng, không phải nhãn định mệnh** tiếp nhận điểm tựa từ **Khả năng phục hồi vùng: chuyên môn hoá mạnh vừa là lợi thế vừa là rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: trung tâm–ngoại vi như cấu trúc mạng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Liên hệ kiến thức: vùng là một đặc trưng, không phải nhãn định mệnh** nối từ **Khả năng phục hồi vùng: chuyên môn hoá mạnh vừa là lợi thế vừa là rủi ro** sang **Liên hệ kiến thức: trung tâm–ngoại vi như cấu trúc mạng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ kiến thức: vùng là một đặc trưng, không phải nhãn định mệnh
 
@@ -546,7 +546,7 @@ trung bình nhóm ≠ dự đoán cá nhân
 
 Đây là một cách dùng tư duy thống kê để chống định kiến.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Liên hệ kiến thức: trung tâm–ngoại vi như cấu trúc mạng** tiếp nhận điểm tựa từ **Liên hệ kiến thức: vùng là một đặc trưng, không phải nhãn định mệnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Liên hệ kiến thức: trung tâm–ngoại vi như cấu trúc mạng** nối từ **Liên hệ kiến thức: vùng là một đặc trưng, không phải nhãn định mệnh** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ kiến thức: trung tâm–ngoại vi như cấu trúc mạng
 
@@ -556,13 +556,13 @@ Trong mạng lưới, nút đã có nhiều liên kết thường dễ hút thê
 
 Muốn giảm tập trung không chỉ cần xây một toà nhà ở vùng khác; cần tạo mạng đủ dày gồm việc làm + giáo dục + nhà ở + giao thông + văn hoá.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Mô hình tư duy** gom các mảnh từ **Liên hệ kiến thức: trung tâm–ngoại vi như cấu trúc mạng** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Mô hình tư duy** tổng hợp từ **Liên hệ kiến thức: trung tâm–ngoại vi như cấu trúc mạng** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
 > “Hàn Quốc” là một mạng chung của ngôn ngữ, thiết chế và ký ức quốc gia, nhưng mỗi nút địa phương có lịch sử, sinh thái và cấu trúc kinh tế riêng. Hãy xem Seoul là một nút cực mạnh chứ không phải mẫu duy nhất; xem phương ngữ và ẩm thực như sản phẩm của lịch sử vùng chứ không phải công cụ đo tính cách. Muốn hiểu sức sống của một địa phương, cần nhìn đồng thời **việc làm, giáo dục, y tế, giao thông, nhà ở, dân số và khả năng duy trì dịch vụ**.
 
-> **Chuyển mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc tiếp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -582,13 +582,13 @@ Muốn giảm tập trung không chỉ cần xây một toà nhà ở vùng khá
 
 “Du lịch viral luôn tốt cho địa phương” bỏ qua năng lực hạ tầng, chi phí nhà ở, rác, giao thông và tính mùa vụ.
 
-> **Chuyển mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Đọc tiếp** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn tham khảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Đọc tiếp** nối từ **Những hiểu lầm phổ biến** sang **Nguồn tham khảo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đọc tiếp
 
 Đọc cùng [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md), [`15_contemporary_change_demography_migration.md`](15_contemporary_change_demography_migration.md), [`21_historical_layers_ancient_to_modern.md`](21_historical_layers_ancient_to_modern.md), [`24_economy_chaebol_housing_status_mobility.md`](24_economy_chaebol_housing_status_mobility.md), [`30_school_university_youth_campus_culture.md`](30_school_university_youth_campus_culture.md) và [`32_seasons_climate_environment_daily_rhythm.md`](32_seasons_climate_environment_daily_rhythm.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Đọc tiếp** nêu điều cần giải thích; **Nguồn tham khảo** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vùng miền, Jeju, bản sắc địa phương và không gian bán đảo**, **Đọc tiếp** đặt vấn đề; **Nguồn tham khảo** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn tham khảo
 

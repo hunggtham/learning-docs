@@ -23,7 +23,7 @@ environment changes again
 
 Đây là vòng phản hồi (feedback loop / 피드백 루프), không phải environmental determinism.
 
-> **Chuyển mạch:** Trong **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Monsoon: abundance và bất định (uncertainty / 불확실성) cùng lúc** tiếp nhận điểm tựa từ **Nature không phải background cố định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Red River: fertile sediment và flood rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Monsoon: abundance và bất định (uncertainty / 불확실성) cùng lúc** nối từ **Nature không phải background cố định** sang **Red River: fertile sediment và flood rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Monsoon: abundance và bất định (uncertainty / 불확실성) cùng lúc
 
@@ -33,7 +33,7 @@ Agrarian society therefore manages **variance**, not just average rainfall.
 
 Calendar, irrigation, crop choice, lưu trữ (storage / 저장소) and community labor are risk-management technologies.
 
-> **Chuyển mạch:** Ở chặng này của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Red River: fertile sediment và flood rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **Monsoon: abundance và bất định (uncertainty / 불확실성) cùng lúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Delta is historical, not timeless land** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Red River: fertile sediment và flood rủi ro (risk / 위험)** nối từ **Monsoon: abundance và bất định (uncertainty / 불확실성) cùng lúc** sang **Delta is historical, not timeless land**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Red River: fertile sediment và flood rủi ro (risk / 위험)
 
@@ -45,7 +45,7 @@ Once settlement becomes protected by dike, abandoning maintenance becomes costly
 
 This is hạ tầng (infrastructure / 인프라)–môi trường (environment / 환경) coevolution.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Delta is historical, not timeless land** tiếp nhận điểm tựa từ **Red River: fertile sediment và flood rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Disease ecology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Delta is historical, not timeless land** nối từ **Red River: fertile sediment và flood rủi ro (risk / 위험)** sang **Disease ecology**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Delta is historical, not timeless land
 
@@ -53,7 +53,7 @@ River delta shifts channel, deposits sediment and changes coastline over long th
 
 This matters when reading ancient/medieval geography. Do not dự án (project / 프로젝트) today's coastline directly backward.
 
-> **Chuyển mạch:** Trong **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Disease ecology** tiếp nhận điểm tựa từ **Delta is historical, not timeless land** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Famine: harvest thất bại (failure / 실패) alone rarely explains everything** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Disease ecology** nối từ **Delta is historical, not timeless land** sang **Famine: harvest thất bại (failure / 실패) alone rarely explains everything**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Disease ecology
 
@@ -63,7 +63,7 @@ Disease can reduce labor, army sức chứa (capacity / 용량), tax revenue and
 
 Pandemic is therefore political-economic sự kiện (event / 이벤트) as well as medical sự kiện (event / 이벤트).
 
-> **Chuyển mạch:** Ở chặng này của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Famine: harvest thất bại (failure / 실패) alone rarely explains everything** tiếp nhận điểm tựa từ **Disease ecology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Forest and upland tài nguyên (resource / 자원)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Famine: harvest thất bại (failure / 실패) alone rarely explains everything** nối từ **Disease ecology** sang **Forest and upland tài nguyên (resource / 자원)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Famine: harvest thất bại (failure / 실패) alone rarely explains everything
 
@@ -80,7 +80,7 @@ famine risk
 
 This khung phần mềm (framework / 프레임워크) is crucial for understanding the 1944–45 famine: weather and crop problems interacted with wartime extraction, vận chuyển (transport / 전송) các ràng buộc (constraints / 제약조건들) and political-economic disruption.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Famine: harvest thất bại (failure / 실패) alone rarely explains everything** nêu điều cần giải thích; **Forest and upland tài nguyên (resource / 자원)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Champa and central-coast môi trường (environment / 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Famine: harvest thất bại (failure / 실패) alone rarely explains everything** đặt vấn đề; **Forest and upland tài nguyên (resource / 자원)** đối chiếu bằng chứng, rồi **Champa and central-coast môi trường (environment / 환경)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Forest and upland tài nguyên (resource / 자원)
 
@@ -90,7 +90,7 @@ Commercial extraction and settlement expansion thay đổi (change / 변경) bot
 
 Thus deforestation lịch sử (history / 이력) is also frontier lịch sử (history / 이력).
 
-> **Chuyển mạch:** Trong **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Forest and upland tài nguyên (resource / 자원)** nêu điều cần giải thích; **Champa and central-coast môi trường (environment / 환경)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mekong Delta: water as transportation and môi trường vận hành (production / 운영 환경) medium** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Forest and upland tài nguyên (resource / 자원)** đặt vấn đề; **Champa and central-coast môi trường (environment / 환경)** đối chiếu bằng chứng, rồi **Mekong Delta: water as transportation and môi trường vận hành (production / 운영 환경) medium** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Champa and central-coast môi trường (environment / 환경)
 
@@ -100,7 +100,7 @@ This ecology differs sharply from Red River and Mekong, helping explain differen
 
 But ecology constrains; it does not determine one inevitable culture/trạng thái (state / 상태) form.
 
-> **Chuyển mạch:** Ở chặng này của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Mekong Delta: water as transportation and môi trường vận hành (production / 운영 환경) medium** tiếp nhận điểm tựa từ **Champa and central-coast môi trường (environment / 환경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vĩnh Tế and canalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Mekong Delta: water as transportation and môi trường vận hành (production / 운영 환경) medium** nối từ **Champa and central-coast môi trường (environment / 환경)** sang **Vĩnh Tế and canalization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mekong Delta: water as transportation and môi trường vận hành (production / 운영 환경) medium
 
@@ -110,7 +110,7 @@ Canal can drain, irrigate, move goods and extend administrative reach simultaneo
 
 Historical development therefore transforms hydrology.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Vĩnh Tế and canalization** tiếp nhận điểm tựa từ **Mekong Delta: water as transportation and môi trường vận hành (production / 운영 환경) medium** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Typhoon and central/northern coast** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Vĩnh Tế and canalization** nối từ **Mekong Delta: water as transportation and môi trường vận hành (production / 운영 환경) medium** sang **Typhoon and central/northern coast**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vĩnh Tế and canalization
 
@@ -120,7 +120,7 @@ Moving water tuyến (route / 경로) changes which land becomes economically ac
 
 Environmental lịch sử (history / 이력) asks not only “who built canal?” but what new luồng (flow / 흐름) of sediment, people and goods it created.
 
-> **Chuyển mạch:** Trong **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Typhoon and central/northern coast** tiếp nhận điểm tựa từ **Vĩnh Tế and canalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Colonial plantation ecology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Typhoon and central/northern coast** nối từ **Vĩnh Tế and canalization** sang **Colonial plantation ecology**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Typhoon and central/northern coast
 
@@ -130,7 +130,7 @@ Premodern lưu trữ (storage / 저장소) and cục bộ (local / 로컬) relie
 
 Hiện đại (modern / 현대적) forecasting lowers thông tin (information / 정보) bất định (uncertainty / 불확실성) but cannot remove vật lý (physical / 물리적) exposure.
 
-> **Chuyển mạch:** Ở chặng này của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Colonial plantation ecology** tiếp nhận điểm tựa từ **Typhoon and central/northern coast** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **War as environmental sự kiện (event / 이벤트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Colonial plantation ecology** nối từ **Typhoon and central/northern coast** sang **War as environmental sự kiện (event / 이벤트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Colonial plantation ecology
 
@@ -140,7 +140,7 @@ Monoculture can increase exposure to disease/price shock.
 
 Economic tích hợp (integration / 통합) changes ecosystem, not just income.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **War as environmental sự kiện (event / 이벤트)** tiếp nhận điểm tựa từ **Colonial plantation ecology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Postwar resettlement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **War as environmental sự kiện (event / 이벤트)** nối từ **Colonial plantation ecology** sang **Postwar resettlement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## War as environmental sự kiện (event / 이벤트)
 
@@ -150,7 +150,7 @@ Postwar reconstruction therefore included environmental repair and unexploded-or
 
 Environmental consequence can persist much longer than battle chronology.
 
-> **Chuyển mạch:** Trong **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Postwar resettlement** tiếp nhận điểm tựa từ **War as environmental sự kiện (event / 이벤트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hydropower: renewable electricity with spatial trade-offs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Postwar resettlement** nối từ **War as environmental sự kiện (event / 이벤트)** sang **Hydropower: renewable electricity with spatial trade-offs**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Postwar resettlement
 
@@ -158,7 +158,7 @@ New Economic Zones moved people into regions with different soil, disease and h�
 
 This is a strong example of **map territory ≠ lived ecology**.
 
-> **Chuyển mạch:** Ở chặng này của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Hydropower: renewable electricity with spatial trade-offs** tiếp nhận điểm tựa từ **Postwar resettlement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Urban flood** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Hydropower: renewable electricity with spatial trade-offs** nối từ **Postwar resettlement** sang **Urban flood**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hydropower: renewable electricity with spatial trade-offs
 
@@ -168,7 +168,7 @@ Hạ tầng (infrastructure / 인프라) choice redistributes benefit/chi phí (
 
 Environmental lịch sử (history / 이력) must identify affected groups rather than label dự án (project / 프로젝트) simply “good/bad”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Urban flood** tiếp nhận điểm tựa từ **Hydropower: renewable electricity with spatial trade-offs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mekong in the climate-change era** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Urban flood** nối từ **Hydropower: renewable electricity with spatial trade-offs** sang **Mekong in the climate-change era**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Urban flood
 
@@ -186,7 +186,7 @@ flood pressure ↑
 
 Historical land-use quyết định (decision / 결정) becomes hiện đại (modern / 현대적) climate-risk multiplier.
 
-> **Chuyển mạch:** Trong **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Mekong in the climate-change era** tiếp nhận điểm tựa từ **Urban flood** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Climate thay đổi (change / 변경) changes baseline** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Mekong in the climate-change era** nối từ **Urban flood** sang **Climate thay đổi (change / 변경) changes baseline**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mekong in the climate-change era
 
@@ -196,7 +196,7 @@ The phản hồi (response / 응답) cannot be “bản dựng (build / 빌드) 
 
 Di chuyển (migration / 마이그레이션) can be thất bại (failure / 실패), opportunity or rational adaptation depending on household ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Ở chặng này của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Climate thay đổi (change / 변경) changes baseline** tiếp nhận điểm tựa từ **Mekong in the climate-change era** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Heritage under environmental stress** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Climate thay đổi (change / 변경) changes baseline** nối từ **Mekong in the climate-change era** sang **Heritage under environmental stress**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Climate thay đổi (change / 변경) changes baseline
 
@@ -204,7 +204,7 @@ Traditional adaptation often assumes xác suất (probability / 확률) phân ph
 
 That creates **non-stationarity**: hạ tầng (infrastructure / 인프라) designed for old climate may underperform.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Heritage under environmental stress** tiếp nhận điểm tựa từ **Climate thay đổi (change / 변경) changes baseline** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **How to read disaster sources** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Heritage under environmental stress** nối từ **Climate thay đổi (change / 변경) changes baseline** sang **How to read disaster sources**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Heritage under environmental stress
 
@@ -212,7 +212,7 @@ Huế, Hội An and archaeological sites face flood, humidity, storm and urban d
 
 Preserving a wooden building means controlling water, termite, ventilation and visitor pressure—not only protecting legal status.
 
-> **Chuyển mạch:** Trong **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Heritage under environmental stress** nêu điều cần giải thích; **How to read disaster sources** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Recap và bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **Heritage under environmental stress** đặt vấn đề; **How to read disaster sources** đối chiếu bằng chứng, rồi **Recap và bàn giao** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## How to read disaster sources
 
@@ -220,7 +220,7 @@ Official chronicle may danh sách (list / 목록) flood/famine; village genealog
 
 Do not convert one dramatic nguồn (source / 소스) into national estimate without checking spatial phạm vi (scope / 범위).
 
-> **Chuyển mạch:** Ở chặng này của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **How to read disaster sources** nêu điều cần giải thích; **Recap và bàn giao** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Môi trường (environment / 환경) & Disaster Lịch sử (history / 이력): sông, lũ, hạn, dịch bệnh và adaptation**, **How to read disaster sources** đặt vấn đề; **Recap và bàn giao** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

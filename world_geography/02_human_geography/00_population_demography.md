@@ -8,7 +8,7 @@
 
 Hai quốc gia cùng 50 triệu dân có thể hoàn toàn khác nếu một nơi trẻ và phân tán còn nơi kia già hóa và tập trung trong vài vùng đô thị.
 
-> **Chuyển mạch:** Trong **Dân số và nhân khẩu học theo không gian**, **Phương trình cân bằng dân số** tiếp nhận điểm tựa từ **Dân số là stock có cấu trúc, không chỉ một con số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tỷ lệ (rate / 비율) quan trọng hơn count khi so sánh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Population là stock có tuổi, giới và địa điểm; **Phương trình cân bằng dân số** nối births, deaths và migration để giải thích stock đổi theo thời gian. **Tỷ lệ (rate / 비율) quan trọng hơn count khi so sánh** tiếp theo chuẩn hóa khác biệt quy mô.
 
 ## Phương trình cân bằng dân số
 
@@ -20,7 +20,7 @@ Trong đó \(B\) là sinh, \(D\) là tử, \(I\) là nhập cư và \(E\) là xu
 
 Muốn giải thích thay đổi dân số phải tách gia tăng tự nhiên khỏi di cư ròng. Một thành phố tăng nhanh có thể do nhập cư dù mức sinh thấp; vùng nông thôn giảm có thể do người trẻ rời đi hơn là tử vong cao.
 
-> **Chuyển mạch:** Ở chặng này của **Dân số và nhân khẩu học theo không gian**, **Phương trình cân bằng dân số** đã nêu tiêu chí phân biệt, còn **Tỷ lệ (rate / 비율) quan trọng hơn count khi so sánh** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **TFR và mức sinh thay thế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Balance equation mô tả thay đổi tuyệt đối, còn **Tỷ lệ (rate / 비율) quan trọng hơn count khi so sánh** giúp phân biệt population lớn với risk/rate lớn. **TFR và mức sinh thay thế** tiếp theo đưa fertility vào cùng logic.
 
 ## Tỷ lệ (rate / 비율) quan trọng hơn count khi so sánh
 
@@ -28,7 +28,7 @@ Số sinh tuyệt đối phụ thuộc quy mô dân số. Để so sánh cần d
 
 Đây là nguyên tắc chung: khi so dân số, phải hỏi mẫu số là gì và cấu trúc nền có khác nhau không.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dân số và nhân khẩu học theo không gian**, **Tỷ lệ (rate / 비율) quan trọng hơn count khi so sánh** đã nêu tiêu chí phân biệt, còn **TFR và mức sinh thay thế** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Cohort và period: đừng trộn thế hệ với thời điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Rate chuẩn hóa exposure, còn **TFR và mức sinh thay thế** giải thích số con kỳ vọng và vì sao replacement phụ thuộc mortality/sex ratio. **Cohort và period: đừng trộn thế hệ với thời điểm** tiếp theo tách thế hệ khỏi snapshot thời kỳ.
 
 ## TFR và mức sinh thay thế
 
@@ -38,7 +38,7 @@ Mức sinh thay thế không cố định chính xác ở 2,0; trong quần th�
 
 TFR là chỉ số của chế độ sinh hiện tại, không phải dự báo chắc chắn số con của một phụ nữ thật.
 
-> **Chuyển mạch:** Trong **Dân số và nhân khẩu học theo không gian**, **Cohort và period: đừng trộn thế hệ với thời điểm** tiếp nhận điểm tựa từ **TFR và mức sinh thay thế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Population momentum: cơ cấu tuổi tạo quán tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Fertility measure có thể là cohort hoặc period; **Cohort và period: đừng trộn thế hệ với thời điểm** ngăn việc đọc một năm như lịch sử cả thế hệ. **Population momentum: cơ cấu tuổi tạo quán tính** tiếp theo cho thấy tuổi hiện tại kéo dài tăng trưởng ra sao.
 
 ## Cohort và period: đừng trộn thế hệ với thời điểm
 
@@ -46,7 +46,7 @@ TFR là chỉ số của chế độ sinh hiện tại, không phải dự báo 
 
 Phân biệt cohort–period giúp tránh kết luận vội từ một năm dữ liệu.
 
-> **Chuyển mạch:** Ở chặng này của **Dân số và nhân khẩu học theo không gian**, **Population momentum: cơ cấu tuổi tạo quán tính** tiếp nhận điểm tựa từ **Cohort và period: đừng trộn thế hệ với thời điểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tháp dân số như lịch sử được nén** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cohort/period xác định cách đo, còn **Population momentum: cơ cấu tuổi tạo quán tính** giải thích vì sao fertility giảm chưa làm population giảm ngay. **Tháp dân số như lịch sử được nén** tiếp theo trực quan hóa các cohort tích lũy.
 
 ## Population momentum: cơ cấu tuổi tạo quán tính
 
@@ -54,7 +54,7 @@ Nếu có rất nhiều người trẻ, số phụ nữ bước vào tuổi sinh
 
 Ngược lại, xã hội đã có cohort trẻ nhỏ có quy mô thấp có thể tiếp tục giảm dân số dù TFR phục hồi phần nào. **Quán tính dân số (population momentum)** là hậu quả của cấu trúc tuổi tích lũy từ quá khứ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dân số và nhân khẩu học theo không gian**, **Tháp dân số như lịch sử được nén** tiếp nhận điểm tựa từ **Population momentum: cơ cấu tuổi tạo quán tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phụ thuộc (dependency / 의존성) ratio và bẫy của ranh giới tuổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Momentum nằm trong cơ cấu tuổi, còn **Tháp dân số như lịch sử được nén** cho thấy cohort phình hoặc co theo thời gian. **Phụ thuộc (dependency / 의존성) ratio và bẫy của ranh giới tuổi** tiếp theo kiểm tra ai được tính là dependent.
 
 ## Tháp dân số như lịch sử được nén
 
@@ -62,7 +62,7 @@ Ngược lại, xã hội đã có cohort trẻ nhỏ có quy mô thấp có th�
 
 Nhưng không nên “đọc bói” chỉ từ hình dạng. Cần tách tác động của sinh, tử và di chuyển (migration / 마이그레이션); nhóm tuổi lao động phình có thể do nhập cư chứ không phải mức sinh trước đó.
 
-> **Chuyển mạch:** Trong **Dân số và nhân khẩu học theo không gian**, **Tháp dân số như lịch sử được nén** đã nêu tiêu chí phân biệt, còn **Phụ thuộc (dependency / 의존성) ratio và bẫy của ranh giới tuổi** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Chuyển đổi nhân khẩu học là mô hình (model / 모델), không phải định luật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Age pyramid cho pattern, còn **Phụ thuộc (dependency / 의존성) ratio và bẫy của ranh giới tuổi** nhắc rằng cutoff tuổi không đồng nghĩa productivity hay care need. **Chuyển đổi nhân khẩu học là mô hình (model / 모델), không phải định luật** tiếp theo đặt pattern vào quá trình xã hội.
 
 ## Phụ thuộc (dependency / 의존성) ratio và bẫy của ranh giới tuổi
 
@@ -70,7 +70,7 @@ Nhưng không nên “đọc bói” chỉ từ hình dạng. Cần tách tác �
 
 Nhiều người trên 65 vẫn làm việc; sinh viên 20 tuổi có thể chưa làm; thất nghiệp làm giảm người đóng góp dù nằm trong “working age”. Do đó đây là chỉ số cấu trúc tuổi, không phải phép đo trực tiếp số người phụ thuộc tài chính.
 
-> **Chuyển mạch:** Ở chặng này của **Dân số và nhân khẩu học theo không gian**, **Phụ thuộc (dependency / 의존성) ratio và bẫy của ranh giới tuổi** đã nêu tiêu chí phân biệt, còn **Chuyển đổi nhân khẩu học là mô hình (model / 모델), không phải định luật** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Già hóa là thay đổi tỷ lệ giữa các cohort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Dependency ratio là chỉ báo cấu trúc, còn **Chuyển đổi nhân khẩu học là mô hình (model / 모델), không phải định luật** nối fertility, mortality, income, institution và urbanization nhưng không dự đoán mọi nơi giống nhau. **Già hóa là thay đổi tỷ lệ giữa các cohort** tiếp theo cụ thể hóa một hướng chuyển đổi.
 
 ## Chuyển đổi nhân khẩu học là mô hình (model / 모델), không phải định luật
 
@@ -78,7 +78,7 @@ Nhiều người trên 65 vẫn làm việc; sinh viên 20 tuổi có thể chư
 
 Di chuyển (migration / 마이그레이션), chính sách gia đình, văn hóa và tốc độ phát triển làm quỹ đạo khác nhau. Không nên ép mọi xã hội vào một lịch trình duy nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dân số và nhân khẩu học theo không gian**, **Già hóa là thay đổi tỷ lệ giữa các cohort** tiếp nhận điểm tựa từ **Chuyển đổi nhân khẩu học là mô hình (model / 모델), không phải định luật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mật độ có nhiều định nghĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Demographic transition đổi fertility/mortality, còn **Già hóa là thay đổi tỷ lệ giữa các cohort** làm demand về care, labor và services đổi theo không gian. **Mật độ có nhiều định nghĩa** tiếp theo tránh biến một tỷ lệ dân số thành một khoảng cách duy nhất.
 
 ## Già hóa là thay đổi tỷ lệ giữa các cohort
 
@@ -86,7 +86,7 @@ Già hóa xảy ra khi mức sinh giảm, tuổi thọ tăng và cohort lớn di
 
 Trong một nước, già hóa thường không đồng đều: vùng xuất cư của người trẻ có thể già nhanh hơn đô thị thu hút lao động. Vì vậy bản đồ tuổi quan trọng hơn trung bình quốc gia.
 
-> **Chuyển mạch:** Trong **Dân số và nhân khẩu học theo không gian**, **Mật độ có nhiều định nghĩa** tiếp nhận điểm tựa từ **Già hóa là thay đổi tỷ lệ giữa các cohort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân bố dân cư là kết quả của nhiều lớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Aging thay đổi composition, còn **Mật độ có nhiều định nghĩa** phân biệt arithmetic, physiological, agricultural và urban density. **Phân bố dân cư là kết quả của nhiều lớp** tiếp theo nối density với water, jobs, history và access.
 
 ## Mật độ có nhiều định nghĩa
 
@@ -94,7 +94,7 @@ Trong một nước, già hóa thường không đồng đều: vùng xuất cư
 
 Một quốc gia rộng có hoang mạc có thể mật độ arithmetic thấp nhưng phần lớn cư dân sống trong hành lang cực dày. Luôn hỏi density đang dùng mẫu số nào.
 
-> **Chuyển mạch:** Ở chặng này của **Dân số và nhân khẩu học theo không gian**, **Phân bố dân cư là kết quả của nhiều lớp** tiếp nhận điểm tựa từ **Mật độ có nhiều định nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Census, registry và survey không đo giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Density là summary, còn **Phân bố dân cư là kết quả của nhiều lớp** giải thích water, terrain, jobs, institutions và migration tạo clusters. **Census, registry và survey không đo giống nhau** tiếp theo kiểm tra dữ liệu tạo ra pattern.
 
 ## Phân bố dân cư là kết quả của nhiều lớp
 
@@ -102,7 +102,7 @@ Một quốc gia rộng có hoang mạc có thể mật độ arithmetic thấp 
 
 Một đồng bằng màu mỡ có thể thu hút nông nghiệp trước, rồi thành phố và hạ tầng tạo cumulative advantage. Đây là cách vật lý (physical / 물리적) geography và human geography nối thành chuỗi nhân quả (causal chain / 인과 사슬).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dân số và nhân khẩu học theo không gian**, **Census, registry và survey không đo giống nhau** tiếp nhận điểm tựa từ **Phân bố dân cư là kết quả của nhiều lớp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dữ liệu lưới dân số và dasymetric ánh xạ (mapping / 매핑)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Spatial distribution cần nguồn đo rõ; **Census, registry và survey không đo giống nhau** khác coverage, timing và definition. **Dữ liệu lưới dân số và dasymetric ánh xạ (mapping / 매핑)** tiếp theo chuyển số liệu tổng hợp thành surface có không gian.
 
 ## Census, registry và survey không đo giống nhau
 
@@ -110,7 +110,7 @@ Một đồng bằng màu mỡ có thể thu hút nông nghiệp trước, rồi
 
 Dân di động, người không giấy tờ, khu phi chính thức và vùng khó tiếp cận thường có nguy cơ thiếu đếm. So sánh quốc tế cần kiểm tra definition of usual residence và tham chiếu (reference / 참조) date.
 
-> **Chuyển mạch:** Trong **Dân số và nhân khẩu học theo không gian**, **Census, registry và survey không đo giống nhau** nêu điều cần giải thích; **Dữ liệu lưới dân số và dasymetric ánh xạ (mapping / 매핑)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Dự báo dân số là kịch bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Census/registry/survey cho các loại stock và flow khác nhau; **Dữ liệu lưới dân số và dasymetric ánh xạ (mapping / 매핑)** phân bố population theo built-up/land-use nhưng vẫn mang uncertainty. **Dự báo dân số là kịch bản** tiếp theo đưa uncertainty vào tương lai.
 
 ## Dữ liệu lưới dân số và dasymetric ánh xạ (mapping / 매핑)
 
@@ -118,7 +118,7 @@ Dân số theo tỉnh thuận tiện nhưng gán đều vào cả hồ, núi ho�
 
 Nhưng dữ liệu chi tiết hơn không tự động chính xác hơn: mô hình phân bổ có giả định và cần kiểm tra hợp lệ (validation / 검증).
 
-> **Chuyển mạch:** Ở chặng này của **Dân số và nhân khẩu học theo không gian**, **Dữ liệu lưới dân số và dasymetric ánh xạ (mapping / 매핑)** nêu điều cần giải thích; **Dự báo dân số là kịch bản** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Korea–Vietnam như bài tập so sánh cơ chế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Gridded population làm rõ nơi người ở, còn **Dự báo dân số là kịch bản** thay đổi fertility, mortality, migration và policy thành các đường tương lai chứ không phải một con số chắc chắn. **Korea–Vietnam như bài tập so sánh cơ chế** tiếp theo đặt hai quỹ đạo cạnh nhau.
 
 ## Dự báo dân số là kịch bản
 
@@ -126,7 +126,7 @@ Projection phụ thuộc giả định fertility, mortality và di chuyển (mig
 
 Vì vậy nên đọc nhiều scenario và hỏi giả định nào tạo chênh lệch, thay vì coi một con số cho năm xa là dự đoán chắc chắn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dân số và nhân khẩu học theo không gian**, **Dự báo dân số là kịch bản** đã nêu tiêu chí phân biệt, còn **Korea–Vietnam như bài tập so sánh cơ chế** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Scenario giữ bất định của tương lai, còn **Korea–Vietnam như bài tập so sánh cơ chế** so fertility, aging, migration và urban concentration dưới các thể chế khác nhau. **Những hiểu lầm phổ biến** tiếp theo chặn các kết luận từ count hoặc average.
 
 ## Korea–Vietnam như bài tập so sánh cơ chế
 
@@ -134,13 +134,13 @@ Khi so Hàn Quốc và Việt Nam, nên tránh chỉ đặt hai TFR hoặc media
 
 Mục tiêu của so sánh không phải xếp hạng mà là nhận ra cơ chế theo giai đoạn và không gian.
 
-> **Chuyển mạch:** Trong **Dân số và nhân khẩu học theo không gian**, **Korea–Vietnam như bài tập so sánh cơ chế** đã nêu tiêu chí phân biệt, còn **Những hiểu lầm phổ biến** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Comparison cho thấy cùng demographic mechanism có outcome khác; **Những hiểu lầm phổ biến** giữ rõ count không thay rate, pyramid không tự dự báo và density không giải thích nguyên nhân. **Mô hình tư duy** tiếp theo cô đọng stock, structure và spatial process.
 
 ## Những hiểu lầm phổ biến
 
 TFR thấp không có nghĩa dân số giảm ngay. Mật độ thấp không có nghĩa mọi nơi thưa. Aging không chỉ là vấn đề “người già nhiều”. Projection không phải prophecy. Và tổng dân số quốc gia không cho biết dịch vụ nên đặt ở đâu.
 
-> **Chuyển mạch:** Ở chặng này của **Dân số và nhân khẩu học theo không gian**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi stock–flows → rates/fertility → cohorts/momentum → density/distribution → measurement/scenarios → comparative mechanisms, rồi bàn giao owner **Human Geography** trong [README](../README.md).
 
 ## Mô hình tư duy
 

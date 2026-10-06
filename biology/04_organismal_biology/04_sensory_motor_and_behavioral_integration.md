@@ -28,7 +28,7 @@ Môi trường không gửi khái niệm “ánh sáng”, “âm thanh” hay �
 
 Điều này rất quan trọng về mặt nhận thức: hệ thần kinh không truy cập reality trực tiếp. Nó chỉ truy cập **tín hiệu (signal / 신호) được receptor cho phép đo**. Mỗi hệ cảm giác (sensory system) vì vậy giống một instrument có bandwidth, threshold và noise riêng.
 
-> **Chuyển mạch:** Sensory receptor transduces energy into signal; receptor potential grades input, action potential carries spikes, and dynamic range determines usable coding resolution.
+> **Nối mạch:** Sensory receptor transduces energy into signal; receptor potential grades input, action potential carries spikes, and dynamic range determines usable coding resolution.
 
 ## 2. Điện thế thụ thể (receptor potential) và điện thế hoạt động (action potential) đóng vai trò khác nhau
 
@@ -38,7 +38,7 @@ Vậy intensity được encode thế nào? Một cơ chế (mechanism / 메커�
 
 Do đó thông tin (information / 정보) không nằm đơn giản ở “độ cao spike”, mà ở tần số (frequency), thời điểm (timing), synchrony và mẫu hình (pattern) qua mạng lưới (network).
 
-> **Chuyển mạch:** Ở chặng này của **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **3. Dải động (dynamic range) và logarithmic intuition** tiếp nhận điểm tựa từ **2. Điện thế thụ thể (receptor potential) và điện thế hoạt động (action potential) đóng vai trò khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Thích nghi (adaptation): hệ thần kinh ưu tiên thay đổi (change / 변경) hơn constant background** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Dải động (dynamic range) và logarithmic intuition** nối từ **2. Điện thế thụ thể (receptor potential) và điện thế hoạt động (action potential) đóng vai trò khác nhau** sang **4. Thích nghi (adaptation): hệ thần kinh ưu tiên thay đổi (change / 변경) hơn constant background**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Dải động (dynamic range) và logarithmic intuition
 
@@ -50,7 +50,7 @@ Nhiều hệ cảm giác dùng compression: thay đổi relative ratio đôi khi
 
 Liên kết (connection / 연결) với Mathematics ở đây là practical: logarithm nén dải động rất lớn thành quy mô (scale / 규모) xử lý được.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **4. Thích nghi (adaptation): hệ thần kinh ưu tiên thay đổi (change / 변경) hơn constant background** tiếp nhận điểm tựa từ **3. Dải động (dynamic range) và logarithmic intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Trường tiếp nhận (receptive field): neuron không encode toàn world, nó encode một vùng và tính năng (feature / 기능) cụ thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Thích nghi (adaptation): hệ thần kinh ưu tiên thay đổi (change / 변경) hơn constant background** nối từ **3. Dải động (dynamic range) và logarithmic intuition** sang **5. Trường tiếp nhận (receptive field): neuron không encode toàn world, nó encode một vùng và tính năng (feature / 기능) cụ thể**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Thích nghi (adaptation): hệ thần kinh ưu tiên thay đổi (change / 변경) hơn constant background
 
@@ -60,7 +60,7 @@ Adaptation làm hệ thần kinh dành bandwidth cho thay đổi (change / 변�
 
 Nhưng adaptation tỷ lệ (rate / 비율) khác nhau giữa receptor. Pain receptor thường duy trì phản hồi (response / 응답) lâu hơn vì sustained tissue damage vẫn biologically relevant. Do đó “quen stimulus” không phải một thuộc tính (property / 속성) chung mà phụ thuộc hàm (function / 함수).
 
-> **Chuyển mạch:** Trong **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **5. Trường tiếp nhận (receptive field): neuron không encode toàn world, nó encode một vùng và tính năng (feature / 기능) cụ thể** tiếp nhận điểm tựa từ **4. Thích nghi (adaptation): hệ thần kinh ưu tiên thay đổi (change / 변경) hơn constant background** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Vision: từ photon (photon) đến biểu diễn đối tượng (object representation / 객체 표현) là nhiều tầng lớp trừu tượng (abstraction / 추상화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Trường tiếp nhận (receptive field): neuron không encode toàn world, nó encode một vùng và tính năng (feature / 기능) cụ thể** nối từ **4. Thích nghi (adaptation): hệ thần kinh ưu tiên thay đổi (change / 변경) hơn constant background** sang **6. Vision: từ photon (photon) đến biểu diễn đối tượng (object representation / 객체 표현) là nhiều tầng lớp trừu tượng (abstraction / 추상화)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Trường tiếp nhận (receptive field): neuron không encode toàn world, nó encode một vùng và tính năng (feature / 기능) cụ thể
 
@@ -70,7 +70,7 @@ Một sensory neuron thường phản ứng mạnh với stimulus ở một subs
 
 Một lesson lớn xuất hiện: perception là **tính năng (feature / 기능) extraction**, không phải photocopy của môi trường (environment / 환경).
 
-> **Chuyển mạch:** Ở chặng này của **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **6. Vision: từ photon (photon) đến biểu diễn đối tượng (object representation / 객체 표현) là nhiều tầng lớp trừu tượng (abstraction / 추상화)** tiếp nhận điểm tựa từ **5. Trường tiếp nhận (receptive field): neuron không encode toàn world, nó encode một vùng và tính năng (feature / 기능) cụ thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Hearing: vật lý (physical / 물리적) frequency được map thành spatial organization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Vision: từ photon (photon) đến biểu diễn đối tượng (object representation / 객체 표현) là nhiều tầng lớp trừu tượng (abstraction / 추상화)** nối từ **5. Trường tiếp nhận (receptive field): neuron không encode toàn world, nó encode một vùng và tính năng (feature / 기능) cụ thể** sang **7. Hearing: vật lý (physical / 물리적) frequency được map thành spatial organization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Vision: từ photon (photon) đến biểu diễn đối tượng (object representation / 객체 표현) là nhiều tầng lớp trừu tượng (abstraction / 추상화)
 
@@ -80,7 +80,7 @@ Không có một neuron đơn lẻ chứa “hình ảnh hoàn chỉnh”. biể
 
 Điều này nối lại concept **emergence** ở [Cách tư duy trong Sinh học](../00_foundations/00_scientific_thinking_scale_and_models.md): higher-level perception không phải thuộc tính (property / 속성) của một molecule hay một neuron riêng lẻ, mà của mạng (network / 네트워크) organization.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **7. Hearing: vật lý (physical / 물리적) frequency được map thành spatial organization** tiếp nhận điểm tựa từ **6. Vision: từ photon (photon) đến biểu diễn đối tượng (object representation / 객체 표현) là nhiều tầng lớp trừu tượng (abstraction / 추상화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Proprioception và vestibular tín hiệu (signal / 신호): controller phải biết body trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Hearing: vật lý (physical / 물리적) frequency được map thành spatial organization** nối từ **6. Vision: từ photon (photon) đến biểu diễn đối tượng (object representation / 객체 표현) là nhiều tầng lớp trừu tượng (abstraction / 추상화)** sang **8. Proprioception và vestibular tín hiệu (signal / 신호): controller phải biết body trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Hearing: vật lý (physical / 물리적) frequency được map thành spatial organization
 
@@ -90,7 +90,7 @@ Hair cell biến movement thành electrical tín hiệu (signal / 신호). Vì v
 
 Đây là cấu trúc (structure / 구조)–hàm (function / 함수) rất đẹp: anatomy của cochlea thực hiện một dạng frequency decomposition trước khi higher neural circuit xử lý âm thanh (sound) mẫu hình (pattern).
 
-> **Chuyển mạch:** Trong **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **8. Proprioception và vestibular tín hiệu (signal / 신호): controller phải biết body trạng thái (state / 상태)** tiếp nhận điểm tựa từ **7. Hearing: vật lý (physical / 물리적) frequency được map thành spatial organization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Reflex: cục bộ (local / 로컬) điều khiển (control / 제어) giảm độ trễ (latency / 지연 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Proprioception và vestibular tín hiệu (signal / 신호): controller phải biết body trạng thái (state / 상태)** nối từ **7. Hearing: vật lý (physical / 물리적) frequency được map thành spatial organization** sang **9. Reflex: cục bộ (local / 로컬) điều khiển (control / 제어) giảm độ trễ (latency / 지연 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Proprioception và vestibular tín hiệu (signal / 신호): controller phải biết body trạng thái (state / 상태)
 
@@ -100,7 +100,7 @@ Nếu proprioception mất nhưng motor neuron vẫn khỏe, movement vẫn tr�
 
 Trong lý thuyết điều khiển (control theory), controller không thể điều khiển một hệ thống (system / 시스템) tốt nếu không có phản hồi (feedback / 피드백) hoặc estimate về trạng thái (state / 상태).
 
-> **Chuyển mạch:** Ở chặng này của **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **9. Reflex: cục bộ (local / 로컬) điều khiển (control / 제어) giảm độ trễ (latency / 지연 시간)** tiếp nhận điểm tựa từ **8. Proprioception và vestibular tín hiệu (signal / 신호): controller phải biết body trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Đơn vị vận động (motor unit) và nguyên lý recruitment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Reflex: cục bộ (local / 로컬) điều khiển (control / 제어) giảm độ trễ (latency / 지연 시간)** nối từ **8. Proprioception và vestibular tín hiệu (signal / 신호): controller phải biết body trạng thái (state / 상태)** sang **10. Đơn vị vận động (motor unit) và nguyên lý recruitment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Reflex: cục bộ (local / 로컬) điều khiển (control / 제어) giảm độ trễ (latency / 지연 시간)
 
@@ -110,7 +110,7 @@ Stretch reflex giúp ổn định muscle length. Khi muscle bị kéo, spindle t
 
 Reflex không có nghĩa brain hoàn toàn không tham gia. Higher center có thể modulate gain của reflex và nhận tín hiệu (signal / 신호) song song. kiến trúc (architecture / 아키텍처) này giống điều khiển phân tán (distributed control): cục bộ (local / 로컬) controller xử lý tác vụ (task / 작업) nhanh, toàn cục (global / 전역) controller điều chỉnh ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **10. Đơn vị vận động (motor unit) và nguyên lý recruitment** tiếp nhận điểm tựa từ **9. Reflex: cục bộ (local / 로컬) điều khiển (control / 제어) giảm độ trễ (latency / 지연 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Neuromuscular junction nối thông tin (information / 정보) với mechanics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Đơn vị vận động (motor unit) và nguyên lý recruitment** nối từ **9. Reflex: cục bộ (local / 로컬) điều khiển (control / 제어) giảm độ trễ (latency / 지연 시간)** sang **11. Neuromuscular junction nối thông tin (information / 정보) với mechanics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Đơn vị vận động (motor unit) và nguyên lý recruitment
 
@@ -120,7 +120,7 @@ Force tăng qua recruitment thêm đơn vị (unit / 단위) và tăng tần s�
 
 Movement vì vậy không phải một command “co 40%”. Nó là quần thể (population) điều khiển (control / 제어) của nhiều đơn vị (unit / 단위) với timing khác nhau.
 
-> **Chuyển mạch:** Trong **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **11. Neuromuscular junction nối thông tin (information / 정보) với mechanics** tiếp nhận điểm tựa từ **10. Đơn vị vận động (motor unit) và nguyên lý recruitment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Lực–chiều dài (force–length) và lực–vận tốc (force–velocity): muscle không tạo lực giống nhau ở mọi trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Neuromuscular junction nối thông tin (information / 정보) với mechanics** nối từ **10. Đơn vị vận động (motor unit) và nguyên lý recruitment** sang **12. Lực–chiều dài (force–length) và lực–vận tốc (force–velocity): muscle không tạo lực giống nhau ở mọi trạng thái**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Neuromuscular junction nối thông tin (information / 정보) với mechanics
 
@@ -138,7 +138,7 @@ neural spike
 
 Đây là nơi dòng thông tin (information flow) và dòng năng lượng (energy flow) gặp nhau trong một mechanical đầu ra (output / 출력).
 
-> **Chuyển mạch:** Ở chặng này của **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **12. Lực–chiều dài (force–length) và lực–vận tốc (force–velocity): muscle không tạo lực giống nhau ở mọi trạng thái** tiếp nhận điểm tựa từ **11. Neuromuscular junction nối thông tin (information / 정보) với mechanics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Central mẫu (pattern / 패턴) Generator: rhythm có thể emerge từ mạng lưới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Lực–chiều dài (force–length) và lực–vận tốc (force–velocity): muscle không tạo lực giống nhau ở mọi trạng thái** nối từ **11. Neuromuscular junction nối thông tin (information / 정보) với mechanics** sang **13. Central mẫu (pattern / 패턴) Generator: rhythm có thể emerge từ mạng lưới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Lực–chiều dài (force–length) và lực–vận tốc (force–velocity): muscle không tạo lực giống nhau ở mọi trạng thái
 
@@ -148,7 +148,7 @@ Muscle force phụ thuộc overlap actin–myosin và contraction velocity. Ở 
 
 Điều khiển vận động (motor control) phải xử lý một plant — theo ngôn ngữ điều khiển (control / 제어) kỹ thuật (engineering / 엔지니어링) — có thuộc tính (property / 속성) nonlinear và trạng thái-dependent.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **13. Central mẫu (pattern / 패턴) Generator: rhythm có thể emerge từ mạng lưới** tiếp nhận điểm tựa từ **12. Lực–chiều dài (force–length) và lực–vận tốc (force–velocity): muscle không tạo lực giống nhau ở mọi trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Feedforward và điều khiển phản hồi (feedback control) cùng tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Central mẫu (pattern / 패턴) Generator: rhythm có thể emerge từ mạng lưới** nối từ **12. Lực–chiều dài (force–length) và lực–vận tốc (force–velocity): muscle không tạo lực giống nhau ở mọi trạng thái** sang **14. Feedforward và điều khiển phản hồi (feedback control) cùng tồn tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Central mẫu (pattern / 패턴) Generator: rhythm có thể emerge từ mạng lưới
 
@@ -158,7 +158,7 @@ Walking, swimming và breathing có rhythmic mẫu (pattern / 패턴). Hệ th�
 
 CPG cho thấy mạng (network / 네트워크) cấu trúc liên kết (topology) + màng (membrane) dynamics có thể tạo hành vi (behavior / 동작) periodic mà không cần “clock neuron” duy nhất điều khiển toàn bộ.
 
-> **Chuyển mạch:** Trong **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **14. Feedforward và điều khiển phản hồi (feedback control) cùng tồn tại** tiếp nhận điểm tựa từ **13. Central mẫu (pattern / 패턴) Generator: rhythm có thể emerge từ mạng lưới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Cerebellum và error-based học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Feedforward và điều khiển phản hồi (feedback control) cùng tồn tại** nối từ **13. Central mẫu (pattern / 패턴) Generator: rhythm có thể emerge từ mạng lưới** sang **15. Cerebellum và error-based học tập (learning / 학습)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Feedforward và điều khiển phản hồi (feedback control) cùng tồn tại
 
@@ -176,7 +176,7 @@ prediction
 → update internal model
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **15. Cerebellum và error-based học tập (learning / 학습)** tiếp nhận điểm tựa từ **14. Feedforward và điều khiển phản hồi (feedback control) cùng tồn tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Basal ganglia: không chỉ tạo movement mà còn chọn hành động (action / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Cerebellum và error-based học tập (learning / 학습)** nối từ **14. Feedforward và điều khiển phản hồi (feedback control) cùng tồn tại** sang **16. Basal ganglia: không chỉ tạo movement mà còn chọn hành động (action / 동작)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Cerebellum và error-based học tập (learning / 학습)
 
@@ -184,7 +184,7 @@ Cerebellum đóng vai trò lớn trong thời điểm, coordination và hiệu c
 
 Damage cerebellum có thể làm movement vẫn có strength nhưng mất smooth coordination và độ chính xác (accuracy). Điều này cho thấy movement chất lượng (quality / 품질) không chỉ phụ thuộc motor neuron và muscle, mà còn phụ thuộc computational correction.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **16. Basal ganglia: không chỉ tạo movement mà còn chọn hành động (action / 동작)** tiếp nhận điểm tựa từ **15. Cerebellum và error-based học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Perception cũng là suy luận (inference / 추론) dưới bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Basal ganglia: không chỉ tạo movement mà còn chọn hành động (action / 동작)** nối từ **15. Cerebellum và error-based học tập (learning / 학습)** sang **17. Perception cũng là suy luận (inference / 추론) dưới bất định (uncertainty / 불확실성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Basal ganglia: không chỉ tạo movement mà còn chọn hành động (action / 동작)
 
@@ -202,7 +202,7 @@ Trong đó \(r\) là reward hiện tại, \(V(s)\) là expected giá trị (valu
 
 Equation là mô hình (model / 모델), không phải claim rằng neuron “chạy đúng công thức” theo nghĩa literal; nó là cách formalize relationship giữa expectation, kết quả (outcome / 결과) và học tập (learning / 학습) tín hiệu (signal / 신호).
 
-> **Chuyển mạch:** Trong **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **17. Perception cũng là suy luận (inference / 추론) dưới bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **16. Basal ganglia: không chỉ tạo movement mà còn chọn hành động (action / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. học tập (learning / 학습) thay đổi circuit ở nhiều quy mô (scale / 규모)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Perception cũng là suy luận (inference / 추론) dưới bất định (uncertainty / 불확실성)** nối từ **16. Basal ganglia: không chỉ tạo movement mà còn chọn hành động (action / 동작)** sang **18. học tập (learning / 학습) thay đổi circuit ở nhiều quy mô (scale / 규모)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Perception cũng là suy luận (inference / 추론) dưới bất định (uncertainty / 불확실성)
 
@@ -216,7 +216,7 @@ P(H|D)\propto P(D|H)P(H)
 
 Ta không cần giả định brain tính Bayes equation tường minh (explicit / 명시적) ở mọi tác vụ (task / 작업). Nhưng khung phần mềm (framework / 프레임워크) giúp hiểu perception như suy luận (inference / 추론) chứ không phải direct readout.
 
-> **Chuyển mạch:** Ở chặng này của **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **18. học tập (learning / 학습) thay đổi circuit ở nhiều quy mô (scale / 규모)** tiếp nhận điểm tựa từ **17. Perception cũng là suy luận (inference / 추론) dưới bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Homeostasis và motivation: giá trị (value / 값) phụ thuộc trạng thái nội bộ (internal state / 내부 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. học tập (learning / 학습) thay đổi circuit ở nhiều quy mô (scale / 규모)** nối từ **17. Perception cũng là suy luận (inference / 추론) dưới bất định (uncertainty / 불확실성)** sang **19. Homeostasis và motivation: giá trị (value / 값) phụ thuộc trạng thái nội bộ (internal state / 내부 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. học tập (learning / 학습) thay đổi circuit ở nhiều quy mô (scale / 규모)
 
@@ -234,7 +234,7 @@ experience
 
 Một concept psychological có thể dấu vết (trace / 추적) xuống sinh học tế bào (cell biology) mà không cần reduce toàn bộ psychology thành một molecule duy nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **19. Homeostasis và motivation: giá trị (value / 값) phụ thuộc trạng thái nội bộ (internal state / 내부 상태)** tiếp nhận điểm tựa từ **18. học tập (learning / 학습) thay đổi circuit ở nhiều quy mô (scale / 규모)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. quyết định (decision / 결정) luôn có chi phí (cost / 비용), delay và độ bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Homeostasis và motivation: giá trị (value / 값) phụ thuộc trạng thái nội bộ (internal state / 내부 상태)** nối từ **18. học tập (learning / 학습) thay đổi circuit ở nhiều quy mô (scale / 규모)** sang **20. quyết định (decision / 결정) luôn có chi phí (cost / 비용), delay và độ bất định (uncertainty / 불확실성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Homeostasis và motivation: giá trị (value / 값) phụ thuộc trạng thái nội bộ (internal state / 내부 상태)
 
@@ -244,7 +244,7 @@ Trạng thái nội bộ (internal state / 내부 상태) từ hypothalamic, end
 
 Đây là lý do hệ thần kinh, hệ nội tiết (endocrine system) và metabolism không thể học như ba mô-đun (module / 모듈) tách biệt.
 
-> **Chuyển mạch:** Trong **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **20. quyết định (decision / 결정) luôn có chi phí (cost / 비용), delay và độ bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **19. Homeostasis và motivation: giá trị (value / 값) phụ thuộc trạng thái nội bộ (internal state / 내부 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Sinh thái học hành vi (behavioral ecology): hành vi có consequence về mức thích nghi sinh sản (fitness)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. quyết định (decision / 결정) luôn có chi phí (cost / 비용), delay và độ bất định (uncertainty / 불확실성)** nối từ **19. Homeostasis và motivation: giá trị (value / 값) phụ thuộc trạng thái nội bộ (internal state / 내부 상태)** sang **21. Sinh thái học hành vi (behavioral ecology): hành vi có consequence về mức thích nghi sinh sản (fitness)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. quyết định (decision / 결정) luôn có chi phí (cost / 비용), delay và độ bất định (uncertainty / 불확실성)
 
@@ -254,7 +254,7 @@ Organism hiếm khi có đủ thông tin (information / 정보) hoàn hảo. Ch�
 
 Biology vì vậy thường không tạo “quyết định (decision / 결정) tối ưu tuyệt đối”, mà giải pháp (solution) đủ tốt dưới ràng buộc (constraint / 제약조건) năng lượng (energy / 에너지), thời gian (time / 시간) và độ bất định.
 
-> **Chuyển mạch:** Ở chặng này của **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **21. Sinh thái học hành vi (behavioral ecology): hành vi có consequence về mức thích nghi sinh sản (fitness)** tiếp nhận điểm tựa từ **20. quyết định (decision / 결정) luôn có chi phí (cost / 비용), delay và độ bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. xã hội (social / 사회적) hành vi (behavior / 동작) và inclusive fitness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Sinh thái học hành vi (behavioral ecology): hành vi có consequence về mức thích nghi sinh sản (fitness)** nối từ **20. quyết định (decision / 결정) luôn có chi phí (cost / 비용), delay và độ bất định (uncertainty / 불확실성)** sang **22. xã hội (social / 사회적) hành vi (behavior / 동작) và inclusive fitness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Sinh thái học hành vi (behavioral ecology): hành vi có consequence về mức thích nghi sinh sản (fitness)
 
@@ -268,7 +268,7 @@ Net\ Benefit = năng lượng (energy / 에너지)\ Gain - Năng lượng\ chi p
 
 Animal không cần consciously solve equation. Selection có thể favor neural/behavioral cơ chế (mechanism / 메커니즘) tạo kết quả (outcome / 결과) tương tự trong relevant môi trường (environment / 환경).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **22. xã hội (social / 사회적) hành vi (behavior / 동작) và inclusive fitness** tiếp nhận điểm tựa từ **21. Sinh thái học hành vi (behavioral ecology): hành vi có consequence về mức thích nghi sinh sản (fitness)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Tình huống phân tích (case study): bắt bóng như một bài toán (problem / 문제) điều khiển (control / 제어) hoàn chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. xã hội (social / 사회적) hành vi (behavior / 동작) và inclusive fitness** nối từ **21. Sinh thái học hành vi (behavioral ecology): hành vi có consequence về mức thích nghi sinh sản (fitness)** sang **23. Tình huống phân tích (case study): bắt bóng như một bài toán (problem / 문제) điều khiển (control / 제어) hoàn chỉnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. xã hội (social / 사회적) hành vi (behavior / 동작) và inclusive fitness
 
@@ -282,7 +282,7 @@ với \(r\) là relatedness, \(B\) benefit cho recipient và \(C\) chi phí (cos
 
 Equation này là mô hình để suy luận kin selection, không phải explanation duy nhất của cooperation. Reciprocity, mutualism, group cấu trúc (structure / 구조) và repeated tương tác (interaction / 상호작용) cũng có thể tạo cooperative dynamics.
 
-> **Chuyển mạch:** Trong **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **22. xã hội (social / 사회적) hành vi (behavior / 동작) và inclusive fitness** cho ta quy tắc; **23. Tình huống phân tích (case study): bắt bóng như một bài toán (problem / 문제) điều khiển (control / 제어) hoàn chỉnh** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **24. Tình huống phân tích: pain là perception bảo vệ, không phải meter đo damage đơn giản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. xã hội (social / 사회적) hành vi (behavior / 동작) và inclusive fitness** nêu quy tắc; **23. Tình huống phân tích (case study): bắt bóng như một bài toán (problem / 문제) điều khiển (control / 제어) hoàn chỉnh** thử quy tắc trong tình huống, rồi **24. Tình huống phân tích: pain là perception bảo vệ, không phải meter đo damage đơn giản** mở rộng hệ quả.
 
 ## 23. Tình huống phân tích (case study): bắt bóng như một bài toán (problem / 문제) điều khiển (control / 제어) hoàn chỉnh
 
@@ -292,7 +292,7 @@ Nếu chỉ “phản ứng sau khi thấy bóng tới tay”, độ trễ (late
 
 Một hành vi tưởng đơn giản vì vậy tích hợp optics, neural coding, nội bộ (internal / 내부) mô hình (model / 모델), cơ học cơ (muscle mechanics) và học tập (learning / 학습).
 
-> **Chuyển mạch:** Ở chặng này của **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **23. Tình huống phân tích (case study): bắt bóng như một bài toán (problem / 문제) điều khiển (control / 제어) hoàn chỉnh** cho ta quy tắc; **24. Tình huống phân tích: pain là perception bảo vệ, không phải meter đo damage đơn giản** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **25. Các hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. Tình huống phân tích (case study): bắt bóng như một bài toán (problem / 문제) điều khiển (control / 제어) hoàn chỉnh** nêu quy tắc; **24. Tình huống phân tích: pain là perception bảo vệ, không phải meter đo damage đơn giản** thử quy tắc trong tình huống, rồi **25. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
 
 ## 24. Tình huống phân tích: pain là perception bảo vệ, không phải meter đo damage đơn giản
 
@@ -302,7 +302,7 @@ Nociceptor detect potentially damaging stimulus, nhưng trải nghiệm đau (pa
 
 Trường hợp (case / 사례) này giúp tránh lỗi phổ biến khi đồng nhất receptor activity với conscious perception.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **24. Tình huống phân tích: pain là perception bảo vệ, không phải meter đo damage đơn giản** cho ta quy tắc; **25. Các hiểu lầm phổ biến (common misconceptions)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **26. Mô hình tư duy tổng hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. Tình huống phân tích: pain là perception bảo vệ, không phải meter đo damage đơn giản** nêu quy tắc; **25. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **26. Mô hình tư duy tổng hợp** mở rộng hệ quả.
 
 ## 25. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -314,7 +314,7 @@ Trường hợp (case / 사례) này giúp tránh lỗi phổ biến khi đồng
 
 “Perception là reality được bản sao (copy / 복사) vào brain” cũng sai. Hệ cảm giác transform và infer từ partial tín hiệu (signal / 신호).
 
-> **Chuyển mạch:** Trong **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **26. Mô hình tư duy tổng hợp** gom các mảnh từ **25. Các hiểu lầm phổ biến (common misconceptions)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Sensory hệ thống (system / 시스템) ước lượng trạng thái (state / 상태) chứ không sao chép thế giới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mô hình tư duy tổng hợp sửa misconceptions của mục 25; sensory system ước lượng state chứ không sao chép thế giới.
 
 ## 26. Mô hình tư duy tổng hợp
 
@@ -337,7 +337,7 @@ Vòng lặp này không dừng. Mỗi hành động (action / 동작) thay world
 
 <!-- depth-audit-2026:predictive-control -->
 
-> **Chuyển mạch:** Ở chặng này của **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **Sensory hệ thống (system / 시스템) ước lượng trạng thái (state / 상태) chứ không sao chép thế giới** gom các mảnh từ **26. Mô hình tư duy tổng hợp** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **27. cầu nối (bridge / 브리지) sang Ecology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sensory system ước lượng state từ tín hiệu; cầu nối sang Ecology mở rộng nguyên tắc sensing và action ra môi trường.
 
 ## Sensory hệ thống (system / 시스템) ước lượng trạng thái (state / 상태) chứ không sao chép thế giới
 
@@ -353,7 +353,7 @@ Motor điều khiển (control / 제어) cũng cần prediction vì phản hồi
 
 Đây là cầu nối (bridge / 브리지) trực tiếp sang Psychology và AI: perception có thể được xem như trạng thái (state / 상태) estimation dưới bất định (uncertainty / 불확실성), còn hành vi (behavior / 동작) là chính sách (policy / 정책) dưới ràng buộc (constraint / 제약조건). Nhưng biological hệ thống (system / 시스템) có embodiment, năng lượng (energy / 에너지) chi phí (cost / 비용), development và evolutionary lịch sử (history / 이력) mà mô hình (model / 모델) AI thuần dữ liệu không tự động có.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tích hợp cảm giác, vận động và hành vi — Sensory, Motor and Behavioral tích hợp (integration / 통합)**, **27. cầu nối (bridge / 브리지) sang Ecology** tiếp nhận điểm tựa từ **Sensory hệ thống (system / 시스템) ước lượng trạng thái (state / 상태) chứ không sao chép thế giới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Cầu nối sang Ecology khép mạch từ sensory state estimation tới tương tác organism–environment.
 
 ## 27. cầu nối (bridge / 브리지) sang Ecology
 

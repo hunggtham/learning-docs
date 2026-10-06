@@ -41,7 +41,7 @@ Post-mortem
 
 Không dùng một bank quote hiện tại để suy ra toàn bộ regime lịch sử. Không trộn tham chiếu (reference / 참조) tỷ lệ (rate / 비율), interbank quote, retail conversion tỷ lệ (rate / 비율) và executable hedge price trong cùng một cột.
 
-> **Chuyển mạch:** Trong **Lab 06 — Vietnam FX-Management Stress**, **1. sản phẩm tạo ra (artifact / 산출물) đặc tả hợp đồng (contract / 계약)** cho ta quy tắc; **2. trường hợp (case / 사례) A — Regime map trước khi nhìn chart** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **3. trường hợp (case / 사례) B — Reserve drawdown decomposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lab 06 — Vietnam FX-Management Stress**, **1. sản phẩm tạo ra (artifact / 산출물) đặc tả hợp đồng (contract / 계약)** nêu quy tắc; **2. trường hợp (case / 사례) A — Regime map trước khi nhìn chart** thử quy tắc trong tình huống, rồi **3. trường hợp (case / 사례) B — Reserve drawdown decomposition** mở rộng hệ quả.
 
 ## 2. trường hợp (case / 사례) A — Regime map trước khi nhìn chart
 
@@ -58,7 +58,7 @@ Giả sử bạn phải phân tích USD/VND trong một giai đoạn bên ngoài
 
 Sau đó viết nhân quả (causal / 인과적) map tối đa 12 nút (node / 노드). Map phải có ít nhất một nhánh đi ngược với kết luận ban đầu, ví dụ export receipts hỗ trợ USD supply trong khi imported-energy demand tăng USD demand.
 
-> **Chuyển mạch:** Ở chặng này của **Lab 06 — Vietnam FX-Management Stress**, **2. trường hợp (case / 사례) A — Regime map trước khi nhìn chart** cho ta quy tắc; **3. trường hợp (case / 사례) B — Reserve drawdown decomposition** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **4. trường hợp (case / 사례) C — Policy-trade-off ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lab 06 — Vietnam FX-Management Stress**, **2. trường hợp (case / 사례) A — Regime map trước khi nhìn chart** nêu quy tắc; **3. trường hợp (case / 사례) B — Reserve drawdown decomposition** thử quy tắc trong tình huống, rồi **4. trường hợp (case / 사례) C — Policy-trade-off ma trận (matrix / 행렬)** mở rộng hệ quả.
 
 ## 3. trường hợp (case / 사례) B — Reserve drawdown decomposition
 
@@ -83,7 +83,7 @@ components that cannot be identified from aggregate data alone
 
 Không được ghi “intervention = reserve decrease”. Một reserve series có thể chứa valuation, debt dịch vụ (service / 서비스), deposits, forward positions hoặc timing differences. Nếu không có transaction-level dữ liệu (data / 데이터), kết luận phải ghi là `not identified` hoặc `bounded estimate`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab 06 — Vietnam FX-Management Stress**, **3. trường hợp (case / 사례) B — Reserve drawdown decomposition** cho ta quy tắc; **4. trường hợp (case / 사례) C — Policy-trade-off ma trận (matrix / 행렬)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **5. trường hợp (case / 사례) D — Band widening và thực thi (execution / 실행) stress** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lab 06 — Vietnam FX-Management Stress**, **3. trường hợp (case / 사례) B — Reserve drawdown decomposition** nêu quy tắc; **4. trường hợp (case / 사례) C — Policy-trade-off ma trận (matrix / 행렬)** thử quy tắc trong tình huống, rồi **5. trường hợp (case / 사례) D — Band widening và thực thi (execution / 실행) stress** mở rộng hệ quả.
 
 ## 4. trường hợp (case / 사례) C — Policy-trade-off ma trận (matrix / 행렬)
 
@@ -121,7 +121,7 @@ what would falsify the thesis
 
 Không chọn phản hồi (response / 응답) bằng một score tổng duy nhất. Nêu rõ mục tiêu (objective / 목표) hàm (function / 함수): giảm disorderly move, giữ inflation expectation, hỗ trợ growth hay bảo vệ reserve buffer.
 
-> **Chuyển mạch:** Trong **Lab 06 — Vietnam FX-Management Stress**, **4. trường hợp (case / 사례) C — Policy-trade-off ma trận (matrix / 행렬)** cho ta quy tắc; **5. trường hợp (case / 사례) D — Band widening và thực thi (execution / 실행) stress** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **6. trường hợp (case / 사례) E — Importer versus exporter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lab 06 — Vietnam FX-Management Stress**, **4. trường hợp (case / 사례) C — Policy-trade-off ma trận (matrix / 행렬)** nêu quy tắc; **5. trường hợp (case / 사례) D — Band widening và thực thi (execution / 실행) stress** thử quy tắc trong tình huống, rồi **6. trường hợp (case / 사례) E — Importer versus exporter** mở rộng hệ quả.
 
 ## 5. trường hợp (case / 사례) D — Band widening và thực thi (execution / 실행) stress
 
@@ -152,7 +152,7 @@ spread / slippage assumption
 settlement and collateral risk
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Lab 06 — Vietnam FX-Management Stress**, **5. trường hợp (case / 사례) D — Band widening và thực thi (execution / 실행) stress** cho ta quy tắc; **6. trường hợp (case / 사례) E — Importer versus exporter** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **7. trường hợp (case / 사례) F — sự kiện (event / 이벤트) study không hindsight** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lab 06 — Vietnam FX-Management Stress**, **5. trường hợp (case / 사례) D — Band widening và thực thi (execution / 실행) stress** nêu quy tắc; **6. trường hợp (case / 사례) E — Importer versus exporter** thử quy tắc trong tình huống, rồi **7. trường hợp (case / 사례) F — sự kiện (event / 이벤트) study không hindsight** mở rộng hệ quả.
 
 ## 6. trường hợp (case / 사례) E — Importer versus exporter
 
@@ -194,7 +194,7 @@ local input costs rise 3%
 
 Tách derivative P/L khỏi combined operating margin.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab 06 — Vietnam FX-Management Stress**, **6. trường hợp (case / 사례) E — Importer versus exporter** cho ta quy tắc; **7. trường hợp (case / 사례) F — sự kiện (event / 이벤트) study không hindsight** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **8. trường hợp (case / 사례) G — Cross-border investor return** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lab 06 — Vietnam FX-Management Stress**, **6. trường hợp (case / 사례) E — Importer versus exporter** nêu quy tắc; **7. trường hợp (case / 사례) F — sự kiện (event / 이벤트) study không hindsight** thử quy tắc trong tình huống, rồi **8. trường hợp (case / 사례) G — Cross-border investor return** mở rộng hệ quả.
 
 ## 7. trường hợp (case / 사례) F — sự kiện (event / 이벤트) study không hindsight
 
@@ -223,7 +223,7 @@ revision or later data release
 
 Không dùng reserve dữ liệu (data / 데이터) công bố sau sự kiện (event / 이벤트) để viết pre-event thesis. Nếu timestamp không chắc, đánh dấu observation là unavailable.
 
-> **Chuyển mạch:** Trong **Lab 06 — Vietnam FX-Management Stress**, **7. trường hợp (case / 사례) F — sự kiện (event / 이벤트) study không hindsight** cho ta quy tắc; **8. trường hợp (case / 사례) G — Cross-border investor return** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **9. Research-quality gates** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lab 06 — Vietnam FX-Management Stress**, **7. trường hợp (case / 사례) F — sự kiện (event / 이벤트) study không hindsight** nêu quy tắc; **8. trường hợp (case / 사례) G — Cross-border investor return** thử quy tắc trong tình huống, rồi **9. Research-quality gates** mở rộng hệ quả.
 
 ## 8. trường hợp (case / 사례) G — Cross-border investor return
 
@@ -256,7 +256,7 @@ wrapper / tax / settlement item to verify
 
 Mục tiêu là thấy investor return phụ thuộc reporting currency và liability currency, không chỉ asset price.
 
-> **Chuyển mạch:** Ở chặng này của **Lab 06 — Vietnam FX-Management Stress**, **8. trường hợp (case / 사례) G — Cross-border investor return** cho ta quy tắc; **9. Research-quality gates** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **10. Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lab 06 — Vietnam FX-Management Stress**, **8. trường hợp (case / 사례) G — Cross-border investor return** nêu quy tắc; **9. Research-quality gates** thử quy tắc trong tình huống, rồi **10. Đọc tiếp** mở rộng hệ quả.
 
 ## 9. Research-quality gates
 
@@ -274,7 +274,7 @@ Bài chỉ đạt khi:
 [ ] không áp rule EUR/USD trực tiếp vào USD/VND
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab 06 — Vietnam FX-Management Stress**, **10. Đọc tiếp** tiếp nhận điểm tựa từ **9. Research-quality gates** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lab 06 — Vietnam FX-Management Stress**, **10. Đọc tiếp** nối từ **9. Research-quality gates** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 10. Đọc tiếp
 

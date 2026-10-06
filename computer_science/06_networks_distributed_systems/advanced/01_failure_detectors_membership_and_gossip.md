@@ -12,7 +12,7 @@ Hết thời gian chờ (timeout / 타임아웃) ngắn phát hiện nhanh nhưn
 
 Không có threshold hoàn hảo nếu mạng (network / 네트워크) delay không có upper bound chắc chắn.
 
-> **Chuyển mạch:** Trong **Thất bại (failure / 실패) detectors, membership và gossip protocols**, **Perfect thất bại (failure / 실패) detector là lớp trừu tượng (abstraction / 추상화) mạnh** tiếp nhận điểm tựa từ **Hết thời gian chờ (timeout / 타임아웃) chỉ tạo suspicion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Membership là máy trạng thái (state machine / 상태 머신) riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Perfect thất bại (failure / 실패) detector là lớp trừu tượng (abstraction / 추상화) mạnh** nối từ **Hết thời gian chờ (timeout / 타임아웃) chỉ tạo suspicion** sang **Membership là máy trạng thái (state machine / 상태 머신) riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Perfect thất bại (failure / 실패) detector là lớp trừu tượng (abstraction / 추상화) mạnh
 
@@ -22,7 +22,7 @@ Perfect detector lý tưởng cuối cùng phát hiện mọi tiến trình (pro
 
 Môi trường vận hành (production / 운영 환경) các hệ thống (systems / 시스템들) vì vậy dùng eventually-accurate các giả định (assumptions / 가정들), heartbeats và adaptive hết thời gian chờ (timeout / 타임아웃).
 
-> **Chuyển mạch:** Ở chặng này của **Thất bại (failure / 실패) detectors, membership và gossip protocols**, **Membership là máy trạng thái (state machine / 상태 머신) riêng** tiếp nhận điểm tựa từ **Perfect thất bại (failure / 실패) detector là lớp trừu tượng (abstraction / 추상화) mạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Heartbeat** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Membership là máy trạng thái (state machine / 상태 머신) riêng** nối từ **Perfect thất bại (failure / 실패) detector là lớp trừu tượng (abstraction / 추상화) mạnh** sang **Heartbeat**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Membership là máy trạng thái (state machine / 상태 머신) riêng
 
@@ -32,7 +32,7 @@ Membership không chỉ là một danh sách (list / 목록) IP. Nó cần phiê
 
 Nếu nút (node / 노드) B restart với cùng address nhưng incarnation mới, gossip cũ nói “B dead” không được phép giết membership mới.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thất bại (failure / 실패) detectors, membership và gossip protocols**, **Heartbeat** tiếp nhận điểm tựa từ **Membership là máy trạng thái (state machine / 상태 머신) riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gossip** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Heartbeat** nối từ **Membership là máy trạng thái (state machine / 상태 머신) riêng** sang **Gossip**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Heartbeat
 
@@ -40,7 +40,7 @@ Nút (node / 노드) gửi heartbeat định kỳ hoặc peers chủ động pro
 
 Central coordinator đơn giản nhưng thành bottleneck/single phụ thuộc (dependency / 의존성). All-to-all heartbeat quy mô (scale / 규모) `O(n^2)` messages. Large clusters thường dùng subset probing + gossip.
 
-> **Chuyển mạch:** Trong **Thất bại (failure / 실패) detectors, membership và gossip protocols**, **Gossip** tiếp nhận điểm tựa từ **Heartbeat** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SWIM intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Gossip** nối từ **Heartbeat** sang **SWIM intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gossip
 
@@ -50,7 +50,7 @@ Gossip có ưu điểm decentralized, robust và message chi phí (cost / 비용
 
 Một nút (node / 노드) có thể biết thất bại (failure / 실패) trước nút (node / 노드) khác; giao thức (protocol / 프로토콜) sử dụng membership phải chịu được điều đó.
 
-> **Chuyển mạch:** Ở chặng này của **Thất bại (failure / 실패) detectors, membership và gossip protocols**, **SWIM intuition** tiếp nhận điểm tựa từ **Gossip** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **False positive nguy hiểm hơn tưởng tượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **SWIM intuition** nối từ **Gossip** sang **False positive nguy hiểm hơn tưởng tượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## SWIM intuition
 
@@ -60,7 +60,7 @@ Sau suspicion, status được piggyback qua gossip.
 
 Chi tiết hiện thực (implementation / 구현) khác nhau, nhưng mô hình tư duy (mental model / 사고 모델) quan trọng là **randomized probing + suspicion + epidemic dissemination**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thất bại (failure / 실패) detectors, membership và gossip protocols**, **False positive nguy hiểm hơn tưởng tượng** tiếp nhận điểm tựa từ **SWIM intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Partition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **False positive nguy hiểm hơn tưởng tượng** nối từ **SWIM intuition** sang **Partition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## False positive nguy hiểm hơn tưởng tượng
 
@@ -70,7 +70,7 @@ Membership tầng (layer / 계층) cần hysteresis/suspicion period và downstr
 
 Thất bại (failure / 실패) detector không nên tự động biến bất định (uncertainty / 불확실성) thành destructive hành động (action / 동작) quá sớm.
 
-> **Chuyển mạch:** Trong **Thất bại (failure / 실패) detectors, membership và gossip protocols**, **Partition** tiếp nhận điểm tựa từ **False positive nguy hiểm hơn tưởng tượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phi accrual detector** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Partition** nối từ **False positive nguy hiểm hơn tưởng tượng** sang **Phi accrual detector**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Partition
 
@@ -80,7 +80,7 @@ Membership/thất bại (failure / 실패) detector không tự giải split-bra
 
 Đây là lý do “health check thất bại (fail / 실패)” không tương đương “safe to promote standby”.
 
-> **Chuyển mạch:** Ở chặng này của **Thất bại (failure / 실패) detectors, membership và gossip protocols**, **Phi accrual detector** tiếp nhận điểm tựa từ **Partition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Clock và timer các giả định (assumptions / 가정들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Phi accrual detector** nối từ **Partition** sang **Clock và timer các giả định (assumptions / 가정들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phi accrual detector
 
@@ -88,7 +88,7 @@ Thay vì nhị phân (binary / 이진) hết thời gian chờ (timeout / 타임
 
 Điều này thích ứng độ trễ (latency / 지연 시간) variation tốt hơn fixed hết thời gian chờ (timeout / 타임아웃) trong một số các hệ thống (systems / 시스템들), nhưng vẫn không biến bất định (uncertainty / 불확실성) thành certainty.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thất bại (failure / 실패) detectors, membership và gossip protocols**, **Clock và timer các giả định (assumptions / 가정들)** tiếp nhận điểm tựa từ **Phi accrual detector** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Membership thay đổi (change / 변경) và quyền sở hữu trạng thái (state ownership / 상태 소유권)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Clock và timer các giả định (assumptions / 가정들)** nối từ **Phi accrual detector** sang **Membership thay đổi (change / 변경) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Clock và timer các giả định (assumptions / 가정들)
 
@@ -96,7 +96,7 @@ Thất bại (failure / 실패) detection dùng cục bộ (local / 로컬) time
 
 Môi trường vận hành (production / 운영 환경) tuning phải xem GC, CPU starvation, event-loop stalls và mạng (network / 네트워크) tail độ trễ (latency / 지연 시간) cùng nhau.
 
-> **Chuyển mạch:** Trong **Thất bại (failure / 실패) detectors, membership và gossip protocols**, sau nội dung của **Clock và timer các giả định (assumptions / 가정들)**, **Membership thay đổi (change / 변경) và quyền sở hữu trạng thái (state ownership / 상태 소유권)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** sau nội dung của **Clock và timer các giả định (assumptions / 가정들)**, **Membership thay đổi (change / 변경) và quyền sở hữu trạng thái (state ownership / 상태 소유권)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu; **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn của cơ chế này.
 
 ## Membership thay đổi (change / 변경) và quyền sở hữu trạng thái (state ownership / 상태 소유권)
 
@@ -104,13 +104,13 @@ Khi member set đổi, shard quyền sở hữu (ownership / 소유권) hoặc r
 
 Do đó stable membership và controlled reconfiguration là prerequisite cho lưu trữ (storage / 저장소) cluster khỏe.
 
-> **Chuyển mạch:** Ở chặng này của **Thất bại (failure / 실패) detectors, membership và gossip protocols**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Membership thay đổi (change / 변경) và quyền sở hữu trạng thái (state ownership / 상태 소유권)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Membership thay đổi (change / 변경) và quyền sở hữu trạng thái (state ownership / 상태 소유권)**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > thất bại (failure / 실패) detector không nói “ai chết”; nó cung cấp **suspicion tín hiệu (signal / 신호) dưới timing các giả định (assumptions / 가정들)**. Membership biến signals đó thành versioned cluster view; safety-critical quyền sở hữu (ownership / 소유권) phải dựa thêm quorum/consensus/fencing.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thất bại (failure / 실패) detectors, membership và gossip protocols**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -120,7 +120,7 @@ Do đó stable membership và controlled reconfiguration là prerequisite cho l�
 
 **“Detect thất bại (failure / 실패) là đủ để failover an toàn.”** Failover mutation authority cần fencing/quorum để tránh split-brain.
 
-> **Chuyển mạch:** Trong **Thất bại (failure / 실패) detectors, membership và gossip protocols**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

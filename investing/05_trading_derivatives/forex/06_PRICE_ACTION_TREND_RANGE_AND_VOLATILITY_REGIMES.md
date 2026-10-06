@@ -42,7 +42,7 @@ Cost model
 Exit rule
 ```
 
-> **Chuyển mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **2. Trend là khái niệm phụ thuộc horizon** tiếp nhận điểm tựa từ **1. Price hành động (action / 동작) là description trước khi là prediction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Trend có thể được định nghĩa bằng nhiều quy tắc (rule / 규칙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **2. Trend là khái niệm phụ thuộc horizon** nối từ **1. Price hành động (action / 동작) là description trước khi là prediction** sang **3. Trend có thể được định nghĩa bằng nhiều quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Trend là khái niệm phụ thuộc horizon
 
@@ -67,7 +67,7 @@ Trend definition
 
 Nếu đổi timeframe sau khi thấy kết quả, rất dễ rơi vào hindsight.
 
-> **Chuyển mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **3. Trend có thể được định nghĩa bằng nhiều quy tắc (rule / 규칙)** tiếp nhận điểm tựa từ **2. Trend là khái niệm phụ thuộc horizon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Phạm vi (range / 범위) là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **3. Trend có thể được định nghĩa bằng nhiều quy tắc (rule / 규칙)** nối từ **2. Trend là khái niệm phụ thuộc horizon** sang **4. Phạm vi (range / 범위) là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Trend có thể được định nghĩa bằng nhiều quy tắc (rule / 규칙)
 
@@ -87,7 +87,7 @@ Do đó không nên tranh luận “định nghĩa trend nào đúng tuyệt đ�
 
 > Định nghĩa nào phù hợp với hypothesis và dữ liệu, và nó có ổn định ngoài mẫu không?
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **4. Phạm vi (range / 범위) là gì?** tiếp nhận điểm tựa từ **3. Trend có thể được định nghĩa bằng nhiều quy tắc (rule / 규칙)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Trend và mean reversion có thể cùng tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **4. Phạm vi (range / 범위) là gì?** nối từ **3. Trend có thể được định nghĩa bằng nhiều quy tắc (rule / 규칙)** sang **5. Trend và mean reversion có thể cùng tồn tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Phạm vi (range / 범위) là gì?
 
@@ -104,7 +104,7 @@ Phạm vi (range / 범위) chiến lược (strategy / 전략) thường đặt 
 
 Nhưng phạm vi (range / 범위) có thể kết thúc đột ngột khi new thông tin (information / 정보) xuất hiện.
 
-> **Chuyển mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **5. Trend và mean reversion có thể cùng tồn tại** tiếp nhận điểm tựa từ **4. Phạm vi (range / 범위) là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Breakout là chuyển tiếp (transition / 전이) hypothesis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **5. Trend và mean reversion có thể cùng tồn tại** nối từ **4. Phạm vi (range / 범위) là gì?** sang **6. Breakout là chuyển tiếp (transition / 전이) hypothesis**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Trend và mean reversion có thể cùng tồn tại
 
@@ -121,7 +121,7 @@ hoặc ngược lại.
 
 Thị trường (market / 시장) có thể trend trong nhiều tuần nhưng vẫn có intraday oscillation quanh cục bộ (local / 로컬) mean. Chiến lược (strategy / 전략) phải xác định horizon của edge.
 
-> **Chuyển mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **6. Breakout là chuyển tiếp (transition / 전이) hypothesis** tiếp nhận điểm tựa từ **5. Trend và mean reversion có thể cùng tồn tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. False breakout không phải exception hiếm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **6. Breakout là chuyển tiếp (transition / 전이) hypothesis** nối từ **5. Trend và mean reversion có thể cùng tồn tại** sang **7. False breakout không phải exception hiếm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Breakout là chuyển tiếp (transition / 전이) hypothesis
 
@@ -148,7 +148,7 @@ Cần định nghĩa:
 - stop/vô hiệu hóa (invalidation / 무효화);
 - thời gian (time / 시간) stop.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **7. False breakout không phải exception hiếm** tiếp nhận điểm tựa từ **6. Breakout là chuyển tiếp (transition / 전이) hypothesis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Pullback** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **7. False breakout không phải exception hiếm** nối từ **6. Breakout là chuyển tiếp (transition / 전이) hypothesis** sang **8. Pullback**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. False breakout không phải exception hiếm
 
@@ -164,7 +164,7 @@ Price có thể vượt mức (level / 수준), kích hoạt luồng (flow / 흐
 
 Một chiến lược (strategy / 전략) breakout phải sống sót sau phân phối (distribution / 분포) của false breakouts.
 
-> **Chuyển mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **8. Pullback** tiếp nhận điểm tựa từ **7. False breakout không phải exception hiếm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Hỗ trợ (support / 지원) và resistance nên xem là vùng xác suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **8. Pullback** nối từ **7. False breakout không phải exception hiếm** sang **9. Hỗ trợ (support / 지원) và resistance nên xem là vùng xác suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Pullback
 
@@ -182,7 +182,7 @@ What is expected continuation horizon?
 
 Nếu không formalize, mọi reversal nhỏ đều có thể được gọi là “healthy pullback” sau khi biết kết quả.
 
-> **Chuyển mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **9. Hỗ trợ (support / 지원) và resistance nên xem là vùng xác suất** tiếp nhận điểm tựa từ **8. Pullback** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Swing high / swing low** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **9. Hỗ trợ (support / 지원) và resistance nên xem là vùng xác suất** nối từ **8. Pullback** sang **10. Swing high / swing low**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Hỗ trợ (support / 지원) và resistance nên xem là vùng xác suất
 
@@ -206,7 +206,7 @@ zone + tolerance + reaction rule
 
 thay vì một con số tuyệt đối.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **10. Swing high / swing low** tiếp nhận điểm tựa từ **9. Hỗ trợ (support / 지원) và resistance nên xem là vùng xác suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Thị trường (market / 시장) cấu trúc (structure / 구조) labels phải có deterministic quy tắc (rule / 규칙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **10. Swing high / swing low** nối từ **9. Hỗ trợ (support / 지원) và resistance nên xem là vùng xác suất** sang **11. Thị trường (market / 시장) cấu trúc (structure / 구조) labels phải có deterministic quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Swing high / swing low
 
@@ -223,7 +223,7 @@ Quy tắc (rule / 규칙) này có look-ahead nếu dùng future bars. Trong liv
 
 Đây là ví dụ điển hình của **look-ahead độ lệch (bias / 편향)** khi biến visual mẫu (pattern / 패턴) thành backtest.
 
-> **Chuyển mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **10. Swing high / swing low** cho ta quy tắc; **11. Thị trường (market / 시장) cấu trúc (structure / 구조) labels phải có deterministic quy tắc (rule / 규칙)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **12. Volatility là trạng thái (state / 상태) variable trung tâm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **10. Swing high / swing low** nêu quy tắc; **11. Thị trường (market / 시장) cấu trúc (structure / 구조) labels phải có deterministic quy tắc (rule / 규칙)** thử quy tắc trong tình huống, rồi **12. Volatility là trạng thái (state / 상태) variable trung tâm** mở rộng hệ quả.
 
 ## 11. Thị trường (market / 시장) cấu trúc (structure / 구조) labels phải có deterministic quy tắc (rule / 규칙)
 
@@ -247,7 +247,7 @@ with move size > threshold
 
 Khi đó mới có thể đo frequency, expectancy và regime dependence.
 
-> **Chuyển mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **11. Thị trường (market / 시장) cấu trúc (structure / 구조) labels phải có deterministic quy tắc (rule / 규칙)** cho ta quy tắc; **12. Volatility là trạng thái (state / 상태) variable trung tâm** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **13. Realized volatility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **11. Thị trường (market / 시장) cấu trúc (structure / 구조) labels phải có deterministic quy tắc (rule / 규칙)** nêu quy tắc; **12. Volatility là trạng thái (state / 상태) variable trung tâm** thử quy tắc trong tình huống, rồi **13. Realized volatility** mở rộng hệ quả.
 
 ## 12. Volatility là trạng thái (state / 상태) variable trung tâm
 
@@ -264,7 +264,7 @@ Volatility không chỉ là “thị trường (market / 시장) chạy mạnh�
 
 Cùng một tín hiệu (signal / 신호) có thể cần kích thước (size / 크기) khác hoàn toàn ở low-vol và high-vol regime.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **13. Realized volatility** tiếp nhận điểm tựa từ **12. Volatility là trạng thái (state / 상태) variable trung tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. ATR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **13. Realized volatility** nối từ **12. Volatility là trạng thái (state / 상태) variable trung tâm** sang **14. ATR**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Realized volatility
 
@@ -284,7 +284,7 @@ Annualization gần đúng:
 
 Nhưng FX returns có volatility clustering và fat tails, nên square-root scaling chỉ là approximation.
 
-> **Chuyển mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **14. ATR** tiếp nhận điểm tựa từ **13. Realized volatility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Volatility clustering** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **14. ATR** nối từ **13. Realized volatility** sang **15. Volatility clustering**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. ATR
 
@@ -302,7 +302,7 @@ ATR hữu ích để normalize stop/position sizing theo hiện tại (current /
 
 Nhưng ATR không nói hướng. Nó chỉ mô tả magnitude của movement.
 
-> **Chuyển mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **15. Volatility clustering** tiếp nhận điểm tựa từ **14. ATR** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Compression và expansion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **15. Volatility clustering** nối từ **14. ATR** sang **16. Compression và expansion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Volatility clustering
 
@@ -317,7 +317,7 @@ low-vol periods followed by low-vol periods
 
 Một chiến lược (strategy / 전략) dùng constant stop hoặc constant leverage bất chấp regime có thể bị overleveraged khi volatility chuyển cao.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **16. Compression và expansion** tiếp nhận điểm tựa từ **15. Volatility clustering** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Range-normalized movement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **16. Compression và expansion** nối từ **15. Volatility clustering** sang **17. Range-normalized movement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Compression và expansion
 
@@ -332,7 +332,7 @@ volatility contracts
 
 Nhưng compression không đảm bảo breakout direction hoặc profitability. Chiến lược (strategy / 전략) phải estimate conditional phân phối (distribution / 분포).
 
-> **Chuyển mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **17. Range-normalized movement** tiếp nhận điểm tựa từ **16. Compression và expansion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Multi-timeframe phân tích (analysis / 분석) — dùng hierarchy, không narrative** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **17. Range-normalized movement** nối từ **16. Compression và expansion** sang **18. Multi-timeframe phân tích (analysis / 분석) — dùng hierarchy, không narrative**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Range-normalized movement
 
@@ -351,7 +351,7 @@ Move / realized sigma
 
 70 pips có thể là rất lớn trong low-vol regime nhưng bình thường trong crisis regime.
 
-> **Chuyển mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **18. Multi-timeframe phân tích (analysis / 분석) — dùng hierarchy, không narrative** tiếp nhận điểm tựa từ **17. Range-normalized movement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Candlestick patterns** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **18. Multi-timeframe phân tích (analysis / 분석) — dùng hierarchy, không narrative** nối từ **17. Range-normalized movement** sang **19. Candlestick patterns**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Multi-timeframe phân tích (analysis / 분석) — dùng hierarchy, không narrative
 
@@ -373,7 +373,7 @@ Daily trend > 0
 1H execution trigger
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **19. Candlestick patterns** tiếp nhận điểm tựa từ **18. Multi-timeframe phân tích (analysis / 분석) — dùng hierarchy, không narrative** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Chart mẫu (pattern / 패턴) và multiple testing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **19. Candlestick patterns** nối từ **18. Multi-timeframe phân tích (analysis / 분석) — dùng hierarchy, không narrative** sang **20. Chart mẫu (pattern / 패턴) và multiple testing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Candlestick patterns
 
@@ -394,7 +394,7 @@ future horizon
 
 Sau đó mới đo kết quả (outcome / 결과).
 
-> **Chuyển mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **20. Chart mẫu (pattern / 패턴) và multiple testing** tiếp nhận điểm tựa từ **19. Candlestick patterns** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Price hành động (action / 동작) quanh news** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **20. Chart mẫu (pattern / 패턴) và multiple testing** nối từ **19. Candlestick patterns** sang **21. Price hành động (action / 동작) quanh news**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Chart mẫu (pattern / 패턴) và multiple testing
 
@@ -412,7 +412,7 @@ Nếu thử:
 
 Vì vậy visual mẫu (pattern / 패턴) research phải nối với multiple-testing điều khiển (control / 제어) và out-of-sample kiểm tra hợp lệ (validation / 검증) ở chapter 10.
 
-> **Chuyển mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **21. Price hành động (action / 동작) quanh news** tiếp nhận điểm tựa từ **20. Chart mẫu (pattern / 패턴) và multiple testing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Regime là latent trạng thái (state / 상태), không phải nhãn tuyệt đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **21. Price hành động (action / 동작) quanh news** nối từ **20. Chart mẫu (pattern / 패턴) và multiple testing** sang **22. Regime là latent trạng thái (state / 상태), không phải nhãn tuyệt đối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Price hành động (action / 동작) quanh news
 
@@ -425,7 +425,7 @@ Cùng một breakout có meaning khác nếu xảy ra:
 
 Price cấu trúc (structure / 구조) không nên tách khỏi sự kiện (event / 이벤트)/liquidity ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **22. Regime là latent trạng thái (state / 상태), không phải nhãn tuyệt đối** tiếp nhận điểm tựa từ **21. Price hành động (action / 동작) quanh news** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Regime chuyển tiếp (transition / 전이) là nơi chiến lược (strategy / 전략) dễ gãy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **22. Regime là latent trạng thái (state / 상태), không phải nhãn tuyệt đối** nối từ **21. Price hành động (action / 동작) quanh news** sang **23. Regime chuyển tiếp (transition / 전이) là nơi chiến lược (strategy / 전략) dễ gãy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Regime là latent trạng thái (state / 상태), không phải nhãn tuyệt đối
 
@@ -444,7 +444,7 @@ Không regime label nào quan sát trực tiếp hoàn hảo. Ta infer từ dữ
 
 Vì vậy regime classifier cũng có bất định (uncertainty / 불확실성) và lag.
 
-> **Chuyển mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **23. Regime chuyển tiếp (transition / 전이) là nơi chiến lược (strategy / 전략) dễ gãy** tiếp nhận điểm tựa từ **22. Regime là latent trạng thái (state / 상태), không phải nhãn tuyệt đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Hindsight charting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **23. Regime chuyển tiếp (transition / 전이) là nơi chiến lược (strategy / 전략) dễ gãy** nối từ **22. Regime là latent trạng thái (state / 상태), không phải nhãn tuyệt đối** sang **24. Hindsight charting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Regime chuyển tiếp (transition / 전이) là nơi chiến lược (strategy / 전략) dễ gãy
 
@@ -462,7 +462,7 @@ drawdown speed
 
 Không chỉ cumulative P/L.
 
-> **Chuyển mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **24. Hindsight charting** tiếp nhận điểm tựa từ **23. Regime chuyển tiếp (transition / 전이) là nơi chiến lược (strategy / 전략) dễ gãy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Trendline** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **24. Hindsight charting** nối từ **23. Regime chuyển tiếp (transition / 전이) là nơi chiến lược (strategy / 전략) dễ gãy** sang **25. Trendline**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Hindsight charting
 
@@ -477,7 +477,7 @@ Sau khi thị trường (market / 시장) move mạnh, rất dễ vẽ:
 
 Một quy tắc (rule / 규칙) chỉ hợp lệ nếu trader/mô hình (model / 모델) có thể biết nó bằng dữ liệu có sẵn lúc đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **25. Trendline** tiếp nhận điểm tựa từ **24. Hindsight charting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Fibonacci levels** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **25. Trendline** nối từ **24. Hindsight charting** sang **26. Fibonacci levels**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Trendline
 
@@ -494,7 +494,7 @@ How is line updated over time?
 
 Nếu không trả lời được, chart reading vẫn hữu ích cho discretionary rà soát (review / 검토) nhưng chưa thành reproducible chiến lược (strategy / 전략).
 
-> **Chuyển mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **26. Fibonacci levels** tiếp nhận điểm tựa từ **25. Trendline** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Round numbers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **26. Fibonacci levels** nối từ **25. Trendline** sang **27. Round numbers**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Fibonacci levels
 
@@ -510,7 +510,7 @@ After costs?
 
 Nếu không, mức (level / 수준) có thể chỉ là coordination convention hoặc hindsight sản phẩm tạo ra (artifact / 산출물).
 
-> **Chuyển mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **27. Round numbers** tiếp nhận điểm tựa từ **26. Fibonacci levels** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Price hành động (action / 동작) và thứ tự (order / 순서) luồng (flow / 흐름)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **27. Round numbers** nối từ **26. Fibonacci levels** sang **28. Price hành động (action / 동작) và thứ tự (order / 순서) luồng (flow / 흐름)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Round numbers
 
@@ -518,7 +518,7 @@ Round numbers như `1.1000` có thể thu hút attention vì human/institutional
 
 Nhưng “round number” nên được kiểm thử (test / 테스트) bằng distance normalization và điều khiển (control / 제어) levels, không mặc định là hỗ trợ (support / 지원)/resistance mạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **27. Round numbers** xác định đầu vào; **28. Price hành động (action / 동작) và thứ tự (order / 순서) luồng (flow / 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **29. A robust price-action hypothesis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **27. Round numbers** đặt đầu vào cho **28. Price hành động (action / 동작) và thứ tự (order / 순서) luồng (flow / 흐름)**, rồi **29. A robust price-action hypothesis** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 28. Price hành động (action / 동작) và thứ tự (order / 순서) luồng (flow / 흐름)
 
@@ -537,7 +537,7 @@ không cho biết chắc price đi `100→105→95→101` hay `100→95→105→
 
 Nếu chiến lược (strategy / 전략) phụ thuộc chuỗi (sequence / 시퀀스) intrabar, bar dữ liệu (data / 데이터) không đủ.
 
-> **Chuyển mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **28. Price hành động (action / 동작) và thứ tự (order / 순서) luồng (flow / 흐름)** xác định đầu vào; **29. A robust price-action hypothesis** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **30. Checklist trước khi học indicators** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **28. Price hành động (action / 동작) và thứ tự (order / 순서) luồng (flow / 흐름)** đặt đầu vào cho **29. A robust price-action hypothesis**, rồi **30. Checklist trước khi học indicators** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 29. A robust price-action hypothesis
 
@@ -566,7 +566,7 @@ Walk-forward across pairs and regimes with realistic cost.
 
 Đây là cách biến “breakout” từ từ khóa chart thành research đối tượng (object / 객체).
 
-> **Chuyển mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **30. Checklist trước khi học indicators** tiếp nhận điểm tựa từ **29. A robust price-action hypothesis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **30. Checklist trước khi học indicators** nối từ **29. A robust price-action hypothesis** sang **Đọc tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Checklist trước khi học indicators
 
@@ -582,13 +582,13 @@ Bạn cần phân biệt được:
 8. Vì sao OHLC không chứa đầy đủ intrabar đường dẫn (path / 경로).
 9. Vì sao multiple testing làm mẫu (pattern / 패턴) đẹp dễ xuất hiện ngẫu nhiên.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **Đọc tiếp** tiếp nhận điểm tựa từ **30. Checklist trước khi học indicators** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nội bộ (internal / 내부) links** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **Đọc tiếp** nối từ **30. Checklist trước khi học indicators** sang **Nội bộ (internal / 내부) links**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đọc tiếp
 
 → [07 — Technical indicators as data transformations](./07_TECHNICAL_INDICATORS_AS_DATA_TRANSFORMATIONS.md)
 
-> **Chuyển mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **Nội bộ (internal / 내부) links** tiếp nhận điểm tựa từ **Đọc tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **06 — Price hành động (action / 동작), trend, phạm vi (range / 범위) và volatility regimes**, **Nội bộ (internal / 내부) links** nối từ **Đọc tiếp** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nội bộ (internal / 내부) links
 

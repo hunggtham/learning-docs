@@ -43,7 +43,7 @@ Nhưng không closed dưới subtraction:
 
 Điểm này giải thích vì sao negative numbers không phải “phần phụ kỳ lạ”; chúng hoàn tất một thao tác (operation / 연산) mà counting numbers chưa giữ được.
 
-> **Chuyển mạch:** Trong **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **2. Natural numbers: arithmetic của counting** tiếp nhận điểm tựa từ **1. Một number hệ thống (system / 시스템) được chọn theo operations ta cần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Integers: thêm direction quanh zero** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **2. Natural numbers: arithmetic của counting** nối từ **1. Một number hệ thống (system / 시스템) được chọn theo operations ta cần** sang **3. Integers: thêm direction quanh zero**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Natural numbers: arithmetic của counting
 
@@ -59,7 +59,7 @@ Natural numbers mô hình (model / 모델) count của discrete objects. Với `
 
 Peano-style viewpoint còn cho thấy arithmetic có thể được xây từ successor thao tác (operation / 연산), nhưng phạm vi (scope / 범위) hiện tại không cần formal axiomatization đầy đủ. Điều quan trọng là hiểu natural numbers mang **discrete thứ tự (order / 순서) + arithmetic cấu trúc (structure / 구조)**.
 
-> **Chuyển mạch:** Ở chặng này của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **3. Integers: thêm direction quanh zero** tiếp nhận điểm tựa từ **2. Natural numbers: arithmetic của counting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Rational numbers: hoàn tất phép chia giữa integers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **3. Integers: thêm direction quanh zero** nối từ **2. Natural numbers: arithmetic của counting** sang **4. Rational numbers: hoàn tất phép chia giữa integers**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Integers: thêm direction quanh zero
 
@@ -91,7 +91,7 @@ Integers vẫn không closed dưới division:
 1/2\notin\mathbb Z.
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **4. Rational numbers: hoàn tất phép chia giữa integers** tiếp nhận điểm tựa từ **3. Integers: thêm direction quanh zero** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Decimal expansion và rationality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **4. Rational numbers: hoàn tất phép chia giữa integers** nối từ **3. Integers: thêm direction quanh zero** sang **5. Decimal expansion và rationality**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Rational numbers: hoàn tất phép chia giữa integers
 
@@ -127,7 +127,7 @@ với denominators nonzero.
 
 Đây là liên kết (connection / 연결) giữa number các hệ thống (systems / 시스템들) và equivalence relations.
 
-> **Chuyển mạch:** Trong **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **5. Decimal expansion và rationality** tiếp nhận điểm tựa từ **4. Rational numbers: hoàn tất phép chia giữa integers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Irrational numbers: rational line có “holes” đối với limits** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **5. Decimal expansion và rationality** nối từ **4. Rational numbers: hoàn tất phép chia giữa integers** sang **6. Irrational numbers: rational line có “holes” đối với limits**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Decimal expansion và rationality
 
@@ -165,7 +165,7 @@ General fact: real number có eventually repeating decimal expansion iff nó rat
 
 Điều này cho thấy biểu diễn (representation / 표현) bằng digits chứa thông tin (information / 정보) về algebraic nature của number.
 
-> **Chuyển mạch:** Ở chặng này của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **5. Decimal expansion và rationality** đã nêu tiêu chí phân biệt, còn **6. Irrational numbers: rational line có “holes” đối với limits** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **7. Real numbers và completeness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **5. Decimal expansion và rationality** đặt tiêu chí; **6. Irrational numbers: rational line có “holes” đối với limits** dùng tiêu chí đó để kiểm tra ranh giới, rồi **7. Real numbers và completeness** mở rộng hệ quả.
 
 ## 6. Irrational numbers: rational line có “holes” đối với limits
 
@@ -183,7 +183,7 @@ Irrational không nghĩa “không approximate được”. Rational numbers den
 
 Vấn đề là approximation không bằng chính xác (exact / 정확한) membership.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **6. Irrational numbers: rational line có “holes” đối với limits** đã nêu tiêu chí phân biệt, còn **7. Real numbers và completeness** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **8. Absolute giá trị (value / 값): từ sign tới chỉ số (metric / 지표)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **6. Irrational numbers: rational line có “holes” đối với limits** đặt tiêu chí; **7. Real numbers và completeness** dùng tiêu chí đó để kiểm tra ranh giới, rồi **8. Absolute giá trị (value / 값): từ sign tới chỉ số (metric / 지표)** mở rộng hệ quả.
 
 ## 7. Real numbers và completeness
 
@@ -201,7 +201,7 @@ Rationals không complete. Có rational Cauchy sequences converge về `√2`, n
 
 Đây là reason Real phân tích (analysis / 분석) dành nhiều thời gian cho completeness: limits, derivatives, integrals dựa vào việc limiting objects không biến mất khỏi number hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Trong **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **8. Absolute giá trị (value / 값): từ sign tới chỉ số (metric / 지표)** tiếp nhận điểm tựa từ **7. Real numbers và completeness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. thứ tự (order / 순서): cái mà complex numbers sẽ không giữ nguyên theo cùng cách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **8. Absolute giá trị (value / 값): từ sign tới chỉ số (metric / 지표)** nối từ **7. Real numbers và completeness** sang **9. thứ tự (order / 순서): cái mà complex numbers sẽ không giữ nguyên theo cùng cách**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Absolute giá trị (value / 값): từ sign tới chỉ số (metric / 지표)
 
@@ -235,7 +235,7 @@ Mẫu (pattern / 패턴) này mở rộng tới véc-tơ (vector / 벡터) norms
 
 Vì vậy absolute giá trị (value / 값) là first example của norm/chỉ số (metric / 지표) cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Ở chặng này của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **9. thứ tự (order / 순서): cái mà complex numbers sẽ không giữ nguyên theo cùng cách** tiếp nhận điểm tựa từ **8. Absolute giá trị (value / 값): từ sign tới chỉ số (metric / 지표)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Complex numbers: closure cho polynomial equations và rotation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **9. thứ tự (order / 순서): cái mà complex numbers sẽ không giữ nguyên theo cùng cách** nối từ **8. Absolute giá trị (value / 값): từ sign tới chỉ số (metric / 지표)** sang **10. Complex numbers: closure cho polynomial equations và rotation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. thứ tự (order / 순서): cái mà complex numbers sẽ không giữ nguyên theo cùng cách
 
@@ -255,7 +255,7 @@ Complex numbers không có natural total thứ tự (order / 순서) tương th�
 
 Đây là lesson tổng quát: extension thường giải quyết một limitation nhưng đổi set of structures available.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **10. Complex numbers: closure cho polynomial equations và rotation** tiếp nhận điểm tựa từ **9. thứ tự (order / 순서): cái mà complex numbers sẽ không giữ nguyên theo cùng cách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Fundamental Theorem of Algebra: vì sao C là một natural endpoint cho polynomial roots** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **10. Complex numbers: closure cho polynomial equations và rotation** nối từ **9. thứ tự (order / 순서): cái mà complex numbers sẽ không giữ nguyên theo cùng cách** sang **11. Fundamental Theorem of Algebra: vì sao C là một natural endpoint cho polynomial roots**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Complex numbers: closure cho polynomial equations và rotation
 
@@ -298,7 +298,7 @@ Multiplication của complex numbers cộng angles và nhân magnitudes. Vì v�
 
 Đây là reason complex numbers xuất hiện tự nhiên trong Fourier phân tích (analysis / 분석), wave các mô hình (models / 모델들), AC circuits và điều khiển (control / 제어) các hệ thống (systems / 시스템들).
 
-> **Chuyển mạch:** Trong **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **11. Fundamental Theorem of Algebra: vì sao C là một natural endpoint cho polynomial roots** tiếp nhận điểm tựa từ **10. Complex numbers: closure cho polynomial equations và rotation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Numeral hệ thống (system / 시스템) không phải number hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **11. Fundamental Theorem of Algebra: vì sao C là một natural endpoint cho polynomial roots** nối từ **10. Complex numbers: closure cho polynomial equations và rotation** sang **12. Numeral hệ thống (system / 시스템) không phải number hệ thống (system / 시스템)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Fundamental Theorem of Algebra: vì sao C là một natural endpoint cho polynomial roots
 
@@ -308,7 +308,7 @@ Conceptually, `C` là algebraically closed: polynomial equations không buộc t
 
 Không cần proof theorem này ở chapter foundations; proof cần complex phân tích (analysis / 분석)/algebra sâu hơn. Nhưng theorem giải thích vị trí đặc biệt của complex numbers trong algebra.
 
-> **Chuyển mạch:** Ở chặng này của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **12. Numeral hệ thống (system / 시스템) không phải number hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **11. Fundamental Theorem of Algebra: vì sao C là một natural endpoint cho polynomial roots** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Positional notation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **12. Numeral hệ thống (system / 시스템) không phải number hệ thống (system / 시스템)** nối từ **11. Fundamental Theorem of Algebra: vì sao C là một natural endpoint cho polynomial roots** sang **13. Positional notation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Numeral hệ thống (system / 시스템) không phải number hệ thống (system / 시스템)
 
@@ -324,7 +324,7 @@ Biểu diễn (representation / 표현) thay đổi, đối tượng (object / �
 
 Đây là cùng mô hình tư duy (mental model / 사고 모델) đã gặp ở coordinate các hệ thống (systems / 시스템들) và basis changes.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **13. Positional notation** tiếp nhận điểm tựa từ **12. Numeral hệ thống (system / 시스템) không phải number hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Finite biểu diễn (representation / 표현): khi mathematics gặp machine limits** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **13. Positional notation** nối từ **12. Numeral hệ thống (system / 시스템) không phải number hệ thống (system / 시스템)** sang **14. Finite biểu diễn (representation / 표현): khi mathematics gặp machine limits**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Positional notation
 
@@ -347,7 +347,7 @@ Fractional digits dùng negative powers:
 
 Nhị phân (binary / 이진) cơ sở (base / 기반) 2 phù hợp digital biểu diễn (representation / 표현) vì hardware dễ distinguish two stable trạng thái (state / 상태) ranges. Nhưng nhị phân (binary / 이진) không biến quantity thành “loại số khác”.
 
-> **Chuyển mạch:** Trong **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **13. Positional notation** đã nêu tiêu chí phân biệt, còn **14. Finite biểu diễn (representation / 표현): khi mathematics gặp machine limits** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **15. Vì sao 0.1 thường không chính xác (exact / 정확한) trong nhị phân (binary / 이진)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **13. Positional notation** đặt tiêu chí; **14. Finite biểu diễn (representation / 표현): khi mathematics gặp machine limits** dùng tiêu chí đó để kiểm tra ranh giới, rồi **15. Vì sao 0.1 thường không chính xác (exact / 정확한) trong nhị phân (binary / 이진)** mở rộng hệ quả.
 
 ## 14. Finite biểu diễn (representation / 표현): khi mathematics gặp machine limits
 
@@ -371,7 +371,7 @@ IEEE-style floating điểm (point / 지점) roughly:
 
 Do finite significand, thao tác (operation / 연산) được rounded.
 
-> **Chuyển mạch:** Ở chặng này của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **14. Finite biểu diễn (representation / 표현): khi mathematics gặp machine limits** đã nêu tiêu chí phân biệt, còn **15. Vì sao 0.1 thường không chính xác (exact / 정확한) trong nhị phân (binary / 이진)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **16. Equality trong numerical computing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **14. Finite biểu diễn (representation / 표현): khi mathematics gặp machine limits** đặt tiêu chí; **15. Vì sao 0.1 thường không chính xác (exact / 정확한) trong nhị phân (binary / 이진)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **16. Equality trong numerical computing** mở rộng hệ quả.
 
 ## 15. Vì sao 0.1 thường không chính xác (exact / 정확한) trong nhị phân (binary / 이진)
 
@@ -385,7 +385,7 @@ Cơ sở (base / 기반) 2 chỉ có factor 2; denominator 10 còn factor 5, nê
 
 Vì vậy lỗi (error / 오류) không phải bug của floating điểm (point / 지점); nó là consequence của finite positional biểu diễn (representation / 표현).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **16. Equality trong numerical computing** tiếp nhận điểm tựa từ **15. Vì sao 0.1 thường không chính xác (exact / 정확한) trong nhị phân (binary / 이진)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Density và cardinality: hai notions “có nhiều số” khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **16. Equality trong numerical computing** nối từ **15. Vì sao 0.1 thường không chính xác (exact / 정확한) trong nhị phân (binary / 이진)** sang **17. Density và cardinality: hai notions “có nhiều số” khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Equality trong numerical computing
 
@@ -401,7 +401,7 @@ Nhưng solution cũng không phải dùng một `epsilon` magic cho mọi quy m�
 
 Absolute tolerance thích hợp gần zero; relative tolerance hữu ích ở different magnitudes. Numerical comparison phải match bài toán (problem / 문제) quy mô (scale / 규모) và lỗi (error / 오류) mô hình (model / 모델).
 
-> **Chuyển mạch:** Trong **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **17. Density và cardinality: hai notions “có nhiều số” khác nhau** tiếp nhận điểm tựa từ **16. Equality trong numerical computing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Number các hệ thống (systems / 시스템들) và algebraic structures** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **17. Density và cardinality: hai notions “có nhiều số” khác nhau** nối từ **16. Equality trong numerical computing** sang **18. Number các hệ thống (systems / 시스템들) và algebraic structures**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Density và cardinality: hai notions “có nhiều số” khác nhau
 
@@ -413,7 +413,7 @@ Do đó “dense” không đồng nghĩa “có cùng kích thước (size / �
 
 Đây là một trong những điểm làm infinite sets khác finite intuition.
 
-> **Chuyển mạch:** Ở chặng này của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **18. Number các hệ thống (systems / 시스템들) và algebraic structures** tiếp nhận điểm tựa từ **17. Density và cardinality: hai notions “có nhiều số” khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Physics, AI và Finance connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **18. Number các hệ thống (systems / 시스템들) và algebraic structures** nối từ **17. Density và cardinality: hai notions “có nhiều số” khác nhau** sang **19. Physics, AI và Finance connections**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Number các hệ thống (systems / 시스템들) và algebraic structures
 
@@ -423,7 +423,7 @@ Không cần học abstract algebra trước để dùng numbers, nhưng viewpoi
 
 Khi một thao tác (operation / 연산) không valid trong cấu trúc (structure / 구조) — ví dụ division by zero — không có symbolic trick nào cứu được.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **19. Physics, AI và Finance connections** tiếp nhận điểm tựa từ **18. Number các hệ thống (systems / 시스템들) và algebraic structures** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **19. Physics, AI và Finance connections** nối từ **18. Number các hệ thống (systems / 시스템들) và algebraic structures** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Physics, AI và Finance connections
 
@@ -435,13 +435,13 @@ Finance dùng decimals/currency representations nơi nhị phân (binary / 이�
 
 Điểm chung là **mathematical number lĩnh vực (domain / 도메인)** và **machine biểu diễn (representation / 표현)** phải được chọn riêng.
 
-> **Chuyển mạch:** Trong **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **19. Physics, AI và Finance connections** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **19. Physics, AI và Finance connections** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Một number hệ thống (system / 시스템) là một universe được mở rộng để giữ những operations hoặc limits ta cần. Natural numbers giữ counting; integers thêm additive inverse; rationals thêm division; reals thêm completeness; complex numbers thêm algebraic closure cho polynomial roots và hình học (geometry / 기하학) của rotation. Còn nhị phân (binary / 이진)/decimal/floating-point chỉ là representations hữu hạn của những objects đó trong một computational mô hình (model / 모델).
 
-> **Chuyển mạch:** Ở chặng này của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Số và các hệ số: mở rộng universe để phép toán có nơi tồn tại**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

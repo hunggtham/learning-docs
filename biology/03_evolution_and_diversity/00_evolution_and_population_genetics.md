@@ -18,7 +18,7 @@ p+q=1
 
 Di truyền học quần thể theo dõi cách các tần số này thay đổi và cơ chế nào gây ra sự thay đổi đó.
 
-> **Chuyển mạch:** Population là đơn vị theo dõi allele frequency; Hardy–Weinberg tạo baseline không có evolutionary forces, rồi mutation cung cấp allele mới để baseline bị phá.
+> **Nối mạch:** Population là đơn vị theo dõi allele frequency; Hardy–Weinberg tạo baseline không có evolutionary forces, rồi mutation cung cấp allele mới để baseline bị phá.
 
 ## 2. Hardy–Weinberg: mô hình không để phát hiện lực tiến hóa
 
@@ -32,7 +32,7 @@ Trong đó \(p^2\) là AA, \(2pq\) là Aa và \(q^2\) là aa.
 
 Hardy–Weinberg không phải mô tả rằng tự nhiên “phải như vậy”. Nó là **mô hình không (null model)**. Khi dữ liệu lệch khỏi kỳ vọng, ta hỏi giả định nào đã bị phá: có chọn lọc không, có cấu trúc quần thể không, có giao phối không ngẫu nhiên không, hay chỉ là sai số lấy mẫu?
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **2. Hardy–Weinberg: mô hình không để phát hiện lực tiến hóa** nêu điều cần giải thích; **3. Đột biến: nguồn cuối cùng của allele mới** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Chọn lọc tự nhiên: khác biệt sinh sản, không chỉ khác biệt sống sót** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. Hardy–Weinberg: mô hình không để phát hiện lực tiến hóa** đặt vấn đề; **3. Đột biến: nguồn cuối cùng của allele mới** kiểm tra bằng chứng, rồi **4. Chọn lọc tự nhiên: khác biệt sinh sản, không chỉ khác biệt sống sót** mở rộng hệ quả.
 
 ## 3. Đột biến: nguồn cuối cùng của allele mới
 
@@ -40,7 +40,7 @@ Hardy–Weinberg không phải mô tả rằng tự nhiên “phải như vậy�
 
 Đột biến không xuất hiện vì sinh vật “cần” thích nghi. Nó phát sinh do giới hạn của sao chép/sửa chữa DNA và tác nhân vật lý–hóa học. Sau đó môi trường và động lực học quần thể quyết định số phận của biến thể. Một đột biến có lợi vẫn có thể mất khi còn hiếm do ngẫu nhiên; một biến thể trung tính vẫn có thể tăng tần số nhờ trôi dạt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **3. Đột biến: nguồn cuối cùng của allele mới** nêu điều cần giải thích; **4. Chọn lọc tự nhiên: khác biệt sinh sản, không chỉ khác biệt sống sót** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. Hệ số chọn lọc và fitness tương đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Đột biến: nguồn cuối cùng của allele mới** đặt vấn đề; **4. Chọn lọc tự nhiên: khác biệt sinh sản, không chỉ khác biệt sống sót** kiểm tra bằng chứng, rồi **5. Hệ số chọn lọc và fitness tương đối** mở rộng hệ quả.
 
 ## 4. Chọn lọc tự nhiên: khác biệt sinh sản, không chỉ khác biệt sống sót
 
@@ -50,7 +50,7 @@ Hardy–Weinberg không phải mô tả rằng tự nhiên “phải như vậy�
 
 Selection luôn phụ thuộc bối cảnh: cùng một allele có thể có lợi trong môi trường này nhưng bất lợi trong môi trường khác.
 
-> **Chuyển mạch:** Trong **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **5. Hệ số chọn lọc và fitness tương đối** tiếp nhận điểm tựa từ **4. Chọn lọc tự nhiên: khác biệt sinh sản, không chỉ khác biệt sống sót** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Chọn lọc định hướng, ổn định và phân hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Hệ số chọn lọc và fitness tương đối** nối từ **4. Chọn lọc tự nhiên: khác biệt sinh sản, không chỉ khác biệt sống sót** sang **6. Chọn lọc định hướng, ổn định và phân hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Hệ số chọn lọc và fitness tương đối
 
@@ -58,7 +58,7 @@ Trong mô hình đơn giản, nếu một kiểu gene có fitness tương đối
 
 Con số này không phải thuộc tính bất biến của allele. Fitness có thể đổi theo tuổi, giới tính, nguồn tài nguyên, mật độ quần thể, tần số của chính kiểu hình và tương tác với các gene khác. Mô hình giúp định lượng lực chọn lọc trong điều kiện xác định; nó không biến fitness thành hằng số phổ quát.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **6. Chọn lọc định hướng, ổn định và phân hóa** tiếp nhận điểm tựa từ **5. Hệ số chọn lọc và fitness tương đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Chọn lọc phụ thuộc tần số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Chọn lọc định hướng, ổn định và phân hóa** nối từ **5. Hệ số chọn lọc và fitness tương đối** sang **7. Chọn lọc phụ thuộc tần số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Chọn lọc định hướng, ổn định và phân hóa
 
@@ -66,7 +66,7 @@ Con số này không phải thuộc tính bất biến của allele. Fitness có
 
 Đây là mô tả hình dạng tác động lên phân bố kiểu hình. Cơ chế di truyền phía dưới có thể rất khác nhau giữa các hệ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **7. Chọn lọc phụ thuộc tần số** tiếp nhận điểm tựa từ **6. Chọn lọc định hướng, ổn định và phân hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Chọn lọc giới tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Chọn lọc phụ thuộc tần số** nối từ **6. Chọn lọc định hướng, ổn định và phân hóa** sang **8. Chọn lọc giới tính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Chọn lọc phụ thuộc tần số
 
@@ -74,7 +74,7 @@ Fitness của một kiểu hình có thể phụ thuộc vào việc nó phổ b
 
 Cơ chế này có thể duy trì đa dạng thay vì đẩy một allele duy nhất tới cố định (fixation). Vì vậy evolution không phải lúc nào cũng là “tìm ra một phương án tốt nhất rồi loại tất cả phương án khác”.
 
-> **Chuyển mạch:** Trong **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **8. Chọn lọc giới tính** tiếp nhận điểm tựa từ **7. Chọn lọc phụ thuộc tần số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Trôi dạt di truyền: ngẫu nhiên mạnh hơn khi quần thể nhỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Chọn lọc giới tính** nối từ **7. Chọn lọc phụ thuộc tần số** sang **9. Trôi dạt di truyền: ngẫu nhiên mạnh hơn khi quần thể nhỏ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Chọn lọc giới tính
 
@@ -82,7 +82,7 @@ Cơ chế này có thể duy trì đa dạng thay vì đẩy một allele duy nh
 
 Cơ chế có thể gồm cạnh tranh giữa các cá thể cùng giới, lựa chọn bạn tình hoặc tương tác phức tạp giữa cả hai. Đây là lý do một số cấu trúc nổi bật không thể giải thích chỉ bằng hiệu quả sống sót.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **9. Trôi dạt di truyền: ngẫu nhiên mạnh hơn khi quần thể nhỏ** tiếp nhận điểm tựa từ **8. Chọn lọc giới tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Kích thước quần thể hiệu dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Trôi dạt di truyền: ngẫu nhiên mạnh hơn khi quần thể nhỏ** nối từ **8. Chọn lọc giới tính** sang **10. Kích thước quần thể hiệu dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Trôi dạt di truyền: ngẫu nhiên mạnh hơn khi quần thể nhỏ
 
@@ -90,7 +90,7 @@ Cơ chế có thể gồm cạnh tranh giữa các cá thể cùng giới, lựa
 
 Drift có thể làm một allele trung tính bị mất hoặc cố định mà không cần lợi thế chọn lọc. Có thể hình dung chọn lọc là lấy mẫu có thiên lệch theo fitness, còn drift là nhiễu ngẫu nhiên của quá trình sinh sản hữu hạn. Hai lực cùng hoạt động, không loại trừ nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **10. Kích thước quần thể hiệu dụng** tiếp nhận điểm tựa từ **9. Trôi dạt di truyền: ngẫu nhiên mạnh hơn khi quần thể nhỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Bottleneck và hiệu ứng sáng lập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Kích thước quần thể hiệu dụng** nối từ **9. Trôi dạt di truyền: ngẫu nhiên mạnh hơn khi quần thể nhỏ** sang **11. Bottleneck và hiệu ứng sáng lập**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Kích thước quần thể hiệu dụng
 
@@ -98,7 +98,7 @@ Số cá thể đếm được ngoài tự nhiên không nhất thiết bằng *
 
 \(N_e\) quan trọng vì nó phản ánh mức độ thật sự mà gene được truyền sang thế hệ sau, từ đó ảnh hưởng cường độ của trôi dạt và mức đa dạng di truyền còn giữ được.
 
-> **Chuyển mạch:** Trong **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **11. Bottleneck và hiệu ứng sáng lập** tiếp nhận điểm tựa từ **10. Kích thước quần thể hiệu dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Dòng gen: quần thể không phải đảo di truyền kín** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Bottleneck và hiệu ứng sáng lập** nối từ **10. Kích thước quần thể hiệu dụng** sang **12. Dòng gen: quần thể không phải đảo di truyền kín**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Bottleneck và hiệu ứng sáng lập
 
@@ -106,7 +106,7 @@ Số cá thể đếm được ngoài tự nhiên không nhất thiết bằng *
 
 Cả hai là biểu hiện của drift. Việc một allele tăng sau bottleneck không tự chứng minh rằng allele đó có lợi.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **12. Dòng gen: quần thể không phải đảo di truyền kín** tiếp nhận điểm tựa từ **11. Bottleneck và hiệu ứng sáng lập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Tái tổ hợp: không tạo allele mới nhưng tạo tổ hợp mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Dòng gen: quần thể không phải đảo di truyền kín** nối từ **11. Bottleneck và hiệu ứng sáng lập** sang **13. Tái tổ hợp: không tạo allele mới nhưng tạo tổ hợp mới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Dòng gen: quần thể không phải đảo di truyền kín
 
@@ -114,7 +114,7 @@ Cả hai là biểu hiện của drift. Việc một allele tăng sau bottleneck
 
 Kiểu hình quan sát được vì vậy là kết quả cân bằng giữa chọn lọc, drift, dòng gen, mutation và cấu trúc không gian của quần thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **13. Tái tổ hợp: không tạo allele mới nhưng tạo tổ hợp mới** tiếp nhận điểm tựa từ **12. Dòng gen: quần thể không phải đảo di truyền kín** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Thích nghi không có khả năng nhìn trước tương lai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Tái tổ hợp: không tạo allele mới nhưng tạo tổ hợp mới** nối từ **12. Dòng gen: quần thể không phải đảo di truyền kín** sang **14. Thích nghi không có khả năng nhìn trước tương lai**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Tái tổ hợp: không tạo allele mới nhưng tạo tổ hợp mới
 
@@ -122,7 +122,7 @@ Kiểu hình quan sát được vì vậy là kết quả cân bằng giữa ch�
 
 Các locus gần nhau có xu hướng cùng được truyền vì xác suất crossover giữa chúng thấp hơn. Mức liên hệ giữa các allele được mô tả bằng **mất cân bằng liên kết (linkage disequilibrium)**. Đây là điểm giao trực tiếp giữa meiosis, genomics và population genetics.
 
-> **Chuyển mạch:** Trong **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **14. Thích nghi không có khả năng nhìn trước tương lai** tiếp nhận điểm tựa từ **13. Tái tổ hợp: không tạo allele mới nhưng tạo tổ hợp mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. sự đánh đổi (trade-off / 트레이드오프) và thỏa hiệp tiến hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Thích nghi không có khả năng nhìn trước tương lai** nối từ **13. Tái tổ hợp: không tạo allele mới nhưng tạo tổ hợp mới** sang **15. sự đánh đổi (trade-off / 트레이드오프) và thỏa hiệp tiến hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Thích nghi không có khả năng nhìn trước tương lai
 
@@ -130,7 +130,7 @@ Chọn lọc tự nhiên không thiết kế tính trạng cho nhu cầu tương
 
 Evolution cũng luôn bị giới hạn bởi lịch sử. Cánh dơi, vây cá voi và tay người đều sửa đổi từ bộ xương chi của tổ tiên tetrapod. Selection thường cải biến cấu trúc có sẵn thay vì bắt đầu lại từ một thiết kế tối ưu lý tưởng.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **15. sự đánh đổi (trade-off / 트레이드오프) và thỏa hiệp tiến hóa** tiếp nhận điểm tựa từ **14. Thích nghi không có khả năng nhìn trước tương lai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Thích nghi địa phương cần tách gene khỏi môi trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. sự đánh đổi (trade-off / 트레이드오프) và thỏa hiệp tiến hóa** nối từ **14. Thích nghi không có khả năng nhìn trước tương lai** sang **16. Thích nghi địa phương cần tách gene khỏi môi trường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. sự đánh đổi (trade-off / 트레이드오프) và thỏa hiệp tiến hóa
 
@@ -138,7 +138,7 @@ Tài nguyên (resource / 자원) hữu hạn phải được chia cho growth, re
 
 Ví dụ một allele có thể có lợi trong môi trường có pathogen cụ thể nhưng gây chi phí khi pathogen không còn. Fitness luôn là thuộc tính (property / 속성) của genotype/phenotype **trong một bối cảnh**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **16. Thích nghi địa phương cần tách gene khỏi môi trường** tiếp nhận điểm tựa từ **15. sự đánh đổi (trade-off / 트레이드오프) và thỏa hiệp tiến hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Tính mềm dẻo kiểu hình không phải tiến hóa, nhưng bản thân plasticity có thể tiến hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Thích nghi địa phương cần tách gene khỏi môi trường** nối từ **15. sự đánh đổi (trade-off / 트레이드오프) và thỏa hiệp tiến hóa** sang **17. Tính mềm dẻo kiểu hình không phải tiến hóa, nhưng bản thân plasticity có thể tiến hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Thích nghi địa phương cần tách gene khỏi môi trường
 
@@ -146,7 +146,7 @@ Hai quần thể sống ở môi trường khác nhau có thể có phenotype kh
 
 Dòng gen có xu hướng làm quần thể giống nhau; selection địa phương làm chúng khác nhau. cục bộ (local / 로컬) adaptation xuất hiện khi selection đủ mạnh so với gene luồng (flow / 흐름) và drift.
 
-> **Chuyển mạch:** Trong **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **17. Tính mềm dẻo kiểu hình không phải tiến hóa, nhưng bản thân plasticity có thể tiến hóa** tiếp nhận điểm tựa từ **16. Thích nghi địa phương cần tách gene khỏi môi trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Hình thành loài là quá trình giảm trao đổi gene và tăng divergence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Tính mềm dẻo kiểu hình không phải tiến hóa, nhưng bản thân plasticity có thể tiến hóa** nối từ **16. Thích nghi địa phương cần tách gene khỏi môi trường** sang **18. Hình thành loài là quá trình giảm trao đổi gene và tăng divergence**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Tính mềm dẻo kiểu hình không phải tiến hóa, nhưng bản thân plasticity có thể tiến hóa
 
@@ -154,7 +154,7 @@ Dòng gen có xu hướng làm quần thể giống nhau; selection địa phư�
 
 Tuy nhiên phản ứng đó cũng có nền di truyền. Selection có thể thay hình dạng của **chuẩn phản ứng (reaction norm)** qua thế hệ, tức plasticity itself có thể evolve.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **18. Hình thành loài là quá trình giảm trao đổi gene và tăng divergence** tiếp nhận điểm tựa từ **17. Tính mềm dẻo kiểu hình không phải tiến hóa, nhưng bản thân plasticity có thể tiến hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Cách ly sinh sản có thể xuất hiện trước hoặc sau thụ tinh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Hình thành loài là quá trình giảm trao đổi gene và tăng divergence** nối từ **17. Tính mềm dẻo kiểu hình không phải tiến hóa, nhưng bản thân plasticity có thể tiến hóa** sang **19. Cách ly sinh sản có thể xuất hiện trước hoặc sau thụ tinh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Hình thành loài là quá trình giảm trao đổi gene và tăng divergence
 
@@ -164,7 +164,7 @@ Trong **speciation khác khu vực (allopatric speciation)**, rào cản địa 
 
 Không nhất thiết tồn tại một “ngày” mà quần thể đột nhiên trở thành loài mới. Ranh giới được hình thành dần và đôi khi vẫn có hybridization.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **19. Cách ly sinh sản có thể xuất hiện trước hoặc sau thụ tinh** tiếp nhận điểm tựa từ **18. Hình thành loài là quá trình giảm trao đổi gene và tăng divergence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. “Loài” là mô hình khoa học có nhiều cách định nghĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Cách ly sinh sản có thể xuất hiện trước hoặc sau thụ tinh** nối từ **18. Hình thành loài là quá trình giảm trao đổi gene và tăng divergence** sang **20. “Loài” là mô hình khoa học có nhiều cách định nghĩa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Cách ly sinh sản có thể xuất hiện trước hoặc sau thụ tinh
 
@@ -172,7 +172,7 @@ Rào cản **trước hợp tử (prezygotic)** gồm khác thời gian sinh s�
 
 Các rào cản có thể tích lũy khi hai quần thể diverge. Nếu hybrid có fitness thấp, selection còn có thể củng cố preference tránh giao phối khác quần thể.
 
-> **Chuyển mạch:** Trong **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **20. “Loài” là mô hình khoa học có nhiều cách định nghĩa** tiếp nhận điểm tựa từ **19. Cách ly sinh sản có thể xuất hiện trước hoặc sau thụ tinh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Tiến hóa phân tử: không phải mọi vị trí DNA thay đổi với cùng tốc độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. “Loài” là mô hình khoa học có nhiều cách định nghĩa** nối từ **19. Cách ly sinh sản có thể xuất hiện trước hoặc sau thụ tinh** sang **21. Tiến hóa phân tử: không phải mọi vị trí DNA thay đổi với cùng tốc độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. “Loài” là mô hình khoa học có nhiều cách định nghĩa
 
@@ -180,7 +180,7 @@ Khái niệm loài sinh học dựa trên reproductive isolation hữu ích cho 
 
 Do đó species không phải chiếc hộp tự nhiên có ranh giới tuyệt đối trong mọi trường hợp. Nó là mô hình để mô tả các dòng dõi tương đối độc lập trong lịch sử tiến hóa.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **21. Tiến hóa phân tử: không phải mọi vị trí DNA thay đổi với cùng tốc độ** tiếp nhận điểm tựa từ **20. “Loài” là mô hình khoa học có nhiều cách định nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Đồng hồ phân tử là mô hình có calibration và bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Tiến hóa phân tử: không phải mọi vị trí DNA thay đổi với cùng tốc độ** nối từ **20. “Loài” là mô hình khoa học có nhiều cách định nghĩa** sang **22. Đồng hồ phân tử là mô hình có calibration và bất định (uncertainty / 불확실성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Tiến hóa phân tử: không phải mọi vị trí DNA thay đổi với cùng tốc độ
 
@@ -188,7 +188,7 @@ Một số nucleotide/amino acid chịu **chọn lọc thanh lọc (purifying se
 
 So sánh substitution đồng nghĩa và không đồng nghĩa có thể gợi ý pressure chọn lọc, nhưng interpretation phụ thuộc mô hình (model / 모델), cấu trúc gene và demography. Không nên suy một tỷ lệ duy nhất thành “gene đang thích nghi” mà bỏ qua các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **22. Đồng hồ phân tử là mô hình có calibration và bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **21. Tiến hóa phân tử: không phải mọi vị trí DNA thay đổi với cùng tốc độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Đồng tiến hóa: species tạo selection pressure cho nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. Đồng hồ phân tử là mô hình có calibration và bất định (uncertainty / 불확실성)** nối từ **21. Tiến hóa phân tử: không phải mọi vị trí DNA thay đổi với cùng tốc độ** sang **23. Đồng tiến hóa: species tạo selection pressure cho nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Đồng hồ phân tử là mô hình có calibration và bất định (uncertainty / 불확실성)
 
@@ -196,7 +196,7 @@ Nếu substitution tích lũy với tỷ lệ (rate / 비율) tương đối ổ
 
 Đồng hồ phân tử tạo estimate với độ bất định, không phải “đọc ngày tháng trực tiếp từ DNA”.
 
-> **Chuyển mạch:** Trong **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **23. Đồng tiến hóa: species tạo selection pressure cho nhau** tiếp nhận điểm tựa từ **22. Đồng hồ phân tử là mô hình có calibration và bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Kháng kháng sinh là evolution có thể quan sát ở thời gian ngắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. Đồng tiến hóa: species tạo selection pressure cho nhau** nối từ **22. Đồng hồ phân tử là mô hình có calibration và bất định (uncertainty / 불확실성)** sang **24. Kháng kháng sinh là evolution có thể quan sát ở thời gian ngắn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Đồng tiến hóa: species tạo selection pressure cho nhau
 
@@ -204,7 +204,7 @@ Host và pathogen, hoa và pollinator, predator và prey có thể tạo **đồ
 
 Đây không phải lúc nào cũng là “chạy đua vũ trang”. Mutualism cũng có thể coevolve; một tương tác (interaction / 상호작용) có thể chuyển từ có lợi sang có hại khi môi trường (environment / 환경) đổi. Evolution diễn ra trong mạng tương tác (interaction / 상호작용), không trong chân không.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **24. Kháng kháng sinh là evolution có thể quan sát ở thời gian ngắn** tiếp nhận điểm tựa từ **23. Đồng tiến hóa: species tạo selection pressure cho nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Y học tiến hóa bổ sung, không thay thế cơ chế gần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. Kháng kháng sinh là evolution có thể quan sát ở thời gian ngắn** nối từ **23. Đồng tiến hóa: species tạo selection pressure cho nhau** sang **25. Y học tiến hóa bổ sung, không thay thế cơ chế gần**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Kháng kháng sinh là evolution có thể quan sát ở thời gian ngắn
 
@@ -212,7 +212,7 @@ Quần thể bacteria có variation do mutation và chuyển gen ngang. Antibiot
 
 Resistance có thể có chi phí (cost / 비용) khi không có thuốc; mutation bù trừ có thể giảm chi phí (cost / 비용) đó. Vì thế tần số resistance phụ thuộc lịch sử sử dụng thuốc, gene luồng (flow / 흐름) và ecological ngữ cảnh (context / 맥락). Antibiotic không làm bacteria “cố gắng tạo mutation đúng”; nó thay selection pressure lên variation sẵn có hoặc mới phát sinh ngẫu nhiên.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **24. Kháng kháng sinh là evolution có thể quan sát ở thời gian ngắn** xác định đầu vào; **25. Y học tiến hóa bổ sung, không thay thế cơ chế gần** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **26. So sánh loài phải tính tới tổ tiên chung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Kháng kháng sinh cho thấy evolution trong thời gian ngắn; evolutionary medicine mở rộng cơ chế gần. **So sánh loài phải tính tới tổ tiên chung** để tránh suy luận sai.
 
 ## 25. Y học tiến hóa bổ sung, không thay thế cơ chế gần
 
@@ -220,7 +220,7 @@ Một vulnerability có thể được hỏi ở hai cấp. **Cơ chế gần (p
 
 Ví dụ fever có thể là defense được điều hòa; virulence chịu sự đánh đổi (trade-off / 트레이드오프) với transmission; physiology hiện đại có thể gặp mismatch với môi trường sống mới. Nhưng evolutionary story không thay diagnosis/cellular cơ chế (mechanism / 메커니즘).
 
-> **Chuyển mạch:** Trong **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **25. Y học tiến hóa bổ sung, không thay thế cơ chế gần** đã nêu tiêu chí phân biệt, còn **26. So sánh loài phải tính tới tổ tiên chung** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **27. Khi nào selection mạnh hơn drift?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. Y học tiến hóa bổ sung, không thay thế cơ chế gần** đặt tiêu chí; **26. So sánh loài phải tính tới tổ tiên chung** dùng nó để kiểm tra ranh giới, rồi **27. Khi nào selection mạnh hơn drift?** mở rộng cơ chế.
 
 ## 26. So sánh loài phải tính tới tổ tiên chung
 
@@ -228,7 +228,7 @@ Nếu hai species giống nhau, similarity có thể đến từ **tương đồ
 
 Comparative biology cần phylogenetic ngữ cảnh (context / 맥락) để tránh kết luận một trait liên quan môi trường (environment / 환경) chỉ vì nhiều species cùng clade cùng có trait đó.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **26. So sánh loài phải tính tới tổ tiên chung** đã nêu tiêu chí phân biệt, còn **27. Khi nào selection mạnh hơn drift?** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **28. Coalescent: đọc lịch sử quần thể từ genome hiện tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **26. So sánh loài phải tính tới tổ tiên chung** đặt tiêu chí; **27. Khi nào selection mạnh hơn drift?** dùng nó để kiểm tra ranh giới, rồi **28. Coalescent: đọc lịch sử quần thể từ genome hiện tại** mở rộng cơ chế.
 
 ## 27. Khi nào selection mạnh hơn drift?
 
@@ -244,7 +244,7 @@ q\approx\sqrt{\frac{\mu}{s}}
 
 trong đó \(\mu\) là mutation tỷ lệ (rate / 비율) và \(s\) là selection coefficient. Vì vậy selection mạnh vẫn không nhất thiết xóa allele hoàn toàn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **28. Coalescent: đọc lịch sử quần thể từ genome hiện tại** tiếp nhận điểm tựa từ **27. Khi nào selection mạnh hơn drift?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Ecology và evolution tạo vòng phản hồi hai chiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **28. Coalescent: đọc lịch sử quần thể từ genome hiện tại** nối từ **27. Khi nào selection mạnh hơn drift?** sang **29. Ecology và evolution tạo vòng phản hồi hai chiều**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Coalescent: đọc lịch sử quần thể từ genome hiện tại
 
@@ -252,7 +252,7 @@ trong đó \(\mu\) là mutation tỷ lệ (rate / 비율) và \(s\) là selectio
 
 Do đó genome lưu dấu không chỉ selection mà cả demographic lịch sử (history / 이력). Một mẫu (pattern / 패턴) diversity thấp có thể do selective sweep, nhưng cũng có thể do bottleneck; suy luận (inference / 추론) phải so các mô hình (model / 모델) cạnh tranh.
 
-> **Chuyển mạch:** Trong **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **29. Ecology và evolution tạo vòng phản hồi hai chiều** tiếp nhận điểm tựa từ **28. Coalescent: đọc lịch sử quần thể từ genome hiện tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. cầu nối (bridge / 브리지): nếu lineage phân nhánh, ta reconstruct lịch sử đó như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **29. Ecology và evolution tạo vòng phản hồi hai chiều** nối từ **28. Coalescent: đọc lịch sử quần thể từ genome hiện tại** sang **30. cầu nối (bridge / 브리지): nếu lineage phân nhánh, ta reconstruct lịch sử đó như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Ecology và evolution tạo vòng phản hồi hai chiều
 
@@ -288,7 +288,7 @@ môi trường
 
 “Loài luôn có ranh giới tuyệt đối” sai trong nhiều hệ có hybridization hoặc chuyển gene ngang.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa và Di truyền quần thể — Evolution and Population Genetics (진화와 집단유전학)**, **30. cầu nối (bridge / 브리지): nếu lineage phân nhánh, ta reconstruct lịch sử đó như thế nào?** tiếp nhận điểm tựa từ **29. Ecology và evolution tạo vòng phản hồi hai chiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Cầu nối về lineage branching tổng hợp feedback hai chiều giữa ecology và evolution, rồi khép mạch bằng câu hỏi reconstruct lịch sử đó thế nào.
 
 ## 30. cầu nối (bridge / 브리지): nếu lineage phân nhánh, ta reconstruct lịch sử đó như thế nào?
 

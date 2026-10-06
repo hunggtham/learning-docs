@@ -10,7 +10,7 @@ Nước, lương thực và năng lượng thường được quản lý bởi c
 
 Ví dụ, trợ giá điện cho bơm tưới có thể giúp nông dân trong ngắn hạn. Nhưng nếu giá điện quá thấp, động cơ tiết kiệm nước giảm và khai thác nước ngầm có thể tăng đến mức vượt bổ cập. Một chính sách năng lượng lúc đó trở thành chính sách nước.
 
-> **Chuyển mạch:** Trong **Mối liên hệ Nước – Lương thực – Năng lượng**, **Một khung cân bằng đơn giản** tiếp nhận điểm tựa từ **Vì sao ba hệ không thể được tối ưu riêng lẻ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nước cho năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ba hệ dùng chung nước, đất, điện, vốn và hạ tầng, nên tối ưu một hệ có thể đẩy chi phí sang hệ khác. **Một khung cân bằng đơn giản** biến trực giác phụ thuộc thành các dòng vào–ra có thể theo dõi.
 
 ## Một khung cân bằng đơn giản
 
@@ -26,7 +26,7 @@ thì nguồn nước đang suy giảm dù trong vài năm đầu vẫn còn rấ
 
 Điểm cốt lõi là hệ thống có thể trông ổn trong ngắn hạn nhờ rút từ lượng tích lũy, trong khi quỹ đạo dài hạn không bền vững.
 
-> **Chuyển mạch:** Ở chặng này của **Mối liên hệ Nước – Lương thực – Năng lượng**, **Nước cho năng lượng** tiếp nhận điểm tựa từ **Một khung cân bằng đơn giản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng cho nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khung cân bằng cho thấy khai thác, làm mát, thủy điện và nhiên liệu đều cần nước ở mức khác nhau. **Nước cho năng lượng** cụ thể hóa dòng nước đi vào các hệ thống năng lượng.
 
 ## Nước cho năng lượng
 
@@ -34,7 +34,7 @@ Thủy điện cần dòng vào và chênh cao. Nhà máy nhiệt điện thư�
 
 Tuy nhiên “nhà máy điện dùng nước” cần phân biệt **lượng lấy vào (withdrawal)** và **lượng tiêu hao (consumption)**. Một hệ làm mát có thể lấy lượng nước lớn nhưng trả phần lớn lại nguồn, trong khi hệ khác lấy ít hơn nhưng làm bay hơi tỷ lệ cao. Hai chỉ số mang ý nghĩa khác nhau đối với lưu vực.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mối liên hệ Nước – Lương thực – Năng lượng**, **Năng lượng cho nước** tiếp nhận điểm tựa từ **Nước cho năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khử mặn: chuyển ràng buộc chứ không xóa ràng buộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Bơm, xử lý, vận chuyển và khử mặn đều tiêu thụ điện; thiếu năng lượng sẽ làm giảm khả năng cung cấp nước. **Năng lượng cho nước** dẫn trực tiếp tới **Khử mặn: chuyển ràng buộc chứ không xóa ràng buộc**, nơi chi phí nước được chuyển sang năng lượng, vốn và xả thải.
 
 ## Năng lượng cho nước
 
@@ -42,7 +42,7 @@ Nước không tự động xuất hiện tại nơi và độ cao cần dùng. 
 
 Mực nước ngầm càng hạ sâu thì năng lượng bơm thường tăng. Vì vậy khai thác quá mức có thể tạo vòng phản hồi: bơm nhiều → mực nước hạ → mỗi mét khối nước cần nhiều điện hơn → chi phí tăng hoặc phát thải tăng nếu điện dựa vào nhiên liệu hóa thạch.
 
-> **Chuyển mạch:** Trong **Mối liên hệ Nước – Lương thực – Năng lượng**, **Khử mặn: chuyển ràng buộc chứ không xóa ràng buộc** tiếp nhận điểm tựa từ **Năng lượng cho nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng cho lương thực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khử mặn mở nguồn nước mới nhưng cần điện, hạ tầng, màng lọc và xử lý nước muối, nên không xóa ràng buộc mà tái phân bố chúng. **Năng lượng cho lương thực** tiếp theo xem sản xuất và chuỗi lạnh cần cùng loại đầu vào ra sao.
 
 ## Khử mặn: chuyển ràng buộc chứ không xóa ràng buộc
 
@@ -52,7 +52,7 @@ Nếu nguồn điện sạch và ổn định, tác động carbon có thể gi�
 
 Đây là ví dụ điển hình của tư duy hệ thống: công nghệ giải được một giới hạn nhưng tạo ra các phụ thuộc mới.
 
-> **Chuyển mạch:** Ở chặng này của **Mối liên hệ Nước – Lương thực – Năng lượng**, **Năng lượng cho lương thực** tiếp nhận điểm tựa từ **Khử mặn: chuyển ràng buộc chứ không xóa ràng buộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nước cho lương thực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Lương thực dùng năng lượng cho máy móc, phân bón, bơm, chế biến, kho lạnh và vận chuyển. **Nước cho lương thực** bổ sung giới hạn sinh thái và phân bổ nước trong toàn chuỗi.
 
 ## Năng lượng cho lương thực
 
@@ -60,7 +60,7 @@ Nông nghiệp hiện đại dùng năng lượng trực tiếp cho máy móc, b
 
 Vì vậy cú sốc giá năng lượng có thể truyền sang giá thực phẩm dù mùa vụ không thay đổi. Mức truyền dẫn phụ thuộc loại cây, khoảng cách vận tải, tỷ lệ phân bón và cấu trúc thị trường.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mối liên hệ Nước – Lương thực – Năng lượng**, **Nước cho lương thực** tiếp nhận điểm tựa từ **Năng lượng cho lương thực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lương thực cho năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cây trồng, vật nuôi và thủy sản cạnh tranh nước với đô thị, công nghiệp và hệ sinh thái; năng suất không tách khỏi lưu vực. **Lương thực cho năng lượng** chuyển sang biofuel và phần sinh khối có thể trở thành đầu vào năng lượng.
 
 ## Nước cho lương thực
 
@@ -68,7 +68,7 @@ Nông nghiệp dùng phần lớn lượng nước ngọt khai thác ở nhiều
 
 **Hiệu suất tưới (irrigation efficiency)** cũng cần đọc cẩn thận. Giảm nước chảy ra khỏi ruộng không phải lúc nào làm lưu vực “tiết kiệm” cùng lượng đó, vì một phần dòng thấm hoặc nước hồi quy có thể được người dùng hạ lưu sử dụng lại. Tối ưu ở quy mô ruộng có thể khác tối ưu ở quy mô lưu vực.
 
-> **Chuyển mạch:** Trong **Mối liên hệ Nước – Lương thực – Năng lượng**, **Lương thực cho năng lượng** tiếp nhận điểm tựa từ **Nước cho lương thực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hồ chứa đa mục tiêu: một ví dụ về xung đột mục tiêu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Biofuel và sinh khối có thể nối nông nghiệp với điện, nhưng cần đất, nước và có thể cạnh tranh với lương thực. **Hồ chứa đa mục tiêu: một ví dụ về xung đột mục tiêu** cho thấy một hạ tầng có thể phải phục vụ nhiều mục tiêu không đồng thời tối ưu.
 
 ## Lương thực cho năng lượng
 
@@ -76,7 +76,7 @@ Nhiên liệu sinh học có thể chuyển cây trồng, phụ phẩm hoặc d�
 
 Do đó cần phân tích toàn bộ chuỗi thay vì chỉ so lượng nhiên liệu hóa thạch được thay thế tại giai đoạn sử dụng.
 
-> **Chuyển mạch:** Ở chặng này của **Mối liên hệ Nước – Lương thực – Năng lượng**, **Lương thực cho năng lượng** cho ta quy tắc; **Hồ chứa đa mục tiêu: một ví dụ về xung đột mục tiêu** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Nước ảo và thương mại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hồ chứa phải cân bằng phát điện, tưới, chống lũ, dòng chảy sinh thái và cấp nước theo mùa; quyết định upstream tạo hệ quả downstream. **Nước ảo và thương mại** mở rộng xung đột đó qua biên giới bằng dòng hàng hóa.
 
 ## Hồ chứa đa mục tiêu: một ví dụ về xung đột mục tiêu
 
@@ -86,7 +86,7 @@ Giữ hồ đầy có lợi cho dự trữ nước và thủy điện, nhưng đ
 
 Vì vậy vận hành hồ là bài toán **tối ưu đa mục tiêu (multi-objective optimization)** dưới điều kiện bất định, chứ không chỉ “tích càng nhiều nước càng tốt”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mối liên hệ Nước – Lương thực – Năng lượng**, **Hồ chứa đa mục tiêu: một ví dụ về xung đột mục tiêu** cho ta quy tắc; **Nước ảo và thương mại** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Dấu chân nước và bẫy của một con số tổng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Thương mại chuyển “nước ẩn” trong nông sản từ vùng này sang vùng khác, nhưng lợi ích và rủi ro không phân bố đều. **Dấu chân nước và bẫy của một con số tổng** tách nơi tiêu thụ khỏi nơi chịu áp lực tài nguyên.
 
 ## Nước ảo và thương mại
 
@@ -96,7 +96,7 @@ Khi một quốc gia nhập lúa mì, thịt hoặc bông, họ gián tiếp nh�
 
 Do đó thương mại có thể là một dạng “hạ tầng nước gián tiếp”.
 
-> **Chuyển mạch:** Trong **Mối liên hệ Nước – Lương thực – Năng lượng**, **Nước ảo và thương mại** đã nêu tiêu chí phân biệt, còn **Dấu chân nước và bẫy của một con số tổng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mối liên hệ trong thành phố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Tổng dấu chân nước không nói ai dùng nước, ở đâu, vào mùa nào hay với chất lượng nào; cần tách xanh, xanh dương, xám và chuỗi cung ứng. **Mối liên hệ trong thành phố** đưa phép tách đó vào hệ thống đô thị.
 
 ## Dấu chân nước và bẫy của một con số tổng
 
@@ -104,7 +104,7 @@ Do đó thương mại có thể là một dạng “hạ tầng nước gián t
 
 Bối cảnh địa lý quyết định ý nghĩa của con số. Một mét khối nước ở vùng mưa nhiều và một mét khối nước ngầm không tái tạo ở vùng khô có chi phí cơ hội khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Mối liên hệ Nước – Lương thực – Năng lượng**, **Dấu chân nước và bẫy của một con số tổng** đã nêu tiêu chí phân biệt, còn **Mối liên hệ trong thành phố** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Chất thải có thể trở thành dòng đầu vào** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Thành phố nhập nước, lương thực và năng lượng rồi thải nhiệt, nước bẩn, chất hữu cơ và vật liệu; các dòng này có thể được thu hồi. **Chất thải có thể trở thành dòng đầu vào** chuyển từ cân bằng đô thị sang tuần hoàn tài nguyên.
 
 ## Mối liên hệ trong thành phố
 
@@ -112,7 +112,7 @@ Thành phố nhập nước, lương thực và năng lượng từ vùng hậu 
 
 Đây là khác biệt giữa **kế toán theo lãnh thổ (territorial accounting)** và **kế toán theo tiêu dùng (consumption-based accounting)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mối liên hệ Nước – Lương thực – Năng lượng**, **Chất thải có thể trở thành dòng đầu vào** tiếp nhận điểm tựa từ **Mối liên hệ trong thành phố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biến đổi khí hậu làm các phụ thuộc trở nên động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Nước thải, nhiệt thải, biogas và chất hữu cơ có thể trở thành đầu vào nếu công nghệ, tiêu chuẩn và thị trường cho phép; không phải dòng nào cũng tái sử dụng an toàn. **Biến đổi khí hậu làm các phụ thuộc trở nên động** thêm biến thời gian và cực trị vào các dòng vốn đã liên kết.
 
 ## Chất thải có thể trở thành dòng đầu vào
 
@@ -120,7 +120,7 @@ Nước thải sau xử lý có thể dùng cho tưới hoặc công nghiệp. C
 
 Những ví dụ này minh họa tư duy **kinh tế tuần hoàn (circular economy)**, nhưng không nên giả định mọi dòng đều tái sử dụng được vô hạn. Chất lượng, khoảng cách, chi phí xử lý và nhu cầu không đồng bộ giới hạn khả năng tuần hoàn.
 
-> **Chuyển mạch:** Trong **Mối liên hệ Nước – Lương thực – Năng lượng**, **Biến đổi khí hậu làm các phụ thuộc trở nên động** tiếp nhận điểm tựa từ **Chất thải có thể trở thành dòng đầu vào** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ bền hệ thống và đa dạng hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khí hậu thay đổi timing, lượng nước, nhu cầu điện, năng suất và tần suất gián đoạn, nên nexus không có cân bằng cố định. **Độ bền hệ thống và đa dạng hóa** tiếp theo hỏi cách giảm phụ thuộc chung và tạo phương án thay thế.
 
 ## Biến đổi khí hậu làm các phụ thuộc trở nên động
 
@@ -128,7 +128,7 @@ Nhiệt độ cao làm nhu cầu điện cho làm mát tăng; đồng thời h�
 
 Khí hậu cũng thay đổi mùa nước, năng suất cây trồng và nhu cầu tưới. Vì vậy quy hoạch dựa hoàn toàn trên trung bình lịch sử có thể không còn đủ.
 
-> **Chuyển mạch:** Ở chặng này của **Mối liên hệ Nước – Lương thực – Năng lượng**, **Độ bền hệ thống và đa dạng hóa** tiếp nhận điểm tựa từ **Biến đổi khí hậu làm các phụ thuộc trở nên động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới hệ thống quyết định kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Resilience cần dự phòng, đa dạng hóa và khả năng chuyển đổi, nhưng một giải pháp có thể đẩy chi phí sang lưu vực hoặc ngành khác. **Ranh giới hệ thống quyết định kết luận** giúp kiểm tra ta đang tính những dòng, người và thời gian nào.
 
 ## Độ bền hệ thống và đa dạng hóa
 
@@ -136,7 +136,7 @@ Một hệ tối ưu cho hiệu suất trung bình có thể dễ tổn thương
 
 Đa dạng hóa nguồn, tăng khả năng lưu trữ và tạo tuyến thay thế thường làm chi phí bình thường cao hơn một chút nhưng tăng **khả năng chống chịu và phục hồi (resilience)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mối liên hệ Nước – Lương thực – Năng lượng**, **Ranh giới hệ thống quyết định kết luận** gom các mảnh từ **Độ bền hệ thống và đa dạng hóa** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Chọn ranh giới lưu vực, thành phố, quốc gia hay chuỗi cung ứng sẽ làm lộ các trade-off khác nhau; không có một kết luận nexus ngoài ngữ cảnh. **Những hiểu lầm phổ biến** tiếp theo kiểm tra các phép đồng nhất hóa đó.
 
 ## Ranh giới hệ thống quyết định kết luận
 
@@ -144,13 +144,13 @@ Một dự án có thể trông hiệu quả nếu chỉ đo tại nhà máy nh�
 
 Đây là liên kết (connection / 연결) trực tiếp với **đánh giá vòng đời (life-cycle assessment)**, kỹ thuật hệ thống, tối ưu hóa và phân tích chuỗi cung ứng.
 
-> **Chuyển mạch:** Trong **Mối liên hệ Nước – Lương thực – Năng lượng**, **Những hiểu lầm phổ biến** gom các mảnh từ **Ranh giới hệ thống quyết định kết luận** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sau khi sửa các hiểu lầm về khử mặn, biofuel, hồ chứa, nước ảo và resilience, còn lại cách đọc nexus như mạng dòng vật chất, năng lượng, quyền lực và thời gian. **Mô hình tư duy** cô đọng khung đó.
 
 ## Những hiểu lầm phổ biến
 
 “Tiết kiệm nước ở ruộng luôn tiết kiệm nước cho lưu vực” không luôn đúng vì nước hồi quy có thể được tái sử dụng. “Khử mặn giải quyết thiếu nước” chỉ đúng nếu bỏ qua nhu cầu điện, chi phí và nước muối. “Năng lượng tái tạo không cần nước” cũng quá đơn giản vì chuỗi sản xuất, khai khoáng, vệ sinh thiết bị và một số công nghệ vẫn dùng nước, dù cấu trúc sử dụng khác nhà máy nhiệt điện.
 
-> **Chuyển mạch:** Ở chặng này của **Mối liên hệ Nước – Lương thực – Năng lượng**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi ba hệ phụ thuộc → nước/energy/food flows → khử mặn, biofuel và hồ đa mục tiêu → nước ảo, đô thị, chất thải → climate dynamics, resilience và system boundaries. Kết luận bàn giao owner **World Geography** theo [README](../README.md), để nối sang môi trường, địa chính trị và thương mại toàn cầu.
 
 ## Mô hình tư duy
 

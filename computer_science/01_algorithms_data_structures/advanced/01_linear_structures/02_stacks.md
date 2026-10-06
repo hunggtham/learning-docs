@@ -27,7 +27,7 @@ pop  -> xóa ở đầu
 
 Cả hai có thể cho `push/pop` `O(1)` theo hợp đồng phù hợp. Mảng động thường có **tính cục bộ bộ nhớ (locality)** tốt và ít lần cấp phát hơn. Danh sách liên kết không cần một vùng nhớ liên tục nhưng phải trả thêm chi phí nút (node / 노드), con trỏ và cấp phát.
 
-> **Chuyển mạch:** Trong **Ngăn xếp**, **2. Ngăn xếp trong C, Java và JavaScript** tiếp nhận điểm tựa từ **1. Ngăn xếp là một lớp trừu tượng (abstraction / 추상화), không phải một hiện thực (implementation / 구현) cụ thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Bất biến của ngăn xếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. Ngăn xếp trong C, Java và JavaScript** nối từ **1. Ngăn xếp là một lớp trừu tượng (abstraction / 추상화), không phải một hiện thực (implementation / 구현) cụ thể** sang **3. Bất biến của ngăn xếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Ngăn xếp trong C, Java và JavaScript
 
@@ -62,7 +62,7 @@ typedef struct {
 
 API cần định nghĩa rõ hành vi khi ngăn xếp rỗng: trả `boolean` kèm tham số đầu ra, giá trị đặc biệt (sentinel), `null`, ngoại lệ (exception) hay mã lỗi (error code).
 
-> **Chuyển mạch:** Ở chặng này của **Ngăn xếp**, **3. Bất biến của ngăn xếp** tiếp nhận điểm tựa từ **2. Ngăn xếp trong C, Java và JavaScript** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Ghép cặp dấu ngoặc: lưu nghĩa vụ chưa hoàn tất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Bất biến của ngăn xếp** nối từ **2. Ngăn xếp trong C, Java và JavaScript** sang **4. Ghép cặp dấu ngoặc: lưu nghĩa vụ chưa hoàn tất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Bất biến của ngăn xếp
 
@@ -76,7 +76,7 @@ phần tử đỉnh nếu tồn tại = a[size-1]
 
 Mọi thao tác phải giữ **bất biến (invariant / 불변식)** này. `pop` không nhất thiết phải xóa các byte vật lý; về lô-gic (logic / 논리) chỉ cần giảm `size`. Tuy nhiên, nếu cấu trúc giữ tham chiếu tới đối tượng (object / 객체) trong ngôn ngữ có GC, xóa tham chiếu ở ô cũ đôi khi giúp đối tượng (object / 객체) trở thành không còn truy cập được sớm hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngăn xếp**, **4. Ghép cặp dấu ngoặc: lưu nghĩa vụ chưa hoàn tất** tiếp nhận điểm tựa từ **3. Bất biến của ngăn xếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Ngăn xếp lời gọi và đệ quy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Ghép cặp dấu ngoặc: lưu nghĩa vụ chưa hoàn tất** nối từ **3. Bất biến của ngăn xếp** sang **5. Ngăn xếp lời gọi và đệ quy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Ghép cặp dấu ngoặc: lưu nghĩa vụ chưa hoàn tất
 
@@ -99,7 +99,7 @@ function validBrackets(s) {
 
 **mô hình tư duy (mental model / 사고 모델):** ngăn xếp lưu các **nghĩa vụ đang mở (open obligations)**. Dấu đóng mới phải giải quyết nghĩa vụ được tạo gần nhất trước.
 
-> **Chuyển mạch:** Trong **Ngăn xếp**, **5. Ngăn xếp lời gọi và đệ quy** tiếp nhận điểm tựa từ **4. Ghép cặp dấu ngoặc: lưu nghĩa vụ chưa hoàn tất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Chuyển đệ quy thành ngăn xếp tường minh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Ngăn xếp lời gọi và đệ quy** nối từ **4. Ghép cặp dấu ngoặc: lưu nghĩa vụ chưa hoàn tất** sang **6. Chuyển đệ quy thành ngăn xếp tường minh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Ngăn xếp lời gọi và đệ quy
 
@@ -113,7 +113,7 @@ khung C <- đỉnh
 
 C phải trả về trước B, B phải trả về trước A. Mỗi **khung lời gọi (stack frame)** lưu địa chỉ quay về, tham số, trạng thái cục bộ và siêu dữ liệu (metadata / 메타데이터) của thời gian chạy (runtime / 런타임). Đệ quy (recursion) tự nhiên vì thời gian chạy (runtime / 런타임) đã cung cấp ngăn xếp. Nếu độ sâu phụ thuộc dữ liệu đầu vào và có thể rất lớn, dùng ngăn xếp tường minh (explicit stack) thường an toàn hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Ngăn xếp**, **6. Chuyển đệ quy thành ngăn xếp tường minh** tiếp nhận điểm tựa từ **5. Ngăn xếp lời gọi và đệ quy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Trạng thái tiếp tục (continuation state)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Chuyển đệ quy thành ngăn xếp tường minh** nối từ **5. Ngăn xếp lời gọi và đệ quy** sang **7. Trạng thái tiếp tục (continuation state)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Chuyển đệ quy thành ngăn xếp tường minh
 
@@ -144,19 +144,19 @@ while (!st.isEmpty()) {
 
 Để mô phỏng **hậu thứ tự (postorder)** chính xác, một mục trong ngăn xếp thường phải giữ thêm giai đoạn hoặc chỉ số đang xử lý. Đệ quy không chỉ là “ngăn xếp chứa nút (node / 노드)”; mỗi khung còn giữ vị trí cần tiếp tục sau khi lời gọi con kết thúc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngăn xếp**, **7. Trạng thái tiếp tục (continuation state)** tiếp nhận điểm tựa từ **6. Chuyển đệ quy thành ngăn xếp tường minh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Tính biểu thức và ngăn xếp toán tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Trạng thái tiếp tục (continuation state)** nối từ **6. Chuyển đệ quy thành ngăn xếp tường minh** sang **8. Tính biểu thức và ngăn xếp toán tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Trạng thái tiếp tục (continuation state)
 
 Một phép duyệt cây hậu thứ tự dạng lặp có thể lưu `(node, visitedChildrenFlag)` hoặc `(node, nextChildIndex)`. Điểm cốt lõi là ngăn xếp lời gọi thực chất lưu các **trạng thái tiếp tục (continuations)** — thông tin cần thiết để biết “sau khi bài toán con xong thì phải làm gì tiếp”. Khi chuyển đệ quy sang vòng lặp, cần xác định trạng thái tiếp tục chứ không chỉ đẩy tham số hàm vào ngăn xếp.
 
-> **Chuyển mạch:** Trong **Ngăn xếp**, **8. Tính biểu thức và ngăn xếp toán tử** tiếp nhận điểm tựa từ **7. Trạng thái tiếp tục (continuation state)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Trung tố, hậu tố và tiền tố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Tính biểu thức và ngăn xếp toán tử** nối từ **7. Trạng thái tiếp tục (continuation state)** sang **9. Trung tố, hậu tố và tiền tố**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Tính biểu thức và ngăn xếp toán tử
 
 Biểu thức `3 + 4 * 2` không thể tính đơn giản từ trái sang phải. Thuật toán Shunting-yard hoặc bộ phân tích theo **độ ưu tiên toán tử (operator precedence)** dùng ngăn xếp để trì hoãn các toán tử chưa đủ điều kiện xử lý. Khi toán tử mới có độ ưu tiên thấp hơn, các toán tử mạnh hơn ở đỉnh được lấy ra và xử lý trước.
 
-> **Chuyển mạch:** Ở chặng này của **Ngăn xếp**, **9. Trung tố, hậu tố và tiền tố** tiếp nhận điểm tựa từ **8. Tính biểu thức và ngăn xếp toán tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Quay lui và trạng thái hoàn tác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Trung tố, hậu tố và tiền tố** nối từ **8. Tính biểu thức và ngăn xếp toán tử** sang **10. Quay lui và trạng thái hoàn tác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Trung tố, hậu tố và tiền tố
 
@@ -168,19 +168,19 @@ Biểu thức hậu tố (postfix / Reverse Polish Notation) biến thứ tự �
 
 Quy trình: gặp toán hạng thì `push`; gặp toán tử thì lấy các toán hạng cần thiết, tính kết quả rồi `push` lại. Ở giai đoạn tính, hậu tố không cần giải quyết lại dấu ngoặc hay độ ưu tiên vì thứ tự đã được mã hóa trong biểu thức.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngăn xếp**, **10. Quay lui và trạng thái hoàn tác** tiếp nhận điểm tựa từ **9. Trung tố, hậu tố và tiền tố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Undo/Redo cần hai ngăn xếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Quay lui và trạng thái hoàn tác** nối từ **9. Trung tố, hậu tố và tiền tố** sang **11. Undo/Redo cần hai ngăn xếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Quay lui và trạng thái hoàn tác
 
 Quay lui (backtracking) thường có mẫu `chọn → áp dụng trạng thái → khám phá → hoàn tác`. Ngăn xếp lời gọi tự nhiên giữ lịch sử lựa chọn. Nếu viết dạng lặp, mỗi khung thường phải chứa trạng thái hiện tại, chỉ số lựa chọn tiếp theo và thông tin cần để hoàn tác. Lựa chọn mới nhất phải được hoàn tác trước khi quay lại lựa chọn cũ hơn.
 
-> **Chuyển mạch:** Trong **Ngăn xếp**, **11. Undo/Redo cần hai ngăn xếp** tiếp nhận điểm tựa từ **10. Quay lui và trạng thái hoàn tác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Ngăn xếp đơn điệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Undo/Redo cần hai ngăn xếp** nối từ **10. Quay lui và trạng thái hoàn tác** sang **12. Ngăn xếp đơn điệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Undo/Redo cần hai ngăn xếp
 
 Một trình soạn thảo đơn giản có thể giữ `undoStack` và `redoStack`. Khi có hành động mới, đưa hành động vào `undoStack` và xóa `redoStack`. Khi hoàn tác, lấy hành động gần nhất khỏi `undoStack`, áp dụng thao tác nghịch đảo rồi đưa nó vào `redoStack`. Nếu lịch sử cho phép phân nhánh thành nhiều phiên bản, hai ngăn xếp không còn đủ; cách biểu diễn có thể phải chuyển sang cây bền vững (persistent tree) hoặc DAG.
 
-> **Chuyển mạch:** Ở chặng này của **Ngăn xếp**, **12. Ngăn xếp đơn điệu** tiếp nhận điểm tựa từ **11. Undo/Redo cần hai ngăn xếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Vì sao ngăn xếp đơn điệu là O(n)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Ngăn xếp đơn điệu** nối từ **11. Undo/Redo cần hai ngăn xếp** sang **13. Vì sao ngăn xếp đơn điệu là O(n)?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Ngăn xếp đơn điệu
 
@@ -200,79 +200,79 @@ function nextGreater(a) {
 
 Khi `a[i]` lớn hơn giá trị ở đỉnh, `a[i]` chính là ứng viên lớn hơn đầu tiên đã được xác định cho chỉ số đó, vì mọi vị trí ở giữa đã được xét mà không đủ lớn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngăn xếp**, **13. Vì sao ngăn xếp đơn điệu là O(n)?** tiếp nhận điểm tựa từ **12. Ngăn xếp đơn điệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Hình chữ nhật lớn nhất trong histogram** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Vì sao ngăn xếp đơn điệu là O(n)?** nối từ **12. Ngăn xếp đơn điệu** sang **14. Hình chữ nhật lớn nhất trong histogram**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Vì sao ngăn xếp đơn điệu là O(n)?
 
 Mỗi chỉ số được `push` đúng một lần và bị `pop` tối đa một lần. Tổng số thay đổi là `O(n)`. Đây là **phân tích khấu hao (amortized analysis)**: thấy `for + while` không đủ để kết luận `O(n²)`; cần đếm số lần mỗi phần tử thực sự có thể tham gia thao tác.
 
-> **Chuyển mạch:** Trong **Ngăn xếp**, **14. Hình chữ nhật lớn nhất trong histogram** tiếp nhận điểm tựa từ **13. Vì sao ngăn xếp đơn điệu là O(n)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Min ngăn xếp (stack / 스택) và trạng thái bổ sung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Hình chữ nhật lớn nhất trong histogram** nối từ **13. Vì sao ngăn xếp đơn điệu là O(n)?** sang **15. Min ngăn xếp (stack / 스택) và trạng thái bổ sung**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Hình chữ nhật lớn nhất trong histogram
 
 Ngăn xếp tăng dần giữ các cột mà biên phải cuối cùng chưa được xác định. Khi gặp một cột thấp hơn, các cột cao hơn ở đỉnh biết rằng vị trí hiện tại là phần tử thấp hơn đầu tiên bên phải. Phần tử còn lại sau khi `pop` giúp xác định biên phía trái. Ngăn xếp ở đây lưu **các ứng viên chưa biết biên cuối cùng**.
 
-> **Chuyển mạch:** Ở chặng này của **Ngăn xếp**, **15. Min ngăn xếp (stack / 스택) và trạng thái bổ sung** tiếp nhận điểm tựa từ **14. Hình chữ nhật lớn nhất trong histogram** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Xây hàng đợi bằng hai ngăn xếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Min ngăn xếp (stack / 스택) và trạng thái bổ sung** nối từ **14. Hình chữ nhật lớn nhất trong histogram** sang **16. Xây hàng đợi bằng hai ngăn xếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Min ngăn xếp (stack / 스택) và trạng thái bổ sung
 
 Muốn `getMin()` chạy `O(1)`, có thể lưu thêm ngăn xếp giá trị nhỏ nhất. Ta đổi thêm bộ nhớ để duy trì thông tin tổng hợp tăng dần (incremental aggregate), nhờ đó truy vấn rẻ hơn. Một biến thể khác lưu `(value, minSoFar)` ở mỗi mục; thao tác đơn giản hơn nhưng siêu dữ liệu (metadata / 메타데이터) bị lặp nhiều hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngăn xếp**, **16. Xây hàng đợi bằng hai ngăn xếp** tiếp nhận điểm tựa từ **15. Min ngăn xếp (stack / 스택) và trạng thái bổ sung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Ngăn xếp bền vững** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Xây hàng đợi bằng hai ngăn xếp** nối từ **15. Min ngăn xếp (stack / 스택) và trạng thái bổ sung** sang **17. Ngăn xếp bền vững**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Xây hàng đợi bằng hai ngăn xếp
 
 `inStack` nhận `enqueue`, `outStack` cung cấp `dequeue`. Khi `outStack` rỗng, chuyển toàn bộ phần tử từ `inStack` sang `outStack`. Mỗi phần tử chỉ được chuyển số lần bị chặn nên chi phí khấu hao của thao tác hàng đợi là `O(1)`.
 
-> **Chuyển mạch:** Trong **Ngăn xếp**, **17. Ngăn xếp bền vững** tiếp nhận điểm tựa từ **16. Xây hàng đợi bằng hai ngăn xếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Tràn ngăn xếp và độ sâu đệ quy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Ngăn xếp bền vững** nối từ **16. Xây hàng đợi bằng hai ngăn xếp** sang **18. Tràn ngăn xếp và độ sâu đệ quy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Ngăn xếp bền vững
 
 Danh sách liên kết đơn bất biến (immutable singly linked list) tạo **tính bền vững phiên bản (persistence)** tự nhiên. `push` tạo nút (node / 노드) mới trỏ tới phiên bản cũ; `pop` trả về phần đuôi cũ. Các phiên bản chia sẻ cấu trúc (structural sharing) thay vì sao chép toàn bộ.
 
-> **Chuyển mạch:** Ở chặng này của **Ngăn xếp**, **18. Tràn ngăn xếp và độ sâu đệ quy** tiếp nhận điểm tựa từ **17. Ngăn xếp bền vững** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Đệ quy đuôi không đảm bảo bộ nhớ hằng số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Tràn ngăn xếp và độ sâu đệ quy** nối từ **17. Ngăn xếp bền vững** sang **19. Đệ quy đuôi không đảm bảo bộ nhớ hằng số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Tràn ngăn xếp và độ sâu đệ quy
 
 Độ sâu đệ quy tối đa phụ thuộc kích thước ngăn xếp (stack / 스택) của thời gian chạy (runtime / 런타임), kích thước mỗi khung, trình biên dịch (compiler / 컴파일러)/JIT, biến cục bộ và công cụ gỡ lỗi. Nếu dữ liệu có thể tạo độ sâu `O(n)`, phiên bản lặp thường đáng cân nhắc dù phiên bản đệ quy dễ đọc hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngăn xếp**, **19. Đệ quy đuôi không đảm bảo bộ nhớ hằng số** tiếp nhận điểm tựa từ **18. Tràn ngăn xếp và độ sâu đệ quy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Bộ nhớ ngăn xếp (stack / 스택) và vòng đời đối tượng (object / 객체) cục bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Đệ quy đuôi không đảm bảo bộ nhớ hằng số** nối từ **18. Tràn ngăn xếp và độ sâu đệ quy** sang **20. Bộ nhớ ngăn xếp (stack / 스택) và vòng đời đối tượng (object / 객체) cục bộ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Đệ quy đuôi không đảm bảo bộ nhớ hằng số
 
 Một số ngôn ngữ hoặc trình biên dịch (compiler / 컴파일러) tối ưu **lời gọi đuôi (tail-call optimization)** trong những điều kiện nhất định. Java không đảm bảo loại bỏ lời gọi đuôi như một hợp đồng ngữ nghĩa. Vì vậy không nên kết luận rằng đệ quy đuôi luôn dùng bộ nhớ `O(1)` nếu thời gian chạy (runtime / 런타임) không đảm bảo.
 
-> **Chuyển mạch:** Trong **Ngăn xếp**, **20. Bộ nhớ ngăn xếp (stack / 스택) và vòng đời đối tượng (object / 객체) cục bộ** tiếp nhận điểm tựa từ **19. Đệ quy đuôi không đảm bảo bộ nhớ hằng số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Treiber ngăn xếp (stack / 스택) không khóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. Bộ nhớ ngăn xếp (stack / 스택) và vòng đời đối tượng (object / 객체) cục bộ** nối từ **19. Đệ quy đuôi không đảm bảo bộ nhớ hằng số** sang **21. Treiber ngăn xếp (stack / 스택) không khóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Bộ nhớ ngăn xếp (stack / 스택) và vòng đời đối tượng (object / 객체) cục bộ
 
 Trong C, vòng đời đối tượng (object / 객체) cấp phát trên ngăn xếp (stack / 스택) kết thúc khi phạm vi (scope / 범위) hoặc khung lời gọi kết thúc. Trả con trỏ tới biến cục bộ tạo con trỏ treo (dangling pointer). **ngăn xếp (stack / 스택) ADT** và **ngăn xếp lời gọi (call stack / 호출 스택) của thời gian chạy (runtime / 런타임)** là hai khái niệm khác nhau dù cùng mang tính LIFO; một ngăn xếp (stack / 스택) ADT hoàn toàn có thể dùng vùng nhớ động (heap / 힙).
 
-> **Chuyển mạch:** Ở chặng này của **Ngăn xếp**, **21. Treiber ngăn xếp (stack / 스택) không khóa** tiếp nhận điểm tựa từ **20. Bộ nhớ ngăn xếp (stack / 스택) và vòng đời đối tượng (object / 객체) cục bộ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Ngăn xếp giới hạn dung lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Treiber ngăn xếp (stack / 스택) không khóa** nối từ **20. Bộ nhớ ngăn xếp (stack / 스택) và vòng đời đối tượng (object / 객체) cục bộ** sang **22. Ngăn xếp giới hạn dung lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Treiber ngăn xếp (stack / 스택) không khóa
 
 Treiber ngăn xếp (stack / 스택) là ngăn xếp đồng thời dùng thao tác nguyên tử **so sánh và hoán đổi (CAS — compare-and-swap)** trên `head`. Phần khó nằm ở thu hồi bộ nhớ và **vấn đề ABA (ABA problem)**. Hazard pointer, epoch hoặc con trỏ gắn phiên bản có thể cần thiết. Tính đúng trong môi trường đồng thời không thể suy trực tiếp từ bất biến LIFO tuần tự.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngăn xếp**, **21. Treiber ngăn xếp (stack / 스택) không khóa** đã nêu tiêu chí phân biệt, còn **22. Ngăn xếp giới hạn dung lượng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **23. Ngữ nghĩa lỗi và underflow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Treiber ngăn xếp (stack / 스택) không khóa** đặt tiêu chí; **22. Ngăn xếp giới hạn dung lượng** dùng nó để kiểm tra ranh giới, rồi **23. Ngữ nghĩa lỗi và underflow** mở rộng hệ quả.
 
 ## 22. Ngăn xếp giới hạn dung lượng
 
 Nếu biết trước độ sâu tối đa, ngăn xếp có dung lượng cố định tránh được cấp phát và thay đổi kích thước. Khi đầy, API phải định nghĩa rõ hành vi. Hệ thống nhúng hoặc thời gian thực thường thích bộ nhớ giới hạn vì mức dùng bộ nhớ và độ trễ dễ dự đoán hơn.
 
-> **Chuyển mạch:** Trong **Ngăn xếp**, **22. Ngăn xếp giới hạn dung lượng** đã nêu tiêu chí phân biệt, còn **23. Ngữ nghĩa lỗi và underflow** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **24. Kiểm thử ngăn xếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. Ngăn xếp giới hạn dung lượng** đặt tiêu chí; **23. Ngữ nghĩa lỗi và underflow** dùng nó để kiểm tra ranh giới, rồi **24. Kiểm thử ngăn xếp** mở rộng hệ quả.
 
 ## 23. Ngữ nghĩa lỗi và underflow
 
 `pop` trên ngăn xếp rỗng là **underflow**. API có thể ném ngoại lệ, trả `Optional/null`, trả `boolean` kèm tham số đầu ra hoặc dùng assertion nếu đây là lỗi lập trình nội bộ. Lựa chọn phụ thuộc tầng lớp trừu tượng (abstraction / 추상화) và hợp đồng API.
 
-> **Chuyển mạch:** Ở chặng này của **Ngăn xếp**, **23. Ngữ nghĩa lỗi và underflow** xác định đầu vào; **24. Kiểm thử ngăn xếp** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **25. Khi nào nhận ra một bài cần ngăn xếp?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. Ngữ nghĩa lỗi và underflow** đặt đầu vào cho **24. Kiểm thử ngăn xếp**, rồi **25. Khi nào nhận ra một bài cần ngăn xếp?** mở rộng hệ quả.
 
 ## 24. Kiểm thử ngăn xếp
 
 Cần kiểm tra thứ tự LIFO, `peek` không xóa phần tử, `size` chính xác và hành vi underflow. Có thể dùng **kiểm thử vi sai (differential testing)** để so cấu trúc tự viết với một cấu trúc tham chiếu. Thuật toán ngăn xếp đơn điệu nên được so với lời giải vét cạn `O(n²)` trên nhiều đầu vào nhỏ ngẫu nhiên.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngăn xếp**, **25. Khi nào nhận ra một bài cần ngăn xếp?** tiếp nhận điểm tựa từ **24. Kiểm thử ngăn xếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. Khi nào nhận ra một bài cần ngăn xếp?** nối từ **24. Kiểm thử ngăn xếp** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Khi nào nhận ra một bài cần ngăn xếp?
 
@@ -284,7 +284,7 @@ Câu hỏi hữu ích:
 
 Nếu có, ngăn xếp thường là mô hình tự nhiên.
 
-> **Chuyển mạch:** Trong **Ngăn xếp**, **Mô hình tư duy** gom các mảnh từ **25. Khi nào nhận ra một bài cần ngăn xếp?** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** tổng hợp từ **25. Khi nào nhận ra một bài cần ngăn xếp?**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy
 

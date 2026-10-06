@@ -8,7 +8,7 @@ Nigeria nằm ở bờ Gulf of Guinea và trải từ vùng ven biển cực ẩ
 
 Phía nam mở ra Atlantic; phía bắc nối với mạng Sahel; phía đông và tây liên kết với các hành lang khu vực Tây Phi. Vì vậy Nigeria vừa là coastal trạng thái (state / 상태) vừa là một inland thị trường (market / 시장) khổng lồ.
 
-> **Chuyển mạch:** Trong **Nigeria**, **Địa hình, sông và châu thổ** tiếp nhận điểm tựa từ **Khung không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khí hậu và các đai sinh thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Gulf of Guinea, plateau, plains và Niger–Benue–Delta tạo nhiều “Nigeria địa lý”; **Địa hình, sông và châu thổ** biến địa hình thành cả tài nguyên lẫn vulnerability. **Khí hậu và các đai sinh thái** tiếp theo phân hóa nam–bắc rõ hơn.
 
 ## Địa hình, sông và châu thổ
 
@@ -16,7 +16,7 @@ Phần lớn Nigeria không phải núi cao mà gồm plateau, upland và plains
 
 Niger Delta là vùng đất thấp, wetlands và distributary channels rất phức tạp. Châu thổ vừa giàu tài nguyên hydrocarbon vừa cực nhạy với erosion, flood, wetland degradation và pollution. Đây là ví dụ điển hình của sự đánh đổi (trade-off / 트레이드오프): cùng một landscape tạo tài nguyên, cảng và sinh kế nhưng cũng có vulnerability cao.
 
-> **Chuyển mạch:** Ở chặng này của **Nigeria**, **Khí hậu và các đai sinh thái** tiếp nhận điểm tựa từ **Địa hình, sông và châu thổ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dân cư và mạng đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mưa giảm từ coast qua Middle Belt tới Sahel, làm crop calendar, livestock mobility và fire regime khác nhau; **Khí hậu và các đai sinh thái** đặt nền cho settlement. **Dân cư và mạng đô thị** tiếp theo cho thấy nhiều cực đô thị bám các gradient đó.
 
 ## Khí hậu và các đai sinh thái
 
@@ -24,7 +24,7 @@ Mưa giảm dần từ nam lên bắc. Coastal south và Niger Delta có mùa m�
 
 Độ dốc (gradient / 기울기) này ảnh hưởng crop calendar, livestock mobility và vegetation fire regime. Không nên nói “Nigeria có khí hậu nhiệt đới” rồi dừng lại, vì sự khác biệt trong một năm mưa giữa south coast và Sahel north có ý nghĩa trực tiếp đối với settlement và food các hệ thống (systems / 시스템들).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nigeria**, **Dân cư và mạng đô thị** tiếp nhận điểm tựa từ **Khí hậu và các đai sinh thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Lagos, Abuja, Kano, Port Harcourt và các đô thị khác tạo mạng đa cực, nơi port, industry, services và trade flows chồng nhau; **Dân cư và mạng đô thị** không quy về một corridor. **Kinh tế không gian** tiếp theo phân bố hydrocarbon, agriculture và informal production.
 
 ## Dân cư và mạng đô thị
 
@@ -32,7 +32,7 @@ Nigeria có urban hệ thống (system / 시스템) đa cực hơn nhiều nư�
 
 Điều quan trọng là Nigeria không có một single urban corridor duy nhất. Thay vào đó là nhiều metropolitan–thị trường (market / 시장) các hệ thống (systems / 시스템들) chồng lấn, nối bởi highways, domestic aviation và trade flows.
 
-> **Chuyển mạch:** Trong **Nigeria**, **Kinh tế không gian** tiếp nhận điểm tựa từ **Dân cư và mạng đô thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giao thông và cửa ngõ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Niger Delta tập trung hydrocarbon, còn agriculture trải rộng theo đai ẩm–khô; **Kinh tế không gian** nối các vùng bằng industrial corridors và thị trường informal. **Giao thông và cửa ngõ** tiếp theo cho thấy những tuyến nào gánh luồng người và hàng.
 
 ## Kinh tế không gian
 
@@ -40,7 +40,7 @@ Hydrocarbon tập trung mạnh ở Niger Delta và offshore Gulf of Guinea. Agri
 
 Industrial activity tập trung quanh Lagos–Ogun, các đô thị lớn và một số corridor. Informal môi trường vận hành (production / 운영 환경)/trade có vai trò lớn, vì vậy dữ liệu formal establishment có thể đánh giá thấp cường độ kinh tế thực ở nhiều thị trường (market / 시장) cities.
 
-> **Chuyển mạch:** Ở chặng này của **Nigeria**, **Giao thông và cửa ngõ** tiếp nhận điểm tựa từ **Kinh tế không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro và môi trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Port, highway, rail và aviation nối các cực kinh tế nhưng Niger Delta wetlands, congestion và khoảng cách Sahel làm friction khác nhau; **Giao thông và cửa ngõ** không chỉ là bản đồ tuyến. **Rủi ro và môi trường** tiếp theo kiểm tra độ bền của các gateway.
 
 ## Giao thông và cửa ngõ
 
@@ -48,7 +48,7 @@ Lagos cổng (port / 포트) hệ thống (system / 시스템) là gateway quố
 
 Một vấn đề địa lý cơ bản là congestion: khi population và freight tăng nhanh hơn road/cổng (port / 포트) sức chứa (capacity / 용량), effective distance tăng dù vật lý (physical / 물리적) distance không đổi. Một chuyến hàng 30 km có thể mất nhiều thời gian hơn chuyến xa hơn trên corridor thông suốt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nigeria**, **Rủi ro và môi trường** tiếp nhận điểm tựa từ **Giao thông và cửa ngõ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Flood, erosion, pollution, drought và security pressure tác động khác nhau theo delta, coast, Middle Belt và north; **Rủi ro và môi trường** gắn hazard với hạ tầng và settlement. **Những hiểu lầm phổ biến** tiếp theo sửa cách đọc Nigeria như một vùng đồng nhất.
 
 ## Rủi ro và môi trường
 
@@ -56,7 +56,7 @@ South coast chịu flood, storm surge, subsidence/erosion ở một số nơi v�
 
 Niger Delta cho thấy environmental rủi ro (risk / 위험) có thể mang dạng compound: oil hạ tầng (infrastructure / 인프라) + wetlands + dense settlement + river flooding.
 
-> **Chuyển mạch:** Trong **Nigeria**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Rủi ro và môi trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Những hiểu lầm phổ biến** nhắc rằng Nigeria không chỉ là khí hậu nhiệt đới, không chỉ có Lagos, và formal data không bao quát hết kinh tế đô thị; **Mô hình tư duy** sẽ giữ gradient và mạng đa cực.
 
 ## Những hiểu lầm phổ biến
 
@@ -66,7 +66,7 @@ Niger Delta cho thấy environmental rủi ro (risk / 위험) có thể mang d�
 
 **“Bắc và nam chỉ khác văn hóa.”** Chúng còn khác rõ về rainfall, vegetation, môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템) và water ràng buộc (constraint / 제약조건).
 
-> **Chuyển mạch:** Ở chặng này của **Nigeria**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi Gulf–Sahel gradient → Niger/Benue/Delta → đô thị đa cực → hydrocarbon/agriculture → gateways và risk, rồi bàn giao cho owner **Western Africa** trong [README](./README.md).
 
 ## Mô hình tư duy
 

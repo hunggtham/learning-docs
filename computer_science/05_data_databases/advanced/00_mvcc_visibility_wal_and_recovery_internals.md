@@ -22,7 +22,7 @@ Bất biến (invariant / 불변식) cơ bản:
 
 Hai nửa của câu này nối visibility với durability.
 
-> **Chuyển mạch:** Concurrency cần giữ lịch sử hợp lệ; MVCC lưu nhiều row version, còn snapshot định nghĩa visibility/order của transaction chứ không phải bản copy toàn database.
+> **Nối mạch:** Concurrency cần giữ lịch sử hợp lệ; MVCC lưu nhiều row version, còn snapshot định nghĩa visibility/order của transaction chứ không phải bản copy toàn database.
 
 ## 2. MVCC biến một logical row thành phiên bản (version / 버전) lịch sử (history / 이력)
 
@@ -39,7 +39,7 @@ Reader không lấy “phiên bản (version / 버전) mới nhất theo wall cl
 
 Đây là reason hai transactions cùng truy vấn (query / 쿼리) một key tại gần cùng thời điểm có thể hợp lệ khi nhìn thấy hai answers khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **2. MVCC biến một logical row thành phiên bản (version / 버전) lịch sử (history / 이력)** nêu điều cần giải thích; **3. Snapshot là một đặc tả hợp đồng (contract / 계약) về giao dịch (transaction / 트랜잭션) thứ tự (order / 순서), không phải bản sao (copy / 복사) toàn cơ sở dữ liệu (database / 데이터베이스)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Visibility không tự bảo đảm serializability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. MVCC biến một logical row thành phiên bản (version / 버전) lịch sử (history / 이력)** đặt vấn đề; **3. Snapshot là một đặc tả hợp đồng (contract / 계약) về giao dịch (transaction / 트랜잭션) thứ tự (order / 순서), không phải bản sao (copy / 복사) toàn cơ sở dữ liệu (database / 데이터베이스)** kiểm tra bằng chứng, rồi **4. Visibility không tự bảo đảm serializability** mở rộng hệ quả.
 
 ## 3. Snapshot là một đặc tả hợp đồng (contract / 계약) về giao dịch (transaction / 트랜잭션) thứ tự (order / 순서), không phải bản sao (copy / 복사) toàn cơ sở dữ liệu (database / 데이터베이스)
 
@@ -56,7 +56,7 @@ transaction đó có visible đối với snapshot không?
 
 Một snapshot không nhất thiết materialize mọi row. Nó là siêu dữ liệu (metadata / 메타데이터)/quy tắc (rule / 규칙) để evaluate visibility khi row được đọc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **3. Snapshot là một đặc tả hợp đồng (contract / 계약) về giao dịch (transaction / 트랜잭션) thứ tự (order / 순서), không phải bản sao (copy / 복사) toàn cơ sở dữ liệu (database / 데이터베이스)** nêu điều cần giải thích; **4. Visibility không tự bảo đảm serializability** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. cập nhật (update / 업데이트) không nhất thiết overwrite trạng thái (state / 상태) cũ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Snapshot là một đặc tả hợp đồng (contract / 계약) về giao dịch (transaction / 트랜잭션) thứ tự (order / 순서), không phải bản sao (copy / 복사) toàn cơ sở dữ liệu (database / 데이터베이스)** đặt vấn đề; **4. Visibility không tự bảo đảm serializability** kiểm tra bằng chứng, rồi **5. cập nhật (update / 업데이트) không nhất thiết overwrite trạng thái (state / 상태) cũ** mở rộng hệ quả.
 
 ## 4. Visibility không tự bảo đảm serializability
 
@@ -73,7 +73,7 @@ predicate/range dependency có được bảo vệ không?
 
 Đọc [lock manager, predicate locking và serializable isolation](./01_lock_manager_predicate_locking_and_serializable_isolation.md).
 
-> **Chuyển mạch:** Trong **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **5. cập nhật (update / 업데이트) không nhất thiết overwrite trạng thái (state / 상태) cũ** tiếp nhận điểm tựa từ **4. Visibility không tự bảo đảm serializability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. giao dịch (transaction / 트랜잭션) trạng thái (state / 상태) là authority của phiên bản (version / 버전)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. cập nhật (update / 업데이트) không nhất thiết overwrite trạng thái (state / 상태) cũ** nối từ **4. Visibility không tự bảo đảm serializability** sang **6. giao dịch (transaction / 트랜잭션) trạng thái (state / 상태) là authority của phiên bản (version / 버전)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. cập nhật (update / 업데이트) không nhất thiết overwrite trạng thái (state / 상태) cũ
 
@@ -89,7 +89,7 @@ engine phải giữ version metadata, old tuples/undo và reclamation work
 
 Long-running giao dịch (transaction / 트랜잭션) vì vậy không chỉ “giữ liên kết (connection / 연결) lâu”; nó có thể giữ giao dịch (transaction / 트랜잭션) horizon cũ và ngăn cleanup của lượng lịch sử (history / 이력) lớn.
 
-> **Chuyển mạch:** Ở chặng này của **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **6. giao dịch (transaction / 트랜잭션) trạng thái (state / 상태) là authority của phiên bản (version / 버전)** tiếp nhận điểm tựa từ **5. cập nhật (update / 업데이트) không nhất thiết overwrite trạng thái (state / 상태) cũ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. WAL giải durability bằng write-ahead quy tắc (rule / 규칙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. giao dịch (transaction / 트랜잭션) trạng thái (state / 상태) là authority của phiên bản (version / 버전)** nối từ **5. cập nhật (update / 업데이트) không nhất thiết overwrite trạng thái (state / 상태) cũ** sang **7. WAL giải durability bằng write-ahead quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. giao dịch (transaction / 트랜잭션) trạng thái (state / 상태) là authority của phiên bản (version / 버전)
 
@@ -106,7 +106,7 @@ in-progress / unknown until recovery resolves
 
 Bất biến (invariant / 불변식) là **khôi phục (recovery / 복구) và visibility lô-gic (logic / 논리) phải cùng hiểu giao dịch (transaction / 트랜잭션) authority**. Nếu crash xảy ra giữa vật lý (physical / 물리적) ghi (write / 쓰기) và lần ghi nhận (commit / 커밋) bản ghi (record / 레코드), page bytes không được tự nhiên biến thành committed row.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **7. WAL giải durability bằng write-ahead quy tắc (rule / 규칙)** tiếp nhận điểm tựa từ **6. giao dịch (transaction / 트랜잭션) trạng thái (state / 상태) là authority của phiên bản (version / 버전)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. lần ghi nhận (commit / 커밋) acknowledgement có một ranh giới (boundary / 경계) cụ thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. WAL giải durability bằng write-ahead quy tắc (rule / 규칙)** nối từ **6. giao dịch (transaction / 트랜잭션) trạng thái (state / 상태) là authority của phiên bản (version / 버전)** sang **8. lần ghi nhận (commit / 커밋) acknowledgement có một ranh giới (boundary / 경계) cụ thể**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. WAL giải durability bằng write-ahead quy tắc (rule / 규칙)
 
@@ -123,7 +123,7 @@ modify page in buffer pool
 
 Dữ liệu (data / 데이터) pages không cần flush mỗi lần ghi nhận (commit / 커밋). Sequential-ish log flush thường rẻ hơn random page flush và cho phép group lần ghi nhận (commit / 커밋).
 
-> **Chuyển mạch:** Trong **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **7. WAL giải durability bằng write-ahead quy tắc (rule / 규칙)** đã nêu tiêu chí phân biệt, còn **8. lần ghi nhận (commit / 커밋) acknowledgement có một ranh giới (boundary / 경계) cụ thể** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **9. Steal/no-steal và force/no-force quyết định khôi phục (recovery / 복구) burden** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. WAL giải durability bằng write-ahead quy tắc (rule / 규칙)** đặt tiêu chí; **8. lần ghi nhận (commit / 커밋) acknowledgement có một ranh giới (boundary / 경계) cụ thể** dùng nó để kiểm tra ranh giới, rồi **9. Steal/no-steal và force/no-force quyết định khôi phục (recovery / 복구) burden** mở rộng hệ quả.
 
 ## 8. lần ghi nhận (commit / 커밋) acknowledgement có một ranh giới (boundary / 경계) cụ thể
 
@@ -145,7 +145,7 @@ Chính xác (exact / 정확한) chuỗi (sequence / 시퀀스) khác engine, nh�
 
 Nếu chính sách (policy / 정책) là asynchronous/local-only, guarantee yếu hơn synchronous replicated durability. Từ “lần ghi nhận (commit / 커밋)” phải luôn đi cùng thất bại (failure / 실패) mô hình (model / 모델).
 
-> **Chuyển mạch:** Ở chặng này của **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **8. lần ghi nhận (commit / 커밋) acknowledgement có một ranh giới (boundary / 경계) cụ thể** đã nêu tiêu chí phân biệt, còn **9. Steal/no-steal và force/no-force quyết định khôi phục (recovery / 복구) burden** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **10. LSN nối logical log thứ tự (order / 순서) với vật lý (physical / 물리적) page trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. lần ghi nhận (commit / 커밋) acknowledgement có một ranh giới (boundary / 경계) cụ thể** đặt tiêu chí; **9. Steal/no-steal và force/no-force quyết định khôi phục (recovery / 복구) burden** dùng nó để kiểm tra ranh giới, rồi **10. LSN nối logical log thứ tự (order / 순서) với vật lý (physical / 물리적) page trạng thái (state / 상태)** mở rộng hệ quả.
 
 ## 9. Steal/no-steal và force/no-force quyết định khôi phục (recovery / 복구) burden
 
@@ -155,7 +155,7 @@ Nếu committed pages không bắt buộc flush ngay khi lần ghi nhận (commi
 
 High-performance engines thường thích steal + no-force vì sử dụng buffer/lưu trữ (storage / 저장소) hiệu quả, đổi lại khôi phục (recovery / 복구) siêu dữ liệu (metadata / 메타데이터)/logging phức tạp hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **10. LSN nối logical log thứ tự (order / 순서) với vật lý (physical / 물리적) page trạng thái (state / 상태)** tiếp nhận điểm tựa từ **9. Steal/no-steal và force/no-force quyết định khôi phục (recovery / 복구) burden** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. khôi phục (recovery / 복구) là một máy trạng thái (state machine / 상태 머신), không phải “tải (load / 로드) backup”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. LSN nối logical log thứ tự (order / 순서) với vật lý (physical / 물리적) page trạng thái (state / 상태)** nối từ **9. Steal/no-steal và force/no-force quyết định khôi phục (recovery / 복구) burden** sang **11. khôi phục (recovery / 복구) là một máy trạng thái (state machine / 상태 머신), không phải “tải (load / 로드) backup”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. LSN nối logical log thứ tự (order / 순서) với vật lý (physical / 물리적) page trạng thái (state / 상태)
 
@@ -171,7 +171,7 @@ Khôi phục (recovery / 복구) có thể so pageLSN với log bản ghi (recor
 
 Đây là liên kết (connection / 연결) trực tiếp sang filesystem/thiết bị (device / 장치) thứ tự (ordering / 순서): nếu lưu trữ (storage / 저장소) làm page durable nhưng log mà page phụ thuộc chưa thật sự persistent theo đặc tả hợp đồng (contract / 계약), WAL bất biến (invariant / 불변식) bị phá.
 
-> **Chuyển mạch:** Trong **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **11. khôi phục (recovery / 복구) là một máy trạng thái (state machine / 상태 머신), không phải “tải (load / 로드) backup”** tiếp nhận điểm tựa từ **10. LSN nối logical log thứ tự (order / 순서) với vật lý (physical / 물리적) page trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Crash scenarios làm bất biến (invariant / 불변식) rõ hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. khôi phục (recovery / 복구) là một máy trạng thái (state machine / 상태 머신), không phải “tải (load / 로드) backup”** nối từ **10. LSN nối logical log thứ tự (order / 순서) với vật lý (physical / 물리적) page trạng thái (state / 상태)** sang **12. Crash scenarios làm bất biến (invariant / 불변식) rõ hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. khôi phục (recovery / 복구) là một máy trạng thái (state machine / 상태 머신), không phải “tải (load / 로드) backup”
 
@@ -186,7 +186,7 @@ xác định transaction/page/log state cần quan tâm
 
 Không phải mọi engine dùng ARIES hay cùng chính xác (exact / 정확한) thuật toán (algorithm / 알고리즘). mô hình tư duy (mental model / 사고 모델) quan trọng là khôi phục (recovery / 복구) **reconstructs a valid logical lịch sử (history / 이력) from durable bằng chứng (evidence / 증거)**, không đơn giản đọc dữ liệu (data / 데이터) tệp (file / 파일) như final truth.
 
-> **Chuyển mạch:** Ở chặng này của **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **12. Crash scenarios làm bất biến (invariant / 불변식) rõ hơn** tiếp nhận điểm tựa từ **11. khôi phục (recovery / 복구) là một máy trạng thái (state machine / 상태 머신), không phải “tải (load / 로드) backup”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Checkpoint giới hạn khôi phục (recovery / 복구) debt chứ không định nghĩa lần ghi nhận (commit / 커밋) truth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Crash scenarios làm bất biến (invariant / 불변식) rõ hơn** nối từ **11. khôi phục (recovery / 복구) là một máy trạng thái (state machine / 상태 머신), không phải “tải (load / 로드) backup”** sang **13. Checkpoint giới hạn khôi phục (recovery / 복구) debt chứ không định nghĩa lần ghi nhận (commit / 커밋) truth**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Crash scenarios làm bất biến (invariant / 불변식) rõ hơn
 
@@ -208,7 +208,7 @@ Checkpoint siêu dữ liệu (metadata / 메타데이터) có thể incomplete t
 
 Những trường hợp (case / 사례) này cho thấy cơ sở dữ liệu (database / 데이터베이스) thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론) nối trực tiếp với ứng dụng (application / 애플리케이션) thử lại (retry / 재시도) ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **12. Crash scenarios làm bất biến (invariant / 불변식) rõ hơn** đã nêu tiêu chí phân biệt, còn **13. Checkpoint giới hạn khôi phục (recovery / 복구) debt chứ không định nghĩa lần ghi nhận (commit / 커밋) truth** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. Group lần ghi nhận (commit / 커밋) đổi timing, không đổi durability bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Crash scenarios làm bất biến (invariant / 불변식) rõ hơn** đặt tiêu chí; **13. Checkpoint giới hạn khôi phục (recovery / 복구) debt chứ không định nghĩa lần ghi nhận (commit / 커밋) truth** dùng nó để kiểm tra ranh giới, rồi **14. Group lần ghi nhận (commit / 커밋) đổi timing, không đổi durability bất biến (invariant / 불변식)** mở rộng hệ quả.
 
 ## 13. Checkpoint giới hạn khôi phục (recovery / 복구) debt chứ không định nghĩa lần ghi nhận (commit / 커밋) truth
 
@@ -228,7 +228,7 @@ checkpoint quá thưa
 
 Đây là balancing giữa steady-state thông lượng (throughput / 처리량) và RTO.
 
-> **Chuyển mạch:** Trong **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **13. Checkpoint giới hạn khôi phục (recovery / 복구) debt chứ không định nghĩa lần ghi nhận (commit / 커밋) truth** đã nêu tiêu chí phân biệt, còn **14. Group lần ghi nhận (commit / 커밋) đổi timing, không đổi durability bất biến (invariant / 불변식)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **15. Torn page và page-image chiến lược (strategy / 전략)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Checkpoint giới hạn khôi phục (recovery / 복구) debt chứ không định nghĩa lần ghi nhận (commit / 커밋) truth** đặt tiêu chí; **14. Group lần ghi nhận (commit / 커밋) đổi timing, không đổi durability bất biến (invariant / 불변식)** dùng nó để kiểm tra ranh giới, rồi **15. Torn page và page-image chiến lược (strategy / 전략)** mở rộng hệ quả.
 
 ## 14. Group lần ghi nhận (commit / 커밋) đổi timing, không đổi durability bất biến (invariant / 불변식)
 
@@ -242,7 +242,7 @@ T3 ─┘
 
 Một giao dịch (transaction / 트랜잭션) có thể chờ thêm để batch, nhưng acknowledgement vẫn chỉ được phát sau ranh giới (boundary / 경계) chính sách (policy / 정책) yêu cầu. tối ưu hóa (optimization / 최적화) được phép đổi batching/timing, không được âm thầm làm yếu Đặc tả API (API contract / API 계약).
 
-> **Chuyển mạch:** Ở chặng này của **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **15. Torn page và page-image chiến lược (strategy / 전략)** tiếp nhận điểm tựa từ **14. Group lần ghi nhận (commit / 커밋) đổi timing, không đổi durability bất biến (invariant / 불변식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Vacuum/purge là garbage collection của phiên bản (version / 버전) lịch sử (history / 이력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Torn page và page-image chiến lược (strategy / 전략)** nối từ **14. Group lần ghi nhận (commit / 커밋) đổi timing, không đổi durability bất biến (invariant / 불변식)** sang **16. Vacuum/purge là garbage collection của phiên bản (version / 버전) lịch sử (history / 이력)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Torn page và page-image chiến lược (strategy / 전략)
 
@@ -252,7 +252,7 @@ Checksum detect corruption nhưng khôi phục (recovery / 복구) cần cơ ch�
 
 Bất biến (invariant / 불변식) là **khôi phục (recovery / 복구) không được tin một partial vật lý (physical / 물리적) ghi (write / 쓰기) như logical page hoàn chỉnh**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **16. Vacuum/purge là garbage collection của phiên bản (version / 버전) lịch sử (history / 이력)** tiếp nhận điểm tựa từ **15. Torn page và page-image chiến lược (strategy / 전략)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Replica làm vòng đời (lifecycle / 생명주기) kéo dài sang phân tán (distributed / 분산) trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Vacuum/purge là garbage collection của phiên bản (version / 버전) lịch sử (history / 이력)** nối từ **15. Torn page và page-image chiến lược (strategy / 전략)** sang **17. Replica làm vòng đời (lifecycle / 생명주기) kéo dài sang phân tán (distributed / 분산) trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Vacuum/purge là garbage collection của phiên bản (version / 버전) lịch sử (history / 이력)
 
@@ -269,7 +269,7 @@ backup/export snapshot
 
 Hậu quả: bảng (table / 테이블)/chỉ mục (index / 인덱스) bloat, undo/version-store growth, more I/O/bộ nhớ đệm (cache / 캐시) pressure và đôi khi transaction-ID/phiên bản (version / 버전) siêu dữ liệu (metadata / 메타데이터) pressure tùy engine.
 
-> **Chuyển mạch:** Trong **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **16. Vacuum/purge là garbage collection của phiên bản (version / 버전) lịch sử (history / 이력)** xác định đầu vào; **17. Replica làm vòng đời (lifecycle / 생명주기) kéo dài sang phân tán (distributed / 분산) trạng thái (state / 상태)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **18. hiệu năng (performance / 성능) pressure thay đổi hành vi (behavior / 동작) theo subsystem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Vacuum/purge là garbage collection của phiên bản (version / 버전) lịch sử (history / 이력)** đặt đầu vào cho **17. Replica làm vòng đời (lifecycle / 생명주기) kéo dài sang phân tán (distributed / 분산) trạng thái (state / 상태)**, rồi **18. hiệu năng (performance / 성능) pressure thay đổi hành vi (behavior / 동작) theo subsystem** mở rộng hệ quả.
 
 ## 17. Replica làm vòng đời (lifecycle / 생명주기) kéo dài sang phân tán (distributed / 분산) trạng thái (state / 상태)
 
@@ -290,7 +290,7 @@ Read from replica có consistency đặc tả hợp đồng (contract / 계약) 
 
 Đọc [multi-region replication và failover](../../06_networks_distributed_systems/advanced/05_multi_region_replication_and_geo_distributed_tradeoffs.md).
 
-> **Chuyển mạch:** Ở chặng này của **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **17. Replica làm vòng đời (lifecycle / 생명주기) kéo dài sang phân tán (distributed / 분산) trạng thái (state / 상태)** xác định đầu vào; **18. hiệu năng (performance / 성능) pressure thay đổi hành vi (behavior / 동작) theo subsystem** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **19. bằng chứng vận hành (production evidence / 운영 증거): quan sát lịch sử (history / 이력) ở nhiều representations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Replica làm vòng đời (lifecycle / 생명주기) kéo dài sang phân tán (distributed / 분산) trạng thái (state / 상태)** đặt đầu vào cho **18. hiệu năng (performance / 성능) pressure thay đổi hành vi (behavior / 동작) theo subsystem**, rồi **19. bằng chứng vận hành (production evidence / 운영 증거): quan sát lịch sử (history / 이력) ở nhiều representations** mở rộng hệ quả.
 
 ## 18. hiệu năng (performance / 성능) pressure thay đổi hành vi (behavior / 동작) theo subsystem
 
@@ -310,7 +310,7 @@ write load ↑
 
 Vì vậy nguyên nhân gốc (root cause / 근본 원인) có thể không nằm ở truy vấn (query / 쿼리) văn bản (text / 텍스트) đang chậm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **18. hiệu năng (performance / 성능) pressure thay đổi hành vi (behavior / 동작) theo subsystem** nêu điều cần giải thích; **19. bằng chứng vận hành (production evidence / 운영 증거): quan sát lịch sử (history / 이력) ở nhiều representations** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. hiệu năng (performance / 성능) pressure thay đổi hành vi (behavior / 동작) theo subsystem** đặt vấn đề; **19. bằng chứng vận hành (production evidence / 운영 증거): quan sát lịch sử (history / 이력) ở nhiều representations** kiểm tra bằng chứng, rồi **20. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** mở rộng hệ quả.
 
 ## 19. bằng chứng vận hành (production evidence / 운영 증거): quan sát lịch sử (history / 이력) ở nhiều representations
 
@@ -342,19 +342,19 @@ Replication:
 
 Chỉ số (metric / 지표) names khác DBMS; mô hình tư duy (mental model / 사고 모델) là đo **visibility horizon + durable-log frontier + dirty-page frontier + replica frontier**.
 
-> **Chuyển mạch:** Trong **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **19. bằng chứng vận hành (production evidence / 운영 증거): quan sát lịch sử (history / 이력) ở nhiều representations** nêu điều cần giải thích; **20. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **21. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. bằng chứng vận hành (production evidence / 운영 증거): quan sát lịch sử (history / 이력) ở nhiều representations** đặt vấn đề; **20. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** kiểm tra bằng chứng, rồi **21. Mô hình tư duy** mở rộng hệ quả.
 
 ## 20. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?
 
 Nếu reader thấy stale trạng thái (state / 상태), kiểm tra snapshot/isolation/replica position trước khi nghi disk. Nếu committed dữ liệu (data / 데이터) mất sau crash, kiểm tra WAL acknowledgment và lưu trữ (storage / 저장소) durability đường dẫn (path / 경로). Nếu DB phình dù traffic nhỏ, kiểm tra old snapshot horizon. Nếu p99 lần ghi nhận (commit / 커밋) spike, kiểm tra WAL flush/checkpoint/lưu trữ (storage / 저장소) hàng đợi (queue / 큐) chứ không chỉ CPU.
 
-> **Chuyển mạch:** Ở chặng này của **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **21. Mô hình tư duy** gom các mảnh từ **20. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Mô hình tư duy** tổng hợp từ **20. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 21. Mô hình tư duy
 
 > MVCC quyết định **ai nhìn thấy phiên bản (version / 버전) nào**; giao dịch (transaction / 트랜잭션) trạng thái (state / 상태) quyết định **phiên bản (version / 버전) nào có authority**; WAL/khôi phục (recovery / 복구) quyết định **lịch sử (history / 이력) nào sống sót crash**; checkpoint giới hạn **khôi phục (recovery / 복구) debt**; vacuum/purge quyết định **khi nào lịch sử (history / 이력) cũ có thể bị quên**; replication kéo cùng lịch sử (history / 이력) qua nhiều nodes. **tính đúng đắn (correctness / 정확성) đến từ việc mọi biểu diễn (representation / 표현) tôn trọng cùng giao dịch (transaction / 트랜잭션) authority, còn hiệu năng (performance / 성능) đến từ cách hệ thống (system / 시스템) trì hoãn, batch và reclaim công việc (work / 작업) mà không phá bất biến (invariant / 불변식).**
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **MVCC, visibility, WAL và khôi phục (recovery / 복구) internals**, **Kết nối** gom các mảnh từ **21. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **21. Mô hình tư duy**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

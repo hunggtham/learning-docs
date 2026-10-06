@@ -22,7 +22,7 @@ Geopolitics
 
 Vì vậy tăng trưởng nội địa không thể luôn được phân tích riêng khỏi điều kiện tài chính toàn cầu.
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **1. Không có nền kinh tế nào hoàn toàn độc lập** đã nêu tiêu chí phân biệt, còn **2. Lợi thế so sánh** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **3. Terms of trade** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **1. Không có nền kinh tế nào hoàn toàn độc lập** đặt tiêu chí; **2. Lợi thế so sánh** dùng tiêu chí đó để kiểm tra ranh giới, rồi **3. Terms of trade** mở rộng hệ quả.
 
 ## 2. Lợi thế so sánh
 
@@ -32,7 +32,7 @@ Sau khi đặt thương mại vào bối cảnh dòng vốn và nhu cầu, ta c�
 
 Điều quan trọng là chi phí cơ hội tương đối.
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **2. Lợi thế so sánh** đã nêu tiêu chí phân biệt, còn **3. Terms of trade** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4. Chuỗi giá trị toàn cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **2. Lợi thế so sánh** đặt tiêu chí; **3. Terms of trade** dùng tiêu chí đó để kiểm tra ranh giới, rồi **4. Chuỗi giá trị toàn cầu** mở rộng hệ quả.
 
 ## 3. Terms of trade
 
@@ -42,7 +42,7 @@ Khi đã hiểu quốc gia chuyên môn hóa ra sao, ta theo dõi giá xuất kh
 
 Một nước nhập khẩu năng lượng như Hàn Quốc có thể bị bất lợi khi dầu tăng mạnh vì phải trả nhiều hơn cho nhập khẩu dù sản lượng xuất khẩu không đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **3. Terms of trade** xác định đầu vào; **4. Chuỗi giá trị toàn cầu** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **5. Hiệu quả và khả năng chống chịu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **3. Terms of trade** đặt đầu vào cho **4. Chuỗi giá trị toàn cầu**, rồi **5. Hiệu quả và khả năng chống chịu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. Chuỗi giá trị toàn cầu
 
@@ -60,7 +60,7 @@ Thiết kế tại Mỹ
 
 Do đó doanh thu xuất khẩu không luôn tương đương giá trị gia tăng nội địa.
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **4. Chuỗi giá trị toàn cầu** xác định đầu vào; **5. Hiệu quả và khả năng chống chịu** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. hiện tại (current / 현재) account** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **4. Chuỗi giá trị toàn cầu** đặt đầu vào cho **5. Hiệu quả và khả năng chống chịu**, rồi **6. hiện tại (current / 현재) account** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. Hiệu quả và khả năng chống chịu
 
@@ -76,7 +76,7 @@ Sau các cú sốc lớn, doanh nghiệp thường chấp nhận chi phí cao h�
 
 # Phần II — Cán cân thanh toán
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **6. hiện tại (current / 현재) account** tiếp nhận điểm tựa từ **5. Hiệu quả và khả năng chống chịu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Capital / financial account** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **6. hiện tại (current / 현재) account** nối từ **5. Hiệu quả và khả năng chống chịu** sang **7. Capital / financial account**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. hiện tại (current / 현재) account
 
@@ -89,7 +89,7 @@ Tài khoản vãng lai (current account) gồm:
 
 Thặng dư nghĩa nền kinh tế đang tiết kiệm nhiều hơn đầu tư trong nước theo một nghĩa kế toán rộng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **7. Capital / financial account** tiếp nhận điểm tựa từ **6. hiện tại (current / 현재) account** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. FDI và portfolio luồng (flow / 흐름) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **7. Capital / financial account** nối từ **6. hiện tại (current / 현재) account** sang **8. FDI và portfolio luồng (flow / 흐름) khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Capital / financial account
 
@@ -105,7 +105,7 @@ Dòng vốn có thể đến từ:
 
 Chất lượng nguồn tài trợ quan trọng không kém quy mô.
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **7. Capital / financial account** xác định đầu vào; **8. FDI và portfolio luồng (flow / 흐름) khác nhau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. Vai trò đồng USD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **7. Capital / financial account** đặt đầu vào cho **8. FDI và portfolio luồng (flow / 흐름) khác nhau**, rồi **9. Vai trò đồng USD** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8. FDI và portfolio luồng (flow / 흐름) khác nhau
 
@@ -117,7 +117,7 @@ Một nền kinh tế phụ thuộc dòng vốn ngắn hạn thường nhạy h�
 
 # Phần III — USD và hệ thống tiền tệ quốc tế
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **8. FDI và portfolio luồng (flow / 흐름) khác nhau** xác định đầu vào; **9. Vai trò đồng USD** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Đồng tiền dự trữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **8. FDI và portfolio luồng (flow / 흐름) khác nhau** đặt đầu vào cho **9. Vai trò đồng USD**, rồi **10. Đồng tiền dự trữ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. Vai trò đồng USD
 
@@ -131,7 +131,7 @@ USD được dùng rộng rãi trong:
 
 Vì vậy điều kiện USD có thể ảnh hưởng doanh nghiệp không có hoạt động trực tiếp tại Mỹ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **10. Đồng tiền dự trữ** tiếp nhận điểm tựa từ **9. Vai trò đồng USD** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Bretton Woods** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **10. Đồng tiền dự trữ** nối từ **9. Vai trò đồng USD** sang **11. Bretton Woods**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Đồng tiền dự trữ
 
@@ -145,7 +145,7 @@ Một đồng tiền dự trữ lớn cần:
 
 Vai trò này tạo cả lợi ích lẫn trách nhiệm cho quốc gia phát hành.
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **11. Bretton Woods** tiếp nhận điểm tựa từ **10. Đồng tiền dự trữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Eurodollar và USD ngoài Mỹ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **11. Bretton Woods** nối từ **10. Đồng tiền dự trữ** sang **12. Eurodollar và USD ngoài Mỹ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Bretton Woods
 
@@ -153,7 +153,7 @@ Hệ thống Bretton Woods sau Thế chiến II gắn nhiều đồng tiền v�
 
 Khi hệ thống kết thúc, tỷ giá lớn chuyển sang linh hoạt hơn nhưng USD vẫn giữ vai trò trung tâm nhờ quy mô tài chính và mạng (network / 네트워크) tác động (effect / 효과).
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **12. Eurodollar và USD ngoài Mỹ** tiếp nhận điểm tựa từ **11. Bretton Woods** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. toàn cục (global / 전역) dollar funding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **12. Eurodollar và USD ngoài Mỹ** nối từ **11. Bretton Woods** sang **13. toàn cục (global / 전역) dollar funding**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Eurodollar và USD ngoài Mỹ
 
@@ -163,7 +163,7 @@ Hệ thống USD toàn cầu không chỉ nằm trong tiền gửi tại ngân h
 
 Điều này cho thấy nguồn cung USD toàn cầu không chỉ phụ thuộc trực tiếp vào Fed.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **13. toàn cục (global / 전역) dollar funding** tiếp nhận điểm tựa từ **12. Eurodollar và USD ngoài Mỹ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Vì sao vốn chảy giữa các quốc gia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **13. toàn cục (global / 전역) dollar funding** nối từ **12. Eurodollar và USD ngoài Mỹ** sang **14. Vì sao vốn chảy giữa các quốc gia**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. toàn cục (global / 전역) dollar funding
 
@@ -181,7 +181,7 @@ Debt Service Burden ↑
 
 # Phần IV — Dòng vốn quốc tế
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **14. Vì sao vốn chảy giữa các quốc gia** tiếp nhận điểm tựa từ **13. toàn cục (global / 전역) dollar funding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Carry trade** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **14. Vì sao vốn chảy giữa các quốc gia** nối từ **13. toàn cục (global / 전역) dollar funding** sang **15. Carry trade**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Vì sao vốn chảy giữa các quốc gia
 
@@ -197,7 +197,7 @@ Dòng vốn phản ứng với:
 
 Không nên chỉ nhìn một biến đơn lẻ.
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **15. Carry trade** tiếp nhận điểm tựa từ **14. Vì sao vốn chảy giữa các quốc gia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Dòng vốn vào thị trường mới nổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **15. Carry trade** nối từ **14. Vì sao vốn chảy giữa các quốc gia** sang **16. Dòng vốn vào thị trường mới nổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Carry trade
 
@@ -205,7 +205,7 @@ Carry trade vay đồng tiền có lãi suất thấp để đầu tư vào đ�
 
 Lợi nhuận có thể tốt khi volatility thấp nhưng mất nhanh khi FX đảo chiều.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **16. Dòng vốn vào thị trường mới nổi** tiếp nhận điểm tựa từ **15. Carry trade** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Sudden stop** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **16. Dòng vốn vào thị trường mới nổi** nối từ **15. Carry trade** sang **17. Sudden stop**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Dòng vốn vào thị trường mới nổi
 
@@ -219,7 +219,7 @@ USD yếu
 
 Nhưng cùng điều kiện đó có thể đảo chiều nhanh.
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **17. Sudden stop** tiếp nhận điểm tựa từ **16. Dòng vốn vào thị trường mới nổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Original sin và nợ ngoại tệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **17. Sudden stop** nối từ **16. Dòng vốn vào thị trường mới nổi** sang **18. Original sin và nợ ngoại tệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Sudden stop
 
@@ -237,7 +237,7 @@ FX ↓
 → Banking Stress ↑
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **18. Original sin và nợ ngoại tệ** tiếp nhận điểm tựa từ **17. Sudden stop** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Cross-border banking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **18. Original sin và nợ ngoại tệ** nối từ **17. Sudden stop** sang **19. Cross-border banking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Original sin và nợ ngoại tệ
 
@@ -253,7 +253,7 @@ Ngay cả khi số USD nợ không đổi.
 
 # Phần V — Ngân hàng xuyên biên giới
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **19. Cross-border banking** tiếp nhận điểm tựa từ **18. Original sin và nợ ngoại tệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Maturity mismatch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **19. Cross-border banking** nối từ **18. Original sin và nợ ngoại tệ** sang **20. Maturity mismatch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Cross-border banking
 
@@ -261,7 +261,7 @@ Ngân hàng quốc tế có thể tài trợ thương mại, doanh nghiệp và 
 
 Khi ngân hàng mẹ giảm rủi ro, chi nhánh hoặc khách hàng ở nước khác cũng có thể bị cắt funding.
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **20. Maturity mismatch** tiếp nhận điểm tựa từ **19. Cross-border banking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Currency mismatch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **20. Maturity mismatch** nối từ **19. Cross-border banking** sang **21. Currency mismatch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Maturity mismatch
 
@@ -269,7 +269,7 @@ Vay ngắn hạn để tài trợ tài sản dài hạn tạo rủi ro đáo h�
 
 Nếu thị trường funding đóng cửa, tài sản có thể tốt về dài hạn nhưng chủ thể vẫn thiếu thanh khoản.
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **21. Currency mismatch** tiếp nhận điểm tựa từ **20. Maturity mismatch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. BOP crisis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **21. Currency mismatch** nối từ **20. Maturity mismatch** sang **22. BOP crisis**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Currency mismatch
 
@@ -283,7 +283,7 @@ Short-Term USD Debt
 
 # Phần VI — Khủng hoảng cán cân thanh toán
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **22. BOP crisis** tiếp nhận điểm tựa từ **21. Currency mismatch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Currency crisis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **22. BOP crisis** nối từ **21. Currency mismatch** sang **23. Currency crisis**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. BOP crisis
 
@@ -297,7 +297,7 @@ Khủng hoảng cán cân thanh toán có thể xuất hiện khi:
 
 Ngân hàng trung ương có thể buộc phải tăng lãi suất dù kinh tế đang suy yếu để bảo vệ tiền tệ.
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **23. Currency crisis** tiếp nhận điểm tựa từ **22. BOP crisis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Sovereign debt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **23. Currency crisis** nối từ **22. BOP crisis** sang **24. Sovereign debt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Currency crisis
 
@@ -313,7 +313,7 @@ Nó có thể kéo theo:
 
 # Phần VII — Nợ chính phủ và khủng hoảng chủ quyền
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **24. Sovereign debt** tiếp nhận điểm tựa từ **23. Currency crisis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Debt dynamics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **24. Sovereign debt** nối từ **23. Currency crisis** sang **25. Debt dynamics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Sovereign debt
 
@@ -328,7 +328,7 @@ Khả năng trả nợ phụ thuộc:
 
 Nợ bằng nội tệ có cơ chế rủi ro khác nợ bằng ngoại tệ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **25. Debt dynamics** tiếp nhận điểm tựa từ **24. Sovereign debt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Fiscal dominance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **25. Debt dynamics** nối từ **24. Sovereign debt** sang **26. Fiscal dominance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Debt dynamics
 
@@ -342,7 +342,7 @@ và primary deficit lớn
 
 Nhưng cấu trúc đáo hạn quyết định tốc độ áp lực truyền vào chi phí lãi.
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **26. Fiscal dominance** tiếp nhận điểm tựa từ **25. Debt dynamics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Vòng lặp ngân hàng – chính phủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **26. Fiscal dominance** nối từ **25. Debt dynamics** sang **27. Vòng lặp ngân hàng – chính phủ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Fiscal dominance
 
@@ -354,7 +354,7 @@ Khi nợ và nhu cầu tài trợ trở nên quá lớn, chính sách tiền t�
 
 # Phần VIII — Sovereign–bank nexus
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **27. Vòng lặp ngân hàng – chính phủ** tiếp nhận điểm tựa từ **26. Fiscal dominance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Collateral** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **27. Vòng lặp ngân hàng – chính phủ** nối từ **26. Fiscal dominance** sang **28. Collateral**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Vòng lặp ngân hàng – chính phủ
 
@@ -374,7 +374,7 @@ Sovereign Risk ↑
 
 # Phần IX — Repo, collateral và hệ thống phi ngân hàng
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **28. Collateral** tiếp nhận điểm tựa từ **27. Vòng lặp ngân hàng – chính phủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Shadow banking và NBFI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **28. Collateral** nối từ **27. Vòng lặp ngân hàng – chính phủ** sang **29. Shadow banking và NBFI**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Collateral
 
@@ -382,7 +382,7 @@ Tài sản bảo đảm không chỉ giảm credit rủi ro (risk / 위험); nó
 
 Khi giá collateral giảm hoặc haircut tăng, sức vay của hệ thống có thể co nhanh.
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **29. Shadow banking và NBFI** tiếp nhận điểm tựa từ **28. Collateral** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Margin spiral** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **29. Shadow banking và NBFI** nối từ **28. Collateral** sang **30. Margin spiral**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Shadow banking và NBFI
 
@@ -390,7 +390,7 @@ Các tổ chức tài chính phi ngân hàng (NBFI) như funds, insurers, pensio
 
 Rủi ro có thể di chuyển khỏi bank balance sheet chứ không biến mất.
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **30. Margin spiral** tiếp nhận điểm tựa từ **29. Shadow banking và NBFI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Mỹ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **30. Margin spiral** nối từ **29. Shadow banking và NBFI** sang **31. Mỹ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Margin spiral
 
@@ -407,7 +407,7 @@ Asset Price ↓
 
 # Phần X — Các trung tâm kinh tế lớn
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **31. Mỹ** tiếp nhận điểm tựa từ **30. Margin spiral** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Trung Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **31. Mỹ** nối từ **30. Margin spiral** sang **32. Trung Quốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Mỹ
 
@@ -420,7 +420,7 @@ Mỹ ảnh hưởng hệ thống qua:
 - technology;
 - toàn cục (global / 전역) rủi ro (risk / 위험) appetite.
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **32. Trung Quốc** tiếp nhận điểm tựa từ **31. Mỹ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Eurozone** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **32. Trung Quốc** nối từ **31. Mỹ** sang **33. Eurozone**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Trung Quốc
 
@@ -435,7 +435,7 @@ Trung Quốc ảnh hưởng qua:
 
 Cần tách stimulus dành cho thuộc tính (property / 속성), hạ tầng (infrastructure / 인프라) hay consumption vì tác động tới thế giới khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **33. Eurozone** tiếp nhận điểm tựa từ **32. Trung Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Nhật Bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **33. Eurozone** nối từ **32. Trung Quốc** sang **34. Nhật Bản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Eurozone
 
@@ -443,7 +443,7 @@ Eurozone có một chính sách tiền tệ chung nhưng nhiều chính phủ v�
 
 Điều này tạo nguy cơ fragmentation khi sovereign spreads giữa các nước tăng quá mạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **34. Nhật Bản** tiếp nhận điểm tựa từ **33. Eurozone** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **34. Nhật Bản** nối từ **33. Eurozone** sang **35. Hàn Quốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Nhật Bản
 
@@ -457,7 +457,7 @@ Nhật có lịch sử dài với:
 
 Sự thay đổi chính sách Nhật có thể ảnh hưởng carry trade và dòng vốn toàn cầu.
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **35. Hàn Quốc** tiếp nhận điểm tựa từ **34. Nhật Bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Việt Nam** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **35. Hàn Quốc** nối từ **34. Nhật Bản** sang **36. Việt Nam**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Hàn Quốc
 
@@ -470,7 +470,7 @@ Hàn Quốc nhạy với:
 - USD/KRW;
 - household debt.
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **36. Việt Nam** tiếp nhận điểm tựa từ **35. Hàn Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Dầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **36. Việt Nam** nối từ **35. Hàn Quốc** sang **37. Dầu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Việt Nam
 
@@ -485,7 +485,7 @@ Việt Nam nhạy với:
 
 # Phần XI — Hàng hóa và vận tải
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **37. Dầu** tiếp nhận điểm tựa từ **36. Việt Nam** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Kim loại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **37. Dầu** nối từ **36. Việt Nam** sang **38. Kim loại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Dầu
 
@@ -493,7 +493,7 @@ Dầu là đầu vào (input / 입력) quan trọng cho sản xuất, vận tả
 
 Cú sốc dầu do cầu mạnh có ý nghĩa khác cú sốc do nguồn cung bị gián đoạn.
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **38. Kim loại** tiếp nhận điểm tựa từ **37. Dầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Nông sản và thực phẩm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **38. Kim loại** nối từ **37. Dầu** sang **39. Nông sản và thực phẩm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Kim loại
 
@@ -505,13 +505,13 @@ Kim loại công nghiệp nhạy với:
 - năng lượng (energy / 에너지) chuyển tiếp (transition / 전이);
 - mine supply.
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **39. Nông sản và thực phẩm** tiếp nhận điểm tựa từ **38. Kim loại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Shipping** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **39. Nông sản và thực phẩm** nối từ **38. Kim loại** sang **40. Shipping**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Nông sản và thực phẩm
 
 Food inflation có tác động xã hội lớn hơn ở quốc gia hộ gia đình dành tỷ trọng thu nhập cao cho thực phẩm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **40. Shipping** tiếp nhận điểm tựa từ **39. Nông sản và thực phẩm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Sanctions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **40. Shipping** nối từ **39. Nông sản và thực phẩm** sang **41. Sanctions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Shipping
 
@@ -521,7 +521,7 @@ Geopolitical rerouting có thể làm ton-miles tăng dù lượng hàng không 
 
 # Phần XII — Địa kinh tế
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **41. Sanctions** tiếp nhận điểm tựa từ **40. Shipping** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Tariff** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **41. Sanctions** nối từ **40. Shipping** sang **42. Tariff**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Sanctions
 
@@ -535,7 +535,7 @@ Cấm vận có thể tác động:
 
 Tác động thứ cấp thường rất quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **42. Tariff** tiếp nhận điểm tựa từ **41. Sanctions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Industrial chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **42. Tariff** nối từ **41. Sanctions** sang **43. Industrial chính sách (policy / 정책)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Tariff
 
@@ -546,13 +546,13 @@ Thuế quan có thể làm giá nhập khẩu tăng nhưng mức truyền sang C
 - substitution;
 - domestic sức chứa (capacity / 용량).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **43. Industrial chính sách (policy / 정책)** tiếp nhận điểm tựa từ **42. Tariff** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. Friend-shoring và near-shoring** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **43. Industrial chính sách (policy / 정책)** nối từ **42. Tariff** sang **44. Friend-shoring và near-shoring**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. Industrial chính sách (policy / 정책)
 
 Trợ cấp, tax credit và quy định nội địa hóa có thể làm thay đổi vị trí nhà máy và capex toàn cầu.
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **44. Friend-shoring và near-shoring** tiếp nhận điểm tựa từ **43. Industrial chính sách (policy / 정책)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. Geoeconomic fragmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **44. Friend-shoring và near-shoring** nối từ **43. Industrial chính sách (policy / 정책)** sang **45. Geoeconomic fragmentation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. Friend-shoring và near-shoring
 
@@ -562,7 +562,7 @@ Sau các cú sốc thương mại và địa chính trị, chuỗi cung ứng c�
 
 Cả hai có thể tăng resilience nhưng cũng tăng chi phí.
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **45. Geoeconomic fragmentation** tiếp nhận điểm tựa từ **44. Friend-shoring và near-shoring** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. Semiconductor geopolitics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **45. Geoeconomic fragmentation** nối từ **44. Friend-shoring và near-shoring** sang **46. Semiconductor geopolitics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. Geoeconomic fragmentation
 
@@ -570,7 +570,7 @@ Khi thương mại và đầu tư bị chia thành các khối, hiệu quả to�
 
 # Phần XIII — Bán dẫn, AI và capex toàn cầu
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **46. Semiconductor geopolitics** tiếp nhận điểm tựa từ **45. Geoeconomic fragmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **47. AI capex** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **46. Semiconductor geopolitics** nối từ **45. Geoeconomic fragmentation** sang **47. AI capex**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 46. Semiconductor geopolitics
 
@@ -585,7 +585,7 @@ Chip tiên tiến liên quan đồng thời:
 
 Đây không còn là một ngành công nghiệp thuần thương mại.
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **47. AI capex** tiếp nhận điểm tựa từ **46. Semiconductor geopolitics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **48. năng lượng (energy / 에너지) chuyển tiếp (transition / 전이)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **47. AI capex** nối từ **46. Semiconductor geopolitics** sang **48. năng lượng (energy / 에너지) chuyển tiếp (transition / 전이)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. AI capex
 
@@ -605,13 +605,13 @@ Nhưng cần phân biệt đầu tư tạo nhu cầu bền vững và đầu tư
 
 # Phần XIV — Khí hậu và chuyển dịch năng lượng
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **48. năng lượng (energy / 에너지) chuyển tiếp (transition / 전이)** tiếp nhận điểm tựa từ **47. AI capex** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **49. Climate shock** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **48. năng lượng (energy / 에너지) chuyển tiếp (transition / 전이)** nối từ **47. AI capex** sang **49. Climate shock**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. năng lượng (energy / 에너지) chuyển tiếp (transition / 전이)
 
 Chuyển dịch năng lượng làm tăng nhu cầu một số kim loại và grid investment nhưng cũng tạo stranded-asset rủi ro (risk / 위험) cho tài sản cũ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **49. Climate shock** tiếp nhận điểm tựa từ **48. năng lượng (energy / 에너지) chuyển tiếp (transition / 전이)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **50. Dollar smile** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **49. Climate shock** nối từ **48. năng lượng (energy / 에너지) chuyển tiếp (transition / 전이)** sang **50. Dollar smile**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. Climate shock
 
@@ -621,7 +621,7 @@ Không nên xem đây chỉ là câu chuyện ESG; nó có thể là biến kinh
 
 # Phần XV — Cách đọc toàn cục (global / 전역) macro
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **50. Dollar smile** tiếp nhận điểm tựa từ **49. Climate shock** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **51. toàn cục (global / 전역) liquidity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **50. Dollar smile** nối từ **49. Climate shock** sang **51. toàn cục (global / 전역) liquidity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 50. Dollar smile
 
@@ -632,7 +632,7 @@ Một trực giác thường dùng là USD có thể mạnh trong hai trạng th
 
 Đây là **dollar smile**, không phải quy luật cứng.
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **51. toàn cục (global / 전역) liquidity** tiếp nhận điểm tựa từ **50. Dollar smile** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **52. Một cú sốc truyền qua thế giới thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **51. toàn cục (global / 전역) liquidity** nối từ **50. Dollar smile** sang **52. Một cú sốc truyền qua thế giới thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 51. toàn cục (global / 전역) liquidity
 
@@ -646,7 +646,7 @@ Thanh khoản toàn cầu chịu ảnh hưởng bởi:
 - China credit;
 - major central banks.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **52. Một cú sốc truyền qua thế giới thế nào?** tiếp nhận điểm tựa từ **51. toàn cục (global / 전역) liquidity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **53. Phân biệt cú sốc thật và câu chuyện thị trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **52. Một cú sốc truyền qua thế giới thế nào?** nối từ **51. toàn cục (global / 전역) liquidity** sang **53. Phân biệt cú sốc thật và câu chuyện thị trường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 52. Một cú sốc truyền qua thế giới thế nào?
 
@@ -664,7 +664,7 @@ Shock
 → Asset Prices
 ```
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **53. Phân biệt cú sốc thật và câu chuyện thị trường** tiếp nhận điểm tựa từ **52. Một cú sốc truyền qua thế giới thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **54. Asian Financial Crisis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **53. Phân biệt cú sốc thật và câu chuyện thị trường** nối từ **52. Một cú sốc truyền qua thế giới thế nào?** sang **54. Asian Financial Crisis**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 53. Phân biệt cú sốc thật và câu chuyện thị trường
 
@@ -681,7 +681,7 @@ Cần kiểm tra bằng dữ liệu:
 
 # Phần XVI — Các khủng hoảng lịch sử như thư viện cơ chế
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **54. Asian Financial Crisis** tiếp nhận điểm tựa từ **53. Phân biệt cú sốc thật và câu chuyện thị trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **55. toàn cục (global / 전역) Financial Crisis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **54. Asian Financial Crisis** nối từ **53. Phân biệt cú sốc thật và câu chuyện thị trường** sang **55. toàn cục (global / 전역) Financial Crisis**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 54. Asian Financial Crisis
 
@@ -695,7 +695,7 @@ Short-Term Foreign Debt
 → Currency / Banking Crisis
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **55. toàn cục (global / 전역) Financial Crisis** tiếp nhận điểm tựa từ **54. Asian Financial Crisis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **56. Eurozone crisis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **55. toàn cục (global / 전역) Financial Crisis** nối từ **54. Asian Financial Crisis** sang **56. Eurozone crisis**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. toàn cục (global / 전역) Financial Crisis
 
@@ -707,13 +707,13 @@ Cơ chế nổi bật:
 - short-term funding;
 - forced deleveraging.
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **56. Eurozone crisis** tiếp nhận điểm tựa từ **55. toàn cục (global / 전역) Financial Crisis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **57. Pandemic shock** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **56. Eurozone crisis** nối từ **55. toàn cục (global / 전역) Financial Crisis** sang **57. Pandemic shock**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 56. Eurozone crisis
 
 Khủng hoảng cho thấy vòng phản hồi giữa sovereign và banking hệ thống (system / 시스템) trong một monetary union.
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **57. Pandemic shock** tiếp nhận điểm tựa từ **56. Eurozone crisis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **58. Nguồn quốc tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **57. Pandemic shock** nối từ **56. Eurozone crisis** sang **58. Nguồn quốc tế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 57. Pandemic shock
 
@@ -729,7 +729,7 @@ Một cú sốc có thể thay đổi bản chất theo thời gian.
 
 # Phần XVII — Nguồn dữ liệu
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **57. Pandemic shock** nêu điều cần giải thích; **58. Nguồn quốc tế** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **59. Không dùng một dashboard để dự báo mọi thứ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **57. Pandemic shock** đặt vấn đề; **58. Nguồn quốc tế** đối chiếu bằng chứng, rồi **59. Không dùng một dashboard để dự báo mọi thứ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 58. Nguồn quốc tế
 
@@ -745,13 +745,13 @@ Các nguồn nền tảng gồm:
 
 Dữ liệu động phải luôn ghi thời điểm.
 
-> **Chuyển mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **58. Nguồn quốc tế** nêu điều cần giải thích; **59. Không dùng một dashboard để dự báo mọi thứ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **60. Checklist toàn cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **58. Nguồn quốc tế** đặt vấn đề; **59. Không dùng một dashboard để dự báo mọi thứ** đối chiếu bằng chứng, rồi **60. Checklist toàn cầu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 59. Không dùng một dashboard để dự báo mọi thứ
 
 Dashboard chỉ giúp tổ chức dữ liệu. Quyết định vẫn cần cơ chế nhân quả và kiểm tra kỳ vọng đã được phản ánh trong giá.
 
-> **Chuyển mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **60. Checklist toàn cầu** tiếp nhận điểm tựa từ **59. Không dùng một dashboard để dự báo mọi thứ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **60. Checklist toàn cầu** nối từ **59. Không dùng một dashboard để dự báo mọi thứ** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 60. Checklist toàn cầu
 
@@ -772,7 +772,7 @@ EM FX
 Global Earnings Revisions
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **Kết luận** gom các mảnh từ **60. Checklist toàn cầu** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kinh tế toàn cầu, dòng vốn và khủng hoảng**, **Kết luận** tổng hợp từ **60. Checklist toàn cầu** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

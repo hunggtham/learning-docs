@@ -28,7 +28,7 @@ resize, biểu định kiểu (stylesheet / 스타일시트) mới, mạng (netw
 phần cây (tree / 트리) và kích hoạt lại công việc (work / 작업). Vì vậy câu hỏi gỡ lỗi (debug / 디버그) tốt là “ranh giới (boundary / 경계) nào
 đổi trạng thái (state / 상태) và bằng chứng (evidence / 증거) nào chứng minh nó?” thay vì chỉ hỏi “thành phần (component / 컴포넌트) nào lỗi?”.
 
-> **Chuyển mạch:** Trong **Nền tảng Web (web platform / 웹 플랫폼): mô hình (model / 모델), boundaries và bất biến (invariant / 불변식)**, **Từ tài nguyên (resource / 자원) đến hành vi (behavior / 동작)** nêu điều cần giải thích; **Ba lớp cần tách** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Bất biến (invariant / 불변식) cấp lĩnh vực (domain / 도메인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nền tảng Web (web platform / 웹 플랫폼): mô hình (model / 모델), boundaries và bất biến (invariant / 불변식)**, **Từ tài nguyên (resource / 자원) đến hành vi (behavior / 동작)** đặt vấn đề; **Ba lớp cần tách** đối chiếu bằng chứng, rồi **Bất biến (invariant / 불변식) cấp lĩnh vực (domain / 도메인)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Ba lớp cần tách
 
@@ -40,7 +40,7 @@ subscription, scheduling và rendering lớp trừu tượng (abstraction / 추�
 sản phẩm tạo ra (artifact / 산출물). Một khung phần mềm (framework / 프레임워크) không thể biến dữ liệu không đáng tin thành trusted dữ liệu (data / 데이터)
 chỉ bằng kiểu (type / 타입) hoặc thành phần (component / 컴포넌트) ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Ba lớp tách host, browser và application responsibilities. **Domain invariant** dùng boundary đó để xác định điều ứng dụng phải giữ dù rendering, network hay framework thay đổi.
+> **Nối mạch:** Ba lớp tách host, browser và application responsibilities. **Domain invariant** dùng boundary đó để xác định điều ứng dụng phải giữ dù rendering, network hay framework thay đổi.
 
 ## Bất biến (invariant / 불변식) cấp lĩnh vực (domain / 도메인)
 

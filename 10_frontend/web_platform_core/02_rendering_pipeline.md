@@ -17,7 +17,7 @@ Tách các cây (tree / 트리) này giúp tránh giải thích mọi vấn đ�
 DOM cây (tree / 트리) có nút (node / 노드) không vẽ, còn pseudo-element hoặc anonymous box có thể xuất
    hiện trong formatting/paint mô hình (model / 모델). Vì vậy `querySelector`, cây khả năng tiếp cận (accessibility tree / 접근성 트리), bố cục (layout / 레이아웃) box và compositor tầng (layer / 계층) là các quan sát khác nhau.
 
-> **Chuyển mạch:** Trong **Rendering chuỗi xử lý (pipeline / 파이프라인): parser đến pixels**, **Các ranh giới (boundary / 경계) chính** đã nêu tiêu chí phân biệt, còn **Vô hiệu hóa (invalidation / 무효화) và bằng chứng (evidence / 증거)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **SSR, hydration và khung phần mềm (framework / 프레임워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Rendering chuỗi xử lý (pipeline / 파이프라인): parser đến pixels**, **Các ranh giới (boundary / 경계) chính** đặt tiêu chí; **Vô hiệu hóa (invalidation / 무효화) và bằng chứng (evidence / 증거)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **SSR, hydration và khung phần mềm (framework / 프레임워크)** mở rộng hệ quả.
 
 ## Vô hiệu hóa (invalidation / 무효화) và bằng chứng (evidence / 증거)
 
@@ -32,7 +32,7 @@ minh nhân quả (causal / 인과적) chi phí (cost / 비용). Xem [CSS track](
 cascade/bố cục (layout / 레이아웃) detail và [JavaScript performance](../javascript/javascript_senior.md)
 cho thời gian chạy (runtime / 런타임) profiling.
 
-> **Chuyển mạch:** Invalidation và evidence cho biết thay đổi nào buộc pipeline tính lại style/layout/paint. SSR và hydration tiếp theo đối chiếu pipeline server–client để tìm mismatch thay vì xem framework như một lớp che toàn bộ browser.
+> **Nối mạch:** Invalidation và evidence cho biết thay đổi nào buộc pipeline tính lại style/layout/paint. SSR và hydration tiếp theo đối chiếu pipeline server–client để tìm mismatch thay vì xem framework như một lớp che toàn bộ browser.
 
 ## SSR, hydration và khung phần mềm (framework / 프레임워크)
 

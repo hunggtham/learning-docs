@@ -12,7 +12,7 @@ Nếu đọc tuần tự từ đầu đến cuối, bạn phải có thể đi t
 
 # PHẦN 1 — HTML LÀ GÌ VÀ trình duyệt (browser / 브라우저) HIỂU NÓ THẾ NÀO?
 
-> **Chuyển mạch:** Tài liệu đặt mục tiêu ở semantics và production markup; phần HTML không phải programming language làm rõ mô hình xử lý, rồi `<!doctype html>` xác định mode parsing mà browser sẽ dùng.
+> **Nối mạch:** Tài liệu đặt mục tiêu ở semantics và production markup; phần HTML không phải programming language làm rõ mô hình xử lý, rồi `<!doctype html>` xác định mode parsing mà browser sẽ dùng.
 
 ## 1. HTML không phải ngôn ngữ lập trình
 
@@ -50,7 +50,7 @@ Trong dự án (project / 프로젝트) hiện đại, ba tầng (layer / 계층
 
 ---
 
-> **Chuyển mạch:** HTML không phải programming language; `<!doctype html>` khai báo parsing mode, rồi document structure tiếp theo tạo cây mà browser có thể hiểu.
+> **Nối mạch:** HTML không phải programming language; `<!doctype html>` khai báo parsing mode, rồi document structure tiếp theo tạo cây mà browser có thể hiểu.
 
 ## 2. `<!doctype html>`
 
@@ -76,7 +76,7 @@ Vì vậy môi trường vận hành (production / 운영 환경) HTML gần nh�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **3. Cấu trúc tối thiểu của một HTML document** tiếp nhận điểm tựa từ **2. <!doctype html>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. <html>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **3. Cấu trúc tối thiểu của một HTML document** nối từ **2. <!doctype html>** sang **4. <html>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Cấu trúc tối thiểu của một HTML document
 
@@ -109,7 +109,7 @@ Bạn nên hiểu từng tầng (layer / 계층) thay vì chỉ bản sao (copy 
 
 # PHẦN 2 — gốc (root / 루트) DOCUMENT VÀ siêu dữ liệu (metadata / 메타데이터)
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **4. <html>** tiếp nhận điểm tựa từ **3. Cấu trúc tối thiểu của một HTML document** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. dir** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **4. <html>** nối từ **3. Cấu trúc tối thiểu của một HTML document** sang **5. dir**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. `<html>`
 
@@ -153,7 +153,7 @@ Nếu chỉ một đoạn dùng ngôn ngữ khác, khai báo ở subtree:
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **5. dir** tiếp nhận điểm tựa từ **4. <html>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. <head>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **5. dir** nối từ **4. <html>** sang **6. <head>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. `dir`
 
@@ -179,7 +179,7 @@ Ngữ nghĩa (semantic / 의미적) direction nên được biểu diễn bằng
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **6. <head>** tiếp nhận điểm tựa từ **5. dir** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. <meta charset="utf-8">** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **6. <head>** nối từ **5. dir** sang **7. <meta charset="utf-8">**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. `<head>`
 
@@ -207,7 +207,7 @@ Nguồn (source / 소스) thứ tự (order / 순서) trong `head` cũng có th�
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **7. <meta charset="utf-8">** tiếp nhận điểm tựa từ **6. <head>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Viewport siêu dữ liệu (metadata / 메타데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **7. <meta charset="utf-8">** nối từ **6. <head>** sang **8. Viewport siêu dữ liệu (metadata / 메타데이터)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. `<meta charset="utf-8">`
 
@@ -225,7 +225,7 @@ Nếu encoding bị hiểu sai, tiếng Việt/Hàn/Nhật có thể trở thàn
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **7. <meta charset="utf-8">** nêu điều cần giải thích; **8. Viewport siêu dữ liệu (metadata / 메타데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. <title>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **7. <meta charset="utf-8">** đặt vấn đề; **8. Viewport siêu dữ liệu (metadata / 메타데이터)** đối chiếu bằng chứng, rồi **9. <title>** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8. Viewport siêu dữ liệu (metadata / 메타데이터)
 
@@ -250,7 +250,7 @@ vì zoom là khả năng tiếp cận (accessibility / 접근성) năng lực (c
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **8. Viewport siêu dữ liệu (metadata / 메타데이터)** nêu điều cần giải thích; **9. <title>** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. Meta description** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **8. Viewport siêu dữ liệu (metadata / 메타데이터)** đặt vấn đề; **9. <title>** đối chiếu bằng chứng, rồi **10. Meta description** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. `<title>`
 
@@ -278,7 +278,7 @@ Ví dụ tốt hơn:
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **10. Meta description** tiếp nhận điểm tựa từ **9. <title>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. <link>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **10. Meta description** nối từ **9. <title>** sang **11. <link>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Meta description
 Phần này nối mạch bài học với “10. Meta description”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -295,7 +295,7 @@ Nó không phải “từ khóa (keyword / 키워드) hack”. Nên viết một
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **11. <link>** tiếp nhận điểm tựa từ **10. Meta description** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. <base>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **11. <link>** nối từ **10. Meta description** sang **12. <base>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. `<link>`
 
@@ -346,7 +346,7 @@ Preload:
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **12. <base>** tiếp nhận điểm tựa từ **11. <link>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. <body>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **12. <base>** nối từ **11. <link>** sang **13. <body>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. `<base>`
 
@@ -372,7 +372,7 @@ Khi gỡ lỗi (debug / 디버그) một page có relative URLs kỳ lạ, hãy 
 
 # PHẦN 3 — BODY VÀ ngữ nghĩa (semantic / 의미적) cấu trúc (structure / 구조)
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **13. <body>** tiếp nhận điểm tựa từ **12. <base>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Vì sao ngữ nghĩa (semantic / 의미적) HTML quan trọng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **13. <body>** nối từ **12. <base>** sang **14. Vì sao ngữ nghĩa (semantic / 의미적) HTML quan trọng?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. `<body>`
 
@@ -390,7 +390,7 @@ Trình duyệt (browser / 브라우저) parse body markup thành DOM. JavaScript
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **14. Vì sao ngữ nghĩa (semantic / 의미적) HTML quan trọng?** tiếp nhận điểm tựa từ **13. <body>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. <header>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **14. Vì sao ngữ nghĩa (semantic / 의미적) HTML quan trọng?** nối từ **13. <body>** sang **15. <header>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Vì sao ngữ nghĩa (semantic / 의미적) HTML quan trọng?
 
@@ -424,7 +424,7 @@ Cấp cao (senior / 시니어) HTML không có nghĩa “không bao giờ dùng 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **15. <header>** tiếp nhận điểm tựa từ **14. Vì sao ngữ nghĩa (semantic / 의미적) HTML quan trọng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. <main>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **15. <header>** nối từ **14. Vì sao ngữ nghĩa (semantic / 의미적) HTML quan trọng?** sang **16. <main>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. `<header>`
 
@@ -454,7 +454,7 @@ Một page có thể có nhiều `header` nếu chúng thuộc các sections/art
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **16. <main>** tiếp nhận điểm tựa từ **15. <header>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. <footer>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **16. <main>** nối từ **15. <header>** sang **17. <footer>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. `<main>`
 
@@ -472,7 +472,7 @@ Thông thường chỉ nên có một main đang active/visible cho document.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **17. <footer>** tiếp nhận điểm tựa từ **16. <main>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. <nav>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **17. <footer>** nối từ **16. <main>** sang **18. <nav>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. `<footer>`
 
@@ -499,7 +499,7 @@ related links
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **18. <nav>** tiếp nhận điểm tựa từ **17. <footer>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. <section>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **18. <nav>** nối từ **17. <footer>** sang **19. <section>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. `<nav>`
 
@@ -523,7 +523,7 @@ Không phải mọi nhóm links đều cần `nav`. Một danh sách (list / 목
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **19. <section>** tiếp nhận điểm tựa từ **18. <nav>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. <article>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **19. <section>** nối từ **18. <nav>** sang **20. <article>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. `<section>`
 
@@ -542,7 +542,7 @@ Một dùng chung (common / 공통) beginner mistake là thay tất cả `div` b
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **20. <article>** tiếp nhận điểm tựa từ **19. <section>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. <aside>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **20. <article>** nối từ **19. <section>** sang **21. <aside>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. `<article>`
 
@@ -570,7 +570,7 @@ Mental kiểm thử (test / 테스트): nếu bản sao (copy / 복사) phần n
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **21. <aside>** tiếp nhận điểm tựa từ **20. <article>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. <address>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **21. <aside>** nối từ **20. <article>** sang **22. <address>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. `<aside>`
 
@@ -587,7 +587,7 @@ Không dùng `aside` chỉ vì CSS đặt nó bên phải. Vị trí visual khô
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **22. <address>** tiếp nhận điểm tựa từ **21. <aside>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. <h1> đến <h6>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **22. <address>** nối từ **21. <aside>** sang **23. <h1> đến <h6>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. `<address>`
 
@@ -608,7 +608,7 @@ Nó không phải generic tag cho mọi postal address.
 
 # PHẦN 4 — HEADINGS VÀ văn bản (text / 텍스트) cấu trúc (structure / 구조)
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **23. <h1> đến <h6>** tiếp nhận điểm tựa từ **22. <address>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. <p>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **23. <h1> đến <h6>** nối từ **22. <address>** sang **24. <p>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. `<h1>` đến `<h6>`
 
@@ -630,7 +630,7 @@ Một cấp cao (senior / 시니어) rà soát (review / 검토) sẽ kiểm tra
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **24. <p>** tiếp nhận điểm tựa từ **23. <h1> đến <h6>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. <div>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **24. <p>** nối từ **23. <h1> đến <h6>** sang **25. <div>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. `<p>`
 
@@ -648,7 +648,7 @@ Không nên đặt khối (block / 블록) structures không phù hợp bên tro
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **25. <div>** tiếp nhận điểm tựa từ **24. <p>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. <span>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **25. <div>** nối từ **24. <p>** sang **26. <span>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. `<div>`
 
@@ -668,7 +668,7 @@ Một cấp cao (senior / 시니어) không tránh `div`; cấp cao (senior / �
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **26. <span>** tiếp nhận điểm tựa từ **25. <div>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. <br>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **26. <span>** nối từ **25. <div>** sang **27. <br>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. `<span>`
 
@@ -687,7 +687,7 @@ Dùng để style hoặc attach hành vi (behavior / 동작)/dữ liệu (data /
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **27. <br>** tiếp nhận điểm tựa từ **26. <span>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. <hr>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **27. <br>** nối từ **26. <span>** sang **28. <hr>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. `<br>`
 
@@ -710,7 +710,7 @@ Không dùng:
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **28. <hr>** tiếp nhận điểm tựa từ **27. <br>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. <strong> và <b>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **28. <hr>** nối từ **27. <br>** sang **29. <strong> và <b>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. `<hr>`
 
@@ -730,7 +730,7 @@ Trình duyệt (browser / 브라우저) thường kết xuất (render / 렌더�
 
 # PHẦN 5 — văn bản (text / 텍스트) ngữ nghĩa (semantics / 의미론)
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **29. <strong> và <b>** tiếp nhận điểm tựa từ **28. <hr>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. <em> và <i>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **29. <strong> và <b>** nối từ **28. <hr>** sang **30. <em> và <i>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. `<strong>` và `<b>`
 
@@ -752,7 +752,7 @@ Nếu mục tiêu chỉ là font-weight, CSS mới là công cụ styling.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **30. <em> và <i>** tiếp nhận điểm tựa từ **29. <strong> và <b>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. <mark>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **30. <em> và <i>** nối từ **29. <strong> và <b>** sang **31. <mark>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. `<em>` và `<i>`
 
@@ -772,7 +772,7 @@ Trình duyệt (browser / 브라우저) thường italic cả hai, nhưng ngữ 
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **31. <mark>** tiếp nhận điểm tựa từ **30. <em> và <i>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. <small>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **31. <mark>** nối từ **30. <em> và <i>** sang **32. <small>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. `<mark>`
 
@@ -787,7 +787,7 @@ Rất phù hợp với tìm kiếm (search / 검색) kết quả (result / 결�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **32. <small>** tiếp nhận điểm tựa từ **31. <mark>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. <s>, <del> và <ins>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **32. <small>** nối từ **31. <mark>** sang **33. <s>, <del> và <ins>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. `<small>`
 
@@ -801,7 +801,7 @@ Không nên dùng chỉ vì muốn font-size nhỏ.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **33. <s>, <del> và <ins>** tiếp nhận điểm tựa từ **32. <small>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. <code>, <pre>, <kbd>, <samp>, <var>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **33. <s>, <del> và <ins>** nối từ **32. <small>** sang **34. <code>, <pre>, <kbd>, <samp>, <var>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. `<s>`, `<del>` và `<ins>`
 
@@ -824,7 +824,7 @@ Nếu đang hiển thị old price, `s` thường hợp hơn `del`, vì bạn kh
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **34. <code>, <pre>, <kbd>, <samp>, <var>** tiếp nhận điểm tựa từ **33. <s>, <del> và <ins>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. <abbr>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **34. <code>, <pre>, <kbd>, <samp>, <var>** nối từ **33. <s>, <del> và <ins>** sang **35. <abbr>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. `<code>`, `<pre>`, `<kbd>`, `<samp>`, `<var>`
 
@@ -864,7 +864,7 @@ Những tags này giúp technical documentation có ngữ nghĩa (semantics / �
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **35. <abbr>** tiếp nhận điểm tựa từ **34. <code>, <pre>, <kbd>, <samp>, <var>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. <blockquote> và <q>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **35. <abbr>** nối từ **34. <code>, <pre>, <kbd>, <samp>, <var>** sang **36. <blockquote> và <q>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. `<abbr>`
 Phần này nối mạch bài học với “35. `<abbr>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -881,7 +881,7 @@ Dùng cho abbreviation.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **36. <blockquote> và <q>** tiếp nhận điểm tựa từ **35. <abbr>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. <cite>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **36. <blockquote> và <q>** nối từ **35. <abbr>** sang **37. <cite>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. `<blockquote>` và `<q>`
 
@@ -903,7 +903,7 @@ Inline quote:
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **37. <cite>** tiếp nhận điểm tựa từ **36. <blockquote> và <q>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. <time>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **37. <cite>** nối từ **36. <blockquote> và <q>** sang **38. <time>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. `<cite>`
 
@@ -917,7 +917,7 @@ Không phải generic “nguồn URL” tag.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **38. <time>** tiếp nhận điểm tựa từ **37. <cite>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. <data>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **38. <time>** nối từ **37. <cite>** sang **39. <data>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. `<time>`
 Phần này nối mạch bài học với “38. `<time>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -934,7 +934,7 @@ Date/thời gian (time / 시간) ngữ nghĩa (semantics / 의미론) hữu ích
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **39. <data>** tiếp nhận điểm tựa từ **38. <time>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. <sub> và <sup>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **39. <data>** nối từ **38. <time>** sang **40. <sub> và <sup>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. `<data>`
 Phần này nối mạch bài học với “39. `<data>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -951,7 +951,7 @@ Hữu ích trong sản phẩm (product / 제품)/danh mục (catalog / 카탈로
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **40. <sub> và <sup>** tiếp nhận điểm tựa từ **39. <data>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. <bdi> và <bdo>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **40. <sub> và <sup>** nối từ **39. <data>** sang **41. <bdi> và <bdo>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. `<sub>` và `<sup>`
 Phần này nối mạch bài học với “40. `<sub>` và `<sup>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -968,7 +968,7 @@ Dùng cho subscript/superscript ngữ nghĩa (semantics / 의미론), không ch�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **41. <bdi> và <bdo>** tiếp nhận điểm tựa từ **40. <sub> và <sup>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Ruby annotations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **41. <bdi> và <bdo>** nối từ **40. <sub> và <sup>** sang **42. Ruby annotations**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. `<bdi>` và `<bdo>`
 
@@ -990,7 +990,7 @@ Nó hữu ích khi UI left-to-right chứa username right-to-left.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **42. Ruby annotations** tiếp nhận điểm tựa từ **41. <bdi> và <bdo>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. <ul>, <ol>, <li>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **42. Ruby annotations** nối từ **41. <bdi> và <bdo>** sang **43. <ul>, <ol>, <li>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Ruby annotations
 
@@ -1009,7 +1009,7 @@ East Asian pronunciation annotations:
 
 # PHẦN 6 — LISTS
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **43. <ul>, <ol>, <li>** tiếp nhận điểm tựa từ **42. Ruby annotations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. Description list** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **43. <ul>, <ol>, <li>** nối từ **42. Ruby annotations** sang **44. Description list**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. `<ul>`, `<ol>`, `<li>`
 
@@ -1038,7 +1038,7 @@ Dùng `ol` khi thứ tự (order / 순서) mang meaning, `ul` khi thứ tự (or
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **44. Description list** tiếp nhận điểm tựa từ **43. <ul>, <ol>, <li>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. <a>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **44. Description list** nối từ **43. <ul>, <ol>, <li>** sang **45. <a>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. Description list
 Phần này nối mạch bài học với “44. Description list”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1059,7 +1059,7 @@ Phần này nối mạch bài học với “44. Description list”, nêu mục
 
 # PHẦN 7 — LINKS VÀ điều hướng (navigation / 내비게이션)
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **45. <a>** tiếp nhận điểm tựa từ **44. Description list** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. Link và button khác nhau ở bản chất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **45. <a>** nối từ **44. Description list** sang **46. Link và button khác nhau ở bản chất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. `<a>`
 
@@ -1091,7 +1091,7 @@ Ví dụ:
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **46. Link và button khác nhau ở bản chất** tiếp nhận điểm tựa từ **45. <a>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **47. target="blank"** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **46. Link và button khác nhau ở bản chất** nối từ **45. <a>** sang **47. target="blank"**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 46. Link và button khác nhau ở bản chất
 
@@ -1115,7 +1115,7 @@ Không dùng `<a href="#">` để fake button nếu không có điều hướng 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **47. target="blank"** tiếp nhận điểm tựa từ **46. Link và button khác nhau ở bản chất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **48. rel** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **47. target="blank"** nối từ **46. Link và button khác nhau ở bản chất** sang **48. rel**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. `target="_blank"`
 Phần này nối mạch bài học với “47. `target="_blank"`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1136,7 +1136,7 @@ Hiện đại (modern / 현대적) browsers có behaviors bảo vệ opener tố
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **48. rel** tiếp nhận điểm tựa từ **47. target="blank"** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **49. download** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **48. rel** nối từ **47. target="blank"** sang **49. download**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. `rel`
 
@@ -1164,7 +1164,7 @@ SEO quan hệ (relation / 관계) tokens không phải bảo mật (security / �
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **49. download** tiếp nhận điểm tựa từ **48. rel** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **50. <img>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **49. download** nối từ **48. rel** sang **50. <img>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. `download`
 Phần này nối mạch bài học với “49. `download`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1185,7 +1185,7 @@ Nó là trình duyệt (browser / 브라우저) hint cho download hành vi (beha
 
 # PHẦN 8 — IMAGES VÀ RESPONSIVE IMAGES
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **50. <img>** tiếp nhận điểm tựa từ **49. download** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **51. Viết alt đúng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **50. <img>** nối từ **49. download** sang **51. Viết alt đúng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 50. `<img>`
 Phần này nối mạch bài học với “50. `<img>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1202,7 +1202,7 @@ Phần này nối mạch bài học với “50. `<img>`”, nêu mục đích, 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **51. Viết alt đúng** tiếp nhận điểm tựa từ **50. <img>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **52. width và height** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **51. Viết alt đúng** nối từ **50. <img>** sang **52. width và height**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 51. Viết `alt` đúng
 
@@ -1228,7 +1228,7 @@ Alt tốt mô tả **purpose trong ngữ cảnh (context / 맥락)**, không ph�
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **52. width và height** tiếp nhận điểm tựa từ **51. Viết alt đúng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **53. loading** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **52. width và height** nối từ **51. Viết alt đúng** sang **53. loading**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 52. `width` và `height`
 Phần này nối mạch bài học với “52. `width` và `height`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1256,7 +1256,7 @@ img {
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **53. loading** tiếp nhận điểm tựa từ **52. width và height** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **54. srcset** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **53. loading** nối từ **52. width và height** sang **54. srcset**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 53. `loading`
 Phần này nối mạch bài học với “53. `loading`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1274,7 +1274,7 @@ Không nên lazy-load hero/LCP ảnh (image / 이미지) một cách máy móc v
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **54. srcset** tiếp nhận điểm tựa từ **53. loading** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **55. sizes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **54. srcset** nối từ **53. loading** sang **55. sizes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 54. `srcset`
 Phần này nối mạch bài học với “54. `srcset`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1293,7 +1293,7 @@ Bạn cung cấp ảnh (image / 이미지) candidates; trình duyệt (browser /
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **55. sizes** tiếp nhận điểm tựa từ **54. srcset** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **56. <picture>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **55. sizes** nối từ **54. srcset** sang **56. <picture>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. `sizes`
 Phần này nối mạch bài học với “55. `sizes`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1317,7 +1317,7 @@ Nếu `sizes` sai, trình duyệt (browser / 브라우저) có thể chọn tài
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **56. <picture>** tiếp nhận điểm tựa từ **55. sizes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **57. <figure> và <figcaption>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **56. <picture>** nối từ **55. sizes** sang **57. <figure> và <figcaption>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 56. `<picture>`
 
@@ -1345,7 +1345,7 @@ Nếu `sizes` sai, trình duyệt (browser / 브라우저) có thể chọn tài
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **57. <figure> và <figcaption>** tiếp nhận điểm tựa từ **56. <picture>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **58. <audio>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **57. <figure> và <figcaption>** nối từ **56. <picture>** sang **58. <audio>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 57. `<figure>` và `<figcaption>`
 Phần này nối mạch bài học với “57. `<figure>` và `<figcaption>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1368,7 +1368,7 @@ Figure phù hợp với ảnh (image / 이미지), diagram, chart, mã (code / �
 
 # PHẦN 9 — AUDIO, VIDEO VÀ EMBEDDED CONTENT
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **58. <audio>** tiếp nhận điểm tựa từ **57. <figure> và <figcaption>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **59. <video>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **58. <audio>** nối từ **57. <figure> và <figcaption>** sang **59. <video>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 58. `<audio>`
 Phần này nối mạch bài học với “58. `<audio>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1396,7 +1396,7 @@ Autoplay có nhiều trình duyệt (browser / 브라우저) restrictions, đặ
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **59. <video>** tiếp nhận điểm tựa từ **58. <audio>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **60. <source>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **59. <video>** nối từ **58. <audio>** sang **60. <source>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 59. `<video>`
 Phần này nối mạch bài học với “59. `<video>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1421,7 +1421,7 @@ Phần này nối mạch bài học với “59. `<video>`”, nêu mục đích
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **59. <video>** nêu điều cần giải thích; **60. <source>** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **61. <track>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **59. <video>** đặt vấn đề; **60. <source>** đối chiếu bằng chứng, rồi **61. <track>** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 60. `<source>`
 
@@ -1443,7 +1443,7 @@ Trình duyệt (browser / 브라우저) dùng năng lực (capability / 역량)/
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **60. <source>** nêu điều cần giải thích; **61. <track>** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **62. <iframe>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **60. <source>** đặt vấn đề; **61. <track>** đối chiếu bằng chứng, rồi **62. <iframe>** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 61. `<track>`
 Phần này nối mạch bài học với “61. `<track>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1460,7 +1460,7 @@ Phần này nối mạch bài học với “61. `<track>`”, nêu mục đích
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **62. <iframe>** tiếp nhận điểm tựa từ **61. <track>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **63. sandbox** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **62. <iframe>** nối từ **61. <track>** sang **63. sandbox**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 62. `<iframe>`
 Phần này nối mạch bài học với “62. `<iframe>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1478,7 +1478,7 @@ Iframe embed một browsing ngữ cảnh (context / 맥락) khác.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **63. sandbox** tiếp nhận điểm tựa từ **62. <iframe>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **64. allow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **63. sandbox** nối từ **62. <iframe>** sang **64. allow**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 63. `sandbox`
 Phần này nối mạch bài học với “63. `sandbox`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1502,7 +1502,7 @@ Cấp cao (senior / 시니어) bảo mật (security / 보안) principle là **l
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **64. allow** tiếp nhận điểm tựa từ **63. sandbox** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **65. srcdoc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **64. allow** nối từ **63. sandbox** sang **65. srcdoc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 64. `allow`
 Phần này nối mạch bài học với “64. `allow`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1520,7 +1520,7 @@ Permissions chính sách (policy / 정책) cho iframe capabilities.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **65. srcdoc** tiếp nhận điểm tựa từ **64. allow** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **66. <table>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **65. srcdoc** nối từ **64. allow** sang **66. <table>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 65. `srcdoc`
 Phần này nối mạch bài học với “65. `srcdoc`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1539,7 +1539,7 @@ Nếu content đến từ người dùng (user / 사용자)/untrusted nguồn (s
 
 # PHẦN 10 — TABLES
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **66. <table>** tiếp nhận điểm tựa từ **65. srcdoc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **67. <caption>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **66. <table>** nối từ **65. srcdoc** sang **67. <caption>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 66. `<table>`
 
@@ -1555,7 +1555,7 @@ Hiện đại (modern / 현대적) bố cục (layout / 레이아웃) dùng CSS 
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **67. <caption>** tiếp nhận điểm tựa từ **66. <table>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **68. Table structure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **67. <caption>** nối từ **66. <table>** sang **68. Table structure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 67. `<caption>`
 Phần này nối mạch bài học với “67. `<caption>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1571,7 +1571,7 @@ Caption mô tả mục đích/nội dung bảng (table / 테이블) và rất h�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **68. Table structure** tiếp nhận điểm tựa từ **67. <caption>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **69. scope** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **68. Table structure** nối từ **67. <caption>** sang **69. scope**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 68. Table structure
 Phần này nối mạch bài học với “68. Table structure”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1602,7 +1602,7 @@ Trình duyệt (browser / 브라우저) parser có table-specific rules; nguồn
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **69. scope** tiếp nhận điểm tựa từ **68. Table structure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **70. rowspan và colspan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **69. scope** nối từ **68. Table structure** sang **70. rowspan và colspan**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 69. `scope`
 Phần này nối mạch bài học với “69. `scope`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1623,7 +1623,7 @@ Complex bảng (table / 테이블) có thể cần `headers`/`id` strategies, nh
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **70. rowspan và colspan** tiếp nhận điểm tựa từ **69. scope** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **71. <form>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **70. rowspan và colspan** nối từ **69. scope** sang **71. <form>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 70. `rowspan` và `colspan`
 Phần này nối mạch bài học với “70. `rowspan` và `colspan`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1644,7 +1644,7 @@ Merged bảng (table / 테이블) structures cần kiểm thử (test / 테스�
 
 # PHẦN 11 — FORMS: PHẦN QUAN TRỌNG NHẤT CỦA HTML ứng dụng (application / 애플리케이션)
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **71. <form>** tiếp nhận điểm tựa từ **70. rowspan và colspan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **72. action** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **71. <form>** nối từ **70. rowspan và colspan** sang **72. action**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 71. `<form>`
 Phần này nối mạch bài học với “71. `<form>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1663,7 +1663,7 @@ Form không chỉ là visual wrapper. Nó là một cơ chế (mechanism / 메�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **72. action** tiếp nhận điểm tựa từ **71. <form>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **73. method** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **72. action** nối từ **71. <form>** sang **73. method**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 72. `action`
 Phần này nối mạch bài học với “72. `action`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1678,7 +1678,7 @@ Nếu ứng dụng (application / 애플리케이션) intercept submit bằng Ja
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **73. method** tiếp nhận điểm tựa từ **72. action** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **74. enctype** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **73. method** nối từ **72. action** sang **74. enctype**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 73. `method`
 
@@ -1702,7 +1702,7 @@ HTML phương thức (method / 메서드) ngữ nghĩa (semantics / 의미론) k
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **74. enctype** tiếp nhận điểm tựa từ **73. method** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **75. <label>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **74. enctype** nối từ **73. method** sang **75. <label>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 74. `enctype`
 
@@ -1724,7 +1724,7 @@ Nếu quên multipart, tệp (file / 파일) dữ liệu (data / 데이터) sẽ
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **74. enctype** cho ta quy tắc; **75. <label>** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **76. Placeholder không phải label** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **74. enctype** nêu quy tắc; **75. <label>** thử quy tắc trong tình huống, rồi **76. Placeholder không phải label** mở rộng hệ quả.
 
 ## 75. `<label>`
 Phần này nối mạch bài học với “75. `<label>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1757,7 +1757,7 @@ Bạn cũng có thể wrap điều khiển (control / 제어):
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **75. <label>** cho ta quy tắc; **76. Placeholder không phải label** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **77. <input>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **75. <label>** nêu quy tắc; **76. Placeholder không phải label** thử quy tắc trong tình huống, rồi **77. <input>** mở rộng hệ quả.
 
 ## 76. Placeholder không phải label
 
@@ -1789,7 +1789,7 @@ Placeholder nên là hint/example, không phải trường dữ liệu (field / 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **76. Placeholder không phải label** cho ta quy tắc; **77. <input>** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **78. text** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **76. Placeholder không phải label** nêu quy tắc; **77. <input>** thử quy tắc trong tình huống, rồi **78. text** mở rộng hệ quả.
 
 ## 77. `<input>`
 
@@ -1819,7 +1819,7 @@ value
 
 # PHẦN 12 — đầu vào (input / 입력) TYPES
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **78. text** tiếp nhận điểm tựa từ **77. <input>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **79. password** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **78. text** nối từ **77. <input>** sang **79. password**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 78. `text`
 Phần này nối mạch bài học với “78. `text`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1834,7 +1834,7 @@ General single-line văn bản (text / 텍스트).
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **79. password** tiếp nhận điểm tựa từ **78. text** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **80. email** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **79. password** nối từ **78. text** sang **80. email**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 79. `password`
 Phần này nối mạch bài học với “79. `password`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1852,7 +1852,7 @@ Bảo mật (security / 보안) vẫn phụ thuộc HTTPS, máy chủ (server / 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **80. email** tiếp nhận điểm tựa từ **79. password** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **81. number** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **80. email** nối từ **79. password** sang **81. number**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 80. `email`
 Phần này nối mạch bài học với “80. `email`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1871,7 +1871,7 @@ Máy chủ (server / 서버) vẫn phải validate email/nghiệp vụ (business
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **81. number** tiếp nhận điểm tựa từ **80. email** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **82. search, tel, url** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **81. number** nối từ **80. email** sang **82. search, tel, url**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 81. `number`
 Phần này nối mạch bài học với “81. `number`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1891,7 +1891,7 @@ Không dùng cho phone number, credit card, postal mã (code / 코드) hoặc ID
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **82. search, tel, url** tiếp nhận điểm tựa từ **81. number** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **83. checkbox** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **82. search, tel, url** nối từ **81. number** sang **83. checkbox**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 82. `search`, `tel`, `url`
 
@@ -1919,7 +1919,7 @@ URL:
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **83. checkbox** tiếp nhận điểm tựa từ **82. search, tel, url** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **84. radio** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **83. checkbox** nối từ **82. search, tel, url** sang **84. radio**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 83. `checkbox`
 Phần này nối mạch bài học với “83. `checkbox`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1943,7 +1943,7 @@ Nếu unchecked, trường dữ liệu (field / 필드) thường không có ent
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **84. radio** tiếp nhận điểm tựa từ **83. checkbox** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **85. Date/time types** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **84. radio** nối từ **83. checkbox** sang **85. Date/time types**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 84. `radio`
 Phần này nối mạch bài học với “84. `radio`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1970,7 +1970,7 @@ Radio cùng `name` tạo group và thường chỉ một item được selected.
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **85. Date/time types** tiếp nhận điểm tựa từ **84. radio** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **86. range** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **85. Date/time types** nối từ **84. radio** sang **86. range**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 85. Date/time types
 Phần này nối mạch bài học với “85. Date/time types”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1991,7 +1991,7 @@ UI display cũng phụ thuộc locale/trình duyệt (browser / 브라우저).
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **86. range** tiếp nhận điểm tựa từ **85. Date/time types** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **87. color** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **86. range** nối từ **85. Date/time types** sang **87. color**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 86. `range`
 Phần này nối mạch bài học với “86. `range`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2010,7 +2010,7 @@ Nếu chính xác (exact / 정확한) giá trị (value / 값) quan trọng, nê
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **87. color** tiếp nhận điểm tựa từ **86. range** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **88. file** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **87. color** nối từ **86. range** sang **88. file**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 87. `color`
 Phần này nối mạch bài học với “87. `color`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2025,7 +2025,7 @@ Bản địa (native / 네이티브) color picker trong supporting browsers.
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **88. file** tiếp nhận điểm tựa từ **87. color** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **89. hidden** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **88. file** nối từ **87. color** sang **89. hidden**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 88. `file`
 Phần này nối mạch bài học với “88. `file`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2050,7 +2050,7 @@ Multiple:
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **89. hidden** tiếp nhận điểm tựa từ **88. file** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **90. name** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **89. hidden** nối từ **88. file** sang **90. name**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 89. `hidden`
 Phần này nối mạch bài học với “89. `hidden`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2070,7 +2070,7 @@ Không bao giờ coi hidden giá trị (value / 값) là secret/trusted authoriz
 
 # PHẦN 13 — đầu vào (input / 입력) ATTRIBUTES VÀ FORM kiểm tra hợp lệ (validation / 검증)
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **90. name** tiếp nhận điểm tựa từ **89. hidden** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **91. value** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **90. name** nối từ **89. hidden** sang **91. value**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 90. `name`
 Phần này nối mạch bài học với “90. `name`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2087,7 +2087,7 @@ Nếu điều khiển (control / 제어) không có `name`, nó thường không
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **91. value** tiếp nhận điểm tựa từ **90. name** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **92. required** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **91. value** nối từ **90. name** sang **92. required**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 91. `value`
 
@@ -2117,7 +2117,7 @@ vẫn phản ánh markup attribute `"Alice"`.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **92. required** tiếp nhận điểm tựa từ **91. value** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **93. disabled** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **92. required** nối từ **91. value** sang **93. disabled**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 92. `required`
 Phần này nối mạch bài học với “92. `required`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2134,7 +2134,7 @@ Máy khách (client / 클라이언트) kiểm tra hợp lệ (validation / 검�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **93. disabled** tiếp nhận điểm tựa từ **92. required** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **94. readonly** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **93. disabled** nối từ **92. required** sang **94. readonly**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 93. `disabled`
 Phần này nối mạch bài học với “93. `disabled`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2165,7 +2165,7 @@ Muốn false, remove attribute hoặc set DOM thuộc tính (property / 속성) 
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **94. readonly** tiếp nhận điểm tựa từ **93. disabled** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **95. checked và selected** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **94. readonly** nối từ **93. disabled** sang **95. checked và selected**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 94. `readonly`
 Phần này nối mạch bài học với “94. `readonly`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2185,7 +2185,7 @@ Khác disabled, disabled điều khiển (control / 제어) thường bị loạ
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **95. checked và selected** tiếp nhận điểm tựa từ **94. readonly** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **96. min, max, step** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **95. checked và selected** nối từ **94. readonly** sang **96. min, max, step**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 95. `checked` và `selected`
 
@@ -2214,7 +2214,7 @@ phản ánh trạng thái hiện tại (current state / 현재 상태), còn mar
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **96. min, max, step** tiếp nhận điểm tựa từ **95. checked và selected** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **97. minlength, maxlength** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **96. min, max, step** nối từ **95. checked và selected** sang **97. minlength, maxlength**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 96. `min`, `max`, `step`
 Phần này nối mạch bài học với “96. `min`, `max`, `step`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2233,7 +2233,7 @@ Các ràng buộc (constraints / 제약조건들) này áp dụng phù hợp the
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **97. minlength, maxlength** tiếp nhận điểm tựa từ **96. min, max, step** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **98. pattern** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **97. minlength, maxlength** nối từ **96. min, max, step** sang **98. pattern**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 97. `minlength`, `maxlength`
 Phần này nối mạch bài học với “97. `minlength`, `maxlength`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2250,7 +2250,7 @@ Không thay máy chủ (server / 서버) kiểm tra hợp lệ (validation / 검
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **98. pattern** tiếp nhận điểm tựa từ **97. minlength, maxlength** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **99. multiple** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **98. pattern** nối từ **97. minlength, maxlength** sang **99. multiple**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 98. `pattern`
 Phần này nối mạch bài học với “98. `pattern`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2266,7 +2266,7 @@ Không biến HTML regex thành bảo mật (security / 보안) filter. máy ch�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **99. multiple** tiếp nhận điểm tựa từ **98. pattern** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **100. autocomplete** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **99. multiple** nối từ **98. pattern** sang **100. autocomplete**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 99. `multiple`
 
@@ -2288,7 +2288,7 @@ Form dữ liệu (data / 데이터) có thể có nhiều entries cùng name.
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **100. autocomplete** tiếp nhận điểm tựa từ **99. multiple** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **101. inputmode** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **100. autocomplete** nối từ **99. multiple** sang **101. inputmode**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 100. `autocomplete`
 
@@ -2327,7 +2327,7 @@ Không tắt autofill bừa chỉ vì “UI nhìn sạch hơn”.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **101. inputmode** tiếp nhận điểm tựa từ **100. autocomplete** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **102. enterkeyhint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **101. inputmode** nối từ **100. autocomplete** sang **102. enterkeyhint**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 101. `inputmode`
 Phần này nối mạch bài học với “101. `inputmode`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2352,7 +2352,7 @@ Ví dụ postal mã (code / 코드) numeric-looking nhưng không phải number 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **102. enterkeyhint** tiếp nhận điểm tựa từ **101. inputmode** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **103. <datalist>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **102. enterkeyhint** nối từ **101. inputmode** sang **103. <datalist>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 102. `enterkeyhint`
 Phần này nối mạch bài học với “102. `enterkeyhint`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2378,7 +2378,7 @@ send
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **103. <datalist>** tiếp nhận điểm tựa từ **102. enterkeyhint** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **104. <textarea>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **103. <datalist>** nối từ **102. enterkeyhint** sang **104. <textarea>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 103. `<datalist>`
 Phần này nối mạch bài học với “103. `<datalist>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2405,7 +2405,7 @@ Người dùng (user / 사용자) vẫn có thể nhập giá trị (value / 값
 
 # PHẦN 14 — TEXTAREA, SELECT, FIELDSET VÀ BUTTON
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **104. <textarea>** tiếp nhận điểm tựa từ **103. <datalist>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **105. <select> và <option>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **104. <textarea>** nối từ **103. <datalist>** sang **105. <select> và <option>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 104. `<textarea>`
 Phần này nối mạch bài học với “104. `<textarea>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2426,7 +2426,7 @@ không phải `value` attribute như đầu vào (input / 입력).
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **105. <select> và <option>** tiếp nhận điểm tựa từ **104. <textarea>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **106. <optgroup>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **105. <select> và <option>** nối từ **104. <textarea>** sang **106. <optgroup>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 105. `<select>` và `<option>`
 Phần này nối mạch bài học với “105. `<select>` và `<option>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2444,7 +2444,7 @@ Bản địa (native / 네이티브) select cung cấp keyboard/mobile/khả nă
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **106. <optgroup>** tiếp nhận điểm tựa từ **105. <select> và <option>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **107. <fieldset> và <legend>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **106. <optgroup>** nối từ **105. <select> và <option>** sang **107. <fieldset> và <legend>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 106. `<optgroup>`
 Phần này nối mạch bài học với “106. `<optgroup>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2462,7 +2462,7 @@ Dùng để group options theo category.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **107. <fieldset> và <legend>** tiếp nhận điểm tựa từ **106. <optgroup>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **108. <button>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **107. <fieldset> và <legend>** nối từ **106. <optgroup>** sang **108. <button>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 107. `<fieldset>` và `<legend>`
 Phần này nối mạch bài học với “107. `<fieldset>` và `<legend>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2489,7 +2489,7 @@ Phần này nối mạch bài học với “107. `<fieldset>` và `<legend>`”
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **108. <button>** tiếp nhận điểm tựa từ **107. <fieldset> và <legend>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **109. Multi-action form** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **108. <button>** nối từ **107. <fieldset> và <legend>** sang **109. Multi-action form**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 108. `<button>`
 Phần này nối mạch bài học với “108. `<button>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2518,7 +2518,7 @@ rõ ràng để tránh accidental submission.
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **109. Multi-action form** tiếp nhận điểm tựa từ **108. <button>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **110. <output>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **109. Multi-action form** nối từ **108. <button>** sang **110. <output>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 109. Multi-action form
 
@@ -2556,7 +2556,7 @@ Phần Master sẽ giải thích sâu submitter/form đơn vị sở hữu (owne
 
 # PHẦN 15 — bản địa (native / 네이티브) đầu ra (output / 출력) VÀ INTERACTIVE ELEMENTS
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **110. <output>** tiếp nhận điểm tựa từ **109. Multi-action form** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **111. <progress>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **110. <output>** nối từ **109. Multi-action form** sang **111. <progress>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 110. `<output>`
 Phần này nối mạch bài học với “110. `<output>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2571,7 +2571,7 @@ Biểu diễn kết quả (result / 결과) của calculation/người dùng (us
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **111. <progress>** tiếp nhận điểm tựa từ **110. <output>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **112. <meter>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **111. <progress>** nối từ **110. <output>** sang **112. <meter>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 111. `<progress>`
 Phần này nối mạch bài học với “111. `<progress>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2588,7 +2588,7 @@ Dùng cho tác vụ (task / 작업) progress.
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **112. <meter>** tiếp nhận điểm tựa từ **111. <progress>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **113. <details> và <summary>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **112. <meter>** nối từ **111. <progress>** sang **113. <details> và <summary>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 112. `<meter>`
 Phần này nối mạch bài học với “112. `<meter>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2608,7 +2608,7 @@ Dùng cho đo lường (measurement / 측정) trong known phạm vi (range / 범
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **113. <details> và <summary>** gom các mảnh từ **112. <meter>** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **114. <dialog>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **113. <details> và <summary>** tổng hợp từ **112. <meter>** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **114. <dialog>** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 113. `<details>` và `<summary>`
 Phần này nối mạch bài học với “113. `<details>` và `<summary>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2627,7 +2627,7 @@ Trước khi tự viết accordion bằng `div + onclick + aria-expanded`, hãy 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **114. <dialog>** gom các mảnh từ **113. <details> và <summary>** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **115. <form method="dialog">** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **114. <dialog>** tổng hợp từ **113. <details> và <summary>** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **115. <form method="dialog">** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 114. `<dialog>`
 Phần này nối mạch bài học với “114. `<dialog>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2664,7 +2664,7 @@ Bản địa (native / 네이티브) dialog có top-layer/modal/focus ngữ ngh�
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **115. <form method="dialog">** tiếp nhận điểm tựa từ **114. <dialog>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **116. Popover** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **115. <form method="dialog">** nối từ **114. <dialog>** sang **116. Popover**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 115. `<form method="dialog">`
 
@@ -2690,7 +2690,7 @@ Submit form có thể đóng dialog thay vì gửi HTTP yêu cầu (request / �
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **116. Popover** tiếp nhận điểm tựa từ **115. <form method="dialog">** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **117. id** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **116. Popover** nối từ **115. <form method="dialog">** sang **117. id**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 116. Popover
 
@@ -2722,7 +2722,7 @@ Tính năng (feature / 기능) này sẽ được giải thích sâu ở Master 
 
 # PHẦN 16 — toàn cục (global / 전역) ATTRIBUTES
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **117. id** tiếp nhận điểm tựa từ **116. Popover** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **118. class** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **117. id** nối từ **116. Popover** sang **118. class**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 117. `id`
 Phần này nối mạch bài học với “117. `id`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2739,7 +2739,7 @@ Duplicate IDs có thể gây khả năng tiếp cận (accessibility / 접근성
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **118. class** tiếp nhận điểm tựa từ **117. id** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **119. style** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **118. class** nối từ **117. id** sang **119. style**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 118. `class`
 Phần này nối mạch bài học với “118. `class`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2758,7 +2758,7 @@ element.classList
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **119. style** tiếp nhận điểm tựa từ **118. class** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **120. title** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **119. style** nối từ **118. class** sang **120. title**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 119. `style`
 Phần này nối mạch bài học với “119. `style`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2771,7 +2771,7 @@ Inline style hợp lệ, nhưng large ứng dụng (application / 애플리케�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **120. title** tiếp nhận điểm tựa từ **119. style** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **121. hidden** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **120. title** nối từ **119. style** sang **121. hidden**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 120. `title`
 Phần này nối mạch bài học với “120. `title`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2788,7 +2788,7 @@ Không dùng nó làm accessible name duy nhất cho trọng yếu (critical / �
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **121. hidden** tiếp nhận điểm tựa từ **120. title** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **122. inert** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **121. hidden** nối từ **120. title** sang **122. inert**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 121. `hidden`
 Phần này nối mạch bài học với “121. `hidden`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2809,7 +2809,7 @@ Phần Master sẽ phân biệt `hidden`, `hidden="until-found"`, CSS hiding và
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **122. inert** tiếp nhận điểm tựa từ **121. hidden** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **123. tabindex** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **122. inert** nối từ **121. hidden** sang **123. tabindex**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 122. `inert`
 Phần này nối mạch bài học với “122. `inert`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2826,7 +2826,7 @@ Useful với custom overlay workflows, nhưng bản địa (native / 네이티�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **123. tabindex** tiếp nhận điểm tựa từ **122. inert** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **124. data-** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **123. tabindex** nối từ **122. inert** sang **124. data-**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 123. `tabindex`
 Phần này nối mạch bài học với “123. `tabindex`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2853,7 +2853,7 @@ thường là anti-pattern vì phá natural focus thứ tự (order / 순서) v�
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **124. data-** tiếp nhận điểm tựa từ **123. tabindex** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125. contenteditable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **124. data-** nối từ **123. tabindex** sang **125. contenteditable**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 124. `data-*`
 Phần này nối mạch bài học với “124. `data-*`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2875,7 +2875,7 @@ Không chứa secret/đơn vị từ (token / 토큰) vì DOM thuộc máy khác
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **125. contenteditable** tiếp nhận điểm tựa từ **124. data-** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **126. draggable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **125. contenteditable** nối từ **124. data-** sang **126. draggable**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 125. `contenteditable`
 Phần này nối mạch bài học với “125. `contenteditable`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2892,7 +2892,7 @@ Selection, paste sanitization, undo, trình duyệt (browser / 브라우저) dif
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **126. draggable** tiếp nhận điểm tựa từ **125. contenteditable** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **127. spellcheck, translate, autofocus** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **126. draggable** nối từ **125. contenteditable** sang **127. spellcheck, translate, autofocus**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 126. `draggable`
 Phần này nối mạch bài học với “126. `draggable`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2907,7 +2907,7 @@ Nếu drag hành động (action / 동작) là trọng yếu (critical / 중요)
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **127. spellcheck, translate, autofocus** tiếp nhận điểm tựa từ **126. draggable** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **128. <script>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **127. spellcheck, translate, autofocus** nối từ **126. draggable** sang **128. <script>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 127. `spellcheck`, `translate`, `autofocus`
 
@@ -2937,7 +2937,7 @@ Autofocus phải dùng cẩn thận vì có thể bật mobile keyboard hoặc l
 
 # PHẦN 17 — SCRIPT LOADING
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **128. <script>** tiếp nhận điểm tựa từ **127. spellcheck, translate, autofocus** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **129. defer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **128. <script>** nối từ **127. spellcheck, translate, autofocus** sang **129. defer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 128. `<script>`
 
@@ -2951,7 +2951,7 @@ Script loading chiến lược (strategy / 전략) ảnh hưởng parser và hi�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **129. defer** tiếp nhận điểm tựa từ **128. <script>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **130. async** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **129. defer** nối từ **128. <script>** sang **130. async**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 129. `defer`
 Phần này nối mạch bài học với “129. `defer`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2969,7 +2969,7 @@ Classic deferred script được download song song và execute sau document par
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **130. async** tiếp nhận điểm tựa từ **129. defer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **131. type="module"** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **130. async** nối từ **129. defer** sang **131. type="module"**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 130. `async`
 Phần này nối mạch bài học với “130. `async`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2987,7 +2987,7 @@ Phù hợp với independent scripts như analytics.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **131. type="module"** tiếp nhận điểm tựa từ **130. async** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **132. nomodule** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **131. type="module"** nối từ **130. async** sang **132. nomodule**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 131. `type="module"`
 Phần này nối mạch bài học với “131. `type="module"`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3007,7 +3007,7 @@ Hiện đại (modern / 현대적) frontend cần hiểu mô-đun (module / 모�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **132. nomodule** tiếp nhận điểm tựa từ **131. type="module"** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **133. integrity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **132. nomodule** nối từ **131. type="module"** sang **133. integrity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 132. `nomodule`
 Phần này nối mạch bài học với “132. `nomodule`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3025,7 +3025,7 @@ Ngày nay nhiều projects không cần nữa, nhưng cấp cao (senior / 시니
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **133. integrity** tiếp nhận điểm tựa từ **132. nomodule** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **134. nonce** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **133. integrity** nối từ **132. nomodule** sang **134. nonce**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 133. `integrity`
 Phần này nối mạch bài học với “133. `integrity`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3044,7 +3044,7 @@ Hữu ích với pinned third-party CDN resources.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **134. nonce** tiếp nhận điểm tựa từ **133. integrity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **135. <noscript>** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **134. nonce** nối từ **133. integrity** sang **135. <noscript>**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 134. `nonce`
 Phần này nối mạch bài học với “134. `nonce`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3059,7 +3059,7 @@ Nonce phải unpredictable và phù hợp chính sách (policy / 정책). Hardco
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **135. <noscript>** tiếp nhận điểm tựa từ **134. nonce** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **136. SEO bắt đầu từ nội dung và ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **135. <noscript>** nối từ **134. nonce** sang **136. SEO bắt đầu từ nội dung và ngữ nghĩa (semantics / 의미론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 135. `<noscript>`
 Phần này nối mạch bài học với “135. `<noscript>`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3076,7 +3076,7 @@ Nếu cơ sở (base / 기반) tính năng (feature / 기능) có thể hoạt �
 
 # PHẦN 18 — SEO, xã hội (social / 사회적) siêu dữ liệu (metadata / 메타데이터) VÀ STRUCTURED dữ liệu (data / 데이터)
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **136. SEO bắt đầu từ nội dung và ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **135. <noscript>** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **137. Canonical** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **136. SEO bắt đầu từ nội dung và ngữ nghĩa (semantics / 의미론)** nối từ **135. <noscript>** sang **137. Canonical**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 136. SEO bắt đầu từ nội dung và ngữ nghĩa (semantics / 의미론)
 
@@ -3100,7 +3100,7 @@ Tìm kiếm (search / 검색) engine phải hiểu content thật.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, sau nội dung của **136. SEO bắt đầu từ nội dung và ngữ nghĩa (semantics / 의미론)**, **137. Canonical** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **138. Robots metadata** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, sau nội dung của **136. SEO bắt đầu từ nội dung và ngữ nghĩa (semantics / 의미론)**, **137. Canonical** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **138. Robots metadata** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 137. Canonical
 Phần này nối mạch bài học với “137. Canonical”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3117,7 +3117,7 @@ Nó không phải redirect và không phải bảo mật (security / 보안) quy
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **138. Robots metadata** tiếp nhận điểm tựa từ **137. Canonical** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **139. Open Graph** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **138. Robots metadata** nối từ **137. Canonical** sang **139. Open Graph**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 138. Robots metadata
 Phần này nối mạch bài học với “138. Robots metadata”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3134,7 +3134,7 @@ Nó không bảo vệ private admin page. Private page phải có authentication
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **139. Open Graph** tiếp nhận điểm tựa từ **138. Robots metadata** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **140. JSON-LD structured data** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **139. Open Graph** nối từ **138. Robots metadata** sang **140. JSON-LD structured data**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 139. Open Graph
 Phần này nối mạch bài học với “139. Open Graph”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3157,7 +3157,7 @@ Dùng để tạo xã hội (social / 사회적) sharing previews trong supporti
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **140. JSON-LD structured data** tiếp nhận điểm tựa từ **139. Open Graph** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **141. bản địa (native / 네이티브) HTML trước ARIA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **140. JSON-LD structured data** nối từ **139. Open Graph** sang **141. bản địa (native / 네이티브) HTML trước ARIA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 140. JSON-LD structured data
 Phần này nối mạch bài học với “140. JSON-LD structured data”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3180,7 +3180,7 @@ Nó phải phản ánh content thật, không phải nơi khai báo thông tin g
 
 # PHẦN 19 — khả năng tiếp cận (accessibility / 접근성)
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **141. bản địa (native / 네이티브) HTML trước ARIA** tiếp nhận điểm tựa từ **140. JSON-LD structured data** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **142. Accessible name** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **141. bản địa (native / 네이티브) HTML trước ARIA** nối từ **140. JSON-LD structured data** sang **142. Accessible name**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 141. bản địa (native / 네이티브) HTML trước ARIA
 
@@ -3208,7 +3208,7 @@ ARIA không tạo bản địa (native / 네이티브) hành vi (behavior / 동�
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **142. Accessible name** tiếp nhận điểm tựa từ **141. bản địa (native / 네이티브) HTML trước ARIA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **143. aria-labelledby** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **142. Accessible name** nối từ **141. bản địa (native / 네이티브) HTML trước ARIA** sang **143. aria-labelledby**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 142. Accessible name
 
@@ -3236,7 +3236,7 @@ Nếu visible văn bản (text / 텍스트) tồn tại, ưu tiên để accessi
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **142. Accessible name** cho ta quy tắc; **143. aria-labelledby** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **144. aria-describedby** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **142. Accessible name** nêu quy tắc; **143. aria-labelledby** thử quy tắc trong tình huống, rồi **144. aria-describedby** mở rộng hệ quả.
 
 ## 143. `aria-labelledby`
 Phần này nối mạch bài học với “143. `aria-labelledby`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3257,7 +3257,7 @@ Accessible name lấy từ element khác.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **143. aria-labelledby** cho ta quy tắc; **144. aria-describedby** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **145. động (dynamic / 동적) ARIA trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **143. aria-labelledby** nêu quy tắc; **144. aria-describedby** thử quy tắc trong tình huống, rồi **145. động (dynamic / 동적) ARIA trạng thái (state / 상태)** mở rộng hệ quả.
 
 ## 144. `aria-describedby`
 Phần này nối mạch bài học với “144. `aria-describedby`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3280,7 +3280,7 @@ Label/name trả lời “điều khiển (control / 제어) này là gì?”. D
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **145. động (dynamic / 동적) ARIA trạng thái (state / 상태)** tiếp nhận điểm tựa từ **144. aria-describedby** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **146. aria-current** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **145. động (dynamic / 동적) ARIA trạng thái (state / 상태)** nối từ **144. aria-describedby** sang **146. aria-current**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 145. động (dynamic / 동적) ARIA trạng thái (state / 상태)
 
@@ -3300,7 +3300,7 @@ ARIA trạng thái (state / 상태) không tự sync với visual trạng thái 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **146. aria-current** tiếp nhận điểm tựa từ **145. động (dynamic / 동적) ARIA trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **147. Live regions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **146. aria-current** nối từ **145. động (dynamic / 동적) ARIA trạng thái (state / 상태)** sang **147. Live regions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 146. `aria-current`
 Phần này nối mạch bài học với “146. `aria-current`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3317,7 +3317,7 @@ Cho assistive technology biết item hiện tại.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **147. Live regions** tiếp nhận điểm tựa từ **146. aria-current** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **148. Keyboard kiểm thử (test / 테스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **147. Live regions** nối từ **146. aria-current** sang **148. Keyboard kiểm thử (test / 테스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 147. Live regions
 Phần này nối mạch bài học với “147. Live regions”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3335,7 +3335,7 @@ Không dùng `assertive` cho mọi notification vì có thể interrupt người
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **148. Keyboard kiểm thử (test / 테스트)** tiếp nhận điểm tựa từ **147. Live regions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **149. Hai tầng (layer / 계층) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **148. Keyboard kiểm thử (test / 테스트)** nối từ **147. Live regions** sang **149. Hai tầng (layer / 계층) khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 148. Keyboard kiểm thử (test / 테스트)
 
@@ -3358,7 +3358,7 @@ HTML ngữ nghĩa (semantics / 의미론) tốt thường giảm rất nhiều c
 
 # PHẦN 20 — ATTRIBUTE VS DOM thuộc tính (property / 속성)
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **149. Hai tầng (layer / 계층) khác nhau** tiếp nhận điểm tựa từ **148. Keyboard kiểm thử (test / 테스트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **150. value** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **149. Hai tầng (layer / 계층) khác nhau** nối từ **148. Keyboard kiểm thử (test / 테스트)** sang **150. value**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 149. Hai tầng (layer / 계층) khác nhau
 
@@ -3381,7 +3381,7 @@ Content attribute và DOM thuộc tính (property / 속성) có thể reflect l�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **150. value** tiếp nhận điểm tựa từ **149. Hai tầng (layer / 계층) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **151. checked** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **150. value** nối từ **149. Hai tầng (layer / 계층) khác nhau** sang **151. checked**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 150. `value`
 
@@ -3411,7 +3411,7 @@ Attribute thể hiện markup/default giá trị (value / 값) relationship; thu
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **151. checked** tiếp nhận điểm tựa từ **150. value** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **152. href** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **151. checked** nối từ **150. value** sang **152. href**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 151. `checked`
 Phần này nối mạch bài học với “151. `checked`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3434,7 +3434,7 @@ input.checked
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **152. href** tiếp nhận điểm tựa từ **151. checked** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **153. Boolean attributes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **152. href** nối từ **151. checked** sang **153. Boolean attributes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 152. `href`
 Phần này nối mạch bài học với “152. `href`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3459,7 +3459,7 @@ thường trả fully resolved absolute URL.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **153. Boolean attributes** tiếp nhận điểm tựa từ **152. href** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **154. Không phải element nào cũng chứa gì cũng được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **153. Boolean attributes** nối từ **152. href** sang **154. Không phải element nào cũng chứa gì cũng được**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 153. Boolean attributes
 
@@ -3491,7 +3491,7 @@ Dùng chung (common / 공통) boolean attrs gồm `disabled`, `checked`, `select
 
 # PHẦN 21 — CONTENT mô hình (model / 모델) VÀ VALID HTML
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **154. Không phải element nào cũng chứa gì cũng được** tiếp nhận điểm tựa từ **153. Boolean attributes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **155. Void elements** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **154. Không phải element nào cũng chứa gì cũng được** nối từ **153. Boolean attributes** sang **155. Void elements**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 154. Không phải element nào cũng chứa gì cũng được
 
@@ -3515,7 +3515,7 @@ Nếu điều hướng (navigation / 내비게이션), dùng link. Nếu hành �
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **155. Void elements** tiếp nhận điểm tựa từ **154. Không phải element nào cũng chứa gì cũng được** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **156. HTML parser không giống XML parser** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **155. Void elements** nối từ **154. Không phải element nào cũng chứa gì cũng được** sang **156. HTML parser không giống XML parser**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 155. Void elements
 
@@ -3557,7 +3557,7 @@ HTML void elements khác XML self-closing mô hình (model / 모델).
 
 # PHẦN 22 — trình duyệt (browser / 브라우저) PARSER CƠ BẢN
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **156. HTML parser không giống XML parser** tiếp nhận điểm tựa từ **155. Void elements** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **157. trình duyệt (browser / 브라우저) có thể thêm nodes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **156. HTML parser không giống XML parser** nối từ **155. Void elements** sang **157. trình duyệt (browser / 브라우저) có thể thêm nodes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 156. HTML parser không giống XML parser
 
@@ -3571,7 +3571,7 @@ Trình duyệt (browser / 브라우저) có standardized algorithms để sửa/
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **157. trình duyệt (browser / 브라우저) có thể thêm nodes** tiếp nhận điểm tựa từ **156. HTML parser không giống XML parser** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **158. View nguồn (source / 소스) vs Elements** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **157. trình duyệt (browser / 브라우저) có thể thêm nodes** nối từ **156. HTML parser không giống XML parser** sang **158. View nguồn (source / 소스) vs Elements**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 157. trình duyệt (browser / 브라우저) có thể thêm nodes
 
@@ -3591,7 +3591,7 @@ DOM inspector có thể thấy `tbody` được parser tạo.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **157. trình duyệt (browser / 브라우저) có thể thêm nodes** nêu điều cần giải thích; **158. View nguồn (source / 소스) vs Elements** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **159. máy khách (client / 클라이언트) HTML không đáng tin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **157. trình duyệt (browser / 브라우저) có thể thêm nodes** đặt vấn đề; **158. View nguồn (source / 소스) vs Elements** đối chiếu bằng chứng, rồi **159. máy khách (client / 클라이언트) HTML không đáng tin** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 158. View nguồn (source / 소스) vs Elements
 
@@ -3607,7 +3607,7 @@ Khi gỡ lỗi (debug / 디버그) hydration mismatch, phải phân biệt ba t�
 
 # PHẦN 23 — bảo mật (security / 보안) VÀ hiệu năng (performance / 성능) FOUNDATION
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **158. View nguồn (source / 소스) vs Elements** nêu điều cần giải thích; **159. máy khách (client / 클라이언트) HTML không đáng tin** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **160. Untrusted HTML** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **158. View nguồn (source / 소스) vs Elements** đặt vấn đề; **159. máy khách (client / 클라이언트) HTML không đáng tin** đối chiếu bằng chứng, rồi **160. Untrusted HTML** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 159. máy khách (client / 클라이언트) HTML không đáng tin
 
@@ -3617,7 +3617,7 @@ Máy chủ (server / 서버) phải validate và authorize independent of HTML.
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **160. Untrusted HTML** tiếp nhận điểm tựa từ **159. máy khách (client / 클라이언트) HTML không đáng tin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **161. Iframe bảo mật (security / 보안)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **160. Untrusted HTML** nối từ **159. máy khách (client / 클라이언트) HTML không đáng tin** sang **161. Iframe bảo mật (security / 보안)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 160. Untrusted HTML
 
@@ -3633,7 +3633,7 @@ Bảo mật (security / 보안) phải dựa trên contextual encoding/sanitizat
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **161. Iframe bảo mật (security / 보안)** tiếp nhận điểm tựa từ **160. Untrusted HTML** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **162. tài nguyên (resource / 자원) loading ảnh hưởng hiệu năng (performance / 성능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **161. Iframe bảo mật (security / 보안)** nối từ **160. Untrusted HTML** sang **162. tài nguyên (resource / 자원) loading ảnh hưởng hiệu năng (performance / 성능)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 161. Iframe bảo mật (security / 보안)
 
@@ -3643,7 +3643,7 @@ Third-party iframe là ranh giới bảo mật (security boundary / 보안 경�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **161. Iframe bảo mật (security / 보안)** nêu điều cần giải thích; **162. tài nguyên (resource / 자원) loading ảnh hưởng hiệu năng (performance / 성능)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **163. fetchpriority** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **161. Iframe bảo mật (security / 보안)** đặt vấn đề; **162. tài nguyên (resource / 자원) loading ảnh hưởng hiệu năng (performance / 성능)** đối chiếu bằng chứng, rồi **163. fetchpriority** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 162. tài nguyên (resource / 자원) loading ảnh hưởng hiệu năng (performance / 성능)
 
@@ -3663,7 +3663,7 @@ preconnect đúng origin
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **162. tài nguyên (resource / 자원) loading ảnh hưởng hiệu năng (performance / 성능)** nêu điều cần giải thích; **163. fetchpriority** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **164. Preconnect và preload** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **162. tài nguyên (resource / 자원) loading ảnh hưởng hiệu năng (performance / 성능)** đặt vấn đề; **163. fetchpriority** đối chiếu bằng chứng, rồi **164. Preconnect và preload** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 163. `fetchpriority`
 Phần này nối mạch bài học với “163. `fetchpriority`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3683,7 +3683,7 @@ Không đặt mọi thứ `high`; nếu mọi tài nguyên (resource / 자원) �
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **164. Preconnect và preload** tiếp nhận điểm tựa từ **163. fetchpriority** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **165. Native-first thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **164. Preconnect và preload** nối từ **163. fetchpriority** sang **165. Native-first thiết kế (design / 설계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 164. Preconnect và preload
 
@@ -3713,7 +3713,7 @@ Hiệu năng (performance / 성능) hints phải được đo bằng DevTools/Li
 
 # PHẦN 24 — PROGRESSIVE ENHANCEMENT VÀ cấp cao (senior / 시니어) MINDSET
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **165. Native-first thiết kế (design / 설계)** tiếp nhận điểm tựa từ **164. Preconnect và preload** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **166. Progressive enhancement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HTML — Beginner → cấp cao (senior / 시니어)**, **165. Native-first thiết kế (design / 설계)** nối từ **164. Preconnect và preload** sang **166. Progressive enhancement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 165. Native-first thiết kế (design / 설계)
 
@@ -3735,7 +3735,7 @@ Bản địa (native / 네이티브) controls thường có keyboard, focus, kh�
 
 ---
 
-> **Chuyển mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **166. Progressive enhancement** tiếp nhận điểm tựa từ **165. Native-first thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **167. cấp cao (senior / 시니어) HTML rà soát (review / 검토) questions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HTML — Beginner → cấp cao (senior / 시니어)**, **166. Progressive enhancement** nối từ **165. Native-first thiết kế (design / 설계)** sang **167. cấp cao (senior / 시니어) HTML rà soát (review / 검토) questions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 166. Progressive enhancement
 
@@ -3770,7 +3770,7 @@ JavaScript có thể enhance suggestions, loading trạng thái (state / 상태)
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **167. cấp cao (senior / 시니어) HTML rà soát (review / 검토) questions** tiếp nhận điểm tựa từ **166. Progressive enhancement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **HTML — Beginner → cấp cao (senior / 시니어)**, **167. cấp cao (senior / 시니어) HTML rà soát (review / 검토) questions** nối từ **166. Progressive enhancement** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 167. cấp cao (senior / 시니어) HTML rà soát (review / 검토) questions
 

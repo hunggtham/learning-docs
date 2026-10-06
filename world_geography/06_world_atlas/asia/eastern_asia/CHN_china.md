@@ -10,7 +10,7 @@ Chuỗi nhân quả (causal chain / 인과 사슬):
 
 **high west + monsoon east → major rivers/alluvial plains → dense eastern settlement → coastal/river industrialization → continental vận chuyển (transport / 전송) tích hợp (integration / 통합) → toàn cục (global / 전역) manufacturing/trade role**.
 
-> **Chuyển mạch:** Trong **Trung Quốc (China) — continental độ dốc (gradient / 기울기), river basins và coastal megaregions**, **High west, low east** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Water tower và river hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **High west, low east** tạo chênh lệch relief, population và access trên quy mô lục địa; plateau phía tây là nguồn, đồng bằng phía đông là demand. **Water tower và river hệ thống (system / 시스템)** tiếp theo nối hai cực bằng lưu vực.
 
 ## High west, low east
 
@@ -20,7 +20,7 @@ Phía east có North China Plain, Yangtze basin/delta và southern coastal lowla
 
 Một national average vì thế rất dễ gây hiểu sai.
 
-> **Chuyển mạch:** Ở chặng này của **Trung Quốc (China) — continental độ dốc (gradient / 기울기), river basins và coastal megaregions**, **Water tower và river hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **High west, low east** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Monsoon và aridity độ dốc (gradient / 기울기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Tibetan Plateau, Yangtze, Yellow, Pearl và các basin tạo **Water tower và river hệ thống (system / 시스템)** cho agriculture, cities và hydropower, nhưng tranh chấp phân bổ vẫn tồn tại. **Monsoon và aridity độ dốc (gradient / 기울기)** tiếp theo giải thích biến động mưa–khô.
 
 ## Water tower và river hệ thống (system / 시스템)
 
@@ -30,7 +30,7 @@ Yangtze nối inland industrial/agricultural zone với Shanghai/Yangtze Delta. 
 
 Yellow River có high sediment lịch sử (history / 이력) do Loess Plateau, nên flood/sediment management có significance lâu dài.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trung Quốc (China) — continental độ dốc (gradient / 기울기), river basins và coastal megaregions**, **Monsoon và aridity độ dốc (gradient / 기울기)** tiếp nhận điểm tựa từ **Water tower và river hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Population concentration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Monsoon east, arid west và seasonal extremes làm **Monsoon và aridity độ dốc (gradient / 기울기)** quyết định crop, water security và settlement. **Population concentration** tiếp theo cho thấy dân cư bám đồng bằng và coast thế nào.
 
 ## Monsoon và aridity độ dốc (gradient / 기울기)
 
@@ -40,7 +40,7 @@ Agriculture vì thế phân vùng: humid rice hệ thống (system / 시스템) 
 
 Water scarcity ở north không thể hiểu chỉ từ rainfall; population/industry/irrigation demand cũng quan trọng.
 
-> **Chuyển mạch:** Trong **Trung Quốc (China) — continental độ dốc (gradient / 기울기), river basins và coastal megaregions**, **Population concentration** tiếp nhận điểm tựa từ **Monsoon và aridity độ dốc (gradient / 기울기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coastal megaregions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đồng bằng, delta và coastal corridors gom population, jobs và infrastructure; **Population concentration** tạo demand density cho megaregions. **Coastal megaregions** tiếp theo giải thích các cực kinh tế ven biển.
 
 ## Population concentration
 
@@ -48,7 +48,7 @@ Population density cao ở eastern lowlands và basins, thấp hơn ở plateau/
 
 Urbanization làm concentration vào city cluster tăng nhưng interior city/corridor cũng phát triển theo vận chuyển (transport / 전송) investment.
 
-> **Chuyển mạch:** Ở chặng này của **Trung Quốc (China) — continental độ dốc (gradient / 기울기), river basins và coastal megaregions**, **Coastal megaregions** tiếp nhận điểm tựa từ **Population concentration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Manufacturing và supplier mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Yangtze Delta, Pearl River Delta, Bohai và coastal cities tạo **Coastal megaregions** với port, rail và supplier density. **Manufacturing và supplier mạng (network / 네트워크)** tiếp theo cho thấy production được phân công trên các vùng này.
 
 ## Coastal megaregions
 
@@ -58,7 +58,7 @@ Cluster advantage đến từ supplier, labor, university, finance, cổng (port
 
 Agglomeration tăng productivity nhưng congestion, housing, pollution và regional inequality là counterforce.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trung Quốc (China) — continental độ dốc (gradient / 기울기), river basins và coastal megaregions**, **Manufacturing và supplier mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Coastal megaregions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cổng (port / 포트) và river-sea tích hợp (integration / 통합)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Export manufacturing, supplier networks và domestic market làm **Manufacturing và supplier mạng (network / 네트워크)** gắn với ports, energy và inland corridors. **Cổng (port / 포트) và river-sea tích hợp (integration / 통합)** tiếp theo cho thấy hàng hóa đi qua những gateway nào.
 
 ## Manufacturing và supplier mạng (network / 네트워크)
 
@@ -68,7 +68,7 @@ Deep supplier mạng (network / 네트워크) tạo đường dẫn (path / 경�
 
 Khi wage hoặc trade điều kiện (condition / 조건) đổi, industry có thể move một phần nhưng cluster không biến mất ngay.
 
-> **Chuyển mạch:** Trong **Trung Quốc (China) — continental độ dốc (gradient / 기울기), river basins và coastal megaregions**, **Cổng (port / 포트) và river-sea tích hợp (integration / 통합)** tiếp nhận điểm tựa từ **Manufacturing và supplier mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rail/highway và territorial tích hợp (integration / 통합)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** River–sea ports and intermodal terminals biến **Cổng (port / 포트) và river-sea tích hợp (integration / 통합)** thành lớp nối giữa factory belts, basin và thị trường thế giới. **Rail/highway và territorial tích hợp (integration / 통합)** tiếp theo mở mạng vào nội địa.
 
 ## Cổng (port / 포트) và river-sea tích hợp (integration / 통합)
 
@@ -76,7 +76,7 @@ Shanghai/Ningbo-Zhoushan, Shenzhen/Guangzhou region và other cổng (port / 포
 
 Yangtze inland waterway làm coastal cổng (port / 포트) có hinterland sâu. Đây là advantage khác island cổng (port / 포트): river corridor kéo maritime truy cập (access / 접근) vào sâu continent.
 
-> **Chuyển mạch:** Ở chặng này của **Trung Quốc (China) — continental độ dốc (gradient / 기울기), river basins và coastal megaregions**, **Rail/highway và territorial tích hợp (integration / 통합)** tiếp nhận điểm tựa từ **Cổng (port / 포트) và river-sea tích hợp (integration / 통합)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng (energy / 에너지)/tài nguyên (resource / 자원) geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** High-speed rail, highways và inland corridors làm **Rail/highway và territorial tích hợp (integration / 통합)** giảm effective distance giữa west resource zones và east markets. **Năng lượng (energy / 에너지)/tài nguyên (resource / 자원) geography** tiếp theo đặt nguồn–tải lên mạng đó.
 
 ## Rail/highway và territorial tích hợp (integration / 통합)
 
@@ -84,7 +84,7 @@ Large national quy mô (scale / 규모) làm nội bộ (internal / 내부) vậ
 
 Vận chuyển (transport / 전송) investment giảm effective distance nhưng không xóa relief và population độ dốc (gradient / 기울기).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trung Quốc (China) — continental độ dốc (gradient / 기울기), river basins và coastal megaregions**, **Rail/highway và territorial tích hợp (integration / 통합)** nêu điều cần giải thích; **Năng lượng (energy / 에너지)/tài nguyên (resource / 자원) geography** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Agriculture và food bảo mật (security / 보안)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Coal, hydro, solar, gas và demand centers tạo **Năng lượng (energy / 에너지)/tài nguyên (resource / 자원) geography** với mismatch vùng lớn. **Agriculture và food bảo mật (security / 보안)** tiếp theo nối energy/water với đất sản xuất.
 
 ## Năng lượng (energy / 에너지)/tài nguyên (resource / 자원) geography
 
@@ -92,7 +92,7 @@ Coal reserve, hydropower, wind/solar potential và industrial demand phân bố 
 
 Năng lượng (energy / 에너지) geography là **nguồn (source / 소스)–grid–tải (load / 로드)**, không chỉ map tài nguyên (resource / 자원).
 
-> **Chuyển mạch:** Trong **Trung Quốc (China) — continental độ dốc (gradient / 기울기), river basins và coastal megaregions**, **Năng lượng (energy / 에너지)/tài nguyên (resource / 자원) geography** nêu điều cần giải thích; **Agriculture và food bảo mật (security / 보안)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Nội bộ (internal / 내부) di chuyển (migration / 마이그레이션) và urban hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Grain belts, irrigation, soil và water constraints làm **Agriculture và food bảo mật (security / 보안)** gắn với basin và policy, không chỉ với diện tích. **Nội bộ (internal / 내부) di chuyển (migration / 마이그레이션) và urban hệ thống (system / 시스템)** tiếp theo cho thấy lao động và đô thị điều chỉnh ra sao.
 
 ## Agriculture và food bảo mật (security / 보안)
 
@@ -100,7 +100,7 @@ Large population + regional climate tạo need for diversified domestic môi tr�
 
 Urban diet thay đổi (change / 변경) còn ảnh hưởng feed import và toàn cục (global / 전역) commodity mạng (network / 네트워크).
 
-> **Chuyển mạch:** Ở chặng này của **Trung Quốc (China) — continental độ dốc (gradient / 기울기), river basins và coastal megaregions**, **Nội bộ (internal / 내부) di chuyển (migration / 마이그레이션) và urban hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Agriculture và food bảo mật (security / 보안)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hazard geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Migrant labor nối inland villages với coastal factories, trong khi hukou/urban services tạo friction; **Nội bộ (internal / 내부) di chuyển (migration / 마이그레이션) và urban hệ thống (system / 시스템)** phân bố opportunity khác nhau. **Hazard geography** tiếp theo ghép exposure với nơi dân cư tập trung.
 
 ## Nội bộ (internal / 내부) di chuyển (migration / 마이그레이션) và urban hệ thống (system / 시스템)
 
@@ -108,7 +108,7 @@ Rural-to-urban di chuyển (migration / 마이그레이션) và regional di chuy
 
 Major city hút high-skill labor, trong khi manufacturing city và inland city có trajectory khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trung Quốc (China) — continental độ dốc (gradient / 기울기), river basins và coastal megaregions**, **Hazard geography** tiếp nhận điểm tựa từ **Nội bộ (internal / 내부) di chuyển (migration / 마이그레이션) và urban hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regional role** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Flood, drought, earthquake, heat và typhoon tạo **Hazard geography** khác nhau theo basin, coast, plateau và megaregion. **Regional role** tiếp theo tổng hợp scale nội địa với mạng toàn cầu.
 
 ## Hazard geography
 
@@ -116,7 +116,7 @@ West/southwest có earthquake/landslide tectonic rủi ro (risk / 위험); east/
 
 Large dams, dense city và industrial corridor làm cascading rủi ro (risk / 위험) quan trọng.
 
-> **Chuyển mạch:** Trong **Trung Quốc (China) — continental độ dốc (gradient / 기울기), river basins và coastal megaregions**, **Regional role** tiếp nhận điểm tựa từ **Hazard geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Regional role** của China đến từ market scale, manufacturing, ports, technology và territorial networks, đồng thời chịu water, demographic và hazard constraints. **Dùng chung (common / 공통) misconceptions** tiếp theo chỉnh các cách đọc giản lược.
 
 ## Regional role
 
@@ -124,7 +124,7 @@ China kết nối continental Eurasia với western Pacific. Coastal manufacturi
 
 Regional role vì thế vừa maritime vừa continental.
 
-> **Chuyển mạch:** Ở chặng này của **Trung Quốc (China) — continental độ dốc (gradient / 기울기), river basins và coastal megaregions**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Regional role** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) misconceptions** nhắc rằng China không chỉ là coastal megacities, không phải mọi vùng đều phát triển đồng đều, và river/rail integration không xóa ecology hay demographic gaps. **Mô hình tư duy (mental model / 사고 모델)** sẽ khép profile.
 
 ## Dùng chung (common / 공통) misconceptions
 
@@ -134,7 +134,7 @@ Regional role vì thế vừa maritime vừa continental.
 
 “High-speed rail xóa geography” sai; mạng (network / 네트워크) giảm travel thời gian (time / 시간) nhưng nút (node / 노드) hierarchy và tài nguyên (resource / 자원) location vẫn tồn tại.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trung Quốc (China) — continental độ dốc (gradient / 기울기), river basins và coastal megaregions**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** khép chuỗi high west–low east → rivers/monsoon → population/coastal megaregions → manufacturing/ports → rail/energy/agriculture → migration/hazard, rồi bàn giao cho owner **Eastern Asia** trong [README](./README.md).
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

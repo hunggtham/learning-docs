@@ -6,31 +6,31 @@
 
 Đồng bằng Chao Phraya là lõi địa lý của Thailand: đất thấp, màu mỡ, mạng kênh–sông và vị trí gần vịnh Thailand hỗ trợ nông nghiệp, đô thị và giao thông. Bangkok nằm gần cửa hệ sông, trở thành nút (node / 노드) lớn giữa nội địa và biển.
 
-> **Chuyển mạch:** Trong **Thái Lan — Thailand (THA)**, **Bắc núi, đông bắc cao nguyên, nam bán đảo** tiếp nhận điểm tựa từ **Đồng bằng trung tâm và nút Bangkok** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gió mùa và nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Chao Phraya và Bangkok tạo lõi thấp, màu mỡ và hướng biển; **Bắc núi, đông bắc cao nguyên, nam bán đảo** tiếp theo cho thấy ba miền còn lại có địa hình, nước và cửa biển khác nhau thế nào. **Gió mùa và nước** sau đó giải thích mùa vụ và rủi ro nối các miền ấy.
 
 ## Bắc núi, đông bắc cao nguyên, nam bán đảo
 
 Phía bắc có núi và thung lũng; đông bắc là Khorat Plateau khô hơn và có hệ thoát nước hướng Mekong; miền nam kéo dài trên bán đảo Malay, nằm giữa Andaman Sea và Gulf of Thailand. Ba miền có lô-gic (logic / 논리) nước–nông nghiệp–du lịch khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Thái Lan — Thailand (THA)**, **Gió mùa và nước** tiếp nhận điểm tựa từ **Bắc núi, đông bắc cao nguyên, nam bán đảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công nghiệp và Eastern Seaboard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Núi phía bắc, Khorat Plateau và bán đảo nam tạo các lưu vực và mùa vụ khác nhau; **Gió mùa và nước** biến khác biệt địa hình thành lịch nông nghiệp, hồ chứa và lũ. **Công nghiệp và Eastern Seaboard** tiếp theo cho thấy hạ tầng sản xuất né bớt áp lực của lõi Bangkok ra sao.
 
 ## Gió mùa và nước
 
 Mùa mưa–khô điều khiển lúa, hồ chứa và flood management. Bangkok cùng đồng bằng thấp đối mặt lũ sông, mưa đô thị và sụt lún, nên rủi ro (risk / 위험) là tổng của nhiều quá trình chứ không chỉ “mưa lớn”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thái Lan — Thailand (THA)**, **Công nghiệp và Eastern Seaboard** tiếp nhận điểm tựa từ **Gió mùa và nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vị trí lục địa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Lũ, hạn và sụt lún làm reliability của đồng bằng quan trọng với nhà máy và đô thị; **Công nghiệp và Eastern Seaboard** nối quản trị nước với Laem Chabang và corridor sản xuất. **Vị trí lục địa** tiếp theo mở corridor ấy ra mạng lục địa mainland Southeast Asia.
 
 ## Công nghiệp và Eastern Seaboard
 
 Ngoài Bangkok, corridor công nghiệp–cảng phía đông nối sản xuất với Laem Chabang và mạng hàng hải. Đây là ví dụ dịch chuyển một phần activity ra khỏi cốt lõi (core / 핵심) nhưng vẫn nằm trong metropolitan–cổng (port / 포트) hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Trong **Thái Lan — Thailand (THA)**, **Vị trí lục địa** tiếp nhận điểm tựa từ **Công nghiệp và Eastern Seaboard** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Eastern Seaboard chuyển lõi Bangkok thành mạng cảng–sản xuất, còn biên giới với Myanmar, Laos, Cambodia và Malaysia mở các route xuyên lục địa; **Vị trí lục địa** vì vậy bổ sung chiều sâu khu vực cho kinh tế ven biển. **Mô hình tư duy** tiếp theo gom lõi, miền và corridor thành một bản đồ.
 
 ## Vị trí lục địa
 
 Thailand nằm giữa Myanmar, Laos, Cambodia, Malaysia, nên đường bộ xuyên biên giới có vai trò gateway trên mainland Southeast Asia.
 
-> **Chuyển mạch:** Ở chặng này của **Thái Lan — Thailand (THA)**, **Mô hình tư duy** gom các mảnh từ **Vị trí lục địa** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi Chao Phraya–Bangkok → miền núi/cao nguyên/bán đảo → gió mùa và nước → Eastern Seaboard → corridor lục địa. Kết luận này bàn giao cho owner **South-eastern Asia** trong [README](./README.md).
 
 ## Mô hình tư duy
 

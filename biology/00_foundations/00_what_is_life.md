@@ -16,7 +16,7 @@ Một tế bào chứa nước, lipid, protein (protein), carbohydrate, DNA, RNA
 
 Sinh học phức tạp hơn máy tính vì sinh vật không chỉ chạy một program. Nó còn phải tự sửa, tự xây lại nhiều thành phần, phản ứng với môi trường, sinh sản và thay đổi qua tiến hóa (evolution).
 
-> **Chuyển mạch:** Thành phần riêng lẻ chưa tạo hệ sống; boundary bên trong/bên ngoài duy trì gradient, rồi metabolism biến vật chất và năng lượng thành hoạt động liên tục.
+> **Nối mạch:** Thành phần riêng lẻ chưa tạo hệ sống; boundary bên trong/bên ngoài duy trì gradient, rồi metabolism biến vật chất và năng lượng thành hoạt động liên tục.
 
 ## 2. Ranh giới: tại sao sự sống cần một “bên trong” và “bên ngoài”?
 
@@ -28,7 +28,7 @@ Ranh giới (boundary / 경계) không phải bức tường đóng kín. Một 
 
 Ta có thể nghĩ ranh giới (boundary / 경계) như điều kiện tạo ra một “workspace hóa học”: bên trong đủ khác bên ngoài để các reaction được tổ chức, nhưng vẫn kết nối đủ để nhận nutrient và thải waste.
 
-> **Chuyển mạch:** Ở chặng này của **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **3. Chuyển hóa: sống nghĩa là liên tục biến đổi vật chất và năng lượng** tiếp nhận điểm tựa từ **2. Ranh giới: tại sao sự sống cần một “bên trong” và “bên ngoài”?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Cân bằng nội môi (homeostasis): tại sao sinh vật phải chống lại sự thay đổi?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Chuyển hóa: sống nghĩa là liên tục biến đổi vật chất và năng lượng** nối từ **2. Ranh giới: tại sao sự sống cần một “bên trong” và “bên ngoài”?** sang **4. Cân bằng nội môi (homeostasis): tại sao sinh vật phải chống lại sự thay đổi?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Chuyển hóa: sống nghĩa là liên tục biến đổi vật chất và năng lượng
 
@@ -42,7 +42,7 @@ Ví dụ, glucose có thể bị oxy hóa qua hô hấp tế bào (cellular resp
 
 Điểm quan trọng là metabolism không chỉ “tạo năng lượng”. Nó nối **dòng vật chất (matter flow)** với **dòng năng lượng (energy flow)**. Khung carbon (carbon skeleton) từ nutrient vừa có thể bị đốt để lấy năng lượng (energy / 에너지), vừa có thể được giữ lại làm raw material xây molecule mới.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **4. Cân bằng nội môi (homeostasis): tại sao sinh vật phải chống lại sự thay đổi?** tiếp nhận điểm tựa từ **3. Chuyển hóa: sống nghĩa là liên tục biến đổi vật chất và năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Thông tin: sự sống phải “nhớ” cách xây và vận hành chính nó** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Cân bằng nội môi (homeostasis): tại sao sinh vật phải chống lại sự thay đổi?** nối từ **3. Chuyển hóa: sống nghĩa là liên tục biến đổi vật chất và năng lượng** sang **5. Thông tin: sự sống phải “nhớ” cách xây và vận hành chính nó**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Cân bằng nội môi (homeostasis): tại sao sinh vật phải chống lại sự thay đổi?
 
@@ -56,7 +56,7 @@ Ví dụ, khi nhiệt độ cơ thể tăng, mạch máu (blood vessel) ở da c
 
 Chương (chapter) [Sinh lý động vật và Cân bằng nội môi](../04_organismal_biology/01_animal_physiology_and_homeostasis.md) sẽ cho thấy homeostasis ở quy mô cơ thể chỉ là phiên bản lớn hơn của lô-gic (logic / 논리) điều khiển (control / 제어) đã xuất hiện ngay ở tế bào.
 
-> **Chuyển mạch:** Trong **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **5. Thông tin: sự sống phải “nhớ” cách xây và vận hành chính nó** tiếp nhận điểm tựa từ **4. Cân bằng nội môi (homeostasis): tại sao sinh vật phải chống lại sự thay đổi?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Growth không chỉ là “to lên”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Thông tin: sự sống phải “nhớ” cách xây và vận hành chính nó** nối từ **4. Cân bằng nội môi (homeostasis): tại sao sinh vật phải chống lại sự thay đổi?** sang **6. Growth không chỉ là “to lên”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Thông tin: sự sống phải “nhớ” cách xây và vận hành chính nó
 
@@ -74,7 +74,7 @@ Do đó, thông tin sinh học có ít nhất ba tầng:
 
 Ba tầng này sẽ trở thành trục của [DNA, Gene và Biểu hiện gene](../02_genetics_molecular_biology/00_dna_genes_and_gene_expression.md) và [Genomics, Epigenetics và Điều hòa hệ gene](../02_genetics_molecular_biology/02_genomics_epigenetics_and_regulation.md).
 
-> **Chuyển mạch:** Ở chặng này của **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **6. Growth không chỉ là “to lên”** tiếp nhận điểm tựa từ **5. Thông tin: sự sống phải “nhớ” cách xây và vận hành chính nó** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Reproduction: cá thể có nhất thiết phải sinh sản mới được gọi là sống?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Growth không chỉ là “to lên”** nối từ **5. Thông tin: sự sống phải “nhớ” cách xây và vận hành chính nó** sang **7. Reproduction: cá thể có nhất thiết phải sinh sản mới được gọi là sống?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Growth không chỉ là “to lên”
 
@@ -84,7 +84,7 @@ Một crystal cũng có thể lớn lên khi thêm molecule vào lattice, nhưng
 
 Ở sinh vật đa bào (multicellular organism), growth còn cần coordination. Nếu phân chia tế bào (cell division) diễn ra mà không được kiểm soát, kiến trúc mô (tissue architecture) có thể bị phá vỡ; cancer là một ví dụ về thất bại (failure / 실패) của regulation ở cấp cell và mô (tissue).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **7. Reproduction: cá thể có nhất thiết phải sinh sản mới được gọi là sống?** tiếp nhận điểm tựa từ **6. Growth không chỉ là “to lên”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Biến dị (variation) + tính di truyền (heredity) + differential reproduction = tiến hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Reproduction: cá thể có nhất thiết phải sinh sản mới được gọi là sống?** nối từ **6. Growth không chỉ là “to lên”** sang **8. Biến dị (variation) + tính di truyền (heredity) + differential reproduction = tiến hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Reproduction: cá thể có nhất thiết phải sinh sản mới được gọi là sống?
 
@@ -94,7 +94,7 @@ Một crystal cũng có thể lớn lên khi thêm molecule vào lattice, nhưng
 
 Một hệ nếu chỉ tự duy trì nhưng không bao giờ tạo descendant có thể tồn tại một thời gian, nhưng không tham gia evolution theo nghĩa Darwinian lâu dài.
 
-> **Chuyển mạch:** Trong **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **8. Biến dị (variation) + tính di truyền (heredity) + differential reproduction = tiến hóa** tiếp nhận điểm tựa từ **7. Reproduction: cá thể có nhất thiết phải sinh sản mới được gọi là sống?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Cell lý thuyết (theory / 이론): vì sao tế bào trở thành đơn vị trung tâm của sự sống?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Biến dị (variation) + tính di truyền (heredity) + differential reproduction = tiến hóa** nối từ **7. Reproduction: cá thể có nhất thiết phải sinh sản mới được gọi là sống?** sang **9. Cell lý thuyết (theory / 이론): vì sao tế bào trở thành đơn vị trung tâm của sự sống?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Biến dị (variation) + tính di truyền (heredity) + differential reproduction = tiến hóa
 
@@ -112,7 +112,7 @@ Khi ba điều kiện này lặp qua nhiều generation, tần số trait/allele
 
 Mitochondria, enzyme trung tâm hoạt động (active site), hệ miễn dịch (immune system), hoa (flower) hay hành vi (behavior / 동작) đều có lịch sử tiến hóa.
 
-> **Chuyển mạch:** Ở chặng này của **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **9. Cell lý thuyết (theory / 이론): vì sao tế bào trở thành đơn vị trung tâm của sự sống?** tiếp nhận điểm tựa từ **8. Biến dị (variation) + tính di truyền (heredity) + differential reproduction = tiến hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Prokaryote và eukaryote: hai cách tổ chức cell lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Cell lý thuyết (theory / 이론): vì sao tế bào trở thành đơn vị trung tâm của sự sống?** nối từ **8. Biến dị (variation) + tính di truyền (heredity) + differential reproduction = tiến hóa** sang **10. Prokaryote và eukaryote: hai cách tổ chức cell lớn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Cell lý thuyết (theory / 이론): vì sao tế bào trở thành đơn vị trung tâm của sự sống?
 
@@ -126,7 +126,7 @@ Mitochondria, enzyme trung tâm hoạt động (active site), hệ miễn dịch
 
 Nói cách khác, sự sống hiện tại là một chuỗi continuity của cell từ những cell trước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **10. Prokaryote và eukaryote: hai cách tổ chức cell lớn** tiếp nhận điểm tựa từ **9. Cell lý thuyết (theory / 이론): vì sao tế bào trở thành đơn vị trung tâm của sự sống?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Unicellular và multicellular: nhiều tế bào tạo thêm vấn đề gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Prokaryote và eukaryote: hai cách tổ chức cell lớn** nối từ **9. Cell lý thuyết (theory / 이론): vì sao tế bào trở thành đơn vị trung tâm của sự sống?** sang **11. Unicellular và multicellular: nhiều tế bào tạo thêm vấn đề gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Prokaryote và eukaryote: hai cách tổ chức cell lớn
 
@@ -140,7 +140,7 @@ Eukaryotic organization cho phép **compartmentalization (phân khoang / 구획�
 
 Compartmentalization là ví dụ rõ của principle “cấu trúc (structure / 구조) enables hàm (function / 함수)”.
 
-> **Chuyển mạch:** Trong **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **11. Unicellular và multicellular: nhiều tế bào tạo thêm vấn đề gì?** tiếp nhận điểm tựa từ **10. Prokaryote và eukaryote: hai cách tổ chức cell lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Virus có sống không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Unicellular và multicellular: nhiều tế bào tạo thêm vấn đề gì?** nối từ **10. Prokaryote và eukaryote: hai cách tổ chức cell lớn** sang **12. Virus có sống không?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Unicellular và multicellular: nhiều tế bào tạo thêm vấn đề gì?
 
@@ -161,7 +161,7 @@ Multicellularity do đó cần:
 
 Toàn bộ organismal biology sau này thực chất là cách evolution giải bài toán “làm sao hàng nghìn tỷ cell hoạt động như một organism”.
 
-> **Chuyển mạch:** Ở chặng này của **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **12. Virus có sống không?** tiếp nhận điểm tựa từ **11. Unicellular và multicellular: nhiều tế bào tạo thêm vấn đề gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Prion còn thách thức hơn virus** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Virus có sống không?** nối từ **11. Unicellular và multicellular: nhiều tế bào tạo thêm vấn đề gì?** sang **13. Prion còn thách thức hơn virus**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Virus có sống không?
 
@@ -175,7 +175,7 @@ Vì vậy câu hỏi “virus sống hay không?” phụ thuộc tiêu chí ta 
 
 Chương [Vi sinh vật và Virus](../03_evolution_and_diversity/02_microorganisms_and_viruses.md) sẽ dùng ranh giới (boundary / 경계) trường hợp (case / 사례) này để hiểu replication, evolution và host–pathogen tương tác (interaction / 상호작용).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **13. Prion còn thách thức hơn virus** tiếp nhận điểm tựa từ **12. Virus có sống không?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Dormancy: không hoạt động mạnh vẫn có thể sống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Prion còn thách thức hơn virus** nối từ **12. Virus có sống không?** sang **14. Dormancy: không hoạt động mạnh vẫn có thể sống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Prion còn thách thức hơn virus
 
@@ -185,7 +185,7 @@ Prion cho thấy “self-propagation” không đủ để định nghĩa life. 
 
 Điều này giúp ta tránh định nghĩa sự sống bằng chỉ một thuộc tính.
 
-> **Chuyển mạch:** Trong **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **14. Dormancy: không hoạt động mạnh vẫn có thể sống** tiếp nhận điểm tựa từ **13. Prion còn thách thức hơn virus** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Entropy và câu hỏi “sự sống có chống lại nhiệt động lực học không?”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Dormancy: không hoạt động mạnh vẫn có thể sống** nối từ **13. Prion còn thách thức hơn virus** sang **15. Entropy và câu hỏi “sự sống có chống lại nhiệt động lực học không?”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Dormancy: không hoạt động mạnh vẫn có thể sống
 
@@ -195,7 +195,7 @@ Seed khô, bacterial spore hay tardigrade trong trạng thái cryptobiosis có m
 
 Dormancy cho thấy sống không phải tốc độ activity cố định; đó là một kiến trúc (architecture / 아키텍처) có khả năng duy trì continuity qua những trạng thái khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **15. Entropy và câu hỏi “sự sống có chống lại nhiệt động lực học không?”** tiếp nhận điểm tựa từ **14. Dormancy: không hoạt động mạnh vẫn có thể sống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Non-equilibrium: sống nghĩa là phải liên tục “chạy”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Entropy và câu hỏi “sự sống có chống lại nhiệt động lực học không?”** nối từ **14. Dormancy: không hoạt động mạnh vẫn có thể sống** sang **16. Non-equilibrium: sống nghĩa là phải liên tục “chạy”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Entropy và câu hỏi “sự sống có chống lại nhiệt động lực học không?”
 
@@ -207,7 +207,7 @@ Ví dụ, cell dùng năng lượng tự do từ chất dinh dưỡng để tổ
 
 Life không chống lại physics. Life là một cách vật chất khai thác dòng năng lượng để duy trì cấu trúc (structure / 구조) xa equilibrium.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **16. Non-equilibrium: sống nghĩa là phải liên tục “chạy”** tiếp nhận điểm tựa từ **15. Entropy và câu hỏi “sự sống có chống lại nhiệt động lực học không?”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Origin of life: từ hóa học (chemistry) đến biology cần những bước nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Non-equilibrium: sống nghĩa là phải liên tục “chạy”** nối từ **15. Entropy và câu hỏi “sự sống có chống lại nhiệt động lực học không?”** sang **17. Origin of life: từ hóa học (chemistry) đến biology cần những bước nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Non-equilibrium: sống nghĩa là phải liên tục “chạy”
 
@@ -219,7 +219,7 @@ Nếu ATP môi trường vận hành (production / 운영 환경) dừng, pump d
 
 Liên kết (connection / 연결) này sẽ được thấy rất rõ ở điện thế màng (membrane potential) và phosphoryl hóa oxy hóa (oxidative phosphorylation).
 
-> **Chuyển mạch:** Trong **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **17. Origin of life: từ hóa học (chemistry) đến biology cần những bước nào?** tiếp nhận điểm tựa từ **16. Non-equilibrium: sống nghĩa là phải liên tục “chạy”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Emergence: khi nào chemistry trở thành biology?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Origin of life: từ hóa học (chemistry) đến biology cần những bước nào?** nối từ **16. Non-equilibrium: sống nghĩa là phải liên tục “chạy”** sang **18. Emergence: khi nào chemistry trở thành biology?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Origin of life: từ hóa học (chemistry) đến biology cần những bước nào?
 
@@ -237,7 +237,7 @@ Một hypothesis nổi tiếng là **Thế giới RNA (RNA world)**, trong đó 
 
 Điểm quan trọng với người học là nhận ra biology không bắt đầu ở “cell hiện đại hoàn chỉnh”. Nó có thể đã xuất hiện dần từ chemistry có khả năng tự tổ chức (self-organization), replication và chọn lọc.
 
-> **Chuyển mạch:** Ở chặng này của **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **18. Emergence: khi nào chemistry trở thành biology?** tiếp nhận điểm tựa từ **17. Origin of life: từ hóa học (chemistry) đến biology cần những bước nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Một tình huống phân tích (case study): từ bữa ăn đến sự sống được duy trì** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Emergence: khi nào chemistry trở thành biology?** nối từ **17. Origin of life: từ hóa học (chemistry) đến biology cần những bước nào?** sang **19. Một tình huống phân tích (case study): từ bữa ăn đến sự sống được duy trì**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Emergence: khi nào chemistry trở thành biology?
 
@@ -249,7 +249,7 @@ Emergence không phủ nhận reductionism. Ta vẫn cần biết molecule. Như
 
 Đây chính là lý do thư viện đi theo hai hướng đồng thời: ta **giảm** sự sống xuống chemistry để hiểu cơ chế (mechanism / 메커니즘), rồi **xây lại** tế bào, sinh vật, population và hệ sinh thái (ecosystem) để hiểu hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **18. Emergence: khi nào chemistry trở thành biology?** cho ta quy tắc; **19. Một tình huống phân tích (case study): từ bữa ăn đến sự sống được duy trì** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **20. Các hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Emergence: khi nào chemistry trở thành biology?** nêu quy tắc; **19. Một tình huống phân tích (case study): từ bữa ăn đến sự sống được duy trì** thử quy tắc trong tình huống, rồi **20. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
 
 ## 19. Một tình huống phân tích (case study): từ bữa ăn đến sự sống được duy trì
 
@@ -261,7 +261,7 @@ ATP chạy pump ion, hỗ trợ tổng hợp protein (protein synthesis), co cơ
 
 Không có chapter nào trong Sinh học thực sự độc lập với những chapter còn lại.
 
-> **Chuyển mạch:** Trong **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **19. Một tình huống phân tích (case study): từ bữa ăn đến sự sống được duy trì** cho ta quy tắc; **20. Các hiểu lầm phổ biến (common misconceptions)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **21. cầu nối (bridge / 브리지): nếu life là chemistry có tổ chức, chemistry nào làm điều đó khả thi?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Một tình huống phân tích (case study): từ bữa ăn đến sự sống được duy trì** nêu quy tắc; **20. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **21. cầu nối (bridge / 브리지): nếu life là chemistry có tổ chức, chemistry nào làm điều đó khả thi?** mở rộng hệ quả.
 
 ## 20. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -275,7 +275,7 @@ Không có chapter nào trong Sinh học thực sự độc lập với những 
 
 “Virus chắc chắn sống” hoặc “virus chắc chắn không sống” thường che mất câu hỏi khoa học hữu ích hơn: tiêu chí nào của life đang được xét?
 
-> **Chuyển mạch:** Ở chặng này của **Sự sống là gì? — What Is Life? (생명이란 무엇인가)**, **21. cầu nối (bridge / 브리지): nếu life là chemistry có tổ chức, chemistry nào làm điều đó khả thi?** tiếp nhận điểm tựa từ **20. Các hiểu lầm phổ biến (common misconceptions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Cầu nối hỏi chemistry có tổ chức nào làm life khả thi; nó tổng hợp các hiểu lầm ở mục 20 để khép mạch giải thích.
 
 ## 21. cầu nối (bridge / 브리지): nếu life là chemistry có tổ chức, chemistry nào làm điều đó khả thi?
 

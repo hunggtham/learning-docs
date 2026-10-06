@@ -8,7 +8,7 @@
 
 Đây là baseline đủ chắc để chuyển từ “lấp khoảng trống” sang **độ sâu (depth / 깊이) có chọn lọc**. Vòng đánh giá này đã bổ sung trường hợp (case / 사례) studies liên vùng, chuyển tiếp (transition / 전이) ma trận (matrix / 행렬) và nguồn (source / 소스) workbench; ưu tiên kế tiếp là gắn các trường hợp (case / 사례) đó vào bibliography cụ thể và các chapter chuyên đề, không sinh thêm hàng loạt tệp (file / 파일) timeline.
 
-> **Chuyển mạch:** Trong **Coverage kiểm tra (audit / 감사) — World lịch sử (history / 이력)**, **Ma trận chất lượng** gom các mảnh từ **Kết luận hiện tại** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Ranh giới cần giữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Kết luận hiện tại ghi lại coverage đã có và điểm còn thiếu; **Ma trận chất lượng** biến ghi nhận đó thành tiêu chí kiểm tra. **Ranh giới cần giữ** bảo vệ phạm vi audit.
 
 ## Ma trận chất lượng
 
@@ -27,7 +27,7 @@
 | Cross-links | Mạnh | chỉ mục (index / 인덱스), methods và link sang Geography/Korea đã có |
 | Study usability | Mạnh | README, phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), học tập (learning / 학습) tuyến (route / 경로), kiểm tra (audit / 감사), glossary, trường hợp (case / 사례) studies và chuyển tiếp (transition / 전이) ma trận (matrix / 행렬) đã có |
 
-> **Chuyển mạch:** **Ma trận chất lượng** cho biết tiêu chí nào đang thiếu; **Ranh giới cần giữ** khóa phạm vi audit, rồi **Ưu tiên nâng cấp** chọn lỗ hổng có tác động lớn nhất thay vì sửa dàn trải.
+> **Nối mạch:** Ma trận chất lượng chỉ ra tiêu chí thiếu, ranh giới khóa scope, và **Ưu tiên nâng cấp** chọn gap có tác động lớn nhất thay vì sửa dàn trải.
 
 ## Ranh giới cần giữ
 
@@ -41,7 +41,7 @@ investing/economics = market, finance, risk và allocation tools
 
 Khi một chapter mới cần mô tả địa hình, không duplicate toàn bộ Geography; khi cần niên đại Hàn Quốc, link sang Korean lịch sử (history / 이력); khi cần mô hình kinh tế, giữ phần lịch sử ở đây và trỏ sang Economics.
 
-> **Chuyển mạch:** Khi ranh giới đã rõ, **Ưu tiên nâng cấp** biến issue thành thứ tự hành động; **Definition of done** nêu bằng chứng tối thiểu để xác nhận một depth pass thật sự hoàn tất.
+> **Nối mạch:** Sau khi scope rõ, Ưu tiên nâng cấp biến issue thành thứ tự hành động. **Definition of done** nêu bằng chứng tối thiểu để xác nhận depth pass thật sự hoàn tất.
 
 ## Ưu tiên nâng cấp
 
@@ -63,7 +63,7 @@ Khi một chapter mới cần mô tả địa hình, không duplicate toàn bộ
 - Tạo timeline tra cứu nhanh chỉ sau khi nhân quả (causal / 인과적) chapters đủ sâu.
 - Bổ sung bibliography có chú thích ngắn: nguồn sơ cấp, textbook, monograph và dataset.
 
-> **Chuyển mạch:** **Definition of done** khép vòng audit bằng claim, nguồn, reasoning và link có thể kiểm tra; thiếu một trong các bằng chứng đó thì issue vẫn mở.
+> **Nối mạch:** Definition of done khép vòng bằng claim, nguồn, reasoning và link có thể kiểm tra; thiếu một bằng chứng thì issue vẫn mở và quay lại backlog có owner.
 
 ## Definition of done cho một độ sâu (depth / 깊이) pass
 

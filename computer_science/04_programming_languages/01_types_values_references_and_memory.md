@@ -10,7 +10,7 @@ Giá trị (value / 값) là ngữ nghĩa (semantic / 의미적) thực thể (e
 
 Kiểu (type / 타입) có thể influence kích thước (size / 크기)/bố cục (layout / 레이아웃) nhưng lớp trừu tượng (abstraction / 추상화) có thể che vật lý (physical / 물리적) biểu diễn (representation / 표현). `String` không phải “mảng chars” universal; Java uses compact-string hiện thực (implementation / 구현) details, UTF-16 APIs; Rust `String` is UTF-8 buffer lớp trừu tượng (abstraction / 추상화); JS string ngữ nghĩa (semantics / 의미론) use UTF-16 mã (code / 코드) units.
 
-> **Chuyển mạch:** Trong **Types, values, references và bộ nhớ (memory / 메모리) management**, **Static và động (dynamic / 동적) typing** tiếp nhận điểm tựa từ **Giá trị (value / 값) và biểu diễn (representation / 표현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nominal và structural typing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Static và động (dynamic / 동적) typing** nối từ **Giá trị (value / 값) và biểu diễn (representation / 표현)** sang **Nominal và structural typing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Static và động (dynamic / 동적) typing
 
@@ -18,7 +18,7 @@ Static kiểu (type / 타입) checker xác minh các ràng buộc (constraints /
 
 Strong/weak typing là thuật ngữ mơ hồ; nên nói cụ thể implicit coercion nào được phép, bộ nhớ (memory / 메모리) an toàn (safety / 안전) ra sao, casts/checks thế nào.
 
-> **Chuyển mạch:** Ở chặng này của **Types, values, references và bộ nhớ (memory / 메모리) management**, **Nominal và structural typing** tiếp nhận điểm tựa từ **Static và động (dynamic / 동적) typing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giá trị (value / 값) ngữ nghĩa (semantics / 의미론) và tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Nominal và structural typing** nối từ **Static và động (dynamic / 동적) typing** sang **Giá trị (value / 값) ngữ nghĩa (semantics / 의미론) và tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nominal và structural typing
 
@@ -26,7 +26,7 @@ Nominal typing dựa declared định danh (identity / 식별자)/relationship (
 
 Choice ảnh hưởng API evolution và accidental tính tương thích (compatibility / 호환성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Types, values, references và bộ nhớ (memory / 메모리) management**, sau nội dung của **Nominal và structural typing**, **Giá trị (value / 값) ngữ nghĩa (semantics / 의미론) và tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Ngăn xếp (stack / 스택) và vùng nhớ động (heap / 힙) không phải kiểu (type / 타입) quy tắc (rule / 규칙) universal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** sau nội dung của **Nominal và structural typing**, **Giá trị (value / 값) ngữ nghĩa (semantics / 의미론) và tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu; **Ngăn xếp (stack / 스택) và vùng nhớ động (heap / 힙) không phải kiểu (type / 타입) quy tắc (rule / 규칙) universal** mở rộng hệ quả hoặc giới hạn của cơ chế này.
 
 ## Giá trị (value / 값) ngữ nghĩa (semantics / 의미론) và tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론)
 
@@ -34,7 +34,7 @@ Giá trị (value / 값) ngữ nghĩa (semantics / 의미론) coi variable chứ
 
 Aliasing xuất hiện khi nhiều references trỏ cùng mutable đối tượng (object / 객체). Mutation qua một alias observable ở alias khác, làm lập luận (reasoning / 추론) phức tạp và cần synchronization trong tính đồng thời (concurrency / 동시성).
 
-> **Chuyển mạch:** Trong **Types, values, references và bộ nhớ (memory / 메모리) management**, **Ngăn xếp (stack / 스택) và vùng nhớ động (heap / 힙) không phải kiểu (type / 타입) quy tắc (rule / 규칙) universal** tiếp nhận điểm tựa từ **Giá trị (value / 값) ngữ nghĩa (semantics / 의미론) và tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Manual management, RAII và garbage collection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Ngăn xếp (stack / 스택) và vùng nhớ động (heap / 힙) không phải kiểu (type / 타입) quy tắc (rule / 규칙) universal** nối từ **Giá trị (value / 값) ngữ nghĩa (semantics / 의미론) và tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론)** sang **Manual management, RAII và garbage collection**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ngăn xếp (stack / 스택) và vùng nhớ động (heap / 힙) không phải kiểu (type / 타입) quy tắc (rule / 규칙) universal
 
@@ -42,7 +42,7 @@ Ngăn xếp (stack / 스택) thường phục vụ lời gọi (call / 호출) f
 
 Xem OS bộ nhớ (memory / 메모리) ở [Virtual Memory](../03_operating_systems/03_virtual_memory_and_address_spaces.md).
 
-> **Chuyển mạch:** Ở chặng này của **Types, values, references và bộ nhớ (memory / 메모리) management**, **Manual management, RAII và garbage collection** tiếp nhận điểm tựa từ **Ngăn xếp (stack / 스택) và vùng nhớ động (heap / 힙) không phải kiểu (type / 타입) quy tắc (rule / 규칙) universal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **GC và generational hypothesis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Manual management, RAII và garbage collection** nối từ **Ngăn xếp (stack / 스택) và vùng nhớ động (heap / 힙) không phải kiểu (type / 타입) quy tắc (rule / 규칙) universal** sang **GC và generational hypothesis**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Manual management, RAII và garbage collection
 
@@ -52,7 +52,7 @@ Tracing GC bắt đầu từ roots, mark reachable objects, reclaim unreachable.
 
 Tham chiếu (reference / 참조) counting reclaim khi count về zero, deterministic hơn nhưng cycles cần xử lý; increments/decrements có overhead.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Types, values, references và bộ nhớ (memory / 메모리) management**, **GC và generational hypothesis** tiếp nhận điểm tựa từ **Manual management, RAII và garbage collection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyền sở hữu (ownership / 소유권) và thời gian tồn tại (lifetime / 수명)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **GC và generational hypothesis** nối từ **Manual management, RAII và garbage collection** sang **Quyền sở hữu (ownership / 소유권) và thời gian tồn tại (lifetime / 수명)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## GC và generational hypothesis
 
@@ -62,7 +62,7 @@ Ghi (write / 쓰기) barriers/card tables nhánh học (track / 트랙) referenc
 
 GC tuning là sự đánh đổi (trade-off / 트레이드오프) độ trễ (latency / 지연 시간), thông lượng (throughput / 처리량) và bộ nhớ (memory / 메모리) headroom, không phải chỉ “increase vùng nhớ động (heap / 힙)”.
 
-> **Chuyển mạch:** Trong **Types, values, references và bộ nhớ (memory / 메모리) management**, sau nội dung của **GC và generational hypothesis**, **Quyền sở hữu (ownership / 소유권) và thời gian tồn tại (lifetime / 수명)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Null và optionality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** sau nội dung của **GC và generational hypothesis**, **Quyền sở hữu (ownership / 소유권) và thời gian tồn tại (lifetime / 수명)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu; **Null và optionality** mở rộng hệ quả hoặc giới hạn của cơ chế này.
 
 ## Quyền sở hữu (ownership / 소유권) và thời gian tồn tại (lifetime / 수명)
 
@@ -70,7 +70,7 @@ Quyền sở hữu (ownership / 소유권) trả lời ai chịu trách nhiệm 
 
 `try-with-resources`, `defer`, `using`, RAII hay ngữ cảnh (context / 맥락) manager encode deterministic cleanup.
 
-> **Chuyển mạch:** Ở chặng này của **Types, values, references và bộ nhớ (memory / 메모리) management**, **Null và optionality** tiếp nhận điểm tựa từ **Quyền sở hữu (ownership / 소유권) và thời gian tồn tại (lifetime / 수명)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Variance và generics ở intuition mức (level / 수준)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Null và optionality** nối từ **Quyền sở hữu (ownership / 소유권) và thời gian tồn tại (lifetime / 수명)** sang **Variance và generics ở intuition mức (level / 수준)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Null và optionality
 
@@ -78,7 +78,7 @@ Null tham chiếu (reference / 참조) đại diện absence nhưng cho phép �
 
 Không có biểu diễn (representation / 표현) miễn phí: tagged union có tag, nullable pointer có thể exploit invalid/null bit patterns. Nhưng ngữ nghĩa (semantic / 의미적) clarity thường quan trọng hơn byte tối ưu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Types, values, references và bộ nhớ (memory / 메모리) management**, **Variance và generics ở intuition mức (level / 수준)** tiếp nhận điểm tựa từ **Null và optionality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Variance và generics ở intuition mức (level / 수준)** nối từ **Null và optionality** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Variance và generics ở intuition mức (level / 수준)
 
@@ -86,13 +86,13 @@ Nếu Dog <: Animal, `List<Dog>` có phải subtype `List<Animal>`? Nếu mutabl
 
 Java wildcard mnemonic PECS — Producer Extends, bên tiêu thụ (consumer / 소비자) Super — xuất phát từ lô-gic (logic / 논리) variance này, không phải quy tắc (rule / 규칙) ngẫu nhiên.
 
-> **Chuyển mạch:** Trong **Types, values, references và bộ nhớ (memory / 메모리) management**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Variance và generics ở intuition mức (level / 수준)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Variance và generics ở intuition mức (level / 수준)**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > hệ kiểu (type system / 타입 시스템) quản lý **sets of values + allowed operations + các giả định (assumptions / 가정들)**. bộ nhớ (memory / 메모리) mô hình (model / 모델) quản lý **định danh (identity / 식별자), aliasing, thời gian tồn tại (lifetime / 수명) và reclamation**. Bugs thường xuất hiện khi các giả định (assumptions / 가정들) về hai lớp này không khớp.
 
-> **Chuyển mạch:** Ở chặng này của **Types, values, references và bộ nhớ (memory / 메모리) management**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -102,7 +102,7 @@ Java wildcard mnemonic PECS — Producer Extends, bên tiêu thụ (consumer / �
 
 **“Static hệ kiểu (type system / 타입 시스템) chứng minh program đúng.”** Nó loại classes lỗi trong mô hình (model / 모델) của hệ kiểu (type system / 타입 시스템), không chứng minh mọi nghiệp vụ (business / 비즈니스)/thuộc tính (property / 속성) tính đúng đắn (correctness / 정확성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Types, values, references và bộ nhớ (memory / 메모리) management**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

@@ -22,7 +22,7 @@ Thay vì một transformation phức tạp, ta có nhiều independent one-dimen
 
 Đó là lý do eigen decomposition xuất hiện trong động (dynamic / 동적) các hệ thống (systems / 시스템들), PCA, Markov chains, differential equations, đồ thị (graph / 그래프) algorithms và stability phân tích (analysis / 분석).
 
-> **Chuyển mạch:** Trong **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Từ Av = λv đến characteristic equation** tiếp nhận điểm tựa từ **Vì sao eigenvectors là câu hỏi tự nhiên?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ 2×2** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Từ Av = λv đến characteristic equation** nối từ **Vì sao eigenvectors là câu hỏi tự nhiên?** sang **Ví dụ 2×2**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ `Av = λv` đến characteristic equation
 
@@ -54,7 +54,7 @@ p_A(\lambda)=\det(A-\lambda I)
 
 là characteristic polynomial. Roots của polynomial là eigenvalues.
 
-> **Chuyển mạch:** Ở chặng này của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Từ Av = λv đến characteristic equation** cho ta quy tắc; **Ví dụ 2×2** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Eigenspace** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Từ Av = λv đến characteristic equation** nêu quy tắc; **Ví dụ 2×2** thử quy tắc trong tình huống, rồi **Eigenspace** mở rộng hệ quả.
 
 ## Ví dụ 2×2
 
@@ -105,7 +105,7 @@ v_2\propto\begin{bmatrix}1\\-1\end{bmatrix}.
 
 Hai eigenvectors trực giao vì ma trận (matrix / 행렬) symmetric.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Ví dụ 2×2** cho ta quy tắc; **Eigenspace** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Algebraic multiplicity và geometric multiplicity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Ví dụ 2×2** nêu quy tắc; **Eigenspace** thử quy tắc trong tình huống, rồi **Algebraic multiplicity và geometric multiplicity** mở rộng hệ quả.
 
 ## Eigenspace
 
@@ -119,7 +119,7 @@ E_\lambda=\ker(A-\lambda I).
 
 Một eigenvalue có thể có nhiều linearly independent eigenvectors. Dimension của eigenspace gọi là **geometric multiplicity**.
 
-> **Chuyển mạch:** Trong **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Algebraic multiplicity và geometric multiplicity** tiếp nhận điểm tựa từ **Eigenspace** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Diagonalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Algebraic multiplicity và geometric multiplicity** nối từ **Eigenspace** sang **Diagonalization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Algebraic multiplicity và geometric multiplicity
 
@@ -140,7 +140,7 @@ Luôn có
 
 Nếu tổng số independent eigenvectors đủ bằng dimension của không gian (space / 공간), ma trận (matrix / 행렬) diagonalizable.
 
-> **Chuyển mạch:** Ở chặng này của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Diagonalization** tiếp nhận điểm tựa từ **Algebraic multiplicity và geometric multiplicity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Powers của ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Diagonalization** nối từ **Algebraic multiplicity và geometric multiplicity** sang **Powers của ma trận (matrix / 행렬)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Diagonalization
 
@@ -170,7 +170,7 @@ A=PDP^{-1}.
 
 Đây không phải chỉ là trick algebra. `P^{-1}` đổi coordinates từ tiêu chuẩn (standard / 표준) basis sang eigenbasis, `D` quy mô (scale / 규모) từng eigen-coordinate độc lập, rồi `P` đổi trở lại original basis.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Powers của ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **Diagonalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Động (dynamic / 동적) các hệ thống (systems / 시스템들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Powers của ma trận (matrix / 행렬)** nối từ **Diagonalization** sang **Động (dynamic / 동적) các hệ thống (systems / 시스템들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Powers của ma trận (matrix / 행렬)
 
@@ -194,7 +194,7 @@ D^k=\operatorname{diag}(\lambda_1^k,\dots,\lambda_n^k).
 
 Repeated transformation vì vậy được hiểu qua powers của eigenvalues.
 
-> **Chuyển mạch:** Trong **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Động (dynamic / 동적) các hệ thống (systems / 시스템들)** tiếp nhận điểm tựa từ **Powers của ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Spectral radius** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Động (dynamic / 동적) các hệ thống (systems / 시스템들)** nối từ **Powers của ma trận (matrix / 행렬)** sang **Spectral radius**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Động (dynamic / 동적) các hệ thống (systems / 시스템들)
 
@@ -226,7 +226,7 @@ Mỗi eigenmode evolve độc lập.
 
 Nếu `|λ|<1`, chế độ (mode / 모드) decay. Nếu `|λ|>1`, chế độ (mode / 모드) grow. Nếu `λ=-1`, sign alternate. Nếu `λ` complex, chế độ (mode / 모드) thường encode rotation/oscillation.
 
-> **Chuyển mạch:** Ở chặng này của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Spectral radius** tiếp nhận điểm tựa từ **Động (dynamic / 동적) các hệ thống (systems / 시스템들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Complex eigenvalues** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Spectral radius** nối từ **Động (dynamic / 동적) các hệ thống (systems / 시스템들)** sang **Complex eigenvalues**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Spectral radius
 
@@ -246,7 +246,7 @@ e_{k+1}=Ae_k,
 
 thì `ρ(A)<1` thường là central điều kiện (condition / 조건) để lỗi (error / 오류) decay asymptotically.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Complex eigenvalues** tiếp nhận điểm tựa từ **Spectral radius** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Defective matrices** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Complex eigenvalues** nối từ **Spectral radius** sang **Defective matrices**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Complex eigenvalues
 
@@ -269,7 +269,7 @@ Trong real plane không có nonzero direction giữ nguyên dưới nontrivial r
 
 Điều này nối eigenanalysis với complex numbers và oscillation.
 
-> **Chuyển mạch:** Trong **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Defective matrices** tiếp nhận điểm tựa từ **Complex eigenvalues** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Jordan form intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Defective matrices** nối từ **Complex eigenvalues** sang **Jordan form intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Defective matrices
 
@@ -297,7 +297,7 @@ có null không gian (space / 공간) dimension 1. Chỉ có một independent e
 
 Ma trận (matrix / 행렬) như vậy gọi là **defective** và không diagonalizable.
 
-> **Chuyển mạch:** Ở chặng này của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Jordan form intuition** tiếp nhận điểm tựa từ **Defective matrices** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Symmetric matrices và spectral theorem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Jordan form intuition** nối từ **Defective matrices** sang **Symmetric matrices và spectral theorem**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Jordan form intuition
 
@@ -318,7 +318,7 @@ Extra ones trên superdiagonal encode thất bại (failure / 실패) to have en
 
 Jordan form quan trọng về lý thuyết (theory / 이론), dù numerically thường không stable để compute trực tiếp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Symmetric matrices và spectral theorem** tiếp nhận điểm tựa từ **Jordan form intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Positive definite matrices** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Symmetric matrices và spectral theorem** nối từ **Jordan form intuition** sang **Positive definite matrices**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Symmetric matrices và spectral theorem
 
@@ -342,7 +342,7 @@ với `Q` orthogonal.
 
 Nó đặc biệt quan trọng vì covariance matrices và Hessians của sufficiently smooth scalar functions là symmetric.
 
-> **Chuyển mạch:** Trong **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Positive definite matrices** tiếp nhận điểm tựa từ **Symmetric matrices và spectral theorem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rayleigh quotient** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Positive definite matrices** nối từ **Symmetric matrices và spectral theorem** sang **Rayleigh quotient**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Positive definite matrices
 
@@ -360,7 +360,7 @@ Nếu tất cả eigenvalues nonnegative, ma trận (matrix / 행렬) positive s
 
 Điều này liên hệ trực tiếp với convexity của quadratic functions và covariance cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Ở chặng này của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Rayleigh quotient** tiếp nhận điểm tựa từ **Positive definite matrices** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **PCA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Rayleigh quotient** nối từ **Positive definite matrices** sang **PCA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rayleigh quotient
 
@@ -382,7 +382,7 @@ Maximum Rayleigh quotient đạt tại eigenvector của largest eigenvalue; min
 
 Đây là foundation của PCA, spectral methods và tối ưu hóa (optimization / 최적화) algorithms.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **PCA** tiếp nhận điểm tựa từ **Rayleigh quotient** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SVD và eigen decomposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **PCA** nối từ **Rayleigh quotient** sang **SVD và eigen decomposition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## PCA
 
@@ -400,7 +400,7 @@ PCA chọn eigenvectors tương ứng với largest eigenvalues để giữ dire
 
 Điều này không có nghĩa “largest eigenvalue luôn là tính năng (feature / 기능) quan trọng nhất”. Interpretation chỉ đúng trong ngữ cảnh (context / 맥락) covariance và PCA mục tiêu (objective / 목표).
 
-> **Chuyển mạch:** Trong **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **SVD và eigen decomposition** tiếp nhận điểm tựa từ **PCA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Markov chains** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **SVD và eigen decomposition** nối từ **PCA** sang **Markov chains**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## SVD và eigen decomposition
 
@@ -426,7 +426,7 @@ Squared singular values là eigenvalues tương ứng.
 
 SVD robust hơn eigen decomposition cho rectangular matrices và nhiều numerical tasks.
 
-> **Chuyển mạch:** Ở chặng này của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Markov chains** tiếp nhận điểm tựa từ **SVD và eigen decomposition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồ thị (graph / 그래프) spectral methods** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Markov chains** nối từ **SVD và eigen decomposition** sang **Đồ thị (graph / 그래프) spectral methods**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Markov chains
 
@@ -440,7 +440,7 @@ Vì vậy `π` là left eigenvector với eigenvalue 1.
 
 Repeated multiplication bởi chuyển tiếp (transition / 전이) ma trận (matrix / 행렬) damp nhiều modes khác nhau; long-run hành vi (behavior / 동작) thường dominated bởi eigenvalue magnitude lớn nhất, đặc biệt eigenvalue 1 trong ergodic chains.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Đồ thị (graph / 그래프) spectral methods** tiếp nhận điểm tựa từ **Markov chains** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Differential equations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Đồ thị (graph / 그래프) spectral methods** nối từ **Markov chains** sang **Differential equations**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đồ thị (graph / 그래프) spectral methods
 
@@ -454,7 +454,7 @@ trong đó `D` là degree ma trận (matrix / 행렬) và `A` adjacency ma trậ
 
 Số zero eigenvalues liên quan số connected components. Eigenvector tương ứng với second-smallest eigenvalue, gọi là Fiedler véc-tơ (vector / 벡터), được dùng trong spectral clustering và đồ thị (graph / 그래프) partitioning.
 
-> **Chuyển mạch:** Trong **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Differential equations** tiếp nhận điểm tựa từ **Đồ thị (graph / 그래프) spectral methods** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Power iteration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Differential equations** nối từ **Đồ thị (graph / 그래프) spectral methods** sang **Power iteration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Differential equations
 
@@ -484,7 +484,7 @@ e^{\lambda_i t}.
 
 Real part của eigenvalue quyết định growth/decay; imaginary part quyết định oscillation frequency.
 
-> **Chuyển mạch:** Ở chặng này của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Power iteration** tiếp nhận điểm tựa từ **Differential equations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Numerical sensitivity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Power iteration** nối từ **Differential equations** sang **Numerical sensitivity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Power iteration
 
@@ -500,7 +500,7 @@ rồi normalize sẽ hướng tới dominant eigenvector.
 
 Thuật toán (algorithm / 알고리즘) giải thích trực giác vì sao repeated transformation làm dominant chế độ (mode / 모드) lấn át các modes nhỏ hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Numerical sensitivity** tiếp nhận điểm tựa từ **Power iteration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Numerical sensitivity** nối từ **Power iteration** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Numerical sensitivity
 
@@ -510,7 +510,7 @@ Một ma trận (matrix / 행렬) có eigenvalues nhìn ổn định vẫn có t
 
 Conditioning của eigenproblem quan trọng khi dùng eigenvalues từ floating-point computation.
 
-> **Chuyển mạch:** Trong **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Numerical sensitivity** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Numerical sensitivity** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -518,7 +518,7 @@ Hãy xem tuyến tính (linear / 선형) transformation như một machine trộ
 
 Eigenvalues sau đó trở thành “growth factors” của các natural modes. Repeated dynamics, covariance hình học (geometry / 기하학), đồ thị (graph / 그래프) diffusion và differential equations đều dùng cùng cấu trúc (structure / 구조) này.
 
-> **Chuyển mạch:** Ở chặng này của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -528,7 +528,7 @@ Largest eigenvalue không luôn “quan trọng nhất” nếu chưa xác đị
 
 Complex eigenvalues của real ma trận (matrix / 행렬) không phải lỗi. Chúng thường encode rotations và oscillations.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Eigenvalues và eigenvectors: những directions tự nhiên của tuyến tính (linear / 선형) transformation**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức
 

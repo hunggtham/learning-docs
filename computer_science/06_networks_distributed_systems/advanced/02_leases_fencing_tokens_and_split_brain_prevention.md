@@ -12,7 +12,7 @@ Nếu lưu trữ (storage / 저장소) chấp nhận ghi (write / 쓰기) của 
 
 Đây là dạng thất bại (failure mode / 실패 모드) kinh điển của phân tán (distributed / 분산) khóa (lock / 잠금) không có fencing.
 
-> **Chuyển mạch:** Trong **Leases, fencing tokens và split-brain prevention**, **Lease** tiếp nhận điểm tựa từ **Khóa (lock / 잠금) quyền sở hữu (ownership / 소유권) không nên dựa vào niềm tin cục bộ (local / 로컬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fencing đơn vị từ (token / 토큰)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Lease** nối từ **Khóa (lock / 잠금) quyền sở hữu (ownership / 소유권) không nên dựa vào niềm tin cục bộ (local / 로컬)** sang **Fencing đơn vị từ (token / 토큰)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lease
 
@@ -22,7 +22,7 @@ Lease giúp hệ thống (system / 시스템) tự thu hồi quyền sở hữu 
 
 Lease giao thức (protocol / 프로토콜) cần các giả định (assumptions / 가정들) về clock drift/mạng (network / 네트워크) delay hoặc authority central kiểm tra validity.
 
-> **Chuyển mạch:** Ở chặng này của **Leases, fencing tokens và split-brain prevention**, **Fencing đơn vị từ (token / 토큰)** tiếp nhận điểm tựa từ **Lease** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao fencing mạnh hơn “check khóa (lock / 잠금) trước ghi (write / 쓰기)”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Fencing đơn vị từ (token / 토큰)** nối từ **Lease** sang **Vì sao fencing mạnh hơn “check khóa (lock / 잠금) trước ghi (write / 쓰기)”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Fencing đơn vị từ (token / 토큰)
 
@@ -38,7 +38,7 @@ Lưu trữ (storage / 저장소)/tài nguyên (resource / 자원) máy chủ (se
 
 Fencing biến stale-owner bài toán (problem / 문제) thành monotonic thứ tự (ordering / 순서) check ở nơi side tác động (effect / 효과) xảy ra.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Leases, fencing tokens và split-brain prevention**, **Vì sao fencing mạnh hơn “check khóa (lock / 잠금) trước ghi (write / 쓰기)”** tiếp nhận điểm tựa từ **Fencing đơn vị từ (token / 토큰)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đơn vị từ (token / 토큰) cần được enforce ở tài nguyên (resource / 자원)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Vì sao fencing mạnh hơn “check khóa (lock / 잠금) trước ghi (write / 쓰기)”** nối từ **Fencing đơn vị từ (token / 토큰)** sang **Đơn vị từ (token / 토큰) cần được enforce ở tài nguyên (resource / 자원)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao fencing mạnh hơn “check khóa (lock / 잠금) trước ghi (write / 쓰기)”
 
@@ -48,7 +48,7 @@ A có thể check khóa (lock / 잠금) và thấy valid, rồi pause trước g
 
 Nếu ghi (write / 쓰기) mang fencing đơn vị từ (token / 토큰) và tài nguyên (resource / 자원) máy chủ (server / 서버) validate atomically, stale máy khách (client / 클라이언트) không thể bypass chỉ vì check xảy ra trước pause.
 
-> **Chuyển mạch:** Trong **Leases, fencing tokens và split-brain prevention**, **Vì sao fencing mạnh hơn “check khóa (lock / 잠금) trước ghi (write / 쓰기)”** nêu điều cần giải thích; **Đơn vị từ (token / 토큰) cần được enforce ở tài nguyên (resource / 자원)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Leader lease** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Vì sao fencing mạnh hơn “check khóa (lock / 잠금) trước ghi (write / 쓰기)”** đặt vấn đề; **Đơn vị từ (token / 토큰) cần được enforce ở tài nguyên (resource / 자원)** kiểm tra bằng chứng, rồi **Leader lease** mở rộng hệ quả.
 
 ## Đơn vị từ (token / 토큰) cần được enforce ở tài nguyên (resource / 자원)
 
@@ -56,7 +56,7 @@ Nếu khóa (lock / 잠금) dịch vụ (service / 서비스) phát đơn vị t
 
 An toàn (safety / 안전) ranh giới (boundary / 경계) phải đặt ở hệ thống (system / 시스템) thực hiện side tác động (effect / 효과): lưu trữ (storage / 저장소), máy trạng thái (state machine / 상태 머신) hoặc API đơn vị sở hữu (owner / 오너) của dữ liệu (data / 데이터).
 
-> **Chuyển mạch:** Ở chặng này của **Leases, fencing tokens và split-brain prevention**, **Đơn vị từ (token / 토큰) cần được enforce ở tài nguyên (resource / 자원)** nêu điều cần giải thích; **Leader lease** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Split-brain** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Đơn vị từ (token / 토큰) cần được enforce ở tài nguyên (resource / 자원)** đặt vấn đề; **Leader lease** kiểm tra bằng chứng, rồi **Split-brain** mở rộng hệ quả.
 
 ## Leader lease
 
@@ -66,7 +66,7 @@ Consensus-based hệ thống (system / 시스템) có thể dùng lease để le
 
 Lease tối ưu hóa (optimization / 최적화) luôn phải nêu rõ timing giả định (assumption / 가정).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Leases, fencing tokens và split-brain prevention**, **Split-brain** tiếp nhận điểm tựa từ **Leader lease** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Epoch/term như fencing concept** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Split-brain** nối từ **Leader lease** sang **Epoch/term như fencing concept**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Split-brain
 
@@ -76,7 +76,7 @@ Thất bại (failure / 실패) detector có thể gây split-brain nếu mỗi 
 
 Trong cluster 3 nodes, partition 2-1 cho phép side 2 giữ majority và side 1 phải ngừng writes. Availability bị hy sinh ở minority để giữ single-writer an toàn (safety / 안전).
 
-> **Chuyển mạch:** Trong **Leases, fencing tokens và split-brain prevention**, **Epoch/term như fencing concept** tiếp nhận điểm tựa từ **Split-brain** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cơ sở dữ liệu (database / 데이터베이스) primary failover** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Epoch/term như fencing concept** nối từ **Split-brain** sang **Cơ sở dữ liệu (database / 데이터베이스) primary failover**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Epoch/term như fencing concept
 
@@ -86,7 +86,7 @@ Consensus protocols dùng term/epoch tăng dần. Message từ old leader term t
 
 Epoch giúp phân biệt “message cũ đến muộn” với hiện tại (current / 현재) authority.
 
-> **Chuyển mạch:** Ở chặng này của **Leases, fencing tokens và split-brain prevention**, **Epoch/term như fencing concept** nêu điều cần giải thích; **Cơ sở dữ liệu (database / 데이터베이스) primary failover** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Phân tán (distributed / 분산) job quyền sở hữu (ownership / 소유권)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Epoch/term như fencing concept** đặt vấn đề; **Cơ sở dữ liệu (database / 데이터베이스) primary failover** kiểm tra bằng chứng, rồi **Phân tán (distributed / 분산) job quyền sở hữu (ownership / 소유권)** mở rộng hệ quả.
 
 ## Cơ sở dữ liệu (database / 데이터베이스) primary failover
 
@@ -96,7 +96,7 @@ Môi trường vận hành (production / 운영 환경) failover cần đảm b�
 
 “Promote new primary” chỉ là nửa đầu của failover; “old primary cannot ghi (write / 쓰기)” mới hoàn tất an toàn (safety / 안전).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Leases, fencing tokens và split-brain prevention**, **Cơ sở dữ liệu (database / 데이터베이스) primary failover** nêu điều cần giải thích; **Phân tán (distributed / 분산) job quyền sở hữu (ownership / 소유권)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cơ sở dữ liệu (database / 데이터베이스) primary failover** đặt vấn đề; **Phân tán (distributed / 분산) job quyền sở hữu (ownership / 소유권)** kiểm tra bằng chứng, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Phân tán (distributed / 분산) job quyền sở hữu (ownership / 소유권)
 
@@ -106,13 +106,13 @@ Nếu old worker chậm hoàn thành sau thử lại (retry / 재시도) worker 
 
 Mẫu (pattern / 패턴) này hữu ích cho batch, workflow engine và exactly-once-like processing.
 
-> **Chuyển mạch:** Trong **Leases, fencing tokens và split-brain prevention**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Phân tán (distributed / 분산) job quyền sở hữu (ownership / 소유권)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Phân tán (distributed / 분산) job quyền sở hữu (ownership / 소유권)**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Lease trả lời **quyền có hiệu lực trong khoảng nào**; fencing đơn vị từ (token / 토큰) trả lời **làm sao tài nguyên (resource / 자원) từ chối đơn vị sở hữu (owner / 오너) cũ dù nó quay lại**. Split-brain prevention cần authority được enforce tại side-effect ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Ở chặng này của **Leases, fencing tokens và split-brain prevention**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -122,7 +122,7 @@ Mẫu (pattern / 패턴) này hữu ích cho batch, workflow engine và exactly-
 
 **“Failover xong khi standby thành primary.”** Old primary phải mất khả năng mutate trạng thái (state / 상태).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Leases, fencing tokens và split-brain prevention**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

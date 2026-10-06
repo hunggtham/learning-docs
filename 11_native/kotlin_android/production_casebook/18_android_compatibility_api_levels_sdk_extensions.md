@@ -14,7 +14,7 @@ Nhưng chỉ biết `Build.VERSION.SDK_INT` không đủ. hành vi (behavior / �
 
 Tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링) vì thế là quản lý **hành vi (behavior / 동작) đặc tả hợp đồng (contract / 계약)**, không chỉ phương thức (method / 메서드) availability.
 
-> **Chuyển mạch:** API level là platform contract; tiếp theo phải tách compile/min/target SDK và SDK Extensions, rồi mới phân loại behavior change khi migration.
+> **Nối mạch:** API level là platform contract; tiếp theo phải tách compile/min/target SDK và SDK Extensions, rồi mới phân loại behavior change khi migration.
 
 ## 2. Bốn phiên bản (version / 버전) axis thường bị trộn lẫn
 
@@ -36,7 +36,7 @@ Nền tảng (platform / 플랫폼) thực tế app đang chạy.
 
 Ví dụ app có thể compile SDK 37, mục tiêu (target / 대상) 36, min 26 và chạy trên thiết bị (device / 장치) API 37. Mỗi con số trả lời câu hỏi khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **3. Hai nhóm nền tảng (platform / 플랫폼) hành vi (behavior / 동작) changes** tiếp nhận điểm tựa từ **2. Bốn phiên bản (version / 버전) axis thường bị trộn lẫn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. tính tương thích (compatibility / 호환성) calendar nên bắt đầu từ preview/beta** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **3. Hai nhóm nền tảng (platform / 플랫폼) hành vi (behavior / 동작) changes** nối từ **2. Bốn phiên bản (version / 버전) axis thường bị trộn lẫn** sang **4. tính tương thích (compatibility / 호환성) calendar nên bắt đầu từ preview/beta**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Hai nhóm nền tảng (platform / 플랫폼) hành vi (behavior / 동작) changes
 
@@ -58,7 +58,7 @@ Target SDK migration
 
 Chỉ làm workstream thứ hai là quá muộn vì người dùng (user / 사용자) có thể upgrade OS trước khi nhóm (team / 팀) tăng mục tiêu (target / 대상).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **4. tính tương thích (compatibility / 호환성) calendar nên bắt đầu từ preview/beta** tiếp nhận điểm tựa từ **3. Hai nhóm nền tảng (platform / 플랫폼) hành vi (behavior / 동작) changes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. tính tương thích (compatibility / 호환성) khung phần mềm (framework / 프레임워크) giúp kiểm thử (test / 테스트) thay đổi (change / 변경) riêng lẻ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **4. tính tương thích (compatibility / 호환성) calendar nên bắt đầu từ preview/beta** nối từ **3. Hai nhóm nền tảng (platform / 플랫폼) hành vi (behavior / 동작) changes** sang **5. tính tương thích (compatibility / 호환성) khung phần mềm (framework / 프레임워크) giúp kiểm thử (test / 테스트) thay đổi (change / 변경) riêng lẻ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. tính tương thích (compatibility / 호환성) calendar nên bắt đầu từ preview/beta
 
@@ -76,7 +76,7 @@ Nhóm (team / 팀) môi trường vận hành (production / 운영 환경) khôn
 
 Mục tiêu là tách nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션) khỏi nghiệp vụ (business / 비즈니스) bản phát hành (release / 릴리스) pressure.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **5. tính tương thích (compatibility / 호환성) khung phần mềm (framework / 프레임워크) giúp kiểm thử (test / 테스트) thay đổi (change / 변경) riêng lẻ** tiếp nhận điểm tựa từ **4. tính tương thích (compatibility / 호환성) calendar nên bắt đầu từ preview/beta** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. API availability guard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **5. tính tương thích (compatibility / 호환성) khung phần mềm (framework / 프레임워크) giúp kiểm thử (test / 테스트) thay đổi (change / 변경) riêng lẻ** nối từ **4. tính tương thích (compatibility / 호환성) calendar nên bắt đầu từ preview/beta** sang **6. API availability guard**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. tính tương thích (compatibility / 호환성) khung phần mềm (framework / 프레임워크) giúp kiểm thử (test / 테스트) thay đổi (change / 변경) riêng lẻ
 
@@ -95,7 +95,7 @@ Thay vì tăng mục tiêu (target / 대상) rồi gặp 15 hành vi (behavior /
 
 ADB command cụ thể thay đổi theo nền tảng (platform / 플랫폼)/thay đổi (change / 변경) ID; luôn lấy ID và command từ Android behavior-changes documentation của phiên bản (version / 버전) đang kiểm thử (test / 테스트).
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **5. tính tương thích (compatibility / 호환성) khung phần mềm (framework / 프레임워크) giúp kiểm thử (test / 테스트) thay đổi (change / 변경) riêng lẻ** cho ta quy tắc; **6. API availability guard** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **7. @RequiresApi và lint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **5. tính tương thích (compatibility / 호환성) khung phần mềm (framework / 프레임워크) giúp kiểm thử (test / 테스트) thay đổi (change / 변경) riêng lẻ** nêu quy tắc; **6. API availability guard** thử quy tắc trong tình huống, rồi **7. @RequiresApi và lint** mở rộng hệ quả.
 
 ## 6. API availability guard
 
@@ -113,7 +113,7 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
 
 Nếu tính năng (feature / 기능) không thể hỗ trợ (support / 지원) OS cũ, có thể degrade gracefully thay vì giả lập hành vi (behavior / 동작) nguy hiểm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **6. API availability guard** cho ta quy tắc; **7. @RequiresApi và lint** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **8. API-specific hiện thực (implementation / 구현) bằng lớp (class / 클래스) isolation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **6. API availability guard** nêu quy tắc; **7. @RequiresApi và lint** thử quy tắc trong tình huống, rồi **8. API-specific hiện thực (implementation / 구현) bằng lớp (class / 클래스) isolation** mở rộng hệ quả.
 
 ## 7. `@RequiresApi` và lint
 
@@ -126,7 +126,7 @@ fun useNewApi() { ... }
 
 Annotation không tự runtime-check. Nó là static đặc tả hợp đồng (contract / 계약). Caller vẫn chịu trách nhiệm guard.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **8. API-specific hiện thực (implementation / 구현) bằng lớp (class / 클래스) isolation** tiếp nhận điểm tựa từ **7. @RequiresApi và lint** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Jetpack compat lớp trừu tượng (abstraction / 추상화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **8. API-specific hiện thực (implementation / 구현) bằng lớp (class / 클래스) isolation** nối từ **7. @RequiresApi và lint** sang **9. Jetpack compat lớp trừu tượng (abstraction / 추상화)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. API-specific hiện thực (implementation / 구현) bằng lớp (class / 클래스) isolation
 
@@ -155,7 +155,7 @@ object NotificationPermissionCompat {
 
 Mẫu (pattern / 패턴) này giữ new API tham chiếu (reference / 참조) trong hiện thực (implementation / 구현) isolated và làm tính tương thích (compatibility / 호환성) intent rõ.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **9. Jetpack compat lớp trừu tượng (abstraction / 추상화)** tiếp nhận điểm tựa từ **8. API-specific hiện thực (implementation / 구현) bằng lớp (class / 클래스) isolation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Desugaring là compile/toolchain tính tương thích (compatibility / 호환성), không phải OS magic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **9. Jetpack compat lớp trừu tượng (abstraction / 추상화)** nối từ **8. API-specific hiện thực (implementation / 구현) bằng lớp (class / 클래스) isolation** sang **10. Desugaring là compile/toolchain tính tương thích (compatibility / 호환성), không phải OS magic**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Jetpack compat lớp trừu tượng (abstraction / 추상화)
 
@@ -165,7 +165,7 @@ Không phải mọi API-level difference cần tự viết `if SDK_INT`. Jetpack
 
 Tuy nhiên wrapper không loại bỏ need hiểu underlying hành vi (behavior / 동작) khi debugging OEM/nền tảng (platform / 플랫폼) trường hợp biên (edge case / 경계 사례).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **10. Desugaring là compile/toolchain tính tương thích (compatibility / 호환성), không phải OS magic** tiếp nhận điểm tựa từ **9. Jetpack compat lớp trừu tượng (abstraction / 추상화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. compileSdk upgrade thường ít risky hơn targetSdk upgrade nhưng không risk-free** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **10. Desugaring là compile/toolchain tính tương thích (compatibility / 호환성), không phải OS magic** nối từ **9. Jetpack compat lớp trừu tượng (abstraction / 추상화)** sang **11. compileSdk upgrade thường ít risky hơn targetSdk upgrade nhưng không risk-free**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Desugaring là compile/toolchain tính tương thích (compatibility / 호환성), không phải OS magic
 
@@ -175,7 +175,7 @@ Cốt lõi (core / 핵심) thư viện (library / 라이브러리) desugaring c�
 
 Không nhìn thấy compile lỗi (error / 오류) không có nghĩa phương thức (method / 메서드) khung phần mềm (framework / 프레임워크) mới sẽ chạy trên minSdk cũ.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **11. compileSdk upgrade thường ít risky hơn targetSdk upgrade nhưng không risk-free** tiếp nhận điểm tựa từ **10. Desugaring là compile/toolchain tính tương thích (compatibility / 호환성), không phải OS magic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. nền tảng (platform / 플랫폼) hành vi (behavior / 동작) ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **11. compileSdk upgrade thường ít risky hơn targetSdk upgrade nhưng không risk-free** nối từ **10. Desugaring là compile/toolchain tính tương thích (compatibility / 호환성), không phải OS magic** sang **12. nền tảng (platform / 플랫폼) hành vi (behavior / 동작) ma trận (matrix / 행렬)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. `compileSdk` upgrade thường ít risky hơn `targetSdk` upgrade nhưng không risk-free
 
@@ -185,7 +185,7 @@ Tăng targetSdk bật hành vi (behavior / 동작) đặc tả hợp đồng (co
 
 Nhóm (team / 팀) nên tách hai thay đổi (change / 변경) nếu dự án (project / 프로젝트) rủi ro (risk / 위험) cao, để nguyên nhân gốc (root cause / 근본 원인) rõ hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **12. nền tảng (platform / 플랫폼) hành vi (behavior / 동작) ma trận (matrix / 행렬)** tiếp nhận điểm tựa từ **11. compileSdk upgrade thường ít risky hơn targetSdk upgrade nhưng không risk-free** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Permission changes là tính tương thích (compatibility / 호환성) di chuyển (migration / 마이그레이션) điển hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **12. nền tảng (platform / 플랫폼) hành vi (behavior / 동작) ma trận (matrix / 행렬)** nối từ **11. compileSdk upgrade thường ít risky hơn targetSdk upgrade nhưng không risk-free** sang **13. Permission changes là tính tương thích (compatibility / 호환성) di chuyển (migration / 마이그레이션) điển hình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. nền tảng (platform / 플랫폼) hành vi (behavior / 동작) ma trận (matrix / 행렬)
 
@@ -200,7 +200,7 @@ Cho mỗi Android upgrade, tạo bảng:
 
 Không để kiến thức (knowledge / 지식) chỉ nằm trong bản phát hành (release / 릴리스) notes trình duyệt (browser / 브라우저) tab của một nhà phát triển (developer / 개발자).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **13. Permission changes là tính tương thích (compatibility / 호환성) di chuyển (migration / 마이그레이션) điển hình** tiếp nhận điểm tựa từ **12. nền tảng (platform / 플랫폼) hành vi (behavior / 동작) ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Background thực thi (execution / 실행) thay đổi qua nền tảng (platform / 플랫폼) versions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **13. Permission changes là tính tương thích (compatibility / 호환성) di chuyển (migration / 마이그레이션) điển hình** nối từ **12. nền tảng (platform / 플랫폼) hành vi (behavior / 동작) ma trận (matrix / 행렬)** sang **14. Background thực thi (execution / 실행) thay đổi qua nền tảng (platform / 플랫폼) versions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Permission changes là tính tương thích (compatibility / 호환성) di chuyển (migration / 마이그레이션) điển hình
 
@@ -218,7 +218,7 @@ Di chuyển (migration / 마이그레이션) phải kiểm thử (test / 테스�
 
 Đây là lý do trường hợp (case / 사례) 10 mô hình (model / 모델) permission như máy trạng thái (state machine / 상태 머신) thay vì boolean.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **14. Background thực thi (execution / 실행) thay đổi qua nền tảng (platform / 플랫폼) versions** tiếp nhận điểm tựa từ **13. Permission changes là tính tương thích (compatibility / 호환성) di chuyển (migration / 마이그레이션) điển hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. UI tính tương thích (compatibility / 호환성) không chỉ screen kích thước (size / 크기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **14. Background thực thi (execution / 실행) thay đổi qua nền tảng (platform / 플랫폼) versions** nối từ **13. Permission changes là tính tương thích (compatibility / 호환성) di chuyển (migration / 마이그레이션) điển hình** sang **15. UI tính tương thích (compatibility / 호환성) không chỉ screen kích thước (size / 크기)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Background thực thi (execution / 실행) thay đổi qua nền tảng (platform / 플랫폼) versions
 
@@ -228,7 +228,7 @@ Mã (code / 코드) kiểu “dịch vụ (service / 서비스) chạy được 
 
 Nếu tác vụ (task / 작업) durable nhưng không exact-time, WorkManager thường phù hợp hơn giữ tiến trình (process / 프로세스)/dịch vụ (service / 서비스) sống.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **15. UI tính tương thích (compatibility / 호환성) không chỉ screen kích thước (size / 크기)** tiếp nhận điểm tựa từ **14. Background thực thi (execution / 실행) thay đổi qua nền tảng (platform / 플랫폼) versions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Predictive back và hệ thống (system / 시스템) điều hướng (navigation / 내비게이션) contracts** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **15. UI tính tương thích (compatibility / 호환성) không chỉ screen kích thước (size / 크기)** nối từ **14. Background thực thi (execution / 실행) thay đổi qua nền tảng (platform / 플랫폼) versions** sang **16. Predictive back và hệ thống (system / 시스템) điều hướng (navigation / 내비게이션) contracts**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. UI tính tương thích (compatibility / 호환성) không chỉ screen kích thước (size / 크기)
 
@@ -236,7 +236,7 @@ Nền tảng (platform / 플랫폼) changes có thể ảnh hưởng status/đi�
 
 UI regression kiểm thử (test / 테스트) khi mục tiêu (target / 대상) upgrade phải cover hệ thống (system / 시스템) bars/insets, keyboard, back gesture, rotation/resizing, large screen và khả năng tiếp cận (accessibility / 접근성)—not chỉ screenshot main trạng thái (state / 상태).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **16. Predictive back và hệ thống (system / 시스템) điều hướng (navigation / 내비게이션) contracts** tiếp nhận điểm tựa từ **15. UI tính tương thích (compatibility / 호환성) không chỉ screen kích thước (size / 크기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. SDK Extensions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **16. Predictive back và hệ thống (system / 시스템) điều hướng (navigation / 내비게이션) contracts** nối từ **15. UI tính tương thích (compatibility / 호환성) không chỉ screen kích thước (size / 크기)** sang **17. SDK Extensions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Predictive back và hệ thống (system / 시스템) điều hướng (navigation / 내비게이션) contracts
 
@@ -246,7 +246,7 @@ Nếu app custom back ngăn xếp (stack / 스택), kiểm thử (test / 테스�
 
 Tính tương thích (compatibility / 호환성) principle: integrate hệ thống (system / 시스템) đặc tả hợp đồng (contract / 계약) ở lớp trừu tượng (abstraction / 추상화) mức (level / 수준) chính thức, tránh hack dựa hiện thực (implementation / 구현) detail.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **17. SDK Extensions** tiếp nhận điểm tựa từ **16. Predictive back và hệ thống (system / 시스템) điều hướng (navigation / 내비게이션) contracts** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Extension phiên bản (version / 버전) check phải gắn Đặc tả API (API contract / API 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **17. SDK Extensions** nối từ **16. Predictive back và hệ thống (system / 시스템) điều hướng (navigation / 내비게이션) contracts** sang **18. Extension phiên bản (version / 버전) check phải gắn Đặc tả API (API contract / API 계약)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. SDK Extensions
 
@@ -258,7 +258,7 @@ Khi dùng API gated bởi extension, check extension phiên bản (version / 버
 
 Không cần mọi app dùng extension check; chỉ khi API documentation nói năng lực (capability / 역량) thuộc extension.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **18. Extension phiên bản (version / 버전) check phải gắn Đặc tả API (API contract / API 계약)** tiếp nhận điểm tựa từ **17. SDK Extensions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Mainline mô-đun (module / 모듈) và updatable hệ thống (system / 시스템) components** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **18. Extension phiên bản (version / 버전) check phải gắn Đặc tả API (API contract / API 계약)** nối từ **17. SDK Extensions** sang **19. Mainline mô-đun (module / 모듈) và updatable hệ thống (system / 시스템) components**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Extension phiên bản (version / 버전) check phải gắn Đặc tả API (API contract / API 계약)
 
@@ -275,7 +275,7 @@ ID/phiên bản (version / 버전) cụ thể phải lấy từ docs của API. 
 
 Kiểm thử (test / 테스트) thiết bị (device / 장치)/emulator cần representative extension trạng thái (state / 상태) nếu tính năng (feature / 기능) phụ thuộc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **19. Mainline mô-đun (module / 모듈) và updatable hệ thống (system / 시스템) components** tiếp nhận điểm tựa từ **18. Extension phiên bản (version / 버전) check phải gắn Đặc tả API (API contract / API 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Non-SDK giao diện (interface / 인터페이스) là technical debt nguy hiểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **19. Mainline mô-đun (module / 모듈) và updatable hệ thống (system / 시스템) components** nối từ **18. Extension phiên bản (version / 버전) check phải gắn Đặc tả API (API contract / API 계약)** sang **20. Non-SDK giao diện (interface / 인터페이스) là technical debt nguy hiểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Mainline mô-đun (module / 모듈) và updatable hệ thống (system / 시스템) components
 
@@ -283,7 +283,7 @@ Một số Android components có thể cập nhật (update / 업데이트) qua
 
 App nên dựa công khai (public / 공개) năng lực (capability / 역량)/phiên bản (version / 버전) checks thay vì manufacturer bản dựng (build / 빌드) fingerprint các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **20. Non-SDK giao diện (interface / 인터페이스) là technical debt nguy hiểm** tiếp nhận điểm tựa từ **19. Mainline mô-đun (module / 모듈) và updatable hệ thống (system / 시스템) components** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Reflection vào nền tảng (platform / 플랫폼) internals và R8 là hai rủi ro (risk / 위험) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **20. Non-SDK giao diện (interface / 인터페이스) là technical debt nguy hiểm** nối từ **19. Mainline mô-đun (module / 모듈) và updatable hệ thống (system / 시스템) components** sang **21. Reflection vào nền tảng (platform / 플랫폼) internals và R8 là hai rủi ro (risk / 위험) khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Non-SDK giao diện (interface / 인터페이스) là technical debt nguy hiểm
 
@@ -299,7 +299,7 @@ Non-SDK giao diện (interface / 인터페이스) chính sách (policy / 정책)
 
 Không xây cốt lõi (core / 핵심) tính năng (feature / 기능) dựa private khung phần mềm (framework / 프레임워크) phương thức (method / 메서드) chỉ vì StackOverflow có reflection snippet.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **21. Reflection vào nền tảng (platform / 플랫폼) internals và R8 là hai rủi ro (risk / 위험) khác nhau** tiếp nhận điểm tựa từ **20. Non-SDK giao diện (interface / 인터페이스) là technical debt nguy hiểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. OEM tính tương thích (compatibility / 호환성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **21. Reflection vào nền tảng (platform / 플랫폼) internals và R8 là hai rủi ro (risk / 위험) khác nhau** nối từ **20. Non-SDK giao diện (interface / 인터페이스) là technical debt nguy hiểm** sang **22. OEM tính tương thích (compatibility / 호환성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Reflection vào nền tảng (platform / 플랫폼) internals và R8 là hai rủi ro (risk / 위험) khác nhau
 
@@ -307,7 +307,7 @@ Reflection app-internal có shrinker/keep-rule concern. Reflection vào Android 
 
 Một reflection lời gọi (call / 호출) thất bại (fail / 실패) sau OS cập nhật (update / 업데이트) không nhất thiết do R8.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **22. OEM tính tương thích (compatibility / 호환성)** tiếp nhận điểm tựa từ **21. Reflection vào nền tảng (platform / 플랫폼) internals và R8 là hai rủi ro (risk / 위험) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. WebView là independently evolving thời gian chạy (runtime / 런타임)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **22. OEM tính tương thích (compatibility / 호환성)** nối từ **21. Reflection vào nền tảng (platform / 플랫폼) internals và R8 là hai rủi ro (risk / 위험) khác nhau** sang **23. WebView là independently evolving thời gian chạy (runtime / 런타임)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. OEM tính tương thích (compatibility / 호환성)
 
@@ -322,7 +322,7 @@ Không mã (code / 코드) theo brand hack ngay từ đầu. Trước tiên xác
 
 Cờ tính năng (feature flag / 기능 플래그)/remote cấu hình (config / 설정) có thể giúp disable workaround theo cohort, nhưng workaround phải có expiry/cleanup đơn vị sở hữu (owner / 오너).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **23. WebView là independently evolving thời gian chạy (runtime / 런타임)** tiếp nhận điểm tựa từ **22. OEM tính tương thích (compatibility / 호환성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. thư viện (library / 라이브러리) minSdk và transitive các ràng buộc (constraints / 제약조건들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **23. WebView là independently evolving thời gian chạy (runtime / 런타임)** nối từ **22. OEM tính tương thích (compatibility / 호환성)** sang **24. thư viện (library / 라이브러리) minSdk và transitive các ràng buộc (constraints / 제약조건들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. WebView là independently evolving thời gian chạy (runtime / 런타임)
 
@@ -332,7 +332,7 @@ Tính tương thích (compatibility / 호환성) issue JavaScript cầu nối (b
 
 Do đó bug report nên capture OS + thiết bị (device / 장치) + WebView gói (package / 패키지)/phiên bản (version / 버전).
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **24. thư viện (library / 라이브러리) minSdk và transitive các ràng buộc (constraints / 제약조건들)** tiếp nhận điểm tựa từ **23. WebView là independently evolving thời gian chạy (runtime / 런타임)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. minSdk increase là sản phẩm (product / 제품) quyết định (decision / 결정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **24. thư viện (library / 라이브러리) minSdk và transitive các ràng buộc (constraints / 제약조건들)** nối từ **23. WebView là independently evolving thời gian chạy (runtime / 런타임)** sang **25. minSdk increase là sản phẩm (product / 제품) quyết định (decision / 결정)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. thư viện (library / 라이브러리) minSdk và transitive các ràng buộc (constraints / 제약조건들)
 
@@ -348,7 +348,7 @@ Before upgrade:
 
 Không merge Renovate/Dependabot-style upgrade chỉ vì compile pass.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **25. minSdk increase là sản phẩm (product / 제품) quyết định (decision / 결정)** tiếp nhận điểm tựa từ **24. thư viện (library / 라이브러리) minSdk và transitive các ràng buộc (constraints / 제약조건들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. mục tiêu (target / 대상) API chính sách (policy / 정책) và nền tảng (platform / 플랫폼) bản phát hành (release / 릴리스) không cùng timeline** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **25. minSdk increase là sản phẩm (product / 제품) quyết định (decision / 결정)** nối từ **24. thư viện (library / 라이브러리) minSdk và transitive các ràng buộc (constraints / 제약조건들)** sang **26. mục tiêu (target / 대상) API chính sách (policy / 정책) và nền tảng (platform / 플랫폼) bản phát hành (release / 릴리스) không cùng timeline**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. `minSdk` increase là sản phẩm (product / 제품) quyết định (decision / 결정)
 
@@ -358,7 +358,7 @@ Quyết định (decision / 결정) cần usage telemetry, bảo mật (security
 
 Khi drop old OS, clean tính tương thích (compatibility / 호환성) branches/dependencies dần để giảm permanent dead mã (code / 코드).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **26. mục tiêu (target / 대상) API chính sách (policy / 정책) và nền tảng (platform / 플랫폼) bản phát hành (release / 릴리스) không cùng timeline** tiếp nhận điểm tựa từ **25. minSdk increase là sản phẩm (product / 제품) quyết định (decision / 결정)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. tính tương thích (compatibility / 호환성) testing với ADB toggles** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **26. mục tiêu (target / 대상) API chính sách (policy / 정책) và nền tảng (platform / 플랫폼) bản phát hành (release / 릴리스) không cùng timeline** nối từ **25. minSdk increase là sản phẩm (product / 제품) quyết định (decision / 결정)** sang **27. tính tương thích (compatibility / 호환성) testing với ADB toggles**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. mục tiêu (target / 대상) API chính sách (policy / 정책) và nền tảng (platform / 플랫폼) bản phát hành (release / 릴리스) không cùng timeline
 
@@ -377,7 +377,7 @@ minSdk support floor
 
 Đừng chờ console warning mới lập kế hoạch.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **27. tính tương thích (compatibility / 호환성) testing với ADB toggles** tiếp nhận điểm tựa từ **26. mục tiêu (target / 대상) API chính sách (policy / 정책) và nền tảng (platform / 플랫폼) bản phát hành (release / 릴리스) không cùng timeline** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. OS upgrade đường dẫn (path / 경로) khác fresh install** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **27. tính tương thích (compatibility / 호환성) testing với ADB toggles** nối từ **26. mục tiêu (target / 대상) API chính sách (policy / 정책) và nền tảng (platform / 플랫폼) bản phát hành (release / 릴리스) không cùng timeline** sang **28. OS upgrade đường dẫn (path / 경로) khác fresh install**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. tính tương thích (compatibility / 호환성) testing với ADB toggles
 
@@ -387,7 +387,7 @@ Kiểm thử (test / 테스트) script có thể encode regression scenario, nh�
 
 Automation tốt biến di chuyển (migration / 마이그레이션) checklist thành repeatable bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **27. tính tương thích (compatibility / 호환성) testing với ADB toggles** xác định đầu vào; **28. OS upgrade đường dẫn (path / 경로) khác fresh install** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **29. App downgrade thường không phải supported quay lui (rollback / 롤백) đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **27. tính tương thích (compatibility / 호환성) testing với ADB toggles** đặt đầu vào cho **28. OS upgrade đường dẫn (path / 경로) khác fresh install**, rồi **29. App downgrade thường không phải supported quay lui (rollback / 롤백) đường dẫn (path / 경로)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 28. OS upgrade đường dẫn (path / 경로) khác fresh install
 
@@ -402,7 +402,7 @@ install app on N → configure state → OS upgrade → launch on N+1
 
 CI emulator upgrade automation không phải lúc nào đơn giản, nhưng bản phát hành (release / 릴리스) qualification lab/manual ma trận (matrix / 행렬) có thể cover representative đường dẫn (path / 경로).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **28. OS upgrade đường dẫn (path / 경로) khác fresh install** xác định đầu vào; **29. App downgrade thường không phải supported quay lui (rollback / 롤백) đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **30. Backend phiên bản (version / 버전) skew** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **28. OS upgrade đường dẫn (path / 경로) khác fresh install** đặt đầu vào cho **29. App downgrade thường không phải supported quay lui (rollback / 롤백) đường dẫn (path / 경로)**, rồi **30. Backend phiên bản (version / 버전) skew** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 29. App downgrade thường không phải supported quay lui (rollback / 롤백) đường dẫn (path / 경로)
 
@@ -410,7 +410,7 @@ Android trình quản lý gói (package manager / 패키지 관리자) thường
 
 Vì vậy tính tương thích (compatibility / 호환성) phải hướng **forward fix** và **backward-compatible dữ liệu (data / 데이터)/backend** hơn là dựa người dùng (user / 사용자) downgrade.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **29. App downgrade thường không phải supported quay lui (rollback / 롤백) đường dẫn (path / 경로)** xác định đầu vào; **30. Backend phiên bản (version / 버전) skew** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **31. tính tương thích (compatibility / 호환성) telemetry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **29. App downgrade thường không phải supported quay lui (rollback / 롤백) đường dẫn (path / 경로)** đặt đầu vào cho **30. Backend phiên bản (version / 버전) skew**, rồi **31. tính tương thích (compatibility / 호환성) telemetry** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 30. Backend phiên bản (version / 버전) skew
 
@@ -420,7 +420,7 @@ Khi mục tiêu (target / 대상) SDK di chuyển (migration / 마이그레이�
 
 Một máy chủ (server / 서버) deploy phá old app còn nguy hiểm hơn mục tiêu (target / 대상) SDK bug vì người dùng (user / 사용자) không cập nhật (update / 업데이트) ngay.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **31. tính tương thích (compatibility / 호환성) telemetry** tiếp nhận điểm tựa từ **30. Backend phiên bản (version / 버전) skew** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. di chuyển (migration / 마이그레이션) playbook mẫu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **31. tính tương thích (compatibility / 호환성) telemetry** nối từ **30. Backend phiên bản (version / 버전) skew** sang **32. di chuyển (migration / 마이그레이션) playbook mẫu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. tính tương thích (compatibility / 호환성) telemetry
 
@@ -435,7 +435,7 @@ Crash/ANR/tính năng (feature / 기능) thất bại (failure / 실패) nên se
 
 Nếu chỉ xem toàn cục (global / 전역) crash tỷ lệ (rate / 비율), regression chỉ xảy ra API 37 có thể bị che bởi majority API 34–36.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **32. di chuyển (migration / 마이그레이션) playbook mẫu** tiếp nhận điểm tựa từ **31. tính tương thích (compatibility / 호환성) telemetry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. cấp cao (senior / 시니어) checklist cho một Android phiên bản (version / 버전) mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **32. di chuyển (migration / 마이그레이션) playbook mẫu** nối từ **31. tính tương thích (compatibility / 호환성) telemetry** sang **33. cấp cao (senior / 시니어) checklist cho một Android phiên bản (version / 버전) mới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. di chuyển (migration / 마이그레이션) playbook mẫu
 
@@ -463,7 +463,7 @@ Monitor API-level segmented metrics.
 
 Xóa tính tương thích (compatibility / 호환성) workaround obsolete, cập nhật (update / 업데이트) documentation và baseline.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **33. cấp cao (senior / 시니어) checklist cho một Android phiên bản (version / 버전) mới** tiếp nhận điểm tựa từ **32. di chuyển (migration / 마이그레이션) playbook mẫu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Official references** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, **33. cấp cao (senior / 시니어) checklist cho một Android phiên bản (version / 버전) mới** nối từ **32. di chuyển (migration / 마이그레이션) playbook mẫu** sang **34. Official references**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. cấp cao (senior / 시니어) checklist cho một Android phiên bản (version / 버전) mới
 
@@ -480,7 +480,7 @@ Hỏi:
 - metrics có segment API/OEM không;
 - quay lui (rollback / 롤백)/hotfix đường dẫn (path / 경로) là gì.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, sau nội dung của **33. cấp cao (senior / 시니어) checklist cho một Android phiên bản (version / 버전) mới**, **34. Official references** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 18 — Android tính tương thích (compatibility / 호환성) kỹ thuật (engineering / 엔지니어링): API mức (level / 수준), targetSdk, SDK Extensions và nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션)**, sau nội dung của **33. cấp cao (senior / 시니어) checklist cho một Android phiên bản (version / 버전) mới**, **34. Official references** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 34. Official references
 Phần này nối mạch Android vừa học với “34. Official references”, giải thích mục đích, vòng đời hoặc ràng buộc để người mới hiểu vì sao ví dụ tiếp theo hoạt động.

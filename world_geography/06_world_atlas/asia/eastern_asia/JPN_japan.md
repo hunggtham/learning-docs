@@ -10,7 +10,7 @@ Chuỗi nhân quả (causal chain / 인과 사슬):
 
 **island arc tectonics → mountain relief + hazard → scarce flat land → coastal urban concentration → rail/cổng (port / 포트) industrial belt → imported-resource processing → toàn cục (global / 전역) high-value mạng (network / 네트워크)**.
 
-> **Chuyển mạch:** Trong **Nhật Bản (Japan) — island arc, limited plains và Pacific urban-industrial belt**, **Island arc và tectonics** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Limited plains** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Active margin và quần đảo làm **Island arc và tectonics** tạo núi, hazard và river ngắn; đó là nền khiến đồng bằng trở nên quý hiếm. **Limited plains** tiếp theo cho thấy land scarcity tổ chức đô thị và hạ tầng thế nào.
 
 ## Island arc và tectonics
 
@@ -20,7 +20,7 @@ Mountain building làm relief dốc, river ngắn và sediment transfer nhanh.
 
 Hazard không phải sự kiện (event / 이벤트) hiếm tách rời geography; nó ảnh hưởng building mã (code / 코드), land use, insurance và hạ tầng (infrastructure / 인프라) redundancy.
 
-> **Chuyển mạch:** Ở chặng này của **Nhật Bản (Japan) — island arc, limited plains và Pacific urban-industrial belt**, **Island arc và tectonics** đã nêu tiêu chí phân biệt, còn **Limited plains** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Climate độ dốc (gradient / 기울기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Kanto, Nobi và Osaka/Kansai là các pocket phẳng nơi dân cư, rail và industry dồn lại; **Limited plains** đồng thời tạo giá trị đất và coastal exposure. **Climate độ dốc (gradient / 기울기)** tiếp theo phân hóa tuyết, mưa và typhoon theo đảo.
 
 ## Limited plains
 
@@ -30,7 +30,7 @@ Khi plain hiếm, urban density và land giá trị (value / 값) tăng; rail co
 
 Coastal reclamation mở land cho cổng (port / 포트)/airport/industry nhưng tạo geotechnical/liquefaction/coastal exposure cần quản lý.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhật Bản (Japan) — island arc, limited plains và Pacific urban-industrial belt**, **Limited plains** đã nêu tiêu chí phân biệt, còn **Climate độ dốc (gradient / 기울기)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Short steep rivers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Quần đảo kéo dài bắc–nam, mountain spine tạo Sea of Japan/Pacific contrast; **Climate độ dốc (gradient / 기울기)** chi phối snow, agriculture, energy và flood. **Short steep rivers** tiếp theo cho thấy nước phản ứng nhanh trên relief dốc.
 
 ## Climate độ dốc (gradient / 기울기)
 
@@ -40,7 +40,7 @@ Summer rain, frontal hệ thống (system / 시스템) và typhoon tạo flood/l
 
 Seasonality ảnh hưởng agriculture, năng lượng (energy / 에너지) và vận chuyển (transport / 전송).
 
-> **Chuyển mạch:** Trong **Nhật Bản (Japan) — island arc, limited plains và Pacific urban-industrial belt**, **Short steep rivers** tiếp nhận điểm tựa từ **Climate độ dốc (gradient / 기울기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pacific Belt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sông ngắn và dốc tạo hydropower nhưng flash flood, sediment và limited storage; **Short steep rivers** giải thích vì sao alluvial plains vừa thuận cư trú vừa dễ ngập. **Pacific Belt** tiếp theo tập trung các đô thị–cảng trên chính các đồng bằng đó.
 
 ## Short steep rivers
 
@@ -48,7 +48,7 @@ Mountain gần coast làm many river short/steep, flash phản hồi (response /
 
 Alluvial fan/plain thuận settlement nhưng cũng flood/sediment rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Ở chặng này của **Nhật Bản (Japan) — island arc, limited plains và Pacific urban-industrial belt**, **Pacific Belt** tiếp nhận điểm tựa từ **Short steep rivers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tokyo metropolitan centrality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Tokyo–Nagoya–Osaka/Kobe nối bằng port, rail, expressway và dense market; **Pacific Belt** là corridor nơi settlement concentration làm transport technology hiệu quả. **Tokyo metropolitan centrality** tiếp theo giải thích cực điều phối lớn nhất.
 
 ## Pacific Belt
 
@@ -58,7 +58,7 @@ High-speed rail hoạt động hiệu quả vì nhiều large city nằm gần c
 
 Vận chuyển (transport / 전송) technology phát huy lợi thế khi settlement mẫu (pattern / 패턴) đã tuyến tính/concentrated.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhật Bản (Japan) — island arc, limited plains và Pacific urban-industrial belt**, **Tokyo metropolitan centrality** tiếp nhận điểm tựa từ **Pacific Belt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Manufacturing geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Tokyo gom government, finance, headquarters, media, university và transit; **Tokyo metropolitan centrality** tạo agglomeration nhưng cũng regional demographic contrast. **Manufacturing geography** tiếp theo cho thấy production cluster phân bố ra sao quanh mạng đó.
 
 ## Tokyo metropolitan centrality
 
@@ -68,7 +68,7 @@ Metropolitan sprawl và commuter rail tạo functional region vượt Tokyo admi
 
 National centralization làm regional demographic contrast mạnh hơn khi rural area già hóa/shrink.
 
-> **Chuyển mạch:** Trong **Nhật Bản (Japan) — island arc, limited plains và Pacific urban-industrial belt**, **Manufacturing geography** tiếp nhận điểm tựa từ **Tokyo metropolitan centrality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài nguyên (resource / 자원) và năng lượng (energy / 에너지) import** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Automotive, machinery, electronics và supplier networks tạo **Manufacturing geography** dựa trên port, power, skill và industrial land; **Tài nguyên (resource / 자원) và năng lượng (energy / 에너지) import** tiếp theo đặt giới hạn đầu vào lên ecosystem đó.
 
 ## Manufacturing geography
 
@@ -78,7 +78,7 @@ Toyota region/Aichi là ví dụ manufacturing ecosystem dựa supplier proximit
 
 Advanced manufacturing vẫn cần cổng (port / 포트), power và industrial land.
 
-> **Chuyển mạch:** Ở chặng này của **Nhật Bản (Japan) — island arc, limited plains và Pacific urban-industrial belt**, **Manufacturing geography** nêu điều cần giải thích; **Tài nguyên (resource / 자원) và năng lượng (energy / 에너지) import** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Fisheries và marine không gian (space / 공간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Fossil fuels và ores nhập qua cảng, rồi đi vào grid và industry; **Tài nguyên (resource / 자원) và năng lượng (energy / 에너지) import** khiến security phụ thuộc maritime routes, storage và diversification. **Fisheries và marine không gian (space / 공간)** tiếp theo mở lớp tài nguyên biển.
 
 ## Tài nguyên (resource / 자원) và năng lượng (energy / 에너지) import
 
@@ -88,7 +88,7 @@ LNG, oil, ore vào cổng (port / 포트) rồi tới power/industry. năng lư�
 
 Đây là ràng buộc (constraint / 제약조건) tương tự Korea nhưng geography archipelago và thị trường (market / 시장) quy mô (scale / 규모) khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhật Bản (Japan) — island arc, limited plains và Pacific urban-industrial belt**, **Tài nguyên (resource / 자원) và năng lượng (energy / 에너지) import** nêu điều cần giải thích; **Fisheries và marine không gian (space / 공간)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Natural hazard và resilience kỹ thuật (engineering / 엔지니어링)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Warm/cold currents và island geography tạo productive waters, nhưng stock migration và management giới hạn **Fisheries và marine không gian (space / 공간)**; coast không phải nguồn vô hạn. **Natural hazard và resilience kỹ thuật (engineering / 엔지니어링)** tiếp theo đưa biển vào khung hazard.
 
 ## Fisheries và marine không gian (space / 공간)
 
@@ -96,7 +96,7 @@ Island geography làm fisheries và marine ecosystem quan trọng. Warm/cold hi�
 
 Fishery tài nguyên (resource / 자원) thay đổi theo ocean temperature, stock di chuyển (migration / 마이그레이션) và management; coast không tự động đảm bảo unlimited fish.
 
-> **Chuyển mạch:** Trong **Nhật Bản (Japan) — island arc, limited plains và Pacific urban-industrial belt**, **Natural hazard và resilience kỹ thuật (engineering / 엔지니어링)** tiếp nhận điểm tựa từ **Fisheries và marine không gian (space / 공간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Demographic shrink** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Earthquake, tsunami, typhoon và flood thúc đẩy **Natural hazard và resilience kỹ thuật (engineering / 엔지니어링)**, nhưng exposure cao và population aging vẫn làm risk không bằng zero. **Demographic shrink** tiếp theo cho thấy resilience xã hội khác nhau theo vùng.
 
 ## Natural hazard và resilience kỹ thuật (engineering / 엔지니어링)
 
@@ -104,7 +104,7 @@ Japan đầu tư mạnh seismic building, early warning, tsunami evacuation và 
 
 Resilience không chỉ kỹ thuật (engineering / 엔지니어링); demographic aging và rural evacuation sức chứa (capacity / 용량) cũng quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **Nhật Bản (Japan) — island arc, limited plains và Pacific urban-industrial belt**, **Demographic shrink** tiếp nhận điểm tựa từ **Natural hazard và resilience kỹ thuật (engineering / 엔지니어링)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Agriculture** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Aging, vacancy, shrinking rail và municipal services làm **Demographic shrink** phân cực giữa Tokyo core và rural periphery. **Agriculture** tiếp theo cho thấy land-use và food system phản ứng thế nào.
 
 ## Demographic shrink
 
@@ -114,7 +114,7 @@ Cốt lõi (core / 핵심) metropolitan vẫn retain jobs/young population tốt
 
 Compact-city chính sách (policy / 정책) ở một số place là phản hồi (response / 응답) với shrink: concentrate dịch vụ (service / 서비스) quanh transit thay vì duy trì dispersed hạ tầng (infrastructure / 인프라).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhật Bản (Japan) — island arc, limited plains và Pacific urban-industrial belt**, **Agriculture** tiếp nhận điểm tựa từ **Demographic shrink** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regional role** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Rice plains, horticulture và fragmented farms chịu mountain relief, aging farmers và food import; **Agriculture** vừa là sản xuất vừa là quản trị land. **Regional role** tiếp theo tổng hợp manufacturing, maritime access và technology.
 
 ## Agriculture
 
@@ -124,7 +124,7 @@ Small fragmented trường dữ liệu (field / 필드) và aging farmer tạo s
 
 Food import nối Japan với toàn cục (global / 전역) food hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Trong **Nhật Bản (Japan) — island arc, limited plains và Pacific urban-industrial belt**, **Regional role** tiếp nhận điểm tựa từ **Agriculture** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Regional role** của Japan đến từ capital, manufacturing, finance, ports và Pacific networks chứ không phải resource abundance; hazard và import dependence vẫn là giới hạn. **Dùng chung (common / 공통) misconceptions** tiếp theo chỉnh các cách đọc giản lược.
 
 ## Regional role
 
@@ -132,7 +132,7 @@ Japan là maritime industrial economy nằm gần East Asian môi trường vậ
 
 Regional role đến từ capital/technology, manufacturing, finance và logistics hơn natural tài nguyên (resource / 자원) abundance.
 
-> **Chuyển mạch:** Ở chặng này của **Nhật Bản (Japan) — island arc, limited plains và Pacific urban-industrial belt**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Regional role** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) misconceptions** nhắc rằng Japan vừa có marine/forest/water vừa phụ thuộc energy imports; earthquake risk và population decline cũng phân hóa theo vùng. **Mô hình tư duy (mental model / 사고 모델)** sẽ khép chuỗi này.
 
 ## Dùng chung (common / 공통) misconceptions
 
@@ -142,7 +142,7 @@ Regional role đến từ capital/technology, manufacturing, finance và logisti
 
 “Population decline làm Tokyo shrink giống rural” sai vì di chuyển (migration / 마이그레이션) nội địa tạo divergence.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhật Bản (Japan) — island arc, limited plains và Pacific urban-industrial belt**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** khép chuỗi active island arc → scarce plains → Pacific urban belt → ports/rail → imported resources → fisheries, hazards, shrink và agriculture, rồi bàn giao cho owner **Eastern Asia** trong [README](./README.md).
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

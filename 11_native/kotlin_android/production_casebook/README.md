@@ -29,7 +29,7 @@ Casebook không dùng một “mẫu (sample / 표본) app thần thánh” rồ
 19. [`19_app_startup_initialization_cold_start.md`](19_app_startup_initialization_cold_start.md) đi sâu cold/warm/hot start, ứng dụng (application / 애플리케이션)/provider initialization, lazy vs eager công việc (work / 작업), App Startup, splash, Compose first frame, Baseline Profile, Macrobenchmark, Perfetto và startup ngân sách (budget / 예산).
 20. [`20_android_library_sdk_authoring.md`](20_android_library_sdk_authoring.md) chuyển góc nhìn từ app bên tiêu thụ (consumer / 소비자) sang thư viện (library / 라이브러리)/SDK author: AAR, API công khai (public API / 공개 API)/ABI, Java/Kotlin interop, resources/manifest, bên tiêu thụ (consumer / 소비자) R8 rules, lint, publishing, SemVer, tính tương thích (compatibility / 호환성) và di chuyển (migration / 마이그레이션) đặc tả hợp đồng (contract / 계약).
 
-> **Chuyển mạch:** Trong **Kotlin + Android môi trường vận hành (production / 운영 환경) Casebook**, **Thứ tự đọc** cho ta quy tắc; **Cách sử dụng casebook** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Nguyên tắc xuyên suốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kotlin + Android môi trường vận hành (production / 운영 환경) Casebook**, **Thứ tự đọc** nêu quy tắc; **Cách sử dụng casebook** thử quy tắc trong tình huống, rồi **Nguyên tắc xuyên suốt** mở rộng hệ quả.
 
 ## Cách sử dụng casebook
 
@@ -43,7 +43,7 @@ Trường hợp (case / 사례) 10–14 là tầng “Android nền tảng (plat
 
 Trường hợp (case / 사례) 15–20 là tầng **bản dựng (build / 빌드), phân phối (distribution / 분포) và ecosystem kỹ thuật (engineering / 엔지니어링)**. Chúng nối mã nguồn (source code / 소스 코드) với sản phẩm tạo ra (artifact / 산출물) thực tế: Gradle/AGP quyết định mã (code / 코드)/tài nguyên (resource / 자원) nào được compile; AAB/Play quyết định bytes nào tới thiết bị (device / 장치); bản địa (native / 네이티브) libraries thêm ABI/page-size/memory-safety đặc tả hợp đồng (contract / 계약); Android nền tảng (platform / 플랫폼) di chuyển (migration / 마이그레이션) thay hành vi (behavior / 동작) đặc tả hợp đồng (contract / 계약); startup quyết định đường găng (critical path / 임계 경로) đầu tiên; còn thư viện (library / 라이브러리)/SDK authoring biến API công khai (public API / 공개 API) và bản dựng (build / 빌드) siêu dữ liệu (metadata / 메타데이터) thành tính tương thích (compatibility / 호환성) obligation với bên tiêu thụ (consumer / 소비자) khác.
 
-> **Chuyển mạch:** Cách dùng casebook xác định cách đọc một scenario; nguyên tắc xuyên suốt tiếp theo buộc mỗi case nối invariant, ownership, failure và release evidence.
+> **Nối mạch:** Cách dùng casebook xác định cách đọc một scenario; nguyên tắc xuyên suốt tiếp theo buộc mỗi case nối invariant, ownership, failure và release evidence.
 
 ## Nguyên tắc xuyên suốt
 

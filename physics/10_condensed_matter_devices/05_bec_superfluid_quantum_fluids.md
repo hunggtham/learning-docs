@@ -17,7 +17,7 @@ Khi nhiệt độ giảm hoặc mật độ tăng, các gói sóng bắt đầu 
 
 Đây không phải hiện tượng các hạt “hút nhau rồi tụ thành một cục” trong không gian thực. Nó là hiện tượng thống kê lượng tử trong không gian trạng thái.
 
-> **Chuyển mạch:** Trong **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Khi bước sóng lượng tử trở nên so sánh với khoảng cách giữa các hạt** đã nêu tiêu chí phân biệt, còn **Mật độ pha tới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Tham số trật tự vĩ mô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Khi bước sóng lượng tử trở nên so sánh với khoảng cách giữa các hạt** đặt tiêu chí; **Mật độ pha tới hạn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Tham số trật tự vĩ mô** mở rộng hệ quả.
 
 ## Mật độ pha tới hạn
 
@@ -33,7 +33,7 @@ Khi đại lượng này đạt giá trị bậc 1, chính xác hơn liên hệ 
 
 Điều kiện này cho thấy vì sao BEC dễ quan sát hơn với hạt nhẹ, nhiệt độ cực thấp và mật độ đủ cao.
 
-> **Chuyển mạch:** Ở chặng này của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Tham số trật tự vĩ mô** tiếp nhận điểm tựa từ **Mật độ pha tới hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương trình Gross–Pitaevskii** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Tham số trật tự vĩ mô** nối từ **Mật độ pha tới hạn** sang **Phương trình Gross–Pitaevskii**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tham số trật tự vĩ mô
 
@@ -55,7 +55,7 @@ Vận tốc siêu chảy liên hệ với độ dốc (gradient / 기울기) pha
 
 Vì curl của độ dốc (gradient / 기울기) bằng 0, dòng siêu chảy lý tưởng là không xoáy cục bộ, ngoại trừ tại các singularity nơi mật độ giảm về 0 và vortex lượng tử có thể tồn tại.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Phương trình Gross–Pitaevskii** tiếp nhận điểm tựa từ **Tham số trật tự vĩ mô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BEC và siêu chảy không phải một khái niệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Phương trình Gross–Pitaevskii** nối từ **Tham số trật tự vĩ mô** sang **BEC và siêu chảy không phải một khái niệm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình Gross–Pitaevskii
 
@@ -83,7 +83,7 @@ Hạng `g|\Psi|^2` mô tả tương tác mean-field giữa các hạt.
 
 Phương trình này không phải lý thuyết chính xác cho mọi chất lưu lượng tử. Nó phù hợp nhất với condensate Bose loãng và tương tác yếu.
 
-> **Chuyển mạch:** Trong **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **BEC và siêu chảy không phải một khái niệm** tiếp nhận điểm tựa từ **Phương trình Gross–Pitaevskii** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiêu chuẩn Landau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **BEC và siêu chảy không phải một khái niệm** nối từ **Phương trình Gross–Pitaevskii** sang **Tiêu chuẩn Landau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## BEC và siêu chảy không phải một khái niệm
 
@@ -95,7 +95,7 @@ Helium-4 là chất siêu chảy tương tác mạnh và condensate fraction kh�
 
 Do đó không nên định nghĩa siêu chảy đơn giản là “BEC có độ nhớt bằng 0”.
 
-> **Chuyển mạch:** Ở chặng này của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Tiêu chuẩn Landau** tiếp nhận điểm tựa từ **BEC và siêu chảy không phải một khái niệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lượng tử hóa circulation và vortex** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Tiêu chuẩn Landau** nối từ **BEC và siêu chảy không phải một khái niệm** sang **Lượng tử hóa circulation và vortex**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tiêu chuẩn Landau
 
@@ -120,7 +120,7 @@ Tuy nhiên, vận tốc tới hạn thực nghiệm còn bị giới hạn bởi
 
 Vì vậy `v_c` của Landau là tiêu chuẩn nền tảng, không phải con số duy nhất cho mọi setup.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Lượng tử hóa circulation và vortex** tiếp nhận điểm tựa từ **Tiêu chuẩn Landau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Helium-4 và chuyển pha lambda** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Lượng tử hóa circulation và vortex** nối từ **Tiêu chuẩn Landau** sang **Helium-4 và chuyển pha lambda**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lượng tử hóa circulation và vortex
 
@@ -143,7 +143,7 @@ Vortex lượng tử có lõi nơi mật độ condensate giảm mạnh để ph
 
 Khi chất siêu chảy quay, nó không tạo phân bố vorticity liên tục như chất lưu cổ điển lý tưởng; nhiều vortex lượng tử có thể sắp thành mạng vortex.
 
-> **Chuyển mạch:** Trong **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Helium-4 và chuyển pha lambda** tiếp nhận điểm tựa từ **Lượng tử hóa circulation và vortex** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình hai chất lưu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Helium-4 và chuyển pha lambda** nối từ **Lượng tử hóa circulation và vortex** sang **Mô hình hai chất lưu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Helium-4 và chuyển pha lambda
 
@@ -153,7 +153,7 @@ Nhiệt dung gần chuyển pha có dạng dị thường giống chữ lambda, 
 
 Nguyên tử helium-4 là boson, nhưng tương tác giữa chúng mạnh. Vì vậy khí Bose lý tưởng chỉ cung cấp trực giác ban đầu, không phải mô hình định lượng đầy đủ của helium lỏng.
 
-> **Chuyển mạch:** Ở chặng này của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Mô hình hai chất lưu** tiếp nhận điểm tựa từ **Helium-4 và chuyển pha lambda** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Helium-3: fermion cũng có thể siêu chảy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Mô hình hai chất lưu** nối từ **Helium-4 và chuyển pha lambda** sang **Helium-3: fermion cũng có thể siêu chảy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mô hình hai chất lưu
 
@@ -166,7 +166,7 @@ Dưới lambda chuyển tiếp (transition / 전이), helium-4 thường đượ
 
 Dòng ngược giữa hai thành phần tạo các cơ chế truyền nhiệt rất khác chất lưu cổ điển thông thường.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Helium-3: fermion cũng có thể siêu chảy** tiếp nhận điểm tựa từ **Mô hình hai chất lưu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **So sánh siêu chảy và siêu dẫn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Helium-3: fermion cũng có thể siêu chảy** nối từ **Mô hình hai chất lưu** sang **So sánh siêu chảy và siêu dẫn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Helium-3: fermion cũng có thể siêu chảy
 
@@ -178,7 +178,7 @@ Cấu trúc này có họ hàng khái niệm với cặp Cooper trong siêu dẫ
 
 Vì vậy nguyên lý Pauli không cấm fermion tham gia một trạng thái siêu chảy; nó thay đổi cơ chế tạo trạng thái tập thể.
 
-> **Chuyển mạch:** Trong **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Helium-3: fermion cũng có thể siêu chảy** đã nêu tiêu chí phân biệt, còn **So sánh siêu chảy và siêu dẫn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Hiệu ứng Josephson** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Helium-3: fermion cũng có thể siêu chảy** đặt tiêu chí; **So sánh siêu chảy và siêu dẫn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Hiệu ứng Josephson** mở rộng hệ quả.
 
 ## So sánh siêu chảy và siêu dẫn
 
@@ -199,7 +199,7 @@ Từ thông lượng tử trong siêu dẫn cặp Cooper là
 \Phi_0=\frac{h}{2e}.
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **So sánh siêu chảy và siêu dẫn** đã nêu tiêu chí phân biệt, còn **Hiệu ứng Josephson** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Khí nguyên tử siêu lạnh như quantum simulator** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **So sánh siêu chảy và siêu dẫn** đặt tiêu chí; **Hiệu ứng Josephson** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Khí nguyên tử siêu lạnh như quantum simulator** mở rộng hệ quả.
 
 ## Hiệu ứng Josephson
 
@@ -220,7 +220,7 @@ Josephson junction là nền tảng của SQUID, chuẩn điện áp và nhiều
 
 Hệ nguyên tử trung hòa cũng có hiệu ứng Josephson tương tự về cấu trúc pha.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Khí nguyên tử siêu lạnh như quantum simulator** tiếp nhận điểm tựa từ **Hiệu ứng Josephson** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **BEC trong bẫy điều hòa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Khí nguyên tử siêu lạnh như quantum simulator** nối từ **Hiệu ứng Josephson** sang **BEC trong bẫy điều hòa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khí nguyên tử siêu lạnh như quantum simulator
 
@@ -230,7 +230,7 @@ Optical lattice tạo thế tuần hoàn có tham số điều chỉnh bằng la
 
 Đây là ví dụ mạnh của quantum simulation: thay vì mô phỏng một Hamiltonian khó chỉ bằng máy tính cổ điển, ta xây một hệ lượng tử có Hamiltonian gần tương đương rồi đo trực tiếp hành vi của nó.
 
-> **Chuyển mạch:** Trong **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Khí nguyên tử siêu lạnh như quantum simulator** đã nêu tiêu chí phân biệt, còn **BEC trong bẫy điều hòa** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Bogoliubov excitation và âm thanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Khí nguyên tử siêu lạnh như quantum simulator** đặt tiêu chí; **BEC trong bẫy điều hòa** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Bogoliubov excitation và âm thanh** mở rộng hệ quả.
 
 ## BEC trong bẫy điều hòa
 
@@ -244,7 +244,7 @@ Phân bố mật độ là kết quả cạnh tranh giữa:
 
 Khi tắt bẫy và cho đám mây giãn nở, time-of-flight imaging cung cấp thông tin về phân bố động lượng. Condensate thường tạo peak hẹp đặc trưng.
 
-> **Chuyển mạch:** Ở chặng này của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **BEC trong bẫy điều hòa** đã nêu tiêu chí phân biệt, còn **Bogoliubov excitation và âm thanh** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Chuyển pha BKT trong hai chiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **BEC trong bẫy điều hòa** đặt tiêu chí; **Bogoliubov excitation và âm thanh** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Chuyển pha BKT trong hai chiều** mở rộng hệ quả.
 
 ## Bogoliubov excitation và âm thanh
 
@@ -260,7 +260,7 @@ Trong condensate tương tác yếu, excitation Bogoliubov có dispersion gần 
 
 Đây là ví dụ quasiparticle phụ thuộc thang: cùng hệ có thể được mô tả bằng excitation “giống sóng âm” ở năng lượng thấp và “giống hạt” ở năng lượng cao hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Chuyển pha BKT trong hai chiều** tiếp nhận điểm tựa từ **Bogoliubov excitation và âm thanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với hydrodynamics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Chuyển pha BKT trong hai chiều** nối từ **Bogoliubov excitation và âm thanh** sang **Liên hệ với hydrodynamics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển pha BKT trong hai chiều
 
@@ -270,7 +270,7 @@ Tuy nhiên, chuyển pha Berezinskii–Kosterlitz–Thouless (BKT) có thể t�
 
 Đây là chuyển pha tô pô: cơ chế cốt lõi nằm ở defect và topology, không chỉ ở một tham số trật tự Landau thông thường.
 
-> **Chuyển mạch:** Trong **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Liên hệ với hydrodynamics** tiếp nhận điểm tựa từ **Chuyển pha BKT trong hai chiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Miền áp dụng và giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Liên hệ với hydrodynamics** nối từ **Chuyển pha BKT trong hai chiều** sang **Miền áp dụng và giới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với hydrodynamics
 
@@ -289,7 +289,7 @@ và tách phương trình Gross–Pitaevskii thành phần biên độ và pha c
 
 Ở thang dài, nhiều hệ lượng tử tập thể có thể được mô tả bằng các biến hydrodynamic hiệu dụng thay vì theo dõi từng hạt.
 
-> **Chuyển mạch:** Ở chặng này của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Liên hệ với hydrodynamics** đã nêu tiêu chí phân biệt, còn **Miền áp dụng và giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Liên hệ với hydrodynamics** đặt tiêu chí; **Miền áp dụng và giới hạn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Miền áp dụng và giới hạn
 
@@ -299,7 +299,7 @@ Gross–Pitaevskii là mean-field lý thuyết (theory / 이론); nó hoạt đ�
 
 Tiêu chuẩn Landau không tự tính được mọi cơ chế vortex nucleation hoặc ảnh hưởng biên thực tế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Miền áp dụng và giới hạn** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Miền áp dụng và giới hạn** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -320,7 +320,7 @@ quantum statistics
 → superfluid flow / vortices / Josephson phenomena
 ```
 
-> **Chuyển mạch:** Trong **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -340,7 +340,7 @@ Sai. Tương tác thường rất quan trọng cho độ ổn định, âm thanh
 
 Sai. Fermion có thể bắt cặp để tạo bậc tự do composite và pha siêu chảy hoặc siêu dẫn.
 
-> **Chuyển mạch:** Ở chặng này của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Ngưng tụ Bose–Einstein, siêu chảy và chất lưu lượng tử**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

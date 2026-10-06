@@ -14,7 +14,7 @@ Xem [[02_anxiety_ocd_and_trauma]], [[../02_learning_and_cognition/00_learning_an
 
 Ba tiến trình (process / 프로세스) overlap nhưng không identical. Cùng heart-rate increase có thể được interpreted khác nhau tùy ngữ cảnh (context / 맥락) và prior belief.
 
-> **Chuyển mạch:** Trong **Lo âu và các rối loạn liên quan sợ hãi**, **2. Threat hệ thống (system / 시스템) là adaptive trước khi trở thành maladaptive** tiếp nhận điểm tựa từ **1. Fear, anxiety và panic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Fear conditioning và extinction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lo âu và các rối loạn liên quan sợ hãi**, **2. Threat hệ thống (system / 시스템) là adaptive trước khi trở thành maladaptive** nối từ **1. Fear, anxiety và panic** sang **3. Fear conditioning và extinction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Threat hệ thống (system / 시스템) là adaptive trước khi trở thành maladaptive
 
@@ -24,7 +24,7 @@ Clinical anxiety có thể được hiểu như mismatch giữa predicted threat
 
 Không nên dùng evolutionary story như proof cho cơ chế (mechanism / 메커니즘) cụ thể; đó là explanatory frame, không thay experimental bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Ở chặng này của **Lo âu và các rối loạn liên quan sợ hãi**, **3. Fear conditioning và extinction** tiếp nhận điểm tựa từ **2. Threat hệ thống (system / 시스템) là adaptive trước khi trở thành maladaptive** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Avoidance và negative reinforcement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lo âu và các rối loạn liên quan sợ hãi**, **3. Fear conditioning và extinction** nối từ **2. Threat hệ thống (system / 시스템) là adaptive trước khi trở thành maladaptive** sang **4. Avoidance và negative reinforcement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Fear conditioning và extinction
 
@@ -34,7 +34,7 @@ Neutral cue có thể acquire fear khi paired với aversive sự kiện (event 
 
 > **Established/hiện tại (current / 현재) ranh giới (boundary / 경계):** associative-learning principles có bằng chứng (evidence / 증거) mạnh; chính xác (exact / 정확한) ánh xạ (mapping / 매핑) từ laboratory conditioning sang complex human anxiety vẫn không one-to-one.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lo âu và các rối loạn liên quan sợ hãi**, **4. Avoidance và negative reinforcement** tiếp nhận điểm tựa từ **3. Fear conditioning và extinction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. an toàn (safety / 안전) hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lo âu và các rối loạn liên quan sợ hãi**, **4. Avoidance và negative reinforcement** nối từ **3. Fear conditioning và extinction** sang **5. an toàn (safety / 안전) hành vi (behavior / 동작)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Avoidance và negative reinforcement
 
@@ -51,7 +51,7 @@ threat prediction
 
 Đây là một maintenance cơ chế (mechanism / 메커니즘) rất quan trọng trong phobia, panic/agoraphobia và xã hội (social / 사회적) anxiety.
 
-> **Chuyển mạch:** Trong **Lo âu và các rối loạn liên quan sợ hãi**, **5. an toàn (safety / 안전) hành vi (behavior / 동작)** tiếp nhận điểm tựa từ **4. Avoidance và negative reinforcement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Panic disorder và interoceptive học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lo âu và các rối loạn liên quan sợ hãi**, **5. an toàn (safety / 안전) hành vi (behavior / 동작)** nối từ **4. Avoidance và negative reinforcement** sang **6. Panic disorder và interoceptive học tập (learning / 학습)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. an toàn (safety / 안전) hành vi (behavior / 동작)
 
@@ -59,7 +59,7 @@ An toàn (safety / 안전) hành vi (behavior / 동작) là hành động (actio
 
 Không phải mọi precaution là maladaptive. Câu hỏi là hành vi (behavior / 동작) có proportionate với actual rủi ro (risk / 위험) không và có duy trì belief “nếu không làm X chắc sẽ xảy ra disaster” hay không.
 
-> **Chuyển mạch:** Ở chặng này của **Lo âu và các rối loạn liên quan sợ hãi**, **6. Panic disorder và interoceptive học tập (learning / 학습)** tiếp nhận điểm tựa từ **5. an toàn (safety / 안전) hành vi (behavior / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Agoraphobia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lo âu và các rối loạn liên quan sợ hãi**, **6. Panic disorder và interoceptive học tập (learning / 학습)** nối từ **5. an toàn (safety / 안전) hành vi (behavior / 동작)** sang **7. Agoraphobia**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Panic disorder và interoceptive học tập (learning / 학습)
 
@@ -69,7 +69,7 @@ Trong panic disorder, bodily sensations có thể trở thành conditioned cues.
 
 Điều này không có nghĩa clinician bỏ qua medical cause; differential assessment vẫn cần khi presentation phù hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lo âu và các rối loạn liên quan sợ hãi**, **7. Agoraphobia** tiếp nhận điểm tựa từ **6. Panic disorder và interoceptive học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. xã hội (social / 사회적) anxiety** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lo âu và các rối loạn liên quan sợ hãi**, **7. Agoraphobia** nối từ **6. Panic disorder và interoceptive học tập (learning / 학습)** sang **8. xã hội (social / 사회적) anxiety**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Agoraphobia
 
@@ -79,7 +79,7 @@ Avoidance có thể mở rộng dần: vận chuyển (transport / 전송) → m
 
 Mechanism-level formulation hữu ích hơn stereotype về location.
 
-> **Chuyển mạch:** Trong **Lo âu và các rối loạn liên quan sợ hãi**, **8. xã hội (social / 사회적) anxiety** tiếp nhận điểm tựa từ **7. Agoraphobia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Specific phobia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lo âu và các rối loạn liên quan sợ hãi**, **8. xã hội (social / 사회적) anxiety** nối từ **7. Agoraphobia** sang **9. Specific phobia**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. xã hội (social / 사회적) anxiety
 
@@ -89,7 +89,7 @@ Một person có thể monitor voice, facial expression và body posture đến 
 
 > **bằng chứng (evidence / 증거) ranh giới (boundary / 경계):** cognitive-behavioral các mô hình (models / 모델들) có strong clinical usefulness, nhưng individual pathway khác nhau và xã hội (social / 사회적) ngữ cảnh (context / 맥락) thật — bullying, discrimination, ngôn ngữ (language / 언어) barrier — phải được phân biệt với distorted threat expectation.
 
-> **Chuyển mạch:** Ở chặng này của **Lo âu và các rối loạn liên quan sợ hãi**, **9. Specific phobia** tiếp nhận điểm tựa từ **8. xã hội (social / 사회적) anxiety** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Generalized anxiety disorder và worry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lo âu và các rối loạn liên quan sợ hãi**, **9. Specific phobia** nối từ **8. xã hội (social / 사회적) anxiety** sang **10. Generalized anxiety disorder và worry**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Specific phobia
 
@@ -99,7 +99,7 @@ Observational học tập (learning / 학습), thông tin (information / 정보)
 
 Treatment thường dựa exposure principles khi clinically appropriate.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lo âu và các rối loạn liên quan sợ hãi**, **10. Generalized anxiety disorder và worry** tiếp nhận điểm tựa từ **9. Specific phobia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Health anxiety** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lo âu và các rối loạn liên quan sợ hãi**, **10. Generalized anxiety disorder và worry** nối từ **9. Specific phobia** sang **11. Health anxiety**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Generalized anxiety disorder và worry
 
@@ -109,7 +109,7 @@ GAD nổi bật bởi excessive/difficult-to-control worry across domains. Worry
 
 > **hiện tại (current / 현재) lý thuyết (theory / 이론):** intolerance of bất định (uncertainty / 불확실성) có substantial bằng chứng (evidence / 증거), nhưng không phải exclusive cause của GAD.
 
-> **Chuyển mạch:** Trong **Lo âu và các rối loạn liên quan sợ hãi**, **11. Health anxiety** tiếp nhận điểm tựa từ **10. Generalized anxiety disorder và worry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Attention độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lo âu và các rối loạn liên quan sợ hãi**, **11. Health anxiety** nối từ **10. Generalized anxiety disorder và worry** sang **12. Attention độ lệch (bias / 편향)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Health anxiety
 
@@ -117,7 +117,7 @@ Bodily sensation bình thường có thể được interpreted catastrophic, le
 
 Cần phân biệt health anxiety với việc có actual medical điều kiện (condition / 조건). Psychological cơ chế (mechanism / 메커니즘) và medical illness có thể coexist.
 
-> **Chuyển mạch:** Ở chặng này của **Lo âu và các rối loạn liên quan sợ hãi**, **12. Attention độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **11. Health anxiety** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Exposure như học tập (learning / 학습) procedure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lo âu và các rối loạn liên quan sợ hãi**, **12. Attention độ lệch (bias / 편향)** nối từ **11. Health anxiety** sang **13. Exposure như học tập (learning / 학습) procedure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Attention độ lệch (bias / 편향)
 
@@ -125,7 +125,7 @@ Anxious trạng thái (state / 상태) thường làm threat cue dễ capture at
 
 Không nên nói “anxiety khiến não chỉ nhìn thấy tiêu cực” như universal cơ chế (mechanism / 메커니즘).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lo âu và các rối loạn liên quan sợ hãi**, **13. Exposure như học tập (learning / 학습) procedure** tiếp nhận điểm tựa từ **12. Attention độ lệch (bias / 편향)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. CBT và treatment choice** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lo âu và các rối loạn liên quan sợ hãi**, **13. Exposure như học tập (learning / 학습) procedure** nối từ **12. Attention độ lệch (bias / 편향)** sang **14. CBT và treatment choice**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Exposure như học tập (learning / 학습) procedure
 
@@ -133,7 +133,7 @@ Exposure tốt không phải punishment hoặc “chịu đến khi hết sợ�
 
 Treatment must be tailored. Severe/complex presentation cần clinician-guided plan.
 
-> **Chuyển mạch:** Trong **Lo âu và các rối loạn liên quan sợ hãi**, **14. CBT và treatment choice** tiếp nhận điểm tựa từ **13. Exposure như học tập (learning / 학습) procedure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Anxiety và everyday self-regulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lo âu và các rối loạn liên quan sợ hãi**, **14. CBT và treatment choice** nối từ **13. Exposure như học tập (learning / 학습) procedure** sang **15. Anxiety và everyday self-regulation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. CBT và treatment choice
 
@@ -143,7 +143,7 @@ NICE guidance dùng stepped-care và condition-specific CBT rather than one gene
 
 Xem [[../05_intervention/01_cbt_behavioral_and_third_wave]] và [[../05_intervention/02_biological_and_community_treatment]].
 
-> **Chuyển mạch:** Ở chặng này của **Lo âu và các rối loạn liên quan sợ hãi**, **15. Anxiety và everyday self-regulation** tiếp nhận điểm tựa từ **14. CBT và treatment choice** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lo âu và các rối loạn liên quan sợ hãi**, **15. Anxiety và everyday self-regulation** nối từ **14. CBT và treatment choice** sang **16. Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Anxiety và everyday self-regulation
 
@@ -151,7 +151,7 @@ Normal anxiety có thể được managed qua sleep, preparation, bài toán (pr
 
 Xem [[../06_applied/12_psychology_in_daily_life_and_self_regulation]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lo âu và các rối loạn liên quan sợ hãi**, **16. Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **15. Anxiety và everyday self-regulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lo âu và các rối loạn liên quan sợ hãi**, **16. Những hiểu lầm phổ biến** nối từ **15. Anxiety và everyday self-regulation** sang **17. Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Những hiểu lầm phổ biến
 
@@ -163,7 +163,7 @@ Xem [[../06_applied/12_psychology_in_daily_life_and_self_regulation]].
 
 **“Nếu kiểm thử (test / 테스트) medical normal thì symptom là giả.”** Sai. Panic/interoceptive symptom là real experience dù structural pathology không giải thích nó.
 
-> **Chuyển mạch:** Trong **Lo âu và các rối loạn liên quan sợ hãi**, **17. Mô hình tư duy** gom các mảnh từ **16. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Bằng chứng (evidence / 증거) anchors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lo âu và các rối loạn liên quan sợ hãi**, **17. Mô hình tư duy** tổng hợp từ **16. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Bằng chứng (evidence / 증거) anchors** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 17. Mô hình tư duy
 
@@ -185,7 +185,7 @@ short-term relief
 learning loop maintained
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Lo âu và các rối loạn liên quan sợ hãi**, **17. Mô hình tư duy** nêu điều cần giải thích; **Bằng chứng (evidence / 증거) anchors** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lo âu và các rối loạn liên quan sợ hãi**, **17. Mô hình tư duy** đặt vấn đề; **Bằng chứng (evidence / 증거) anchors** đối chiếu bằng chứng, rồi **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Bằng chứng (evidence / 증거) anchors
 
@@ -195,7 +195,7 @@ Các evidence anchors giúp kiểm tra mô hình sợ hãi, né tránh và đi�
 - NICE guidance for xã hội (social / 사회적) anxiety and digitally enabled anxiety therapies.
 - học tập (learning / 학습)/exposure bằng chứng (evidence / 증거) should be read with [[../00_foundations/06_open_science_and_evidence_evaluation]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lo âu và các rối loạn liên quan sợ hãi**, **Bằng chứng (evidence / 증거) anchors** nêu điều cần giải thích; **Kết nối kiến thức** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lo âu và các rối loạn liên quan sợ hãi**, **Bằng chứng (evidence / 증거) anchors** đặt vấn đề; **Kết nối kiến thức** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

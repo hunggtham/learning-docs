@@ -21,7 +21,7 @@ Sai lầm hành vi
 
 Một tài sản ít biến động nhưng không thể bán khi cần tiền vẫn có thể rất rủi ro. Một cổ phiếu biến động cao nhưng chỉ chiếm tỷ trọng nhỏ và không dùng đòn bẩy có thể ít nguy hiểm hơn.
 
-> **Chuyển mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **2. Ba khái niệm: chịu đựng, khả năng và mức rủi ro cần thiết** tiếp nhận điểm tựa từ **1. Rủi ro không chỉ là độ biến động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Mục tiêu, thời hạn và nghĩa vụ phải đi trước sản phẩm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **2. Ba khái niệm: chịu đựng, khả năng và mức rủi ro cần thiết** nối từ **1. Rủi ro không chỉ là độ biến động** sang **3. Mục tiêu, thời hạn và nghĩa vụ phải đi trước sản phẩm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Ba khái niệm: chịu đựng, khả năng và mức rủi ro cần thiết
 
@@ -35,7 +35,7 @@ Sau khi phân biệt volatility với rủi ro thất bại, ta cần tách ba c
 
 Ba yếu tố này có thể xung đột. Một người thích rủi ro nhưng cần tiền mua nhà trong hai năm có khả năng chịu rủi ro thấp đối với khoản tiền đó.
 
-> **Chuyển mạch:** Ở chặng này của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **3. Mục tiêu, thời hạn và nghĩa vụ phải đi trước sản phẩm** tiếp nhận điểm tựa từ **2. Ba khái niệm: chịu đựng, khả năng và mức rủi ro cần thiết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Quỹ dự phòng là một phần của danh mục tổng thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **3. Mục tiêu, thời hạn và nghĩa vụ phải đi trước sản phẩm** nối từ **2. Ba khái niệm: chịu đựng, khả năng và mức rủi ro cần thiết** sang **4. Quỹ dự phòng là một phần của danh mục tổng thể**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Mục tiêu, thời hạn và nghĩa vụ phải đi trước sản phẩm
 
@@ -51,7 +51,7 @@ Khoản nào không được phép chịu lỗ lớn?
 
 Tiền cần trong thời gian ngắn nên ưu tiên khả năng chi trả hơn lợi suất kỳ vọng. Tiền cho mục tiêu dài hạn có thể chịu biến động cao hơn nếu khả năng tài chính và hành vi cho phép.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **4. Quỹ dự phòng là một phần của danh mục tổng thể** tiếp nhận điểm tựa từ **3. Mục tiêu, thời hạn và nghĩa vụ phải đi trước sản phẩm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Diversification là đa dạng hóa nguồn rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **4. Quỹ dự phòng là một phần của danh mục tổng thể** nối từ **3. Mục tiêu, thời hạn và nghĩa vụ phải đi trước sản phẩm** sang **5. Diversification là đa dạng hóa nguồn rủi ro**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Quỹ dự phòng là một phần của danh mục tổng thể
 
@@ -59,7 +59,7 @@ Quỹ dự phòng không phải “tiền chết”. Nó mua quyền lựa chọ
 
 Nếu toàn bộ tài sản tài chính đều được đầu tư và bạn không có bộ đệm tiền mặt, rủi ro lớn nhất có thể là phải bán trong thời điểm xấu, không phải độ biến động trung bình của danh mục.
 
-> **Chuyển mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **4. Quỹ dự phòng là một phần của danh mục tổng thể** nêu điều cần giải thích; **5. Diversification là đa dạng hóa nguồn rủi ro** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. Tương quan và hiệp phương sai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **4. Quỹ dự phòng là một phần của danh mục tổng thể** đặt vấn đề; **5. Diversification là đa dạng hóa nguồn rủi ro** đối chiếu bằng chứng, rồi **6. Tương quan và hiệp phương sai** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. Diversification là đa dạng hóa nguồn rủi ro
 
@@ -77,7 +77,7 @@ Tâm lý chấp nhận rủi ro
 
 Danh mục nhìn có nhiều sản phẩm nhưng thực chất chỉ là một cược nhân tố lớn.
 
-> **Chuyển mạch:** Ở chặng này của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **5. Diversification là đa dạng hóa nguồn rủi ro** nêu điều cần giải thích; **6. Tương quan và hiệp phương sai** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. Tỷ trọng vốn không bằng tỷ trọng rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **5. Diversification là đa dạng hóa nguồn rủi ro** đặt vấn đề; **6. Tương quan và hiệp phương sai** đối chiếu bằng chứng, rồi **7. Tỷ trọng vốn không bằng tỷ trọng rủi ro** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 6. Tương quan và hiệp phương sai
 
@@ -93,7 +93,7 @@ Một tài sản có độ biến động cao vẫn có thể làm danh mục �
 
 Nhưng tương quan không cố định. Trong khủng hoảng, nhiều tài sản rủi ro cùng giảm vì nhu cầu tiền mặt và giảm đòn bẩy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **7. Tỷ trọng vốn không bằng tỷ trọng rủi ro** tiếp nhận điểm tựa từ **6. Tương quan và hiệp phương sai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Rủi ro tập trung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **7. Tỷ trọng vốn không bằng tỷ trọng rủi ro** nối từ **6. Tương quan và hiệp phương sai** sang **8. Rủi ro tập trung**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Tỷ trọng vốn không bằng tỷ trọng rủi ro
 
@@ -103,7 +103,7 @@ Do đó ngoài tỷ trọng vốn cần nhìn **đóng góp rủi ro (risk contr
 
 Một vị thế 10% có thể tạo 25% rủi ro danh mục nếu biến động cao và tương quan mạnh với phần còn lại.
 
-> **Chuyển mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **8. Rủi ro tập trung** tiếp nhận điểm tựa từ **7. Tỷ trọng vốn không bằng tỷ trọng rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Beta và rủi ro thị trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **8. Rủi ro tập trung** nối từ **7. Tỷ trọng vốn không bằng tỷ trọng rủi ro** sang **9. Beta và rủi ro thị trường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Rủi ro tập trung
 
@@ -121,7 +121,7 @@ Một loại thanh khoản
 
 Nhà đầu tư có lương từ ngành công nghệ, nắm cổ phiếu công nghệ và nhà ở tại cùng một thành phố đã có mức tập trung kinh tế lớn ngay cả khi tài khoản chứng khoán có nhiều mã.
 
-> **Chuyển mạch:** Ở chặng này của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **9. Beta và rủi ro thị trường** tiếp nhận điểm tựa từ **8. Rủi ro tập trung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Phân bổ chiến lược và phân bổ chiến thuật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **9. Beta và rủi ro thị trường** nối từ **8. Rủi ro tập trung** sang **10. Phân bổ chiến lược và phân bổ chiến thuật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Beta và rủi ro thị trường
 
@@ -129,7 +129,7 @@ Beta đo độ nhạy của tài sản so với chỉ số tham chiếu. Beta h�
 
 Một danh mục beta thấp vẫn có thể chịu rủi ro lớn nếu tập trung vào một chiến lược bán biến động hoặc tài sản khó thanh khoản.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **10. Phân bổ chiến lược và phân bổ chiến thuật** tiếp nhận điểm tựa từ **9. Beta và rủi ro thị trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Cấu trúc lõi–vệ tinh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **10. Phân bổ chiến lược và phân bổ chiến thuật** nối từ **9. Beta và rủi ro thị trường** sang **11. Cấu trúc lõi–vệ tinh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Phân bổ chiến lược và phân bổ chiến thuật
 
@@ -141,7 +141,7 @@ Khi đã biết mục tiêu và ngân sách rủi ro, ta phân biệt cấu trú
 
 Nếu không có lợi thế dự báo rõ ràng, thay đổi chiến thuật quá thường xuyên dễ trở thành đuổi theo hiệu suất.
 
-> **Chuyển mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **11. Cấu trúc lõi–vệ tinh** tiếp nhận điểm tựa từ **10. Phân bổ chiến lược và phân bổ chiến thuật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Tái cân bằng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **11. Cấu trúc lõi–vệ tinh** nối từ **10. Phân bổ chiến lược và phân bổ chiến thuật** sang **12. Tái cân bằng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Cấu trúc lõi–vệ tinh
 
@@ -154,7 +154,7 @@ Vệ tinh (satellite): ý tưởng chủ động, ngành, nhân tố hoặc giao
 
 Phần vệ tinh phải có giới hạn để một sai lầm chủ động không phá mục tiêu của toàn bộ danh mục.
 
-> **Chuyển mạch:** Ở chặng này của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **12. Tái cân bằng** tiếp nhận điểm tựa từ **11. Cấu trúc lõi–vệ tinh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Rủi ro thứ tự lợi suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **12. Tái cân bằng** nối từ **11. Cấu trúc lõi–vệ tinh** sang **13. Rủi ro thứ tự lợi suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Tái cân bằng
 
@@ -164,7 +164,7 @@ Có thể dùng lịch định kỳ hoặc dải sai lệch. Ví dụ thay vì t
 
 Tái cân bằng có thể buộc nhà đầu tư bán bớt tài sản tăng mạnh và mua thêm tài sản yếu hơn, nhưng không nên làm máy móc nếu bản chất rủi ro đã thay đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **13. Rủi ro thứ tự lợi suất** tiếp nhận điểm tựa từ **12. Tái cân bằng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Toán phục hồi sau thua lỗ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **13. Rủi ro thứ tự lợi suất** nối từ **12. Tái cân bằng** sang **14. Toán phục hồi sau thua lỗ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Rủi ro thứ tự lợi suất
 
@@ -174,7 +174,7 @@ Hai người có cùng lợi suất trung bình nhưng thứ tự năm tăng/gi�
 
 Vì vậy giai đoạn gần mục tiêu cần chú trọng bộ đệm thanh khoản và tài sản ổn định hơn.
 
-> **Chuyển mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **14. Toán phục hồi sau thua lỗ** tiếp nhận điểm tựa từ **13. Rủi ro thứ tự lợi suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Đòn bẩy làm thay đổi đường đi rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **14. Toán phục hồi sau thua lỗ** nối từ **13. Rủi ro thứ tự lợi suất** sang **15. Đòn bẩy làm thay đổi đường đi rủi ro**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Toán phục hồi sau thua lỗ
 
@@ -188,7 +188,7 @@ Mất 50% → cần +100%
 
 Đây là lý do quản trị mức suy giảm sâu quan trọng cho tăng trưởng kép. Tối đa hóa lợi suất kỳ vọng mà bỏ qua rủi ro phá sản hoặc bán cưỡng bức có thể làm kết quả dài hạn tệ hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **15. Đòn bẩy làm thay đổi đường đi rủi ro** tiếp nhận điểm tựa từ **14. Toán phục hồi sau thua lỗ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Ngân sách rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **15. Đòn bẩy làm thay đổi đường đi rủi ro** nối từ **14. Toán phục hồi sau thua lỗ** sang **16. Ngân sách rủi ro**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Đòn bẩy làm thay đổi đường đi rủi ro
 
@@ -206,7 +206,7 @@ Biến động yêu cầu tài sản bảo đảm
 
 Một vị thế có kỳ vọng dương vẫn có thể bị thanh lý trước khi cơ chế dài hạn xảy ra.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **16. Ngân sách rủi ro** tiếp nhận điểm tựa từ **15. Đòn bẩy làm thay đổi đường đi rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Kiểm thử căng thẳng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **16. Ngân sách rủi ro** nối từ **15. Đòn bẩy làm thay đổi đường đi rủi ro** sang **17. Kiểm thử căng thẳng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Ngân sách rủi ro
 
@@ -224,7 +224,7 @@ Rủi ro giao dịch chủ động
 
 Mục tiêu là tránh một nhân tố duy nhất thống trị toàn bộ danh mục mà không được nhận ra.
 
-> **Chuyển mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **17. Kiểm thử căng thẳng** tiếp nhận điểm tựa từ **16. Ngân sách rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Rủi ro tiền tệ và nghĩa vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **17. Kiểm thử căng thẳng** nối từ **16. Ngân sách rủi ro** sang **18. Rủi ro tiền tệ và nghĩa vụ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Kiểm thử căng thẳng
 
@@ -240,7 +240,7 @@ Khủng hoảng thanh khoản → tương quan tăng và spread mở rộng
 
 Kiểm thử nhằm tìm điểm yếu ẩn, không phải dự báo chính xác tương lai.
 
-> **Chuyển mạch:** Ở chặng này của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **18. Rủi ro tiền tệ và nghĩa vụ** tiếp nhận điểm tựa từ **17. Kiểm thử căng thẳng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Rủi ro thanh khoản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **18. Rủi ro tiền tệ và nghĩa vụ** nối từ **17. Kiểm thử căng thẳng** sang **19. Rủi ro thanh khoản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Rủi ro tiền tệ và nghĩa vụ
 
@@ -248,7 +248,7 @@ Tài sản ngoại tệ vừa tạo cơ hội đa dạng hóa vừa tạo lệch
 
 Quyết định phòng vệ cần dựa trên thời hạn và độ chắc chắn của nghĩa vụ, không chỉ dự báo tỷ giá.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **19. Rủi ro thanh khoản** tiếp nhận điểm tựa từ **18. Rủi ro tiền tệ và nghĩa vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Thiên lệch hành vi: quá tự tin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **19. Rủi ro thanh khoản** nối từ **18. Rủi ro tiền tệ và nghĩa vụ** sang **20. Thiên lệch hành vi: quá tự tin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Rủi ro thanh khoản
 
@@ -256,7 +256,7 @@ Một tài sản được báo giá hằng ngày không có nghĩa có thể bá
 
 Danh mục phải có đủ tài sản thanh khoản để đáp ứng chi tiêu, nghĩa vụ và margin mà không cần bán tháo tài sản dài hạn.
 
-> **Chuyển mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **20. Thiên lệch hành vi: quá tự tin** tiếp nhận điểm tựa từ **19. Rủi ro thanh khoản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Thiên lệch xác nhận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **20. Thiên lệch hành vi: quá tự tin** nối từ **19. Rủi ro thanh khoản** sang **21. Thiên lệch xác nhận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Thiên lệch hành vi: quá tự tin
 
@@ -264,7 +264,7 @@ Nhà đầu tư dễ đánh đồng kết quả tốt với kỹ năng. Một n�
 
 Nhật ký quyết định giúp ghi lại dữ kiện, giả định, mức định giá và điều kiện vô hiệu hóa trước khi biết kết quả.
 
-> **Chuyển mạch:** Ở chặng này của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **21. Thiên lệch xác nhận** tiếp nhận điểm tựa từ **20. Thiên lệch hành vi: quá tự tin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Ác cảm thua lỗ và hiệu ứng sở hữu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **21. Thiên lệch xác nhận** nối từ **20. Thiên lệch hành vi: quá tự tin** sang **22. Ác cảm thua lỗ và hiệu ứng sở hữu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Thiên lệch xác nhận
 
@@ -277,7 +277,7 @@ Bằng chứng nào sẽ khiến tôi giảm xác suất kịch bản cơ sở?
 Dữ liệu nào sẽ buộc tôi bán dù giá chưa giảm?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **22. Ác cảm thua lỗ và hiệu ứng sở hữu** tiếp nhận điểm tựa từ **21. Thiên lệch xác nhận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Hiệu ứng gần đây và đuổi theo hiệu suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **22. Ác cảm thua lỗ và hiệu ứng sở hữu** nối từ **21. Thiên lệch xác nhận** sang **23. Hiệu ứng gần đây và đuổi theo hiệu suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Ác cảm thua lỗ và hiệu ứng sở hữu
 
@@ -289,7 +289,7 @@ Một câu hỏi hữu ích:
 
 Nếu câu trả lời là không, việc giữ chỉ vì “chưa bán thì chưa lỗ” cần được xem lại.
 
-> **Chuyển mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **23. Hiệu ứng gần đây và đuổi theo hiệu suất** tiếp nhận điểm tựa từ **22. Ác cảm thua lỗ và hiệu ứng sở hữu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. kết quả (outcome / 결과) độ lệch (bias / 편향) và hindsight độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **23. Hiệu ứng gần đây và đuổi theo hiệu suất** nối từ **22. Ác cảm thua lỗ và hiệu ứng sở hữu** sang **24. kết quả (outcome / 결과) độ lệch (bias / 편향) và hindsight độ lệch (bias / 편향)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Hiệu ứng gần đây và đuổi theo hiệu suất
 
@@ -297,7 +297,7 @@ Những gì vừa xảy ra thường bị phóng đại thành dự báo dài h�
 
 Phân bổ chiến lược và dải tái cân bằng giúp giảm hành vi này.
 
-> **Chuyển mạch:** Ở chặng này của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **24. kết quả (outcome / 결과) độ lệch (bias / 편향) và hindsight độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **23. Hiệu ứng gần đây và đuổi theo hiệu suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Tuyên bố chính sách đầu tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **24. kết quả (outcome / 결과) độ lệch (bias / 편향) và hindsight độ lệch (bias / 편향)** nối từ **23. Hiệu ứng gần đây và đuổi theo hiệu suất** sang **25. Tuyên bố chính sách đầu tư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. kết quả (outcome / 결과) độ lệch (bias / 편향) và hindsight độ lệch (bias / 편향)
 
@@ -307,7 +307,7 @@ Một quyết định có xác suất hợp lý vẫn có thể thua. Một quy�
 
 Đánh giá quy trình phải hỏi liệu dữ kiện, xác suất và sizing tại thời điểm ra quyết định có hợp lý không.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **25. Tuyên bố chính sách đầu tư** tiếp nhận điểm tựa từ **24. kết quả (outcome / 결과) độ lệch (bias / 편향) và hindsight độ lệch (bias / 편향)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Nhật ký quyết định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **25. Tuyên bố chính sách đầu tư** nối từ **24. kết quả (outcome / 결과) độ lệch (bias / 편향) và hindsight độ lệch (bias / 편향)** sang **26. Nhật ký quyết định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Tuyên bố chính sách đầu tư
 
@@ -327,7 +327,7 @@ Ngưỡng đánh giá lại
 
 IPS không phải hợp đồng cứng nhắc với thị trường; nó là công cụ ngăn cảm xúc ngắn hạn phá mục tiêu dài hạn.
 
-> **Chuyển mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **26. Nhật ký quyết định** tiếp nhận điểm tựa từ **25. Tuyên bố chính sách đầu tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Đo hiệu quả đúng cách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **26. Nhật ký quyết định** nối từ **25. Tuyên bố chính sách đầu tư** sang **27. Đo hiệu quả đúng cách**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Nhật ký quyết định
 
@@ -346,7 +346,7 @@ Ngày đánh giá lại
 
 Sau đó so với kết quả thực tế để cải thiện khả năng hiệu chỉnh xác suất.
 
-> **Chuyển mạch:** Ở chặng này của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **27. Đo hiệu quả đúng cách** tiếp nhận điểm tựa từ **26. Nhật ký quyết định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Danh mục là một hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **27. Đo hiệu quả đúng cách** nối từ **26. Nhật ký quyết định** sang **28. Danh mục là một hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Đo hiệu quả đúng cách
 
@@ -364,7 +364,7 @@ Mức rủi ro đã nhận để tạo lợi suất
 
 Time-Weighted Return phù hợp khi muốn đánh giá chiến lược đầu tư độc lập với dòng tiền của nhà đầu tư. Money-Weighted Return phản ánh trải nghiệm thực tế của nhà đầu tư khi có đóng/rút tiền.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **28. Danh mục là một hệ thống** tiếp nhận điểm tựa từ **27. Đo hiệu quả đúng cách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Mô hình tư duy cuối cùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **28. Danh mục là một hệ thống** nối từ **27. Đo hiệu quả đúng cách** sang **29. Mô hình tư duy cuối cùng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Danh mục là một hệ thống
 
@@ -378,7 +378,7 @@ Nó giúp hay làm xấu nghĩa vụ tương lai?
 Nó có làm danh mục khó sống sót hơn trong kịch bản xấu không?
 ```
 
-> **Chuyển mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **29. Mô hình tư duy cuối cùng** gom các mảnh từ **28. Danh mục là một hệ thống** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Rủi ro danh mục, phân bổ tài sản và hành vi nhà đầu tư**, **29. Mô hình tư duy cuối cùng** tổng hợp từ **28. Danh mục là một hệ thống** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 29. Mô hình tư duy cuối cùng
 

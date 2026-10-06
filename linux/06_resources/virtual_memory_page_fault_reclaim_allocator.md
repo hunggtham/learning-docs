@@ -24,7 +24,7 @@ chưa chắc có frame cho mọi virtual page
 
 Cơ chế này cho phép tiến trình (process / 프로세스) đặt trước không gian địa chỉ lớn mà không lập tức tiêu thụ lượng RAM tương ứng.
 
-> **Chuyển mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **VMA: vùng bộ nhớ ảo** tiếp nhận điểm tựa từ **Không gian địa chỉ ảo không phải RAM được cấp phát sẵn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảng trang (page table / 페이지 테이블) và MMU** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **VMA: vùng bộ nhớ ảo** nối từ **Không gian địa chỉ ảo không phải RAM được cấp phát sẵn** sang **Bảng trang (page table / 페이지 테이블) và MMU**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## VMA: vùng bộ nhớ ảo
 
@@ -54,7 +54,7 @@ Các vùng có thể đại diện:
 
 Một JVM thường có nhiều ánh xạ (mapping / 매핑) và vùng reserve lớn, vì vậy nhìn `VIRT` riêng lẻ rất dễ gây hiểu nhầm.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Bảng trang (page table / 페이지 테이블) và MMU** tiếp nhận điểm tựa từ **VMA: vùng bộ nhớ ảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **TLB** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Bảng trang (page table / 페이지 테이블) và MMU** nối từ **VMA: vùng bộ nhớ ảo** sang **TLB**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bảng trang (page table / 페이지 테이블) và MMU
 
@@ -72,7 +72,7 @@ physical frame
 
 Nếu ánh xạ (mapping / 매핑) không có hoặc permission không phù hợp, CPU tạo exception để kernel xử lý.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **TLB** tiếp nhận điểm tựa từ **Bảng trang (page table / 페이지 테이블) và MMU** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Page fault không nhất thiết là lỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **TLB** nối từ **Bảng trang (page table / 페이지 테이블) và MMU** sang **Page fault không nhất thiết là lỗi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## TLB
 
@@ -82,7 +82,7 @@ Nếu working set lớn hơn khả năng TLB, **TLB miss** tăng và CPU phải 
 
 Huge pages có thể giúp giảm số entry cần thiết trong TLB cho tải công việc (workload / 워크로드) lớn, nhưng đổi lại có sự đánh đổi (trade-off / 트레이드오프) về allocation, fragmentation và flexibility.
 
-> **Chuyển mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Page fault không nhất thiết là lỗi** tiếp nhận điểm tựa từ **TLB** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Demand paging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Page fault không nhất thiết là lỗi** nối từ **TLB** sang **Demand paging**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Page fault không nhất thiết là lỗi
 
@@ -107,7 +107,7 @@ ps -o pid,min_flt,maj_flt,cmd -p <PID>
 
 Tên trường dữ liệu (field / 필드) cụ thể có thể phụ thuộc công cụ.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Demand paging** tiếp nhận điểm tựa từ **Page fault không nhất thiết là lỗi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sao chép khi ghi (copy-on-write / 쓰기 시 복사) sau fork()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Demand paging** nối từ **Page fault không nhất thiết là lỗi** sang **Sao chép khi ghi (copy-on-write / 쓰기 시 복사) sau fork()**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Demand paging
 
@@ -117,7 +117,7 @@ Ví dụ khi executable được map, kernel không nhất thiết đọc toàn 
 
 Điều này giúp startup và bộ nhớ (memory / 메모리) efficiency tốt hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Sao chép khi ghi (copy-on-write / 쓰기 시 복사) sau fork()** tiếp nhận điểm tựa từ **Demand paging** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Anonymous bộ nhớ (memory / 메모리) và file-backed bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Sao chép khi ghi (copy-on-write / 쓰기 시 복사) sau fork()** nối từ **Demand paging** sang **Anonymous bộ nhớ (memory / 메모리) và file-backed bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sao chép khi ghi (copy-on-write / 쓰기 시 복사) sau `fork()`
 
@@ -140,7 +140,7 @@ child  ─── copied page
 
 COW giúp `fork()` tương đối rẻ ban đầu, nhưng chi phí thực xuất hiện khi nhiều pages bị ghi sau đó.
 
-> **Chuyển mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Anonymous bộ nhớ (memory / 메모리) và file-backed bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Sao chép khi ghi (copy-on-write / 쓰기 시 복사) sau fork()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **malloc() không đồng nghĩa kernel cấp page ngay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Anonymous bộ nhớ (memory / 메모리) và file-backed bộ nhớ (memory / 메모리)** nối từ **Sao chép khi ghi (copy-on-write / 쓰기 시 복사) sau fork()** sang **malloc() không đồng nghĩa kernel cấp page ngay**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Anonymous bộ nhớ (memory / 메모리) và file-backed bộ nhớ (memory / 메모리)
 
@@ -156,7 +156,7 @@ Khi reclaim:
 
 Đây là lý do page bộ nhớ đệm (cache / 캐시) thường dễ reclaim hơn anonymous working set.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **malloc() không đồng nghĩa kernel cấp page ngay** tiếp nhận điểm tựa từ **Anonymous bộ nhớ (memory / 메모리) và file-backed bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Allocator fragmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **malloc() không đồng nghĩa kernel cấp page ngay** nối từ **Anonymous bộ nhớ (memory / 메모리) và file-backed bộ nhớ (memory / 메모리)** sang **Allocator fragmentation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `malloc()` không đồng nghĩa kernel cấp page ngay
 
@@ -170,7 +170,7 @@ Các cơ chế kernel thường liên quan gồm:
 
 Vì vậy ứng dụng (application / 애플리케이션) allocation, virtual ánh xạ (mapping / 매핑) và vật lý (physical / 물리적) residency là ba tầng khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Allocator fragmentation** tiếp nhận điểm tựa từ **malloc() không đồng nghĩa kernel cấp page ngay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Buddy allocator** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Allocator fragmentation** nối từ **malloc() không đồng nghĩa kernel cấp page ngay** sang **Buddy allocator**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Allocator fragmentation
 
@@ -183,7 +183,7 @@ Hai khái niệm:
 
 Trong kernel còn có vấn đề fragmentation theo thứ tự (order / 순서) của buddy allocator.
 
-> **Chuyển mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Buddy allocator** tiếp nhận điểm tựa từ **Allocator fragmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SLAB/SLUB allocator** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Buddy allocator** nối từ **Allocator fragmentation** sang **SLAB/SLUB allocator**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Buddy allocator
 
@@ -193,7 +193,7 @@ Khi một khối (block / 블록) lớn bị chia thành hai “buddy”, các k
 
 Mô hình này hỗ trợ cấp phát nhanh nhưng contiguous allocation lớn có thể khó khi RAM bị phân mảnh.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Buddy allocator** cho ta quy tắc; **SLAB/SLUB allocator** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **/proc/meminfo sâu hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Buddy allocator** nêu quy tắc; **SLAB/SLUB allocator** thử quy tắc trong tình huống, rồi **/proc/meminfo sâu hơn** mở rộng hệ quả.
 
 ## SLAB/SLUB allocator
 
@@ -209,7 +209,7 @@ slabtop
 
 Nếu kernel bộ nhớ (memory / 메모리) tăng mạnh, không phải mọi bộ nhớ (memory / 메모리) pressure đều nằm ở user-process RSS.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **SLAB/SLUB allocator** cho ta quy tắc; **/proc/meminfo sâu hơn** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Reclaim: kernel lấy lại RAM như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **SLAB/SLUB allocator** nêu quy tắc; **/proc/meminfo sâu hơn** thử quy tắc trong tình huống, rồi **Reclaim: kernel lấy lại RAM như thế nào?** mở rộng hệ quả.
 
 ## `/proc/meminfo` sâu hơn
 
@@ -231,7 +231,7 @@ grep -E 'MemAvailable|Cached|Buffers|Slab|SReclaimable|SUnreclaim|AnonPages|Mapp
 
 Không nên cộng trừ các trường dữ liệu (field / 필드) một cách máy móc vì accounting có overlap và ngữ nghĩa (semantics / 의미론) kernel-version dependent.
 
-> **Chuyển mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Reclaim: kernel lấy lại RAM như thế nào?** tiếp nhận điểm tựa từ **/proc/meminfo sâu hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **LRU là một mô hình gần đúng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Reclaim: kernel lấy lại RAM như thế nào?** nối từ **/proc/meminfo sâu hơn** sang **LRU là một mô hình gần đúng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Reclaim: kernel lấy lại RAM như thế nào?
 
@@ -250,7 +250,7 @@ reclaim candidates
 
 Kernel cố giữ working set nóng và loại pages ít cần hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **LRU là một mô hình gần đúng** tiếp nhận điểm tựa từ **Reclaim: kernel lấy lại RAM như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Direct reclaim** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **LRU là một mô hình gần đúng** nối từ **Reclaim: kernel lấy lại RAM như thế nào?** sang **Direct reclaim**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## LRU là một mô hình gần đúng
 
@@ -260,7 +260,7 @@ Kernel hiện đại có thể dùng **multi-generational LRU (MGLRU)** tùy phi
 
 Điểm cần nhớ là kernel phải trả lời câu hỏi: “page nào có xác suất ít được dùng lại nhất?”
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Direct reclaim** tiếp nhận điểm tựa từ **LRU là một mô hình gần đúng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **kswapd** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Direct reclaim** nối từ **LRU là một mô hình gần đúng** sang **kswapd**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Direct reclaim
 
@@ -281,7 +281,7 @@ sau đó mới OOM nếu không phục hồi
 
 Vì vậy OOM là điểm cuối; hiệu năng (performance / 성능) degradation có thể xuất hiện sớm hơn nhiều.
 
-> **Chuyển mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **kswapd** tiếp nhận điểm tựa từ **Direct reclaim** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ (memory / 메모리) watermark** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **kswapd** nối từ **Direct reclaim** sang **Bộ nhớ (memory / 메모리) watermark**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `kswapd`
 
@@ -289,7 +289,7 @@ Vì vậy OOM là điểm cuối; hiệu năng (performance / 성능) degradatio
 
 Nếu `kswapd` dùng CPU đáng kể và `vmstat` cho thấy swap/reclaim activity, bộ nhớ (memory / 메모리) pressure là giả thuyết mạnh.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Bộ nhớ (memory / 메모리) watermark** tiếp nhận điểm tựa từ **kswapd** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **PSI: Pressure Stall thông tin (information / 정보)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Bộ nhớ (memory / 메모리) watermark** nối từ **kswapd** sang **PSI: Pressure Stall thông tin (information / 정보)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ nhớ (memory / 메모리) watermark
 
@@ -305,7 +305,7 @@ sysctl vm.min_free_kbytes
 
 Không nên tuning nếu chưa hiểu tải công việc (workload / 워크로드) và kernel bộ nhớ (memory / 메모리) mô hình (model / 모델).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **PSI: Pressure Stall thông tin (information / 정보)** tiếp nhận điểm tựa từ **Bộ nhớ (memory / 메모리) watermark** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Swap không chỉ là “RAM chậm”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **PSI: Pressure Stall thông tin (information / 정보)** nối từ **Bộ nhớ (memory / 메모리) watermark** sang **Swap không chỉ là “RAM chậm”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## PSI: Pressure Stall thông tin (information / 정보)
 
@@ -328,7 +328,7 @@ PSI rất hữu ích vì nó đo **tác động pressure lên tải công việc
 
 Bộ nhớ (memory / 메모리) usage 90% có thể bình thường nếu không stall; bộ nhớ (memory / 메모리) pressure thấp hơn nhưng direct reclaim liên tục lại có thể gây độ trễ (latency / 지연 시간).
 
-> **Chuyển mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Swap không chỉ là “RAM chậm”** tiếp nhận điểm tựa từ **PSI: Pressure Stall thông tin (information / 정보)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thrashing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Swap không chỉ là “RAM chậm”** nối từ **PSI: Pressure Stall thông tin (information / 정보)** sang **Thrashing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Swap không chỉ là “RAM chậm”
 
@@ -352,7 +352,7 @@ vmstat 1
 
 với `si` và `so`.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Thrashing** tiếp nhận điểm tựa từ **Swap không chỉ là “RAM chậm”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **OOM killer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Thrashing** nối từ **Swap không chỉ là “RAM chậm”** sang **OOM killer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thrashing
 
@@ -372,7 +372,7 @@ working set > RAM phù hợp
 
 Độ trễ (latency / 지연 시간) tăng cực mạnh trong khi thông lượng (throughput / 처리량) sụt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **OOM killer** tiếp nhận điểm tựa từ **Thrashing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cgroup OOM khác toàn cục (global / 전역) OOM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **OOM killer** nối từ **Thrashing** sang **Cgroup OOM khác toàn cục (global / 전역) OOM**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## OOM killer
 
@@ -393,7 +393,7 @@ cat /proc/<PID>/oom_score_adj
 
 `oom_score_adj` cho phép ảnh hưởng khả năng tiến trình (process / 프로세스) bị chọn. Không nên đặt mọi trọng yếu (critical / 중요) tiến trình (process / 프로세스) thành “không bao giờ kill”, vì kernel vẫn cần cách phục hồi khi thật sự cạn bộ nhớ (memory / 메모리).
 
-> **Chuyển mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Cgroup OOM khác toàn cục (global / 전역) OOM** tiếp nhận điểm tựa từ **OOM killer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **memory.high và throttling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Cgroup OOM khác toàn cục (global / 전역) OOM** nối từ **OOM killer** sang **memory.high và throttling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cgroup OOM khác toàn cục (global / 전역) OOM
 
@@ -412,7 +412,7 @@ Tùy môi trường, có thể xem trong `/sys/fs/cgroup`.
 
 Nếu host còn 30 GB RAM nhưng bộ chứa (container / 컨테이너) bị kill, cần kiểm tra cgroup trước khi kết luận kernel toàn cục (global / 전역) OOM.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **memory.high và throttling** tiếp nhận điểm tựa từ **Cgroup OOM khác toàn cục (global / 전역) OOM** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **JVM và bản địa (native / 네이티브) bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **memory.high và throttling** nối từ **Cgroup OOM khác toàn cục (global / 전역) OOM** sang **JVM và bản địa (native / 네이티브) bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `memory.high` và throttling
 
@@ -422,7 +422,7 @@ Khi vượt `memory.high`, tải công việc (workload / 워크로드) có th�
 
 Điều này tạo một tầng hiệu năng (performance / 성능) degradation trước hard limit.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **JVM và bản địa (native / 네이티브) bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **memory.high và throttling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và số lượng luồng thực thi (thread / 스레드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **JVM và bản địa (native / 네이티브) bộ nhớ (memory / 메모리)** nối từ **memory.high và throttling** sang **Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và số lượng luồng thực thi (thread / 스레드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## JVM và bản địa (native / 네이티브) bộ nhớ (memory / 메모리)
 
@@ -449,7 +449,7 @@ nếu JVM được bật bản địa (native / 네이티브) bộ nhớ (memory
 
 Khi RSS cao hơn `Xmx` nhiều, đây không nhất thiết là leak; cần phân rã các vùng bản địa (native / 네이티브).
 
-> **Chuyển mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và số lượng luồng thực thi (thread / 스레드)** tiếp nhận điểm tựa từ **JVM và bản địa (native / 네이티브) bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Direct buffer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và số lượng luồng thực thi (thread / 스레드)** nối từ **JVM và bản địa (native / 네이티브) bộ nhớ (memory / 메모리)** sang **Direct buffer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và số lượng luồng thực thi (thread / 스레드)
 
@@ -464,7 +464,7 @@ Ví dụ conceptual:
 
 Vật lý (physical / 물리적) residency thực tế có thể thấp hơn reservation, nhưng luồng thực thi (thread / 스레드) count vẫn ảnh hưởng bộ nhớ (memory / 메모리) và scheduler.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Direct buffer** tiếp nhận điểm tựa từ **Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và số lượng luồng thực thi (thread / 스레드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **NUMA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Direct buffer** nối từ **Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và số lượng luồng thực thi (thread / 스레드)** sang **NUMA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Direct buffer
 
@@ -474,7 +474,7 @@ Nếu ứng dụng (application / 애플리케이션) dùng Netty hoặc NIO m�
 
 Cần kết hợp JVM metrics với `/proc/<PID>/smaps` hoặc bản địa (native / 네이티브) bộ nhớ (memory / 메모리) Tracking.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **NUMA** tiếp nhận điểm tựa từ **Direct buffer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Transparent Huge Pages** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **NUMA** nối từ **Direct buffer** sang **Transparent Huge Pages**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## NUMA
 
@@ -491,7 +491,7 @@ NUMA imbalance có thể làm độ trễ (latency / 지연 시간) tăng dù t�
 
 Không nên pin bộ nhớ (memory / 메모리)/CPU tùy tiện; first-touch allocation và scheduler placement có thể ảnh hưởng lớn.
 
-> **Chuyển mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Transparent Huge Pages** tiếp nhận điểm tựa từ **NUMA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bộ nhớ (memory / 메모리) compaction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Transparent Huge Pages** nối từ **NUMA** sang **Bộ nhớ (memory / 메모리) compaction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Transparent Huge Pages
 
@@ -505,7 +505,7 @@ cat /sys/kernel/mm/transparent_hugepage/enabled
 
 THP có thể cải thiện TLB efficiency nhưng một số cơ sở dữ liệu (database / 데이터베이스) tải công việc (workload / 워크로드) không thích độ trễ (latency / 지연 시간) từ compaction hoặc allocation. Vì vậy khuyến nghị phụ thuộc tải công việc (workload / 워크로드).
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Bộ nhớ (memory / 메모리) compaction** tiếp nhận điểm tựa từ **Transparent Huge Pages** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): JVM không OOM vùng nhớ động (heap / 힙) nhưng bộ chứa (container / 컨테이너) vẫn bị kill** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Bộ nhớ (memory / 메모리) compaction** nối từ **Transparent Huge Pages** sang **Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): JVM không OOM vùng nhớ động (heap / 힙) nhưng bộ chứa (container / 컨테이너) vẫn bị kill**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ nhớ (memory / 메모리) compaction
 
@@ -513,7 +513,7 @@ THP có thể cải thiện TLB efficiency nhưng một số cơ sở dữ liệ
 
 Compaction có thể tạo độ trễ (latency / 지연 시간) spike trong một số trường hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Bộ nhớ (memory / 메모리) compaction** cho ta quy tắc; **Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): JVM không OOM vùng nhớ động (heap / 힙) nhưng bộ chứa (container / 컨테이너) vẫn bị kill** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): host còn RAM nhưng yêu cầu (request / 요청) độ trễ (latency / 지연 시간) tăng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Bộ nhớ (memory / 메모리) compaction** nêu quy tắc; **Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): JVM không OOM vùng nhớ động (heap / 힙) nhưng bộ chứa (container / 컨테이너) vẫn bị kill** thử quy tắc trong tình huống, rồi **Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): host còn RAM nhưng yêu cầu (request / 요청) độ trễ (latency / 지연 시간) tăng** mở rộng hệ quả.
 
 ## Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): JVM không OOM vùng nhớ động (heap / 힙) nhưng bộ chứa (container / 컨테이너) vẫn bị kill
 
@@ -537,7 +537,7 @@ Tổng tiến trình (process / 프로세스)/cgroup usage có thể vượt 4 G
 
 Giải pháp không phải chỉ tăng `Xmx`; ngược lại, đôi khi cần giảm vùng nhớ động (heap / 힙) để dành headroom cho bản địa (native / 네이티브) bộ nhớ (memory / 메모리).
 
-> **Chuyển mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): JVM không OOM vùng nhớ động (heap / 힙) nhưng bộ chứa (container / 컨테이너) vẫn bị kill** cho ta quy tắc; **Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): host còn RAM nhưng yêu cầu (request / 요청) độ trễ (latency / 지연 시간) tăng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): JVM không OOM vùng nhớ động (heap / 힙) nhưng bộ chứa (container / 컨테이너) vẫn bị kill** nêu quy tắc; **Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): host còn RAM nhưng yêu cầu (request / 요청) độ trễ (latency / 지연 시간) tăng** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): host còn RAM nhưng yêu cầu (request / 요청) độ trễ (latency / 지연 시간) tăng
 
@@ -553,7 +553,7 @@ cat /sys/fs/cgroup/.../memory.events
 
 Nếu `memory.high` events tăng hoặc PSI bộ nhớ (memory / 메모리) cao, đây là bằng chứng (evidence / 증거) tốt hơn chỉ nhìn `free -h`.
 
-> **Chuyển mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): host còn RAM nhưng yêu cầu (request / 요청) độ trễ (latency / 지연 시간) tăng** cho ta quy tắc; **Mô hình tư duy** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Một trường hợp (case / 사례) môi trường vận hành (production / 운영 환경): host còn RAM nhưng yêu cầu (request / 요청) độ trễ (latency / 지연 시간) tăng** nêu quy tắc; **Mô hình tư duy** thử quy tắc trong tình huống, rồi **Những hiểu lầm phổ biến** mở rộng hệ quả.
 
 ## Mô hình tư duy
 
@@ -571,7 +571,7 @@ reclaim / swap / cgroup policy
 
 Một tiến trình (process / 프로세스) có thể có ánh xạ (mapping / 매핑) nhưng chưa resident. Một page có thể resident rồi bị reclaim. Một cgroup có thể hết quota dù host chưa hết RAM.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -587,7 +587,7 @@ Một tiến trình (process / 프로세스) có thể có ánh xạ (mapping / 
 
 **“RSS cộng lại bằng đúng RAM used.”** dùng chung (shared / 공유) pages và kernel accounting làm phép cộng đơn giản sai.
 
-> **Chuyển mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Bộ nhớ ảo sâu hơn: page fault, allocator, reclaim và OOM**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

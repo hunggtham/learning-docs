@@ -21,7 +21,7 @@ Cơ chế (mechanism / 메커니즘) và hàm (function / 함수) complement, no
 
 Ví dụ jealousy có proximate triggers, appraisal và học tập (learning / 학습) lịch sử (history / 이력); evolutionary hypothesis about mate retention is separate claim requiring separate bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **2. Natural selection không có mục tiêu trung tâm** tiếp nhận điểm tựa từ **1. Tinbergen: bốn loại câu hỏi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Adaptation, by-product và drift** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **2. Natural selection không có mục tiêu trung tâm** nối từ **1. Tinbergen: bốn loại câu hỏi** sang **3. Adaptation, by-product và drift**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Natural selection không có mục tiêu trung tâm
 
@@ -31,7 +31,7 @@ Evolution does not “want” happiness, morality or perfect health.
 
 Anthropomorphic phrase “evolution designed X for Y” can be shorthand, but should not imply conscious planner.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **3. Adaptation, by-product và drift** tiếp nhận điểm tựa từ **2. Natural selection không có mục tiêu trung tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Adaptationist storytelling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **3. Adaptation, by-product và drift** nối từ **2. Natural selection không có mục tiêu trung tâm** sang **4. Adaptationist storytelling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Adaptation, by-product và drift
 
@@ -45,7 +45,7 @@ A trait may be:
 
 Not every hành vi (behavior / 동작) with plausible hàm (function / 함수) is adaptation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **4. Adaptationist storytelling** tiếp nhận điểm tựa từ **3. Adaptation, by-product và drift** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Mismatch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **4. Adaptationist storytelling** nối từ **3. Adaptation, by-product và drift** sang **5. Mismatch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Adaptationist storytelling
 
@@ -70,7 +70,7 @@ Good evolutionary hypothesis asks for bằng chứng (evidence / 증거) from:
 
 > **Hypothesis quy tắc (rule / 규칙):** adaptation claim should create risky prediction, not just plausible narrative.
 
-> **Chuyển mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **5. Mismatch** tiếp nhận điểm tựa từ **4. Adaptationist storytelling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Behavioral genetics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **5. Mismatch** nối từ **4. Adaptationist storytelling** sang **6. Behavioral genetics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Mismatch
 
@@ -80,7 +80,7 @@ Preference for energy-dense food is dùng chung (common / 공통) mismatch examp
 
 Mismatch is useful khung phần mềm (framework / 프레임워크) only when historical ecology and cơ chế (mechanism / 메커니즘) are specified.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **6. Behavioral genetics** tiếp nhận điểm tựa từ **5. Mismatch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Heritability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **6. Behavioral genetics** nối từ **5. Mismatch** sang **7. Heritability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Behavioral genetics
 
@@ -90,7 +90,7 @@ Classical methods include twin/adoption designs; hiện đại (modern / 현대�
 
 No phương thức (method / 메서드) is assumption-free.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **7. Heritability** tiếp nhận điểm tựa từ **6. Behavioral genetics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. High heritability does not mean immutable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **7. Heritability** nối từ **6. Behavioral genetics** sang **8. High heritability does not mean immutable**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Heritability
 
@@ -104,7 +104,7 @@ It does **not** mean:
 
 Heritability is not an individual pie chart.
 
-> **Chuyển mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **8. High heritability does not mean immutable** tiếp nhận điểm tựa từ **7. Heritability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Heritability does not explain group differences** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **8. High heritability does not mean immutable** nối từ **7. Heritability** sang **9. Heritability does not explain group differences**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. High heritability does not mean immutable
 
@@ -114,7 +114,7 @@ Phenylketonuria illustrates this clearly: genetic cause can coexist with strong 
 
 Likewise, vision traits can be heritable while glasses thay đổi (change / 변경) functional kết quả (outcome / 결과).
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **9. Heritability does not explain group differences** tiếp nhận điểm tựa từ **8. High heritability does not mean immutable** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. dùng chung (shared / 공유) and nonshared môi trường (environment / 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **9. Heritability does not explain group differences** nối từ **8. High heritability does not mean immutable** sang **10. dùng chung (shared / 공유) and nonshared môi trường (environment / 환경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Heritability does not explain group differences
 
@@ -126,7 +126,7 @@ Recent methodological công việc (work / 작업) reiterates that within-group 
 
 Therefore using heritability estimate to explain ethnic, national, lớp (class / 클래스) or gender mean difference is invalid without much stronger nhân quả (causal / 인과적) bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **10. dùng chung (shared / 공유) and nonshared môi trường (environment / 환경)** tiếp nhận điểm tựa từ **9. Heritability does not explain group differences** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Equal-environments and other các giả định (assumptions / 가정들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **10. dùng chung (shared / 공유) and nonshared môi trường (environment / 환경)** nối từ **9. Heritability does not explain group differences** sang **11. Equal-environments and other các giả định (assumptions / 가정들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. dùng chung (shared / 공유) and nonshared môi trường (environment / 환경)
 
@@ -136,7 +136,7 @@ Twin các mô hình (models / 모델들) often partition variance into additive 
 
 Mô hình (model / 모델) các giả định (assumptions / 가정들) affect estimates.
 
-> **Chuyển mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **11. Equal-environments and other các giả định (assumptions / 가정들)** tiếp nhận điểm tựa từ **10. dùng chung (shared / 공유) and nonshared môi trường (environment / 환경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Polygenic kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **11. Equal-environments and other các giả định (assumptions / 가정들)** nối từ **10. dùng chung (shared / 공유) and nonshared môi trường (environment / 환경)** sang **12. Polygenic kiến trúc (architecture / 아키텍처)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Equal-environments and other các giả định (assumptions / 가정들)
 
@@ -146,7 +146,7 @@ Hiện đại (modern / 현대적) genomic designs provide complementary bằng 
 
 Confidence should come from converging methods.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **12. Polygenic kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **11. Equal-environments and other các giả định (assumptions / 가정들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. GWAS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **12. Polygenic kiến trúc (architecture / 아키텍처)** nối từ **11. Equal-environments and other các giả định (assumptions / 가정들)** sang **13. GWAS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Polygenic kiến trúc (architecture / 아키텍처)
 
@@ -156,7 +156,7 @@ There is no single “gene for intelligence”, “gene for depression” or “
 
 Genes influence molecular/developmental pathways whose effects depend ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **13. GWAS** tiếp nhận điểm tựa từ **12. Polygenic kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Polygenic scores** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **13. GWAS** nối từ **12. Polygenic kiến trúc (architecture / 아키텍처)** sang **14. Polygenic scores**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. GWAS
 
@@ -166,7 +166,7 @@ GWAS tín hiệu (signal / 신호) is association, not automatically nhân quả
 
 Large N is necessary because individual effects are tiny.
 
-> **Chuyển mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **14. Polygenic scores** tiếp nhận điểm tựa từ **13. GWAS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Genetic nurture and indirect effects** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **14. Polygenic scores** nối từ **13. GWAS** sang **15. Genetic nurture and indirect effects**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Polygenic scores
 
@@ -182,7 +182,7 @@ Polygenic score:
 
 Use for individual quyết định (decision / 결정) requires strong kiểm tra hợp lệ (validation / 검증) and ethical caution.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **15. Genetic nurture and indirect effects** tiếp nhận điểm tựa từ **14. Polygenic scores** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Gene–môi trường (environment / 환경) correlation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **15. Genetic nurture and indirect effects** nối từ **14. Polygenic scores** sang **16. Gene–môi trường (environment / 환경) correlation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Genetic nurture and indirect effects
 
@@ -192,7 +192,7 @@ This **genetic nurture/indirect genetic tác động (effect / 효과)** complic
 
 Gene tác động (effect / 효과) may partly operate through xã hội (social / 사회적) môi trường (environment / 환경).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **16. Gene–môi trường (environment / 환경) correlation** tiếp nhận điểm tựa từ **15. Genetic nurture and indirect effects** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Gene–môi trường (environment / 환경) tương tác (interaction / 상호작용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **16. Gene–môi trường (environment / 환경) correlation** nối từ **15. Genetic nurture and indirect effects** sang **17. Gene–môi trường (environment / 환경) tương tác (interaction / 상호작용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Gene–môi trường (environment / 환경) correlation
 
@@ -204,7 +204,7 @@ Three classic forms:
 
 Thus môi trường (environment / 환경) exposure is often not random.
 
-> **Chuyển mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **17. Gene–môi trường (environment / 환경) tương tác (interaction / 상호작용)** tiếp nhận điểm tựa từ **16. Gene–môi trường (environment / 환경) correlation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Reaction phạm vi (range / 범위) is too simple** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **17. Gene–môi trường (environment / 환경) tương tác (interaction / 상호작용)** nối từ **16. Gene–môi trường (environment / 환경) correlation** sang **18. Reaction phạm vi (range / 범위) is too simple**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Gene–môi trường (environment / 환경) tương tác (interaction / 상호작용)
 
@@ -214,7 +214,7 @@ Hiện đại (modern / 현대적) genomic research confirms G×E is conceptuall
 
 > **hiện tại (current / 현재) bằng chứng (evidence / 증거):** G×E exists for complex traits; specific tương tác (interaction / 상호작용) claims require large, well-measured and replicated samples.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **18. Reaction phạm vi (range / 범위) is too simple** tiếp nhận điểm tựa từ **17. Gene–môi trường (environment / 환경) tương tác (interaction / 상호작용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Epigenetics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **18. Reaction phạm vi (range / 범위) is too simple** nối từ **17. Gene–môi trường (environment / 환경) tương tác (interaction / 상호작용)** sang **19. Epigenetics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Reaction phạm vi (range / 범위) is too simple
 
@@ -228,7 +228,7 @@ Genes ↔ development ↔ environment ↔ behavior
 
 not fixed phạm vi (range / 범위).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **19. Epigenetics** tiếp nhận điểm tựa từ **18. Reaction phạm vi (range / 범위) is too simple** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Gene expression is context-sensitive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **19. Epigenetics** nối từ **18. Reaction phạm vi (range / 범위) is too simple** sang **20. Gene expression is context-sensitive**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Epigenetics
 
@@ -242,7 +242,7 @@ But popular claim “trauma rewrites genes and passes exactly to grandchildren�
 >
 > **Debated/hypothesis:** strong transgenerational inheritance of specific psychological trauma signatures in humans.
 
-> **Chuyển mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **20. Gene expression is context-sensitive** tiếp nhận điểm tựa từ **19. Epigenetics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Cultural evolution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **20. Gene expression is context-sensitive** nối từ **19. Epigenetics** sang **21. Cultural evolution**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Gene expression is context-sensitive
 
@@ -250,7 +250,7 @@ A DNA chuỗi (sequence / 시퀀스) does not prescribe fixed hành vi (behavior
 
 This is why “gene for hành vi (behavior / 동작) X” is usually misleading shorthand.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **21. Cultural evolution** tiếp nhận điểm tựa từ **20. Gene expression is context-sensitive** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. xã hội (social / 사회적) học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **21. Cultural evolution** nối từ **20. Gene expression is context-sensitive** sang **22. xã hội (social / 사회적) học tập (learning / 학습)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Cultural evolution
 
@@ -260,7 +260,7 @@ Human hành vi (behavior / 동작) also changes through xã hội (social / 사�
 
 Lactase persistence is chuẩn gốc (canonical / 정본) biological example; psychological domains may also show phản hồi (feedback / 피드백) between xã hội (social / 사회적) practice and selection pressure.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **22. xã hội (social / 사회적) học tập (learning / 학습)** tiếp nhận điểm tựa từ **21. Cultural evolution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Evolutionary psychology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **22. xã hội (social / 사회적) học tập (learning / 학습)** nối từ **21. Cultural evolution** sang **23. Evolutionary psychology**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. xã hội (social / 사회적) học tập (learning / 학습)
 
@@ -270,7 +270,7 @@ Some cross-cultural regularities may reflect dùng chung (shared / 공유) biolo
 
 Recurring motif alone cannot identify cơ chế (mechanism / 메커니즘).
 
-> **Chuyển mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **23. Evolutionary psychology** tiếp nhận điểm tựa từ **22. xã hội (social / 사회적) học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Sexual selection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **23. Evolutionary psychology** nối từ **22. xã hội (social / 사회적) học tập (learning / 학습)** sang **24. Sexual selection**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Evolutionary psychology
 
@@ -280,7 +280,7 @@ Strong công việc (work / 작업) generates testable hypotheses about thông t
 
 Weak popular use simply labels hành vi (behavior / 동작) “evolutionary” after observing it.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **24. Sexual selection** tiếp nhận điểm tựa từ **23. Evolutionary psychology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Kin selection and cooperation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **24. Sexual selection** nối từ **23. Evolutionary psychology** sang **25. Kin selection and cooperation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Sexual selection
 
@@ -290,7 +290,7 @@ Evolutionary hypotheses about mating hành vi (behavior / 동작) can be useful,
 
 Cross-cultural variation is bằng chứng (evidence / 증거) to explain, not noise to ignore.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **25. Kin selection and cooperation** tiếp nhận điểm tựa từ **24. Sexual selection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Prepared học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **25. Kin selection and cooperation** nối từ **24. Sexual selection** sang **26. Prepared học tập (learning / 학습)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Kin selection and cooperation
 
@@ -300,7 +300,7 @@ Human prosociality cannot be reduced to one cơ chế (mechanism / 메커니즘)
 
 Xem [[../03_human_development_and_person/08_moral_psychology_and_prosocial_behavior]].
 
-> **Chuyển mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **26. Prepared học tập (learning / 학습)** tiếp nhận điểm tựa từ **25. Kin selection and cooperation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Personality and genetics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **26. Prepared học tập (learning / 학습)** nối từ **25. Kin selection and cooperation** sang **27. Personality and genetics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Prepared học tập (learning / 학습)
 
@@ -308,7 +308,7 @@ Some threat associations may be acquired more easily than others, suggesting evo
 
 But fear still depends experience and ngữ cảnh (context / 맥락). “Evolved preparedness” does not mean innate fully formed fear.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **27. Personality and genetics** tiếp nhận điểm tựa từ **26. Prepared học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Intelligence and genetics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **27. Personality and genetics** nối từ **26. Prepared học tập (learning / 학습)** sang **28. Intelligence and genetics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Personality and genetics
 
@@ -318,7 +318,7 @@ Genetic association does not mean personality cannot thay đổi (change / 변�
 
 Xem [[../03_human_development_and_person/03_personality]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **28. Intelligence and genetics** tiếp nhận điểm tựa từ **27. Personality and genetics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Mental health genetics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **28. Intelligence and genetics** nối từ **27. Personality and genetics** sang **29. Mental health genetics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Intelligence and genetics
 
@@ -334,7 +334,7 @@ But:
 
 Xem [[../02_learning_and_cognition/03_intelligence_and_cognitive_differences]].
 
-> **Chuyển mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **29. Mental health genetics** tiếp nhận điểm tựa từ **28. Intelligence and genetics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Heritability and intervention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **29. Mental health genetics** nối từ **28. Intelligence and genetics** sang **30. Heritability and intervention**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Mental health genetics
 
@@ -342,7 +342,7 @@ Psychiatric disorders are generally polygenic and heterogeneous. Genetic liabili
 
 Polygenic rủi ro (risk / 위험) is one factor among development, môi trường (environment / 환경) and stochastic processes, not diagnosis in itself.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **30. Heritability and intervention** tiếp nhận điểm tựa từ **29. Mental health genetics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Moral naturalistic fallacy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **30. Heritability and intervention** nối từ **29. Mental health genetics** sang **31. Moral naturalistic fallacy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Heritability and intervention
 
@@ -357,7 +357,7 @@ This conclusion does not follow.
 
 Intervention acts on nhân quả (causal / 인과적) pathway/môi trường (environment / 환경) even when variation in hiện tại (current / 현재) population is partly genetic.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **31. Moral naturalistic fallacy** tiếp nhận điểm tựa từ **30. Heritability and intervention** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Race/ancestry caution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **31. Moral naturalistic fallacy** nối từ **30. Heritability and intervention** sang **32. Race/ancestry caution**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Moral naturalistic fallacy
 
@@ -370,7 +370,7 @@ Intervention acts on nhân quả (causal / 인과적) pathway/môi trường (en
 
 Evolutionary explanation is descriptive, not ethical prescription.
 
-> **Chuyển mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **32. Race/ancestry caution** tiếp nhận điểm tựa từ **31. Moral naturalistic fallacy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **32. Race/ancestry caution** nối từ **31. Moral naturalistic fallacy** sang **33. dùng chung (common / 공통) misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Race/ancestry caution
 
@@ -380,7 +380,7 @@ Group labels often bundle môi trường (environment / 환경), discrimination,
 
 Psychological difference claims require exceptional đo lường (measurement / 측정) and nhân quả (causal / 인과적) rigor.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **33. dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **32. Race/ancestry caution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Evidence-status checklist for evolutionary claims** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **33. dùng chung (common / 공통) misconceptions** nối từ **32. Race/ancestry caution** sang **34. Evidence-status checklist for evolutionary claims**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. dùng chung (common / 공통) misconceptions
 
@@ -408,7 +408,7 @@ Too strong for human psychological claims.
 
 Sai.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **33. dùng chung (common / 공통) misconceptions** nêu điều cần giải thích; **34. Evidence-status checklist for evolutionary claims** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **35. mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **33. dùng chung (common / 공통) misconceptions** đặt vấn đề; **34. Evidence-status checklist for evolutionary claims** đối chiếu bằng chứng, rồi **35. mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 34. Evidence-status checklist for evolutionary claims
 
@@ -423,7 +423,7 @@ Before accepting adaptation claim, ask:
 7. Could trait be by-product?
 8. Is dữ liệu (data / 데이터) independent of story used to generate hypothesis?
 
-> **Chuyển mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, các dấu vết trong **34. Evidence-status checklist for evolutionary claims** được đọc cùng nhau ở **35. mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, các dấu vết trong **34. Evidence-status checklist for evolutionary claims** được đọc cùng nhau ở **35. mô hình tư duy (mental model / 사고 모델)** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 35. mô hình tư duy (mental model / 사고 모델)
 
@@ -450,7 +450,7 @@ Mechanism now
 
 These questions connect but need separate bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **Kết nối kiến thức** gom các mảnh từ **35. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Tiến hóa, di truyền và hành vi — Evolution, Genetics & hành vi (behavior / 동작)**, **Kết nối kiến thức** tổng hợp từ **35. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

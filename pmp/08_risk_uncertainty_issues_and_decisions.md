@@ -10,7 +10,7 @@ Rủi ro (risk / 위험) là một sự kiện hoặc điều kiện chưa chắ
 
 Rủi ro (risk / 위험) không tồn tại độc lập với mục tiêu (objective / 목표). Cùng một sự kiện (event / 이벤트) có thể là threat với một mục tiêu (objective / 목표) nhưng gần như irrelevant với mục tiêu (objective / 목표) khác. Vì vậy rủi ro (risk / 위험) statement nên luôn gắn với impact thực tế lên giá trị (value / 값), phạm vi (scope / 범위), schedule, chi phí (cost / 비용), chất lượng (quality / 품질), compliance hoặc reputation.
 
-> **Chuyển mạch:** Trong **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Bất định (uncertainty / 불확실성) không chỉ là sự kiện (event / 이벤트) rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **Rủi ro (risk / 위험) là bất định (uncertainty / 불확실성) có tác động (effect / 효과) lên mục tiêu (objective / 목표)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro (risk / 위험) management là làm bất định (uncertainty / 불확실성) có thể hành động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bất định (uncertainty / 불확실성) không chỉ là sự kiện (event / 이벤트) rủi ro (risk / 위험)** nối từ **Rủi ro (risk / 위험) là bất định (uncertainty / 불확실성) có tác động (effect / 효과) lên mục tiêu (objective / 목표)** sang **Rủi ro (risk / 위험) management là làm bất định (uncertainty / 불확실성) có thể hành động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bất định (uncertainty / 불확실성) không chỉ là sự kiện (event / 이벤트) rủi ro (risk / 위험)
 
@@ -22,7 +22,7 @@ Gọi tất cả là “rủi ro (risk / 위험)” nhưng dùng cùng một ph�
 
 Một cách phân biệt sâu hơn là epistemic bất định (uncertainty / 불확실성) — bất định (uncertainty / 불확실성) vì thiếu kiến thức (knowledge / 지식) và có thể giảm bằng học tập (learning / 학습) — với aleatory variability — variation vốn có không biến mất chỉ vì nghiên cứu thêm. Prototype có thể giảm epistemic bất định (uncertainty / 불확실성) về API tính tương thích (compatibility / 호환성); nó không loại bỏ natural variability của giao dịch (transaction / 트랜잭션) volume. Hai loại bất định (uncertainty / 불확실성) cần intervention khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Rủi ro (risk / 위험) management là làm bất định (uncertainty / 불확실성) có thể hành động** tiếp nhận điểm tựa từ **Bất định (uncertainty / 불확실성) không chỉ là sự kiện (event / 이벤트) rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro (risk / 위험) mô hình (model / 모델) chất lượng (quality / 품질) quan trọng hơn số lượng rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Rủi ro (risk / 위험) management là làm bất định (uncertainty / 불확실성) có thể hành động** nối từ **Bất định (uncertainty / 불확실성) không chỉ là sự kiện (event / 이벤트) rủi ro (risk / 위험)** sang **Rủi ro (risk / 위험) mô hình (model / 모델) chất lượng (quality / 품질) quan trọng hơn số lượng rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rủi ro (risk / 위험) management là làm bất định (uncertainty / 불확실성) có thể hành động
 
@@ -32,7 +32,7 @@ Rủi ro (risk / 위험) register là working mô hình (model / 모델) gồm �
 
 Rủi ro (risk / 위험) đơn vị sở hữu (owner / 오너) là người chịu trách nhiệm theo dõi và bảo đảm rủi ro (risk / 위험) được quản lý; hành động (action / 동작) đơn vị sở hữu (owner / 오너) có thể là người thực hiện một phản hồi (response / 응답) cụ thể. Hai vai trò có thể là một hoặc khác nhau. Nếu register chỉ có “đơn vị sở hữu (owner / 오너)” nhưng không ai hiểu trách nhiệm là gì, item dễ bị treo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Rủi ro (risk / 위험) mô hình (model / 모델) chất lượng (quality / 품질) quan trọng hơn số lượng rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **Rủi ro (risk / 위험) management là làm bất định (uncertainty / 불확실성) có thể hành động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro (risk / 위험) identification cần nhìn theo nhiều lớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Rủi ro (risk / 위험) mô hình (model / 모델) chất lượng (quality / 품질) quan trọng hơn số lượng rủi ro (risk / 위험)** nối từ **Rủi ro (risk / 위험) management là làm bất định (uncertainty / 불확실성) có thể hành động** sang **Rủi ro (risk / 위험) identification cần nhìn theo nhiều lớp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rủi ro (risk / 위험) mô hình (model / 모델) chất lượng (quality / 품질) quan trọng hơn số lượng rủi ro (risk / 위험)
 
@@ -42,7 +42,7 @@ Duplicate rủi ro (risk / 위험) làm exposure bị double-count. rủi ro (ri
 
 Register cũng phải phân biệt nguồn (source / 소스) rủi ro (risk / 위험) và symptom rủi ro (risk / 위험). “UAT có thể trễ” có thể chỉ là consequence của môi trường (environment / 환경) instability, vendor phản hồi (response / 응답) độ trễ (latency / 지연 시간) và yêu cầu (requirement / 요구사항) churn. Nếu chỉ mitigate symptom bằng overtime, underlying exposure còn nguyên.
 
-> **Chuyển mạch:** Trong **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Rủi ro (risk / 위험) identification cần nhìn theo nhiều lớp** tiếp nhận điểm tựa từ **Rủi ro (risk / 위험) mô hình (model / 모델) chất lượng (quality / 품질) quan trọng hơn số lượng rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro (risk / 위험) dimensions ngoài xác suất (probability / 확률) × impact** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Rủi ro (risk / 위험) identification cần nhìn theo nhiều lớp** nối từ **Rủi ro (risk / 위험) mô hình (model / 모델) chất lượng (quality / 품질) quan trọng hơn số lượng rủi ro (risk / 위험)** sang **Rủi ro (risk / 위험) dimensions ngoài xác suất (probability / 확률) × impact**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rủi ro (risk / 위험) identification cần nhìn theo nhiều lớp
 
@@ -52,7 +52,7 @@ Pre-mortem cũng hữu ích: giả sử sáu tháng sau dự án (project / 프�
 
 Near miss và weak tín hiệu (signal / 신호) cũng là nguồn identification. Một môi trường (environment / 환경) outage chỉ kéo dài 10 phút và chưa ảnh hưởng milestone có thể là tín hiệu (signal / 신호) của systemic độ tin cậy (reliability / 신뢰성) rủi ro (risk / 위험). Nếu organization chỉ học từ mất mát (loss / 손실) thật, học tập (learning / 학습) chi phí (cost / 비용) sẽ cao hơn cần thiết.
 
-> **Chuyển mạch:** Ở chặng này của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Rủi ro (risk / 위험) dimensions ngoài xác suất (probability / 확률) × impact** tiếp nhận điểm tựa từ **Rủi ro (risk / 위험) identification cần nhìn theo nhiều lớp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Qualitative và quantitative phân tích (analysis / 분석)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Rủi ro (risk / 위험) dimensions ngoài xác suất (probability / 확률) × impact** nối từ **Rủi ro (risk / 위험) identification cần nhìn theo nhiều lớp** sang **Qualitative và quantitative phân tích (analysis / 분석)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rủi ro (risk / 위험) dimensions ngoài xác suất (probability / 확률) × impact
 
@@ -62,7 +62,7 @@ Một rủi ro (risk / 위험) xác suất (probability / 확률) trung bình nh
 
 Không nhất thiết phải biến mọi dimension thành score. Mục tiêu là tránh flatten mọi rủi ro (risk / 위험) thành một ô màu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Qualitative và quantitative phân tích (analysis / 분석)** tiếp nhận điểm tựa từ **Rủi ro (risk / 위험) dimensions ngoài xác suất (probability / 확률) × impact** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Risk-adjusted giá trị (value / 값) thay vì expected giá trị (value / 값) đơn thuần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Qualitative và quantitative phân tích (analysis / 분석)** nối từ **Rủi ro (risk / 위험) dimensions ngoài xác suất (probability / 확률) × impact** sang **Risk-adjusted giá trị (value / 값) thay vì expected giá trị (value / 값) đơn thuần**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Qualitative và quantitative phân tích (analysis / 분석)
 
@@ -80,7 +80,7 @@ Cây quyết định (decision tree / 의사결정 트리) giúp so option có b
 
 Correlation là điểm dễ bị bỏ qua. Nếu ba rủi ro (risk / 위험) đều cùng phụ thuộc một vendor hoặc cùng xảy ra khi thị trường (market / 시장) biến động, cộng EMV như các sự kiện (event / 이벤트) độc lập có thể đánh giá thấp tail rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Trong **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Risk-adjusted giá trị (value / 값) thay vì expected giá trị (value / 값) đơn thuần** tiếp nhận điểm tựa từ **Qualitative và quantitative phân tích (analysis / 분석)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Scenario phân tích (analysis / 분석): không ép bất định (uncertainty / 불확실성) thành một số duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Risk-adjusted giá trị (value / 값) thay vì expected giá trị (value / 값) đơn thuần** nối từ **Qualitative và quantitative phân tích (analysis / 분석)** sang **Scenario phân tích (analysis / 분석): không ép bất định (uncertainty / 불확실성) thành một số duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Risk-adjusted giá trị (value / 값) thay vì expected giá trị (value / 값) đơn thuần
 
@@ -90,7 +90,7 @@ Vì vậy EMV là đầu vào (input / 입력), không phải quyết định. R
 
 Một organization không có sức chứa (capacity / 용량) hấp thụ một mất mát (loss / 손실) 1 tỷ không nên hành xử như thể 1% × 1 tỷ chỉ đơn giản là 10 triệu expected chi phí (cost / 비용).
 
-> **Chuyển mạch:** Ở chặng này của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Scenario phân tích (analysis / 분석): không ép bất định (uncertainty / 불확실성) thành một số duy nhất** tiếp nhận điểm tựa từ **Risk-adjusted giá trị (value / 값) thay vì expected giá trị (value / 값) đơn thuần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm thử sức chịu tải (stress test / 스트레스 테스트) và break điểm (point / 지점)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Scenario phân tích (analysis / 분석): không ép bất định (uncertainty / 불확실성) thành một số duy nhất** nối từ **Risk-adjusted giá trị (value / 값) thay vì expected giá trị (value / 값) đơn thuần** sang **Kiểm thử sức chịu tải (stress test / 스트레스 테스트) và break điểm (point / 지점)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Scenario phân tích (analysis / 분석): không ép bất định (uncertainty / 불확실성) thành một số duy nhất
 
@@ -100,7 +100,7 @@ Scenario không phải ba con số tùy ý quanh estimate trung bình. Mỗi sce
 
 Một dự án (project / 프로젝트) chỉ “tốt” trong best trường hợp (case / 사례) nhưng mất viability ngay khi adoption thấp hơn 10% đang có fragility mà một single-point forecast che mất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Kiểm thử sức chịu tải (stress test / 스트레스 테스트) và break điểm (point / 지점)** tiếp nhận điểm tựa từ **Scenario phân tích (analysis / 분석): không ép bất định (uncertainty / 불확실성) thành một số duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Monte Carlo: từ một finish date sang phân phối (distribution / 분포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Kiểm thử sức chịu tải (stress test / 스트레스 테스트) và break điểm (point / 지점)** nối từ **Scenario phân tích (analysis / 분석): không ép bất định (uncertainty / 불확실성) thành một số duy nhất** sang **Monte Carlo: từ một finish date sang phân phối (distribution / 분포)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kiểm thử sức chịu tải (stress test / 스트레스 테스트) và break điểm (point / 지점)
 
@@ -108,7 +108,7 @@ Scenario phân tích (analysis / 분석) có thể đi thêm một bước: thay
 
 Break điểm (point / 지점) biến discussion từ “rủi ro (risk / 위험) cao hay thấp” thành “hệ thống (system / 시스템) chịu được tới đâu”. Đây là cầu nối (bridge / 브리지) giữa rủi ro (risk / 위험), finance, schedule và operations readiness.
 
-> **Chuyển mạch:** Trong **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Monte Carlo: từ một finish date sang phân phối (distribution / 분포)** tiếp nhận điểm tựa từ **Kiểm thử sức chịu tải (stress test / 스트레스 테스트) và break điểm (point / 지점)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sensitivity và tornado thinking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Monte Carlo: từ một finish date sang phân phối (distribution / 분포)** nối từ **Kiểm thử sức chịu tải (stress test / 스트레스 테스트) và break điểm (point / 지점)** sang **Sensitivity và tornado thinking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Monte Carlo: từ một finish date sang phân phối (distribution / 분포)
 
@@ -128,7 +128,7 @@ Một lỗi phổ biến là mẫu (sample / 표본) mỗi activity độc lập
 
 Monte Carlo hữu ích nhất khi quyết định (decision / 결정) cần xác suất (probability / 확률) ngôn ngữ (language / 언어): cần contingency bao nhiêu để đạt confidence mục tiêu (target / 대상), milestone nào có tail lớn, hoặc rủi ro (risk / 위험) phản hồi (response / 응답) nào làm phân phối (distribution / 분포) thu hẹp đáng kể.
 
-> **Chuyển mạch:** Ở chặng này của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Sensitivity và tornado thinking** tiếp nhận điểm tựa từ **Monte Carlo: từ một finish date sang phân phối (distribution / 분포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xác suất (probability / 확률) không phải frequency đơn giản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sensitivity và tornado thinking** nối từ **Monte Carlo: từ một finish date sang phân phối (distribution / 분포)** sang **Xác suất (probability / 확률) không phải frequency đơn giản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sensitivity và tornado thinking
 
@@ -138,7 +138,7 @@ Nếu finish date nhạy nhất với regulatory approval và kiểm thử tích
 
 Sensitivity không chứng minh causation tuyệt đối, nhưng giúp ưu tiên nơi nên mua thêm thông tin (information / 정보) hoặc phản hồi (response / 응답).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Xác suất (probability / 확률) không phải frequency đơn giản** tiếp nhận điểm tựa từ **Sensitivity và tornado thinking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Threat phản hồi (response / 응답) và opportunity phản hồi (response / 응답)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Xác suất (probability / 확률) không phải frequency đơn giản** nối từ **Sensitivity và tornado thinking** sang **Threat phản hồi (response / 응답) và opportunity phản hồi (response / 응답)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xác suất (probability / 확률) không phải frequency đơn giản
 
@@ -148,7 +148,7 @@ Trong dự án (project / 프로젝트), xác suất (probability / 확률) thư
 
 Calibration có thể học theo thời gian. Nếu một nhóm (team / 팀) liên tục gắn “20%” cho rủi ro (risk / 위험) nhưng gần một nửa rủi ro (risk / 위험) đó xảy ra, quy mô (scale / 규모) hoặc judgment đang miscalibrated. quyết định (decision / 결정) log và historical outcomes giúp cải thiện forecasting skill.
 
-> **Chuyển mạch:** Trong **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Threat phản hồi (response / 응답) và opportunity phản hồi (response / 응답)** tiếp nhận điểm tựa từ **Xác suất (probability / 확률) không phải frequency đơn giản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều khiển (control / 제어) taxonomy: preventive, detective, corrective** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Threat phản hồi (response / 응답) và opportunity phản hồi (response / 응답)** nối từ **Xác suất (probability / 확률) không phải frequency đơn giản** sang **Điều khiển (control / 제어) taxonomy: preventive, detective, corrective**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Threat phản hồi (response / 응답) và opportunity phản hồi (response / 응답)
 
@@ -158,7 +158,7 @@ Mitigation làm xác suất (probability / 확률) hoặc impact giảm trước
 
 Transfer không làm rủi ro (risk / 위험) biến mất khỏi dự án (project / 프로젝트) kết quả (outcome / 결과). Bảo hiểm hoặc đặc tả hợp đồng (contract / 계약) có thể chuyển financial consequence, nhưng schedule hoặc reputation tác động (effect / 효과) vẫn có thể ở lại. Đây là lý do transfer phải được hiểu theo loại exposure cụ thể.
 
-> **Chuyển mạch:** Ở chặng này của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Điều khiển (control / 제어) taxonomy: preventive, detective, corrective** tiếp nhận điểm tựa từ **Threat phản hồi (response / 응답) và opportunity phản hồi (response / 응답)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều khiển (control / 제어) effectiveness phải được kiểm chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Điều khiển (control / 제어) taxonomy: preventive, detective, corrective** nối từ **Threat phản hồi (response / 응답) và opportunity phản hồi (response / 응답)** sang **Điều khiển (control / 제어) effectiveness phải được kiểm chứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điều khiển (control / 제어) taxonomy: preventive, detective, corrective
 
@@ -168,7 +168,7 @@ Một dự án (project / 프로젝트) mature không chỉ hỏi “có phản 
 
 Bow-tie lập luận (reasoning / 추론) hữu ích vì nó đặt sự kiện (event / 이벤트) ở giữa: bên trái là cause/preventive barrier; bên phải là consequence/mitigating barrier. Nó giúp thấy dự án (project / 프로젝트) đang dựa quá nhiều vào một điều khiển (control / 제어) duy nhất hay không.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Điều khiển (control / 제어) effectiveness phải được kiểm chứng** tiếp nhận điểm tựa từ **Điều khiển (control / 제어) taxonomy: preventive, detective, corrective** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Residual và secondary rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Điều khiển (control / 제어) effectiveness phải được kiểm chứng** nối từ **Điều khiển (control / 제어) taxonomy: preventive, detective, corrective** sang **Residual và secondary rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điều khiển (control / 제어) effectiveness phải được kiểm chứng
 
@@ -176,7 +176,7 @@ Có điều khiển (control / 제어) trên giấy không có nghĩa điều kh
 
 Rủi ro (risk / 위험) rà soát (review / 검토) nên hỏi bằng chứng (evidence / 증거) về điều khiển (control / 제어) effectiveness, không chỉ status “implemented”. điều khiển (control / 제어) có thể degrade theo thời gian, đặc biệt khi cấu hình (configuration / 구성), people hoặc vendor phiên bản (version / 버전) thay đổi.
 
-> **Chuyển mạch:** Trong **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Residual và secondary rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **Điều khiển (control / 제어) effectiveness phải được kiểm chứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro (risk / 위험) sức chứa (capacity / 용량), appetite, threshold và tolerance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Residual và secondary rủi ro (risk / 위험)** nối từ **Điều khiển (control / 제어) effectiveness phải được kiểm chứng** sang **Rủi ro (risk / 위험) sức chứa (capacity / 용량), appetite, threshold và tolerance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Residual và secondary rủi ro (risk / 위험)
 
@@ -184,7 +184,7 @@ Phản hồi (response / 응답) có thể không loại bỏ rủi ro (risk / �
 
 Một phản hồi (response / 응답) chỉ hợp lý khi tổng exposure sau phản hồi (response / 응답), gồm residual và secondary rủi ro (risk / 위험), tốt hơn trạng thái trước đó so với chi phí (cost / 비용) bỏ ra.
 
-> **Chuyển mạch:** Ở chặng này của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Rủi ro (risk / 위험) sức chứa (capacity / 용량), appetite, threshold và tolerance** tiếp nhận điểm tựa từ **Residual và secondary rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reserve và buffer: bảo vệ plan khỏi bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Rủi ro (risk / 위험) sức chứa (capacity / 용량), appetite, threshold và tolerance** nối từ **Residual và secondary rủi ro (risk / 위험)** sang **Reserve và buffer: bảo vệ plan khỏi bất định (uncertainty / 불확실성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rủi ro (risk / 위험) sức chứa (capacity / 용량), appetite, threshold và tolerance
 
@@ -194,7 +194,7 @@ Sức chứa (capacity / 용량) và appetite không giống nhau. Organization 
 
 Ví dụ organization có thể chấp nhận schedule variance vài ngày nhưng zero tolerance với privacy breach. Hai rủi ro (risk / 위험) cùng xác suất (probability / 확률) không thể được xử lý bằng cùng priority quy tắc (rule / 규칙).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Reserve và buffer: bảo vệ plan khỏi bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **Rủi ro (risk / 위험) sức chứa (capacity / 용량), appetite, threshold và tolerance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro (risk / 위험) exposure trend và rủi ro (risk / 위험) burndown** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Reserve và buffer: bảo vệ plan khỏi bất định (uncertainty / 불확실성)** nối từ **Rủi ro (risk / 위험) sức chứa (capacity / 용량), appetite, threshold và tolerance** sang **Rủi ro (risk / 위험) exposure trend và rủi ro (risk / 위험) burndown**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Reserve và buffer: bảo vệ plan khỏi bất định (uncertainty / 불확실성)
 
@@ -206,7 +206,7 @@ Reserve cũng không nên được tính bằng cách cộng mechanical mọi EM
 
 Reserve consumption cần liên hệ rủi ro (risk / 위험) retirement. Nếu contingency đã tiêu nhưng exposure chưa giảm, dự án (project / 프로젝트) đang mất protection. Nếu rủi ro (risk / 위험) đã retire mà reserve vẫn bị giữ không cần thiết, forecast có thể quá conservative.
 
-> **Chuyển mạch:** Trong **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Rủi ro (risk / 위험) exposure trend và rủi ro (risk / 위험) burndown** tiếp nhận điểm tựa từ **Reserve và buffer: bảo vệ plan khỏi bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro (risk / 위험) tương tác (interaction / 상호작용) và rủi ro (risk / 위험) cascade** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Rủi ro (risk / 위험) exposure trend và rủi ro (risk / 위험) burndown** nối từ **Reserve và buffer: bảo vệ plan khỏi bất định (uncertainty / 불확실성)** sang **Rủi ro (risk / 위험) tương tác (interaction / 상호작용) và rủi ro (risk / 위험) cascade**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rủi ro (risk / 위험) exposure trend và rủi ro (risk / 위험) burndown
 
@@ -216,7 +216,7 @@ Rủi ro (risk / 위험) burndown không có nghĩa số rủi ro (risk / 위험
 
 Nếu nhóm (team / 팀) “đóng rủi ro (risk / 위험)” để dashboard đẹp trong khi giả định (assumption / 가정) chưa được kiểm chứng, chỉ số (metric / 지표) trở thành gaming.
 
-> **Chuyển mạch:** Ở chặng này của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Rủi ro (risk / 위험) tương tác (interaction / 상호작용) và rủi ro (risk / 위험) cascade** tiếp nhận điểm tựa từ **Rủi ro (risk / 위험) exposure trend và rủi ro (risk / 위험) burndown** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Systemic rủi ro (risk / 위험) và common-cause thất bại (failure / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Rủi ro (risk / 위험) tương tác (interaction / 상호작용) và rủi ro (risk / 위험) cascade** nối từ **Rủi ro (risk / 위험) exposure trend và rủi ro (risk / 위험) burndown** sang **Systemic rủi ro (risk / 위험) và common-cause thất bại (failure / 실패)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rủi ro (risk / 위험) tương tác (interaction / 상호작용) và rủi ro (risk / 위험) cascade
 
@@ -224,7 +224,7 @@ Rủi ro (risk / 위험) có thể gây rủi ro (risk / 위험) khác. Vendor d
 
 Một phụ thuộc (dependency / 의존성) map hoặc bow-tie lập luận (reasoning / 추론) giúp nhìn nguyên nhân gốc (root cause / 근본 원인), preventive điều khiển (control / 제어), sự kiện (event / 이벤트) và consequence. Mục tiêu là chọn điều khiển (control / 제어) ở nơi có leverage lớn nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Systemic rủi ro (risk / 위험) và common-cause thất bại (failure / 실패)** tiếp nhận điểm tựa từ **Rủi ro (risk / 위험) tương tác (interaction / 상호작용) và rủi ro (risk / 위험) cascade** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Robustness, resilience và recoverability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Systemic rủi ro (risk / 위험) và common-cause thất bại (failure / 실패)** nối từ **Rủi ro (risk / 위험) tương tác (interaction / 상호작용) và rủi ro (risk / 위험) cascade** sang **Robustness, resilience và recoverability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Systemic rủi ro (risk / 위험) và common-cause thất bại (failure / 실패)
 
@@ -236,7 +236,7 @@ Cách xử lý là map dùng chung (shared / 공유) phụ thuộc (dependency /
 
 Concentration rủi ro (risk / 위험) còn có thể nằm ở giả định (assumption / 가정). Nhiều benefit trường hợp (case / 사례) có vẻ khác nhau nhưng cùng phụ thuộc adoption growth. Nếu adoption giả định (assumption / 가정) sai, nhiều benefit cùng collapse.
 
-> **Chuyển mạch:** Trong **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Robustness, resilience và recoverability** tiếp nhận điểm tựa từ **Systemic rủi ro (risk / 위험) và common-cause thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Issue management và impediment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Robustness, resilience và recoverability** nối từ **Systemic rủi ro (risk / 위험) và common-cause thất bại (failure / 실패)** sang **Issue management và impediment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Robustness, resilience và recoverability
 
@@ -246,7 +246,7 @@ Redundancy, slack, modularity, fallback, cross-training và quay lui (rollback /
 
 Rủi ro (risk / 위험) management trưởng thành cân preventive efficiency với khôi phục (recovery / 복구) năng lực (capability / 역량). Một hệ thống (system / 시스템) không bao giờ thất bại (fail / 실패) là mục tiêu không thực tế; một hệ thống (system / 시스템) thất bại (fail / 실패) nhưng recover nhanh có thể tạo nghiệp vụ (business / 비즈니스) kết quả (outcome / 결과) tốt hơn.
 
-> **Chuyển mạch:** Ở chặng này của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Issue management và impediment** tiếp nhận điểm tựa từ **Robustness, resilience và recoverability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Triage: contain trước, diagnose sau khi harm đang lan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Issue management và impediment** nối từ **Robustness, resilience và recoverability** sang **Triage: contain trước, diagnose sau khi harm đang lan**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Issue management và impediment
 
@@ -256,7 +256,7 @@ Một issue recurring thường chỉ ra systemic cause. Nếu mỗi sprint môi
 
 Khi rủi ro (risk / 위험) trở thành issue, register không nên chỉ chuyển status sang “occurred” rồi bỏ. nhóm (team / 팀) cần execute phản hồi (response / 응답), cập nhật forecast, reassess secondary rủi ro (risk / 위험) và communicate impact tới người có quyết định (decision / 결정) right.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Triage: contain trước, diagnose sau khi harm đang lan** tiếp nhận điểm tựa từ **Issue management và impediment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Crisis và quyết định (decision / 결정) compression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Triage: contain trước, diagnose sau khi harm đang lan** nối từ **Issue management và impediment** sang **Crisis và quyết định (decision / 결정) compression**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Triage: contain trước, diagnose sau khi harm đang lan
 
@@ -266,7 +266,7 @@ Triage nên dựa trên severity, velocity, reversibility và stakeholder exposu
 
 Sau containment, nhóm (team / 팀) vẫn phải diagnose và sửa hệ thống (system / 시스템). Nếu chỉ dập lửa rồi quay lại business-as-usual, recurring issue trở thành normalized thất bại (failure / 실패).
 
-> **Chuyển mạch:** Trong **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Crisis và quyết định (decision / 결정) compression** tiếp nhận điểm tựa từ **Triage: contain trước, diagnose sau khi harm đang lan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyết định (decision / 결정) under bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Crisis và quyết định (decision / 결정) compression** nối từ **Triage: contain trước, diagnose sau khi harm đang lan** sang **Quyết định (decision / 결정) under bất định (uncertainty / 불확실성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Crisis và quyết định (decision / 결정) compression
 
@@ -276,7 +276,7 @@ Crisis không phải lúc thích hợp để invent toàn bộ operating mô hì
 
 Sau crisis, temporary emergency authority phải được retire; nếu không, exception dễ biến thành permanent shadow quản trị (governance / 거버넌스).
 
-> **Chuyển mạch:** Ở chặng này của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Quyết định (decision / 결정) under bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **Crisis và quyết định (decision / 결정) compression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyết định (decision / 결정) regret và chi phí (cost / 비용) of waiting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Quyết định (decision / 결정) under bất định (uncertainty / 불확실성)** nối từ **Crisis và quyết định (decision / 결정) compression** sang **Quyết định (decision / 결정) regret và chi phí (cost / 비용) of waiting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quyết định (decision / 결정) under bất định (uncertainty / 불확실성)
 
@@ -286,7 +286,7 @@ Reversible quyết định (decision / 결정) nên được decentralize và th
 
 Giá trị (value / 값) of thông tin (information / 정보) có thể lập luận (reasoning / 추론) định tính: nếu một thử nghiệm rẻ có khả năng thay đổi một quyết định (decision / 결정) rất đắt, kiểm thử (test / 테스트) thường đáng làm. Nếu dù kết quả nào quyết định (decision / 결정) cũng không đổi, thu thêm dữ liệu (data / 데이터) chỉ trì hoãn hành động (action / 동작).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Quyết định (decision / 결정) regret và chi phí (cost / 비용) of waiting** tiếp nhận điểm tựa từ **Quyết định (decision / 결정) under bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Real options: giữ quyền lựa chọn có thể có giá trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Quyết định (decision / 결정) regret và chi phí (cost / 비용) of waiting** nối từ **Quyết định (decision / 결정) under bất định (uncertainty / 불확실성)** sang **Real options: giữ quyền lựa chọn có thể có giá trị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quyết định (decision / 결정) regret và chi phí (cost / 비용) of waiting
 
@@ -296,7 +296,7 @@ Quyết định (decision / 결정) lập luận (reasoning / 추론) cần cân
 
 Không tồn tại quy tắc (rule / 규칙) “luôn phân tích trước” hoặc “luôn hành động nhanh”. ngữ cảnh (context / 맥락) quyết định thông tin (information / 정보) threshold phù hợp.
 
-> **Chuyển mạch:** Trong **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Real options: giữ quyền lựa chọn có thể có giá trị** tiếp nhận điểm tựa từ **Quyết định (decision / 결정) regret và chi phí (cost / 비용) of waiting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyết định (decision / 결정) chất lượng (quality / 품질) khác kết quả (outcome / 결과) chất lượng (quality / 품질)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Real options: giữ quyền lựa chọn có thể có giá trị** nối từ **Quyết định (decision / 결정) regret và chi phí (cost / 비용) of waiting** sang **Quyết định (decision / 결정) chất lượng (quality / 품질) khác kết quả (outcome / 결과) chất lượng (quality / 품질)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Real options: giữ quyền lựa chọn có thể có giá trị
 
@@ -306,7 +306,7 @@ Một commitment lớn không đảo ngược có thể rẻ hơn nominally như
 
 Real-options thinking không có nghĩa trì hoãn mọi quyết định (decision / 결정). Option cũng có chi phí (cost / 비용) và expiry. Câu hỏi là flexibility có đáng giá hơn chi phí (cost / 비용) giữ option không.
 
-> **Chuyển mạch:** Ở chặng này của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Quyết định (decision / 결정) chất lượng (quality / 품질) khác kết quả (outcome / 결과) chất lượng (quality / 품질)** tiếp nhận điểm tựa từ **Real options: giữ quyền lựa chọn có thể có giá trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cognitive độ lệch (bias / 편향) trong rủi ro (risk / 위험) quyết định (decision / 결정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Quyết định (decision / 결정) chất lượng (quality / 품질) khác kết quả (outcome / 결과) chất lượng (quality / 품질)** nối từ **Real options: giữ quyền lựa chọn có thể có giá trị** sang **Cognitive độ lệch (bias / 편향) trong rủi ro (risk / 위험) quyết định (decision / 결정)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quyết định (decision / 결정) chất lượng (quality / 품질) khác kết quả (outcome / 결과) chất lượng (quality / 품질)
 
@@ -316,7 +316,7 @@ Post-decision rà soát (review / 검토) nên hỏi: thông tin (information / 
 
 Quyết định (decision / 결정) log giúp chống hindsight độ lệch (bias / 편향). Sau khi biết kết quả (outcome / 결과), con người dễ tin rằng kết quả (result / 결과) “rõ ràng từ đầu”. Ghi prediction, confidence và rationale tại thời điểm quyết định (decision / 결정) tạo bằng chứng (evidence / 증거) để học calibration thật.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Cognitive độ lệch (bias / 편향) trong rủi ro (risk / 위험) quyết định (decision / 결정)** tiếp nhận điểm tựa từ **Quyết định (decision / 결정) chất lượng (quality / 품질) khác kết quả (outcome / 결과) chất lượng (quality / 품질)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Opportunity management không chỉ là “rủi ro (risk / 위험) tích cực” trên giấy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cognitive độ lệch (bias / 편향) trong rủi ro (risk / 위험) quyết định (decision / 결정)** nối từ **Quyết định (decision / 결정) chất lượng (quality / 품질) khác kết quả (outcome / 결과) chất lượng (quality / 품질)** sang **Opportunity management không chỉ là “rủi ro (risk / 위험) tích cực” trên giấy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cognitive độ lệch (bias / 편향) trong rủi ro (risk / 위험) quyết định (decision / 결정)
 
@@ -326,7 +326,7 @@ Không thể loại bỏ độ lệch (bias / 편향) hoàn toàn, nhưng có th
 
 Groupthink và authority độ lệch (bias / 편향) cũng quan trọng. Nếu cấp cao (senior / 시니어) leader nói “vendor này chắc chắn ổn”, nhóm (team / 팀) có thể ngừng surface weak tín hiệu (signal / 신호). Psychological an toàn (safety / 안전) ở chapter People vì vậy là một risk-control cơ chế (mechanism / 메커니즘) thực sự.
 
-> **Chuyển mạch:** Trong **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Opportunity management không chỉ là “rủi ro (risk / 위험) tích cực” trên giấy** tiếp nhận điểm tựa từ **Cognitive độ lệch (bias / 편향) trong rủi ro (risk / 위험) quyết định (decision / 결정)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ scenario** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Opportunity management không chỉ là “rủi ro (risk / 위험) tích cực” trên giấy** nối từ **Cognitive độ lệch (bias / 편향) trong rủi ro (risk / 위험) quyết định (decision / 결정)** sang **Ví dụ scenario**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Opportunity management không chỉ là “rủi ro (risk / 위험) tích cực” trên giấy
 
@@ -334,7 +334,7 @@ Opportunity có thể là supplier sẵn sức chứa (capacity / 용량) sớm,
 
 Opportunity phản hồi (response / 응답) cũng cạnh tranh tài nguyên (resource / 자원) với threat mitigation. Organization cần nhìn expected upside, strategic fit và option expiry. Một opportunity có thể biến thành threat nếu quy mô (scale / 규모) quá nhanh làm operations quá tải.
 
-> **Chuyển mạch:** Ở chặng này của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Opportunity management không chỉ là “rủi ro (risk / 위험) tích cực” trên giấy** cho ta quy tắc; **Ví dụ scenario** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Anti-patterns** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Opportunity management không chỉ là “rủi ro (risk / 위험) tích cực” trên giấy** nêu quy tắc; **Ví dụ scenario** thử quy tắc trong tình huống, rồi **Anti-patterns** mở rộng hệ quả.
 
 ## Ví dụ scenario
 
@@ -346,7 +346,7 @@ Một scenario schedule khác: deterministic plan nói go-live 30/11, nhưng sim
 
 Một scenario resilience: payment API phụ thuộc một vendor đạt SLA 99.99%, nhưng không có degraded chế độ (mode / 모드). Expected outage thấp, song mỗi outage chặn toàn bộ sales. Một fallback manual/queued processing có thể tạo nhiều giá trị (value / 값) hơn việc mua thêm 0.005% SLA vì nó giảm consequence thay vì chỉ xác suất (probability / 확률).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Ví dụ scenario** cho ta quy tắc; **Anti-patterns** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Ví dụ scenario** nêu quy tắc; **Anti-patterns** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Anti-patterns
 
@@ -356,7 +356,7 @@ Dùng Monte Carlo với đầu vào (input / 입력) giả chính xác cũng ch�
 
 Mục tiêu không phải có nhiều rủi ro (risk / 위험) item hay nhiều chart mà là tạo preparedness, option, resilience và timely quyết định (decision / 결정).
 
-> **Chuyển mạch:** Trong **08 — rủi ro (risk / 위험), bất định (uncertainty / 불확실성), issue và quyết định (decision / 결정) making**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Anti-patterns** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp kết quả từ **Anti-patterns** để khép mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

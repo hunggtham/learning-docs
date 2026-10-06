@@ -35,19 +35,19 @@ stock: land rights, herds, fortifications, religious endowments, skills
 flow: rent, tribute, pilgrims, grain, silver, enslaved people, messages
 ```
 
-> **Chuyển mạch:** Trong **06 — Medieval political/economic các hệ thống (systems / 시스템들): phân mảnh, trung gian và kết nối**, sau khi thấy quy trình trong **Cơ chế phân tầng quyền lực**, **Trường hợp (case / 사례) comparison** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **Bằng chứng, giới hạn và cầu nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cơ chế phân tầng quyền lực mô tả trung gian và quyền chồng lấn; **Case comparison** đặt nó vào bối cảnh cụ thể để thấy điều kiện thành công và chỗ dễ sai. **Bằng chứng, giới hạn và cầu nối** kiểm tra bằng dấu vết.
 
 ## Trường hợp (case / 사례) comparison
 
 Mongol networks cho thấy conquest có thể mở corridor nhưng cũng gây phá huỷ; các caliphate/kingdom vùng Ấn Độ cho thấy legal pluralism; các đô thị châu Âu, Tây Phi và Đông Nam Á cho thấy merchant power và cổng (port / 포트) ecology tạo hình thái chính trị khác nhau. Không nên dùng “trung cổ” để biến các thế giới này thành một thời đại đồng nhất.
 
-> **Chuyển mạch:** Ở chặng này của **06 — Medieval political/economic các hệ thống (systems / 시스템들): phân mảnh, trung gian và kết nối**, **Trường hợp (case / 사례) comparison** cho ta quy tắc; **Bằng chứng, giới hạn và cầu nối** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Độ sâu (depth / 깊이) pass: trade các hệ thống (systems / 시스템들), brokers và shock transmission** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Case comparison cho biết quy tắc về phân mảnh và trung gian hoạt động ở đâu; **Bằng chứng, giới hạn và cầu nối** đưa trade, brokers và quyền lực vào cùng khung. **Độ sâu pass** theo dõi shock transmission.
 
 ## Bằng chứng, giới hạn và cầu nối
 
 Charter, waqf/temple bản ghi (record / 레코드), merchant letters, tax lists, cemetery bằng chứng (evidence / 증거) và climate proxies phải được đối chiếu vì mỗi archive có độ lệch (bias / 편향) địa lý và giai cấp. Counterfactual: nếu corridor có nhiều nút (node / 노드) thay thế, plague/war shock có thể giảm centrality của một thành phố thay vì làm sụp toàn mạng. Cầu nối sang 07 là **credit, gunpowder, cổng (port / 포트) và centralization** tăng khả năng huy động vượt qua jurisdiction địa phương.
 
-> **Chuyển mạch:** **Bằng chứng, giới hạn và cầu nối** xác định vai trò của trade, brokers và các trung gian; phần **Độ sâu pass** kiểm tra cách shock truyền qua những hệ thống phân mảnh đó.
+> **Nối mạch:** Bằng chứng xác định vai trò của trade, brokers và trung gian; **Độ sâu pass** kiểm tra cách shock truyền qua các hệ thống phân mảnh thay vì giả định một trung tâm duy nhất.
 
 ## Độ sâu (depth / 깊이) pass: trade các hệ thống (systems / 시스템들), brokers và shock transmission
 

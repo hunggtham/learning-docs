@@ -22,7 +22,7 @@ D --> E   // không còn đường đi từ root
 
 `D` và `E` có thể được thu hồi dù chúng vẫn trỏ lẫn nhau. Đây là khác biệt quan trọng so với tham chiếu (reference / 참조) counting thuần túy, vốn có thể gặp vấn đề cycle.
 
-> **Chuyển mạch:** Trong **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **2. Mark–sweep: mô hình cơ bản** tiếp nhận điểm tựa từ **1. gốc (root / 루트) và đối tượng (object / 객체) đồ thị (graph / 그래프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Compacting collector** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. Mark–sweep: mô hình cơ bản** nối từ **1. gốc (root / 루트) và đối tượng (object / 객체) đồ thị (graph / 그래프)** sang **3. Compacting collector**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Mark–sweep: mô hình cơ bản
 
@@ -35,7 +35,7 @@ sweep -> quét heap và thu hồi object chưa được đánh dấu
 
 Mark–sweep dễ hiểu nhưng có thể để lại **phân mảnh (fragmentation)**: vùng trống nằm rải rác, khiến đối tượng (object / 객체) lớn khó tìm chỗ liên tục và locality kém.
 
-> **Chuyển mạch:** Ở chặng này của **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **3. Compacting collector** tiếp nhận điểm tựa từ **2. Mark–sweep: mô hình cơ bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Stop-the-world là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Compacting collector** nối từ **2. Mark–sweep: mô hình cơ bản** sang **4. Stop-the-world là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Compacting collector
 
@@ -43,7 +43,7 @@ Mark–sweep dễ hiểu nhưng có thể để lại **phân mảnh (fragmentat
 
 Nhưng di chuyển đối tượng (object / 객체) tạo chi phí. thời gian chạy (runtime / 런타임) phải biết mọi tham chiếu (reference / 참조) cần sửa; mã (code / 코드) bản địa (native / 네이티브) giữ raw pointer vào đối tượng (object / 객체) managed cũng trở thành vấn đề. Đây là lý do FFI, pinning và đối tượng (object / 객체) movement liên quan chặt với thiết kế GC.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **4. Stop-the-world là gì?** tiếp nhận điểm tựa từ **3. Compacting collector** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Generational hypothesis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Stop-the-world là gì?** nối từ **3. Compacting collector** sang **5. Generational hypothesis**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Stop-the-world là gì?
 
@@ -53,7 +53,7 @@ Pause không đồng nghĩa toàn bộ công việc GC đều diễn ra khi ứn
 
 Đối với dịch vụ latency-sensitive, p99/p999 pause quan trọng hơn thời gian GC trung bình.
 
-> **Chuyển mạch:** Trong **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **5. Generational hypothesis** tiếp nhận điểm tựa từ **4. Stop-the-world là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Vì sao generational GC cần remembered set?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Generational hypothesis** nối từ **4. Stop-the-world là gì?** sang **6. Vì sao generational GC cần remembered set?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Generational hypothesis
 
@@ -68,7 +68,7 @@ old generation   -> thu gom ít hơn
 
 Minor GC chỉ quét phần trẻ nên rẻ hơn full-heap collection. đối tượng (object / 객체) sống lâu có thể được **thăng cấp (promotion)** sang old generation.
 
-> **Chuyển mạch:** Ở chặng này của **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **6. Vì sao generational GC cần remembered set?** tiếp nhận điểm tựa từ **5. Generational hypothesis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. ghi (write / 쓰기) barrier và read barrier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Vì sao generational GC cần remembered set?** nối từ **5. Generational hypothesis** sang **7. ghi (write / 쓰기) barrier và read barrier**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Vì sao generational GC cần remembered set?
 
@@ -78,7 +78,7 @@ Thời gian chạy (runtime / 런타임) vì vậy duy trì **tập ghi nhớ (r
 
 Đây là một ví dụ rất quan trọng: GC nhanh không chỉ đến từ thuật toán collector; trình biên dịch (compiler / 컴파일러)/thời gian chạy (runtime / 런타임) chèn thêm mã (code / 코드) vào đường ghi của ứng dụng (application / 애플리케이션) để duy trì bất biến (invariant / 불변식) phục vụ collector.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **7. ghi (write / 쓰기) barrier và read barrier** tiếp nhận điểm tựa từ **6. Vì sao generational GC cần remembered set?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Mutator là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. ghi (write / 쓰기) barrier và read barrier** nối từ **6. Vì sao generational GC cần remembered set?** sang **8. Mutator là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. ghi (write / 쓰기) barrier và read barrier
 
@@ -88,7 +88,7 @@ Thời gian chạy (runtime / 런타임) vì vậy duy trì **tập ghi nhớ (r
 
 Barrier làm đường thực thi ứng dụng (application / 애플리케이션) đắt hơn một chút để GC giảm pause hoặc làm việc concurrent. Đây là sự đánh đổi (trade-off / 트레이드오프) giữa mutator chi phí (cost / 비용) và collector chi phí (cost / 비용).
 
-> **Chuyển mạch:** Trong **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **8. Mutator là gì?** tiếp nhận điểm tựa từ **7. ghi (write / 쓰기) barrier và read barrier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Concurrent marking và bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Mutator là gì?** nối từ **7. ghi (write / 쓰기) barrier và read barrier** sang **9. Concurrent marking và bất biến (invariant / 불변식)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Mutator là gì?
 
@@ -96,7 +96,7 @@ Trong tài liệu GC, **mutator** là luồng thực thi (thread / 스레드) c�
 
 Khi GC chạy concurrent, vấn đề cốt lõi là: collector đang cố suy luận đồ thị (graph / 그래프) trong khi mutator vẫn thay đổi đồ thị (graph / 그래프) đó. Nếu không có giao thức (protocol / 프로토콜), collector có thể bỏ sót đối tượng (object / 객체) vừa trở nên reachable.
 
-> **Chuyển mạch:** Ở chặng này của **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **9. Concurrent marking và bất biến (invariant / 불변식)** tiếp nhận điểm tựa từ **8. Mutator là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Tri-color lớp trừu tượng (abstraction / 추상화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Concurrent marking và bất biến (invariant / 불변식)** nối từ **8. Mutator là gì?** sang **10. Tri-color lớp trừu tượng (abstraction / 추상화)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Concurrent marking và bất biến (invariant / 불변식)
 
@@ -111,7 +111,7 @@ hoặc ghi lại các edge mới có thể làm thay đổi reachability
 
 Ghi (write / 쓰기) barrier chính là công cụ để thời gian chạy (runtime / 런타임) duy trì bất biến (invariant / 불변식) đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **10. Tri-color lớp trừu tượng (abstraction / 추상화)** tiếp nhận điểm tựa từ **9. Concurrent marking và bất biến (invariant / 불변식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Allocation fast đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Tri-color lớp trừu tượng (abstraction / 추상화)** nối từ **9. Concurrent marking và bất biến (invariant / 불변식)** sang **11. Allocation fast đường dẫn (path / 경로)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Tri-color lớp trừu tượng (abstraction / 추상화)
 
@@ -125,7 +125,7 @@ Một bất biến (invariant / 불변식) phổ biến là tránh để đối 
 
 Mô hình màu là công cụ lập luận (reasoning / 추론), không nhất thiết là cách vùng nhớ động (heap / 힙) thật lưu ba màu literal.
 
-> **Chuyển mạch:** Trong **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **10. Tri-color lớp trừu tượng (abstraction / 추상화)** xác định đầu vào; **11. Allocation fast đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **12. Allocation tỷ lệ (rate / 비율) và live set** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Tri-color lớp trừu tượng (abstraction / 추상화)** đặt đầu vào cho **11. Allocation fast đường dẫn (path / 경로)**, rồi **12. Allocation tỷ lệ (rate / 비율) và live set** mở rộng hệ quả.
 
 ## 11. Allocation fast đường dẫn (path / 경로)
 
@@ -140,7 +140,7 @@ Nếu mỗi luồng thực thi (thread / 스레드) có **vùng cấp phát cụ
 
 Do đó “GC ngôn ngữ (language / 언어) allocation luôn chậm” là hiểu lầm. Allocation có thể rẻ; chi phí thật xuất hiện khi đối tượng (object / 객체) sống lâu, vùng nhớ động (heap / 힙) pressure cao hoặc collection không theo kịp allocation tỷ lệ (rate / 비율).
 
-> **Chuyển mạch:** Ở chặng này của **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **11. Allocation fast đường dẫn (path / 경로)** xác định đầu vào; **12. Allocation tỷ lệ (rate / 비율) và live set** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **13. Promotion thất bại (failure / 실패) và old-generation pressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Allocation fast đường dẫn (path / 경로)** đặt đầu vào cho **12. Allocation tỷ lệ (rate / 비율) và live set**, rồi **13. Promotion thất bại (failure / 실패) và old-generation pressure** mở rộng hệ quả.
 
 ## 12. Allocation tỷ lệ (rate / 비율) và live set
 
@@ -150,7 +150,7 @@ Hai tải công việc (workload / 워크로드) có cùng vùng nhớ động (
 
 Nếu allocation tỷ lệ (rate / 비율) cao nhưng phần lớn đối tượng (object / 객체) chết trẻ, generational GC có thể xử lý tốt. Nếu live set gần vùng nhớ động (heap / 힙) limit, collector phải quét và di chuyển nhiều đối tượng (object / 객체) mỗi chu kỳ, thời gian GC tăng mạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **13. Promotion thất bại (failure / 실패) và old-generation pressure** tiếp nhận điểm tựa từ **12. Allocation tỷ lệ (rate / 비율) và live set** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Fragmentation và pinning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Promotion thất bại (failure / 실패) và old-generation pressure** nối từ **12. Allocation tỷ lệ (rate / 비율) và live set** sang **14. Fragmentation và pinning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Promotion thất bại (failure / 실패) và old-generation pressure
 
@@ -158,7 +158,7 @@ Nếu young collection muốn thăng cấp đối tượng (object / 객체) nh�
 
 Hiện tượng này cho thấy young/old không độc lập. Tuning young generation quá lớn có thể tăng pause minor hoặc tạo burst promotion; quá nhỏ làm minor GC quá thường xuyên.
 
-> **Chuyển mạch:** Trong **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **14. Fragmentation và pinning** tiếp nhận điểm tựa từ **13. Promotion thất bại (failure / 실패) và old-generation pressure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. tham chiếu (reference / 참조) counting khác tracing GC thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Fragmentation và pinning** nối từ **13. Promotion thất bại (failure / 실패) và old-generation pressure** sang **15. tham chiếu (reference / 참조) counting khác tracing GC thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Fragmentation và pinning
 
@@ -166,7 +166,7 @@ Hiện tượng này cho thấy young/old không độc lập. Tuning young gene
 
 Đây là một liên kết (connection / 연결) quan trọng giữa thời gian chạy (runtime / 런타임), FFI và OS I/O.
 
-> **Chuyển mạch:** Ở chặng này của **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, sau nội dung của **14. Fragmentation và pinning**, **15. tham chiếu (reference / 참조) counting khác tracing GC thế nào?** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **16. GC và tính đồng thời (concurrency / 동시성) ứng dụng (application / 애플리케이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** sau nội dung của **14. Fragmentation và pinning**, **15. tham chiếu (reference / 참조) counting khác tracing GC thế nào?** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu; **16. GC và tính đồng thời (concurrency / 동시성) ứng dụng (application / 애플리케이션)** mở rộng hệ quả hoặc giới hạn của cơ chế này.
 
 ## 15. tham chiếu (reference / 참조) counting khác tracing GC thế nào?
 
@@ -174,7 +174,7 @@ Tham chiếu (reference / 참조) counting giảm counter khi tham chiếu (refe
 
 Tracing GC không cần counter trên mọi edge nhưng tạo collection phase riêng. Swift ARC và Objective-C ARC là ví dụ reference-counting-oriented thời gian chạy (runtime / 런타임); JVM/.NET phổ biến tracing GC.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **16. GC và tính đồng thời (concurrency / 동시성) ứng dụng (application / 애플리케이션)** tiếp nhận điểm tựa từ **15. tham chiếu (reference / 참조) counting khác tracing GC thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. bộ nhớ (memory / 메모리) leak trong managed thời gian chạy (runtime / 런타임)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. GC và tính đồng thời (concurrency / 동시성) ứng dụng (application / 애플리케이션)** nối từ **15. tham chiếu (reference / 참조) counting khác tracing GC thế nào?** sang **17. bộ nhớ (memory / 메모리) leak trong managed thời gian chạy (runtime / 런타임)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. GC và tính đồng thời (concurrency / 동시성) ứng dụng (application / 애플리케이션)
 
@@ -182,7 +182,7 @@ GC pause có thể dừng nhiều luồng thực thi (thread / 스레드) cùng 
 
 Vì vậy GC tuning không thể tách khỏi sức chứa (capacity / 용량) planning. vùng nhớ động (heap / 힙) lớn hơn có thể giảm collection frequency nhưng làm collection lớn đắt hơn và tăng working set.
 
-> **Chuyển mạch:** Trong **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **17. bộ nhớ (memory / 메모리) leak trong managed thời gian chạy (runtime / 런타임)** tiếp nhận điểm tựa từ **16. GC và tính đồng thời (concurrency / 동시성) ứng dụng (application / 애플리케이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Safepoint độ lệch (bias / 편향)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. bộ nhớ (memory / 메모리) leak trong managed thời gian chạy (runtime / 런타임)** nối từ **16. GC và tính đồng thời (concurrency / 동시성) ứng dụng (application / 애플리케이션)** sang **18. Safepoint độ lệch (bias / 편향)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. bộ nhớ (memory / 메모리) leak trong managed thời gian chạy (runtime / 런타임)
 
@@ -199,7 +199,7 @@ global map
 
 Nếu listener không được unregister, toàn đồ thị (graph / 그래프) vẫn sống. vùng nhớ động (heap / 힙) dump và dominator cây (tree / 트리) giúp tìm đối tượng (object / 객체) nào đang giữ phần lớn retained bộ nhớ (memory / 메모리).
 
-> **Chuyển mạch:** Ở chặng này của **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **18. Safepoint độ lệch (bias / 편향)** tiếp nhận điểm tựa từ **17. bộ nhớ (memory / 메모리) leak trong managed thời gian chạy (runtime / 런타임)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. GC log và các câu hỏi cần đặt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Safepoint độ lệch (bias / 편향)** nối từ **17. bộ nhớ (memory / 메모리) leak trong managed thời gian chạy (runtime / 런타임)** sang **19. GC log và các câu hỏi cần đặt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Safepoint độ lệch (bias / 편향)
 
@@ -207,7 +207,7 @@ Một thời gian chạy (runtime / 런타임) có thể cần đưa luồng th�
 
 Do đó khi xem log GC, cần tách “thời gian collection” khỏi “thời gian chờ tất cả luồng thực thi (thread / 스레드) đạt trạng thái an toàn” nếu thời gian chạy (runtime / 런타임) cung cấp số liệu đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **19. GC log và các câu hỏi cần đặt** tiếp nhận điểm tựa từ **18. Safepoint độ lệch (bias / 편향)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Không có collector tốt nhất tuyệt đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. GC log và các câu hỏi cần đặt** nối từ **18. Safepoint độ lệch (bias / 편향)** sang **20. Không có collector tốt nhất tuyệt đối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. GC log và các câu hỏi cần đặt
 
@@ -225,7 +225,7 @@ heap growth có tương ứng traffic không?
 
 Nếu vùng nhớ động (heap / 힙) tăng vì bộ nhớ đệm (cache / 캐시) hợp lệ, giải pháp khác với vùng nhớ động (heap / 힙) tăng vì tham chiếu (reference / 참조) leak.
 
-> **Chuyển mạch:** Trong **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **20. Không có collector tốt nhất tuyệt đối** tiếp nhận điểm tựa từ **19. GC log và các câu hỏi cần đặt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. Không có collector tốt nhất tuyệt đối** nối từ **19. GC log và các câu hỏi cần đặt** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Không có collector tốt nhất tuyệt đối
 
@@ -233,7 +233,7 @@ Một collector có pause cực thấp có thể dùng thêm CPU hoặc bộ nh�
 
 Chọn collector là chọn mục tiêu tối ưu: thông lượng (throughput / 처리량), tail độ trễ (latency / 지연 시간), footprint, predictability hay khả năng quy mô (scale / 규모) vùng nhớ động (heap / 힙) lớn.
 
-> **Chuyển mạch:** Ở chặng này của **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **20. Không có collector tốt nhất tuyệt đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **20. Không có collector tốt nhất tuyệt đối** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -245,7 +245,7 @@ Chọn collector là chọn mục tiêu tối ưu: thông lượng (throughput /
 
 **“đối tượng (object / 객체) không dùng nữa sẽ được thu hồi ngay.”** Chỉ khi nó không còn reachable và collector thực hiện reclamation phù hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Garbage collection: thế hệ, concurrent, compacting và ghi (write / 쓰기) barrier**, **Mô hình tư duy** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy
 

@@ -22,7 +22,7 @@ Ngôn ngữ (language / 언어) gồm nhiều mức (level / 수준):
 
 Biết nghĩa từ không đảm bảo hiểu utterance. Câu “được đấy” có thể là praise, reluctant acceptance hoặc sarcasm tùy tone, relationship và ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Trong **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **2. Comprehension là prediction + cập nhật (update / 업데이트)** tiếp nhận điểm tựa từ **1. Ngôn ngữ không chỉ là vocabulary** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Lexical truy cập (access / 접근) và ambiguity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **2. Comprehension là prediction + cập nhật (update / 업데이트)** nối từ **1. Ngôn ngữ không chỉ là vocabulary** sang **3. Lexical truy cập (access / 접근) và ambiguity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Comprehension là prediction + cập nhật (update / 업데이트)
 
@@ -30,13 +30,13 @@ Người nghe thường dùng ngữ cảnh (context / 맥락) để predict mean
 
 > **hiện tại (current / 현재) lý thuyết (theory / 이론):** predictive approaches to ngôn ngữ (language / 언어) processing giải thích một phần anticipatory hành vi (behavior / 동작), nhưng mức độ prediction là cơ chế (mechanism / 메커니즘) bắt buộc hay chiến lược (strategy / 전략) tùy tác vụ (task / 작업) vẫn còn tranh luận.
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **3. Lexical truy cập (access / 접근) và ambiguity** tiếp nhận điểm tựa từ **2. Comprehension là prediction + cập nhật (update / 업데이트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Pragmatics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **3. Lexical truy cập (access / 접근) và ambiguity** nối từ **2. Comprehension là prediction + cập nhật (update / 업데이트)** sang **4. Pragmatics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Lexical truy cập (access / 접근) và ambiguity
 
 Một word có thể có nhiều meanings. ngữ cảnh (context / 맥락) giúp select interpretation. Processing ambiguity cho thấy ngôn ngữ (language / 언어) comprehension không phải dictionary lookup đơn giản; hệ thống (system / 시스템) combine lexical xác suất (probability / 확률), cú pháp (syntax / 문법), world kiến thức (knowledge / 지식) và conversational ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **4. Pragmatics** tiếp nhận điểm tựa từ **3. Lexical truy cập (access / 접근) và ambiguity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Gricean lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **4. Pragmatics** nối từ **3. Lexical truy cập (access / 접근) và ambiguity** sang **5. Gricean lập luận (reasoning / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Pragmatics
 
@@ -44,7 +44,7 @@ Một word có thể có nhiều meanings. ngữ cảnh (context / 맥락) giúp
 
 Nếu đồng nghiệp nói “cũng gần xong rồi” vào 5 giờ chiều, literal meaning khác practical implication depending deadline và ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Trong **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **5. Gricean lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **4. Pragmatics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. lý thuyết (theory / 이론) of Mind** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **5. Gricean lập luận (reasoning / 추론)** nối từ **4. Pragmatics** sang **6. lý thuyết (theory / 이론) of Mind**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Gricean lập luận (reasoning / 추론)
 
@@ -52,7 +52,7 @@ Grice's conversational maxims là influential khung phần mềm (framework / �
 
 Sarcasm, politeness và strategic ambiguity often violate literal maxim while remaining socially meaningful.
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **6. lý thuyết (theory / 이론) of Mind** tiếp nhận điểm tựa từ **5. Gricean lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. xã hội (social / 사회적) suy luận (inference / 추론) không hoàn hảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **6. lý thuyết (theory / 이론) of Mind** nối từ **5. Gricean lập luận (reasoning / 추론)** sang **7. xã hội (social / 사회적) suy luận (inference / 추론) không hoàn hảo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. lý thuyết (theory / 이론) of Mind
 
@@ -64,7 +64,7 @@ Classic false-belief tasks cho thấy development of tường minh (explicit / �
 >
 > **Debated/hiện tại (current / 현재) lý thuyết (theory / 이론):** chính xác (exact / 정확한) kiến trúc (architecture / 아키텍처) — specialized ToM mô-đun (module / 모듈) vs broader inferential networks — remains actively studied.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **7. xã hội (social / 사회적) suy luận (inference / 추론) không hoàn hảo** tiếp nhận điểm tựa từ **6. lý thuyết (theory / 이론) of Mind** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Attribution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **7. xã hội (social / 사회적) suy luận (inference / 추론) không hoàn hảo** nối từ **6. lý thuyết (theory / 이론) of Mind** sang **8. Attribution**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. xã hội (social / 사회적) suy luận (inference / 추론) không hoàn hảo
 
@@ -77,7 +77,7 @@ Con người thường infer intention từ limited cues và prior expectations.
 
 Đây không phải bằng chứng “people cannot understand each other”; nó cho thấy xã hội (social / 사회적) suy luận (inference / 추론) is probabilistic.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **8. Attribution** tiếp nhận điểm tựa từ **7. xã hội (social / 사회적) suy luận (inference / 추론) không hoàn hảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Fundamental attribution lỗi (error / 오류) cần đọc cẩn thận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **8. Attribution** nối từ **7. xã hội (social / 사회적) suy luận (inference / 추론) không hoàn hảo** sang **9. Fundamental attribution lỗi (error / 오류) cần đọc cẩn thận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Attribution
 
@@ -87,7 +87,7 @@ Một manager thấy employee late có thể infer “thiếu trách nhiệm”,
 
 Classic attribution biases are useful concepts, nhưng magnitude và cross-cultural generality phụ thuộc ngữ cảnh (context / 맥락). Không nên dùng textbook label để judge one individual.
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **9. Fundamental attribution lỗi (error / 오류) cần đọc cẩn thận** tiếp nhận điểm tựa từ **8. Attribution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Egocentric độ lệch (bias / 편향) và curse of kiến thức (knowledge / 지식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **9. Fundamental attribution lỗi (error / 오류) cần đọc cẩn thận** nối từ **8. Attribution** sang **10. Egocentric độ lệch (bias / 편향) và curse of kiến thức (knowledge / 지식)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Fundamental attribution lỗi (error / 오류) cần đọc cẩn thận
 
@@ -95,7 +95,7 @@ Tendency overweight dispositional explanations has substantial research lịch s
 
 > **Trạng thái bằng chứng:** dispositional over-attribution xuất hiện trong nhiều settings; claim “mọi người luôn underestimate situation” là overgeneralization.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **10. Egocentric độ lệch (bias / 편향) và curse of kiến thức (knowledge / 지식)** tiếp nhận điểm tựa từ **9. Fundamental attribution lỗi (error / 오류) cần đọc cẩn thận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Perspective taking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **10. Egocentric độ lệch (bias / 편향) và curse of kiến thức (knowledge / 지식)** nối từ **9. Fundamental attribution lỗi (error / 오류) cần đọc cẩn thận** sang **11. Perspective taking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Egocentric độ lệch (bias / 편향) và curse of kiến thức (knowledge / 지식)
 
@@ -103,7 +103,7 @@ Khi mình biết answer, khó simulate trạng thái (state / 상태) of someone
 
 Trong software documentation, expert may say “just configure OAuth” because intermediate steps are chunked. Đây là xã hội (social / 사회적) cognition bài toán (problem / 문제), không chỉ writing bài toán (problem / 문제).
 
-> **Chuyển mạch:** Trong **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **11. Perspective taking** tiếp nhận điểm tựa từ **10. Egocentric độ lệch (bias / 편향) và curse of kiến thức (knowledge / 지식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Empathy không phải một construct duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **11. Perspective taking** nối từ **10. Egocentric độ lệch (bias / 편향) và curse of kiến thức (knowledge / 지식)** sang **12. Empathy không phải một construct duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Perspective taking
 
@@ -111,7 +111,7 @@ Trong software documentation, expert may say “just configure OAuth” because 
 
 Direct communication và phản hồi (feedback / 피드백) often better than “đoán sâu hơn”.
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **11. Perspective taking** xác định đầu vào; **12. Empathy không phải một construct duy nhất** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **13. Emotion recognition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **11. Perspective taking** đặt đầu vào cho **12. Empathy không phải một construct duy nhất**, rồi **13. Emotion recognition** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. Empathy không phải một construct duy nhất
 
@@ -123,7 +123,7 @@ Empathy often split thành:
 
 High cognitive empathy does not guarantee prosocial hành vi (behavior / 동작); someone can understand another person well and use that kiến thức (knowledge / 지식) manipulatively.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **12. Empathy không phải một construct duy nhất** xác định đầu vào; **13. Emotion recognition** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. xã hội (social / 사회적) scripts và schemas** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **12. Empathy không phải một construct duy nhất** đặt đầu vào cho **13. Emotion recognition**, rồi **14. xã hội (social / 사회적) scripts và schemas** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13. Emotion recognition
 
@@ -131,7 +131,7 @@ Facial expression, voice, posture và ngữ cảnh (context / 맥락) contribute
 
 > **Debated interpretation:** there is bằng chứng (evidence / 증거) for cross-cultural regularities in expression/perception, but ngữ cảnh (context / 맥락) and culture substantially shape labeling and interpretation. Do not present emotion-reading from face as deterministic mind reading.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **14. xã hội (social / 사회적) scripts và schemas** tiếp nhận điểm tựa từ **13. Emotion recognition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Stereotype và category use** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **14. xã hội (social / 사회적) scripts và schemas** nối từ **13. Emotion recognition** sang **15. Stereotype và category use**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. xã hội (social / 사회적) scripts và schemas
 
@@ -139,7 +139,7 @@ Xã hội (social / 사회적) schemas compress expectation about situations: in
 
 Lược đồ (schema / 스키마) helps prediction; stereotype is harmful when group-level expectation is applied rigidly to individual.
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **15. Stereotype và category use** tiếp nhận điểm tựa từ **14. xã hội (social / 사회적) scripts và schemas** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. ngôn ngữ (language / 언어), định danh (identity / 식별자) và code-switching** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **15. Stereotype và category use** nối từ **14. xã hội (social / 사회적) scripts và schemas** sang **16. ngôn ngữ (language / 언어), định danh (identity / 식별자) và code-switching**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Stereotype và category use
 
@@ -155,7 +155,7 @@ Individual prediction certainty
 Moral judgment
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **16. ngôn ngữ (language / 언어), định danh (identity / 식별자) và code-switching** tiếp nhận điểm tựa từ **15. Stereotype và category use** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Communication breakdown** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **16. ngôn ngữ (language / 언어), định danh (identity / 식별자) và code-switching** nối từ **15. Stereotype và category use** sang **17. Communication breakdown**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. ngôn ngữ (language / 언어), định danh (identity / 식별자) và code-switching
 
@@ -165,7 +165,7 @@ Di chuyển (migration / 마이그레이션) can create an định danh (identit
 
 Xem [[../03_human_development_and_person/16_acculturation_migration_and_bicultural_identity]].
 
-> **Chuyển mạch:** Trong **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **17. Communication breakdown** tiếp nhận điểm tựa từ **16. ngôn ngữ (language / 언어), định danh (identity / 식별자) và code-switching** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. xã hội (social / 사회적) cognition và autism** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **17. Communication breakdown** nối từ **16. ngôn ngữ (language / 언어), định danh (identity / 식별자) và code-switching** sang **18. xã hội (social / 사회적) cognition và autism**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Communication breakdown
 
@@ -181,7 +181,7 @@ Many conflicts are not simple “communication bài toán (problem / 문제)”.
 
 Better communication helps only when cơ chế (mechanism / 메커니즘) is actually informational/interpretive.
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **18. xã hội (social / 사회적) cognition và autism** tiếp nhận điểm tựa từ **17. Communication breakdown** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Neural basis của mentalizing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **18. xã hội (social / 사회적) cognition và autism** nối từ **17. Communication breakdown** sang **19. Neural basis của mentalizing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. xã hội (social / 사회적) cognition và autism
 
@@ -189,7 +189,7 @@ Autism research historically overfocused deficits in ToM. hiện đại (modern 
 
 > **Trạng thái bằng chứng:** autism involves differences in xã hội (social / 사회적) communication across many individuals, but a single ToM deficit does not explain the entire spectrum. Double-empathy accounts are influential hiện tại (current / 현재)/debated frameworks, not settled universal explanation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **19. Neural basis của mentalizing** tiếp nhận điểm tựa từ **18. xã hội (social / 사회적) cognition và autism** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. AI và xã hội (social / 사회적) cognition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **19. Neural basis của mentalizing** nối từ **18. xã hội (social / 사회적) cognition và autism** sang **20. AI và xã hội (social / 사회적) cognition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Neural basis của mentalizing
 
@@ -199,7 +199,7 @@ Neuroimaging often implicates temporoparietal junction, medial prefrontal cortex
 >
 > **Limitation:** activation map does not prove one region contains “lý thuyết (theory / 이론) of mind”. tác vụ (task / 작업) contrast, ngôn ngữ (language / 언어) demand and autobiographical lập luận (reasoning / 추론) can overlap.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **20. AI và xã hội (social / 사회적) cognition** tiếp nhận điểm tựa từ **19. Neural basis của mentalizing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **20. AI và xã hội (social / 사회적) cognition** nối từ **19. Neural basis của mentalizing** sang **21. dùng chung (common / 공통) misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. AI và xã hội (social / 사회적) cognition
 
@@ -209,7 +209,7 @@ A ngôn ngữ (language / 언어) mô hình (model / 모델) can produce sociall
 
 Xem [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]].
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **21. dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **20. AI và xã hội (social / 사회적) cognition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **21. dùng chung (common / 공통) misconceptions** nối từ **20. AI và xã hội (social / 사회적) cognition** sang **22. mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. dùng chung (common / 공통) misconceptions
 
@@ -229,7 +229,7 @@ Quá mạnh. ngữ cảnh (context / 맥락), culture and situation matter.
 
 Có thể misunderstanding is bidirectional, incentive xung đột (conflict / 충돌) hoặc ngôn ngữ (language / 언어) mismatch.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **22. mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **21. dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **22. mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **21. dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 22. mô hình tư duy (mental model / 사고 모델)
 
@@ -253,7 +253,7 @@ Feedback cập nhật model
 
 Xã hội (social / 사회적) cognition tốt không phải “đọc tâm trí chính xác”, mà là suy luận (inference / 추론) có calibration và willingness to cập nhật (update / 업데이트).
 
-> **Chuyển mạch:** Trong **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **Kết nối kiến thức** gom các mảnh từ **22. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Ngôn ngữ, nhận thức xã hội và lý thuyết tâm trí**, **Kết nối kiến thức** tổng hợp từ **22. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

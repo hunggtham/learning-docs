@@ -10,7 +10,7 @@ Thuật toán (algorithm / 알고리즘) độ phức tạp (complexity / 복잡
 
 Moving dữ liệu (data / 데이터) often costs significant năng lượng (energy / 에너지) relative to cục bộ (local / 로컬) arithmetic. Better locality/compression/batching có thể giảm both độ trễ (latency / 지연 시간) và năng lượng (energy / 에너지).
 
-> **Chuyển mạch:** Energy use không chỉ nằm ở lúc chạy hardware; embodied cost của sản xuất cộng với datacenter efficiency và accessibility quyết định tổng tác động xã hội của hạ tầng tính toán.
+> **Nối mạch:** Energy use không chỉ nằm ở lúc chạy hardware; embodied cost của sản xuất cộng với datacenter efficiency và accessibility quyết định tổng tác động xã hội của hạ tầng tính toán.
 
 ## Embodied chi phí (cost / 비용)
 
@@ -18,7 +18,7 @@ Carbon/tài nguyên (resource / 자원) impact không chỉ operational electric
 
 Extending hardware thời gian tồn tại (lifetime / 수명) qua efficient software có thể giảm replacement pressure, nhưng phải balance bảo mật (security / 보안)/hỗ trợ (support / 지원) các ràng buộc (constraints / 제약조건들).
 
-> **Chuyển mạch:** Ở chặng này của **Sustainability, khả năng tiếp cận (accessibility / 접근성) và computing as xã hội (social / 사회적) hạ tầng (infrastructure / 인프라)**, **Datacenter efficiency** tiếp nhận điểm tựa từ **Embodied chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **E-waste** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Datacenter efficiency** nối từ **Embodied chi phí (cost / 비용)** sang **E-waste**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Datacenter efficiency
 
@@ -26,7 +26,7 @@ Power Usage Effectiveness (PUE) roughly compares total facility năng lượng (
 
 Tải công việc (workload / 워크로드) scheduling theo renewable availability/location có thể giảm carbon nếu độ trễ (latency / 지연 시간)/dữ liệu (data / 데이터) rules cho phép.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sustainability, khả năng tiếp cận (accessibility / 접근성) và computing as xã hội (social / 사회적) hạ tầng (infrastructure / 인프라)**, **E-waste** tiếp nhận điểm tựa từ **Datacenter efficiency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Digital divide** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **E-waste** nối từ **Datacenter efficiency** sang **Digital divide**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## E-waste
 
@@ -34,7 +34,7 @@ Short hỗ trợ (support / 지원) cycles và hardware obsolescence tạo elect
 
 Repairability, modularity và long-term updates là sản phẩm (product / 제품)/hệ thống (system / 시스템) thiết kế (design / 설계) concerns.
 
-> **Chuyển mạch:** Trong **Sustainability, khả năng tiếp cận (accessibility / 접근성) và computing as xã hội (social / 사회적) hạ tầng (infrastructure / 인프라)**, **Digital divide** tiếp nhận điểm tựa từ **E-waste** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khả năng tiếp cận (accessibility / 접근성) như hạ tầng (infrastructure / 인프라) độ tin cậy (reliability / 신뢰성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Digital divide** nối từ **E-waste** sang **Khả năng tiếp cận (accessibility / 접근성) như hạ tầng (infrastructure / 인프라) độ tin cậy (reliability / 신뢰성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Digital divide
 
@@ -42,7 +42,7 @@ Assuming fast broadband, latest phone hoặc constant connectivity excludes user
 
 Hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화) đôi khi là equity tính năng (feature / 기능), không chỉ UX polish.
 
-> **Chuyển mạch:** Ở chặng này của **Sustainability, khả năng tiếp cận (accessibility / 접근성) và computing as xã hội (social / 사회적) hạ tầng (infrastructure / 인프라)**, **Khả năng tiếp cận (accessibility / 접근성) như hạ tầng (infrastructure / 인프라) độ tin cậy (reliability / 신뢰성)** tiếp nhận điểm tựa từ **Digital divide** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nền tảng (platform / 플랫폼) concentration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Khả năng tiếp cận (accessibility / 접근성) như hạ tầng (infrastructure / 인프라) độ tin cậy (reliability / 신뢰성)** nối từ **Digital divide** sang **Nền tảng (platform / 플랫폼) concentration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khả năng tiếp cận (accessibility / 접근성) như hạ tầng (infrastructure / 인프라) độ tin cậy (reliability / 신뢰성)
 
@@ -50,7 +50,7 @@ Nếu công khai (public / 공개) dịch vụ (service / 서비스) không keyb
 
 Availability phải được nghĩ end-to-end từ hạ tầng (infrastructure / 인프라) đến human truy cập (access / 접근).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sustainability, khả năng tiếp cận (accessibility / 접근성) và computing as xã hội (social / 사회적) hạ tầng (infrastructure / 인프라)**, **Nền tảng (platform / 플랫폼) concentration** tiếp nhận điểm tựa từ **Khả năng tiếp cận (accessibility / 접근성) như hạ tầng (infrastructure / 인프라) độ tin cậy (reliability / 신뢰성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Resilience** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Nền tảng (platform / 플랫폼) concentration** nối từ **Khả năng tiếp cận (accessibility / 접근성) như hạ tầng (infrastructure / 인프라) độ tin cậy (reliability / 신뢰성)** sang **Resilience**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nền tảng (platform / 플랫폼) concentration
 
@@ -58,7 +58,7 @@ Cloud/app stores/tìm kiếm (search / 검색)/xã hội (social / 사회적) pl
 
 Kiến trúc (architecture / 아키텍처) phụ thuộc (dependency / 의존성) có societal/economic dimension: technical lock-in biến thành bargaining power.
 
-> **Chuyển mạch:** Trong **Sustainability, khả năng tiếp cận (accessibility / 접근성) và computing as xã hội (social / 사회적) hạ tầng (infrastructure / 인프라)**, **Resilience** tiếp nhận điểm tựa từ **Nền tảng (platform / 플랫폼) concentration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rebound effects** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Resilience** nối từ **Nền tảng (platform / 플랫폼) concentration** sang **Rebound effects**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Resilience
 
@@ -66,7 +66,7 @@ Trọng yếu (critical / 중요) hạ tầng (infrastructure / 인프라) cần
 
 Resilience includes organization/humans, not only replication.
 
-> **Chuyển mạch:** Ở chặng này của **Sustainability, khả năng tiếp cận (accessibility / 접근성) và computing as xã hội (social / 사회적) hạ tầng (infrastructure / 인프라)**, **Rebound effects** tiếp nhận điểm tựa từ **Resilience** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Rebound effects** nối từ **Resilience** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rebound effects
 
@@ -74,7 +74,7 @@ Efficiency improvement có thể giảm chi phí (cost / 비용) rồi tăng tot
 
 Vì vậy per-request efficiency chỉ số (metric / 지표) cần đi cùng total tải công việc (workload / 워크로드) growth.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sustainability, khả năng tiếp cận (accessibility / 접근성) và computing as xã hội (social / 사회적) hạ tầng (infrastructure / 인프라)**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Rebound effects** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Rebound effects** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -84,13 +84,13 @@ Vì vậy per-request efficiency chỉ số (metric / 지표) cần đi cùng to
 
 **“Efficiency luôn giảm total consumption.”** Lower chi phí (cost / 비용) có thể stimulate more usage.
 
-> **Chuyển mạch:** Trong **Sustainability, khả năng tiếp cận (accessibility / 접근성) và computing as xã hội (social / 사회적) hạ tầng (infrastructure / 인프라)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Computing là vật lý (physical / 물리적) + xã hội (social / 사회적) hạ tầng (infrastructure / 인프라). Một tối ưu hóa (optimization / 최적화)/kiến trúc (architecture / 아키텍처) quyết định (decision / 결정) phân bố chi phí (cost / 비용) qua năng lượng (energy / 에너지), devices, people và institutions—không chỉ CPU milliseconds.
 
-> **Chuyển mạch:** Ở chặng này của **Sustainability, khả năng tiếp cận (accessibility / 접근성) và computing as xã hội (social / 사회적) hạ tầng (infrastructure / 인프라)**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

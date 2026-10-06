@@ -23,7 +23,7 @@ systemctl show app -p User -p Group
 ps -o user,group,pid,cmd -p <PID>
 ```
 
-> **Chuyển mạch:** Trong **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Các bit quyền truy cập** tiếp nhận điểm tựa từ **Người dùng không chỉ là tên đăng nhập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyền trên tệp và thư mục có ý nghĩa khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Các bit quyền truy cập** nối từ **Người dùng không chỉ là tên đăng nhập** sang **Quyền trên tệp và thư mục có ý nghĩa khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các bit quyền truy cập
 
@@ -52,7 +52,7 @@ Vì vậy `chmod 640 config.yml` nghĩa là chủ sở hữu được đọc/ghi
 
 Nếu chỉ học các con số mà không hiểu ý nghĩa của quyền trên thư mục, việc đặt quyền rất dễ sai.
 
-> **Chuyển mạch:** Ở chặng này của **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Quyền trên tệp và thư mục có ý nghĩa khác nhau** tiếp nhận điểm tựa từ **Các bit quyền truy cập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tại sao xóa tệp lại phụ thuộc quyền của thư mục?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Quyền trên tệp và thư mục có ý nghĩa khác nhau** nối từ **Các bit quyền truy cập** sang **Tại sao xóa tệp lại phụ thuộc quyền của thư mục?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quyền trên tệp và thư mục có ý nghĩa khác nhau
 
@@ -66,13 +66,13 @@ namei -l /opt/app/config/a.yml
 
 Câu lệnh này rất hữu ích khi tệp cuối cùng có quyền `644` nhưng ứng dụng vẫn báo `Permission denied`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Tại sao xóa tệp lại phụ thuộc quyền của thư mục?** tiếp nhận điểm tựa từ **Quyền trên tệp và thư mục có ý nghĩa khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chủ sở hữu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Tại sao xóa tệp lại phụ thuộc quyền của thư mục?** nối từ **Quyền trên tệp và thư mục có ý nghĩa khác nhau** sang **Chủ sở hữu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tại sao xóa tệp lại phụ thuộc quyền của thư mục?
 
 Xóa một đường dẫn là thay đổi mục thư mục. Vì vậy khả năng chạy `rm file` phụ thuộc mạnh vào quyền của thư mục chứa nó, chứ không chỉ phụ thuộc bit ghi trên bản thân tệp. Đây là hệ quả trực tiếp của mô hình vùng tên trong [Hệ thống tệp, đường dẫn, inode và liên kết](../01_filesystem/filesystem_paths_inodes_links.md).
 
-> **Chuyển mạch:** Trong **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Chủ sở hữu** tiếp nhận điểm tựa từ **Tại sao xóa tệp lại phụ thuộc quyền của thư mục?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao chmod -R 777 là một cách làm không tốt?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Chủ sở hữu** nối từ **Tại sao xóa tệp lại phụ thuộc quyền của thư mục?** sang **Vì sao chmod -R 777 là một cách làm không tốt?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chủ sở hữu
 
@@ -90,7 +90,7 @@ chown -R app:app /opt/app
 
 có phạm vi ảnh hưởng lớn. Một thói quen tốt trong môi trường vận hành (production / 운영 환경) là kiểm tra cây thư mục trước và tránh chạy lệnh đệ quy trên đường dẫn chưa được xác minh.
 
-> **Chuyển mạch:** Ở chặng này của **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Vì sao chmod -R 777 là một cách làm không tốt?** tiếp nhận điểm tựa từ **Chủ sở hữu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **umask** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Vì sao chmod -R 777 là một cách làm không tốt?** nối từ **Chủ sở hữu** sang **umask**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao `chmod -R 777` là một cách làm không tốt?
 
@@ -107,7 +107,7 @@ Sau đó chỉ cấp quyền đặc biệt cho tệp thực thi, cấu hình ho�
 
 Nguyên tắc **đặc quyền tối thiểu (least privilege / 최소 권한)** yêu cầu chỉ cấp khả năng cần thiết cho một nhiệm vụ, thay vì mở quyền rộng chỉ để việc gỡ lỗi trở nên dễ hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Người dùng, nhóm, quyền truy cập và đặc quyền**, **umask** tiếp nhận điểm tựa từ **Vì sao chmod -R 777 là một cách làm không tốt?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhóm như một cơ chế chia sẻ quyền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Người dùng, nhóm, quyền truy cập và đặc quyền**, **umask** nối từ **Vì sao chmod -R 777 là một cách làm không tốt?** sang **Nhóm như một cơ chế chia sẻ quyền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `umask`
 
@@ -119,7 +119,7 @@ umask
 
 Giá trị thường gặp `0022` thường dẫn tới tệp có quyền `644` và thư mục `755` khi chương trình yêu cầu chế độ mặc định tương ứng. Vì thế hai dịch vụ có `umask` khác nhau có thể tạo ra tệp với quyền khác nhau dù mã nguồn giống nhau.
 
-> **Chuyển mạch:** Trong **Người dùng, nhóm, quyền truy cập và đặc quyền**, **umask** xác định đầu vào; **Nhóm như một cơ chế chia sẻ quyền** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **sudo: ủy quyền đặc quyền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Người dùng, nhóm, quyền truy cập và đặc quyền**, **umask** đặt đầu vào cho **Nhóm như một cơ chế chia sẻ quyền**, rồi **sudo: ủy quyền đặc quyền** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Nhóm như một cơ chế chia sẻ quyền
 
@@ -140,7 +140,7 @@ getent group appops
 
 Sau khi thêm một người dùng vào nhóm, phiên đăng nhập hiện tại có thể chưa nhận nhóm bổ sung mới cho tới khi mở phiên mới hoặc áp dụng cơ chế cập nhật tương ứng.
 
-> **Chuyển mạch:** Ở chặng này của **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Nhóm như một cơ chế chia sẻ quyền** xác định đầu vào; **sudo: ủy quyền đặc quyền** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **ACL: khi đơn vị sở hữu (owner / 오너)/group/others chưa đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Nhóm như một cơ chế chia sẻ quyền** đặt đầu vào cho **sudo: ủy quyền đặc quyền**, rồi **ACL: khi đơn vị sở hữu (owner / 오너)/group/others chưa đủ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## `sudo`: ủy quyền đặc quyền
 
@@ -160,7 +160,7 @@ chạy câu lệnh dưới danh tính khác, hữu ích khi muốn tái hiện m
 
 `sudo -i` mở shell đăng nhập của gốc (root / 루트) và nên dùng thận trọng vì từ thời điểm đó mọi câu lệnh đều có phạm vi ảnh hưởng lớn hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Người dùng, nhóm, quyền truy cập và đặc quyền**, sau nội dung của **sudo: ủy quyền đặc quyền**, **ACL: khi đơn vị sở hữu (owner / 오너)/group/others chưa đủ** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Các bit chế độ đặc biệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Người dùng, nhóm, quyền truy cập và đặc quyền**, sau nội dung của **sudo: ủy quyền đặc quyền**, **ACL: khi đơn vị sở hữu (owner / 오너)/group/others chưa đủ** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Các bit chế độ đặc biệt** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## ACL: khi đơn vị sở hữu (owner / 오너)/group/others chưa đủ
 
@@ -173,7 +173,7 @@ setfacl -m u:deploy:r file
 
 ACL hữu ích nhưng cũng làm chính sách quyền trở nên khó nhìn hơn. `ls -l` có thể hiển thị dấu `+`; nếu chỉ nhìn các bit quyền cơ bản, quản trị viên có thể bỏ sót ACL bổ sung.
 
-> **Chuyển mạch:** Trong **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Các bit chế độ đặc biệt** tiếp nhận điểm tựa từ **ACL: khi đơn vị sở hữu (owner / 오너)/group/others chưa đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Capabilities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Các bit chế độ đặc biệt** nối từ **ACL: khi đơn vị sở hữu (owner / 오너)/group/others chưa đủ** sang **Capabilities**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các bit chế độ đặc biệt
 
@@ -187,7 +187,7 @@ thường cho thấy ký tự `t` ở cuối phần quyền.
 
 Tệp thực thi có `setuid` có thể làm tiến trình nhận `effective UID` theo chủ sở hữu của tệp trong các điều kiện phù hợp. Vì vậy cơ chế này có ảnh hưởng bảo mật lớn và không nên dùng như đường tắt để xử lý vấn đề quyền truy cập.
 
-> **Chuyển mạch:** Ở chặng này của **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Capabilities** tiếp nhận điểm tựa từ **Các bit chế độ đặc biệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SELinux và AppArmor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Capabilities** nối từ **Các bit chế độ đặc biệt** sang **SELinux và AppArmor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Capabilities
 
@@ -195,7 +195,7 @@ Trong Unix truyền thống, gốc (root / 루트) mang một gói đặc quyề
 
 Ví dụ một tiến trình có thể được phép gắn vào cổng đặc quyền mà không cần toàn bộ quyền gốc (root / 루트), tùy mô hình triển khai. Đây là cách nguyên tắc đặc quyền tối thiểu được đưa xuống mức thông tin xác thực của kernel.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Người dùng, nhóm, quyền truy cập và đặc quyền**, **SELinux và AppArmor** tiếp nhận điểm tựa từ **Capabilities** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyền của khóa SSH** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Người dùng, nhóm, quyền truy cập và đặc quyền**, **SELinux và AppArmor** nối từ **Capabilities** sang **Quyền của khóa SSH**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## SELinux và AppArmor
 
@@ -203,7 +203,7 @@ Các bit quyền truyền thống là một dạng **kiểm soát truy cập tù
 
 Họ RHEL thường gặp SELinux; Ubuntu thường gặp AppArmor. Khi quyền trên tệp có vẻ đúng nhưng thao tác vẫn bị từ chối, cần kiểm tra khung bảo mật tương ứng thay vì tiếp tục mở rộng `chmod`.
 
-> **Chuyển mạch:** Trong **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Quyền của khóa SSH** tiếp nhận điểm tựa từ **SELinux và AppArmor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Quyền của khóa SSH** nối từ **SELinux và AppArmor** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quyền của khóa SSH
 
@@ -216,7 +216,7 @@ chmod 700 ~/.ssh
 
 Đây không phải sự khó chịu vô lý. Khóa riêng tư là bí mật xác thực; nếu người dùng khác đọc được thì ranh giới danh tính không còn ý nghĩa.
 
-> **Chuyển mạch:** Ở chặng này của **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Quyền của khóa SSH** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Quyền của khóa SSH** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -238,7 +238,7 @@ thao tác được cho phép hoặc bị từ chối
 
 Quyền truy cập là một quyết định đối với **một thao tác cụ thể**, không phải thuộc tính đúng/sai đơn giản kiểu "tệp có truy cập được hay không".
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Những hiểu lầm phổ biến (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Những hiểu lầm phổ biến (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -252,7 +252,7 @@ Quyền truy cập là một quyết định đối với **một thao tác cụ
 
 **"`ls -l` cho thấy toàn bộ chính sách bảo mật."** ACL, SELinux/AppArmor và capabilities có thể bổ sung các ràng buộc khác.
 
-> **Chuyển mạch:** Trong **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến (Common Misconceptions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Người dùng, nhóm, quyền truy cập và đặc quyền**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến (Common Misconceptions)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

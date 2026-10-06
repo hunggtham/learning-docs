@@ -10,7 +10,7 @@ Chuỗi nhân quả (causal chain / 인과 사슬):
 
 **mountain peninsula → limited lowland → concentrated settlement → dense vận chuyển (transport / 전송)/urban mạng (network / 네트워크) → manufacturing clusters → port-based imports/exports → high regional connectivity**.
 
-> **Chuyển mạch:** Trong **Hàn Quốc (Republic of Korea) — bán đảo núi, đô thị tập trung và nền kinh tế kết nối biển**, **Khung địa hình** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bán đảo và hai mặt biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Núi chiếm phần lớn bán đảo, để lại đồng bằng và valley hạn chế; **Khung địa hình** vì thế định tuyến settlement, rail và industry. **Bán đảo và hai mặt biển** tiếp theo mở câu hỏi về maritime access.
 
 ## Khung địa hình
 
@@ -20,7 +20,7 @@ Mountain không quá cao như Himalaya nhưng đủ để chia nhỏ catchment, 
 
 Địa hình này làm flat land có giá trị cao đối với housing, industrial park, airport, rail và highway.
 
-> **Chuyển mạch:** Ở chặng này của **Hàn Quốc (Republic of Korea) — bán đảo núi, đô thị tập trung và nền kinh tế kết nối biển**, **Bán đảo và hai mặt biển** tiếp nhận điểm tựa từ **Khung địa hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khí hậu và monsoon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Biển Hoàng Hải và biển Nhật Bản tạo các hướng cảng, fisheries và trade khác nhau; **Bán đảo và hai mặt biển** nối núi–đồng bằng với maritime economy. **Khí hậu và monsoon** tiếp theo cho thấy mùa mưa, tuyết và typhoon phân bố thế nào.
 
 ## Bán đảo và hai mặt biển
 
@@ -28,7 +28,7 @@ Vị trí bán đảo tạo tiếp cận Yellow Sea, Korea Strait và East Sea/S
 
 Coastline khác nhau ảnh hưởng cổng (port / 포트) điều kiện (condition / 조건), fisheries, reclamation và coastal settlement.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hàn Quốc (Republic of Korea) — bán đảo núi, đô thị tập trung và nền kinh tế kết nối biển**, **Khí hậu và monsoon** tiếp nhận điểm tựa từ **Bán đảo và hai mặt biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **River và water hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Monsoon, winter snow và summer rain làm **Khí hậu và monsoon** chi phối crop, reservoir, heat và flood. **River và water hệ thống (system / 시스템)** tiếp theo biến mùa khí hậu thành hạ tầng nước và đô thị.
 
 ## Khí hậu và monsoon
 
@@ -38,7 +38,7 @@ Seasonality lớn làm năng lượng (energy / 에너지) demand, agriculture, 
 
 Rainfall tập trung theo mùa nghĩa reservoir phải cân giữa water supply và flood điều khiển (control / 제어).
 
-> **Chuyển mạch:** Trong **Hàn Quốc (Republic of Korea) — bán đảo núi, đô thị tập trung và nền kinh tế kết nối biển**, **River và water hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Khí hậu và monsoon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Natural hazard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Han, Nakdong và các sông ngắn–dốc phục vụ water supply, industry và flood control; **River và water hệ thống (system / 시스템)** đồng thời tạo exposure ở đồng bằng. **Natural hazard** tiếp theo đặt hạ tầng trước typhoon, flood và landslide.
 
 ## River và water hệ thống (system / 시스템)
 
@@ -48,7 +48,7 @@ Seoul metropolitan area phát triển dọc Han River hệ thống (system / 시
 
 Water chất lượng (quality / 품질), drought và flood phải quản lý theo basin thay vì city ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Ở chặng này của **Hàn Quốc (Republic of Korea) — bán đảo núi, đô thị tập trung và nền kinh tế kết nối biển**, **Natural hazard** tiếp nhận điểm tựa từ **River và water hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Limited flat land và urban form** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Flood, landslide, typhoon, drought và occasional seismic exposure làm **Natural hazard** gắn với nơi dân cư dồn lại. **Limited flat land và urban form** tiếp theo giải thích density, reclamation và high-rise form.
 
 ## Natural hazard
 
@@ -58,7 +58,7 @@ Mountain slope + concentrated summer rain tạo landslide threshold; dense urban
 
 Climate rủi ro (risk / 위험) vì thế thường là **hydro-meteorological + urban exposure**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hàn Quốc (Republic of Korea) — bán đảo núi, đô thị tập trung và nền kinh tế kết nối biển**, **Natural hazard** đã nêu tiêu chí phân biệt, còn **Limited flat land và urban form** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Seoul Capital Area và regional imbalance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đồng bằng ít và hazard exposure khiến **Limited flat land và urban form** phải dùng density, transit và reclamation để mở rộng capacity. **Seoul Capital Area và regional imbalance** tiếp theo cho thấy cực đô thị lớn nhất hấp thụ lợi thế ấy thế nào.
 
 ## Limited flat land và urban form
 
@@ -68,7 +68,7 @@ Seoul Capital Area là extreme trường hợp (case / 사례) của national co
 
 Vật lý (physical / 물리적) ràng buộc (constraint / 제약조건) làm concentration chi phí (cost / 비용) rõ hơn, nhưng institution/đường dẫn (path / 경로) dependence duy trì nó.
 
-> **Chuyển mạch:** Trong **Hàn Quốc (Republic of Korea) — bán đảo núi, đô thị tập trung và nền kinh tế kết nối biển**, **Limited flat land và urban form** đã nêu tiêu chí phân biệt, còn **Seoul Capital Area và regional imbalance** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Busan–Ulsan–Gyeongnam industrial-maritime hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Seoul Capital Area gom jobs, education, finance và population, tạo agglomeration nhưng kéo regional imbalance; **Seoul Capital Area và regional imbalance** cần đọc cùng các cực phía nam. **Busan–Ulsan–Gyeongnam industrial-maritime hệ thống (system / 시스템)** tiếp theo là đối trọng cảng–industry.
 
 ## Seoul Capital Area và regional imbalance
 
@@ -78,7 +78,7 @@ Concentration tạo productivity, dịch vụ (service / 서비스) diversity v�
 
 Population decline ở national mức (level / 수준) có thể đồng thời tồn tại với high housing demand ở cốt lõi (core / 핵심).
 
-> **Chuyển mạch:** Ở chặng này của **Hàn Quốc (Republic of Korea) — bán đảo núi, đô thị tập trung và nền kinh tế kết nối biển**, **Busan–Ulsan–Gyeongnam industrial-maritime hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Seoul Capital Area và regional imbalance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tài nguyên (resource / 자원) và năng lượng (energy / 에너지) ràng buộc (constraint / 제약조건)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Busan, Ulsan và Gyeongnam ghép port, shipbuilding, automotive, petrochemical và logistics thành **Busan–Ulsan–Gyeongnam industrial-maritime hệ thống (system / 시스템)**. **Tài nguyên (resource / 자원) và năng lượng (energy / 에너지) ràng buộc (constraint / 제약조건)** tiếp theo đặt giới hạn nhập khẩu lên hệ thống.
 
 ## Busan–Ulsan–Gyeongnam industrial-maritime hệ thống (system / 시스템)
 
@@ -86,7 +86,7 @@ Southeast Korea có major cổng (port / 포트), petrochemical, shipbuilding, a
 
 Đây là cluster không thể giải thích bằng một factory: cổng (port / 포트), highway, supplier, skill và historical investment cùng tạo đường dẫn (path / 경로) dependence.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hàn Quốc (Republic of Korea) — bán đảo núi, đô thị tập trung và nền kinh tế kết nối biển**, **Busan–Ulsan–Gyeongnam industrial-maritime hệ thống (system / 시스템)** nêu điều cần giải thích; **Tài nguyên (resource / 자원) và năng lượng (energy / 에너지) ràng buộc (constraint / 제약조건)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Manufacturing geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Fossil fuels, ores và energy imports đi qua ports, nên **Tài nguyên (resource / 자원) và năng lượng (energy / 에너지) ràng buộc (constraint / 제약조건)** gắn với maritime security, storage và diversification. **Manufacturing geography** tiếp theo cho thấy industry tổ chức quanh đầu vào đó thế nào.
 
 ## Tài nguyên (resource / 자원) và năng lượng (energy / 에너지) ràng buộc (constraint / 제약조건)
 
@@ -96,7 +96,7 @@ Coal, oil, LNG, iron ore và trọng yếu (critical / 중요) material đi qua 
 
 Tài nguyên (resource / 자원) scarcity đã thúc đẩy emphasis lên processing/manufacturing giá trị (value / 값) rather than raw-resource export.
 
-> **Chuyển mạch:** Trong **Hàn Quốc (Republic of Korea) — bán đảo núi, đô thị tập trung và nền kinh tế kết nối biển**, **Tài nguyên (resource / 자원) và năng lượng (energy / 에너지) ràng buộc (constraint / 제약조건)** nêu điều cần giải thích; **Manufacturing geography** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Cổng (port / 포트) và trade mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Semiconductors, shipbuilding, automotive, chemicals và supplier clusters làm **Manufacturing geography** dựa trên skill, power, port và dense market. **Cổng (port / 포트) và trade mạng (network / 네트워크)** tiếp theo nối factory belts với thế giới.
 
 ## Manufacturing geography
 
@@ -104,7 +104,7 @@ Electronics, semiconductor, automotive, battery, petrochemical và shipbuilding 
 
 Semiconductor fab không phải “digital industry không cần geography”; nó cần stable power, water, cleanroom supply chuỗi (chain / 사슬) và vận chuyển (transport / 전송).
 
-> **Chuyển mạch:** Ở chặng này của **Hàn Quốc (Republic of Korea) — bán đảo núi, đô thị tập trung và nền kinh tế kết nối biển**, **Cổng (port / 포트) và trade mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Manufacturing geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Aviation và toàn cục (global / 전역) city hàm (function / 함수)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Busan, Incheon và industrial ports ghép ocean shipping, customs, logistics và supplier networks; **Cổng (port / 포트) và trade mạng (network / 네트워크)** là hạ tầng của export economy. **Aviation và toàn cục (global / 전역) city hàm (function / 함수)** tiếp theo mở thêm lớp kết nối tốc độ cao.
 
 ## Cổng (port / 포트) và trade mạng (network / 네트워크)
 
@@ -112,7 +112,7 @@ Busan, Incheon, Gwangyang và Ulsan có hàm (function / 함수) khác nhau: b�
 
 Cổng (port / 포트) role phải đọc cùng hinterland. Busan mạnh không chỉ vì coastline mà vì toàn cục (global / 전역) tuyến (route / 경로) tích hợp (integration / 통합) và domestic mạng (network / 네트워크).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hàn Quốc (Republic of Korea) — bán đảo núi, đô thị tập trung và nền kinh tế kết nối biển**, **Aviation và toàn cục (global / 전역) city hàm (function / 함수)** tiếp nhận điểm tựa từ **Cổng (port / 포트) và trade mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Demographic chuyển tiếp (transition / 전이)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Incheon airport, Seoul command functions và digital/air links tạo **Aviation và toàn cục (global / 전역) city hàm (function / 함수)** vượt khỏi port geography. **Demographic chuyển tiếp (transition / 전이)** tiếp theo đặt connectivity cạnh aging và low fertility.
 
 ## Aviation và toàn cục (global / 전역) city hàm (function / 함수)
 
@@ -122,7 +122,7 @@ Air vận chuyển (transport / 전송) đặc biệt quan trọng với electro
 
 Modal geography phản ánh value-to-weight và thời gian (time / 시간) sensitivity của hàng hóa.
 
-> **Chuyển mạch:** Trong **Hàn Quốc (Republic of Korea) — bán đảo núi, đô thị tập trung và nền kinh tế kết nối biển**, **Demographic chuyển tiếp (transition / 전이)** tiếp nhận điểm tựa từ **Aviation và toàn cục (global / 전역) city hàm (function / 함수)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Agriculture và rural landscape** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Aging, low fertility và migration về capital region làm **Demographic chuyển tiếp (transition / 전이)** phân cực metro–rural dù aviation/trade vẫn mạnh. **Agriculture và rural landscape** tiếp theo cho thấy vùng nông thôn thích nghi thế nào.
 
 ## Demographic chuyển tiếp (transition / 전이)
 
@@ -132,7 +132,7 @@ Aging ảnh hưởng healthcare khả năng tiếp cận (accessibility / 접근
 
 Di chuyển (migration / 마이그레이션) quốc tế ngày càng có vai trò hơn trong labor geography, nhưng impact khác theo sector và region.
 
-> **Chuyển mạch:** Ở chặng này của **Hàn Quốc (Republic of Korea) — bán đảo núi, đô thị tập trung và nền kinh tế kết nối biển**, **Agriculture và rural landscape** tiếp nhận điểm tựa từ **Demographic chuyển tiếp (transition / 전이)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Korea–Vietnam mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Rice, horticulture, aging farmers và rural services làm **Agriculture và rural landscape** khác hẳn manufacturing metros; technology và food import bù một phần thiếu lao động. **Korea–Vietnam mạng (network / 네트워크)** tiếp theo nối sản xuất, migration và trade.
 
 ## Agriculture và rural landscape
 
@@ -142,7 +142,7 @@ Rural modernization nâng productivity nhưng mechanization + aging làm farm c�
 
 Food hệ thống (system / 시스템) cũng phụ thuộc import feed/grain, nối rural Korea với toàn cục (global / 전역) commodity chuỗi (chain / 사슬).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hàn Quốc (Republic of Korea) — bán đảo núi, đô thị tập trung và nền kinh tế kết nối biển**, **Korea–Vietnam mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Agriculture và rural landscape** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regional role** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Electronics, manufacturing supply chains, investment và labor mobility làm **Korea–Vietnam mạng (network / 네트워크)** thành một phần của East/Southeast Asian production geography. **Regional role** tiếp theo tổng hợp maritime, capital và technology.
 
 ## Korea–Vietnam mạng (network / 네트워크)
 
@@ -150,7 +150,7 @@ Korea và Vietnam có manufacturing/investment/di chuyển (migration / 마이�
 
 Trường hợp (case / 사례) này minh họa regional môi trường vận hành (production / 운영 환경) mạng (network / 네트워크): country profile không nên xem economy là hệ kín.
 
-> **Chuyển mạch:** Trong **Hàn Quốc (Republic of Korea) — bán đảo núi, đô thị tập trung và nền kinh tế kết nối biển**, **Regional role** tiếp nhận điểm tựa từ **Korea–Vietnam mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Regional role** của Korea đến từ manufacturing, ports, aviation, technology và alliance/trade networks, không chỉ từ tài nguyên tự nhiên. **Dùng chung (common / 공통) misconceptions** tiếp theo chỉnh các cách đọc giản lược.
 
 ## Regional role
 
@@ -158,7 +158,7 @@ Hàn Quốc nằm giữa continental Northeast Asia và western Pacific maritime
 
 Regional role đến từ high-value manufacturing, shipping/cổng (port / 포트), technology mạng (network / 네트워크) và metropolitan centrality hơn là tài nguyên (resource / 자원) endowment.
 
-> **Chuyển mạch:** Ở chặng này của **Hàn Quốc (Republic of Korea) — bán đảo núi, đô thị tập trung và nền kinh tế kết nối biển**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Regional role** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) misconceptions** nhắc rằng Korea không chỉ là Seoul, export không xóa resource dependence, và mountain peninsula vẫn tổ chức urban form/hazard. **Mô hình tư duy (mental model / 사고 모델)** sẽ khép profile.
 
 ## Dùng chung (common / 공통) misconceptions
 
@@ -168,7 +168,7 @@ Regional role đến từ high-value manufacturing, shipping/cổng (port / 포�
 
 “High-tech làm vận chuyển (transport / 전송) ít quan trọng” sai; semiconductor/battery có complex toàn cục (global / 전역) logistics và vật lý (physical / 물리적) đầu vào (input / 입력).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hàn Quốc (Republic of Korea) — bán đảo núi, đô thị tập trung và nền kinh tế kết nối biển**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** khép chuỗi mountain peninsula → two seas/monsoon → rivers/hazards → Seoul concentration → southern industrial ports → imports/manufacturing → Korea–Vietnam network, rồi bàn giao cho owner **Eastern Asia** trong [README](./README.md).
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

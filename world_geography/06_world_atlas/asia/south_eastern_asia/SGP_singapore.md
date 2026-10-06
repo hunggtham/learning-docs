@@ -10,7 +10,7 @@ Chuỗi nhân quả (causal / 인과적):
 
 **strategic maritime location → cổng (port / 포트)/air connectivity → trade/logistics concentration → high-density urban economy → engineered water/land/năng lượng (energy / 에너지) các hệ thống (systems / 시스템들) → global-city role**.
 
-> **Chuyển mạch:** Trong **Singapore — Singapore (SGP)**, **Vị trí: nhỏ về diện tích, lớn về effective centrality** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coastline và cổng (port / 포트) geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Thesis đặt Singapore vào quan hệ giữa vị trí biển và mạng lưới; **Vị trí: nhỏ về diện tích, lớn về effective centrality** giải thích vì sao location chỉ trở thành lợi thế khi được chuyển thành nút ít ma sát. **Coastline và cổng (port / 포트) geography** tiếp theo cho thấy hạ tầng nào thực hiện phép chuyển đó.
 
 ## Vị trí: nhỏ về diện tích, lớn về effective centrality
 
@@ -18,7 +18,7 @@ Singapore nằm gần một trong các maritime corridors quan trọng nhất gi
 
 Centrality xuất hiện khi vật lý (physical / 물리적) location được chuyển thành **low-friction nút (node / 노드)**: cổng (port / 포트) turnaround nhanh, customs/thông tin (information / 정보) hiệu quả, multimodal logistics, finance và legal/nghiệp vụ (business / 비즈니스) services.
 
-> **Chuyển mạch:** Ở chặng này của **Singapore — Singapore (SGP)**, **Coastline và cổng (port / 포트) geography** tiếp nhận điểm tựa từ **Vị trí: nhỏ về diện tích, lớn về effective centrality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Eo Malacca và chokepoint ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Effective centrality cần một cổng có terminal, channel và dịch vụ đủ tin cậy; **Coastline và cổng (port / 포트) geography** cho thấy Singapore kiếm giá trị từ trung chuyển chứ không chỉ từ hinterland. **Eo Malacca và chokepoint ngữ cảnh (context / 맥락)** tiếp theo đặt cổng ấy vào mạng tuyến hàng hải rộng hơn.
 
 ## Coastline và cổng (port / 포트) geography
 
@@ -26,7 +26,7 @@ Cổng (port / 포트) cần deep-water truy cập (access / 접근), terminal, 
 
 Do đó cổng (port / 포트) geography ở đây khác classic river-port như Rotterdam hay Shanghai. giá trị (value / 값) đến mạnh từ **mạng (network / 네트워크) intermediation** — gom, chuyển, điều phối luồng (flow / 흐름) giữa tuyến.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Singapore — Singapore (SGP)**, **Eo Malacca và chokepoint ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **Coastline và cổng (port / 포트) geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Land scarcity như một ràng buộc (constraint / 제약조건) hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cảng Singapore có ý nghĩa vì nằm trong mạng Eo Malacca, nhưng chokepoint chỉ tạo cơ hội chứ không tự cấp năng lực; **Eo Malacca và chokepoint ngữ cảnh (context / 맥락)** làm rõ vai trò của tuyến và các route thay thế. **Land scarcity như một ràng buộc (constraint / 제약조건) hệ thống** tiếp theo cho thấy hub phải cạnh tranh không gian với mọi chức năng khác.
 
 ## Eo Malacca và chokepoint ngữ cảnh (context / 맥락)
 
@@ -34,7 +34,7 @@ Strait of Malacca tập trung shipping luồng (flow / 흐름) giữa Indian Oce
 
 Đây là trường hợp (case / 사례) tốt cho [chokepoint logic](../../../04_global_systems/02_geopolitics_chokepoints_resources.md): importance là thuộc tính của mạng (network / 네트워크), không chỉ width của strait.
 
-> **Chuyển mạch:** Trong **Singapore — Singapore (SGP)**, **Land scarcity như một ràng buộc (constraint / 제약조건) hệ thống** tiếp nhận điểm tựa từ **Eo Malacca và chokepoint ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Land reclamation: tạo thêm không gian (space / 공간) nhưng không miễn phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Chokepoint đưa luồng hàng tới gần nhưng không tạo thêm đất; **Land scarcity như một ràng buộc (constraint / 제약조건) hệ thống** buộc port, airport, housing và reservoir cùng tranh một mặt bằng. **Land reclamation: tạo thêm không gian (space / 공간) nhưng không miễn phí** tiếp theo là cách Singapore chuyển thiếu đất thành chi phí vốn và sinh thái.
 
 ## Land scarcity như một ràng buộc (constraint / 제약조건) hệ thống
 
@@ -42,7 +42,7 @@ City-state nhỏ phải phân bổ land cho housing, industry, cổng (port / �
 
 Vì vậy land-use planning ở Singapore có tính **hệ thống (system / 시스템) tối ưu hóa (optimization / 최적화)** rõ: vận chuyển (transport / 전송) và housing density phải phối hợp, industrial zone cần buffer, airport/cổng (port / 포트) cần corridor, water catchment cạnh urban area.
 
-> **Chuyển mạch:** Ở chặng này của **Singapore — Singapore (SGP)**, **Land reclamation: tạo thêm không gian (space / 공간) nhưng không miễn phí** tiếp nhận điểm tựa từ **Land scarcity như một ràng buộc (constraint / 제약조건) hệ thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khí hậu xích đạo và urban thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khi reclamation mua thêm mặt bằng bằng fill, kỹ thuật và bảo vệ bờ, ràng buộc vật lý chỉ đổi dạng; **Land reclamation: tạo thêm không gian (space / 공간) nhưng không miễn phí** mở ra bài toán vốn, nhiệt và nước. **Khí hậu xích đạo và urban thiết kế (design / 설계)** tiếp theo cho thấy thành phố phải vận hành mặt bằng mới trong nóng ẩm và mưa lớn.
 
 ## Land reclamation: tạo thêm không gian (space / 공간) nhưng không miễn phí
 
@@ -50,7 +50,7 @@ Reclamation tăng usable land, nhưng cần fill material, kỹ thuật (enginee
 
 Đây là mô hình tư duy (mental model / 사고 모델) quan trọng: technology thường không xóa ràng buộc (constraint / 제약조건); nó chuyển ràng buộc (constraint / 제약조건) sang loại tài nguyên (resource / 자원) khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Singapore — Singapore (SGP)**, **Khí hậu xích đạo và urban thiết kế (design / 설계)** tiếp nhận điểm tựa từ **Land reclamation: tạo thêm không gian (space / 공간) nhưng không miễn phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Water bảo mật (security / 보안): catchment + import + reuse + desalination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Nóng ẩm, mưa đối lưu và mặt phủ dày biến thiết kế đô thị thành hạ tầng thích nghi; **Khí hậu xích đạo và urban thiết kế (design / 설계)** nối reclamation với nhiệt, thoát nước và nhu cầu làm mát. **Water bảo mật (security / 보안): catchment + import + reuse + desalination** tiếp theo chuyển câu hỏi khí hậu thành bài toán nguồn nước.
 
 ## Khí hậu xích đạo và urban thiết kế (design / 설계)
 
@@ -58,7 +58,7 @@ Singapore nóng ẩm quanh năm với convective rainfall cao. Climate tạo coo
 
 Dense built môi trường (environment / 환경) còn tạo **urban heat island** và thay airflow. cây (tree / 트리) canopy, shading, building orientation, drainage và transit vì thế là part của climate adaptation chứ không chỉ aesthetic planning.
 
-> **Chuyển mạch:** Trong **Singapore — Singapore (SGP)**, **Water bảo mật (security / 보안): catchment + import + reuse + desalination** tiếp nhận điểm tựa từ **Khí hậu xích đạo và urban thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Food hệ thống (system / 시스템) và bên ngoài (external / 외부) phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khí hậu cung cấp mưa nhưng đất nhỏ giới hạn catchment; **Water bảo mật (security / 보안): catchment + import + reuse + desalination** cho thấy độ tin cậy đến từ danh mục nguồn và năng lượng xử lý, không từ một hồ duy nhất. **Food hệ thống (system / 시스템) và bên ngoài (external / 외부) phụ thuộc (dependency / 의존성)** tiếp theo áp dụng cùng logic đa nguồn cho lương thực.
 
 ## Water bảo mật (security / 보안): catchment + import + reuse + desalination
 
@@ -68,7 +68,7 @@ Mỗi nguồn (source / 소스) có chi phí (cost / 비용) profile khác nhau.
 
 Singapore vì vậy là trường hợp (case / 사례) rất rõ của **Water–Food–năng lượng (energy / 에너지) Nexus**.
 
-> **Chuyển mạch:** Ở chặng này của **Singapore — Singapore (SGP)**, **Food hệ thống (system / 시스템) và bên ngoài (external / 외부) phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **Water bảo mật (security / 보안): catchment + import + reuse + desalination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng (energy / 에너지) geography: import phụ thuộc (dependency / 의존성) và dense demand** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Vì đất hiếm và nông nghiệp quy mô lớn không khả thi, **Food hệ thống (system / 시스템) và bên ngoài (external / 외부) phụ thuộc (dependency / 의존성)** dùng trade, cold chain và tồn kho như hạ tầng gián tiếp của đất–nước. **Năng lượng (energy / 에너지) geography: import phụ thuộc (dependency / 의존성) và dense demand** tiếp theo cho thấy mọi nguồn thay thế đều cần power và mặt bằng.
 
 ## Food hệ thống (system / 시스템) và bên ngoài (external / 외부) phụ thuộc (dependency / 의존성)
 
@@ -78,7 +78,7 @@ Food bảo mật (security / 보안) ở đây không phải “tự sản xuấ
 
 Trade trở thành một dạng indirect land/water hạ tầng (infrastructure / 인프라).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Singapore — Singapore (SGP)**, **Năng lượng (energy / 에너지) geography: import phụ thuộc (dependency / 의존성) và dense demand** tiếp nhận điểm tựa từ **Food hệ thống (system / 시스템) và bên ngoài (external / 외부) phụ thuộc (dependency / 의존성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Settlement và housing: city gần như toàn territory** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Food security dựa vào logistics, còn logistics và đô thị dựa vào điện ổn định; **Năng lượng (energy / 에너지) geography: import phụ thuộc (dependency / 의존성) và dense demand** làm rõ trade-off giữa độ tin cậy, nhiên liệu nhập và land footprint. **Settlement và housing: city gần như toàn territory** tiếp theo cho thấy demand dày đặc được tổ chức ở đâu.
 
 ## Năng lượng (energy / 에너지) geography: import phụ thuộc (dependency / 의존성) và dense demand
 
@@ -86,7 +86,7 @@ High-density city/industry tạo power demand lớn trên area nhỏ. năng lư�
 
 Solar triển khai (deployment / 배포) có vật lý (physical / 물리적) limit từ roof/land; offshore/import/interconnection options đều mang mạng (network / 네트워크) sự đánh đổi (trade-off / 트레이드오프). Một lần nữa, small area không ngăn sophisticated năng lượng (energy / 에너지) hệ thống (system / 시스템) nhưng làm land-value ràng buộc (constraint / 제약조건) mạnh hơn.
 
-> **Chuyển mạch:** Trong **Singapore — Singapore (SGP)**, **Settlement và housing: city gần như toàn territory** tiếp nhận điểm tựa từ **Năng lượng (energy / 에너지) geography: import phụ thuộc (dependency / 의존성) và dense demand** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vận chuyển (transport / 전송): nội bộ (internal / 내부) khả năng tiếp cận (accessibility / 접근성) hỗ trợ bên ngoài (external / 외부) hub** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Nhu cầu năng lượng dày lên vì gần như toàn lãnh thổ là một metropolitan; **Settlement và housing: city gần như toàn territory** cho thấy vertical housing và transit-oriented planning là cách tiết kiệm footprint. **Vận chuyển (transport / 전송): nội bộ (internal / 내부) khả năng tiếp cận (accessibility / 접근성) hỗ trợ bên ngoài (external / 외부) hub** tiếp theo kiểm tra mạng nội bộ nuôi hub bên ngoài ra sao.
 
 ## Settlement và housing: city gần như toàn territory
 
@@ -94,7 +94,7 @@ Singapore không có contrast rural–urban kiểu quốc gia lớn; gần như 
 
 High density làm vertical housing và transit-oriented planning có economic lô-gic (logic / 논리) mạnh. Khi land gần job/transit đắt, vertical construction tăng usable floor không gian (space / 공간) mà không tăng footprint tương ứng.
 
-> **Chuyển mạch:** Ở chặng này của **Singapore — Singapore (SGP)**, **Vận chuyển (transport / 전송): nội bộ (internal / 내부) khả năng tiếp cận (accessibility / 접근성) hỗ trợ bên ngoài (external / 외부) hub** tiếp nhận điểm tựa từ **Settlement và housing: city gần như toàn territory** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Airport và aviation geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Vertical settlement chỉ tạo lợi thế khi metro, road và freight nối được người với gateway; **Vận chuyển (transport / 전송): nội bộ (internal / 내부) khả năng tiếp cận (accessibility / 접근성) hỗ trợ bên ngoài (external / 외부) hub** là lớp domestic của centrality. **Airport và aviation geography** tiếp theo mở lớp kết nối hành khách, dịch vụ và hàng giá trị cao.
 
 ## Vận chuyển (transport / 전송): nội bộ (internal / 내부) khả năng tiếp cận (accessibility / 접근성) hỗ trợ bên ngoài (external / 외부) hub
 
@@ -104,7 +104,7 @@ Có thể xem Singapore như hai mạng (network / 네트워크) chồng lên nh
 
 **nội bộ (internal / 내부) high-density mobility mạng (network / 네트워크) + bên ngoài (external / 외부) maritime/aviation mạng (network / 네트워크)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Singapore — Singapore (SGP)**, **Airport và aviation geography** tiếp nhận điểm tựa từ **Vận chuyển (transport / 전송): nội bộ (internal / 내부) khả năng tiếp cận (accessibility / 접근성) hỗ trợ bên ngoài (external / 외부) hub** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Economy: từ cổng (port / 포트) dịch vụ (service / 서비스) tới high-value functions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Nội bộ dễ tiếp cận giúp sân bay gom passenger, business service và cargo; **Airport và aviation geography** biến city-state thành điểm gần hơn với thị trường toàn cầu dù thiếu hinterland lớn. **Economy: từ cổng (port / 포트) dịch vụ (service / 서비스) tới high-value functions** tiếp theo hỏi khi nào gateway chuyển thành giá trị gia tăng.
 
 ## Airport và aviation geography
 
@@ -112,7 +112,7 @@ Air connectivity quan trọng với passenger, nghiệp vụ (business / 비즈�
 
 Với city-state, aviation còn giảm effective distance tới toàn cục (global / 전역) thị trường (market / 시장), bù phần nào thiếu domestic hinterland.
 
-> **Chuyển mạch:** Trong **Singapore — Singapore (SGP)**, **Economy: từ cổng (port / 포트) dịch vụ (service / 서비스) tới high-value functions** tiếp nhận điểm tựa từ **Airport và aviation geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Toàn cục (global / 전역) city: centrality khác population kích thước (size / 크기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Port và airport tạo nền logistics nhưng high-value functions cần kỹ năng, thể chế, hạ tầng số và agglomeration; **Economy: từ cổng (port / 포트) dịch vụ (service / 서비스) tới high-value functions** tách gateway khỏi kết quả kinh tế tự động. **Toàn cục (global / 전역) city: centrality khác population kích thước (size / 크기)** tiếp theo đo kết quả bằng vai trò mạng thay vì dân số.
 
 ## Economy: từ cổng (port / 포트) dịch vụ (service / 서비스) tới high-value functions
 
@@ -120,7 +120,7 @@ Gateway role tạo foundation cho logistics, finance, trade services, regional h
 
 Điểm học quan trọng là **cổng (port / 포트) không tự động sinh high-value economy**. Upgrading cần education, legal/institutional chất lượng (quality / 품질), digital hạ tầng (infrastructure / 인프라) và capital thị trường (market / 시장).
 
-> **Chuyển mạch:** Ở chặng này của **Singapore — Singapore (SGP)**, **Toàn cục (global / 전역) city: centrality khác population kích thước (size / 크기)** tiếp nhận điểm tựa từ **Economy: từ cổng (port / 포트) dịch vụ (service / 서비스) tới high-value functions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Society và di chuyển (migration / 마이그레이션) geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** High-value economy làm Singapore có functional role lớn hơn quy mô dân số; **Toàn cục (global / 전역) city: centrality khác population kích thước (size / 크기)** cho thấy centrality là thuộc tính của nhiều mạng đồng thời. **Society và di chuyển (migration / 마이그레이션) geography** tiếp theo đưa lao động và tính mở vào phép tính đó.
 
 ## Toàn cục (global / 전역) city: centrality khác population kích thước (size / 크기)
 
@@ -128,7 +128,7 @@ Singapore minh họa distinction giữa **city kích thước (size / 크기)** 
 
 Global-city status là kết quả của multi-layer networks chứ không phải danh hiệu dựa dân số.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Singapore — Singapore (SGP)**, **Society và di chuyển (migration / 마이그레이션) geography** tiếp nhận điểm tựa từ **Toàn cục (global / 전역) city: centrality khác population kích thước (size / 크기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hazard và systemic rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Centrality hút lao động và kỹ năng quốc tế, nhưng cũng làm housing, mobility và integration chịu áp lực; **Society và di chuyển (migration / 마이그레이션) geography** cho thấy openness có giới hạn sức chứa. **Hazard và systemic rủi ro (risk / 위험)** tiếp theo kiểm tra khi concentration làm một sự cố lan rộng thế nào.
 
 ## Society và di chuyển (migration / 마이그레이션) geography
 
@@ -136,7 +136,7 @@ Hub economy cần diverse labor skill và international mobility. di chuyển (m
 
 Một toàn cục (global / 전역) city luôn phải quản lý tension giữa openness phục vụ economy và sức chứa (capacity / 용량) của housing/vận chuyển (transport / 전송)/xã hội (social / 사회적) tích hợp (integration / 통합).
 
-> **Chuyển mạch:** Trong **Singapore — Singapore (SGP)**, **Hazard và systemic rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **Society và di chuyển (migration / 마이그레이션) geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Singapore trong Southeast Asia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mobility và hạ tầng tập trung làm intense rainfall, heat, sea-level rise, haze hay đứt chuỗi cung ứng có thể chạm nhiều chức năng cùng lúc; **Hazard và systemic rủi ro (risk / 위험)** vì thế là bài toán concentration. **Singapore trong Southeast Asia** tiếp theo mở risk từ nội bộ thành quan hệ phụ thuộc khu vực.
 
 ## Hazard và systemic rủi ro (risk / 위험)
 
@@ -144,7 +144,7 @@ Singapore ít chịu một số tectonic hazard trực tiếp hơn nhiều parts
 
 Vì trọng yếu (critical / 중요) functions tập trung trong land nhỏ, **concentration rủi ro (risk / 위험)** quan trọng: cục bộ (local / 로컬) hạ tầng (infrastructure / 인프라) thất bại (failure / 실패) có thể ảnh hưởng large share national hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Ở chặng này của **Singapore — Singapore (SGP)**, **Singapore trong Southeast Asia** tiếp nhận điểm tựa từ **Hazard và systemic rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Korea–Singapore–Vietnam liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Một hub nhỏ có thể chống risk nội bộ nhưng vẫn cần food, energy, labor và thị trường từ vùng xung quanh; **Singapore trong Southeast Asia** đặt centrality vào interdependence khu vực thay vì hình ảnh đảo tách biệt. **Korea–Singapore–Vietnam liên kết (connection / 연결)** tiếp theo làm cụ thể các luồng chức năng vượt biên giới.
 
 ## Singapore trong Southeast Asia
 
@@ -152,7 +152,7 @@ Regional role đến từ việc kết nối maritime Southeast Asia với toàn
 
 Nó không phải “island tách khỏi region”; chính regional interdependence làm hub role có ý nghĩa.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Singapore — Singapore (SGP)**, sau nội dung của **Singapore trong Southeast Asia**, **Korea–Singapore–Vietnam liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Finance, aviation, shipping và investment nối Korea–Singapore–Vietnam theo chức năng chứ không theo một biên giới duy nhất; **Korea–Singapore–Vietnam liên kết (connection / 연결)** minh họa mạng coordination và production khu vực. **Dùng chung (common / 공통) misconceptions** tiếp theo sửa các cách đọc giản lược về island hub.
 
 ## Korea–Singapore–Vietnam liên kết (connection / 연결)
 
@@ -160,13 +160,13 @@ Korea–Singapore thường gắn qua finance, aviation, shipping và corporate 
 
 Đây là ví dụ của **functional geography**: giá trị (value / 값) chuỗi (chain / 사슬) không trùng political border.
 
-> **Chuyển mạch:** Trong **Singapore — Singapore (SGP)**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Korea–Singapore–Vietnam liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Các ngộ nhận về “may mắn vì ở cạnh Malacca”, tự cung lương thực hay city không phụ thuộc vật lý đều bỏ qua mạng và trade-off; **Dùng chung (common / 공통) misconceptions** buộc ta giữ cả vị trí lẫn giới hạn. **Mô hình tư duy** tiếp theo cô đọng chuỗi centrality–hạ tầng–phụ thuộc.
 
 ## Dùng chung (common / 공통) misconceptions
 
 “Singapore thành công chỉ vì nằm cạnh Malacca” là environmental determinism. “Small country không có geography phức tạp” sai vì land/water/năng lượng (energy / 에너지) sự đánh đổi (trade-off / 트레이드오프) rất mạnh. “Food bảo mật (security / 보안) = food self-sufficiency” sai trong mạng (network / 네트워크) economy. “toàn cục (global / 전역) city không phụ thuộc vật lý (physical / 물리적) hạ tầng (infrastructure / 인프라)” sai vì cổng (port / 포트), airport, cable, water và power đều vật lý.
 
-> **Chuyển mạch:** Ở chặng này của **Singapore — Singapore (SGP)**, **Mô hình tư duy** gom các mảnh từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi vị trí hàng hải → gateway ít ma sát → đô thị mật độ cao → water/land/energy systems → vai trò global city, đồng thời giữ rõ rằng scarcity chỉ được quản trị chứ không biến mất. Kết luận này bàn giao cho owner **South-eastern Asia** trong [README](./README.md).
 
 ## Mô hình tư duy
 

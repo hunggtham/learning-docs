@@ -23,7 +23,7 @@ Do đó tính chất và phản ứng trạng thái rắn phụ thuộc mạnh v
 
 Hai mẫu có cùng công thức tổng có thể có tính chất khác nhau nếu cấu trúc hoặc phân bố khuyết tật khác nhau.
 
-> **Chuyển mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Ô cơ sở và mạng tinh thể** tiếp nhận điểm tựa từ **Tại sao chất rắn cần một cách tư duy riêng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số phối trí và môi trường cục bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Ô cơ sở và mạng tinh thể** nối từ **Tại sao chất rắn cần một cách tư duy riêng?** sang **Số phối trí và môi trường cục bộ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ô cơ sở và mạng tinh thể
 
@@ -38,7 +38,7 @@ Thông tin cơ bản gồm:
 
 Ô cơ sở không nhất thiết là “khối nhỏ nhất nhìn thấy”, mà là đơn vị toán học đủ để tái tạo cấu trúc bằng phép tịnh tiến.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Số phối trí và môi trường cục bộ** tiếp nhận điểm tựa từ **Ô cơ sở và mạng tinh thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các kiểu mạng ion điển hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Số phối trí và môi trường cục bộ** nối từ **Ô cơ sở và mạng tinh thể** sang **Các kiểu mạng ion điển hình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Số phối trí và môi trường cục bộ
 
@@ -54,7 +54,7 @@ Ví dụ phổ biến:
 
 Trong vật liệu oxide, cùng một cation có thể chuyển từ phối trí 4 sang 6 theo nhiệt độ hoặc áp suất, làm tính chất thay đổi mạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Các kiểu mạng ion điển hình** tiếp nhận điểm tựa từ **Số phối trí và môi trường cục bộ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Perovskite — một khung cấu trúc rất linh hoạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Các kiểu mạng ion điển hình** nối từ **Số phối trí và môi trường cục bộ** sang **Perovskite — một khung cấu trúc rất linh hoạt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các kiểu mạng ion điển hình
 
@@ -69,7 +69,7 @@ Một số cấu trúc thường gặp:
 
 Mục tiêu không phải học thuộc tên, mà hiểu rằng mỗi motif tạo một **mạng liên kết và đường khuếch tán khác nhau**.
 
-> **Chuyển mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Perovskite — một khung cấu trúc rất linh hoạt** tiếp nhận điểm tựa từ **Các kiểu mạng ion điển hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ số dung sai Goldschmidt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Perovskite — một khung cấu trúc rất linh hoạt** nối từ **Các kiểu mạng ion điển hình** sang **Hệ số dung sai Goldschmidt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Perovskite — một khung cấu trúc rất linh hoạt
 
@@ -91,7 +91,7 @@ Khung `BO6` thường tạo các bát diện nối nhau. Việc xoay, méo hoặ
 
 Đây là lý do cùng một motif perovskite xuất hiện trong cảm biến, pin nhiên liệu, điện tử và quang điện.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Hệ số dung sai Goldschmidt** tiếp nhận điểm tựa từ **Perovskite — một khung cấu trúc rất linh hoạt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Spinel** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Hệ số dung sai Goldschmidt** nối từ **Perovskite — một khung cấu trúc rất linh hoạt** sang **Spinel**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ số dung sai Goldschmidt
 
@@ -107,7 +107,7 @@ Nếu lệch đáng kể, các bát diện có thể nghiêng hoặc cấu trúc
 
 Đây là quy tắc kinh nghiệm, không thay thế tính toán năng lượng hay thực nghiệm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Spinel** tiếp nhận điểm tựa từ **Hệ số dung sai Goldschmidt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khuyết tật điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Spinel** nối từ **Hệ số dung sai Goldschmidt** sang **Khuyết tật điểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Spinel
 
@@ -123,7 +123,7 @@ Trong **spinel thường**, A ưu tiên một loại site; trong **spinel nghị
 
 Sự phân bố cation ảnh hưởng mạnh tới tính từ và độ dẫn.
 
-> **Chuyển mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Khuyết tật điểm** tiếp nhận điểm tựa từ **Spinel** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt động lực học của khuyết tật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Khuyết tật điểm** nối từ **Spinel** sang **Nhiệt động lực học của khuyết tật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khuyết tật điểm
 
@@ -139,7 +139,7 @@ Các loại quan trọng:
 
 Nồng độ khuyết tật ở cân bằng tăng theo nhiệt độ vì entropy cấu hình cạnh tranh với chi phí enthalpy tạo khuyết tật.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Nhiệt động lực học của khuyết tật** tiếp nhận điểm tựa từ **Khuyết tật điểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ký hiệu Kröger–Vink** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Nhiệt động lực học của khuyết tật** nối từ **Khuyết tật điểm** sang **Ký hiệu Kröger–Vink**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệt động lực học của khuyết tật
 
@@ -159,7 +159,7 @@ Do đó vật liệu nung ở nhiệt độ cao có thể chứa nhiều defect 
 
 Nếu làm nguội nhanh, một phần phân bố defect ở nhiệt độ cao có thể bị “đóng băng” khỏi cân bằng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Ký hiệu Kröger–Vink** tiếp nhận điểm tựa từ **Nhiệt động lực học của khuyết tật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bù điện tích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Ký hiệu Kröger–Vink** nối từ **Nhiệt động lực học của khuyết tật** sang **Bù điện tích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ký hiệu Kröger–Vink
 
@@ -189,7 +189,7 @@ h^\bullet
 
 Ký hiệu này không nói điện tích tuyệt đối mà nói **điện tích hiệu dụng tương đối với mạng lý tưởng**.
 
-> **Chuyển mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Bù điện tích** tiếp nhận điểm tựa từ **Ký hiệu Kröger–Vink** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Defect điện tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Bù điện tích** nối từ **Ký hiệu Kröger–Vink** sang **Defect điện tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bù điện tích
 
@@ -207,7 +207,7 @@ Có thể mô tả định tính:
 
 Chính vacancy này làm oxygen ion dễ di chuyển hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Defect điện tử** tiếp nhận điểm tựa từ **Bù điện tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất không đúng tỉ lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Defect điện tử** nối từ **Bù điện tích** sang **Chất không đúng tỉ lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Defect điện tử
 
@@ -227,7 +227,7 @@ M^{n+}\leftrightarrow M^{(n+1)+}
 
 Đây là **dẫn điện hóa trị hỗn hợp (mixed-valence conduction)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Chất không đúng tỉ lượng** tiếp nhận điểm tựa từ **Defect điện tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Áp suất oxygen điều khiển defect** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Chất không đúng tỉ lượng** nối từ **Defect điện tử** sang **Áp suất oxygen điều khiển defect**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất không đúng tỉ lượng
 
@@ -245,7 +245,7 @@ Fe_{1-x}O
 
 Thành phần `x` có thể thay đổi theo nhiệt độ và áp suất oxygen.
 
-> **Chuyển mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Áp suất oxygen điều khiển defect** tiếp nhận điểm tựa từ **Chất không đúng tỉ lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sơ đồ Brouwer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Áp suất oxygen điều khiển defect** nối từ **Chất không đúng tỉ lượng** sang **Sơ đồ Brouwer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Áp suất oxygen điều khiển defect
 
@@ -258,7 +258,7 @@ Một oxide có thể trở nên:
 
 Do đó **áp suất riêng phần oxygen** là một biến nhiệt động mạnh trong hóa học chất rắn.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Sơ đồ Brouwer** tiếp nhận điểm tựa từ **Áp suất oxygen điều khiển defect** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khuếch tán trong chất rắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Sơ đồ Brouwer** nối từ **Áp suất oxygen điều khiển defect** sang **Khuếch tán trong chất rắn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sơ đồ Brouwer
 
@@ -272,7 +272,7 @@ Sơ đồ giúp trả lời:
 - conductivity thay đổi ra sao;
 - vật liệu ổn định ở môi trường oxy hóa hay khử.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Khuếch tán trong chất rắn** tiếp nhận điểm tựa từ **Sơ đồ Brouwer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ dẫn ion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Khuếch tán trong chất rắn** nối từ **Sơ đồ Brouwer** sang **Độ dẫn ion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khuếch tán trong chất rắn
 
@@ -290,7 +290,7 @@ D=D_0e^{-Q/(RT)}
 
 Năng lượng hoạt hóa \(Q\) gồm đóng góp từ tạo defect và di chuyển defect tùy cơ chế.
 
-> **Chuyển mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Độ dẫn ion** tiếp nhận điểm tựa từ **Khuếch tán trong chất rắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ Nernst–Einstein** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Độ dẫn ion** nối từ **Khuếch tán trong chất rắn** sang **Quan hệ Nernst–Einstein**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ dẫn ion
 
@@ -310,7 +310,7 @@ Muốn tăng conductivity có thể tăng số vacancy hoặc giảm hàng rào 
 
 Nhưng quá nhiều defect có thể tương tác, clustering hoặc làm pha mất ổn định.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Quan hệ Nernst–Einstein** tiếp nhận điểm tựa từ **Độ dẫn ion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất điện ly rắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Quan hệ Nernst–Einstein** nối từ **Độ dẫn ion** sang **Chất điện ly rắn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quan hệ Nernst–Einstein
 
@@ -330,7 +330,7 @@ suy ra:
 
 Trong hệ tương quan mạnh, cần hệ số hiệu chỉnh vì các bước nhảy không hoàn toàn độc lập.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Chất điện ly rắn** tiếp nhận điểm tựa từ **Quan hệ Nernst–Einstein** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dẫn electron trong oxide** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Chất điện ly rắn** nối từ **Quan hệ Nernst–Einstein** sang **Dẫn electron trong oxide**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất điện ly rắn
 
@@ -350,7 +350,7 @@ Ví dụ gồm:
 
 Không có một tiêu chí duy nhất; vật liệu phải cân bằng nhiều thuộc tính.
 
-> **Chuyển mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Dẫn electron trong oxide** tiếp nhận điểm tựa từ **Chất điện ly rắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Polaron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Dẫn electron trong oxide** nối từ **Chất điện ly rắn** sang **Polaron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dẫn electron trong oxide
 
@@ -367,7 +367,7 @@ Một số hệ cho:
 
 Đây là vùng giao giữa hóa học vô cơ, vật lý chất rắn và vật liệu điện tử.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Polaron** tiếp nhận điểm tựa từ **Dẫn electron trong oxide** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới hạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Polaron** nối từ **Dẫn electron trong oxide** sang **Ranh giới hạt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Polaron
 
@@ -377,7 +377,7 @@ Trong nhiều oxide, vận chuyển điện tích xảy ra bằng hopping polaro
 
 Độ dẫn vì thế phụ thuộc cả cấu trúc điện tử lẫn dao động mạng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Ranh giới hạt** tiếp nhận điểm tựa từ **Polaron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thiêu kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Ranh giới hạt** nối từ **Polaron** sang **Thiêu kết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ranh giới hạt
 
@@ -393,7 +393,7 @@ Ranh giới có thể:
 
 Do đó cùng một vật liệu hóa học nhưng kích thước hạt khác có thể cho conductivity khác.
 
-> **Chuyển mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Thiêu kết** tiếp nhận điểm tựa từ **Ranh giới hạt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển pha đa hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Thiêu kết** nối từ **Ranh giới hạt** sang **Chuyển pha đa hình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thiêu kết
 
@@ -410,7 +410,7 @@ Cơ chế vận chuyển vật chất có thể gồm:
 
 Một số cơ chế làm cổ hạt lớn lên nhưng không làm đặc mạnh; các cơ chế khác làm giảm lỗ rỗng và tăng density.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Chuyển pha đa hình** tiếp nhận điểm tựa từ **Thiêu kết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiễu xạ tia X** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Chuyển pha đa hình** nối từ **Thiêu kết** sang **Nhiễu xạ tia X**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển pha đa hình
 
@@ -428,7 +428,7 @@ Pha ổn định phụ thuộc:
 
 Ở nano quy mô (scale / 규모), pha metastable đôi khi được ổn định vì đóng góp bề mặt lớn hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Nhiễu xạ tia X** tiếp nhận điểm tựa từ **Chuyển pha đa hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công thức Scherrer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Nhiễu xạ tia X** nối từ **Chuyển pha đa hình** sang **Công thức Scherrer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiễu xạ tia X
 
@@ -449,7 +449,7 @@ XRD có thể dùng để:
 - ước lượng crystallite kích thước (size / 크기);
 - theo dõi chuyển pha.
 
-> **Chuyển mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Công thức Scherrer** tiếp nhận điểm tựa từ **Nhiễu xạ tia X** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rietveld refinement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Công thức Scherrer** nối từ **Nhiễu xạ tia X** sang **Rietveld refinement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Công thức Scherrer
 
@@ -461,7 +461,7 @@ D\approx\frac{K\lambda}{\beta\cos\theta}
 
 Nhưng peak broadening còn có thể đến từ strain và thiết bị, nên không nên xem công thức Scherrer là phép đo kích thước tuyệt đối trong mọi trường hợp.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Rietveld refinement** tiếp nhận điểm tựa từ **Công thức Scherrer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kính hiển vi và phân tích cục bộ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Rietveld refinement** nối từ **Công thức Scherrer** sang **Kính hiển vi và phân tích cục bộ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rietveld refinement
 
@@ -477,7 +477,7 @@ Có thể suy ra:
 
 Tuy nhiên kết quả phụ thuộc mô hình; fit tốt không chứng minh duy nhất rằng cấu trúc đã đúng nếu có nhiều mô hình tương đương.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Kính hiển vi và phân tích cục bộ** tiếp nhận điểm tựa từ **Rietveld refinement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pin và intercalation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Kính hiển vi và phân tích cục bộ** nối từ **Rietveld refinement** sang **Pin và intercalation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kính hiển vi và phân tích cục bộ
 
@@ -493,7 +493,7 @@ EDS/EELS có thể thêm thông tin thành phần và trạng thái điện tử
 
 Kết hợp phương pháp trung bình + cục bộ thường đáng tin hơn chỉ dùng một kỹ thuật.
 
-> **Chuyển mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Pin và intercalation** tiếp nhận điểm tựa từ **Kính hiển vi và phân tích cục bộ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Oxygen vacancy và xúc tác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Pin và intercalation** nối từ **Kính hiển vi và phân tích cục bộ** sang **Oxygen vacancy và xúc tác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pin và intercalation
 
@@ -515,7 +515,7 @@ Hiệu suất phụ thuộc:
 
 Đây là ứng dụng trực tiếp của defect chemistry.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Oxygen vacancy và xúc tác** tiếp nhận điểm tựa từ **Pin và intercalation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vật liệu mixed ionic–electronic conductor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Oxygen vacancy và xúc tác** nối từ **Pin và intercalation** sang **Vật liệu mixed ionic–electronic conductor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Oxygen vacancy và xúc tác
 
@@ -534,7 +534,7 @@ vacancy + O2
 
 Vì vậy activity phụ thuộc khả năng tạo và chữa vacancy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Vật liệu mixed ionic–electronic conductor** tiếp nhận điểm tựa từ **Oxygen vacancy và xúc tác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt động học pha và thế hóa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Vật liệu mixed ionic–electronic conductor** nối từ **Oxygen vacancy và xúc tác** sang **Nhiệt động học pha và thế hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vật liệu mixed ionic–electronic conductor
 
@@ -548,7 +548,7 @@ Một số oxide dẫn cả ion và electron.
 
 Nếu chỉ dẫn ion, reaction zone bị giới hạn gần giao diện (interface / 인터페이스) ba pha. Nếu dẫn cả ion + electron, vùng phản ứng có thể mở rộng trên bề mặt lớn hơn.
 
-> **Chuyển mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Nhiệt động học pha và thế hóa học** tiếp nhận điểm tựa từ **Vật liệu mixed ionic–electronic conductor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Động học tổng hợp trạng thái rắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Nhiệt động học pha và thế hóa học** nối từ **Vật liệu mixed ionic–electronic conductor** sang **Động học tổng hợp trạng thái rắn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệt động học pha và thế hóa học
 
@@ -558,7 +558,7 @@ Một pha chỉ ổn định trong vùng mà Gibbs free năng lượng (energy /
 
 Trong vật liệu đa nguyên tố, có thể xây **sơ đồ ổn định pha (phase stability diagram)** theo chemical potential để xác định môi trường tổng hợp mà compound không phân hủy.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Động học tổng hợp trạng thái rắn** gom các mảnh từ **Nhiệt động học pha và thế hóa học** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Soft chemistry và topotactic reaction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Động học tổng hợp trạng thái rắn** tổng hợp từ **Nhiệt động học pha và thế hóa học** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Soft chemistry và topotactic reaction** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Động học tổng hợp trạng thái rắn
 
@@ -577,7 +577,7 @@ Khi lớp sản phẩm dày lên, đường khuếch tán tăng và tốc độ 
 
 Do đó nghiền nhỏ, trộn tốt, tăng nhiệt độ hoặc dùng precursor phân tử có thể tăng tốc tổng hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Soft chemistry và topotactic reaction** gom các mảnh từ **Động học tổng hợp trạng thái rắn** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Metastability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Soft chemistry và topotactic reaction** tổng hợp từ **Động học tổng hợp trạng thái rắn** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Metastability** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Soft chemistry và topotactic reaction
 
@@ -589,7 +589,7 @@ Không phải mọi chất rắn cần tổng hợp ở nhiệt độ cực cao.
 
 Đây là chiến lược quan trọng để tạo pha metastable mà nung cân bằng thông thường không cho được.
 
-> **Chuyển mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Metastability** tiếp nhận điểm tựa từ **Soft chemistry và topotactic reaction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với hóa học phối trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Metastability** nối từ **Soft chemistry và topotactic reaction** sang **Liên hệ với hóa học phối trí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Metastability
 
@@ -606,7 +606,7 @@ cùng composition
 → phase khác
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Liên hệ với hóa học phối trí** tiếp nhận điểm tựa từ **Metastability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với lý thuyết vùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Liên hệ với hóa học phối trí** nối từ **Metastability** sang **Liên hệ với lý thuyết vùng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với hóa học phối trí
 
@@ -616,7 +616,7 @@ Crystal trường dữ liệu (field / 필드) splitting của kim loại chuy�
 
 Do đó hóa học phối trí phân tử và hóa học trạng thái rắn không phải hai thế giới tách biệt. Một bên là giới hạn cục bộ, bên kia mở rộng các motif đó thành mạng vô hạn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Liên hệ với lý thuyết vùng** tiếp nhận điểm tựa từ **Liên hệ với hóa học phối trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Liên hệ với lý thuyết vùng** nối từ **Liên hệ với hóa học phối trí** sang **Các hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với lý thuyết vùng
 
@@ -633,7 +633,7 @@ Pha tạp vì thế đồng thời là:
 
 Đây là nền tảng hóa học của semiconductor kỹ thuật (engineering / 엔지니어링).
 
-> **Chuyển mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Các hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Liên hệ với lý thuyết vùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Các hiểu lầm thường gặp** nối từ **Liên hệ với lý thuyết vùng** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các hiểu lầm thường gặp
 
@@ -661,7 +661,7 @@ Không. Khuếch tán chậm nhưng vẫn xảy ra, đặc biệt ở nhiệt đ
 
 Không. Cấu trúc và lịch sử xử lý có thể tạo vật liệu khác hoàn toàn.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Hóa học trạng thái rắn và khuyết tật — từ mạng tinh thể tới vật liệu chức năng**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

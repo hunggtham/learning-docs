@@ -12,7 +12,7 @@ Lập thể đặc biệt quan trọng vì phần lớn đại phân tử sinh h
 
 Vì vậy trong sinh học, “cùng thành phần” chưa đủ; cách nguyên tử được sắp xếp trong không gian có thể quyết định hoàn toàn chức năng.
 
-> **Chuyển mạch:** Molecular structure controls recognition; acid–base chemistry next tunes enzyme function, while redox chemistry supplies the electron flow behind metabolism.
+> **Nối mạch:** Molecular structure controls recognition; acid–base chemistry next tunes enzyme function, while redox chemistry supplies the electron flow behind metabolism.
 
 ## Hóa học acid-base → chức năng enzyme
 
@@ -22,7 +22,7 @@ Giá trị `pKa` của một nhóm trong protein có thể lệch đáng kể so
 
 Các hệ đệm của tế bào giúp giữ pH trong vùng mà điện tích, cấu trúc và hoạt tính của protein vẫn phù hợp.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**, **Hóa học oxy hóa-khử → chuyển hóa** tiếp nhận điểm tựa từ **Hóa học acid-base → chức năng enzyme** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt động lực học → ghép năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**, **Hóa học oxy hóa-khử → chuyển hóa** nối từ **Hóa học acid-base → chức năng enzyme** sang **Nhiệt động lực học → ghép năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học oxy hóa-khử → chuyển hóa
 
@@ -32,7 +32,7 @@ Hô hấp tế bào không oxy hóa chất dinh dưỡng trực tiếp với oxy
 
 Đây là ví dụ rõ về cách hóa học oxy hóa-khử được tổ chức thành một hệ năng lượng có kiểm soát.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**, **Nhiệt động lực học → ghép năng lượng** tiếp nhận điểm tựa từ **Hóa học oxy hóa-khử → chuyển hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Động học → điều hòa dòng chuyển hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**, **Nhiệt động lực học → ghép năng lượng** nối từ **Hóa học oxy hóa-khử → chuyển hóa** sang **Động học → điều hòa dòng chuyển hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệt động lực học → ghép năng lượng
 
@@ -48,7 +48,7 @@ Nếu tổng âm, toàn bộ quá trình có thể thuận lợi về mặt nhi�
 
 Sự sống vì vậy không chống lại nhiệt động lực học. Nó duy trì cấu trúc cục bộ bằng cách liên tục tiêu thụ năng lượng tự do và thải entropy ra môi trường.
 
-> **Chuyển mạch:** Trong **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**, **Động học → điều hòa dòng chuyển hóa** tiếp nhận điểm tựa từ **Nhiệt động lực học → ghép năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa học màng → sinh lý học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**, **Động học → điều hòa dòng chuyển hóa** nối từ **Nhiệt động lực học → ghép năng lượng** sang **Hóa học màng → sinh lý học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Động học → điều hòa dòng chuyển hóa
 
@@ -58,7 +58,7 @@ Nhiệt động lực học cho biết phản ứng nào có thể thuận lợi
 
 Vì vậy một phản ứng “có thể xảy ra” về nhiệt động không nhất thiết đóng vai trò thực tế nếu không có con đường động học phù hợp.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**, **Hóa học màng → sinh lý học** tiếp nhận điểm tựa từ **Động học → điều hòa dòng chuyển hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa học polymer → di truyền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**, **Hóa học màng → sinh lý học** nối từ **Động học → điều hòa dòng chuyển hóa** sang **Hóa học polymer → di truyền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học màng → sinh lý học
 
@@ -68,7 +68,7 @@ Các độ dốc (gradient / 기울기) điện hóa này được dùng trong d
 
 Có thể nói màng biến hình học và phân ngăn thành một tài nguyên nhiệt động.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**, **Hóa học polymer → di truyền** tiếp nhận điểm tựa từ **Hóa học màng → sinh lý học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**, **Hóa học polymer → di truyền** nối từ **Hóa học màng → sinh lý học** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học polymer → di truyền
 
@@ -78,7 +78,7 @@ Protein cũng là polymer có trình tự xác định. Trình tự amino acid �
 
 Sự sống vì vậy liên kết hóa học polymer với thông tin: cấu trúc phân tử không chỉ mang năng lượng hay vật chất mà còn mang hướng dẫn.
 
-> **Chuyển mạch:** Trong **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**, **Mô hình tư duy** gom các mảnh từ **Hóa học polymer → di truyền** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Hóa học và Sinh học — khi mạng phản ứng trở thành hệ sống**, **Mô hình tư duy** tổng hợp từ **Hóa học polymer → di truyền** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

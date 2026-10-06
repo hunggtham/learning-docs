@@ -12,7 +12,7 @@ Tính dục (sexuality) là một hệ thống gồm attraction, desire, arousal
 
 Cả hai mẫu (pattern / 패턴) đều có thể bình thường. Nếu một người chỉ chờ “tự nhiên có mood” nhưng thường thuộc responsive mẫu (pattern / 패턴), họ có thể tưởng mình có vấn đề dù hệ thống (system / 시스템) vẫn hoạt động khi ngữ cảnh (context / 맥락) thích hợp.
 
-> **Chuyển mạch:** Trong **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Desire discrepancy** tiếp nhận điểm tựa từ **Desire không phải một thứ duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sexual arousal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Desire discrepancy** nối từ **Desire không phải một thứ duy nhất** sang **Sexual arousal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Desire discrepancy
 
@@ -29,7 +29,7 @@ Cách xử lý tốt cần tách:
 
 Goal không phải ép hai mức desire bằng nhau mà xây cách negotiation không coercion.
 
-> **Chuyển mạch:** Ở chặng này của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Sexual arousal** tiếp nhận điểm tựa từ **Desire discrepancy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Consent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Sexual arousal** nối từ **Desire discrepancy** sang **Consent**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sexual arousal
 
@@ -37,7 +37,7 @@ Arousal gồm subjective experience và physiological phản hồi (response / �
 
 Physiological phản hồi (response / 응답) không tự động chứng minh consent, desire hoặc enjoyment. Đây là distinction quan trọng trong education và forensic ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Consent** tiếp nhận điểm tựa từ **Sexual arousal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dual điều khiển (control / 제어) mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Consent** nối từ **Sexual arousal** sang **Dual điều khiển (control / 제어) mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Consent
 
@@ -47,7 +47,7 @@ Một consent có ý nghĩa cần đủ sức chứa (capacity / 용량), freedo
 
 Silence, freezing hoặc physiological arousal không tự động là consent.
 
-> **Chuyển mạch:** Trong **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Dual điều khiển (control / 제어) mô hình (model / 모델)** tiếp nhận điểm tựa từ **Consent** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Stress** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Dual điều khiển (control / 제어) mô hình (model / 모델)** nối từ **Consent** sang **Stress**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dual điều khiển (control / 제어) mô hình (model / 모델)
 
@@ -65,7 +65,7 @@ stress / fear / distraction / pain
 
 Low desire có thể do excitation thấp, inhibition cao hoặc cả hai. Vì vậy intervention cần đúng bottleneck.
 
-> **Chuyển mạch:** Ở chặng này của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Stress** tiếp nhận điểm tựa từ **Dual điều khiển (control / 제어) mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sleep** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Stress** nối từ **Dual điều khiển (control / 제어) mô hình (model / 모델)** sang **Sleep**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Stress
 
@@ -75,7 +75,7 @@ Nói `hãy relax` không đủ nếu tải công việc (workload / 워크로드
 
 Xem [[06_stress_coping_and_emotion_regulation]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Sleep** tiếp nhận điểm tựa từ **Stress** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Medication và health** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Sleep** nối từ **Stress** sang **Medication và health**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sleep
 
@@ -83,7 +83,7 @@ Sleep thiếu làm fatigue, mood và hormone regulation thay đổi. Desire gi�
 
 Nếu một couple chỉ có thời gian intimacy lúc cả hai đã kiệt sức, timing trở thành variable cần thay đổi.
 
-> **Chuyển mạch:** Trong **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Medication và health** tiếp nhận điểm tựa từ **Sleep** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Body ảnh (image / 이미지)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Medication và health** nối từ **Sleep** sang **Body ảnh (image / 이미지)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Medication và health
 
@@ -91,7 +91,7 @@ Một số medication, endocrine điều kiện (condition / 조건), pain disor
 
 Không nên tự ngừng medication. Khi thay đổi (change / 변경) rõ sau treatment, cần discuss với clinician.
 
-> **Chuyển mạch:** Ở chặng này của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Body ảnh (image / 이미지)** tiếp nhận điểm tựa từ **Medication và health** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu năng (performance / 성능) anxiety** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Body ảnh (image / 이미지)** nối từ **Medication và health** sang **Hiệu năng (performance / 성능) anxiety**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Body ảnh (image / 이미지)
 
@@ -101,7 +101,7 @@ Body ảnh (image / 이미지) ảnh hưởng attention trong intimacy. Nếu m�
 
 Intervention thường tập trung chuyển attention về sensation, communication và giảm hiệu năng (performance / 성능) demand.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Hiệu năng (performance / 성능) anxiety** tiếp nhận điểm tựa từ **Body ảnh (image / 이미지)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sexual script** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Hiệu năng (performance / 성능) anxiety** nối từ **Body ảnh (image / 이미지)** sang **Sexual script**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu năng (performance / 성능) anxiety
 
@@ -123,7 +123,7 @@ lo mạnh hơn lần sau
 
 Giảm goal “phải đạt kết quả (outcome / 결과) X” có thể giúp hệ thống (system / 시스템) trở lại exploratory chế độ (mode / 모드).
 
-> **Chuyển mạch:** Trong **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Sexual script** tiếp nhận điểm tựa từ **Hiệu năng (performance / 성능) anxiety** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pornography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Sexual script** nối từ **Hiệu năng (performance / 성능) anxiety** sang **Pornography**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sexual script
 
@@ -133,7 +133,7 @@ Script đến từ culture, peer, family, religion, media và pornography.
 
 Script hữu ích để coordinate nhưng có thể trở nên restrictive nếu được coi là quy tắc (rule / 규칙) duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Pornography** tiếp nhận điểm tựa từ **Sexual script** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Novelty và habituation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Pornography** nối từ **Sexual script** sang **Novelty và habituation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pornography
 
@@ -149,7 +149,7 @@ Không nên kết luận `porn luôn gây dysfunction` hoặc `không bao giờ 
 
 Nếu expectation về body hoặc hiệu năng (performance / 성능) bị định hình bởi content không thực tế, comparison có thể ảnh hưởng relationship.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Novelty và habituation** tiếp nhận điểm tựa từ **Pornography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Intimacy và desire** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Novelty và habituation** nối từ **Pornography** sang **Intimacy và desire**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Novelty và habituation
 
@@ -157,7 +157,7 @@ Novelty có thể tăng attention và arousal, trong khi repeated stimulus tạo
 
 Điều này không đồng nghĩa long-term relationship phải mất desire. Novelty có thể đến từ ngữ cảnh (context / 맥락), dùng chung (shared / 공유) exploration, emotional closeness và changing routine, không chỉ new partner.
 
-> **Chuyển mạch:** Trong **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Intimacy và desire** tiếp nhận điểm tựa từ **Novelty và habituation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Attachment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Intimacy và desire** nối từ **Novelty và habituation** sang **Attachment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Intimacy và desire
 
@@ -167,7 +167,7 @@ Không có universal quy tắc (rule / 규칙) `closeness càng nhiều desire c
 
 Relationship cần balance bảo mật (security / 보안) và individuality.
 
-> **Chuyển mạch:** Ở chặng này của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Attachment** tiếp nhận điểm tựa từ **Intimacy và desire** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Communication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Attachment** nối từ **Intimacy và desire** sang **Communication**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Attachment
 
@@ -177,7 +177,7 @@ Nhưng attachment label không giải thích mọi sexual issue.
 
 Xem [[01_attachment_and_relationships]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Communication** tiếp nhận điểm tựa từ **Attachment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rejection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Communication** nối từ **Attachment** sang **Rejection**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Communication
 
@@ -195,7 +195,7 @@ Một practice là phân biệt:
 
 Điều này tạo vocabulary negotiation rõ hơn.
 
-> **Chuyển mạch:** Trong **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Rejection** tiếp nhận điểm tựa từ **Communication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Frequency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Rejection** nối từ **Communication** sang **Frequency**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rejection
 
@@ -205,7 +205,7 @@ Nhưng no có thể đến từ fatigue, pain, stress hoặc timing.
 
 Relationship khỏe cần cho phép từ chối không có punishment, đồng thời cho phép partner có desire được nói ra mà không shame.
 
-> **Chuyển mạch:** Ở chặng này của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Frequency** tiếp nhận điểm tựa từ **Rejection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sexual dysfunction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Frequency** nối từ **Rejection** sang **Sexual dysfunction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Frequency
 
@@ -213,7 +213,7 @@ Không có một số lần “bình thường” universal. Frequency có varia
 
 Clinical concern nên tập trung distress, impairment, consent và mismatch hơn benchmark internet.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Sexual dysfunction** tiếp nhận điểm tựa từ **Frequency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pain** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Sexual dysfunction** nối từ **Frequency** sang **Pain**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sexual dysfunction
 
@@ -221,7 +221,7 @@ Các difficulty về desire, arousal, erection, lubrication, orgasm hoặc pain 
 
 Không nên assume “do tâm lý” chỉ vì medical kiểm thử (test / 테스트) bình thường. Functional bài toán (problem / 문제) vẫn là thật và có thể gồm nervous hệ thống (system / 시스템), học tập (learning / 학습), medication, pelvic health và relationship factor.
 
-> **Chuyển mạch:** Trong **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Pain** tiếp nhận điểm tựa từ **Sexual dysfunction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Orientation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Pain** nối từ **Sexual dysfunction** sang **Orientation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pain
 
@@ -231,7 +231,7 @@ Pain tạo học tập (learning / 학습) vòng lặp (loop / 루프): anticipa
 
 Assessment cần medical evaluation và đôi khi multidisciplinary treatment.
 
-> **Chuyển mạch:** Ở chặng này của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Orientation** tiếp nhận điểm tựa từ **Pain** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Aging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Orientation** nối từ **Pain** sang **Aging**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Orientation
 
@@ -239,7 +239,7 @@ Assessment cần medical evaluation và đôi khi multidisciplinary treatment.
 
 Không nên suy orientation từ hành vi (behavior / 동작) đơn lẻ hoặc stereotype.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Aging** tiếp nhận điểm tựa từ **Orientation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fertility và reproductive stress** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Aging** nối từ **Orientation** sang **Fertility và reproductive stress**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Aging
 
@@ -247,7 +247,7 @@ Sexuality không biến mất ở tuổi già. Health, medication, hormonal thay
 
 Age stereotype đôi khi làm provider hoặc family bỏ qua sexual health need.
 
-> **Chuyển mạch:** Trong **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Fertility và reproductive stress** tiếp nhận điểm tựa từ **Aging** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trauma** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Fertility và reproductive stress** nối từ **Aging** sang **Trauma**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Fertility và reproductive stress
 
@@ -255,7 +255,7 @@ Trying to conceive có thể biến sex thành tác vụ (task / 작업) theo l�
 
 Relationship hỗ trợ (support / 지원) cần recognize burden thay vì chỉ tập trung kết quả (outcome / 결과).
 
-> **Chuyển mạch:** Ở chặng này của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Trauma** tiếp nhận điểm tựa từ **Fertility và reproductive stress** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Trauma** nối từ **Fertility và reproductive stress** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trauma
 
@@ -265,7 +265,7 @@ Không nên assume mọi survivor có dysfunction hoặc mọi sexual difficulty
 
 Trauma-informed approach ưu tiên điều khiển (control / 제어), choice và pacing.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Trauma** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Những hiểu lầm phổ biến** nối từ **Trauma** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -279,7 +279,7 @@ Trauma-informed approach ưu tiên điều khiển (control / 제어), choice v�
 
 **“Nếu bài toán (problem / 문제) là psychological thì không phải thật.”** Psychological cơ chế (mechanism / 메커니즘) vẫn là biological/behavioral tiến trình (process / 프로세스) có consequence thật.
 
-> **Chuyển mạch:** Trong **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -296,7 +296,7 @@ body + health + stress + relationship
 
 > Sexual functioning là kết quả của cả hệ thống, không phải thước đo đơn giản của tình yêu hoặc “bản lĩnh”.
 
-> **Chuyển mạch:** Ở chặng này của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Tính dục, ham muốn và vận hành quan hệ — Sexuality, Desire & Relationship Functioning / 성·욕구·관계기능**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

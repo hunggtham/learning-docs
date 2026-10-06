@@ -8,7 +8,7 @@ Tài liệu này được viết cho người chưa có nền tảng XML. Mục 
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Beginner**, **Học XML từ con số 0: cú pháp, cấu trúc dữ liệu và cách parser thực sự hiểu tài liệu XML** nêu điều cần giải thích; **1. XML là gì và vì sao nó tồn tại?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **2. XML document thực chất là một cây dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Beginner**, **Học XML từ con số 0: cú pháp, cấu trúc dữ liệu và cách parser thực sự hiểu tài liệu XML** đặt vấn đề; **1. XML là gì và vì sao nó tồn tại?** đối chiếu bằng chứng, rồi **2. XML document thực chất là một cây dữ liệu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 1. XML là gì và vì sao nó tồn tại?
 
@@ -29,7 +29,7 @@ XML chỉ biết đây là một cây có element `user`, bên trong có `name` 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Beginner**, **1. XML là gì và vì sao nó tồn tại?** nêu điều cần giải thích; **2. XML document thực chất là một cây dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. gốc (root / 루트) element là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Beginner**, **1. XML là gì và vì sao nó tồn tại?** đặt vấn đề; **2. XML document thực chất là một cây dữ liệu** đối chiếu bằng chứng, rồi **3. gốc (root / 루트) element là gì?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2. XML document thực chất là một cây dữ liệu
 
@@ -63,7 +63,7 @@ Một XML parser không chỉ “tìm văn bản (text / 텍스트) giữa hai t
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **2. XML document thực chất là một cây dữ liệu** nêu điều cần giải thích; **3. gốc (root / 루트) element là gì?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Element là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **2. XML document thực chất là một cây dữ liệu** đặt vấn đề; **3. gốc (root / 루트) element là gì?** đối chiếu bằng chứng, rồi **4. Element là gì?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3. gốc (root / 루트) element là gì?
 
@@ -91,7 +91,7 @@ Lý do là tài liệu có hai top-level elements. XML parser không thể coi c
 
 ---
 
-> **Chuyển mạch:** Root element đặt giới hạn cho document tree; element tiếp theo mô tả node có content và attributes ra sao. Empty/self-closing syntax kiểm tra trường hợp node không có content.
+> **Nối mạch:** Root element đặt giới hạn cho document tree; element tiếp theo mô tả node có content và attributes ra sao. Empty/self-closing syntax kiểm tra trường hợp node không có content.
 
 ## 4. Element là gì?
 
@@ -132,7 +132,7 @@ là hai tên khác nhau.
 
 ---
 
-> **Chuyển mạch:** Element có thể chứa content hoặc rỗng; empty-element syntax quy định serialization, còn case sensitivity tiếp theo ảnh hưởng name matching.
+> **Nối mạch:** Element có thể chứa content hoặc rỗng; empty-element syntax quy định serialization, còn case sensitivity tiếp theo ảnh hưởng name matching.
 
 ## 5. Empty element và self-closing cú pháp (syntax / 문법)
 
@@ -154,7 +154,7 @@ Trong XML, đây là empty-element cú pháp (syntax / 문법) thực sự. Nó 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **6. XML phân biệt chữ hoa chữ thường** tiếp nhận điểm tựa từ **5. Empty element và self-closing cú pháp (syntax / 문법)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Proper nesting: element phải đóng đúng thứ tự** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **6. XML phân biệt chữ hoa chữ thường** nối từ **5. Empty element và self-closing cú pháp (syntax / 문법)** sang **7. Proper nesting: element phải đóng đúng thứ tự**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. XML phân biệt chữ hoa chữ thường
 
@@ -172,7 +172,7 @@ Bạn cũng cần hiểu rằng tên attribute cũng phân biệt hoa thường 
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Beginner**, **7. Proper nesting: element phải đóng đúng thứ tự** tiếp nhận điểm tựa từ **6. XML phân biệt chữ hoa chữ thường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Attribute là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Beginner**, **7. Proper nesting: element phải đóng đúng thứ tự** nối từ **6. XML phân biệt chữ hoa chữ thường** sang **8. Attribute là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Proper nesting: element phải đóng đúng thứ tự
 
@@ -198,7 +198,7 @@ HTML trình duyệt (browser / 브라우저) có lỗi (error / 오류) khôi ph
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Beginner**, **8. Attribute là gì?** tiếp nhận điểm tựa từ **7. Proper nesting: element phải đóng đúng thứ tự** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Khi nào nên dùng element, khi nào nên dùng attribute?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Beginner**, **8. Attribute là gì?** nối từ **7. Proper nesting: element phải đóng đúng thứ tự** sang **9. Khi nào nên dùng element, khi nào nên dùng attribute?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Attribute là gì?
 
@@ -238,7 +238,7 @@ là lỗi.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **9. Khi nào nên dùng element, khi nào nên dùng attribute?** tiếp nhận điểm tựa từ **8. Attribute là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. văn bản (text / 텍스트) content thực chất vẫn là character dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **9. Khi nào nên dùng element, khi nào nên dùng attribute?** nối từ **8. Attribute là gì?** sang **10. văn bản (text / 텍스트) content thực chất vẫn là character dữ liệu (data / 데이터)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Khi nào nên dùng element, khi nào nên dùng attribute?
 
@@ -286,7 +286,7 @@ Cấp cao (senior / 시니어) XML thiết kế (design / 설계) không dựa t
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Beginner**, **9. Khi nào nên dùng element, khi nào nên dùng attribute?** nêu điều cần giải thích; **10. văn bản (text / 텍스트) content thực chất vẫn là character dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. Escaping: vì sao một số ký tự không được viết trực tiếp?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Beginner**, **9. Khi nào nên dùng element, khi nào nên dùng attribute?** đặt vấn đề; **10. văn bản (text / 텍스트) content thực chất vẫn là character dữ liệu (data / 데이터)** đối chiếu bằng chứng, rồi **11. Escaping: vì sao một số ký tự không được viết trực tiếp?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 10. văn bản (text / 텍스트) content thực chất vẫn là character dữ liệu (data / 데이터)
 
@@ -310,7 +310,7 @@ Kiểu dữ liệu có thể được gán ở tầng XML lược đồ (schema 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Beginner**, **10. văn bản (text / 텍스트) content thực chất vẫn là character dữ liệu (data / 데이터)** nêu điều cần giải thích; **11. Escaping: vì sao một số ký tự không được viết trực tiếp?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. Numeric character references** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Beginner**, **10. văn bản (text / 텍스트) content thực chất vẫn là character dữ liệu (data / 데이터)** đặt vấn đề; **11. Escaping: vì sao một số ký tự không được viết trực tiếp?** đối chiếu bằng chứng, rồi **12. Numeric character references** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 11. Escaping: vì sao một số ký tự không được viết trực tiếp?
 
@@ -354,7 +354,7 @@ Bạn không cần encode mọi Unicode character thành thực thể (entity / 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, sau nội dung của **11. Escaping: vì sao một số ký tự không được viết trực tiếp?**, **12. Numeric character references** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **13. XML declaration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, sau nội dung của **11. Escaping: vì sao một số ký tự không được viết trực tiếp?**, **12. Numeric character references** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **13. XML declaration** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. Numeric character references
 
@@ -378,7 +378,7 @@ Numeric tham chiếu (reference / 참조) hữu ích khi cần biểu diễn ký
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Beginner**, **13. XML declaration** tiếp nhận điểm tựa từ **12. Numeric character references** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. XML declaration có bắt buộc không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Beginner**, **13. XML declaration** nối từ **12. Numeric character references** sang **14. XML declaration có bắt buộc không?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. XML declaration
 
@@ -398,7 +398,7 @@ Trong hệ thống mới, UTF‑8 gần như luôn là lựa chọn tốt nhất
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Beginner**, **14. XML declaration có bắt buộc không?** tiếp nhận điểm tựa từ **13. XML declaration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. BOM là gì và có cần không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Beginner**, **14. XML declaration có bắt buộc không?** nối từ **13. XML declaration** sang **15. BOM là gì và có cần không?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. XML declaration có bắt buộc không?
 
@@ -420,7 +420,7 @@ giúp giảm ambiguity và làm intent rõ hơn.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **15. BOM là gì và có cần không?** tiếp nhận điểm tựa từ **14. XML declaration có bắt buộc không?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Comment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **15. BOM là gì và có cần không?** nối từ **14. XML declaration có bắt buộc không?** sang **16. Comment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. BOM là gì và có cần không?
 
@@ -430,7 +430,7 @@ XML processor chuẩn có rules xử lý BOM, nhưng một số toolchain hoặc
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Beginner**, **16. Comment** tiếp nhận điểm tựa từ **15. BOM là gì và có cần không?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. CDATA section** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Beginner**, **16. Comment** nối từ **15. BOM là gì và có cần không?** sang **17. CDATA section**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Comment
 
@@ -448,7 +448,7 @@ Ngoài ra XML comment có restrictions riêng về chuỗi `--`, vì vậy khôn
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Beginner**, **17. CDATA section** tiếp nhận điểm tựa từ **16. Comment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Vì sao ]]> đặc biệt trong CDATA?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Beginner**, **17. CDATA section** nối từ **16. Comment** sang **18. Vì sao ]]> đặc biệt trong CDATA?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. CDATA section
 
@@ -484,7 +484,7 @@ CDATA cũng không phải bảo mật (security / 보안) tính năng (feature /
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **18. Vì sao ]]> đặc biệt trong CDATA?** tiếp nhận điểm tựa từ **17. CDATA section** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Processing Instruction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **18. Vì sao ]]> đặc biệt trong CDATA?** nối từ **17. CDATA section** sang **19. Processing Instruction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Vì sao `]]>` đặc biệt trong CDATA?
 
@@ -500,7 +500,7 @@ Nếu bạn dùng XML serializer đúng chuẩn, serializer sẽ xử lý chuy�
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Beginner**, **18. Vì sao ]]> đặc biệt trong CDATA?** xác định đầu vào; **19. Processing Instruction** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **20. Whitespace trong XML có thực sự tồn tại không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Beginner**, **18. Vì sao ]]> đặc biệt trong CDATA?** đặt đầu vào cho **19. Processing Instruction**, rồi **20. Whitespace trong XML có thực sự tồn tại không?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. Processing Instruction
 
@@ -522,7 +522,7 @@ XML declaration nhìn giống PI nhưng có grammar và vị trí đặc biệt.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Beginner**, **19. Processing Instruction** xác định đầu vào; **20. Whitespace trong XML có thực sự tồn tại không?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **21. xml:space** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Beginner**, **19. Processing Instruction** đặt đầu vào cho **20. Whitespace trong XML có thực sự tồn tại không?**, rồi **21. xml:space** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. Whitespace trong XML có thực sự tồn tại không?
 
@@ -543,7 +543,7 @@ Vì vậy khi bạn muốn “lấy child elements”, hãy dùng API chọn ele
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **21. xml:space** tiếp nhận điểm tựa từ **20. Whitespace trong XML có thực sự tồn tại không?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. xml:lang** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **21. xml:space** nối từ **20. Whitespace trong XML có thực sự tồn tại không?** sang **22. xml:lang**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. `xml:space`
 
@@ -569,7 +569,7 @@ preserve
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Beginner**, **22. xml:lang** tiếp nhận điểm tựa từ **21. xml:space** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. xml:base** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Beginner**, **22. xml:lang** nối từ **21. xml:space** sang **23. xml:base**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. `xml:lang`
 
@@ -585,7 +585,7 @@ Nó hữu ích với document processing, khả năng tiếp cận (accessibilit
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Beginner**, **23. xml:base** tiếp nhận điểm tựa từ **22. xml:lang** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. xml:id** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Beginner**, **23. xml:base** nối từ **22. xml:lang** sang **24. xml:id**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. `xml:base`
 
@@ -603,7 +603,7 @@ Nó hữu ích với document processing, khả năng tiếp cận (accessibilit
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **24. xml:id** tiếp nhận điểm tựa từ **23. xml:base** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Well-formed XML là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **24. xml:id** nối từ **23. xml:base** sang **25. Well-formed XML là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. `xml:id`
 
@@ -625,7 +625,7 @@ Vì một attribute có tên `id` không tự động có ID kiểu (type / 타�
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Beginner**, **25. Well-formed XML là gì?** tiếp nhận điểm tựa từ **24. xml:id** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Valid XML khác well-formed như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Beginner**, **25. Well-formed XML là gì?** nối từ **24. xml:id** sang **26. Valid XML khác well-formed như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Well-formed XML là gì?
 
@@ -645,7 +645,7 @@ XML parser phải báo fatal lỗi (error / 오류).
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Beginner**, **26. Valid XML khác well-formed như thế nào?** tiếp nhận điểm tựa từ **25. Well-formed XML là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. XML Names có quy tắc riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Beginner**, **26. Valid XML khác well-formed như thế nào?** nối từ **25. Well-formed XML là gì?** sang **27. XML Names có quy tắc riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Valid XML khác well-formed như thế nào?
 
@@ -672,7 +672,7 @@ Mọi valid XML phải well-formed, nhưng well-formed XML chưa chắc valid.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **27. XML Names có quy tắc riêng** tiếp nhận điểm tựa từ **26. Valid XML khác well-formed như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Mixed content** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **27. XML Names có quy tắc riêng** nối từ **26. Valid XML khác well-formed như thế nào?** sang **28. Mixed content**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. XML Names có quy tắc riêng
 
@@ -691,7 +691,7 @@ Nhưng không nên tự viết một regex ASCII đơn giản rồi nghĩ đã v
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Beginner**, **28. Mixed content** tiếp nhận điểm tựa từ **27. XML Names có quy tắc riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Data-centric XML** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Beginner**, **28. Mixed content** nối từ **27. XML Names có quy tắc riêng** sang **29. Data-centric XML**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Mixed content
 
@@ -709,7 +709,7 @@ Trong mixed content, whitespace và văn bản (text / 텍스트) nút (node / �
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Beginner**, **29. Data-centric XML** tiếp nhận điểm tựa từ **28. Mixed content** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Document-centric XML** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Beginner**, **29. Data-centric XML** nối từ **28. Mixed content** sang **30. Document-centric XML**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Data-centric XML
 
@@ -726,7 +726,7 @@ Mỗi child element gần giống một trường dữ liệu (field / 필드). 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **30. Document-centric XML** tiếp nhận điểm tựa từ **29. Data-centric XML** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. XML khác HTML như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **30. Document-centric XML** nối từ **29. Data-centric XML** sang **31. XML khác HTML như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Document-centric XML
 
@@ -747,7 +747,7 @@ Document-centric XML thiên về nội dung văn bản:
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Beginner**, **31. XML khác HTML như thế nào?** tiếp nhận điểm tựa từ **30. Document-centric XML** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. XHTML là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Beginner**, **31. XML khác HTML như thế nào?** nối từ **30. Document-centric XML** sang **32. XHTML là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. XML khác HTML như thế nào?
 
@@ -761,7 +761,7 @@ HTML có vocabulary và ngữ nghĩa (semantics / 의미론) do HTML tiêu chu�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Beginner**, **32. XHTML là gì?** tiếp nhận điểm tựa từ **31. XML khác HTML như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. XML khác JSON như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Beginner**, **32. XHTML là gì?** nối từ **31. XML khác HTML như thế nào?** sang **33. XML khác JSON như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. XHTML là gì?
 
@@ -781,7 +781,7 @@ Một tệp (file / 파일) HTML thông thường có `<br />` vẫn có thể �
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **33. XML khác JSON như thế nào?** tiếp nhận điểm tựa từ **32. XHTML là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Ví dụ thực tế: Maven pom.xml** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **33. XML khác JSON như thế nào?** nối từ **32. XHTML là gì?** sang **34. Ví dụ thực tế: Maven pom.xml**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. XML khác JSON như thế nào?
 
@@ -795,7 +795,7 @@ Vì vậy không nên kết luận “XML cũ nên luôn thay bằng JSON”. C�
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Beginner**, **33. XML khác JSON như thế nào?** cho ta quy tắc; **34. Ví dụ thực tế: Maven pom.xml** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **35. Tại sao không parse XML bằng regex?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Beginner**, **33. XML khác JSON như thế nào?** nêu quy tắc; **34. Ví dụ thực tế: Maven pom.xml** thử quy tắc trong tình huống, rồi **35. Tại sao không parse XML bằng regex?** mở rộng hệ quả.
 
 ## 34. Ví dụ thực tế: Maven `pom.xml`
 
@@ -816,7 +816,7 @@ Tư duy này giúp bạn đọc mọi XML khung phần mềm (framework / 프레
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Beginner**, **34. Ví dụ thực tế: Maven pom.xml** cho ta quy tắc; **35. Tại sao không parse XML bằng regex?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **36. DOM mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Beginner**, **34. Ví dụ thực tế: Maven pom.xml** nêu quy tắc; **35. Tại sao không parse XML bằng regex?** thử quy tắc trong tình huống, rồi **36. DOM mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## 35. Tại sao không parse XML bằng regex?
 
@@ -832,7 +832,7 @@ XML là grammar có cấu trúc. Regex/string split không hiểu cây (tree / �
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **36. DOM mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **35. Tại sao không parse XML bằng regex?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **37. Bài tập tổng hợp Beginner** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **36. DOM mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **35. Tại sao không parse XML bằng regex?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **37. Bài tập tổng hợp Beginner** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 36. DOM mô hình tư duy (mental model / 사고 모델)
 
@@ -853,7 +853,7 @@ DOM phù hợp khi document nhỏ hoặc vừa, bạn cần truy cập nhiều v
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Beginner**, **37. Bài tập tổng hợp Beginner** gom các mảnh từ **36. DOM mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **38. mô hình tư duy (mental model / 사고 모델) cần giữ lại sau Beginner** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Beginner**, **37. Bài tập tổng hợp Beginner** tổng hợp từ **36. DOM mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **38. mô hình tư duy (mental model / 사고 모델) cần giữ lại sau Beginner** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 37. Bài tập tổng hợp Beginner
 
@@ -883,7 +883,7 @@ Nếu bạn đổi end tag `</book>` thành `</Book>`, tài liệu sẽ không c
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Beginner**, **38. mô hình tư duy (mental model / 사고 모델) cần giữ lại sau Beginner** gom các mảnh từ **37. Bài tập tổng hợp Beginner** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **39. Những lỗi beginner phải tránh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Beginner**, **38. mô hình tư duy (mental model / 사고 모델) cần giữ lại sau Beginner** tổng hợp từ **37. Bài tập tổng hợp Beginner** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **39. Những lỗi beginner phải tránh** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 38. mô hình tư duy (mental model / 사고 모델) cần giữ lại sau Beginner
 
@@ -904,7 +904,7 @@ bytes
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **39. Những lỗi beginner phải tránh** gom các mảnh từ **38. mô hình tư duy (mental model / 사고 모델) cần giữ lại sau Beginner** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **40. XML trong tệp (file / 파일) cấu hình không có nghĩa mọi tag đều thuộc XML tiêu chuẩn (standard / 표준)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **39. Những lỗi beginner phải tránh** tổng hợp từ **38. mô hình tư duy (mental model / 사고 모델) cần giữ lại sau Beginner** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **40. XML trong tệp (file / 파일) cấu hình không có nghĩa mọi tag đều thuộc XML tiêu chuẩn (standard / 표준)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 39. Những lỗi beginner phải tránh
 
@@ -916,7 +916,7 @@ Nếu các nguyên tắc này trở thành phản xạ, bạn đã có nền t�
 
 # PHẦN BỔ SUNG — XML TRONG CÁC HỆ THỐNG THỰC TẾ
 
-> **Chuyển mạch:** Trong **XML — Beginner**, **40. XML trong tệp (file / 파일) cấu hình không có nghĩa mọi tag đều thuộc XML tiêu chuẩn (standard / 표준)** tiếp nhận điểm tựa từ **39. Những lỗi beginner phải tránh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Android dùng XML như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Beginner**, **40. XML trong tệp (file / 파일) cấu hình không có nghĩa mọi tag đều thuộc XML tiêu chuẩn (standard / 표준)** nối từ **39. Những lỗi beginner phải tránh** sang **41. Android dùng XML như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. XML trong tệp (file / 파일) cấu hình không có nghĩa mọi tag đều thuộc XML tiêu chuẩn (standard / 표준)
 
@@ -926,7 +926,7 @@ Khi bạn mở một tệp (file / 파일) như `pom.xml`, `AndroidManifest.xml`
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Beginner**, **41. Android dùng XML như thế nào?** tiếp nhận điểm tựa từ **40. XML trong tệp (file / 파일) cấu hình không có nghĩa mọi tag đều thuộc XML tiêu chuẩn (standard / 표준)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Maven, Spring và cấu hình (configuration / 구성) XML trong Java enterprise** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Beginner**, **41. Android dùng XML như thế nào?** nối từ **40. XML trong tệp (file / 파일) cấu hình không có nghĩa mọi tag đều thuộc XML tiêu chuẩn (standard / 표준)** sang **42. Maven, Spring và cấu hình (configuration / 구성) XML trong Java enterprise**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Android dùng XML như thế nào?
 
@@ -1001,7 +1001,7 @@ Jetpack Compose làm giảm nhu cầu dùng XML bố cục (layout / 레이아�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **42. Maven, Spring và cấu hình (configuration / 구성) XML trong Java enterprise** tiếp nhận điểm tựa từ **41. Android dùng XML như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Cách đọc một XML cấu hình (configuration / 구성) mà bạn chưa từng thấy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Beginner**, **42. Maven, Spring và cấu hình (configuration / 구성) XML trong Java enterprise** nối từ **41. Android dùng XML như thế nào?** sang **43. Cách đọc một XML cấu hình (configuration / 구성) mà bạn chưa từng thấy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Maven, Spring và cấu hình (configuration / 구성) XML trong Java enterprise
 
@@ -1027,7 +1027,7 @@ Khi maintain legacy Java ứng dụng (application / 애플리케이션), bạn 
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Beginner**, **43. Cách đọc một XML cấu hình (configuration / 구성) mà bạn chưa từng thấy** tiếp nhận điểm tựa từ **42. Maven, Spring và cấu hình (configuration / 구성) XML trong Java enterprise** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. Khi nào XML hợp hơn JSON và khi nào JSON hợp hơn XML?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Beginner**, **43. Cách đọc một XML cấu hình (configuration / 구성) mà bạn chưa từng thấy** nối từ **42. Maven, Spring và cấu hình (configuration / 구성) XML trong Java enterprise** sang **44. Khi nào XML hợp hơn JSON và khi nào JSON hợp hơn XML?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. Cách đọc một XML cấu hình (configuration / 구성) mà bạn chưa từng thấy
 
@@ -1053,7 +1053,7 @@ Sau đó mới tìm lược đồ (schema / 스키마) hoặc documentation củ
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Beginner**, **44. Khi nào XML hợp hơn JSON và khi nào JSON hợp hơn XML?** tiếp nhận điểm tựa từ **43. Cách đọc một XML cấu hình (configuration / 구성) mà bạn chưa từng thấy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **XML — Beginner**, **44. Khi nào XML hợp hơn JSON và khi nào JSON hợp hơn XML?** nối từ **43. Cách đọc một XML cấu hình (configuration / 구성) mà bạn chưa từng thấy** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 44. Khi nào XML hợp hơn JSON và khi nào JSON hợp hơn XML?
 

@@ -20,7 +20,7 @@ Ví dụ:
 
 Xem thêm: [[../02_learning_and_cognition/01_memory]], [[../02_learning_and_cognition/10_cognitive_offloading_external_memory_and_extended_cognition]].
 
-> **Chuyển mạch:** Trong **HCI, AI và hỗ trợ ra quyết định của con người**, **Cognitive tải (load / 로드) không phải cứ “ít element” là tốt** tiếp nhận điểm tựa từ **Working bộ nhớ (memory / 메모리) là tài nguyên hữu hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Attention là hệ thống cạnh tranh ưu tiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HCI, AI và hỗ trợ ra quyết định của con người**, **Cognitive tải (load / 로드) không phải cứ “ít element” là tốt** nối từ **Working bộ nhớ (memory / 메모리) là tài nguyên hữu hạn** sang **Attention là hệ thống cạnh tranh ưu tiên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cognitive tải (load / 로드) không phải cứ “ít element” là tốt
 
@@ -28,7 +28,7 @@ Tải nhận thức (cognitive load) phụ thuộc vào tác vụ (task / 작업
 
 Đặc biệt với enterprise software, mục tiêu không phải “trông tối giản” mà là **giảm unnecessary mental transformation**.
 
-> **Chuyển mạch:** Ở chặng này của **HCI, AI và hỗ trợ ra quyết định của con người**, **Attention là hệ thống cạnh tranh ưu tiên** tiếp nhận điểm tựa từ **Cognitive tải (load / 로드) không phải cứ “ít element” là tốt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lỗi (error / 오류) là tương tác (interaction / 상호작용) giữa người và hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HCI, AI và hỗ trợ ra quyết định của con người**, **Attention là hệ thống cạnh tranh ưu tiên** nối từ **Cognitive tải (load / 로드) không phải cứ “ít element” là tốt** sang **Lỗi (error / 오류) là tương tác (interaction / 상호작용) giữa người và hệ thống (system / 시스템)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Attention là hệ thống cạnh tranh ưu tiên
 
@@ -40,7 +40,7 @@ Attention capture cũng có chi phí (cost / 비용) sau khi interruption kết 
 
 Xem thêm: [[../01_brain_and_mind/07_attention_consciousness_and_awareness]], [[./00_work_organization_and_leadership]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HCI, AI và hỗ trợ ra quyết định của con người**, **Lỗi (error / 오류) là tương tác (interaction / 상호작용) giữa người và hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Attention là hệ thống cạnh tranh ưu tiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) và hệ thống (system / 시스템) mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HCI, AI và hỗ trợ ra quyết định của con người**, **Lỗi (error / 오류) là tương tác (interaction / 상호작용) giữa người và hệ thống (system / 시스템)** nối từ **Attention là hệ thống cạnh tranh ưu tiên** sang **Mô hình tư duy (mental model / 사고 모델) và hệ thống (system / 시스템) mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lỗi (error / 오류) là tương tác (interaction / 상호작용) giữa người và hệ thống (system / 시스템)
 
@@ -55,7 +55,7 @@ Có thể phân biệt:
 
 Thiết kế tốt không chỉ prevent lỗi (error / 오류) mà còn hỗ trợ **khôi phục (recovery / 복구)**: undo, clear status, reversible hành động (action / 동작) và meaningful lỗi (error / 오류) message.
 
-> **Chuyển mạch:** Trong **HCI, AI và hỗ trợ ra quyết định của con người**, **Mô hình tư duy (mental model / 사고 모델) và hệ thống (system / 시스템) mô hình (model / 모델)** gom các mảnh từ **Lỗi (error / 오류) là tương tác (interaction / 상호작용) giữa người và hệ thống (system / 시스템)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Affordance và phản hồi (feedback / 피드백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HCI, AI và hỗ trợ ra quyết định của con người**, **Mô hình tư duy (mental model / 사고 모델) và hệ thống (system / 시스템) mô hình (model / 모델)** tổng hợp từ **Lỗi (error / 오류) là tương tác (interaction / 상호작용) giữa người và hệ thống (system / 시스템)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Affordance và phản hồi (feedback / 피드백)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델) và hệ thống (system / 시스템) mô hình (model / 모델)
 
@@ -63,7 +63,7 @@ Người dùng không nhìn thấy cơ sở dữ liệu (database / 데이터베
 
 Nếu UI hiển thị một button “Save” nhưng thực tế hành động (action / 동작) chỉ lưu draft cục bộ (local / 로컬), mô hình tư duy (mental model / 사고 모델) sẽ sai. Bug usability đôi khi không nằm ở chức năng mà nằm ở ánh xạ (mapping / 매핑) giữa giao diện (interface / 인터페이스) và underlying trạng thái (state / 상태).
 
-> **Chuyển mạch:** Ở chặng này của **HCI, AI và hỗ trợ ra quyết định của con người**, **Affordance và phản hồi (feedback / 피드백)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델) và hệ thống (system / 시스템) mô hình (model / 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Default và choice kiến trúc (architecture / 아키텍처)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HCI, AI và hỗ trợ ra quyết định của con người**, **Affordance và phản hồi (feedback / 피드백)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델) và hệ thống (system / 시스템) mô hình (model / 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Default và choice kiến trúc (architecture / 아키텍처)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Affordance và phản hồi (feedback / 피드백)
 
@@ -71,7 +71,7 @@ Nếu UI hiển thị một button “Save” nhưng thực tế hành động (
 
 **phản hồi (feedback / 피드백)** trả lời “hành động (action / 동작) vừa rồi có tác dụng gì?”. độ trễ (latency / 지연 시간) không có phản hồi (feedback / 피드백) khiến người dùng (user / 사용자) click lặp, submit nhiều lần hoặc nghĩ hệ thống (system / 시스템) treo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HCI, AI và hỗ trợ ra quyết định của con người**, **Default và choice kiến trúc (architecture / 아키텍처)** tiếp nhận điểm tựa từ **Affordance và phản hồi (feedback / 피드백)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AI thay đổi vai trò của giao diện (interface / 인터페이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HCI, AI và hỗ trợ ra quyết định của con người**, **Default và choice kiến trúc (architecture / 아키텍처)** nối từ **Affordance và phản hồi (feedback / 피드백)** sang **AI thay đổi vai trò của giao diện (interface / 인터페이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Default và choice kiến trúc (architecture / 아키텍처)
 
@@ -81,7 +81,7 @@ Trong enterprise workflow, default có thể tăng efficiency nhưng cũng tạo
 
 Xem thêm: [[../02_learning_and_cognition/08_decision_under_risk_uncertainty_and_ambiguity]], [[../02_learning_and_cognition/02_thinking_language_and_decision]].
 
-> **Chuyển mạch:** Trong **HCI, AI và hỗ trợ ra quyết định của con người**, **AI thay đổi vai trò của giao diện (interface / 인터페이스)** tiếp nhận điểm tựa từ **Default và choice kiến trúc (architecture / 아키텍처)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Explainability không tự động tạo trust tốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HCI, AI và hỗ trợ ra quyết định của con người**, **AI thay đổi vai trò của giao diện (interface / 인터페이스)** nối từ **Default và choice kiến trúc (architecture / 아키텍처)** sang **Explainability không tự động tạo trust tốt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AI thay đổi vai trò của giao diện (interface / 인터페이스)
 
@@ -94,7 +94,7 @@ Hai dạng thất bại (failure mode / 실패 모드) đối lập:
 
 Mục tiêu là **sự phụ thuộc phù hợp (appropriate reliance)**: dùng AI khi comparative advantage của nó cao và kiểm tra mạnh hơn khi bất định (uncertainty / 불확실성)/rủi ro (risk / 위험) cao.
 
-> **Chuyển mạch:** Ở chặng này của **HCI, AI và hỗ trợ ra quyết định của con người**, **Explainability không tự động tạo trust tốt** tiếp nhận điểm tựa từ **AI thay đổi vai trò của giao diện (interface / 인터페이스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xác minh (verification / 확인) debt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HCI, AI và hỗ trợ ra quyết định của con người**, **Explainability không tự động tạo trust tốt** nối từ **AI thay đổi vai trò của giao diện (interface / 인터페이스)** sang **Xác minh (verification / 확인) debt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Explainability không tự động tạo trust tốt
 
@@ -107,7 +107,7 @@ Một explanation trông hợp lý có thể làm người dùng (user / 사용�
 
 “AI giải thích được” không đồng nghĩa “AI đúng”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HCI, AI và hỗ trợ ra quyết định của con người**, **Xác minh (verification / 확인) debt** tiếp nhận điểm tựa từ **Explainability không tự động tạo trust tốt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cognitive offloading: AI là công cụ hay phần thay thế kỹ năng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HCI, AI và hỗ trợ ra quyết định của con người**, **Xác minh (verification / 확인) debt** nối từ **Explainability không tự động tạo trust tốt** sang **Cognitive offloading: AI là công cụ hay phần thay thế kỹ năng?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xác minh (verification / 확인) debt
 
@@ -123,7 +123,7 @@ Cách giảm xác minh (verification / 확인) debt:
 - tự giải thích lại lô-gic (logic / 논리);
 - giữ human checkpoint cho high-risk hành động (action / 동작).
 
-> **Chuyển mạch:** Trong **HCI, AI và hỗ trợ ra quyết định của con người**, **Cognitive offloading: AI là công cụ hay phần thay thế kỹ năng?** tiếp nhận điểm tựa từ **Xác minh (verification / 확인) debt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Human-in-the-loop thực sự nghĩa gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HCI, AI và hỗ trợ ra quyết định của con người**, **Cognitive offloading: AI là công cụ hay phần thay thế kỹ năng?** nối từ **Xác minh (verification / 확인) debt** sang **Human-in-the-loop thực sự nghĩa gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cognitive offloading: AI là công cụ hay phần thay thế kỹ năng?
 
@@ -137,7 +137,7 @@ Mô hình tư duy (mental model / 사고 모델):
 
 > Offload lưu trữ (storage / 저장소)/computation khi phù hợp, nhưng đừng offload phần lập luận (reasoning / 추론) mà bạn đang cố học.
 
-> **Chuyển mạch:** Ở chặng này của **HCI, AI và hỗ trợ ra quyết định của con người**, **Human-in-the-loop thực sự nghĩa gì?** tiếp nhận điểm tựa từ **Cognitive offloading: AI là công cụ hay phần thay thế kỹ năng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AI anthropomorphism** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HCI, AI và hỗ trợ ra quyết định của con người**, **Human-in-the-loop thực sự nghĩa gì?** nối từ **Cognitive offloading: AI là công cụ hay phần thay thế kỹ năng?** sang **AI anthropomorphism**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Human-in-the-loop thực sự nghĩa gì?
 
@@ -151,7 +151,7 @@ Chỉ có một người bấm “Approve” cuối chuỗi xử lý (pipeline /
 
 Nếu 99.9% suggestion đúng, vigilance của reviewer có thể giảm; đây là automation complacency bài toán (problem / 문제).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HCI, AI và hỗ trợ ra quyết định của con người**, **AI anthropomorphism** tiếp nhận điểm tựa từ **Human-in-the-loop thực sự nghĩa gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: AI mã (code / 코드) assistant** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HCI, AI và hỗ trợ ra quyết định của con người**, **AI anthropomorphism** nối từ **Human-in-the-loop thực sự nghĩa gì?** sang **Ví dụ: AI mã (code / 코드) assistant**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AI anthropomorphism
 
@@ -167,7 +167,7 @@ Cần tách:
 
 Xem thêm: [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]], [[./17_misinformation_belief_revision_and_inoculation]].
 
-> **Chuyển mạch:** Trong **HCI, AI và hỗ trợ ra quyết định của con người**, **AI anthropomorphism** cho ta quy tắc; **Ví dụ: AI mã (code / 코드) assistant** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **HCI, AI và hỗ trợ ra quyết định của con người**, **AI anthropomorphism** nêu quy tắc; **Ví dụ: AI mã (code / 코드) assistant** thử quy tắc trong tình huống, rồi **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả.
 
 ## Ví dụ: AI mã (code / 코드) assistant
 
@@ -184,7 +184,7 @@ Một workflow tốt hơn “prompt rồi bản sao (copy / 복사)”:
 
 Ở đây AI làm giảm môi trường vận hành (production / 운영 환경) chi phí (cost / 비용) nhưng human vẫn giữ mô hình (model / 모델) của hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Ở chặng này của **HCI, AI và hỗ trợ ra quyết định của con người**, **Ví dụ: AI mã (code / 코드) assistant** cho ta quy tắc; **Dùng chung (common / 공통) Misconceptions** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **HCI, AI và hỗ trợ ra quyết định của con người**, **Ví dụ: AI mã (code / 코드) assistant** nêu quy tắc; **Dùng chung (common / 공통) Misconceptions** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -196,7 +196,7 @@ Một workflow tốt hơn “prompt rồi bản sao (copy / 복사)”:
 
 **“Dùng AI sẽ chắc chắn làm con người ngu đi.”** Quá đơn giản. kết quả (outcome / 결과) phụ thuộc phần nào được offload, tác vụ (task / 작업) goal và cách người dùng vẫn thực hành retrieval/lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **HCI, AI và hỗ trợ ra quyết định của con người**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **HCI, AI và hỗ trợ ra quyết định của con người**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Connections** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -206,7 +206,7 @@ Câu hỏi thiết kế trung tâm:
 
 > Phần nào con người nên quyết định, phần nào máy nên tính, và thông tin nào cần hiện ra để hai bên phối hợp đúng?
 
-> **Chuyển mạch:** Trong **HCI, AI và hỗ trợ ra quyết định của con người**, **Connections** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **HCI, AI và hỗ trợ ra quyết định của con người**, **Connections** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Connections
 

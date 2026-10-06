@@ -34,7 +34,7 @@ Vì vậy một phép tách tốt phải thỏa hai điều:
 - các chất khác nhau có thời gian lưu trung bình đủ khác nhau;
 - các phân tử của cùng một chất có phân bố thời gian lưu đủ hẹp.
 
-> **Chuyển mạch:** Mỗi lần chất phân bố giữa hai pha góp phần tạo đỉnh; hệ số phân bố quyết định mức giữ, còn thời gian lưu phải được đọc cùng thời gian chết để tách retention khỏi transit.
+> **Nối mạch:** Mỗi lần chất phân bố giữa hai pha góp phần tạo đỉnh; hệ số phân bố quyết định mức giữ, còn thời gian lưu phải được đọc cùng thời gian chết để tách retention khỏi transit.
 
 ## Cân bằng phân bố
 

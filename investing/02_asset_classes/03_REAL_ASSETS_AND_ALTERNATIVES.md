@@ -10,7 +10,7 @@ Tài sản tài chính là quyền đòi đối với dòng tiền hoặc nghĩa
 
 Bất động sản vừa là tài sản thực vừa thường được sở hữu qua công ty hoặc REIT. Hàng hóa có giá trị sử dụng nhưng không tạo dòng tiền hợp đồng. Cơ sở hạ tầng tạo dòng tiền từ quyền khai thác hoặc hợp đồng dài hạn.
 
-> **Chuyển mạch:** Trong **Tài sản thực và tài sản thay thế**, **2. Bất động sản trực tiếp** tiếp nhận điểm tựa từ **1. Tài sản thực và tài sản tài chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. NOI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tài sản thực và tài sản thay thế**, **2. Bất động sản trực tiếp** nối từ **1. Tài sản thực và tài sản tài chính** sang **3. NOI**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Bất động sản trực tiếp
 
@@ -26,7 +26,7 @@ Thu nhập vận hành ròng (NOI)
 
 Giá nhà tăng không phải nguồn lợi suất duy nhất; dòng tiền và chi phí vốn quan trọng không kém.
 
-> **Chuyển mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **3. NOI** tiếp nhận điểm tựa từ **2. Bất động sản trực tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Cap tỷ lệ (rate / 비율)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **3. NOI** nối từ **2. Bất động sản trực tiếp** sang **4. Cap tỷ lệ (rate / 비율)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. NOI
 
@@ -34,7 +34,7 @@ Thu nhập vận hành ròng (Net Operating Income, NOI) gần bằng doanh thu 
 
 NOI là nền để định giá tài sản bất động sản tạo thu nhập.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **4. Cap tỷ lệ (rate / 비율)** tiếp nhận điểm tựa từ **3. NOI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. LTV và DSCR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **4. Cap tỷ lệ (rate / 비율)** nối từ **3. NOI** sang **5. LTV và DSCR**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Cap tỷ lệ (rate / 비율)
 
@@ -48,7 +48,7 @@ Cap tỷ lệ (rate / 비율) tăng thường làm giá trị tài sản giảm 
 
 Không nên kết luận “lạm phát tốt cho bất động sản” nếu chi phí vốn tăng nhanh hơn tiền thuê.
 
-> **Chuyển mạch:** Trong **Tài sản thực và tài sản thay thế**, **5. LTV và DSCR** tiếp nhận điểm tựa từ **4. Cap tỷ lệ (rate / 비율)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Cấu trúc hợp đồng thuê** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tài sản thực và tài sản thay thế**, **5. LTV và DSCR** nối từ **4. Cap tỷ lệ (rate / 비율)** sang **6. Cấu trúc hợp đồng thuê**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. LTV và DSCR
 
@@ -66,7 +66,7 @@ DSCR = Cash Flow Available for Debt Service / Debt Service
 
 Giá tài sản giảm làm LTV tăng. Lãi suất tái cấp vốn cao làm DSCR xấu đi. Hai biến này quan trọng hơn giá tài sản danh nghĩa khi đánh giá khả năng sống sót.
 
-> **Chuyển mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **6. Cấu trúc hợp đồng thuê** tiếp nhận điểm tựa từ **5. LTV và DSCR** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Rủi ro phát triển dự án** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **6. Cấu trúc hợp đồng thuê** nối từ **5. LTV và DSCR** sang **7. Rủi ro phát triển dự án**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Cấu trúc hợp đồng thuê
 
@@ -74,7 +74,7 @@ Hợp đồng thuê khác nhau về thời hạn, tăng giá định kỳ, trác
 
 Tài sản có hợp đồng dài giúp ổn định dòng tiền nhưng có thể phản ứng chậm với lạm phát. Hợp đồng ngắn cho phép điều chỉnh giá nhanh hơn nhưng chịu rủi ro trống mặt bằng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **7. Rủi ro phát triển dự án** tiếp nhận điểm tựa từ **6. Cấu trúc hợp đồng thuê** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. REIT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **7. Rủi ro phát triển dự án** nối từ **6. Cấu trúc hợp đồng thuê** sang **8. REIT**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Rủi ro phát triển dự án
 
@@ -82,7 +82,7 @@ Bất động sản phát triển mới chịu rủi ro pháp lý, xây dựng, 
 
 Một quỹ đất lớn không đồng nghĩa tài sản có thể tạo tiền ngay. Cần chiết khấu thời gian và rủi ro thực thi.
 
-> **Chuyển mạch:** Trong **Tài sản thực và tài sản thay thế**, **8. REIT** tiếp nhận điểm tựa từ **7. Rủi ro phát triển dự án** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. REIT chịu cả rủi ro cổ phiếu và bất động sản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tài sản thực và tài sản thay thế**, **8. REIT** nối từ **7. Rủi ro phát triển dự án** sang **9. REIT chịu cả rủi ro cổ phiếu và bất động sản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. REIT
 
@@ -94,7 +94,7 @@ FFO ≈ Net Income + Real-estate Depreciation - Gains on Property Sales
 
 AFFO cố điều chỉnh thêm capex duy trì và các khoản không lặp lại.
 
-> **Chuyển mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **9. REIT chịu cả rủi ro cổ phiếu và bất động sản** tiếp nhận điểm tựa từ **8. REIT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Các loại bất động sản khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **9. REIT chịu cả rủi ro cổ phiếu và bất động sản** nối từ **8. REIT** sang **10. Các loại bất động sản khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. REIT chịu cả rủi ro cổ phiếu và bất động sản
 
@@ -102,7 +102,7 @@ REIT giao dịch trên sở nên chịu thanh khoản và định giá thị tr�
 
 Trong cú sốc lãi suất, REIT có thể giảm dù tiền thuê vẫn tăng vì chi phí vốn và tỷ lệ chiết khấu thay đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **10. Các loại bất động sản khác nhau** tiếp nhận điểm tựa từ **9. REIT chịu cả rủi ro cổ phiếu và bất động sản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Vàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **10. Các loại bất động sản khác nhau** nối từ **9. REIT chịu cả rủi ro cổ phiếu và bất động sản** sang **11. Vàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Các loại bất động sản khác nhau
 
@@ -110,7 +110,7 @@ Văn phòng, logistics, dữ liệu (data / 데이터) center, nhà ở, bán l�
 
 Không nên coi “REIT” là một factor đồng nhất. Một data-center REIT nhạy với capex số hóa và nguồn điện; văn phòng nhạy với tỷ lệ sử dụng; khách sạn gần mô hình kinh doanh vận hành hơn tài sản cho thuê dài hạn.
 
-> **Chuyển mạch:** Trong **Tài sản thực và tài sản thay thế**, **11. Vàng** tiếp nhận điểm tựa từ **10. Các loại bất động sản khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Vàng giao ngay, ETF và cổ phiếu mỏ khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tài sản thực và tài sản thay thế**, **11. Vàng** nối từ **10. Các loại bất động sản khác nhau** sang **12. Vàng giao ngay, ETF và cổ phiếu mỏ khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Vàng
 
@@ -129,7 +129,7 @@ Nhu cầu trang sức / công nghiệp
 
 Vàng có thể đa dạng hóa nhưng phản ứng ngắn hạn không cố định.
 
-> **Chuyển mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **12. Vàng giao ngay, ETF và cổ phiếu mỏ khác nhau** tiếp nhận điểm tựa từ **11. Vàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Hàng hóa và cung–cầu vật chất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **12. Vàng giao ngay, ETF và cổ phiếu mỏ khác nhau** nối từ **11. Vàng** sang **13. Hàng hóa và cung–cầu vật chất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Vàng giao ngay, ETF và cổ phiếu mỏ khác nhau
 
@@ -137,7 +137,7 @@ Vàng vật chất hoặc ETF theo vàng chủ yếu phản ánh giá vàng và 
 
 Giá vàng tăng 10% không đồng nghĩa cổ phiếu mỏ tăng đúng 10%.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **13. Hàng hóa và cung–cầu vật chất** tiếp nhận điểm tựa từ **12. Vàng giao ngay, ETF và cổ phiếu mỏ khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Futures hàng hóa khác giá giao ngay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **13. Hàng hóa và cung–cầu vật chất** nối từ **12. Vàng giao ngay, ETF và cổ phiếu mỏ khác nhau** sang **14. Futures hàng hóa khác giá giao ngay**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Hàng hóa và cung–cầu vật chất
 
@@ -145,7 +145,7 @@ Hàng hóa gồm năng lượng, kim loại, nông sản và nhiều sản phẩ
 
 Phải phân biệt cú sốc nhu cầu và cú sốc nguồn cung. Cùng mức giá dầu tăng có ý nghĩa vĩ mô khác nhau nếu do kinh tế toàn cầu mạnh hoặc do gián đoạn nguồn cung.
 
-> **Chuyển mạch:** Trong **Tài sản thực và tài sản thay thế**, **14. Futures hàng hóa khác giá giao ngay** tiếp nhận điểm tựa từ **13. Hàng hóa và cung–cầu vật chất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Contango và Backwardation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tài sản thực và tài sản thay thế**, **14. Futures hàng hóa khác giá giao ngay** nối từ **13. Hàng hóa và cung–cầu vật chất** sang **15. Contango và Backwardation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Futures hàng hóa khác giá giao ngay
 
@@ -160,7 +160,7 @@ Biến động giá hợp đồng
 
 Vì vậy biểu đồ spot không đủ để dự đoán lợi suất quỹ.
 
-> **Chuyển mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **15. Contango và Backwardation** tiếp nhận điểm tựa từ **14. Futures hàng hóa khác giá giao ngay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Convenience Yield** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **15. Contango và Backwardation** nối từ **14. Futures hàng hóa khác giá giao ngay** sang **16. Convenience Yield**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Contango và Backwardation
 
@@ -170,7 +170,7 @@ Trong contango, việc bán hợp đồng gần và mua hợp đồng xa đắt 
 
 Cấu trúc đường cong phản ánh tồn kho, lưu trữ, tài trợ, mùa vụ và sự khan hiếm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **16. Convenience Yield** tiếp nhận điểm tựa từ **15. Contango và Backwardation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Đường chi phí hàng hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **16. Convenience Yield** nối từ **15. Contango và Backwardation** sang **17. Đường chi phí hàng hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Convenience Yield
 
@@ -178,7 +178,7 @@ Lợi ích nắm giữ vật chất (convenience yield) phản ánh giá trị k
 
 Khi tồn kho thấp, convenience yield có thể tăng và hỗ trợ backwardation.
 
-> **Chuyển mạch:** Trong **Tài sản thực và tài sản thay thế**, **17. Đường chi phí hàng hóa** tiếp nhận điểm tựa từ **16. Convenience Yield** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Dầu và khí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tài sản thực và tài sản thay thế**, **17. Đường chi phí hàng hóa** nối từ **16. Convenience Yield** sang **18. Dầu và khí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Đường chi phí hàng hóa
 
@@ -186,7 +186,7 @@ Trong ngành khai thác, đường chi phí (cost curve) xếp nhà sản xuất
 
 Doanh nghiệp ở thấp trên đường chi phí có khả năng chịu chu kỳ tốt hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **18. Dầu và khí** tiếp nhận điểm tựa từ **17. Đường chi phí hàng hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Crack Spread và lọc dầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **18. Dầu và khí** nối từ **17. Đường chi phí hàng hóa** sang **19. Crack Spread và lọc dầu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Dầu và khí
 
@@ -194,7 +194,7 @@ Dầu chịu nhu cầu vận tải/công nghiệp, OPEC+, shale, tồn kho, côn
 
 Nhà sản xuất, nhà cung cấp dịch vụ, đường ống và nhà máy lọc dầu có động lực lợi nhuận khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **19. Crack Spread và lọc dầu** tiếp nhận điểm tựa từ **18. Dầu và khí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Kim loại công nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **19. Crack Spread và lọc dầu** nối từ **18. Dầu và khí** sang **20. Kim loại công nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Crack Spread và lọc dầu
 
@@ -202,7 +202,7 @@ Nhà máy lọc dầu kiếm tiền từ chênh lệch giữa giá sản phẩm 
 
 Giá dầu tăng có thể đi cùng crack spread giảm, nên “dầu tăng = nhà máy lọc dầu tốt” là suy luận sai.
 
-> **Chuyển mạch:** Trong **Tài sản thực và tài sản thay thế**, **20. Kim loại công nghiệp** tiếp nhận điểm tựa từ **19. Crack Spread và lọc dầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Nông sản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tài sản thực và tài sản thay thế**, **20. Kim loại công nghiệp** nối từ **19. Crack Spread và lọc dầu** sang **21. Nông sản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Kim loại công nghiệp
 
@@ -210,7 +210,7 @@ Giá dầu tăng có thể đi cùng crack spread giảm, nên “dầu tăng = 
 
 Cần tách giá bán, giá quặng/nguyên liệu, chi phí năng lượng, công suất Trung Quốc và tồn kho.
 
-> **Chuyển mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **21. Nông sản** tiếp nhận điểm tựa từ **20. Kim loại công nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Cơ sở hạ tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **21. Nông sản** nối từ **20. Kim loại công nghiệp** sang **22. Cơ sở hạ tầng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Nông sản
 
@@ -218,7 +218,7 @@ Nông sản chịu thời tiết, mùa vụ, diện tích trồng, tồn kho, lo
 
 ETF nông sản dùng futures còn chịu roll như các hàng hóa khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **22. Cơ sở hạ tầng** tiếp nhận điểm tựa từ **21. Nông sản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Hợp đồng nhượng quyền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **22. Cơ sở hạ tầng** nối từ **21. Nông sản** sang **23. Hợp đồng nhượng quyền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Cơ sở hạ tầng
 
@@ -226,7 +226,7 @@ Cơ sở hạ tầng gồm đường, sân bay, cảng, đường ống, điện
 
 Dòng tiền có thể được hỗ trợ bởi hợp đồng dài hạn hoặc vị thế độc quyền tự nhiên, nhưng thường chịu rủi ro quy định và chính trị.
 
-> **Chuyển mạch:** Trong **Tài sản thực và tài sản thay thế**, **23. Hợp đồng nhượng quyền** tiếp nhận điểm tựa từ **22. Cơ sở hạ tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Crypto** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tài sản thực và tài sản thay thế**, **23. Hợp đồng nhượng quyền** nối từ **22. Cơ sở hạ tầng** sang **24. Crypto**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Hợp đồng nhượng quyền
 
@@ -234,7 +234,7 @@ Tài sản nhượng quyền có thể có thời hạn hữu hạn. Giá trị 
 
 Không nên dùng hệ số định giá của tài sản sở hữu vĩnh viễn cho một concession sắp hết hạn.
 
-> **Chuyển mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **24. Crypto** tiếp nhận điểm tựa từ **23. Hợp đồng nhượng quyền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Stablecoin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **24. Crypto** nối từ **23. Hợp đồng nhượng quyền** sang **25. Stablecoin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Crypto
 
@@ -254,7 +254,7 @@ Quy định
 
 Biến động giá cao không tự chứng minh giá trị hay vô giá trị.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **25. Stablecoin** tiếp nhận điểm tựa từ **24. Crypto** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Vốn cổ phần tư nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **25. Stablecoin** nối từ **24. Crypto** sang **26. Vốn cổ phần tư nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Stablecoin
 
@@ -262,7 +262,7 @@ Stablecoin cố giữ giá so với một đồng tiền tham chiếu. Rủi ro 
 
 “Ổn định giá” không đồng nghĩa không có rủi ro tín dụng hoặc thanh khoản.
 
-> **Chuyển mạch:** Trong **Tài sản thực và tài sản thay thế**, **26. Vốn cổ phần tư nhân** tiếp nhận điểm tựa từ **25. Stablecoin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. LBO** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tài sản thực và tài sản thay thế**, **26. Vốn cổ phần tư nhân** nối từ **25. Stablecoin** sang **27. LBO**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Vốn cổ phần tư nhân
 
@@ -279,7 +279,7 @@ Mở rộng hệ số thoái vốn
 
 Mở rộng hệ số định giá là phần ít kiểm soát nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **27. LBO** tiếp nhận điểm tựa từ **26. Vốn cổ phần tư nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. IRR, MOIC, TVPI, DPI và RVPI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **27. LBO** nối từ **26. Vốn cổ phần tư nhân** sang **28. IRR, MOIC, TVPI, DPI và RVPI**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. LBO
 
@@ -287,7 +287,7 @@ Mua lại dùng đòn bẩy (Leveraged Buyout, LBO) sử dụng nợ ở cấp c
 
 Đòn bẩy khuếch đại lợi suất khi doanh nghiệp tăng giá trị nhưng cũng tăng rủi ro tái cấp vốn và mất vốn khi EBITDA giảm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **28. IRR, MOIC, TVPI, DPI và RVPI** tiếp nhận điểm tựa từ **27. LBO** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. PME** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **28. IRR, MOIC, TVPI, DPI và RVPI** nối từ **27. LBO** sang **29. PME**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. IRR, MOIC, TVPI, DPI và RVPI
 
@@ -301,7 +301,7 @@ DPI là giá trị đã phân phối so vốn đã góp. RVPI là giá trị cò
 
 TVPI cao nhưng chủ yếu nằm ở RVPI kém chắc chắn hơn TVPI đã chuyển thành tiền mặt.
 
-> **Chuyển mạch:** Trong **Tài sản thực và tài sản thay thế**, **29. PME** tiếp nhận điểm tựa từ **28. IRR, MOIC, TVPI, DPI và RVPI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. J-Curve và năm đầu tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tài sản thực và tài sản thay thế**, **29. PME** nối từ **28. IRR, MOIC, TVPI, DPI và RVPI** sang **30. J-Curve và năm đầu tư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. PME
 
@@ -309,7 +309,7 @@ So sánh thị trường công khai (Public Market Equivalent, PME) dùng một 
 
 Điều này hữu ích hơn so IRR với lợi suất chỉ số không điều chỉnh dòng tiền.
 
-> **Chuyển mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **30. J-Curve và năm đầu tư** tiếp nhận điểm tựa từ **29. PME** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Gọi vốn và nghĩa vụ chưa góp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **30. J-Curve và năm đầu tư** nối từ **29. PME** sang **31. Gọi vốn và nghĩa vụ chưa góp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. J-Curve và năm đầu tư
 
@@ -317,7 +317,7 @@ Quỹ tư nhân thường có kết quả âm hoặc thấp ở giai đoạn đ�
 
 Năm đầu tư (vintage year) ảnh hưởng giá mua và môi trường tín dụng. Phân bổ cam kết qua nhiều năm giảm rủi ro thời điểm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **31. Gọi vốn và nghĩa vụ chưa góp** tiếp nhận điểm tựa từ **30. J-Curve và năm đầu tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Subscription Line** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **31. Gọi vốn và nghĩa vụ chưa góp** nối từ **30. J-Curve và năm đầu tư** sang **32. Subscription Line**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Gọi vốn và nghĩa vụ chưa góp
 
@@ -325,7 +325,7 @@ Nhà đầu tư quỹ tư nhân cam kết vốn rồi được gọi vốn theo 
 
 Trong khủng hoảng, tài sản niêm yết có thể giảm đúng lúc quỹ tư nhân gọi thêm vốn, tạo rủi ro thanh khoản kép.
 
-> **Chuyển mạch:** Trong **Tài sản thực và tài sản thay thế**, **32. Subscription Line** tiếp nhận điểm tựa từ **31. Gọi vốn và nghĩa vụ chưa góp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Venture Capital** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tài sản thực và tài sản thay thế**, **32. Subscription Line** nối từ **31. Gọi vốn và nghĩa vụ chưa góp** sang **33. Venture Capital**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Subscription Line
 
@@ -333,7 +333,7 @@ Quỹ có thể dùng hạn mức tín dụng ngắn hạn trước khi gọi v�
 
 Cần nhìn cả bội số tiền và dòng tiền thực tế.
 
-> **Chuyển mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **33. Venture Capital** tiếp nhận điểm tựa từ **32. Subscription Line** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Tín dụng tư nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **33. Venture Capital** nối từ **32. Subscription Line** sang **34. Tín dụng tư nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Venture Capital
 
@@ -341,7 +341,7 @@ Cần nhìn cả bội số tiền và dòng tiền thực tế.
 
 Rủi ro gồm pha loãng, nhu cầu vốn tiếp theo, khả năng thoái vốn, định giá vòng sau và tập trung vào một số công ty thắng lớn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **34. Tín dụng tư nhân** tiếp nhận điểm tựa từ **33. Venture Capital** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. EBITDA Add-Back và PIK** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **34. Tín dụng tư nhân** nối từ **33. Venture Capital** sang **35. EBITDA Add-Back và PIK**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Tín dụng tư nhân
 
@@ -349,7 +349,7 @@ Tín dụng tư nhân (private credit) cung cấp khoản vay ngoài thị trư�
 
 Lãi suất thả nổi hỗ trợ thu nhập khi lãi tăng nhưng cũng có thể làm khả năng trả lãi của người vay xấu đi.
 
-> **Chuyển mạch:** Trong **Tài sản thực và tài sản thay thế**, **35. EBITDA Add-Back và PIK** tiếp nhận điểm tựa từ **34. Tín dụng tư nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Tài sản tư nhân có volatility thấp trên báo cáo không có nghĩa rủi ro thấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tài sản thực và tài sản thay thế**, **35. EBITDA Add-Back và PIK** nối từ **34. Tín dụng tư nhân** sang **36. Tài sản tư nhân có volatility thấp trên báo cáo không có nghĩa rủi ro thấp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. EBITDA Add-Back và PIK
 
@@ -357,7 +357,7 @@ Một số khoản vay sử dụng EBITDA điều chỉnh với nhiều phần c
 
 Lãi PIK được cộng vào nợ thay vì trả tiền mặt. Nó làm lợi suất ghi nhận tăng nhưng cũng khiến nợ của người vay phình ra.
 
-> **Chuyển mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **36. Tài sản tư nhân có volatility thấp trên báo cáo không có nghĩa rủi ro thấp** tiếp nhận điểm tựa từ **35. EBITDA Add-Back và PIK** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Thị trường thứ cấp của tài sản tư nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **36. Tài sản tư nhân có volatility thấp trên báo cáo không có nghĩa rủi ro thấp** nối từ **35. EBITDA Add-Back và PIK** sang **37. Thị trường thứ cấp của tài sản tư nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Tài sản tư nhân có volatility thấp trên báo cáo không có nghĩa rủi ro thấp
 
@@ -365,7 +365,7 @@ Lãi PIK được cộng vào nợ thay vì trả tiền mặt. Nó làm lợi s
 
 Tương quan và volatility có thể bị đánh giá thấp do giá cũ, không phải vì kinh tế ít biến động hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **37. Thị trường thứ cấp của tài sản tư nhân** tiếp nhận điểm tựa từ **36. Tài sản tư nhân có volatility thấp trên báo cáo không có nghĩa rủi ro thấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Hiệu ứng mẫu số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **37. Thị trường thứ cấp của tài sản tư nhân** nối từ **36. Tài sản tư nhân có volatility thấp trên báo cáo không có nghĩa rủi ro thấp** sang **38. Hiệu ứng mẫu số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Thị trường thứ cấp của tài sản tư nhân
 
@@ -373,7 +373,7 @@ LP interest hoặc cổ phần tư nhân có thể được bán trên thị tr�
 
 Giá thứ cấp cung cấp tín hiệu về chất lượng tài sản và mức khan hiếm thanh khoản mà NAV định kỳ có thể chưa thể hiện.
 
-> **Chuyển mạch:** Trong **Tài sản thực và tài sản thay thế**, **38. Hiệu ứng mẫu số** tiếp nhận điểm tựa từ **37. Thị trường thứ cấp của tài sản tư nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Illiquidity Premium** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tài sản thực và tài sản thay thế**, **38. Hiệu ứng mẫu số** nối từ **37. Thị trường thứ cấp của tài sản tư nhân** sang **39. Illiquidity Premium**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Hiệu ứng mẫu số
 
@@ -381,7 +381,7 @@ Khi tài sản công khai giảm nhanh nhưng NAV tài sản tư nhân điều c
 
 Nhà đầu tư tổ chức có thể buộc phải giảm cam kết mới hoặc bán tài sản tư nhân để đưa phân bổ về giới hạn.
 
-> **Chuyển mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **39. Illiquidity Premium** tiếp nhận điểm tựa từ **38. Hiệu ứng mẫu số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Checklist tài sản thay thế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tài sản thực và tài sản thay thế**, **39. Illiquidity Premium** nối từ **38. Hiệu ứng mẫu số** sang **40. Checklist tài sản thay thế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Illiquidity Premium
 
@@ -389,7 +389,7 @@ Phần bù kém thanh khoản không phải lợi nhuận miễn phí. Nó chỉ
 
 Nếu nhà đầu tư trả giá quá cao cho tài sản tư nhân, phần bù này có thể biến mất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **40. Checklist tài sản thay thế** tiếp nhận điểm tựa từ **39. Illiquidity Premium** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tài sản thực và tài sản thay thế**, **40. Checklist tài sản thay thế** nối từ **39. Illiquidity Premium** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Checklist tài sản thay thế
 
@@ -409,7 +409,7 @@ Nghĩa vụ gọi vốn
 Kịch bản xấu
 ```
 
-> **Chuyển mạch:** Trong **Tài sản thực và tài sản thay thế**, **Kết luận** gom các mảnh từ **40. Checklist tài sản thay thế** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Tài sản thực và tài sản thay thế**, **Kết luận** tổng hợp từ **40. Checklist tài sản thay thế** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

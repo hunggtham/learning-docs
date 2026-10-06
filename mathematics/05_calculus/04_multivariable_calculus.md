@@ -40,7 +40,7 @@ Ta có
 
 Mỗi partial derivative là sensitivity theo một coordinate axis. Nhưng real perturbation thường không đi đúng theo axis; vì vậy ta cần độ dốc (gradient / 기울기) và directional derivative.
 
-> **Chuyển mạch:** Trong **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Độ dốc (gradient / 기울기): gói các coordinate sensitivities thành một véc-tơ (vector / 벡터)** tiếp nhận điểm tựa từ **Partial derivative: hỏi từng coordinate một** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao độ dốc (gradient / 기울기) chỉ hướng steepest ascent?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Độ dốc (gradient / 기울기): gói các coordinate sensitivities thành một véc-tơ (vector / 벡터)** nối từ **Partial derivative: hỏi từng coordinate một** sang **Vì sao độ dốc (gradient / 기울기) chỉ hướng steepest ascent?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ dốc (gradient / 기울기): gói các coordinate sensitivities thành một véc-tơ (vector / 벡터)
 
@@ -76,7 +76,7 @@ Nếu perturb đầu vào (input / 입력) bởi small véc-tơ (vector / 벡터
 \Delta y\approx f'(x)\Delta x.
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Vì sao độ dốc (gradient / 기울기) chỉ hướng steepest ascent?** tiếp nhận điểm tựa từ **Độ dốc (gradient / 기울기): gói các coordinate sensitivities thành một véc-tơ (vector / 벡터)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mức (level / 수준) sets và vì sao độ dốc (gradient / 기울기) vuông góc contour** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Vì sao độ dốc (gradient / 기울기) chỉ hướng steepest ascent?** nối từ **Độ dốc (gradient / 기울기): gói các coordinate sensitivities thành một véc-tơ (vector / 벡터)** sang **Mức (level / 수준) sets và vì sao độ dốc (gradient / 기울기) vuông góc contour**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao độ dốc (gradient / 기울기) chỉ hướng steepest ascent?
 
@@ -98,7 +98,7 @@ Với `\|u\|=1`, maximum đạt khi `u` cùng direction với độ dốc (gradi
 
 Đây là proof idea của độ dốc (gradient / 기울기) descent hình học (geometry / 기하학).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Mức (level / 수준) sets và vì sao độ dốc (gradient / 기울기) vuông góc contour** tiếp nhận điểm tựa từ **Vì sao độ dốc (gradient / 기울기) chỉ hướng steepest ascent?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Worked example — độ dốc (gradient / 기울기) của quadratic bowl** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Mức (level / 수준) sets và vì sao độ dốc (gradient / 기울기) vuông góc contour** nối từ **Vì sao độ dốc (gradient / 기울기) chỉ hướng steepest ascent?** sang **Worked example — độ dốc (gradient / 기울기) của quadratic bowl**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mức (level / 수준) sets và vì sao độ dốc (gradient / 기울기) vuông góc contour
 
@@ -120,7 +120,7 @@ Trong 2D, độ dốc (gradient / 기울기) normal với contour line. Trong 3D
 
 Đây là foundation của Lagrange multipliers: tại constrained optimum, mục tiêu (objective / 목표) độ dốc (gradient / 기울기) phải align với ràng buộc (constraint / 제약조건) normal nếu không còn feasible first-order improvement direction.
 
-> **Chuyển mạch:** Trong **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Mức (level / 수준) sets và vì sao độ dốc (gradient / 기울기) vuông góc contour** cho ta quy tắc; **Worked example — độ dốc (gradient / 기울기) của quadratic bowl** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Jacobian: derivative của vector-valued hàm (function / 함수)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Mức (level / 수준) sets và vì sao độ dốc (gradient / 기울기) vuông góc contour** nêu quy tắc; **Worked example — độ dốc (gradient / 기울기) của quadratic bowl** thử quy tắc trong tình huống, rồi **Jacobian: derivative của vector-valued hàm (function / 함수)** mở rộng hệ quả.
 
 ## Worked example — độ dốc (gradient / 기울기) của quadratic bowl
 
@@ -146,7 +146,7 @@ Hàm (function / 함수) tăng mạnh hơn theo `y` direction vì curvature/scal
 
 Nếu features `x,y` có units/scales rất khác nhau, hình học (geometry / 기하학) của “steepest” cũng bị ảnh hưởng. Đây là lý do tính năng (feature / 기능) scaling và preconditioning matter trong tối ưu hóa (optimization / 최적화).
 
-> **Chuyển mạch:** Ở chặng này của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Worked example — độ dốc (gradient / 기울기) của quadratic bowl** cho ta quy tắc; **Jacobian: derivative của vector-valued hàm (function / 함수)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Chuỗi (chain / 사슬) quy tắc (rule / 규칙) trở thành ma trận (matrix / 행렬) composition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Worked example — độ dốc (gradient / 기울기) của quadratic bowl** nêu quy tắc; **Jacobian: derivative của vector-valued hàm (function / 함수)** thử quy tắc trong tình huống, rồi **Chuỗi (chain / 사슬) quy tắc (rule / 규칙) trở thành ma trận (matrix / 행렬) composition** mở rộng hệ quả.
 
 ## Jacobian: derivative của vector-valued hàm (function / 함수)
 
@@ -178,7 +178,7 @@ F(x)+J_F(x)\Delta x.
 
 Đây là statement trung tâm: Jacobian là cục bộ (local / 로컬) tuyến tính (linear / 선형) map từ đầu vào (input / 입력) perturbations sang đầu ra (output / 출력) perturbations.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Jacobian: derivative của vector-valued hàm (function / 함수)** xác định đầu vào; **Chuỗi (chain / 사슬) quy tắc (rule / 규칙) trở thành ma trận (matrix / 행렬) composition** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Độ dốc (gradient / 기울기), Jacobian và matrix-calculus conventions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Jacobian: derivative của vector-valued hàm (function / 함수)** đặt đầu vào cho **Chuỗi (chain / 사슬) quy tắc (rule / 규칙) trở thành ma trận (matrix / 행렬) composition**, rồi **Độ dốc (gradient / 기울기), Jacobian và matrix-calculus conventions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Chuỗi (chain / 사슬) quy tắc (rule / 규칙) trở thành ma trận (matrix / 행렬) composition
 
@@ -200,7 +200,7 @@ Meaning: cục bộ (local / 로컬) perturbation đi qua `H` trước, rồi qu
 
 Backpropagation là efficient organization của chuỗi (chain / 사슬) quy tắc (rule / 규칙) để tránh forming huge full Jacobians không cần thiết.
 
-> **Chuyển mạch:** Trong **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Chuỗi (chain / 사슬) quy tắc (rule / 규칙) trở thành ma trận (matrix / 행렬) composition** xác định đầu vào; **Độ dốc (gradient / 기울기), Jacobian và matrix-calculus conventions** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Hessian: curvature theo nhiều directions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Chuỗi (chain / 사슬) quy tắc (rule / 규칙) trở thành ma trận (matrix / 행렬) composition** đặt đầu vào cho **Độ dốc (gradient / 기울기), Jacobian và matrix-calculus conventions**, rồi **Hessian: curvature theo nhiều directions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Độ dốc (gradient / 기울기), Jacobian và matrix-calculus conventions
 
@@ -212,7 +212,7 @@ Backpropagation là efficient organization của chuỗi (chain / 사슬) quy t�
 
 Khi đọc papers/frameworks, phải check convention. Nhiều bugs notation đến từ assume shapes mà không verify.
 
-> **Chuyển mạch:** Ở chặng này của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Hessian: curvature theo nhiều directions** tiếp nhận điểm tựa từ **Độ dốc (gradient / 기울기), Jacobian và matrix-calculus conventions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Eigenvalues của Hessian và tối ưu hóa (optimization / 최적화) hình học (geometry / 기하학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Hessian: curvature theo nhiều directions** nối từ **Độ dốc (gradient / 기울기), Jacobian và matrix-calculus conventions** sang **Eigenvalues của Hessian và tối ưu hóa (optimization / 최적화) hình học (geometry / 기하학)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hessian: curvature theo nhiều directions
 
@@ -244,7 +244,7 @@ Nếu Hessian positive definite tại a trọng yếu (critical / 중요) điể
 
 Nếu Hessian indefinite, có directions up và down: saddle điểm (point / 지점).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Eigenvalues của Hessian và tối ưu hóa (optimization / 최적화) hình học (geometry / 기하학)** tiếp nhận điểm tựa từ **Hessian: curvature theo nhiều directions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Constrained tối ưu hóa (optimization / 최적화) và Lagrange multipliers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Eigenvalues của Hessian và tối ưu hóa (optimization / 최적화) hình học (geometry / 기하학)** nối từ **Hessian: curvature theo nhiều directions** sang **Constrained tối ưu hóa (optimization / 최적화) và Lagrange multipliers**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Eigenvalues của Hessian và tối ưu hóa (optimization / 최적화) hình học (geometry / 기하학)
 
@@ -252,7 +252,7 @@ Hessian symmetric khi mixed partials behave well. Its eigenvectors give principa
 
 Nếu eigenvalues vary by orders of magnitude, mất mát (loss / 손실) landscape elongated. độ dốc (gradient / 기울기) descent phải dùng học tập (learning / 학습) tỷ lệ (rate / 비율) nhỏ enough cho steep direction, nên progress theo flat direction chậm. Đây là condition-number intuition trong tối ưu hóa (optimization / 최적화).
 
-> **Chuyển mạch:** Trong **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Constrained tối ưu hóa (optimization / 최적화) và Lagrange multipliers** tiếp nhận điểm tựa từ **Eigenvalues của Hessian và tối ưu hóa (optimization / 최적화) hình học (geometry / 기하학)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multiple integrals: accumulation trong nhiều dimensions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Constrained tối ưu hóa (optimization / 최적화) và Lagrange multipliers** nối từ **Eigenvalues của Hessian và tối ưu hóa (optimization / 최적화) hình học (geometry / 기하학)** sang **Multiple integrals: accumulation trong nhiều dimensions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Constrained tối ưu hóa (optimization / 최적화) và Lagrange multipliers
 
@@ -270,7 +270,7 @@ tại smooth interior constrained optimum, feasible tangent directions nằm ort
 
 Lagrange multiplier không phải trick algebra; nó encode alignment of normals.
 
-> **Chuyển mạch:** Ở chặng này của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Multiple integrals: accumulation trong nhiều dimensions** tiếp nhận điểm tựa từ **Constrained tối ưu hóa (optimization / 최적화) và Lagrange multipliers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thay đổi (change / 변경) of variables và Jacobian determinant** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Multiple integrals: accumulation trong nhiều dimensions** nối từ **Constrained tối ưu hóa (optimization / 최적화) và Lagrange multipliers** sang **Thay đổi (change / 변경) of variables và Jacobian determinant**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Multiple integrals: accumulation trong nhiều dimensions
 
@@ -284,7 +284,7 @@ accumulates density over area. Triple integral accumulates over volume.
 
 Nếu `f` là mass density kg/m², then integral over area gives mass kg. Units tiếp tục là sanity check.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Thay đổi (change / 변경) of variables và Jacobian determinant** tiếp nhận điểm tựa từ **Multiple integrals: accumulation trong nhiều dimensions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xác suất (probability / 확률) liên kết (connection / 연결) — transformations của random variables** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Thay đổi (change / 변경) of variables và Jacobian determinant** nối từ **Multiple integrals: accumulation trong nhiều dimensions** sang **Xác suất (probability / 확률) liên kết (connection / 연결) — transformations của random variables**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thay đổi (change / 변경) of variables và Jacobian determinant
 
@@ -324,7 +324,7 @@ dA=r\,dr\,d\theta.
 
 Factor `r` không phải formula cần nhớ riêng; nó là cục bộ (local / 로컬) area expansion khi radial coordinate tăng.
 
-> **Chuyển mạch:** Trong **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, sau nội dung của **Thay đổi (change / 변경) of variables và Jacobian determinant**, **Xác suất (probability / 확률) liên kết (connection / 연결) — transformations của random variables** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Physics liên kết (connection / 연결) — scalar và véc-tơ (vector / 벡터) fields** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, sau nội dung của **Thay đổi (change / 변경) of variables và Jacobian determinant**, **Xác suất (probability / 확률) liên kết (connection / 연결) — transformations của random variables** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Physics liên kết (connection / 연결) — scalar và véc-tơ (vector / 벡터) fields** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Xác suất (probability / 확률) liên kết (connection / 연결) — transformations của random variables
 
@@ -332,7 +332,7 @@ Nếu random véc-tơ (vector / 벡터) `X` được transform thành `Y=T(X)`, 
 
 Đây là liên kết (connection / 연결) sâu: change-of-variables theorem trong tích hợp (integration / 통합) và density transformation là cùng mathematical cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Ở chặng này của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Physics liên kết (connection / 연결) — scalar và véc-tơ (vector / 벡터) fields** tiếp nhận điểm tựa từ **Xác suất (probability / 확률) liên kết (connection / 연결) — transformations của random variables** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AI liên kết (connection / 연결) — mất mát (loss / 손실) landscapes và backpropagation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Physics liên kết (connection / 연결) — scalar và véc-tơ (vector / 벡터) fields** nối từ **Xác suất (probability / 확률) liên kết (connection / 연결) — transformations của random variables** sang **AI liên kết (connection / 연결) — mất mát (loss / 손실) landscapes và backpropagation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Physics liên kết (connection / 연결) — scalar và véc-tơ (vector / 벡터) fields
 
@@ -340,7 +340,7 @@ Temperature `T(x,y,z)` là scalar trường dữ liệu (field / 필드); độ 
 
 Velocity trường dữ liệu (field / 필드) `v(x,y,z)` là véc-tơ (vector / 벡터) trường dữ liệu (field / 필드); its Jacobian contains cục bộ (local / 로컬) deformation thông tin (information / 정보). Divergence và curl được xây từ derivatives của véc-tơ (vector / 벡터) fields và nối sang fluid dynamics, electromagnetism và véc-tơ (vector / 벡터) calculus.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **AI liên kết (connection / 연결) — mất mát (loss / 손실) landscapes và backpropagation** tiếp nhận điểm tựa từ **Physics liên kết (connection / 연결) — scalar và véc-tơ (vector / 벡터) fields** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Finance liên kết (connection / 연결) — multi-factor sensitivity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **AI liên kết (connection / 연결) — mất mát (loss / 손실) landscapes và backpropagation** nối từ **Physics liên kết (connection / 연결) — scalar và véc-tơ (vector / 벡터) fields** sang **Finance liên kết (connection / 연결) — multi-factor sensitivity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AI liên kết (connection / 연결) — mất mát (loss / 손실) landscapes và backpropagation
 
@@ -354,7 +354,7 @@ là scalar hàm (function / 함수) trên parameter không gian (space / 공간)
 
 Automatic differentiation computes chính xác (exact / 정확한) chain-rule derivatives của implemented computation đồ thị (graph / 그래프) up to floating-point effects; nó không phải numerical finite differencing.
 
-> **Chuyển mạch:** Trong **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Finance liên kết (connection / 연결) — multi-factor sensitivity** tiếp nhận điểm tựa từ **AI liên kết (connection / 연결) — mất mát (loss / 손실) landscapes và backpropagation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Differentiability không chỉ là “mọi partial derivative tồn tại”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Finance liên kết (connection / 연결) — multi-factor sensitivity** nối từ **AI liên kết (connection / 연결) — mất mát (loss / 손실) landscapes và backpropagation** sang **Differentiability không chỉ là “mọi partial derivative tồn tại”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Finance liên kết (connection / 연결) — multi-factor sensitivity
 
@@ -362,7 +362,7 @@ Portfolio giá trị (value / 값) có thể depend on rates, FX, volatility, eq
 
 Nhưng cục bộ (local / 로컬) Greeks/sensitivities không thay thế scenario phân tích (analysis / 분석) cho large shocks, vì Taylor approximation có validity phạm vi (range / 범위).
 
-> **Chuyển mạch:** Ở chặng này của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Differentiability không chỉ là “mọi partial derivative tồn tại”** tiếp nhận điểm tựa từ **Finance liên kết (connection / 연결) — multi-factor sensitivity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Differentiability không chỉ là “mọi partial derivative tồn tại”** nối từ **Finance liên kết (connection / 연결) — multi-factor sensitivity** sang **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Differentiability không chỉ là “mọi partial derivative tồn tại”
 
@@ -370,7 +370,7 @@ Một hàm (function / 함수) có thể có all partial derivatives tại đi�
 
 Đây là lý do Jacobian/local-linear-map viewpoint mạnh hơn việc coi multivariable calculus là “take partials one by one”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **Differentiability không chỉ là “mọi partial derivative tồn tại”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** nối từ **Differentiability không chỉ là “mọi partial derivative tồn tại”** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes
 
@@ -380,13 +380,13 @@ Hessian-based classification cần smoothness và cục bộ (local / 로컬) ng
 
 Jacobian linearization chỉ accurate locally. Large perturbations require nonlinear terms or repeated re-linearization.
 
-> **Chuyển mạch:** Trong **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Multivariable calculus asks how a small véc-tơ (vector / 벡터) perturbation flows through a hệ thống (system / 시스템). độ dốc (gradient / 기울기) is the scalar-output sensitivity véc-tơ (vector / 벡터); Jacobian is the cục bộ (local / 로컬) tuyến tính (linear / 선형) transformation for véc-tơ (vector / 벡터) outputs; Hessian is the curvature operator describing how first-order sensitivity itself changes. tích hợp (integration / 통합) and Jacobian determinants describe how small pieces of area/volume transform and accumulate.
 
-> **Chuyển mạch:** Ở chặng này của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Giải tích nhiều biến: từ nhiều partial derivatives đến cục bộ (local / 로컬) tuyến tính (linear / 선형) maps**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

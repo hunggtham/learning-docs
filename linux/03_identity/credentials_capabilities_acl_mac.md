@@ -25,7 +25,7 @@ Có thể quan sát một phần:
 cat /proc/<PID>/status | grep -E 'Uid|Gid|Groups|Cap'
 ```
 
-> **Chuyển mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Real UID và effective UID** tiếp nhận điểm tựa từ **Kernel kiểm tra ai đang thực hiện thao tác bằng cách nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Saved UID** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Real UID và effective UID** nối từ **Kernel kiểm tra ai đang thực hiện thao tác bằng cách nào?** sang **Saved UID**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Real UID và effective UID
 
@@ -37,7 +37,7 @@ Setuid nhị phân (binary / 이진) tồn tại chính vì hai giá trị này 
 
 Ví dụ `passwd` cần cập nhật dữ liệu mà người dùng (user / 사용자) bình thường không thể ghi trực tiếp. nhị phân (binary / 이진) có thể chạy với effective privilege cao hơn trong phạm vi mã (code / 코드) được kiểm soát.
 
-> **Chuyển mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Saved UID** tiếp nhận điểm tựa từ **Real UID và effective UID** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Supplementary groups** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Saved UID** nối từ **Real UID và effective UID** sang **Supplementary groups**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Saved UID
 
@@ -54,7 +54,7 @@ start với privilege cao
 
 Thiết kế này giảm blast radius nếu phần xử lý yêu cầu (request / 요청) có bug.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Supplementary groups** tiếp nhận điểm tựa từ **Saved UID** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Credential inheritance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Supplementary groups** nối từ **Saved UID** sang **Credential inheritance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Supplementary groups
 
@@ -72,7 +72,7 @@ cat /proc/<PID>/status | grep Groups
 
 Nếu permission dựa vào group nhưng tiến trình (process / 프로세스) không thật sự có group đó, `ls -l` nhìn tệp (file / 파일) đúng vẫn không giúp.
 
-> **Chuyển mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Credential inheritance** tiếp nhận điểm tựa từ **Supplementary groups** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **sudo thực sự làm gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Credential inheritance** nối từ **Supplementary groups** sang **sudo thực sự làm gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Credential inheritance
 
@@ -80,7 +80,7 @@ Child tiến trình (process / 프로세스) thường kế thừa credentials t
 
 Đây là lý do shell, sudo, systemd và bộ chứa (container / 컨테이너) thời gian chạy (runtime / 런타임) đều quan trọng: chúng quyết định credentials của tiến trình (process / 프로세스) cuối cùng.
 
-> **Chuyển mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **sudo thực sự làm gì?** tiếp nhận điểm tựa từ **Credential inheritance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **su và sudo -i khác nhau về ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **sudo thực sự làm gì?** nối từ **Credential inheritance** sang **su và sudo -i khác nhau về ngữ cảnh (context / 맥락)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `sudo` thực sự làm gì?
 
@@ -109,7 +109,7 @@ ALL=(ALL) NOPASSWD: ALL
 
 thực tế gần như trao full gốc (root / 루트) năng lực (capability / 역량) cho account đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **su và sudo -i khác nhau về ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **sudo thực sự làm gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Permission check trên pathname** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **su và sudo -i khác nhau về ngữ cảnh (context / 맥락)** nối từ **sudo thực sự làm gì?** sang **Permission check trên pathname**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `su` và `sudo -i` khác nhau về ngữ cảnh (context / 맥락)
 
@@ -123,7 +123,7 @@ Khi gỡ lỗi (debug / 디버그) nên tái hiện đúng định danh (identit
 sudo -u appuser -- /usr/bin/test -r /opt/app/config.yml
 ```
 
-> **Chuyển mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **su và sudo -i khác nhau về ngữ cảnh (context / 맥락)** xác định đầu vào; **Permission check trên pathname** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **ACL mask** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **su và sudo -i khác nhau về ngữ cảnh (context / 맥락)** đặt đầu vào cho **Permission check trên pathname**, rồi **ACL mask** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Permission check trên pathname
 
@@ -145,7 +145,7 @@ namei -l /a/b/c.txt
 
 để thấy permission từng thành phần (component / 컴포넌트).
 
-> **Chuyển mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Permission check trên pathname** xác định đầu vào; **ACL mask** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Default ACL trên directory** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Permission check trên pathname** đặt đầu vào cho **ACL mask**, rồi **Default ACL trên directory** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## ACL mask
 
@@ -171,7 +171,7 @@ Dù entry `deploy` là `rw-`, mask chỉ `r--`, nên effective permission có th
 
 Đây là lý do `getfacl` đôi khi hiển thị comment `#effective:r--`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Default ACL trên directory** tiếp nhận điểm tựa từ **ACL mask** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Setgid trên directory** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Default ACL trên directory** nối từ **ACL mask** sang **Setgid trên directory**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Default ACL trên directory
 
@@ -185,7 +185,7 @@ setfacl -d -m g:appops:rwx /srv/shared
 
 Nhưng ACL inheritance phức tạp hơn chế độ (mode / 모드) bits đơn giản; cần document rõ để tránh chính sách (policy / 정책) “ẩn”.
 
-> **Chuyển mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Setgid trên directory** tiếp nhận điểm tựa từ **Default ACL trên directory** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sticky bit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Setgid trên directory** nối từ **Default ACL trên directory** sang **Sticky bit**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Setgid trên directory
 
@@ -199,7 +199,7 @@ Tệp (file / 파일) mới thường kế thừa group của directory thay vì
 
 Đây là mẫu (pattern / 패턴) tốt cho dùng chung (shared / 공유) workspace.
 
-> **Chuyển mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Sticky bit** tiếp nhận điểm tựa từ **Setgid trên directory** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Setuid và setgid nhị phân (binary / 이진)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Sticky bit** nối từ **Setgid trên directory** sang **Setuid và setgid nhị phân (binary / 이진)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sticky bit
 
@@ -217,7 +217,7 @@ drwxrwxrwt
 
 Chữ `t` là sticky bit.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Setuid và setgid nhị phân (binary / 이진)** tiếp nhận điểm tựa từ **Sticky bit** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Capabilities: chia nhỏ quyền gốc (root / 루트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Setuid và setgid nhị phân (binary / 이진)** nối từ **Sticky bit** sang **Capabilities: chia nhỏ quyền gốc (root / 루트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Setuid và setgid nhị phân (binary / 이진)
 
@@ -233,7 +233,7 @@ find / -xdev -perm -4000 -type f 2>/dev/null
 
 Không nên xóa tùy tiện vì nhiều hệ thống (system / 시스템) utilities hợp lệ dùng setuid.
 
-> **Chuyển mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Capabilities: chia nhỏ quyền gốc (root / 루트)** tiếp nhận điểm tựa từ **Setuid và setgid nhị phân (binary / 이진)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lực (capability / 역량) sets** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Capabilities: chia nhỏ quyền gốc (root / 루트)** nối từ **Setuid và setgid nhị phân (binary / 이진)** sang **Năng lực (capability / 역량) sets**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Capabilities: chia nhỏ quyền gốc (root / 루트)
 
@@ -249,7 +249,7 @@ Ví dụ:
 
 Danh sách chính xác phụ thuộc kernel phiên bản (version / 버전).
 
-> **Chuyển mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Năng lực (capability / 역량) sets** tiếp nhận điểm tựa từ **Capabilities: chia nhỏ quyền gốc (root / 루트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tệp (file / 파일) capabilities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Năng lực (capability / 역량) sets** nối từ **Capabilities: chia nhỏ quyền gốc (root / 루트)** sang **Tệp (file / 파일) capabilities**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lực (capability / 역량) sets
 
@@ -277,7 +277,7 @@ getpcaps <PID>
 
 nếu công cụ (tool / 도구) có sẵn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Tệp (file / 파일) capabilities** tiếp nhận điểm tựa từ **Năng lực (capability / 역량) sets** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CAPSYSADMIN không phải năng lực (capability / 역량) “nhỏ”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Tệp (file / 파일) capabilities** nối từ **Năng lực (capability / 역량) sets** sang **CAPSYSADMIN không phải năng lực (capability / 역량) “nhỏ”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tệp (file / 파일) capabilities
 
@@ -292,7 +292,7 @@ getcap /opt/app/server
 
 Nhưng tệp (file / 파일) năng lực (capability / 역량) cũng cần quản lý như privilege-bearing siêu dữ liệu (metadata / 메타데이터).
 
-> **Chuyển mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **CAPSYSADMIN không phải năng lực (capability / 역량) “nhỏ”** tiếp nhận điểm tựa từ **Tệp (file / 파일) capabilities** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bounding set** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **CAPSYSADMIN không phải năng lực (capability / 역량) “nhỏ”** nối từ **Tệp (file / 파일) capabilities** sang **Bounding set**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `CAP_SYS_ADMIN` không phải năng lực (capability / 역량) “nhỏ”
 
@@ -300,7 +300,7 @@ Nhưng tệp (file / 파일) năng lực (capability / 역량) cũng cần quả
 
 Nếu mục tiêu là least privilege, tránh cấp nó chỉ vì một permission issue chưa hiểu.
 
-> **Chuyển mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Bounding set** tiếp nhận điểm tựa từ **CAPSYSADMIN không phải năng lực (capability / 역량) “nhỏ”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ambient capabilities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Bounding set** nối từ **CAPSYSADMIN không phải năng lực (capability / 역량) “nhỏ”** sang **Ambient capabilities**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bounding set
 
@@ -314,7 +314,7 @@ CapabilityBoundingSet=CAP_NET_BIND_SERVICE
 
 để giảm privilege surface.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Ambient capabilities** tiếp nhận điểm tựa từ **Bounding set** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **nonewprivs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Ambient capabilities** nối từ **Bounding set** sang **nonewprivs**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ambient capabilities
 
@@ -328,7 +328,7 @@ AmbientCapabilities=CAP_NET_BIND_SERVICE
 
 Cần hiểu rõ trước khi dùng; năng lực (capability / 역량) propagation là một phần bảo mật (security / 보안) mô hình (model / 모델) phức tạp.
 
-> **Chuyển mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **nonewprivs** tiếp nhận điểm tựa từ **Ambient capabilities** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Người dùng (user / 사용자) không gian tên (namespace / 네임스페이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **nonewprivs** nối từ **Ambient capabilities** sang **Người dùng (user / 사용자) không gian tên (namespace / 네임스페이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `no_new_privs`
 
@@ -342,7 +342,7 @@ NoNewPrivileges=true
 
 Bộ chứa (container / 컨테이너) runtimes cũng dùng flag này trong hardening.
 
-> **Chuyển mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Người dùng (user / 사용자) không gian tên (namespace / 네임스페이스)** tiếp nhận điểm tựa từ **nonewprivs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rootless bộ chứa (container / 컨테이너)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Người dùng (user / 사용자) không gian tên (namespace / 네임스페이스)** nối từ **nonewprivs** sang **Rootless bộ chứa (container / 컨테이너)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Người dùng (user / 사용자) không gian tên (namespace / 네임스페이스)
 
@@ -358,7 +358,7 @@ host UID 100000
 
 Do đó “gốc (root / 루트) trong bộ chứa (container / 컨테이너)” không nhất thiết là host gốc (root / 루트) nếu người dùng (user / 사용자) không gian tên (namespace / 네임스페이스) được cấu hình đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Rootless bộ chứa (container / 컨테이너)** tiếp nhận điểm tựa từ **Người dùng (user / 사용자) không gian tên (namespace / 네임스페이스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **DAC và MAC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Rootless bộ chứa (container / 컨테이너)** nối từ **Người dùng (user / 사용자) không gian tên (namespace / 네임스페이스)** sang **DAC và MAC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rootless bộ chứa (container / 컨테이너)
 
@@ -366,7 +366,7 @@ Rootless bộ chứa (container / 컨테이너) dựa nhiều vào người dùn
 
 Tuy nhiên có các giới hạn về networking, thiết bị (device / 장치) truy cập (access / 접근) và kernel features.
 
-> **Chuyển mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **DAC và MAC** tiếp nhận điểm tựa từ **Rootless bộ chứa (container / 컨테이너)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SELinux mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **DAC và MAC** nối từ **Rootless bộ chứa (container / 컨테이너)** sang **SELinux mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## DAC và MAC
 
@@ -388,7 +388,7 @@ MAC policy
 mount/security constraints
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **SELinux mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **DAC và MAC** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **SELinux chế độ (mode / 모드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **SELinux mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **DAC và MAC** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **SELinux chế độ (mode / 모드)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## SELinux mô hình tư duy (mental model / 사고 모델)
 
@@ -405,7 +405,7 @@ Chính sách (policy / 정책) quyết định lĩnh vực (domain / 도메인) 
 
 Đây là lý do chế độ (mode / 모드) `777` vẫn có thể bị SELinux deny.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **SELinux chế độ (mode / 모드)** gom các mảnh từ **SELinux mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nhật ký kiểm tra (audit log / 감사 로그)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **SELinux chế độ (mode / 모드)** tổng hợp từ **SELinux mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Nhật ký kiểm tra (audit log / 감사 로그)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## SELinux chế độ (mode / 모드)
 
@@ -425,7 +425,7 @@ Disabled
 
 Không nên disable SELinux chỉ để “fix nhanh”. Permissive chế độ (mode / 모드) có thể dùng có kiểm soát để quan sát denial mà chưa enforce, nhưng môi trường vận hành (production / 운영 환경) chính sách (policy / 정책) cần theo quy trình phù hợp.
 
-> **Chuyển mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Nhật ký kiểm tra (audit log / 감사 로그)** tiếp nhận điểm tựa từ **SELinux chế độ (mode / 모드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **restorecon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Nhật ký kiểm tra (audit log / 감사 로그)** nối từ **SELinux chế độ (mode / 모드)** sang **restorecon**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhật ký kiểm tra (audit log / 감사 로그)
 
@@ -441,7 +441,7 @@ hoặc xem journal/nhật ký kiểm tra (audit log / 감사 로그).
 
 Cần đọc denial để biết nguồn (source / 소스) ngữ cảnh (context / 맥락), mục tiêu (target / 대상) ngữ cảnh (context / 맥락) và thao tác (operation / 연산).
 
-> **Chuyển mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **restorecon** tiếp nhận điểm tựa từ **Nhật ký kiểm tra (audit log / 감사 로그)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AppArmor mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **restorecon** nối từ **Nhật ký kiểm tra (audit log / 감사 로그)** sang **AppArmor mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `restorecon`
 
@@ -455,7 +455,7 @@ restorecon -Rv /var/www/html
 
 Không nên dùng `chcon` làm fix vĩnh viễn nếu chính sách (policy / 정책) ánh xạ (mapping / 매핑) chưa được cấu hình, vì relabel có thể mất thay đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **AppArmor mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **restorecon** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Seccomp không phải permission filesystem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **AppArmor mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **restorecon** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Seccomp không phải permission filesystem** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## AppArmor mô hình tư duy (mental model / 사고 모델)
 
@@ -471,7 +471,7 @@ Profile quy định executable được truy cập (access / 접근) đường d
 
 Ubuntu thường gặp AppArmor nhiều hơn SELinux.
 
-> **Chuyển mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Seccomp không phải permission filesystem** gom các mảnh từ **AppArmor mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Mount flags cũng là bảo mật (security / 보안) chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Seccomp không phải permission filesystem** tổng hợp từ **AppArmor mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Mount flags cũng là bảo mật (security / 보안) chính sách (policy / 정책)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Seccomp không phải permission filesystem
 
@@ -481,7 +481,7 @@ Một tiến trình (process / 프로세스) có thể có tệp (file / 파일)
 
 Bộ chứa (container / 컨테이너) thời gian chạy (runtime / 런타임) thường áp seccomp profile mặc định.
 
-> **Chuyển mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Mount flags cũng là bảo mật (security / 보안) chính sách (policy / 정책)** tiếp nhận điểm tựa từ **Seccomp không phải permission filesystem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Linux bảo mật (security / 보안) mô-đun (module / 모듈)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Mount flags cũng là bảo mật (security / 보안) chính sách (policy / 정책)** nối từ **Seccomp không phải permission filesystem** sang **Linux bảo mật (security / 보안) mô-đun (module / 모듈)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mount flags cũng là bảo mật (security / 보안) chính sách (policy / 정책)
 
@@ -502,7 +502,7 @@ Kiểm tra:
 findmnt -T /path -o TARGET,SOURCE,FSTYPE,OPTIONS
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Linux bảo mật (security / 보안) mô-đun (module / 모듈)** tiếp nhận điểm tựa từ **Mount flags cũng là bảo mật (security / 보안) chính sách (policy / 정책)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm tra (audit / 감사) tiến trình (process / 프로세스) credentials khi gỡ lỗi (debug / 디버그)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Linux bảo mật (security / 보안) mô-đun (module / 모듈)** nối từ **Mount flags cũng là bảo mật (security / 보안) chính sách (policy / 정책)** sang **Kiểm tra (audit / 감사) tiến trình (process / 프로세스) credentials khi gỡ lỗi (debug / 디버그)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Linux bảo mật (security / 보안) mô-đun (module / 모듈)
 
@@ -512,7 +512,7 @@ SELinux, AppArmor và các khung phần mềm (framework / 프레임워크) khá
 
 Bảo mật (security / 보안) không chỉ nằm ở filesystem.
 
-> **Chuyển mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Linux bảo mật (security / 보안) mô-đun (module / 모듈)** xác định đầu vào; **Kiểm tra (audit / 감사) tiến trình (process / 프로세스) credentials khi gỡ lỗi (debug / 디버그)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Một trường hợp (case / 사례): Java dịch vụ (service / 서비스) không đọc được certificate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Linux bảo mật (security / 보안) mô-đun (module / 모듈)** đặt đầu vào cho **Kiểm tra (audit / 감사) tiến trình (process / 프로세스) credentials khi gỡ lỗi (debug / 디버그)**, rồi **Một trường hợp (case / 사례): Java dịch vụ (service / 서비스) không đọc được certificate** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Kiểm tra (audit / 감사) tiến trình (process / 프로세스) credentials khi gỡ lỗi (debug / 디버그)
 
@@ -539,7 +539,7 @@ Nếu dùng AppArmor:
 aa-status
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, sau khi thấy quy trình trong **Kiểm tra (audit / 감사) tiến trình (process / 프로세스) credentials khi gỡ lỗi (debug / 디버그)**, **Một trường hợp (case / 사례): Java dịch vụ (service / 서비스) không đọc được certificate** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **Trường hợp (case / 사례): bind cổng (port / 포트) 80 nhưng không muốn gốc (root / 루트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, sau khi thấy quy trình trong **Kiểm tra (audit / 감사) tiến trình (process / 프로세스) credentials khi gỡ lỗi (debug / 디버그)**, **Một trường hợp (case / 사례): Java dịch vụ (service / 서비스) không đọc được certificate** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **Trường hợp (case / 사례): bind cổng (port / 포트) 80 nhưng không muốn gốc (root / 루트)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Một trường hợp (case / 사례): Java dịch vụ (service / 서비스) không đọc được certificate
 
@@ -568,7 +568,7 @@ systemctl show app -p User -p Group
 
 Fix đúng có thể là thêm supplementary group hoặc thay quyền sở hữu (ownership / 소유권)/chính sách (policy / 정책) phù hợp, không phải `chmod 777`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Một trường hợp (case / 사례): Java dịch vụ (service / 서비스) không đọc được certificate** cho ta quy tắc; **Trường hợp (case / 사례): bind cổng (port / 포트) 80 nhưng không muốn gốc (root / 루트)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례): permission đúng nhưng vẫn Permission denied** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Một trường hợp (case / 사례): Java dịch vụ (service / 서비스) không đọc được certificate** nêu quy tắc; **Trường hợp (case / 사례): bind cổng (port / 포트) 80 nhưng không muốn gốc (root / 루트)** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례): permission đúng nhưng vẫn Permission denied** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례): bind cổng (port / 포트) 80 nhưng không muốn gốc (root / 루트)
 
@@ -580,7 +580,7 @@ Thay vì chạy ứng dụng (application / 애플리케이션) full gốc (root
 
 Mỗi cách có sự đánh đổi (trade-off / 트레이드오프) khác.
 
-> **Chuyển mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Trường hợp (case / 사례): bind cổng (port / 포트) 80 nhưng không muốn gốc (root / 루트)** cho ta quy tắc; **Trường hợp (case / 사례): permission đúng nhưng vẫn Permission denied** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Trường hợp (case / 사례): bind cổng (port / 포트) 80 nhưng không muốn gốc (root / 루트)** nêu quy tắc; **Trường hợp (case / 사례): permission đúng nhưng vẫn Permission denied** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례): permission đúng nhưng vẫn `Permission denied`
 
@@ -598,7 +598,7 @@ Checklist:
 
 Đây là cách tiếp cận theo tầng (layer / 계층) thay vì mở quyền ngẫu nhiên.
 
-> **Chuyển mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Trường hợp (case / 사례): permission đúng nhưng vẫn Permission denied** cho ta quy tắc; **Mô hình tư duy** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Trường hợp (case / 사례): permission đúng nhưng vẫn Permission denied** nêu quy tắc; **Mô hình tư duy** thử quy tắc trong tình huống, rồi **Những hiểu lầm phổ biến** mở rộng hệ quả.
 
 ## Mô hình tư duy
 
@@ -622,7 +622,7 @@ allow hoặc deny
 
 Không có một câu lệnh `chmod` nào đại diện toàn bộ chuỗi này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -636,7 +636,7 @@ Không có một câu lệnh `chmod` nào đại diện toàn bộ chuỗi này.
 
 **“gốc (root / 루트) trong bộ chứa (container / 컨테이너) = host gốc (root / 루트).”** Không nhất thiết nếu người dùng (user / 사용자) không gian tên (namespace / 네임스페이스) ánh xạ (mapping / 매핑) được dùng.
 
-> **Chuyển mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Danh tính Linux sâu hơn: credentials, capabilities, ACL và MAC**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

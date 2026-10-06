@@ -20,7 +20,7 @@ Cơ chế thanh toán
 Tài sản bảo đảm
 ```
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **2. Thông số hợp đồng** tiếp nhận điểm tựa từ **1. Quyền sở hữu khác mức phơi nhiễm theo hợp đồng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Giá trị danh nghĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **2. Thông số hợp đồng** nối từ **1. Quyền sở hữu khác mức phơi nhiễm theo hợp đồng** sang **3. Giá trị danh nghĩa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Thông số hợp đồng
 
@@ -39,7 +39,7 @@ Trước khi giao dịch một sản phẩm phái sinh cần biết:
 
 Tên sản phẩm giống nhau không bảo đảm thông số giống nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **3. Giá trị danh nghĩa** tiếp nhận điểm tựa từ **2. Thông số hợp đồng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Hợp đồng kỳ hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **3. Giá trị danh nghĩa** nối từ **2. Thông số hợp đồng** sang **4. Hợp đồng kỳ hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Giá trị danh nghĩa
 
@@ -58,7 +58,7 @@ Tiền ký quỹ chỉ là tài sản bảo đảm, không phải giá trị dan
 
 # Phần II — Hợp đồng kỳ hạn và hợp đồng tương lai
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **4. Hợp đồng kỳ hạn** tiếp nhận điểm tựa từ **3. Giá trị danh nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Hợp đồng tương lai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **4. Hợp đồng kỳ hạn** nối từ **3. Giá trị danh nghĩa** sang **5. Hợp đồng tương lai**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Hợp đồng kỳ hạn
 
@@ -68,7 +68,7 @@ Forward bắt đầu từ thỏa thuận song phương và rủi ro đối tác.
 
 Forward thường giao dịch ngoài sở (OTC), vì vậy rủi ro đối tác, tài sản bảo đảm và điều khoản đóng vị thế rất quan trọng.
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **5. Hợp đồng tương lai** tiếp nhận điểm tựa từ **4. Hợp đồng kỳ hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Ký quỹ ban đầu và ký quỹ duy trì** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **5. Hợp đồng tương lai** nối từ **4. Hợp đồng kỳ hạn** sang **6. Ký quỹ ban đầu và ký quỹ duy trì**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Hợp đồng tương lai
 
@@ -78,7 +78,7 @@ Futures chuẩn hóa các điều khoản và thêm clearing, margin, expiry và
 
 Chuẩn hóa giúp thanh khoản tốt hơn nhưng nhà giao dịch phải tuân thủ hệ số hợp đồng, ngày đáo hạn, ký quỹ và quy tắc thanh toán của từng sản phẩm.
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **6. Ký quỹ ban đầu và ký quỹ duy trì** tiếp nhận điểm tựa từ **5. Hợp đồng tương lai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Ký quỹ biến đổi và đánh dấu theo thị trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **6. Ký quỹ ban đầu và ký quỹ duy trì** nối từ **5. Hợp đồng tương lai** sang **7. Ký quỹ biến đổi và đánh dấu theo thị trường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Ký quỹ ban đầu và ký quỹ duy trì
 
@@ -90,7 +90,7 @@ Margin là cơ chế giữ cho hợp đồng có đủ collateral khi giá thay 
 
 Nếu giá trị tài khoản giảm dưới ngưỡng, nhà môi giới hoặc thành viên bù trừ có thể yêu cầu bổ sung tiền hoặc đóng vị thế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **7. Ký quỹ biến đổi và đánh dấu theo thị trường** tiếp nhận điểm tựa từ **6. Ký quỹ ban đầu và ký quỹ duy trì** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Cơ sở giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **7. Ký quỹ biến đổi và đánh dấu theo thị trường** nối từ **6. Ký quỹ ban đầu và ký quỹ duy trì** sang **8. Cơ sở giá**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Ký quỹ biến đổi và đánh dấu theo thị trường
 
@@ -104,7 +104,7 @@ Giá thay đổi
 
 Vì vậy quản lý thanh khoản rất quan trọng ngay cả khi luận điểm dài hạn vẫn đúng.
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **8. Cơ sở giá** tiếp nhận điểm tựa từ **7. Ký quỹ biến đổi và đánh dấu theo thị trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Hội tụ khi đáo hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **8. Cơ sở giá** nối từ **7. Ký quỹ biến đổi và đánh dấu theo thị trường** sang **9. Hội tụ khi đáo hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Cơ sở giá
 
@@ -121,7 +121,7 @@ Nó chịu ảnh hưởng của:
 - chi phí vay tài sản;
 - cung cầu kỹ thuật.
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **9. Hội tụ khi đáo hạn** tiếp nhận điểm tựa từ **8. Cơ sở giá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Contango và backwardation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **9. Hội tụ khi đáo hạn** nối từ **8. Cơ sở giá** sang **10. Contango và backwardation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Hội tụ khi đáo hạn
 
@@ -129,7 +129,7 @@ Gần đáo hạn, giá hợp đồng tương lai và giá giao ngay thường h
 
 Nếu không hiểu cơ chế thanh toán, nhà giao dịch có thể vô tình giữ hợp đồng tới giai đoạn không mong muốn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **10. Contango và backwardation** tiếp nhận điểm tựa từ **9. Hội tụ khi đáo hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Chuyển kỳ hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **10. Contango và backwardation** nối từ **9. Hội tụ khi đáo hạn** sang **11. Chuyển kỳ hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Contango và backwardation
 
@@ -139,7 +139,7 @@ Nếu không hiểu cơ chế thanh toán, nhà giao dịch có thể vô tình 
 
 Không nên kết luận tăng hay giảm chỉ từ hai nhãn này. Cần xem chi phí nắm giữ, tồn kho, mức khan hiếm và nhu cầu phòng vệ.
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **11. Chuyển kỳ hạn** tiếp nhận điểm tựa từ **10. Contango và backwardation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Hợp đồng tương lai hàng hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **11. Chuyển kỳ hạn** nối từ **10. Contango và backwardation** sang **12. Hợp đồng tương lai hàng hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Chuyển kỳ hạn
 
@@ -152,7 +152,7 @@ Quá trình này tạo:
 - lợi suất cuộn kỳ hạn;
 - rủi ro thanh khoản.
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **12. Hợp đồng tương lai hàng hóa** tiếp nhận điểm tựa từ **11. Chuyển kỳ hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Trái phiếu rẻ nhất để giao trong futures trái phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **12. Hợp đồng tương lai hàng hóa** nối từ **11. Chuyển kỳ hạn** sang **13. Trái phiếu rẻ nhất để giao trong futures trái phiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Hợp đồng tương lai hàng hóa
 
@@ -166,7 +166,7 @@ Ngoài biến động giá, hàng hóa còn chịu:
 
 Người chỉ muốn giao dịch tài chính phải đặc biệt hiểu ngày thông báo giao hàng và điều khoản vật chất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **13. Trái phiếu rẻ nhất để giao trong futures trái phiếu** tiếp nhận điểm tựa từ **12. Hợp đồng tương lai hàng hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Quyền chọn mua và quyền chọn bán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **13. Trái phiếu rẻ nhất để giao trong futures trái phiếu** nối từ **12. Hợp đồng tương lai hàng hóa** sang **14. Quyền chọn mua và quyền chọn bán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Trái phiếu rẻ nhất để giao trong futures trái phiếu
 
@@ -176,7 +176,7 @@ Vì vậy phòng vệ bằng futures trái phiếu còn phụ thuộc hệ số 
 
 # Phần III — Quyền chọn
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **14. Quyền chọn mua và quyền chọn bán** tiếp nhận điểm tựa từ **13. Trái phiếu rẻ nhất để giao trong futures trái phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Phí quyền chọn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **14. Quyền chọn mua và quyền chọn bán** nối từ **13. Trái phiếu rẻ nhất để giao trong futures trái phiếu** sang **15. Phí quyền chọn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Quyền chọn mua và quyền chọn bán
 
@@ -189,7 +189,7 @@ Put  = max(K - S, 0)
 
 Người mua trả phí để có quyền; người bán nhận phí nhưng gánh nghĩa vụ tương ứng.
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **15. Phí quyền chọn** tiếp nhận điểm tựa từ **14. Quyền chọn mua và quyền chọn bán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Giá trị nội tại và giá trị thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **15. Phí quyền chọn** nối từ **14. Quyền chọn mua và quyền chọn bán** sang **16. Giá trị nội tại và giá trị thời gian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Phí quyền chọn
 
@@ -204,7 +204,7 @@ Premium là giá phải trả cho payoff không đối xứng. Người mua cầ
 - chi phí vay;
 - hình dạng bề mặt biến động.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **16. Giá trị nội tại và giá trị thời gian** tiếp nhận điểm tựa từ **15. Phí quyền chọn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Độ gần tiền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **16. Giá trị nội tại và giá trị thời gian** nối từ **15. Phí quyền chọn** sang **17. Độ gần tiền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Giá trị nội tại và giá trị thời gian
 
@@ -218,7 +218,7 @@ Giá quyền chọn
 
 Giá trị thời gian thường giảm khi đáo hạn tới gần nhưng tốc độ giảm không tuyến tính.
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **17. Độ gần tiền** tiếp nhận điểm tựa từ **16. Giá trị nội tại và giá trị thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Delta** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **17. Độ gần tiền** nối từ **16. Giá trị nội tại và giá trị thời gian** sang **18. Delta**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Độ gần tiền
 
@@ -234,13 +234,13 @@ Moneyness đặt option vào quan hệ giữa spot và strike, từ đó quyết
 
 # Phần IV — Greeks
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **18. Delta** tiếp nhận điểm tựa từ **17. Độ gần tiền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Gamma** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **18. Delta** nối từ **17. Độ gần tiền** sang **19. Gamma**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Delta
 
 Delta đo độ nhạy của giá quyền chọn với thay đổi nhỏ của tài sản cơ sở. Delta không cố định; nó thay đổi theo giá, thời gian và biến động.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **19. Gamma** tiếp nhận điểm tựa từ **18. Delta** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Theta** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **19. Gamma** nối từ **18. Delta** sang **20. Theta**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Gamma
 
@@ -248,19 +248,19 @@ Gamma đo tốc độ Delta thay đổi khi giá cơ sở thay đổi.
 
 Mua quyền chọn thường Gamma dương; bán quyền chọn thường Gamma âm. Gamma âm có thể làm tổn thất tăng nhanh khi thị trường di chuyển mạnh.
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **20. Theta** tiếp nhận điểm tựa từ **19. Gamma** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Vega** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **20. Theta** nối từ **19. Gamma** sang **21. Vega**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Theta
 
 Theta mô tả hao mòn giá trị theo thời gian. Người mua quyền chọn thường trả chi phí thời gian; người bán thường thu Theta nhưng đổi lại chịu rủi ro Gamma và rủi ro đuôi.
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **21. Vega** tiếp nhận điểm tựa từ **20. Theta** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Rho** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **21. Vega** nối từ **20. Theta** sang **22. Rho**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Vega
 
 Vega đo độ nhạy với biến động hàm ý. Đúng hướng giá vẫn có thể lỗ nếu IV giảm đủ mạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **22. Rho** tiếp nhận điểm tựa từ **21. Vega** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. IV không phải dự báo chắc chắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **22. Rho** nối từ **21. Vega** sang **23. IV không phải dự báo chắc chắn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Rho
 
@@ -268,7 +268,7 @@ Rho đo độ nhạy với lãi suất. Với quyền chọn ngắn hạn tác �
 
 # Phần V — Biến động hàm ý
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **23. IV không phải dự báo chắc chắn** tiếp nhận điểm tựa từ **22. Rho** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Biến động thực hiện và biến động hàm ý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **23. IV không phải dự báo chắc chắn** nối từ **22. Rho** sang **24. Biến động thực hiện và biến động hàm ý**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. IV không phải dự báo chắc chắn
 
@@ -283,7 +283,7 @@ Nó phản ánh đồng thời:
 - cung cầu quyền chọn;
 - nhu cầu phòng vệ.
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **24. Biến động thực hiện và biến động hàm ý** tiếp nhận điểm tựa từ **23. IV không phải dự báo chắc chắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. IV giảm mạnh sau sự kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **24. Biến động thực hiện và biến động hàm ý** nối từ **23. IV không phải dự báo chắc chắn** sang **25. IV giảm mạnh sau sự kiện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Biến động thực hiện và biến động hàm ý
 
@@ -293,7 +293,7 @@ So sánh realized với implied giúp kiểm tra option đang đắt/rẻ tươn
 
 Nhiều chiến lược quyền chọn thực chất đặt cược vào khoảng cách giữa hai mức này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **25. IV giảm mạnh sau sự kiện** tiếp nhận điểm tựa từ **24. Biến động thực hiện và biến động hàm ý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Quyền chọn bán bảo vệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **25. IV giảm mạnh sau sự kiện** nối từ **24. Biến động thực hiện và biến động hàm ý** sang **26. Quyền chọn bán bảo vệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. IV giảm mạnh sau sự kiện
 
@@ -303,7 +303,7 @@ Do đó mua quyền chọn trước sự kiện cần đúng không chỉ hướ
 
 # Phần VI — Các cấu trúc quyền chọn cơ bản
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **26. Quyền chọn bán bảo vệ** tiếp nhận điểm tựa từ **25. IV giảm mạnh sau sự kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Covered lời gọi (call / 호출)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **26. Quyền chọn bán bảo vệ** nối từ **25. IV giảm mạnh sau sự kiện** sang **27. Covered lời gọi (call / 호출)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Quyền chọn bán bảo vệ
 
@@ -311,7 +311,7 @@ Protective put đổi một phần premium lấy giới hạn rủi ro giảm. C
 
 **Protective put** là nắm tài sản cơ sở và mua quyền chọn bán để giới hạn phần giảm dưới một vùng nhất định. Chi phí là phí quyền chọn lặp lại.
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **27. Covered lời gọi (call / 호출)** tiếp nhận điểm tựa từ **26. Quyền chọn bán bảo vệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Chênh lệch dọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **27. Covered lời gọi (call / 호출)** nối từ **26. Quyền chọn bán bảo vệ** sang **28. Chênh lệch dọc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Covered lời gọi (call / 호출)
 
@@ -319,7 +319,7 @@ Covered call tạo thu nhập premium bằng cách bán một phần upside và 
 
 **Covered call** là nắm tài sản cơ sở và bán quyền chọn mua. Nhà đầu tư thu phí nhưng đổi lại giới hạn một phần mức tăng và đang bán độ lồi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **28. Chênh lệch dọc** tiếp nhận điểm tựa từ **27. Covered lời gọi (call / 호출)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Collar** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **28. Chênh lệch dọc** nối từ **27. Covered lời gọi (call / 호출)** sang **29. Collar**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Chênh lệch dọc
 
@@ -327,7 +327,7 @@ Vertical spread dùng hai strike để đổi giới hạn chi phí lấy giới
 
 **Vertical spread** dùng hai quyền chọn cùng kỳ hạn nhưng khác giá thực hiện để giới hạn cả chi phí lẫn khoản chi trả.
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **29. Collar** tiếp nhận điểm tựa từ **28. Chênh lệch dọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Straddle và strangle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **29. Collar** nối từ **28. Chênh lệch dọc** sang **30. Straddle và strangle**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Collar
 
@@ -335,7 +335,7 @@ Collar kết hợp bảo vệ downside với việc bán upside để giảm chi
 
 **Collar** kết hợp tài sản cơ sở, quyền chọn bán và quyền chọn mua bán ra để giảm chi phí bảo vệ nhưng giới hạn phần tăng.
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **30. Straddle và strangle** tiếp nhận điểm tựa từ **29. Collar** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Bán quyền chọn không phải thu nhập đều đặn miễn phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **30. Straddle và strangle** nối từ **29. Collar** sang **31. Bán quyền chọn không phải thu nhập đều đặn miễn phí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Straddle và strangle
 
@@ -343,7 +343,7 @@ Hai cấu trúc này tập trung nhiều hơn vào độ lớn biến động th
 
 # Phần VII — Rủi ro bán quyền chọn
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **31. Bán quyền chọn không phải thu nhập đều đặn miễn phí** tiếp nhận điểm tựa từ **30. Straddle và strangle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Bán quyền chọn mua không có tài sản bảo đảm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **31. Bán quyền chọn không phải thu nhập đều đặn miễn phí** nối từ **30. Straddle và strangle** sang **32. Bán quyền chọn mua không có tài sản bảo đảm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Bán quyền chọn không phải thu nhập đều đặn miễn phí
 
@@ -354,7 +354,7 @@ Tỷ lệ thắng cao
 ≠ rủi ro thấp
 ```
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **32. Bán quyền chọn mua không có tài sản bảo đảm** tiếp nhận điểm tựa từ **31. Bán quyền chọn không phải thu nhập đều đặn miễn phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Bán quyền chọn bán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **32. Bán quyền chọn mua không có tài sản bảo đảm** nối từ **31. Bán quyền chọn không phải thu nhập đều đặn miễn phí** sang **33. Bán quyền chọn bán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Bán quyền chọn mua không có tài sản bảo đảm
 
@@ -362,7 +362,7 @@ Naked call tạo exposure short convexity với rủi ro tăng rất lớn. Trư
 
 **Naked call** có mức lỗ lý thuyết rất lớn khi tài sản cơ sở tăng mạnh.
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **33. Bán quyền chọn bán** tiếp nhận điểm tựa từ **32. Bán quyền chọn mua không có tài sản bảo đảm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Kiểu Mỹ và kiểu châu Âu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **33. Bán quyền chọn bán** nối từ **32. Bán quyền chọn mua không có tài sản bảo đảm** sang **34. Kiểu Mỹ và kiểu châu Âu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Bán quyền chọn bán
 
@@ -372,7 +372,7 @@ Short put gần với cam kết mua tài sản ở strike nếu giá giảm. Pre
 
 # Phần VIII — Thực hiện quyền và phân bổ nghĩa vụ
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **34. Kiểu Mỹ và kiểu châu Âu** tiếp nhận điểm tựa từ **33. Bán quyền chọn bán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Phân bổ nghĩa vụ thực hiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **34. Kiểu Mỹ và kiểu châu Âu** nối từ **33. Bán quyền chọn bán** sang **35. Phân bổ nghĩa vụ thực hiện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Kiểu Mỹ và kiểu châu Âu
 
@@ -380,7 +380,7 @@ Quyền chọn kiểu Mỹ có thể được thực hiện trước đáo hạn
 
 Tên gọi này mô tả kiểu thực hiện quyền, không phải vị trí địa lý của thị trường.
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **35. Phân bổ nghĩa vụ thực hiện** tiếp nhận điểm tựa từ **34. Kiểu Mỹ và kiểu châu Âu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Rủi ro pin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **35. Phân bổ nghĩa vụ thực hiện** nối từ **34. Kiểu Mỹ và kiểu châu Âu** sang **36. Rủi ro pin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Phân bổ nghĩa vụ thực hiện
 
@@ -388,7 +388,7 @@ Người bán quyền chọn có thể bị **phân bổ thực hiện (assignme
 
 Cần hiểu tác động lên vị thế tài sản cơ sở, tiền mặt và ký quỹ.
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **36. Rủi ro pin** tiếp nhận điểm tựa từ **35. Phân bổ nghĩa vụ thực hiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Hoán đổi lãi suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **36. Rủi ro pin** nối từ **35. Phân bổ nghĩa vụ thực hiện** sang **37. Hoán đổi lãi suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Rủi ro pin
 
@@ -396,7 +396,7 @@ Gần đáo hạn, giá cơ sở quanh giá thực hiện có thể làm trạng
 
 # Phần IX — Hoán đổi
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **37. Hoán đổi lãi suất** tiếp nhận điểm tựa từ **36. Rủi ro pin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. OIS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **37. Hoán đổi lãi suất** nối từ **36. Rủi ro pin** sang **38. OIS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Hoán đổi lãi suất
 
@@ -406,7 +406,7 @@ Interest-rate swap tách rủi ro lãi suất khỏi tài sản cơ sở bằng 
 
 Nó cho phép thay đổi mức phơi nhiễm lãi suất mà không cần mua bán toàn bộ danh mục trái phiếu.
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **38. OIS** tiếp nhận điểm tựa từ **37. Hoán đổi lãi suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Hoán đổi chéo tiền tệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **38. OIS** nối từ **37. Hoán đổi lãi suất** sang **39. Hoán đổi chéo tiền tệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. OIS
 
@@ -414,7 +414,7 @@ OIS dùng lãi suất qua đêm để phản ánh đường đi policy và disco
 
 **Hoán đổi chỉ số qua đêm (Overnight Index Swap, OIS)** dùng lãi suất qua đêm làm tham chiếu và thường được dùng để suy ra đường đi lãi suất chính sách kỳ vọng.
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **39. Hoán đổi chéo tiền tệ** tiếp nhận điểm tựa từ **38. OIS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Hoán đổi tổng lợi suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **39. Hoán đổi chéo tiền tệ** nối từ **38. OIS** sang **40. Hoán đổi tổng lợi suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Hoán đổi chéo tiền tệ
 
@@ -424,7 +424,7 @@ Cross-currency swap kết hợp rủi ro lãi suất với rủi ro FX và fundi
 
 Nó liên quan chi phí nguồn vốn và cơ sở hoán đổi tiền tệ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **40. Hoán đổi tổng lợi suất** tiếp nhận điểm tựa từ **39. Hoán đổi chéo tiền tệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. CDS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **40. Hoán đổi tổng lợi suất** nối từ **39. Hoán đổi chéo tiền tệ** sang **41. CDS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Hoán đổi tổng lợi suất
 
@@ -436,7 +436,7 @@ Cấu trúc này tạo rủi ro đối tác và rủi ro tài sản bảo đảm
 
 # Phần X — Phái sinh tín dụng
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **41. CDS** tiếp nhận điểm tựa từ **40. Hoán đổi tổng lợi suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Chỉ số tín dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **41. CDS** nối từ **40. Hoán đổi tổng lợi suất** sang **42. Chỉ số tín dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. CDS
 
@@ -448,7 +448,7 @@ Người mua bảo vệ trả phí; người bán bảo vệ bồi thường n�
 
 Chênh lệch CDS không phải xác suất vỡ nợ thuần túy vì còn phản ánh giả định thu hồi, thanh khoản và phần bù rủi ro.
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **42. Chỉ số tín dụng** tiếp nhận điểm tựa từ **41. CDS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Hoán đổi phương sai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **42. Chỉ số tín dụng** nối từ **41. CDS** sang **43. Hoán đổi phương sai**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Chỉ số tín dụng
 
@@ -456,7 +456,7 @@ CDX, iTraxx và chỉ số tương tự gom nhiều tên tín dụng để giao 
 
 # Phần XI — Phái sinh biến động
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **43. Hoán đổi phương sai** tiếp nhận điểm tựa từ **42. Chỉ số tín dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. CFD là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **43. Hoán đổi phương sai** nối từ **42. Chỉ số tín dụng** sang **44. CFD là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. Hoán đổi phương sai
 
@@ -468,7 +468,7 @@ Variance swap tạo exposure trực tiếp với realized variance, nên payoff 
 
 # Phần XII — CFD
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **44. CFD là gì?** tiếp nhận điểm tựa từ **43. Hoán đổi phương sai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. Chi phí tài trợ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **44. CFD là gì?** nối từ **43. Hoán đổi phương sai** sang **45. Chi phí tài trợ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. CFD là gì?
 
@@ -478,13 +478,13 @@ CFD là hợp đồng song phương nên kết quả phụ thuộc giá cơ sở
 
 Nhà giao dịch thường không sở hữu tài sản cơ sở.
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **45. Chi phí tài trợ** tiếp nhận điểm tựa từ **44. CFD là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. Rủi ro đối tác với nhà môi giới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **45. Chi phí tài trợ** nối từ **44. CFD là gì?** sang **46. Rủi ro đối tác với nhà môi giới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. Chi phí tài trợ
 
 Vị thế CFD giữ qua đêm có thể chịu phí tài trợ. Chi phí này có thể làm chiến lược dài hạn kém hiệu quả dù hướng giá đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **46. Rủi ro đối tác với nhà môi giới** tiếp nhận điểm tựa từ **45. Chi phí tài trợ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **47. CFD và futures trên sở không giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **46. Rủi ro đối tác với nhà môi giới** nối từ **45. Chi phí tài trợ** sang **47. CFD và futures trên sở không giống nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 46. Rủi ro đối tác với nhà môi giới
 
@@ -497,7 +497,7 @@ Cần hiểu:
 - mức đóng cưỡng bức;
 - bảo vệ số dư âm nếu có.
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **47. CFD và futures trên sở không giống nhau** tiếp nhận điểm tựa từ **46. Rủi ro đối tác với nhà môi giới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **48. Tài sản bảo đảm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **47. CFD và futures trên sở không giống nhau** nối từ **46. Rủi ro đối tác với nhà môi giới** sang **48. Tài sản bảo đảm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. CFD và futures trên sở không giống nhau
 
@@ -507,7 +507,7 @@ Hai sản phẩm cùng theo vàng có thể có rủi ro pháp lý và cấu tr�
 
 # Phần XIII — Tài sản bảo đảm và rủi ro đối tác
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **48. Tài sản bảo đảm** tiếp nhận điểm tựa từ **47. CFD và futures trên sở không giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **49. Bù trừ nghĩa vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **48. Tài sản bảo đảm** nối từ **47. CFD và futures trên sở không giống nhau** sang **49. Bù trừ nghĩa vụ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. Tài sản bảo đảm
 
@@ -515,7 +515,7 @@ Phái sinh có thể yêu cầu tiền mặt hoặc chứng khoán làm **tài s
 
 Yêu cầu tài sản bảo đảm tăng trong căng thẳng có thể buộc nhà đầu tư bán tài sản khác để lấy tiền.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **49. Bù trừ nghĩa vụ** tiếp nhận điểm tựa từ **48. Tài sản bảo đảm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **50. Rủi ro sai chiều đối tác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **49. Bù trừ nghĩa vụ** nối từ **48. Tài sản bảo đảm** sang **50. Rủi ro sai chiều đối tác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. Bù trừ nghĩa vụ
 
@@ -525,7 +525,7 @@ Netting giảm gross exposure giữa nhiều giao dịch khi điều khoản ph�
 
 Khả năng giảm rủi ro phụ thuộc hiệu lực pháp lý của thỏa thuận.
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **50. Rủi ro sai chiều đối tác** tiếp nhận điểm tựa từ **49. Bù trừ nghĩa vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **51. Công cụ phòng vệ phải khớp loại rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **50. Rủi ro sai chiều đối tác** nối từ **49. Bù trừ nghĩa vụ** sang **51. Công cụ phòng vệ phải khớp loại rủi ro**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 50. Rủi ro sai chiều đối tác
 
@@ -537,7 +537,7 @@ Ví dụ dùng một đối tác có sức khỏe phụ thuộc cùng loại tí
 
 # Phần XIV — Tỷ lệ phòng vệ
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **51. Công cụ phòng vệ phải khớp loại rủi ro** tiếp nhận điểm tựa từ **50. Rủi ro sai chiều đối tác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **52. Không phòng vệ chỉ theo giá trị danh nghĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **51. Công cụ phòng vệ phải khớp loại rủi ro** nối từ **50. Rủi ro sai chiều đối tác** sang **52. Không phòng vệ chỉ theo giá trị danh nghĩa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 51. Công cụ phòng vệ phải khớp loại rủi ro
 
@@ -559,7 +559,7 @@ Rủi ro đuôi
 
 Chọn công cụ không khớp tạo **rủi ro cơ sở (basis risk)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **52. Không phòng vệ chỉ theo giá trị danh nghĩa** tiếp nhận điểm tựa từ **51. Công cụ phòng vệ phải khớp loại rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **53. Lịch hợp đồng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **52. Không phòng vệ chỉ theo giá trị danh nghĩa** nối từ **51. Công cụ phòng vệ phải khớp loại rủi ro** sang **53. Lịch hợp đồng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 52. Không phòng vệ chỉ theo giá trị danh nghĩa
 
@@ -569,7 +569,7 @@ Tỷ lệ phòng vệ nên dựa trên độ nhạy phù hợp như DV01, beta, 
 
 # Phần XV — Quản lý đáo hạn và chuyển kỳ hạn
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **53. Lịch hợp đồng** tiếp nhận điểm tựa từ **52. Không phòng vệ chỉ theo giá trị danh nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **54. Dịch chuyển thanh khoản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **53. Lịch hợp đồng** nối từ **52. Không phòng vệ chỉ theo giá trị danh nghĩa** sang **54. Dịch chuyển thanh khoản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 53. Lịch hợp đồng
 
@@ -581,7 +581,7 @@ Nhà giao dịch phái sinh phải theo dõi:
 - ngày đáo hạn quyền chọn;
 - thời điểm thanh khoản chuyển sang hợp đồng kế tiếp.
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **54. Dịch chuyển thanh khoản** tiếp nhận điểm tựa từ **53. Lịch hợp đồng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **55. Không nhìn từng vị thế riêng lẻ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **54. Dịch chuyển thanh khoản** nối từ **53. Lịch hợp đồng** sang **55. Không nhìn từng vị thế riêng lẻ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 54. Dịch chuyển thanh khoản
 
@@ -589,7 +589,7 @@ Khối lượng thường chuyển từ hợp đồng gần sang hợp đồng k
 
 # Phần XVI — Rủi ro tổng hợp ở cấp danh mục
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **55. Không nhìn từng vị thế riêng lẻ** tiếp nhận điểm tựa từ **54. Dịch chuyển thanh khoản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **56. Lãi/lỗ và ký quỹ phải được kiểm thử cùng nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **55. Không nhìn từng vị thế riêng lẻ** nối từ **54. Dịch chuyển thanh khoản** sang **56. Lãi/lỗ và ký quỹ phải được kiểm thử cùng nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. Không nhìn từng vị thế riêng lẻ
 
@@ -604,7 +604,7 @@ Một danh mục có thể gồm quyền chọn mua, quyền chọn bán, future
 - ký quỹ;
 - rủi ro đối tác.
 
-> **Chuyển mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **56. Lãi/lỗ và ký quỹ phải được kiểm thử cùng nhau** tiếp nhận điểm tựa từ **55. Không nhìn từng vị thế riêng lẻ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **57. Phân rã lãi/lỗ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **56. Lãi/lỗ và ký quỹ phải được kiểm thử cùng nhau** nối từ **55. Không nhìn từng vị thế riêng lẻ** sang **57. Phân rã lãi/lỗ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 56. Lãi/lỗ và ký quỹ phải được kiểm thử cùng nhau
 
@@ -620,7 +620,7 @@ Có đủ tiền mặt để duy trì vị thế không?
 
 Một vị thế có lợi nhuận kỳ vọng dương vẫn có thể bị đóng cưỡng bức nếu thiếu thanh khoản giữa đường.
 
-> **Chuyển mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **57. Phân rã lãi/lỗ** tiếp nhận điểm tựa từ **56. Lãi/lỗ và ký quỹ phải được kiểm thử cùng nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **57. Phân rã lãi/lỗ** nối từ **56. Lãi/lỗ và ký quỹ phải được kiểm thử cùng nhau** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 57. Phân rã lãi/lỗ
 
@@ -640,7 +640,7 @@ Chi phí giao dịch
 
 Việc phân rã giúp biết luận điểm đúng nhưng triển khai sai ở đâu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **Kết luận** gom các mảnh từ **57. Phân rã lãi/lỗ** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phái sinh: hợp đồng tương lai, quyền chọn, hoán đổi và CFD**, **Kết luận** tổng hợp từ **57. Phân rã lãi/lỗ** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

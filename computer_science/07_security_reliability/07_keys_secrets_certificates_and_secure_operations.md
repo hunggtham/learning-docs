@@ -10,7 +10,7 @@ Cơ sở dữ liệu (database / 데이터베이스) password, API đơn vị t�
 
 “môi trường (environment / 환경) variable” chỉ là vận chuyển (transport / 전송) cơ chế (mechanism / 메커니즘), không tự động là secret manager. tiến trình (process / 프로세스) môi trường (environment / 환경) có thể bị logs/gỡ lỗi (debug / 디버그) dumps/child processes expose tùy nền tảng (platform / 플랫폼).
 
-> **Chuyển mạch:** Secret có giá trị bảo mật khác config thường; key lifecycle bao gồm tạo, phân phối, rotation và thu hồi, còn envelope encryption tách data key khỏi key mã hóa chủ.
+> **Nối mạch:** Secret có giá trị bảo mật khác config thường; key lifecycle bao gồm tạo, phân phối, rotation và thu hồi, còn envelope encryption tách data key khỏi key mã hóa chủ.
 
 ## Key vòng đời (lifecycle / 생명주기)
 
@@ -18,7 +18,7 @@ Cryptographic key nên có purpose rõ: signing, encryption, MAC, key-encryption
 
 Vòng đời (lifecycle / 생명주기) gồm generation bằng CSPRNG, secure lưu trữ (storage / 저장소), limited use, rotation, archival nếu cần decrypt historical dữ liệu (data / 데이터), và destruction/revocation.
 
-> **Chuyển mạch:** Ở chặng này của **Keys, secrets, certificates và secure operations**, **Key vòng đời (lifecycle / 생명주기)** xác định đầu vào; **Envelope encryption** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **HSM và KMS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Key vòng đời (lifecycle / 생명주기)** đặt đầu vào cho **Envelope encryption**, rồi **HSM và KMS** mở rộng hệ quả.
 
 ## Envelope encryption
 
@@ -26,7 +26,7 @@ Thay vì dùng master key encrypt mọi dữ liệu (data / 데이터) trực ti
 
 Điều này giúp rotate KEK mà không re-encrypt toàn bộ dataset và giới hạn direct exposure của master keys.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Keys, secrets, certificates và secure operations**, **HSM và KMS** tiếp nhận điểm tựa từ **Envelope encryption** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Certificates và PKI operations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **HSM và KMS** nối từ **Envelope encryption** sang **Certificates và PKI operations**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## HSM và KMS
 
@@ -34,7 +34,7 @@ Hardware bảo mật (security / 보안) mô-đun (module / 모듈) giữ key ma
 
 Chúng giảm key-handling burden nhưng không sửa overly broad IAM permissions.
 
-> **Chuyển mạch:** Trong **Keys, secrets, certificates và secure operations**, **Certificates và PKI operations** tiếp nhận điểm tựa từ **HSM và KMS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Secret rotation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Certificates và PKI operations** nối từ **HSM và KMS** sang **Secret rotation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Certificates và PKI operations
 
@@ -44,7 +44,7 @@ Automation như ACME giảm manual renewal rủi ro (risk / 위험). Certificate
 
 Revocation mechanisms như CRL/OCSP có operational limitations; hiện đại (modern / 현대적) ecosystems dùng short-lived certs và trình duyệt (browser / 브라우저)/vendor mechanisms bổ sung.
 
-> **Chuyển mạch:** Ở chặng này của **Keys, secrets, certificates và secure operations**, **Secret rotation** tiếp nhận điểm tựa từ **Certificates và PKI operations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Break-glass truy cập (access / 접근)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Secret rotation** nối từ **Certificates và PKI operations** sang **Break-glass truy cập (access / 접근)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Secret rotation
 
@@ -54,7 +54,7 @@ Nếu rotate cơ sở dữ liệu (database / 데이터베이스) password ngay 
 
 Rotation là phân tán (distributed / 분산) chuyển tiếp trạng thái (state transition / 상태 전이), không phải replace one string atomically.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Keys, secrets, certificates và secure operations**, **Break-glass truy cập (access / 접근)** tiếp nhận điểm tựa từ **Secret rotation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Logging và redaction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Break-glass truy cập (access / 접근)** nối từ **Secret rotation** sang **Logging và redaction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Break-glass truy cập (access / 접근)
 
@@ -62,7 +62,7 @@ Emergency truy cập (access / 접근) đôi khi cần quyền mạnh tạm th�
 
 Least privilege phải cân bằng recoverability; hệ thống (system / 시스템) không thể “an toàn” nếu sự cố khiến không ai có thể khôi phục hợp lệ.
 
-> **Chuyển mạch:** Trong **Keys, secrets, certificates và secure operations**, **Logging và redaction** tiếp nhận điểm tựa từ **Break-glass truy cập (access / 접근)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Logging và redaction** nối từ **Break-glass truy cập (access / 접근)** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Logging và redaction
 
@@ -70,7 +70,7 @@ Logs thường vô tình biến thành secret store: Authorization headers, toke
 
 Bảo mật (security / 보안) telemetry phải đủ điều tra mà không tạo thêm disclosure surface.
 
-> **Chuyển mạch:** Ở chặng này của **Keys, secrets, certificates và secure operations**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Logging và redaction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Logging và redaction** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -80,13 +80,13 @@ Bảo mật (security / 보안) telemetry phải đủ điều tra mà không t�
 
 **“Certificate công khai (public / 공개) nên private key cũng chỉ là tệp (file / 파일) cấu hình (config / 설정).”** Private key là trust anchor material; compromise cho phép impersonation/signing tùy use.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Keys, secrets, certificates và secure operations**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Crypto thành phần nguyên thủy (primitive / 기본 요소) bảo vệ bits; key management bảo vệ quyền sử dụng thành phần nguyên thủy (primitive / 기본 요소). Hãy lập luận (reasoning / 추론) toàn vòng đời (lifecycle / 생명주기), không chỉ encryption lời gọi (call / 호출).
 
-> **Chuyển mạch:** Trong **Keys, secrets, certificates và secure operations**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

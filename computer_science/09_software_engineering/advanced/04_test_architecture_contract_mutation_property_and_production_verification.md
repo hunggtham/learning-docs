@@ -22,7 +22,7 @@ principal không truy cập resource ngoài policy
 
 Nếu oracle yếu, kiểm thử (test / 테스트) có thể chạy đúng đường dẫn (path / 경로) nhưng không phát hiện bug. Đây là lý do mã (code / 코드) coverage cao không tự tạo confidence cao.
 
-> **Chuyển mạch:** Test case cần oracle mạnh; unit tests dễ couple implementation, còn contract/property/mutation tests mở rộng bằng chứng tới boundary, behavior và production-like invariants.
+> **Nối mạch:** Test case cần oracle mạnh; unit tests dễ couple implementation, còn contract/property/mutation tests mở rộng bằng chứng tới boundary, behavior và production-like invariants.
 
 ## 2. đơn vị (unit / 단위) kiểm thử (test / 테스트) và hiện thực (implementation / 구현) coupling
 
@@ -32,7 +32,7 @@ Mock mọi phụ thuộc (dependency / 의존성) có thể tạo “green tests
 
 Mock hữu ích khi cần kiểm soát rare lỗi (error / 오류) hoặc tách pure lô-gic (logic / 논리) khỏi expensive phụ thuộc (dependency / 의존성). Nhưng nếu kiểm thử (test / 테스트) bắt đầu mô phỏng giao thức (protocol / 프로토콜), giao dịch (transaction / 트랜잭션) hoặc mạng (network / 네트워크) hành vi (behavior / 동작) bằng hàng chục expectations thủ công, fake world có thể khác môi trường vận hành (production / 운영 환경) world nhiều hơn nhóm (team / 팀) tưởng.
 
-> **Chuyển mạch:** Ở chặng này của **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **2. đơn vị (unit / 단위) kiểm thử (test / 테스트) và hiện thực (implementation / 구현) coupling** đã nêu tiêu chí phân biệt, còn **3. đặc tả hợp đồng (contract / 계약) testing kiểm tra agreement tại ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4. Property-based testing biến yêu cầu (requirement / 요구사항) thành bất biến (invariant / 불변식) tổng quát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. đơn vị (unit / 단위) kiểm thử (test / 테스트) và hiện thực (implementation / 구현) coupling** đặt tiêu chí; **3. đặc tả hợp đồng (contract / 계약) testing kiểm tra agreement tại ranh giới (boundary / 경계)** dùng nó để kiểm tra ranh giới, rồi **4. Property-based testing biến yêu cầu (requirement / 요구사항) thành bất biến (invariant / 불변식) tổng quát** mở rộng hệ quả.
 
 ## 3. đặc tả hợp đồng (contract / 계약) testing kiểm tra agreement tại ranh giới (boundary / 경계)
 
@@ -44,7 +44,7 @@ Consumer-driven đặc tả hợp đồng (contract / 계약) hữu ích khi pro
 
 Nếu lược đồ (schema / 스키마) vẫn parse nhưng ngữ nghĩa (semantics / 의미론) đổi từ “missing means zero” thành “missing means unknown”, structural đặc tả hợp đồng (contract / 계약) có thể xanh trong khi nghiệp vụ (business / 비즈니스) đặc tả hợp đồng (contract / 계약) đã vỡ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **3. đặc tả hợp đồng (contract / 계약) testing kiểm tra agreement tại ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **4. Property-based testing biến yêu cầu (requirement / 요구사항) thành bất biến (invariant / 불변식) tổng quát** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **5. Metamorphic testing hữu ích khi không biết chính xác (exact / 정확한) expected đầu ra (output / 출력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. đặc tả hợp đồng (contract / 계약) testing kiểm tra agreement tại ranh giới (boundary / 경계)** đặt tiêu chí; **4. Property-based testing biến yêu cầu (requirement / 요구사항) thành bất biến (invariant / 불변식) tổng quát** dùng nó để kiểm tra ranh giới, rồi **5. Metamorphic testing hữu ích khi không biết chính xác (exact / 정확한) expected đầu ra (output / 출력)** mở rộng hệ quả.
 
 ## 4. Property-based testing biến yêu cầu (requirement / 요구사항) thành bất biến (invariant / 불변식) tổng quát
 
@@ -60,7 +60,7 @@ decode(encode(x)) ≈ x
 
 Dấu `≈` quan trọng: floating điểm (point / 지점), unordered maps hoặc canonicalization có thể làm chính xác (exact / 정확한) byte equality không phải bất biến (invariant / 불변식) đúng. kiểm thử (test / 테스트) tốt phải phát biểu ngữ nghĩa (semantic / 의미적) equivalence đúng với lĩnh vực (domain / 도메인).
 
-> **Chuyển mạch:** Trong **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **5. Metamorphic testing hữu ích khi không biết chính xác (exact / 정확한) expected đầu ra (output / 출력)** tiếp nhận điểm tựa từ **4. Property-based testing biến yêu cầu (requirement / 요구사항) thành bất biến (invariant / 불변식) tổng quát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Mutation testing đo sức mạnh của assertion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Metamorphic testing hữu ích khi không biết chính xác (exact / 정확한) expected đầu ra (output / 출력)** nối từ **4. Property-based testing biến yêu cầu (requirement / 요구사항) thành bất biến (invariant / 불변식) tổng quát** sang **6. Mutation testing đo sức mạnh của assertion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Metamorphic testing hữu ích khi không biết chính xác (exact / 정확한) expected đầu ra (output / 출력)
 
@@ -70,7 +70,7 @@ Nếu quy mô (scale / 규모) toàn bộ đơn vị đo theo cùng factor, ho�
 
 Metamorphic testing không thay lĩnh vực (domain / 도메인) oracle, nhưng giúp kiểm tra consistency khi expected answer quá đắt hoặc khó tính trước.
 
-> **Chuyển mạch:** Ở chặng này của **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **6. Mutation testing đo sức mạnh của assertion** tiếp nhận điểm tựa từ **5. Metamorphic testing hữu ích khi không biết chính xác (exact / 정확한) expected đầu ra (output / 출력)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. kiểm thử tích hợp (integration test / 통합 테스트) cần real ngữ nghĩa (semantics / 의미론) ở nơi mock nguy hiểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Mutation testing đo sức mạnh của assertion** nối từ **5. Metamorphic testing hữu ích khi không biết chính xác (exact / 정확한) expected đầu ra (output / 출력)** sang **7. kiểm thử tích hợp (integration test / 통합 테스트) cần real ngữ nghĩa (semantics / 의미론) ở nơi mock nguy hiểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Mutation testing đo sức mạnh của assertion
 
@@ -80,7 +80,7 @@ Mutation sống sót có thể chỉ ra assertion yếu, unreachable hành vi (b
 
 Mutation score cũng không nên thành KPI tuyệt đối. Nếu nhóm (team / 팀) viết assertions vô nghĩa chỉ để “kill mutant”, chỉ số (metric / 지표) bắt đầu bị Goodhart hóa thay vì tăng tính đúng đắn (correctness / 정확성) bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **7. kiểm thử tích hợp (integration test / 통합 테스트) cần real ngữ nghĩa (semantics / 의미론) ở nơi mock nguy hiểm** tiếp nhận điểm tựa từ **6. Mutation testing đo sức mạnh của assertion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. tính đồng thời (concurrency / 동시성) testing không thể thay proof bằng “chạy nhiều lần”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. kiểm thử tích hợp (integration test / 통합 테스트) cần real ngữ nghĩa (semantics / 의미론) ở nơi mock nguy hiểm** nối từ **6. Mutation testing đo sức mạnh của assertion** sang **8. tính đồng thời (concurrency / 동시성) testing không thể thay proof bằng “chạy nhiều lần”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. kiểm thử tích hợp (integration test / 통합 테스트) cần real ngữ nghĩa (semantics / 의미론) ở nơi mock nguy hiểm
 
@@ -90,7 +90,7 @@ Cơ sở dữ liệu (database / 데이터베이스), broker, filesystem, TLS v�
 
 Kiểm thử (test / 테스트) pyramid vì vậy không nên được hiểu là luật hình học cố định; phân phối (distribution / 분포) phụ thuộc hệ thống (system / 시스템) boundaries, chi phí (cost / 비용) of thất bại (failure / 실패) và tốc độ phản hồi (feedback / 피드백).
 
-> **Chuyển mạch:** Trong **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **8. tính đồng thời (concurrency / 동시성) testing không thể thay proof bằng “chạy nhiều lần”** tiếp nhận điểm tựa từ **7. kiểm thử tích hợp (integration test / 통합 테스트) cần real ngữ nghĩa (semantics / 의미론) ở nơi mock nguy hiểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. thất bại (failure / 실패) injection kiểm tra đặc tả hợp đồng (contract / 계약) khi lower tầng (layer / 계층) không còn happy đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. tính đồng thời (concurrency / 동시성) testing không thể thay proof bằng “chạy nhiều lần”** nối từ **7. kiểm thử tích hợp (integration test / 통합 테스트) cần real ngữ nghĩa (semantics / 의미론) ở nơi mock nguy hiểm** sang **9. thất bại (failure / 실패) injection kiểm tra đặc tả hợp đồng (contract / 계약) khi lower tầng (layer / 계층) không còn happy đường dẫn (path / 경로)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. tính đồng thời (concurrency / 동시성) testing không thể thay proof bằng “chạy nhiều lần”
 
@@ -102,7 +102,7 @@ Nếu bug biến mất khi thêm logging/sleep, đó có thể là Heisenbug vì
 
 Tính đúng đắn (correctness / 정확성) lập luận (reasoning / 추론) vẫn phải quay về happens-before/quyền sở hữu (ownership / 소유권). Xem [đường correctness CPU → language memory model](../../90_connections/advanced/02_correctness_path_language_os_cpu_memory_ordering.md).
 
-> **Chuyển mạch:** Ở chặng này của **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **8. tính đồng thời (concurrency / 동시성) testing không thể thay proof bằng “chạy nhiều lần”** xác định đầu vào; **9. thất bại (failure / 실패) injection kiểm tra đặc tả hợp đồng (contract / 계약) khi lower tầng (layer / 계층) không còn happy đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Crash consistency cần kiểm thử (test / 테스트) interruption points, không chỉ restart** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. tính đồng thời (concurrency / 동시성) testing không thể thay proof bằng “chạy nhiều lần”** đặt đầu vào cho **9. thất bại (failure / 실패) injection kiểm tra đặc tả hợp đồng (contract / 계약) khi lower tầng (layer / 계층) không còn happy đường dẫn (path / 경로)**, rồi **10. Crash consistency cần kiểm thử (test / 테스트) interruption points, không chỉ restart** mở rộng hệ quả.
 
 ## 9. thất bại (failure / 실패) injection kiểm tra đặc tả hợp đồng (contract / 계약) khi lower tầng (layer / 계층) không còn happy đường dẫn (path / 경로)
 
@@ -123,7 +123,7 @@ evidence nào chứng minh recovery thành công?
 
 Nếu kiểm thử (test / 테스트) chỉ kiểm tra dịch vụ (service / 서비스) “không crash” mà không kiểm tra trạng thái (state / 상태) sau khôi phục (recovery / 복구), oracle vẫn quá yếu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **9. thất bại (failure / 실패) injection kiểm tra đặc tả hợp đồng (contract / 계약) khi lower tầng (layer / 계층) không còn happy đường dẫn (path / 경로)** xác định đầu vào; **10. Crash consistency cần kiểm thử (test / 테스트) interruption points, không chỉ restart** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. mạng (network / 네트워크) fault không chỉ là disconnect** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. thất bại (failure / 실패) injection kiểm tra đặc tả hợp đồng (contract / 계약) khi lower tầng (layer / 계층) không còn happy đường dẫn (path / 경로)** đặt đầu vào cho **10. Crash consistency cần kiểm thử (test / 테스트) interruption points, không chỉ restart**, rồi **11. mạng (network / 네트워크) fault không chỉ là disconnect** mở rộng hệ quả.
 
 ## 10. Crash consistency cần kiểm thử (test / 테스트) interruption points, không chỉ restart
 
@@ -140,7 +140,7 @@ Sau restart phải kiểm tra committed trạng thái (state / 상태), uncommit
 
 Đây là lý do cơ sở dữ liệu (database / 데이터베이스)/filesystem testing cần state-machine lập luận (reasoning / 추론) thay vì chỉ “restart xong app lên được”. Đọc [Durability path](../../90_connections/advanced/03_durability_path_application_commit_wal_filesystem_device.md).
 
-> **Chuyển mạch:** Trong **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **11. mạng (network / 네트워크) fault không chỉ là disconnect** tiếp nhận điểm tựa từ **10. Crash consistency cần kiểm thử (test / 테스트) interruption points, không chỉ restart** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Chaos kỹ thuật (engineering / 엔지니어링) là experiment trên bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. mạng (network / 네트워크) fault không chỉ là disconnect** nối từ **10. Crash consistency cần kiểm thử (test / 테스트) interruption points, không chỉ restart** sang **12. Chaos kỹ thuật (engineering / 엔지니어링) là experiment trên bất biến (invariant / 불변식)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. mạng (network / 네트워크) fault không chỉ là disconnect
 
@@ -150,7 +150,7 @@ Máy khách (client / 클라이언트) có thể gửi yêu cầu (request / 요
 
 Độ trễ (latency / 지연 시간) injection cũng cần cẩn thận. Fixed 500 ms cho mọi yêu cầu (request / 요청) tạo tải công việc (workload / 워크로드) khác môi trường vận hành (production / 운영 환경) burst/tail phân phối (distribution / 분포). Delay phân phối (distribution / 분포), packet mất mát (loss / 손실) và partial phụ thuộc (dependency / 의존성) slowdown thường cho bằng chứng (evidence / 증거) thực tế hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **12. Chaos kỹ thuật (engineering / 엔지니어링) là experiment trên bất biến (invariant / 불변식)** tiếp nhận điểm tựa từ **11. mạng (network / 네트워크) fault không chỉ là disconnect** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. bảo mật (security / 보안) testing cần kiểm tra authorization quyết định (decision / 결정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Chaos kỹ thuật (engineering / 엔지니어링) là experiment trên bất biến (invariant / 불변식)** nối từ **11. mạng (network / 네트워크) fault không chỉ là disconnect** sang **13. bảo mật (security / 보안) testing cần kiểm tra authorization quyết định (decision / 결정)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Chaos kỹ thuật (engineering / 엔지니어링) là experiment trên bất biến (invariant / 불변식)
 
@@ -168,7 +168,7 @@ Blast radius phải phù hợp maturity. Early-stage hệ thống (system / 시�
 
 Chaos kiểm thử (test / 테스트) có giá trị khi nó tìm giả định (assumption / 가정) ẩn: failover chậm hơn ngân sách thời gian chờ (timeout budget / 타임아웃 예산), thử lại (retry / 재시도) storm, certificate issuer là single điểm (point / 지점) of thất bại (failure / 실패), hoặc autoscaler không kịp phản ứng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **13. bảo mật (security / 보안) testing cần kiểm tra authorization quyết định (decision / 결정)** tiếp nhận điểm tựa từ **12. Chaos kỹ thuật (engineering / 엔지니어링) là experiment trên bất biến (invariant / 불변식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Differential testing dùng hiện thực (implementation / 구현) khác làm bằng chứng (evidence / 증거) so sánh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. bảo mật (security / 보안) testing cần kiểm tra authorization quyết định (decision / 결정)** nối từ **12. Chaos kỹ thuật (engineering / 엔지니어링) là experiment trên bất biến (invariant / 불변식)** sang **14. Differential testing dùng hiện thực (implementation / 구현) khác làm bằng chứng (evidence / 증거) so sánh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. bảo mật (security / 보안) testing cần kiểm tra authorization quyết định (decision / 결정)
 
@@ -180,7 +180,7 @@ Fuzzing parser/giao thức (protocol / 프로토콜) đặc biệt có giá tr�
 
 Đọc [Security boundaries và attack chains](../../07_security_reliability/advanced/00_security_boundaries_attack_chains_and_exploitability.md).
 
-> **Chuyển mạch:** Trong **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **13. bảo mật (security / 보안) testing cần kiểm tra authorization quyết định (decision / 결정)** đã nêu tiêu chí phân biệt, còn **14. Differential testing dùng hiện thực (implementation / 구현) khác làm bằng chứng (evidence / 증거) so sánh** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **15. môi trường vận hành (production / 운영 환경) xác minh (verification / 확인) kiểm tra các giả định (assumptions / 가정들) chỉ môi trường vận hành (production / 운영 환경) mới có** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. bảo mật (security / 보안) testing cần kiểm tra authorization quyết định (decision / 결정)** đặt tiêu chí; **14. Differential testing dùng hiện thực (implementation / 구현) khác làm bằng chứng (evidence / 증거) so sánh** dùng nó để kiểm tra ranh giới, rồi **15. môi trường vận hành (production / 운영 환경) xác minh (verification / 확인) kiểm tra các giả định (assumptions / 가정들) chỉ môi trường vận hành (production / 운영 환경) mới có** mở rộng hệ quả.
 
 ## 14. Differential testing dùng hiện thực (implementation / 구현) khác làm bằng chứng (evidence / 증거) so sánh
 
@@ -190,7 +190,7 @@ Divergence không tự chứng minh bên nào sai; specification có thể cho p
 
 Shadow traffic trong di chuyển (migration / 마이그레이션) là một biến thể môi trường vận hành (production / 운영 환경) của differential testing: old/new đường dẫn (path / 경로) nhận cùng logical yêu cầu (request / 요청) rồi ngữ nghĩa (semantic / 의미적) outputs được so sánh có chọn lọc.
 
-> **Chuyển mạch:** Ở chặng này của **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **14. Differential testing dùng hiện thực (implementation / 구현) khác làm bằng chứng (evidence / 증거) so sánh** đã nêu tiêu chí phân biệt, còn **15. môi trường vận hành (production / 운영 환경) xác minh (verification / 확인) kiểm tra các giả định (assumptions / 가정들) chỉ môi trường vận hành (production / 운영 환경) mới có** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **16. thời gian chạy (runtime / 런타임) bất biến (invariant / 불변식) biến silent corruption thành observable thất bại (failure / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Differential testing dùng hiện thực (implementation / 구현) khác làm bằng chứng (evidence / 증거) so sánh** đặt tiêu chí; **15. môi trường vận hành (production / 운영 환경) xác minh (verification / 확인) kiểm tra các giả định (assumptions / 가정들) chỉ môi trường vận hành (production / 운영 환경) mới có** dùng nó để kiểm tra ranh giới, rồi **16. thời gian chạy (runtime / 런타임) bất biến (invariant / 불변식) biến silent corruption thành observable thất bại (failure / 실패)** mở rộng hệ quả.
 
 ## 15. môi trường vận hành (production / 운영 환경) xác minh (verification / 확인) kiểm tra các giả định (assumptions / 가정들) chỉ môi trường vận hành (production / 운영 환경) mới có
 
@@ -200,7 +200,7 @@ Testing không kết thúc khi deploy; triển khai (deployment / 배포) là m�
 
 Môi trường vận hành (production / 운영 환경) xác minh (verification / 확인) cần phân biệt bản phát hành (release / 릴리스) health, nghiệp vụ (business / 비즈니스) tính đúng đắn (correctness / 정확성), hiệu năng (performance / 성능) regression, bảo mật (security / 보안) chính sách (policy / 정책) regression và dữ liệu (data / 데이터)/lược đồ (schema / 스키마) divergence. Một canary CPU ổn không chứng minh monetary calculation đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **16. thời gian chạy (runtime / 런타임) bất biến (invariant / 불변식) biến silent corruption thành observable thất bại (failure / 실패)** tiếp nhận điểm tựa từ **15. môi trường vận hành (production / 운영 환경) xác minh (verification / 확인) kiểm tra các giả định (assumptions / 가정들) chỉ môi trường vận hành (production / 운영 환경) mới có** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Flaky tests là độ tin cậy (reliability / 신뢰성) thất bại (failure / 실패) của chính kiểm thử (test / 테스트) hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. thời gian chạy (runtime / 런타임) bất biến (invariant / 불변식) biến silent corruption thành observable thất bại (failure / 실패)** nối từ **15. môi trường vận hành (production / 운영 환경) xác minh (verification / 확인) kiểm tra các giả định (assumptions / 가정들) chỉ môi trường vận hành (production / 운영 환경) mới có** sang **17. Flaky tests là độ tin cậy (reliability / 신뢰성) thất bại (failure / 실패) của chính kiểm thử (test / 테스트) hệ thống (system / 시스템)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. thời gian chạy (runtime / 런타임) bất biến (invariant / 불변식) biến silent corruption thành observable thất bại (failure / 실패)
 
@@ -210,7 +210,7 @@ Thời gian chạy (runtime / 런타임) assertion có thể fail-fast trong n�
 
 Ý tưởng cốt lõi là chuyển “hy vọng giả định (assumption / 가정) đúng” thành observable bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Trong **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **17. Flaky tests là độ tin cậy (reliability / 신뢰성) thất bại (failure / 실패) của chính kiểm thử (test / 테스트) hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **16. thời gian chạy (runtime / 런타임) bất biến (invariant / 불변식) biến silent corruption thành observable thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. kiểm thử (test / 테스트) dữ liệu (data / 데이터) phải giữ ngữ nghĩa (semantics / 의미론) mà không tạo privacy debt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Flaky tests là độ tin cậy (reliability / 신뢰성) thất bại (failure / 실패) của chính kiểm thử (test / 테스트) hệ thống (system / 시스템)** nối từ **16. thời gian chạy (runtime / 런타임) bất biến (invariant / 불변식) biến silent corruption thành observable thất bại (failure / 실패)** sang **18. kiểm thử (test / 테스트) dữ liệu (data / 데이터) phải giữ ngữ nghĩa (semantics / 의미론) mà không tạo privacy debt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Flaky tests là độ tin cậy (reliability / 신뢰성) thất bại (failure / 실패) của chính kiểm thử (test / 테스트) hệ thống (system / 시스템)
 
@@ -220,7 +220,7 @@ Deterministic thời gian (time / 시간)/fake clock và tường minh (explicit
 
 Nếu kiểm thử (test / 테스트) randomize đầu vào (input / 입력)/schedule, seed phải được lưu để reproduce. Nếu kiểm thử (test / 테스트) phụ thuộc eventual consistency, poll theo điều kiện (condition / 조건) + deadline thường đúng hơn sleep “đủ lâu”.
 
-> **Chuyển mạch:** Ở chặng này của **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **17. Flaky tests là độ tin cậy (reliability / 신뢰성) thất bại (failure / 실패) của chính kiểm thử (test / 테스트) hệ thống (system / 시스템)** nêu điều cần giải thích; **18. kiểm thử (test / 테스트) dữ liệu (data / 데이터) phải giữ ngữ nghĩa (semantics / 의미론) mà không tạo privacy debt** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. hiệu năng (performance / 성능) kiểm thử (test / 테스트) phải đo saturation và khôi phục (recovery / 복구)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Flaky tests là độ tin cậy (reliability / 신뢰성) thất bại (failure / 실패) của chính kiểm thử (test / 테스트) hệ thống (system / 시스템)** đặt vấn đề; **18. kiểm thử (test / 테스트) dữ liệu (data / 데이터) phải giữ ngữ nghĩa (semantics / 의미론) mà không tạo privacy debt** kiểm tra bằng chứng, rồi **19. hiệu năng (performance / 성능) kiểm thử (test / 테스트) phải đo saturation và khôi phục (recovery / 복구)** mở rộng hệ quả.
 
 ## 18. kiểm thử (test / 테스트) dữ liệu (data / 데이터) phải giữ ngữ nghĩa (semantics / 의미론) mà không tạo privacy debt
 
@@ -228,7 +228,7 @@ Môi trường vận hành (production / 운영 환경) snapshot có phân phố
 
 Synthetic/anonymized dữ liệu (data / 데이터) hữu ích nhưng có thể mất skew/rare edge cases. Test-data chiến lược (strategy / 전략) cần cân privacy với representativeness và ghi rõ phân phối (distribution / 분포) nào đã bị mất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **18. kiểm thử (test / 테스트) dữ liệu (data / 데이터) phải giữ ngữ nghĩa (semantics / 의미론) mà không tạo privacy debt** nêu điều cần giải thích; **19. hiệu năng (performance / 성능) kiểm thử (test / 테스트) phải đo saturation và khôi phục (recovery / 복구)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. kiểm thử (test / 테스트) môi trường (environment / 환경) có thể pass vì miền lỗi (failure domain / 장애 도메인) khác môi trường vận hành (production / 운영 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. kiểm thử (test / 테스트) dữ liệu (data / 데이터) phải giữ ngữ nghĩa (semantics / 의미론) mà không tạo privacy debt** đặt vấn đề; **19. hiệu năng (performance / 성능) kiểm thử (test / 테스트) phải đo saturation và khôi phục (recovery / 복구)** kiểm tra bằng chứng, rồi **20. kiểm thử (test / 테스트) môi trường (environment / 환경) có thể pass vì miền lỗi (failure domain / 장애 도메인) khác môi trường vận hành (production / 운영 환경)** mở rộng hệ quả.
 
 ## 19. hiệu năng (performance / 성능) kiểm thử (test / 테스트) phải đo saturation và khôi phục (recovery / 복구)
 
@@ -238,7 +238,7 @@ Tải công việc (workload / 워크로드) mix, payload sizes, bộ nhớ đ�
 
 Sức chứa (capacity / 용량) chapter đi sâu hơn tại [Capacity planning và whole-system profiling](../../08_software_systems/advanced/01_capacity_planning_utilization_knee_and_admission_control.md).
 
-> **Chuyển mạch:** Trong **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **20. kiểm thử (test / 테스트) môi trường (environment / 환경) có thể pass vì miền lỗi (failure domain / 장애 도메인) khác môi trường vận hành (production / 운영 환경)** tiếp nhận điểm tựa từ **19. hiệu năng (performance / 성능) kiểm thử (test / 테스트) phải đo saturation và khôi phục (recovery / 복구)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. sự cố (incident / 인시던트) phải quay lại kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처) dưới dạng bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. kiểm thử (test / 테스트) môi trường (environment / 환경) có thể pass vì miền lỗi (failure domain / 장애 도메인) khác môi trường vận hành (production / 운영 환경)** nối từ **19. hiệu năng (performance / 성능) kiểm thử (test / 테스트) phải đo saturation và khôi phục (recovery / 복구)** sang **21. sự cố (incident / 인시던트) phải quay lại kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처) dưới dạng bất biến (invariant / 불변식)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. kiểm thử (test / 테스트) môi trường (environment / 환경) có thể pass vì miền lỗi (failure domain / 장애 도메인) khác môi trường vận hành (production / 운영 환경)
 
@@ -257,7 +257,7 @@ invariant
 
 Nhờ vậy nhóm (team / 팀) biết gap nào cần môi trường vận hành (production / 운영 환경) canary hoặc fault-injection môi trường (environment / 환경) thay vì vô thức tin một green CI suite.
 
-> **Chuyển mạch:** Ở chặng này của **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **21. sự cố (incident / 인시던트) phải quay lại kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처) dưới dạng bất biến (invariant / 불변식)** tiếp nhận điểm tựa từ **20. kiểm thử (test / 테스트) môi trường (environment / 환경) có thể pass vì miền lỗi (failure domain / 장애 도메인) khác môi trường vận hành (production / 운영 환경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. kiểm thử (test / 테스트) metrics cũng chịu Goodhart's Law** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. sự cố (incident / 인시던트) phải quay lại kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처) dưới dạng bất biến (invariant / 불변식)** nối từ **20. kiểm thử (test / 테스트) môi trường (environment / 환경) có thể pass vì miền lỗi (failure domain / 장애 도메인) khác môi trường vận hành (production / 운영 환경)** sang **22. kiểm thử (test / 테스트) metrics cũng chịu Goodhart's Law**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. sự cố (incident / 인시던트) phải quay lại kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처) dưới dạng bất biến (invariant / 불변식)
 
@@ -267,7 +267,7 @@ Outage do thử lại (retry / 재시도) storm không chỉ cần kiểm thử 
 
 Sự cố (incident / 인시던트) học tập (learning / 학습) hiệu quả biến một môi trường vận hành (production / 운영 환경) surprise thành **family of properties/thất bại (failure / 실패) tests**, giảm xác suất cùng cơ chế (mechanism / 메커니즘) xuất hiện ở hình thức khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **22. kiểm thử (test / 테스트) metrics cũng chịu Goodhart's Law** tiếp nhận điểm tựa từ **21. sự cố (incident / 인시던트) phải quay lại kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처) dưới dạng bất biến (invariant / 불변식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Worked example: payment hết thời gian chờ (timeout / 타임아웃) với ambiguous kết quả (outcome / 결과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. kiểm thử (test / 테스트) metrics cũng chịu Goodhart's Law** nối từ **21. sự cố (incident / 인시던트) phải quay lại kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처) dưới dạng bất biến (invariant / 불변식)** sang **23. Worked example: payment hết thời gian chờ (timeout / 타임아웃) với ambiguous kết quả (outcome / 결과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. kiểm thử (test / 테스트) metrics cũng chịu Goodhart's Law
 
@@ -277,7 +277,7 @@ Coverage %, kiểm thử (test / 테스트) count, pass tỷ lệ (rate / 비율
 
 Chỉ số (metric / 지표) nên là bằng chứng (evidence / 증거) hỗ trợ câu hỏi “rủi ro (risk / 위험) nào đang được kiểm soát?”, không phải proxy thay tính đúng đắn (correctness / 정확성).
 
-> **Chuyển mạch:** Trong **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **22. kiểm thử (test / 테스트) metrics cũng chịu Goodhart's Law** cho ta quy tắc; **23. Worked example: payment hết thời gian chờ (timeout / 타임아웃) với ambiguous kết quả (outcome / 결과)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **24. Worked example: lược đồ (schema / 스키마) di chuyển (migration / 마이그레이션) old/new coexist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. kiểm thử (test / 테스트) metrics cũng chịu Goodhart's Law** nêu quy tắc; **23. Worked example: payment hết thời gian chờ (timeout / 타임아웃) với ambiguous kết quả (outcome / 결과)** thử quy tắc trong tình huống, rồi **24. Worked example: lược đồ (schema / 스키마) di chuyển (migration / 마이그레이션) old/new coexist** mở rộng hệ quả.
 
 ## 23. Worked example: payment hết thời gian chờ (timeout / 타임아웃) với ambiguous kết quả (outcome / 결과)
 
@@ -296,7 +296,7 @@ Oracle không phải “HTTP 200”. Oracle là **một logical payment tạo t�
 
 Ví dụ này nối fault injection, idempotency, giao dịch (transaction / 트랜잭션) durability và môi trường vận hành (production / 운영 환경) tracing trong một bất biến (invariant / 불변식) duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **23. Worked example: payment hết thời gian chờ (timeout / 타임아웃) với ambiguous kết quả (outcome / 결과)** cho ta quy tắc; **24. Worked example: lược đồ (schema / 스키마) di chuyển (migration / 마이그레이션) old/new coexist** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **25. bằng chứng vận hành (production evidence / 운영 증거) và forensic usefulness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. Worked example: payment hết thời gian chờ (timeout / 타임아웃) với ambiguous kết quả (outcome / 결과)** nêu quy tắc; **24. Worked example: lược đồ (schema / 스키마) di chuyển (migration / 마이그레이션) old/new coexist** thử quy tắc trong tình huống, rồi **25. bằng chứng vận hành (production evidence / 운영 증거) và forensic usefulness** mở rộng hệ quả.
 
 ## 24. Worked example: lược đồ (schema / 스키마) di chuyển (migration / 마이그레이션) old/new coexist
 
@@ -313,7 +313,7 @@ new producer → new consumer
 
 Sau khi old phiên bản (version / 버전) retire, đặc tả hợp đồng (contract / 계약) ma trận (matrix / 행렬) có thể thu hẹp. Testing phải phản ánh triển khai (deployment / 배포) máy trạng thái (state machine / 상태 머신), không giả định fleet upgrade atomically.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **24. Worked example: lược đồ (schema / 스키마) di chuyển (migration / 마이그레이션) old/new coexist** cho ta quy tắc; **25. bằng chứng vận hành (production evidence / 운영 증거) và forensic usefulness** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. Worked example: lược đồ (schema / 스키마) di chuyển (migration / 마이그레이션) old/new coexist** nêu quy tắc; **25. bằng chứng vận hành (production evidence / 운영 증거) và forensic usefulness** thử quy tắc trong tình huống, rồi **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả.
 
 ## 25. bằng chứng vận hành (production evidence / 운영 증거) và forensic usefulness
 
@@ -323,7 +323,7 @@ Không cần log toàn payload hoặc secret. **Khả năng điều tra (forensi
 
 Kiểm thử (test / 테스트) harness cũng nên export artifacts hữu ích: minimized thuộc tính (property / 속성) counterexample, random seed, fault timeline, nút (node / 노드)/replica trạng thái (state / 상태) và relevant logs/metrics. Một flaky CI thất bại (failure / 실패) không reproduce được là bằng chứng (evidence / 증거) rất yếu.
 
-> **Chuyển mạch:** Trong **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **25. bằng chứng vận hành (production evidence / 운영 증거) và forensic usefulness** nêu điều cần giải thích; **Dùng chung (common / 공통) Misconceptions** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. bằng chứng vận hành (production evidence / 운영 증거) và forensic usefulness** đặt vấn đề; **Dùng chung (common / 공통) Misconceptions** kiểm tra bằng chứng, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -337,13 +337,13 @@ Kiểm thử (test / 테스트) harness cũng nên export artifacts hữu ích: 
 
 **“thử lại (retry / 재시도) flaky kiểm thử (test / 테스트) là fix.”** thử lại (retry / 재시도) có thể che race, clock hoặc tài nguyên (resource / 자원) bug và làm kiểm thử (test / 테스트) hệ thống (system / 시스템) mất trust.
 
-> **Chuyển mạch:** Ở chặng này của **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처) là **portfolio bằng chứng về bất biến (invariant / 불변식) dưới nhiều thực thi (execution / 실행) và thất bại (failure / 실패) các mô hình (models / 모델들)**. đơn vị (unit / 단위) tests kiểm tra cục bộ (local / 로컬) lô-gic (logic / 논리); contracts kiểm tra ranh giới (boundary / 경계) agreement; properties/mutation kiểm tra độ rộng và sức mạnh oracle; tích hợp (integration / 통합)/fault injection kiểm tra ngữ nghĩa (semantics / 의미론) của phụ thuộc (dependency / 의존성) thật; môi trường vận hành (production / 운영 환경) xác minh (verification / 확인) kiểm tra các giả định (assumptions / 가정들) chỉ tải công việc (workload / 워크로드) thật mới làm lộ. Một bộ kiểm thử (test suite / 테스트 스위트) mạnh biết rủi ro (risk / 위험) nào được chứng minh ở đâu và gap nào vẫn còn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처): đặc tả hợp đồng (contract / 계약), mutation, property-based và môi trường vận hành (production / 운영 환경) xác minh (verification / 확인)**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

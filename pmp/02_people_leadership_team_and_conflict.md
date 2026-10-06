@@ -10,7 +10,7 @@ Lãnh đạo (leadership / 리더십) khác authority. Authority đến từ v�
 
 Dự án (project / 프로젝트) nhóm (team / 팀) nên được nhìn như một mạng (network / 네트워크) của quyết định (decision / 결정), thông tin (information / 정보) và phụ thuộc (dependency / 의존성). Người nào biết gì, ai có quyền quyết, ai chịu hậu quả và tín hiệu (signal / 신호) mất bao lâu để tới đúng người quyết định thường quan trọng hơn sơ đồ tổ chức chính thức.
 
-> **Chuyển mạch:** Trong **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Leadership là thiết kế môi trường ra quyết định** tiếp nhận điểm tựa từ **Dự án (project / 프로젝트) hệ thống (system / 시스템) là socio-technical hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (shared / 공유) vision giảm coordination chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Leadership là thiết kế môi trường ra quyết định** nối từ **Dự án (project / 프로젝트) hệ thống (system / 시스템) là socio-technical hệ thống (system / 시스템)** sang **Dùng chung (shared / 공유) vision giảm coordination chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Leadership là thiết kế môi trường ra quyết định
 
@@ -20,7 +20,7 @@ Một leader không tạo giá trị (value / 값) bằng cách tự quyết m�
 
 Leadership tốt giảm số quyết định (decision / 결정) phải đi qua leader mà không làm giảm coherence. Đây là khác biệt giữa **decentralization có thiết kế** và “mọi người tự làm theo cách mình muốn”.
 
-> **Chuyển mạch:** Ở chặng này của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Dùng chung (shared / 공유) vision giảm coordination chi phí (cost / 비용)** tiếp nhận điểm tựa từ **Leadership là thiết kế môi trường ra quyết định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델) quan trọng hơn dùng chung (shared / 공유) slogan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (shared / 공유) vision giảm coordination chi phí (cost / 비용)** nối từ **Leadership là thiết kế môi trường ra quyết định** sang **Dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델) quan trọng hơn dùng chung (shared / 공유) slogan**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (shared / 공유) vision giảm coordination chi phí (cost / 비용)
 
@@ -30,7 +30,7 @@ Ví dụ: “phát hành đúng ngày” có thể xung đột với “không �
 
 Direction tốt thường gồm kết quả (outcome / 결과), non-negotiable ràng buộc (constraint / 제약조건), priority quy tắc (rule / 규칙) và success bằng chứng (evidence / 증거). Khi bốn thứ này rõ, nhóm (team / 팀) có thể tự xử lý nhiều cục bộ (local / 로컬) quyết định (decision / 결정) mà không cần chờ approval.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델) quan trọng hơn dùng chung (shared / 공유) slogan** gom các mảnh từ **Dùng chung (shared / 공유) vision giảm coordination chi phí (cost / 비용)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Empowerment và accountability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델) quan trọng hơn dùng chung (shared / 공유) slogan** tổng hợp kết quả từ **Dùng chung (shared / 공유) vision giảm coordination chi phí (cost / 비용)**; **Empowerment và accountability** mở rộng cơ chế.
 
 ## Dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델) quan trọng hơn dùng chung (shared / 공유) slogan
 
@@ -40,7 +40,7 @@ Dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델) c
 
 Working agreement, acceptance criteria, quyết định (decision / 결정) quy tắc (rule / 규칙) và kiến trúc (architecture / 아키텍처) ranh giới (boundary / 경계) đều là cách externalize dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델).
 
-> **Chuyển mạch:** Trong **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Empowerment và accountability** gom các mảnh từ **Dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델) quan trọng hơn dùng chung (shared / 공유) slogan** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Delegation thất bại (failure / 실패) có hai cực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Empowerment và accountability** tổng hợp kết quả từ **Dùng chung (shared / 공유) mô hình tư duy (mental model / 사고 모델) quan trọng hơn dùng chung (shared / 공유) slogan**; **Delegation thất bại (failure / 실패) có hai cực** mở rộng cơ chế.
 
 ## Empowerment và accountability
 
@@ -50,7 +50,7 @@ Accountability (trách nhiệm giải trình / 책임성) là counterpart của 
 
 Một nguyên tắc hữu ích là quyền quyết định nên đi cùng ba thứ: thông tin (information / 정보), competence và consequence visibility. Nếu người ra quyết định không thấy hậu quả tới hệ thống (system / 시스템) khác, cục bộ (local / 로컬) tối ưu hóa (optimization / 최적화) rất dễ xảy ra.
 
-> **Chuyển mạch:** Ở chặng này của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Delegation thất bại (failure / 실패) có hai cực** tiếp nhận điểm tựa từ **Empowerment và accountability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyết định (decision / 결정) rights nên phân theo reversibility và consequence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Delegation thất bại (failure / 실패) có hai cực** nối từ **Empowerment và accountability** sang **Quyết định (decision / 결정) rights nên phân theo reversibility và consequence**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Delegation thất bại (failure / 실패) có hai cực
 
@@ -60,7 +60,7 @@ Over-delegation xảy ra khi leader chuyển quyết định (decision / 결정)
 
 Delegation tốt cần answer: quyết định (decision / 결정) nào được giao, ranh giới (boundary / 경계) nào không được vượt, thông tin (information / 정보) nào cần nhìn, khi nào phải escalate và kết quả (outcome / 결과) nào người nhận accountable.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Quyết định (decision / 결정) rights nên phân theo reversibility và consequence** tiếp nhận điểm tựa từ **Delegation thất bại (failure / 실패) có hai cực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Authority độ dốc (gradient / 기울기) và escalation friction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Quyết định (decision / 결정) rights nên phân theo reversibility và consequence** nối từ **Delegation thất bại (failure / 실패) có hai cực** sang **Authority độ dốc (gradient / 기울기) và escalation friction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quyết định (decision / 결정) rights nên phân theo reversibility và consequence
 
@@ -75,7 +75,7 @@ irreversible + high consequence → evidence + review + authority cao hơn
 
 Điều này tránh hai lỗi: micro-manage mọi chi tiết và trao quyền vô điều kiện cho quyết định (decision / 결정) vượt rủi ro (risk / 위험) tolerance.
 
-> **Chuyển mạch:** Trong **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Authority độ dốc (gradient / 기울기) và escalation friction** tiếp nhận điểm tựa từ **Quyết định (decision / 결정) rights nên phân theo reversibility và consequence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Power, influence và authority không giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Authority độ dốc (gradient / 기울기) và escalation friction** nối từ **Quyết định (decision / 결정) rights nên phân theo reversibility và consequence** sang **Power, influence và authority không giống nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Authority độ dốc (gradient / 기울기) và escalation friction
 
@@ -85,7 +85,7 @@ Escalation luôn có friction: chuẩn bị ngữ cảnh (context / 맥락), ch�
 
 Một dấu hiệu kiến trúc (architecture / 아키텍처) kém là **shadow authority**: trên giấy nhóm (team / 팀) được quyền quyết, nhưng thực tế mọi người vẫn chờ một cấp cao (senior / 시니어) leader “gật đầu” vì sợ hậu quả chính trị. Khi đó RACI hay delegation ma trận (matrix / 행렬) đúng trên tài liệu nhưng hành vi (behavior / 동작) không đổi. PM phải quan sát quyết định (decision / 결정) thực tế đi qua đâu, không chỉ đọc quản trị (governance / 거버넌스) chart.
 
-> **Chuyển mạch:** Ở chặng này của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Power, influence và authority không giống nhau** tiếp nhận điểm tựa từ **Authority độ dốc (gradient / 기울기) và escalation friction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Power asymmetry thay đổi cách xung đột (conflict / 충돌) biểu hiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Power, influence và authority không giống nhau** nối từ **Authority độ dốc (gradient / 기울기) và escalation friction** sang **Power asymmetry thay đổi cách xung đột (conflict / 충돌) biểu hiện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Power, influence và authority không giống nhau
 
@@ -95,7 +95,7 @@ Một architect không có chức danh quản lý có thể ảnh hưởng lớn
 
 Đây là lý do stakeholder engagement và nhóm (team / 팀) leadership phải nối với quản trị (governance / 거버넌스) thay vì chỉ dựa vào communication skill.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Power asymmetry thay đổi cách xung đột (conflict / 충돌) biểu hiện** tiếp nhận điểm tựa từ **Power, influence và authority không giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhóm (team / 팀) formation và psychological an toàn (safety / 안전)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Power asymmetry thay đổi cách xung đột (conflict / 충돌) biểu hiện** nối từ **Power, influence và authority không giống nhau** sang **Nhóm (team / 팀) formation và psychological an toàn (safety / 안전)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Power asymmetry thay đổi cách xung đột (conflict / 충돌) biểu hiện
 
@@ -105,7 +105,7 @@ Vì vậy absence of disagreement không chứng minh alignment. Một meeting n
 
 Leader cần tạo cơ chế (mechanism / 메커니즘) để dissent có thể xuất hiện: pre-mortem, anonymous đầu vào (input / 입력), round-robin, independent rà soát (review / 검토) hoặc one-on-one channel tùy ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Trong **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Nhóm (team / 팀) formation và psychological an toàn (safety / 안전)** tiếp nhận điểm tựa từ **Power asymmetry thay đổi cách xung đột (conflict / 충돌) biểu hiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Psychological an toàn (safety / 안전) là chất lượng của sensor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Nhóm (team / 팀) formation và psychological an toàn (safety / 안전)** nối từ **Power asymmetry thay đổi cách xung đột (conflict / 충돌) biểu hiện** sang **Psychological an toàn (safety / 안전) là chất lượng của sensor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhóm (team / 팀) formation và psychological an toàn (safety / 안전)
 
@@ -115,7 +115,7 @@ Nhóm hiệu quả cần role clarity, trust, working agreement và khả năng 
 
 Psychological an toàn (safety / 안전) không thay hiệu năng (performance / 성능) tiêu chuẩn (standard / 표준). nhóm (team / 팀) có thể vừa an toàn để nói thật vừa có accountability cao. Môi trường tốt không phải nơi “ai cũng được chấp nhận mọi hành vi”, mà là nơi bài toán (problem / 문제) được đưa ra sớm và xử lý công bằng.
 
-> **Chuyển mạch:** Ở chặng này của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Psychological an toàn (safety / 안전) là chất lượng của sensor** tiếp nhận điểm tựa từ **Nhóm (team / 팀) formation và psychological an toàn (safety / 안전)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trust không đồng nghĩa kiểm soát thấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Psychological an toàn (safety / 안전) là chất lượng của sensor** nối từ **Nhóm (team / 팀) formation và psychological an toàn (safety / 안전)** sang **Trust không đồng nghĩa kiểm soát thấp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Psychological an toàn (safety / 안전) là chất lượng của sensor
 
@@ -125,7 +125,7 @@ Nếu culture khiến sensor tự kiểm duyệt, quản trị (governance / 거
 
 Một leader phản ứng bằng blame mỗi khi có bad news sẽ dần làm dashboard đẹp hơn nhưng reality xấu hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Trust không đồng nghĩa kiểm soát thấp** tiếp nhận điểm tựa từ **Psychological an toàn (safety / 안전) là chất lượng của sensor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhóm (team / 팀) development không phải một đường thẳng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Trust không đồng nghĩa kiểm soát thấp** nối từ **Psychological an toàn (safety / 안전) là chất lượng của sensor** sang **Nhóm (team / 팀) development không phải một đường thẳng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trust không đồng nghĩa kiểm soát thấp
 
@@ -133,7 +133,7 @@ Trust làm giảm xác minh (verification / 확인) giao dịch (transaction / �
 
 Điều khiển (control / 제어) tốt bảo vệ hệ thống (system / 시스템) chứ không mặc định nghi ngờ cá nhân. Khi điều khiển (control / 제어) được giải thích bằng rủi ro (risk / 위험)/consequence thay vì “vì tôi không tin bạn”, trust và assurance có thể cùng tồn tại.
 
-> **Chuyển mạch:** Trong **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Nhóm (team / 팀) development không phải một đường thẳng** tiếp nhận điểm tựa từ **Trust không đồng nghĩa kiểm soát thấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhóm (team / 팀) topology ảnh hưởng coordination chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Nhóm (team / 팀) development không phải một đường thẳng** nối từ **Trust không đồng nghĩa kiểm soát thấp** sang **Nhóm (team / 팀) topology ảnh hưởng coordination chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhóm (team / 팀) development không phải một đường thẳng
 
@@ -141,7 +141,7 @@ Các nhóm (team / 팀) thường trải qua giai đoạn hình thành, va chạ
 
 Vì vậy dự án (project / 프로젝트) manager không nên nhìn nhóm (team / 팀) health như trạng thái đạt một lần rồi xong. nhóm (team / 팀) là hệ động (dynamic system / 동적 시스템); thay đổi cấu trúc hoặc pressure làm hành vi (behavior / 동작) thay đổi.
 
-> **Chuyển mạch:** Ở chặng này của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Nhóm (team / 팀) topology ảnh hưởng coordination chi phí (cost / 비용)** tiếp nhận điểm tựa từ **Nhóm (team / 팀) development không phải một đường thẳng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coordination tải (load / 로드) tăng phi tuyến theo phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Nhóm (team / 팀) topology ảnh hưởng coordination chi phí (cost / 비용)** nối từ **Nhóm (team / 팀) development không phải một đường thẳng** sang **Coordination tải (load / 로드) tăng phi tuyến theo phụ thuộc (dependency / 의존성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhóm (team / 팀) topology ảnh hưởng coordination chi phí (cost / 비용)
 
@@ -151,7 +151,7 @@ Dự án (project / 프로젝트) manager không luôn có authority đổi orga
 
 Cross-functional quyền sở hữu (ownership / 소유권), stable nhóm (team / 팀) hoặc clear dịch vụ (service / 서비스) giao diện (interface / 인터페이스) có thể giảm coordination phụ thuộc (dependency / 의존성) hơn việc thêm meeting.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Coordination tải (load / 로드) tăng phi tuyến theo phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **Nhóm (team / 팀) topology ảnh hưởng coordination chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyết định (decision / 결정) tải (load / 로드) và attention ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Coordination tải (load / 로드) tăng phi tuyến theo phụ thuộc (dependency / 의존성)** nối từ **Nhóm (team / 팀) topology ảnh hưởng coordination chi phí (cost / 비용)** sang **Quyết định (decision / 결정) tải (load / 로드) và attention ngân sách (budget / 예산)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Coordination tải (load / 로드) tăng phi tuyến theo phụ thuộc (dependency / 의존성)
 
@@ -161,7 +161,7 @@ Thêm một người không chỉ thêm sức chứa (capacity / 용량); đôi 
 
 Vì vậy “thêm người để cứu deadline” chỉ hiệu quả khi công việc (work / 작업) có thể partition, onboarding chi phí (cost / 비용) chấp nhận được và bottleneck thực sự là sức chứa (capacity / 용량). Nếu bottleneck là quyết định (decision / 결정), môi trường (environment / 환경), yêu cầu (requirement / 요구사항) ambiguity hoặc dùng chung (shared / 공유) reviewer, thêm người có thể tăng hàng đợi (queue / 큐) thay vì giảm duration.
 
-> **Chuyển mạch:** Trong **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Quyết định (decision / 결정) tải (load / 로드) và attention ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **Coordination tải (load / 로드) tăng phi tuyến theo phụ thuộc (dependency / 의존성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xung đột (conflict / 충돌) là tín hiệu (signal / 신호), không mặc định là thất bại (failure / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Quyết định (decision / 결정) tải (load / 로드) và attention ngân sách (budget / 예산)** nối từ **Coordination tải (load / 로드) tăng phi tuyến theo phụ thuộc (dependency / 의존성)** sang **Xung đột (conflict / 충돌) là tín hiệu (signal / 신호), không mặc định là thất bại (failure / 실패)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quyết định (decision / 결정) tải (load / 로드) và attention ngân sách (budget / 예산)
 
@@ -171,7 +171,7 @@ Quyết định (decision / 결정) tải (load / 로드) nên được quản l
 
 Một tín hiệu (signal / 신호) quan trọng là quyết định (decision / 결정) aging: yêu cầu (request / 요청) đã chờ bao lâu, bao nhiêu công việc (work / 작업) bị khối (block / 블록) và quyết định (decision / 결정) nào thường xuyên quay lại vì rationale không rõ. Đây là điểm nối People với luồng (flow / 흐름) và quản trị (governance / 거버넌스).
 
-> **Chuyển mạch:** Ở chặng này của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Xung đột (conflict / 충돌) là tín hiệu (signal / 신호), không mặc định là thất bại (failure / 실패)** tiếp nhận điểm tựa từ **Quyết định (decision / 결정) tải (load / 로드) và attention ngân sách (budget / 예산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tác vụ (task / 작업) xung đột (conflict / 충돌) và relationship xung đột (conflict / 충돌) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Xung đột (conflict / 충돌) là tín hiệu (signal / 신호), không mặc định là thất bại (failure / 실패)** nối từ **Quyết định (decision / 결정) tải (load / 로드) và attention ngân sách (budget / 예산)** sang **Tác vụ (task / 작업) xung đột (conflict / 충돌) và relationship xung đột (conflict / 충돌) khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xung đột (conflict / 충돌) là tín hiệu (signal / 신호), không mặc định là thất bại (failure / 실패)
 
@@ -181,7 +181,7 @@ Một cách lập luận (reasoning / 추론) là tách position khỏi interest
 
 Trong tình huống cần quyết định nhanh, forcing/directing có thể hợp lý, ví dụ sự cố (incident / 인시던트) an toàn. Khi issue quan trọng và relationship cần duy trì, collaborating/bài toán (problem / 문제) solving thường tạo kết quả (outcome / 결과) tốt hơn. Compromising có thể hữu dụng khi thời gian (time / 시간) box chặt. Avoiding hoặc smoothing chỉ phù hợp khi issue thấp hoặc cần cooling-off; dùng chúng với xung đột (conflict / 충돌) cốt lõi sẽ làm debt tích tụ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Tác vụ (task / 작업) xung đột (conflict / 충돌) và relationship xung đột (conflict / 충돌) khác nhau** tiếp nhận điểm tựa từ **Xung đột (conflict / 충돌) là tín hiệu (signal / 신호), không mặc định là thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xung đột (conflict / 충돌) escalation ladder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tác vụ (task / 작업) xung đột (conflict / 충돌) và relationship xung đột (conflict / 충돌) khác nhau** nối từ **Xung đột (conflict / 충돌) là tín hiệu (signal / 신호), không mặc định là thất bại (failure / 실패)** sang **Xung đột (conflict / 충돌) escalation ladder**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tác vụ (task / 작업) xung đột (conflict / 충돌) và relationship xung đột (conflict / 충돌) khác nhau
 
@@ -189,7 +189,7 @@ Tác vụ (task / 작업) xung đột (conflict / 충돌) có thể hữu ích k
 
 Leader nên bảo vệ **productive dissent** nhưng ngăn attack cá nhân. Nếu mọi disagreement bị dập để “giữ hòa khí”, nhóm (team / 팀) dễ groupthink. Nếu mọi tranh luận trở thành đấu quyền lực, quyết định (decision / 결정) độ trễ (latency / 지연 시간) và trust cùng xấu đi.
 
-> **Chuyển mạch:** Trong **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Xung đột (conflict / 충돌) escalation ladder** tiếp nhận điểm tựa từ **Tác vụ (task / 작업) xung đột (conflict / 충돌) và relationship xung đột (conflict / 충돌) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xung đột (conflict / 충돌) debt tích lũy như technical debt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Xung đột (conflict / 충돌) escalation ladder** nối từ **Tác vụ (task / 작업) xung đột (conflict / 충돌) và relationship xung đột (conflict / 충돌) khác nhau** sang **Xung đột (conflict / 충돌) debt tích lũy như technical debt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xung đột (conflict / 충돌) escalation ladder
 
@@ -197,7 +197,7 @@ Không phải xung đột (conflict / 충돌) nào cũng nên escalate ngay. M�
 
 Escalation đúng không phải thất bại (failure / 실패) của PM. thất bại (failure / 실패) là giữ issue ở mức (level / 수준) không thể giải quyết chỉ vì muốn “tự xử lý”.
 
-> **Chuyển mạch:** Ở chặng này của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Xung đột (conflict / 충돌) debt tích lũy như technical debt** tiếp nhận điểm tựa từ **Xung đột (conflict / 충돌) escalation ladder** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Negotiation trong nhóm (team / 팀) là phân bổ ràng buộc (constraint / 제약조건)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Xung đột (conflict / 충돌) debt tích lũy như technical debt** nối từ **Xung đột (conflict / 충돌) escalation ladder** sang **Negotiation trong nhóm (team / 팀) là phân bổ ràng buộc (constraint / 제약조건)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xung đột (conflict / 충돌) debt tích lũy như technical debt
 
@@ -205,7 +205,7 @@ Unresolved disagreement có thể được che bằng quyết định tạm th�
 
 Một xung đột (conflict / 충돌) được “đóng” khi quyết định (decision / 결정), rationale, đơn vị sở hữu (owner / 오너) và follow-up đủ rõ; không phải chỉ khi meeting kết thúc yên bình.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Negotiation trong nhóm (team / 팀) là phân bổ ràng buộc (constraint / 제약조건)** tiếp nhận điểm tựa từ **Xung đột (conflict / 충돌) debt tích lũy như technical debt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Motivation và incentive alignment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Negotiation trong nhóm (team / 팀) là phân bổ ràng buộc (constraint / 제약조건)** nối từ **Xung đột (conflict / 충돌) debt tích lũy như technical debt** sang **Motivation và incentive alignment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Negotiation trong nhóm (team / 팀) là phân bổ ràng buộc (constraint / 제약조건)
 
@@ -213,7 +213,7 @@ Khi hai nhóm cùng cần một scarce tài nguyên (resource / 자원), negotia
 
 Nếu PM cố “chia đều” tài nguyên (resource / 자원) để mọi bên hài lòng, có thể làm cả hai đường dẫn (path / 경로) chậm. Đôi khi quyết định đúng là ưu tiên một đường dẫn (path / 경로) trọng yếu (critical / 중요) và trì hoãn đường dẫn (path / 경로) khác. Fairness không đồng nghĩa equality; fairness cần rationale transparent.
 
-> **Chuyển mạch:** Trong **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Motivation và incentive alignment** tiếp nhận điểm tựa từ **Negotiation trong nhóm (team / 팀) là phân bổ ràng buộc (constraint / 제약조건)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chỉ số (metric / 지표) trở thành incentive ngay cả khi không gắn thưởng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Motivation và incentive alignment** nối từ **Negotiation trong nhóm (team / 팀) là phân bổ ràng buộc (constraint / 제약조건)** sang **Chỉ số (metric / 지표) trở thành incentive ngay cả khi không gắn thưởng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Motivation và incentive alignment
 
@@ -223,7 +223,7 @@ Dự án (project / 프로젝트) manager không phải lúc nào cũng thay com
 
 Đây là một mô hình tư duy (mental model / 사고 모델) quan trọng: hành vi (behavior / 동작) thường là thuộc tính (property / 속성) của hệ thống (system / 시스템), không chỉ của cá nhân.
 
-> **Chuyển mạch:** Ở chặng này của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Chỉ số (metric / 지표) trở thành incentive ngay cả khi không gắn thưởng** tiếp nhận điểm tựa từ **Motivation và incentive alignment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Extrinsic và intrinsic motivation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Chỉ số (metric / 지표) trở thành incentive ngay cả khi không gắn thưởng** nối từ **Motivation và incentive alignment** sang **Extrinsic và intrinsic motivation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chỉ số (metric / 지표) trở thành incentive ngay cả khi không gắn thưởng
 
@@ -231,7 +231,7 @@ Một chỉ số (metric / 지표) được executive hỏi hàng tuần có th�
 
 Leader phải quan sát **behavioral side tác động (effect / 효과) của đo lường (measurement / 측정)**. Đây là liên kết trực tiếp với Goodhart's Law ở chapter đo lường (measurement / 측정): khi chỉ số (metric / 지표) thành mục tiêu (target / 대상) cứng, nó có thể mất giá trị làm tín hiệu (signal / 신호).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Extrinsic và intrinsic motivation** tiếp nhận điểm tựa từ **Chỉ số (metric / 지표) trở thành incentive ngay cả khi không gắn thưởng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Servant leadership và adaptive teams** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Extrinsic và intrinsic motivation** nối từ **Chỉ số (metric / 지표) trở thành incentive ngay cả khi không gắn thưởng** sang **Servant leadership và adaptive teams**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Extrinsic và intrinsic motivation
 
@@ -241,7 +241,7 @@ Kiến thức (knowledge / 지식) công việc (work / 작업) dài hạn thư�
 
 Dự án (project / 프로젝트) manager nên thiết kế môi trường (environment / 환경) nơi người giỏi thấy công việc (work / 작업) meaningful, có autonomy phù hợp và được phản hồi (feedback / 피드백) về impact, đồng thời mục tiêu (objective / 목표)/ràng buộc (constraint / 제약조건) vẫn rõ.
 
-> **Chuyển mạch:** Trong **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Servant leadership và adaptive teams** tiếp nhận điểm tựa từ **Extrinsic và intrinsic motivation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Leadership chế độ (mode / 모드) nên đổi theo ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Servant leadership và adaptive teams** nối từ **Extrinsic và intrinsic motivation** sang **Leadership chế độ (mode / 모드) nên đổi theo ngữ cảnh (context / 맥락)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Servant leadership và adaptive teams
 
@@ -251,7 +251,7 @@ Nhưng servant leadership không phải passive leadership. Khi nhóm (team / �
 
 Servant leader tốt chuyển focus từ “ai đang chậm?” sang “hệ thống (system / 시스템) nào đang làm luồng (flow / 흐름) chậm?”. Nếu testing luôn nghẽn vì dùng chung (shared / 공유) môi trường (environment / 환경), thúc tester làm nhanh hơn không giải quyết ràng buộc (constraint / 제약조건).
 
-> **Chuyển mạch:** Ở chặng này của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Leadership chế độ (mode / 모드) nên đổi theo ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **Servant leadership và adaptive teams** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Leadership dưới pressure bộc lộ quản trị (governance / 거버넌스) thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Leadership chế độ (mode / 모드) nên đổi theo ngữ cảnh (context / 맥락)** nối từ **Servant leadership và adaptive teams** sang **Leadership dưới pressure bộc lộ quản trị (governance / 거버넌스) thật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Leadership chế độ (mode / 모드) nên đổi theo ngữ cảnh (context / 맥락)
 
@@ -259,7 +259,7 @@ Không có một style đúng mọi lúc. Emergency cần direction rõ và tố
 
 Maturity của leader là khả năng thay chế độ (mode / 모드) mà không tạo confusion về principle. Direction có thể thay, nhưng fairness, transparency và respect không nên biến mất khi pressure tăng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Leadership dưới pressure bộc lộ quản trị (governance / 거버넌스) thật** tiếp nhận điểm tựa từ **Leadership chế độ (mode / 모드) nên đổi theo ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coaching, mentoring và huấn luyện (training / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Leadership dưới pressure bộc lộ quản trị (governance / 거버넌스) thật** nối từ **Leadership chế độ (mode / 모드) nên đổi theo ngữ cảnh (context / 맥락)** sang **Coaching, mentoring và huấn luyện (training / 학습)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Leadership dưới pressure bộc lộ quản trị (governance / 거버넌스) thật
 
@@ -269,7 +269,7 @@ Nếu leader bỏ cổng chất lượng (quality gate / 품질 게이트) ngay 
 
 Culture được định hình nhiều bởi hành vi (behavior / 동작) lúc pressure hơn bởi chính sách (policy / 정책) document.
 
-> **Chuyển mạch:** Trong **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Coaching, mentoring và huấn luyện (training / 학습)** tiếp nhận điểm tựa từ **Leadership dưới pressure bộc lộ quản trị (governance / 거버넌스) thật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lực (capability / 역량) ma trận (matrix / 행렬) phải nhìn cả độ sâu (depth / 깊이) lẫn redundancy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Coaching, mentoring và huấn luyện (training / 학습)** nối từ **Leadership dưới pressure bộc lộ quản trị (governance / 거버넌스) thật** sang **Năng lực (capability / 역량) ma trận (matrix / 행렬) phải nhìn cả độ sâu (depth / 깊이) lẫn redundancy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Coaching, mentoring và huấn luyện (training / 학습)
 
@@ -277,7 +277,7 @@ Huấn luyện (training / 학습) truyền kiến thức (knowledge / 지식)/s
 
 Một fourth chế độ (mode / 모드) là directing, cần khi rủi ro (risk / 위험) cao và năng lực (capability / 역량) thấp hoặc khi emergency cần hành động (action / 동작) nhanh. Maturity không nằm ở việc luôn coaching, mà ở việc chọn intervention theo năng lực (capability / 역량) và ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Ở chặng này của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Năng lực (capability / 역량) ma trận (matrix / 행렬) phải nhìn cả độ sâu (depth / 깊이) lẫn redundancy** tiếp nhận điểm tựa từ **Coaching, mentoring và huấn luyện (training / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhóm (team / 팀) resilience không chỉ là có người backup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Năng lực (capability / 역량) ma trận (matrix / 행렬) phải nhìn cả độ sâu (depth / 깊이) lẫn redundancy** nối từ **Coaching, mentoring và huấn luyện (training / 학습)** sang **Nhóm (team / 팀) resilience không chỉ là có người backup**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lực (capability / 역량) ma trận (matrix / 행렬) phải nhìn cả độ sâu (depth / 깊이) lẫn redundancy
 
@@ -285,7 +285,7 @@ Một nhóm (team / 팀) có một chuyên gia cực giỏi nhưng không có ba
 
 Pairing, rà soát (review / 검토) rotation, shadowing và quyền sở hữu (ownership / 소유권) sharing không chỉ phát triển người; chúng giảm single điểm (point / 지점) of kiến thức (knowledge / 지식) thất bại (failure / 실패). Nhưng rotation quá nhiều cũng phá focus. Cần balance học tập (learning / 학습) với luồng (flow / 흐름).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Nhóm (team / 팀) resilience không chỉ là có người backup** tiếp nhận điểm tựa từ **Năng lực (capability / 역량) ma trận (matrix / 행렬) phải nhìn cả độ sâu (depth / 깊이) lẫn redundancy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quyết định (decision / 결정) giao thức (protocol / 프로토콜) làm giảm xung đột (conflict / 충돌) không cần thiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Nhóm (team / 팀) resilience không chỉ là có người backup** nối từ **Năng lực (capability / 역량) ma trận (matrix / 행렬) phải nhìn cả độ sâu (depth / 깊이) lẫn redundancy** sang **Quyết định (decision / 결정) giao thức (protocol / 프로토콜) làm giảm xung đột (conflict / 충돌) không cần thiết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhóm (team / 팀) resilience không chỉ là có người backup
 
@@ -295,7 +295,7 @@ Một nhóm (team / 팀) resilient có ngữ cảnh (context / 맥락) được 
 
 Resilience có chi phí (cost / 비용). Pairing, documentation, cross-training và slack sức chứa (capacity / 용량) có thể làm utilization nhìn thấp hơn trong ngắn hạn nhưng giảm tail rủi ro (risk / 위험). Đây là sự đánh đổi (trade-off / 트레이드오프) giống redundancy trong technical hệ thống (system / 시스템): efficiency cực đại thường làm hệ thống (system / 시스템) mong manh hơn trước disturbance.
 
-> **Chuyển mạch:** Trong **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Quyết định (decision / 결정) giao thức (protocol / 프로토콜) làm giảm xung đột (conflict / 충돌) không cần thiết** tiếp nhận điểm tựa từ **Nhóm (team / 팀) resilience không chỉ là có người backup** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Consensus không phải default** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Quyết định (decision / 결정) giao thức (protocol / 프로토콜) làm giảm xung đột (conflict / 충돌) không cần thiết** nối từ **Nhóm (team / 팀) resilience không chỉ là có người backup** sang **Consensus không phải default**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quyết định (decision / 결정) giao thức (protocol / 프로토콜) làm giảm xung đột (conflict / 충돌) không cần thiết
 
@@ -303,7 +303,7 @@ Nhiều xung đột (conflict / 충돌) xuất hiện không phải vì người
 
 Một quyết định (decision / 결정) log ngắn ghi quyết định (decision / 결정), ngữ cảnh (context / 맥락), đơn vị sở hữu (owner / 오너), date và giả định (assumption / 가정) có thể ngăn dự án (project / 프로젝트) tranh luận lại cùng vấn đề nhiều lần. Nó cũng giúp học tập (learning / 학습) khi giả định (assumption / 가정) thay đổi.
 
-> **Chuyển mạch:** Ở chặng này của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Consensus không phải default** tiếp nhận điểm tựa từ **Quyết định (decision / 결정) giao thức (protocol / 프로토콜) làm giảm xung đột (conflict / 충돌) không cần thiết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Disagree-and-commit cần điều kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Consensus không phải default** nối từ **Quyết định (decision / 결정) giao thức (protocol / 프로토콜) làm giảm xung đột (conflict / 충돌) không cần thiết** sang **Disagree-and-commit cần điều kiện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Consensus không phải default
 
@@ -311,7 +311,7 @@ Consensus có giá trị (value / 값) khi buy-in rộng thực sự cần thi�
 
 Một quy tắc (rule / 규칙) tốt có thể là: consult rộng, quyết định (decision / 결정) đơn vị sở hữu (owner / 오너) rõ. Người không đồng ý vẫn có thể lần ghi nhận (commit / 커밋) sau quyết định (decision / 결정) nếu tiến trình (process / 프로세스) công bằng và rationale tường minh (explicit / 명시적).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Disagree-and-commit cần điều kiện** tiếp nhận điểm tựa từ **Consensus không phải default** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Virtual và cross-cultural teams** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Disagree-and-commit cần điều kiện** nối từ **Consensus không phải default** sang **Virtual và cross-cultural teams**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Disagree-and-commit cần điều kiện
 
@@ -319,7 +319,7 @@ Một quy tắc (rule / 규칙) tốt có thể là: consult rộng, quyết đ�
 
 Sau commitment, bằng chứng (evidence / 증거) mới có thể reopen quyết định (decision / 결정) nếu giả định (assumption / 가정) thay đổi. lần ghi nhận (commit / 커밋) không đồng nghĩa quyết định (decision / 결정) bất biến.
 
-> **Chuyển mạch:** Trong **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Virtual và cross-cultural teams** tiếp nhận điểm tựa từ **Disagree-and-commit cần điều kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Timezone là ràng buộc (constraint / 제약조건) hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Virtual và cross-cultural teams** nối từ **Disagree-and-commit cần điều kiện** sang **Timezone là ràng buộc (constraint / 제약조건) hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Virtual và cross-cultural teams
 
@@ -327,7 +327,7 @@ Phân tán (distributed / 분산) nhóm (team / 팀) làm mất nhiều ngữ c�
 
 Async communication tốt cần sản phẩm tạo ra (artifact / 산출물) đủ ngữ cảnh (context / 맥락) để người khác hiểu mà không cần người viết online. Nhưng không phải mọi xung đột (conflict / 충돌) nên xử lý async; sensitive disagreement thường cần synchronous conversation để giảm misunderstanding.
 
-> **Chuyển mạch:** Ở chặng này của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Timezone là ràng buộc (constraint / 제약조건) hệ thống** tiếp nhận điểm tựa từ **Virtual và cross-cultural teams** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dấu hiệu nhóm (team / 팀) health cần quan sát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Timezone là ràng buộc (constraint / 제약조건) hệ thống** nối từ **Virtual và cross-cultural teams** sang **Dấu hiệu nhóm (team / 팀) health cần quan sát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Timezone là ràng buộc (constraint / 제약조건) hệ thống
 
@@ -335,7 +335,7 @@ Nếu hai nhóm (team / 팀) chỉ overlap một giờ mỗi ngày, một clarif
 
 Solution có thể là better async sản phẩm tạo ra (artifact / 산출물), rotating overlap, quyết định (decision / 결정) SLA hoặc cục bộ (local / 로컬) quyết định (decision / 결정) rights. “Họ phải communicate tốt hơn” là chẩn đoán quá mơ hồ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Dấu hiệu nhóm (team / 팀) health cần quan sát** tiếp nhận điểm tựa từ **Timezone là ràng buộc (constraint / 제약조건) hệ thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Burnout là rủi ro (risk / 위험) hệ thống, không phải weakness cá nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dấu hiệu nhóm (team / 팀) health cần quan sát** nối từ **Timezone là ràng buộc (constraint / 제약조건) hệ thống** sang **Burnout là rủi ro (risk / 위험) hệ thống, không phải weakness cá nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dấu hiệu nhóm (team / 팀) health cần quan sát
 
@@ -343,7 +343,7 @@ Velocity hoặc tác vụ (task / 작업) completion không đủ để đánh g
 
 Một nhóm (team / 팀) vẫn “đạt deadline” trong vài sprint nhưng nếu bad news bị che giấu và overtime tăng liên tục, hệ thống (system / 시스템) đang tích debt. dự án (project / 프로젝트) manager cần nhìn leading indicator chứ không chỉ đầu ra (output / 출력) ngắn hạn.
 
-> **Chuyển mạch:** Trong **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Burnout là rủi ro (risk / 위험) hệ thống, không phải weakness cá nhân** tiếp nhận điểm tựa từ **Dấu hiệu nhóm (team / 팀) health cần quan sát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khôi phục (recovery / 복구) debt sau giai đoạn surge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Burnout là rủi ro (risk / 위험) hệ thống, không phải weakness cá nhân** nối từ **Dấu hiệu nhóm (team / 팀) health cần quan sát** sang **Khôi phục (recovery / 복구) debt sau giai đoạn surge**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Burnout là rủi ro (risk / 위험) hệ thống, không phải weakness cá nhân
 
@@ -351,7 +351,7 @@ Chronic overtime làm giảm attention, tăng defect và giảm willingness to s
 
 Leader cần phân biệt surge ngắn hạn có khôi phục (recovery / 복구) với operating mô hình (model / 모델) dựa trên overtime. Nếu plan chỉ khả thi khi nhóm (team / 팀) liên tục vượt sustainable sức chứa (capacity / 용량), plan đang che rủi ro (risk / 위험) bằng sức khỏe con người.
 
-> **Chuyển mạch:** Ở chặng này của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Khôi phục (recovery / 복구) debt sau giai đoạn surge** tiếp nhận điểm tựa từ **Burnout là rủi ro (risk / 위험) hệ thống, không phải weakness cá nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Accountability vòng lặp (loop / 루프) cần có phản hồi (feedback / 피드백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Khôi phục (recovery / 복구) debt sau giai đoạn surge** nối từ **Burnout là rủi ro (risk / 위험) hệ thống, không phải weakness cá nhân** sang **Accountability vòng lặp (loop / 루프) cần có phản hồi (feedback / 피드백)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khôi phục (recovery / 복구) debt sau giai đoạn surge
 
@@ -361,7 +361,7 @@ Sau surge cần nhìn sức chứa (capacity / 용량) thực, defect/rework tai
 
 Điều này nối People với schedule/finance: overtime có thể chuyển chi phí (cost / 비용) từ hiện tại sang future rework, turnover hoặc delay. Một plan “đúng hạn” nhưng làm phase sau mất năng lực (capability / 역량) chưa chắc tối ưu toàn hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Accountability vòng lặp (loop / 루프) cần có phản hồi (feedback / 피드백)** tiếp nhận điểm tựa từ **Khôi phục (recovery / 복구) debt sau giai đoạn surge** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **People bằng chứng (evidence / 증거) phải nối được với dự án (project / 프로젝트) trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Accountability vòng lặp (loop / 루프) cần có phản hồi (feedback / 피드백)** nối từ **Khôi phục (recovery / 복구) debt sau giai đoạn surge** sang **People bằng chứng (evidence / 증거) phải nối được với dự án (project / 프로젝트) trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Accountability vòng lặp (loop / 루프) cần có phản hồi (feedback / 피드백)
 
@@ -369,7 +369,7 @@ Accountability không phải chỉ “ai chịu trách nhiệm khi sai”. Một
 
 Nếu organization chỉ có punishment cuối vòng lặp (loop / 루프) nhưng không có clarity/tài nguyên (resource / 자원)/phản hồi (feedback / 피드백) sớm, accountability trở thành blame hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Trong **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Accountability vòng lặp (loop / 루프) cần có phản hồi (feedback / 피드백)** nêu điều cần giải thích; **People bằng chứng (evidence / 증거) phải nối được với dự án (project / 프로젝트) trạng thái (state / 상태)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Ví dụ scenario** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Accountability vòng lặp (loop / 루프) cần có phản hồi (feedback / 피드백)** đặt vấn đề; **People bằng chứng (evidence / 증거) phải nối được với dự án (project / 프로젝트) trạng thái (state / 상태)** kiểm tra bằng chứng, rồi **Ví dụ scenario** mở rộng hệ quả.
 
 ## People bằng chứng (evidence / 증거) phải nối được với dự án (project / 프로젝트) trạng thái (state / 상태)
 
@@ -379,7 +379,7 @@ Mục tiêu không phải biến mọi cảm xúc thành KPI. Mục tiêu là tr
 
 Ví dụ nhóm (team / 팀) nói “quá tải” và đồng thời cycle thời gian (time / 시간), defect escape và quyết định (decision / 결정) aging đều tăng. phản hồi (response / 응답) hợp lý hơn là điều tra demand/sức chứa (capacity / 용량) và bottleneck, không mặc định đây chỉ là morale issue. Đây là cách People trở thành một phần của integrated dự án (project / 프로젝트) sensing.
 
-> **Chuyển mạch:** Ở chặng này của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **People bằng chứng (evidence / 증거) phải nối được với dự án (project / 프로젝트) trạng thái (state / 상태)** cho ta quy tắc; **Ví dụ scenario** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **People bằng chứng (evidence / 증거) phải nối được với dự án (project / 프로젝트) trạng thái (state / 상태)** nêu quy tắc; **Ví dụ scenario** thử quy tắc trong tình huống, rồi **Thất bại (failure / 실패) modes** mở rộng hệ quả.
 
 ## Ví dụ scenario
 
@@ -389,7 +389,7 @@ Một trường hợp (case / 사례) khác: hai nhóm (team / 팀) cùng cần 
 
 Một trường hợp (case / 사례) thứ ba: nhóm (team / 팀) nói họ “được empowered”, nhưng mọi môi trường vận hành (production / 운영 환경) thay đổi (change / 변경) vẫn phải chờ một director ở timezone khác. Vấn đề không phải thiếu quyền sở hữu (ownership / 소유권) ở nhóm (team / 팀); quyết định (decision / 결정) kiến trúc (architecture / 아키텍처) contradicts empowerment. PM cần làm rõ threshold nào có thể delegate, điều khiển (control / 제어) nào có thể automate và quyết định (decision / 결정) nào thật sự cần director.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Ví dụ scenario** cho ta quy tắc; **Thất bại (failure / 실패) modes** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Ví dụ scenario** nêu quy tắc; **Thất bại (failure / 실패) modes** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Thất bại (failure / 실패) modes
 
@@ -397,7 +397,7 @@ Hero culture xảy ra khi dự án (project / 프로젝트) phụ thuộc vài c
 
 Những thất bại (failure / 실패) này đều làm thông tin (information / 정보) luồng (flow / 흐름) hoặc quyết định (decision / 결정) chất lượng (quality / 품질) xấu đi trước khi chúng xuất hiện thành schedule/chất lượng (quality / 품질) issue.
 
-> **Chuyển mạch:** Trong **02 — People: leadership, nhóm (team / 팀), xung đột (conflict / 충돌) và empowerment**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Thất bại (failure / 실패) modes** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp kết quả từ **Thất bại (failure / 실패) modes** để khép mạch giải thích.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

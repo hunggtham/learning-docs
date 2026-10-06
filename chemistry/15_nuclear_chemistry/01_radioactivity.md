@@ -26,7 +26,7 @@ A=-\frac{dN}{dt}=\lambda N
 
 Do đó hoạt độ cũng giảm theo hàm mũ khi quần thể hạt nhân mẹ bị tiêu hao.
 
-> **Chuyển mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Chu kỳ bán rã** tiếp nhận điểm tựa từ **Định luật phân rã** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thời gian sống trung bình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Chu kỳ bán rã** nối từ **Định luật phân rã** sang **Thời gian sống trung bình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chu kỳ bán rã
 
@@ -40,7 +40,7 @@ Sau mỗi chu kỳ bán rã, giá trị kỳ vọng của quần thể còn lạ
 
 Chu kỳ bán rã là tính chất của quần thể thống kê, không phải chiếc “đồng hồ đếm ngược” gắn riêng trên từng nguyên tử.
 
-> **Chuyển mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Thời gian sống trung bình** tiếp nhận điểm tựa từ **Chu kỳ bán rã** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đơn vị hoạt độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Thời gian sống trung bình** nối từ **Chu kỳ bán rã** sang **Đơn vị hoạt độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thời gian sống trung bình
 
@@ -58,7 +58,7 @@ t_{1/2}=\tau\ln2
 
 Hai đại lượng mô tả cùng một quá trình nhưng hữu ích trong những cách xử lý toán học khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Đơn vị hoạt độ** tiếp nhận điểm tựa từ **Thời gian sống trung bình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân rã alpha** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Đơn vị hoạt độ** nối từ **Thời gian sống trung bình** sang **Phân rã alpha**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đơn vị hoạt độ
 
@@ -68,7 +68,7 @@ Hai đại lượng mô tả cùng một quá trình nhưng hữu ích trong nh�
 
 Hoạt độ cao không tự động đồng nghĩa liều hấp thụ cao. Loại bức xạ, năng lượng, khoảng cách, hình học nguồn, che chắn và đường xâm nhập vào cơ thể đều ảnh hưởng mức năng lượng thực sự được hấp thụ.
 
-> **Chuyển mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Phân rã alpha** tiếp nhận điểm tựa từ **Đơn vị hoạt độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xuyên hầm lượng tử trong phân rã alpha** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Phân rã alpha** nối từ **Đơn vị hoạt độ** sang **Xuyên hầm lượng tử trong phân rã alpha**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân rã alpha
 
@@ -82,7 +82,7 @@ Alpha gây ion hóa mạnh trên một đơn vị chiều dài đường đi nh�
 
 Nguồn alpha ở bên ngoài thường bị lớp vật liệu mỏng hoặc lớp ngoài của da chặn lại tương đối dễ, nhưng chất phát alpha khi đi vào trong cơ thể có thể nguy hiểm vì năng lượng được lắng đọng trong khoảng cách rất ngắn.
 
-> **Chuyển mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Xuyên hầm lượng tử trong phân rã alpha** tiếp nhận điểm tựa từ **Phân rã alpha** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân rã beta trừ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Xuyên hầm lượng tử trong phân rã alpha** nối từ **Phân rã alpha** sang **Phân rã beta trừ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xuyên hầm lượng tử trong phân rã alpha
 
@@ -92,7 +92,7 @@ Cơ học lượng tử cho phép xác suất **xuyên hầm (quantum tunneling)
 
 Xác suất xuyên hầm phụ thuộc rất nhạy vào chiều cao và chiều rộng hàng rào, vì vậy chỉ một thay đổi nhỏ về năng lượng alpha cũng có thể làm chu kỳ bán rã thay đổi qua nhiều bậc độ lớn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Phân rã beta trừ** tiếp nhận điểm tựa từ **Xuyên hầm lượng tử trong phân rã alpha** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân rã beta cộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Phân rã beta trừ** nối từ **Xuyên hầm lượng tử trong phân rã alpha** sang **Phân rã beta cộng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân rã beta trừ
 
@@ -110,7 +110,7 @@ n\rightarrow p+e^-+\bar\nu_e
 
 Số khối \(A\) không đổi, còn \(Z\) tăng thêm 1.
 
-> **Chuyển mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Phân rã beta cộng** tiếp nhận điểm tựa từ **Phân rã beta trừ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bắt electron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Phân rã beta cộng** nối từ **Phân rã beta trừ** sang **Bắt electron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân rã beta cộng
 
@@ -124,7 +124,7 @@ p\rightarrow n+e^++\nu_e
 
 Positron tạo ra sau đó có thể hủy cặp với electron và tạo photon gamma. Chụp cắt lớp phát xạ positron (**Positron Emission Tomography, PET**) khai thác cơ chế này để tạo tín hiệu hình ảnh.
 
-> **Chuyển mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Bắt electron** tiếp nhận điểm tựa từ **Phân rã beta cộng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân rã gamma** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Bắt electron** nối từ **Phân rã beta cộng** sang **Phân rã gamma**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bắt electron
 
@@ -138,7 +138,7 @@ Khi đó \(Z\) giảm 1.
 
 Việc mất electron lớp trong tạo lỗ trống trong vỏ electron. Khi các electron bên ngoài tái sắp xếp để lấp lỗ trống, hệ có thể phát tia X đặc trưng hoặc electron Auger.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Phân rã gamma** tiếp nhận điểm tựa từ **Bắt electron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển đổi nội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Phân rã gamma** nối từ **Bắt electron** sang **Chuyển đổi nội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân rã gamma
 
@@ -152,7 +152,7 @@ Cả \(A\) và \(Z\) đều không đổi; chỉ trạng thái năng lượng c�
 
 Gamma có khả năng xuyên sâu hơn alpha vì xác suất tương tác trên một đơn vị đường đi thấp hơn, dù vẫn có thể lắng đọng năng lượng đáng kể trong vật chất.
 
-> **Chuyển mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Chuyển đổi nội** tiếp nhận điểm tựa từ **Phân rã gamma** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi phân rã** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Chuyển đổi nội** nối từ **Phân rã gamma** sang **Chuỗi phân rã**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển đổi nội
 
@@ -160,7 +160,7 @@ Thay vì phát photon gamma, hạt nhân kích thích có thể truyền trực 
 
 Cơ chế này gọi là **chuyển đổi nội (internal conversion)** và có thể cạnh tranh với phát gamma đối với một số chuyển mức hạt nhân.
 
-> **Chuyển mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Chuyển đổi nội** xác định đầu vào; **Chuỗi phân rã** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Cân bằng thế tục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Chuyển đổi nội** đặt đầu vào cho **Chuỗi phân rã**, rồi **Cân bằng thế tục** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Chuỗi phân rã
 
@@ -174,7 +174,7 @@ Các chuỗi uranium và thorium chứa nhiều bước alpha và beta liên ti�
 
 Hoạt độ của từng thành viên trong chuỗi phụ thuộc đồng thời tốc độ nó được tạo ra và tốc độ nó tiếp tục phân rã.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Chuỗi phân rã** xác định đầu vào; **Cân bằng thế tục** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Phân nhánh phân rã** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Chuỗi phân rã** đặt đầu vào cho **Cân bằng thế tục**, rồi **Phân nhánh phân rã** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Cân bằng thế tục
 
@@ -182,7 +182,7 @@ Nếu chu kỳ bán rã của hạt nhân mẹ dài hơn rất nhiều hạt nh�
 
 Quan hệ này gọi là **cân bằng thế tục (secular equilibrium)**. Đây là một quan hệ trạng thái ổn định động học trong chuỗi phân rã, không phải cân bằng nhiệt động lực học.
 
-> **Chuyển mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Phân nhánh phân rã** tiếp nhận điểm tựa từ **Cân bằng thế tục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bức xạ tương tác với vật chất như thế nào** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Phân nhánh phân rã** nối từ **Cân bằng thế tục** sang **Bức xạ tương tác với vật chất như thế nào**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân nhánh phân rã
 
@@ -200,7 +200,7 @@ b_i=\frac{\lambda_i}{\lambda}
 
 Phần nhánh cho biết xác suất tương đối một phân rã đi theo từng con đường.
 
-> **Chuyển mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Bức xạ tương tác với vật chất như thế nào** tiếp nhận điểm tựa từ **Phân nhánh phân rã** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mật độ truyền năng lượng tuyến tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Bức xạ tương tác với vật chất như thế nào** nối từ **Phân nhánh phân rã** sang **Mật độ truyền năng lượng tuyến tính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bức xạ tương tác với vật chất như thế nào
 
@@ -218,7 +218,7 @@ Photon năng lượng cao có thể tương tác qua hiệu ứng quang điện,
 
 Neutron không mang điện nên tương tác chủ yếu với hạt nhân qua tán xạ hoặc bắt neutron. Vì vậy neutron gây ion hóa gián tiếp thông qua các hạt tích điện thứ cấp sinh ra sau tương tác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Mật độ truyền năng lượng tuyến tính** tiếp nhận điểm tựa từ **Bức xạ tương tác với vật chất như thế nào** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tầm đi và khả năng xuyên thấu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Mật độ truyền năng lượng tuyến tính** nối từ **Bức xạ tương tác với vật chất như thế nào** sang **Tầm đi và khả năng xuyên thấu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mật độ truyền năng lượng tuyến tính
 
@@ -228,7 +228,7 @@ Alpha thường có LET cao; gamma có LET thấp hơn.
 
 Bức xạ LET cao tạo dải ion hóa dày đặc hơn và vì vậy có thể tạo kiểu tổn thương sinh học khác với bức xạ LET thấp ở cùng mức năng lượng hấp thụ.
 
-> **Chuyển mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Tầm đi và khả năng xuyên thấu** tiếp nhận điểm tựa từ **Mật độ truyền năng lượng tuyến tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyên lý che chắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Tầm đi và khả năng xuyên thấu** nối từ **Mật độ truyền năng lượng tuyến tính** sang **Nguyên lý che chắn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tầm đi và khả năng xuyên thấu
 
@@ -236,7 +236,7 @@ Bức xạ gây ion hóa càng mạnh trên mỗi đơn vị chiều dài thư�
 
 Do đó alpha lắng đọng năng lượng rất tập trung nhưng xuyên kém; gamma tương tác thưa hơn trên đường đi nên có thể xuyên sâu hơn trước khi mất phần lớn năng lượng.
 
-> **Chuyển mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Nguyên lý che chắn** tiếp nhận điểm tựa từ **Tầm đi và khả năng xuyên thấu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ nghịch đảo bình phương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Nguyên lý che chắn** nối từ **Tầm đi và khả năng xuyên thấu** sang **Quan hệ nghịch đảo bình phương**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nguyên lý che chắn
 
@@ -249,7 +249,7 @@ Vật liệu che chắn phù hợp phụ thuộc loại bức xạ.
 
 Không có một loại “tường chống bức xạ” tối ưu cho mọi trường hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Quan hệ nghịch đảo bình phương** tiếp nhận điểm tựa từ **Nguyên lý che chắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thời gian, khoảng cách và che chắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Quan hệ nghịch đảo bình phương** nối từ **Nguyên lý che chắn** sang **Thời gian, khoảng cách và che chắn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quan hệ nghịch đảo bình phương
 
@@ -263,7 +263,7 @@ Vì vậy khoảng cách là một biến rất hiệu quả trong kiểm soát 
 
 Tuy nhiên nguồn thực có kích thước hữu hạn, môi trường có tán xạ và hình học phòng có thể làm hệ lệch khỏi mô hình nguồn điểm lý tưởng.
 
-> **Chuyển mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Thời gian, khoảng cách và che chắn** tiếp nhận điểm tựa từ **Quan hệ nghịch đảo bình phương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liều hấp thụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Thời gian, khoảng cách và che chắn** nối từ **Quan hệ nghịch đảo bình phương** sang **Liều hấp thụ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thời gian, khoảng cách và che chắn
 
@@ -277,7 +277,7 @@ giảm thời gian phơi nhiễm
 
 Đây là khung suy luận quản lý rủi ro, không thay thế quy trình an toàn bức xạ chuyên nghiệp trong môi trường làm việc thực tế.
 
-> **Chuyển mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Liều hấp thụ** tiếp nhận điểm tựa từ **Thời gian, khoảng cách và che chắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liều tương đương và liều hiệu dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Liều hấp thụ** nối từ **Thời gian, khoảng cách và che chắn** sang **Liều tương đương và liều hiệu dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liều hấp thụ
 
@@ -289,7 +289,7 @@ giảm thời gian phơi nhiễm
 
 Đại lượng này khác hoàn toàn hoạt độ tính bằng Bq. Một nguồn có thể có hoạt độ lớn nhưng tạo liều nhỏ tại một vị trí xa, hoặc ngược lại, tùy loại bức xạ và điều kiện hình học.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Liều tương đương và liều hiệu dụng** tiếp nhận điểm tựa từ **Liều hấp thụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng mô và rủi ro ngẫu nhiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Liều tương đương và liều hiệu dụng** nối từ **Liều hấp thụ** sang **Hiệu ứng mô và rủi ro ngẫu nhiên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liều tương đương và liều hiệu dụng
 
@@ -297,7 +297,7 @@ giảm thời gian phơi nhiễm
 
 Gy và Sv vì vậy trả lời những câu hỏi khác nhau: Gy hỏi bao nhiêu năng lượng được hấp thụ; Sv cố gắng phản ánh hệ quả sinh học tương đối của sự hấp thụ đó.
 
-> **Chuyển mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Hiệu ứng mô và rủi ro ngẫu nhiên** tiếp nhận điểm tựa từ **Liều tương đương và liều hiệu dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bức xạ nền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Hiệu ứng mô và rủi ro ngẫu nhiên** nối từ **Liều tương đương và liều hiệu dụng** sang **Bức xạ nền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng mô và rủi ro ngẫu nhiên
 
@@ -305,7 +305,7 @@ Gy và Sv vì vậy trả lời những câu hỏi khác nhau: Gy hỏi bao nhi�
 
 Nguy cơ ung thư thường được xử lý như một hiệu ứng ngẫu nhiên, trong đó xác suất tăng theo liều. Ở vùng liều thấp, việc ước lượng rủi ro có độ không đảm bảo đáng kể và phụ thuộc mô hình dịch tễ.
 
-> **Chuyển mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Bức xạ nền** tiếp nhận điểm tựa từ **Hiệu ứng mô và rủi ro ngẫu nhiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Radon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Bức xạ nền** nối từ **Hiệu ứng mô và rủi ro ngẫu nhiên** sang **Radon**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bức xạ nền
 
@@ -313,7 +313,7 @@ Môi trường tự nhiên luôn có bức xạ từ tia vũ trụ, nuclide tron
 
 Vì vậy “có bức xạ” không tự động đồng nghĩa “nguy hiểm”. Đánh giá rủi ro phải dựa trên liều, loại bức xạ, thời gian và đường phơi nhiễm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Radon** tiếp nhận điểm tựa từ **Bức xạ nền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định tuổi bằng đồng vị phóng xạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Radon** nối từ **Bức xạ nền** sang **Định tuổi bằng đồng vị phóng xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Radon
 
@@ -323,7 +323,7 @@ Các sản phẩm phân rã sống ngắn của radon có thể phát alpha; khi
 
 Đây là ví dụ rõ cho việc hóa học và vận chuyển của một chất khí có thể kiểm soát rủi ro bắt nguồn từ quá trình hạt nhân.
 
-> **Chuyển mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Định tuổi bằng đồng vị phóng xạ** tiếp nhận điểm tựa từ **Radon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Carbon-14** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Định tuổi bằng đồng vị phóng xạ** nối từ **Radon** sang **Carbon-14**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định tuổi bằng đồng vị phóng xạ
 
@@ -333,7 +333,7 @@ Carbon-14 phù hợp với vật liệu hữu cơ tương đối gần thời hi
 
 Độ chính xác phụ thuộc nhiễm bẩn, hiệu chuẩn và lịch sử mở/đóng của hệ mẫu.
 
-> **Chuyển mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Carbon-14** tiếp nhận điểm tựa từ **Định tuổi bằng đồng vị phóng xạ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồng vị đánh dấu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Carbon-14** nối từ **Định tuổi bằng đồng vị phóng xạ** sang **Đồng vị đánh dấu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Carbon-14
 
@@ -343,7 +343,7 @@ Tỉ lệ đồng vị đo được kết hợp đường cong hiệu chuẩn ch
 
 Đây là một ví dụ nơi động học đồng vị trở thành công cụ đo thời gian.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Đồng vị đánh dấu** tiếp nhận điểm tựa từ **Carbon-14** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các phương pháp phát hiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Đồng vị đánh dấu** nối từ **Carbon-14** sang **Các phương pháp phát hiện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đồng vị đánh dấu
 
@@ -351,7 +351,7 @@ Tỉ lệ đồng vị đo được kết hợp đường cong hiệu chuẩn ch
 
 Ứng dụng bao gồm theo dõi chuyển hóa, nước ngầm, dòng vật liệu và phát hiện rò rỉ trong công nghiệp.
 
-> **Chuyển mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Các phương pháp phát hiện** tiếp nhận điểm tựa từ **Đồng vị đánh dấu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thống kê đếm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Các phương pháp phát hiện** nối từ **Đồng vị đánh dấu** sang **Thống kê đếm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các phương pháp phát hiện
 
@@ -371,7 +371,7 @@ Bức xạ tạo cặp electron–lỗ trống trong chất bán dẫn. Một s�
 
 Liều kế theo dõi mức phơi nhiễm hoặc liều tích lũy cho cá nhân hay khu vực.
 
-> **Chuyển mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Thống kê đếm** tiếp nhận điểm tựa từ **Các phương pháp phát hiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trừ nền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Thống kê đếm** nối từ **Các phương pháp phát hiện** sang **Trừ nền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thống kê đếm
 
@@ -391,7 +391,7 @@ Nếu đo được \(N\) sự kiện:
 
 Vì vậy tăng thời gian đếm làm độ chụm tăng theo căn bậc hai, không tăng tuyến tính.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Trừ nền** tiếp nhận điểm tựa từ **Thống kê đếm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thời gian chết của đầu dò** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Trừ nền** nối từ **Thống kê đếm** sang **Thời gian chết của đầu dò**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trừ nền
 
@@ -401,7 +401,7 @@ Nền cần được đo riêng rồi trừ đi, đồng thời độ không đ�
 
 Ở hoạt độ thấp, thống kê của nền có thể trở thành nguồn độ không đảm bảo chi phối.
 
-> **Chuyển mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Thời gian chết của đầu dò** tiếp nhận điểm tựa từ **Trừ nền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Thời gian chết của đầu dò** nối từ **Trừ nền** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thời gian chết của đầu dò
 
@@ -409,7 +409,7 @@ Nền cần được đo riêng rồi trừ đi, đồng thời độ không đ�
 
 Khi đó cần hiệu chỉnh **thời gian chết (dead time)** hoặc thay đổi hình học đo để đưa tốc độ đếm về vùng làm việc thích hợp.
 
-> **Chuyển mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Thời gian chết của đầu dò** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Những hiểu lầm thường gặp** nối từ **Thời gian chết của đầu dò** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -429,7 +429,7 @@ Không thể kết luận chỉ từ hoạt độ. Liều còn phụ thuộc lo�
 
 Không. Rủi ro phụ thuộc liều và bối cảnh phơi nhiễm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phóng xạ — biến đổi hạt nhân xác suất, động học phân rã và tương tác bức xạ**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

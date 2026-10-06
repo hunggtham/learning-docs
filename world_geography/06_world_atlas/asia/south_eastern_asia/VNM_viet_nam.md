@@ -10,7 +10,7 @@ Chuỗi nhân quả (causal chain / 인과 사슬):
 
 **monsoon + mountain–delta relief → rice/water/agriculture → dense delta settlement → north/south metropolitan-industrial poles → coastal vận chuyển (transport / 전송)/ports → export manufacturing and regional trade**.
 
-> **Chuyển mạch:** Trong **Việt Nam (Viet Nam) — lãnh thổ dài hẹp, hai đồng bằng lớn và hành lang sản xuất ven biển**, **Hình dạng dài hẹp và north–south distance** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mountain, plateau và watershed** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Thesis đặt Việt Nam vào quan hệ núi–đồng bằng–biển và hai cực delta; **Hình dạng dài hẹp và north–south distance** giải thích vì sao mọi kết nối bắc–nam phải đi qua một backbone hẹp. **Mountain, plateau và watershed** tiếp theo cho thấy địa hình tạo các corridor và lưu vực đó thế nào.
 
 ## Hình dạng dài hẹp và north–south distance
 
@@ -20,7 +20,7 @@ North–south connectivity vì thế mang tính backbone: road, rail, power, tel
 
 Một disruption lớn ở central corridor có thể tạo mạng (network / 네트워크) tác động (effect / 효과) vượt địa phương.
 
-> **Chuyển mạch:** Ở chặng này của **Việt Nam (Viet Nam) — lãnh thổ dài hẹp, hai đồng bằng lớn và hành lang sản xuất ven biển**, **Mountain, plateau và watershed** tiếp nhận điểm tựa từ **Hình dạng dài hẹp và north–south distance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Monsoon và climate độ dốc (gradient / 기울기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khoảng cách bắc–nam trở thành chi phí mạng vì núi áp sát coast ở miền Trung; **Mountain, plateau và watershed** cho thấy pass, sông dốc và cao nguyên đồng thời mở hydropower/crop và tạo rào cản. **Monsoon và climate độ dốc (gradient / 기울기)** tiếp theo phân hóa các điều kiện theo vĩ độ và relief.
 
 ## Mountain, plateau và watershed
 
@@ -30,7 +30,7 @@ Relief làm river ngắn–dốc ở central coast, nên heavy rainfall có th�
 
 Mountain cũng làm vận chuyển (transport / 전송) east–west tới Laos/Cambodia/China phụ thuộc pass/corridor.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Việt Nam (Viet Nam) — lãnh thổ dài hẹp, hai đồng bằng lớn và hành lang sản xuất ven biển**, **Monsoon và climate độ dốc (gradient / 기울기)** tiếp nhận điểm tựa từ **Mountain, plateau và watershed** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Red River Delta** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Watershed và relief làm mưa, nhiệt và bão có tác động khác nhau theo vùng; **Monsoon và climate độ dốc (gradient / 기울기)** vì thế phải đọc theo timing và không gian chứ không chỉ annual mean. **Red River Delta** tiếp theo cho thấy một lowland phía bắc biến gradient đó thành settlement và công nghiệp.
 
 ## Monsoon và climate độ dốc (gradient / 기울기)
 
@@ -40,7 +40,7 @@ Typhoon/tropical storm ảnh hưởng mạnh central/northern coast nhưng rủi
 
 Agriculture và hạ tầng (infrastructure / 인프라) phải thích nghi với timing rain, heat và storm chứ không chỉ annual mean.
 
-> **Chuyển mạch:** Trong **Việt Nam (Viet Nam) — lãnh thổ dài hẹp, hai đồng bằng lớn và hành lang sản xuất ven biển**, **Red River Delta** tiếp nhận điểm tựa từ **Monsoon và climate độ dốc (gradient / 기울기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mekong Delta** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mưa mùa và phù sa tạo Red River Delta dày dân, nhưng levee, reservoir và đô thị hóa lại điều chỉnh dòng chảy; **Red River Delta** nối thủy văn với Hanoi–Hai Phong–Quang Ninh manufacturing corridor. **Mekong Delta** tiếp theo đối chiếu lowland phía nam với một cân bằng nước–phù sa khác.
 
 ## Red River Delta
 
@@ -50,7 +50,7 @@ Delta formation phụ thuộc sediment và river; levee/reservoir/urbanization l
 
 Hanoi–Hai Phong–Quang Ninh corridor có advantage từ capital thị trường (market / 시장) + cổng (port / 포트) + highway + industrial zone, tạo manufacturing agglomeration northern Vietnam.
 
-> **Chuyển mạch:** Ở chặng này của **Việt Nam (Viet Nam) — lãnh thổ dài hẹp, hai đồng bằng lớn và hành lang sản xuất ven biển**, **Mekong Delta** tiếp nhận điểm tựa từ **Red River Delta** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Central coast** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cả hai delta đều dày dân nhưng Mekong chịu thêm sediment reduction, subsidence, sand mining và saline intrusion; **Mekong Delta** cho thấy vulnerability là cán cân nhiều stock–flow chứ không chỉ sea-level rise. **Central coast** tiếp theo chuyển từ đồng bằng mở rộng sang dải hẹp giữa núi và biển.
 
 ## Mekong Delta
 
@@ -62,7 +62,7 @@ Không nên giải thích delta vulnerability chỉ bằng sea-level rise. Đây
 
 **sediment supply + freshwater luồng (flow / 흐름) − subsidence − erosion − saline pressure**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Việt Nam (Viet Nam) — lãnh thổ dài hẹp, hai đồng bằng lớn và hành lang sản xuất ven biển**, **Central coast** tiếp nhận điểm tựa từ **Mekong Delta** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Central Highlands và commodity geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mekong Delta là lowland sedimentary network, còn **Central coast** có short river, narrow plain, pass và lagoon nên flood/landslide đến nhanh nhưng cảng và du lịch có thể tập trung tại node. **Central Highlands và commodity geography** tiếp theo đọc vùng cao nguyên như hậu phương crop và nước của dải duyên hải.
 
 ## Central coast
 
@@ -72,7 +72,7 @@ Heavy rain, short river và steep catchment tạo flash-flood/landslide rủi ro
 
 Coastline dài hỗ trợ cổng (port / 포트)/tourism/fisheries nhưng cũng tăng exposure với storm/coastal erosion.
 
-> **Chuyển mạch:** Trong **Việt Nam (Viet Nam) — lãnh thổ dài hẹp, hai đồng bằng lớn và hành lang sản xuất ven biển**, **Central Highlands và commodity geography** tiếp nhận điểm tựa từ **Central coast** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Settlement mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Central coast cần hậu phương qua pass, còn **Central Highlands và commodity geography** cho thấy basalt soil, elevation và water tạo coffee nhưng giá trị còn phụ thuộc processing, road và export network. **Settlement mẫu (pattern / 패턴)** tiếp theo đặt các vùng sản xuất ấy cạnh phân bố dân cư và đô thị.
 
 ## Central Highlands và commodity geography
 
@@ -82,7 +82,7 @@ Commodity expansion làm land-use thay đổi (change / 변경) và groundwater 
 
 Coffee geography cho thấy climate + soil chưa đủ; toàn cục (global / 전역) price, processing chất lượng (quality / 품질) và logistics quyết định giá trị (value / 값) capture.
 
-> **Chuyển mạch:** Ở chặng này của **Việt Nam (Viet Nam) — lãnh thổ dài hẹp, hai đồng bằng lớn và hành lang sản xuất ven biển**, **Settlement mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **Central Highlands và commodity geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ho Chi Minh City và Southeast industrial region** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Crop frontier cần đường và nhà máy, trong khi dân cư vẫn dồn về delta, coast và corridor; **Settlement mẫu (pattern / 패턴)** làm rõ heterogeneity bị che bởi national average. **Ho Chi Minh City và Southeast industrial region** tiếp theo là ví dụ tập trung đô thị–cảng–công nghiệp ở phía nam.
 
 ## Settlement mẫu (pattern / 패턴)
 
@@ -92,7 +92,7 @@ National average density che heterogeneity rất lớn.
 
 Urbanization tăng quanh Hanoi, Ho Chi Minh City, industrial provinces và coastal nodes.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Việt Nam (Viet Nam) — lãnh thổ dài hẹp, hai đồng bằng lớn và hành lang sản xuất ven biển**, **Ho Chi Minh City và Southeast industrial region** tiếp nhận điểm tựa từ **Settlement mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Manufacturing và toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Settlement tập trung quanh delta, coast và gateway; **Ho Chi Minh City và Southeast industrial region** biến pattern đó thành functional metropolitan với port, airport, labor và FDI cluster, nhưng vẫn chịu flood/subsidence. **Manufacturing và toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬)** tiếp theo giải thích đầu ra kinh tế của cụm này.
 
 ## Ho Chi Minh City và Southeast industrial region
 
@@ -102,7 +102,7 @@ Cổng (port / 포트), airport, highway, labor thị trường (market / 시장
 
 Low elevation và heavy rainfall tạo flood/drainage challenge; groundwater/subsidence và tidal tác động (effect / 효과) là tầng (layer / 계층) bổ sung.
 
-> **Chuyển mạch:** Trong **Việt Nam (Viet Nam) — lãnh thổ dài hẹp, hai đồng bằng lớn và hành lang sản xuất ven biển**, **Ho Chi Minh City và Southeast industrial region** xác định đầu vào; **Manufacturing và toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Korea–Vietnam môi trường vận hành (production / 운영 환경) liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cụm HCMC cung cấp port, labor và cluster, còn **Manufacturing và toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬)** cho thấy nâng cấp cần supplier depth, power reliability, skill và customs chứ không chỉ wage. **Korea–Vietnam môi trường vận hành (production / 운영 환경) liên kết (connection / 연결)** tiếp theo cụ thể hóa các luồng vốn, công nghệ và lao động.
 
 ## Manufacturing và toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬)
 
@@ -112,7 +112,7 @@ Supplier độ sâu (depth / 깊이), năng lượng (energy / 에너지) độ 
 
 Một factory export-oriented thực chất là nút (node / 노드) trong mạng (network / 네트워크) thành phần (component / 컴포넌트) xuyên nhiều nước.
 
-> **Chuyển mạch:** Ở chặng này của **Việt Nam (Viet Nam) — lãnh thổ dài hẹp, hai đồng bằng lớn và hành lang sản xuất ven biển**, sau nội dung của **Manufacturing và toàn cục (global / 전역) giá trị (value / 값) chuỗi (chain / 사슬)**, **Korea–Vietnam môi trường vận hành (production / 운영 환경) liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Cổng (port / 포트) và maritime truy cập (access / 접근)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Electronics và manufacturing liên kết Korea–Vietnam qua vốn, technology, shipping và labor migration; **Korea–Vietnam môi trường vận hành (production / 운영 환경) liên kết (connection / 연결)** nối industrial agglomeration với housing, logistics và regional inequality. **Cổng (port / 포트) và maritime truy cập (access / 접근)** tiếp theo cho thấy các chuỗi đó đi qua cửa biển nào.
 
 ## Korea–Vietnam môi trường vận hành (production / 운영 환경) liên kết (connection / 연결)
 
@@ -122,7 +122,7 @@ Trường hợp (case / 사례) này giúp học quan hệ (relation / 관계):
 
 **foreign capital/technology → industrial agglomeration → labor di chuyển (migration / 마이그레이션) → urban housing → logistics demand → regional inequality**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Việt Nam (Viet Nam) — lãnh thổ dài hẹp, hai đồng bằng lớn và hành lang sản xuất ven biển**, **Cổng (port / 포트) và maritime truy cập (access / 접근)** tiếp nhận điểm tựa từ **Korea–Vietnam môi trường vận hành (production / 운영 환경) liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Agriculture và food hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Vốn và hàng hóa cần port có channel, terminal và hinterland phù hợp; **Cổng (port / 포트) và maritime truy cập (access / 접근)** vì thế phân biệt coastline dài với effective logistics hub. **Agriculture và food hệ thống (system / 시스템)** tiếp theo đặt cửa biển cạnh các vùng sản xuất và export nông nghiệp.
 
 ## Cổng (port / 포트) và maritime truy cập (access / 접근)
 
@@ -130,7 +130,7 @@ Hai Phong/Lach Huyen, Cai Mep–Thi Vai và other cổng (port / 포트) có rol
 
 Không phải có biển là tự động thành logistics hub.
 
-> **Chuyển mạch:** Trong **Việt Nam (Viet Nam) — lãnh thổ dài hẹp, hai đồng bằng lớn và hành lang sản xuất ven biển**, **Agriculture và food hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Cổng (port / 포트) và maritime truy cập (access / 접근)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng (energy / 에너지) geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Port access quyết định rice, seafood, coffee và fruit đi vào cold chain, processing và traceability ra sao; **Agriculture và food hệ thống (system / 시스템)** nối ecology từng vùng với nhu cầu thị trường. **Năng lượng (energy / 에너지) geography** tiếp theo hỏi nguồn điện nào giữ được các chuỗi lạnh và nhà máy.
 
 ## Agriculture và food hệ thống (system / 시스템)
 
@@ -138,7 +138,7 @@ Rice, seafood, coffee, fruit và other agricultural export phản ánh regional 
 
 Food hệ thống (system / 시스템) đang chuyển từ môi trường vận hành (production / 운영 환경) volume sang cold chuỗi (chain / 사슬), chất lượng (quality / 품질), processing và traceability.
 
-> **Chuyển mạch:** Ở chặng này của **Việt Nam (Viet Nam) — lãnh thổ dài hẹp, hai đồng bằng lớn và hành lang sản xuất ven biển**, **Năng lượng (energy / 에너지) geography** tiếp nhận điểm tựa từ **Agriculture và food hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Development và regional inequality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Food processing và manufacturing làm demand dồn tại đô thị–cảng, trong khi hydropower nằm ở upland và wind/solar có pattern khác; **Năng lượng (energy / 에너지) geography** cho thấy transmission capacity quyết định resource có thành power hữu dụng hay không. **Development và regional inequality** tiếp theo nối source–demand gap với khác biệt cơ hội.
 
 ## Năng lượng (energy / 에너지) geography
 
@@ -146,7 +146,7 @@ Power demand tăng ở industrial/urban region trong khi generation nguồn (sou
 
 Wind/solar potential có spatial mẫu (pattern / 패턴) riêng; grid sức chứa (capacity / 용량) quyết định tài nguyên (resource / 자원) có thể khai thác thực tế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Việt Nam (Viet Nam) — lãnh thổ dài hẹp, hai đồng bằng lớn và hành lang sản xuất ven biển**, **Development và regional inequality** tiếp nhận điểm tựa từ **Năng lượng (energy / 에너지) geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regional role** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khi job, power và hạ tầng tập trung ở Hanoi/HCMC/coastal zones, mountain và rural areas có accessibility thấp hơn; **Development và regional inequality** cho thấy network có thể giảm distance nhưng cũng hút activity về node lớn. **Regional role** tiếp theo đặt bất bình đẳng nội bộ vào vị trí cầu nối Đông Nam Á.
 
 ## Development và regional inequality
 
@@ -154,7 +154,7 @@ Hanoi/HCMC và coastal industrial zone có khả năng tiếp cận (accessibili
 
 Ethnic, rural–urban và migrant differences cho thấy development không thể đọc bằng GDP average.
 
-> **Chuyển mạch:** Trong **Việt Nam (Viet Nam) — lãnh thổ dài hẹp, hai đồng bằng lớn và hành lang sản xuất ven biển**, **Regional role** tiếp nhận điểm tựa từ **Development và regional inequality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Các cực phát triển và hành lang cảng–sản xuất cùng tạo vai trò cầu nối giữa mainland corridor, South China Sea và East Asian supply chains; **Regional role** tổng hợp agriculture, manufacturing, ports và hai river systems. **Dùng chung (common / 공통) misconceptions** tiếp theo kiểm tra các cách giải thích quá đơn giản về lợi thế đó.
 
 ## Regional role
 
@@ -162,7 +162,7 @@ Vietnam nằm ở eastern edge mainland Southeast Asia, giáp South China Sea v�
 
 Role regional đến từ manufacturing, agriculture/food, ports, Mekong/Red River các hệ thống (systems / 시스템들) và vị trí trong East Asia–Southeast Asia supply chuỗi (chain / 사슬).
 
-> **Chuyển mạch:** Ở chặng này của **Việt Nam (Viet Nam) — lãnh thổ dài hẹp, hai đồng bằng lớn và hành lang sản xuất ven biển**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Regional role** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Các ngộ nhận về “chỉ là lao động rẻ”, “Mekong chỉ do sea-level rise” hay “coastline dài thì cảng nào cũng tốt” đều bỏ qua supplier, subsidence, bathymetry và hinterland; **Dùng chung (common / 공통) misconceptions** giữ lại các biến cơ chế. **Mô hình tư duy (mental model / 사고 모델)** tiếp theo cô đọng toàn bộ chuỗi không gian.
 
 ## Dùng chung (common / 공통) misconceptions
 
@@ -172,7 +172,7 @@ Role regional đến từ manufacturing, agriculture/food, ports, Mekong/Red Riv
 
 “Đường bờ biển dài đồng nghĩa mọi nơi thuận lợi cảng” sai vì bathymetry, hinterland và connectivity khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Việt Nam (Viet Nam) — lãnh thổ dài hẹp, hai đồng bằng lớn và hành lang sản xuất ven biển**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** khép chuỗi mountain–coast corridor → Red River/Mekong deltas → hai metropolitan manufacturing poles → port và maritime export network, đồng thời giữ rõ các giới hạn khí hậu, nước và năng lượng. Kết luận này bàn giao cho owner **South-eastern Asia** trong [README](./README.md).
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

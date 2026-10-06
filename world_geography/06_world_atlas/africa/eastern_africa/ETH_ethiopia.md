@@ -8,7 +8,7 @@ Ethiopia là quốc gia không giáp biển có cấu trúc địa hình thuộc
 
 Do elevation thay đổi mạnh, khoảng cách vài chục kilomet theo phương ngang có thể đi kèm chênh lệch khí hậu, crop suitability và khả năng tiếp cận (accessibility / 접근성) rất lớn.
 
-> **Chuyển mạch:** Trong **Ethiopia**, **Ethiopian Highlands như “water tower”** tiếp nhận điểm tựa từ **Khung không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rift Valley và Afar** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Highlands tạo nguồn nước và cao độ lớn, nên **Ethiopian Highlands như “water tower”** tổ chức cả agriculture lẫn downstream politics. **Rift Valley và Afar** tiếp theo cho thấy rift, hồ và vùng thấp tạo tương phản thế nào.
 
 ## Ethiopian Highlands như “water tower”
 
@@ -16,7 +16,7 @@ Cao nguyên nhận lượng mưa lớn hơn surrounding lowlands và là đầu 
 
 Khái niệm **water tower** rất hữu ích: highland không chỉ là nơi ở mà còn là reservoir tự nhiên theo nghĩa rộng, nơi rainfall và elevation tạo runoff cho vùng thấp và basin ngoài biên giới.
 
-> **Chuyển mạch:** Ở chặng này của **Ethiopia**, **Rift Valley và Afar** tiếp nhận điểm tựa từ **Ethiopian Highlands như “water tower”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khí hậu theo độ cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Rift Valley và Afar** hạ thấp địa hình, tăng nhiệt và tạo hồ/volcanic hazards, đối lập với plateau; **Khí hậu theo độ cao** tiếp theo biến chênh lệch này thành mùa vụ và water access.
 
 ## Rift Valley và Afar
 
@@ -24,7 +24,7 @@ East African Rift tạo escarpment, volcanic fields, lakes và geothermal potent
 
 Rift vừa là corridor tự nhiên ở một số đoạn, vừa là zone hazard với earthquake/volcanism.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ethiopia**, **Khí hậu theo độ cao** tiếp nhận điểm tựa từ **Rift Valley và Afar** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dân cư và đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cao độ làm mưa, nhiệt và crop calendar thay đổi nhanh; **Khí hậu theo độ cao** giải thích vì sao settlement và agriculture tập trung ở một số plateau/valley. **Dân cư và đô thị** tiếp theo cho thấy Addis Ababa và các vùng khác nối nhau thế nào.
 
 ## Khí hậu theo độ cao
 
@@ -32,7 +32,7 @@ Không nên hiểu Ethiopia chỉ bằng latitude nhiệt đới. Highlands có 
 
 Highlands thường thuận lợi hơn cho rain-fed agriculture và dense settlement; lowland east/northeast khô hơn, phù hợp hơn với pastoral mobility ở nhiều nơi. Vì vậy elevation là biến nền của human geography.
 
-> **Chuyển mạch:** Trong **Ethiopia**, **Dân cư và đô thị** tiếp nhận điểm tựa từ **Khí hậu theo độ cao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Addis Ababa là administrative–services core, còn corridor và highland towns nối agriculture, livestock và industry; **Dân cư và đô thị** phản ánh địa hình hơn là một cực duy nhất. **Kinh tế không gian** tiếp theo đặt crops, livestock và manufacturing vào mạng đó.
 
 ## Dân cư và đô thị
 
@@ -40,7 +40,7 @@ Addis Ababa nằm trên highland ở vị trí tương đối trung tâm và tr�
 
 Dense rural settlement ở highlands phản ánh combination của climate, soil, long agricultural lịch sử (history / 이력) và water availability. Lowlands rộng nhưng population thưa hơn không phải vì “trống”, mà vì carrying sức chứa (capacity / 용량) và mobility hệ thống (system / 시스템) khác.
 
-> **Chuyển mạch:** Ở chặng này của **Ethiopia**, **Kinh tế không gian** tiếp nhận điểm tựa từ **Dân cư và đô thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Landlockedness và corridor ra biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Coffee, cereals, livestock, manufacturing và services cần roads, rail và energy; **Kinh tế không gian** bị giới hạn bởi địa hình và biển. **Landlockedness và corridor ra biển** tiếp theo giải thích chi phí gateway.
 
 ## Kinh tế không gian
 
@@ -48,7 +48,7 @@ Coffee landscapes nổi bật ở một số highland zones; cereals, livestock 
 
 Hydropower potential lớn do high elevation + river discharge, nhưng electricity geography và water-basin geography không trùng hoàn toàn: power có thể truyền qua grid, water thì chảy theo basin.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ethiopia**, **Landlockedness và corridor ra biển** tiếp nhận điểm tựa từ **Kinh tế không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Không giáp biển khiến **Landlockedness và corridor ra biển** phụ thuộc Djibouti và các tuyến khu vực; độ tin cậy corridor ảnh hưởng trực tiếp tới food, fuel và export. **Rủi ro** tiếp theo đặt mạng này trước hạn, flood, landslide và conflict.
 
 ## Landlockedness và corridor ra biển
 
@@ -56,7 +56,7 @@ Ethiopia không có seaport, nên road/rail corridor tới Djibouti có vai trò
 
 Landlocked không đồng nghĩa isolated; vấn đề là số lượng tuyến (route / 경로) alternatives, border efficiency, rail/road sức chứa (capacity / 용량) và cổng (port / 포트) truy cập (access / 접근).
 
-> **Chuyển mạch:** Trong **Ethiopia**, **Rủi ro** tiếp nhận điểm tựa từ **Landlockedness và corridor ra biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Drought, flood, landslide, earthquake/volcanic activity và corridor disruption làm **Rủi ro** phân hóa theo highland, rift và lowland. **Những hiểu lầm phổ biến** tiếp theo sửa cách đọc Ethiopia chỉ qua highlands hoặc famine.
 
 ## Rủi ro
 
@@ -64,7 +64,7 @@ Drought rủi ro (risk / 위험) cao ở các drylands và có thể lan sang fo
 
 Climate variability vì vậy tạo opposite hazards: cùng quốc gia vừa có drought-prone zones vừa có flood-prone basins.
 
-> **Chuyển mạch:** Ở chặng này của **Ethiopia**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Những hiểu lầm phổ biến** nhắc rằng Ethiopia vừa là water tower vừa thiếu ổn định nước cục bộ, vừa có highlands vừa có rift/lowlands, và growth không xóa landlockedness. **Mô hình tư duy** sẽ khép profile.
 
 ## Những hiểu lầm phổ biến
 
@@ -74,7 +74,7 @@ Climate variability vì vậy tạo opposite hazards: cùng quốc gia vừa có
 
 **“Rift Valley chỉ là một đường nứt.”** Thực tế nó là một zone địa hình–núi lửa–hồ–geothermal rộng, ảnh hưởng trực tiếp settlement và vận chuyển (transport / 전송).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ethiopia**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi highland water tower → Rift/Afar → altitude climate → Addis/urban network → economy → Djibouti corridors và risk, rồi bàn giao cho owner **Eastern Africa** trong [README](./README.md).
 
 ## Mô hình tư duy
 

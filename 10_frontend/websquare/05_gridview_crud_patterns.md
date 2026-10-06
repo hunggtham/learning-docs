@@ -17,7 +17,7 @@ DataList giữ row, column giá trị (value / 값) và row status. GridView ch�
 
 Khi cần gửi dữ liệu máy chủ (server / 서버), dirty check hoặc phân tích trạng thái (state / 상태), ưu tiên mô hình (model / 모델). Khi cần thay cách trình bày, ưu tiên GridView.
 
-> **Chuyển mạch:** Trong **05 — GridView, CRUD & Enterprise Screen Patterns**, **1. GridView là view; DataList mới là dữ liệu nghiệp vụ phía máy khách (client / 클라이언트)** nêu điều cần giải thích; **2. tìm kiếm (search / 검색) screen điển hình** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Row định danh (identity / 식별자) quan trọng hơn row chỉ mục (index / 인덱스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — GridView, CRUD & Enterprise Screen Patterns**, **1. GridView là view; DataList mới là dữ liệu nghiệp vụ phía máy khách (client / 클라이언트)** đặt vấn đề; **2. tìm kiếm (search / 검색) screen điển hình** đối chiếu bằng chứng, rồi **3. Row định danh (identity / 식별자) quan trọng hơn row chỉ mục (index / 인덱스)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2. tìm kiếm (search / 검색) screen điển hình
 
@@ -42,7 +42,7 @@ GridView
 
 Luồng (flow / 흐름) này tốt vì mỗi tầng (layer / 계층) có trách nhiệm rõ. Nếu GridView rỗng, bạn có thể inspect `dlUser`. Nếu `dlUser` rỗng, inspect Submission phản hồi (response / 응답). Nếu phản hồi (response / 응답) rỗng, inspect máy chủ (server / 서버) truy vấn (query / 쿼리).
 
-> **Chuyển mạch:** Search screen tạo input/query state; row identity giữ stable mapping khi DataList sort/filter/update. CRUD row status tiếp theo biến mapping đó thành transition contract.
+> **Nối mạch:** Search screen tạo input/query state; row identity giữ stable mapping khi DataList sort/filter/update. CRUD row status tiếp theo biến mapping đó thành transition contract.
 
 ## 3. Row định danh (identity / 식별자) quan trọng hơn row chỉ mục (index / 인덱스)
 
@@ -67,7 +67,7 @@ scwin.selectedUserId = dlUser.getCellData(row, "USER_ID");
 
 Sau đó nếu cần, tìm lại row bằng key theo API phù hợp.
 
-> **Chuyển mạch:** Stable row identity làm CRUD mapping không phụ thuộc index; row status tiếp theo quyết định insert mới mang default nào và do owner nào khởi tạo.
+> **Nối mạch:** Stable row identity làm CRUD mapping không phụ thuộc index; row status tiếp theo quyết định insert mới mang default nào và do owner nào khởi tạo.
 
 ## 4. CRUD row status và ý nghĩa thật
 
@@ -95,7 +95,7 @@ for (var i = 0; i < count; i++) {
 
 Đừng reset row status chỉ để UI “trông sạch” trước khi máy chủ (server / 서버) lần ghi nhận (commit / 커밋). Bạn sẽ mất bằng chứng (evidence / 증거) về unsaved changes.
 
-> **Chuyển mạch:** Insert default phải phản ánh business invariant; delete/remove tiếp theo tách thay đổi persistence khỏi việc chỉ bỏ row khỏi current view.
+> **Nối mạch:** Insert default phải phản ánh business invariant; delete/remove tiếp theo tách thay đổi persistence khỏi việc chỉ bỏ row khỏi current view.
 
 ## 5. Insert row nên khởi tạo default có chủ đích
 
@@ -114,7 +114,7 @@ Tên API có thể khác theo generation/bản dựng (build / 빌드), nhưng m
 
 Nếu default đến máy chủ (server / 서버)/cấu hình (config / 설정), tránh hard-code rải rác nhiều screen.
 
-> **Chuyển mạch:** Ở chặng này của **05 — GridView, CRUD & Enterprise Screen Patterns**, **6. Delete và remove khác nghiệp vụ (business / 비즈니스) meaning** tiếp nhận điểm tựa từ **5. Insert row nên khởi tạo default có chủ đích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. GridView có thể ẩn row deleted nhưng DataList vẫn giữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — GridView, CRUD & Enterprise Screen Patterns**, **6. Delete và remove khác nghiệp vụ (business / 비즈니스) meaning** nối từ **5. Insert row nên khởi tạo default có chủ đích** sang **7. GridView có thể ẩn row deleted nhưng DataList vẫn giữ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Delete và remove khác nghiệp vụ (business / 비즈니스) meaning
 
@@ -129,7 +129,7 @@ existing row → marked delete → server DELETE
 new unsaved row → discard locally
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — GridView, CRUD & Enterprise Screen Patterns**, **7. GridView có thể ẩn row deleted nhưng DataList vẫn giữ** tiếp nhận điểm tựa từ **6. Delete và remove khác nghiệp vụ (business / 비즈니스) meaning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Cell giá trị (value / 값) và display giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — GridView, CRUD & Enterprise Screen Patterns**, **7. GridView có thể ẩn row deleted nhưng DataList vẫn giữ** nối từ **6. Delete và remove khác nghiệp vụ (business / 비즈니스) meaning** sang **8. Cell giá trị (value / 값) và display giá trị (value / 값)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. GridView có thể ẩn row deleted nhưng DataList vẫn giữ
 
@@ -137,7 +137,7 @@ Thuộc tính (property / 속성) như `hideDeletedRow` cho phép UI không hi�
 
 Hệ quả: count trên Grid và count trên DataList có thể khác ngữ nghĩa (semantics / 의미론). Khi hiển thị “총 10건”, hãy quyết định đang đếm visible records, máy chủ (server / 서버) records hay all máy khách (client / 클라이언트) rows including deleted.
 
-> **Chuyển mạch:** Trong **05 — GridView, CRUD & Enterprise Screen Patterns**, **8. Cell giá trị (value / 값) và display giá trị (value / 값)** tiếp nhận điểm tựa từ **7. GridView có thể ẩn row deleted nhưng DataList vẫn giữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. kiểm tra hợp lệ (validation / 검증) theo row trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — GridView, CRUD & Enterprise Screen Patterns**, **8. Cell giá trị (value / 값) và display giá trị (value / 값)** nối từ **7. GridView có thể ẩn row deleted nhưng DataList vẫn giữ** sang **9. kiểm tra hợp lệ (validation / 검증) theo row trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Cell giá trị (value / 값) và display giá trị (value / 값)
 
@@ -152,7 +152,7 @@ Hoặc date/number format tương tự đầu vào (input / 입력). Khi bản d
 
 Đừng compare display string nếu nghiệp vụ (business / 비즈니스) quy tắc (rule / 규칙) dựa mã (code / 코드).
 
-> **Chuyển mạch:** Ở chặng này của **05 — GridView, CRUD & Enterprise Screen Patterns**, **9. kiểm tra hợp lệ (validation / 검증) theo row trạng thái (state / 상태)** tiếp nhận điểm tựa từ **8. Cell giá trị (value / 값) và display giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Cross-row bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — GridView, CRUD & Enterprise Screen Patterns**, **9. kiểm tra hợp lệ (validation / 검증) theo row trạng thái (state / 상태)** nối từ **8. Cell giá trị (value / 값) và display giá trị (value / 값)** sang **10. Cross-row bất biến (invariant / 불변식)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. kiểm tra hợp lệ (validation / 검증) theo row trạng thái (state / 상태)
 
@@ -178,7 +178,7 @@ scwin.validateChangedRows = function () {
 
 Nếu quy tắc (rule / 규칙) liên quan uniqueness toàn dataset, vẫn có thể cần scan nhiều row. Optimize theo ngữ nghĩa (semantics / 의미론), không theo công thức “chỉ changed rows”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — GridView, CRUD & Enterprise Screen Patterns**, **10. Cross-row bất biến (invariant / 불변식)** tiếp nhận điểm tựa từ **9. kiểm tra hợp lệ (validation / 검증) theo row trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Before-change sự kiện (event / 이벤트) để chặn invalid chuyển tiếp (transition / 전이)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — GridView, CRUD & Enterprise Screen Patterns**, **10. Cross-row bất biến (invariant / 불변식)** nối từ **9. kiểm tra hợp lệ (validation / 검증) theo row trạng thái (state / 상태)** sang **11. Before-change sự kiện (event / 이벤트) để chặn invalid chuyển tiếp (transition / 전이)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Cross-row bất biến (invariant / 불변식)
 
@@ -200,7 +200,7 @@ scwin.validateDuplicateUserId = function () { ... };
 
 Không nhét lô-gic (logic / 논리) vào `onchange` của từng cell nếu quy tắc (rule / 규칙) cần toàn dataset, vì nó dễ bị bypass khi dữ liệu (data / 데이터) tải (load / 로드) bằng API.
 
-> **Chuyển mạch:** Trong **05 — GridView, CRUD & Enterprise Screen Patterns**, **11. Before-change sự kiện (event / 이벤트) để chặn invalid chuyển tiếp (transition / 전이)** tiếp nhận điểm tựa từ **10. Cross-row bất biến (invariant / 불변식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Selection trạng thái (state / 상태) không nên bị nhầm với dữ liệu (data / 데이터) trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — GridView, CRUD & Enterprise Screen Patterns**, **11. Before-change sự kiện (event / 이벤트) để chặn invalid chuyển tiếp (transition / 전이)** nối từ **10. Cross-row bất biến (invariant / 불변식)** sang **12. Selection trạng thái (state / 상태) không nên bị nhầm với dữ liệu (data / 데이터) trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Before-change sự kiện (event / 이벤트) để chặn invalid chuyển tiếp (transition / 전이)
 
@@ -218,7 +218,7 @@ scwin.dlUser_onbeforecelldatachange = function (info) {
 
 Đây phù hợp cho cục bộ (local / 로컬) bất biến (invariant / 불변식) rẻ và rõ. quy tắc (rule / 규칙) cần máy chủ (server / 서버) dữ liệu (data / 데이터) hoặc async check không nên khối (block / 블록) theo cách giả định synchronous.
 
-> **Chuyển mạch:** Ở chặng này của **05 — GridView, CRUD & Enterprise Screen Patterns**, **11. Before-change sự kiện (event / 이벤트) để chặn invalid chuyển tiếp (transition / 전이)** đã nêu tiêu chí phân biệt, còn **12. Selection trạng thái (state / 상태) không nên bị nhầm với dữ liệu (data / 데이터) trạng thái (state / 상태)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **13. tìm kiếm (search / 검색) lại sau save hay cập nhật (update / 업데이트) cục bộ (local / 로컬)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — GridView, CRUD & Enterprise Screen Patterns**, **11. Before-change sự kiện (event / 이벤트) để chặn invalid chuyển tiếp (transition / 전이)** đặt tiêu chí; **12. Selection trạng thái (state / 상태) không nên bị nhầm với dữ liệu (data / 데이터) trạng thái (state / 상태)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **13. tìm kiếm (search / 검색) lại sau save hay cập nhật (update / 업데이트) cục bộ (local / 로컬)?** mở rộng hệ quả.
 
 ## 12. Selection trạng thái (state / 상태) không nên bị nhầm với dữ liệu (data / 데이터) trạng thái (state / 상태)
 
@@ -234,7 +234,7 @@ BUSINESS_SELECTED_YN field thực sự cần persist
 
 Không nên persist UI selection chỉ vì nó tiện.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — GridView, CRUD & Enterprise Screen Patterns**, **12. Selection trạng thái (state / 상태) không nên bị nhầm với dữ liệu (data / 데이터) trạng thái (state / 상태)** đã nêu tiêu chí phân biệt, còn **13. tìm kiếm (search / 검색) lại sau save hay cập nhật (update / 업데이트) cục bộ (local / 로컬)?** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. Optimistic locking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — GridView, CRUD & Enterprise Screen Patterns**, **12. Selection trạng thái (state / 상태) không nên bị nhầm với dữ liệu (data / 데이터) trạng thái (state / 상태)** đặt tiêu chí; **13. tìm kiếm (search / 검색) lại sau save hay cập nhật (update / 업데이트) cục bộ (local / 로컬)?** dùng tiêu chí đó để kiểm tra ranh giới, rồi **14. Optimistic locking** mở rộng hệ quả.
 
 ## 13. tìm kiếm (search / 검색) lại sau save hay cập nhật (update / 업데이트) cục bộ (local / 로컬)?
 
@@ -248,7 +248,7 @@ Re-query phù hợp khi máy chủ (server / 서버) có chuỗi (sequence / 시
 
 Không có lựa chọn luôn đúng. Hãy cân tính đúng đắn (correctness / 정확성), độ trễ (latency / 지연 시간) và độ phức tạp (complexity / 복잡도).
 
-> **Chuyển mạch:** Trong **05 — GridView, CRUD & Enterprise Screen Patterns**, **14. Optimistic locking** tiếp nhận điểm tựa từ **13. tìm kiếm (search / 검색) lại sau save hay cập nhật (update / 업데이트) cục bộ (local / 로컬)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Paging: client-side và server-side khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — GridView, CRUD & Enterprise Screen Patterns**, **14. Optimistic locking** nối từ **13. tìm kiếm (search / 검색) lại sau save hay cập nhật (update / 업데이트) cục bộ (local / 로컬)?** sang **15. Paging: client-side và server-side khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Optimistic locking
 
@@ -266,7 +266,7 @@ Máy chủ (server / 서버) cập nhật (update / 업데이트) với điều 
 
 WebSquare chỉ là nơi vận chuyển (transport / 전송)/display xung đột (conflict / 충돌); bất biến (invariant / 불변식) tính đồng thời (concurrency / 동시성) thuộc máy chủ (server / 서버)/cơ sở dữ liệu (database / 데이터베이스).
 
-> **Chuyển mạch:** Ở chặng này của **05 — GridView, CRUD & Enterprise Screen Patterns**, **15. Paging: client-side và server-side khác nhau** tiếp nhận điểm tựa từ **14. Optimistic locking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Large dataset và rendering ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — GridView, CRUD & Enterprise Screen Patterns**, **15. Paging: client-side và server-side khác nhau** nối từ **14. Optimistic locking** sang **16. Large dataset và rendering ngân sách (budget / 예산)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Paging: client-side và server-side khác nhau
 
@@ -283,7 +283,7 @@ server paging → browser chỉ có một slice
 
 Đừng viết lô-gic (logic / 논리) “đếm toàn bộ” dựa trên `getRowCount()` nếu máy chủ (server / 서버) paging đang bật.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — GridView, CRUD & Enterprise Screen Patterns**, **16. Large dataset và rendering ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **15. Paging: client-side và server-side khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. N+1 Submission ở từng row là anti-pattern** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — GridView, CRUD & Enterprise Screen Patterns**, **16. Large dataset và rendering ngân sách (budget / 예산)** nối từ **15. Paging: client-side và server-side khác nhau** sang **17. N+1 Submission ở từng row là anti-pattern**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Large dataset và rendering ngân sách (budget / 예산)
 
@@ -313,7 +313,7 @@ memory before/after load
 
 Nếu 50 MB JSON được trả về, virtual scroll không làm mạng (network / 네트워크) và parse chi phí (cost / 비용) biến mất.
 
-> **Chuyển mạch:** Trong **05 — GridView, CRUD & Enterprise Screen Patterns**, **17. N+1 Submission ở từng row là anti-pattern** tiếp nhận điểm tựa từ **16. Large dataset và rendering ngân sách (budget / 예산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Custom formatting không nên chứa heavy lô-gic nghiệp vụ (business logic / 비즈니스 로직)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — GridView, CRUD & Enterprise Screen Patterns**, **17. N+1 Submission ở từng row là anti-pattern** nối từ **16. Large dataset và rendering ngân sách (budget / 예산)** sang **18. Custom formatting không nên chứa heavy lô-gic nghiệp vụ (business logic / 비즈니스 로직)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. N+1 Submission ở từng row là anti-pattern
 
@@ -327,7 +327,7 @@ Một màn hình tải (load / 로드) 100 row rồi gọi thêm một Submissio
 
 Nếu máy chủ (server / 서버) có thể phép nối (join / 조인)/batch, ưu tiên batch đặc tả hợp đồng (contract / 계약). Nếu detail thật sự lazy, chỉ tải (load / 로드) khi người dùng (user / 사용자) mở row cần thiết.
 
-> **Chuyển mạch:** Ở chặng này của **05 — GridView, CRUD & Enterprise Screen Patterns**, **18. Custom formatting không nên chứa heavy lô-gic nghiệp vụ (business logic / 비즈니스 로직)** tiếp nhận điểm tựa từ **17. N+1 Submission ở từng row là anti-pattern** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Excel upload/download là dữ liệu (data / 데이터) ranh giới (boundary / 경계) nguy hiểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — GridView, CRUD & Enterprise Screen Patterns**, **18. Custom formatting không nên chứa heavy lô-gic nghiệp vụ (business logic / 비즈니스 로직)** nối từ **17. N+1 Submission ở từng row là anti-pattern** sang **19. Excel upload/download là dữ liệu (data / 데이터) ranh giới (boundary / 경계) nguy hiểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Custom formatting không nên chứa heavy lô-gic nghiệp vụ (business logic / 비즈니스 로직)
 
@@ -341,7 +341,7 @@ input value → display representation
 
 Nghiệp vụ (business / 비즈니스) computation nên chuẩn bị trước ở mô hình (model / 모델)/máy chủ (server / 서버) nếu phức tạp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — GridView, CRUD & Enterprise Screen Patterns**, **18. Custom formatting không nên chứa heavy lô-gic nghiệp vụ (business logic / 비즈니스 로직)** đã nêu tiêu chí phân biệt, còn **19. Excel upload/download là dữ liệu (data / 데이터) ranh giới (boundary / 경계) nguy hiểm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **20. Batch save và partial thất bại (failure / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — GridView, CRUD & Enterprise Screen Patterns**, **18. Custom formatting không nên chứa heavy lô-gic nghiệp vụ (business logic / 비즈니스 로직)** đặt tiêu chí; **19. Excel upload/download là dữ liệu (data / 데이터) ranh giới (boundary / 경계) nguy hiểm** dùng tiêu chí đó để kiểm tra ranh giới, rồi **20. Batch save và partial thất bại (failure / 실패)** mở rộng hệ quả.
 
 ## 19. Excel upload/download là dữ liệu (data / 데이터) ranh giới (boundary / 경계) nguy hiểm
 
@@ -363,7 +363,7 @@ partial failure reporting
 
 Upload thành Grid không đồng nghĩa dữ liệu (data / 데이터) hợp lệ để persist.
 
-> **Chuyển mạch:** Trong **05 — GridView, CRUD & Enterprise Screen Patterns**, **19. Excel upload/download là dữ liệu (data / 데이터) ranh giới (boundary / 경계) nguy hiểm** đã nêu tiêu chí phân biệt, còn **20. Batch save và partial thất bại (failure / 실패)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **21. lỗi (error / 오류) ánh xạ (mapping / 매핑) về row/cell** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — GridView, CRUD & Enterprise Screen Patterns**, **19. Excel upload/download là dữ liệu (data / 데이터) ranh giới (boundary / 경계) nguy hiểm** đặt tiêu chí; **20. Batch save và partial thất bại (failure / 실패)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **21. lỗi (error / 오류) ánh xạ (mapping / 매핑) về row/cell** mở rộng hệ quả.
 
 ## 20. Batch save và partial thất bại (failure / 실패)
 
@@ -375,7 +375,7 @@ Giả sử 100 row được save. máy chủ (server / 서버) có hai chiến l
 
 Máy khách (client / 클라이언트) UX phải phù hợp. Với partial success, DataList cần biết row nào đã lần ghi nhận (commit / 커밋) và row nào còn dirty/lỗi (error / 오류). Đây là giao thức (protocol / 프로토콜) thiết kế (design / 설계), không chỉ Grid sự kiện (event / 이벤트).
 
-> **Chuyển mạch:** Ở chặng này của **05 — GridView, CRUD & Enterprise Screen Patterns**, **21. lỗi (error / 오류) ánh xạ (mapping / 매핑) về row/cell** tiếp nhận điểm tựa từ **20. Batch save và partial thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. truy vấn (query / 쿼리) điều kiện (condition / 조건) trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — GridView, CRUD & Enterprise Screen Patterns**, **21. lỗi (error / 오류) ánh xạ (mapping / 매핑) về row/cell** nối từ **20. Batch save và partial thất bại (failure / 실패)** sang **22. truy vấn (query / 쿼리) điều kiện (condition / 조건) trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. lỗi (error / 오류) ánh xạ (mapping / 매핑) về row/cell
 
@@ -395,7 +395,7 @@ Máy chủ (server / 서버) kiểm tra hợp lệ (validation / 검증) tốt n
 
 Row chỉ mục (index / 인덱스) trên máy khách (client / 클라이언트) có thể thay đổi do sort/filter. nghiệp vụ (business / 비즈니스) key giúp map lỗi (error / 오류) ổn định hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — GridView, CRUD & Enterprise Screen Patterns**, **22. truy vấn (query / 쿼리) điều kiện (condition / 조건) trạng thái (state / 상태)** tiếp nhận điểm tựa từ **21. lỗi (error / 오류) ánh xạ (mapping / 매핑) về row/cell** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. UI chế độ (mode / 모드): truy vấn (query / 쿼리) / EDIT / SAVE** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — GridView, CRUD & Enterprise Screen Patterns**, **22. truy vấn (query / 쿼리) điều kiện (condition / 조건) trạng thái (state / 상태)** nối từ **21. lỗi (error / 오류) ánh xạ (mapping / 매핑) về row/cell** sang **23. UI chế độ (mode / 모드): truy vấn (query / 쿼리) / EDIT / SAVE**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. truy vấn (query / 쿼리) điều kiện (condition / 조건) trạng thái (state / 상태)
 
@@ -411,7 +411,7 @@ current result dataset
 
 Nếu report/export cần biết truy vấn (query / 쿼리) đã chạy, snapshot điều kiện (condition / 조건) khi execute Submission.
 
-> **Chuyển mạch:** Trong **05 — GridView, CRUD & Enterprise Screen Patterns**, **23. UI chế độ (mode / 모드): truy vấn (query / 쿼리) / EDIT / SAVE** tiếp nhận điểm tựa từ **22. truy vấn (query / 쿼리) điều kiện (condition / 조건) trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Unsaved-change guard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — GridView, CRUD & Enterprise Screen Patterns**, **23. UI chế độ (mode / 모드): truy vấn (query / 쿼리) / EDIT / SAVE** nối từ **22. truy vấn (query / 쿼리) điều kiện (condition / 조건) trạng thái (state / 상태)** sang **24. Unsaved-change guard**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. UI chế độ (mode / 모드): truy vấn (query / 쿼리) / EDIT / SAVE
 
@@ -429,7 +429,7 @@ scwin.setMode = function (mode) {
 
 Chế độ (mode / 모드) giúp thống nhất enable/readOnly trạng thái (state / 상태) của nhiều thành phần (component / 컴포넌트) thay vì rải thuộc tính (property / 속성) mutation khắp handlers.
 
-> **Chuyển mạch:** Ở chặng này của **05 — GridView, CRUD & Enterprise Screen Patterns**, **24. Unsaved-change guard** tiếp nhận điểm tựa từ **23. UI chế độ (mode / 모드): truy vấn (query / 쿼리) / EDIT / SAVE** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Grid sự kiện (event / 이벤트) storm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — GridView, CRUD & Enterprise Screen Patterns**, **24. Unsaved-change guard** nối từ **23. UI chế độ (mode / 모드): truy vấn (query / 쿼리) / EDIT / SAVE** sang **25. Grid sự kiện (event / 이벤트) storm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Unsaved-change guard
 
@@ -437,7 +437,7 @@ Trước khi chuyển tab/page hoặc đóng popup, nếu DataList còn dirty, �
 
 Dirty check phải dựa mô hình (model / 모델) trạng thái (state / 상태), không dựa “người dùng (user / 사용자) đã click Edit”. người dùng (user / 사용자) có thể click Edit nhưng không thay gì, hoặc dữ liệu (data / 데이터) có thể bị script thay dù người dùng (user / 사용자) không click Edit.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — GridView, CRUD & Enterprise Screen Patterns**, **25. Grid sự kiện (event / 이벤트) storm** tiếp nhận điểm tựa từ **24. Unsaved-change guard** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Readability của grid mã (code / 코드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — GridView, CRUD & Enterprise Screen Patterns**, **25. Grid sự kiện (event / 이벤트) storm** nối từ **24. Unsaved-change guard** sang **26. Readability của grid mã (code / 코드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Grid sự kiện (event / 이벤트) storm
 
@@ -447,7 +447,7 @@ Ví dụ 10.000 cell changes × scan 10.000 rows là 100 triệu thao tác (oper
 
 Khi bulk cập nhật (update / 업데이트), xem bản dựng (build / 빌드) có cơ chế suspend sự kiện (event / 이벤트)/redraw hay không; nếu không, thiết kế hàm (function / 함수) tổng hợp để chỉ recalculate một lần sau batch.
 
-> **Chuyển mạch:** Trong **05 — GridView, CRUD & Enterprise Screen Patterns**, **26. Readability của grid mã (code / 코드)** tiếp nhận điểm tựa từ **25. Grid sự kiện (event / 이벤트) storm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Example: search-edit-save hoàn chỉnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **05 — GridView, CRUD & Enterprise Screen Patterns**, **26. Readability của grid mã (code / 코드)** nối từ **25. Grid sự kiện (event / 이벤트) storm** sang **27. Example: search-edit-save hoàn chỉnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Readability của grid mã (code / 코드)
 
@@ -470,7 +470,7 @@ var USER_COL = {
 
 Tuy nhiên đừng lớp trừu tượng (abstraction / 추상화) quá mức khiến dev phải nhảy 5 tệp (file / 파일) mới biết column ID. Mục tiêu là giảm typo và giữ lĩnh vực (domain / 도메인) vocabulary rõ.
 
-> **Chuyển mạch:** Ở chặng này của **05 — GridView, CRUD & Enterprise Screen Patterns**, **26. Readability của grid mã (code / 코드)** cho ta quy tắc; **27. Example: search-edit-save hoàn chỉnh** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **28. cấp cao (senior / 시니어) code-review checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **05 — GridView, CRUD & Enterprise Screen Patterns**, **26. Readability của grid mã (code / 코드)** nêu quy tắc; **27. Example: search-edit-save hoàn chỉnh** thử quy tắc trong tình huống, rồi **28. cấp cao (senior / 시니어) code-review checklist** mở rộng hệ quả.
 
 ## 27. Example: search-edit-save hoàn chỉnh
 
@@ -516,7 +516,7 @@ scwin.saveUsers = function () {
 
 Tên API DataMap như `getJSON()` phải được đối chiếu bản dựng (build / 빌드) nếu dùng thực tế; ví dụ này nhấn mạnh orchestration cấu trúc (structure / 구조) hơn là tham chiếu (reference / 참조) API tuyệt đối.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **05 — GridView, CRUD & Enterprise Screen Patterns**, **27. Example: search-edit-save hoàn chỉnh** cho ta quy tắc; **28. cấp cao (senior / 시니어) code-review checklist** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **29. Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **05 — GridView, CRUD & Enterprise Screen Patterns**, **27. Example: search-edit-save hoàn chỉnh** nêu quy tắc; **28. cấp cao (senior / 시니어) code-review checklist** thử quy tắc trong tình huống, rồi **29. Kết nối** mở rộng hệ quả.
 
 ## 28. cấp cao (senior / 시니어) code-review checklist
 
@@ -540,7 +540,7 @@ Khi rà soát (review / 검토) Grid screen, hỏi:
 
 “Sau save máy khách (client / 클라이언트) lấy chuẩn gốc (canonical / 정본) trạng thái (state / 상태) từ đâu?”
 
-> **Chuyển mạch:** Trong **05 — GridView, CRUD & Enterprise Screen Patterns**, **29. Kết nối** tiếp nhận điểm tựa từ **28. cấp cao (senior / 시니어) code-review checklist** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **05 — GridView, CRUD & Enterprise Screen Patterns**, **29. Kết nối** nối từ **28. cấp cao (senior / 시니어) code-review checklist** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 29. Kết nối
 

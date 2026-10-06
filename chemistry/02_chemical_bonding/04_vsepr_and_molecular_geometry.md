@@ -134,7 +134,7 @@ angles ≈120°
 
 Molecule có symmetry cao nên net dipole gần 0 dù B–F bonds rất polar.
 
-> **Chuyển mạch:** Trong **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₂E — bent** tiếp nhận điểm tựa từ **AX₃ — trigonal planar** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AX₄ — tetrahedral** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₂E — bent** nối từ **AX₃ — trigonal planar** sang **AX₄ — tetrahedral**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AX₂E — bent
 
@@ -146,7 +146,7 @@ Vì dipoles không triệt tiêu, SO₂ polar.
 
 # Bốn electron domains
 
-> **Chuyển mạch:** Ở chặng này của **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₄ — tetrahedral** tiếp nhận điểm tựa từ **AX₂E — bent** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AX₃E — trigonal pyramidal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₄ — tetrahedral** nối từ **AX₂E — bent** sang **AX₃E — trigonal pyramidal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AX₄ — tetrahedral
 
@@ -154,7 +154,7 @@ CH₄ có four equivalent directions.
 
 Tetrahedral hình học (geometry / 기하학) maximizes angular separation trong 3D tốt hơn square planar cho bốn equivalent domains.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₃E — trigonal pyramidal** tiếp nhận điểm tựa từ **AX₄ — tetrahedral** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AX₂E₂ — bent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₃E — trigonal pyramidal** nối từ **AX₄ — tetrahedral** sang **AX₂E₂ — bent**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AX₃E — trigonal pyramidal
 
@@ -162,7 +162,7 @@ NH₃ có one lone pair. Nitrogen nằm above plane của three H atoms.
 
 Hình học (geometry / 기하학) này làm NH₃ có permanent dipole và lone pair accessible, liên quan trực tiếp tới Lewis basicity.
 
-> **Chuyển mạch:** Trong **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₂E₂ — bent** tiếp nhận điểm tựa từ **AX₃E — trigonal pyramidal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AX₅ — trigonal bipyramidal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₂E₂ — bent** nối từ **AX₃E — trigonal pyramidal** sang **AX₅ — trigonal bipyramidal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AX₂E₂ — bent
 
@@ -179,7 +179,7 @@ Trigonal bipyramid có hai loại sites không tương đương:
 
 Lone pair thường ưu tiên equatorial position vì ít 90° interactions hơn.
 
-> **Chuyển mạch:** Ở chặng này của **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₅ — trigonal bipyramidal** tiếp nhận điểm tựa từ **AX₂E₂ — bent** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AX₄E — seesaw** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₅ — trigonal bipyramidal** nối từ **AX₂E₂ — bent** sang **AX₄E — seesaw**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AX₅ — trigonal bipyramidal
 
@@ -187,19 +187,19 @@ PF₅ là textbook example.
 
 Axial P–F và equatorial P–F có cục bộ (local / 로컬) environments khác nhau, nên bond lengths có thể khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₄E — seesaw** tiếp nhận điểm tựa từ **AX₅ — trigonal bipyramidal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AX₃E₂ — T-shaped** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₄E — seesaw** nối từ **AX₅ — trigonal bipyramidal** sang **AX₃E₂ — T-shaped**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AX₄E — seesaw
 
 Một equatorial lone pair để lại four atomic positions tạo shape seesaw.
 
-> **Chuyển mạch:** Trong **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₃E₂ — T-shaped** tiếp nhận điểm tựa từ **AX₄E — seesaw** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AX₂E₃ — tuyến tính (linear / 선형)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₃E₂ — T-shaped** nối từ **AX₄E — seesaw** sang **AX₂E₃ — tuyến tính (linear / 선형)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AX₃E₂ — T-shaped
 
 Hai lone pairs ưu tiên equatorial, còn three bonded atoms tạo T shape.
 
-> **Chuyển mạch:** Ở chặng này của **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₂E₃ — tuyến tính (linear / 선형)** tiếp nhận điểm tựa từ **AX₃E₂ — T-shaped** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AX₆ — octahedral** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₂E₃ — tuyến tính (linear / 선형)** nối từ **AX₃E₂ — T-shaped** sang **AX₆ — octahedral**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AX₂E₃ — tuyến tính (linear / 선형)
 
@@ -207,19 +207,19 @@ Ba equatorial lone pairs để lại two axial bonds đối nhau, như XeF₂ tr
 
 # Sáu electron domains — octahedral
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₆ — octahedral** tiếp nhận điểm tựa từ **AX₂E₃ — tuyến tính (linear / 선형)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AX₅E — square pyramidal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₆ — octahedral** nối từ **AX₂E₃ — tuyến tính (linear / 선형)** sang **AX₅E — square pyramidal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AX₆ — octahedral
 
 SF₆ có six equivalent directions trong ideal mô hình (model / 모델).
 
-> **Chuyển mạch:** Trong **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₅E — square pyramidal** tiếp nhận điểm tựa từ **AX₆ — octahedral** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AX₄E₂ — square planar** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₅E — square pyramidal** nối từ **AX₆ — octahedral** sang **AX₄E₂ — square planar**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AX₅E — square pyramidal
 
 Một lone pair removed khỏi octahedral vertex tạo square-pyramidal molecular hình học (geometry / 기하학).
 
-> **Chuyển mạch:** Ở chặng này của **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₄E₂ — square planar** tiếp nhận điểm tựa từ **AX₅E — square pyramidal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **AX₄E₂ — square planar** nối từ **AX₅E — square pyramidal** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AX₄E₂ — square planar
 
@@ -431,7 +431,7 @@ Không. Cần véc-tơ (vector / 벡터) symmetry của toàn hình học (geome
 
 Không. Ligand-field/electronic cấu trúc (structure / 구조) thường quan trọng hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **Mô hình tư duy** gom các mảnh từ **AX₄E₂ — square planar** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **VSEPR và hình học phân tử — từ miền electron tới hình dạng ba chiều**, **Mô hình tư duy** tổng hợp từ **AX₄E₂ — square planar** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

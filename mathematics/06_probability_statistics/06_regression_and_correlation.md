@@ -29,7 +29,7 @@ Nhưng magnitude phụ thuộc units. Nếu đổi KRW thành million KRW, covar
 
 Do đó cần normalized measure để so association across scales.
 
-> **Chuyển mạch:** Trong **Hồi quy và tương quan: association, conditional modeling và prediction**, **2. Pearson correlation là normalized covariance** tiếp nhận điểm tựa từ **1. Covariance: direction của joint variation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Correlation chỉ đo tuyến tính (linear / 선형) association** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hồi quy và tương quan: association, conditional modeling và prediction**, **2. Pearson correlation là normalized covariance** nối từ **1. Covariance: direction của joint variation** sang **3. Correlation chỉ đo tuyến tính (linear / 선형) association**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Pearson correlation là normalized covariance
 
@@ -61,7 +61,7 @@ Một geometric interpretation rất hữu ích: sau khi center observations, co
 
 Vì vậy `r=1` khi standardized patterns align perfectly linearly.
 
-> **Chuyển mạch:** Ở chặng này của **Hồi quy và tương quan: association, conditional modeling và prediction**, **3. Correlation chỉ đo tuyến tính (linear / 선형) association** tiếp nhận điểm tựa từ **2. Pearson correlation là normalized covariance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Correlation không bất biến (invariant / 불변식) trước selection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hồi quy và tương quan: association, conditional modeling và prediction**, **3. Correlation chỉ đo tuyến tính (linear / 선형) association** nối từ **2. Pearson correlation là normalized covariance** sang **4. Correlation không bất biến (invariant / 불변식) trước selection**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Correlation chỉ đo tuyến tính (linear / 선형) association
 
@@ -79,7 +79,7 @@ Do đó trước khi đọc correlation coefficient cần plot dữ liệu (data
 
 Spearman correlation dùng ranks và đo monotonic association, nhưng cũng không phải universal dependence measure.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hồi quy và tương quan: association, conditional modeling và prediction**, **4. Correlation không bất biến (invariant / 불변식) trước selection** tiếp nhận điểm tựa từ **3. Correlation chỉ đo tuyến tính (linear / 선형) association** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Simple tuyến tính (linear / 선형) regression bắt đầu từ conditional mean mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hồi quy và tương quan: association, conditional modeling và prediction**, **4. Correlation không bất biến (invariant / 불변식) trước selection** nối từ **3. Correlation chỉ đo tuyến tính (linear / 선형) association** sang **5. Simple tuyến tính (linear / 선형) regression bắt đầu từ conditional mean mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Correlation không bất biến (invariant / 불변식) trước selection
 
@@ -89,7 +89,7 @@ Nếu combine subgroups có centers khác nhau, correlation aggregate có thể 
 
 Đây là geometric/statistical phiên bản (version / 버전) của Simpson's paradox và selection effects.
 
-> **Chuyển mạch:** Trong **Hồi quy và tương quan: association, conditional modeling và prediction**, **5. Simple tuyến tính (linear / 선형) regression bắt đầu từ conditional mean mô hình (model / 모델)** tiếp nhận điểm tựa từ **4. Correlation không bất biến (invariant / 불변식) trước selection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Least squares đến từ projection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hồi quy và tương quan: association, conditional modeling và prediction**, **5. Simple tuyến tính (linear / 선형) regression bắt đầu từ conditional mean mô hình (model / 모델)** nối từ **4. Correlation không bất biến (invariant / 불변식) trước selection** sang **6. Least squares đến từ projection**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Simple tuyến tính (linear / 선형) regression bắt đầu từ conditional mean mô hình (model / 모델)
 
@@ -110,7 +110,7 @@ nếu lỗi (error / 오류) có conditional mean zero.
 
 Ta không nói mọi điểm (point / 지점) nằm trên line. Line mô tả conditional center; residuals mô tả unexplained variation.
 
-> **Chuyển mạch:** Ở chặng này của **Hồi quy và tương quan: association, conditional modeling và prediction**, **6. Least squares đến từ projection** tiếp nhận điểm tựa từ **5. Simple tuyến tính (linear / 선형) regression bắt đầu từ conditional mean mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Derive simple-regression slope** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hồi quy và tương quan: association, conditional modeling và prediction**, **6. Least squares đến từ projection** nối từ **5. Simple tuyến tính (linear / 선형) regression bắt đầu từ conditional mean mô hình (model / 모델)** sang **7. Derive simple-regression slope**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Least squares đến từ projection
 
@@ -136,7 +136,7 @@ Prediction véc-tơ (vector / 벡터) `X\hat\beta` là orthogonal projection c�
 
 Đây là liên kết (connection / 연결) trực tiếp với tuyến tính (linear / 선형) algebra, không phải một statistics formula riêng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hồi quy và tương quan: association, conditional modeling và prediction**, **7. Derive simple-regression slope** tiếp nhận điểm tựa từ **6. Least squares đến từ projection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Units của coefficient mang meaning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hồi quy và tương quan: association, conditional modeling và prediction**, **7. Derive simple-regression slope** nối từ **6. Least squares đến từ projection** sang **8. Units của coefficient mang meaning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Derive simple-regression slope
 
@@ -181,7 +181,7 @@ Population analogue:
 
 under tuyến tính (linear / 선형) projection interpretation.
 
-> **Chuyển mạch:** Trong **Hồi quy và tương quan: association, conditional modeling và prediction**, **8. Units của coefficient mang meaning** tiếp nhận điểm tựa từ **7. Derive simple-regression slope** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Multiple regression và “holding other variables fixed”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hồi quy và tương quan: association, conditional modeling và prediction**, **8. Units của coefficient mang meaning** nối từ **7. Derive simple-regression slope** sang **9. Multiple regression và “holding other variables fixed”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Units của coefficient mang meaning
 
@@ -201,7 +201,7 @@ Nó nói conditional predicted bill thay khoảng 120 KRW cho mỗi additional k
 
 Intercept 8000 là prediction tại `X=0`; nếu dữ liệu (data / 데이터) chỉ từ 200–500 kWh, interpretation intercept có thể là extrapolation và không meaningful.
 
-> **Chuyển mạch:** Ở chặng này của **Hồi quy và tương quan: association, conditional modeling và prediction**, **9. Multiple regression và “holding other variables fixed”** tiếp nhận điểm tựa từ **8. Units của coefficient mang meaning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Omitted variable độ lệch (bias / 편향): vì sao nhân quả (causal / 인과적) interpretation dễ sai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hồi quy và tương quan: association, conditional modeling và prediction**, **9. Multiple regression và “holding other variables fixed”** nối từ **8. Units của coefficient mang meaning** sang **10. Omitted variable độ lệch (bias / 편향): vì sao nhân quả (causal / 인과적) interpretation dễ sai**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Multiple regression và “holding other variables fixed”
 
@@ -217,7 +217,7 @@ Nhưng “hold fixed” trong regression là algebra/mô hình (model / 모델) 
 
 Nếu predictors correlated strongly, such comparisons may correspond to rare/unrealistic states.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hồi quy và tương quan: association, conditional modeling và prediction**, **10. Omitted variable độ lệch (bias / 편향): vì sao nhân quả (causal / 인과적) interpretation dễ sai** tiếp nhận điểm tựa từ **9. Multiple regression và “holding other variables fixed”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Residuals là dữ liệu (data / 데이터) về mô hình (model / 모델) thất bại (failure / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hồi quy và tương quan: association, conditional modeling và prediction**, **10. Omitted variable độ lệch (bias / 편향): vì sao nhân quả (causal / 인과적) interpretation dễ sai** nối từ **9. Multiple regression và “holding other variables fixed”** sang **11. Residuals là dữ liệu (data / 데이터) về mô hình (model / 모델) thất bại (failure / 실패)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Omitted variable độ lệch (bias / 편향): vì sao nhân quả (causal / 인과적) interpretation dễ sai
 
@@ -235,7 +235,7 @@ Nếu `Z` ảnh hưởng `Y` và correlated với `X`, estimated slope on `X` ab
 
 Ví dụ salary và defects có thể correlate vì seniority/dự án (project / 프로젝트) độ phức tạp (complexity / 복잡도). Regression coefficient không tự động là nhân quả (causal / 인과적) tác động (effect / 효과) của salary.
 
-> **Chuyển mạch:** Trong **Hồi quy và tương quan: association, conditional modeling và prediction**, **10. Omitted variable độ lệch (bias / 편향): vì sao nhân quả (causal / 인과적) interpretation dễ sai** nêu điều cần giải thích; **11. Residuals là dữ liệu (data / 데이터) về mô hình (model / 모델) thất bại (failure / 실패)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. Homoskedasticity và heteroskedasticity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hồi quy và tương quan: association, conditional modeling và prediction**, **10. Omitted variable độ lệch (bias / 편향): vì sao nhân quả (causal / 인과적) interpretation dễ sai** đặt vấn đề; **11. Residuals là dữ liệu (data / 데이터) về mô hình (model / 모델) thất bại (failure / 실패)** đối chiếu bằng chứng, rồi **12. Homoskedasticity và heteroskedasticity** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 11. Residuals là dữ liệu (data / 데이터) về mô hình (model / 모델) thất bại (failure / 실패)
 
@@ -255,7 +255,7 @@ Residual diagnostics hỏi:
 
 Một high `R^2` không trả lời những questions này.
 
-> **Chuyển mạch:** Ở chặng này của **Hồi quy và tương quan: association, conditional modeling và prediction**, **11. Residuals là dữ liệu (data / 데이터) về mô hình (model / 모델) thất bại (failure / 실패)** nêu điều cần giải thích; **12. Homoskedasticity và heteroskedasticity** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. Independence và thời gian (time / 시간) series** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hồi quy và tương quan: association, conditional modeling và prediction**, **11. Residuals là dữ liệu (data / 데이터) về mô hình (model / 모델) thất bại (failure / 실패)** đặt vấn đề; **12. Homoskedasticity và heteroskedasticity** đối chiếu bằng chứng, rồi **13. Independence và thời gian (time / 시간) series** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. Homoskedasticity và heteroskedasticity
 
@@ -269,7 +269,7 @@ Nếu residual spread phụ thuộc `X`, ta có heteroskedasticity.
 
 OLS coefficient estimates có thể vẫn unbiased/consistent dưới some conditions, nhưng conventional tiêu chuẩn (standard / 표준) errors có thể sai. Robust tiêu chuẩn (standard / 표준) errors hoặc mô hình (model / 모델) variance cấu trúc (structure / 구조) có thể cần thiết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hồi quy và tương quan: association, conditional modeling và prediction**, **13. Independence và thời gian (time / 시간) series** tiếp nhận điểm tựa từ **12. Homoskedasticity và heteroskedasticity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. R^2 là gì và không phải gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hồi quy và tương quan: association, conditional modeling và prediction**, **13. Independence và thời gian (time / 시간) series** nối từ **12. Homoskedasticity và heteroskedasticity** sang **14. R^2 là gì và không phải gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Independence và thời gian (time / 시간) series
 
@@ -279,7 +279,7 @@ Nếu assume iid errors khi dữ liệu (data / 데이터) có serial dependence
 
 Regression cho time-indexed dữ liệu (data / 데이터) cần diagnostics/modeling như AR terms, Newey–West style robust errors hoặc full time-series các mô hình (models / 모델들) tùy goal.
 
-> **Chuyển mạch:** Trong **Hồi quy và tương quan: association, conditional modeling và prediction**, **14. R^2 là gì và không phải gì?** tiếp nhận điểm tựa từ **13. Independence và thời gian (time / 시간) series** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Prediction intervals khác confidence intervals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hồi quy và tương quan: association, conditional modeling và prediction**, **14. R^2 là gì và không phải gì?** nối từ **13. Independence và thời gian (time / 시간) series** sang **15. Prediction intervals khác confidence intervals**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. `R^2` là gì và không phải gì?
 
@@ -304,7 +304,7 @@ High `R^2` không guarantee:
 
 Adding predictors thường không decrease huấn luyện (training / 학습) `R^2`, nên adjusted metrics/cross-validation cần cho mô hình (model / 모델) comparison.
 
-> **Chuyển mạch:** Ở chặng này của **Hồi quy và tương quan: association, conditional modeling và prediction**, **15. Prediction intervals khác confidence intervals** tiếp nhận điểm tựa từ **14. R^2 là gì và không phải gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Regularization: đổi mục tiêu (objective / 목표) để trade độ lệch (bias / 편향) lấy variance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hồi quy và tương quan: association, conditional modeling và prediction**, **15. Prediction intervals khác confidence intervals** nối từ **14. R^2 là gì và không phải gì?** sang **16. Regularization: đổi mục tiêu (objective / 목표) để trade độ lệch (bias / 편향) lấy variance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Prediction intervals khác confidence intervals
 
@@ -314,7 +314,7 @@ Prediction interval cho một new observation rộng hơn vì gồm cả model-m
 
 Hai intervals answer different questions.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hồi quy và tương quan: association, conditional modeling và prediction**, **16. Regularization: đổi mục tiêu (objective / 목표) để trade độ lệch (bias / 편향) lấy variance** tiếp nhận điểm tựa từ **15. Prediction intervals khác confidence intervals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Multicollinearity và identifiability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hồi quy và tương quan: association, conditional modeling và prediction**, **16. Regularization: đổi mục tiêu (objective / 목표) để trade độ lệch (bias / 편향) lấy variance** nối từ **15. Prediction intervals khác confidence intervals** sang **17. Multicollinearity và identifiability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Regularization: đổi mục tiêu (objective / 목표) để trade độ lệch (bias / 편향) lấy variance
 
@@ -340,7 +340,7 @@ Regularization deliberately introduces độ lệch (bias / 편향) để reduce
 
 Đây là statistics phiên bản (version / 버전) của bias-variance sự đánh đổi (trade-off / 트레이드오프).
 
-> **Chuyển mạch:** Trong **Hồi quy và tương quan: association, conditional modeling và prediction**, **17. Multicollinearity và identifiability** tiếp nhận điểm tựa từ **16. Regularization: đổi mục tiêu (objective / 목표) để trade độ lệch (bias / 편향) lấy variance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Logistic regression: mô hình tuyến tính (linear model / 선형 모델) trên log-odds quy mô (scale / 규모)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hồi quy và tương quan: association, conditional modeling và prediction**, **17. Multicollinearity và identifiability** nối từ **16. Regularization: đổi mục tiêu (objective / 목표) để trade độ lệch (bias / 편향) lấy variance** sang **18. Logistic regression: mô hình tuyến tính (linear model / 선형 모델) trên log-odds quy mô (scale / 규모)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Multicollinearity và identifiability
 
@@ -352,7 +352,7 @@ Then individual coefficients become unstable even if overall predictions okay.
 
 Statistics và numerical tuyến tính (linear / 선형) algebra gặp nhau trực tiếp ở đây.
 
-> **Chuyển mạch:** Ở chặng này của **Hồi quy và tương quan: association, conditional modeling và prediction**, **18. Logistic regression: mô hình tuyến tính (linear model / 선형 모델) trên log-odds quy mô (scale / 규모)** tiếp nhận điểm tựa từ **17. Multicollinearity và identifiability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Maximum likelihood viewpoint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hồi quy và tương quan: association, conditional modeling và prediction**, **18. Logistic regression: mô hình tuyến tính (linear model / 선형 모델) trên log-odds quy mô (scale / 규모)** nối từ **17. Multicollinearity và identifiability** sang **19. Maximum likelihood viewpoint**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Logistic regression: mô hình tuyến tính (linear model / 선형 모델) trên log-odds quy mô (scale / 규모)
 
@@ -380,7 +380,7 @@ e^{\beta_j}.
 
 Điều này nối logarithms/exponentials với statistical modeling.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hồi quy và tương quan: association, conditional modeling và prediction**, **19. Maximum likelihood viewpoint** tiếp nhận điểm tựa từ **18. Logistic regression: mô hình tuyến tính (linear model / 선형 모델) trên log-odds quy mô (scale / 규모)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Nonlinear regression và mô hình (model / 모델) flexibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hồi quy và tương quan: association, conditional modeling và prediction**, **19. Maximum likelihood viewpoint** nối từ **18. Logistic regression: mô hình tuyến tính (linear model / 선형 모델) trên log-odds quy mô (scale / 규모)** sang **20. Nonlinear regression và mô hình (model / 모델) flexibility**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Maximum likelihood viewpoint
 
@@ -392,7 +392,7 @@ Nếu noise mô hình (model / 모델) khác, optimal mất mát (loss / 손실)
 
 Ví dụ Laplace noise liên hệ L1 mất mát (loss / 손실).
 
-> **Chuyển mạch:** Trong **Hồi quy và tương quan: association, conditional modeling và prediction**, **20. Nonlinear regression và mô hình (model / 모델) flexibility** tiếp nhận điểm tựa từ **19. Maximum likelihood viewpoint** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Extrapolation là giả định (assumption / 가정) mạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hồi quy và tương quan: association, conditional modeling và prediction**, **20. Nonlinear regression và mô hình (model / 모델) flexibility** nối từ **19. Maximum likelihood viewpoint** sang **21. Extrapolation là giả định (assumption / 가정) mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Nonlinear regression và mô hình (model / 모델) flexibility
 
@@ -408,7 +408,7 @@ Ta có thể dùng:
 
 Càng flexible, approximation độ lệch (bias / 편향) có thể giảm nhưng overfitting rủi ro (risk / 위험) tăng. Cross-validation và regularization trở nên quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **Hồi quy và tương quan: association, conditional modeling và prediction**, **21. Extrapolation là giả định (assumption / 가정) mạnh** tiếp nhận điểm tựa từ **20. Nonlinear regression và mô hình (model / 모델) flexibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Worked example: confounding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hồi quy và tương quan: association, conditional modeling và prediction**, **21. Extrapolation là giả định (assumption / 가정) mạnh** nối từ **20. Nonlinear regression và mô hình (model / 모델) flexibility** sang **22. Worked example: confounding**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Extrapolation là giả định (assumption / 가정) mạnh
 
@@ -418,7 +418,7 @@ Một quadratic fit cho historical growth có thể explode absurdly khi extrapo
 
 Physics/lĩnh vực (domain / 도메인) các ràng buộc (constraints / 제약조건들) đôi khi quan trọng hơn fit lỗi (error / 오류) trong-sample.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hồi quy và tương quan: association, conditional modeling và prediction**, **21. Extrapolation là giả định (assumption / 가정) mạnh** cho ta quy tắc; **22. Worked example: confounding** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **23. Finance: beta là regression coefficient có các giả định (assumptions / 가정들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hồi quy và tương quan: association, conditional modeling và prediction**, **21. Extrapolation là giả định (assumption / 가정) mạnh** nêu quy tắc; **22. Worked example: confounding** thử quy tắc trong tình huống, rồi **23. Finance: beta là regression coefficient có các giả định (assumptions / 가정들)** mở rộng hệ quả.
 
 ## 22. Worked example: confounding
 
@@ -432,7 +432,7 @@ Thêm độ phức tạp (complexity / 복잡도) variables có thể thay đổ
 
 Regression adjustment là công cụ (tool / 도구), không phải automatic nhân quả (causal / 인과적) machine.
 
-> **Chuyển mạch:** Trong **Hồi quy và tương quan: association, conditional modeling và prediction**, **22. Worked example: confounding** cho ta quy tắc; **23. Finance: beta là regression coefficient có các giả định (assumptions / 가정들)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **24. AI: regression as supervised học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hồi quy và tương quan: association, conditional modeling và prediction**, **22. Worked example: confounding** nêu quy tắc; **23. Finance: beta là regression coefficient có các giả định (assumptions / 가정들)** thử quy tắc trong tình huống, rồi **24. AI: regression as supervised học tập (learning / 학습)** mở rộng hệ quả.
 
 ## 23. Finance: beta là regression coefficient có các giả định (assumptions / 가정들)
 
@@ -447,7 +447,7 @@ R_i-R_f
 
 Nó không phải immutable vật lý (physical / 물리적) constant; estimate phụ thuộc cửa sổ (window / 윈도우), frequency, regime và dữ liệu (data / 데이터) chất lượng (quality / 품질).
 
-> **Chuyển mạch:** Ở chặng này của **Hồi quy và tương quan: association, conditional modeling và prediction**, **24. AI: regression as supervised học tập (learning / 학습)** tiếp nhận điểm tựa từ **23. Finance: beta là regression coefficient có các giả định (assumptions / 가정들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Correlation, regression và causality — relationship map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hồi quy và tương quan: association, conditional modeling và prediction**, **24. AI: regression as supervised học tập (learning / 학습)** nối từ **23. Finance: beta là regression coefficient có các giả định (assumptions / 가정들)** sang **25. Correlation, regression và causality — relationship map**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. AI: regression as supervised học tập (learning / 학습)
 
@@ -461,7 +461,7 @@ Hàm mất mát (loss function / 손실 함수) defines what “best fit” mean
 
 Train lỗi (error / 오류) measures fit observed dữ liệu (data / 데이터); kiểm tra hợp lệ (validation / 검증)/kiểm thử (test / 테스트) estimate generalization. phân phối (distribution / 분포) shift can break both regression các giả định (assumptions / 가정들) và ML hiệu năng (performance / 성능).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hồi quy và tương quan: association, conditional modeling và prediction**, **25. Correlation, regression và causality — relationship map** tiếp nhận điểm tựa từ **24. AI: regression as supervised học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hồi quy và tương quan: association, conditional modeling và prediction**, **25. Correlation, regression và causality — relationship map** nối từ **24. AI: regression as supervised học tập (learning / 학습)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Correlation, regression và causality — relationship map
 
@@ -478,13 +478,13 @@ Causal inference
 
 Chúng có thể dùng chung algebra/xác suất (probability / 확률), nhưng estimand khác nhau.
 
-> **Chuyển mạch:** Trong **Hồi quy và tương quan: association, conditional modeling và prediction**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **25. Correlation, regression và causality — relationship map** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hồi quy và tương quan: association, conditional modeling và prediction**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **25. Correlation, regression và causality — relationship map** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Correlation measures alignment. Regression constructs a predictive/conditional surface. nhân quả (causal / 인과적) suy luận (inference / 추론) asks what would thay đổi (change / 변경) under intervention. Least squares is projection hình học (geometry / 기하학); statistical interpretation arrives only after specifying how dữ liệu (data / 데이터)/noise were generated.
 
-> **Chuyển mạch:** Ở chặng này của **Hồi quy và tương quan: association, conditional modeling và prediction**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Hồi quy và tương quan: association, conditional modeling và prediction**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

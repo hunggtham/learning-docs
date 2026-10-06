@@ -63,7 +63,7 @@ Một phương pháp tốt chọn chỉ thị hoặc thuật toán phát hiện 
 
 Từ khối lượng chất chuẩn sơ cấp, số mol được xác định trực tiếp.
 
-> **Chuyển mạch:** Chất chuẩn sơ cấp xác lập nồng độ đáng tin; dung dịch chuẩn thứ cấp phải được chuẩn hóa, sau đó điểm tương đương được diễn giải theo stoichiometry và acid–base chứ không mặc định pH bằng 7.
+> **Nối mạch:** Chất chuẩn sơ cấp xác lập nồng độ đáng tin; dung dịch chuẩn thứ cấp phải được chuẩn hóa, sau đó điểm tương đương được diễn giải theo stoichiometry và acid–base chứ không mặc định pH bằng 7.
 
 ## Dung dịch chuẩn thứ cấp
 
@@ -113,7 +113,7 @@ pH\approx pK_a
 
 Đây là lý do đường chuẩn độ không chỉ cho nồng độ; nó còn có thể chứa thông tin về \(pK_a\).
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **pH tại điểm tương đương không luôn bằng 7** tiếp nhận điểm tựa từ **Dung dịch chuẩn thứ cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện thế và độ dốc đường chuẩn độ redox** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **pH tại điểm tương đương không luôn bằng 7** nối từ **Dung dịch chuẩn thứ cấp** sang **Điện thế và độ dốc đường chuẩn độ redox**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## pH tại điểm tương đương không luôn bằng 7
 
@@ -172,7 +172,7 @@ cho thấy một mol permanganate nhận 5 mol electron trong môi trường aci
 
 Nếu analyte nhường một electron mỗi mol, tỉ lệ hóa lượng trực tiếp theo số electron cân bằng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Điện thế và độ dốc đường chuẩn độ redox** tiếp nhận điểm tựa từ **pH tại điểm tương đương không luôn bằng 7** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Permanganate tự chỉ thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Điện thế và độ dốc đường chuẩn độ redox** nối từ **pH tại điểm tương đương không luôn bằng 7** sang **Permanganate tự chỉ thị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điện thế và độ dốc đường chuẩn độ redox
 
@@ -186,7 +186,7 @@ Gần điểm tương đương, thành phần redox thay đổi nhanh và điệ
 
 Điểm endpoint có thể nhận bằng chỉ thị redox, tự chỉ thị hoặc điện cực.
 
-> **Chuyển mạch:** Trong **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Permanganate tự chỉ thị** tiếp nhận điểm tựa từ **Điện thế và độ dốc đường chuẩn độ redox** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ cứng nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Permanganate tự chỉ thị** nối từ **Điện thế và độ dốc đường chuẩn độ redox** sang **Độ cứng nước**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Permanganate tự chỉ thị
 
@@ -226,7 +226,7 @@ với \(\alpha_{Y^{4-}}\) là phần EDTA ở dạng có khả năng liên kết
 
 Đây là lý do buffer không chỉ “giữ pH”; nó trực tiếp thay đổi độ mạnh hiệu dụng của phản ứng chuẩn độ.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Độ cứng nước** tiếp nhận điểm tựa từ **Permanganate tự chỉ thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương pháp Mohr** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Độ cứng nước** nối từ **Permanganate tự chỉ thị** sang **Phương pháp Mohr**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ cứng nước
 
@@ -246,7 +246,7 @@ trước điểm tương đương, \(Ag^+\) thêm vào bị tiêu thụ tạo k�
 
 Hình dạng đường chuẩn độ liên quan \(K_{sp}\), nồng độ và các phản ứng phụ như tạo phức.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Phương pháp Mohr** tiếp nhận điểm tựa từ **Độ cứng nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Volhard và chuẩn độ ngược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Phương pháp Mohr** nối từ **Độ cứng nước** sang **Volhard và chuẩn độ ngược**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương pháp Mohr
 
@@ -254,7 +254,7 @@ Chromate được dùng làm chỉ thị; sau khi phần lớn chloride đã k�
 
 pH phải được kiểm soát vì chromate, dichromate và các kết tủa bạc khác phụ thuộc môi trường.
 
-> **Chuyển mạch:** Trong **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Volhard và chuẩn độ ngược** tiếp nhận điểm tựa từ **Phương pháp Mohr** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi nào đọc buret không còn là nguồn chi phối?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Volhard và chuẩn độ ngược** nối từ **Phương pháp Mohr** sang **Khi nào đọc buret không còn là nguồn chi phối?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Volhard và chuẩn độ ngược
 
@@ -327,7 +327,7 @@ C_A=f(C_B,V_B,V_A,\ldots)
 
 thì độ không đảm bảo phải được truyền từ các biến đầu vào theo mô hình đo.
 
-> **Chuyển mạch:** Ở chặng này của **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Volhard và chuẩn độ ngược** nêu điều cần giải thích; **Khi nào đọc buret không còn là nguồn chi phối?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Phân tích thể tích — chuẩn độ như một phép đo định lượng**, **Volhard và chuẩn độ ngược** đặt vấn đề; **Khi nào đọc buret không còn là nguồn chi phối?** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Khi nào đọc buret không còn là nguồn chi phối?
 

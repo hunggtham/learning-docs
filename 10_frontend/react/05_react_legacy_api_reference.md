@@ -6,12 +6,12 @@
 
 ## 1. Cách dùng tệp (file / 파일) này
 
-> **Chuyển mạch:** Cách dùng file xác định đây là tài liệu tra cứu sau Beginner; **Old → new → reason → migration** biến mỗi API thành một quyết định có ngữ nghĩa, không phải bảng thay tên.
+> **Nối mạch:** Cách dùng file xác định đây là tài liệu tra cứu sau Beginner; **Old → new → reason → migration** biến mỗi API thành một quyết định có ngữ nghĩa, không phải bảng thay tên.
 
 ## 1A. Old pattern → new pattern → reason → migration → khi còn gặp
 Phần này nối mạch bài học với “1A. Old pattern → new pattern → reason → migration → khi còn gặp”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
 
-> **Chuyển mạch:** Bảng migration đặt intent trước API; phần component creation/composition tiếp theo áp dụng nguyên tắc đó vào createClass, mixins, HOC và render props.
+> **Nối mạch:** Bảng migration đặt intent trước API; phần component creation/composition tiếp theo áp dụng nguyên tắc đó vào createClass, mixins, HOC và render props.
 
 ## 1A. Old mẫu (pattern / 패턴) → new mẫu (pattern / 패턴) → reason → di chuyển (migration / 마이그레이션) → khi còn gặp
 
@@ -30,7 +30,7 @@ Phần này nối mạch bài học với “1A. Old pattern → new pattern →
 
 Quy tắc là **migrate ngữ nghĩa (semantics / 의미론), không migrate tên API**. Một vòng đời (lifecycle / 생명주기) cũ có thể làm nhiều việc; tách kết xuất (render / 렌더링) derivation, người dùng (user / 사용자) sự kiện (event / 이벤트) và bên ngoài (external / 외부) synchronization trước khi chọn API mới.
 
-> **Chuyển mạch:** Composition cho thấy legacy API tạo và chia sẻ behavior thế nào; class APIs tiếp theo tập trung vào state, setState và escape hatches của chính class.
+> **Nối mạch:** Composition cho thấy legacy API tạo và chia sẻ behavior thế nào; class APIs tiếp theo tập trung vào state, setState và escape hatches của chính class.
 
 ## 2. thành phần (component / 컴포넌트) creation và composition
 
@@ -86,7 +86,7 @@ Phần này nối mạch bài học với “Render props”, nêu mục đích,
 
 Vẫn hợp lệ. Hooks thường thuận tiện hơn khi mục tiêu là chia sẻ stateful lô-gic (logic / 논리).
 
-> **Chuyển mạch:** Class APIs xác định state ownership và update contract; lifecycle APIs tiếp theo đặt các phương thức đó vào mount, update, unmount và error phases.
+> **Nối mạch:** Class APIs xác định state ownership và update contract; lifecycle APIs tiếp theo đặt các phương thức đó vào mount, update, unmount và error phases.
 
 ## 3. lớp (class / 클래스) APIs
 
@@ -119,7 +119,7 @@ Callback của `setState` là API lớp (class / 클래스); Hook setter không 
 
 Thêm shallow comparison mặc định cho props/trạng thái (state / 상태).
 
-> **Chuyển mạch:** Ở chặng này của **React Legacy API tham chiếu (reference / 참조) — React 15 → 18**, **3. lớp (class / 클래스) APIs** xác định đầu vào; **4. vòng đời (lifecycle / 생명주기) APIs** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **5. Refs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **React Legacy API tham chiếu (reference / 참조) — React 15 → 18**, **3. lớp (class / 클래스) APIs** đặt đầu vào cho **4. vòng đời (lifecycle / 생명주기) APIs**, rồi **5. Refs** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. vòng đời (lifecycle / 생명주기) APIs
 
@@ -143,7 +143,7 @@ Thêm shallow comparison mặc định cho props/trạng thái (state / 상태).
 
 `componentWillMount`, `componentWillReceiveProps`, `componentWillUpdate` là tên cũ. Các tên `UNSAFE_...` tồn tại để làm rõ rằng các giả định (assumptions / 가정들) của chúng không an toàn với rendering hiện đại. Không migrate bằng search-replace sang tác động (effect / 효과); phải xác định intent.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Legacy API tham chiếu (reference / 참조) — React 15 → 18**, **4. vòng đời (lifecycle / 생명주기) APIs** xác định đầu vào; **5. Refs** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **React Legacy API tham chiếu (reference / 참조) — React 15 → 18**, **4. vòng đời (lifecycle / 생명주기) APIs** đặt đầu vào cho **5. Refs**, rồi **6. ngữ cảnh (context / 맥락)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. Refs
 
@@ -189,7 +189,7 @@ React 19 cho hàm (function / 함수) thành phần (component / 컴포넌트) n
 
 Escape hatch tìm DOM từ thành phần (component / 컴포넌트) instance. Deprecated 16.6, removed 19. Thay bằng tường minh (explicit / 명시적) ref.
 
-> **Chuyển mạch:** Refs giữ imperative handle tới node/instance; context truyền dependency qua cây mà không biến ref thành global state. React element APIs tiếp theo mô tả object được tạo ra từ render.
+> **Nối mạch:** Refs giữ imperative handle tới node/instance; context truyền dependency qua cây mà không biến ref thành global state. React element APIs tiếp theo mô tả object được tạo ra từ render.
 
 ## 6. ngữ cảnh (context / 맥락)
 
@@ -201,7 +201,7 @@ Escape hatch tìm DOM từ thành phần (component / 컴포넌트) instance. De
 
 `createContext`, `.Provider`, `.Consumer`, lớp (class / 클래스) `contextType`, Hook `useContext`. React 19 thêm provider shorthand `<Context value={...}>`.
 
-> **Chuyển mạch:** Context giải thích dữ liệu đi qua component tree; element APIs mô tả giá trị render tương ứng. ReactDOM legacy APIs tiếp theo đặt element vào root và DOM lifecycle.
+> **Nối mạch:** Context giải thích dữ liệu đi qua component tree; element APIs mô tả giá trị render tương ứng. ReactDOM legacy APIs tiếp theo đặt element vào root và DOM lifecycle.
 
 ## 7. React element APIs
 
@@ -247,7 +247,7 @@ Deprecated 16.13, removed 19.
 
 DOM factory đời rất cũ; hiểu như tiền thân của JSX.
 
-> **Chuyển mạch:** Element APIs tạo render values; ReactDOM legacy APIs quyết định root/hydration behavior. Runtime typing/defaults tiếp theo kiểm tra assumptions của component boundary.
+> **Nối mạch:** Element APIs tạo render values; ReactDOM legacy APIs quyết định root/hydration behavior. Runtime typing/defaults tiếp theo kiểm tra assumptions của component boundary.
 
 ## 8. ReactDOM legacy APIs
 
@@ -271,7 +271,7 @@ Deprecated 16.6, removed 19.
 
 `ReactDOM.render` cũ từng nhận callback sau kết xuất (render / 렌더링). hiện đại (modern / 현대적) gốc (root / 루트) không có one-to-one replacement; phải chọn tác động (effect / 효과)/ref/callback phù hợp mục tiêu thực tế.
 
-> **Chuyển mạch:** Root APIs expose runtime assumptions about props/types/defaults; Events tiếp theo đưa input người dùng vào cùng contract và propagation model.
+> **Nối mạch:** Root APIs expose runtime assumptions about props/types/defaults; Events tiếp theo đưa input người dùng vào cùng contract và propagation model.
 
 ## 9. thời gian chạy (runtime / 런타임) typing và defaults
 
@@ -287,19 +287,19 @@ Phổ biến từ React 15–18. hàm (function / 함수) thành phần (compone
 
 Hàm (function / 함수) thành phần (component / 컴포넌트) `defaultProps` bị loại trong React 19; dùng default parameter. lớp (class / 클래스) `defaultProps` vẫn có thể tồn tại.
 
-> **Chuyển mạch:** Runtime defaults define the input shape; events exercise that shape through propagation and handler identity. Legacy testing tiếp theo kiểm tra behavior mà không khóa vào implementation trivia.
+> **Nối mạch:** Runtime defaults define the input shape; events exercise that shape through propagation and handler identity. Legacy testing tiếp theo kiểm tra behavior mà không khóa vào implementation trivia.
 
 ## 10. Events
 
 React web cũ dùng pooled `SyntheticEvent`, nên mã (code / 코드) async từng cần `event.persist()`. React 17 bỏ pooling hành vi (behavior / 동작) đó trên web; mã (code / 코드) hiện đại thường không cần `persist()`.
 
-> **Chuyển mạch:** Event behavior cung cấp test surface; JSX transform/import React tiếp theo giải thích source syntax nào tạo ra element và vì sao legacy build cần khác modern build.
+> **Nối mạch:** Event behavior cung cấp test surface; JSX transform/import React tiếp theo giải thích source syntax nào tạo ra element và vì sao legacy build cần khác modern build.
 
 ## 11. Testing legacy
 
 `react-test-renderer` bị deprecate ở React 19. `react-test-renderer/shallow` bị remove khỏi đường dẫn (path / 경로) đó. `react-dom/test-utils` helpers bị cắt giảm; `act` chuyển về `react`. Codebase Enzyme/shallow-heavy nên migrate về kiểm thử (test / 테스트) hành vi khi có thể.
 
-> **Chuyển mạch:** Testing legacy giữ behavior ổn định trong khi JSX transform thay đổi compilation step. UMD builds tiếp theo đặt artifact đó vào môi trường không dùng module bundler.
+> **Nối mạch:** Testing legacy giữ behavior ổn định trong khi JSX transform thay đổi compilation step. UMD builds tiếp theo đặt artifact đó vào môi trường không dùng module bundler.
 
 ## 12. JSX transform và import React
 
@@ -313,13 +313,13 @@ ngay cả khi mã (code / 코드) không gọi biến `React` trực tiếp, vì
 
 Hiện đại (modern / 현대적) JSX transform cho phép JSX không cần import React chỉ vì transform. React 19 yêu cầu hiện đại (modern / 현대적) transform.
 
-> **Chuyển mạch:** UMD clarifies the distribution boundary of legacy React; 13A chuyển từ artifact compatibility sang lifecycle intent, để migration không thành search-and-replace.
+> **Nối mạch:** UMD clarifies the distribution boundary of legacy React; 13A chuyển từ artifact compatibility sang lifecycle intent, để migration không thành search-and-replace.
 
 ## 13. UMD builds
 
 Các dự án (project / 프로젝트) rất cũ có thể tải (load / 로드) React bằng script UMD trong HTML. React 19 không còn phát hành UMD bản dựng (build / 빌드) như trước; mã (code / 코드) hiện đại ưu tiên mô-đun (module / 모듈)/ESM hoặc bundler/khung phần mềm (framework / 프레임워크).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **React Legacy API tham chiếu (reference / 참조) — React 15 → 18**, **13. UMD builds** xác định đầu vào; **13A. Migrate vòng đời (lifecycle / 생명주기) theo intent thay vì map tên phương thức (method / 메서드) một-một** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. di chuyển (migration / 마이그레이션) checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **React Legacy API tham chiếu (reference / 참조) — React 15 → 18**, **13. UMD builds** đặt đầu vào cho **13A. Migrate vòng đời (lifecycle / 생명주기) theo intent thay vì map tên phương thức (method / 메서드) một-một**, rồi **14. di chuyển (migration / 마이그레이션) checklist** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13A. Migrate vòng đời (lifecycle / 생명주기) theo intent thay vì map tên phương thức (method / 메서드) một-một
 
@@ -337,7 +337,7 @@ Lớp (class / 클래스) vòng đời (lifecycle / 생명주기) thường ch�
 
 Khi còn gặp `componentDidMount`/`componentDidUpdate`, hãy đọc side tác động (effect / 효과) cụ thể: một phương thức (method / 메서드) có thể vừa fetch, vừa log analytics, vừa sync DOM. di chuyển (migration / 마이그레이션) tốt thường tách chúng thành sự kiện (event / 이벤트)/tác động (effect / 효과)/ranh giới (boundary / 경계) riêng theo ngữ nghĩa (semantics / 의미론), nhờ đó phụ thuộc (dependency / 의존성) và cleanup trở nên rõ hơn.
 
-> **Chuyển mạch:** Trong **React Legacy API tham chiếu (reference / 참조) — React 15 → 18**, **13A. Migrate vòng đời (lifecycle / 생명주기) theo intent thay vì map tên phương thức (method / 메서드) một-một** xác định đầu vào; **14. di chuyển (migration / 마이그레이션) checklist** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14A. Khi nào nên giữ old mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **React Legacy API tham chiếu (reference / 참조) — React 15 → 18**, **13A. Migrate vòng đời (lifecycle / 생명주기) theo intent thay vì map tên phương thức (method / 메서드) một-một** đặt đầu vào cho **14. di chuyển (migration / 마이그레이션) checklist**, rồi **14A. Khi nào nên giữ old mẫu (pattern / 패턴)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. di chuyển (migration / 마이그레이션) checklist
 
@@ -345,7 +345,7 @@ Khi nâng một codebase cũ, đừng cố nhảy thẳng từ “API cũ” san
 
 Một luồng (flow / 흐름) thực tế là: gốc (root / 루트) API → deprecated lớp (class / 클래스)/ngữ cảnh (context / 맥락)/ref APIs → tests → TypeScript/types → Strict chế độ (mode / 모드)/tính đồng thời (concurrency / 동시성) các giả định (assumptions / 가정들) → khung phần mềm (framework / 프레임워크)/máy chủ (server / 서버) tích hợp (integration / 통합). Với React 18 lên 19, React nhóm (team / 팀) khuyến nghị dùng 18.3 như bước cảnh báo trung gian.
 
-> **Chuyển mạch:** Migration checklist ghi lại risk và rollback; 14A quyết định khi nào giữ legacy pattern vì public contract hoặc dependency chưa thể đổi. Version table sau đó tóm tắt mốc cần tra cứu.
+> **Nối mạch:** Migration checklist ghi lại risk và rollback; 14A quyết định khi nào giữ legacy pattern vì public contract hoặc dependency chưa thể đổi. Version table sau đó tóm tắt mốc cần tra cứu.
 
 ## 14A. Khi nào nên giữ old mẫu (pattern / 패턴)
 
@@ -353,7 +353,7 @@ Legacy không đồng nghĩa phải rewrite. lớp (class / 클래스) thành ph
 
 Nên ưu tiên migrate khi old API đã bị remove ở mục tiêu (target / 대상) React, khi Strict/concurrent ngữ nghĩa (semantics / 의미론) phơi ra bug cleanup/purity, khi phụ thuộc (dependency / 의존성) cũ chặn bảo mật (security / 보안)/khung phần mềm (framework / 프레임워크) upgrade, hoặc khi mã (code / 코드) thay đổi thường xuyên và lớp trừu tượng (abstraction / 추상화) hiện tại làm tính năng (feature / 기능) công việc (work / 작업) ngày càng khó. Mục tiêu là giảm rủi ro (risk / 위험) và độ phức tạp (complexity / 복잡도) chứ không phải đạt “100% hàm (function / 함수) thành phần (component / 컴포넌트)”.
 
-> **Chuyển mạch:** Version table chốt mốc API và boundary của tài liệu; khi gặp claim ngoài các mốc này, quay về canonical React source thay vì suy luận từ legacy behavior.
+> **Nối mạch:** Version table chốt mốc API và boundary của tài liệu; khi gặp claim ngoài các mốc này, quay về canonical React source thay vì suy luận từ legacy behavior.
 
 ## 15. Bảng version nhanh
 Phần này nối mạch bài học với “15. Bảng version nhanh”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.

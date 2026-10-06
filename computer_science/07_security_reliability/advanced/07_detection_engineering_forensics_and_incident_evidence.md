@@ -34,7 +34,7 @@ Từ bất biến (invariant / 불변식) đó mới suy ra sự kiện (event /
 
 Nếu bắt đầu bằng “hãy collect tất cả logs”, hệ thống dễ tạo noise và chi phí (cost / 비용) nhưng không tăng khả năng lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Trong **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **2. Telemetry không phải sự thật tuyệt đối** tiếp nhận điểm tựa từ **1. Detection bắt đầu từ bất biến (invariant / 불변식), không bắt đầu từ SIEM quy tắc (rule / 규칙)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. sự kiện (event / 이벤트) lược đồ (schema / 스키마) phải giữ định danh (identity / 식별자) và causality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. Telemetry không phải sự thật tuyệt đối** nối từ **1. Detection bắt đầu từ bất biến (invariant / 불변식), không bắt đầu từ SIEM quy tắc (rule / 규칙)** sang **3. sự kiện (event / 이벤트) lược đồ (schema / 스키마) phải giữ định danh (identity / 식별자) và causality**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Telemetry không phải sự thật tuyệt đối
 
@@ -50,7 +50,7 @@ application self-log
 
 Thứ tự này không phải universal ranking, nhưng nhắc rằng nguồn bằng chứng (evidence / 증거) và threat mô hình (model / 모델) phải được xét cùng nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **3. sự kiện (event / 이벤트) lược đồ (schema / 스키마) phải giữ định danh (identity / 식별자) và causality** tiếp nhận điểm tựa từ **2. Telemetry không phải sự thật tuyệt đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Base-rate bài toán (problem / 문제) làm alert hiếm rất khó** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. sự kiện (event / 이벤트) lược đồ (schema / 스키마) phải giữ định danh (identity / 식별자) và causality** nối từ **2. Telemetry không phải sự thật tuyệt đối** sang **4. Base-rate bài toán (problem / 문제) làm alert hiếm rất khó**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. sự kiện (event / 이벤트) lược đồ (schema / 스키마) phải giữ định danh (identity / 식별자) và causality
 
@@ -69,7 +69,7 @@ correlation: request / trace / session / transaction id
 
 Thiếu định danh (identity / 식별자) hoặc đối tượng (object / 객체) phạm vi (scope / 범위) khiến sự cố (incident / 인시던트) responder chỉ biết “API admin đã được gọi” nhưng không biết ai có authority tại thời điểm đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **4. Base-rate bài toán (problem / 문제) làm alert hiếm rất khó** tiếp nhận điểm tựa từ **3. sự kiện (event / 이벤트) lược đồ (schema / 스키마) phải giữ định danh (identity / 식별자) và causality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Correlation tạo ngữ cảnh (context / 맥락) nhưng cũng có thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Base-rate bài toán (problem / 문제) làm alert hiếm rất khó** nối từ **3. sự kiện (event / 이벤트) lược đồ (schema / 스키마) phải giữ định danh (identity / 식별자) và causality** sang **5. Correlation tạo ngữ cảnh (context / 맥락) nhưng cũng có thất bại (failure / 실패) modes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Base-rate bài toán (problem / 문제) làm alert hiếm rất khó
 
@@ -115,7 +115,7 @@ Khi prevalence thay đổi, precision có thể đổi dù quy tắc (rule / 규
 
 Cổng chất lượng (quality gate / 품질 게이트) tối thiểu là detector có regression set, data-quality monitor, known blind-spot danh sách (list / 목록), đơn vị sở hữu (owner / 오너) chịu trách nhiệm và lịch rà soát (review / 검토) sau sự cố (incident / 인시던트). Không dùng số alert thấp làm proxy cho chất lượng nếu chưa chứng minh recall và telemetry coverage.
 
-> **Chuyển mạch:** Trong **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **5. Correlation tạo ngữ cảnh (context / 맥락) nhưng cũng có thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **4. Base-rate bài toán (problem / 문제) làm alert hiếm rất khó** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Detection là hypothesis kiểm thử (test / 테스트), không phải verdict** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Correlation tạo ngữ cảnh (context / 맥락) nhưng cũng có thất bại (failure / 실패) modes** nối từ **4. Base-rate bài toán (problem / 문제) làm alert hiếm rất khó** sang **6. Detection là hypothesis kiểm thử (test / 테스트), không phải verdict**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Correlation tạo ngữ cảnh (context / 맥락) nhưng cũng có thất bại (failure / 실패) modes
 
@@ -132,7 +132,7 @@ có evidential giá trị (value / 값) mạnh hơn.
 
 Correlation có thể theo định danh (identity / 식별자), host, tài nguyên (resource / 자원), dấu vết (trace / 추적), temporal cửa sổ (window / 윈도우) hoặc đồ thị (graph / 그래프) relationship. Tuy nhiên cửa sổ (window / 윈도우) quá rộng tăng false positives; quá hẹp bỏ sót slow attack. thực thể (entity / 엔터티) resolution sai có thể ghép nhầm hai users/services.
 
-> **Chuyển mạch:** Ở chặng này của **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **6. Detection là hypothesis kiểm thử (test / 테스트), không phải verdict** tiếp nhận điểm tựa từ **5. Correlation tạo ngữ cảnh (context / 맥락) nhưng cũng có thất bại (failure / 실패) modes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. thời gian (time / 시간) là một phần của forensic tính đúng đắn (correctness / 정확성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Detection là hypothesis kiểm thử (test / 테스트), không phải verdict** nối từ **5. Correlation tạo ngữ cảnh (context / 맥락) nhưng cũng có thất bại (failure / 실패) modes** sang **7. thời gian (time / 시간) là một phần của forensic tính đúng đắn (correctness / 정확성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Detection là hypothesis kiểm thử (test / 테스트), không phải verdict
 
@@ -151,7 +151,7 @@ symptom
 → containment decision
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **7. thời gian (time / 시간) là một phần của forensic tính đúng đắn (correctness / 정확성)** tiếp nhận điểm tựa từ **6. Detection là hypothesis kiểm thử (test / 테스트), không phải verdict** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Immutable/tamper-evident nhật ký kiểm tra (audit log / 감사 로그) bảo vệ bằng chứng (evidence / 증거) đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. thời gian (time / 시간) là một phần của forensic tính đúng đắn (correctness / 정확성)** nối từ **6. Detection là hypothesis kiểm thử (test / 테스트), không phải verdict** sang **8. Immutable/tamper-evident nhật ký kiểm tra (audit log / 감사 로그) bảo vệ bằng chứng (evidence / 증거) đường dẫn (path / 경로)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. thời gian (time / 시간) là một phần của forensic tính đúng đắn (correctness / 정확성)
 
@@ -161,7 +161,7 @@ Wall-clock timestamp nên đi cùng monotonic/chuỗi (sequence / 시퀀스)/cor
 
 Không nên suy luận nhân quả (causal / 인과적) thứ tự (order / 순서) chỉ từ hai timestamps gần nhau khi bất định (uncertainty / 불확실성) lớn hơn khoảng cách giữa chúng.
 
-> **Chuyển mạch:** Trong **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **7. thời gian (time / 시간) là một phần của forensic tính đúng đắn (correctness / 정확성)** nêu điều cần giải thích; **8. Immutable/tamper-evident nhật ký kiểm tra (audit log / 감사 로그) bảo vệ bằng chứng (evidence / 증거) đường dẫn (path / 경로)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. chuỗi (chain / 사슬) of custody quan trọng khi bằng chứng (evidence / 증거) có hậu quả pháp lý hoặc compliance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. thời gian (time / 시간) là một phần của forensic tính đúng đắn (correctness / 정확성)** đặt vấn đề; **8. Immutable/tamper-evident nhật ký kiểm tra (audit log / 감사 로그) bảo vệ bằng chứng (evidence / 증거) đường dẫn (path / 경로)** kiểm tra bằng chứng, rồi **9. chuỗi (chain / 사슬) of custody quan trọng khi bằng chứng (evidence / 증거) có hậu quả pháp lý hoặc compliance** mở rộng hệ quả.
 
 ## 8. Immutable/tamper-evident nhật ký kiểm tra (audit log / 감사 로그) bảo vệ bằng chứng (evidence / 증거) đường dẫn (path / 경로)
 
@@ -178,7 +178,7 @@ access to evidence is itself audited
 
 Cơ chế cụ thể có thể là append-only lưu trữ (storage / 저장소), WORM retention, signed batches hoặc restricted logging account. mô hình tư duy (mental model / 사고 모델) là **bằng chứng (evidence / 증거) authority phải độc lập hơn điều khiển (control / 제어) plane đang bị điều tra**.
 
-> **Chuyển mạch:** Ở chặng này của **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **8. Immutable/tamper-evident nhật ký kiểm tra (audit log / 감사 로그) bảo vệ bằng chứng (evidence / 증거) đường dẫn (path / 경로)** nêu điều cần giải thích; **9. chuỗi (chain / 사슬) of custody quan trọng khi bằng chứng (evidence / 증거) có hậu quả pháp lý hoặc compliance** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. Ephemeral hạ tầng (infrastructure / 인프라) làm forensic cửa sổ (window / 윈도우) ngắn hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Immutable/tamper-evident nhật ký kiểm tra (audit log / 감사 로그) bảo vệ bằng chứng (evidence / 증거) đường dẫn (path / 경로)** đặt vấn đề; **9. chuỗi (chain / 사슬) of custody quan trọng khi bằng chứng (evidence / 증거) có hậu quả pháp lý hoặc compliance** kiểm tra bằng chứng, rồi **10. Ephemeral hạ tầng (infrastructure / 인프라) làm forensic cửa sổ (window / 윈도우) ngắn hơn** mở rộng hệ quả.
 
 ## 9. chuỗi (chain / 사슬) of custody quan trọng khi bằng chứng (evidence / 증거) có hậu quả pháp lý hoặc compliance
 
@@ -186,7 +186,7 @@ Trong nhiều sự cố (incident / 인시던트) nội bộ, kỹ thuật (engi
 
 Bản sao (copy / 복사) tệp (file / 파일) log không kèm provenance có thể hữu ích kỹ thuật nhưng yếu hơn cho formal investigation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **9. chuỗi (chain / 사슬) of custody quan trọng khi bằng chứng (evidence / 증거) có hậu quả pháp lý hoặc compliance** nêu điều cần giải thích; **10. Ephemeral hạ tầng (infrastructure / 인프라) làm forensic cửa sổ (window / 윈도우) ngắn hơn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. bộ nhớ (memory / 메모리) và tiến trình (process / 프로세스) trạng thái (state / 상태) đôi khi quan trọng hơn disk logs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. chuỗi (chain / 사슬) of custody quan trọng khi bằng chứng (evidence / 증거) có hậu quả pháp lý hoặc compliance** đặt vấn đề; **10. Ephemeral hạ tầng (infrastructure / 인프라) làm forensic cửa sổ (window / 윈도우) ngắn hơn** kiểm tra bằng chứng, rồi **11. bộ nhớ (memory / 메모리) và tiến trình (process / 프로세스) trạng thái (state / 상태) đôi khi quan trọng hơn disk logs** mở rộng hệ quả.
 
 ## 10. Ephemeral hạ tầng (infrastructure / 인프라) làm forensic cửa sổ (window / 윈도우) ngắn hơn
 
@@ -204,7 +204,7 @@ retention cost
 
 Trọng yếu (critical / 중요) định danh (identity / 식별자)/chính sách (policy / 정책)/kiểm tra (audit / 감사) events thường cần ship ra ngoài miền lỗi (failure domain / 장애 도메인) sớm hơn gỡ lỗi (debug / 디버그) logs thông thường.
 
-> **Chuyển mạch:** Trong **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **10. Ephemeral hạ tầng (infrastructure / 인프라) làm forensic cửa sổ (window / 윈도우) ngắn hơn** xác định đầu vào; **11. bộ nhớ (memory / 메모리) và tiến trình (process / 프로세스) trạng thái (state / 상태) đôi khi quan trọng hơn disk logs** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **12. mạng (network / 네트워크) bằng chứng (evidence / 증거) nói được đường dẫn (path / 경로), không luôn nói được intent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Ephemeral hạ tầng (infrastructure / 인프라) làm forensic cửa sổ (window / 윈도우) ngắn hơn** đặt đầu vào cho **11. bộ nhớ (memory / 메모리) và tiến trình (process / 프로세스) trạng thái (state / 상태) đôi khi quan trọng hơn disk logs**, rồi **12. mạng (network / 네트워크) bằng chứng (evidence / 증거) nói được đường dẫn (path / 경로), không luôn nói được intent** mở rộng hệ quả.
 
 ## 11. bộ nhớ (memory / 메모리) và tiến trình (process / 프로세스) trạng thái (state / 상태) đôi khi quan trọng hơn disk logs
 
@@ -212,7 +212,7 @@ Credential theft, injected mã (code / 코드) hoặc in-memory malware có th�
 
 Tuy nhiên collection có overhead và privacy impact. Không có bất biến (invariant / 불변식) “capture everything”. Điều cần thiết là forensic readiness phù hợp threat mô hình (model / 모델).
 
-> **Chuyển mạch:** Ở chặng này của **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, cơ chế trong **11. bộ nhớ (memory / 메모리) và tiến trình (process / 프로세스) trạng thái (state / 상태) đôi khi quan trọng hơn disk logs** cần được kiểm chứng bằng dấu vết cụ thể; **12. mạng (network / 네트워크) bằng chứng (evidence / 증거) nói được đường dẫn (path / 경로), không luôn nói được intent** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **13. định danh (identity / 식별자) bằng chứng (evidence / 증거) thường là trục chính của cloud/dịch vụ (service / 서비스) sự cố (incident / 인시던트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** cơ chế trong **11. bộ nhớ (memory / 메모리) và tiến trình (process / 프로세스) trạng thái (state / 상태) đôi khi quan trọng hơn disk logs** cần được kiểm chứng bằng dấu vết cụ thể; **12. mạng (network / 네트워크) bằng chứng (evidence / 증거) nói được đường dẫn (path / 경로), không luôn nói được intent** đưa dữ liệu và nguồn vào đúng điểm đó; **13. định danh (identity / 식별자) bằng chứng (evidence / 증거) thường là trục chính của cloud/dịch vụ (service / 서비스) sự cố (incident / 인시던트)** mở rộng hệ quả hoặc giới hạn của cơ chế này.
 
 ## 12. mạng (network / 네트워크) bằng chứng (evidence / 증거) nói được đường dẫn (path / 경로), không luôn nói được intent
 
@@ -220,7 +220,7 @@ Luồng (flow / 흐름) logs, liên kết (connection / 연결) siêu dữ liệ
 
 Một outbound liên kết (connection / 연결) lớn không tự chứng minh exfiltration. Nó cần ngữ cảnh (context / 맥락) về principal, dataset, destination trust và nghiệp vụ (business / 비즈니스) hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **12. mạng (network / 네트워크) bằng chứng (evidence / 증거) nói được đường dẫn (path / 경로), không luôn nói được intent** nêu điều cần giải thích; **13. định danh (identity / 식별자) bằng chứng (evidence / 증거) thường là trục chính của cloud/dịch vụ (service / 서비스) sự cố (incident / 인시던트)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **14. Secret rotation là một forensic chuyển tiếp trạng thái (state transition / 상태 전이)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. mạng (network / 네트워크) bằng chứng (evidence / 증거) nói được đường dẫn (path / 경로), không luôn nói được intent** đặt vấn đề; **13. định danh (identity / 식별자) bằng chứng (evidence / 증거) thường là trục chính của cloud/dịch vụ (service / 서비스) sự cố (incident / 인시던트)** kiểm tra bằng chứng, rồi **14. Secret rotation là một forensic chuyển tiếp trạng thái (state transition / 상태 전이)** mở rộng hệ quả.
 
 ## 13. định danh (identity / 식별자) bằng chứng (evidence / 증거) thường là trục chính của cloud/dịch vụ (service / 서비스) sự cố (incident / 인시던트)
 
@@ -239,7 +239,7 @@ credential source
 
 Đây là continuation của authority đồ thị (graph / 그래프) trong chapter bảo mật (security / 보안) boundaries.
 
-> **Chuyển mạch:** Trong **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **13. định danh (identity / 식별자) bằng chứng (evidence / 증거) thường là trục chính của cloud/dịch vụ (service / 서비스) sự cố (incident / 인시던트)** nêu điều cần giải thích; **14. Secret rotation là một forensic chuyển tiếp trạng thái (state transition / 상태 전이)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. False negative thường đến từ missing telemetry hoặc attacker adaptation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. định danh (identity / 식별자) bằng chứng (evidence / 증거) thường là trục chính của cloud/dịch vụ (service / 서비스) sự cố (incident / 인시던트)** đặt vấn đề; **14. Secret rotation là một forensic chuyển tiếp trạng thái (state transition / 상태 전이)** kiểm tra bằng chứng, rồi **15. False negative thường đến từ missing telemetry hoặc attacker adaptation** mở rộng hệ quả.
 
 ## 14. Secret rotation là một forensic chuyển tiếp trạng thái (state transition / 상태 전이)
 
@@ -247,7 +247,7 @@ Khi credential bị nghi compromise, rotation/revocation không phải chỉ tha
 
 Containment timeline phải đo **effective revocation**, không chỉ thời điểm operator bấm “rotate”. Đọc thêm [KMS, HSM, rotation và envelope encryption](./06_secrets_kms_hsm_rotation_and_envelope_encryption.md).
 
-> **Chuyển mạch:** Ở chặng này của **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **15. False negative thường đến từ missing telemetry hoặc attacker adaptation** tiếp nhận điểm tựa từ **14. Secret rotation là một forensic chuyển tiếp trạng thái (state transition / 상태 전이)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Adversarial pressure thay đổi economics của khả năng quan sát (observability / 관측 가능성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. False negative thường đến từ missing telemetry hoặc attacker adaptation** nối từ **14. Secret rotation là một forensic chuyển tiếp trạng thái (state transition / 상태 전이)** sang **16. Adversarial pressure thay đổi economics của khả năng quan sát (observability / 관측 가능성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. False negative thường đến từ missing telemetry hoặc attacker adaptation
 
@@ -257,7 +257,7 @@ Vì vậy “không có alert” không chứng minh không có compromise.
 
 Detection coverage nên được kiểm thử (test / 테스트) bằng simulated benign/malicious scenarios theo bất biến (invariant / 불변식), giống kiểm thử (test / 테스트) kiến trúc (architecture / 아키텍처) chứ không chỉ rà soát (review / 검토) quy tắc (rule / 규칙) cú pháp (syntax / 문법).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **16. Adversarial pressure thay đổi economics của khả năng quan sát (observability / 관측 가능성)** tiếp nhận điểm tựa từ **15. False negative thường đến từ missing telemetry hoặc attacker adaptation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Detection chuỗi xử lý (pipeline / 파이프라인) cũng có data-quality bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Adversarial pressure thay đổi economics của khả năng quan sát (observability / 관측 가능성)** nối từ **15. False negative thường đến từ missing telemetry hoặc attacker adaptation** sang **17. Detection chuỗi xử lý (pipeline / 파이프라인) cũng có data-quality bất biến (invariant / 불변식)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Adversarial pressure thay đổi economics của khả năng quan sát (observability / 관측 가능성)
 
@@ -267,7 +267,7 @@ Cần tỷ lệ (rate / 비율) limit, backpressure, priority classes và degrad
 
 Liên kết (connection / 연결) này nối trực tiếp với [queueing, tail latency và backpressure](../../08_software_systems/advanced/00_queueing_tail_latency_and_backpressure.md).
 
-> **Chuyển mạch:** Trong **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **16. Adversarial pressure thay đổi economics của khả năng quan sát (observability / 관측 가능성)** xác định đầu vào; **17. Detection chuỗi xử lý (pipeline / 파이프라인) cũng có data-quality bất biến (invariant / 불변식)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **18. sự cố (incident / 인시던트) containment cần cắt năng lực (capability / 역량), không chỉ kill tiến trình (process / 프로세스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Adversarial pressure thay đổi economics của khả năng quan sát (observability / 관측 가능성)** đặt đầu vào cho **17. Detection chuỗi xử lý (pipeline / 파이프라인) cũng có data-quality bất biến (invariant / 불변식)**, rồi **18. sự cố (incident / 인시던트) containment cần cắt năng lực (capability / 역량), không chỉ kill tiến trình (process / 프로세스)** mở rộng hệ quả.
 
 ## 17. Detection chuỗi xử lý (pipeline / 파이프라인) cũng có data-quality bất biến (invariant / 불변식)
 
@@ -286,7 +286,7 @@ parse/drop rate
 
 Bảo mật (security / 보안) detection không thể tin chuỗi xử lý (pipeline / 파이프라인) mà không quan sát chính chuỗi xử lý (pipeline / 파이프라인).
 
-> **Chuyển mạch:** Ở chặng này của **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, biết phải giữ gì trong **17. Detection chuỗi xử lý (pipeline / 파이프라인) cũng có data-quality bất biến (invariant / 불변식)**, ta theo dõi trong **18. sự cố (incident / 인시던트) containment cần cắt năng lực (capability / 역량), không chỉ kill tiến trình (process / 프로세스)** cách hệ thống thực hiện và phản hồi qua từng bước. Từ đây, **19. khôi phục (recovery / 복구) cần chứng minh bất biến (invariant / 불변식) được phục hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** biết phải giữ gì trong **17. Detection chuỗi xử lý (pipeline / 파이프라인) cũng có data-quality bất biến (invariant / 불변식)**, ta theo dõi trong **18. sự cố (incident / 인시던트) containment cần cắt năng lực (capability / 역량), không chỉ kill tiến trình (process / 프로세스)** cách hệ thống thực hiện và phản hồi qua từng bước; **19. khôi phục (recovery / 복구) cần chứng minh bất biến (invariant / 불변식) được phục hồi** mở rộng hệ quả hoặc giới hạn của cơ chế này.
 
 ## 18. sự cố (incident / 인시던트) containment cần cắt năng lực (capability / 역량), không chỉ kill tiến trình (process / 프로세스)
 
@@ -296,7 +296,7 @@ Containment phải xác định năng lực (capability / 역량) đồ thị (g
 
 Blast radius được giảm khi authority boundaries nhỏ từ trước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **18. sự cố (incident / 인시던트) containment cần cắt năng lực (capability / 역량), không chỉ kill tiến trình (process / 프로세스)** xác định đầu vào; **19. khôi phục (recovery / 복구) cần chứng minh bất biến (invariant / 불변식) được phục hồi** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **20. sự cố (incident / 인시던트) học tập (learning / 학습) không nên dừng ở “human lỗi (error / 오류)”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. sự cố (incident / 인시던트) containment cần cắt năng lực (capability / 역량), không chỉ kill tiến trình (process / 프로세스)** đặt đầu vào cho **19. khôi phục (recovery / 복구) cần chứng minh bất biến (invariant / 불변식) được phục hồi**, rồi **20. sự cố (incident / 인시던트) học tập (learning / 학습) không nên dừng ở “human lỗi (error / 오류)”** mở rộng hệ quả.
 
 ## 19. khôi phục (recovery / 복구) cần chứng minh bất biến (invariant / 불변식) được phục hồi
 
@@ -312,7 +312,7 @@ backlog/retry không tái kích hoạt hành vi cũ
 
 Đây là điểm bảo mật (security / 보안) giao với độ tin cậy (reliability / 신뢰성).
 
-> **Chuyển mạch:** Trong **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **20. sự cố (incident / 인시던트) học tập (learning / 학습) không nên dừng ở “human lỗi (error / 오류)”** tiếp nhận điểm tựa từ **19. khôi phục (recovery / 복구) cần chứng minh bất biến (invariant / 불변식) được phục hồi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Privacy và retention là ràng buộc (constraint / 제약조건) thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. sự cố (incident / 인시던트) học tập (learning / 학습) không nên dừng ở “human lỗi (error / 오류)”** nối từ **19. khôi phục (recovery / 복구) cần chứng minh bất biến (invariant / 불변식) được phục hồi** sang **21. Privacy và retention là ràng buộc (constraint / 제약조건) thật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. sự cố (incident / 인시던트) học tập (learning / 학습) không nên dừng ở “human lỗi (error / 오류)”
 
@@ -322,7 +322,7 @@ Post-incident học tập (learning / 학습) nên hỏi giả định (assumpti
 
 Kết quả có thể là policy-as-code, approval separation, safer default, better kiểm tra (audit / 감사) sự kiện (event / 이벤트) hoặc runbook; không phải chỉ thêm alert.
 
-> **Chuyển mạch:** Ở chặng này của **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **21. Privacy và retention là ràng buộc (constraint / 제약조건) thật** tiếp nhận điểm tựa từ **20. sự cố (incident / 인시던트) học tập (learning / 학습) không nên dừng ở “human lỗi (error / 오류)”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Worked example: dịch vụ (service / 서비스) account bị dùng sai phạm vi (scope / 범위)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Privacy và retention là ràng buộc (constraint / 제약조건) thật** nối từ **20. sự cố (incident / 인시던트) học tập (learning / 학습) không nên dừng ở “human lỗi (error / 오류)”** sang **22. Worked example: dịch vụ (service / 서비스) account bị dùng sai phạm vi (scope / 범위)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Privacy và retention là ràng buộc (constraint / 제약조건) thật
 
@@ -330,7 +330,7 @@ Bảo mật (security / 보안) telemetry thường chứa người dùng (user 
 
 Cần dữ liệu (data / 데이터) minimization, kiểm soát truy cập (access control / 접근 제어), retention tier và purpose limitation. bằng chứng (evidence / 증거) hữu ích không đồng nghĩa thu mọi payload nhạy cảm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **21. Privacy và retention là ràng buộc (constraint / 제약조건) thật** cho ta quy tắc; **22. Worked example: dịch vụ (service / 서비스) account bị dùng sai phạm vi (scope / 범위)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **23. bằng chứng vận hành (production evidence / 운영 증거) checklist theo lập luận (reasoning / 추론) đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Privacy và retention là ràng buộc (constraint / 제약조건) thật** nêu quy tắc; **22. Worked example: dịch vụ (service / 서비스) account bị dùng sai phạm vi (scope / 범위)** thử quy tắc trong tình huống, rồi **23. bằng chứng vận hành (production evidence / 운영 증거) checklist theo lập luận (reasoning / 추론) đường dẫn (path / 경로)** mở rộng hệ quả.
 
 ## 22. Worked example: dịch vụ (service / 서비스) account bị dùng sai phạm vi (scope / 범위)
 
@@ -348,7 +348,7 @@ policy change
 
 Investigation cần biết thay đổi (change / 변경) nào cấp authority, ai approve, đơn vị từ (token / 토큰) nào dùng, tài nguyên (resource / 자원) nào đọc và containment nào thu hồi năng lực (capability / 역량). Nếu chỉ có ứng dụng (application / 애플리케이션) truy cập (access / 접근) log không có policy-history bằng chứng (evidence / 증거), nguyên nhân gốc (root cause / 근본 원인) sẽ mơ hồ.
 
-> **Chuyển mạch:** Trong **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **22. Worked example: dịch vụ (service / 서비스) account bị dùng sai phạm vi (scope / 범위)** cho ta quy tắc; **23. bằng chứng vận hành (production evidence / 운영 증거) checklist theo lập luận (reasoning / 추론) đường dẫn (path / 경로)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **24. Kết nối sang các chapter khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. Worked example: dịch vụ (service / 서비스) account bị dùng sai phạm vi (scope / 범위)** nêu quy tắc; **23. bằng chứng vận hành (production evidence / 운영 증거) checklist theo lập luận (reasoning / 추론) đường dẫn (path / 경로)** thử quy tắc trong tình huống, rồi **24. Kết nối sang các chapter khác** mở rộng hệ quả.
 
 ## 23. bằng chứng vận hành (production evidence / 운영 증거) checklist theo lập luận (reasoning / 추론) đường dẫn (path / 경로)
 
@@ -356,7 +356,7 @@ Khi điều tra, ưu tiên dựng timeline và đồ thị (graph / 그래프) t
 
 Mục tiêu là trả lời được: **ai có authority gì, authority đó đến từ đâu, được dùng khi nào, đã tạo impact nào, và khi nào authority thực sự bị cắt**.
 
-> **Chuyển mạch:** Ở chặng này của **Detection kỹ thuật (engineering / 엔지니어링), forensics và sự cố (incident / 인시던트) bằng chứng (evidence / 증거)**, **23. bằng chứng vận hành (production evidence / 운영 증거) checklist theo lập luận (reasoning / 추론) đường dẫn (path / 경로)** nêu điều cần giải thích; **24. Kết nối sang các chapter khác** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **23. bằng chứng vận hành (production evidence / 운영 증거) checklist theo lập luận (reasoning / 추론) đường dẫn (path / 경로)** đặt vấn đề; **24. Kết nối sang các chapter khác** kiểm tra bằng chứng; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## 24. Kết nối sang các chapter khác
 

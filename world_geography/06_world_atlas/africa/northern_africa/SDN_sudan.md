@@ -8,7 +8,7 @@ Sudan trải qua một độ dốc (gradient / 기울기) khô–ẩm rất mạ
 
 Không nên coi đường ranh khí hậu như một vạch cố định. Sahel là **vùng chuyển tiếp (transition zone)** có biến động lượng mưa lớn giữa các năm; vì vậy quản lý bất định quan trọng hơn việc dựa vào một “lượng mưa trung bình” duy nhất.
 
-> **Chuyển mạch:** Trong **Sudan**, **Nile là trục tổ chức không gian** tiếp nhận điểm tựa từ **Không gian chuyển tiếp giữa Sahara và vùng xavan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khartoum và cổng (port / 포트) Sudan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sahara–xavan tạo một chuyển tiếp khô rộng, còn **Nile là trục tổ chức không gian** gom nước, cư trú và agriculture vào dải hẹp. **Khartoum và cổng (port / 포트) Sudan** tiếp theo cho thấy trục sông gặp mạng biển thế nào.
 
 ## Nile là trục tổ chức không gian
 
@@ -16,7 +16,7 @@ White Nile và Blue Nile gặp nhau tại Khartoum trước khi chảy về phí
 
 Do phần lớn dòng chảy được hình thành ngoài Sudan, Nile cũng là hệ thống xuyên biên giới; thay đổi thượng nguồn có thể ảnh hưởng tới dòng chảy, thời điểm nước và quản trị hạ lưu.
 
-> **Chuyển mạch:** Ở chặng này của **Sudan**, **Khartoum và cổng (port / 포트) Sudan** tiếp nhận điểm tựa từ **Nile là trục tổ chức không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sinh kế và kinh tế không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khartoum là nút hợp lưu và hành chính, Port Sudan là cửa ra Red Sea; **Khartoum và cổng (port / 포트) Sudan** nối interior với thương mại biển nhưng qua khoảng cách dài. **Sinh kế và kinh tế không gian** tiếp theo phân hóa theo nước và corridor.
 
 ## Khartoum và cổng (port / 포트) Sudan
 
@@ -24,7 +24,7 @@ Khartoum hình thành ở hợp lưu hai nhánh Nile — một ví dụ rõ về
 
 Cổng (port / 포트) Sudan ở Biển Đỏ là cửa ngõ hàng hải chính. Vì khoảng cách giữa vùng sản xuất nội địa và cảng lớn, hành lang giao thông tới Biển Đỏ có vai trò chiến lược đối với thương mại.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Sudan**, **Sinh kế và kinh tế không gian** tiếp nhận điểm tựa từ **Khartoum và cổng (port / 포트) Sudan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Irrigation dọc Nile, pastoral mobility ở xavan và trade qua Port Sudan tạo **Sinh kế và kinh tế không gian** không đồng đều; water timing quan trọng hơn diện tích. **Rủi ro** tiếp theo đặt các vùng trước drought, flood và conflict-related disruption.
 
 ## Sinh kế và kinh tế không gian
 
@@ -32,7 +32,7 @@ Sudan có nông nghiệp tưới quanh Nile, canh tác dựa vào mưa, chăn nu
 
 Một hệ thống chăn thả cần mobility; nếu chỉ nhìn ranh giới hành chính có thể bỏ qua lô-gic (logic / 논리) mùa của tuyến di chuyển và nguồn nước.
 
-> **Chuyển mạch:** Trong **Sudan**, **Rủi ro** tiếp nhận điểm tựa từ **Sinh kế và kinh tế không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Drought, Nile flood, heat, desertification và đứt gãy hạ tầng làm **Rủi ro** phân hóa theo sông, xavan, sa mạc và coastal gateway. **Mô hình tư duy** sẽ giữ cả trục nước lẫn khoảng cách biển.
 
 ## Rủi ro
 
@@ -40,7 +40,7 @@ Lũ dọc Nile và wadis có thể xảy ra trong một quốc gia nhìn chung k
 
 Khí hậu có thể khuếch đại khó khăn nhưng không nên dùng nó như lời giải thích duy nhất cho xung đột hoặc biến động xã hội; các yếu tố thể chế, kinh tế và lịch sử luôn cần phân tích riêng.
 
-> **Chuyển mạch:** Ở chặng này của **Sudan**, **Mô hình tư duy** gom các mảnh từ **Rủi ro** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi Sahara–xavan → Nile → Khartoum/Port Sudan → livelihoods/corridors → water and conflict risk, rồi bàn giao cho owner **Northern Africa** trong [README](./README.md).
 
 ## Mô hình tư duy
 

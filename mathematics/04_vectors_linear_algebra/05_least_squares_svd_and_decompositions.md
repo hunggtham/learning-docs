@@ -32,7 +32,7 @@ Square không chỉ để “tránh dấu âm”. Nó tạo mục tiêu (objecti
 
 `Ax` luôn nằm trong column không gian (space / 공간) của `A`. Do đó least squares đang tìm điểm (point / 지점) trong column không gian (space / 공간) gần `b` nhất.
 
-> **Chuyển mạch:** Trong **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Vì sao residual phải orthogonal?** tiếp nhận điểm tựa từ **Từ chính xác (exact / 정확한) solving đến best approximation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Worked example — fit một đường thẳng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Vì sao residual phải orthogonal?** nối từ **Từ chính xác (exact / 정확한) solving đến best approximation** sang **Worked example — fit một đường thẳng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao residual phải orthogonal?
 
@@ -68,7 +68,7 @@ A^TA\hat x=A^Tb.
 
 Đây là proof idea từ projection, không phải một formula xuất hiện ngẫu nhiên.
 
-> **Chuyển mạch:** Ở chặng này của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Vì sao residual phải orthogonal?** cho ta quy tắc; **Worked example — fit một đường thẳng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Least squares không đồng nghĩa “mô hình (model / 모델) đúng”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Vì sao residual phải orthogonal?** nêu quy tắc; **Worked example — fit một đường thẳng** thử quy tắc trong tình huống, rồi **Least squares không đồng nghĩa “mô hình (model / 모델) đúng”** mở rộng hệ quả.
 
 ## Worked example — fit một đường thẳng
 
@@ -138,7 +138,7 @@ Line fit là
 
 Điểm quan trọng là hình học (geometry / 기하학): predicted véc-tơ (vector / 벡터) `X\hat\beta` là closest véc-tơ (vector / 벡터) trong mô hình (model / 모델) subspace.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Worked example — fit một đường thẳng** cho ta quy tắc; **Least squares không đồng nghĩa “mô hình (model / 모델) đúng”** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Vì sao normal equations không phải default numerical phương thức (method / 메서드)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Worked example — fit một đường thẳng** nêu quy tắc; **Least squares không đồng nghĩa “mô hình (model / 모델) đúng”** thử quy tắc trong tình huống, rồi **Vì sao normal equations không phải default numerical phương thức (method / 메서드)?** mở rộng hệ quả.
 
 ## Least squares không đồng nghĩa “mô hình (model / 모델) đúng”
 
@@ -146,7 +146,7 @@ Tối ưu hóa (optimization / 최적화) chỉ trả lời: trong mô hình (mo
 
 Nếu residual cấu trúc (structure / 구조) có mẫu (pattern / 패턴), mô hình (model / 모델) có thể misspecify. Nếu variance thay đổi theo đầu vào (input / 입력), ordinary least squares các giả định (assumptions / 가정들) về bất định (uncertainty / 불확실성) cần xem lại. Nếu features gần collinear, coefficients có thể unstable dù predictions vẫn tương đối ổn.
 
-> **Chuyển mạch:** Trong **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Vì sao normal equations không phải default numerical phương thức (method / 메서드)?** tiếp nhận điểm tựa từ **Least squares không đồng nghĩa “mô hình (model / 모델) đúng”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **QR decomposition: xây orthogonal coordinates cho column không gian (space / 공간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Vì sao normal equations không phải default numerical phương thức (method / 메서드)?** nối từ **Least squares không đồng nghĩa “mô hình (model / 모델) đúng”** sang **QR decomposition: xây orthogonal coordinates cho column không gian (space / 공간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao normal equations không phải default numerical phương thức (method / 메서드)?
 
@@ -166,7 +166,7 @@ Nghĩa là conditioning có thể tệ lên đáng kể. Do đó môi trường 
 mathematically equivalent ≠ numerically equally reliable.
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **QR decomposition: xây orthogonal coordinates cho column không gian (space / 공간)** tiếp nhận điểm tựa từ **Vì sao normal equations không phải default numerical phương thức (method / 메서드)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SVD: mọi tuyến tính (linear / 선형) map như rotate → quy mô (scale / 규모) → rotate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **QR decomposition: xây orthogonal coordinates cho column không gian (space / 공간)** nối từ **Vì sao normal equations không phải default numerical phương thức (method / 메서드)?** sang **SVD: mọi tuyến tính (linear / 선형) map như rotate → quy mô (scale / 규모) → rotate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## QR decomposition: xây orthogonal coordinates cho column không gian (space / 공간)
 
@@ -188,7 +188,7 @@ Orthogonality của `Q` giúp tách bài toán (problem / 문제) thành project
 
 Householder reflections là hiện thực (implementation / 구현) phổ biến vì stable hơn classical Gram–Schmidt trong finite precision.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **SVD: mọi tuyến tính (linear / 선형) map như rotate → quy mô (scale / 규모) → rotate** tiếp nhận điểm tựa từ **QR decomposition: xây orthogonal coordinates cho column không gian (space / 공간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rank, near-rank và numerical rank** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **SVD: mọi tuyến tính (linear / 선형) map như rotate → quy mô (scale / 규모) → rotate** nối từ **QR decomposition: xây orthogonal coordinates cho column không gian (space / 공간)** sang **Rank, near-rank và numerical rank**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## SVD: mọi tuyến tính (linear / 선형) map như rotate → quy mô (scale / 규모) → rotate
 
@@ -214,7 +214,7 @@ Nếu singular values là
 
 thì chúng cho biết transformation mạnh yếu thế nào theo các orthogonal directions.
 
-> **Chuyển mạch:** Trong **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Rank, near-rank và numerical rank** tiếp nhận điểm tựa từ **SVD: mọi tuyến tính (linear / 선형) map như rotate → quy mô (scale / 규모) → rotate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pseudoinverse: inverse khi inverse thật không tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Rank, near-rank và numerical rank** nối từ **SVD: mọi tuyến tính (linear / 선형) map như rotate → quy mô (scale / 규모) → rotate** sang **Pseudoinverse: inverse khi inverse thật không tồn tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rank, near-rank và numerical rank
 
@@ -224,7 +224,7 @@ Vì vậy numerical rank phụ thuộc tolerance và bài toán (problem / 문�
 
 Đây là cốt lõi (core / 핵심) intuition của ill-conditioned inverse problems.
 
-> **Chuyển mạch:** Ở chặng này của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Pseudoinverse: inverse khi inverse thật không tồn tại** tiếp nhận điểm tựa từ **Rank, near-rank và numerical rank** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regularization: chấp nhận độ lệch (bias / 편향) để giảm variance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Pseudoinverse: inverse khi inverse thật không tồn tại** nối từ **Rank, near-rank và numerical rank** sang **Regularization: chấp nhận độ lệch (bias / 편향) để giảm variance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pseudoinverse: inverse khi inverse thật không tồn tại
 
@@ -246,7 +246,7 @@ Nếu hệ thống (system / 시스템) underdetermined, có infinitely many ch�
 
 Nhưng tiny singular values gây amplification, nên practical inverse problems thường cần regularization thay vì blindly using every reciprocal.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Regularization: chấp nhận độ lệch (bias / 편향) để giảm variance** tiếp nhận điểm tựa từ **Pseudoinverse: inverse khi inverse thật không tồn tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Low-rank approximation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Regularization: chấp nhận độ lệch (bias / 편향) để giảm variance** nối từ **Pseudoinverse: inverse khi inverse thật không tồn tại** sang **Low-rank approximation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Regularization: chấp nhận độ lệch (bias / 편향) để giảm variance
 
@@ -266,7 +266,7 @@ Term `\lambda I` làm weak directions bớt nguy hiểm. Ta cố ý độ lệch
 
 Trong SVD coordinates, ridge không invert tiny singular values một cách hung hăng; nó damp chúng. Đây là cách nhìn geometric/numerical rõ hơn việc chỉ gọi regularization là “chống overfitting”.
 
-> **Chuyển mạch:** Trong **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Low-rank approximation** tiếp nhận điểm tựa từ **Regularization: chấp nhận độ lệch (bias / 편향) để giảm variance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **PCA quan hệ (relation / 관계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Low-rank approximation** nối từ **Regularization: chấp nhận độ lệch (bias / 편향) để giảm variance** sang **PCA quan hệ (relation / 관계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Low-rank approximation
 
@@ -280,7 +280,7 @@ Eckart–Young theorem nói đây là best rank-`k` approximation theo Frobenius
 
 Meaning: nếu ma trận (matrix / 행렬) thật sự có dominant low-dimensional cấu trúc (structure / 구조), ta có thể bỏ weak directions với minimum possible reconstruction lỗi (error / 오류) trong lớp (class / 클래스) rank-`k`.
 
-> **Chuyển mạch:** Ở chặng này của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **PCA quan hệ (relation / 관계)** tiếp nhận điểm tựa từ **Low-rank approximation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Compression và recommender các hệ thống (systems / 시스템들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **PCA quan hệ (relation / 관계)** nối từ **Low-rank approximation** sang **Compression và recommender các hệ thống (systems / 시스템들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## PCA quan hệ (relation / 관계)
 
@@ -294,7 +294,7 @@ Columns của `V` là principal directions trong tính năng (feature / 기능) 
 
 PCA vì vậy là một change-of-basis bài toán (problem / 문제): tìm orthogonal axes theo thứ tự variance decreasing.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Compression và recommender các hệ thống (systems / 시스템들)** tiếp nhận điểm tựa từ **PCA quan hệ (relation / 관계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Finance liên kết (connection / 연결) — factor các mô hình (models / 모델들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Compression và recommender các hệ thống (systems / 시스템들)** nối từ **PCA quan hệ (relation / 관계)** sang **Finance liên kết (connection / 연결) — factor các mô hình (models / 모델들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Compression và recommender các hệ thống (systems / 시스템들)
 
@@ -302,7 +302,7 @@ PCA vì vậy là một change-of-basis bài toán (problem / 문제): tìm orth
 
 Nhưng low-rank giả định (assumption / 가정) là mô hình (model / 모델) giả định (assumption / 가정). Nếu dữ liệu (data / 데이터) không có low-rank cấu trúc (structure / 구조), compression hoặc latent-factor interpretation sẽ kém.
 
-> **Chuyển mạch:** Trong **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, sau nội dung của **Compression và recommender các hệ thống (systems / 시스템들)**, **Finance liên kết (connection / 연결) — factor các mô hình (models / 모델들)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **AI liên kết (connection / 연결) — embeddings và low-rank parameterization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, sau nội dung của **Compression và recommender các hệ thống (systems / 시스템들)**, **Finance liên kết (connection / 연결) — factor các mô hình (models / 모델들)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **AI liên kết (connection / 연결) — embeddings và low-rank parameterization** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Finance liên kết (connection / 연결) — factor các mô hình (models / 모델들)
 
@@ -314,7 +314,7 @@ R\approx FB^T.
 
 Đây là low-rank idea. PCA có thể tìm statistical factors, nhưng statistical principal directions không tự động có economic meaning. Một direction maximize variance chưa chắc là factor có interpretation nhân quả (causal / 인과적).
 
-> **Chuyển mạch:** Ở chặng này của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **AI liên kết (connection / 연결) — embeddings và low-rank parameterization** tiếp nhận điểm tựa từ **Finance liên kết (connection / 연결) — factor các mô hình (models / 모델들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ma trận (matrix / 행렬) decompositions là chiến lược (strategy / 전략) chung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **AI liên kết (connection / 연결) — embeddings và low-rank parameterization** nối từ **Finance liên kết (connection / 연결) — factor các mô hình (models / 모델들)** sang **Ma trận (matrix / 행렬) decompositions là chiến lược (strategy / 전략) chung**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AI liên kết (connection / 연결) — embeddings và low-rank parameterization
 
@@ -322,7 +322,7 @@ Large matrices trong neural networks có thể được approximated hoặc adap
 
 SVD cũng giúp hiểu why low-rank representations compress thông tin (information / 정보), nhưng trained low-rank adapters không đơn giản là “SVD của mô hình (model / 모델)”. cấu trúc (structure / 구조) và tối ưu hóa (optimization / 최적화) đường dẫn (path / 경로) khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Ma trận (matrix / 행렬) decompositions là chiến lược (strategy / 전략) chung** tiếp nhận điểm tựa từ **AI liên kết (connection / 연결) — embeddings và low-rank parameterization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thất bại (failure / 실패) modes và các giả định (assumptions / 가정들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Ma trận (matrix / 행렬) decompositions là chiến lược (strategy / 전략) chung** nối từ **AI liên kết (connection / 연결) — embeddings và low-rank parameterization** sang **Thất bại (failure / 실패) modes và các giả định (assumptions / 가정들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ma trận (matrix / 행렬) decompositions là chiến lược (strategy / 전략) chung
 
@@ -336,7 +336,7 @@ LU, QR, Cholesky, eigendecomposition và SVD không phải các tricks rời r�
 
 Chọn decomposition phụ thuộc ma trận (matrix / 행렬) cấu trúc (structure / 구조) và tác vụ (task / 작업), không có một decomposition “tốt nhất” cho mọi bài toán (problem / 문제).
 
-> **Chuyển mạch:** Trong **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Thất bại (failure / 실패) modes và các giả định (assumptions / 가정들)** tiếp nhận điểm tựa từ **Ma trận (matrix / 행렬) decompositions là chiến lược (strategy / 전략) chung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Thất bại (failure / 실패) modes và các giả định (assumptions / 가정들)** nối từ **Ma trận (matrix / 행렬) decompositions là chiến lược (strategy / 전략) chung** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thất bại (failure / 실패) modes và các giả định (assumptions / 가정들)
 
@@ -346,13 +346,13 @@ SVD trên raw features bị ảnh hưởng mạnh bởi quy mô (scale / 규모)
 
 Low-rank truncation có thể xóa weak nhưng meaningful tín hiệu (signal / 신호). “Small singular giá trị (value / 값)” chỉ nói weak tuyến tính (linear / 선형) direction relative to chosen scaling, không nói nghiệp vụ (business / 비즈니스) importance bằng zero.
 
-> **Chuyển mạch:** Ở chặng này của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Thất bại (failure / 실패) modes và các giả định (assumptions / 가정들)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Thất bại (failure / 실패) modes và các giả định (assumptions / 가정들)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Least squares là projection: khi mục tiêu (target / 대상) nằm ngoài reachable subspace, chọn reachable điểm (point / 지점) gần nhất. QR xây coordinates ổn định cho subspace đó. SVD bóc một tuyến tính (linear / 선형) map thành orthogonal đầu vào (input / 입력) directions, independent scaling strengths và orthogonal đầu ra (output / 출력) directions. Tiny singular values là directions gần mất thông tin; regularization quyết định không cố phục hồi chúng quá mức.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Least squares, SVD và ma trận (matrix / 행렬) decompositions: projection, approximation và cấu trúc (structure / 구조)**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

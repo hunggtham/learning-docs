@@ -22,7 +22,7 @@ Chemistry thư viện (library / 라이브러리) hiện là nội dung chuẩn 
 
 Không tạo một thư viện `chemistry` mới hoặc các tệp (file / 파일) kiểu `_final`, `_updated`, `_v2` khi tệp chuẩn gốc (canonical file / 정본 파일) hiện tại có thể được cập nhật trực tiếp. Mọi thay đổi mới nên đi qua `main` và được ghi nhận trong `COVERAGE_AUDIT.md`.
 
-> **Chuyển mạch:** Trong **Thư viện kiến thức Hóa học**, **Trạng thái chuẩn gốc (canonical / 정본)** xác định đầu vào; **Phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Cấu trúc chuẩn gốc (canonical / 정본) hiện tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thư viện kiến thức Hóa học**, **Trạng thái chuẩn gốc (canonical / 정본)** đặt đầu vào cho **Phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi**, rồi **Cấu trúc chuẩn gốc (canonical / 정본) hiện tại** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi
 
@@ -58,7 +58,7 @@ flowchart TD
 
 Đồ thị này là lộ trình mặc định, không phải thứ tự bắt buộc tuyệt đối. Một chapter chuyên ngành có thể quay lại prerequisite thông qua liên kết chéo.
 
-> **Chuyển mạch:** Ở chặng này của **Thư viện kiến thức Hóa học**, **Phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi** xác định đầu vào; **Cấu trúc chuẩn gốc (canonical / 정본) hiện tại** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Quy tắc ngôn ngữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thư viện kiến thức Hóa học**, **Phụ thuộc (dependency / 의존성) luồng (flow / 흐름) cốt lõi** đặt đầu vào cho **Cấu trúc chuẩn gốc (canonical / 정본) hiện tại**, rồi **Quy tắc ngôn ngữ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Cấu trúc chuẩn gốc (canonical / 정본) hiện tại
 
@@ -208,7 +208,7 @@ chemistry/
 
 Không tạo chapter mới chỉ để làm cây thư mục lớn hơn. Một tệp (file / 파일) mới chỉ hợp lý khi có ranh giới khái niệm đủ lớn và không thể tích hợp sạch vào tệp chuẩn gốc (canonical file / 정본 파일) hiện tại.
 
-> **Chuyển mạch:** **Cấu trúc canonical hiện tại** giữ owner và boundary; **Quy tắc ngôn ngữ** biến chúng thành thuật ngữ dễ tra cứu, rồi **Ba tầng mô tả** nối macro–mechanism–evidence.
+> **Nối mạch:** **Cấu trúc canonical hiện tại** giữ owner và boundary; **Quy tắc ngôn ngữ** biến chúng thành thuật ngữ dễ tra cứu, rồi **Ba tầng mô tả** nối macro–mechanism–evidence.
 
 ## Quy tắc ngôn ngữ
 
@@ -232,7 +232,7 @@ Các ký hiệu và tên chuẩn quốc tế như `pH`, `pKa`, `Ka`, `ΔG`, `VSE
 
 Thuật ngữ tiếng Hàn chỉ là lớp bổ sung khi hữu ích cho học tập hoặc công việc tại Hàn Quốc; phần giải thích chính vẫn phải là tiếng Việt.
 
-> **Chuyển mạch:** **Quy tắc ngôn ngữ** khóa cách gọi; **Ba tầng mô tả** kiểm tra cùng một hiện tượng ở scale khác nhau trước khi **Chuẩn về độ sâu** đặt mức giải thích.
+> **Nối mạch:** **Quy tắc ngôn ngữ** khóa cách gọi; **Ba tầng mô tả** kiểm tra cùng một hiện tượng ở scale khác nhau trước khi **Chuẩn về độ sâu** đặt mức giải thích.
 
 ## Ba tầng mô tả luôn phải nối với nhau
 
@@ -254,7 +254,7 @@ ký hiệu: NaCl(s) → Na+(aq) + Cl−(aq)
 
 Nếu một tệp (file / 파일) chỉ có công thức mà không nối được về hiện tượng và cơ chế hạt, tệp (file / 파일) đó chưa đạt chuẩn của thư viện (library / 라이브러리).
 
-> **Chuyển mạch:** **Chuẩn về độ sâu** yêu cầu cơ chế, giới hạn và ví dụ; **Lộ trình từ gần số 0** dùng chuẩn đó để xây prerequisite mà không nhảy cóc.
+> **Nối mạch:** **Chuẩn về độ sâu** yêu cầu cơ chế, giới hạn và ví dụ; **Lộ trình từ gần số 0** dùng chuẩn đó để xây prerequisite mà không nhảy cóc.
 
 ## Chuẩn về độ sâu
 
@@ -271,7 +271,7 @@ Một chapter được xem là đủ mạnh khi người đọc có thể trả 
 
 Độ dài tệp (file / 파일) chỉ là tín hiệu kiểm tra (audit / 감사), không phải tiêu chuẩn chất lượng. Một chapter phạm vi hẹp có thể ngắn mà vẫn hoàn chỉnh; một chapter phạm vi lớn nhưng chỉ vài đoạn thường cần đào sâu.
 
-> **Chuyển mạch:** **Lộ trình từ gần số 0** sắp xếp concept theo prerequisite; **Các liên hệ liên ngành** chỉ những điểm nối thật với physics, biology và materials.
+> **Nối mạch:** **Lộ trình từ gần số 0** sắp xếp concept theo prerequisite; **Các liên hệ liên ngành** chỉ những điểm nối thật với physics, biology và materials.
 
 ## Lộ trình cho người học lại từ gần số 0
 
@@ -314,7 +314,7 @@ Chặng 7
 
 Người đọc không cần nhớ toàn bộ trước khi đi tiếp. Mục tiêu là giữ được mô hình tư duy (mental model / 사고 모델), biết prerequisite ở đâu và có thể quay lại bằng nội bộ (internal / 내부) link.
 
-> **Chuyển mạch:** **Các liên hệ liên ngành** giúp chọn context cần dùng; **Bắt đầu học** quay lại câu hỏi trung tâm và mở đúng canonical chemistry owner.
+> **Nối mạch:** **Các liên hệ liên ngành** giúp chọn context cần dùng; **Bắt đầu học** quay lại câu hỏi trung tâm và mở đúng canonical chemistry owner.
 
 ## Các liên hệ liên ngành được ưu tiên
 
@@ -338,7 +338,7 @@ Redox + Nernst + kinetics + mass vận chuyển (transport / 전송) + material 
 
 Nấu ăn, làm sạch, bảo quản thực phẩm, gỉ sắt, thuốc, nhựa và pin được giải thích bằng cùng các cơ chế nền, không tách thành danh sách mẹo.
 
-> **Chuyển mạch:** **Bắt đầu học** khép README bằng câu hỏi, prerequisite và route; chi tiết chuyên môn quay về chapter chemistry tương ứng.
+> **Nối mạch:** **Bắt đầu học** khép README bằng câu hỏi, prerequisite và route; chi tiết chuyên môn quay về chapter chemistry tương ứng.
 
 ## Bắt đầu học
 

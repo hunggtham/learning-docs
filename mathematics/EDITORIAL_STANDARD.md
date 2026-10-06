@@ -18,7 +18,7 @@ Một chapter tốt phải giúp người đọc xây được một mô hình t
 
 Một chapter không được coi là hoàn thiện chỉ vì đã liệt kê đủ definitions và formulas.
 
-> **Chuyển mạch:** Trong **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **2. Luồng giải thích mặc định** tiếp nhận điểm tựa từ **1. Mục tiêu của một chapter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Viết thành discourse, không viết thành flashcard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **2. Luồng giải thích mặc định** nối từ **1. Mục tiêu của một chapter** sang **3. Viết thành discourse, không viết thành flashcard**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Luồng giải thích mặc định
 
@@ -48,7 +48,7 @@ mental model
 
 Nếu người đọc cần một prerequisite để hiểu bước hiện tại, hoặc giải thích prerequisite ngay tại chỗ ở mức đủ dùng, hoặc link rõ đến chapter đã giải thích nó. Không dùng câu kiểu “phần này sẽ rõ hơn ở chương nâng cao” để né giải thích bản chất cần thiết.
 
-> **Chuyển mạch:** Ở chặng này của **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **3. Viết thành discourse, không viết thành flashcard** tiếp nhận điểm tựa từ **2. Luồng giải thích mặc định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Definition phải đi cùng intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **3. Viết thành discourse, không viết thành flashcard** nối từ **2. Luồng giải thích mặc định** sang **4. Definition phải đi cùng intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Viết thành discourse, không viết thành flashcard
 
@@ -66,7 +66,7 @@ nếu giữa A, B và C có nhân quả (causal / 인과적) relationship. Hãy 
 
 Mỗi section nên có một câu hỏi hoặc idea trung tâm. Heading không nên chia vụn nội dung thành quá nhiều section chỉ có một paragraph ngắn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **4. Definition phải đi cùng intuition** tiếp nhận điểm tựa từ **3. Viết thành discourse, không viết thành flashcard** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Công thức phải có provenance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **4. Definition phải đi cùng intuition** nối từ **3. Viết thành discourse, không viết thành flashcard** sang **5. Công thức phải có provenance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Definition phải đi cùng intuition
 
@@ -80,7 +80,7 @@ Tên tiếng Việt (English term / 한국어 용어)
 
 Sau definition, giải thích đối tượng (object / 객체) đó nên được “nhìn” như thế nào. Ví dụ, basis không chỉ là “linearly independent spanning set”; nó là một hệ tọa độ tối thiểu cho một véc-tơ (vector / 벡터) không gian (space / 공간). Derivative không chỉ là limit của difference quotient; nó là cục bộ (local / 로컬) mô hình tuyến tính (linear model / 선형 모델) của một hàm (function / 함수).
 
-> **Chuyển mạch:** Trong **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **5. Công thức phải có provenance** tiếp nhận điểm tựa từ **4. Definition phải đi cùng intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Ví dụ phải tạo lập luận (reasoning / 추론) transfer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **5. Công thức phải có provenance** nối từ **4. Definition phải đi cùng intuition** sang **6. Ví dụ phải tạo lập luận (reasoning / 추론) transfer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Công thức phải có provenance
 
@@ -107,7 +107,7 @@ cần nối nó với cục bộ (local / 로컬) law
 
 và giải thích rằng exponential xuất hiện vì tốc độ thay đổi tại mỗi thời điểm tỷ lệ với chính lượng hiện có.
 
-> **Chuyển mạch:** Ở chặng này của **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **5. Công thức phải có provenance** cho ta quy tắc; **6. Ví dụ phải tạo lập luận (reasoning / 추론) transfer** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **7. Liên kết giữa các lĩnh vực phải dựa trên cùng cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **5. Công thức phải có provenance** nêu quy tắc; **6. Ví dụ phải tạo lập luận (reasoning / 추론) transfer** thử quy tắc trong tình huống, rồi **7. Liên kết giữa các lĩnh vực phải dựa trên cùng cấu trúc (structure / 구조)** mở rộng hệ quả.
 
 ## 6. Ví dụ phải tạo lập luận (reasoning / 추론) transfer
 
@@ -123,7 +123,7 @@ Một chapter quan trọng nên cố gắng có nhiều lớp ví dụ khi phù 
 
 Ví dụ không nên chỉ chứng minh rằng formula “chạy được”; nó phải làm rõ một idea.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **6. Ví dụ phải tạo lập luận (reasoning / 추론) transfer** cho ta quy tắc; **7. Liên kết giữa các lĩnh vực phải dựa trên cùng cấu trúc (structure / 구조)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **8. Phân biệt mô hình (model / 모델), theorem và computation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **6. Ví dụ phải tạo lập luận (reasoning / 추론) transfer** nêu quy tắc; **7. Liên kết giữa các lĩnh vực phải dựa trên cùng cấu trúc (structure / 구조)** thử quy tắc trong tình huống, rồi **8. Phân biệt mô hình (model / 모델), theorem và computation** mở rộng hệ quả.
 
 ## 7. Liên kết giữa các lĩnh vực phải dựa trên cùng cấu trúc (structure / 구조)
 
@@ -139,7 +139,7 @@ Ví dụ:
 
 Khi liên kết (connection / 연결) chỉ là analogy bề mặt, không dùng nó như explanation.
 
-> **Chuyển mạch:** Trong **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **8. Phân biệt mô hình (model / 모델), theorem và computation** tiếp nhận điểm tựa từ **7. Liên kết giữa các lĩnh vực phải dựa trên cùng cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Luôn nói về các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **8. Phân biệt mô hình (model / 모델), theorem và computation** nối từ **7. Liên kết giữa các lĩnh vực phải dựa trên cùng cấu trúc (structure / 구조)** sang **9. Luôn nói về các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Phân biệt mô hình (model / 모델), theorem và computation
 
@@ -153,7 +153,7 @@ Ba câu hỏi này phải được tách rõ:
 
 Ví dụ `Ax=b` có thể có chính xác (exact / 정확한) mathematical solution, nhưng measured `A,b` có noise và numerical thuật toán (algorithm / 알고리즘) lại dùng floating điểm (point / 지점). Đây là ba nguồn bất định (uncertainty / 불확실성) khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **9. Luôn nói về các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **8. Phân biệt mô hình (model / 모델), theorem và computation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Dùng notation nhất quán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **9. Luôn nói về các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** nối từ **8. Phân biệt mô hình (model / 모델), theorem và computation** sang **10. Dùng notation nhất quán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Luôn nói về các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes
 
@@ -169,7 +169,7 @@ Các câu hỏi cần xem xét:
 
 Đây là phần giúp kiến thức (knowledge / 지식) chuyển từ “school math” thành kỹ thuật (engineering / 엔지니어링) judgment.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **10. Dùng notation nhất quán** tiếp nhận điểm tựa từ **9. Luôn nói về các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. mô hình tư duy (mental model / 사고 모델) không phải summary** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **10. Dùng notation nhất quán** nối từ **9. Luôn nói về các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** sang **11. mô hình tư duy (mental model / 사고 모델) không phải summary**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Dùng notation nhất quán
 
@@ -179,7 +179,7 @@ Không đổi notation vô lý giữa các section. véc-tơ (vector / 벡터) n
 
 Formula display dùng fenced `math` khối (block / 블록) theo convention hiện tại của repository.
 
-> **Chuyển mạch:** Trong **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **11. mô hình tư duy (mental model / 사고 모델) không phải summary** gom các mảnh từ **10. Dùng notation nhất quán** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **12. dùng chung (common / 공통) Misconceptions phải giải thích vì sao sai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **11. mô hình tư duy (mental model / 사고 모델) không phải summary** tổng hợp từ **10. Dùng notation nhất quán** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **12. dùng chung (common / 공통) Misconceptions phải giải thích vì sao sai** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 11. mô hình tư duy (mental model / 사고 모델) không phải summary
 
@@ -191,7 +191,7 @@ Ví dụ tốt:
 
 Mô hình tư duy (mental model / 사고 모델) phải giúp người đọc dự đoán hoặc suy luận, không chỉ ghi nhớ.
 
-> **Chuyển mạch:** Ở chặng này của **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **12. dùng chung (common / 공통) Misconceptions phải giải thích vì sao sai** gom các mảnh từ **11. mô hình tư duy (mental model / 사고 모델) không phải summary** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **13. Chất lượng chapter quan trọng hơn độ dài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **12. dùng chung (common / 공통) Misconceptions phải giải thích vì sao sai** tổng hợp từ **11. mô hình tư duy (mental model / 사고 모델) không phải summary** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **13. Chất lượng chapter quan trọng hơn độ dài** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. dùng chung (common / 공통) Misconceptions phải giải thích vì sao sai
 
@@ -199,7 +199,7 @@ Không chỉ liệt kê lỗi. Với misconception quan trọng, nói nguyên nh
 
 Ví dụ: “logarithm làm dữ liệu thành tuyến tính” chỉ đúng với một số functional relationships; log-transform không tự động biến arbitrary nonlinear quan hệ (relation / 관계) thành tuyến tính (linear / 선형) quan hệ (relation / 관계) và còn thay đổi interpretation/lỗi (error / 오류) cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **13. Chất lượng chapter quan trọng hơn độ dài** tiếp nhận điểm tựa từ **12. dùng chung (common / 공통) Misconceptions phải giải thích vì sao sai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Checklist trước khi merge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **13. Chất lượng chapter quan trọng hơn độ dài** nối từ **12. dùng chung (common / 공통) Misconceptions phải giải thích vì sao sai** sang **14. Checklist trước khi merge**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Chất lượng chapter quan trọng hơn độ dài
 
@@ -207,7 +207,7 @@ Không đặt word-count mục tiêu (target / 대상) cứng. Tuy nhiên, chapt
 
 Một tệp (file / 파일) dài cũng có thể kém nếu lặp ý. Mục tiêu là **conceptual completeness**, không phải volume.
 
-> **Chuyển mạch:** Trong **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **14. Checklist trước khi merge** tiếp nhận điểm tựa từ **13. Chất lượng chapter quan trọng hơn độ dài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델) cho toàn bộ thư viện (library / 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **14. Checklist trước khi merge** nối từ **13. Chất lượng chapter quan trọng hơn độ dài** sang **Mô hình tư duy (mental model / 사고 모델) cho toàn bộ thư viện (library / 라이브러리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Checklist trước khi merge
 
@@ -224,7 +224,7 @@ Trước khi coi một chapter là hoàn thiện trong phạm vi (scope / 범위
 - `Common Misconceptions` có giải thích lỗi tư duy không?
 - Paragraph có luồng (flow / 흐름) hay vẫn giống bullet notes được kéo dài?
 
-> **Chuyển mạch:** Ở chặng này của **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Mô hình tư duy (mental model / 사고 모델) cho toàn bộ thư viện (library / 라이브러리)** gom các mảnh từ **14. Checklist trước khi merge** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Editorial tiêu chuẩn (standard / 표준) — Mathematics thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Mô hình tư duy (mental model / 사고 모델) cho toàn bộ thư viện (library / 라이브러리)** tổng hợp từ **14. Checklist trước khi merge** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy (mental model / 사고 모델) cho toàn bộ thư viện (library / 라이브러리)
 

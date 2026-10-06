@@ -21,7 +21,7 @@ Nếu producer thêm `PARTIALLY_REFUNDED`, cú pháp (syntax / 문법) vẫn h�
 
 Do đó lược đồ (schema / 스키마) có hai lớp: biểu diễn (representation / 표현) đặc tả hợp đồng (contract / 계약) và ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약).
 
-> **Chuyển mạch:** Trong **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích**, **2. Backward và forward tính tương thích (compatibility / 호환성)** tiếp nhận điểm tựa từ **1. lược đồ (schema / 스키마) là đặc tả hợp đồng (contract / 계약) chứ không chỉ cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Additive thay đổi (change / 변경) thường an toàn hơn destructive thay đổi (change / 변경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. Backward và forward tính tương thích (compatibility / 호환성)** nối từ **1. lược đồ (schema / 스키마) là đặc tả hợp đồng (contract / 계약) chứ không chỉ cấu trúc (structure / 구조)** sang **3. Additive thay đổi (change / 변경) thường an toàn hơn destructive thay đổi (change / 변경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Backward và forward tính tương thích (compatibility / 호환성)
 
@@ -31,7 +31,7 @@ Trong rolling triển khai (deployment / 배포), thường cần cả hai theo 
 
 Không nên dùng hai thuật ngữ này mà không nói rõ ai là reader, ai là writer; documentation giữa các hệ sinh thái đôi khi dùng góc nhìn khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích**, **3. Additive thay đổi (change / 변경) thường an toàn hơn destructive thay đổi (change / 변경)** tiếp nhận điểm tựa từ **2. Backward và forward tính tương thích (compatibility / 호환성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Tolerant reader và giới hạn của nó** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Additive thay đổi (change / 변경) thường an toàn hơn destructive thay đổi (change / 변경)** nối từ **2. Backward và forward tính tương thích (compatibility / 호환성)** sang **4. Tolerant reader và giới hạn của nó**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Additive thay đổi (change / 변경) thường an toàn hơn destructive thay đổi (change / 변경)
 
@@ -49,7 +49,7 @@ Nhưng “thêm trường dữ liệu (field / 필드)” không tự động an
 
 Rename thường thực chất là `add new → dual support → migrate → remove old`, không phải đổi tên nguyên tử.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích**, **3. Additive thay đổi (change / 변경) thường an toàn hơn destructive thay đổi (change / 변경)** đã nêu tiêu chí phân biệt, còn **4. Tolerant reader và giới hạn của nó** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **5. Enum là điểm tính tương thích (compatibility / 호환성) dễ vỡ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Additive thay đổi (change / 변경) thường an toàn hơn destructive thay đổi (change / 변경)** đặt tiêu chí; **4. Tolerant reader và giới hạn của nó** dùng nó để kiểm tra ranh giới, rồi **5. Enum là điểm tính tương thích (compatibility / 호환성) dễ vỡ** mở rộng hệ quả.
 
 ## 4. Tolerant reader và giới hạn của nó
 
@@ -57,7 +57,7 @@ Tolerant reader bỏ qua thông tin không hiểu, giúp evolution. Nhưng quá 
 
 Vì vậy tolerance phải có ranh giới (boundary / 경계): unknown siêu dữ liệu (metadata / 메타데이터) có thể bỏ qua, nhưng unknown authorization chế độ (mode / 모드) có thể phải thất bại (fail / 실패) closed.
 
-> **Chuyển mạch:** Trong **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích**, **4. Tolerant reader và giới hạn của nó** đã nêu tiêu chí phân biệt, còn **5. Enum là điểm tính tương thích (compatibility / 호환성) dễ vỡ** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **6. nhị phân (binary / 이진) protocols và trường dữ liệu (field / 필드) định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Tolerant reader và giới hạn của nó** đặt tiêu chí; **5. Enum là điểm tính tương thích (compatibility / 호환성) dễ vỡ** dùng nó để kiểm tra ranh giới, rồi **6. nhị phân (binary / 이진) protocols và trường dữ liệu (field / 필드) định danh (identity / 식별자)** mở rộng hệ quả.
 
 ## 5. Enum là điểm tính tương thích (compatibility / 호환성) dễ vỡ
 
@@ -71,7 +71,7 @@ Phân tán (distributed / 분산) giao thức (protocol / 프로토콜) nên câ
 
 Đây là sự đánh đổi (trade-off / 트레이드오프) giữa evolvability và khả năng phát hiện dữ liệu bất thường.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích**, **5. Enum là điểm tính tương thích (compatibility / 호환성) dễ vỡ** nêu điều cần giải thích; **6. nhị phân (binary / 이진) protocols và trường dữ liệu (field / 필드) định danh (identity / 식별자)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마) trong rolling triển khai (deployment / 배포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Enum là điểm tính tương thích (compatibility / 호환성) dễ vỡ** đặt vấn đề; **6. nhị phân (binary / 이진) protocols và trường dữ liệu (field / 필드) định danh (identity / 식별자)** kiểm tra bằng chứng, rồi **7. cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마) trong rolling triển khai (deployment / 배포)** mở rộng hệ quả.
 
 ## 6. nhị phân (binary / 이진) protocols và trường dữ liệu (field / 필드) định danh (identity / 식별자)
 
@@ -79,7 +79,7 @@ Các serialization hệ thống (system / 시스템) như giao thức (protocol 
 
 Điểm sâu ở đây là **wire định danh (identity / 식별자) phải ổn định lâu hơn source-code name**. Rename nguồn (source / 소스) trường dữ liệu (field / 필드) có thể an toàn trong khi reuse wire tag có thể nguy hiểm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích**, **6. nhị phân (binary / 이진) protocols và trường dữ liệu (field / 필드) định danh (identity / 식별자)** nêu điều cần giải thích; **7. cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마) trong rolling triển khai (deployment / 배포)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. Dual ghi (write / 쓰기) và consistency rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. nhị phân (binary / 이진) protocols và trường dữ liệu (field / 필드) định danh (identity / 식별자)** đặt vấn đề; **7. cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마) trong rolling triển khai (deployment / 배포)** kiểm tra bằng chứng, rồi **8. Dual ghi (write / 쓰기) và consistency rủi ro (risk / 위험)** mở rộng hệ quả.
 
 ## 7. cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마) trong rolling triển khai (deployment / 배포)
 
@@ -95,7 +95,7 @@ contract: xóa representation cũ khi không còn reader/writer phụ thuộc
 
 Điều này biến di chuyển (migration / 마이그레이션) từ một mutation lớn thành giao thức (protocol / 프로토콜) giữa các phiên bản (version / 버전).
 
-> **Chuyển mạch:** Trong **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích**, **7. cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마) trong rolling triển khai (deployment / 배포)** nêu điều cần giải thích; **8. Dual ghi (write / 쓰기) và consistency rủi ro (risk / 위험)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. Backfill là tải công việc (workload / 워크로드) môi trường vận hành (production / 운영 환경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. cơ sở dữ liệu (database / 데이터베이스) lược đồ (schema / 스키마) trong rolling triển khai (deployment / 배포)** đặt vấn đề; **8. Dual ghi (write / 쓰기) và consistency rủi ro (risk / 위험)** kiểm tra bằng chứng, rồi **9. Backfill là tải công việc (workload / 워크로드) môi trường vận hành (production / 운영 환경)** mở rộng hệ quả.
 
 ## 8. Dual ghi (write / 쓰기) và consistency rủi ro (risk / 위험)
 
@@ -105,7 +105,7 @@ Nếu dual ghi (write / 쓰기) sang hai dịch vụ (service / 서비스)/cơ s
 
 Xem [distributed transactions](../../05_data_databases/advanced/07_distributed_transactions_2pc_consensus_sagas_and_outbox.md).
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích**, **9. Backfill là tải công việc (workload / 워크로드) môi trường vận hành (production / 운영 환경)** tiếp nhận điểm tựa từ **8. Dual ghi (write / 쓰기) và consistency rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. sự kiện (event / 이벤트) lược đồ (schema / 스키마) khó xóa hơn cơ sở dữ liệu (database / 데이터베이스) column** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Backfill là tải công việc (workload / 워크로드) môi trường vận hành (production / 운영 환경)** nối từ **8. Dual ghi (write / 쓰기) và consistency rủi ro (risk / 위험)** sang **10. sự kiện (event / 이벤트) lược đồ (schema / 스키마) khó xóa hơn cơ sở dữ liệu (database / 데이터베이스) column**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Backfill là tải công việc (workload / 워크로드) môi trường vận hành (production / 운영 환경)
 
@@ -115,7 +115,7 @@ Một di chuyển (migration / 마이그레이션) logically correct vẫn có t
 
 Đây là liên kết (connection / 연결) trực tiếp giữa lược đồ (schema / 스키마) evolution và sức chứa (capacity / 용량) planning.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích**, **9. Backfill là tải công việc (workload / 워크로드) môi trường vận hành (production / 운영 환경)** nêu điều cần giải thích; **10. sự kiện (event / 이벤트) lược đồ (schema / 스키마) khó xóa hơn cơ sở dữ liệu (database / 데이터베이스) column** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. API versioning không phải lựa chọn đầu tiên cho mọi thay đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Backfill là tải công việc (workload / 워크로드) môi trường vận hành (production / 운영 환경)** đặt vấn đề; **10. sự kiện (event / 이벤트) lược đồ (schema / 스키마) khó xóa hơn cơ sở dữ liệu (database / 데이터베이스) column** kiểm tra bằng chứng, rồi **11. API versioning không phải lựa chọn đầu tiên cho mọi thay đổi** mở rộng hệ quả.
 
 ## 10. sự kiện (event / 이벤트) lược đồ (schema / 스키마) khó xóa hơn cơ sở dữ liệu (database / 데이터베이스) column
 
@@ -125,7 +125,7 @@ Nếu stream được dùng cho replay, tính tương thích (compatibility / �
 
 Lược đồ (schema / 스키마) registry giúp kiểm tra structural tính tương thích (compatibility / 호환성), nhưng không chứng minh ngữ nghĩa (semantic / 의미적) tính tương thích (compatibility / 호환성).
 
-> **Chuyển mạch:** Trong **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích**, **10. sự kiện (event / 이벤트) lược đồ (schema / 스키마) khó xóa hơn cơ sở dữ liệu (database / 데이터베이스) column** nêu điều cần giải thích; **11. API versioning không phải lựa chọn đầu tiên cho mọi thay đổi** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. năng lực (capability / 역량) negotiation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. sự kiện (event / 이벤트) lược đồ (schema / 스키마) khó xóa hơn cơ sở dữ liệu (database / 데이터베이스) column** đặt vấn đề; **11. API versioning không phải lựa chọn đầu tiên cho mọi thay đổi** kiểm tra bằng chứng, rồi **12. năng lực (capability / 역량) negotiation** mở rộng hệ quả.
 
 ## 11. API versioning không phải lựa chọn đầu tiên cho mọi thay đổi
 
@@ -135,7 +135,7 @@ Phiên bản (version / 버전) mới hợp lý khi đặc tả hợp đồng (c
 
 Versioning không xóa di chuyển (migration / 마이그레이션); nó chuyển di chuyển (migration / 마이그레이션) sang máy khách (client / 클라이언트) ecosystem.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích**, **12. năng lực (capability / 역량) negotiation** tiếp nhận điểm tựa từ **11. API versioning không phải lựa chọn đầu tiên cho mọi thay đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. ngữ nghĩa (semantic / 의미적) versioning và phân tán (distributed / 분산) reality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. năng lực (capability / 역량) negotiation** nối từ **11. API versioning không phải lựa chọn đầu tiên cho mọi thay đổi** sang **13. ngữ nghĩa (semantic / 의미적) versioning và phân tán (distributed / 분산) reality**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. năng lực (capability / 역량) negotiation
 
@@ -149,7 +149,7 @@ intersection: compression=B; feature=X
 
 Năng lực (capability / 역량) negotiation hữu ích khi tính năng (feature / 기능) evolution không tuyến tính. Nhưng giao thức (protocol / 프로토콜) handshake và fallback trở nên phức tạp hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích**, **13. ngữ nghĩa (semantic / 의미적) versioning và phân tán (distributed / 분산) reality** tiếp nhận điểm tựa từ **12. năng lực (capability / 역량) negotiation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Consumer-driven đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. ngữ nghĩa (semantic / 의미적) versioning và phân tán (distributed / 분산) reality** nối từ **12. năng lực (capability / 역량) negotiation** sang **14. Consumer-driven đặc tả hợp đồng (contract / 계약)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. ngữ nghĩa (semantic / 의미적) versioning và phân tán (distributed / 분산) reality
 
@@ -157,7 +157,7 @@ Năng lực (capability / 역량) negotiation hữu ích khi tính năng (featur
 
 Đặc tả hợp đồng (contract / 계약) tests và traffic bằng chứng (evidence / 증거) quan trọng hơn label phiên bản (version / 버전).
 
-> **Chuyển mạch:** Trong **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích**, **14. Consumer-driven đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **13. ngữ nghĩa (semantic / 의미적) versioning và phân tán (distributed / 분산) reality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Unknown fields, defaults và dữ liệu bị mất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Consumer-driven đặc tả hợp đồng (contract / 계약)** nối từ **13. ngữ nghĩa (semantic / 의미적) versioning và phân tán (distributed / 분산) reality** sang **15. Unknown fields, defaults và dữ liệu bị mất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Consumer-driven đặc tả hợp đồng (contract / 계약)
 
@@ -165,7 +165,7 @@ Provider không luôn biết bên tiêu thụ (consumer / 소비자) đang dựa
 
 Nhưng kiểm thử (test / 테스트) chỉ phản ánh bên tiêu thụ (consumer / 소비자) đã đăng ký. Shadow bên tiêu thụ (consumer / 소비자), ad-hoc analytics hoặc bên ngoài (external / 외부) tích hợp (integration / 통합) vẫn có thể tồn tại. quản trị (governance / 거버넌스) và khả năng quan sát (observability / 관측 가능성) vẫn cần thiết.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích**, **14. Consumer-driven đặc tả hợp đồng (contract / 계약)** nêu điều cần giải thích; **15. Unknown fields, defaults và dữ liệu bị mất** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Consumer-driven đặc tả hợp đồng (contract / 계약)** đặt vấn đề; **15. Unknown fields, defaults và dữ liệu bị mất** kiểm tra bằng chứng, rồi **16. tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** mở rộng hệ quả.
 
 ## 15. Unknown fields, defaults và dữ liệu bị mất
 
@@ -173,7 +173,7 @@ Một proxy đọc message mới bằng lược đồ (schema / 스키마) cũ r
 
 Default giá trị (value / 값) cũng nguy hiểm. Missing trường dữ liệu (field / 필드) có thể có nghĩa “writer cũ không biết trường dữ liệu (field / 필드) này”, khác với writer mới chủ động gửi `false` hoặc `0`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích**, **15. Unknown fields, defaults và dữ liệu bị mất** nêu điều cần giải thích; **16. tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. Failure-safe rollout** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Unknown fields, defaults và dữ liệu bị mất** đặt vấn đề; **16. tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** kiểm tra bằng chứng, rồi **17. Failure-safe rollout** mở rộng hệ quả.
 
 ## 16. tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)
 
@@ -189,7 +189,7 @@ historical replay -> reader current
 
 Sau đó kiểm tra structural parsing, ngữ nghĩa (semantic / 의미적) interpretation và side tác động (effect / 효과) của từng ô.
 
-> **Chuyển mạch:** Trong **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích**, **17. Failure-safe rollout** tiếp nhận điểm tựa từ **16. tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Failure-safe rollout** nối từ **16. tính tương thích (compatibility / 호환성) ma trận (matrix / 행렬)** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Failure-safe rollout
 
@@ -197,7 +197,7 @@ Một rollout tốt cần khả năng dừng và quay lui (rollback / 롤백). N
 
 Do đó di chuyển (migration / 마이그레이션) cần **quay lui (rollback / 롤백) tính tương thích (compatibility / 호환성)** trong khoảng quan trọng, hoặc forward-fix chiến lược (strategy / 전략) rõ ràng.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **17. Failure-safe rollout** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **17. Failure-safe rollout** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -209,7 +209,7 @@ Do đó di chuyển (migration / 마이그레이션) cần **quay lui (rollback 
 
 **“quay lui (rollback / 롤백) ứng dụng (application / 애플리케이션) là đủ.”** dữ liệu (data / 데이터) được ghi bởi phiên bản (version / 버전) mới có thể làm phiên bản (version / 버전) cũ không chạy được.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến hóa lược đồ (schema / 스키마), giao thức (protocol / 프로토콜) và hợp đồng tương thích**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

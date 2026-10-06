@@ -116,6 +116,18 @@ Một problem frame đủ tốt khi:
 - biết evidence nào sẽ phân biệt chúng;
 - biết phần nào đang nằm ngoài scope.
 
+## 9. Operationalize outcome và giữ boundary của model
+
+Một desired state chỉ dùng được khi có cách quan sát hoặc kiểm tra. Hãy tách `construct` (ví dụ “reliability” hoặc “học hiểu”) khỏi indicator/proxy đang dùng để đo nó, rồi ghi điều kiện mà proxy có thể lệch khỏi outcome. Nếu không, ta dễ biến thứ dễ đếm thành thứ cần tối ưu.
+
+Tiếp theo, ghi model boundary: thời gian nào, population nào, actor nào và failure mode nào không được bao phủ. Boundary không làm bài toán yếu đi; nó nói rõ kết luận đang có hiệu lực ở đâu và khi nào phải chuyển sang [Model Selection](../model-selection/README.md) hoặc [Research Methods](../../research_methods/README.md) để chọn cách đo khác.
+
+## 10. Competing frames trước khi chọn giải pháp
+
+Với vấn đề material, viết ít nhất hai frame hợp lý và chỉ ra prediction hoặc action khác nhau của chúng. Ví dụ “website chậm” có thể là capacity problem, dependency problem hoặc user-perception problem; mỗi frame cần evidence phân biệt và owner xử lý khác nhau.
+
+Artifact tối thiểu là một problem brief gồm `outcome → proxy → constraints → boundary → competing frames → discriminating evidence → stop condition`. Khi các frame hội tụ vào cùng một hành động, mới có lý do để chuyển sang [Decision Making](../decision-making/README.md); nếu không, giữ bất định thay vì ép một câu trả lời sớm.
+
 ## Connections
 
 - [Critical Thinking](../critical-thinking/README.md): kiểm tra claim sau khi câu hỏi đã được frame.

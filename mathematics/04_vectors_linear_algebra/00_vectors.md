@@ -23,7 +23,7 @@ v_1\\v_2\\\vdots\\v_n
 
 Trong 2D, `v=(3,4)` có thể là displacement. Trong ML, véc-tơ (vector / 벡터) có thể có hàng nghìn dimensions mà không cần “mũi tên” literal.
 
-> **Chuyển mạch:** Trong **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **2. điểm (point / 지점) và véc-tơ (vector / 벡터) không phải cùng đối tượng (object / 객체)** tiếp nhận điểm tựa từ **1. Scalar và véc-tơ (vector / 벡터) khác nhau ở loại câu hỏi nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. véc-tơ (vector / 벡터) addition là composition của displacements** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **2. điểm (point / 지점) và véc-tơ (vector / 벡터) không phải cùng đối tượng (object / 객체)** nối từ **1. Scalar và véc-tơ (vector / 벡터) khác nhau ở loại câu hỏi nào?** sang **3. véc-tơ (vector / 벡터) addition là composition của displacements**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. điểm (point / 지점) và véc-tơ (vector / 벡터) không phải cùng đối tượng (object / 객체)
 
@@ -51,7 +51,7 @@ P+v=Q.
 
 Nhưng coordinates có thể làm điểm (point / 지점) và véc-tơ (vector / 벡터) trông giống nhau. Phân biệt ngữ nghĩa (semantics / 의미론) này quan trọng trong affine hình học (geometry / 기하학), graphics và mechanics.
 
-> **Chuyển mạch:** Ở chặng này của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **3. véc-tơ (vector / 벡터) addition là composition của displacements** tiếp nhận điểm tựa từ **2. điểm (point / 지점) và véc-tơ (vector / 벡터) không phải cùng đối tượng (object / 객체)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Scalar multiplication là quy mô (scale / 규모) direction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **3. véc-tơ (vector / 벡터) addition là composition của displacements** nối từ **2. điểm (point / 지점) và véc-tơ (vector / 벡터) không phải cùng đối tượng (object / 객체)** sang **4. Scalar multiplication là quy mô (scale / 규모) direction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. véc-tơ (vector / 벡터) addition là composition của displacements
 
@@ -77,7 +77,7 @@ u+v=v+u.
 
 Nhưng composition của transformations sau này không nhất thiết commutative. Đây là distinction quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **4. Scalar multiplication là quy mô (scale / 규모) direction** tiếp nhận điểm tựa từ **3. véc-tơ (vector / 벡터) addition là composition của displacements** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Norm: véc-tơ (vector / 벡터) dài bao nhiêu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **4. Scalar multiplication là quy mô (scale / 규모) direction** nối từ **3. véc-tơ (vector / 벡터) addition là composition của displacements** sang **5. Norm: véc-tơ (vector / 벡터) dài bao nhiêu?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Scalar multiplication là quy mô (scale / 규모) direction
 
@@ -101,7 +101,7 @@ a_1v_1+\cdots+a_kv_k
 
 là thao tác (operation / 연산) nền phía sau span, basis, phép nhân ma trận (matrix multiplication / 행렬 곱셈) và tuyến tính (linear / 선형) các mô hình (models / 모델들).
 
-> **Chuyển mạch:** Trong **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **5. Norm: véc-tơ (vector / 벡터) dài bao nhiêu?** tiếp nhận điểm tựa từ **4. Scalar multiplication là quy mô (scale / 규모) direction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Dot sản phẩm (product / 제품) là measure của alignment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **5. Norm: véc-tơ (vector / 벡터) dài bao nhiêu?** nối từ **4. Scalar multiplication là quy mô (scale / 규모) direction** sang **6. Dot sản phẩm (product / 제품) là measure của alignment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Norm: véc-tơ (vector / 벡터) dài bao nhiêu?
 
@@ -144,7 +144,7 @@ L-infinity norm:
 
 Mỗi norm tạo hình học (geometry / 기하학) khác nhau. Trong tối ưu hóa (optimization / 최적화) và ML, choice of norm encode different các giả định (assumptions / 가정들) và penalties.
 
-> **Chuyển mạch:** Ở chặng này của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **6. Dot sản phẩm (product / 제품) là measure của alignment** tiếp nhận điểm tựa từ **5. Norm: véc-tơ (vector / 벡터) dài bao nhiêu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Vì sao dot sản phẩm (product / 제품) có form đó?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **6. Dot sản phẩm (product / 제품) là measure của alignment** nối từ **5. Norm: véc-tơ (vector / 벡터) dài bao nhiêu?** sang **7. Vì sao dot sản phẩm (product / 제품) có form đó?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Dot sản phẩm (product / 제품) là measure của alignment
 
@@ -169,7 +169,7 @@ Do đó:
 
 Dot sản phẩm (product / 제품) không chỉ là arithmetic formula; nó nối coordinates với angle hình học (geometry / 기하학).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **7. Vì sao dot sản phẩm (product / 제품) có form đó?** tiếp nhận điểm tựa từ **6. Dot sản phẩm (product / 제품) là measure của alignment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Projection: tách véc-tơ (vector / 벡터) thành useful thành phần (component / 컴포넌트) và residual** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **7. Vì sao dot sản phẩm (product / 제품) có form đó?** nối từ **6. Dot sản phẩm (product / 제품) là measure của alignment** sang **8. Projection: tách véc-tơ (vector / 벡터) thành useful thành phần (component / 컴포넌트) và residual**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Vì sao dot sản phẩm (product / 제품) có form đó?
 
@@ -202,7 +202,7 @@ u\cdot v=\|u\|\|v\|\cos\theta.
 
 Dot sản phẩm (product / 제품) vì vậy encode angle hình học (geometry / 기하학) của Euclidean không gian (space / 공간).
 
-> **Chuyển mạch:** Trong **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **8. Projection: tách véc-tơ (vector / 벡터) thành useful thành phần (component / 컴포넌트) và residual** tiếp nhận điểm tựa từ **7. Vì sao dot sản phẩm (product / 제품) có form đó?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Worked example: projection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **8. Projection: tách véc-tơ (vector / 벡터) thành useful thành phần (component / 컴포넌트) và residual** nối từ **7. Vì sao dot sản phẩm (product / 제품) có form đó?** sang **9. Worked example: projection**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Projection: tách véc-tơ (vector / 벡터) thành useful thành phần (component / 컴포넌트) và residual
 
@@ -232,7 +232,7 @@ orthogonal với `u`.
 
 Đây là seed concept của least squares: tách mục tiêu (target / 대상) thành phần giải thích được bởi subspace và phần residual vuông góc.
 
-> **Chuyển mạch:** Ở chặng này của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **8. Projection: tách véc-tơ (vector / 벡터) thành useful thành phần (component / 컴포넌트) và residual** cho ta quy tắc; **9. Worked example: projection** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **10. Cosine similarity: hình học (geometry / 기하학) của direction, không phải universal similarity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **8. Projection: tách véc-tơ (vector / 벡터) thành useful thành phần (component / 컴포넌트) và residual** nêu quy tắc; **9. Worked example: projection** thử quy tắc trong tình huống, rồi **10. Cosine similarity: hình học (geometry / 기하학) của direction, không phải universal similarity** mở rộng hệ quả.
 
 ## 9. Worked example: projection
 
@@ -266,7 +266,7 @@ Residual:
 
 Một véc-tơ (vector / 벡터) đã được decomposition thành thành phần (component / 컴포넌트) along `u` và orthogonal thành phần (component / 컴포넌트).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **9. Worked example: projection** cho ta quy tắc; **10. Cosine similarity: hình học (geometry / 기하학) của direction, không phải universal similarity** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **11. Cross sản phẩm (product / 제품): oriented area trong 3D** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **9. Worked example: projection** nêu quy tắc; **10. Cosine similarity: hình học (geometry / 기하학) của direction, không phải universal similarity** thử quy tắc trong tình huống, rồi **11. Cross sản phẩm (product / 제품): oriented area trong 3D** mở rộng hệ quả.
 
 ## 10. Cosine similarity: hình học (geometry / 기하학) của direction, không phải universal similarity
 
@@ -284,7 +284,7 @@ Trong embeddings, điều này hữu ích khi direction encode ngữ nghĩa (sem
 
 Nếu embedding không gian (space / 공간) distorted hoặc tính năng (feature / 기능) meanings khác nhau, cosine không tự động trở thành “ngữ nghĩa (semantic / 의미적) truth”.
 
-> **Chuyển mạch:** Trong **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **11. Cross sản phẩm (product / 제품): oriented area trong 3D** tiếp nhận điểm tựa từ **10. Cosine similarity: hình học (geometry / 기하학) của direction, không phải universal similarity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. véc-tơ (vector / 벡터) equation của line và plane** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **11. Cross sản phẩm (product / 제품): oriented area trong 3D** nối từ **10. Cosine similarity: hình học (geometry / 기하학) của direction, không phải universal similarity** sang **12. véc-tơ (vector / 벡터) equation của line và plane**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Cross sản phẩm (product / 제품): oriented area trong 3D
 
@@ -309,7 +309,7 @@ Direction theo right-hand quy tắc (rule / 규칙) encode orientation.
 
 Cross sản phẩm (product / 제품) xuất hiện trong torque, angular momentum, surface normals và graphics.
 
-> **Chuyển mạch:** Ở chặng này của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **12. véc-tơ (vector / 벡터) equation của line và plane** tiếp nhận điểm tựa từ **11. Cross sản phẩm (product / 제품): oriented area trong 3D** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Basis: coordinates phụ thuộc ngôn ngữ (language / 언어) đang dùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **12. véc-tơ (vector / 벡터) equation của line và plane** nối từ **11. Cross sản phẩm (product / 제품): oriented area trong 3D** sang **13. Basis: coordinates phụ thuộc ngôn ngữ (language / 언어) đang dùng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. véc-tơ (vector / 벡터) equation của line và plane
 
@@ -327,7 +327,7 @@ n\cdot(x-P)=0.
 
 Véc-tơ (vector / 벡터) notation làm hình học (geometry / 기하학) coordinate-free hơn slope formulas và generalize dễ hơn sang higher dimensions.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **13. Basis: coordinates phụ thuộc ngôn ngữ (language / 언어) đang dùng** tiếp nhận điểm tựa từ **12. véc-tơ (vector / 벡터) equation của line và plane** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Matrix-vector multiplication là combination của columns** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **13. Basis: coordinates phụ thuộc ngôn ngữ (language / 언어) đang dùng** nối từ **12. véc-tơ (vector / 벡터) equation của line và plane** sang **14. Matrix-vector multiplication là combination của columns**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Basis: coordinates phụ thuộc ngôn ngữ (language / 언어) đang dùng
 
@@ -345,7 +345,7 @@ Do đó statement như “véc-tơ (vector / 벡터) này là `[3,4]`” thiếu
 
 Tuyến tính (linear / 선형) algebra sau này formalize basis thay đổi (change / 변경), eigenbasis và PCA theo cùng idea.
 
-> **Chuyển mạch:** Trong **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **14. Matrix-vector multiplication là combination của columns** tiếp nhận điểm tựa từ **13. Basis: coordinates phụ thuộc ngôn ngữ (language / 언어) đang dùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Physics: vectors là ngôn ngữ (language / 언어) của directional quantities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **14. Matrix-vector multiplication là combination của columns** nối từ **13. Basis: coordinates phụ thuộc ngôn ngữ (language / 언어) đang dùng** sang **15. Physics: vectors là ngôn ngữ (language / 언어) của directional quantities**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Matrix-vector multiplication là combination của columns
 
@@ -374,7 +374,7 @@ Matrix-vector sản phẩm (product / 제품) không chỉ là row-by-column thu
 
 Điều này nối vectors trực tiếp với tuyến tính (linear / 선형) transformations.
 
-> **Chuyển mạch:** Ở chặng này của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **15. Physics: vectors là ngôn ngữ (language / 언어) của directional quantities** tiếp nhận điểm tựa từ **14. Matrix-vector multiplication là combination của columns** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Computer Graphics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **15. Physics: vectors là ngôn ngữ (language / 언어) của directional quantities** nối từ **14. Matrix-vector multiplication là combination của columns** sang **16. Computer Graphics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Physics: vectors là ngôn ngữ (language / 언어) của directional quantities
 
@@ -406,7 +406,7 @@ encode rotational tác động (effect / 효과).
 
 Dot/cross products vì vậy có vật lý (physical / 물리적) meaning rõ, không chỉ formal operations.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **16. Computer Graphics** tiếp nhận điểm tựa từ **15. Physics: vectors là ngôn ngữ (language / 언어) của directional quantities** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. AI/dữ liệu (data / 데이터): tính năng (feature / 기능) vectors và biểu diễn (representation / 표현) các giả định (assumptions / 가정들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **16. Computer Graphics** nối từ **15. Physics: vectors là ngôn ngữ (language / 언어) của directional quantities** sang **17. AI/dữ liệu (data / 데이터): tính năng (feature / 기능) vectors và biểu diễn (representation / 표현) các giả định (assumptions / 가정들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Computer Graphics
 
@@ -422,7 +422,7 @@ Surface normal `n` dùng dot sản phẩm (product / 제품) với light directi
 
 Normals còn transform khác positions dưới non-uniform scaling; đây là reminder rằng ngữ nghĩa (semantics / 의미론) của véc-tơ (vector / 벡터) kiểu (type / 타입) matters.
 
-> **Chuyển mạch:** Trong **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **16. Computer Graphics** nêu điều cần giải thích; **17. AI/dữ liệu (data / 데이터): tính năng (feature / 기능) vectors và biểu diễn (representation / 표현) các giả định (assumptions / 가정들)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. Finance: portfolio vectors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **16. Computer Graphics** đặt vấn đề; **17. AI/dữ liệu (data / 데이터): tính năng (feature / 기능) vectors và biểu diễn (representation / 표현) các giả định (assumptions / 가정들)** đối chiếu bằng chứng, rồi **18. Finance: portfolio vectors** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 17. AI/dữ liệu (data / 데이터): tính năng (feature / 기능) vectors và biểu diễn (representation / 표현) các giả định (assumptions / 가정들)
 
@@ -444,7 +444,7 @@ z=Wx+b
 
 biến đầu vào (input / 입력) véc-tơ (vector / 벡터) thành đầu ra (output / 출력) véc-tơ (vector / 벡터) qua affine map.
 
-> **Chuyển mạch:** Ở chặng này của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **17. AI/dữ liệu (data / 데이터): tính năng (feature / 기능) vectors và biểu diễn (representation / 표현) các giả định (assumptions / 가정들)** nêu điều cần giải thích; **18. Finance: portfolio vectors** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. High-dimensional hình học (geometry / 기하학) có thể counterintuitive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **17. AI/dữ liệu (data / 데이터): tính năng (feature / 기능) vectors và biểu diễn (representation / 표현) các giả định (assumptions / 가정들)** đặt vấn đề; **18. Finance: portfolio vectors** đối chiếu bằng chứng, rồi **19. High-dimensional hình học (geometry / 기하학) có thể counterintuitive** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. Finance: portfolio vectors
 
@@ -470,7 +470,7 @@ Rủi ro (risk / 위험) với covariance ma trận (matrix / 행렬) `\Sigma`:
 
 Véc-tơ (vector / 벡터)/ma trận (matrix / 행렬) ngôn ngữ (language / 언어) làm portfolio lý thuyết (theory / 이론) trở thành hình học (geometry / 기하학) trong exposure không gian (space / 공간).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **19. High-dimensional hình học (geometry / 기하학) có thể counterintuitive** tiếp nhận điểm tựa từ **18. Finance: portfolio vectors** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **19. High-dimensional hình học (geometry / 기하학) có thể counterintuitive** nối từ **18. Finance: portfolio vectors** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. High-dimensional hình học (geometry / 기하학) có thể counterintuitive
 
@@ -483,13 +483,13 @@ Trong high dimension:
 
 Vì vậy véc-tơ (vector / 벡터) biểu diễn (representation / 표현) powerful nhưng không nên kéo trực giác 2D sang high dimension một cách máy móc.
 
-> **Chuyển mạch:** Trong **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **19. High-dimensional hình học (geometry / 기하학) có thể counterintuitive** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **19. High-dimensional hình học (geometry / 기하학) có thể counterintuitive** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > véc-tơ (vector / 벡터) là một trạng thái (state / 상태)/displacement được mô tả trong một basis. Norm hỏi “lớn bao nhiêu?”, dot sản phẩm (product / 제품) hỏi “align bao nhiêu?”, projection hỏi “bao nhiêu phần nằm theo direction/subspace này?”, còn matrices transform vectors sang representations/states mới.
 
-> **Chuyển mạch:** Ở chặng này của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Véc-tơ (vector / 벡터): trạng thái (state / 상태), direction, projection và biểu diễn (representation / 표현)**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

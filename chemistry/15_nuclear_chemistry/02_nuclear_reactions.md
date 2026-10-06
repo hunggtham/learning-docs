@@ -22,7 +22,7 @@ A(a,b)B
 
 trong đó hạt tới \(a\) tương tác với hạt nhân bia \(A\), tạo hạt nhân dư \(B\) và hạt đi ra \(b\).
 
-> **Chuyển mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Các định luật bảo toàn** tiếp nhận điểm tựa từ **Ký hiệu tổng quát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giá trị Q của phản ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Các định luật bảo toàn** nối từ **Ký hiệu tổng quát** sang **Giá trị Q của phản ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các định luật bảo toàn
 
@@ -30,7 +30,7 @@ Phản ứng hạt nhân phải thỏa các định luật bảo toàn tương �
 
 Cân bằng \(Z\) và \(A\) là bước bắt buộc nhưng chưa đủ. Năng lượng, động lượng và các quy tắc chọn lượng tử vẫn có thể làm một kênh phản ứng bị cấm hoặc có xác suất rất nhỏ.
 
-> **Chuyển mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Giá trị Q của phản ứng** tiếp nhận điểm tựa từ **Các định luật bảo toàn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao bảng khối lượng cũng là bảng năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Giá trị Q của phản ứng** nối từ **Các định luật bảo toàn** sang **Vì sao bảng khối lượng cũng là bảng năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giá trị Q của phản ứng
 
@@ -56,7 +56,7 @@ Q\approx0.005\times 931.5\;\văn bản (text / 텍스트){MeV}\approx4.66\;\văn
 
 Con số khối lượng chênh rất nhỏ nhưng năng lượng trên mỗi sự kiện lại lớn vì hệ số chuyển đổi giữa khối lượng và năng lượng là rất lớn. Đây chính là cùng lô-gic (logic / 논리) đã gặp ở **khuyết khối và năng lượng liên kết**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Vì sao bảng khối lượng cũng là bảng năng lượng** tiếp nhận điểm tựa từ **Giá trị Q của phản ứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng ngưỡng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Vì sao bảng khối lượng cũng là bảng năng lượng** nối từ **Giá trị Q của phản ứng** sang **Năng lượng ngưỡng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao bảng khối lượng cũng là bảng năng lượng
 
@@ -70,7 +70,7 @@ Một chênh lệch khối lượng rất nhỏ có thể tương ứng năng l�
 
 Do đó chỉ cần đo khối lượng đủ chính xác, ta có thể tính năng lượng của nhiều phản ứng hạt nhân.
 
-> **Chuyển mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Năng lượng ngưỡng** tiếp nhận điểm tựa từ **Vì sao bảng khối lượng cũng là bảng năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xác suất phản ứng và tiết diện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Năng lượng ngưỡng** nối từ **Vì sao bảng khối lượng cũng là bảng năng lượng** sang **Xác suất phản ứng và tiết diện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng ngưỡng
 
@@ -80,7 +80,7 @@ Một phần động năng phải còn lại trong chuyển động của tâm k
 
 Điểm này là ví dụ tốt cho giới hạn của việc chỉ nhìn vào cân bằng năng lượng: **động lượng và hình học va chạm cũng đặt ràng buộc**.
 
-> **Chuyển mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Xác suất phản ứng và tiết diện** tiếp nhận điểm tựa từ **Năng lượng ngưỡng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao tiết diện phụ thuộc năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Xác suất phản ứng và tiết diện** nối từ **Năng lượng ngưỡng** sang **Vì sao tiết diện phụ thuộc năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xác suất phản ứng và tiết diện
 
@@ -94,7 +94,7 @@ Một phần động năng phải còn lại trong chuyển động của tâm k
 
 Tiết diện lớn nghĩa kênh phản ứng có xác suất cao hơn trong điều kiện năng lượng đang xét. Nó không có nghĩa hạt nhân thật sự là một đĩa cứng có diện tích đúng bằng giá trị đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Vì sao tiết diện phụ thuộc năng lượng** tiếp nhận điểm tựa từ **Xác suất phản ứng và tiết diện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hàng rào Coulomb** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Vì sao tiết diện phụ thuộc năng lượng** nối từ **Xác suất phản ứng và tiết diện** sang **Hàng rào Coulomb**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao tiết diện phụ thuộc năng lượng
 
@@ -102,7 +102,7 @@ Tiết diện có thể thay đổi rất mạnh theo năng lượng của hạt
 
 Vì vậy cùng một hạt tới và cùng một bia có thể tạo hành vi hoàn toàn khác khi năng lượng thay đổi. Khi dùng dữ liệu tiết diện trong tính toán, luôn phải hỏi **tiết diện ở năng lượng nào?** thay vì coi \(\sigma\) như hằng số vật liệu cố định.
 
-> **Chuyển mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Hàng rào Coulomb** tiếp nhận điểm tựa từ **Vì sao tiết diện phụ thuộc năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xuyên hầm lượng tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Hàng rào Coulomb** nối từ **Vì sao tiết diện phụ thuộc năng lượng** sang **Xuyên hầm lượng tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hàng rào Coulomb
 
@@ -116,7 +116,7 @@ V_C\sim\frac{1}{4\pi\varepsilon_0}\frac{Z_1Z_2e^2}{R_1+R_2}
 
 Đây là lý do phản ứng do neutron gây ra thường dễ xảy ra hơn ở năng lượng thấp: neutron không phải vượt lực đẩy Coulomb.
 
-> **Chuyển mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Xuyên hầm lượng tử** tiếp nhận điểm tựa từ **Hàng rào Coulomb** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tán xạ đàn hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Xuyên hầm lượng tử** nối từ **Hàng rào Coulomb** sang **Tán xạ đàn hồi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xuyên hầm lượng tử
 
@@ -124,7 +124,7 @@ Hạt tích điện vẫn có xác suất phản ứng ngay cả khi năng lư�
 
 Phản ứng nhiệt hạch trong sao phụ thuộc mạnh vào cơ chế này vì năng lượng nhiệt trung bình trong sao thấp hơn chiều cao hàng rào Coulomb nếu xét hoàn toàn theo cơ học cổ điển.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Tán xạ đàn hồi** tiếp nhận điểm tựa từ **Xuyên hầm lượng tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tán xạ không đàn hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Tán xạ đàn hồi** nối từ **Xuyên hầm lượng tử** sang **Tán xạ không đàn hồi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tán xạ đàn hồi
 
@@ -132,7 +132,7 @@ Trong **tán xạ đàn hồi (elastic scattering)**, hạt tới và hạt nhâ
 
 Tán xạ đàn hồi được dùng để khảo sát kích thước, cấu trúc hạt nhân và để làm chậm neutron.
 
-> **Chuyển mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Tán xạ không đàn hồi** tiếp nhận điểm tựa từ **Tán xạ đàn hồi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản ứng bắt hạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Tán xạ không đàn hồi** nối từ **Tán xạ đàn hồi** sang **Phản ứng bắt hạt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tán xạ không đàn hồi
 
@@ -146,7 +146,7 @@ sau đó thường khử kích thích bằng cách phát gamma.
 
 Một phần động năng của hạt tới vì vậy được chuyển thành năng lượng kích thích bên trong hạt nhân.
 
-> **Chuyển mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Phản ứng bắt hạt** tiếp nhận điểm tựa từ **Tán xạ không đàn hồi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kích hoạt neutron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Phản ứng bắt hạt** nối từ **Tán xạ không đàn hồi** sang **Kích hoạt neutron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phản ứng bắt hạt
 
@@ -160,7 +160,7 @@ Ví dụ bắt neutron:
 
 Quá trình bắt có thể tạo đồng vị phóng xạ từ hạt nhân ban đầu bền.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Kích hoạt neutron** tiếp nhận điểm tựa từ **Phản ứng bắt hạt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bắt proton và hạt alpha** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Kích hoạt neutron** nối từ **Phản ứng bắt hạt** sang **Bắt proton và hạt alpha**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kích hoạt neutron
 
@@ -170,7 +170,7 @@ Chiếu neutron vào vật liệu có thể biến một số hạt nhân bền 
 
 Đây cũng là lý do vật liệu gần nguồn neutron có thể trở thành nguồn bức xạ thứ cấp sau khi nguồn ban đầu đã tắt: **vật liệu đã bị kích hoạt**, không chỉ đơn giản là “bị chiếu xạ rồi hết”.
 
-> **Chuyển mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Bắt proton và hạt alpha** tiếp nhận điểm tựa từ **Kích hoạt neutron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản ứng chuyển nucleon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Bắt proton và hạt alpha** nối từ **Kích hoạt neutron** sang **Phản ứng chuyển nucleon**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bắt proton và hạt alpha
 
@@ -178,7 +178,7 @@ Phản ứng bắt hạt tích điện phải đối mặt với hàng rào Coul
 
 Các phản ứng kiểu này có vai trò lớn trong tổng hợp hạt nhân bên trong sao.
 
-> **Chuyển mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Phản ứng chuyển nucleon** tiếp nhận điểm tựa từ **Bắt proton và hạt alpha** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản ứng bật hạt và spallation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Phản ứng chuyển nucleon** nối từ **Bắt proton và hạt alpha** sang **Phản ứng bật hạt và spallation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phản ứng chuyển nucleon
 
@@ -191,7 +191,7 @@ Ví dụ:
 
 Các phản ứng chuyển nucleon giúp khảo sát cấu trúc trạng thái hạt đơn của hạt nhân.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Phản ứng bật hạt và spallation** tiếp nhận điểm tựa từ **Phản ứng chuyển nucleon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình hạt nhân hợp chất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Phản ứng bật hạt và spallation** nối từ **Phản ứng chuyển nucleon** sang **Mô hình hạt nhân hợp chất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phản ứng bật hạt và spallation
 
@@ -199,7 +199,7 @@ Các phản ứng chuyển nucleon giúp khảo sát cấu trúc trạng thái h
 
 Nguồn **spallation** dùng proton năng lượng cao bắn vào bia nặng để tạo số lượng lớn neutron. Cách này được dùng trong khoa học neutron và sản xuất đồng vị.
 
-> **Chuyển mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Mô hình hạt nhân hợp chất** tiếp nhận điểm tựa từ **Phản ứng bật hạt và spallation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản ứng trực tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Mô hình hạt nhân hợp chất** nối từ **Phản ứng bật hạt và spallation** sang **Phản ứng trực tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mô hình hạt nhân hợp chất
 
@@ -213,7 +213,7 @@ hạt tới + hạt nhân bia
 
 Mô hình này giải thích nhiều phản ứng cộng hưởng và phản ứng có tính thống kê.
 
-> **Chuyển mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Phản ứng trực tiếp** tiếp nhận điểm tựa từ **Mô hình hạt nhân hợp chất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cộng hưởng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Phản ứng trực tiếp** nối từ **Mô hình hạt nhân hợp chất** sang **Cộng hưởng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phản ứng trực tiếp
 
@@ -223,7 +223,7 @@ Các phản ứng chuyển hoặc tước hạt (**stripping**) có thể giữ 
 
 Vì vậy không tồn tại một cơ chế duy nhất cho mọi phản ứng hạt nhân.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Cộng hưởng** tiếp nhận điểm tựa từ **Phản ứng trực tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các vùng năng lượng neutron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Cộng hưởng** nối từ **Phản ứng trực tiếp** sang **Các vùng năng lượng neutron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cộng hưởng
 
@@ -231,7 +231,7 @@ Nếu năng lượng hạt tới trùng với một trạng thái gần liên k�
 
 **Cộng hưởng (resonance)** trong phản ứng hạt nhân có thể xem như hiện tượng ghép đúng mức năng lượng, tương tự trực giác về chuyển mức trong phổ học nhưng xảy ra trong hệ hạt nhân.
 
-> **Chuyển mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Các vùng năng lượng neutron** tiếp nhận điểm tựa từ **Cộng hưởng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Làm chậm neutron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Các vùng năng lượng neutron** nối từ **Cộng hưởng** sang **Làm chậm neutron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các vùng năng lượng neutron
 
@@ -241,7 +241,7 @@ Ranh giới chính xác giữa các vùng thay đổi theo bối cảnh.
 
 Cùng một đồng vị có thể có tiết diện bắt hoặc phân hạch rất khác nhau giữa các vùng năng lượng đó.
 
-> **Chuyển mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Làm chậm neutron** tiếp nhận điểm tựa từ **Các vùng năng lượng neutron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hấp thụ neutron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Làm chậm neutron** nối từ **Các vùng năng lượng neutron** sang **Hấp thụ neutron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Làm chậm neutron
 
@@ -251,7 +251,7 @@ Vật liệu giàu hydrogen là chất làm chậm tốt vì khối lượng h�
 
 Làm chậm neutron có thể làm xác suất của các phản ứng tiếp theo thay đổi mạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Hấp thụ neutron** tiếp nhận điểm tựa từ **Làm chậm neutron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tốc độ phản ứng hạt nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Hấp thụ neutron** nối từ **Làm chậm neutron** sang **Tốc độ phản ứng hạt nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hấp thụ neutron
 
@@ -261,7 +261,7 @@ Boron và cadmium là các ví dụ quen thuộc trong nhiều ứng dụng.
 
 Cần phân biệt **làm chậm neutron (moderation)** với **hấp thụ neutron (absorption)**: một quá trình giảm năng lượng neutron, quá trình kia loại neutron khỏi quần thể tự do.
 
-> **Chuyển mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Tốc độ phản ứng hạt nhân** tiếp nhận điểm tựa từ **Hấp thụ neutron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tích lũy sản phẩm kích hoạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Tốc độ phản ứng hạt nhân** nối từ **Hấp thụ neutron** sang **Tích lũy sản phẩm kích hoạt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tốc độ phản ứng hạt nhân
 
@@ -279,7 +279,7 @@ Trong hệ thực, nếu thông lượng phụ thuộc năng lượng thì cần
 
 Trong phản ứng hóa học, tốc độ thường phụ thuộc nồng độ và hằng số tốc độ. Trong phản ứng hạt nhân dưới chùm hạt, vai trò tương tự được thực hiện bởi **số hạt bia × thông lượng × tiết diện**. Hai mô hình không giống nhau về vật lý vi mô nhưng cùng dùng một ý tưởng hệ thống: tốc độ sự kiện bằng số “mục tiêu khả dụng” nhân xác suất tương tác trên một đơn vị thông lượng.
 
-> **Chuyển mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Tích lũy sản phẩm kích hoạt** tiếp nhận điểm tựa từ **Tốc độ phản ứng hạt nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hoạt độ bão hòa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Tích lũy sản phẩm kích hoạt** nối từ **Tốc độ phản ứng hạt nhân** sang **Hoạt độ bão hòa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tích lũy sản phẩm kích hoạt
 
@@ -293,7 +293,7 @@ Hệ tiến tới trạng thái trong đó tốc độ tạo sản phẩm cân b
 
 Đây là một hệ động học bậc nhất có nguồn cấp liên tục. Nó là ví dụ rõ cho sự khác nhau giữa **trạng thái ổn định động học** và **cân bằng nhiệt động lực học**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Hoạt độ bão hòa** tiếp nhận điểm tựa từ **Tích lũy sản phẩm kích hoạt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển nguyên tố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Hoạt độ bão hòa** nối từ **Tích lũy sản phẩm kích hoạt** sang **Chuyển nguyên tố**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hoạt độ bão hòa
 
@@ -313,7 +313,7 @@ Sau khi dừng chiếu, hoạt độ lại giảm theo quy luật phân rã hàm
 
 Do đó tăng thời gian chiếu vô hạn không làm hoạt độ tăng vô hạn. Khi gần bão hòa, phần sản phẩm tạo thêm trong mỗi đơn vị thời gian gần bằng phần đang phân rã.
 
-> **Chuyển mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Chuyển nguyên tố** tiếp nhận điểm tựa từ **Hoạt độ bão hòa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồng vị phóng xạ nhân tạo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Chuyển nguyên tố** nối từ **Hoạt độ bão hòa** sang **Đồng vị phóng xạ nhân tạo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển nguyên tố
 
@@ -321,7 +321,7 @@ Khi phản ứng hạt nhân làm \(Z\) thay đổi, một nguyên tố thật s
 
 Giả kim thuật lịch sử từng tìm cách chuyển nguyên tố bằng phản ứng hóa học, nhưng điều đó không thể xảy ra vì phản ứng hóa học bảo toàn hạt nhân. Chuyển nguyên tố chỉ có thể xảy ra khi bản thân hạt nhân thay đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Đồng vị phóng xạ nhân tạo** tiếp nhận điểm tựa từ **Chuyển nguyên tố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạng phản ứng hạt nhân trong sao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Đồng vị phóng xạ nhân tạo** nối từ **Chuyển nguyên tố** sang **Mạng phản ứng hạt nhân trong sao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đồng vị phóng xạ nhân tạo
 
@@ -331,7 +331,7 @@ Việc chọn con đường sản xuất phụ thuộc đồng vị bia, loại 
 
 Một con đường có tiết diện lớn chưa chắc tối ưu nếu đồng thời tạo nhiều đồng vị tạp khó tách hoặc sản phẩm có chu kỳ bán rã không phù hợp với logistics sử dụng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Mạng phản ứng hạt nhân trong sao** tiếp nhận điểm tựa từ **Đồng vị phóng xạ nhân tạo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tổng hợp nguyên tố nặng hơn helium** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Mạng phản ứng hạt nhân trong sao** nối từ **Đồng vị phóng xạ nhân tạo** sang **Tổng hợp nguyên tố nặng hơn helium**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mạng phản ứng hạt nhân trong sao
 
@@ -345,7 +345,7 @@ Trong các sao giống Mặt Trời, chuỗi proton–proton là một con đư�
 
 Cả hai quá trình giải phóng năng lượng vì helium-4 liên kết chặt hơn tổng các proton ban đầu.
 
-> **Chuyển mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Tổng hợp nguyên tố nặng hơn helium** gom các mảnh từ **Mạng phản ứng hạt nhân trong sao** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Quá trình s và quá trình r** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Tổng hợp nguyên tố nặng hơn helium** tổng hợp từ **Mạng phản ứng hạt nhân trong sao** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Quá trình s và quá trình r** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tổng hợp nguyên tố nặng hơn helium
 
@@ -353,7 +353,7 @@ Các nguyên tố nặng dần được hình thành qua nhiều giai đoạn nh
 
 Sau vùng sắt, nhiệt hạch thông thường không còn giải phóng năng lượng ròng thuận lợi, nên các nguyên tố nặng hơn chủ yếu cần các quá trình bắt neutron và phân rã.
 
-> **Chuyển mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Quá trình s và quá trình r** gom các mảnh từ **Tổng hợp nguyên tố nặng hơn helium** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Mạng phản ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Quá trình s và quá trình r** tổng hợp từ **Tổng hợp nguyên tố nặng hơn helium** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Mạng phản ứng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Quá trình s và quá trình r
 
@@ -363,7 +363,7 @@ Trong **quá trình r (r-process)**, bắt neutron diễn ra cực nhanh, tạo 
 
 Hai cơ chế này giải thích nguồn gốc của nhiều nguyên tố nặng trong vũ trụ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Mạng phản ứng** tiếp nhận điểm tựa từ **Quá trình s và quá trình r** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **So sánh năng lượng phản ứng hạt nhân và hóa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Mạng phản ứng** nối từ **Quá trình s và quá trình r** sang **So sánh năng lượng phản ứng hạt nhân và hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mạng phản ứng
 
@@ -377,7 +377,7 @@ Về toán học, đây rất giống mạng động học phản ứng hóa h�
 
 Khi số phản ứng lớn, các thang thời gian rất khác nhau có thể tạo hệ phương trình cứng (**stiff system**), cùng vấn đề số học đã gặp trong động học hóa học và mô hình phản ứng.
 
-> **Chuyển mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Mạng phản ứng** đã nêu tiêu chí phân biệt, còn **So sánh năng lượng phản ứng hạt nhân và hóa học** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Phép đo hạt nhân như một bài toán nghịch đảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Mạng phản ứng** đặt tiêu chí; **So sánh năng lượng phản ứng hạt nhân và hóa học** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Phép đo hạt nhân như một bài toán nghịch đảo** mở rộng hệ quả.
 
 ## So sánh năng lượng phản ứng hạt nhân và hóa học
 
@@ -387,7 +387,7 @@ Chênh lệch thang năng lượng rất lớn này giải thích vì sao phản
 
 Điều đó không có nghĩa mọi công nghệ hạt nhân tự động cho mật độ công suất cao hoặc hiệu suất hệ thống tốt; tốc độ phản ứng, truyền nhiệt, vật liệu, che chắn và kiểm soát neutron vẫn là các ràng buộc kỹ thuật riêng.
 
-> **Chuyển mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **So sánh năng lượng phản ứng hạt nhân và hóa học** đã nêu tiêu chí phân biệt, còn **Phép đo hạt nhân như một bài toán nghịch đảo** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **So sánh năng lượng phản ứng hạt nhân và hóa học** đặt tiêu chí; **Phép đo hạt nhân như một bài toán nghịch đảo** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Những hiểu lầm thường gặp** mở rộng hệ quả.
 
 ## Phép đo hạt nhân như một bài toán nghịch đảo
 
@@ -395,7 +395,7 @@ Nếu đầu dò đo năng lượng và góc của các hạt đi ra, các đị
 
 Phổ học hạt nhân vì vậy là một **bài toán nghịch đảo (inverse problem)** tương tự phổ học phân tử, nhưng sử dụng tương tác và thang năng lượng khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Phép đo hạt nhân như một bài toán nghịch đảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Những hiểu lầm thường gặp** nối từ **Phép đo hạt nhân như một bài toán nghịch đảo** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -419,7 +419,7 @@ Không. Thay đổi nguyên tố đòi hỏi thay đổi hạt nhân, không ch�
 
 Không. Q chỉ nói về chênh lệch năng lượng ròng. Hàng rào Coulomb, tiết diện và các quy tắc chọn quyết định khả năng và tốc độ quan sát.
 
-> **Chuyển mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Phản ứng hạt nhân — bảo toàn, giá trị Q, tiết diện và chuyển nguyên tố**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

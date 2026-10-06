@@ -23,7 +23,7 @@
 
 ---
 
-> **Chuyển mạch:** Dùng thuật ngữ Việt–Anh nhất quán để đọc Tailwind v4.3; phần tiếp theo định nghĩa utility engine trước khi đi vào production architecture.
+> **Nối mạch:** Dùng thuật ngữ Việt–Anh nhất quán để đọc Tailwind v4.3; phần tiếp theo định nghĩa utility engine trước khi đi vào production architecture.
 
 ## Quy ước thuật ngữ Việt–Anh
 
@@ -31,11 +31,11 @@ Trong tài liệu này, thuật ngữ Tailwind được diễn đạt bằng ti�
 
 # PHẦN I — HIỂU TAILWIND TỪ GỐC
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **1. Tailwind CSS thực sự là gì?** tiếp nhận điểm tựa từ **Quy ước thuật ngữ Việt–Anh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1A. Cách đọc Tailwind mà không cần nhớ CSS notes trước đó** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **1. Tailwind CSS thực sự là gì?** nối từ **Quy ước thuật ngữ Việt–Anh** sang **1A. Cách đọc Tailwind mà không cần nhớ CSS notes trước đó**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1. Tailwind CSS thực sự là gì?
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **1A. Cách đọc Tailwind mà không cần nhớ CSS notes trước đó** tiếp nhận điểm tựa từ **1. Tailwind CSS thực sự là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. ưu tiên tiện ích (utility-first) khác “inline style” như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **1A. Cách đọc Tailwind mà không cần nhớ CSS notes trước đó** nối từ **1. Tailwind CSS thực sự là gì?** sang **2. ưu tiên tiện ích (utility-first) khác “inline style” như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1A. Cách đọc Tailwind mà không cần nhớ CSS notes trước đó
 
@@ -115,7 +115,7 @@ Nếu một bố cục (layout / 레이아웃) không hoạt động mặc dù l
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **2. ưu tiên tiện ích (utility-first) khác “inline style” như thế nào?** tiếp nhận điểm tựa từ **1A. Cách đọc Tailwind mà không cần nhớ CSS notes trước đó** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Tailwind v4.3 khác Tailwind v3 như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **2. ưu tiên tiện ích (utility-first) khác “inline style” như thế nào?** nối từ **1A. Cách đọc Tailwind mà không cần nhớ CSS notes trước đó** sang **3. Tailwind v4.3 khác Tailwind v3 như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. ưu tiên tiện ích (utility-first) khác “inline style” như thế nào?
 
@@ -162,7 +162,7 @@ Tailwind sẽ generate CSS tương đương với các lớp giả (pseudo-class
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **3. Tailwind v4.3 khác Tailwind v3 như thế nào?** tiếp nhận điểm tựa từ **2. ưu tiên tiện ích (utility-first) khác “inline style” như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Cài Tailwind và hiểu quy trình bản dựng (build / 빌드) (build pipeline)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **3. Tailwind v4.3 khác Tailwind v3 như thế nào?** nối từ **2. ưu tiên tiện ích (utility-first) khác “inline style” như thế nào?** sang **4. Cài Tailwind và hiểu quy trình bản dựng (build / 빌드) (build pipeline)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Tailwind v4.3 khác Tailwind v3 như thế nào?
 
@@ -222,7 +222,7 @@ Bạn vẫn có thể gặp `@config` và `@plugin` để tương thích với h
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **3. Tailwind v4.3 khác Tailwind v3 như thế nào?** xác định đầu vào; **4. Cài Tailwind và hiểu quy trình bản dựng (build / 빌드) (build pipeline)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **5. @import "tailwindcss" và các lớp phân tầng (cascade layer)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **3. Tailwind v4.3 khác Tailwind v3 như thế nào?** đặt đầu vào cho **4. Cài Tailwind và hiểu quy trình bản dựng (build / 빌드) (build pipeline)**, rồi **5. @import "tailwindcss" và các lớp phân tầng (cascade layer)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. Cài Tailwind và hiểu quy trình bản dựng (build / 빌드) (build pipeline)
 
@@ -288,7 +288,7 @@ Vì vậy nếu bạn viết một lớp (class / 클래스) mà Tailwind không
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **4. Cài Tailwind và hiểu quy trình bản dựng (build / 빌드) (build pipeline)** xác định đầu vào; **5. @import "tailwindcss" và các lớp phân tầng (cascade layer)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. Preflight (lớp reset nền của Tailwind) là gì và tại sao HTML trông “khác bình thường”?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **4. Cài Tailwind và hiểu quy trình bản dựng (build / 빌드) (build pipeline)** đặt đầu vào cho **5. @import "tailwindcss" và các lớp phân tầng (cascade layer)**, rồi **6. Preflight (lớp reset nền của Tailwind) là gì và tại sao HTML trông “khác bình thường”?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. `@import "tailwindcss"` và các lớp phân tầng (cascade layer)
 
@@ -315,7 +315,7 @@ CSS lớp phân tầng (cascade layer) giải quyết thứ tự ưu tiên giữ
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **6. Preflight (lớp reset nền của Tailwind) là gì và tại sao HTML trông “khác bình thường”?** tiếp nhận điểm tựa từ **5. @import "tailwindcss" và các lớp phân tầng (cascade layer)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Cấu trúc một Tailwind lớp (class / 클래스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **6. Preflight (lớp reset nền của Tailwind) là gì và tại sao HTML trông “khác bình thường”?** nối từ **5. @import "tailwindcss" và các lớp phân tầng (cascade layer)** sang **7. Cấu trúc một Tailwind lớp (class / 클래스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Preflight (lớp reset nền của Tailwind) là gì và tại sao HTML trông “khác bình thường”?
 
@@ -339,7 +339,7 @@ Preflight (lớp reset nền của Tailwind) rất tiện trong app mới, nhưn
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **7. Cấu trúc một Tailwind lớp (class / 클래스)** tiếp nhận điểm tựa từ **6. Preflight (lớp reset nền của Tailwind) là gì và tại sao HTML trông “khác bình thường”?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Spacing quy mô (scale / 규모) và vì sao p-4 không phải “4px”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **7. Cấu trúc một Tailwind lớp (class / 클래스)** nối từ **6. Preflight (lớp reset nền của Tailwind) là gì và tại sao HTML trông “khác bình thường”?** sang **8. Spacing quy mô (scale / 규모) và vì sao p-4 không phải “4px”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Cấu trúc một Tailwind lớp (class / 클래스)
 
@@ -379,7 +379,7 @@ Tailwind lớp (class / 클래스) vì vậy có grammar tương đối nhất q
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **8. Spacing quy mô (scale / 규모) và vì sao p-4 không phải “4px”** tiếp nhận điểm tựa từ **7. Cấu trúc một Tailwind lớp (class / 클래스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. các giá trị tùy ý (arbitrary values): escape hatch cần thiết nhưng không phải hệ thống thiết kế (design system)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **8. Spacing quy mô (scale / 규모) và vì sao p-4 không phải “4px”** nối từ **7. Cấu trúc một Tailwind lớp (class / 클래스)** sang **9. các giá trị tùy ý (arbitrary values): escape hatch cần thiết nhưng không phải hệ thống thiết kế (design system)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Spacing quy mô (scale / 규모) và vì sao `p-4` không phải “4px”
 
@@ -408,7 +408,7 @@ có thể được derive từ spacing hệ thống (system / 시스템) nếu t
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **9. các giá trị tùy ý (arbitrary values): escape hatch cần thiết nhưng không phải hệ thống thiết kế (design system)** tiếp nhận điểm tựa từ **8. Spacing quy mô (scale / 규모) và vì sao p-4 không phải “4px”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. các thuộc tính tùy ý (arbitrary properties)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **9. các giá trị tùy ý (arbitrary values): escape hatch cần thiết nhưng không phải hệ thống thiết kế (design system)** nối từ **8. Spacing quy mô (scale / 규모) và vì sao p-4 không phải “4px”** sang **10. các thuộc tính tùy ý (arbitrary properties)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. các giá trị tùy ý (arbitrary values): escape hatch cần thiết nhưng không phải hệ thống thiết kế (design system)
 
@@ -467,7 +467,7 @@ one-off exception
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **10. các thuộc tính tùy ý (arbitrary properties)** tiếp nhận điểm tựa từ **9. các giá trị tùy ý (arbitrary values): escape hatch cần thiết nhưng không phải hệ thống thiết kế (design system)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. các biến thể tùy ý (arbitrary variants)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **10. các thuộc tính tùy ý (arbitrary properties)** nối từ **9. các giá trị tùy ý (arbitrary values): escape hatch cần thiết nhưng không phải hệ thống thiết kế (design system)** sang **11. các biến thể tùy ý (arbitrary variants)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. các thuộc tính tùy ý (arbitrary properties)
 
@@ -501,7 +501,7 @@ Cấp cao (senior / 시니어) cần tránh một cực đoan khác: đừng bi�
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **11. các biến thể tùy ý (arbitrary variants)** tiếp nhận điểm tựa từ **10. các thuộc tính tùy ý (arbitrary properties)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. CSS biến (variable) shorthand và thời gian chạy (runtime / 런타임) giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **11. các biến thể tùy ý (arbitrary variants)** nối từ **10. các thuộc tính tùy ý (arbitrary properties)** sang **12. CSS biến (variable) shorthand và thời gian chạy (runtime / 런타임) giá trị (value / 값)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. các biến thể tùy ý (arbitrary variants)
 
@@ -539,7 +539,7 @@ các biến thể tùy ý (arbitrary variants) tuyệt vời cho tích hợp (in
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **12. CSS biến (variable) shorthand và thời gian chạy (runtime / 런타임) giá trị (value / 값)** tiếp nhận điểm tựa từ **11. các biến thể tùy ý (arbitrary variants)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Tailwind scan nguồn (source / 소스) như văn bản (text / 텍스트), không chạy mã (code / 코드) của bạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **12. CSS biến (variable) shorthand và thời gian chạy (runtime / 런타임) giá trị (value / 값)** nối từ **11. các biến thể tùy ý (arbitrary variants)** sang **13. Tailwind scan nguồn (source / 소스) như văn bản (text / 텍스트), không chạy mã (code / 코드) của bạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. CSS biến (variable) shorthand và thời gian chạy (runtime / 런타임) giá trị (value / 값)
 
@@ -578,7 +578,7 @@ vì string arbitrary lớp (class / 클래스) thời gian chạy (runtime / 런
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **12. CSS biến (variable) shorthand và thời gian chạy (runtime / 런타임) giá trị (value / 값)** nêu điều cần giải thích; **13. Tailwind scan nguồn (source / 소스) như văn bản (text / 텍스트), không chạy mã (code / 코드) của bạn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **14. display: hiểu block, inline, flex, grid trước khi dùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **12. CSS biến (variable) shorthand và thời gian chạy (runtime / 런타임) giá trị (value / 값)** đặt vấn đề; **13. Tailwind scan nguồn (source / 소스) như văn bản (text / 텍스트), không chạy mã (code / 코드) của bạn** đối chiếu bằng chứng, rồi **14. display: hiểu block, inline, flex, grid trước khi dùng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13. Tailwind scan nguồn (source / 소스) như văn bản (text / 텍스트), không chạy mã (code / 코드) của bạn
 
@@ -623,7 +623,7 @@ Các complete lớp (class / 클래스) strings đã nằm trong nguồn (source
 
 # PHẦN II — bố cục (layout / 레이아웃) VÀ mô hình hộp (box model / 박스 모델) TRONG TAILWIND
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **13. Tailwind scan nguồn (source / 소스) như văn bản (text / 텍스트), không chạy mã (code / 코드) của bạn** nêu điều cần giải thích; **14. display: hiểu block, inline, flex, grid trước khi dùng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. hidden, invisible, opacity-0 khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **13. Tailwind scan nguồn (source / 소스) như văn bản (text / 텍스트), không chạy mã (code / 코드) của bạn** đặt vấn đề; **14. display: hiểu block, inline, flex, grid trước khi dùng** đối chiếu bằng chứng, rồi **15. hidden, invisible, opacity-0 khác nhau** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. `display`: hiểu `block`, `inline`, `flex`, `grid` trước khi dùng
 
@@ -658,7 +658,7 @@ Ví dụ responsive visibility:
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **15. hidden, invisible, opacity-0 khác nhau** tiếp nhận điểm tựa từ **14. display: hiểu block, inline, flex, grid trước khi dùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Box sizing: box-border và box-content** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **15. hidden, invisible, opacity-0 khác nhau** nối từ **14. display: hiểu block, inline, flex, grid trước khi dùng** sang **16. Box sizing: box-border và box-content**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. `hidden`, `invisible`, `opacity-0` khác nhau
 
@@ -686,7 +686,7 @@ Nếu bạn muốn animate fade, `opacity-0` thường phù hợp hơn vì `disp
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **16. Box sizing: box-border và box-content** tiếp nhận điểm tựa từ **15. hidden, invisible, opacity-0 khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Position: relative, absolute, fixed, sticky** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **16. Box sizing: box-border và box-content** nối từ **15. hidden, invisible, opacity-0 khác nhau** sang **17. Position: relative, absolute, fixed, sticky**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Box sizing: `box-border` và `box-content`
 
@@ -718,7 +718,7 @@ Với `border-box`, declared width đã bao gồm padding và border. Đây là 
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **17. Position: relative, absolute, fixed, sticky** tiếp nhận điểm tựa từ **16. Box sizing: box-border và box-content** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Inset và logical inset** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **17. Position: relative, absolute, fixed, sticky** nối từ **16. Box sizing: box-border và box-content** sang **18. Inset và logical inset**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Position: `relative`, `absolute`, `fixed`, `sticky`
 
@@ -752,7 +752,7 @@ cần `top-0` làm sticky threshold. Nếu ancestor có overflow tạo vùng ch�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **18. Inset và logical inset** tiếp nhận điểm tựa từ **17. Position: relative, absolute, fixed, sticky** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. z- và ngữ cảnh xếp chồng (stacking context / 쌓임 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **18. Inset và logical inset** nối từ **17. Position: relative, absolute, fixed, sticky** sang **19. z- và ngữ cảnh xếp chồng (stacking context / 쌓임 맥락)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Inset và logical inset
 
@@ -785,7 +785,7 @@ Nếu mục tiêu là “icon ở cuối dòng” chứ không phải “icon lu
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **19. z- và ngữ cảnh xếp chồng (stacking context / 쌓임 맥락)** tiếp nhận điểm tựa từ **18. Inset và logical inset** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Overflow và vùng chứa cuộn (scroll container)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **19. z- và ngữ cảnh xếp chồng (stacking context / 쌓임 맥락)** nối từ **18. Inset và logical inset** sang **20. Overflow và vùng chứa cuộn (scroll container)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. `z-*` và ngữ cảnh xếp chồng (stacking context / 쌓임 맥락)
 
@@ -815,7 +815,7 @@ Trong hệ thống thiết kế (design system) lớn, nên có mang tính ngữ
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **19. z- và ngữ cảnh xếp chồng (stacking context / 쌓임 맥락)** xác định đầu vào; **20. Overflow và vùng chứa cuộn (scroll container)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **21. Width: w- không chỉ có px** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **19. z- và ngữ cảnh xếp chồng (stacking context / 쌓임 맥락)** đặt đầu vào cho **20. Overflow và vùng chứa cuộn (scroll container)**, rồi **21. Width: w- không chỉ có px** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. Overflow và vùng chứa cuộn (scroll container)
 
@@ -849,7 +849,7 @@ Cấp cao (senior / 시니어) phải nhớ overflow ảnh hưởng nhiều th�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **20. Overflow và vùng chứa cuộn (scroll container)** xác định đầu vào; **21. Width: w- không chỉ có px** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **22. Height và vùng nhìn (viewport) units: h-screen không phải lúc nào cũng tốt nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **20. Overflow và vùng chứa cuộn (scroll container)** đặt đầu vào cho **21. Width: w- không chỉ có px**, rồi **22. Height và vùng nhìn (viewport) units: h-screen không phải lúc nào cũng tốt nhất** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 21. Width: `w-*` không chỉ có px
 
@@ -876,7 +876,7 @@ Khi bạn chọn width, hãy nghĩ “ràng buộc (constraint / 제약조건) n
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **22. Height và vùng nhìn (viewport) units: h-screen không phải lúc nào cũng tốt nhất** tiếp nhận điểm tựa từ **21. Width: w- không chỉ có px** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. max-w- và readable content** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **22. Height và vùng nhìn (viewport) units: h-screen không phải lúc nào cũng tốt nhất** nối từ **21. Width: w- không chỉ có px** sang **23. max-w- và readable content**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Height và vùng nhìn (viewport) units: `h-screen` không phải lúc nào cũng tốt nhất
 
@@ -903,7 +903,7 @@ thay vì ép `h-screen`, vì minimum height cho phép content dài thêm và `dv
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **23. max-w- và readable content** tiếp nhận điểm tựa từ **22. Height và vùng nhìn (viewport) units: h-screen không phải lúc nào cũng tốt nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. min-w-0: một lớp (class / 클래스) nhỏ nhưng cực kỳ cấp cao (senior / 시니어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **23. max-w- và readable content** nối từ **22. Height và vùng nhìn (viewport) units: h-screen không phải lúc nào cũng tốt nhất** sang **24. min-w-0: một lớp (class / 클래스) nhỏ nhưng cực kỳ cấp cao (senior / 시니어)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. `max-w-*` và readable content
 
@@ -933,7 +933,7 @@ Page bộ chứa (container / 컨테이너) thường:
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **24. min-w-0: một lớp (class / 클래스) nhỏ nhưng cực kỳ cấp cao (senior / 시니어)** tiếp nhận điểm tựa từ **23. max-w- và readable content** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. min-h-0: phiên bản vertical của cùng vấn đề** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **24. min-w-0: một lớp (class / 클래스) nhỏ nhưng cực kỳ cấp cao (senior / 시니어)** nối từ **23. max-w- và readable content** sang **25. min-h-0: phiên bản vertical của cùng vấn đề**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. `min-w-0`: một lớp (class / 클래스) nhỏ nhưng cực kỳ cấp cao (senior / 시니어)
 
@@ -965,7 +965,7 @@ Fix:
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **25. min-h-0: phiên bản vertical của cùng vấn đề** tiếp nhận điểm tựa từ **24. min-w-0: một lớp (class / 클래스) nhỏ nhưng cực kỳ cấp cao (senior / 시니어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Margin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **25. min-h-0: phiên bản vertical của cùng vấn đề** nối từ **24. min-w-0: một lớp (class / 클래스) nhỏ nhưng cực kỳ cấp cao (senior / 시니어)** sang **26. Margin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. `min-h-0`: phiên bản vertical của cùng vấn đề
 
@@ -993,7 +993,7 @@ Mẫu (pattern / 패턴) này rất phổ biến trong:
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **26. Margin** tiếp nhận điểm tựa từ **25. min-h-0: phiên bản vertical của cùng vấn đề** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Padding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **26. Margin** nối từ **25. min-h-0: phiên bản vertical của cùng vấn đề** sang **27. Padding**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Margin
 
@@ -1025,7 +1025,7 @@ Negative margin nên dùng có chủ ý, thường cho overlap/visual compositio
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **27. Padding** tiếp nhận điểm tựa từ **26. Margin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. gap- nên được ưu tiên cho Flex/Grid spacing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **27. Padding** nối từ **26. Margin** sang **28. gap- nên được ưu tiên cho Flex/Grid spacing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Padding
 
@@ -1055,7 +1055,7 @@ Một button:
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **28. gap- nên được ưu tiên cho Flex/Grid spacing** tiếp nhận điểm tựa từ **27. Padding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. divide- khác gap-** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **28. gap- nên được ưu tiên cho Flex/Grid spacing** nối từ **27. Padding** sang **29. divide- khác gap-**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. `gap-*` nên được ưu tiên cho Flex/Grid spacing
 
@@ -1085,7 +1085,7 @@ Tailwind vẫn có `space-y-*` và `space-x-*`, sử dụng bộ chọn (selecto
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **29. divide- khác gap-** tiếp nhận điểm tựa từ **28. gap- nên được ưu tiên cho Flex/Grid spacing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Flexbox: phải hiểu bộ chứa (container / 컨테이너) và item** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **29. divide- khác gap-** nối từ **28. gap- nên được ưu tiên cho Flex/Grid spacing** sang **30. Flexbox: phải hiểu bộ chứa (container / 컨테이너) và item**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. `divide-*` khác `gap-*`
 Phần này nối mạch bài học với “29. `divide-*` khác `gap-*`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1114,7 +1114,7 @@ Một danh sách (list / 목록) có thể dùng cả hai nếu thiết kế (de
 
 # PHẦN III — FLEXBOX TRONG TAILWIND
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **30. Flexbox: phải hiểu bộ chứa (container / 컨테이너) và item** tiếp nhận điểm tựa từ **29. divide- khác gap-** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. justify-** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **30. Flexbox: phải hiểu bộ chứa (container / 컨테이너) và item** nối từ **29. divide- khác gap-** sang **31. justify-**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Flexbox: phải hiểu bộ chứa (container / 컨테이너) và item
 
@@ -1148,7 +1148,7 @@ children xếp theo cột.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **31. justify-** tiếp nhận điểm tựa từ **30. Flexbox: phải hiểu bộ chứa (container / 컨테이너) và item** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. items- và đường cơ sở (baseline)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **31. justify-** nối từ **30. Flexbox: phải hiểu bộ chứa (container / 컨테이너) và item** sang **32. items- và đường cơ sở (baseline)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. `justify-*`
 
@@ -1179,7 +1179,7 @@ Nhưng nếu chỉ cần center content đơn giản, Grid thường ngắn hơn
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **32. items- và đường cơ sở (baseline)** tiếp nhận điểm tựa từ **31. justify-** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. flex-wrap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **32. items- và đường cơ sở (baseline)** nối từ **31. justify-** sang **33. flex-wrap**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. `items-*` và đường cơ sở (baseline)
 
@@ -1204,7 +1204,7 @@ items-baseline
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **33. flex-wrap** tiếp nhận điểm tựa từ **32. items- và đường cơ sở (baseline)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. flex-1 không giống grow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **33. flex-wrap** nối từ **32. items- và đường cơ sở (baseline)** sang **34. flex-1 không giống grow**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. `flex-wrap`
 
@@ -1228,7 +1228,7 @@ Nếu không wrap, content có thể overflow hoặc items shrink mạnh.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **34. flex-1 không giống grow** tiếp nhận điểm tựa từ **33. flex-wrap** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. shrink và shrink-0** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **34. flex-1 không giống grow** nối từ **33. flex-wrap** sang **35. shrink và shrink-0**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. `flex-1` không giống `grow`
 
@@ -1256,7 +1256,7 @@ Nếu bạn chỉ viết `grow`, basis vẫn có thể khác và hành vi (behav
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **35. shrink và shrink-0** tiếp nhận điểm tựa từ **34. flex-1 không giống grow** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. basis-** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **35. shrink và shrink-0** nối từ **34. flex-1 không giống grow** sang **36. basis-**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. `shrink` và `shrink-0`
 
@@ -1287,7 +1287,7 @@ min-w-0 flex-1
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **36. basis-** tiếp nhận điểm tựa từ **35. shrink và shrink-0** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. self-** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **36. basis-** nối từ **35. shrink và shrink-0** sang **37. self-**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. `basis-*`
 
@@ -1308,7 +1308,7 @@ Cấp cao (senior / 시니어) nên hiểu width và flex-basis có thể cùng 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **37. self-** tiếp nhận điểm tựa từ **36. basis-** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Flex pattern: Media Object** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **37. self-** nối từ **36. basis-** sang **38. Flex pattern: Media Object**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. `self-*`
 
@@ -1330,7 +1330,7 @@ Use khi một child thật sự có cross-axis alignment khác phần còn lại
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **38. Flex pattern: Media Object** tiếp nhận điểm tựa từ **37. self-** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Grid khác Flexbox ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **38. Flex pattern: Media Object** nối từ **37. self-** sang **39. Grid khác Flexbox ở đâu?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Flex pattern: Media Object
 Phần này nối mạch bài học với “38. Flex pattern: Media Object”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1364,7 +1364,7 @@ Phần này nối mạch bài học với “38. Flex pattern: Media Object”, 
 
 # PHẦN IV — CSS GRID TRONG TAILWIND
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **39. Grid khác Flexbox ở đâu?** tiếp nhận điểm tựa từ **38. Flex pattern: Media Object** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. grid-cols- và minmax(0,1fr)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **39. Grid khác Flexbox ở đâu?** nối từ **38. Flex pattern: Media Object** sang **40. grid-cols- và minmax(0,1fr)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Grid khác Flexbox ở đâu?
 
@@ -1398,7 +1398,7 @@ Cơ sở (base / 기반) một cột, md hai cột, lg ba cột.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **40. grid-cols- và minmax(0,1fr)** tiếp nhận điểm tựa từ **39. Grid khác Flexbox ở đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Arbitrary grid template** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **40. grid-cols- và minmax(0,1fr)** nối từ **39. Grid khác Flexbox ở đâu?** sang **41. Arbitrary grid template**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. `grid-cols-*` và `minmax(0,1fr)`
 
@@ -1410,7 +1410,7 @@ Tailwind equal grid column các tiện ích (utilities) thường dùng nhánh h
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **41. Arbitrary grid template** tiếp nhận điểm tựa từ **40. grid-cols- và minmax(0,1fr)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. col-span-, col-start-, col-end-** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **41. Arbitrary grid template** nối từ **40. grid-cols- và minmax(0,1fr)** sang **42. col-span-, col-start-, col-end-**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Arbitrary grid template
 
@@ -1440,7 +1440,7 @@ Arbitrary grid template là một trong những giá trị tùy ý (arbitrary va
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **42. col-span-, col-start-, col-end-** tiếp nhận điểm tựa từ **41. Arbitrary grid template** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Grid rows và row placement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **42. col-span-, col-start-, col-end-** nối từ **41. Arbitrary grid template** sang **43. Grid rows và row placement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. `col-span-*`, `col-start-*`, `col-end-*`
 
@@ -1464,7 +1464,7 @@ col-end-6
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **43. Grid rows và row placement** tiếp nhận điểm tựa từ **42. col-span-, col-start-, col-end-** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. Auto-placement và grid-flow-dense** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **43. Grid rows và row placement** nối từ **42. col-span-, col-start-, col-end-** sang **44. Auto-placement và grid-flow-dense**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. Grid rows và row placement
 
@@ -1481,7 +1481,7 @@ Use khi bố cục (layout / 레이아웃) thật sự cần row tracks rõ ràn
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **43. Grid rows và row placement** xác định đầu vào; **44. Auto-placement và grid-flow-dense** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **45. Subgrid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **43. Grid rows và row placement** đặt đầu vào cho **44. Auto-placement và grid-flow-dense**, rồi **45. Subgrid** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 44. Auto-placement và `grid-flow-dense`
 
@@ -1499,7 +1499,7 @@ Vì screen reader/focus điều hướng (navigation / 내비게이션) thườn
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **44. Auto-placement và grid-flow-dense** xác định đầu vào; **45. Subgrid** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **46. Intrinsic auto grid không cần điểm ngắt (breakpoint)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **44. Auto-placement và grid-flow-dense** đặt đầu vào cho **45. Subgrid**, rồi **46. Intrinsic auto grid không cần điểm ngắt (breakpoint)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 45. Subgrid
 Phần này nối mạch bài học với “45. Subgrid”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1524,7 +1524,7 @@ align theo dùng chung (shared / 공유) tracks.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **46. Intrinsic auto grid không cần điểm ngắt (breakpoint)** tiếp nhận điểm tựa từ **45. Subgrid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **47. Font family** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **46. Intrinsic auto grid không cần điểm ngắt (breakpoint)** nối từ **45. Subgrid** sang **47. Font family**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 46. Intrinsic auto grid không cần điểm ngắt (breakpoint)
 
@@ -1548,7 +1548,7 @@ Một advanced mẫu (pattern / 패턴):
 
 # PHẦN V — TYPOGRAPHY
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **47. Font family** tiếp nhận điểm tựa từ **46. Intrinsic auto grid không cần điểm ngắt (breakpoint)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **48. Font kích thước (size / 크기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **47. Font family** nối từ **46. Intrinsic auto grid không cần điểm ngắt (breakpoint)** sang **48. Font kích thước (size / 크기)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. Font family
 
@@ -1583,7 +1583,7 @@ Use:
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **48. Font kích thước (size / 크기)** tiếp nhận điểm tựa từ **47. Font family** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **49. Font weight** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **48. Font kích thước (size / 크기)** nối từ **47. Font family** sang **49. Font weight**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. Font kích thước (size / 크기)
 
@@ -1620,7 +1620,7 @@ nghĩa là font-size `text-lg` với leading giá trị (value / 값) tương �
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **49. Font weight** tiếp nhận điểm tựa từ **48. Font kích thước (size / 크기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **50. Line height** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **49. Font weight** nối từ **48. Font kích thước (size / 크기)** sang **50. Line height**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. Font weight
 Phần này nối mạch bài học với “49. Font weight”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1648,7 +1648,7 @@ Không phải font nào cũng có thực glyph ở mọi weight. trình duyệt 
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **50. Line height** tiếp nhận điểm tựa từ **49. Font weight** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **51. Letter spacing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **50. Line height** nối từ **49. Font weight** sang **51. Letter spacing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 50. Line height
 Phần này nối mạch bài học với “50. Line height”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1682,7 +1682,7 @@ và:
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **51. Letter spacing** tiếp nhận điểm tựa từ **50. Line height** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **52. Text alignment và logical alignment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **51. Letter spacing** nối từ **50. Line height** sang **52. Text alignment và logical alignment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 51. Letter spacing
 Phần này nối mạch bài học với “51. Letter spacing”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1702,7 +1702,7 @@ Large display heading đôi khi đẹp hơn với tracking hơi âm, uppercase l
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **52. Text alignment và logical alignment** tiếp nhận điểm tựa từ **51. Letter spacing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **53. White-space và văn bản (text / 텍스트) wrapping** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **52. Text alignment và logical alignment** nối từ **51. Letter spacing** sang **53. White-space và văn bản (text / 텍스트) wrapping**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 52. Text alignment và logical alignment
 Phần này nối mạch bài học với “52. Text alignment và logical alignment”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1720,7 +1720,7 @@ text-end
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **53. White-space và văn bản (text / 텍스트) wrapping** tiếp nhận điểm tựa từ **52. Text alignment và logical alignment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **54. truncate: hiểu đầy đủ ba điều kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **53. White-space và văn bản (text / 텍스트) wrapping** nối từ **52. Text alignment và logical alignment** sang **54. truncate: hiểu đầy đủ ba điều kiện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 53. White-space và văn bản (text / 텍스트) wrapping
 
@@ -1740,7 +1740,7 @@ whitespace-pre-wrap
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **54. truncate: hiểu đầy đủ ba điều kiện** tiếp nhận điểm tựa từ **53. White-space và văn bản (text / 텍스트) wrapping** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **55. Multi-line clamp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **54. truncate: hiểu đầy đủ ba điều kiện** nối từ **53. White-space và văn bản (text / 텍스트) wrapping** sang **55. Multi-line clamp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 54. `truncate`: hiểu đầy đủ ba điều kiện
 
@@ -1768,7 +1768,7 @@ Nếu văn bản (text / 텍스트) vẫn không ellipsis, kiểm tra sizing ng�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **55. Multi-line clamp** tiếp nhận điểm tựa từ **54. truncate: hiểu đầy đủ ba điều kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **56. Word breaking và Korean/CJK** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **55. Multi-line clamp** nối từ **54. truncate: hiểu đầy đủ ba điều kiện** sang **56. Word breaking và Korean/CJK**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. Multi-line clamp
 Phần này nối mạch bài học với “55. Multi-line clamp”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1790,7 +1790,7 @@ Không dùng để giấu phần nội dung người dùng (user / 사용자) b�
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **56. Word breaking và Korean/CJK** tiếp nhận điểm tựa từ **55. Multi-line clamp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **57. text-balance và text-pretty** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **56. Word breaking và Korean/CJK** nối từ **55. Multi-line clamp** sang **57. text-balance và text-pretty**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 56. Word breaking và Korean/CJK
 
@@ -1817,7 +1817,7 @@ Nhưng văn bản (text / 텍스트) rất dài không có không gian (space / 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **57. text-balance và text-pretty** tiếp nhận điểm tựa từ **56. Word breaking và Korean/CJK** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **58. văn bản (text / 텍스트) decoration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **57. text-balance và text-pretty** nối từ **56. Word breaking và Korean/CJK** sang **58. văn bản (text / 텍스트) decoration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 57. `text-balance` và `text-pretty`
 
@@ -1833,7 +1833,7 @@ Nhưng văn bản (text / 텍스트) rất dài không có không gian (space / 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **58. văn bản (text / 텍스트) decoration** tiếp nhận điểm tựa từ **57. text-balance và text-pretty** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **59. Text transform** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **58. văn bản (text / 텍스트) decoration** nối từ **57. text-balance và text-pretty** sang **59. Text transform**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 58. văn bản (text / 텍스트) decoration
 
@@ -1864,7 +1864,7 @@ Văn bản (text / 텍스트) decoration tốt cho link khả năng tiếp cận
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **59. Text transform** tiếp nhận điểm tựa từ **58. văn bản (text / 텍스트) decoration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **60. OpenType numeric features** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **59. Text transform** nối từ **58. văn bản (text / 텍스트) decoration** sang **60. OpenType numeric features**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 59. Text transform
 Phần này nối mạch bài học với “59. Text transform”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1882,7 +1882,7 @@ Nếu acronym cần uppercase vì nội dung thật sự là acronym, tốt hơn
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **60. OpenType numeric features** tiếp nhận điểm tựa từ **59. Text transform** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **61. Color hệ thống (system / 시스템) và palette** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **60. OpenType numeric features** nối từ **59. Text transform** sang **61. Color hệ thống (system / 시스템) và palette**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 60. OpenType numeric features
 Phần này nối mạch bài học với “60. OpenType numeric features”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1907,7 +1907,7 @@ V4.2+ có `font-features-*` cho low-level `font-feature-settings`, nhưng hãy �
 
 # PHẦN VI — COLOR, BACKGROUND, BORDER, SHADOW
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **61. Color hệ thống (system / 시스템) và palette** tiếp nhận điểm tựa từ **60. OpenType numeric features** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **62. Alpha modifier /** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **61. Color hệ thống (system / 시스템) và palette** nối từ **60. OpenType numeric features** sang **62. Alpha modifier /**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 61. Color hệ thống (system / 시스템) và palette
 
@@ -1941,7 +1941,7 @@ Nhưng numeric shade không có mang tính ý nghĩa (semantic meaning / 의미�
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **62. Alpha modifier /** tiếp nhận điểm tựa từ **61. Color hệ thống (system / 시스템) và palette** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **63. Background** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **62. Alpha modifier /** nối từ **61. Color hệ thống (system / 시스템) và palette** sang **63. Background**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 62. Alpha modifier `/`
 Phần này nối mạch bài học với “62. Alpha modifier `/`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1970,7 +1970,7 @@ Alpha modifier giúp tránh cần tạo riêng hàng loạt opacity color đơn 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **63. Background** tiếp nhận điểm tựa từ **62. Alpha modifier /** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **64. độ dốc (gradient / 기울기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **63. Background** nối từ **62. Alpha modifier /** sang **64. độ dốc (gradient / 기울기)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 63. Background
 
@@ -2010,7 +2010,7 @@ Nhưng với động (dynamic / 동적) URL từ API, inline style/CSS biến (v
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **64. độ dốc (gradient / 기울기)** tiếp nhận điểm tựa từ **63. Background** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **65. Border width, style và color** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **64. độ dốc (gradient / 기울기)** nối từ **63. Background** sang **65. Border width, style và color**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 64. độ dốc (gradient / 기울기)
 
@@ -2023,7 +2023,7 @@ Một độ dốc (gradient / 기울기) UI nên dùng đơn vị từ (token / 
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **65. Border width, style và color** tiếp nhận điểm tựa từ **64. độ dốc (gradient / 기울기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **66. Border radius** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **65. Border width, style và color** nối từ **64. độ dốc (gradient / 기울기)** sang **66. Border radius**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 65. Border width, style và color
 
@@ -2060,7 +2060,7 @@ Divider nên đặt ở parent với `divide-*` nếu mục tiêu là separator 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **66. Border radius** tiếp nhận điểm tựa từ **65. Border width, style và color** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **67. Outline và focus** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **66. Border radius** nối từ **65. Border width, style và color** sang **67. Outline và focus**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 66. Border radius
 Phần này nối mạch bài học với “66. Border radius”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2083,7 +2083,7 @@ Có directional/logical corner các tiện ích (utilities). Khi app cần RTL, 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **67. Outline và focus** tiếp nhận điểm tựa từ **66. Border radius** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **68. Ring các tiện ích (utilities)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **67. Outline và focus** nối từ **66. Border radius** sang **68. Ring các tiện ích (utilities)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 67. Outline và focus
 
@@ -2111,7 +2111,7 @@ mà không có replacement chỉ báo tiêu điểm (focus indicator). Làm mấ
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **68. Ring các tiện ích (utilities)** tiếp nhận điểm tựa từ **67. Outline và focus** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **69. Box shadow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **68. Ring các tiện ích (utilities)** nối từ **67. Outline và focus** sang **69. Box shadow**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 68. Ring các tiện ích (utilities)
 
@@ -2135,7 +2135,7 @@ Nhưng outline có lợi thế mang tính ngữ nghĩa (semantic / 의미적)/di
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **69. Box shadow** tiếp nhận điểm tựa từ **68. Ring các tiện ích (utilities)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **70. văn bản (text / 텍스트) shadow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **69. Box shadow** nối từ **68. Ring các tiện ích (utilities)** sang **70. văn bản (text / 텍스트) shadow**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 69. Box shadow
 Phần này nối mạch bài học với “69. Box shadow”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2161,7 +2161,7 @@ shadow-blue-500/20
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **70. văn bản (text / 텍스트) shadow** tiếp nhận điểm tựa từ **69. Box shadow** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **71. Opacity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **70. văn bản (text / 텍스트) shadow** nối từ **69. Box shadow** sang **71. Opacity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 70. văn bản (text / 텍스트) shadow
 
@@ -2175,7 +2175,7 @@ Không dùng heavy văn bản (text / 텍스트) shadow cho body văn bản (tex
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **71. Opacity** tiếp nhận điểm tựa từ **70. văn bản (text / 텍스트) shadow** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **72. Blend và cô lập (isolation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **71. Opacity** nối từ **70. văn bản (text / 텍스트) shadow** sang **72. Blend và cô lập (isolation)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 71. Opacity
 Phần này nối mạch bài học với “71. Opacity”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2204,7 +2204,7 @@ trên bộ chứa (container / 컨테이너).
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **72. Blend và cô lập (isolation)** tiếp nhận điểm tựa từ **71. Opacity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **73. Filters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **72. Blend và cô lập (isolation)** nối từ **71. Opacity** sang **73. Filters**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 72. Blend và cô lập (isolation)
 
@@ -2216,7 +2216,7 @@ Tailwind có `mix-blend-*`, `bg-blend-*`, `isolate`.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **73. Filters** tiếp nhận điểm tựa từ **72. Blend và cô lập (isolation)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **74. Backdrop filter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **73. Filters** nối từ **72. Blend và cô lập (isolation)** sang **74. Backdrop filter**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 73. Filters
 
@@ -2240,7 +2240,7 @@ Hiệu năng (performance / 성능) của filter lớn, đặc biệt blur trên
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **74. Backdrop filter** tiếp nhận điểm tựa từ **73. Filters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **75. Mask các tiện ích (utilities)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **74. Backdrop filter** nối từ **73. Filters** sang **75. Mask các tiện ích (utilities)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 74. Backdrop filter
 
@@ -2263,7 +2263,7 @@ Backdrop filter có thể tốn kết xuất (render / 렌더링) chi phí (cost
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **75. Mask các tiện ích (utilities)** tiếp nhận điểm tựa từ **74. Backdrop filter** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **76. aspect-** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **75. Mask các tiện ích (utilities)** nối từ **74. Backdrop filter** sang **76. aspect-**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 75. Mask các tiện ích (utilities)
 
@@ -2292,7 +2292,7 @@ là cách hợp lệ.
 
 # PHẦN VII — IMAGES, SVG, TABLES VÀ CONTENT
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **76. aspect-** tiếp nhận điểm tựa từ **75. Mask các tiện ích (utilities)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **77. object-cover và object-contain** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **76. aspect-** nối từ **75. Mask các tiện ích (utilities)** sang **77. object-cover và object-contain**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 76. `aspect-*`
 Phần này nối mạch bài học với “76. `aspect-*`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2324,7 +2324,7 @@ Aspect ratio reserve shape của box; `object-cover` quyết định tài nguyê
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **77. object-cover và object-contain** tiếp nhận điểm tựa từ **76. aspect-** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **78. size-** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **77. object-cover và object-contain** nối từ **76. aspect-** sang **78. size-**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 77. `object-cover` và `object-contain`
 
@@ -2352,7 +2352,7 @@ giúp kiểm soát vùng crop.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **78. size-** tiếp nhận điểm tựa từ **77. object-cover và object-contain** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **79. SVG** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **78. size-** nối từ **77. object-cover và object-contain** sang **79. SVG**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 78. `size-*`
 Phần này nối mạch bài học với “78. `size-*`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2372,7 +2372,7 @@ Nó không thay `aspect-square` hoàn toàn: `size-*` đặt cả hai dimension;
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **79. SVG** tiếp nhận điểm tựa từ **78. size-** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **80. Tables** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **79. SVG** nối từ **78. size-** sang **80. Tables**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 79. SVG
 
@@ -2403,7 +2403,7 @@ Inline SVG style được bởi CSS. SVG dùng qua `<img src="icon.svg">` là re
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **80. Tables** tiếp nhận điểm tựa từ **79. SVG** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **81. Multi-column và fragmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **80. Tables** nối từ **79. SVG** sang **81. Multi-column và fragmentation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 80. Tables
 
@@ -2422,7 +2422,7 @@ Dữ liệu (data / 데이터) bảng (table / 테이블) lớn nên ưu tiên m
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **81. Multi-column và fragmentation** tiếp nhận điểm tựa từ **80. Tables** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **82. Translate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **81. Multi-column và fragmentation** nối từ **80. Tables** sang **82. Translate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 81. Multi-column và fragmentation
 
@@ -2442,7 +2442,7 @@ hữu ích cho print/editorial bố cục (layout / 레이아웃).
 
 # PHẦN VIII — TRANSFORM, chuyển tiếp (transition / 전이), ANIMATION
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **82. Translate** tiếp nhận điểm tựa từ **81. Multi-column và fragmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **83. Scale, rotate, skew** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **82. Translate** nối từ **81. Multi-column và fragmentation** sang **83. Scale, rotate, skew**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 82. Translate
 Phần này nối mạch bài học với “82. Translate”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2480,7 +2480,7 @@ thường đơn giản hơn.
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **83. Scale, rotate, skew** tiếp nhận điểm tựa từ **82. Translate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **84. Transform origin, perspective và 3D** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **83. Scale, rotate, skew** nối từ **82. Translate** sang **84. Transform origin, perspective và 3D**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 83. Scale, rotate, skew
 Phần này nối mạch bài học với “83. Scale, rotate, skew”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2511,7 +2511,7 @@ Nên respect giảm chuyển động (reduced motion) nếu movement đáng kể
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **84. Transform origin, perspective và 3D** tiếp nhận điểm tựa từ **83. Scale, rotate, skew** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **85. zoom- trong v4.3** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **84. Transform origin, perspective và 3D** nối từ **83. Scale, rotate, skew** sang **85. zoom- trong v4.3**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 84. Transform origin, perspective và 3D
 
@@ -2531,7 +2531,7 @@ backface-hidden
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **85. zoom- trong v4.3** tiếp nhận điểm tựa từ **84. Transform origin, perspective và 3D** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **86. chuyển tiếp (transition / 전이) thuộc tính (property / 속성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **85. zoom- trong v4.3** nối từ **84. Transform origin, perspective và 3D** sang **86. chuyển tiếp (transition / 전이) thuộc tính (property / 속성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 85. `zoom-*` trong v4.3
 
@@ -2559,7 +2559,7 @@ CSS `zoom` cũng không phải trình duyệt (browser / 브라우저) người 
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **86. chuyển tiếp (transition / 전이) thuộc tính (property / 속성)** tiếp nhận điểm tựa từ **85. zoom- trong v4.3** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **87. Duration, delay và easing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **86. chuyển tiếp (transition / 전이) thuộc tính (property / 속성)** nối từ **85. zoom- trong v4.3** sang **87. Duration, delay và easing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 86. chuyển tiếp (transition / 전이) thuộc tính (property / 속성)
 
@@ -2591,7 +2591,7 @@ Cấp cao (senior / 시니어) thường chọn mục tiêu (target / 대상) r�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **87. Duration, delay và easing** tiếp nhận điểm tựa từ **86. chuyển tiếp (transition / 전이) thuộc tính (property / 속성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **88. Built-in animations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **87. Duration, delay và easing** nối từ **86. chuyển tiếp (transition / 전이) thuộc tính (property / 속성)** sang **88. Built-in animations**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 87. Duration, delay và easing
 Phần này nối mạch bài học với “87. Duration, delay và easing”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2613,7 +2613,7 @@ Không có “thời lượng chuẩn Tailwind” cho mọi UX. thiết kế (de
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **88. Built-in animations** tiếp nhận điểm tựa từ **87. Duration, delay và easing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **89. Custom animation bằng @theme** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **88. Built-in animations** nối từ **87. Duration, delay và easing** sang **89. Custom animation bằng @theme**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 88. Built-in animations
 
@@ -2645,7 +2645,7 @@ Không phải animation nào cũng phải vòng lặp (loop / 루프). Animation
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **89. Custom animation bằng @theme** tiếp nhận điểm tựa từ **88. Built-in animations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **90. giảm chuyển động (reduced motion)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **89. Custom animation bằng @theme** nối từ **88. Built-in animations** sang **90. giảm chuyển động (reduced motion)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 89. Custom animation bằng `@theme`
 Phần này nối mạch bài học với “89. Custom animation bằng `@theme`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2679,7 +2679,7 @@ Theme đơn vị từ (token / 토큰) cho animation biến animation name/giá 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **90. giảm chuyển động (reduced motion)** tiếp nhận điểm tựa từ **89. Custom animation bằng @theme** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **91. Cursor không tạo ngữ nghĩa (semantics)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **90. giảm chuyển động (reduced motion)** nối từ **89. Custom animation bằng @theme** sang **91. Cursor không tạo ngữ nghĩa (semantics)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 90. giảm chuyển động (reduced motion)
 Phần này nối mạch bài học với “90. giảm chuyển động (reduced motion)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2703,7 +2703,7 @@ Nếu motion chỉ là decoration, giảm/tắt nó cho người dùng đã yêu
 
 # PHẦN IX — FORMS VÀ tương tác (interaction / 상호작용)
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **91. Cursor không tạo ngữ nghĩa (semantics)** tiếp nhận điểm tựa từ **90. giảm chuyển động (reduced motion)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **92. Pointer events** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **91. Cursor không tạo ngữ nghĩa (semantics)** nối từ **90. giảm chuyển động (reduced motion)** sang **92. Pointer events**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 91. Cursor không tạo ngữ nghĩa (semantics)
 Phần này nối mạch bài học với “91. Cursor không tạo ngữ nghĩa (semantics)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2738,7 +2738,7 @@ mang tính ngữ nghĩa (semantic / 의미적) HTML mang keyboard hành vi (beha
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **92. Pointer events** tiếp nhận điểm tựa từ **91. Cursor không tạo ngữ nghĩa (semantics)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **93. User select** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **92. Pointer events** nối từ **91. Cursor không tạo ngữ nghĩa (semantics)** sang **93. User select**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 92. Pointer events
 Phần này nối mạch bài học với “92. Pointer events”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2766,7 +2766,7 @@ Nó không phải mang tính ngữ nghĩa (semantic / 의미적) disabled. Một
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **93. User select** tiếp nhận điểm tựa từ **92. Pointer events** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **94. Appearance và native controls** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **93. User select** nối từ **92. Pointer events** sang **94. Appearance và native controls**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 93. User select
 Phần này nối mạch bài học với “93. User select”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2782,7 +2782,7 @@ select-auto
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **94. Appearance và native controls** tiếp nhận điểm tựa từ **93. User select** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **95. accent-** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **94. Appearance và native controls** nối từ **93. User select** sang **95. accent-**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 94. Appearance và native controls
 Phần này nối mạch bài học với “94. Appearance và native controls”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2804,7 +2804,7 @@ appearance-auto
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **95. accent-** tiếp nhận điểm tựa từ **94. Appearance và native controls** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **96. trường dữ liệu (field / 필드) sizing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **95. accent-** nối từ **94. Appearance và native controls** sang **96. trường dữ liệu (field / 필드) sizing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 95. `accent-*`
 Phần này nối mạch bài học với “95. `accent-*`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2822,7 +2822,7 @@ Nhiều trường hợp (case / 사례) không cần recreate checkbox bằng di
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **95. accent-** nêu điều cần giải thích; **96. trường dữ liệu (field / 필드) sizing** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **97. Resize** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **95. accent-** đặt vấn đề; **96. trường dữ liệu (field / 필드) sizing** đối chiếu bằng chứng, rồi **97. Resize** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 96. trường dữ liệu (field / 필드) sizing
 
@@ -2846,7 +2846,7 @@ Bạn vẫn nên đặt min/max ràng buộc (constraint / 제약조건) để c
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **96. trường dữ liệu (field / 필드) sizing** nêu điều cần giải thích; **97. Resize** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **98. Smooth scroll** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **96. trường dữ liệu (field / 필드) sizing** đặt vấn đề; **97. Resize** đối chiếu bằng chứng, rồi **98. Smooth scroll** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 97. Resize
 Phần này nối mạch bài học với “97. Resize”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2870,7 +2870,7 @@ Textarea thường nên cho phép ít nhất vertical resize:
 
 # PHẦN X — SCROLL, TOUCH VÀ vùng nhìn (viewport) tương tác (interaction / 상호작용)
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **98. Smooth scroll** tiếp nhận điểm tựa từ **97. Resize** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **99. Scroll snap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **98. Smooth scroll** nối từ **97. Resize** sang **99. Scroll snap**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 98. Smooth scroll
 Phần này nối mạch bài học với “98. Smooth scroll”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2890,7 +2890,7 @@ motion-reduce:scroll-auto
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **99. Scroll snap** tiếp nhận điểm tựa từ **98. Smooth scroll** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **100. Overscroll** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **99. Scroll snap** nối từ **98. Smooth scroll** sang **100. Overscroll**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 99. Scroll snap
 
@@ -2918,7 +2918,7 @@ Carousel:
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **100. Overscroll** tiếp nhận điểm tựa từ **99. Scroll snap** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **101. Scroll margin và sticky headers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **100. Overscroll** nối từ **99. Scroll snap** sang **101. Scroll margin và sticky headers**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 100. Overscroll
 
@@ -2938,7 +2938,7 @@ Nested modal scroller:
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **101. Scroll margin và sticky headers** tiếp nhận điểm tựa từ **100. Overscroll** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **102. Touch action** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **101. Scroll margin và sticky headers** nối từ **100. Overscroll** sang **102. Touch action**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 101. Scroll margin và sticky headers
 
@@ -2957,7 +2957,7 @@ Khi trình duyệt (browser / 브라우저) scroll tới `#billing`, `scroll-mar
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **102. Touch action** tiếp nhận điểm tựa từ **101. Scroll margin và sticky headers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **103. Scrollbar các tiện ích (utilities) v4.3** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **102. Touch action** nối từ **101. Scroll margin và sticky headers** sang **103. Scrollbar các tiện ích (utilities) v4.3**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 102. Touch action
 Phần này nối mạch bài học với “102. Touch action”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -2977,7 +2977,7 @@ Custom carousel drag ngang trong page scroll dọc có thể dùng `touch-pan-y`
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **103. Scrollbar các tiện ích (utilities) v4.3** tiếp nhận điểm tựa từ **102. Touch action** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **104. Mobile-first thật sự nghĩa là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **103. Scrollbar các tiện ích (utilities) v4.3** nối từ **102. Touch action** sang **104. Mobile-first thật sự nghĩa là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 103. Scrollbar các tiện ích (utilities) v4.3
 
@@ -3016,7 +3016,7 @@ Scrollbar rendering vẫn phụ thuộc trình duyệt (browser / 브라우저)/
 
 # PHẦN XI — thiết kế đáp ứng (responsive design)
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **104. Mobile-first thật sự nghĩa là gì?** tiếp nhận điểm tựa từ **103. Scrollbar các tiện ích (utilities) v4.3** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **105. điểm ngắt (breakpoint) names không phải thiết bị (device / 장치) names** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **104. Mobile-first thật sự nghĩa là gì?** nối từ **103. Scrollbar các tiện ích (utilities) v4.3** sang **105. điểm ngắt (breakpoint) names không phải thiết bị (device / 장치) names**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 104. Mobile-first thật sự nghĩa là gì?
 Phần này nối mạch bài học với “104. Mobile-first thật sự nghĩa là gì?”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3049,7 +3049,7 @@ Nó không nghĩa “chỉ ở md”.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **105. điểm ngắt (breakpoint) names không phải thiết bị (device / 장치) names** tiếp nhận điểm tựa từ **104. Mobile-first thật sự nghĩa là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **106. Range responsive các biến thể (variants)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **105. điểm ngắt (breakpoint) names không phải thiết bị (device / 장치) names** nối từ **104. Mobile-first thật sự nghĩa là gì?** sang **106. Range responsive các biến thể (variants)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 105. điểm ngắt (breakpoint) names không phải thiết bị (device / 장치) names
 
@@ -3085,7 +3085,7 @@ Nếu nhóm (team / 팀) muốn mang tính ngữ nghĩa (semantic / 의미적) �
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **106. Range responsive các biến thể (variants)** tiếp nhận điểm tựa từ **105. điểm ngắt (breakpoint) names không phải thiết bị (device / 장치) names** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **107. Vì sao truy vấn vùng chứa (container query) quan trọng hơn thêm điểm ngắt (breakpoint)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **106. Range responsive các biến thể (variants)** nối từ **105. điểm ngắt (breakpoint) names không phải thiết bị (device / 장치) names** sang **107. Vì sao truy vấn vùng chứa (container query) quan trọng hơn thêm điểm ngắt (breakpoint)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 106. Range responsive các biến thể (variants)
 Phần này nối mạch bài học với “106. Range responsive các biến thể (variants)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3109,7 +3109,7 @@ Arbitrary điểm ngắt (breakpoint) hợp lý cho cục bộ (local / 로컬) 
 
 # PHẦN XII — các truy vấn vùng chứa (container queries)
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **107. Vì sao truy vấn vùng chứa (container query) quan trọng hơn thêm điểm ngắt (breakpoint)** tiếp nhận điểm tựa từ **106. Range responsive các biến thể (variants)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **108. truy vấn vùng chứa (container query) các điểm ngắt (breakpoints)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **107. Vì sao truy vấn vùng chứa (container query) quan trọng hơn thêm điểm ngắt (breakpoint)** nối từ **106. Range responsive các biến thể (variants)** sang **108. truy vấn vùng chứa (container query) các điểm ngắt (breakpoints)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 107. Vì sao truy vấn vùng chứa (container query) quan trọng hơn thêm điểm ngắt (breakpoint)
 
@@ -3147,7 +3147,7 @@ Child:
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **108. truy vấn vùng chứa (container query) các điểm ngắt (breakpoints)** tiếp nhận điểm tựa từ **107. Vì sao truy vấn vùng chứa (container query) quan trọng hơn thêm điểm ngắt (breakpoint)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **109. bộ chứa (container / 컨테이너) max/phạm vi (range / 범위)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **108. truy vấn vùng chứa (container query) các điểm ngắt (breakpoints)** nối từ **107. Vì sao truy vấn vùng chứa (container query) quan trọng hơn thêm điểm ngắt (breakpoint)** sang **109. bộ chứa (container / 컨테이너) max/phạm vi (range / 범위)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 108. truy vấn vùng chứa (container query) các điểm ngắt (breakpoints)
 
@@ -3180,7 +3180,7 @@ Sau đó API bộ chứa (container / 컨테이너) có thể dùng đơn vị t
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **109. bộ chứa (container / 컨테이너) max/phạm vi (range / 범위)** tiếp nhận điểm tựa từ **108. truy vấn vùng chứa (container query) các điểm ngắt (breakpoints)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **110. @container-size trong v4.3** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **109. bộ chứa (container / 컨테이너) max/phạm vi (range / 범위)** nối từ **108. truy vấn vùng chứa (container query) các điểm ngắt (breakpoints)** sang **110. @container-size trong v4.3**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 109. bộ chứa (container / 컨테이너) max/phạm vi (range / 범위)
 
@@ -3199,7 +3199,7 @@ Bạn có thể viết:
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **110. @container-size trong v4.3** tiếp nhận điểm tựa từ **109. bộ chứa (container / 컨테이너) max/phạm vi (range / 범위)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **111. Hover** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **110. @container-size trong v4.3** nối từ **109. bộ chứa (container / 컨테이너) max/phạm vi (range / 범위)** sang **111. Hover**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 110. `@container-size` trong v4.3
 
@@ -3234,7 +3234,7 @@ Kích thước (size / 크기) containment có ảnh hưởng sizing mạnh hơn
 
 # PHẦN XIII — các biến thể trạng thái (state variants)
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **111. Hover** tiếp nhận điểm tựa từ **110. @container-size trong v4.3** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **112. Focus và focus-visible** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **111. Hover** nối từ **110. @container-size trong v4.3** sang **112. Focus và focus-visible**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 111. Hover
 Phần này nối mạch bài học với “111. Hover”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3249,7 +3249,7 @@ Tailwind generate hover bộ chọn (selector) cùng handling cho hover-capable 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **112. Focus và focus-visible** tiếp nhận điểm tựa từ **111. Hover** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **113. Active** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **112. Focus và focus-visible** nối từ **111. Hover** sang **113. Active**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 112. Focus và `focus-visible`
 Phần này nối mạch bài học với “112. Focus và `focus-visible`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3280,7 +3280,7 @@ Form group:
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **113. Active** tiếp nhận điểm tựa từ **112. Focus và focus-visible** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **114. Structural các biến thể (variants)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **113. Active** nối từ **112. Focus và focus-visible** sang **114. Structural các biến thể (variants)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 113. Active
 Phần này nối mạch bài học với “113. Active”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3301,7 +3301,7 @@ Nếu motion không cần thiết, respect giảm chuyển động (reduced moti
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **114. Structural các biến thể (variants)** tiếp nhận điểm tựa từ **113. Active** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **115. nth-** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **114. Structural các biến thể (variants)** nối từ **113. Active** sang **115. nth-**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 114. Structural các biến thể (variants)
 
@@ -3328,7 +3328,7 @@ Những bộ chọn (selector) này nên mô tả cấu trúc (structure / 구�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **115. nth-** tiếp nhận điểm tựa từ **114. Structural các biến thể (variants)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **116. Form các biến thể trạng thái (state variants)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **115. nth-** nối từ **114. Structural các biến thể (variants)** sang **116. Form các biến thể trạng thái (state variants)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 115. `nth-*`
 
@@ -3352,7 +3352,7 @@ Use cho zebra striping hoặc bố cục (layout / 레이아웃) mẫu (pattern 
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **116. Form các biến thể trạng thái (state variants)** tiếp nhận điểm tựa từ **115. nth-** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **117. group-: style child theo parent trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **116. Form các biến thể trạng thái (state variants)** nối từ **115. nth-** sang **117. group-: style child theo parent trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 116. Form các biến thể trạng thái (state variants)
 
@@ -3394,7 +3394,7 @@ Ví dụ:
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **117. group-: style child theo parent trạng thái (state / 상태)** tiếp nhận điểm tựa từ **116. Form các biến thể trạng thái (state variants)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **118. peer-: style sibling theo sibling trạng thái (state)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **117. group-: style child theo parent trạng thái (state / 상태)** nối từ **116. Form các biến thể trạng thái (state variants)** sang **118. peer-: style sibling theo sibling trạng thái (state)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 117. `group-*`: style child theo parent trạng thái (state / 상태)
 
@@ -3423,7 +3423,7 @@ Nếu không name, một child sâu có thể vô tình react với wrong ancest
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **118. peer-: style sibling theo sibling trạng thái (state)** tiếp nhận điểm tựa từ **117. group-: style child theo parent trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **119. has-: parent-aware styling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **118. peer-: style sibling theo sibling trạng thái (state)** nối từ **117. group-: style child theo parent trạng thái (state / 상태)** sang **119. has-: parent-aware styling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 118. `peer-*`: style sibling theo sibling trạng thái (state)
 Phần này nối mạch bài học với “118. `peer-*`: style sibling theo sibling trạng thái (state)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3450,7 +3450,7 @@ Nếu mục tiêu (target / 대상) cần style previous sibling, dùng parent `
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **119. has-: parent-aware styling** tiếp nhận điểm tựa từ **118. peer-: style sibling theo sibling trạng thái (state)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **120. in-** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **119. has-: parent-aware styling** nối từ **118. peer-: style sibling theo sibling trạng thái (state)** sang **120. in-**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 119. `has-*`: parent-aware styling
 Phần này nối mạch bài học với “119. `has-*`: parent-aware styling”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3480,7 +3480,7 @@ Nghiệp vụ (business / 비즈니스) trạng thái (state / 상태) không t�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **120. in-** tiếp nhận điểm tựa từ **119. has-: parent-aware styling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **121. Child các biến thể (variants) : và :** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **120. in-** nối từ **119. has-: parent-aware styling** sang **121. Child các biến thể (variants) : và :**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 120. `in-*`
 
@@ -3492,7 +3492,7 @@ Cấp cao (senior / 시니어) preference: nếu quyền sở hữu (ownership /
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **121. Child các biến thể (variants) : và :** tiếp nhận điểm tựa từ **120. in-** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **122. ARIA các biến thể (variants)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **121. Child các biến thể (variants) : và :** nối từ **120. in-** sang **122. ARIA các biến thể (variants)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 121. Child các biến thể (variants) `*:` và `**:`
 Phần này nối mạch bài học với “121. Child các biến thể (variants) `*:` và `**:`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3509,7 +3509,7 @@ Phần này nối mạch bài học với “121. Child các biến thể (varia
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **122. ARIA các biến thể (variants)** tiếp nhận điểm tựa từ **121. Child các biến thể (variants) : và :** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **123. Data các biến thể (variants)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **122. ARIA các biến thể (variants)** nối từ **121. Child các biến thể (variants) : và :** sang **123. Data các biến thể (variants)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 122. ARIA các biến thể (variants)
 Phần này nối mạch bài học với “122. ARIA các biến thể (variants)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3530,7 +3530,7 @@ Nhưng không được set ARIA sai chỉ để style. Ví dụ random `<div ari
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **123. Data các biến thể (variants)** tiếp nhận điểm tựa từ **122. ARIA các biến thể (variants)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **124. Dark mode mặc định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **123. Data các biến thể (variants)** nối từ **122. ARIA các biến thể (variants)** sang **124. Dark mode mặc định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 123. Data các biến thể (variants)
 Phần này nối mạch bài học với “123. Data các biến thể (variants)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3564,7 +3564,7 @@ JS không cần hard-code visual CSS; Tailwind/CSS không cần biết lô-gic n
 
 # PHẦN XIV — DARK chế độ (mode / 모드) VÀ người dùng (user / 사용자) PREFERENCES
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **124. Dark mode mặc định** tiếp nhận điểm tựa từ **123. Data các biến thể (variants)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **125. Manual dark chế độ (mode / 모드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **124. Dark mode mặc định** nối từ **123. Data các biến thể (variants)** sang **125. Manual dark chế độ (mode / 모드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 124. Dark mode mặc định
 Phần này nối mạch bài học với “124. Dark mode mặc định”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3584,7 +3584,7 @@ By default, `dark:` có thể dựa trên hệ thống (system / 시스템) `pre
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **125. Manual dark chế độ (mode / 모드)** tiếp nhận điểm tựa từ **124. Dark mode mặc định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **126. hệ thống (system / 시스템) / Light / Dark ba trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **125. Manual dark chế độ (mode / 모드)** nối từ **124. Dark mode mặc định** sang **126. hệ thống (system / 시스템) / Light / Dark ba trạng thái**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 125. Manual dark chế độ (mode / 모드)
 
@@ -3621,7 +3621,7 @@ Gốc (root / 루트):
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **126. hệ thống (system / 시스템) / Light / Dark ba trạng thái** tiếp nhận điểm tựa từ **125. Manual dark chế độ (mode / 모드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **127. motion-reduce, contrast, màu cưỡng bức (forced colors)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **126. hệ thống (system / 시스템) / Light / Dark ba trạng thái** nối từ **125. Manual dark chế độ (mode / 모드)** sang **127. motion-reduce, contrast, màu cưỡng bức (forced colors)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 126. hệ thống (system / 시스템) / Light / Dark ba trạng thái
 
@@ -3646,7 +3646,7 @@ Nếu gốc (root / 루트) trạng thái (state / 상태) set quá muộn sau f
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **126. hệ thống (system / 시스템) / Light / Dark ba trạng thái** đã nêu tiêu chí phân biệt, còn **127. motion-reduce, contrast, màu cưỡng bức (forced colors)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **128. @theme khác :root như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **126. hệ thống (system / 시스템) / Light / Dark ba trạng thái** đặt tiêu chí; **127. motion-reduce, contrast, màu cưỡng bức (forced colors)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **128. @theme khác :root như thế nào?** mở rộng hệ quả.
 
 ## 127. `motion-reduce`, contrast, màu cưỡng bức (forced colors)
 
@@ -3671,7 +3671,7 @@ Use những điều kiện (condition / 조건) phản ánh năng lực (capabil
 
 # PHẦN XV — `@theme` VÀ đơn vị từ (token / 토큰) thiết kế (design tokens)
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **127. motion-reduce, contrast, màu cưỡng bức (forced colors)** đã nêu tiêu chí phân biệt, còn **128. @theme khác :root như thế nào?** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **129. không gian tên (namespace / 네임스페이스) là API** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **127. motion-reduce, contrast, màu cưỡng bức (forced colors)** đặt tiêu chí; **128. @theme khác :root như thế nào?** dùng tiêu chí đó để kiểm tra ranh giới, rồi **129. không gian tên (namespace / 네임스페이스) là API** mở rộng hệ quả.
 
 ## 128. `@theme` khác `:root` như thế nào?
 
@@ -3699,7 +3699,7 @@ Tailwind:
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **129. không gian tên (namespace / 네임스페이스) là API** tiếp nhận điểm tựa từ **128. @theme khác :root như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **130. thành phần nguyên thủy (primitive / 기본 요소) đơn vị từ (token / 토큰) và đơn vị từ (token / 토큰) ngữ nghĩa (semantic token)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **129. không gian tên (namespace / 네임스페이스) là API** nối từ **128. @theme khác :root như thế nào?** sang **130. thành phần nguyên thủy (primitive / 기본 요소) đơn vị từ (token / 토큰) và đơn vị từ (token / 토큰) ngữ nghĩa (semantic token)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 129. không gian tên (namespace / 네임스페이스) là API
 
@@ -3727,7 +3727,7 @@ Bạn không cần nhớ mọi không gian tên (namespace / 네임스페이스)
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **130. thành phần nguyên thủy (primitive / 기본 요소) đơn vị từ (token / 토큰) và đơn vị từ (token / 토큰) ngữ nghĩa (semantic token)** tiếp nhận điểm tựa từ **129. không gian tên (namespace / 네임스페이스) là API** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **131. Theme đơn vị từ (token / 토큰) không nhất thiết nên dùng cho mọi thuộc tính (property / 속성) role** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **130. thành phần nguyên thủy (primitive / 기본 요소) đơn vị từ (token / 토큰) và đơn vị từ (token / 토큰) ngữ nghĩa (semantic token)** nối từ **129. không gian tên (namespace / 네임스페이스) là API** sang **131. Theme đơn vị từ (token / 토큰) không nhất thiết nên dùng cho mọi thuộc tính (property / 속성) role**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 130. thành phần nguyên thủy (primitive / 기본 요소) đơn vị từ (token / 토큰) và đơn vị từ (token / 토큰) ngữ nghĩa (semantic token)
 
@@ -3771,7 +3771,7 @@ và thêm thời gian chạy (runtime / 런타임) mang tính ngữ nghĩa (sema
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **131. Theme đơn vị từ (token / 토큰) không nhất thiết nên dùng cho mọi thuộc tính (property / 속성) role** tiếp nhận điểm tựa từ **130. thành phần nguyên thủy (primitive / 기본 요소) đơn vị từ (token / 토큰) và đơn vị từ (token / 토큰) ngữ nghĩa (semantic token)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **132. Reset không gian tên (namespace) cho strict hệ thống thiết kế (design system)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **131. Theme đơn vị từ (token / 토큰) không nhất thiết nên dùng cho mọi thuộc tính (property / 속성) role** nối từ **130. thành phần nguyên thủy (primitive / 기본 요소) đơn vị từ (token / 토큰) và đơn vị từ (token / 토큰) ngữ nghĩa (semantic token)** sang **132. Reset không gian tên (namespace) cho strict hệ thống thiết kế (design system)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 131. Theme đơn vị từ (token / 토큰) không nhất thiết nên dùng cho mọi thuộc tính (property / 속성) role
 
@@ -3805,7 +3805,7 @@ Cấp cao (senior / 시니어) đơn vị từ (token / 토큰) thiết kế (de
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **132. Reset không gian tên (namespace) cho strict hệ thống thiết kế (design system)** tiếp nhận điểm tựa từ **131. Theme đơn vị từ (token / 토큰) không nhất thiết nên dùng cho mọi thuộc tính (property / 속성) role** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **133. @utility: đăng ký tiện ích (utility) riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **132. Reset không gian tên (namespace) cho strict hệ thống thiết kế (design system)** nối từ **131. Theme đơn vị từ (token / 토큰) không nhất thiết nên dùng cho mọi thuộc tính (property / 속성) role** sang **133. @utility: đăng ký tiện ích (utility) riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 132. Reset không gian tên (namespace) cho strict hệ thống thiết kế (design system)
 Phần này nối mạch bài học với “132. Reset không gian tên (namespace) cho strict hệ thống thiết kế (design system)”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3831,7 +3831,7 @@ Strict theme phù hợp hệ thống thiết kế (design system) mature hơn be
 
 # PHẦN XVI — CUSTOMIZATION API CỦA TAILWIND V4
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **133. @utility: đăng ký tiện ích (utility) riêng** tiếp nhận điểm tựa từ **132. Reset không gian tên (namespace) cho strict hệ thống thiết kế (design system)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **134. Khi nào nên tạo custom tiện ích (utility)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **133. @utility: đăng ký tiện ích (utility) riêng** nối từ **132. Reset không gian tên (namespace) cho strict hệ thống thiết kế (design system)** sang **134. Khi nào nên tạo custom tiện ích (utility)?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 133. `@utility`: đăng ký tiện ích (utility) riêng
 Phần này nối mạch bài học với “133. `@utility`: đăng ký tiện ích (utility) riêng”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3866,7 +3866,7 @@ là một normal lớp (class / 클래스), không nhất thiết tham gia Tailw
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **134. Khi nào nên tạo custom tiện ích (utility)?** tiếp nhận điểm tựa từ **133. @utility: đăng ký tiện ích (utility) riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **135. Functional @utility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **134. Khi nào nên tạo custom tiện ích (utility)?** nối từ **133. @utility: đăng ký tiện ích (utility) riêng** sang **135. Functional @utility**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 134. Khi nào nên tạo custom tiện ích (utility)?
 
@@ -3882,7 +3882,7 @@ Một `super-dashboard-card` chứa 15 các thuộc tính (properties), hover, c
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **135. Functional @utility** tiếp nhận điểm tựa từ **134. Khi nào nên tạo custom tiện ích (utility)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **136. --default() trong v4.3** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **135. Functional @utility** nối từ **134. Khi nào nên tạo custom tiện ích (utility)?** sang **136. --default() trong v4.3**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 135. Functional `@utility`
 
@@ -3908,7 +3908,7 @@ Một definition có thể hỗ trợ (support / 지원):
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **136. --default() trong v4.3** tiếp nhận điểm tựa từ **135. Functional @utility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **137. Modifier và --modifier()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **136. --default() trong v4.3** nối từ **135. Functional @utility** sang **137. Modifier và --modifier()**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 136. `--default()` trong v4.3
 Phần này nối mạch bài học với “136. `--default()` trong v4.3”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -3941,7 +3941,7 @@ Use bare tiện ích (utility) default khi ý nghĩa mặc định thật sự t
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **137. Modifier và --modifier()** tiếp nhận điểm tựa từ **136. --default() trong v4.3** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **138. @custom-variant** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **137. Modifier và --modifier()** nối từ **136. --default() trong v4.3** sang **138. @custom-variant**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 137. Modifier và `--modifier()`
 
@@ -3959,7 +3959,7 @@ Custom tiện ích (utility) cũng có thể dùng modifier cho secondary dimens
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **138. @custom-variant** tiếp nhận điểm tựa từ **137. Modifier và --modifier()** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **139. @variant** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **138. @custom-variant** nối từ **137. Modifier và --modifier()** sang **139. @variant**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 138. `@custom-variant`
 
@@ -3980,7 +3980,7 @@ Bạn đã biến một bộ chọn (selector) phức tạp thành mang tính ng
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **139. @variant** tiếp nhận điểm tựa từ **138. @custom-variant** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **140. @apply** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **139. @variant** nối từ **138. @custom-variant** sang **140. @apply**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 139. `@variant`
 
@@ -4014,7 +4014,7 @@ và multiple:
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **140. @apply** tiếp nhận điểm tựa từ **139. @variant** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **141. @reference** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **140. @apply** nối từ **139. @variant** sang **141. @reference**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 140. `@apply`
 Phần này nối mạch bài học với “140. `@apply`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -4045,7 +4045,7 @@ cho mọi button trong React app, rồi markup lại quay về `.btn-primary`. N
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, sau nội dung của **140. @apply**, **141. @reference** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **142. Automatic phát hiện nguồn (source detection)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, sau nội dung của **140. @apply**, **141. @reference** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **142. Automatic phát hiện nguồn (source detection)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 141. `@reference`
 
@@ -4075,7 +4075,7 @@ thường đơn giản hơn.
 
 # PHẦN XVII — phát hiện nguồn (source detection)
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **141. @reference** nêu điều cần giải thích; **142. Automatic phát hiện nguồn (source detection)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **143. @source** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **141. @reference** đặt vấn đề; **142. Automatic phát hiện nguồn (source detection)** đối chiếu bằng chứng, rồi **143. @source** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 142. Automatic phát hiện nguồn (source detection)
 
@@ -4085,7 +4085,7 @@ Vì vậy phụ thuộc (dependency / 의존성) chứa Tailwind classes có th�
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **142. Automatic phát hiện nguồn (source detection)** nêu điều cần giải thích; **143. @source** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **144. source() base path** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **142. Automatic phát hiện nguồn (source detection)** đặt vấn đề; **143. @source** đối chiếu bằng chứng, rồi **144. source() base path** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 143. `@source`
 Phần này nối mạch bài học với “143. `@source`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -4104,7 +4104,7 @@ Monorepo:
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **143. @source** nêu điều cần giải thích; **144. source() base path** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **145. Ignore path** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **143. @source** đặt vấn đề; **144. source() base path** đối chiếu bằng chứng, rồi **145. Ignore path** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 144. `source()` base path
 Phần này nối mạch bài học với “144. `source()` base path”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -4118,7 +4118,7 @@ Dùng khi hiện tại (current / 현재) working directory của bản dựng (
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **144. source() base path** nêu điều cần giải thích; **145. Ignore path** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **146. source(none)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **144. source() base path** đặt vấn đề; **145. Ignore path** đối chiếu bằng chứng, rồi **146. source(none)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 145. Ignore path
 Phần này nối mạch bài học với “145. Ignore path”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -4131,7 +4131,7 @@ Nếu folder lớn không có Tailwind candidates, loại khỏi scan có thể 
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **145. Ignore path** nêu điều cần giải thích; **146. source(none)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **147. danh sách ép giữ (safelist) bằng @source inline()** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **145. Ignore path** đặt vấn đề; **146. source(none)** đối chiếu bằng chứng, rồi **147. danh sách ép giữ (safelist) bằng @source inline()** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 146. `source(none)`
 Phần này nối mạch bài học với “146. `source(none)`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -4153,7 +4153,7 @@ Rất hữu ích khi dự án (project / 프로젝트) có:
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **146. source(none)** nêu điều cần giải thích; **147. danh sách ép giữ (safelist) bằng @source inline()** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **148. Khi nào lớp (class / 클래스) dài là bình thường?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **146. source(none)** đặt vấn đề; **147. danh sách ép giữ (safelist) bằng @source inline()** đối chiếu bằng chứng, rồi **148. Khi nào lớp (class / 클래스) dài là bình thường?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 147. danh sách ép giữ (safelist) bằng `@source inline()`
 
@@ -4173,7 +4173,7 @@ Nhưng broad danh sách ép giữ (safelist) làm Tailwind mất lợi ích usag
 
 # PHẦN XVIII — thành phần (component / 컴포넌트) kiến trúc (architecture / 아키텍처)
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **147. danh sách ép giữ (safelist) bằng @source inline()** nêu điều cần giải thích; **148. Khi nào lớp (class / 클래스) dài là bình thường?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **149. Extract thành phần (component / 컴포넌트) chứ không nhất thiết extract CSS lớp (class / 클래스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **147. danh sách ép giữ (safelist) bằng @source inline()** đặt vấn đề; **148. Khi nào lớp (class / 클래스) dài là bình thường?** đối chiếu bằng chứng, rồi **149. Extract thành phần (component / 컴포넌트) chứ không nhất thiết extract CSS lớp (class / 클래스)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 148. Khi nào lớp (class / 클래스) dài là bình thường?
 
@@ -4209,7 +4209,7 @@ Nó trở thành vấn đề khi same cấu trúc (structure / 구조) + same st
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **149. Extract thành phần (component / 컴포넌트) chứ không nhất thiết extract CSS lớp (class / 클래스)** tiếp nhận điểm tựa từ **148. Khi nào lớp (class / 클래스) dài là bình thường?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **150. biến thể (variant) API nên mang tính ngữ nghĩa (semantic / 의미적)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **149. Extract thành phần (component / 컴포넌트) chứ không nhất thiết extract CSS lớp (class / 클래스)** nối từ **148. Khi nào lớp (class / 클래스) dài là bình thường?** sang **150. biến thể (variant) API nên mang tính ngữ nghĩa (semantic / 의미적)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 149. Extract thành phần (component / 컴포넌트) chứ không nhất thiết extract CSS lớp (class / 클래스)
 
@@ -4268,7 +4268,7 @@ Bên tiêu thụ (consumer / 소비자) không cần biết Tailwind classes.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **150. biến thể (variant) API nên mang tính ngữ nghĩa (semantic / 의미적)** tiếp nhận điểm tựa từ **149. Extract thành phần (component / 컴포넌트) chứ không nhất thiết extract CSS lớp (class / 클래스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **151. lớp (class / 클래스) xung đột (conflict / 충돌)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **150. biến thể (variant) API nên mang tính ngữ nghĩa (semantic / 의미적)** nối từ **149. Extract thành phần (component / 컴포넌트) chứ không nhất thiết extract CSS lớp (class / 클래스)** sang **151. lớp (class / 클래스) xung đột (conflict / 충돌)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 150. biến thể (variant) API nên mang tính ngữ nghĩa (semantic / 의미적)
 
@@ -4302,7 +4302,7 @@ nếu thành phần (component / 컴포넌트) là công khai (public / 공개) 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **151. lớp (class / 클래스) xung đột (conflict / 충돌)** tiếp nhận điểm tựa từ **150. biến thể (variant) API nên mang tính ngữ nghĩa (semantic / 의미적)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **152. className escape hatch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **151. lớp (class / 클래스) xung đột (conflict / 충돌)** nối từ **150. biến thể (variant) API nên mang tính ngữ nghĩa (semantic / 의미적)** sang **152. className escape hatch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 151. lớp (class / 클래스) xung đột (conflict / 충돌)
 
@@ -4326,7 +4326,7 @@ Thành phần (component / 컴포넌트) thư viện (library / 라이브러리)
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **152. className escape hatch** tiếp nhận điểm tựa từ **151. lớp (class / 클래스) xung đột (conflict / 충돌)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **153. Tailwind không tạo khả năng tiếp cận (accessibility / 접근성) ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **152. className escape hatch** nối từ **151. lớp (class / 클래스) xung đột (conflict / 충돌)** sang **153. Tailwind không tạo khả năng tiếp cận (accessibility / 접근성) ngữ nghĩa (semantics / 의미론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 152. `className` escape hatch
 
@@ -4347,7 +4347,7 @@ Bạn cần document:
 
 # PHẦN XIX — khả năng tiếp cận (accessibility / 접근성)
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **153. Tailwind không tạo khả năng tiếp cận (accessibility / 접근성) ngữ nghĩa (semantics / 의미론)** tiếp nhận điểm tựa từ **152. className escape hatch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **154. sr-only** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **153. Tailwind không tạo khả năng tiếp cận (accessibility / 접근성) ngữ nghĩa (semantics / 의미론)** nối từ **152. className escape hatch** sang **154. sr-only**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 153. Tailwind không tạo khả năng tiếp cận (accessibility / 접근성) ngữ nghĩa (semantics / 의미론)
 
@@ -4363,7 +4363,7 @@ mang tính ngữ nghĩa (semantic / 의미적) HTML vẫn phải chọn đúng e
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **154. sr-only** tiếp nhận điểm tựa từ **153. Tailwind không tạo khả năng tiếp cận (accessibility / 접근성) ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **155. Focus visible** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **154. sr-only** nối từ **153. Tailwind không tạo khả năng tiếp cận (accessibility / 접근성) ngữ nghĩa (semantics / 의미론)** sang **155. Focus visible**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 154. `sr-only`
 Phần này nối mạch bài học với “154. `sr-only`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -4383,7 +4383,7 @@ Phần này nối mạch bài học với “154. `sr-only`”, nêu mục đíc
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **155. Focus visible** tiếp nhận điểm tựa từ **154. sr-only** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **156. Disabled** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **155. Focus visible** nối từ **154. sr-only** sang **156. Disabled**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 155. Focus visible
 
@@ -4405,7 +4405,7 @@ Focus ring color phải có contrast đủ với surrounding background.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **156. Disabled** tiếp nhận điểm tựa từ **155. Focus visible** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **157. màu cưỡng bức (forced colors)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **156. Disabled** nối từ **155. Focus visible** sang **157. màu cưỡng bức (forced colors)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 156. Disabled
 
@@ -4427,7 +4427,7 @@ Nếu custom điều khiển (control / 제어) không hỗ trợ (support / 지
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **157. màu cưỡng bức (forced colors)** tiếp nhận điểm tựa từ **156. Disabled** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **158. Tailwind CSS đầu ra (output / 출력) không tỷ lệ trực tiếp với số lớp (class / 클래스) trong HTML** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **157. màu cưỡng bức (forced colors)** nối từ **156. Disabled** sang **158. Tailwind CSS đầu ra (output / 출력) không tỷ lệ trực tiếp với số lớp (class / 클래스) trong HTML**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 157. màu cưỡng bức (forced colors)
 
@@ -4441,7 +4441,7 @@ Chỉ dùng `forced-color-adjust-none` targeted khi automatic override thực s�
 
 # PHẦN XX — hiệu năng (performance / 성능) VÀ gỡ lỗi (debugging)
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **158. Tailwind CSS đầu ra (output / 출력) không tỷ lệ trực tiếp với số lớp (class / 클래스) trong HTML** tiếp nhận điểm tựa từ **157. màu cưỡng bức (forced colors)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **159. giá trị tùy ý (arbitrary value) cardinality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **158. Tailwind CSS đầu ra (output / 출력) không tỷ lệ trực tiếp với số lớp (class / 클래스) trong HTML** nối từ **157. màu cưỡng bức (forced colors)** sang **159. giá trị tùy ý (arbitrary value) cardinality**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 158. Tailwind CSS đầu ra (output / 출력) không tỷ lệ trực tiếp với số lớp (class / 클래스) trong HTML
 
@@ -4462,7 +4462,7 @@ là các generated contexts khác nhau.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **159. giá trị tùy ý (arbitrary value) cardinality** tiếp nhận điểm tựa từ **158. Tailwind CSS đầu ra (output / 출력) không tỷ lệ trực tiếp với số lớp (class / 클래스) trong HTML** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **160. Monorepo scanning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **159. giá trị tùy ý (arbitrary value) cardinality** nối từ **158. Tailwind CSS đầu ra (output / 출력) không tỷ lệ trực tiếp với số lớp (class / 클래스) trong HTML** sang **160. Monorepo scanning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 159. giá trị tùy ý (arbitrary value) cardinality
 
@@ -4489,7 +4489,7 @@ thì bạn có hàng nghìn unique rules.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **160. Monorepo scanning** tiếp nhận điểm tựa từ **159. giá trị tùy ý (arbitrary value) cardinality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **161. gỡ lỗi (debug / 디버그) lớp (class / 클래스) không được generate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **160. Monorepo scanning** nối từ **159. giá trị tùy ý (arbitrary value) cardinality** sang **161. gỡ lỗi (debug / 디버그) lớp (class / 클래스) không được generate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 160. Monorepo scanning
 
@@ -4505,7 +4505,7 @@ phát hiện nguồn (source detection) không chỉ là cấu hình (config / �
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **161. gỡ lỗi (debug / 디버그) lớp (class / 클래스) không được generate** tiếp nhận điểm tựa từ **160. Monorepo scanning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **162. gỡ lỗi (debug / 디버그) lớp (class / 클래스) có quy tắc (rule / 규칙) nhưng UI sai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **161. gỡ lỗi (debug / 디버그) lớp (class / 클래스) không được generate** nối từ **160. Monorepo scanning** sang **162. gỡ lỗi (debug / 디버그) lớp (class / 클래스) có quy tắc (rule / 규칙) nhưng UI sai**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 161. gỡ lỗi (debug / 디버그) lớp (class / 클래스) không được generate
 
@@ -4525,7 +4525,7 @@ Nếu generated CSS không có quy tắc (rule / 규칙), chưa cần gỡ lỗi
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **162. gỡ lỗi (debug / 디버그) lớp (class / 클래스) có quy tắc (rule / 규칙) nhưng UI sai** tiếp nhận điểm tựa từ **161. gỡ lỗi (debug / 디버그) lớp (class / 클래스) không được generate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **163. Tailwind + React** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **162. gỡ lỗi (debug / 디버그) lớp (class / 클래스) có quy tắc (rule / 규칙) nhưng UI sai** nối từ **161. gỡ lỗi (debug / 디버그) lớp (class / 클래스) không được generate** sang **163. Tailwind + React**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 162. gỡ lỗi (debug / 디버그) lớp (class / 클래스) có quy tắc (rule / 규칙) nhưng UI sai
 
@@ -4548,7 +4548,7 @@ browser support
 
 # PHẦN XXI — TAILWIND + FRAMEWORKS
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **163. Tailwind + React** tiếp nhận điểm tựa từ **162. gỡ lỗi (debug / 디버그) lớp (class / 클래스) có quy tắc (rule / 규칙) nhưng UI sai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **164. Tailwind + Vue/Svelte** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **163. Tailwind + React** nối từ **162. gỡ lỗi (debug / 디버그) lớp (class / 클래스) có quy tắc (rule / 규칙) nhưng UI sai** sang **164. Tailwind + Vue/Svelte**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 163. Tailwind + React
 
@@ -4570,7 +4570,7 @@ Extract thành phần (component / 컴포넌트) khi combination lặp lại.
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **164. Tailwind + Vue/Svelte** tiếp nhận điểm tựa từ **163. Tailwind + React** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **165. Tailwind + CSS Modules** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **164. Tailwind + Vue/Svelte** nối từ **163. Tailwind + React** sang **165. Tailwind + CSS Modules**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 164. Tailwind + Vue/Svelte
 
@@ -4582,7 +4582,7 @@ Nhưng đừng dùng scoped CSS + `@apply` chỉ để thay một color; CSS bi�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **165. Tailwind + CSS Modules** tiếp nhận điểm tựa từ **164. Tailwind + Vue/Svelte** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **166. Tailwind + SCSS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **165. Tailwind + CSS Modules** nối từ **164. Tailwind + Vue/Svelte** sang **166. Tailwind + SCSS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 165. Tailwind + CSS Modules
 
@@ -4603,7 +4603,7 @@ chỉ để đặt một `color`, lớp trừu tượng (abstraction / 추상화
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **166. Tailwind + SCSS** tiếp nhận điểm tựa từ **165. Tailwind + CSS Modules** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **167. Tư duy chuyển đổi (migration)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **166. Tailwind + SCSS** nối từ **165. Tailwind + CSS Modules** sang **167. Tư duy chuyển đổi (migration)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 166. Tailwind + SCSS
 
@@ -4629,7 +4629,7 @@ cùng lúc.
 
 # PHẦN XXII — chuyển đổi (migration) TỪ V3
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **167. Tư duy chuyển đổi (migration)** tiếp nhận điểm tựa từ **166. Tailwind + SCSS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **168. @config** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **167. Tư duy chuyển đổi (migration)** nối từ **166. Tailwind + SCSS** sang **168. @config**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 167. Tư duy chuyển đổi (migration)
 
@@ -4658,7 +4658,7 @@ chuyển đổi (migration) không chỉ đổi cú pháp (syntax / 문법); nó
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **168. @config** tiếp nhận điểm tựa từ **167. Tư duy chuyển đổi (migration)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **169. @plugin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **168. @config** nối từ **167. Tư duy chuyển đổi (migration)** sang **169. @plugin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 168. `@config`
 Phần này nối mạch bài học với “168. `@config`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -4673,7 +4673,7 @@ Nó là cầu nối (bridge / 브리지), không nhất thiết là mục tiêu 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **169. @plugin** tiếp nhận điểm tựa từ **168. @config** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **170. Important cú pháp (syntax / 문법)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **169. @plugin** nối từ **168. @config** sang **170. Important cú pháp (syntax / 문법)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 169. `@plugin`
 Phần này nối mạch bài học với “169. `@plugin`”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -4688,7 +4688,7 @@ Project-owned simple custom tiện ích (utility)/biến thể (variant) nên c�
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **170. Important cú pháp (syntax / 문법)** tiếp nhận điểm tựa từ **169. @plugin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **171. Page container** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **170. Important cú pháp (syntax / 문법)** nối từ **169. @plugin** sang **171. Page container**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 170. Important cú pháp (syntax / 문법)
 
@@ -4705,7 +4705,7 @@ thay vì old leading `!` style trong mã (code / 코드) cũ.
 
 # PHẦN XXIII — các mẫu dùng trong môi trường vận hành (production / 운영 환경) (production patterns)
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **171. Page container** tiếp nhận điểm tựa từ **170. Important cú pháp (syntax / 문법)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **172. Stack** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **171. Page container** nối từ **170. Important cú pháp (syntax / 문법)** sang **172. Stack**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 171. Page container
 Phần này nối mạch bài học với “171. Page container”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -4733,7 +4733,7 @@ Bạn không cần `.container-custom` nếu mẫu (pattern / 패턴) chỉ dùn
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **172. Stack** tiếp nhận điểm tựa từ **171. Page container** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **173. Cluster** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **172. Stack** nối từ **171. Page container** sang **173. Cluster**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 172. Stack
 Phần này nối mạch bài học với “172. Stack”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -4751,7 +4751,7 @@ Use cho:
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **173. Cluster** tiếp nhận điểm tựa từ **172. Stack** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **174. Responsive card grid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **173. Cluster** nối từ **172. Stack** sang **174. Responsive card grid**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 173. Cluster
 Phần này nối mạch bài học với “173. Cluster”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -4770,7 +4770,7 @@ Use cho:
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **174. Responsive card grid** tiếp nhận điểm tựa từ **173. Cluster** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **175. Sticky app header** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **174. Responsive card grid** nối từ **173. Cluster** sang **175. Sticky app header**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 174. Responsive card grid
 Phần này nối mạch bài học với “174. Responsive card grid”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -4793,7 +4793,7 @@ Nếu thành phần (component / 컴포넌트) ngữ cảnh (context / 맥락) t
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **175. Sticky app header** tiếp nhận điểm tựa từ **174. Responsive card grid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **176. Dialog shell** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **175. Sticky app header** nối từ **174. Responsive card grid** sang **176. Dialog shell**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 175. Sticky app header
 Phần này nối mạch bài học với “175. Sticky app header”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -4820,7 +4820,7 @@ Cấp cao (senior / 시니어) checks:
 
 ---
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **176. Dialog shell** tiếp nhận điểm tựa từ **175. Sticky app header** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **177. Form field** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **176. Dialog shell** nối từ **175. Sticky app header** sang **177. Form field**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 176. Dialog shell
 
@@ -4846,7 +4846,7 @@ Tailwind style không tự cung cấp quản lý tiêu điểm (focus management
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **177. Form field** tiếp nhận điểm tựa từ **176. Dialog shell** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **178. Truncated row** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **177. Form field** nối từ **176. Dialog shell** sang **178. Truncated row**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 177. Form field
 Phần này nối mạch bài học với “177. Form field”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -4882,7 +4882,7 @@ Mỗi lớp (class / 클래스) có responsibility rõ: box, spacing, focus, ki�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **178. Truncated row** tiếp nhận điểm tựa từ **177. Form field** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **179. Khi nào dùng tiện ích (utility), giá trị tùy ý (arbitrary value), theme, custom CSS?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **178. Truncated row** nối từ **177. Form field** sang **179. Khi nào dùng tiện ích (utility), giá trị tùy ý (arbitrary value), theme, custom CSS?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 178. Truncated row
 Phần này nối mạch bài học với “178. Truncated row”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -4916,7 +4916,7 @@ Phần này nối mạch bài học với “178. Truncated row”, nêu mục �
 
 # PHẦN XXIV — TƯ DUY cấp cao (senior / 시니어)
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **179. Khi nào dùng tiện ích (utility), giá trị tùy ý (arbitrary value), theme, custom CSS?** tiếp nhận điểm tựa từ **178. Truncated row** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **180. Tailwind không thay hệ thống thiết kế (design system)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **179. Khi nào dùng tiện ích (utility), giá trị tùy ý (arbitrary value), theme, custom CSS?** nối từ **178. Truncated row** sang **180. Tailwind không thay hệ thống thiết kế (design system)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 179. Khi nào dùng tiện ích (utility), giá trị tùy ý (arbitrary value), theme, custom CSS?
 
@@ -4951,7 +4951,7 @@ Dùng thành phần (component / 컴포넌트) lớp trừu tượng (abstractio
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **180. Tailwind không thay hệ thống thiết kế (design system)** tiếp nhận điểm tựa từ **179. Khi nào dùng tiện ích (utility), giá trị tùy ý (arbitrary value), theme, custom CSS?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **181. Tailwind cấp cao (senior / 시니어) phải biết khi nào không dùng Tailwind** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **180. Tailwind không thay hệ thống thiết kế (design system)** nối từ **179. Khi nào dùng tiện ích (utility), giá trị tùy ý (arbitrary value), theme, custom CSS?** sang **181. Tailwind cấp cao (senior / 시니어) phải biết khi nào không dùng Tailwind**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 180. Tailwind không thay hệ thống thiết kế (design system)
 
@@ -4970,7 +4970,7 @@ Khung phần mềm (framework / 프레임워크) là công cụ (tool / 도구);
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **181. Tailwind cấp cao (senior / 시니어) phải biết khi nào không dùng Tailwind** tiếp nhận điểm tựa từ **180. Tailwind không thay hệ thống thiết kế (design system)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **182. Beginner phase** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **181. Tailwind cấp cao (senior / 시니어) phải biết khi nào không dùng Tailwind** nối từ **180. Tailwind không thay hệ thống thiết kế (design system)** sang **182. Beginner phase**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 181. Tailwind cấp cao (senior / 시니어) phải biết khi nào không dùng Tailwind
 
@@ -4996,7 +4996,7 @@ Cấp cao (senior / 시니어) Tailwind không theo ideology “không được 
 
 # PHẦN XXV — ROADMAP HỌC
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **182. Beginner phase** tiếp nhận điểm tựa từ **181. Tailwind cấp cao (senior / 시니어) phải biết khi nào không dùng Tailwind** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **183. Intermediate phase** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **182. Beginner phase** nối từ **181. Tailwind cấp cao (senior / 시니어) phải biết khi nào không dùng Tailwind** sang **183. Intermediate phase**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 182. Beginner phase
 
@@ -5006,7 +5006,7 @@ Một bài tập tốt là bản dựng (build / 빌드) ba thành phần (compo
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **183. Intermediate phase** tiếp nhận điểm tựa từ **182. Beginner phase** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **184. cấp cao (senior / 시니어) phase** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **183. Intermediate phase** nối từ **182. Beginner phase** sang **184. cấp cao (senior / 시니어) phase**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 183. Intermediate phase
 
@@ -5023,7 +5023,7 @@ Sau khi basic các tiện ích (utilities) đã tự nhiên, học:
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **184. cấp cao (senior / 시니어) phase** tiếp nhận điểm tựa từ **183. Intermediate phase** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **185. Kiểm tra kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **184. cấp cao (senior / 시니어) phase** nối từ **183. Intermediate phase** sang **185. Kiểm tra kiến thức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 184. cấp cao (senior / 시니어) phase
 
@@ -5043,7 +5043,7 @@ Bạn cũng phải đọc DevTools generated CSS và giải thích vì sao một
 
 # PHẦN XXVI — SELF kiểm thử (test / 테스트)
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **185. Kiểm tra kiến thức** tiếp nhận điểm tựa từ **184. cấp cao (senior / 시니어) phase** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **186. Đọc Tailwind theo CSS subsystem, không theo danh sách lớp (class / 클래스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **185. Kiểm tra kiến thức** nối từ **184. cấp cao (senior / 시니어) phase** sang **186. Đọc Tailwind theo CSS subsystem, không theo danh sách lớp (class / 클래스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 185. Kiểm tra kiến thức
 
@@ -5093,7 +5093,7 @@ https://tailwindcss.com/docs/upgrade-guide
 
 # PHẦN XXVIII — UNDERLYING CSS ánh xạ (mapping / 매핑) VÀ phiên bản (version / 버전) EVOLUTION
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **186. Đọc Tailwind theo CSS subsystem, không theo danh sách lớp (class / 클래스)** tiếp nhận điểm tựa từ **185. Kiểm tra kiến thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **187. ánh xạ (mapping / 매핑) môi trường vận hành (production / 운영 환경) bug từ Tailwind về CSS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **186. Đọc Tailwind theo CSS subsystem, không theo danh sách lớp (class / 클래스)** nối từ **185. Kiểm tra kiến thức** sang **187. ánh xạ (mapping / 매핑) môi trường vận hành (production / 운영 환경) bug từ Tailwind về CSS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 186. Đọc Tailwind theo CSS subsystem, không theo danh sách lớp (class / 클래스)
 
@@ -5105,7 +5105,7 @@ Tương tự, `grid grid-cols-[16rem_minmax(0,1fr)]` không phải “hai lớp 
 
 các biến thể trạng thái (state variants) cũng là CSS transformations. `hover:bg-*` tạo hover bộ chọn (selector); `focus-visible:*` dùng lớp giả (pseudo-class) cho keyboard-like focus indication; `group-hover:*` tạo ancestor-state bộ chọn (selector) relationship; `peer-invalid:*` dựa subsequent sibling quan hệ (relation / 관계); `has-*` dùng `:has()` relationship. Responsive các biến thể (variants) tạo at-rule conditions: `md:*` là vùng nhìn (viewport) truy vấn môi trường (media query), còn `@md:*` là truy vấn vùng chứa (container query). Khi biến thể (variant) không chạy, hãy gỡ lỗi (debug / 디버그) relationship/điều kiện (condition / 조건) trước khi đổi tiện ích (utility).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **187. ánh xạ (mapping / 매핑) môi trường vận hành (production / 운영 환경) bug từ Tailwind về CSS** tiếp nhận điểm tựa từ **186. Đọc Tailwind theo CSS subsystem, không theo danh sách lớp (class / 클래스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **188. Tailwind phiên bản (version / 버전) evolution — thay đổi programming mô hình (model / 모델), không chỉ thêm tiện ích (utility)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **187. ánh xạ (mapping / 매핑) môi trường vận hành (production / 운영 환경) bug từ Tailwind về CSS** nối từ **186. Đọc Tailwind theo CSS subsystem, không theo danh sách lớp (class / 클래스)** sang **188. Tailwind phiên bản (version / 버전) evolution — thay đổi programming mô hình (model / 모델), không chỉ thêm tiện ích (utility)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 187. ánh xạ (mapping / 매핑) môi trường vận hành (production / 운영 환경) bug từ Tailwind về CSS
 
@@ -5123,7 +5123,7 @@ Ví dụ `z-50` có trong computed style nhưng dropdown vẫn nằm dưới hea
 
 Cách gỡ lỗi (debug / 디버그) này giúp bạn không đổ mọi lỗi styling cho khung phần mềm (framework / 프레임워크).
 
-> **Chuyển mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **188. Tailwind phiên bản (version / 버전) evolution — thay đổi programming mô hình (model / 모델), không chỉ thêm tiện ích (utility)** tiếp nhận điểm tựa từ **187. ánh xạ (mapping / 매핑) môi trường vận hành (production / 운영 환경) bug từ Tailwind về CSS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **189. chuyển đổi (migration) v3 → v4 theo responsibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **188. Tailwind phiên bản (version / 버전) evolution — thay đổi programming mô hình (model / 모델), không chỉ thêm tiện ích (utility)** nối từ **187. ánh xạ (mapping / 매핑) môi trường vận hành (production / 운영 환경) bug từ Tailwind về CSS** sang **189. chuyển đổi (migration) v3 → v4 theo responsibility**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 188. Tailwind phiên bản (version / 버전) evolution — thay đổi programming mô hình (model / 모델), không chỉ thêm tiện ích (utility)
 
@@ -5135,7 +5135,7 @@ Tailwind v4 là thay đổi kiến trúc (architecture / 아키텍처) lớn hơ
 
 Tailwind v4.2 và v4.3 tiếp tục mở rộng API theo CSS nền tảng (platform / 플랫폼) thay vì đổi cốt lõi (core / 핵심) mô hình tư duy (mental model / 사고 모델). v4.2 bổ sung logical thuộc tính (property / 속성) các tiện ích (utilities), `font-features-*` và first-party webpack tích hợp (integration / 통합). v4.3 bổ sung scrollbar các tiện ích (utilities), `@container-size`, `zoom-*`, `tab-*`, stacked/compound `@variant` và default các giá trị (values) cho functional các tiện ích (utilities). Tính đến 21/09/2026, Tailwind blog vẫn liệt kê **v4.3** là bản phát hành (release / 릴리스) khung phần mềm (framework / 프레임워크) mới nhất. Những tính năng (feature / 기능) này quan trọng vì chúng giảm custom plugin/CSS ở edge cases, nhưng cách học vẫn là tiện ích (utility) → CSS cơ chế (mechanism / 메커니즘) → trình duyệt (browser / 브라우저) hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **189. chuyển đổi (migration) v3 → v4 theo responsibility** tiếp nhận điểm tựa từ **188. Tailwind phiên bản (version / 버전) evolution — thay đổi programming mô hình (model / 모델), không chỉ thêm tiện ích (utility)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **190. mẫu dùng trong môi trường vận hành (production / 운영 환경) (production pattern): mang tính ngữ nghĩa (semantic / 의미적) giao diện thành phần (component API), Tailwind là hiện thực (implementation / 구현) detail** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **189. chuyển đổi (migration) v3 → v4 theo responsibility** nối từ **188. Tailwind phiên bản (version / 버전) evolution — thay đổi programming mô hình (model / 모델), không chỉ thêm tiện ích (utility)** sang **190. mẫu dùng trong môi trường vận hành (production / 운영 환경) (production pattern): mang tính ngữ nghĩa (semantic / 의미적) giao diện thành phần (component API), Tailwind là hiện thực (implementation / 구현) detail**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 189. chuyển đổi (migration) v3 → v4 theo responsibility
 
@@ -5143,7 +5143,7 @@ Tailwind v4.2 và v4.3 tiếp tục mở rộng API theo CSS nền tảng (platf
 
 Sau chuyển đổi (migration), kiểm generated CSS diff, Preflight (lớp reset nền của Tailwind) hành vi (behavior / 동작), biến chủ đề (theme variable) đầu ra (output / 출력), nguồn (source / 소스) gói (package / 패키지) scanning, arbitrary candidates, dark-mode chiến lược (strategy / 전략) và hồi quy giao diện (visual regression). Một dự án (project / 프로젝트) “compile được” nhưng mất lớp (class / 클래스) từ dùng chung (shared / 공유) gói (package / 패키지) vẫn là chuyển đổi (migration) thất bại (fail / 실패).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **190. mẫu dùng trong môi trường vận hành (production / 운영 환경) (production pattern): mang tính ngữ nghĩa (semantic / 의미적) giao diện thành phần (component API), Tailwind là hiện thực (implementation / 구현) detail** tiếp nhận điểm tựa từ **189. chuyển đổi (migration) v3 → v4 theo responsibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tailwind CSS — Beginner → cấp cao (senior / 시니어), bản giải thích đầy đủ**, **190. mẫu dùng trong môi trường vận hành (production / 운영 환경) (production pattern): mang tính ngữ nghĩa (semantic / 의미적) giao diện thành phần (component API), Tailwind là hiện thực (implementation / 구현) detail** nối từ **189. chuyển đổi (migration) v3 → v4 theo responsibility** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 190. mẫu dùng trong môi trường vận hành (production / 운영 환경) (production pattern): mang tính ngữ nghĩa (semantic / 의미적) giao diện thành phần (component API), Tailwind là hiện thực (implementation / 구현) detail
 

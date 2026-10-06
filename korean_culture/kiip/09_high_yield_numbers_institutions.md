@@ -6,7 +6,7 @@
 
 ## Con số nên thuộc
 
-Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
+Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, rồi dùng bảng/list để đối chiếu các ngoại lệ trong ngữ cảnh.
 
 | Fact | Số |
 |---|---:|
@@ -24,7 +24,7 @@ Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong
 
 `1억원` và `연 20%` là các fact có mốc thời gian; trước kỳ thi hãy mở file corrections và notice hiện hành. Không dùng bảng này để thay thế thông báo pháp lý.
 
-> **Chuyển mạch:** Trong **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**, **Bộ bốn cần phản xạ** tiếp nhận điểm tựa từ **Con số nên thuộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cơ quan dễ nhầm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**, **Bộ bốn cần phản xạ** nối từ **Con số nên thuộc** sang **Cơ quan dễ nhầm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bộ bốn cần phản xạ
 
@@ -34,11 +34,11 @@ Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong
 ### 4대 사회보험
 `국민건강보험 · 고용보험 · 국민연금 · 산업재해보상보험`
 
-> **Chuyển mạch:** Ở chặng này của **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**, **Bộ bốn cần phản xạ** đã nêu tiêu chí phân biệt, còn **Cơ quan dễ nhầm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Cặp dễ nhầm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**, **Bộ bốn cần phản xạ** đặt tiêu chí; **Cơ quan dễ nhầm** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Cặp dễ nhầm** mở rộng hệ quả.
 
 ## Cơ quan dễ nhầm
 
-Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
+Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, rồi dùng bảng/list để đối chiếu các ngoại lệ trong ngữ cảnh.
 
 | Cơ quan | Chức năng |
 |---|---|
@@ -65,7 +65,7 @@ Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong
 | tranh chấp tiêu dùng | `한국소비자원` | hỗ trợ tư vấn và xử lý khiếu nại |
 | cần trợ giúp pháp lý | `대한법률구조공단` | tư vấn/trợ giúp pháp luật |
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**, **Cơ quan dễ nhầm** đã nêu tiêu chí phân biệt, còn **Cặp dễ nhầm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **귀화용 심화 — phản xạ thêm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**, **Cơ quan dễ nhầm** đặt tiêu chí; **Cặp dễ nhầm** dùng tiêu chí đó để kiểm tra ranh giới, rồi **귀화용 심화 — phản xạ thêm** mở rộng hệ quả.
 
 ## Cặp dễ nhầm
 
@@ -78,7 +78,7 @@ Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong
 `호남 ↔ 영남`  
 `설날 ↔ 추석`
 
-> **Chuyển mạch:** Trong **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**, **Cặp dễ nhầm** đã nêu tiêu chí phân biệt, còn **귀화용 심화 — phản xạ thêm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **09. High-Yield Numbers & Institutions — phạm vi chung + 심화**, **Cặp dễ nhầm** đã nêu tiêu chí phân biệt, còn **귀화용 심화 — phản xạ thêm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 귀화용 심화 — phản xạ thêm
 

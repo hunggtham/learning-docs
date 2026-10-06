@@ -10,7 +10,7 @@ Tài liệu này là phần cuối của bộ XML. Bạn chỉ nên đọc sau k
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **XML specification internals, XSD 1.1, XPath/XQuery/XSLT 3.x, canonicalization và các trường hợp biên (edge case / 경계 사례) cần biết để thực sự master XML** cho ta quy tắc; **1. XML 1.0 và XML 1.1** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **2. XML 1.0 Fifth Edition và Unicode names** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **XML specification internals, XSD 1.1, XPath/XQuery/XSLT 3.x, canonicalization và các trường hợp biên (edge case / 경계 사례) cần biết để thực sự master XML** nêu quy tắc; **1. XML 1.0 và XML 1.1** thử quy tắc trong tình huống, rồi **2. XML 1.0 Fifth Edition và Unicode names** mở rộng hệ quả.
 
 ## 1. XML 1.0 và XML 1.1
 
@@ -24,7 +24,7 @@ Vì vậy nếu không có yêu cầu (requirement / 요구사항) rõ, XML 1.0 
 
 ---
 
-> **Chuyển mạch:** XML 1.0/1.1 đặt version boundary; Fifth Edition và Unicode names làm rõ tên nào hợp lệ trong grammar. Phần UTF-8 tiếp theo tách encoding validity khỏi XML character validity.
+> **Nối mạch:** XML 1.0/1.1 đặt version boundary; Fifth Edition và Unicode names làm rõ tên nào hợp lệ trong grammar. Phần UTF-8 tiếp theo tách encoding validity khỏi XML character validity.
 
 ## 2. XML 1.0 Fifth Edition và Unicode names
 
@@ -44,7 +44,7 @@ Quy tắc (rule / 규칙) đúng là dùng parser/serializer/lược đồ (sche
 
 ---
 
-> **Chuyển mạch:** XML edition và Unicode names xác định vocabulary, nhưng UTF‑8 validity chưa đủ; XML character rules tiếp theo mới quyết định document hợp lệ.
+> **Nối mạch:** XML edition và Unicode names xác định vocabulary, nhưng UTF‑8 validity chưa đủ; XML character rules tiếp theo mới quyết định document hợp lệ.
 
 ## 3. Valid UTF‑8 không đồng nghĩa valid XML character
 
@@ -56,7 +56,7 @@ Vì vậy byte chuỗi (sequence / 시퀀스) có thể decode thành Unicode h�
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **4. End-of-line normalization** tiếp nhận điểm tựa từ **3. Valid UTF‑8 không đồng nghĩa valid XML character** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Attribute giá trị (value / 값) normalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **4. End-of-line normalization** nối từ **3. Valid UTF‑8 không đồng nghĩa valid XML character** sang **5. Attribute giá trị (value / 값) normalization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. End-of-line normalization
 
@@ -72,7 +72,7 @@ Nếu bạn compare raw tệp (file / 파일) byte-for-byte với dữ liệu (d
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **5. Attribute giá trị (value / 값) normalization** tiếp nhận điểm tựa từ **4. End-of-line normalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. standalone** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **5. Attribute giá trị (value / 값) normalization** nối từ **4. End-of-line normalization** sang **6. standalone**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Attribute giá trị (value / 값) normalization
 
@@ -86,7 +86,7 @@ Nếu DTD khai báo attribute kiểu (type / 타입) không phải CDATA, normal
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **6. standalone** tiếp nhận điểm tựa từ **5. Attribute giá trị (value / 값) normalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. nội bộ (internal / 내부) subset và bên ngoài (external / 외부) subset** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **6. standalone** nối từ **5. Attribute giá trị (value / 값) normalization** sang **7. nội bộ (internal / 내부) subset và bên ngoài (external / 외부) subset**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. `standalone`
 
@@ -109,7 +109,7 @@ Nó liên quan việc bên ngoài (external / 외부) markup declarations có �
 
 # DTD Deeper
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **7. nội bộ (internal / 내부) subset và bên ngoài (external / 외부) subset** tiếp nhận điểm tựa từ **6. standalone** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Parameter entities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **7. nội bộ (internal / 내부) subset và bên ngoài (external / 외부) subset** nối từ **6. standalone** sang **8. Parameter entities**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. nội bộ (internal / 내부) subset và bên ngoài (external / 외부) subset
 
@@ -133,7 +133,7 @@ hoặc kết hợp theo grammar phù hợp.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **8. Parameter entities** tiếp nhận điểm tựa từ **7. nội bộ (internal / 내부) subset và bên ngoài (external / 외부) subset** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Unparsed entities và NOTATION** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **8. Parameter entities** nối từ **7. nội bộ (internal / 내부) subset và bên ngoài (external / 외부) subset** sang **9. Unparsed entities và NOTATION**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Parameter entities
 
@@ -156,7 +156,7 @@ Nhưng bên ngoài (external / 외부) parameter entities cũng là một phần
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **9. Unparsed entities và NOTATION** tiếp nhận điểm tựa từ **8. Parameter entities** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. không gian tên (namespace / 네임스페이스) URI là identifier, không phải URL để normalize tùy ý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **9. Unparsed entities và NOTATION** nối từ **8. Parameter entities** sang **10. không gian tên (namespace / 네임스페이스) URI là identifier, không phải URL để normalize tùy ý**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Unparsed entities và NOTATION
 
@@ -170,7 +170,7 @@ Bạn không cần memorize cú pháp (syntax / 문법) chi tiết, chỉ cần 
 
 # Không gian tên (namespace / 네임스페이스) Deeper
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **10. không gian tên (namespace / 네임스페이스) URI là identifier, không phải URL để normalize tùy ý** tiếp nhận điểm tựa từ **9. Unparsed entities và NOTATION** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Expanded name phải trở thành mô hình tư duy (mental model / 사고 모델) mặc định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **10. không gian tên (namespace / 네임스페이스) URI là identifier, không phải URL để normalize tùy ý** nối từ **9. Unparsed entities và NOTATION** sang **11. Expanded name phải trở thành mô hình tư duy (mental model / 사고 모델) mặc định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. không gian tên (namespace / 네임스페이스) URI là identifier, không phải URL để normalize tùy ý
 
@@ -194,7 +194,7 @@ Không gian tên (namespace / 네임스페이스) định danh (identity / 식�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **11. Expanded name phải trở thành mô hình tư duy (mental model / 사고 모델) mặc định** gom các mảnh từ **10. không gian tên (namespace / 네임스페이스) URI là identifier, không phải URL để normalize tùy ý** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **12. QName** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **11. Expanded name phải trở thành mô hình tư duy (mental model / 사고 모델) mặc định** tổng hợp từ **10. không gian tên (namespace / 네임스페이스) URI là identifier, không phải URL để normalize tùy ý** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **12. QName** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 11. Expanded name phải trở thành mô hình tư duy (mental model / 사고 모델) mặc định
 
@@ -225,7 +225,7 @@ Mọi mã (code / 코드) security-sensitive nên match bằng không gian tên 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **12. QName** gom các mảnh từ **11. Expanded name phải trở thành mô hình tư duy (mental model / 사고 모델) mặc định** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **13. cơ sở (base / 기반) URI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **12. QName** tổng hợp từ **11. Expanded name phải trở thành mô hình tư duy (mental model / 사고 모델) mặc định** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **13. cơ sở (base / 기반) URI** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. QName
 
@@ -250,7 +250,7 @@ Nếu bạn bản sao (copy / 복사) một attribute QName-valued sang một el
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **13. cơ sở (base / 기반) URI** tiếp nhận điểm tựa từ **12. QName** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. XML thông tin (information / 정보) Set** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **13. cơ sở (base / 기반) URI** nối từ **12. QName** sang **14. XML thông tin (information / 정보) Set**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. cơ sở (base / 기반) URI
 
@@ -266,7 +266,7 @@ Ví dụ XSLT `document()`, lược đồ (schema / 스키마) imports hoặc �
 
 # Infoset và PSVI
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **14. XML thông tin (information / 정보) Set** tiếp nhận điểm tựa từ **13. cơ sở (base / 기반) URI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. PSVI là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **14. XML thông tin (information / 정보) Set** nối từ **13. cơ sở (base / 기반) URI** sang **15. PSVI là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. XML thông tin (information / 정보) Set
 
@@ -290,7 +290,7 @@ Infoset giúp bạn hiểu vì sao parse → serialize có thể đổi quote st
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **15. PSVI là gì?** tiếp nhận điểm tựa từ **14. XML thông tin (information / 정보) Set** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Default values từ lược đồ (schema / 스키마)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **15. PSVI là gì?** nối từ **14. XML thông tin (information / 정보) Set** sang **16. Default values từ lược đồ (schema / 스키마)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. PSVI là gì?
 
@@ -312,7 +312,7 @@ Nếu ứng dụng (application / 애플리케이션) dùng schema-aware XSLT/XQ
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **16. Default values từ lược đồ (schema / 스키마)** tiếp nhận điểm tựa từ **15. PSVI là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Tại sao XSD 1.1 xuất hiện?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **16. Default values từ lược đồ (schema / 스키마)** nối từ **15. PSVI là gì?** sang **17. Tại sao XSD 1.1 xuất hiện?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Default values từ lược đồ (schema / 스키마)
 
@@ -326,7 +326,7 @@ Lược đồ (schema / 스키마) có thể định nghĩa default/fixed values
 
 # XSD 1.1
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **17. Tại sao XSD 1.1 xuất hiện?** tiếp nhận điểm tựa từ **16. Default values từ lược đồ (schema / 스키마)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. xs:assert** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **17. Tại sao XSD 1.1 xuất hiện?** nối từ **16. Default values từ lược đồ (schema / 스키마)** sang **18. xs:assert**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Tại sao XSD 1.1 xuất hiện?
 
@@ -348,7 +348,7 @@ XSD 1.1 thêm mechanisms như assertions và kiểu (type / 타입) alternatives
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **18. xs:assert** tiếp nhận điểm tựa từ **17. Tại sao XSD 1.1 xuất hiện?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. kiểu (type / 타입) alternatives** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **18. xs:assert** nối từ **17. Tại sao XSD 1.1 xuất hiện?** sang **19. kiểu (type / 타입) alternatives**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. `xs:assert`
 
@@ -368,7 +368,7 @@ Ngoài ra processor hỗ trợ (support / 지원) XSD 1.1 không universal. Khô
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **19. kiểu (type / 타입) alternatives** tiếp nhận điểm tựa từ **18. xs:assert** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. XSD regex không giống regex bạn dùng trong Java** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **19. kiểu (type / 타입) alternatives** nối từ **18. xs:assert** sang **20. XSD regex không giống regex bạn dùng trong Java**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. kiểu (type / 타입) alternatives
 
@@ -382,7 +382,7 @@ Trong cross-company tích hợp (integration / 통합), hỗ trợ (support / �
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **20. XSD regex không giống regex bạn dùng trong Java** tiếp nhận điểm tựa từ **19. kiểu (type / 타입) alternatives** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. whiteSpace facet** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **20. XSD regex không giống regex bạn dùng trong Java** nối từ **19. kiểu (type / 타입) alternatives** sang **21. whiteSpace facet**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. XSD regex không giống regex bạn dùng trong Java
 
@@ -394,7 +394,7 @@ Nếu đặc tả hợp đồng (contract / 계약) có regex quan trọng, ki�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **21. whiteSpace facet** tiếp nhận điểm tựa từ **20. XSD regex không giống regex bạn dùng trong Java** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. xs:token không phải đơn vị từ (token / 토큰) bảo mật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **21. whiteSpace facet** nối từ **20. XSD regex không giống regex bạn dùng trong Java** sang **22. xs:token không phải đơn vị từ (token / 토큰) bảo mật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. `whiteSpace` facet
 
@@ -412,7 +412,7 @@ Ví dụ `xs:string` và `xs:token` không có cùng whitespace hành vi (behavi
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **22. xs:token không phải đơn vị từ (token / 토큰) bảo mật** tiếp nhận điểm tựa từ **21. whiteSpace facet** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. xs:decimal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **22. xs:token không phải đơn vị từ (token / 토큰) bảo mật** nối từ **21. whiteSpace facet** sang **23. xs:decimal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. `xs:token` không phải đơn vị từ (token / 토큰) bảo mật
 
@@ -424,7 +424,7 @@ Tên `token` dễ gây hiểu nhầm.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **23. xs:decimal** tiếp nhận điểm tựa từ **22. xs:token không phải đơn vị từ (token / 토큰) bảo mật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Date/thời gian (time / 시간) types và timezone** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **23. xs:decimal** nối từ **22. xs:token không phải đơn vị từ (token / 토큰) bảo mật** sang **24. Date/thời gian (time / 시간) types và timezone**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. `xs:decimal`
 
@@ -442,7 +442,7 @@ Nếu dùng `double`, nhị phân (binary / 이진) floating điểm (point / �
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **24. Date/thời gian (time / 시간) types và timezone** tiếp nhận điểm tựa từ **23. xs:decimal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. định danh (identity / 식별자) các ràng buộc (constraints / 제약조건들) không dùng arbitrary XPath 3.1** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **24. Date/thời gian (time / 시간) types và timezone** nối từ **23. xs:decimal** sang **25. định danh (identity / 식별자) các ràng buộc (constraints / 제약조건들) không dùng arbitrary XPath 3.1**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Date/thời gian (time / 시간) types và timezone
 
@@ -462,7 +462,7 @@ sang Java kiểu (type / 타입) nào phụ thuộc ngữ nghĩa (semantic / 의
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **24. Date/thời gian (time / 시간) types và timezone** xác định đầu vào; **25. định danh (identity / 식별자) các ràng buộc (constraints / 제약조건들) không dùng arbitrary XPath 3.1** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **26. Vì sao phải biết XPath phiên bản (version / 버전)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **24. Date/thời gian (time / 시간) types và timezone** đặt đầu vào cho **25. định danh (identity / 식별자) các ràng buộc (constraints / 제약조건들) không dùng arbitrary XPath 3.1**, rồi **26. Vì sao phải biết XPath phiên bản (version / 버전)?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 25. định danh (identity / 식별자) các ràng buộc (constraints / 제약조건들) không dùng arbitrary XPath 3.1
 
@@ -474,7 +474,7 @@ Selectors/fields của `xs:key`, `xs:keyref`, `xs:unique` dùng một XPath subs
 
 # XPath 1.0 đến XPath 3.1
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **25. định danh (identity / 식별자) các ràng buộc (constraints / 제약조건들) không dùng arbitrary XPath 3.1** xác định đầu vào; **26. Vì sao phải biết XPath phiên bản (version / 버전)?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **27. XPath 1.0 mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **25. định danh (identity / 식별자) các ràng buộc (constraints / 제약조건들) không dùng arbitrary XPath 3.1** đặt đầu vào cho **26. Vì sao phải biết XPath phiên bản (version / 버전)?**, rồi **27. XPath 1.0 mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 26. Vì sao phải biết XPath phiên bản (version / 버전)?
 
@@ -492,7 +492,7 @@ schema-aware không?
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **27. XPath 1.0 mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **26. Vì sao phải biết XPath phiên bản (version / 버전)?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **28. hiện đại (modern / 현대적) XPath mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **27. XPath 1.0 mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **26. Vì sao phải biết XPath phiên bản (version / 버전)?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **28. hiện đại (modern / 현대적) XPath mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 27. XPath 1.0 mô hình tư duy (mental model / 사고 모델)
 
@@ -509,7 +509,7 @@ Nhiều built-in trình duyệt (browser / 브라우저) XPath APIs vẫn gần 
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **28. hiện đại (modern / 현대적) XPath mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **27. XPath 1.0 mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **29. Effective Boolean giá trị (value / 값)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **28. hiện đại (modern / 현대적) XPath mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **27. XPath 1.0 mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **29. Effective Boolean giá trị (value / 값)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 28. hiện đại (modern / 현대적) XPath mô hình tư duy (mental model / 사고 모델)
 
@@ -528,7 +528,7 @@ XDM là nền tảng.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **29. Effective Boolean giá trị (value / 값)** gom các mảnh từ **28. hiện đại (modern / 현대적) XPath mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **30. General comparison vs giá trị (value / 값) comparison** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **29. Effective Boolean giá trị (value / 값)** tổng hợp từ **28. hiện đại (modern / 현대적) XPath mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **30. General comparison vs giá trị (value / 값) comparison** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 29. Effective Boolean giá trị (value / 값)
 
@@ -542,7 +542,7 @@ Cấp cao (senior / 시니어) XPath phải đọc EBV rules thay vì suy từ n
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **30. General comparison vs giá trị (value / 값) comparison** tiếp nhận điểm tựa từ **29. Effective Boolean giá trị (value / 값)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. nút (node / 노드) định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **30. General comparison vs giá trị (value / 값) comparison** nối từ **29. Effective Boolean giá trị (value / 값)** sang **31. nút (node / 노드) định danh (identity / 식별자)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. General comparison vs giá trị (value / 값) comparison
 
@@ -574,7 +574,7 @@ General comparisons có sequence-oriented ngữ nghĩa (semantics / 의미론), 
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **31. nút (node / 노드) định danh (identity / 식별자)** tiếp nhận điểm tựa từ **30. General comparison vs giá trị (value / 값) comparison** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Maps trong XPath/XQuery 3.1** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **31. nút (node / 노드) định danh (identity / 식별자)** nối từ **30. General comparison vs giá trị (value / 값) comparison** sang **32. Maps trong XPath/XQuery 3.1**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. nút (node / 노드) định danh (identity / 식별자)
 
@@ -594,7 +594,7 @@ is
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **31. nút (node / 노드) định danh (identity / 식별자)** xác định đầu vào; **32. Maps trong XPath/XQuery 3.1** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **33. Arrays** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **31. nút (node / 노드) định danh (identity / 식별자)** đặt đầu vào cho **32. Maps trong XPath/XQuery 3.1**, rồi **33. Arrays** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 32. Maps trong XPath/XQuery 3.1
 
@@ -611,7 +611,7 @@ map {
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **32. Maps trong XPath/XQuery 3.1** xác định đầu vào; **33. Arrays** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **34. hàm (function / 함수) items** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **32. Maps trong XPath/XQuery 3.1** đặt đầu vào cho **33. Arrays**, rồi **34. hàm (function / 함수) items** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 33. Arrays
 
@@ -627,7 +627,7 @@ là first-class items trong 3.1 ecosystem.
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **34. hàm (function / 함수) items** tiếp nhận điểm tựa từ **33. Arrays** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Computed constructors trong XQuery** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **34. hàm (function / 함수) items** nối từ **33. Arrays** sang **35. Computed constructors trong XQuery**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. hàm (function / 함수) items
 
@@ -641,7 +641,7 @@ Nếu bạn chỉ biết XPath 1.0, đây là một thay đổi mô hình tư du
 
 # XQuery và XSLT hiện đại
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **35. Computed constructors trong XQuery** tiếp nhận điểm tựa từ **34. hàm (function / 함수) items** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. XQuery modules** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **35. Computed constructors trong XQuery** nối từ **34. hàm (function / 함수) items** sang **36. XQuery modules**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Computed constructors trong XQuery
 
@@ -658,7 +658,7 @@ element user {
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **36. XQuery modules** tiếp nhận điểm tựa từ **35. Computed constructors trong XQuery** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. XSLT 3.0 packages** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **36. XQuery modules** nối từ **35. Computed constructors trong XQuery** sang **37. XSLT 3.0 packages**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. XQuery modules
 
@@ -668,7 +668,7 @@ Một số XML-native cơ sở dữ liệu (database / 데이터베이스) dùng
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **37. XSLT 3.0 packages** tiếp nhận điểm tựa từ **36. XQuery modules** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. XSLT accumulators** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **37. XSLT 3.0 packages** nối từ **36. XQuery modules** sang **38. XSLT accumulators**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. XSLT 3.0 packages
 
@@ -680,7 +680,7 @@ Chúng có concepts về exposed/accepted components, visibility và versioning.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **38. XSLT accumulators** tiếp nhận điểm tựa từ **37. XSLT 3.0 packages** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Modes và on-no-match** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **38. XSLT accumulators** nối từ **37. XSLT 3.0 packages** sang **39. Modes và on-no-match**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. XSLT accumulators
 
@@ -692,7 +692,7 @@ Chúng là ví dụ về việc XSLT 3.0 giải quyết vấn đề mà imperati
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **39. Modes và on-no-match** tiếp nhận điểm tựa từ **38. XSLT accumulators** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. định danh (identity / 식별자) Transformation mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **39. Modes và on-no-match** nối từ **38. XSLT accumulators** sang **40. định danh (identity / 식별자) Transformation mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Modes và `on-no-match`
 
@@ -704,7 +704,7 @@ Ví dụ một chế độ (mode / 모드) có thể nói “nếu không có te
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **40. định danh (identity / 식별자) Transformation mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **39. Modes và on-no-match** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. XML danh mục (catalog / 카탈로그) sâu hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **40. định danh (identity / 식별자) Transformation mẫu (pattern / 패턴)** nối từ **39. Modes và on-no-match** sang **41. XML danh mục (catalog / 카탈로그) sâu hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. định danh (identity / 식별자) Transformation mẫu (pattern / 패턴)
 
@@ -725,7 +725,7 @@ Mẫu (pattern / 패턴) này cực kỳ quan trọng trong di chuyển (migrati
 
 # Resolver và bên ngoài (external / 외부) Resources
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **41. XML danh mục (catalog / 카탈로그) sâu hơn** tiếp nhận điểm tựa từ **40. định danh (identity / 식별자) Transformation mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Controlled URI Resolver mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **41. XML danh mục (catalog / 카탈로그) sâu hơn** nối từ **40. định danh (identity / 식별자) Transformation mẫu (pattern / 패턴)** sang **42. Controlled URI Resolver mẫu (pattern / 패턴)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. XML danh mục (catalog / 카탈로그) sâu hơn
 
@@ -737,7 +737,7 @@ Trong bản dựng (build / 빌드)/tích hợp (integration / 통합) môi trư
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **42. Controlled URI Resolver mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **41. XML danh mục (catalog / 카탈로그) sâu hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Canonicalization giải quyết vấn đề gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **42. Controlled URI Resolver mẫu (pattern / 패턴)** nối từ **41. XML danh mục (catalog / 카탈로그) sâu hơn** sang **43. Canonicalization giải quyết vấn đề gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Controlled URI Resolver mẫu (pattern / 패턴)
 
@@ -759,7 +759,7 @@ Mẫu (pattern / 패턴) này áp dụng với XSD imports, XSLT includes/import
 
 # Chuẩn gốc (canonical / 정본) XML
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, sau nội dung của **42. Controlled URI Resolver mẫu (pattern / 패턴)**, **43. Canonicalization giải quyết vấn đề gì?** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **44. Inclusive và Exclusive Canonicalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, sau nội dung của **42. Controlled URI Resolver mẫu (pattern / 패턴)**, **43. Canonicalization giải quyết vấn đề gì?** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **44. Inclusive và Exclusive Canonicalization** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 43. Canonicalization giải quyết vấn đề gì?
 
@@ -773,7 +773,7 @@ Nó được dùng nhiều nhất trong digital signatures.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **44. Inclusive và Exclusive Canonicalization** tiếp nhận điểm tựa từ **43. Canonicalization giải quyết vấn đề gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. tham chiếu (reference / 참조) là trọng tâm của XML Signature** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **44. Inclusive và Exclusive Canonicalization** nối từ **43. Canonicalization giải quyết vấn đề gì?** sang **45. tham chiếu (reference / 참조) là trọng tâm của XML Signature**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. Inclusive và Exclusive Canonicalization
 
@@ -787,7 +787,7 @@ Bạn không cần tự implement, nhưng phải biết thuật toán (algorithm
 
 # XML Signature sâu hơn
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **45. tham chiếu (reference / 참조) là trọng tâm của XML Signature** tiếp nhận điểm tựa từ **44. Inclusive và Exclusive Canonicalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. ID typing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **45. tham chiếu (reference / 참조) là trọng tâm của XML Signature** nối từ **44. Inclusive và Exclusive Canonicalization** sang **46. ID typing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. tham chiếu (reference / 참조) là trọng tâm của XML Signature
 
@@ -812,7 +812,7 @@ Nếu bỏ step cuối, vẫn có thể có application-level vulnerability.
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **46. ID typing** tiếp nhận điểm tựa từ **45. tham chiếu (reference / 참조) là trọng tâm của XML Signature** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **47. Signature Wrapping Defense** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **46. ID typing** nối từ **45. tham chiếu (reference / 참조) là trọng tâm của XML Signature** sang **47. Signature Wrapping Defense**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 46. ID typing
 
@@ -834,7 +834,7 @@ Nếu attacker tạo duplicate-looking IDs hoặc ứng dụng (application / �
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **47. Signature Wrapping Defense** tiếp nhận điểm tựa từ **46. ID typing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **48. không gian tên (namespace / 네임스페이스) confusion attack** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **47. Signature Wrapping Defense** nối từ **46. ID typing** sang **48. không gian tên (namespace / 네임스페이스) confusion attack**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. Signature Wrapping Defense
 
@@ -854,7 +854,7 @@ Correct mẫu (pattern / 패턴) là verifier trả hoặc bind chính xác (exa
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **48. không gian tên (namespace / 네임스페이스) confusion attack** tiếp nhận điểm tựa từ **47. Signature Wrapping Defense** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **49. Parser differential** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **48. không gian tên (namespace / 네임스페이스) confusion attack** nối từ **47. Signature Wrapping Defense** sang **49. Parser differential**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. không gian tên (namespace / 네임스페이스) confusion attack
 
@@ -878,7 +878,7 @@ Security-sensitive XML processing phải check expanded name, không chỉ cục
 
 # Parser Differential và tài nguyên (resource / 자원) Limits
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **49. Parser differential** tiếp nhận điểm tựa từ **48. không gian tên (namespace / 네임스페이스) confusion attack** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **50. XXE disabled vẫn chưa đủ chống DoS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **49. Parser differential** nối từ **48. không gian tên (namespace / 네임스페이스) confusion attack** sang **50. XXE disabled vẫn chưa đủ chống DoS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. Parser differential
 
@@ -892,7 +892,7 @@ Cấu hình (configuration / 구성) phải tường minh (explicit / 명시적)
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **50. XXE disabled vẫn chưa đủ chống DoS** tiếp nhận điểm tựa từ **49. Parser differential** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **51. DOM bộ nhớ (memory / 메모리) amplification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **50. XXE disabled vẫn chưa đủ chống DoS** nối từ **49. Parser differential** sang **51. DOM bộ nhớ (memory / 메모리) amplification**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 50. XXE disabled vẫn chưa đủ chống DoS
 
@@ -904,7 +904,7 @@ Vì vậy XML ranh giới (boundary / 경계) cần kích thước (size / 크�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **51. DOM bộ nhớ (memory / 메모리) amplification** tiếp nhận điểm tựa từ **50. XXE disabled vẫn chưa đủ chống DoS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **52. Pretty-print có thể thay đổi dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **51. DOM bộ nhớ (memory / 메모리) amplification** nối từ **50. XXE disabled vẫn chưa đủ chống DoS** sang **52. Pretty-print có thể thay đổi dữ liệu (data / 데이터)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 51. DOM bộ nhớ (memory / 메모리) amplification
 
@@ -920,7 +920,7 @@ Streaming thiết kế (design / 설계) phải dựa trên benchmark và limits
 
 # Serialization và Lexical Preservation
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **51. DOM bộ nhớ (memory / 메모리) amplification** nêu điều cần giải thích; **52. Pretty-print có thể thay đổi dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **53. Parse → serialize không giữ chính xác (exact / 정확한) nguồn (source / 소스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **51. DOM bộ nhớ (memory / 메모리) amplification** đặt vấn đề; **52. Pretty-print có thể thay đổi dữ liệu (data / 데이터)** đối chiếu bằng chứng, rồi **53. Parse → serialize không giữ chính xác (exact / 정확한) nguồn (source / 소스)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 52. Pretty-print có thể thay đổi dữ liệu (data / 데이터)
 
@@ -944,7 +944,7 @@ Document-centric XML phải được format cẩn thận.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **52. Pretty-print có thể thay đổi dữ liệu (data / 데이터)** nêu điều cần giải thích; **53. Parse → serialize không giữ chính xác (exact / 정확한) nguồn (source / 소스)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **54. Prefix có thể đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **52. Pretty-print có thể thay đổi dữ liệu (data / 데이터)** đặt vấn đề; **53. Parse → serialize không giữ chính xác (exact / 정확한) nguồn (source / 소스)** đối chiếu bằng chứng, rồi **54. Prefix có thể đổi** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 53. Parse → serialize không giữ chính xác (exact / 정확한) nguồn (source / 소스)
 
@@ -964,7 +964,7 @@ Nếu bạn cần chính xác (exact / 정확한) lexical preservation, ordinary
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **53. Parse → serialize không giữ chính xác (exact / 정확한) nguồn (source / 소스)** nêu điều cần giải thích; **54. Prefix có thể đổi** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **55. Attribute thứ tự (order / 순서) không phải nghiệp vụ (business / 비즈니스) thứ tự (order / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **53. Parse → serialize không giữ chính xác (exact / 정확한) nguồn (source / 소스)** đặt vấn đề; **54. Prefix có thể đổi** đối chiếu bằng chứng, rồi **55. Attribute thứ tự (order / 순서) không phải nghiệp vụ (business / 비즈니스) thứ tự (order / 순서)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 54. Prefix có thể đổi
 
@@ -986,7 +986,7 @@ Bên tiêu thụ (consumer / 소비자) không được depend chính xác (exac
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **55. Attribute thứ tự (order / 순서) không phải nghiệp vụ (business / 비즈니스) thứ tự (order / 순서)** tiếp nhận điểm tựa từ **54. Prefix có thể đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **56. Empty element lexical form** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **55. Attribute thứ tự (order / 순서) không phải nghiệp vụ (business / 비즈니스) thứ tự (order / 순서)** nối từ **54. Prefix có thể đổi** sang **56. Empty element lexical form**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. Attribute thứ tự (order / 순서) không phải nghiệp vụ (business / 비즈니스) thứ tự (order / 순서)
 
@@ -998,7 +998,7 @@ Canonicalization có thứ tự (ordering / 순서) quy tắc (rule / 규칙) ri
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **56. Empty element lexical form** tiếp nhận điểm tựa từ **55. Attribute thứ tự (order / 순서) không phải nghiệp vụ (business / 비즈니스) thứ tự (order / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **57. thực thể (entity / 엔터티) references có thể không được preserve** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **56. Empty element lexical form** nối từ **55. Attribute thứ tự (order / 순서) không phải nghiệp vụ (business / 비즈니스) thứ tự (order / 순서)** sang **57. thực thể (entity / 엔터티) references có thể không được preserve**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 56. Empty element lexical form
 Phần này nối mạch bài học với “56. Empty element lexical form”, nêu mục đích, cách vận hành và giới hạn trước khi đi vào ví dụ.
@@ -1019,7 +1019,7 @@ Raw string diff không phải ngữ nghĩa (semantic / 의미적) XML diff.
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, sau nội dung của **56. Empty element lexical form**, **57. thực thể (entity / 엔터티) references có thể không được preserve** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **58. CDATA có thể mất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, sau nội dung của **56. Empty element lexical form**, **57. thực thể (entity / 엔터티) references có thể không được preserve** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **58. CDATA có thể mất** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 57. thực thể (entity / 엔터티) references có thể không được preserve
 
@@ -1037,7 +1037,7 @@ Nghiệp vụ (business / 비즈니스) meaning không được phụ thuộc th
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **58. CDATA có thể mất** tiếp nhận điểm tựa từ **57. thực thể (entity / 엔터티) references có thể không được preserve** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **59. ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약) vs lexical đặc tả hợp đồng (contract / 계약)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **58. CDATA có thể mất** nối từ **57. thực thể (entity / 엔터티) references có thể không được preserve** sang **59. ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약) vs lexical đặc tả hợp đồng (contract / 계약)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 58. CDATA có thể mất
 
@@ -1059,7 +1059,7 @@ Vì vậy không được dùng “có CDATA hay không” làm nghiệp vụ (b
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **59. ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약) vs lexical đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **58. CDATA có thể mất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **60. RELAX NG** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **59. ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약) vs lexical đặc tả hợp đồng (contract / 계약)** nối từ **58. CDATA có thể mất** sang **60. RELAX NG**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 59. ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약) vs lexical đặc tả hợp đồng (contract / 계약)
 
@@ -1092,7 +1092,7 @@ trừ khi giao thức (protocol / 프로토콜) explicitly yêu cầu chuẩn g�
 
 # Alternative lược đồ (schema / 스키마) Languages
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **60. RELAX NG** tiếp nhận điểm tựa từ **59. ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약) vs lexical đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **61. Schematron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **60. RELAX NG** nối từ **59. ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약) vs lexical đặc tả hợp đồng (contract / 계약)** sang **61. Schematron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 60. RELAX NG
 
@@ -1106,7 +1106,7 @@ Bạn không nhất thiết phải dùng nó trong Java enterprise dự án (pro
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **61. Schematron** tiếp nhận điểm tựa từ **60. RELAX NG** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **62. Kết hợp XSD và Schematron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **61. Schematron** nối từ **60. RELAX NG** sang **62. Kết hợp XSD và Schematron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 61. Schematron
 
@@ -1130,7 +1130,7 @@ Schematron thường dùng XPath expressions trong assertions.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **62. Kết hợp XSD và Schematron** tiếp nhận điểm tựa từ **61. Schematron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **63. Russian Doll** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **62. Kết hợp XSD và Schematron** nối từ **61. Schematron** sang **63. Russian Doll**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 62. Kết hợp XSD và Schematron
 
@@ -1153,7 +1153,7 @@ Không bắt một tầng (layer / 계층) làm mọi việc.
 
 # XSD thiết kế (design / 설계) Patterns
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **63. Russian Doll** tiếp nhận điểm tựa từ **62. Kết hợp XSD và Schematron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **64. Venetian Blind** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **63. Russian Doll** nối từ **62. Kết hợp XSD và Schematron** sang **64. Venetian Blind**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 63. Russian Doll
 
@@ -1167,7 +1167,7 @@ Mẫu (pattern / 패턴) phù hợp vocabulary nhỏ, cấu trúc (structure / �
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **64. Venetian Blind** tiếp nhận điểm tựa từ **63. Russian Doll** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **65. Salami Slice** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **64. Venetian Blind** nối từ **63. Russian Doll** sang **65. Salami Slice**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 64. Venetian Blind
 
@@ -1179,7 +1179,7 @@ Venetian Blind dùng toàn cục (global / 전역) named complex types nhưng c�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **65. Salami Slice** tiếp nhận điểm tựa từ **64. Venetian Blind** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **66. Garden of Eden** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **65. Salami Slice** nối từ **64. Venetian Blind** sang **66. Garden of Eden**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 65. Salami Slice
 
@@ -1191,7 +1191,7 @@ Nhược điểm là toàn cục (global / 전역) symbol không gian (space / �
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **66. Garden of Eden** tiếp nhận điểm tựa từ **65. Salami Slice** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **67. Contract-first** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **66. Garden of Eden** nối từ **65. Salami Slice** sang **67. Contract-first**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 66. Garden of Eden
 
@@ -1207,7 +1207,7 @@ Không có mẫu (pattern / 패턴) “cấp cao (senior / 시니어) nhất”.
 
 # Contract-first và Code-first
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **67. Contract-first** tiếp nhận điểm tựa từ **66. Garden of Eden** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **68. Code-first** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **67. Contract-first** nối từ **66. Garden of Eden** sang **68. Code-first**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 67. Contract-first
 
@@ -1226,7 +1226,7 @@ Nó phù hợp B2B/enterprise tích hợp (integration / 통합) nơi nhiều ng
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **68. Code-first** tiếp nhận điểm tựa từ **67. Contract-first** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **69. ranh giới (boundary / 경계) Parser** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **68. Code-first** nối từ **67. Contract-first** sang **69. ranh giới (boundary / 경계) Parser**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 68. Code-first
 
@@ -1247,7 +1247,7 @@ Nếu đặc tả hợp đồng (contract / 계약) tồn tại 10 năm và có 
 
 # Master thiết kế (design / 설계) Patterns
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **68. Code-first** đã nêu tiêu chí phân biệt, còn **69. ranh giới (boundary / 경계) Parser** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **70. Resolver Gateway** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **68. Code-first** đặt tiêu chí; **69. ranh giới (boundary / 경계) Parser** dùng tiêu chí đó để kiểm tra ranh giới, rồi **70. Resolver Gateway** mở rộng hệ quả.
 
 ## 69. ranh giới (boundary / 경계) Parser
 
@@ -1267,7 +1267,7 @@ Nghiệp vụ (business / 비즈니스) mã (code / 코드) chỉ nhận typed/t
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **69. ranh giới (boundary / 경계) Parser** đã nêu tiêu chí phân biệt, còn **70. Resolver Gateway** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **71. lược đồ (schema / 스키마) Registry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **69. ranh giới (boundary / 경계) Parser** đặt tiêu chí; **70. Resolver Gateway** dùng tiêu chí đó để kiểm tra ranh giới, rồi **71. lược đồ (schema / 스키마) Registry** mở rộng hệ quả.
 
 ## 70. Resolver Gateway
 
@@ -1279,7 +1279,7 @@ Không để XSLT/XSD/parser tự gọi internet ở nhiều nơi.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **71. lược đồ (schema / 스키마) Registry** tiếp nhận điểm tựa từ **70. Resolver Gateway** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **72. chuẩn gốc (canonical / 정본) mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **71. lược đồ (schema / 스키마) Registry** nối từ **70. Resolver Gateway** sang **72. chuẩn gốc (canonical / 정본) mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 71. lược đồ (schema / 스키마) Registry
 
@@ -1291,7 +1291,7 @@ Lược đồ (schema / 스키마) phải được quản lý như API sản ph�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, sau nội dung của **71. lược đồ (schema / 스키마) Registry**, **72. chuẩn gốc (canonical / 정본) mô hình (model / 모델)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **73. Transformation chuỗi xử lý (pipeline / 파이프라인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, sau nội dung của **71. lược đồ (schema / 스키마) Registry**, **72. chuẩn gốc (canonical / 정본) mô hình (model / 모델)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **73. Transformation chuỗi xử lý (pipeline / 파이프라인)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 72. chuẩn gốc (canonical / 정본) mô hình (model / 모델)
 
@@ -1301,7 +1301,7 @@ Vendor-specific XML được transform thành nội bộ (internal / 내부) mô
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **72. chuẩn gốc (canonical / 정본) mô hình (model / 모델)** xác định đầu vào; **73. Transformation chuỗi xử lý (pipeline / 파이프라인)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **74. Verified nút (node / 노드) Binding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **72. chuẩn gốc (canonical / 정본) mô hình (model / 모델)** đặt đầu vào cho **73. Transformation chuỗi xử lý (pipeline / 파이프라인)**, rồi **74. Verified nút (node / 노드) Binding** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 73. Transformation chuỗi xử lý (pipeline / 파이프라인)
 
@@ -1318,7 +1318,7 @@ Mỗi stage nhỏ và testable.
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **73. Transformation chuỗi xử lý (pipeline / 파이프라인)** xác định đầu vào; **74. Verified nút (node / 노드) Binding** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **75. Full gỡ lỗi (debug / 디버그) luồng (flow / 흐름)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **73. Transformation chuỗi xử lý (pipeline / 파이프라인)** đặt đầu vào cho **74. Verified nút (node / 노드) Binding**, rồi **75. Full gỡ lỗi (debug / 디버그) luồng (flow / 흐름)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 74. Verified nút (node / 노드) Binding
 
@@ -1332,7 +1332,7 @@ Nghiệp vụ (business / 비즈니스) mã (code / 코드) không tự truy v�
 
 # Gỡ lỗi (debug / 디버그) và rà soát (review / 검토)
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **74. Verified nút (node / 노드) Binding** xác định đầu vào; **75. Full gỡ lỗi (debug / 디버그) luồng (flow / 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **76. Master bảo mật (security / 보안) rà soát (review / 검토)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **74. Verified nút (node / 노드) Binding** đặt đầu vào cho **75. Full gỡ lỗi (debug / 디버그) luồng (flow / 흐름)**, rồi **76. Master bảo mật (security / 보안) rà soát (review / 검토)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 75. Full gỡ lỗi (debug / 디버그) luồng (flow / 흐름)
 
@@ -1361,7 +1361,7 @@ signature reference target node nào?
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **75. Full gỡ lỗi (debug / 디버그) luồng (flow / 흐름)** xác định đầu vào; **76. Master bảo mật (security / 보안) rà soát (review / 검토)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **77. Master hiệu năng (performance / 성능) rà soát (review / 검토)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **75. Full gỡ lỗi (debug / 디버그) luồng (flow / 흐름)** đặt đầu vào cho **76. Master bảo mật (security / 보안) rà soát (review / 검토)**, rồi **77. Master hiệu năng (performance / 성능) rà soát (review / 검토)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 76. Master bảo mật (security / 보안) rà soát (review / 검토)
 
@@ -1375,7 +1375,7 @@ Bảo mật (security / 보안) XML là chuỗi xử lý (pipeline / 파이프�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **77. Master hiệu năng (performance / 성능) rà soát (review / 검토)** tiếp nhận điểm tựa từ **76. Master bảo mật (security / 보안) rà soát (review / 검토)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **78. Toàn bộ XML processing luồng (flow / 흐름)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **77. Master hiệu năng (performance / 성능) rà soát (review / 검토)** nối từ **76. Master bảo mật (security / 보안) rà soát (review / 검토)** sang **78. Toàn bộ XML processing luồng (flow / 흐름)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 77. Master hiệu năng (performance / 성능) rà soát (review / 검토)
 
@@ -1387,7 +1387,7 @@ Một hiệu năng (performance / 성능) bug XML thường đến từ kiến t
 
 # Full mô hình tư duy (mental model / 사고 모델)
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **77. Master hiệu năng (performance / 성능) rà soát (review / 검토)** xác định đầu vào; **78. Toàn bộ XML processing luồng (flow / 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **79. Khi nào có thể nói đã master XML?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **XML — Master Supplement**, **77. Master hiệu năng (performance / 성능) rà soát (review / 검토)** đặt đầu vào cho **78. Toàn bộ XML processing luồng (flow / 흐름)**, rồi **79. Khi nào có thể nói đã master XML?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 78. Toàn bộ XML processing luồng (flow / 흐름)
 
@@ -1427,7 +1427,7 @@ Mỗi arrow là một nơi có thể có bug, hiệu năng (performance / 성능
 
 ---
 
-> **Chuyển mạch:** Trong **XML — Master Supplement**, **78. Toàn bộ XML processing luồng (flow / 흐름)** xác định đầu vào; **79. Khi nào có thể nói đã master XML?** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **80. Cách học bộ bốn tệp (file / 파일)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **XML — Master Supplement**, **78. Toàn bộ XML processing luồng (flow / 흐름)** đặt đầu vào cho **79. Khi nào có thể nói đã master XML?**, rồi **80. Cách học bộ bốn tệp (file / 파일)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 79. Khi nào có thể nói đã master XML?
 
@@ -1439,7 +1439,7 @@ Bạn có thể coi mình có XML mastery foundation khi nhìn một hệ thốn
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **XML — Master Supplement**, **80. Cách học bộ bốn tệp (file / 파일)** tiếp nhận điểm tựa từ **79. Khi nào có thể nói đã master XML?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **XML — Master Supplement**, **80. Cách học bộ bốn tệp (file / 파일)** nối từ **79. Khi nào có thể nói đã master XML?** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 80. Cách học bộ bốn tệp (file / 파일)
 

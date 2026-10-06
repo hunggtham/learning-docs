@@ -18,7 +18,7 @@ Bản tóm tắt chương 경제 ghi `1인당 최고 5천만원`.
 
 Đối chiếu: https://www.fsc.go.kr/no010101/85200
 
-> **Chuyển mạch:** Từ hạn mức bảo vệ tiền gửi, ta chuyển sang lãi suất tối đa để tiếp tục luyện cách đọc một con số cùng mốc thời gian.
+> **Nối mạch:** Từ hạn mức bảo vệ tiền gửi, ta chuyển sang lãi suất tối đa để tiếp tục luyện cách đọc một con số cùng mốc thời gian.
 
 ## 2. 법정 최고금리 — lãi suất tối đa theo luật
 
@@ -32,7 +32,7 @@ Bản tóm tắt chương 법 ghi `연 24% 이내`.
 
 Đối chiếu Bộ Tư pháp: https://www.moj.go.kr/bbs/moj/182/545579/artclView.do
 
-> **Chuyển mạch:** Từ quy định tài chính, ta chuyển sang thống kê hộ gia đình; cả hai đều cần ghi rõ năm đo trước khi so sánh.
+> **Nối mạch:** Từ quy định tài chính, ta chuyển sang thống kê hộ gia đình; cả hai đều cần ghi rõ năm đo trước khi so sánh.
 
 ## 3. 1인 가구 비율
 
@@ -45,7 +45,7 @@ Theo 인구주택총조사 2024, **1인가구 chiếm 36.1%** số hộ gia đì
 
 Đối chiếu 국가데이터처/통계청: 2024 인구주택총조사, công bố 2025-07-29.
 
-> **Chuyển mạch:** Sau tỷ lệ hộ một người, dân số Seoul nhắc ta phân biệt dân số đăng ký với quy mô vùng đô thị.
+> **Nối mạch:** Sau tỷ lệ hộ một người, dân số Seoul nhắc ta phân biệt dân số đăng ký với quy mô vùng đô thị.
 
 ## 4. 서울 인구
 
@@ -59,7 +59,7 @@ Bản tóm tắt địa lý dùng con số gần `약 1,000만 명`. Đây là m
 
 Không nên biến con số 10 triệu thành fact bất biến.
 
-> **Chuyển mạch:** Dân số và tôn giáo đều cần đọc theo mốc điều tra; các số về du học sinh, tuyển sinh và hỗ trợ xã hội còn biến động nhanh hơn.
+> **Nối mạch:** Dân số và tôn giáo đều cần đọc theo mốc điều tra; các số về du học sinh, tuyển sinh và hỗ trợ xã hội còn biến động nhanh hơn.
 
 ## 5. 종교 통계
 
@@ -71,7 +71,7 @@ Biểu đồ trong chương 문화 dùng census **2015**. Hãy đọc nó như m
 - Nhiều tôn giáo cùng tồn tại.
 - `부처님오신날`, `성탄절` đều là ngày nghỉ lễ công cộng.
 
-> **Chuyển mạch:** Sau các thống kê biến động, hãy quay về thông tin cấu trúc của KIIP vì số giờ học cũng có thể được điều chỉnh bằng chính sách.
+> **Nối mạch:** Sau các thống kê biến động, hãy quay về thông tin cấu trúc của KIIP vì số giờ học cũng có thể được điều chỉnh bằng chính sách.
 
 ## 6. 유학생 수, 대학 진학률 và các statistic khác
 
@@ -83,7 +83,7 @@ Cách học:
 
 Các cổng cần kiểm tra: `정부24`, `교육부`, `보건복지부`, `법무부`.
 
-> **Chuyển mạch:** Số giờ học cho biết phạm vi chương trình; định dạng kỳ đánh giá vẫn phải đọc theo notice của kỳ thi cụ thể.
+> **Nối mạch:** Số giờ học cho biết phạm vi chương trình; định dạng kỳ đánh giá vẫn phải đọc theo notice của kỳ thi cụ thể.
 
 ## 7. KIIP hiện tại: course hours của 한국사회 이해
 
@@ -96,7 +96,7 @@ Trang Bộ Tư pháp hiện ghi:
 
 Trang thông tin hiện hành: https://www.moj.go.kr/moj/369/subview.do
 
-> **Chuyển mạch:** Sau định dạng đánh giá, ta quay lại các fact chính trị có tính cấu trúc; đó là những điểm tương đối ổn định hơn các con số thống kê.
+> **Nối mạch:** Sau định dạng đánh giá, ta quay lại các fact chính trị có tính cấu trúc; đó là những điểm tương đối ổn định hơn các con số thống kê.
 
 ## 8. 종합평가 format — phải kiểm tra notice trước kỳ thi
 
@@ -117,7 +117,7 @@ Trang đối chiếu:
 - KIIP 평가: https://www.kiiptest.org/
 - 사회통합프로그램 개편방향 보도자료 (2026-07-12): trang Bộ Tư pháp/출입국·외국인정책본부.
 
-> **Chuyển mạch:** Các fact chính trị ổn định là bước đệm để gom những fact nền khác trước khi quay về lộ trình học chính.
+> **Nối mạch:** Các fact chính trị ổn định là bước đệm để gom những fact nền khác trước khi quay về lộ trình học chính.
 
 ## 9. 정치 facts có tính cấu trúc
 
@@ -136,7 +136,7 @@ Các điểm sau vẫn là baseline high-yield trong tài liệu chính thức v
 
 ## 10. Các fact tương đối ổn định khác
 
-Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, sau đó dùng bảng/list để tự kiểm tra và phân biệt ngoại lệ.
+Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, rồi dùng bảng/list để đối chiếu các ngoại lệ trong ngữ cảnh.
 
 - 4대 사회보험
 - 112 / 119 / 117 / 1345

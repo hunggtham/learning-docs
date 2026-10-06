@@ -12,7 +12,7 @@ v(t)=V_0\cos(\omega t+\phi).
 
 Resistor phản ứng tức thời trong lý tưởng (ideal) mô hình (model / 모델), nhưng capacitor và inductor lưu năng lượng (energy / 에너지) trong electric và magnetic các trường (fields). Vì vậy dòng điện có thể lệch pha (phase) so với điện áp.
 
-> **Chuyển mạch:** Trong **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **phức (Complex) number và phasor** tiếp nhận điểm tựa từ **Vì sao AC cần ngôn ngữ mới?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Series RLC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **phức (Complex) number và phasor** nối từ **Vì sao AC cần ngôn ngữ mới?** sang **Series RLC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## phức (Complex) number và phasor
 
@@ -30,7 +30,7 @@ Z_L=i\omega L.
 
 độ lớn (Magnitude) của trở kháng cho ratio biên độ (amplitude) `V/I`; argument cho pha shift.
 
-> **Chuyển mạch:** Ở chặng này của **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **Series RLC** tiếp nhận điểm tựa từ **phức (Complex) number và phasor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất lượng (quality / 품질) hệ số (factor) và bandwidth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **Series RLC** nối từ **phức (Complex) number và phasor** sang **Chất lượng (quality / 품질) hệ số (factor) và bandwidth**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Series RLC
 
@@ -48,13 +48,13 @@ Khi
 
 reactive parts cancel. Đây là điện (electrical) cộng hưởng. Nó cùng mathematical cấu trúc (structure / 구조) với driven damped bộ dao động (oscillator): `L` đóng vai inertia, `1/C` đóng vai restoring độ cứng (stiffness), `R` đóng vai tắt dần (damping).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **Chất lượng (quality / 품질) hệ số (factor) và bandwidth** tiếp nhận điểm tựa từ **Series RLC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **RMS và công suất (power)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **Chất lượng (quality / 품질) hệ số (factor) và bandwidth** nối từ **Series RLC** sang **RMS và công suất (power)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất lượng (quality / 품질) hệ số (factor) và bandwidth
 
 Một resonator tổn hao (loss) thấp có peak đáp ứng (response) hẹp. chất lượng (quality / 품질) hệ số `Q` đo rough ratio giữa năng lượng stored và năng lượng lost mỗi cycle. High-Q useful cho tần số (frequency) selection và bộ dao động, nhưng đáp ứng thời gian (time / 시간) cũng dài hơn. tần số selectivity và thời gian (time / 시간) localization có sự đánh đổi (trade-off / 트레이드오프) kiểu Fourier.
 
-> **Chuyển mạch:** Trong **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **RMS và công suất (power)** tiếp nhận điểm tựa từ **Chất lượng (quality / 품질) hệ số (factor) và bandwidth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Filters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **RMS và công suất (power)** nối từ **Chất lượng (quality / 품질) hệ số (factor) và bandwidth** sang **Filters**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## RMS và công suất (power)
 
@@ -72,19 +72,19 @@ P=V_{rms}I_{rms}\cos\phi.
 
 `cosφ` là công suất hệ số. Reactive dòng điện có thể làm dây và equipment phải chịu dòng điện dù không tạo net công việc (work / 작업) trung bình trên tải.
 
-> **Chuyển mạch:** Ở chặng này của **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **Filters** tiếp nhận điểm tựa từ **RMS và công suất (power)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **Filters** nối từ **RMS và công suất (power)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Filters
 
 RC, RL và RLC networks tạo low-pass, high-pass, dải (band)-pass hay notch hành vi (behavior / 동작). Đây là cầu nối (bridge / 브리지) từ physics sang xử lý tín hiệu (signal processing): mạch điện transfer hàm (function / 함수) `H(ω)` nói tần số thành phần (component / 컴포넌트) nào đi qua và thành phần nào bị suy giảm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Filters** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Filters** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 AC mạch điện lý thuyết (theory / 이론) là sóng (wave)/oscillation lý thuyết ở dạng lumped mạng (network / 네트워크). phức trở kháng không phải “điện trở tưởng tượng”; nó mã hóa đồng thời biên độ đáp ứng và pha đáp ứng.
 
-> **Chuyển mạch:** Trong **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **phức trở kháng không phải “điện trở tưởng tượng”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **phức trở kháng không phải “điện trở tưởng tượng”** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
@@ -92,7 +92,7 @@ AC mạch điện lý thuyết (theory / 이론) là sóng (wave)/oscillation l�
 
 **Liên hệ tiếp:** [Transmission lines](05_transmission_lines_waveguides.md).
 
-> **Chuyển mạch:** Ở chặng này của **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **phức trở kháng không phải “điện trở tưởng tượng”** tiếp nhận điểm tựa từ **Liên kết kiến thức (knowledge connection / 지식 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **cộng hưởng, bandwidth và chất lượng (quality / 품질) hệ số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **phức trở kháng không phải “điện trở tưởng tượng”** nối từ **Liên kết kiến thức (knowledge connection / 지식 연결)** sang **cộng hưởng, bandwidth và chất lượng (quality / 품질) hệ số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## phức trở kháng không phải “điện trở tưởng tượng”
 
@@ -116,7 +116,7 @@ Z=R+i\left(\omega L-\frac{1}{\omega C}\right).
 
 biên độ dòng điện là `I=V/|Z|`, còn pha shift là argument của `Z`. Đây là một ứng dụng tự nhiên của phức number: một vật thể (object) đại số mang đồng thời độ lớn và pha.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **cộng hưởng, bandwidth và chất lượng (quality / 품질) hệ số** tiếp nhận điểm tựa từ **phức trở kháng không phải “điện trở tưởng tượng”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **trung bình công suất và công suất hệ số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **cộng hưởng, bandwidth và chất lượng (quality / 품질) hệ số** nối từ **phức trở kháng không phải “điện trở tưởng tượng”** sang **trung bình công suất và công suất hệ số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## cộng hưởng, bandwidth và chất lượng (quality / 품질) hệ số
 
@@ -143,7 +143,7 @@ Q=\frac{\omega_0L}{R}
 
 `Q` lớn nghĩa năng lượng stored lớn so với năng lượng dissipated mỗi cycle, cộng hưởng hẹp hơn. Bandwidth gần `Δω≈ω_0/Q` trong simple chế độ (regime). Filter thiết kế (design / 설계), RF tuning, tinh thể (crystal) bộ dao động và cavity cộng hưởng đều dùng mô hình tư duy (mental model / 사고 모델) “stored năng lượng / tổn hao / bandwidth”.
 
-> **Chuyển mạch:** Trong **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **trung bình công suất và công suất hệ số** tiếp nhận điểm tựa từ **cộng hưởng, bandwidth và chất lượng (quality / 품질) hệ số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Transient và trạng thái xác lập (steady-state) là hai câu hỏi khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **trung bình công suất và công suất hệ số** nối từ **cộng hưởng, bandwidth và chất lượng (quality / 품질) hệ số** sang **Transient và trạng thái xác lập (steady-state) là hai câu hỏi khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## trung bình công suất và công suất hệ số
 
@@ -163,7 +163,7 @@ S=P+iQ_r,
 
 trong đó `P` là thực công suất và `Q_r` là reactive công suất; ký hiệu `Q_r` ở đây tránh nhầm với chất lượng (quality / 품질) hệ số `Q`.
 
-> **Chuyển mạch:** Ở chặng này của **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **Transient và trạng thái xác lập (steady-state) là hai câu hỏi khác nhau** tiếp nhận điểm tựa từ **trung bình công suất và công suất hệ số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **tần số đáp ứng, filters và Bode thinking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **Transient và trạng thái xác lập (steady-state) là hai câu hỏi khác nhau** nối từ **trung bình công suất và công suất hệ số** sang **tần số đáp ứng, filters và Bode thinking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Transient và trạng thái xác lập (steady-state) là hai câu hỏi khác nhau
 
@@ -177,7 +177,7 @@ Phasor phương thức (method / 메서드) chỉ mô tả sinusoidal trạng th
 
 có thể đại diện độ dịch chuyển (displacement) cơ học hoặc điện tích (charge)/hiện tại (current / 현재) mạch điện sau khi map các tham số (parameters). liên hệ (connection) này cho phép intuition về cộng hưởng/damping chuyển giữa cơ học (mechanics), acoustics, electronics và điều khiển (control / 제어) các hệ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **tần số đáp ứng, filters và Bode thinking** tiếp nhận điểm tựa từ **Transient và trạng thái xác lập (steady-state) là hai câu hỏi khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **các ngộ nhận thường gặp (Common Misconceptions) bổ sung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **tần số đáp ứng, filters và Bode thinking** nối từ **Transient và trạng thái xác lập (steady-state) là hai câu hỏi khác nhau** sang **các ngộ nhận thường gặp (Common Misconceptions) bổ sung**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## tần số đáp ứng, filters và Bode thinking
 
@@ -185,7 +185,7 @@ Thay vì hỏi mạch điện phản ứng với một tần số duy nhất, ta
 
 Bode plot dùng logarithmic tần số trục (axis) vì các hệ thường trải nhiều orders of độ lớn và poles/zeros tạo độ dốc (slope) đơn giản theo dB/decade. Đây là liên hệ trực tiếp giữa logarithm, phương trình vi phân, Fourier phân tích (analysis / 분석) và practical electronics.
 
-> **Chuyển mạch:** Trong **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **các ngộ nhận thường gặp (Common Misconceptions) bổ sung** tiếp nhận điểm tựa từ **tần số đáp ứng, filters và Bode thinking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Mạch AC, phasor, trở kháng (impedance), RLC và cộng hưởng (resonance)**, **các ngộ nhận thường gặp (Common Misconceptions) bổ sung** nối từ **tần số đáp ứng, filters và Bode thinking** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## các ngộ nhận thường gặp (Common Misconceptions) bổ sung
 

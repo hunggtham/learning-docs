@@ -33,7 +33,7 @@ Nếu `α=β=1`, prior uniform. Nếu `α` và `β` lớn hơn, prior concentrat
 
 Prior không nhất thiết phải “subjective guess”. Nó có thể encode vật lý (physical / 물리적) các ràng buộc (constraints / 제약조건들), previous studies, historical dữ liệu (data / 데이터) hoặc regularization cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Trong **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Likelihood** tiếp nhận điểm tựa từ **Prior** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Posterior** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Likelihood** nối từ **Prior** sang **Posterior**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Likelihood
 
@@ -51,7 +51,7 @@ p(D\mid\theta)=\theta^{\sum x_i}(1-\theta)^{n-\sum x_i}.
 
 Likelihood cho biết parameter values nào giải thích dữ liệu (data / 데이터) tốt hơn, nhưng tự nó chưa phải xác suất (probability / 확률) phân phối (distribution / 분포) over parameter trừ khi normalize và kết hợp prior.
 
-> **Chuyển mạch:** Ở chặng này của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Posterior** tiếp nhận điểm tựa từ **Likelihood** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conjugate prior** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Posterior** nối từ **Likelihood** sang **Conjugate prior**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Posterior
 
@@ -71,7 +71,7 @@ p(D)=\int p(D\mid\theta)p(\theta)d\theta
 
 Trong many các mô hình (models / 모델들), denominator khó tính. Nhưng khi chỉ cần posterior up to proportionality, ta có thể làm suy luận (inference / 추론) bằng MCMC hoặc variational methods.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Conjugate prior** tiếp nhận điểm tựa từ **Posterior** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **MAP, MLE và posterior mean** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Conjugate prior** nối từ **Posterior** sang **MAP, MLE và posterior mean**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Conjugate prior
 
@@ -96,7 +96,7 @@ Dữ liệu (data / 데이터) đơn giản cộng counts vào prior pseudo-coun
 
 Đây là một mô hình tư duy (mental model / 사고 모델) rất hữu ích: prior mang một lượng bằng chứng (evidence / 증거) trước đó, dữ liệu (data / 데이터) bổ sung bằng chứng (evidence / 증거) mới.
 
-> **Chuyển mạch:** Trong **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **MAP, MLE và posterior mean** tiếp nhận điểm tựa từ **Conjugate prior** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Posterior predictive phân phối (distribution / 분포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **MAP, MLE và posterior mean** nối từ **Conjugate prior** sang **Posterior predictive phân phối (distribution / 분포)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## MAP, MLE và posterior mean
 
@@ -124,7 +124,7 @@ Ba quantities trả lời ba câu hỏi khác nhau. MLE tối đa likelihood. MA
 
 Bayesian suy luận (inference / 추론) không bắt buộc phải collapse posterior thành một điểm (point / 지점) estimate; thường giữ full posterior là mục tiêu chính.
 
-> **Chuyển mạch:** Ở chặng này của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Posterior predictive phân phối (distribution / 분포)** tiếp nhận điểm tựa từ **MAP, MLE và posterior mean** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Credible interval** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Posterior predictive phân phối (distribution / 분포)** nối từ **MAP, MLE và posterior mean** sang **Credible interval**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Posterior predictive phân phối (distribution / 분포)
 
@@ -141,7 +141,7 @@ Thay vì plug-in một single `θ_hat`, ta average predictions qua all plausible
 
 Điều này thường làm bất định (uncertainty / 불확실성) calibration tốt hơn khi dữ liệu (data / 데이터) ít.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Credible interval** tiếp nhận điểm tựa từ **Posterior predictive phân phối (distribution / 분포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prior predictive phân phối (distribution / 분포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Credible interval** nối từ **Posterior predictive phân phối (distribution / 분포)** sang **Prior predictive phân phối (distribution / 분포)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Credible interval
 
@@ -157,7 +157,7 @@ Interpretation trực tiếp là: conditional on mô hình (model / 모델) và 
 
 Hai frameworks trả lời questions khác nhau và không nên diễn giải lẫn nhau.
 
-> **Chuyển mạch:** Trong **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Prior predictive phân phối (distribution / 분포)** tiếp nhận điểm tựa từ **Credible interval** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Posterior predictive checks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Prior predictive phân phối (distribution / 분포)** nối từ **Credible interval** sang **Posterior predictive checks**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Prior predictive phân phối (distribution / 분포)
 
@@ -171,7 +171,7 @@ p(x)=\int p(x\mid\theta)p(\theta)d\theta.
 
 Ví dụ nếu mô hình (model / 모델) về thời gian phản hồi web thường sinh độ trễ (latency / 지연 시간) hàng nghìn năm, prior quy mô (scale / 규모) rõ ràng không phù hợp.
 
-> **Chuyển mạch:** Ở chặng này của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Posterior predictive checks** tiếp nhận điểm tựa từ **Prior predictive phân phối (distribution / 분포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bayes factor và marginal likelihood** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Posterior predictive checks** nối từ **Prior predictive phân phối (distribution / 분포)** sang **Bayes factor và marginal likelihood**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Posterior predictive checks
 
@@ -187,7 +187,7 @@ Nếu mô hình (model / 모델) không reproduce important patterns của actua
 
 Bayesian workflow vì vậy không chỉ là compute posterior; nó còn gồm mô hình (model / 모델) criticism.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Bayes factor và marginal likelihood** tiếp nhận điểm tựa từ **Posterior predictive checks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hierarchical các mô hình (models / 모델들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Bayes factor và marginal likelihood** nối từ **Posterior predictive checks** sang **Hierarchical các mô hình (models / 모델들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bayes factor và marginal likelihood
 
@@ -205,7 +205,7 @@ p(D\mid M)=\int p(D\mid\theta,M)p(\theta\mid M)d\theta.
 
 Nó naturally penalizes các mô hình (models / 모델들) spreading prior mass over parameter regions that fit dữ liệu (data / 데이터) poorly. Tuy nhiên Bayes factors có thể nhạy với prior choice, đặc biệt diffuse priors.
 
-> **Chuyển mạch:** Trong **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Hierarchical các mô hình (models / 모델들)** tiếp nhận điểm tựa từ **Bayes factor và marginal likelihood** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Partial pooling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Hierarchical các mô hình (models / 모델들)** nối từ **Bayes factor và marginal likelihood** sang **Partial pooling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hierarchical các mô hình (models / 모델들)
 
@@ -229,7 +229,7 @@ Các group estimates được **partial pooling** về toàn cục (global / 전
 
 Group ít dữ liệu (data / 데이터) bị shrink nhiều hơn; group nhiều dữ liệu (data / 데이터) giữ estimate riêng mạnh hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Partial pooling** tiếp nhận điểm tựa từ **Hierarchical các mô hình (models / 모델들)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bayesian tuyến tính (linear / 선형) regression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Partial pooling** nối từ **Hierarchical các mô hình (models / 모델들)** sang **Bayesian tuyến tính (linear / 선형) regression**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Partial pooling
 
@@ -241,7 +241,7 @@ Partial pooling cân bằng hai extremes bằng hierarchy.
 
 Đây là một trong những ideas Bayesian hữu ích nhất trong sản phẩm (product / 제품) analytics, medicine, A/B testing và organizational dữ liệu (data / 데이터).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Bayesian tuyến tính (linear / 선형) regression** tiếp nhận điểm tựa từ **Partial pooling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bayesian updating theo từng batch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Bayesian tuyến tính (linear / 선형) regression** nối từ **Partial pooling** sang **Bayesian updating theo từng batch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bayesian tuyến tính (linear / 선형) regression
 
@@ -269,7 +269,7 @@ Gaussian prior tương ứng gần với L2 regularization/MAP. Laplace prior d�
 
 Vì vậy regularization trong ML có thể được giải thích như prior các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Trong **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Bayesian updating theo từng batch** tiếp nhận điểm tựa từ **Bayesian tuyến tính (linear / 선형) regression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Computational suy luận (inference / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Bayesian updating theo từng batch** nối từ **Bayesian tuyến tính (linear / 선형) regression** sang **Computational suy luận (inference / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bayesian updating theo từng batch
 
@@ -284,7 +284,7 @@ p(\theta\mid D_1,D_2)
 
 Nó rất tự nhiên cho các hệ thống (systems / 시스템들) nhận dữ liệu (data / 데이터) liên tục.
 
-> **Chuyển mạch:** Ở chặng này của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Computational suy luận (inference / 추론)** tiếp nhận điểm tựa từ **Bayesian updating theo từng batch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Calibration và bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Computational suy luận (inference / 추론)** nối từ **Bayesian updating theo từng batch** sang **Calibration và bất định (uncertainty / 불확실성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Computational suy luận (inference / 추론)
 
@@ -302,7 +302,7 @@ hoặc maximize ELBO.
 
 Sự đánh đổi (trade-off / 트레이드오프) thường là MCMC chính xác hơn asymptotically nhưng costly, còn variational methods nhanh hơn nhưng có approximation độ lệch (bias / 편향).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Calibration và bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **Computational suy luận (inference / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prior sensitivity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Calibration và bất định (uncertainty / 불확실성)** nối từ **Computational suy luận (inference / 추론)** sang **Prior sensitivity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Calibration và bất định (uncertainty / 불확실성)
 
@@ -310,7 +310,7 @@ Bayesian posterior bất định (uncertainty / 불확실성) chỉ meaningful n
 
 “Bayesian” không tự động đồng nghĩa “bất định (uncertainty / 불확실성) đúng”. mô hình (model / 모델) checking và sensitivity phân tích (analysis / 분석) là bắt buộc.
 
-> **Chuyển mạch:** Trong **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Prior sensitivity** tiếp nhận điểm tựa từ **Calibration và bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Example: tỷ lệ lỗi triển khai (deployment / 배포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Prior sensitivity** nối từ **Calibration và bất định (uncertainty / 불확실성)** sang **Example: tỷ lệ lỗi triển khai (deployment / 배포)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Prior sensitivity
 
@@ -320,7 +320,7 @@ Thay vì che giấu điều này, nên vary plausible priors và xem conclusions
 
 Sensitivity phân tích (analysis / 분석) giúp phân biệt thông tin (information / 정보) đến từ dữ liệu (data / 데이터) hay các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Ở chặng này của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Prior sensitivity** cho ta quy tắc; **Example: tỷ lệ lỗi triển khai (deployment / 배포)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Quyết định (decision / 결정) lý thuyết (theory / 이론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Prior sensitivity** nêu quy tắc; **Example: tỷ lệ lỗi triển khai (deployment / 배포)** thử quy tắc trong tình huống, rồi **Quyết định (decision / 결정) lý thuyết (theory / 이론)** mở rộng hệ quả.
 
 ## Example: tỷ lệ lỗi triển khai (deployment / 배포)
 
@@ -348,7 +348,7 @@ Observed thất bại (failure / 실패) tỷ lệ (rate / 비율) là `4/20=0.2
 
 Nếu thêm hàng nghìn deployments, dữ liệu (data / 데이터) sẽ dominate prior mạnh hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Example: tỷ lệ lỗi triển khai (deployment / 배포)** cho ta quy tắc; **Quyết định (decision / 결정) lý thuyết (theory / 이론)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Example: tỷ lệ lỗi triển khai (deployment / 배포)** nêu quy tắc; **Quyết định (decision / 결정) lý thuyết (theory / 이론)** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Quyết định (decision / 결정) lý thuyết (theory / 이론)
 
@@ -364,13 +364,13 @@ Trong nghiệp vụ (business / 비즈니스), same posterior có thể dẫn t�
 
 Đây là lý do xác suất (probability / 확률) estimate không tự động quyết định threshold.
 
-> **Chuyển mạch:** Trong **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Quyết định (decision / 결정) lý thuyết (theory / 이론)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Quyết định (decision / 결정) lý thuyết (theory / 이론)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Bayesian suy luận (inference / 추론) là một chuỗi xử lý (pipeline / 파이프라인) của thông tin (information / 정보): prior mô tả trạng thái kiến thức (knowledge / 지식) trước dữ liệu (data / 데이터), likelihood mô tả cách dữ liệu (data / 데이터) được sinh ra nếu parameter có giá trị (value / 값) nhất định, posterior là kiến thức (knowledge / 지식) sau dữ liệu (data / 데이터), và posterior predictive biến updated kiến thức (knowledge / 지식) thành predictions. Hierarchical các mô hình (models / 모델들) cho phép thông tin (information / 정보) luồng (flow / 흐름) cả trong group lẫn giữa các groups.
 
-> **Chuyển mạch:** Ở chặng này của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -378,7 +378,7 @@ Prior không nhất thiết là opinion tùy ý và posterior cũng không “kh
 
 Một misconception khác là credible interval và confidence interval cùng nghĩa. Con số có thể giống nhau trong một số mô hình (model / 모델) nhưng interpretation khác fundamentally.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bayesian suy luận (inference / 추론): posterior, predictive phân phối (distribution / 분포) và hierarchical các mô hình (models / 모델들)**, sau nội dung của **Dùng chung (common / 공통) Misconceptions**, **Liên kết kiến thức** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức
 

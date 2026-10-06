@@ -30,7 +30,7 @@ route được học nhưng policy chọn path khác
 route được chọn nhưng FIB/data plane không forward như mong đợi
 ```
 
-> **Chuyển mạch:** Trong **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **1. Routing có điều khiển (control / 제어) plane và mặt phẳng dữ liệu (data plane / 데이터 플레인)** nêu điều cần giải thích; **2. Prefix và AS là hai lớp trừu tượng (abstraction / 추상화) khác nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. eBGP và iBGP giải hai ranh giới (boundary / 경계) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **1. Routing có điều khiển (control / 제어) plane và mặt phẳng dữ liệu (data plane / 데이터 플레인)** đặt vấn đề; **2. Prefix và AS là hai lớp trừu tượng (abstraction / 추상화) khác nhau** kiểm tra bằng chứng, rồi **3. eBGP và iBGP giải hai ranh giới (boundary / 경계) khác nhau** mở rộng hệ quả.
 
 ## 2. Prefix và AS là hai lớp trừu tượng (abstraction / 추상화) khác nhau
 
@@ -40,7 +40,7 @@ BGP path-vector mang thông tin reachability và AS đường dẫn (path / 경�
 
 Đây là bất biến (invariant / 불변식) xã hội-kỹ thuật quan trọng: **toàn cục (global / 전역) routing emergent từ chính sách (policy / 정책) cục bộ (local / 로컬)**, không từ một optimizer trung tâm.
 
-> **Chuyển mạch:** Ở chặng này của **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **2. Prefix và AS là hai lớp trừu tượng (abstraction / 추상화) khác nhau** đã nêu tiêu chí phân biệt, còn **3. eBGP và iBGP giải hai ranh giới (boundary / 경계) khác nhau** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **4. Best-path không đồng nghĩa shortest ASPATH** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. Prefix và AS là hai lớp trừu tượng (abstraction / 추상화) khác nhau** đặt tiêu chí; **3. eBGP và iBGP giải hai ranh giới (boundary / 경계) khác nhau** dùng nó để kiểm tra ranh giới, rồi **4. Best-path không đồng nghĩa shortest ASPATH** mở rộng hệ quả.
 
 ## 3. eBGP và iBGP giải hai ranh giới (boundary / 경계) khác nhau
 
@@ -48,7 +48,7 @@ Bên ngoài (external / 외부) BGP trao routes giữa ASes. nội bộ (interna
 
 Một tuyến (route / 경로) có thể hợp lệ ở BGP tầng (layer / 계층) nhưng next-hop nội bộ unreachable vì IGP/FIB issue. Vì vậy debugging phải tách BGP điều khiển (control / 제어) trạng thái (state / 상태) khỏi underlay reachability.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **3. eBGP và iBGP giải hai ranh giới (boundary / 경계) khác nhau** đã nêu tiêu chí phân biệt, còn **4. Best-path không đồng nghĩa shortest ASPATH** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **5. Import/export chính sách (policy / 정책) quyết định Internet mà neighbor nhìn thấy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. eBGP và iBGP giải hai ranh giới (boundary / 경계) khác nhau** đặt tiêu chí; **4. Best-path không đồng nghĩa shortest ASPATH** dùng nó để kiểm tra ranh giới, rồi **5. Import/export chính sách (policy / 정책) quyết định Internet mà neighbor nhìn thấy** mở rộng hệ quả.
 
 ## 4. Best-path không đồng nghĩa shortest AS_PATH
 
@@ -66,7 +66,7 @@ import policy
 
 Không nên nhìn AS_PATH ngắn hơn rồi kết luận tuyến (route / 경로) đó chắc chắn được chọn.
 
-> **Chuyển mạch:** Trong **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **4. Best-path không đồng nghĩa shortest ASPATH** xác định đầu vào; **5. Import/export chính sách (policy / 정책) quyết định Internet mà neighbor nhìn thấy** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. RIB và FIB phải được phân biệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Best-path không đồng nghĩa shortest ASPATH** đặt đầu vào cho **5. Import/export chính sách (policy / 정책) quyết định Internet mà neighbor nhìn thấy**, rồi **6. RIB và FIB phải được phân biệt** mở rộng hệ quả.
 
 ## 5. Import/export chính sách (policy / 정책) quyết định Internet mà neighbor nhìn thấy
 
@@ -74,7 +74,7 @@ Router không nhất thiết quảng bá mọi tuyến (route / 경로) nó bi�
 
 Một cấu hình export sai có thể biến AS thành transit ngoài ý muốn hoặc leak routes học từ một provider sang provider khác. Vì vậy tuyến (route / 경로) leak thường là chính sách (policy / 정책) thất bại (failure / 실패), không phải packet corruption.
 
-> **Chuyển mạch:** Ở chặng này của **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **6. RIB và FIB phải được phân biệt** tiếp nhận điểm tựa từ **5. Import/export chính sách (policy / 정책) quyết định Internet mà neighbor nhìn thấy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Withdrawal và convergence tạo một khoảng thời gian bất định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. RIB và FIB phải được phân biệt** nối từ **5. Import/export chính sách (policy / 정책) quyết định Internet mà neighbor nhìn thấy** sang **7. Withdrawal và convergence tạo một khoảng thời gian bất định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. RIB và FIB phải được phân biệt
 
@@ -84,7 +84,7 @@ Nếu điều khiển (control / 제어) plane hội tụ nhưng FIB programming
 
 Bằng chứng vận hành (production evidence / 운영 증거) cần kiểm tra cả hai khi nền tảng (platform / 플랫폼) hỗ trợ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **7. Withdrawal và convergence tạo một khoảng thời gian bất định** tiếp nhận điểm tựa từ **6. RIB và FIB phải được phân biệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. đường dẫn (path / 경로) exploration làm convergence tốn thời gian hơn một lần recompute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Withdrawal và convergence tạo một khoảng thời gian bất định** nối từ **6. RIB và FIB phải được phân biệt** sang **8. đường dẫn (path / 경로) exploration làm convergence tốn thời gian hơn một lần recompute**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Withdrawal và convergence tạo một khoảng thời gian bất định
 
@@ -94,7 +94,7 @@ Do đó Internet routing không có instant atomic cập nhật (update / 업데
 
 Liveness của routing là eventual convergence; an toàn (safety / 안전) cần tránh vòng lặp (loop / 루프)/invalid reachability trong quá trình chuyển trạng thái.
 
-> **Chuyển mạch:** Trong **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **7. Withdrawal và convergence tạo một khoảng thời gian bất định** xác định đầu vào; **8. đường dẫn (path / 경로) exploration làm convergence tốn thời gian hơn một lần recompute** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. tuyến (route / 경로) aggregation giảm trạng thái (state / 상태) nhưng mở rộng thất bại (failure / 실패) blast radius** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Withdrawal và convergence tạo một khoảng thời gian bất định** đặt đầu vào cho **8. đường dẫn (path / 경로) exploration làm convergence tốn thời gian hơn một lần recompute**, rồi **9. tuyến (route / 경로) aggregation giảm trạng thái (state / 상태) nhưng mở rộng thất bại (failure / 실패) blast radius** mở rộng hệ quả.
 
 ## 8. đường dẫn (path / 경로) exploration làm convergence tốn thời gian hơn một lần recompute
 
@@ -102,7 +102,7 @@ Sau khi đường dẫn (path / 경로) tốt nhất biến mất, routers có t
 
 Tuyến (route / 경로) flap damping và chính sách (policy / 정책) suppression từng được dùng để giảm churn nhưng có thể kéo dài outage nếu suppress reachability hợp lệ. Đây là ví dụ điển hình của điều khiển (control / 제어) chống instability nhưng có availability sự đánh đổi (trade-off / 트레이드오프).
 
-> **Chuyển mạch:** Ở chặng này của **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **8. đường dẫn (path / 경로) exploration làm convergence tốn thời gian hơn một lần recompute** xác định đầu vào; **9. tuyến (route / 경로) aggregation giảm trạng thái (state / 상태) nhưng mở rộng thất bại (failure / 실패) blast radius** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. More-specific tuyến (route / 경로) thường thắng data-plane lookup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. đường dẫn (path / 경로) exploration làm convergence tốn thời gian hơn một lần recompute** đặt đầu vào cho **9. tuyến (route / 경로) aggregation giảm trạng thái (state / 상태) nhưng mở rộng thất bại (failure / 실패) blast radius**, rồi **10. More-specific tuyến (route / 경로) thường thắng data-plane lookup** mở rộng hệ quả.
 
 ## 9. tuyến (route / 경로) aggregation giảm trạng thái (state / 상태) nhưng mở rộng thất bại (failure / 실패) blast radius
 
@@ -110,7 +110,7 @@ Aggregating nhiều specific prefixes thành supernet giảm routing-table kích
 
 Do đó aggregate thường cần discard/null tuyến (route / 경로) hoặc reachability điều kiện (condition / 조건) thích hợp để tránh vòng lặp (loop / 루프). Aggregation là compression của routing trạng thái (state / 상태), và như mọi compression, nó làm mất chi tiết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **10. More-specific tuyến (route / 경로) thường thắng data-plane lookup** tiếp nhận điểm tựa từ **9. tuyến (route / 경로) aggregation giảm trạng thái (state / 상태) nhưng mở rộng thất bại (failure / 실패) blast radius** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. tuyến (route / 경로) leak và tuyến (route / 경로) hijack không hoàn toàn giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. More-specific tuyến (route / 경로) thường thắng data-plane lookup** nối từ **9. tuyến (route / 경로) aggregation giảm trạng thái (state / 상태) nhưng mở rộng thất bại (failure / 실패) blast radius** sang **11. tuyến (route / 경로) leak và tuyến (route / 경로) hijack không hoàn toàn giống nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. More-specific tuyến (route / 경로) thường thắng data-plane lookup
 
@@ -118,7 +118,7 @@ Longest-prefix match nghĩa tuyến (route / 경로) `/24` thường được ư
 
 Đây là cơ chế nền của nhiều tuyến (route / 경로) hijack scenario: không cần “hack router của nạn nhân”; chỉ cần invalid reachability được propagated và selected.
 
-> **Chuyển mạch:** Trong **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **11. tuyến (route / 경로) leak và tuyến (route / 경로) hijack không hoàn toàn giống nhau** tiếp nhận điểm tựa từ **10. More-specific tuyến (route / 경로) thường thắng data-plane lookup** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. RPKI origin kiểm tra hợp lệ (validation / 검증) bảo vệ một phần bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. tuyến (route / 경로) leak và tuyến (route / 경로) hijack không hoàn toàn giống nhau** nối từ **10. More-specific tuyến (route / 경로) thường thắng data-plane lookup** sang **12. RPKI origin kiểm tra hợp lệ (validation / 검증) bảo vệ một phần bất biến (invariant / 불변식)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. tuyến (route / 경로) leak và tuyến (route / 경로) hijack không hoàn toàn giống nhau
 
@@ -128,7 +128,7 @@ Longest-prefix match nghĩa tuyến (route / 경로) `/24` thường được ư
 
 Từ endpoint, cả hai có thể trông như đường dẫn (path / 경로) đổi, độ trễ (latency / 지연 시간) tăng, traffic mất hoặc đi qua mạng (network / 네트워크) lạ. Phân loại cần control-plane bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Ở chặng này của **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **12. RPKI origin kiểm tra hợp lệ (validation / 검증) bảo vệ một phần bất biến (invariant / 불변식)** tiếp nhận điểm tựa từ **11. tuyến (route / 경로) leak và tuyến (route / 경로) hijack không hoàn toàn giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Prefix filtering và max-prefix là containment controls** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. RPKI origin kiểm tra hợp lệ (validation / 검증) bảo vệ một phần bất biến (invariant / 불변식)** nối từ **11. tuyến (route / 경로) leak và tuyến (route / 경로) hijack không hoàn toàn giống nhau** sang **13. Prefix filtering và max-prefix là containment controls**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. RPKI origin kiểm tra hợp lệ (validation / 검증) bảo vệ một phần bất biến (invariant / 불변식)
 
@@ -138,7 +138,7 @@ Router có thể classify tuyến (route / 경로) origin kiểm tra hợp lệ 
 
 RPKI giúp chống nhiều origin hijack nhưng **không chứng minh toàn bộ AS đường dẫn (path / 경로) hợp lệ** và không tự ngăn mọi tuyến (route / 경로) leak. bảo mật (security / 보안) điều khiển (control / 제어) phải được hiểu đúng phạm vi (scope / 범위).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **13. Prefix filtering và max-prefix là containment controls** tiếp nhận điểm tựa từ **12. RPKI origin kiểm tra hợp lệ (validation / 검증) bảo vệ một phần bất biến (invariant / 불변식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Communities là siêu dữ liệu (metadata / 메타데이터) chính sách (policy / 정책), không phải routing guarantee** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Prefix filtering và max-prefix là containment controls** nối từ **12. RPKI origin kiểm tra hợp lệ (validation / 검증) bảo vệ một phần bất biến (invariant / 불변식)** sang **14. Communities là siêu dữ liệu (metadata / 메타데이터) chính sách (policy / 정책), không phải routing guarantee**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Prefix filtering và max-prefix là containment controls
 
@@ -146,7 +146,7 @@ Neighbor chính sách (policy / 정책) có thể chỉ chấp nhận prefixes/A
 
 Nhưng fail-closed mạnh quá có thể cắt legitimate traffic khi mạng (network / 네트워크) tăng prefix count. Vì vậy threshold cần operational quản trị (governance / 거버넌스), không chỉ cấu hình một lần.
 
-> **Chuyển mạch:** Trong **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **13. Prefix filtering và max-prefix là containment controls** nêu điều cần giải thích; **14. Communities là siêu dữ liệu (metadata / 메타데이터) chính sách (policy / 정책), không phải routing guarantee** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. Anycast dựa vào routing để đưa cùng IP tới nhiều sites** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Prefix filtering và max-prefix là containment controls** đặt vấn đề; **14. Communities là siêu dữ liệu (metadata / 메타데이터) chính sách (policy / 정책), không phải routing guarantee** kiểm tra bằng chứng, rồi **15. Anycast dựa vào routing để đưa cùng IP tới nhiều sites** mở rộng hệ quả.
 
 ## 14. Communities là siêu dữ liệu (metadata / 메타데이터) chính sách (policy / 정책), không phải routing guarantee
 
@@ -154,7 +154,7 @@ BGP communities cho phép gắn siêu dữ liệu (metadata / 메타데이터) �
 
 Một community có ý nghĩa trong đặc tả hợp đồng (contract / 계약) cụ thể, không phải toàn cục (global / 전역) bất biến (invariant / 불변식). Khi gỡ lỗi (debug / 디버그) phải biết ai set nó, ở ranh giới (boundary / 경계) nào, và chính sách (policy / 정책) nào consume nó.
 
-> **Chuyển mạch:** Ở chặng này của **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **14. Communities là siêu dữ liệu (metadata / 메타데이터) chính sách (policy / 정책), không phải routing guarantee** nêu điều cần giải thích; **15. Anycast dựa vào routing để đưa cùng IP tới nhiều sites** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. Asymmetric routing là bình thường hơn nhiều người nghĩ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Communities là siêu dữ liệu (metadata / 메타데이터) chính sách (policy / 정책), không phải routing guarantee** đặt vấn đề; **15. Anycast dựa vào routing để đưa cùng IP tới nhiều sites** kiểm tra bằng chứng, rồi **16. Asymmetric routing là bình thường hơn nhiều người nghĩ** mở rộng hệ quả.
 
 ## 15. Anycast dựa vào routing để đưa cùng IP tới nhiều sites
 
@@ -162,7 +162,7 @@ Nhiều locations có thể advertise cùng prefix. Internet chính sách (polic
 
 Anycast cải thiện độ trễ (latency / 지연 시간)/resilience nhưng session/stateful hành vi (behavior / 동작) trở nên nhạy với tuyến (route / 경로) thay đổi (change / 변경). Khi đường dẫn (path / 경로) flips, yêu cầu (request / 요청) sau có thể tới site khác. ứng dụng (application / 애플리케이션) tầng (layer / 계층) cần thiết kế trạng thái (state / 상태), thử lại (retry / 재시도) và idempotency phù hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **16. Asymmetric routing là bình thường hơn nhiều người nghĩ** tiếp nhận điểm tựa từ **15. Anycast dựa vào routing để đưa cùng IP tới nhiều sites** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. ECMP phân phối traffic nhưng băm (hash / 해시) tạo hidden skew** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Asymmetric routing là bình thường hơn nhiều người nghĩ** nối từ **15. Anycast dựa vào routing để đưa cùng IP tới nhiều sites** sang **17. ECMP phân phối traffic nhưng băm (hash / 해시) tạo hidden skew**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Asymmetric routing là bình thường hơn nhiều người nghĩ
 
@@ -170,7 +170,7 @@ Forward đường dẫn (path / 경로) và return đường dẫn (path / 경�
 
 Traceroute từ A tới B không mô tả reverse đường dẫn (path / 경로). Debugging one-way mất mát (loss / 손실) cần vantage điểm (point / 지점) hai phía hoặc telemetry trung gian.
 
-> **Chuyển mạch:** Trong **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **17. ECMP phân phối traffic nhưng băm (hash / 해시) tạo hidden skew** tiếp nhận điểm tựa từ **16. Asymmetric routing là bình thường hơn nhiều người nghĩ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. BGP session health không chứng minh ứng dụng (application / 애플리케이션) reachability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. ECMP phân phối traffic nhưng băm (hash / 해시) tạo hidden skew** nối từ **16. Asymmetric routing là bình thường hơn nhiều người nghĩ** sang **18. BGP session health không chứng minh ứng dụng (application / 애플리케이션) reachability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. ECMP phân phối traffic nhưng băm (hash / 해시) tạo hidden skew
 
@@ -178,7 +178,7 @@ Equal-Cost Multi-Path có thể băm (hash / 해시) luồng (flow / 흐름) the
 
 Một elephant luồng (flow / 흐름) không được chia nếu băm (hash / 해시) per-flow. Link utilization trung bình vì vậy có thể che micro-hotspot và packet mất mát (loss / 손실) trên một member.
 
-> **Chuyển mạch:** Ở chặng này của **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **18. BGP session health không chứng minh ứng dụng (application / 애플리케이션) reachability** tiếp nhận điểm tựa từ **17. ECMP phân phối traffic nhưng băm (hash / 해시) tạo hidden skew** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. bằng chứng vận hành (production evidence / 운영 증거) cần dựng lại tuyến (route / 경로) quyết định (decision / 결정) theo thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. BGP session health không chứng minh ứng dụng (application / 애플리케이션) reachability** nối từ **17. ECMP phân phối traffic nhưng băm (hash / 해시) tạo hidden skew** sang **19. bằng chứng vận hành (production evidence / 운영 증거) cần dựng lại tuyến (route / 경로) quyết định (decision / 결정) theo thời gian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. BGP session health không chứng minh ứng dụng (application / 애플리케이션) reachability
 
@@ -188,7 +188,7 @@ Ngược lại, ứng dụng (application / 애플리케이션) có thể vẫn 
 
 Status ở một tầng (layer / 계층) không thay proof ở tầng (layer / 계층) khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **18. BGP session health không chứng minh ứng dụng (application / 애플리케이션) reachability** nêu điều cần giải thích; **19. bằng chứng vận hành (production evidence / 운영 증거) cần dựng lại tuyến (route / 경로) quyết định (decision / 결정) theo thời gian** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. Worked sự cố (incident / 인시던트): more-specific tuyến (route / 경로) xuất hiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. BGP session health không chứng minh ứng dụng (application / 애플리케이션) reachability** đặt vấn đề; **19. bằng chứng vận hành (production evidence / 운영 증거) cần dựng lại tuyến (route / 경로) quyết định (decision / 결정) theo thời gian** kiểm tra bằng chứng, rồi **20. Worked sự cố (incident / 인시던트): more-specific tuyến (route / 경로) xuất hiện** mở rộng hệ quả.
 
 ## 19. bằng chứng vận hành (production evidence / 운영 증거) cần dựng lại tuyến (route / 경로) quyết định (decision / 결정) theo thời gian
 
@@ -207,7 +207,7 @@ packet loss/latency/path từ nhiều vantage points ra sao?
 
 Looking glass, tuyến (route / 경로) collector, router telemetry, luồng (flow / 흐름) logs, packet counters và endpoint probes là các nguồn bằng chứng (evidence / 증거) khác nhau. Không nguồn nào một mình là “sự thật toàn Internet”.
 
-> **Chuyển mạch:** Trong **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **19. bằng chứng vận hành (production evidence / 운영 증거) cần dựng lại tuyến (route / 경로) quyết định (decision / 결정) theo thời gian** cho ta quy tắc; **20. Worked sự cố (incident / 인시던트): more-specific tuyến (route / 경로) xuất hiện** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **21. Convergence pressure có thể trở thành CPU/bộ nhớ (memory / 메모리) pressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. bằng chứng vận hành (production evidence / 운영 증거) cần dựng lại tuyến (route / 경로) quyết định (decision / 결정) theo thời gian** nêu quy tắc; **20. Worked sự cố (incident / 인시던트): more-specific tuyến (route / 경로) xuất hiện** thử quy tắc trong tình huống, rồi **21. Convergence pressure có thể trở thành CPU/bộ nhớ (memory / 메모리) pressure** mở rộng hệ quả.
 
 ## 20. Worked sự cố (incident / 인시던트): more-specific tuyến (route / 경로) xuất hiện
 
@@ -217,7 +217,7 @@ Endpoint trong `/24` đi theo B do longest-prefix match. BGP session của A v�
 
 Diagnosis cần prefix-level reachability và route-origin lịch sử (history / 이력). Containment có thể liên quan tuyến (route / 경로) filtering/RPKI/coordination với upstream; ứng dụng (application / 애플리케이션) thử lại (retry / 재시도) không sửa authority của routing điều khiển (control / 제어) plane.
 
-> **Chuyển mạch:** Ở chặng này của **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **20. Worked sự cố (incident / 인시던트): more-specific tuyến (route / 경로) xuất hiện** cho ta quy tắc; **21. Convergence pressure có thể trở thành CPU/bộ nhớ (memory / 메모리) pressure** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **22. Kết nối sang các chapter khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. Worked sự cố (incident / 인시던트): more-specific tuyến (route / 경로) xuất hiện** nêu quy tắc; **21. Convergence pressure có thể trở thành CPU/bộ nhớ (memory / 메모리) pressure** thử quy tắc trong tình huống, rồi **22. Kết nối sang các chapter khác** mở rộng hệ quả.
 
 ## 21. Convergence pressure có thể trở thành CPU/bộ nhớ (memory / 메모리) pressure
 
@@ -235,7 +235,7 @@ failure/churn
 
 Sức chứa (capacity / 용량) planning cho router/control-plane trạng thái (state / 상태) vì vậy là độ tin cậy (reliability / 신뢰성) concern.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **BGP, routing chính sách (policy / 정책), convergence và tuyến (route / 경로) bảo mật (security / 보안)**, **22. Kết nối sang các chapter khác** tiếp nhận điểm tựa từ **21. Convergence pressure có thể trở thành CPU/bộ nhớ (memory / 메모리) pressure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **22. Kết nối sang các chapter khác** tổng hợp từ **21. Convergence pressure có thể trở thành CPU/bộ nhớ (memory / 메모리) pressure**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## 22. Kết nối sang các chapter khác
 

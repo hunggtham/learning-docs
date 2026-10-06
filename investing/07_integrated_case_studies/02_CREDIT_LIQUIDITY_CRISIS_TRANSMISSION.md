@@ -18,7 +18,7 @@ Có đủ tiền mặt và tài sản thanh khoản để sống tới khi tài 
 
 Đây là khác biệt giữa lỗ theo giá thị trường và lỗ bị buộc phải hiện thực hóa.
 
-> **Chuyển mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **2. Thanh khoản và khả năng thanh toán** tiếp nhận điểm tựa từ **1. Bối cảnh giả định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Chênh lệch kỳ hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **2. Thanh khoản và khả năng thanh toán** nối từ **1. Bối cảnh giả định** sang **3. Chênh lệch kỳ hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Thanh khoản và khả năng thanh toán
 
@@ -42,7 +42,7 @@ Căng thẳng thanh khoản
 
 Đọc thêm: [Hệ thống tiền tệ, thanh khoản và truyền dẫn khủng hoảng](../04_economics/04_MONETARY_SYSTEM_LIQUIDITY_AND_CRISIS_TRANSMISSION.md).
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **3. Chênh lệch kỳ hạn** tiếp nhận điểm tựa từ **2. Thanh khoản và khả năng thanh toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Rút tiền gửi và niềm tin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **3. Chênh lệch kỳ hạn** nối từ **2. Thanh khoản và khả năng thanh toán** sang **4. Rút tiền gửi và niềm tin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Chênh lệch kỳ hạn
 
@@ -55,7 +55,7 @@ Tài sản: trái phiếu 10 năm / khoản vay thế chấp dài hạn
 
 Khi lãi suất tăng, giá trị thị trường của tài sản giảm. Nếu nguồn vốn ổn định, tổ chức có thể chờ. Nếu nguồn vốn rút đi, khoản lỗ phải được hiện thực hóa. Vì vậy rủi ro lãi suất có thể chuyển thành rủi ro thanh khoản.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **4. Rút tiền gửi và niềm tin** tiếp nhận điểm tựa từ **3. Chênh lệch kỳ hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Repo và vòng xoáy haircut** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **4. Rút tiền gửi và niềm tin** nối từ **3. Chênh lệch kỳ hạn** sang **5. Repo và vòng xoáy haircut**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Rút tiền gửi và niềm tin
 
@@ -63,7 +63,7 @@ Rút tiền gửi hàng loạt (deposit flight) có thể bắt đầu từ lo n
 
 Ngân hàng số làm tốc độ rút tiền nhanh hơn nhiều so với trực giác về các cuộc rút tiền truyền thống. Vì vậy bộ đệm thanh khoản và mức tập trung nguồn tiền gửi rất quan trọng.
 
-> **Chuyển mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **5. Repo và vòng xoáy haircut** tiếp nhận điểm tựa từ **4. Rút tiền gửi và niềm tin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Giới hạn bảng cân đối của nhà tạo lập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **5. Repo và vòng xoáy haircut** nối từ **4. Rút tiền gửi và niềm tin** sang **6. Giới hạn bảng cân đối của nhà tạo lập**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Repo và vòng xoáy haircut
 
@@ -83,7 +83,7 @@ Haircut tăng
 
 Đọc thêm: [Tiền mặt, thị trường tiền tệ và sản phẩm cấu trúc](../02_asset_classes/06_CASH_MONEY_MARKETS_STRUCTURED_PRODUCTS_AND_PRIVATE_MARKETS.md).
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **5. Repo và vòng xoáy haircut** đã nêu tiêu chí phân biệt, còn **6. Giới hạn bảng cân đối của nhà tạo lập** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **7. Chênh lệch tín dụng mở rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **5. Repo và vòng xoáy haircut** đặt tiêu chí; **6. Giới hạn bảng cân đối của nhà tạo lập** dùng tiêu chí đó để kiểm tra ranh giới, rồi **7. Chênh lệch tín dụng mở rộng** mở rộng hệ quả.
 
 ## 6. Giới hạn bảng cân đối của nhà tạo lập
 
@@ -93,7 +93,7 @@ Khi năng lực bảng cân đối giảm, chênh lệch mua bán mở rộng v�
 
 Thanh khoản không chỉ là thuộc tính của tài sản; nó còn phụ thuộc vào sức khỏe bảng cân đối của những người tạo thị trường.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **6. Giới hạn bảng cân đối của nhà tạo lập** đã nêu tiêu chí phân biệt, còn **7. Chênh lệch tín dụng mở rộng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **8. Bức tường đáo hạn nợ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **6. Giới hạn bảng cân đối của nhà tạo lập** đặt tiêu chí; **7. Chênh lệch tín dụng mở rộng** dùng tiêu chí đó để kiểm tra ranh giới, rồi **8. Bức tường đáo hạn nợ** mở rộng hệ quả.
 
 ## 7. Chênh lệch tín dụng mở rộng
 
@@ -108,7 +108,7 @@ Bất định nguồn vốn tăng
 
 Chênh lệch tín dụng rộng hơn làm tái cấp vốn đắt hơn, từ đó gây tác động vòng hai lên dòng tiền doanh nghiệp.
 
-> **Chuyển mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **8. Bức tường đáo hạn nợ** tiếp nhận điểm tựa từ **7. Chênh lệch tín dụng mở rộng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Cơ chế khuếch đại tài chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **8. Bức tường đáo hạn nợ** nối từ **7. Chênh lệch tín dụng mở rộng** sang **9. Cơ chế khuếch đại tài chính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Bức tường đáo hạn nợ
 
@@ -128,7 +128,7 @@ Lãi suất tái cấp vốn
 
 Đọc thêm: [Chất lượng lợi nhuận, mô hình và phân tích điều tra](../03_company_analysis/04_EARNINGS_QUALITY_MODELING_AND_FORENSICS.md).
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **8. Bức tường đáo hạn nợ** xác định đầu vào; **9. Cơ chế khuếch đại tài chính** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Vốn ngân hàng và thanh khoản ngân hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **8. Bức tường đáo hạn nợ** đặt đầu vào cho **9. Cơ chế khuếch đại tài chính**, rồi **10. Vốn ngân hàng và thanh khoản ngân hàng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. Cơ chế khuếch đại tài chính
 
@@ -147,7 +147,7 @@ Giá tài sản giảm
 
 Đây là cơ chế khuếch đại tài chính (financial accelerator). Một cú sốc ban đầu ở một thị trường nhỏ vẫn có thể trở thành suy thoái rộng hơn nếu nó đi qua kênh tín dụng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **9. Cơ chế khuếch đại tài chính** xác định đầu vào; **10. Vốn ngân hàng và thanh khoản ngân hàng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. Công cụ hỗ trợ thanh khoản của ngân hàng trung ương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **9. Cơ chế khuếch đại tài chính** đặt đầu vào cho **10. Vốn ngân hàng và thanh khoản ngân hàng**, rồi **11. Công cụ hỗ trợ thanh khoản của ngân hàng trung ương** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 10. Vốn ngân hàng và thanh khoản ngân hàng
 
@@ -155,7 +155,7 @@ Vốn dùng để hấp thụ tổn thất. Thanh khoản dùng để đáp ứn
 
 Một ngân hàng có tỷ lệ vốn cao vẫn có thể gặp khủng hoảng nếu dòng tiền rút quá nhanh và tài sản khó bán. Ngược lại, ngân hàng trung ương có thể cung cấp thanh khoản nhưng không thể xóa tổn thất kinh tế nếu giá trị tài sản thực sự thấp hơn nợ.
 
-> **Chuyển mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **11. Công cụ hỗ trợ thanh khoản của ngân hàng trung ương** tiếp nhận điểm tựa từ **10. Vốn ngân hàng và thanh khoản ngân hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Người cho vay cuối cùng và cứu trợ vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **11. Công cụ hỗ trợ thanh khoản của ngân hàng trung ương** nối từ **10. Vốn ngân hàng và thanh khoản ngân hàng** sang **12. Người cho vay cuối cùng và cứu trợ vốn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Công cụ hỗ trợ thanh khoản của ngân hàng trung ương
 
@@ -170,7 +170,7 @@ Chấp nhận tài sản thế chấp
 
 Nhưng hỗ trợ thanh khoản không xóa rủi ro tín dụng. Nếu người vay cuối cùng vỡ nợ, tổn thất kinh tế vẫn tồn tại.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **12. Người cho vay cuối cùng và cứu trợ vốn** tiếp nhận điểm tựa từ **11. Công cụ hỗ trợ thanh khoản của ngân hàng trung ương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Vòng xoáy ngân hàng–chính phủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **12. Người cho vay cuối cùng và cứu trợ vốn** nối từ **11. Công cụ hỗ trợ thanh khoản của ngân hàng trung ương** sang **13. Vòng xoáy ngân hàng–chính phủ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Người cho vay cuối cùng và cứu trợ vốn
 
@@ -182,7 +182,7 @@ Khi vòng xoáy đã hình thành, phản ứng chính sách cần được đ�
 
 Hai biện pháp có tác động phân phối và tài khóa khác nhau. Không nên gọi mọi can thiệp là QE hoặc “in tiền”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **13. Vòng xoáy ngân hàng–chính phủ** tiếp nhận điểm tựa từ **12. Người cho vay cuối cùng và cứu trợ vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Trái phiếu doanh nghiệp và trái phiếu chính phủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **13. Vòng xoáy ngân hàng–chính phủ** nối từ **12. Người cho vay cuối cùng và cứu trợ vốn** sang **14. Trái phiếu doanh nghiệp và trái phiếu chính phủ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Vòng xoáy ngân hàng–chính phủ
 
@@ -200,7 +200,7 @@ Rủi ro chính phủ tăng
 
 Đây là vòng xoáy ngân hàng–chính phủ (sovereign-bank doom loop).
 
-> **Chuyển mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **14. Trái phiếu doanh nghiệp và trái phiếu chính phủ** tiếp nhận điểm tựa từ **13. Vòng xoáy ngân hàng–chính phủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Truyền dẫn sang cổ phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **14. Trái phiếu doanh nghiệp và trái phiếu chính phủ** nối từ **13. Vòng xoáy ngân hàng–chính phủ** sang **15. Truyền dẫn sang cổ phiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Trái phiếu doanh nghiệp và trái phiếu chính phủ
 
@@ -217,7 +217,7 @@ Tác động lãi suất
 
 Trái phiếu chính phủ tăng giá không đảm bảo trái phiếu doanh nghiệp cũng tăng.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **15. Truyền dẫn sang cổ phiếu** tiếp nhận điểm tựa từ **14. Trái phiếu doanh nghiệp và trái phiếu chính phủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Truyền dẫn vào lợi nhuận doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **15. Truyền dẫn sang cổ phiếu** nối từ **14. Trái phiếu doanh nghiệp và trái phiếu chính phủ** sang **16. Truyền dẫn vào lợi nhuận doanh nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Truyền dẫn sang cổ phiếu
 
@@ -225,7 +225,7 @@ Cổ phiếu tài chính thường chịu tác động trực tiếp qua nguồn
 
 Lập bản đồ ngành phải dựa trên độ nhạy bảng cân đối chứ không chỉ beta lịch sử.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **16. Truyền dẫn vào lợi nhuận doanh nghiệp** tiếp nhận điểm tựa từ **15. Truyền dẫn sang cổ phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Tín dụng tư nhân và độ trễ định giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **16. Truyền dẫn vào lợi nhuận doanh nghiệp** nối từ **15. Truyền dẫn sang cổ phiếu** sang **17. Tín dụng tư nhân và độ trễ định giá**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Truyền dẫn vào lợi nhuận doanh nghiệp
 
@@ -243,7 +243,7 @@ Doanh thu chậm lại
 
 Kế toán có thể phản ánh chậm hơn căng thẳng thanh khoản. Bảng cân đối thường cho cảnh báo sớm hơn EPS.
 
-> **Chuyển mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **17. Tín dụng tư nhân và độ trễ định giá** tiếp nhận điểm tựa từ **16. Truyền dẫn vào lợi nhuận doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Giảm đòn bẩy cưỡng bức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **17. Tín dụng tư nhân và độ trễ định giá** nối từ **16. Truyền dẫn vào lợi nhuận doanh nghiệp** sang **18. Giảm đòn bẩy cưỡng bức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Tín dụng tư nhân và độ trễ định giá
 
@@ -251,7 +251,7 @@ NAV của tín dụng tư nhân hoặc vốn cổ phần tư nhân có thể ch�
 
 Các tín hiệu cần chú ý gồm PIK tăng, gia hạn và sửa điều khoản, EBITDA add-back tăng, nới covenant, mức chiết khấu trên thị trường thứ cấp và thời gian thoái vốn kéo dài.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **18. Giảm đòn bẩy cưỡng bức** tiếp nhận điểm tựa từ **17. Tín dụng tư nhân và độ trễ định giá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Vàng và tiền mặt trong cú sốc thanh khoản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **18. Giảm đòn bẩy cưỡng bức** nối từ **17. Tín dụng tư nhân và độ trễ định giá** sang **19. Vàng và tiền mặt trong cú sốc thanh khoản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Giảm đòn bẩy cưỡng bức
 
@@ -259,7 +259,7 @@ Quỹ hoặc nhà giao dịch dùng đòn bẩy có thể phải bán cả tài 
 
 Tương quan tăng đột biến có thể phản ánh nhu cầu tiền mặt, không nhất thiết phản ánh thay đổi cơ bản của mọi tài sản.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **19. Vàng và tiền mặt trong cú sốc thanh khoản** tiếp nhận điểm tựa từ **18. Giảm đòn bẩy cưỡng bức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Truyền dẫn tới Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **19. Vàng và tiền mặt trong cú sốc thanh khoản** nối từ **18. Giảm đòn bẩy cưỡng bức** sang **20. Truyền dẫn tới Hàn Quốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Vàng và tiền mặt trong cú sốc thanh khoản
 
@@ -267,7 +267,7 @@ Vàng có vai trò trú ẩn nhưng vẫn có thể giảm tạm thời khi nhà
 
 Không nên dùng phản ứng một ngày để kết luận một công cụ phòng vệ “không hoạt động”. Cần phân biệt giai đoạn bán tháo đầu tiên và giai đoạn phản ứng chính sách sau đó.
 
-> **Chuyển mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **20. Truyền dẫn tới Hàn Quốc** tiếp nhận điểm tựa từ **19. Vàng và tiền mặt trong cú sốc thanh khoản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Truyền dẫn tới Việt Nam** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **20. Truyền dẫn tới Hàn Quốc** nối từ **19. Vàng và tiền mặt trong cú sốc thanh khoản** sang **21. Truyền dẫn tới Việt Nam**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Truyền dẫn tới Hàn Quốc
 
@@ -283,7 +283,7 @@ Căng thẳng nguồn vốn USD
 
 Doanh nghiệp xuất khẩu có doanh thu USD nhưng tác động lên vốn lưu động và tài trợ khác nhau theo từng công ty.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **21. Truyền dẫn tới Việt Nam** tiếp nhận điểm tựa từ **20. Truyền dẫn tới Hàn Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Đánh giá các tầng thanh khoản của danh mục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **21. Truyền dẫn tới Việt Nam** nối từ **20. Truyền dẫn tới Hàn Quốc** sang **22. Đánh giá các tầng thanh khoản của danh mục**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Truyền dẫn tới Việt Nam
 
@@ -299,7 +299,7 @@ Tâm lý tránh rủi ro toàn cầu / USD tăng
 
 Tín dụng ngân hàng trong nước, tái cấp vốn trái phiếu bất động sản và margin bán lẻ có thể chi phối thị trường nội địa.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **22. Đánh giá các tầng thanh khoản của danh mục** tiếp nhận điểm tựa từ **21. Truyền dẫn tới Việt Nam** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Kiểm thử căng thẳng ngược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **22. Đánh giá các tầng thanh khoản của danh mục** nối từ **21. Truyền dẫn tới Việt Nam** sang **23. Kiểm thử căng thẳng ngược**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Đánh giá các tầng thanh khoản của danh mục
 
@@ -316,7 +316,7 @@ Chuyển tiền xuyên biên giới có thể chậm ở đâu?
 
 Thanh khoản phải là một phần của ngân sách rủi ro.
 
-> **Chuyển mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **23. Kiểm thử căng thẳng ngược** tiếp nhận điểm tựa từ **22. Đánh giá các tầng thanh khoản của danh mục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Thiết kế phòng vệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **23. Kiểm thử căng thẳng ngược** nối từ **22. Đánh giá các tầng thanh khoản của danh mục** sang **24. Thiết kế phòng vệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Kiểm thử căng thẳng ngược
 
@@ -326,7 +326,7 @@ Thay vì chỉ hỏi “danh mục mất bao nhiêu nếu cổ phiếu giảm 20
 
 Các nguyên nhân có thể gồm mất thu nhập, margin lời gọi (call / 호출), trả nợ, gọi vốn từ quỹ tư nhân, lệch tiền tệ hoặc sự cố môi giới/lưu ký.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **24. Thiết kế phòng vệ** tiếp nhận điểm tựa từ **23. Kiểm thử căng thẳng ngược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Quyền chọn bảo hiểm trong khủng hoảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **24. Thiết kế phòng vệ** nối từ **23. Kiểm thử căng thẳng ngược** sang **25. Quyền chọn bảo hiểm trong khủng hoảng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Thiết kế phòng vệ
 
@@ -334,7 +334,7 @@ Nếu rủi ro là duration lãi suất, cần công cụ phòng vệ duration. 
 
 Một công cụ phòng vệ có thể thất bại về vận hành ngay cả khi hướng kinh tế đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **25. Quyền chọn bảo hiểm trong khủng hoảng** tiếp nhận điểm tựa từ **24. Thiết kế phòng vệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Thực thi trong căng thẳng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **25. Quyền chọn bảo hiểm trong khủng hoảng** nối từ **24. Thiết kế phòng vệ** sang **26. Thực thi trong căng thẳng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Quyền chọn bảo hiểm trong khủng hoảng
 
@@ -342,7 +342,7 @@ Put mua trước có độ lồi giúp bảo vệ đuôi, nhưng biến động 
 
 Phòng vệ đuôi nên được xem như ngân sách bảo hiểm định kỳ của danh mục, không phải một giao dịch ứng biến ở đỉnh hoảng loạn.
 
-> **Chuyển mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **26. Thực thi trong căng thẳng** tiếp nhận điểm tựa từ **25. Quyền chọn bảo hiểm trong khủng hoảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Điều gì đã nằm trong giá?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **26. Thực thi trong căng thẳng** nối từ **25. Quyền chọn bảo hiểm trong khủng hoảng** sang **27. Điều gì đã nằm trong giá?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Thực thi trong căng thẳng
 
@@ -359,7 +359,7 @@ Yêu cầu ký quỹ tăng
 
 Quy mô vị thế trước khủng hoảng quan trọng hơn việc cố tìm một điểm thoát hoàn hảo trong khủng hoảng.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **27. Điều gì đã nằm trong giá?** tiếp nhận điểm tựa từ **26. Thực thi trong căng thẳng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Dòng thời gian khủng hoảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **27. Điều gì đã nằm trong giá?** nối từ **26. Thực thi trong căng thẳng** sang **28. Dòng thời gian khủng hoảng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Điều gì đã nằm trong giá?
 
@@ -367,7 +367,7 @@ Phân tích khủng hoảng tín dụng phải so mức chênh lệch hiện t�
 
 Một doanh nghiệp có thể rất yếu nhưng trái phiếu đã phản ánh xác suất vỡ nợ sâu. Một doanh nghiệp khác có vẻ ổn định nhưng chênh lệch tín dụng vẫn ở mức quá hẹp. Lợi thế nằm ở phân phối kết quả so với giá, không nằm ở nhãn “tốt/xấu”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **28. Dòng thời gian khủng hoảng** tiếp nhận điểm tựa từ **27. Điều gì đã nằm trong giá?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Phân rã sau khủng hoảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **28. Dòng thời gian khủng hoảng** nối từ **27. Điều gì đã nằm trong giá?** sang **29. Phân rã sau khủng hoảng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Dòng thời gian khủng hoảng
 
@@ -386,7 +386,7 @@ Giai đoạn 8: Sửa chữa bảng cân đối / tái cấp vốn / vỡ nợ
 
 Các tài sản tạo đáy ở những giai đoạn khác nhau. Giá thị trường thường đi trước dữ liệu kế toán.
 
-> **Chuyển mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **29. Phân rã sau khủng hoảng** tiếp nhận điểm tựa từ **28. Dòng thời gian khủng hoảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Checklist dùng lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **29. Phân rã sau khủng hoảng** nối từ **28. Dòng thời gian khủng hoảng** sang **30. Checklist dùng lại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Phân rã sau khủng hoảng
 
@@ -401,7 +401,7 @@ Công cụ phòng vệ nào thực sự hiệu quả sau chi phí và ký quỹ?
 Phản ứng chính sách có lớn hoặc nhanh hơn dự kiến không?
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **30. Checklist dùng lại** tiếp nhận điểm tựa từ **29. Phân rã sau khủng hoảng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **30. Checklist dùng lại** nối từ **29. Phân rã sau khủng hoảng** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Checklist dùng lại
 
@@ -424,7 +424,7 @@ Bên bán cưỡng bức
 Thanh khoản danh mục
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **Kết luận** gom các mảnh từ **30. Checklist dùng lại** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 02 — Truyền dẫn khủng hoảng tín dụng và thanh khoản**, **Kết luận** tổng hợp từ **30. Checklist dùng lại** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

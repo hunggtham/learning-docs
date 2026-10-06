@@ -8,7 +8,7 @@ Ghana kéo dài từ bờ Vịnh Guinea qua vùng rừng ẩm và vành đai nô
 
 Phần lớn mạng kinh tế quốc tế hướng về các cảng phía nam, trong khi nội địa phía bắc phụ thuộc các trục bắc–nam để kết nối với thị trường.
 
-> **Chuyển mạch:** Trong **Ghana**, **Volta Basin và hồ Volta** tiếp nhận điểm tựa từ **Từ Vịnh Guinea tới xavan nội địa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Accra–Tema và Kumasi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Gradient Vịnh Guinea–xavan dồn nước và dân cư về các lưu vực; **Volta Basin và hồ Volta** biến chênh lệch mưa thành thủy điện, giao thông và sinh kế. **Accra–Tema và Kumasi** tiếp theo cho thấy các nút đô thị nằm trên trục đó.
 
 ## Volta Basin và hồ Volta
 
@@ -16,7 +16,7 @@ Hệ sông Volta chiếm phần lớn cấu trúc thủy văn Ghana. Hồ Volta,
 
 Đập tạo lợi ích năng lượng nhưng cũng minh họa sự đánh đổi (trade-off / 트레이드오프) của hạ tầng (infrastructure / 인프라) lớn: thay đổi dòng chảy, hệ sinh thái và không gian sinh kế.
 
-> **Chuyển mạch:** Ở chặng này của **Ghana**, **Accra–Tema và Kumasi** tiếp nhận điểm tựa từ **Volta Basin và hồ Volta** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vành đai cacao và vàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Accra–Tema là coastal service–port core, còn Kumasi là inland trade node; **Accra–Tema và Kumasi** nối hồ, nông nghiệp và thị trường theo trục nam–bắc. **Vành đai cacao và vàng** tiếp theo đặt sản xuất hàng hóa lên mạng này.
 
 ## Accra–Tema và Kumasi
 
@@ -24,7 +24,7 @@ Accra là thủ đô và lõi dịch vụ–đô thị ven biển. Tema là cả
 
 Kumasi nằm sâu trong nội địa tại vùng rừng lịch sử và là nút thương mại lớn kết nối các vùng nông nghiệp. Vì thế Ghana có trục mạnh `Accra/Tema ↔ Kumasi ↔ northern Ghana`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ghana**, **Vành đai cacao và vàng** tiếp nhận điểm tựa từ **Accra–Tema và Kumasi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết nối khu vực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cacao dựa vào nhiều hộ sản xuất và cảng, còn vàng tập trung quanh mỏ và corridor; **Vành đai cacao và vàng** tạo hai geography hàng hóa khác nhau. **Kết nối khu vực** tiếp theo cho thấy chúng gặp các thị trường Tây Phi ở đâu.
 
 ## Vành đai cacao và vàng
 
@@ -32,19 +32,19 @@ Cacao phát triển tốt trong vùng rừng ẩm phía nam–trung, còn khai t
 
 Dầu khí ngoài khơi bổ sung một lớp kinh tế biển ở phía tây nam.
 
-> **Chuyển mạch:** Trong **Ghana**, **Kết nối khu vực** tiếp nhận điểm tựa từ **Vành đai cacao và vàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hành lang ven biển và các trục bắc–nam làm **Kết nối khu vực** ngắn hơn trên bản đồ nhưng tắc nghẽn, biên giới và hạ tầng làm effective distance tăng. **Rủi ro** tiếp theo đặt các corridor trước lũ, xói lở và biến động giá hàng hóa.
 
 ## Kết nối khu vực
 
 Ghana nằm trong hành lang ven biển Tây Phi, nơi các đô thị lớn gần nhau hơn so với nhiều vùng nội địa. Tuy vậy tắc nghẽn, thủ tục biên giới và chất lượng hạ tầng làm **effective distance** khác đáng kể khoảng cách bản đồ.
 
-> **Chuyển mạch:** Ở chặng này của **Ghana**, **Rủi ro** tiếp nhận điểm tựa từ **Kết nối khu vực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Lũ đô thị, xói lở bờ biển, mưa biến động và suy thoái đất/rừng làm **Rủi ro** tác động đồng thời lên đô thị và cacao–vàng–dầu khí. **Mô hình tư duy** sẽ tổng hợp nước, vị trí cảng và trục khu vực.
 
 ## Rủi ro
 
 Lũ đô thị ở Accra, xói lở bờ biển, biến động mưa và suy thoái đất/rừng là các rủi ro có tính vùng. Giá hàng hóa toàn cầu cũng truyền trực tiếp vào không gian cacao, vàng và dầu khí.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ghana**, **Mô hình tư duy** gom các mảnh từ **Rủi ro** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi Gulf–forest–savanna → Volta → Accra/Tema–Kumasi → cacao/gold → regional links và risk, rồi bàn giao cho owner **Western Africa** trong [README](./README.md).
 
 ## Mô hình tư duy
 

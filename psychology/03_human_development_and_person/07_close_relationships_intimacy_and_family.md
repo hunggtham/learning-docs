@@ -12,7 +12,7 @@ Các yếu tố cổ điển như proximity, familiarity, similarity và recipro
 
 Similarity thường có lợi vì giảm friction về giá trị (value / 값), lifestyle hoặc communication, nhưng complementarity cũng có thể hữu ích ở một số role. Không có “công thức tính tương thích (compatibility / 호환성)” đơn giản.
 
-> **Chuyển mạch:** Trong **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Trust như một dự đoán** tiếp nhận điểm tựa từ **Attraction: gần nhau không chỉ vì “hợp tính”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Intimacy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Trust như một dự đoán** nối từ **Attraction: gần nhau không chỉ vì “hợp tính”** sang **Intimacy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trust như một dự đoán
 
@@ -32,7 +32,7 @@ updated expectation
 
 Một hành động lớn có thể quan trọng, nhưng nhiều micro-behavior ổn định thường tạo trust bền hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Intimacy** tiếp nhận điểm tựa từ **Trust như một dự đoán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Responsiveness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Intimacy** nối từ **Trust như một dự đoán** sang **Responsiveness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Intimacy
 
@@ -40,7 +40,7 @@ Một hành động lớn có thể quan trọng, nhưng nhiều micro-behavior 
 
 Self-disclosure quá nhanh hoặc không có reciprocity có thể tạo pressure thay vì closeness. Intimacy phát triển qua calibration giữa openness và responsiveness.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Responsiveness** tiếp nhận điểm tựa từ **Intimacy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xung đột (conflict / 충돌) không phải dấu hiệu tự động của relationship thất bại (failure / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Responsiveness** nối từ **Intimacy** sang **Xung đột (conflict / 충돌) không phải dấu hiệu tự động của relationship thất bại (failure / 실패)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Responsiveness
 
@@ -48,7 +48,7 @@ Một construct quan trọng là **perceived partner responsiveness**: cảm gi�
 
 Không cần partner luôn đồng ý. Một phản hồi (response / 응답) có thể rất supportive dù chứa disagreement nếu người kia cảm thấy perspective của mình đã được hiểu.
 
-> **Chuyển mạch:** Trong **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Xung đột (conflict / 충돌) không phải dấu hiệu tự động của relationship thất bại (failure / 실패)** tiếp nhận điểm tựa từ **Responsiveness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Demand–withdraw** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Xung đột (conflict / 충돌) không phải dấu hiệu tự động của relationship thất bại (failure / 실패)** nối từ **Responsiveness** sang **Demand–withdraw**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xung đột (conflict / 충돌) không phải dấu hiệu tự động của relationship thất bại (failure / 실패)
 
@@ -64,7 +64,7 @@ Mọi quan hệ dài hạn đều có khác biệt về priority, money, family,
 
 Một xung đột (conflict / 충돌) có thể trở thành dữ liệu (data / 데이터) cho negotiation nếu hai bên giữ được enough regulation.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Demand–withdraw** tiếp nhận điểm tựa từ **Xung đột (conflict / 충돌) không phải dấu hiệu tự động của relationship thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Soft startup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Demand–withdraw** nối từ **Xung đột (conflict / 충돌) không phải dấu hiệu tự động của relationship thất bại (failure / 실패)** sang **Soft startup**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Demand–withdraw
 
@@ -72,7 +72,7 @@ Trong vòng **đòi hỏi–rút lui (demand–withdraw)**, một bên tăng pre
 
 Breaking cycle cần thay cả hai điểm. Người demand có thể chuyển từ accusation sang yêu cầu (request / 요청) cụ thể; người withdraw có thể xin pause nhưng lần ghi nhận (commit / 커밋) quay lại thảo luận vào thời gian rõ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Soft startup** tiếp nhận điểm tựa từ **Demand–withdraw** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Repair** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Soft startup** nối từ **Demand–withdraw** sang **Repair**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Soft startup
 
@@ -88,7 +88,7 @@ Có thể dùng cấu trúc (structure / 구조):
 
 Đây không đảm bảo đối phương sẽ phản ứng tốt, nhưng giảm unnecessary threat và làm yêu cầu (request / 요청) observable hơn.
 
-> **Chuyển mạch:** Trong **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Repair** tiếp nhận điểm tựa từ **Soft startup** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Apology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Repair** nối từ **Soft startup** sang **Apology**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Repair
 
@@ -102,7 +102,7 @@ Repair có thể nhỏ:
 
 Relationship resilience phụ thuộc mạnh vào khả năng quay lại cooperation sau rupture.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Apology** tiếp nhận điểm tựa từ **Repair** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Forgiveness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Apology** nối từ **Repair** sang **Forgiveness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Apology
 
@@ -118,7 +118,7 @@ Các thành phần hữu ích:
 
 Apology không có nghĩa nhận lỗi cho điều mình không làm. Nó cần accuracy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Forgiveness** tiếp nhận điểm tựa từ **Apology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Commitment và investment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Forgiveness** nối từ **Apology** sang **Commitment và investment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Forgiveness
 
@@ -126,7 +126,7 @@ Forgiveness không đồng nghĩa reconciliation hoặc xóa ranh giới (bounda
 
 Reconciliation đòi hỏi hành vi (behavior / 동작) thay đổi (change / 변경) và restored an toàn (safety / 안전); forgiveness chủ yếu là tiến trình (process / 프로세스) nội tâm/interpersonal khác.
 
-> **Chuyển mạch:** Trong **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Commitment và investment** tiếp nhận điểm tựa từ **Forgiveness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Equity và division of labor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Commitment và investment** nối từ **Forgiveness** sang **Equity và division of labor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Commitment và investment
 
@@ -134,7 +134,7 @@ Investment mô hình (model / 모델) cho rằng commitment thường liên quan
 
 Investment có thể là dùng chung (shared / 공유) friends, lịch sử (history / 이력), home, children hoặc định danh (identity / 식별자). Vì vậy, người ta có thể ở lại một relationship không tốt khi exit chi phí (cost / 비용) cao. Commitment tự thân không chứng minh relationship healthy.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Commitment và investment** cho ta quy tắc; **Equity và division of labor** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Money** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Commitment và investment** nêu quy tắc; **Equity và division of labor** thử quy tắc trong tình huống, rồi **Money** mở rộng hệ quả.
 
 ## Equity và division of labor
 
@@ -144,7 +144,7 @@ Vấn đề xuất hiện khi **invisible labor** không được nhận diện:
 
 Discussion tốt cần làm công việc (work / 작업) visible trước khi negotiate.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Equity và division of labor** cho ta quy tắc; **Money** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Sex và desire discrepancy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Equity và division of labor** nêu quy tắc; **Money** thử quy tắc trong tình huống, rồi **Sex và desire discrepancy** mở rộng hệ quả.
 
 ## Money
 
@@ -154,7 +154,7 @@ Một người tiết kiệm mạnh vì scarcity lịch sử (history / 이력);
 
 Xem [[../06_applied/18_financial_psychology_and_personal_decision_making]].
 
-> **Chuyển mạch:** Trong **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Sex và desire discrepancy** tiếp nhận điểm tựa từ **Money** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Attachment trong adult relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Sex và desire discrepancy** nối từ **Money** sang **Attachment trong adult relationship**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sex và desire discrepancy
 
@@ -164,7 +164,7 @@ Desire phụ thuộc stress, sleep, medication, health, relationship ngữ cản
 
 Xem [[13_sexuality_desire_and_relationship_functioning]].
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Attachment trong adult relationship** tiếp nhận điểm tựa từ **Sex và desire discrepancy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Family hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Attachment trong adult relationship** nối từ **Sex và desire discrepancy** sang **Family hệ thống (system / 시스템)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Attachment trong adult relationship
 
@@ -172,7 +172,7 @@ Attachment anxiety có thể tăng reassurance seeking; avoidance có thể tăn
 
 Xem [[01_attachment_and_relationships]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Family hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Attachment trong adult relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Triangulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Family hệ thống (system / 시스템)** nối từ **Attachment trong adult relationship** sang **Triangulation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Family hệ thống (system / 시스템)
 
@@ -182,7 +182,7 @@ Ví dụ, khi một child gặp khó khăn, parents có thể xung đột (confl
 
 **Family các hệ thống (systems / 시스템들) thinking** xem ranh giới (boundary / 경계), coalition, role, vòng phản hồi (feedback loop / 피드백 루프) và interdependence.
 
-> **Chuyển mạch:** Trong **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Triangulation** tiếp nhận điểm tựa từ **Family hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parentification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Triangulation** nối từ **Family hệ thống (system / 시스템)** sang **Parentification**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Triangulation
 
@@ -190,7 +190,7 @@ Ví dụ, khi một child gặp khó khăn, parents có thể xung đột (confl
 
 Triangulation đôi khi giảm tension tạm thời nhưng có thể đặt burden lên third person và giữ xung đột (conflict / 충돌) gốc chưa giải quyết.
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Parentification** tiếp nhận điểm tựa từ **Triangulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xã hội (social / 사회적) hỗ trợ (support / 지원)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Parentification** nối từ **Triangulation** sang **Xã hội (social / 사회적) hỗ trợ (support / 지원)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Parentification
 
@@ -198,7 +198,7 @@ Triangulation đôi khi giảm tension tạm thời nhưng có thể đặt burd
 
 Helping family không tự động là parentification; mức burden, chronicity và mất mát (loss / 손실) of developmental needs mới quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Xã hội (social / 사회적) hỗ trợ (support / 지원)** tiếp nhận điểm tựa từ **Parentification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Relationship và stress buffering** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Xã hội (social / 사회적) hỗ trợ (support / 지원)** nối từ **Parentification** sang **Relationship và stress buffering**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xã hội (social / 사회적) hỗ trợ (support / 지원)
 
@@ -215,7 +215,7 @@ Một câu hỏi đơn giản hữu ích:
 
 `Bạn muốn mình lắng nghe, cùng nghĩ solution hay giúp làm việc gì cụ thể?`
 
-> **Chuyển mạch:** Trong **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Relationship và stress buffering** tiếp nhận điểm tựa từ **Xã hội (social / 사회적) hỗ trợ (support / 지원)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ranh giới (boundary / 경계) và autonomy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Relationship và stress buffering** nối từ **Xã hội (social / 사회적) hỗ trợ (support / 지원)** sang **Ranh giới (boundary / 경계) và autonomy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Relationship và stress buffering
 
@@ -225,7 +225,7 @@ Chất lượng xã hội (social / 사회적) liên kết (connection / 연결)
 
 Xem [[12_loneliness_social_connection_and_belonging]].
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Relationship và stress buffering** đã nêu tiêu chí phân biệt, còn **Ranh giới (boundary / 경계) và autonomy** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Red flag và mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Relationship và stress buffering** đặt tiêu chí; **Ranh giới (boundary / 경계) và autonomy** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Red flag và mẫu (pattern / 패턴)** mở rộng hệ quả.
 
 ## Ranh giới (boundary / 경계) và autonomy
 
@@ -237,7 +237,7 @@ Ranh giới (boundary / 경계) hiệu quả mô tả hành vi (behavior / 동�
 
 `Nếu cuộc nói chuyện chuyển sang chửi nhau, mình sẽ dừng và quay lại sau.`
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Ranh giới (boundary / 경계) và autonomy** đã nêu tiêu chí phân biệt, còn **Red flag và mẫu (pattern / 패턴)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Abuse không chỉ là “communication bài toán (problem / 문제)”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Ranh giới (boundary / 경계) và autonomy** đặt tiêu chí; **Red flag và mẫu (pattern / 패턴)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Abuse không chỉ là “communication bài toán (problem / 문제)”** mở rộng hệ quả.
 
 ## Red flag và mẫu (pattern / 패턴)
 
@@ -252,7 +252,7 @@ Online advice thường biến một hành vi (behavior / 동작) thành red fla
 
 Một lần quên trả lời tin nhắn khác với mẫu (pattern / 패턴) kiểm soát hoặc contempt kéo dài.
 
-> **Chuyển mạch:** Trong **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Abuse không chỉ là “communication bài toán (problem / 문제)”** tiếp nhận điểm tựa từ **Red flag và mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Abuse không chỉ là “communication bài toán (problem / 문제)”** nối từ **Red flag và mẫu (pattern / 패턴)** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Abuse không chỉ là “communication bài toán (problem / 문제)”
 
@@ -260,7 +260,7 @@ Khi có coercive điều khiển (control / 제어), threat, violence hoặc fea
 
 Trong abuse, power asymmetry và an toàn (safety / 안전) cần được ưu tiên; couple communication technique không thay thế an toàn (safety / 안전) planning hoặc professional hỗ trợ (support / 지원).
 
-> **Chuyển mạch:** Ở chặng này của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Mô hình tư duy** gom các mảnh từ **Abuse không chỉ là “communication bài toán (problem / 문제)”** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Mô hình tư duy** tổng hợp từ **Abuse không chỉ là “communication bài toán (problem / 문제)”** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -280,7 +280,7 @@ history + attachment + stress + expectation
 
 > Relationship không chỉ là tổng của hai personality. Nó là một hệ thống động được tạo bởi những vòng phản hồi lặp lại giữa hai người và môi trường của họ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -292,7 +292,7 @@ history + attachment + stress + expectation
 
 **“Forgiveness nghĩa là phải quay lại.”** Forgiveness và reconciliation là hai tiến trình (process / 프로세스) khác.
 
-> **Chuyển mạch:** Trong **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Quan hệ thân mật, gần gũi và gia đình — Close Relationships, Intimacy & Family / 친밀관계·가족**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

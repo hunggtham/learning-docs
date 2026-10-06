@@ -29,7 +29,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 정당성 | Legitimacy | Tính chính danh; mức độ quyền lực được xem là hợp lý/chấp nhận được | 02 |
 | 관계주의 | Relationalism | Cách nhìn nhấn mạnh quyết định phụ thuộc vào quan hệ cụ thể | 02 |
 
-> **Chuyển mạch:** Trong **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Gia đình, chăm sóc và vòng đời** tiếp nhận điểm tựa từ **Quan hệ và giao tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giáo dục, campus và công việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Gia đình, chăm sóc và vòng đời** nối từ **Quan hệ và giao tiếp** sang **Giáo dục, campus và công việc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gia đình, chăm sóc và vòng đời
 
@@ -65,7 +65,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 아빠육아 | Father-involved childcare | Người cha trực tiếp tham gia và chịu trách nhiệm chăm con | 29 |
 | 돌봄망 | Care mạng (network / 네트워크) | Mạng lưới người và thiết chế cùng tham gia chăm sóc | 29, 15 |
 
-> **Chuyển mạch:** Ở chặng này của **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Giáo dục, campus và công việc** tiếp nhận điểm tựa từ **Gia đình, chăm sóc và vòng đời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ăn uống, nhà ở và khu dân cư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Giáo dục, campus và công việc** nối từ **Gia đình, chăm sóc và vòng đời** sang **Ăn uống, nhà ở và khu dân cư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giáo dục, campus và công việc
 
@@ -122,7 +122,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 장애 | sự cố (incident / 인시던트)/outage | Sự cố hoặc gián đoạn hệ thống | 06 |
 | 사후회고 | Postmortem/retrospective | Hậu kiểm sau sự cố hoặc sự kiện để rút bài học | 06 |
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Ăn uống, nhà ở và khu dân cư** tiếp nhận điểm tựa từ **Giáo dục, campus và công việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tôn giáo, nghệ thuật và di sản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Ăn uống, nhà ở và khu dân cư** nối từ **Giáo dục, campus và công việc** sang **Tôn giáo, nghệ thuật và di sản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ăn uống, nhà ở và khu dân cư
 
@@ -161,7 +161,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 무장애 | Barrier-free | Không rào cản trong thiết kế và tiếp cận | 12, 26, 31 |
 | 접근성 | khả năng tiếp cận (accessibility / 접근성) | Khả năng tiếp cận vật lý, số hoặc thông tin | 12, 26, 31 |
 
-> **Chuyển mạch:** Trong **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Tôn giáo, nghệ thuật và di sản** tiếp nhận điểm tựa từ **Ăn uống, nhà ở và khu dân cư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lễ hội, thành phố, mùa và đời sống số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Tôn giáo, nghệ thuật và di sản** nối từ **Ăn uống, nhà ở và khu dân cư** sang **Lễ hội, thành phố, mùa và đời sống số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tôn giáo, nghệ thuật và di sản
 
@@ -193,7 +193,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 비엔날레 | Biennale | Triển lãm nghệ thuật quy mô lớn theo chu kỳ | 10 |
 | 독립공간 | Independent art không gian (space / 공간) | Không gian nghệ thuật độc lập | 10 |
 
-> **Chuyển mạch:** Ở chặng này của **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Lễ hội, thành phố, mùa và đời sống số** tiếp nhận điểm tựa từ **Tôn giáo, nghệ thuật và di sản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dịch vụ, tiêu dùng và danh tiếng trực tuyến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Lễ hội, thành phố, mùa và đời sống số** nối từ **Tôn giáo, nghệ thuật và di sản** sang **Dịch vụ, tiêu dùng và danh tiếng trực tuyến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lễ hội, thành phố, mùa và đời sống số
 
@@ -230,7 +230,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 여름휴가 | Summer vacation | Kỳ nghỉ hè | 32 |
 | 수능한파 | CSAT cold-wave phrase | Cách nói về rét vào ngày thi CSAT | 32 |
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Dịch vụ, tiêu dùng và danh tiếng trực tuyến** tiếp nhận điểm tựa từ **Lễ hội, thành phố, mùa và đời sống số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hallyu và biến đổi xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Dịch vụ, tiêu dùng và danh tiếng trực tuyến** nối từ **Lễ hội, thành phố, mùa và đời sống số** sang **Hallyu và biến đổi xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dịch vụ, tiêu dùng và danh tiếng trực tuyến
 
@@ -257,7 +257,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 예약 | Reservation | Đặt chỗ/đặt lịch trước | 33 |
 | 노쇼 | No-show | Đã đặt nhưng không đến và không huỷ đúng quy tắc | 33 |
 
-> **Chuyển mạch:** Trong **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Hallyu và biến đổi xã hội** tiếp nhận điểm tựa từ **Dịch vụ, tiêu dùng và danh tiếng trực tuyến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thuật ngữ vùng miền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Hallyu và biến đổi xã hội** nối từ **Dịch vụ, tiêu dùng và danh tiếng trực tuyến** sang **Thuật ngữ vùng miền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hallyu và biến đổi xã hội
 
@@ -283,7 +283,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 지방소멸 | cục bộ (local / 로컬) extinction rủi ro (risk / 위험) | Nguy cơ suy giảm dân số và dịch vụ địa phương | 15 |
 | MZ세대 | Millennials + Gen Z label | Nhãn thế hệ MZ | 06, 15, 30 |
 
-> **Chuyển mạch:** Ở chặng này của **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Thuật ngữ vùng miền** tiếp nhận điểm tựa từ **Hallyu và biến đổi xã hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bản sắc, lịch sử, kinh tế, quân sự và không gian công cộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Thuật ngữ vùng miền** nối từ **Hallyu và biến đổi xã hội** sang **Bản sắc, lịch sử, kinh tế, quân sự và không gian công cộng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thuật ngữ vùng miền
 
@@ -298,7 +298,7 @@ Bảng này dùng để nối thuật ngữ, tên gọi và ngữ cảnh giữa 
 | 고향 | Hometown | Quê nhà | 11, 14 |
 | 지역주의 | Regionalism | Chủ nghĩa hoặc xu hướng vùng miền | 14 |
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Bản sắc, lịch sử, kinh tế, quân sự và không gian công cộng** tiếp nhận điểm tựa từ **Thuật ngữ vùng miền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các khái niệm phân tích xuyên chương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Bản sắc, lịch sử, kinh tế, quân sự và không gian công cộng** nối từ **Thuật ngữ vùng miền** sang **Các khái niệm phân tích xuyên chương**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bản sắc, lịch sử, kinh tế, quân sự và không gian công cộng
 
@@ -358,7 +358,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | 악플 | Malicious comment | Bình luận ác ý | 27 |
 | 티켓팅 | Ticketing race/tiến trình (process / 프로세스) | Quá trình săn/mua vé trực tuyến trong điều kiện khan hiếm | 20 |
 
-> **Chuyển mạch:** Trong **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Các khái niệm phân tích xuyên chương** tiếp nhận điểm tựa từ **Bản sắc, lịch sử, kinh tế, quân sự và không gian công cộng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bản đồ nguồn: nên dùng gì khi mở rộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Các khái niệm phân tích xuyên chương** nối từ **Bản sắc, lịch sử, kinh tế, quân sự và không gian công cộng** sang **Bản đồ nguồn: nên dùng gì khi mở rộng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các khái niệm phân tích xuyên chương
 
@@ -390,7 +390,7 @@ Phần này là mục tra cứu có mục đích cụ thể trong thư viện. H
 | lợi thế tích luỹ | Cumulative advantage | Lợi thế ban đầu tạo thêm nguồn lực làm lợi thế tiếp tục tăng | 13, 16, 24 |
 | vòng đời nội dung | Content vòng đời (lifecycle / 생명주기) | Quá trình từ phát triển, sản xuất, phát hành đến tái khai thác/lưu trữ | 13 |
 
-> **Chuyển mạch:** Ở chặng này của **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Các khái niệm phân tích xuyên chương** nêu điều cần giải thích; **Bản đồ nguồn: nên dùng gì khi mở rộng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Quy ước cập nhật bộ sách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Các khái niệm phân tích xuyên chương** đặt vấn đề; **Bản đồ nguồn: nên dùng gì khi mở rộng** đối chiếu bằng chứng, rồi **Quy ước cập nhật bộ sách** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Bản đồ nguồn: nên dùng gì khi mở rộng
 
@@ -426,7 +426,7 @@ Với nội dung Hallyu và nền tảng, cần tách **độ phổ biến**, **
 
 Với công sở, cần phân biệt **chức danh**, **quyền quyết định**, **quyền đánh giá**, **quyền sở hữu thông tin** và **chuyên môn**. Một sơ đồ chức danh không đủ để mô tả quyền lực thực tế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Bản đồ nguồn: nên dùng gì khi mở rộng** nêu điều cần giải thích; **Quy ước cập nhật bộ sách** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bảng thuật ngữ và bản đồ nguồn tham khảo**, **Bản đồ nguồn: nên dùng gì khi mở rộng** đặt vấn đề; **Quy ước cập nhật bộ sách** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Quy ước cập nhật bộ sách
 

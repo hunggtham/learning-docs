@@ -41,7 +41,7 @@ x\\y
 
 Viết `Ax=b` không chỉ để ngắn hơn. Nó làm lộ cấu trúc (structure / 구조) chung của hàng nghìn problems tưởng như khác nhau.
 
-> **Chuyển mạch:** Trong **Ma trận và hệ phương trình tuyến tính**, **Matrix-vector sản phẩm (product / 제품) thực sự làm gì?** tiếp nhận điểm tựa từ **Tại sao tuyến tính (linear / 선형) các hệ thống (systems / 시스템들) xuất hiện khắp nơi?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Row operations tồn tại vì sao?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ma trận và hệ phương trình tuyến tính**, **Matrix-vector sản phẩm (product / 제품) thực sự làm gì?** nối từ **Tại sao tuyến tính (linear / 선형) các hệ thống (systems / 시스템들) xuất hiện khắp nơi?** sang **Row operations tồn tại vì sao?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Matrix-vector sản phẩm (product / 제품) thực sự làm gì?
 
@@ -67,7 +67,7 @@ Ax=x_1a_1+\cdots+x_na_n.
 
 Cùng phép nhân đó cũng có row viewpoint: thành phần (component / 컴포넌트) thứ `i` của `Ax` là dot sản phẩm (product / 제품) giữa row thứ `i` của `A` và véc-tơ (vector / 벡터) `x`. Column view phù hợp với hình học (geometry / 기하학) của đầu ra (output / 출력) không gian (space / 공간); row view phù hợp với các ràng buộc (constraints / 제약조건들).
 
-> **Chuyển mạch:** Ở chặng này của **Ma trận và hệ phương trình tuyến tính**, **Row operations tồn tại vì sao?** tiếp nhận điểm tựa từ **Matrix-vector sản phẩm (product / 제품) thực sự làm gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao có unique, none hoặc infinitely many solutions?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ma trận và hệ phương trình tuyến tính**, **Row operations tồn tại vì sao?** nối từ **Matrix-vector sản phẩm (product / 제품) thực sự làm gì?** sang **Vì sao có unique, none hoặc infinitely many solutions?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Row operations tồn tại vì sao?
 
@@ -114,7 +114,7 @@ Thực hiện `R_2 \leftarrow R_2-2R_1`:
 
 nên `y=2`, rồi `x=1`. Elimination đã biến coupled các ràng buộc (constraints / 제약조건들) thành triangular phụ thuộc (dependency / 의존성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ma trận và hệ phương trình tuyến tính**, **Vì sao có unique, none hoặc infinitely many solutions?** tiếp nhận điểm tựa từ **Row operations tồn tại vì sao?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rank là số các ràng buộc (constraints / 제약조건들) độc lập thực sự** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ma trận và hệ phương trình tuyến tính**, **Vì sao có unique, none hoặc infinitely many solutions?** nối từ **Row operations tồn tại vì sao?** sang **Rank là số các ràng buộc (constraints / 제약조건들) độc lập thực sự**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao có unique, none hoặc infinitely many solutions?
 
@@ -132,7 +132,7 @@ nghĩa là `0=c`, nên hệ thống (system / 시스템) inconsistent.
 
 Nếu sau elimination có non-pivot columns, các variables tương ứng trở thành free variables. Khi đó solution set thường là một affine subspace: một particular solution cộng với null-space directions.
 
-> **Chuyển mạch:** Trong **Ma trận và hệ phương trình tuyến tính**, **Rank là số các ràng buộc (constraints / 제약조건들) độc lập thực sự** tiếp nhận điểm tựa từ **Vì sao có unique, none hoặc infinitely many solutions?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Inverse: khi transformation giữ đủ thông tin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ma trận và hệ phương trình tuyến tính**, **Rank là số các ràng buộc (constraints / 제약조건들) độc lập thực sự** nối từ **Vì sao có unique, none hoặc infinitely many solutions?** sang **Inverse: khi transformation giữ đủ thông tin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rank là số các ràng buộc (constraints / 제약조건들) độc lập thực sự
 
@@ -154,7 +154,7 @@ n=\operatorname{rank}(A)+\operatorname{nullity}(A).
 
 Đầu vào (input / 입력) degrees of freedom được chia thành directions còn nhìn thấy ở đầu ra (output / 출력) và directions bị transformation làm mất.
 
-> **Chuyển mạch:** Ở chặng này của **Ma trận và hệ phương trình tuyến tính**, **Inverse: khi transformation giữ đủ thông tin** tiếp nhận điểm tựa từ **Rank là số các ràng buộc (constraints / 제약조건들) độc lập thực sự** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Determinant: vì sao zero determinant quan trọng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ma trận và hệ phương trình tuyến tính**, **Inverse: khi transformation giữ đủ thông tin** nối từ **Rank là số các ràng buộc (constraints / 제약조건들) độc lập thực sự** sang **Determinant: vì sao zero determinant quan trọng?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Inverse: khi transformation giữ đủ thông tin
 
@@ -186,7 +186,7 @@ A invertible
 
 Đây không phải một danh sách (list / 목록) facts rời rạc; tất cả cùng nói một điều: transformation không collapse thông tin (information / 정보) direction nào.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ma trận và hệ phương trình tuyến tính**, **Determinant: vì sao zero determinant quan trọng?** tiếp nhận điểm tựa từ **Inverse: khi transformation giữ đủ thông tin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phép nhân ma trận (matrix multiplication / 행렬 곱셈) tồn tại vì composition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ma trận và hệ phương trình tuyến tính**, **Determinant: vì sao zero determinant quan trọng?** nối từ **Inverse: khi transformation giữ đủ thông tin** sang **Phép nhân ma trận (matrix multiplication / 행렬 곱셈) tồn tại vì composition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Determinant: vì sao zero determinant quan trọng?
 
@@ -202,7 +202,7 @@ một volume khác zero bị collapse thành zero volume. Nghĩa là toàn bộ 
 
 Determinant hữu ích về lý thuyết (theory / 이론), nhưng không nên dùng như default numerical kiểm thử (test / 테스트) cho invertibility của large matrices. Conditioning và singular values thường informative hơn.
 
-> **Chuyển mạch:** Trong **Ma trận và hệ phương trình tuyến tính**, **Phép nhân ma trận (matrix multiplication / 행렬 곱셈) tồn tại vì composition** tiếp nhận điểm tựa từ **Determinant: vì sao zero determinant quan trọng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Worked example — cân bằng một portfolio ràng buộc (constraint / 제약조건) đơn giản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ma trận và hệ phương trình tuyến tính**, **Phép nhân ma trận (matrix multiplication / 행렬 곱셈) tồn tại vì composition** nối từ **Determinant: vì sao zero determinant quan trọng?** sang **Worked example — cân bằng một portfolio ràng buộc (constraint / 제약조건) đơn giản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phép nhân ma trận (matrix multiplication / 행렬 곱셈) tồn tại vì composition
 
@@ -226,7 +226,7 @@ AB\neq BA.
 
 Composition của operations có thứ tự (order / 순서). Rotate rồi nonuniform quy mô (scale / 규모) có thể khác quy mô (scale / 규모) rồi rotate.
 
-> **Chuyển mạch:** Ở chặng này của **Ma trận và hệ phương trình tuyến tính**, **Phép nhân ma trận (matrix multiplication / 행렬 곱셈) tồn tại vì composition** cho ta quy tắc; **Worked example — cân bằng một portfolio ràng buộc (constraint / 제약조건) đơn giản** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Từ chính xác (exact / 정확한) equations đến dữ liệu (data / 데이터) science** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ma trận và hệ phương trình tuyến tính**, **Phép nhân ma trận (matrix multiplication / 행렬 곱셈) tồn tại vì composition** nêu quy tắc; **Worked example — cân bằng một portfolio ràng buộc (constraint / 제약조건) đơn giản** thử quy tắc trong tình huống, rồi **Từ chính xác (exact / 정확한) equations đến dữ liệu (data / 데이터) science** mở rộng hệ quả.
 
 ## Worked example — cân bằng một portfolio ràng buộc (constraint / 제약조건) đơn giản
 
@@ -248,7 +248,7 @@ Aw=b.
 
 Điểm quan trọng không nằm ở việc elimination bằng tay, mà ở modeling: mỗi row là một ràng buộc (constraint / 제약조건), mỗi column mô tả cách một asset góp vào từng ràng buộc (constraint / 제약조건). Nếu rows gần phụ thuộc tuyến tính, solution sẽ nhạy với dữ liệu (data / 데이터) noise; lúc đó vấn đề không còn chỉ là “solve equation” mà chuyển sang conditioning và tối ưu hóa (optimization / 최적화).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ma trận và hệ phương trình tuyến tính**, **Worked example — cân bằng một portfolio ràng buộc (constraint / 제약조건) đơn giản** cho ta quy tắc; **Từ chính xác (exact / 정확한) equations đến dữ liệu (data / 데이터) science** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Khoa học máy tính (computer science / 컴퓨터 과학), AI và Physics connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ma trận và hệ phương trình tuyến tính**, **Worked example — cân bằng một portfolio ràng buộc (constraint / 제약조건) đơn giản** nêu quy tắc; **Từ chính xác (exact / 정확한) equations đến dữ liệu (data / 데이터) science** thử quy tắc trong tình huống, rồi **Khoa học máy tính (computer science / 컴퓨터 과학), AI và Physics connections** mở rộng hệ quả.
 
 ## Từ chính xác (exact / 정확한) equations đến dữ liệu (data / 데이터) science
 
@@ -265,7 +265,7 @@ Ax=b
 → regression / PCA / inverse problems.
 ```
 
-> **Chuyển mạch:** Trong **Ma trận và hệ phương trình tuyến tính**, **Từ chính xác (exact / 정확한) equations đến dữ liệu (data / 데이터) science** nêu điều cần giải thích; **Khoa học máy tính (computer science / 컴퓨터 과학), AI và Physics connections** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ma trận và hệ phương trình tuyến tính**, **Từ chính xác (exact / 정확한) equations đến dữ liệu (data / 데이터) science** đặt vấn đề; **Khoa học máy tính (computer science / 컴퓨터 과학), AI và Physics connections** đối chiếu bằng chứng, rồi **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Khoa học máy tính (computer science / 컴퓨터 과학), AI và Physics connections
 
@@ -277,7 +277,7 @@ z=Wx+b,
 
 trong đó `W` tuyến tính (linear / 선형) còn `b` là translation nên whole map là affine. Trong finite-state approximations, chuyển tiếp (transition / 전이) operators cũng được lưu bằng matrices. Trong physics, coupled tuyến tính (linear / 선형) các hệ thống (systems / 시스템들) xuất hiện sau linearization quanh equilibrium. Trong numerical simulation, sparse matrices cho phép xử lý các hệ thống (systems / 시스템들) hàng triệu unknowns nếu exploit cấu trúc (structure / 구조) đúng.
 
-> **Chuyển mạch:** Ở chặng này của **Ma trận và hệ phương trình tuyến tính**, **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** tiếp nhận điểm tựa từ **Khoa học máy tính (computer science / 컴퓨터 과학), AI và Physics connections** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ma trận và hệ phương trình tuyến tính**, **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** nối từ **Khoa học máy tính (computer science / 컴퓨터 과학), AI và Physics connections** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes
 
@@ -285,13 +285,13 @@ Hệ tuyến tính (linear system / 선형 시스템) modeling giả định qua
 
 Even khi chính xác (exact / 정확한) mathematical solution tồn tại, computation vẫn có thể unreliable nếu `A` ill-conditioned. Hai matrices đều invertible nhưng một ma trận (matrix / 행렬) gần singular có thể amplify tiny đầu vào (input / 입력) errors rất mạnh. Vì vậy “invertible” không đồng nghĩa “numerically safe”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ma trận và hệ phương trình tuyến tính**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ma trận và hệ phương trình tuyến tính**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Các giả định (assumptions / 가정들) và thất bại (failure / 실패) modes** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > ma trận (matrix / 행렬) không chỉ là bảng coefficients. Nó là một machine tuyến tính được viết bằng tọa độ. `Ax=b` hỏi machine đó có thể tạo `b` hay không; rank cho biết bao nhiêu directions sống sót; null không gian (space / 공간) cho biết directions nào bị mất; elimination chỉ là cách đổi biểu diễn (representation / 표현) để cấu trúc (structure / 구조) đó lộ ra.
 
-> **Chuyển mạch:** Trong **Ma trận và hệ phương trình tuyến tính**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Ma trận và hệ phương trình tuyến tính**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

@@ -14,7 +14,7 @@ Baseline stable: **Xcode 27 + Swift 6.4 + iOS 27 SDK**. Swift 6.4 phát hành ch
 
 Thư viện (library / 라이브러리) vẫn giữ Swift 5.x, UIKit, Combine, cốt lõi (core / 핵심) dữ liệu (data / 데이터) và Objective-C interoperability khi chúng cần thiết để đọc/migrate môi trường vận hành (production / 운영 환경) codebase.
 
-> **Chuyển mạch:** Baseline cố định toolchain và deployment context; từ đó Beginner đặt vocabulary, còn Intermediate mở rộng ownership và runtime reasoning.
+> **Nối mạch:** Baseline cố định toolchain và deployment context; từ đó Beginner đặt vocabulary, còn Intermediate mở rộng ownership và runtime reasoning.
 
 ## 1. [Beginner](01_swift_ios_beginner.md)
 
@@ -22,7 +22,7 @@ Nền ngữ nghĩa (semantics / 의미론): Swift/Xcode/phiên bản (version / 
 
 **Gate:** phải giải thích được giá trị (value / 값)/tham chiếu (reference / 참조) ngữ nghĩa (semantics / 의미론), escaping capture, retain cycle, `weak`/`unowned`, ARC khác dữ liệu (data / 데이터) race, `await` là suspension, `@State`/`@Binding` quyền sở hữu (ownership / 소유권), UIKit vòng đời (lifecycle / 생명주기) cơ bản và triển khai (deployment / 배포) mục tiêu (target / 대상) khác SDK/trình biên dịch (compiler / 컴파일러).
 
-> **Chuyển mạch:** Beginner đặt vocabulary và ownership nền; Intermediate tiếp theo mở rộng value semantics, concurrency và API contracts trước khi đi vào Advanced/Senior.
+> **Nối mạch:** Beginner đặt vocabulary và ownership nền; Intermediate tiếp theo mở rộng value semantics, concurrency và API contracts trước khi đi vào Advanced/Senior.
 
 ## 2. [Intermediate](02_swift_ios_intermediate.md)
 
@@ -30,7 +30,7 @@ Tính năng (feature / 기능) quyền sở hữu (ownership / 소유권)/isolat
 
 **Gate:** phải chỉ được tác vụ (task / 작업) đơn vị sở hữu (owner / 오너)/cancellation, isolation ranh giới (boundary / 경계), Sendable crossing, SwiftUI nguồn chuẩn (source of truth / 정본)/định danh (identity / 식별자), mạng (network / 네트워크)/persistence ranh giới (boundary / 경계), phụ thuộc (dependency / 의존성) nguồn (source / 소스) và kiểm thử (test / 테스트) điểm (point / 지점) của một tính năng (feature / 기능) thật.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리) — chỉ mục (index / 인덱스)**, **3. Advanced / Senior** tiếp nhận điểm tựa từ **2. Intermediate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Master** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리) — chỉ mục (index / 인덱스)**, **3. Advanced / Senior** nối từ **2. Intermediate** sang **4. Master**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. [Advanced / Senior](03_swift_ios_advanced_senior.md)
 
@@ -38,7 +38,7 @@ Môi trường vận hành (production / 운영 환경) hiện thực (implement
 
 **Gate:** phải vẽ được quyền sở hữu (ownership / 소유권) đồ thị (graph / 그래프), UIKit/SwiftUI vòng đời (lifecycle / 생명주기), tác vụ (task / 작업)/isolation đồ thị (graph / 그래프), trạng thái (state / 상태) source-of-truth, dữ liệu (data / 데이터) ranh giới (boundary / 경계) và mô-đun (module / 모듈) phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프); đồng thời biết profile, kiểm thử (test / 테스트) di chuyển (migration / 마이그레이션)/bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물) và phân tích quay lui (rollback / 롤백) rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Advanced/Senior nối runtime ownership và concurrency; Master tổng hợp evolution/architecture, rồi Production Reference chuyển mental model đó thành release và operations guidance.
+> **Nối mạch:** Advanced/Senior nối runtime ownership và concurrency; Master tổng hợp evolution/architecture, rồi Production Reference chuyển mental model đó thành release và operations guidance.
 
 ## 4. [Master](04_swift_ios_master.md)
 
@@ -46,19 +46,19 @@ Hệ thống (system / 시스템) longevity: Swift/iOS evolution theo programmin
 
 **Completion mục tiêu (target / 대상):** khi toolchain/khung phần mềm (framework / 프레임워크) mới xuất hiện, có thể xác định thay đổi (change / 변경) thuộc trình biên dịch (compiler / 컴파일러)/ngôn ngữ (language / 언어)/SDK/thời gian chạy (runtime / 런타임) nào, ranh giới (boundary / 경계) nào bị ảnh hưởng, kiểm thử (test / 테스트)/di chuyển (migration / 마이그레이션) nào cần chạy và rollout/khôi phục (recovery / 복구) như thế nào.
 
-> **Chuyển mạch:** Ở chặng này của **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리) — chỉ mục (index / 인덱스)**, sau nội dung của **4. Master**, **Production Reference** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Phụ thuộc (dependency / 의존성) rules của mạch học (learning flow / 학습 흐름)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리) — chỉ mục (index / 인덱스)**, sau nội dung của **4. Master**, **Production Reference** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Phụ thuộc (dependency / 의존성) rules của mạch học (learning flow / 학습 흐름)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## [Production Reference](05_swift_ios_production_reference.md)
 
 Tham chiếu (reference / 참조) xuyên cấp cho các chủ đề hay xuất hiện khi gỡ lỗi (debug / 디버그)/môi trường vận hành (production / 운영 환경) kiểm tra (audit / 감사): closure thời gian tồn tại (lifetime / 수명), numeric tính đúng đắn (correctness / 정확성), HTTP ngữ nghĩa (semantics / 의미론), tolerant decoding, thử lại (retry / 재시도)/backoff/idempotency, cốt lõi (core / 핵심) dữ liệu (data / 데이터) legacy, background transfer, quyền sở hữu (ownership / 소유권) APIs mới, generated mã (code / 코드), khả năng quan sát (observability / 관측 가능성)/bộ nhớ (memory / 메모리) đồ thị (graph / 그래프), extension tiến trình (process / 프로세스) ranh giới (boundary / 경계), supply-chain, ADR/phiên bản (version / 버전) ma trận (matrix / 행렬), disaster khôi phục (recovery / 복구), bản phát hành (release / 릴리스) sản phẩm tạo ra (artifact / 산출물) testing và risk-based Definition of Done.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리) — chỉ mục (index / 인덱스)**, **Production Reference** xác định đầu vào; **Phụ thuộc (dependency / 의존성) rules của mạch học (learning flow / 학습 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Phiên bản (version / 버전) quy tắc (rule / 규칙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리) — chỉ mục (index / 인덱스)**, **Production Reference** đặt đầu vào cho **Phụ thuộc (dependency / 의존성) rules của mạch học (learning flow / 학습 흐름)**, rồi **Phiên bản (version / 버전) quy tắc (rule / 규칙)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Phụ thuộc (dependency / 의존성) rules của mạch học (learning flow / 학습 흐름)
 
 Không bỏ ARC để nhảy thẳng tính đồng thời (concurrency / 동시성); không bỏ tác vụ (task / 작업)/isolation để nhảy thẳng kiến trúc (architecture / 아키텍처); không tối ưu SwiftUI khi source-of-truth/định danh (identity / 식별자) còn sai; không làm hybrid SwiftUI/UIKit khi vòng đời (lifecycle / 생명주기) UIKit chưa chắc; không học phiên bản (version / 버전)/bản phát hành (release / 릴리스) quản trị (governance / 거버넌스) trước khi hiểu môi trường vận hành (production / 운영 환경) hiện thực (implementation / 구현).
 
-> **Chuyển mạch:** Trong **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리) — chỉ mục (index / 인덱스)**, **Phụ thuộc (dependency / 의존성) rules của mạch học (learning flow / 학습 흐름)** xác định đầu vào; **Phiên bản (version / 버전) quy tắc (rule / 규칙)** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Swift & iOS thư viện kiến thức (knowledge library / 지식 라이브러리) — chỉ mục (index / 인덱스)**, **Phụ thuộc (dependency / 의존성) rules của mạch học (learning flow / 학습 흐름)** xác định đầu vào; **Phiên bản (version / 버전) quy tắc (rule / 규칙)** giải thích bước vận hành tạo ra kết quả kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Phiên bản (version / 버전) quy tắc (rule / 규칙)
 

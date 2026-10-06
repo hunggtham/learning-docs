@@ -18,7 +18,7 @@ Trong protein của sinh vật, amino acid chủ yếu có **cấu hình L (L co
 
 Vì vậy không nên hình dung amino acid trong môi trường nước sinh lý chủ yếu ở dạng trung hòa NH₂–CHR–COOH.
 
-> **Chuyển mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Hóa học acid-base của amino acid** tiếp nhận điểm tựa từ **Amino acid — phân tử nhỏ nhưng có nhiều trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa học mạch bên quan trọng hơn bảng phân loại cứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Hóa học acid-base của amino acid** nối từ **Amino acid — phân tử nhỏ nhưng có nhiều trạng thái** sang **Hóa học mạch bên quan trọng hơn bảng phân loại cứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học acid-base của amino acid
 
@@ -44,7 +44,7 @@ H_2NCH_2CO_2^- + H^+
 
 Trong điện di, trạng thái điện tích quyết định hướng và tốc độ di chuyển.
 
-> **Chuyển mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Hóa học mạch bên quan trọng hơn bảng phân loại cứng** tiếp nhận điểm tựa từ **Hóa học acid-base của amino acid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vi môi trường làm thay đổi pKa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Hóa học mạch bên quan trọng hơn bảng phân loại cứng** nối từ **Hóa học acid-base của amino acid** sang **Vi môi trường làm thay đổi pKa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học mạch bên quan trọng hơn bảng phân loại cứng
 
@@ -66,7 +66,7 @@ Ví dụ:
 - nhóm hydroxyl của Ser/Thr/Tyr có thể được phosphoryl hóa;
 - Trp/Tyr/Phe tham gia tương tác thơm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Vi môi trường làm thay đổi pKa** tiếp nhận điểm tựa từ **Hóa học mạch bên quan trọng hơn bảng phân loại cứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hình thành liên kết peptide** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Vi môi trường làm thay đổi pKa** nối từ **Hóa học mạch bên quan trọng hơn bảng phân loại cứng** sang **Hình thành liên kết peptide**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vi môi trường làm thay đổi pKa
 
@@ -76,7 +76,7 @@ Giá trị \(pK_a\) trong sách là giá trị của một môi trường mô h�
 
 Histidine chẳng hạn có thể luân phiên làm chất cho và nhận proton vì \(pK_a\) của imidazole gần pH sinh học và dễ bị môi trường cục bộ điều chỉnh.
 
-> **Chuyển mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, sau nội dung của **Vi môi trường làm thay đổi pKa**, **Hình thành liên kết peptide** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Hệ quả của cộng hưởng amide** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, sau nội dung của **Vi môi trường làm thay đổi pKa**, **Hình thành liên kết peptide** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Hệ quả của cộng hưởng amide** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Hình thành liên kết peptide
 
@@ -98,7 +98,7 @@ O=C-NH \leftrightarrow O^- - C=N^+H
 
 Do đó liên kết C–N có một phần đặc tính liên kết đôi.
 
-> **Chuyển mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Hệ quả của cộng hưởng amide** tiếp nhận điểm tựa từ **Hình thành liên kết peptide** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biểu đồ Ramachandran** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Hệ quả của cộng hưởng amide** nối từ **Hình thành liên kết peptide** sang **Biểu đồ Ramachandran**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ quả của cộng hưởng amide
 
@@ -109,7 +109,7 @@ Do đó liên kết C–N có một phần đặc tính liên kết đôi.
 
 Không phải mọi góc \(\phi/\psi\) đều khả thi vì va chạm lập thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Biểu đồ Ramachandran** tiếp nhận điểm tựa từ **Hệ quả của cộng hưởng amide** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các mức cấu trúc protein — cách trừu tượng hữu ích, không phải thứ tự lắp ráp bắt buộc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Biểu đồ Ramachandran** nối từ **Hệ quả của cộng hưởng amide** sang **Các mức cấu trúc protein — cách trừu tượng hữu ích, không phải thứ tự lắp ráp bắt buộc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Biểu đồ Ramachandran
 
@@ -119,7 +119,7 @@ Không phải mọi góc \(\phi/\psi\) đều khả thi vì va chạm lập th�
 
 Glycine linh hoạt hơn vì mạch bên chỉ là H; proline bị ràng buộc hơn vì mạch bên đóng vòng với nitrogen khung chính.
 
-> **Chuyển mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Các mức cấu trúc protein — cách trừu tượng hữu ích, không phải thứ tự lắp ráp bắt buộc** tiếp nhận điểm tựa từ **Biểu đồ Ramachandran** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **α-helix** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Các mức cấu trúc protein — cách trừu tượng hữu ích, không phải thứ tự lắp ráp bắt buộc** nối từ **Biểu đồ Ramachandran** sang **α-helix**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các mức cấu trúc protein — cách trừu tượng hữu ích, không phải thứ tự lắp ráp bắt buộc
 
@@ -141,7 +141,7 @@ Sự lắp ghép của nhiều chuỗi hoặc tiểu đơn vị.
 
 Protein không nhất thiết gấp theo chuỗi “bậc một → bậc hai → bậc ba” từng bước cứng nhắc. Gấp cuộn có thể mang tính hợp tác và phân cấp nhưng con đường thực tế là động.
 
-> **Chuyển mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **α-helix** tiếp nhận điểm tựa từ **Các mức cấu trúc protein — cách trừu tượng hữu ích, không phải thứ tự lắp ráp bắt buộc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **β-sheet** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **α-helix** nối từ **Các mức cấu trúc protein — cách trừu tượng hữu ích, không phải thứ tự lắp ráp bắt buộc** sang **β-sheet**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## α-helix
 
@@ -151,7 +151,7 @@ Mạch bên hướng ra ngoài. Helix có mômen lưỡng cực tổng do nhiề
 
 Xu hướng tạo helix phụ thuộc loại residue. Proline thường phá helix vì hình học vòng và thiếu N–H cho hydrogen bond khung; glycine có entropy cấu dạng cao và cũng thường làm helix đều kém bền.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **β-sheet** tiếp nhận điểm tựa từ **α-helix** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Turn và vòng lặp (loop / 루프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **β-sheet** nối từ **α-helix** sang **Turn và vòng lặp (loop / 루프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## β-sheet
 
@@ -161,7 +161,7 @@ Mạch bên xen kẽ hướng lên và xuống khỏi mặt sheet.
 
 β-sheet có thể tạo lõi cấu trúc mở rộng, thùng β trong màng hoặc tập hợp dạng amyloid tùy bối cảnh.
 
-> **Chuyển mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Turn và vòng lặp (loop / 루프)** tiếp nhận điểm tựa từ **β-sheet** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng tự do gấp cuộn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Turn và vòng lặp (loop / 루프)** nối từ **β-sheet** sang **Năng lượng tự do gấp cuộn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Turn và vòng lặp (loop / 루프)
 
@@ -169,7 +169,7 @@ Vòng lặp (loop / 루프) không phải “phần dư ngẫu nhiên”. Chúng
 
 β-turn cho phép chuỗi đổi hướng nhanh; glycine và proline thường xuất hiện vì hình học phù hợp.
 
-> **Chuyển mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Năng lượng tự do gấp cuộn** tiếp nhận điểm tựa từ **Turn và vòng lặp (loop / 루프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lõi kỵ nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Năng lượng tự do gấp cuộn** nối từ **Turn và vòng lặp (loop / 루프)** sang **Lõi kỵ nước**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng tự do gấp cuộn
 
@@ -191,7 +191,7 @@ Trạng thái tự nhiên được ưu tiên khi \(\Delta G_{fold}<0\), nhưng b
 - mất entropy cấu dạng;
 - entropy dung môi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Lõi kỵ nước** tiếp nhận điểm tựa từ **Năng lượng tự do gấp cuộn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cảnh quan gấp cuộn — hình phễu chứ không phải một con đường duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Lõi kỵ nước** nối từ **Năng lượng tự do gấp cuộn** sang **Cảnh quan gấp cuộn — hình phễu chứ không phải một con đường duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lõi kỵ nước
 
@@ -201,7 +201,7 @@ Nhóm phân cực bị chôn cần được thỏa mãn bằng hydrogen bond ho�
 
 Chất lượng đóng gói cũng quan trọng vì hốc rỗng làm giảm tiếp xúc van der Waals và có thể cho nước xâm nhập làm mất ổn định.
 
-> **Chuyển mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Cảnh quan gấp cuộn — hình phễu chứ không phải một con đường duy nhất** tiếp nhận điểm tựa từ **Lõi kỵ nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chaperone** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Cảnh quan gấp cuộn — hình phễu chứ không phải một con đường duy nhất** nối từ **Lõi kỵ nước** sang **Chaperone**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cảnh quan gấp cuộn — hình phễu chứ không phải một con đường duy nhất
 
@@ -209,7 +209,7 @@ Mô hình cảnh quan năng lượng xem trạng thái chưa gấp là một t�
 
 Protein không cần thử mọi cấu dạng có thể. Tuy vậy các cực tiểu cục bộ gấp sai vẫn có thể tồn tại và dẫn tới kết tụ.
 
-> **Chuyển mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Chaperone** tiếp nhận điểm tựa từ **Cảnh quan gấp cuộn — hình phễu chứ không phải một con đường duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết disulfide** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Chaperone** nối từ **Cảnh quan gấp cuộn — hình phễu chứ không phải một con đường duy nhất** sang **Liên kết disulfide**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chaperone
 
@@ -219,7 +219,7 @@ Chaperone không “nói cho protein biết cấu trúc cuối”. Trình tự v
 
 Các chaperone phụ thuộc ATP dùng năng lượng để định hình lại con đường động học.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, sau nội dung của **Chaperone**, **Liên kết disulfide** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Động lực học protein — cấu trúc không phải ảnh tĩnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, sau nội dung của **Chaperone**, **Liên kết disulfide** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Động lực học protein — cấu trúc không phải ảnh tĩnh** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết disulfide
 
@@ -233,7 +233,7 @@ Disulfide phổ biến trong protein ngoại bào vì môi trường ngoại bà
 
 Protein disulfide isomerase giúp sắp xếp lại các disulfide sai trong quá trình gấp.
 
-> **Chuyển mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Động lực học protein — cấu trúc không phải ảnh tĩnh** tiếp nhận điểm tựa từ **Liên kết disulfide** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt động lực học liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Động lực học protein — cấu trúc không phải ảnh tĩnh** nối từ **Liên kết disulfide** sang **Nhiệt động lực học liên kết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Động lực học protein — cấu trúc không phải ảnh tĩnh
 
@@ -243,7 +243,7 @@ Liên kết, xúc tác và điều hòa dị lập thể thường liên quan s�
 
 NMR động học, phương pháp đơn phân tử và mô phỏng động lực phân tử cho thấy chuyển động trải từ picosecond tới giây.
 
-> **Chuyển mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, sau nội dung của **Động lực học protein — cấu trúc không phải ảnh tĩnh**, **Nhiệt động lực học liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Ổ khóa–chìa khóa, khớp cảm ứng và chọn lọc cấu dạng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, sau nội dung của **Động lực học protein — cấu trúc không phải ảnh tĩnh**, **Nhiệt động lực học liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Ổ khóa–chìa khóa, khớp cảm ứng và chọn lọc cấu dạng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Nhiệt động lực học liên kết
 
@@ -263,7 +263,7 @@ Năng lượng tự do liên kết:
 
 Ái lực không chỉ đến từ tiếp xúc trực tiếp. Mất lớp solvat hóa, entropy cấu dạng và thay đổi proton hóa cũng đóng góp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Ổ khóa–chìa khóa, khớp cảm ứng và chọn lọc cấu dạng** tiếp nhận điểm tựa từ **Nhiệt động lực học liên kết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều hòa dị lập thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Ổ khóa–chìa khóa, khớp cảm ứng và chọn lọc cấu dạng** nối từ **Nhiệt động lực học liên kết** sang **Điều hòa dị lập thể**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ổ khóa–chìa khóa, khớp cảm ứng và chọn lọc cấu dạng
 
@@ -275,7 +275,7 @@ Năng lượng tự do liên kết:
 
 Hệ thật có thể kết hợp cả hai cơ chế.
 
-> **Chuyển mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Điều hòa dị lập thể** tiếp nhận điểm tựa từ **Ổ khóa–chìa khóa, khớp cảm ứng và chọn lọc cấu dạng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết hợp tác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Điều hòa dị lập thể** nối từ **Ổ khóa–chìa khóa, khớp cảm ứng và chọn lọc cấu dạng** sang **Liên kết hợp tác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điều hòa dị lập thể
 
@@ -285,7 +285,7 @@ Không cần chuyển động hình học lớn nhìn thấy được; thay đ�
 
 Hemoglobin là ví dụ kinh điển: liên kết \(O_2\) làm thay đổi phân bố trạng thái của các tiểu đơn vị và tạo tính hợp tác.
 
-> **Chuyển mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, sau nội dung của **Điều hòa dị lập thể**, **Liên kết hợp tác** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Xúc tác bằng protein** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, sau nội dung của **Điều hòa dị lập thể**, **Liên kết hợp tác** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Xúc tác bằng protein** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết hợp tác
 
@@ -297,7 +297,7 @@ Với hệ có tính hợp tác, mô hình liên kết 1:1 đơn giản không �
 
 Tuy nhiên hệ số Hill \(n_H\) không luôn bằng số vị trí liên kết thật; nó là đại lượng hiện tượng mô tả độ dốc và mức hợp tác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Xúc tác bằng protein** tiếp nhận điểm tựa từ **Liên kết hợp tác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biến đổi sau dịch mã** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Xúc tác bằng protein** nối từ **Liên kết hợp tác** sang **Biến đổi sau dịch mã**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xúc tác bằng protein
 
@@ -314,7 +314,7 @@ Các chiến lược xúc tác gồm:
 
 Cấu trúc protein vì vậy là kiến trúc hóa học để hạ \(\Delta G^\ddagger\).
 
-> **Chuyển mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Biến đổi sau dịch mã** tiếp nhận điểm tựa từ **Xúc tác bằng protein** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân hủy và vòng đời protein** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Biến đổi sau dịch mã** nối từ **Xúc tác bằng protein** sang **Phân hủy và vòng đời protein**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Biến đổi sau dịch mã
 
@@ -332,7 +332,7 @@ Biến đổi có thể làm thay đổi điện tích, bề mặt tương tác,
 
 Phosphoryl hóa thêm một nhóm phosphate mang điện âm mạnh và có thể tái định hình đáng kể trường tĩnh điện cục bộ.
 
-> **Chuyển mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Phân hủy và vòng đời protein** tiếp nhận điểm tựa từ **Biến đổi sau dịch mã** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Protein màng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Phân hủy và vòng đời protein** nối từ **Biến đổi sau dịch mã** sang **Protein màng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân hủy và vòng đời protein
 
@@ -342,7 +342,7 @@ Nồng độ protein ở trạng thái ổn định phụ thuộc cả tốc đ�
 
 Kiểm soát chất lượng loại protein hỏng hoặc gấp sai, ngăn kết tụ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Protein màng** tiếp nhận điểm tựa từ **Phân hủy và vòng đời protein** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Protein mất trật tự nội tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Protein màng** nối từ **Phân hủy và vòng đời protein** sang **Protein mất trật tự nội tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Protein màng
 
@@ -352,7 +352,7 @@ Protein màng đưa các bề mặt kỵ nước về phía lõi lipid, còn b�
 
 Vì vậy cảnh quan gấp cuộn của protein màng khác đáng kể protein hòa tan.
 
-> **Chuyển mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Protein mất trật tự nội tại** tiếp nhận điểm tựa từ **Protein màng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân tách pha** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Protein mất trật tự nội tại** nối từ **Protein màng** sang **Phân tách pha**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Protein mất trật tự nội tại
 
@@ -362,7 +362,7 @@ Tình trạng mất trật tự hữu ích cho tín hiệu, điều hòa và ph�
 
 Vì vậy chức năng không đòi hỏi toàn bộ protein phải cứng trong một cấu trúc 3D duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Phân tách pha** tiếp nhận điểm tựa từ **Protein mất trật tự nội tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gấp sai và amyloid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Phân tách pha** nối từ **Protein mất trật tự nội tại** sang **Gấp sai và amyloid**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân tách pha
 
@@ -372,7 +372,7 @@ Những ngăn này không có màng lipid nhưng có thể làm giàu một số
 
 Các khái niệm nhiệt động về đồng tồn tại pha, nồng độ và tương tác liên phân tử áp dụng trực tiếp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Gấp sai và amyloid** tiếp nhận điểm tựa từ **Phân tách pha** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xác định cấu trúc protein** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Gấp sai và amyloid** nối từ **Phân tách pha** sang **Xác định cấu trúc protein**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gấp sai và amyloid
 
@@ -382,7 +382,7 @@ Tạo amyloid có thể bị giới hạn bởi tạo mầm: trạng thái kết
 
 Đây là liên hệ trực tiếp giữa hóa học protein và động học chuyển pha.
 
-> **Chuyển mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Xác định cấu trúc protein** tiếp nhận điểm tựa từ **Gấp sai và amyloid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo tồn trình tự và chức năng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Xác định cấu trúc protein** nối từ **Gấp sai và amyloid** sang **Bảo tồn trình tự và chức năng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xác định cấu trúc protein
 
@@ -402,7 +402,7 @@ Dịch chuyển hóa học, NOE và hằng số ghép cung cấp ràng buộc kh
 
 Các hệ máy học hiện đại dự đoán cấu trúc từ trình tự và thông tin tiến hóa, nhưng độ tin cậy, trạng thái oligomer, ligand, động lực học và môi trường vẫn phải được diễn giải.
 
-> **Chuyển mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Bảo tồn trình tự và chức năng** tiếp nhận điểm tựa từ **Xác định cấu trúc protein** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Bảo tồn trình tự và chức năng** nối từ **Xác định cấu trúc protein** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bảo tồn trình tự và chức năng
 
@@ -412,7 +412,7 @@ Residue được bảo tồn mạnh qua tiến hóa thường cho thấy ràng b
 
 Đây là cầu nối sang tin sinh học và mô hình thống kê.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Bảo tồn trình tự và chức năng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Những hiểu lầm thường gặp** nối từ **Bảo tồn trình tự và chức năng** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -432,7 +432,7 @@ Thông thường không. Biến tính phá cấu trúc bậc cao trong khi khung
 
 Không. Chỉ cần thay đổi phân bố trạng thái hoặc động lực học cũng có thể truyền ghép nối.
 
-> **Chuyển mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Amino acid và protein — trình tự, gấp cuộn, động lực học và chức năng phân tử**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

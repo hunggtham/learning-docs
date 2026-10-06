@@ -22,7 +22,7 @@ Các prerequisite quan trọng:
 
 Hai hệ không độc lập. Dị hóa cung cấp năng lượng và khung carbon; nhu cầu đồng hóa lại điều chỉnh thông lượng dị hóa.
 
-> **Chuyển mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Vì sao tế bào dùng nhiều bước thay vì một phản ứng khổng lồ?** tiếp nhận điểm tựa từ **Dị hóa và đồng hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng tự do Gibbs trong tế bào** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Vì sao tế bào dùng nhiều bước thay vì một phản ứng khổng lồ?** nối từ **Dị hóa và đồng hóa** sang **Năng lượng tự do Gibbs trong tế bào**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao tế bào dùng nhiều bước thay vì một phản ứng khổng lồ?
 
@@ -39,7 +39,7 @@ Tế bào chia quá trình thành nhiều bước do enzyme xúc tác. Mỗi bư
 
 Chuyển hóa vì vậy giống **hệ chuyển đổi năng lượng nhiều tầng** hơn là một lần “đốt cháy” duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Năng lượng tự do Gibbs trong tế bào** tiếp nhận điểm tựa từ **Vì sao tế bào dùng nhiều bước thay vì một phản ứng khổng lồ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ghép phản ứng — năng lượng tự do cộng được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Năng lượng tự do Gibbs trong tế bào** nối từ **Vì sao tế bào dùng nhiều bước thay vì một phản ứng khổng lồ?** sang **Ghép phản ứng — năng lượng tự do cộng được**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng tự do Gibbs trong tế bào
 
@@ -62,7 +62,7 @@ Do đó:
 ΔG   → động lực thật trong điều kiện hiện tại
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Ghép phản ứng — năng lượng tự do cộng được** tiếp nhận điểm tựa từ **Năng lượng tự do Gibbs trong tế bào** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ATP — chất trung gian chuyển nhóm, không phải “pin năng lượng” cô lập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Ghép phản ứng — năng lượng tự do cộng được** nối từ **Năng lượng tự do Gibbs trong tế bào** sang **ATP — chất trung gian chuyển nhóm, không phải “pin năng lượng” cô lập**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ghép phản ứng — năng lượng tự do cộng được
 
@@ -94,7 +94,7 @@ Nếu tổng âm, quá trình ghép có thể thuận lợi.
 
 Câu “ATP cung cấp năng lượng” chỉ là cách nói ngắn cho việc ghép nhiệt động thông qua một cơ chế hóa học thật sự.
 
-> **Chuyển mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **ATP — chất trung gian chuyển nhóm, không phải “pin năng lượng” cô lập** tiếp nhận điểm tựa từ **Ghép phản ứng — năng lượng tự do cộng được** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái năng lượng adenylate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **ATP — chất trung gian chuyển nhóm, không phải “pin năng lượng” cô lập** nối từ **Ghép phản ứng — năng lượng tự do cộng được** sang **Trạng thái năng lượng adenylate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## ATP — chất trung gian chuyển nhóm, không phải “pin năng lượng” cô lập
 
@@ -128,7 +128,7 @@ cơ chất
 
 Ghép xảy ra qua chất trung gian chung, không phải vì năng lượng “chảy” trực tiếp từ ATP sang phân tử bên cạnh.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Trạng thái năng lượng adenylate** tiếp nhận điểm tựa từ **ATP — chất trung gian chuyển nhóm, không phải “pin năng lượng” cô lập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cofactor oxy hóa–khử — mang electron dưới dạng hóa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Trạng thái năng lượng adenylate** nối từ **ATP — chất trung gian chuyển nhóm, không phải “pin năng lượng” cô lập** sang **Cofactor oxy hóa–khử — mang electron dưới dạng hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trạng thái năng lượng adenylate
 
@@ -146,7 +146,7 @@ Adenylate kinase xúc tác:
 
 Một thay đổi nhỏ của ATP có thể gây thay đổi tương đối lớn của AMP, làm AMP trở thành tín hiệu nhạy về thiếu năng lượng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Cofactor oxy hóa–khử — mang electron dưới dạng hóa học** tiếp nhận điểm tựa từ **Trạng thái năng lượng adenylate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện thế oxy hóa–khử và dòng electron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Cofactor oxy hóa–khử — mang electron dưới dạng hóa học** nối từ **Trạng thái năng lượng adenylate** sang **Điện thế oxy hóa–khử và dòng electron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cofactor oxy hóa–khử — mang electron dưới dạng hóa học
 
@@ -174,7 +174,7 @@ Flavin có thể tham gia chuyển một hoặc hai electron và thường gắn
 
 Thế oxy hóa–khử của cofactor phụ thuộc mạnh môi trường protein.
 
-> **Chuyển mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Điện thế oxy hóa–khử và dòng electron** tiếp nhận điểm tựa từ **Cofactor oxy hóa–khử — mang electron dưới dạng hóa học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đường phân — đọc bằng lô-gic (logic / 논리) hóa học thay vì thuộc mười tên phản ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Điện thế oxy hóa–khử và dòng electron** nối từ **Cofactor oxy hóa–khử — mang electron dưới dạng hóa học** sang **Đường phân — đọc bằng lô-gic (logic / 논리) hóa học thay vì thuộc mười tên phản ứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điện thế oxy hóa–khử và dòng electron
 
@@ -192,7 +192,7 @@ nối trực tiếp điện hóa với sinh năng lượng.
 
 `O2` là chất nhận electron cuối mạnh trong hô hấp hiếu khí vì khử oxygen thành nước cho `ΔE` dương lớn và vì vậy `ΔG` âm đáng kể.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Đường phân — đọc bằng lô-gic (logic / 논리) hóa học thay vì thuộc mười tên phản ứng** tiếp nhận điểm tựa từ **Điện thế oxy hóa–khử và dòng electron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lên men — tái sinh NAD+** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Đường phân — đọc bằng lô-gic (logic / 논리) hóa học thay vì thuộc mười tên phản ứng** nối từ **Điện thế oxy hóa–khử và dòng electron** sang **Lên men — tái sinh NAD+**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đường phân — đọc bằng lô-gic (logic / 논리) hóa học thay vì thuộc mười tên phản ứng
 
@@ -218,7 +218,7 @@ Các chất trung gian phosphate có thế chuyển nhóm cao sau đó tạo ATP
 
 Năng lượng oxy hóa được giữ lại trong NADH và các nhóm phosphate hoạt hóa thay vì mất hoàn toàn thành nhiệt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Lên men — tái sinh NAD+** tiếp nhận điểm tựa từ **Đường phân — đọc bằng lô-gic (logic / 논리) hóa học thay vì thuộc mười tên phản ứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Oxy hóa pyruvate và acetyl-CoA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Lên men — tái sinh NAD+** nối từ **Đường phân — đọc bằng lô-gic (logic / 논리) hóa học thay vì thuộc mười tên phản ứng** sang **Oxy hóa pyruvate và acetyl-CoA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lên men — tái sinh NAD+
 
@@ -236,7 +236,7 @@ pyruvate+NADH+H^+\rightarrow lactate+NAD^+
 
 Vai trò chính của lên men là **tái sinh NAD+**, không phải tạo lượng ATP lớn ngoài phần đã có từ đường phân.
 
-> **Chuyển mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Oxy hóa pyruvate và acetyl-CoA** tiếp nhận điểm tựa từ **Lên men — tái sinh NAD+** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chu trình acid citric — vừa oxy hóa vừa cung cấp tiền chất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Oxy hóa pyruvate và acetyl-CoA** nối từ **Lên men — tái sinh NAD+** sang **Chu trình acid citric — vừa oxy hóa vừa cung cấp tiền chất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Oxy hóa pyruvate và acetyl-CoA
 
@@ -248,7 +248,7 @@ Thioester được giải thích chi tiết ở [acid carboxylic và dẫn xuấ
 
 Acetyl-CoA là nút giao giữa carbohydrate, acid béo và amino acid.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Chu trình acid citric — vừa oxy hóa vừa cung cấp tiền chất** tiếp nhận điểm tựa từ **Oxy hóa pyruvate và acetyl-CoA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuỗi truyền electron — biến năng lượng redox thành độ dốc (gradient / 기울기) proton** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Chu trình acid citric — vừa oxy hóa vừa cung cấp tiền chất** nối từ **Oxy hóa pyruvate và acetyl-CoA** sang **Chuỗi truyền electron — biến năng lượng redox thành độ dốc (gradient / 기울기) proton**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chu trình acid citric — vừa oxy hóa vừa cung cấp tiền chất
 
@@ -262,7 +262,7 @@ Khi chất trung gian bị rút ra, **phản ứng bổ sung (anaplerotic reacti
 
 Do đó chu trình vừa là đường oxy hóa vừa là trung tâm phân phối carbon.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Chu trình acid citric — vừa oxy hóa vừa cung cấp tiền chất** xác định đầu vào; **Chuỗi truyền electron — biến năng lượng redox thành độ dốc (gradient / 기울기) proton** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Động lực proton** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Chu trình acid citric — vừa oxy hóa vừa cung cấp tiền chất** đặt đầu vào cho **Chuỗi truyền electron — biến năng lượng redox thành độ dốc (gradient / 기울기) proton**, rồi **Động lực proton** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Chuỗi truyền electron — biến năng lượng redox thành độ dốc (gradient / 기울기) proton
 
@@ -280,7 +280,7 @@ năng lượng redox
 → gradient điện hóa
 ```
 
-> **Chuyển mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Chuỗi truyền electron — biến năng lượng redox thành độ dốc (gradient / 기울기) proton** xác định đầu vào; **Động lực proton** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **ATP synthase — ghép độ dốc (gradient / 기울기) với chuyển động cấu dạng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Chuỗi truyền electron — biến năng lượng redox thành độ dốc (gradient / 기울기) proton** đặt đầu vào cho **Động lực proton**, rồi **ATP synthase — ghép độ dốc (gradient / 기울기) với chuyển động cấu dạng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Động lực proton
 
@@ -299,7 +299,7 @@ Với ion điện tích `z`:
 
 Màng vì vậy vừa có đặc tính của pin nồng độ vừa có đặc tính của tụ điện.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **ATP synthase — ghép độ dốc (gradient / 기울기) với chuyển động cấu dạng** tiếp nhận điểm tựa từ **Động lực proton** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phosphoryl hóa oxy hóa và hiện tượng mất ghép** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **ATP synthase — ghép độ dốc (gradient / 기울기) với chuyển động cấu dạng** nối từ **Động lực proton** sang **Phosphoryl hóa oxy hóa và hiện tượng mất ghép**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## ATP synthase — ghép độ dốc (gradient / 기울기) với chuyển động cấu dạng
 
@@ -320,7 +320,7 @@ oxy hóa chất dinh dưỡng
 
 Đây là ví dụ rõ về sự ghép giữa hóa học, điện hóa và máy phân tử.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Phosphoryl hóa oxy hóa và hiện tượng mất ghép** tiếp nhận điểm tựa từ **ATP synthase — ghép độ dốc (gradient / 기울기) với chuyển động cấu dạng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **β-oxy hóa acid béo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Phosphoryl hóa oxy hóa và hiện tượng mất ghép** nối từ **ATP synthase — ghép độ dốc (gradient / 기울기) với chuyển động cấu dạng** sang **β-oxy hóa acid béo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phosphoryl hóa oxy hóa và hiện tượng mất ghép
 
@@ -339,7 +339,7 @@ UCP1 trong mô mỡ nâu khai thác cơ chế này để sinh nhiệt.
 
 Hiện tượng mất ghép là bằng chứng mạnh cho cơ chế hóa thẩm.
 
-> **Chuyển mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **β-oxy hóa acid béo** tiếp nhận điểm tựa từ **Phosphoryl hóa oxy hóa và hiện tượng mất ghép** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tổng hợp acid béo không phải β-oxy hóa chạy ngược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **β-oxy hóa acid béo** nối từ **Phosphoryl hóa oxy hóa và hiện tượng mất ghép** sang **Tổng hợp acid béo không phải β-oxy hóa chạy ngược**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## β-oxy hóa acid béo
 
@@ -358,7 +358,7 @@ Acid béo chứa carbon ở trạng thái khử mạnh nên cho nhiều tương 
 
 Mỡ cũng lưu ít nước hơn glycogen nên có mật độ năng lượng theo khối lượng cao hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Tổng hợp acid béo không phải β-oxy hóa chạy ngược** gom các mảnh từ **β-oxy hóa acid béo** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Chuyển hóa amino acid và nitrogen** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Tổng hợp acid béo không phải β-oxy hóa chạy ngược** tổng hợp từ **β-oxy hóa acid béo** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Chuyển hóa amino acid và nitrogen** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tổng hợp acid béo không phải β-oxy hóa chạy ngược
 
@@ -368,7 +368,7 @@ Các bước không thuận nghịch được “đi vòng” bằng phản ứn
 
 Đây là nguyên lý chung: **đường dị hóa và đồng hóa thường khác nhau tại các bước xa cân bằng**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Chuyển hóa amino acid và nitrogen** gom các mảnh từ **Tổng hợp acid béo không phải β-oxy hóa chạy ngược** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Phản ứng gần cân bằng và xa cân bằng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Chuyển hóa amino acid và nitrogen** tổng hợp từ **Tổng hợp acid béo không phải β-oxy hóa chạy ngược** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Phản ứng gần cân bằng và xa cân bằng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Chuyển hóa amino acid và nitrogen
 
@@ -380,7 +380,7 @@ Nitrogen cuối cùng phải được xử lý vì ammonia tự do độc ở n�
 
 Khung carbon của amino acid đi vào mạng trung tâm tại pyruvate, acetyl-CoA hoặc chất trung gian TCA.
 
-> **Chuyển mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Phản ứng gần cân bằng và xa cân bằng** tiếp nhận điểm tựa từ **Chuyển hóa amino acid và nitrogen** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều hòa chuyển hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Phản ứng gần cân bằng và xa cân bằng** nối từ **Chuyển hóa amino acid và nitrogen** sang **Điều hòa chuyển hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phản ứng gần cân bằng và xa cân bằng
 
@@ -392,7 +392,7 @@ Những bước này tạo hướng cho con đường và thường cần enzyme
 
 Đây là cầu nối trực tiếp tới [cân bằng động](../07_chemical_equilibrium/00_dynamic_equilibrium.md).
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Điều hòa chuyển hóa** tiếp nhận điểm tựa từ **Phản ứng gần cân bằng và xa cân bằng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân ngăn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Điều hòa chuyển hóa** nối từ **Phản ứng gần cân bằng và xa cân bằng** sang **Phân ngăn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điều hòa chuyển hóa
 
@@ -410,7 +410,7 @@ ATP cao thường ức chế một số điểm kiểm soát dị hóa; AMP/ADP 
 
 Điều hòa chuyển hóa về bản chất là **điều khiển phản hồi của mạng phản ứng hóa học**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Phân ngăn** tiếp nhận điểm tựa từ **Điều hòa chuyển hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thông lượng khác nồng độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Phân ngăn** nối từ **Điều hòa chuyển hóa** sang **Thông lượng khác nồng độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân ngăn
 
@@ -426,7 +426,7 @@ Phân ngăn cho phép duy trì pH, trạng thái redox, tỉ lệ chất chuyể
 
 Động lực nhiệt động vì vậy mang tính cục bộ, không được quyết định bởi một “nồng độ toàn tế bào” duy nhất.
 
-> **Chuyển mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Thông lượng khác nồng độ** tiếp nhận điểm tựa từ **Phân ngăn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái ổn định ngoài cân bằng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Thông lượng khác nồng độ** nối từ **Phân ngăn** sang **Trạng thái ổn định ngoài cân bằng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thông lượng khác nồng độ
 
@@ -441,7 +441,7 @@ biến trạng thái ≠ tốc độ dòng
 
 **Phân tích thông lượng chuyển hóa (metabolic flux analysis)** thường dùng chất đánh dấu đồng vị như `13C` để theo dõi carbon qua mạng.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Trạng thái ổn định ngoài cân bằng** tiếp nhận điểm tựa từ **Thông lượng khác nồng độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các loại oxygen phản ứng và hệ chống oxy hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Trạng thái ổn định ngoài cân bằng** nối từ **Thông lượng khác nồng độ** sang **Các loại oxygen phản ứng và hệ chống oxy hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trạng thái ổn định ngoài cân bằng
 
@@ -460,7 +460,7 @@ steady state sống
 
 Sự sống duy trì tổ chức bằng cách liên tục tiêu thụ nguồn năng lượng tự do và thải entropy/nhiệt ra môi trường.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Các loại oxygen phản ứng và hệ chống oxy hóa** tiếp nhận điểm tựa từ **Trạng thái ổn định ngoài cân bằng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển hóa như đồ thị và ma trận hóa lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Các loại oxygen phản ứng và hệ chống oxy hóa** nối từ **Trạng thái ổn định ngoài cân bằng** sang **Chuyển hóa như đồ thị và ma trận hóa lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các loại oxygen phản ứng và hệ chống oxy hóa
 
@@ -470,7 +470,7 @@ Tế bào dùng superoxide dismutase, catalase, glutathione và hệ phụ thu�
 
 ROS không hoàn toàn “xấu”; ở mức kiểm soát chúng còn tham gia tín hiệu. Vấn đề xuất hiện khi tốc độ tạo vượt khả năng trung hòa và sửa chữa.
 
-> **Chuyển mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Chuyển hóa như đồ thị và ma trận hóa lượng** tiếp nhận điểm tựa từ **Các loại oxygen phản ứng và hệ chống oxy hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ suy luận: vì sao ATP cao không có nghĩa mọi phản ứng tổng hợp tự chạy?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Chuyển hóa như đồ thị và ma trận hóa lượng** nối từ **Các loại oxygen phản ứng và hệ chống oxy hóa** sang **Ví dụ suy luận: vì sao ATP cao không có nghĩa mọi phản ứng tổng hợp tự chạy?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển hóa như đồ thị và ma trận hóa lượng
 
@@ -488,7 +488,7 @@ Phương trình này không tự cho một nghiệm duy nhất; cần thêm ràn
 
 Xem nền toán/hóa lượng ở [Ma trận hóa lượng và mạng phản ứng](../04_chemical_quantities/06_stoichiometric_matrices_and_reaction_networks.md).
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Chuyển hóa như đồ thị và ma trận hóa lượng** cho ta quy tắc; **Ví dụ suy luận: vì sao ATP cao không có nghĩa mọi phản ứng tổng hợp tự chạy?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ví dụ suy luận: vì sao nồng độ pyruvate ổn định không chứng minh glycolysis chậm?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Chuyển hóa như đồ thị và ma trận hóa lượng** nêu quy tắc; **Ví dụ suy luận: vì sao ATP cao không có nghĩa mọi phản ứng tổng hợp tự chạy?** thử quy tắc trong tình huống, rồi **Ví dụ suy luận: vì sao nồng độ pyruvate ổn định không chứng minh glycolysis chậm?** mở rộng hệ quả.
 
 ## Ví dụ suy luận: vì sao ATP cao không có nghĩa mọi phản ứng tổng hợp tự chạy?
 
@@ -498,7 +498,7 @@ Nếu hai phản ứng không được ghép về mặt cơ chế, chỉ đặt 
 
 Do đó **thermodynamic coupling cần chemical coupling**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Ví dụ suy luận: vì sao ATP cao không có nghĩa mọi phản ứng tổng hợp tự chạy?** cho ta quy tắc; **Ví dụ suy luận: vì sao nồng độ pyruvate ổn định không chứng minh glycolysis chậm?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Ví dụ suy luận: vì sao ATP cao không có nghĩa mọi phản ứng tổng hợp tự chạy?** nêu quy tắc; **Ví dụ suy luận: vì sao nồng độ pyruvate ổn định không chứng minh glycolysis chậm?** thử quy tắc trong tình huống, rồi **Những hiểu lầm thường gặp** mở rộng hệ quả.
 
 ## Ví dụ suy luận: vì sao nồng độ pyruvate ổn định không chứng minh glycolysis chậm?
 
@@ -508,7 +508,7 @@ Nếu hai tốc độ gần bằng nhau, nồng độ vẫn gần ổn định t
 
 Muốn biết tốc độ mạng phải đo flux, không chỉ chụp nồng độ tại một thời điểm.
 
-> **Chuyển mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Ví dụ suy luận: vì sao nồng độ pyruvate ổn định không chứng minh glycolysis chậm?** cho ta quy tắc; **Những hiểu lầm thường gặp** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Ví dụ suy luận: vì sao nồng độ pyruvate ổn định không chứng minh glycolysis chậm?** nêu quy tắc; **Những hiểu lầm thường gặp** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Những hiểu lầm thường gặp
 
@@ -536,7 +536,7 @@ Không. Nồng độ là biến trạng thái; thông lượng là tốc độ d
 
 Không. Stoichiometry xác định không gian nghiệm khả thi; dự đoán cụ thể cần thêm ràng buộc và giả định.
 
-> **Chuyển mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Chuyển hóa và sinh năng lượng — mạng phản ứng được vận hành bởi dòng năng lượng tự do**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

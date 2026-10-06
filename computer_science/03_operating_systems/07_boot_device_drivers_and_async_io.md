@@ -12,7 +12,7 @@ Kernel sau đó thiết lập bộ nhớ (memory / 메모리) management, interr
 
 Boot chuỗi (sequence / 시퀀스) cho thấy OS không xuất hiện “từ hư không”; nó phải tự xây những abstractions mà applications sau đó coi là mặc định.
 
-> **Chuyển mạch:** Trong **Boot, thiết bị (device / 장치) drivers và asynchronous I/O**, **Trình điều khiển thiết bị (device driver / 장치 드라이버) là translator giữa OS mô hình (model / 모델) và hardware giao thức (protocol / 프로토콜)** tiếp nhận điểm tựa từ **Từ power-on đến người dùng (user / 사용자) không gian (space / 공간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Memory-mapped I/O và cổng (port / 포트) I/O** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Trình điều khiển thiết bị (device driver / 장치 드라이버) là translator giữa OS mô hình (model / 모델) và hardware giao thức (protocol / 프로토콜)** nối từ **Từ power-on đến người dùng (user / 사용자) không gian (space / 공간)** sang **Memory-mapped I/O và cổng (port / 포트) I/O**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trình điều khiển thiết bị (device driver / 장치 드라이버) là translator giữa OS mô hình (model / 모델) và hardware giao thức (protocol / 프로토콜)
 
@@ -22,7 +22,7 @@ Filesystem không nên biết chi tiết từng NVMe controller; mạng (network
 
 Một buggy kernel driver nguy hiểm vì chạy privileged. User-space drivers và sandboxing được dùng ở một số architectures để giảm blast radius.
 
-> **Chuyển mạch:** Ở chặng này của **Boot, thiết bị (device / 장치) drivers và asynchronous I/O**, **Memory-mapped I/O và cổng (port / 포트) I/O** tiếp nhận điểm tựa từ **Trình điều khiển thiết bị (device driver / 장치 드라이버) là translator giữa OS mô hình (model / 모델) và hardware giao thức (protocol / 프로토콜)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Interrupt và polling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Memory-mapped I/O và cổng (port / 포트) I/O** nối từ **Trình điều khiển thiết bị (device driver / 장치 드라이버) là translator giữa OS mô hình (model / 모델) và hardware giao thức (protocol / 프로토콜)** sang **Interrupt và polling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Memory-mapped I/O và cổng (port / 포트) I/O
 
@@ -30,7 +30,7 @@ Nhiều devices expose điều khiển (control / 제어)/status registers vào 
 
 Các accesses này có thứ tự (ordering / 순서)/volatility ngữ nghĩa (semantics / 의미론) khác normal RAM; trình biên dịch (compiler / 컴파일러)/CPU không được tự do optimize như ordinary bộ nhớ (memory / 메모리). Hardware programming vì vậy gắn chặt với bộ nhớ (memory / 메모리) barriers và kiến trúc (architecture / 아키텍처) rules.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Boot, thiết bị (device / 장치) drivers và asynchronous I/O**, **Interrupt và polling** tiếp nhận điểm tựa từ **Memory-mapped I/O và cổng (port / 포트) I/O** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **DMA: thiết bị (device / 장치) chuyển dữ liệu (data / 데이터) mà CPU không bản sao (copy / 복사) từng byte** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Interrupt và polling** nối từ **Memory-mapped I/O và cổng (port / 포트) I/O** sang **DMA: thiết bị (device / 장치) chuyển dữ liệu (data / 데이터) mà CPU không bản sao (copy / 복사) từng byte**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Interrupt và polling
 
@@ -38,7 +38,7 @@ Nếu CPU liên tục hỏi thiết bị (device / 장치) “xong chưa?” th�
 
 Interrupt cho thiết bị (device / 장치) báo CPU khi cần attention. Interrupt có overhead ngữ cảnh (context / 맥락)/handler, nên hiện đại (modern / 현대적) các hệ thống (systems / 시스템들) có hybrid strategies như interrupt moderation hoặc busy polling trong high-performance networking.
 
-> **Chuyển mạch:** Trong **Boot, thiết bị (device / 장치) drivers và asynchronous I/O**, **Interrupt và polling** nêu điều cần giải thích; **DMA: thiết bị (device / 장치) chuyển dữ liệu (data / 데이터) mà CPU không bản sao (copy / 복사) từng byte** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Blocking, non-blocking và asynchronous I/O** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Interrupt và polling** đặt vấn đề; **DMA: thiết bị (device / 장치) chuyển dữ liệu (data / 데이터) mà CPU không bản sao (copy / 복사) từng byte** kiểm tra bằng chứng, rồi **Blocking, non-blocking và asynchronous I/O** mở rộng hệ quả.
 
 ## DMA: thiết bị (device / 장치) chuyển dữ liệu (data / 데이터) mà CPU không bản sao (copy / 복사) từng byte
 
@@ -46,7 +46,7 @@ Direct bộ nhớ (memory / 메모리) truy cập (access / 접근) (DMA) cho th
 
 DMA tăng hiệu năng (performance / 성능) nhưng tạo bảo mật (security / 보안) yêu cầu (requirement / 요구사항): thiết bị (device / 장치) không được tùy ý truy cập (access / 접근) toàn bộ nhớ (memory / 메모리). IOMMU cung cấp address translation/isolation cho thiết bị (device / 장치) tương tự virtual bộ nhớ (memory / 메모리) cho CPU.
 
-> **Chuyển mạch:** Ở chặng này của **Boot, thiết bị (device / 장치) drivers và asynchronous I/O**, **DMA: thiết bị (device / 장치) chuyển dữ liệu (data / 데이터) mà CPU không bản sao (copy / 복사) từng byte** nêu điều cần giải thích; **Blocking, non-blocking và asynchronous I/O** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Thundering herd và sự kiện (event / 이벤트) loops** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **DMA: thiết bị (device / 장치) chuyển dữ liệu (data / 데이터) mà CPU không bản sao (copy / 복사) từng byte** đặt vấn đề; **Blocking, non-blocking và asynchronous I/O** kiểm tra bằng chứng, rồi **Thundering herd và sự kiện (event / 이벤트) loops** mở rộng hệ quả.
 
 ## Blocking, non-blocking và asynchronous I/O
 
@@ -56,7 +56,7 @@ Readiness APIs như `select`, `poll`, `epoll`, `kqueue` báo descriptors nào s�
 
 Async cú pháp (syntax / 문법) trong ngôn ngữ (language / 언어) không tự quyết OS I/O mô hình (model / 모델). Một `async/await` thời gian chạy (runtime / 런타임) có thể đứng trên readiness, completion ports, luồng thực thi (thread / 스레드) pool hoặc combination.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Boot, thiết bị (device / 장치) drivers và asynchronous I/O**, **Thundering herd và sự kiện (event / 이벤트) loops** tiếp nhận điểm tựa từ **Blocking, non-blocking và asynchronous I/O** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Thundering herd và sự kiện (event / 이벤트) loops** nối từ **Blocking, non-blocking và asynchronous I/O** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thundering herd và sự kiện (event / 이벤트) loops
 
@@ -64,7 +64,7 @@ Nếu nhiều workers cùng thức dậy vì một sự kiện (event / 이벤�
 
 Vòng lặp sự kiện (event loop / 이벤트 루프) xử lý nhiều concurrent connections với ít threads bằng cách multiplex I/O readiness/completions. Nó hiệu quả khi tasks chủ yếu I/O-bound và handlers không khối (block / 블록) dài.
 
-> **Chuyển mạch:** Trong **Boot, thiết bị (device / 장치) drivers và asynchronous I/O**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Thundering herd và sự kiện (event / 이벤트) loops** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Thundering herd và sự kiện (event / 이벤트) loops** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -74,13 +74,13 @@ Vòng lặp sự kiện (event loop / 이벤트 루프) xử lý nhiều concurr
 
 **“Driver chỉ là thư viện.”** Kernel driver có privilege và hardware truy cập (access / 접근) đặc biệt; thất bại (failure / 실패) impact khác user-space thư viện (library / 라이브러리).
 
-> **Chuyển mạch:** Ở chặng này của **Boot, thiết bị (device / 장치) drivers và asynchronous I/O**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > I/O là chuỗi xử lý (pipeline / 파이프라인) điều phối giữa CPU, bộ nhớ (memory / 메모리) và thiết bị (device / 장치). OS chọn khi CPU nên chạy, khi nên ngủ, ai sở hữu buffer và completion được báo bằng cơ chế nào.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Boot, thiết bị (device / 장치) drivers và asynchronous I/O**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

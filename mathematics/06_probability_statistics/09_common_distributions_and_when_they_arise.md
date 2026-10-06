@@ -27,7 +27,7 @@ boundedness
 skew / tails
 ```
 
-> **Chuyển mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **2. Bernoulli: một trial, hai outcomes** tiếp nhận điểm tựa từ **1. phân phối (distribution / 분포) là mô hình (model / 모델), không phải nhãn histogram** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Indicator variables** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **2. Bernoulli: một trial, hai outcomes** nối từ **1. phân phối (distribution / 분포) là mô hình (model / 모델), không phải nhãn histogram** sang **3. Indicator variables**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Bernoulli: một trial, hai outcomes
 
@@ -61,7 +61,7 @@ Bernoulli là atomic building khối (block / 블록) của nhiều count các m
 
 Examples: click/no-click, pass/thất bại (fail / 실패), default/no-default, conversion/no-conversion.
 
-> **Chuyển mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **3. Indicator variables** tiếp nhận điểm tựa từ **2. Bernoulli: một trial, hai outcomes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Binomial: số successes trong fixed trials** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **3. Indicator variables** nối từ **2. Bernoulli: một trial, hai outcomes** sang **4. Binomial: số successes trong fixed trials**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Indicator variables
 
@@ -83,7 +83,7 @@ E[I_A]=P(A).
 
 Đây là cầu nối (bridge / 브리지) quan trọng giữa events và random variables. Tổng indicators biến counting bài toán (problem / 문제) thành expectation bài toán (problem / 문제).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **4. Binomial: số successes trong fixed trials** tiếp nhận điểm tựa từ **3. Indicator variables** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Khi binomial không phù hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **4. Binomial: số successes trong fixed trials** nối từ **3. Indicator variables** sang **5. Khi binomial không phù hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Binomial: số successes trong fixed trials
 
@@ -121,7 +121,7 @@ np(1-p).
 
 `\binom nk` xuất hiện vì có `C(n,k)` ways đặt `k` successes vào `n` trial positions.
 
-> **Chuyển mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **5. Khi binomial không phù hợp** tiếp nhận điểm tựa từ **4. Binomial: số successes trong fixed trials** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Hypergeometric: sampling without replacement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **5. Khi binomial không phù hợp** nối từ **4. Binomial: số successes trong fixed trials** sang **6. Hypergeometric: sampling without replacement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Khi binomial không phù hợp
 
@@ -135,7 +135,7 @@ sampling without replacement từ population nhỏ
 
 Trong without-replacement sampling, hypergeometric thường tự nhiên hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **6. Hypergeometric: sampling without replacement** tiếp nhận điểm tựa từ **5. Khi binomial không phù hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Geometric: waiting tới success đầu tiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **6. Hypergeometric: sampling without replacement** nối từ **5. Khi binomial không phù hợp** sang **7. Geometric: waiting tới success đầu tiên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Hypergeometric: sampling without replacement
 
@@ -152,7 +152,7 @@ Khác binomial ở dependence: mỗi draw thay composition còn lại.
 
 Khi population rất lớn relative to mẫu (sample / 표본), binomial có thể approximate hypergeometric.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **7. Geometric: waiting tới success đầu tiên** tiếp nhận điểm tựa từ **6. Hypergeometric: sampling without replacement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Negative binomial: chờ tới nhiều successes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **7. Geometric: waiting tới success đầu tiên** nối từ **6. Hypergeometric: sampling without replacement** sang **8. Negative binomial: chờ tới nhiều successes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Geometric: waiting tới success đầu tiên
 
@@ -177,7 +177,7 @@ P(X>s+t\mid X>s)=P(X>t).
 
 Thuộc tính (property / 속성) này không phải “thế giới quên quá khứ”; nó là consequence của constant independent success xác suất (probability / 확률) giả định (assumption / 가정).
 
-> **Chuyển mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **8. Negative binomial: chờ tới nhiều successes** tiếp nhận điểm tựa từ **7. Geometric: waiting tới success đầu tiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Poisson: count events theo tỷ lệ (rate / 비율)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **8. Negative binomial: chờ tới nhiều successes** nối từ **7. Geometric: waiting tới success đầu tiên** sang **9. Poisson: count events theo tỷ lệ (rate / 비율)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Negative binomial: chờ tới nhiều successes
 
@@ -187,7 +187,7 @@ Nó cũng hữu ích cho overdispersed count dữ liệu (data / 데이터) tron
 
 Điều quan trọng là check convention vì textbooks/software có nhiều cách định nghĩa hỗ trợ (support / 지원).
 
-> **Chuyển mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **9. Poisson: count events theo tỷ lệ (rate / 비율)** tiếp nhận điểm tựa từ **8. Negative binomial: chờ tới nhiều successes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Poisson từ rare-event limit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **9. Poisson: count events theo tỷ lệ (rate / 비율)** nối từ **8. Negative binomial: chờ tới nhiều successes** sang **10. Poisson từ rare-event limit**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Poisson: count events theo tỷ lệ (rate / 비율)
 
@@ -205,7 +205,7 @@ E[X]=\operatorname{Var}(X)=\lambda.
 
 Poisson tự nhiên khi events xuất hiện theo tỷ lệ (rate / 비율) ổn định trong interval và increments có independence/rare-event cấu trúc (structure / 구조) phù hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **9. Poisson: count events theo tỷ lệ (rate / 비율)** đã nêu tiêu chí phân biệt, còn **10. Poisson từ rare-event limit** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **11. Overdispersion cảnh báo mô hình (model / 모델) sai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **9. Poisson: count events theo tỷ lệ (rate / 비율)** đặt tiêu chí; **10. Poisson từ rare-event limit** dùng tiêu chí đó để kiểm tra ranh giới, rồi **11. Overdispersion cảnh báo mô hình (model / 모델) sai** mở rộng hệ quả.
 
 ## 10. Poisson từ rare-event limit
 
@@ -227,7 +227,7 @@ có limit gần Poisson:
 
 Đây là liên kết (connection / 연결) cơ chế (mechanism / 메커니즘) quan trọng: nhiều opportunities, mỗi sự kiện (event / 이벤트) hiếm, total expected count finite.
 
-> **Chuyển mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **10. Poisson từ rare-event limit** đã nêu tiêu chí phân biệt, còn **11. Overdispersion cảnh báo mô hình (model / 모델) sai** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **12. Exponential: waiting thời gian (time / 시간) trong Poisson tiến trình (process / 프로세스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **10. Poisson từ rare-event limit** đặt tiêu chí; **11. Overdispersion cảnh báo mô hình (model / 모델) sai** dùng tiêu chí đó để kiểm tra ranh giới, rồi **12. Exponential: waiting thời gian (time / 시간) trong Poisson tiến trình (process / 프로세스)** mở rộng hệ quả.
 
 ## 11. Overdispersion cảnh báo mô hình (model / 모델) sai
 
@@ -241,7 +241,7 @@ Nếu dữ liệu (data / 데이터) count có variance lớn hơn mean rất nh
 
 Negative binomial hoặc hierarchical các mô hình (models / 모델들) có thể hợp lý hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **11. Overdispersion cảnh báo mô hình (model / 모델) sai** xác định đầu vào; **12. Exponential: waiting thời gian (time / 시간) trong Poisson tiến trình (process / 프로세스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **13. Hazard tỷ lệ (rate / 비율)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **11. Overdispersion cảnh báo mô hình (model / 모델) sai** đặt đầu vào cho **12. Exponential: waiting thời gian (time / 시간) trong Poisson tiến trình (process / 프로세스)**, rồi **13. Hazard tỷ lệ (rate / 비율)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. Exponential: waiting thời gian (time / 시간) trong Poisson tiến trình (process / 프로세스)
 
@@ -266,7 +266,7 @@ P(T>t)=e^{-\lambda t}.
 
 Exponential là continuous memoryless phân phối (distribution / 분포).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **12. Exponential: waiting thời gian (time / 시간) trong Poisson tiến trình (process / 프로세스)** xác định đầu vào; **13. Hazard tỷ lệ (rate / 비율)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. Gamma: sum của exponential waiting times** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **12. Exponential: waiting thời gian (time / 시간) trong Poisson tiến trình (process / 프로세스)** đặt đầu vào cho **13. Hazard tỷ lệ (rate / 비율)**, rồi **14. Gamma: sum của exponential waiting times** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13. Hazard tỷ lệ (rate / 비율)
 
@@ -284,7 +284,7 @@ h(t)=\lambda.
 
 Constant hazard là statement mạnh. Nếu thất bại (failure / 실패) rủi ro (risk / 위험) tăng theo age, exponential có thể không phù hợp.
 
-> **Chuyển mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **14. Gamma: sum của exponential waiting times** tiếp nhận điểm tựa từ **13. Hazard tỷ lệ (rate / 비율)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Uniform: symmetry theo interval** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **14. Gamma: sum của exponential waiting times** nối từ **13. Hazard tỷ lệ (rate / 비율)** sang **15. Uniform: symmetry theo interval**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Gamma: sum của exponential waiting times
 
@@ -294,7 +294,7 @@ Gamma hỗ trợ (support / 지원) trên positive reals và linh hoạt cho rig
 
 Special cases liên hệ exponential và chi-square.
 
-> **Chuyển mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **15. Uniform: symmetry theo interval** tiếp nhận điểm tựa từ **14. Gamma: sum của exponential waiting times** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Normal/Gaussian: additive fluctuation cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **15. Uniform: symmetry theo interval** nối từ **14. Gamma: sum của exponential waiting times** sang **16. Normal/Gaussian: additive fluctuation cấu trúc (structure / 구조)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Uniform: symmetry theo interval
 
@@ -310,7 +310,7 @@ Uniform không đồng nghĩa “ta không biết gì” một cách bất biế
 
 Đây là caution quan trọng trong Bayesian priors.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **16. Normal/Gaussian: additive fluctuation cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **15. Uniform: symmetry theo interval** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. tiêu chuẩn (standard / 표준) normal và z-score** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **16. Normal/Gaussian: additive fluctuation cấu trúc (structure / 구조)** nối từ **15. Uniform: symmetry theo interval** sang **17. tiêu chuẩn (standard / 표준) normal và z-score**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Normal/Gaussian: additive fluctuation cấu trúc (structure / 구조)
 
@@ -329,7 +329,7 @@ Gaussian xuất hiện tự nhiên khi quantity là aggregate của nhiều smal
 
 Nhưng raw dữ liệu (data / 데이터) không cần normal để mẫu (sample / 표본) mean trở nên approximately Gaussian.
 
-> **Chuyển mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **17. tiêu chuẩn (standard / 표준) normal và z-score** tiếp nhận điểm tựa từ **16. Normal/Gaussian: additive fluctuation cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Gaussian stability dưới tuyến tính (linear / 선형) combinations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **17. tiêu chuẩn (standard / 표준) normal và z-score** nối từ **16. Normal/Gaussian: additive fluctuation cấu trúc (structure / 구조)** sang **18. Gaussian stability dưới tuyến tính (linear / 선형) combinations**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. tiêu chuẩn (standard / 표준) normal và z-score
 
@@ -349,7 +349,7 @@ Standardization chuyển location/quy mô (scale / 규모) về tham chiếu (re
 
 Nhưng z-score chỉ có interpretation “bao nhiêu tiêu chuẩn (standard / 표준) deviations” và không tự biến heavy-tailed dữ liệu (data / 데이터) thành Gaussian.
 
-> **Chuyển mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **18. Gaussian stability dưới tuyến tính (linear / 선형) combinations** tiếp nhận điểm tựa từ **17. tiêu chuẩn (standard / 표준) normal và z-score** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Student's t: extra bất định (uncertainty / 불확실성) từ estimate quy mô (scale / 규모)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **18. Gaussian stability dưới tuyến tính (linear / 선형) combinations** nối từ **17. tiêu chuẩn (standard / 표준) normal và z-score** sang **19. Student's t: extra bất định (uncertainty / 불확실성) từ estimate quy mô (scale / 규모)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Gaussian stability dưới tuyến tính (linear / 선형) combinations
 
@@ -357,7 +357,7 @@ Nếu Gaussian variables jointly Gaussian, tuyến tính (linear / 선형) combi
 
 Đây là một reason Gaussian các mô hình (models / 모델들) tractable trong tín hiệu (signal / 신호) processing, Kalman filters và analytical statistics.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **19. Student's t: extra bất định (uncertainty / 불확실성) từ estimate quy mô (scale / 규모)** tiếp nhận điểm tựa từ **18. Gaussian stability dưới tuyến tính (linear / 선형) combinations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Chi-square: sum of squared tiêu chuẩn (standard / 표준) normals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **19. Student's t: extra bất định (uncertainty / 불확실성) từ estimate quy mô (scale / 규모)** nối từ **18. Gaussian stability dưới tuyến tính (linear / 선형) combinations** sang **20. Chi-square: sum of squared tiêu chuẩn (standard / 표준) normals**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Student's t: extra bất định (uncertainty / 불확실성) từ estimate quy mô (scale / 규모)
 
@@ -373,7 +373,7 @@ t → normal
 
 vì quy mô (scale / 규모) estimate stabilizes.
 
-> **Chuyển mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **20. Chi-square: sum of squared tiêu chuẩn (standard / 표준) normals** tiếp nhận điểm tựa từ **19. Student's t: extra bất định (uncertainty / 불확실성) từ estimate quy mô (scale / 규모)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. F phân phối (distribution / 분포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **20. Chi-square: sum of squared tiêu chuẩn (standard / 표준) normals** nối từ **19. Student's t: extra bất định (uncertainty / 불확실성) từ estimate quy mô (scale / 규모)** sang **21. F phân phối (distribution / 분포)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Chi-square: sum of squared tiêu chuẩn (standard / 표준) normals
 
@@ -404,7 +404,7 @@ Variance:
 2k.
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **21. F phân phối (distribution / 분포)** tiếp nhận điểm tựa từ **20. Chi-square: sum of squared tiêu chuẩn (standard / 표준) normals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Beta: bất định (uncertainty / 불확실성) trên xác suất (probability / 확률)/proportion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **21. F phân phối (distribution / 분포)** nối từ **20. Chi-square: sum of squared tiêu chuẩn (standard / 표준) normals** sang **22. Beta: bất định (uncertainty / 불확실성) trên xác suất (probability / 확률)/proportion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. F phân phối (distribution / 분포)
 
@@ -419,7 +419,7 @@ có F phân phối (distribution / 분포).
 
 Nó xuất hiện trong variance comparisons, ANOVA và regression mô hình (model / 모델) comparisons trong classical khung phần mềm (framework / 프레임워크).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **22. Beta: bất định (uncertainty / 불확실성) trên xác suất (probability / 확률)/proportion** tiếp nhận điểm tựa từ **21. F phân phối (distribution / 분포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Dirichlet: multivariate beta** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **22. Beta: bất định (uncertainty / 불확실성) trên xác suất (probability / 확률)/proportion** nối từ **21. F phân phối (distribution / 분포)** sang **23. Dirichlet: multivariate beta**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Beta: bất định (uncertainty / 불확실성) trên xác suất (probability / 확률)/proportion
 
@@ -440,7 +440,7 @@ prior pseudo-counts
 → posterior parameters
 ```
 
-> **Chuyển mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **23. Dirichlet: multivariate beta** tiếp nhận điểm tựa từ **22. Beta: bất định (uncertainty / 불확실성) trên xác suất (probability / 확률)/proportion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Multinomial: counts across multiple categories** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **23. Dirichlet: multivariate beta** nối từ **22. Beta: bất định (uncertainty / 불확실성) trên xác suất (probability / 확률)/proportion** sang **24. Multinomial: counts across multiple categories**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Dirichlet: multivariate beta
 
@@ -455,7 +455,7 @@ Dirichlet phân phối (distribution / 분포) là dùng chung (common / 공통)
 
 Đây là cầu nối (bridge / 브리지) tới topic modeling, categorical Bayesian các mô hình (models / 모델들) và compositional probabilities.
 
-> **Chuyển mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **24. Multinomial: counts across multiple categories** tiếp nhận điểm tựa từ **23. Dirichlet: multivariate beta** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Log-normal: multiplicative mechanisms** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **24. Multinomial: counts across multiple categories** nối từ **23. Dirichlet: multivariate beta** sang **25. Log-normal: multiplicative mechanisms**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Multinomial: counts across multiple categories
 
@@ -476,7 +476,7 @@ P(X_1=x_1,\ldots,X_K=x_K)
 
 Multinomial coefficient đếm arrangements của category labels.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **24. Multinomial: counts across multiple categories** xác định đầu vào; **25. Log-normal: multiplicative mechanisms** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **26. Power-law và heavy-tail caution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **24. Multinomial: counts across multiple categories** đặt đầu vào cho **25. Log-normal: multiplicative mechanisms**, rồi **26. Power-law và heavy-tail caution** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 25. Log-normal: multiplicative mechanisms
 
@@ -492,7 +492,7 @@ Nó thường arise khi quantity là sản phẩm (product / 제품) của many 
 
 Income, size-like quantities hoặc multiplicative growth đôi khi có log-normal-like hành vi (behavior / 동작), nhưng empirical kiểm tra hợp lệ (validation / 검증) vẫn cần.
 
-> **Chuyển mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **25. Log-normal: multiplicative mechanisms** xác định đầu vào; **26. Power-law và heavy-tail caution** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **27. phân phối (distribution / 분포) families và maximum entropy intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **25. Log-normal: multiplicative mechanisms** đặt đầu vào cho **26. Power-law và heavy-tail caution**, rồi **27. phân phối (distribution / 분포) families và maximum entropy intuition** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 26. Power-law và heavy-tail caution
 
@@ -508,7 +508,7 @@ trên suitable tail region.
 
 Estimating tail exponent và cutoff cần statistical care; log-log straight line bằng mắt không đủ.
 
-> **Chuyển mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **27. phân phối (distribution / 분포) families và maximum entropy intuition** tiếp nhận điểm tựa từ **26. Power-law và heavy-tail caution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Approximation relationships** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **27. phân phối (distribution / 분포) families và maximum entropy intuition** nối từ **26. Power-law và heavy-tail caution** sang **28. Approximation relationships**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. phân phối (distribution / 분포) families và maximum entropy intuition
 
@@ -518,7 +518,7 @@ Ví dụ Gaussian maximizes differential entropy among distributions with fixed 
 
 This perspective links phân phối (distribution / 분포) choice với thông tin (information / 정보) lý thuyết (theory / 이론), nhưng không có nghĩa Gaussian là correct mô hình (model / 모델) chỉ vì ta biết mean/variance.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **28. Approximation relationships** tiếp nhận điểm tựa từ **27. phân phối (distribution / 분포) families và maximum entropy intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Worked example: choose a mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **28. Approximation relationships** nối từ **27. phân phối (distribution / 분포) families và maximum entropy intuition** sang **29. Worked example: choose a mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Approximation relationships
 
@@ -533,7 +533,7 @@ Student t, df large → Normal
 
 Approximation cần regime conditions và continuity corrections đôi khi matter.
 
-> **Chuyển mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **28. Approximation relationships** cho ta quy tắc; **29. Worked example: choose a mô hình (model / 모델)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **30. hỗ trợ (support / 지원) là sanity check đầu tiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **28. Approximation relationships** nêu quy tắc; **29. Worked example: choose a mô hình (model / 모델)** thử quy tắc trong tình huống, rồi **30. hỗ trợ (support / 지원) là sanity check đầu tiên** mở rộng hệ quả.
 
 ## 29. Worked example: choose a mô hình (model / 모델)
 
@@ -547,7 +547,7 @@ Nếu failures cluster theo outages, neither simple mô hình (model / 모델) m
 
 Cơ chế (mechanism / 메커니즘) quyết định mô hình (model / 모델) family.
 
-> **Chuyển mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **29. Worked example: choose a mô hình (model / 모델)** cho ta quy tắc; **30. hỗ trợ (support / 지원) là sanity check đầu tiên** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **31. Finance liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **29. Worked example: choose a mô hình (model / 모델)** nêu quy tắc; **30. hỗ trợ (support / 지원) là sanity check đầu tiên** thử quy tắc trong tình huống, rồi **31. Finance liên kết (connection / 연결)** mở rộng hệ quả.
 
 ## 30. hỗ trợ (support / 지원) là sanity check đầu tiên
 
@@ -564,7 +564,7 @@ Normal → all real numbers
 
 Nếu mô hình (model / 모델) assign nontrivial xác suất (probability / 확률) outside physically possible phạm vi (range / 범위), phải giải thích approximation hoặc chọn family khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, sau nội dung của **30. hỗ trợ (support / 지원) là sanity check đầu tiên**, **31. Finance liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **32. AI liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, sau nội dung của **30. hỗ trợ (support / 지원) là sanity check đầu tiên**, **31. Finance liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **32. AI liên kết (connection / 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 31. Finance liên kết (connection / 연결)
 
@@ -572,7 +572,7 @@ Asset returns often show heavier tails and volatility clustering than iid Gaussi
 
 Positive quantities như prices không nên modeled naïvely bằng unbounded normal levels nếu negative hỗ trợ (support / 지원) vô nghĩa; log-return các mô hình (models / 모델들) thường được dùng vì multiplicative cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **32. AI liên kết (connection / 연결)** tiếp nhận điểm tựa từ **31. Finance liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **32. AI liên kết (connection / 연결)** nối từ **31. Finance liên kết (connection / 연결)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. AI liên kết (connection / 연결)
 
@@ -588,13 +588,13 @@ Poisson → count outputs
 
 Mất mát (loss / 손실) functions often correspond to negative log-likelihoods of assumed distributions. Chọn mất mát (loss / 손실) nghĩa là ngầm chọn lỗi (error / 오류) mô hình (model / 모델).
 
-> **Chuyển mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **32. AI liên kết (connection / 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **32. AI liên kết (connection / 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > phân phối (distribution / 분포) là compressed description của một stochastic cơ chế (mechanism / 메커니즘). hỗ trợ (support / 지원) cho biết values nào có thể tồn tại; parameters cho biết quy mô (scale / 규모)/tỷ lệ (rate / 비율)/shape; các giả định (assumptions / 가정들) cho biết khi nào mô hình (model / 모델) có quyền được dùng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Các phân phối xác suất thường gặp và vì sao chúng xuất hiện**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

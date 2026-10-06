@@ -18,7 +18,7 @@ Kn=\frac{\lambda}{L},
 
 trong đó `\lambda` là quãng đường tự do trung bình và `L` là kích thước đặc trưng. Khi `Kn\ll1`, mô hình liên tục thường tốt. Khi `Kn` không còn nhỏ, mô hình động học phân tử trở nên cần thiết.
 
-> **Chuyển mạch:** Trong **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Lực trên một mặt cắt bên trong vật liệu** tiếp nhận điểm tựa từ **Khi nào xấp xỉ liên tục hợp lý?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tensor ứng suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Lực trên một mặt cắt bên trong vật liệu** nối từ **Khi nào xấp xỉ liên tục hợp lý?** sang **Tensor ứng suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lực trên một mặt cắt bên trong vật liệu
 
@@ -36,7 +36,7 @@ Tưởng tượng cắt một vật bằng một mặt rất nhỏ có vectơ ph
 \mathbf t(\mathbf n)=\boldsymbol\sigma\,\mathbf n.
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Tensor ứng suất** tiếp nhận điểm tựa từ **Lực trên một mặt cắt bên trong vật liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Áp suất là trường hợp đặc biệt của ứng suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Tensor ứng suất** nối từ **Lực trên một mặt cắt bên trong vật liệu** sang **Áp suất là trường hợp đặc biệt của ứng suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tensor ứng suất
 
@@ -63,7 +63,7 @@ Nếu không có mômen lực thể tích đặc biệt, bảo toàn mômen đ�
 
 nên tensor ứng suất đối xứng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Áp suất là trường hợp đặc biệt của ứng suất** tiếp nhận điểm tựa từ **Tensor ứng suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biến dạng: dịch chuyển chưa đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Áp suất là trường hợp đặc biệt của ứng suất** nối từ **Tensor ứng suất** sang **Biến dạng: dịch chuyển chưa đủ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Áp suất là trường hợp đặc biệt của ứng suất
 
@@ -75,7 +75,7 @@ Trong chất lưu tĩnh lý tưởng, ứng suất không phụ thuộc hướng
 
 Dấu âm theo quy ước thường dùng cho biết áp suất gây nén. Đây là cách nhìn thống nhất: áp suất trong chất lưu không phải một khái niệm hoàn toàn tách khỏi ứng suất trong chất rắn; nó là một trường hợp đặc biệt của tensor ứng suất.
 
-> **Chuyển mạch:** Trong **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Biến dạng: dịch chuyển chưa đủ** tiếp nhận điểm tựa từ **Áp suất là trường hợp đặc biệt của ứng suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biến dạng thể tích và biến dạng cắt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Biến dạng: dịch chuyển chưa đủ** nối từ **Áp suất là trường hợp đặc biệt của ứng suất** sang **Biến dạng thể tích và biến dạng cắt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Biến dạng: dịch chuyển chưa đủ
 
@@ -99,7 +99,7 @@ Trong kéo một chiều,
 \varepsilon_{xx}\approx\frac{\Delta L}{L}.
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Biến dạng thể tích và biến dạng cắt** tiếp nhận điểm tựa từ **Biến dạng: dịch chuyển chưa đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ vật liệu: nơi “tính chất vật chất” đi vào phương trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Biến dạng thể tích và biến dạng cắt** nối từ **Biến dạng: dịch chuyển chưa đủ** sang **Quan hệ vật liệu: nơi “tính chất vật chất” đi vào phương trình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Biến dạng thể tích và biến dạng cắt
 
@@ -114,7 +114,7 @@ xấp xỉ độ biến thiên thể tích tương đối khi biến dạng nh�
 
 Phần không đổi thể tích còn lại mô tả thay đổi hình dạng. Phân tách này hữu ích vì nhiều vật liệu phản ứng khác nhau với nén thể tích và cắt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Quan hệ vật liệu: nơi “tính chất vật chất” đi vào phương trình** tiếp nhận điểm tựa từ **Biến dạng thể tích và biến dạng cắt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ số Poisson** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Quan hệ vật liệu: nơi “tính chất vật chất” đi vào phương trình** nối từ **Biến dạng thể tích và biến dạng cắt** sang **Hệ số Poisson**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quan hệ vật liệu: nơi “tính chất vật chất” đi vào phương trình
 
@@ -138,7 +138,7 @@ Trong kéo một chiều, quan hệ quen thuộc là
 
 với `E` là môđun Young. Đây chỉ là một phiên bản đơn giản của quan hệ tensor ba chiều.
 
-> **Chuyển mạch:** Trong **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Hệ số Poisson** tiếp nhận điểm tựa từ **Quan hệ vật liệu: nơi “tính chất vật chất” đi vào phương trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương trình cân bằng động lượng trong môi trường liên tục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Hệ số Poisson** nối từ **Quan hệ vật liệu: nơi “tính chất vật chất” đi vào phương trình** sang **Phương trình cân bằng động lượng trong môi trường liên tục**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ số Poisson
 
@@ -152,7 +152,7 @@ mô tả mức co ngang so với giãn dọc.
 
 `E` và `\nu` có thể được dùng thay cho các tham số Lamé trong vật liệu tuyến tính đẳng hướng. Không phải mọi vật liệu đều có `\nu` giống nhau; một số vật liệu đặc biệt còn có hệ số Poisson âm và nở ngang khi bị kéo.
 
-> **Chuyển mạch:** Ở chặng này của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Phương trình cân bằng động lượng trong môi trường liên tục** tiếp nhận điểm tựa từ **Hệ số Poisson** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ đàn hồi học tới chất lưu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Phương trình cân bằng động lượng trong môi trường liên tục** nối từ **Hệ số Poisson** sang **Từ đàn hồi học tới chất lưu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình cân bằng động lượng trong môi trường liên tục
 
@@ -173,7 +173,7 @@ Nếu vật ở cân bằng tĩnh,
 
 Nếu vật là chất lưu Newton, quan hệ cấu thành của ứng suất dẫn ta tới phương trình Navier–Stokes.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Từ đàn hồi học tới chất lưu** tiếp nhận điểm tựa từ **Phương trình cân bằng động lượng trong môi trường liên tục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ứng suất chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Từ đàn hồi học tới chất lưu** nối từ **Phương trình cân bằng động lượng trong môi trường liên tục** sang **Ứng suất chính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ đàn hồi học tới chất lưu
 
@@ -193,7 +193,7 @@ Trong trường hợp Newton đơn giản,
 
 Nhờ đó cơ học chất rắn và cơ học chất lưu có thể được nhìn trong cùng một khung: định luật bảo toàn giống nhau, nhưng quan hệ cấu thành khác nhau.
 
-> **Chuyển mạch:** Trong **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Ứng suất chính** tiếp nhận điểm tựa từ **Từ đàn hồi học tới chất lưu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiêu chuẩn phá hủy không chỉ dựa vào một thành phần ứng suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Ứng suất chính** nối từ **Từ đàn hồi học tới chất lưu** sang **Tiêu chuẩn phá hủy không chỉ dựa vào một thành phần ứng suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ứng suất chính
 
@@ -201,7 +201,7 @@ Vì tensor ứng suất đối xứng trong nhiều trường hợp, ta có th�
 
 Bài toán trị riêng ở đây có cùng cấu trúc toán học với chế độ (mode / 모드) chuẩn trong dao động hoặc trạng thái riêng trong lượng tử, nhưng ý nghĩa vật lý khác hoàn toàn.
 
-> **Chuyển mạch:** Ở chặng này của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Tiêu chuẩn phá hủy không chỉ dựa vào một thành phần ứng suất** tiếp nhận điểm tựa từ **Ứng suất chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sóng đàn hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Tiêu chuẩn phá hủy không chỉ dựa vào một thành phần ứng suất** nối từ **Ứng suất chính** sang **Sóng đàn hồi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tiêu chuẩn phá hủy không chỉ dựa vào một thành phần ứng suất
 
@@ -209,7 +209,7 @@ Trong thiết kế vật liệu, vật không nhất thiết hỏng chỉ vì `\
 
 Điều này giải thích vì sao một chi tiết chịu ứng suất tổng hợp cần phân tích tensor thay vì chỉ lấy “lực chia diện tích”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Sóng đàn hồi** tiếp nhận điểm tựa từ **Tiêu chuẩn phá hủy không chỉ dựa vào một thành phần ứng suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi mô hình tuyến tính thất bại?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Sóng đàn hồi** nối từ **Tiêu chuẩn phá hủy không chỉ dựa vào một thành phần ứng suất** sang **Khi mô hình tuyến tính thất bại?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sóng đàn hồi
 
@@ -217,7 +217,7 @@ Khi kết hợp bảo toàn động lượng với quan hệ đàn hồi tuyến
 
 Đây là nền tảng vật lý của sóng địa chấn P và S. Chất lỏng không có môđun cắt tĩnh nên không truyền sóng ngang đàn hồi như chất rắn trong cùng nghĩa.
 
-> **Chuyển mạch:** Trong **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Khi mô hình tuyến tính thất bại?** tiếp nhận điểm tựa từ **Sóng đàn hồi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Khi mô hình tuyến tính thất bại?** nối từ **Sóng đàn hồi** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khi mô hình tuyến tính thất bại?
 
@@ -225,7 +225,7 @@ Quan hệ `\sigma=E\varepsilon` chỉ tốt khi biến dạng nhỏ và vật li
 
 Cao su có thể chịu biến dạng lớn; polymer phụ thuộc thời gian; vật liệu sinh học có thể phi tuyến và dị hướng. Khi đó cần mô hình cấu thành phức tạp hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Khi mô hình tuyến tính thất bại?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Khi mô hình tuyến tính thất bại?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -239,7 +239,7 @@ hình học và trường động học
 
 Định luật bảo toàn mang tính phổ quát, còn quan hệ cấu thành chứa “cá tính” của vật liệu. Tensor xuất hiện vì lực và biến dạng phụ thuộc hướng trong không gian ba chiều.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -255,7 +255,7 @@ Không. Một vật có thể tịnh tiến hoặc quay cứng rất xa mà khô
 
 Ma trận là biểu diễn của tensor trong một hệ tọa độ. Tensor bản thân là đối tượng hình học không phụ thuộc cách ta chọn trục.
 
-> **Chuyển mạch:** Trong **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Cơ học môi trường liên tục: tensor ứng suất, tensor biến dạng và quan hệ vật liệu**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

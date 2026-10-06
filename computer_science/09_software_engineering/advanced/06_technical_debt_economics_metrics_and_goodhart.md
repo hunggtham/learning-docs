@@ -25,7 +25,7 @@ Một definition thực dụng:
 
 > Technical debt là một thiết kế (design / 설계)/hiện thực (implementation / 구현)/operational ràng buộc (constraint / 제약조건) làm chi phí hoặc rủi ro của các thay đổi tương lai cao hơn đáng kể so với một trạng thái thay thế hợp lý.
 
-> **Chuyển mạch:** Technical debt describes future cost, not simply bad code; deliberate and accidental debt need different governance, while metrics can become targets and trigger Goodhart failures.
+> **Nối mạch:** Technical debt describes future cost, not simply bad code; deliberate and accidental debt need different governance, while metrics can become targets and trigger Goodhart failures.
 
 ## 2. Debt metaphor hữu ích nhưng không phải accounting literal
 
@@ -40,7 +40,7 @@ interest ≈ recurring extra cost vì chưa thay đổi
 
 Nhưng estimate có bất định (uncertainty / 불확실성) lớn. Đừng giả vờ “debt = 327 engineer-hours” là fact nếu chưa có bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Ở chặng này của **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **3. Deliberate debt và accidental debt có quản trị (governance / 거버넌스) khác nhau** tiếp nhận điểm tựa từ **2. Debt metaphor hữu ích nhưng không phải accounting literal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Obsolescence debt đến từ môi trường thay đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Deliberate debt và accidental debt có quản trị (governance / 거버넌스) khác nhau** nối từ **2. Debt metaphor hữu ích nhưng không phải accounting literal** sang **4. Obsolescence debt đến từ môi trường thay đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Deliberate debt và accidental debt có quản trị (governance / 거버넌스) khác nhau
 
@@ -50,7 +50,7 @@ Accidental debt xuất hiện từ misunderstanding, uncontrolled coupling hoặ
 
 Quan trọng hơn origin là **giả định (assumption / 가정) còn đúng không**. Một shortcut có thể hợp lý năm đầu nhưng trở thành bottleneck khi quy mô (scale / 규모)/nhóm (team / 팀)/regulation thay đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **4. Obsolescence debt đến từ môi trường thay đổi** tiếp nhận điểm tựa từ **3. Deliberate debt và accidental debt có quản trị (governance / 거버넌스) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. thay đổi (change / 변경) amplification là một tín hiệu (signal / 신호) mạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Obsolescence debt đến từ môi trường thay đổi** nối từ **3. Deliberate debt và accidental debt có quản trị (governance / 거버넌스) khác nhau** sang **5. thay đổi (change / 변경) amplification là một tín hiệu (signal / 신호) mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Obsolescence debt đến từ môi trường thay đổi
 
@@ -60,7 +60,7 @@ Mã (code / 코드) có thể không đổi nhưng nền tảng (platform / 플�
 
 Phiên bản (version / 버전) evolution chapter ở ngôn ngữ (language / 언어)/khung phần mềm (framework / 프레임워크) nên được nối với maintenance economics thay vì xem upgrade là housekeeping vô nghĩa.
 
-> **Chuyển mạch:** Trong **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **5. thay đổi (change / 변경) amplification là một tín hiệu (signal / 신호) mạnh** tiếp nhận điểm tựa từ **4. Obsolescence debt đến từ môi trường thay đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Coordination debt là technical debt ở socio-technical tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. thay đổi (change / 변경) amplification là một tín hiệu (signal / 신호) mạnh** nối từ **4. Obsolescence debt đến từ môi trường thay đổi** sang **6. Coordination debt là technical debt ở socio-technical tầng (layer / 계층)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. thay đổi (change / 변경) amplification là một tín hiệu (signal / 신호) mạnh
 
@@ -77,7 +77,7 @@ business change size
 
 Không cần một score universal; trend và repeated examples thường đủ để chứng minh debt.
 
-> **Chuyển mạch:** Ở chặng này của **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **6. Coordination debt là technical debt ở socio-technical tầng (layer / 계층)** tiếp nhận điểm tựa từ **5. thay đổi (change / 변경) amplification là một tín hiệu (signal / 신호) mạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. dữ liệu (data / 데이터)/lược đồ (schema / 스키마) debt thường có irreversibility cao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Coordination debt là technical debt ở socio-technical tầng (layer / 계층)** nối từ **5. thay đổi (change / 변경) amplification là một tín hiệu (signal / 신호) mạnh** sang **7. dữ liệu (data / 데이터)/lược đồ (schema / 스키마) debt thường có irreversibility cao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Coordination debt là technical debt ở socio-technical tầng (layer / 계층)
 
@@ -85,7 +85,7 @@ Nếu kiến trúc (architecture / 아키텍처) ranh giới (boundary / 경계)
 
 Conway-style tác động (effect / 효과) nghĩa nhóm (team / 팀) topology và hệ thống (system / 시스템) topology tác động lẫn nhau. Refactor mã (code / 코드) không giải được nếu quyền sở hữu (ownership / 소유권) mô hình (model / 모델) vẫn giữ same coordination bottleneck.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **6. Coordination debt là technical debt ở socio-technical tầng (layer / 계층)** nêu điều cần giải thích; **7. dữ liệu (data / 데이터)/lược đồ (schema / 스키마) debt thường có irreversibility cao** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. kiểm thử (test / 테스트) debt là thiếu confidence, không chỉ thiếu coverage %** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Coordination debt là technical debt ở socio-technical tầng (layer / 계층)** đặt vấn đề; **7. dữ liệu (data / 데이터)/lược đồ (schema / 스키마) debt thường có irreversibility cao** kiểm tra bằng chứng, rồi **8. kiểm thử (test / 테스트) debt là thiếu confidence, không chỉ thiếu coverage %** mở rộng hệ quả.
 
 ## 7. dữ liệu (data / 데이터)/lược đồ (schema / 스키마) debt thường có irreversibility cao
 
@@ -95,7 +95,7 @@ Dữ liệu (data / 데이터) debt khác mã (code / 코드) debt vì old dữ 
 
 Đọc [API/schema compatibility](./02_api_schema_compatibility_and_evolutionary_design.md) và [large-scale migration](./03_large_scale_refactoring_strangler_and_branch_by_abstraction.md).
 
-> **Chuyển mạch:** Trong **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **7. dữ liệu (data / 데이터)/lược đồ (schema / 스키마) debt thường có irreversibility cao** nêu điều cần giải thích; **8. kiểm thử (test / 테스트) debt là thiếu confidence, không chỉ thiếu coverage %** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. Operational debt xuất hiện khi hệ thống (system / 시스템) chỉ chạy được nhờ heroics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. dữ liệu (data / 데이터)/lược đồ (schema / 스키마) debt thường có irreversibility cao** đặt vấn đề; **8. kiểm thử (test / 테스트) debt là thiếu confidence, không chỉ thiếu coverage %** kiểm tra bằng chứng, rồi **9. Operational debt xuất hiện khi hệ thống (system / 시스템) chỉ chạy được nhờ heroics** mở rộng hệ quả.
 
 ## 8. kiểm thử (test / 테스트) debt là thiếu confidence, không chỉ thiếu coverage %
 
@@ -113,7 +113,7 @@ failure-model coverage
 
 Coverage line chỉ là một observation phụ.
 
-> **Chuyển mạch:** Ở chặng này của **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **9. Operational debt xuất hiện khi hệ thống (system / 시스템) chỉ chạy được nhờ heroics** tiếp nhận điểm tựa từ **8. kiểm thử (test / 테스트) debt là thiếu confidence, không chỉ thiếu coverage %** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Debt interest có thể đo qua recurring friction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Operational debt xuất hiện khi hệ thống (system / 시스템) chỉ chạy được nhờ heroics** nối từ **8. kiểm thử (test / 테스트) debt là thiếu confidence, không chỉ thiếu coverage %** sang **10. Debt interest có thể đo qua recurring friction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Operational debt xuất hiện khi hệ thống (system / 시스템) chỉ chạy được nhờ heroics
 
@@ -121,7 +121,7 @@ Manual restart, tribal runbook, alert noise, undocumented failover hoặc triể
 
 Interest biểu hiện qua on-call tải (load / 로드), sự cố (incident / 인시던트) duration và cognitive tải (load / 로드). Automation có thể trả debt, nhưng automation không hiểu bất biến (invariant / 불변식) có thể chỉ đóng gói thất bại (failure / 실패) nhanh hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **10. Debt interest có thể đo qua recurring friction** tiếp nhận điểm tựa từ **9. Operational debt xuất hiện khi hệ thống (system / 시스템) chỉ chạy được nhờ heroics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Một debt item cần đơn vị sở hữu (owner / 오너), trigger và exit điều kiện (condition / 조건)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Debt interest có thể đo qua recurring friction** nối từ **9. Operational debt xuất hiện khi hệ thống (system / 시스템) chỉ chạy được nhờ heroics** sang **11. Một debt item cần đơn vị sở hữu (owner / 오너), trigger và exit điều kiện (condition / 조건)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Debt interest có thể đo qua recurring friction
 
@@ -129,7 +129,7 @@ Các tín hiệu (signal / 신호) thực tế gồm repeated sự cố (inciden
 
 Không tín hiệu (signal / 신호) nào một mình là debt score. Chúng là bằng chứng (evidence / 증거) để hỏi ràng buộc (constraint / 제약조건) nào gây friction.
 
-> **Chuyển mạch:** Trong **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **11. Một debt item cần đơn vị sở hữu (owner / 오너), trigger và exit điều kiện (condition / 조건)** tiếp nhận điểm tựa từ **10. Debt interest có thể đo qua recurring friction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Paydown timing là option-value quyết định (decision / 결정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Một debt item cần đơn vị sở hữu (owner / 오너), trigger và exit điều kiện (condition / 조건)** nối từ **10. Debt interest có thể đo qua recurring friction** sang **12. Paydown timing là option-value quyết định (decision / 결정)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Một debt item cần đơn vị sở hữu (owner / 오너), trigger và exit điều kiện (condition / 조건)
 
@@ -148,7 +148,7 @@ success / exit condition
 
 Trigger có thể là traffic threshold, number of teams, next regulation deadline hoặc repeated sự cố (incident / 인시던트) count.
 
-> **Chuyển mạch:** Ở chặng này của **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **12. Paydown timing là option-value quyết định (decision / 결정)** tiếp nhận điểm tựa từ **11. Một debt item cần đơn vị sở hữu (owner / 오너), trigger và exit điều kiện (condition / 조건)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Reversibility là tài sản kiến trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Paydown timing là option-value quyết định (decision / 결정)** nối từ **11. Một debt item cần đơn vị sở hữu (owner / 오너), trigger và exit điều kiện (condition / 조건)** sang **13. Reversibility là tài sản kiến trúc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Paydown timing là option-value quyết định (decision / 결정)
 
@@ -164,7 +164,7 @@ expected future interest + risk + migration growth
 
 Bất định (uncertainty / 불확실성) khiến “wait for thông tin (information / 정보)” có option giá trị (value / 값), nhưng chỉ khi hệ thống (system / 시스템) giữ reversibility đủ lâu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **13. Reversibility là tài sản kiến trúc** tiếp nhận điểm tựa từ **12. Paydown timing là option-value quyết định (decision / 결정)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Interest có thể compound qua coupling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Reversibility là tài sản kiến trúc** nối từ **12. Paydown timing là option-value quyết định (decision / 결정)** sang **14. Interest có thể compound qua coupling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Reversibility là tài sản kiến trúc
 
@@ -174,7 +174,7 @@ Một kiến trúc (architecture / 아키텍처) không tối ưu thông lượn
 
 Kiến trúc (architecture / 아키텍처) quyết định (decision / 결정) nên ghi giả định (assumption / 가정) và quay lui (rollback / 롤백)/di chuyển (migration / 마이그레이션) đường dẫn (path / 경로), không chỉ rationale hiện tại.
 
-> **Chuyển mạch:** Trong **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **14. Interest có thể compound qua coupling** tiếp nhận điểm tựa từ **13. Reversibility là tài sản kiến trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Không phải debt nào cũng nên trả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Interest có thể compound qua coupling** nối từ **13. Reversibility là tài sản kiến trúc** sang **15. Không phải debt nào cũng nên trả**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Interest có thể compound qua coupling
 
@@ -184,7 +184,7 @@ Ví dụ dùng chung (shared / 공유) cơ sở dữ liệu (database / 데이�
 
 Đây là lý do early containment ranh giới (boundary / 경계) đôi khi đáng giá hơn “đại refactor” sau này.
 
-> **Chuyển mạch:** Ở chặng này của **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **15. Không phải debt nào cũng nên trả** tiếp nhận điểm tựa từ **14. Interest có thể compound qua coupling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Metrics là sensors, không phải mục tiêu (objective / 목표) hàm (function / 함수) mặc định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Không phải debt nào cũng nên trả** nối từ **14. Interest có thể compound qua coupling** sang **16. Metrics là sensors, không phải mục tiêu (objective / 목표) hàm (function / 함수) mặc định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Không phải debt nào cũng nên trả
 
@@ -203,7 +203,7 @@ retire
 
 Cấp cao (senior / 시니어) quyết định (decision / 결정) là economic sự đánh đổi (trade-off / 트레이드오프), không phải moral judgment về mã (code / 코드) chất lượng (quality / 품질).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **16. Metrics là sensors, không phải mục tiêu (objective / 목표) hàm (function / 함수) mặc định** tiếp nhận điểm tựa từ **15. Không phải debt nào cũng nên trả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Goodhart xuất hiện vì proxy khác mục tiêu (objective / 목표)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Metrics là sensors, không phải mục tiêu (objective / 목표) hàm (function / 함수) mặc định** nối từ **15. Không phải debt nào cũng nên trả** sang **17. Goodhart xuất hiện vì proxy khác mục tiêu (objective / 목표)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Metrics là sensors, không phải mục tiêu (objective / 목표) hàm (function / 함수) mặc định
 
@@ -213,7 +213,7 @@ Khi chỉ số (metric / 지표) trở thành mục tiêu (target / 대상) cứ
 
 > Khi một measure trở thành mục tiêu (target / 대상), nó có xu hướng mất chất lượng như một measure.
 
-> **Chuyển mạch:** Trong **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **17. Goodhart xuất hiện vì proxy khác mục tiêu (objective / 목표)** tiếp nhận điểm tựa từ **16. Metrics là sensors, không phải mục tiêu (objective / 목표) hàm (function / 함수) mặc định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. chỉ số (metric / 지표) quản trị (governance / 거버넌스) cần một chỉ số (metric / 지표) cây (tree / 트리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Goodhart xuất hiện vì proxy khác mục tiêu (objective / 목표)** nối từ **16. Metrics là sensors, không phải mục tiêu (objective / 목표) hàm (function / 함수) mặc định** sang **18. chỉ số (metric / 지표) quản trị (governance / 거버넌스) cần một chỉ số (metric / 지표) cây (tree / 트리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Goodhart xuất hiện vì proxy khác mục tiêu (objective / 목표)
 
@@ -221,7 +221,7 @@ Nếu mục tiêu (target / 대상) là “deploy 20 lần/ngày”, nhóm (team
 
 Bài toán (problem / 문제) không phải chỉ số (metric / 지표) xấu; bài toán (problem / 문제) là **proxy bị dùng như mục tiêu (objective / 목표) duy nhất**.
 
-> **Chuyển mạch:** Ở chặng này của **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **18. chỉ số (metric / 지표) quản trị (governance / 거버넌스) cần một chỉ số (metric / 지표) cây (tree / 트리)** tiếp nhận điểm tựa từ **17. Goodhart xuất hiện vì proxy khác mục tiêu (objective / 목표)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Leading và lagging indicators có vai trò khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. chỉ số (metric / 지표) quản trị (governance / 거버넌스) cần một chỉ số (metric / 지표) cây (tree / 트리)** nối từ **17. Goodhart xuất hiện vì proxy khác mục tiêu (objective / 목표)** sang **19. Leading và lagging indicators có vai trò khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. chỉ số (metric / 지표) quản trị (governance / 거버넌스) cần một chỉ số (metric / 지표) cây (tree / 트리)
 
@@ -238,7 +238,7 @@ Ví dụ “giảm lead thời gian (time / 시간)” phải giữ change-failu
 
 Chỉ số (metric / 지표) cây (tree / 트리) làm rõ sự đánh đổi (trade-off / 트레이드오프) thay vì tối ưu single number.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **19. Leading và lagging indicators có vai trò khác nhau** tiếp nhận điểm tựa từ **18. chỉ số (metric / 지표) quản trị (governance / 거버넌스) cần một chỉ số (metric / 지표) cây (tree / 트리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. DORA-style metrics là diagnostic signals, không phải nhóm (team / 팀) leaderboard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Leading và lagging indicators có vai trò khác nhau** nối từ **18. chỉ số (metric / 지표) quản trị (governance / 거버넌스) cần một chỉ số (metric / 지표) cây (tree / 트리)** sang **20. DORA-style metrics là diagnostic signals, không phải nhóm (team / 팀) leaderboard**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Leading và lagging indicators có vai trò khác nhau
 
@@ -246,7 +246,7 @@ Sự cố (incident / 인시던트) tỷ lệ (rate / 비율) là lagging indica
 
 Một quản trị (governance / 거버넌스) tốt kết hợp cả hai. Không đòi leading indicator “dự đoán hoàn hảo”.
 
-> **Chuyển mạch:** Trong **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **20. DORA-style metrics là diagnostic signals, không phải nhóm (team / 팀) leaderboard** tiếp nhận điểm tựa từ **19. Leading và lagging indicators có vai trò khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. cục bộ (local / 로컬) tối ưu hóa (optimization / 최적화) có thể làm toàn cục (global / 전역) hệ thống (system / 시스템) tệ hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. DORA-style metrics là diagnostic signals, không phải nhóm (team / 팀) leaderboard** nối từ **19. Leading và lagging indicators có vai trò khác nhau** sang **21. cục bộ (local / 로컬) tối ưu hóa (optimization / 최적화) có thể làm toàn cục (global / 전역) hệ thống (system / 시스템) tệ hơn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. DORA-style metrics là diagnostic signals, không phải nhóm (team / 팀) leaderboard
 
@@ -256,7 +256,7 @@ Nhưng so trực tiếp teams có sản phẩm (product / 제품)/rủi ro (risk
 
 Dùng metrics để tìm ràng buộc (constraint / 제약조건) và trend nội bộ tốt hơn dùng để xếp hạng con người.
 
-> **Chuyển mạch:** Ở chặng này của **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **21. cục bộ (local / 로컬) tối ưu hóa (optimization / 최적화) có thể làm toàn cục (global / 전역) hệ thống (system / 시스템) tệ hơn** tiếp nhận điểm tựa từ **20. DORA-style metrics là diagnostic signals, không phải nhóm (team / 팀) leaderboard** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. kỹ thuật (engineering / 엔지니어링) productivity không thể nén thành LOC/lần ghi nhận (commit / 커밋) count** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. cục bộ (local / 로컬) tối ưu hóa (optimization / 최적화) có thể làm toàn cục (global / 전역) hệ thống (system / 시스템) tệ hơn** nối từ **20. DORA-style metrics là diagnostic signals, không phải nhóm (team / 팀) leaderboard** sang **22. kỹ thuật (engineering / 엔지니어링) productivity không thể nén thành LOC/lần ghi nhận (commit / 커밋) count**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. cục bộ (local / 로컬) tối ưu hóa (optimization / 최적화) có thể làm toàn cục (global / 전역) hệ thống (system / 시스템) tệ hơn
 
@@ -264,7 +264,7 @@ Nhóm (team / 팀) A giảm lead thời gian (time / 시간) bằng cách đẩy
 
 Do đó ranh giới (boundary / 경계) của chỉ số (metric / 지표) phải khớp ranh giới (boundary / 경계) của kết quả (outcome / 결과). Nếu mục tiêu (objective / 목표) là customer thay đổi (change / 변경) lead thời gian (time / 시간), đo chỉ một chuỗi xử lý (pipeline / 파이프라인) stage dễ bị game.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **22. kỹ thuật (engineering / 엔지니어링) productivity không thể nén thành LOC/lần ghi nhận (commit / 커밋) count** tiếp nhận điểm tựa từ **21. cục bộ (local / 로컬) tối ưu hóa (optimization / 최적화) có thể làm toàn cục (global / 전역) hệ thống (system / 시스템) tệ hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. sự cố (incident / 인시던트) học tập (learning / 학습) là phản hồi (feedback / 피드백) cho debt portfolio** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. kỹ thuật (engineering / 엔지니어링) productivity không thể nén thành LOC/lần ghi nhận (commit / 커밋) count** nối từ **21. cục bộ (local / 로컬) tối ưu hóa (optimization / 최적화) có thể làm toàn cục (global / 전역) hệ thống (system / 시스템) tệ hơn** sang **23. sự cố (incident / 인시던트) học tập (learning / 학습) là phản hồi (feedback / 피드백) cho debt portfolio**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. kỹ thuật (engineering / 엔지니어링) productivity không thể nén thành LOC/lần ghi nhận (commit / 커밋) count
 
@@ -272,7 +272,7 @@ Lines of mã (code / 코드) có thể tăng khi thiết kế (design / 설계) 
 
 Productivity nên lập luận (reasoning / 추론) từ useful outcomes, chất lượng (quality / 품질), maintainability và luồng (flow / 흐름) các ràng buộc (constraints / 제약조건들); quantitative metrics cần qualitative ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Trong **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **23. sự cố (incident / 인시던트) học tập (learning / 학습) là phản hồi (feedback / 피드백) cho debt portfolio** tiếp nhận điểm tựa từ **22. kỹ thuật (engineering / 엔지니어링) productivity không thể nén thành LOC/lần ghi nhận (commit / 커밋) count** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Worked example: dùng chung (shared / 공유) cơ sở dữ liệu (database / 데이터베이스) giữa nhiều services** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. sự cố (incident / 인시던트) học tập (learning / 학습) là phản hồi (feedback / 피드백) cho debt portfolio** nối từ **22. kỹ thuật (engineering / 엔지니어링) productivity không thể nén thành LOC/lần ghi nhận (commit / 커밋) count** sang **24. Worked example: dùng chung (shared / 공유) cơ sở dữ liệu (database / 데이터베이스) giữa nhiều services**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. sự cố (incident / 인시던트) học tập (learning / 학습) là phản hồi (feedback / 피드백) cho debt portfolio
 
@@ -282,7 +282,7 @@ Debt prioritization nên tăng khi recurrence chứng minh expected mất mát (
 
 Sự cố (incident / 인시던트) không chỉ tạo hành động (action / 동작) item “fix bug”; nó cập nhật economic mô hình (model / 모델) của kiến trúc (architecture / 아키텍처).
 
-> **Chuyển mạch:** Ở chặng này của **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **23. sự cố (incident / 인시던트) học tập (learning / 학습) là phản hồi (feedback / 피드백) cho debt portfolio** cho ta quy tắc; **24. Worked example: dùng chung (shared / 공유) cơ sở dữ liệu (database / 데이터베이스) giữa nhiều services** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **25. Worked example: kiểm thử (test / 테스트) coverage mục tiêu (target / 대상) bị game** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. sự cố (incident / 인시던트) học tập (learning / 학습) là phản hồi (feedback / 피드백) cho debt portfolio** nêu quy tắc; **24. Worked example: dùng chung (shared / 공유) cơ sở dữ liệu (database / 데이터베이스) giữa nhiều services** thử quy tắc trong tình huống, rồi **25. Worked example: kiểm thử (test / 테스트) coverage mục tiêu (target / 대상) bị game** mở rộng hệ quả.
 
 ## 24. Worked example: dùng chung (shared / 공유) cơ sở dữ liệu (database / 데이터베이스) giữa nhiều services
 
@@ -301,7 +301,7 @@ Paydown không nhất thiết “microservices rewrite”. Có thể tạo quy�
 
 Success chỉ số (metric / 지표) là giảm thay đổi (change / 변경) amplification và blast radius, không phải số services.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **24. Worked example: dùng chung (shared / 공유) cơ sở dữ liệu (database / 데이터베이스) giữa nhiều services** cho ta quy tắc; **25. Worked example: kiểm thử (test / 테스트) coverage mục tiêu (target / 대상) bị game** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **26. Một quyết định (decision / 결정) khung phần mềm (framework / 프레임워크) thực dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. Worked example: dùng chung (shared / 공유) cơ sở dữ liệu (database / 데이터베이스) giữa nhiều services** nêu quy tắc; **25. Worked example: kiểm thử (test / 테스트) coverage mục tiêu (target / 대상) bị game** thử quy tắc trong tình huống, rồi **26. Một quyết định (decision / 결정) khung phần mềm (framework / 프레임워크) thực dụng** mở rộng hệ quả.
 
 ## 25. Worked example: kiểm thử (test / 테스트) coverage mục tiêu (target / 대상) bị game
 
@@ -311,7 +311,7 @@ Correction không phải bỏ metrics hoàn toàn. Chuyển focus sang trọng y
 
 Chỉ số (metric / 지표) trở lại vai trò sensor.
 
-> **Chuyển mạch:** Trong **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **25. Worked example: kiểm thử (test / 테스트) coverage mục tiêu (target / 대상) bị game** cho ta quy tắc; **26. Một quyết định (decision / 결정) khung phần mềm (framework / 프레임워크) thực dụng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **27. Kết nối sang các chapter khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. Worked example: kiểm thử (test / 테스트) coverage mục tiêu (target / 대상) bị game** nêu quy tắc; **26. Một quyết định (decision / 결정) khung phần mềm (framework / 프레임워크) thực dụng** thử quy tắc trong tình huống, rồi **27. Kết nối sang các chapter khác** mở rộng hệ quả.
 
 ## 26. Một quyết định (decision / 결정) khung phần mềm (framework / 프레임워크) thực dụng
 
@@ -330,7 +330,7 @@ Success đo bằng outcome nào?
 
 Không cần score giả chính xác. Mục tiêu là làm các giả định (assumptions / 가정들) tường minh (explicit / 명시적) để rà soát (review / 검토) lại theo thời gian.
 
-> **Chuyển mạch:** Ở chặng này của **Technical debt economics, kỹ thuật (engineering / 엔지니어링) metrics và Goodhart's Law**, **27. Kết nối sang các chapter khác** tiếp nhận điểm tựa từ **26. Một quyết định (decision / 결정) khung phần mềm (framework / 프레임워크) thực dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **27. Kết nối sang các chapter khác** tổng hợp từ **26. Một quyết định (decision / 결정) khung phần mềm (framework / 프레임워크) thực dụng**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## 27. Kết nối sang các chapter khác
 

@@ -12,7 +12,7 @@ Carbon là ví dụ kinh điển: kim cương và graphite đều chỉ gồm ca
 
 Vì vậy câu hỏi đúng không chỉ là “vật liệu gồm nguyên tố gì?” mà còn là “các nguyên tử đang liên kết và sắp xếp như thế nào?”.
 
-> **Chuyển mạch:** Composition sets possible bonds; bonds organize into microstructure, and defects can then become controlled features that determine conductivity, strength or catalytic activity.
+> **Nối mạch:** Composition sets possible bonds; bonds organize into microstructure, and defects can then become controlled features that determine conductivity, strength or catalytic activity.
 
 ## Liên kết → vi cấu trúc
 
@@ -22,7 +22,7 @@ Nhiệt động lực học cho biết pha nào ổn định, nhưng động h�
 
 Hai mẫu có cùng thành phần và cùng pha danh nghĩa vẫn có thể có tính chất khác nhau nếu lịch sử gia công khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Khuyết tật có thể tạo chức năng** tiếp nhận điểm tựa từ **Liên kết → vi cấu trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bề mặt phân cách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Khuyết tật có thể tạo chức năng** nối từ **Liên kết → vi cấu trúc** sang **Bề mặt phân cách**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khuyết tật có thể tạo chức năng
 
@@ -32,7 +32,7 @@ Lệch mạng (**dislocation**) cho phép kim loại biến dạng dẻo. Chất
 
 Vì vậy kỹ thuật vật liệu thường là nghệ thuật **thiết kế mật độ và loại khuyết tật**, không phải cố tạo tinh thể hoàn hảo tuyệt đối.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Bề mặt phân cách** tiếp nhận điểm tựa từ **Khuyết tật có thể tạo chức năng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính chất cơ học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Bề mặt phân cách** nối từ **Khuyết tật có thể tạo chức năng** sang **Tính chất cơ học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bề mặt phân cách
 
@@ -42,7 +42,7 @@ Trong pin, phản ứng phụ thường bắt đầu ở bề mặt phân cách.
 
 Do đó hóa học bề mặt và bề mặt phân cách là phần trung tâm của khoa học vật liệu.
 
-> **Chuyển mạch:** Trong **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Tính chất cơ học** tiếp nhận điểm tựa từ **Bề mặt phân cách** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vật liệu năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Tính chất cơ học** nối từ **Bề mặt phân cách** sang **Vật liệu năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính chất cơ học
 
@@ -50,7 +50,7 @@ Do đó hóa học bề mặt và bề mặt phân cách là phần trung tâm c
 
 Một vật liệu có liên kết rất mạnh vẫn có thể giòn. Vì vậy “liên kết mạnh” không đồng nghĩa “vật liệu dai”.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Vật liệu năng lượng** tiếp nhận điểm tựa từ **Tính chất cơ học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy trình chế tạo là một phần của vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Vật liệu năng lượng** nối từ **Tính chất cơ học** sang **Quy trình chế tạo là một phần của vật liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vật liệu năng lượng
 
@@ -60,7 +60,7 @@ Pin nhiên liệu cần chất dẫn ion, điện cực xúc tác và bề mặt
 
 Các yêu cầu này đều bắt đầu từ hóa học của liên kết và cấu trúc điện tử nhưng chỉ trở thành hiệu năng thiết bị khi được tổ chức ở nhiều thang cấu trúc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Vật liệu năng lượng** xác định đầu vào; **Quy trình chế tạo là một phần của vật liệu** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Vật liệu năng lượng** đặt đầu vào cho **Quy trình chế tạo là một phần của vật liệu**, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Quy trình chế tạo là một phần của vật liệu
 
@@ -68,7 +68,7 @@ Nung, tôi, ủ, cán, ép, kéo sợi, trùng hợp, kết tinh hoặc lắng �
 
 Vì vậy trong khoa học vật liệu, “vật liệu là gì?” không thể tách khỏi “vật liệu đã được tạo ra như thế nào?”.
 
-> **Chuyển mạch:** Trong **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Mô hình tư duy** gom các mảnh từ **Quy trình chế tạo là một phần của vật liệu** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Hóa học và Khoa học vật liệu — thành phần chỉ là điểm bắt đầu**, **Mô hình tư duy** tổng hợp từ **Quy trình chế tạo là một phần của vật liệu** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

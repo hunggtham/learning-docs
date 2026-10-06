@@ -1,6 +1,6 @@
 ---
 catalog_version: 1
-last_reviewed: 2026-09-25
+last_reviewed: 2026-10-04
 source_of_truth: main
 review_policy: Update this catalog when a canonical library is added, removed, renamed, or changes domain.
 domains:
@@ -74,6 +74,16 @@ domains:
     scope: Research questions and design, measurement and sampling, survey design, qualitative methods, systematic review and evidence synthesis, mixed methods, ethics, reproducibility, and open science.
     prerequisites: []
     related: [philosophy, mathematics, economics, psychology, sociology, world_history, computer_science]
+  - id: thinking
+    title: Thinking Toolkit
+    group: Methods
+    path: thinking/
+    entrypoint: thinking/README.md
+    status: canonical
+    last_reviewed: 2026-10-04
+    scope: Integration workflows for problem framing, evidence, uncertainty, model selection, causal reasoning, forecasting, risk, decisions, deliberate practice, and cross-domain case application.
+    prerequisites: [research_methods, mathematics, philosophy]
+    related: [psychology, economics, pmp, computer_science, data_engineering, devops_platform_engineering, sociology]
 
   - id: computer_science
     title: Computer Science
@@ -338,7 +348,8 @@ Engineering
 └── Electrical Engineering
 
 Methods
-└── Research Methods
+├── Research Methods
+└── Thinking Toolkit
 
 Computing
 ├── Computer Science
@@ -406,6 +417,8 @@ Economics giữ explicit boundaries: theory không thay evidence, accounting ide
 [`research_methods/`](research_methods/README.md) giữ methodology dùng chung cho toàn repository: research question/design, measurement/sampling/surveys, qualitative methods, systematic reviews/evidence synthesis, mixed methods, ethics, reproducibility và open science. Estimator-level causal/statistical methods tiếp tục nằm ở [`economics/05_econometrics/`](economics/05_econometrics/README.md); Philosophy giữ epistemology/philosophy-of-science foundation.
 
 Mục tiêu là tránh mỗi domain tự lặp lại generic research methods và tạo một evidence contract thống nhất cho các library sau này.
+
+[`thinking/`](thinking/README.md) là integration layer dùng evidence contract đó trong problem framing, model selection, uncertainty, decision và deliberate practice. Thinking không sở hữu lại theory của Mathematics, Philosophy, Psychology, Economics hoặc Research Methods; nó giữ workflow, failure mode, practice artifact và casebook để đưa concept sang domain thực tế.
 
 > **Chuyển mạch:** Trong **Repository catalog**, **9. Sociology: social structure and institutions** tiếp nhận điểm tựa từ **8. Research Methods: cross-domain methodology foundation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. P3 — Electrical / Electronics / Control** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
 

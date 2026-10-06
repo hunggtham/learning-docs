@@ -14,7 +14,7 @@ Utilization 90% không đơn giản nghĩa “còn 10%”. Variability làm tail
 
 Vì vậy sức chứa (capacity / 용량) kỹ thuật (engineering / 엔지니어링) cần tìm **utilization knee**: vùng mà tăng tải (load / 로드) nhỏ bắt đầu làm waiting thời gian (time / 시간) tăng phi tuyến.
 
-> **Chuyển mạch:** Trong **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **2. Queueing delay và dịch vụ (service / 서비스) thời gian (time / 시간) phải đo riêng** tiếp nhận điểm tựa từ **1. Bài toán ban đầu: thông lượng (throughput / 처리량) ổn định không có nghĩa độ trễ (latency / 지연 시간) ổn định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Little's Law nối tính đồng thời (concurrency / 동시성) với độ trễ (latency / 지연 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. Queueing delay và dịch vụ (service / 서비스) thời gian (time / 시간) phải đo riêng** nối từ **1. Bài toán ban đầu: thông lượng (throughput / 처리량) ổn định không có nghĩa độ trễ (latency / 지연 시간) ổn định** sang **3. Little's Law nối tính đồng thời (concurrency / 동시성) với độ trễ (latency / 지연 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Queueing delay và dịch vụ (service / 서비스) thời gian (time / 시간) phải đo riêng
 
@@ -32,7 +32,7 @@ Khi sự cố (incident / 인시던트), câu hỏi đầu tiên nên là:
 
 Nếu không tách hàng đợi (queue / 큐) wait, nhóm (team / 팀) thường tối ưu mã (code / 코드) đang chạy thay vì tài nguyên (resource / 자원) đang saturated.
 
-> **Chuyển mạch:** Ở chặng này của **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **3. Little's Law nối tính đồng thời (concurrency / 동시성) với độ trễ (latency / 지연 시간)** tiếp nhận điểm tựa từ **2. Queueing delay và dịch vụ (service / 서비스) thời gian (time / 시간) phải đo riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Variability tạo hàng đợi (queue / 큐) ngay cả khi average sức chứa (capacity / 용량) đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Little's Law nối tính đồng thời (concurrency / 동시성) với độ trễ (latency / 지연 시간)** nối từ **2. Queueing delay và dịch vụ (service / 서비스) thời gian (time / 시간) phải đo riêng** sang **4. Variability tạo hàng đợi (queue / 큐) ngay cả khi average sức chứa (capacity / 용량) đủ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Little's Law nối tính đồng thời (concurrency / 동시성) với độ trễ (latency / 지연 시간)
 
@@ -48,7 +48,7 @@ Nếu thông lượng (throughput / 처리량) 1000 req/s và average end-to-end
 
 Little's Law không mô tả tail phân phối (distribution / 분포) và không cứu hệ thống (system / 시스템) unstable, nhưng là sanity check mạnh: nếu tính đồng thời (concurrency / 동시성) observed lệch rất xa estimate, có thể có hidden hàng đợi (queue / 큐), thử lại (retry / 재시도), zombie công việc (work / 작업) hoặc đo lường (measurement / 측정) ranh giới (boundary / 경계) khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **4. Variability tạo hàng đợi (queue / 큐) ngay cả khi average sức chứa (capacity / 용량) đủ** tiếp nhận điểm tựa từ **3. Little's Law nối tính đồng thời (concurrency / 동시성) với độ trễ (latency / 지연 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Fan-out khuếch đại tail** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Variability tạo hàng đợi (queue / 큐) ngay cả khi average sức chứa (capacity / 용량) đủ** nối từ **3. Little's Law nối tính đồng thời (concurrency / 동시성) với độ trễ (latency / 지연 시간)** sang **5. Fan-out khuếch đại tail**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Variability tạo hàng đợi (queue / 큐) ngay cả khi average sức chứa (capacity / 용량) đủ
 
@@ -69,7 +69,7 @@ cold start/JIT warm-up
 
 Tail độ trễ (latency / 지연 시간) là thuộc tính (property / 속성) của whole chuỗi xử lý (pipeline / 파이프라인), không chỉ slowest đường đi mã (code path / 코드 경로).
 
-> **Chuyển mạch:** Trong **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **5. Fan-out khuếch đại tail** tiếp nhận điểm tựa từ **4. Variability tạo hàng đợi (queue / 큐) ngay cả khi average sức chứa (capacity / 용량) đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. thử lại (retry / 재시도) không phải backpressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Fan-out khuếch đại tail** nối từ **4. Variability tạo hàng đợi (queue / 큐) ngay cả khi average sức chứa (capacity / 용량) đủ** sang **6. thử lại (retry / 재시도) không phải backpressure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Fan-out khuếch đại tail
 
@@ -79,7 +79,7 @@ Hedged yêu cầu (request / 요청) có thể giảm tail bằng duplicate atte
 
 Tối ưu hóa (optimization / 최적화) tail phải tính **extra công việc (work / 작업) generated per người dùng (user / 사용자) yêu cầu (request / 요청)**, không chỉ độ trễ (latency / 지연 시간) của winner.
 
-> **Chuyển mạch:** Ở chặng này của **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **6. thử lại (retry / 재시도) không phải backpressure** tiếp nhận điểm tựa từ **5. Fan-out khuếch đại tail** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. hết thời gian chờ (timeout / 타임아웃) là deadline quyết định (decision / 결정), không phải cancellation proof** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. thử lại (retry / 재시도) không phải backpressure** nối từ **5. Fan-out khuếch đại tail** sang **7. hết thời gian chờ (timeout / 타임아웃) là deadline quyết định (decision / 결정), không phải cancellation proof**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. thử lại (retry / 재시도) không phải backpressure
 
@@ -102,7 +102,7 @@ slowdown
 
 Đây là positive vòng phản hồi (feedback loop / 피드백 루프) của **thử lại (retry / 재시도) storm**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **7. hết thời gian chờ (timeout / 타임아웃) là deadline quyết định (decision / 결정), không phải cancellation proof** tiếp nhận điểm tựa từ **6. thử lại (retry / 재시도) không phải backpressure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Deadline cần giảm dần qua lời gọi (call / 호출) đồ thị (graph / 그래프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. hết thời gian chờ (timeout / 타임아웃) là deadline quyết định (decision / 결정), không phải cancellation proof** nối từ **6. thử lại (retry / 재시도) không phải backpressure** sang **8. Deadline cần giảm dần qua lời gọi (call / 호출) đồ thị (graph / 그래프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. hết thời gian chờ (timeout / 타임아웃) là deadline quyết định (decision / 결정), không phải cancellation proof
 
@@ -120,7 +120,7 @@ Tính đồng thời (concurrency / 동시성) thật tăng dù người dùng (
 
 Hết thời gian chờ (timeout / 타임아웃) thiết kế (design / 설계) phải đi cùng deadline propagation, cancellation ngữ nghĩa (semantics / 의미론) và idempotency đặc tả hợp đồng (contract / 계약).
 
-> **Chuyển mạch:** Trong **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **8. Deadline cần giảm dần qua lời gọi (call / 호출) đồ thị (graph / 그래프)** tiếp nhận điểm tựa từ **7. hết thời gian chờ (timeout / 타임아웃) là deadline quyết định (decision / 결정), không phải cancellation proof** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Bounded hàng đợi (queue / 큐) biến hidden độ trễ (latency / 지연 시간) thành tường minh (explicit / 명시적) chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Deadline cần giảm dần qua lời gọi (call / 호출) đồ thị (graph / 그래프)** nối từ **7. hết thời gian chờ (timeout / 타임아웃) là deadline quyết định (decision / 결정), không phải cancellation proof** sang **9. Bounded hàng đợi (queue / 큐) biến hidden độ trễ (latency / 지연 시간) thành tường minh (explicit / 명시적) chính sách (policy / 정책)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Deadline cần giảm dần qua lời gọi (call / 호출) đồ thị (graph / 그래프)
 
@@ -138,7 +138,7 @@ serialization/response path
 
 Deadline nên propagate để downstream biết remaining ngân sách (budget / 예산). Không nên reset full hết thời gian chờ (timeout / 타임아웃) ở mỗi hop, vì chuỗi (chain / 사슬) 5 services có thể tạo total wait lớn hơn người dùng (user / 사용자) SLO nhiều lần.
 
-> **Chuyển mạch:** Ở chặng này của **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **9. Bounded hàng đợi (queue / 큐) biến hidden độ trễ (latency / 지연 시간) thành tường minh (explicit / 명시적) chính sách (policy / 정책)** tiếp nhận điểm tựa từ **8. Deadline cần giảm dần qua lời gọi (call / 호출) đồ thị (graph / 그래프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Backpressure phải reach producer có quyền giảm demand** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Bounded hàng đợi (queue / 큐) biến hidden độ trễ (latency / 지연 시간) thành tường minh (explicit / 명시적) chính sách (policy / 정책)** nối từ **8. Deadline cần giảm dần qua lời gọi (call / 호출) đồ thị (graph / 그래프)** sang **10. Backpressure phải reach producer có quyền giảm demand**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Bounded hàng đợi (queue / 큐) biến hidden độ trễ (latency / 지연 시간) thành tường minh (explicit / 명시적) chính sách (policy / 정책)
 
@@ -156,7 +156,7 @@ Bounded hàng đợi (queue / 큐) buộc hệ thống (system / 시스템) quy�
 
 Đây không chỉ là hiệu năng (performance / 성능) tối ưu hóa (optimization / 최적화); nó làm thất bại (failure / 실패) ngữ nghĩa (semantics / 의미론) tường minh (explicit / 명시적).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **10. Backpressure phải reach producer có quyền giảm demand** tiếp nhận điểm tựa từ **9. Bounded hàng đợi (queue / 큐) biến hidden độ trễ (latency / 지연 시간) thành tường minh (explicit / 명시적) chính sách (policy / 정책)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. liên kết (connection / 연결) pool là hàng đợi (queue / 큐) + tính đồng thời (concurrency / 동시성) limiter** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Backpressure phải reach producer có quyền giảm demand** nối từ **9. Bounded hàng đợi (queue / 큐) biến hidden độ trễ (latency / 지연 시간) thành tường minh (explicit / 명시적) chính sách (policy / 정책)** sang **11. liên kết (connection / 연결) pool là hàng đợi (queue / 큐) + tính đồng thời (concurrency / 동시성) limiter**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Backpressure phải reach producer có quyền giảm demand
 
@@ -175,7 +175,7 @@ slow tenant/client
 
 Nếu mỗi tầng (layer / 계층) có unbounded buffer, hệ thống (system / 시스템) trông stable tới khi toàn bộ buffers cùng đầy.
 
-> **Chuyển mạch:** Trong **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **10. Backpressure phải reach producer có quyền giảm demand** đã nêu tiêu chí phân biệt, còn **11. liên kết (connection / 연결) pool là hàng đợi (queue / 큐) + tính đồng thời (concurrency / 동시성) limiter** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **12. Admission điều khiển (control / 제어) giữ hệ thống (system / 시스템) trong safe operating region** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Backpressure phải reach producer có quyền giảm demand** đặt tiêu chí; **11. liên kết (connection / 연결) pool là hàng đợi (queue / 큐) + tính đồng thời (concurrency / 동시성) limiter** dùng nó để kiểm tra ranh giới, rồi **12. Admission điều khiển (control / 제어) giữ hệ thống (system / 시스템) trong safe operating region** mở rộng hệ quả.
 
 ## 11. liên kết (connection / 연결) pool là hàng đợi (queue / 큐) + tính đồng thời (concurrency / 동시성) limiter
 
@@ -185,7 +185,7 @@ Tăng pool kích thước (size / 크기) có thể giảm ứng dụng (applica
 
 Pool sizing phải dựa tài nguyên (resource / 자원) bottleneck thật, không dựa “nhiều liên kết (connection / 연결) hơn = nhanh hơn”.
 
-> **Chuyển mạch:** Ở chặng này của **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **11. liên kết (connection / 연결) pool là hàng đợi (queue / 큐) + tính đồng thời (concurrency / 동시성) limiter** đã nêu tiêu chí phân biệt, còn **12. Admission điều khiển (control / 제어) giữ hệ thống (system / 시스템) trong safe operating region** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **13. tải (load / 로드) shedding bảo vệ bất biến (invariant / 불변식) quan trọng hơn success-rate tức thời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. liên kết (connection / 연결) pool là hàng đợi (queue / 큐) + tính đồng thời (concurrency / 동시성) limiter** đặt tiêu chí; **12. Admission điều khiển (control / 제어) giữ hệ thống (system / 시스템) trong safe operating region** dùng nó để kiểm tra ranh giới, rồi **13. tải (load / 로드) shedding bảo vệ bất biến (invariant / 불변식) quan trọng hơn success-rate tức thời** mở rộng hệ quả.
 
 ## 12. Admission điều khiển (control / 제어) giữ hệ thống (system / 시스템) trong safe operating region
 
@@ -204,7 +204,7 @@ current saturation signal
 
 Reject sớm một phần requests có thể làm success count thực tế cao hơn việc accept 100% rồi để 100% hết thời gian chờ (timeout / 타임아웃).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **13. tải (load / 로드) shedding bảo vệ bất biến (invariant / 불변식) quan trọng hơn success-rate tức thời** tiếp nhận điểm tựa từ **12. Admission điều khiển (control / 제어) giữ hệ thống (system / 시스템) trong safe operating region** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Priority chỉ có nghĩa khi tài nguyên (resource / 자원) được phân lập hoặc schedule công bằng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. tải (load / 로드) shedding bảo vệ bất biến (invariant / 불변식) quan trọng hơn success-rate tức thời** nối từ **12. Admission điều khiển (control / 제어) giữ hệ thống (system / 시스템) trong safe operating region** sang **14. Priority chỉ có nghĩa khi tài nguyên (resource / 자원) được phân lập hoặc schedule công bằng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. tải (load / 로드) shedding bảo vệ bất biến (invariant / 불변식) quan trọng hơn success-rate tức thời
 
@@ -214,7 +214,7 @@ Nhưng degrade chính sách (policy / 정책) phải biết phụ thuộc (depen
 
 Độ tin cậy (reliability / 신뢰성) tối ưu hóa (optimization / 최적화) luôn bị ràng buộc (constraint / 제약조건) bởi tính đúng đắn (correctness / 정확성)/bảo mật (security / 보안) bất biến (invariant / 불변식).
 
-> **Chuyển mạch:** Trong **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **13. tải (load / 로드) shedding bảo vệ bất biến (invariant / 불변식) quan trọng hơn success-rate tức thời** nêu điều cần giải thích; **14. Priority chỉ có nghĩa khi tài nguyên (resource / 자원) được phân lập hoặc schedule công bằng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. Multi-tenant noisy neighbor là hàng đợi (queue / 큐) quyền sở hữu (ownership / 소유권) bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. tải (load / 로드) shedding bảo vệ bất biến (invariant / 불변식) quan trọng hơn success-rate tức thời** đặt vấn đề; **14. Priority chỉ có nghĩa khi tài nguyên (resource / 자원) được phân lập hoặc schedule công bằng** kiểm tra bằng chứng, rồi **15. Multi-tenant noisy neighbor là hàng đợi (queue / 큐) quyền sở hữu (ownership / 소유권) bài toán (problem / 문제)** mở rộng hệ quả.
 
 ## 14. Priority chỉ có nghĩa khi tài nguyên (resource / 자원) được phân lập hoặc schedule công bằng
 
@@ -232,7 +232,7 @@ per-class admission
 
 Nếu không, low-priority burst có thể giữ toàn bộ connections trước khi high-priority traffic tới.
 
-> **Chuyển mạch:** Ở chặng này của **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **14. Priority chỉ có nghĩa khi tài nguyên (resource / 자원) được phân lập hoặc schedule công bằng** nêu điều cần giải thích; **15. Multi-tenant noisy neighbor là hàng đợi (queue / 큐) quyền sở hữu (ownership / 소유권) bài toán (problem / 문제)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. đơn vị từ (token / 토큰) bucket và tỷ lệ (rate / 비율) limit kiểm soát tỷ lệ (rate / 비율) nhưng chưa chắc kiểm soát tính đồng thời (concurrency / 동시성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Priority chỉ có nghĩa khi tài nguyên (resource / 자원) được phân lập hoặc schedule công bằng** đặt vấn đề; **15. Multi-tenant noisy neighbor là hàng đợi (queue / 큐) quyền sở hữu (ownership / 소유권) bài toán (problem / 문제)** kiểm tra bằng chứng, rồi **16. đơn vị từ (token / 토큰) bucket và tỷ lệ (rate / 비율) limit kiểm soát tỷ lệ (rate / 비율) nhưng chưa chắc kiểm soát tính đồng thời (concurrency / 동시성)** mở rộng hệ quả.
 
 ## 15. Multi-tenant noisy neighbor là hàng đợi (queue / 큐) quyền sở hữu (ownership / 소유권) bài toán (problem / 문제)
 
@@ -244,7 +244,7 @@ Useful bất biến (invariant / 불변식):
 
 Cơ chế (mechanism / 메커니즘) có thể là weighted fair scheduling, tính đồng thời (concurrency / 동시성) quota, đơn vị từ (token / 토큰) bucket, per-tenant queues hoặc partitioned tài nguyên (resource / 자원). chính xác (exact / 정확한) choice phụ thuộc tải công việc (workload / 워크로드).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **15. Multi-tenant noisy neighbor là hàng đợi (queue / 큐) quyền sở hữu (ownership / 소유권) bài toán (problem / 문제)** đã nêu tiêu chí phân biệt, còn **16. đơn vị từ (token / 토큰) bucket và tỷ lệ (rate / 비율) limit kiểm soát tỷ lệ (rate / 비율) nhưng chưa chắc kiểm soát tính đồng thời (concurrency / 동시성)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **17. Backoff + jitter giảm synchronization nhưng không tạo sức chứa (capacity / 용량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Multi-tenant noisy neighbor là hàng đợi (queue / 큐) quyền sở hữu (ownership / 소유권) bài toán (problem / 문제)** đặt tiêu chí; **16. đơn vị từ (token / 토큰) bucket và tỷ lệ (rate / 비율) limit kiểm soát tỷ lệ (rate / 비율) nhưng chưa chắc kiểm soát tính đồng thời (concurrency / 동시성)** dùng nó để kiểm tra ranh giới, rồi **17. Backoff + jitter giảm synchronization nhưng không tạo sức chứa (capacity / 용량)** mở rộng hệ quả.
 
 ## 16. đơn vị từ (token / 토큰) bucket và tỷ lệ (rate / 비율) limit kiểm soát tỷ lệ (rate / 비율) nhưng chưa chắc kiểm soát tính đồng thời (concurrency / 동시성)
 
@@ -254,7 +254,7 @@ Tỷ lệ (rate / 비율) limit bảo vệ arrival tỷ lệ (rate / 비율); t�
 
 Weighted admission hữu ích khi endpoint/mô hình (model / 모델)/truy vấn (query / 쿼리) có chi phí (cost / 비용) rất khác nhau.
 
-> **Chuyển mạch:** Trong **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **16. đơn vị từ (token / 토큰) bucket và tỷ lệ (rate / 비율) limit kiểm soát tỷ lệ (rate / 비율) nhưng chưa chắc kiểm soát tính đồng thời (concurrency / 동시성)** đã nêu tiêu chí phân biệt, còn **17. Backoff + jitter giảm synchronization nhưng không tạo sức chứa (capacity / 용량)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **18. Circuit breaker là máy trạng thái (state machine / 상태 머신), không phải magic shield** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. đơn vị từ (token / 토큰) bucket và tỷ lệ (rate / 비율) limit kiểm soát tỷ lệ (rate / 비율) nhưng chưa chắc kiểm soát tính đồng thời (concurrency / 동시성)** đặt tiêu chí; **17. Backoff + jitter giảm synchronization nhưng không tạo sức chứa (capacity / 용량)** dùng nó để kiểm tra ranh giới, rồi **18. Circuit breaker là máy trạng thái (state machine / 상태 머신), không phải magic shield** mở rộng hệ quả.
 
 ## 17. Backoff + jitter giảm synchronization nhưng không tạo sức chứa (capacity / 용량)
 
@@ -272,7 +272,7 @@ unknown-outcome requiring idempotency
 
 Blind thử lại (retry / 재시도) mọi 5xx/hết thời gian chờ (timeout / 타임아웃) là tải (load / 로드) generator.
 
-> **Chuyển mạch:** Ở chặng này của **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **18. Circuit breaker là máy trạng thái (state machine / 상태 머신), không phải magic shield** tiếp nhận điểm tựa từ **17. Backoff + jitter giảm synchronization nhưng không tạo sức chứa (capacity / 용량)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. hàng đợi (queue / 큐) placement quyết định nơi chính sách (policy / 정책) và bằng chứng (evidence / 증거) tồn tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Circuit breaker là máy trạng thái (state machine / 상태 머신), không phải magic shield** nối từ **17. Backoff + jitter giảm synchronization nhưng không tạo sức chứa (capacity / 용량)** sang **19. hàng đợi (queue / 큐) placement quyết định nơi chính sách (policy / 정책) và bằng chứng (evidence / 증거) tồn tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Circuit breaker là máy trạng thái (state machine / 상태 머신), không phải magic shield
 
@@ -282,7 +282,7 @@ Nếu mở quá nhạy, transient blip biến thành self-inflicted outage; nế
 
 Breaker chỉ hữu ích khi caller có fallback/reject hành vi (behavior / 동작) phù hợp; nó không chữa phụ thuộc (dependency / 의존성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **18. Circuit breaker là máy trạng thái (state machine / 상태 머신), không phải magic shield** nêu điều cần giải thích; **19. hàng đợi (queue / 큐) placement quyết định nơi chính sách (policy / 정책) và bằng chứng (evidence / 증거) tồn tại** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. Overload làm dịch vụ (service / 서비스) tỷ lệ (rate / 비율) giảm, không chỉ hàng đợi (queue / 큐) tăng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Circuit breaker là máy trạng thái (state machine / 상태 머신), không phải magic shield** đặt vấn đề; **19. hàng đợi (queue / 큐) placement quyết định nơi chính sách (policy / 정책) và bằng chứng (evidence / 증거) tồn tại** kiểm tra bằng chứng, rồi **20. Overload làm dịch vụ (service / 서비스) tỷ lệ (rate / 비율) giảm, không chỉ hàng đợi (queue / 큐) tăng** mở rộng hệ quả.
 
 ## 19. hàng đợi (queue / 큐) placement quyết định nơi chính sách (policy / 정책) và bằng chứng (evidence / 증거) tồn tại
 
@@ -302,7 +302,7 @@ Ba queues mỗi nơi “chỉ 100 ms” đã tạo 300+ ms trước dịch vụ 
 
 Hàng đợi (queue / 큐) nên nằm nơi hệ thống (system / 시스템) hiểu deadline, priority, quyền sở hữu (ownership / 소유권) và sức chứa (capacity / 용량) tốt nhất; hidden queues ở lower tầng (layer / 계층) cần khả năng quan sát (observability / 관측 가능성) vì chúng vẫn thuộc đường găng (critical path / 임계 경로).
 
-> **Chuyển mạch:** Trong **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **19. hàng đợi (queue / 큐) placement quyết định nơi chính sách (policy / 정책) và bằng chứng (evidence / 증거) tồn tại** nêu điều cần giải thích; **20. Overload làm dịch vụ (service / 서비스) tỷ lệ (rate / 비율) giảm, không chỉ hàng đợi (queue / 큐) tăng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **21. khôi phục (recovery / 복구) cũng cần admission điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. hàng đợi (queue / 큐) placement quyết định nơi chính sách (policy / 정책) và bằng chứng (evidence / 증거) tồn tại** đặt vấn đề; **20. Overload làm dịch vụ (service / 서비스) tỷ lệ (rate / 비율) giảm, không chỉ hàng đợi (queue / 큐) tăng** kiểm tra bằng chứng, rồi **21. khôi phục (recovery / 복구) cũng cần admission điều khiển (control / 제어)** mở rộng hệ quả.
 
 ## 20. Overload làm dịch vụ (service / 서비스) tỷ lệ (rate / 비율) giảm, không chỉ hàng đợi (queue / 큐) tăng
 
@@ -322,7 +322,7 @@ Do đó vượt knee có thể tạo **overload collapse**: thêm demand làm th
 
 Đây là lý do headroom quan trọng hơn chạy sát 100% utilization.
 
-> **Chuyển mạch:** Ở chặng này của **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **21. khôi phục (recovery / 복구) cũng cần admission điều khiển (control / 제어)** tiếp nhận điểm tựa từ **20. Overload làm dịch vụ (service / 서비스) tỷ lệ (rate / 비율) giảm, không chỉ hàng đợi (queue / 큐) tăng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. bằng chứng vận hành (production evidence / 운영 증거) phải theo luồng (flow / 흐름) của công việc (work / 작업)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. khôi phục (recovery / 복구) cũng cần admission điều khiển (control / 제어)** nối từ **20. Overload làm dịch vụ (service / 서비스) tỷ lệ (rate / 비율) giảm, không chỉ hàng đợi (queue / 큐) tăng** sang **22. bằng chứng vận hành (production evidence / 운영 증거) phải theo luồng (flow / 흐름) của công việc (work / 작업)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. khôi phục (recovery / 복구) cũng cần admission điều khiển (control / 제어)
 
@@ -332,7 +332,7 @@ Khôi phục (recovery / 복구) đường dẫn (path / 경로) nên ramp traff
 
 “dịch vụ (service / 서비스) healthy again” không đồng nghĩa “dịch vụ (service / 서비스) chịu được toàn backlog ngay lập tức”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **21. khôi phục (recovery / 복구) cũng cần admission điều khiển (control / 제어)** nêu điều cần giải thích; **22. bằng chứng vận hành (production evidence / 운영 증거) phải theo luồng (flow / 흐름) của công việc (work / 작업)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **23. hiệu năng (performance / 성능) experiments phải tìm knee và vòng phản hồi (feedback loop / 피드백 루프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. khôi phục (recovery / 복구) cũng cần admission điều khiển (control / 제어)** đặt vấn đề; **22. bằng chứng vận hành (production evidence / 운영 증거) phải theo luồng (flow / 흐름) của công việc (work / 작업)** kiểm tra bằng chứng, rồi **23. hiệu năng (performance / 성능) experiments phải tìm knee và vòng phản hồi (feedback loop / 피드백 루프)** mở rộng hệ quả.
 
 ## 22. bằng chứng vận hành (production evidence / 운영 증거) phải theo luồng (flow / 흐름) của công việc (work / 작업)
 
@@ -364,7 +364,7 @@ Deadlines:
 
 Một CPU đồ thị (graph / 그래프) không chỉ ra hidden DB pool hàng đợi (queue / 큐); p99 alone không chỉ ra attempt amplification.
 
-> **Chuyển mạch:** Trong **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **22. bằng chứng vận hành (production evidence / 운영 증거) phải theo luồng (flow / 흐름) của công việc (work / 작업)** nêu điều cần giải thích; **23. hiệu năng (performance / 성능) experiments phải tìm knee và vòng phản hồi (feedback loop / 피드백 루프)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **24. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. bằng chứng vận hành (production evidence / 운영 증거) phải theo luồng (flow / 흐름) của công việc (work / 작업)** đặt vấn đề; **23. hiệu năng (performance / 성능) experiments phải tìm knee và vòng phản hồi (feedback loop / 피드백 루프)** kiểm tra bằng chứng, rồi **24. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** mở rộng hệ quả.
 
 ## 23. hiệu năng (performance / 성능) experiments phải tìm knee và vòng phản hồi (feedback loop / 피드백 루프)
 
@@ -372,19 +372,19 @@ Kiểm thử tải (load test / 부하 테스트) nên ramp demand và giữ đ�
 
 Nếu QPS người dùng (user / 사용자) tăng 10% nhưng attempt tỷ lệ (rate / 비율) tăng 40% do thử lại (retry / 재시도), benchmark phải coi extra attempts là part of tải (load / 로드). Nếu thông lượng (throughput / 처리량) useful plateau rồi giảm, đã bước vào collapse region.
 
-> **Chuyển mạch:** Ở chặng này của **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **24. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** tiếp nhận điểm tựa từ **23. hiệu năng (performance / 성능) experiments phải tìm knee và vòng phản hồi (feedback loop / 피드백 루프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** nối từ **23. hiệu năng (performance / 성능) experiments phải tìm knee và vòng phản hồi (feedback loop / 피드백 루프)** sang **25. Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?
 
 Nếu yêu cầu (request / 요청) chậm nhưng CPU thấp, tìm hàng đợi (queue / 큐) trước pool/I/O/mạng (network / 네트워크). Nếu hết thời gian chờ (timeout / 타임아웃) tăng cùng thử lại (retry / 재시도) tỷ lệ (rate / 비율), inspect amplification. Nếu one tenant làm tất cả chậm, inspect fairness/tài nguyên (resource / 자원) isolation. Nếu adding threads worsens thông lượng (throughput / 처리량), lower bottleneck/contended tài nguyên (resource / 자원) đang quyết định dịch vụ (service / 서비스) tỷ lệ (rate / 비율).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **25. Mô hình tư duy** gom các mảnh từ **24. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. Mô hình tư duy** tổng hợp từ **24. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 25. Mô hình tư duy
 
 > hàng đợi (queue / 큐) là **debt của demand đối với sức chứa (capacity / 용량)**. Tail độ trễ (latency / 지연 시간) tăng khi variability và saturation làm debt khó trả. hết thời gian chờ (timeout / 타임아웃) có thể bỏ người chờ nhưng không xóa công việc (work / 작업); thử lại (retry / 재시도) có thể nhân demand; backpressure và admission điều khiển (control / 제어) giữ debt bounded; fairness quyết định ai được dùng sức chứa (capacity / 용량); tải (load / 로드) shedding giữ hệ thống (system / 시스템) trong safe region. **Khi sự cố (incident / 인시던트) độ trễ (latency / 지연 시간) xảy ra, hãy tìm hàng đợi (queue / 큐), quyền sở hữu (ownership / 소유권) và vòng phản hồi (feedback loop / 피드백 루프) trước khi chỉ tối ưu mã (code / 코드).**
 
-> **Chuyển mạch:** Trong **Queueing, tail độ trễ (latency / 지연 시간) và backpressure**, **Kết nối** gom các mảnh từ **25. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **25. Mô hình tư duy**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

@@ -27,7 +27,7 @@ journal storage
 
 Nhưng ứng dụng (application / 애플리케이션) cũng có thể tự ghi tệp (file / 파일) riêng, nên môi trường vận hành (production / 운영 환경) có thể tồn tại song song nhiều đường log.
 
-> **Chuyển mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **stdout và stderr không tự có tệp (file / 파일) log** tiếp nhận điểm tựa từ **Một dòng log đi đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Journald lưu siêu dữ liệu (metadata / 메타데이터), không chỉ văn bản (text / 텍스트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **stdout và stderr không tự có tệp (file / 파일) log** nối từ **Một dòng log đi đâu?** sang **Journald lưu siêu dữ liệu (metadata / 메타데이터), không chỉ văn bản (text / 텍스트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## stdout và stderr không tự có tệp (file / 파일) log
 
@@ -50,7 +50,7 @@ systemctl cat app.service
 systemctl show app -p StandardOutput -p StandardError
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **stdout và stderr không tự có tệp (file / 파일) log** nêu điều cần giải thích; **Journald lưu siêu dữ liệu (metadata / 메타데이터), không chỉ văn bản (text / 텍스트)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Boot ID** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **stdout và stderr không tự có tệp (file / 파일) log** đặt vấn đề; **Journald lưu siêu dữ liệu (metadata / 메타데이터), không chỉ văn bản (text / 텍스트)** đối chiếu bằng chứng, rồi **Boot ID** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Journald lưu siêu dữ liệu (metadata / 메타데이터), không chỉ văn bản (text / 텍스트)
 
@@ -74,7 +74,7 @@ journalctl -u app -o verbose -n 1
 
 Điều này giải thích vì sao `journalctl -u app` mạnh hơn `grep app` trên văn bản (text / 텍스트) log: nó lọc bằng structured siêu dữ liệu (metadata / 메타데이터).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Journald lưu siêu dữ liệu (metadata / 메타데이터), không chỉ văn bản (text / 텍스트)** nêu điều cần giải thích; **Boot ID** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Journal volatile và persistent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Journald lưu siêu dữ liệu (metadata / 메타데이터), không chỉ văn bản (text / 텍스트)** đặt vấn đề; **Boot ID** đối chiếu bằng chứng, rồi **Journal volatile và persistent** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Boot ID
 
@@ -94,7 +94,7 @@ journalctl -b -1
 
 Đây là công cụ quan trọng khi máy chủ (server / 서버) vừa reboot sau kernel panic hoặc maintenance.
 
-> **Chuyển mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Journal volatile và persistent** tiếp nhận điểm tựa từ **Boot ID** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Storage=** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Journal volatile và persistent** nối từ **Boot ID** sang **Storage=**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Journal volatile và persistent
 
@@ -121,7 +121,7 @@ journalctl --disk-usage
 ls -ld /var/log/journal /run/log/journal 2>/dev/null
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Storage=** tiếp nhận điểm tựa từ **Journal volatile và persistent** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Journal kích thước (size / 크기) và retention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Storage=** nối từ **Journal volatile và persistent** sang **Journal kích thước (size / 크기) và retention**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `Storage=`
 
@@ -138,7 +138,7 @@ Ngữ nghĩa (semantics / 의미론) cụ thể phụ thuộc systemd phiên b�
 
 Môi trường vận hành (production / 운영 환경) cần quyết định retention theo operational yêu cầu (requirement / 요구사항) thay vì để mặc định mà không biết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Journal kích thước (size / 크기) và retention** tiếp nhận điểm tựa từ **Storage=** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Log burst** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Journal kích thước (size / 크기) và retention** nối từ **Storage=** sang **Log burst**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Journal kích thước (size / 크기) và retention
 
@@ -161,7 +161,7 @@ log rate × retention window × compression/overhead
 
 và chừa headroom cho sự cố (incident / 인시던트) burst.
 
-> **Chuyển mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Log burst** tiếp nhận điểm tựa từ **Journal kích thước (size / 크기) và retention** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Journald tỷ lệ (rate / 비율) limiting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Log burst** nối từ **Journal kích thước (size / 크기) và retention** sang **Journald tỷ lệ (rate / 비율) limiting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Log burst
 
@@ -171,7 +171,7 @@ Nếu retention chỉ được sizing theo average tỷ lệ (rate / 비율), di
 
 Sức chứa (capacity / 용량) planning log cần tính burst scenario.
 
-> **Chuyển mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Log burst** đã nêu tiêu chí phân biệt, còn **Journald tỷ lệ (rate / 비율) limiting** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Tỷ lệ (rate / 비율) limit là bảo vệ và cũng là mất mát (loss / 손실) chế độ (mode / 모드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Log burst** đặt tiêu chí; **Journald tỷ lệ (rate / 비율) limiting** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Tỷ lệ (rate / 비율) limit là bảo vệ và cũng là mất mát (loss / 손실) chế độ (mode / 모드)** mở rộng hệ quả.
 
 ## Journald tỷ lệ (rate / 비율) limiting
 
@@ -188,7 +188,7 @@ Nếu vượt giới hạn, một số messages có thể bị suppressed.
 
 Do đó “ứng dụng (application / 애플리케이션) nói đã log” không chắc mọi message đều còn trong journal.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Journald tỷ lệ (rate / 비율) limiting** đã nêu tiêu chí phân biệt, còn **Tỷ lệ (rate / 비율) limit là bảo vệ và cũng là mất mát (loss / 손실) chế độ (mode / 모드)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Priority** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Journald tỷ lệ (rate / 비율) limiting** đặt tiêu chí; **Tỷ lệ (rate / 비율) limit là bảo vệ và cũng là mất mát (loss / 손실) chế độ (mode / 모드)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Priority** mở rộng hệ quả.
 
 ## Tỷ lệ (rate / 비율) limit là bảo vệ và cũng là mất mát (loss / 손실) chế độ (mode / 모드)
 
@@ -201,7 +201,7 @@ Thiết kế tốt cần:
 - không tạo thử lại (retry / 재시도) log spam;
 - giữ lỗi (error / 오류) summaries quan trọng.
 
-> **Chuyển mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Tỷ lệ (rate / 비율) limit là bảo vệ và cũng là mất mát (loss / 손실) chế độ (mode / 모드)** đã nêu tiêu chí phân biệt, còn **Priority** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Structured fields** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Tỷ lệ (rate / 비율) limit là bảo vệ và cũng là mất mát (loss / 손실) chế độ (mode / 모드)** đặt tiêu chí; **Priority** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Structured fields** mở rộng hệ quả.
 
 ## Priority
 
@@ -226,7 +226,7 @@ journalctl -p err..alert
 
 Ứng dụng (application / 애플리케이션) khung phần mềm (framework / 프레임워크) mức (level / 수준) như `ERROR`, `WARN` không phải lúc nào map hoàn hảo sang syslog priority nếu chỉ ghi plain stdout.
 
-> **Chuyển mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Structured fields** tiếp nhận điểm tựa từ **Priority** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Syslog là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Structured fields** nối từ **Priority** sang **Syslog là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Structured fields
 
@@ -236,7 +236,7 @@ journalctl -p err..alert
 
 Tuy nhiên nhiều Java apps vẫn gửi JSON/plain văn bản (text / 텍스트) qua stdout, sau đó centralized collector parse tiếp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Syslog là gì?** tiếp nhận điểm tựa từ **Structured fields** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Journald → rsyslog** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Syslog là gì?** nối từ **Structured fields** sang **Journald → rsyslog**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Syslog là gì?
 
@@ -253,7 +253,7 @@ Daemon như `rsyslog` có thể:
 
 Journald và rsyslog không nhất thiết loại trừ nhau.
 
-> **Chuyển mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Journald → rsyslog** tiếp nhận điểm tựa từ **Syslog là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **/dev/log** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Journald → rsyslog** nối từ **Syslog là gì?** sang **/dev/log**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Journald → rsyslog
 
@@ -271,7 +271,7 @@ rsyslog
 
 Tùy cấu hình (config / 설정), rsyslog có thể đọc journal qua mô-đun (module / 모듈)/giao diện (interface / 인터페이스) thay vì journald forward raw socket.
 
-> **Chuyển mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **/dev/log** tiếp nhận điểm tựa từ **Journald → rsyslog** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tệp (file / 파일) logging trực tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **/dev/log** nối từ **Journald → rsyslog** sang **Tệp (file / 파일) logging trực tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `/dev/log`
 
@@ -281,7 +281,7 @@ Trên systemd các hệ thống (systems / 시스템들), journald có thể nh�
 
 Do đó dịch vụ (service / 서비스) không nhất thiết ghi stdout mới vào journal.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Tệp (file / 파일) logging trực tiếp** tiếp nhận điểm tựa từ **/dev/log** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ai nên chịu trách nhiệm rotation?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Tệp (file / 파일) logging trực tiếp** nối từ **/dev/log** sang **Ai nên chịu trách nhiệm rotation?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tệp (file / 파일) logging trực tiếp
 
@@ -300,7 +300,7 @@ Sự đánh đổi (trade-off / 트레이드오프):
 - nhưng siêu dữ liệu (metadata / 메타데이터) systemd ít hơn;
 - phải quản lý rotation và disk riêng.
 
-> **Chuyển mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Ai nên chịu trách nhiệm rotation?** tiếp nhận điểm tựa từ **Tệp (file / 파일) logging trực tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rename rotation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Ai nên chịu trách nhiệm rotation?** nối từ **Tệp (file / 파일) logging trực tiếp** sang **Rename rotation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ai nên chịu trách nhiệm rotation?
 
@@ -314,7 +314,7 @@ journal handles retention
 
 Không nên để ứng dụng (application / 애플리케이션) và logrotate cùng rotate cùng một tệp (file / 파일) mà không hiểu tương tác (interaction / 상호작용).
 
-> **Chuyển mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Rename rotation** tiếp nhận điểm tựa từ **Ai nên chịu trách nhiệm rotation?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **copytruncate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Rename rotation** nối từ **Ai nên chịu trách nhiệm rotation?** sang **copytruncate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rename rotation
 
@@ -329,7 +329,7 @@ Tiến trình (process / 프로세스) phải đóng/reopen tệp (file / 파일
 
 Nếu tiến trình (process / 프로세스) vẫn giữ FD tới inode cũ, nó tiếp tục ghi vào `app.log.1` hoặc inode đã unlink.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **copytruncate** tiếp nhận điểm tựa từ **Rename rotation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tín hiệu (signal / 신호) để reopen log** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **copytruncate** nối từ **Rename rotation** sang **Tín hiệu (signal / 신호) để reopen log**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `copytruncate`
 
@@ -346,7 +346,7 @@ Nhược điểm: có race cửa sổ (window / 윈도우) giữa bản sao (cop
 
 Do đó reopen-by-signal thường tốt hơn nếu ứng dụng (application / 애플리케이션) hỗ trợ.
 
-> **Chuyển mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Tín hiệu (signal / 신호) để reopen log** tiếp nhận điểm tựa từ **copytruncate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deleted-open log** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Tín hiệu (signal / 신호) để reopen log** nối từ **copytruncate** sang **Deleted-open log**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tín hiệu (signal / 신호) để reopen log
 
@@ -360,7 +360,7 @@ systemctl kill -s HUP service
 
 Nhưng hành vi (behavior / 동작) là application-specific; không gửi HUP nếu chưa biết daemon xử lý thế nào.
 
-> **Chuyển mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Deleted-open log** tiếp nhận điểm tựa từ **Tín hiệu (signal / 신호) để reopen log** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Journal vacuum** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Deleted-open log** nối từ **Tín hiệu (signal / 신호) để reopen log** sang **Journal vacuum**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Deleted-open log
 
@@ -382,7 +382,7 @@ sudo lsof +L1
 
 Fix phải làm tiến trình (process / 프로세스) close/reopen FD hoặc restart an toàn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Journal vacuum** tiếp nhận điểm tựa từ **Deleted-open log** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kernel logs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Journal vacuum** nối từ **Deleted-open log** sang **Kernel logs**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Journal vacuum
 
@@ -395,7 +395,7 @@ sudo journalctl --vacuum-size=1G
 
 Nhưng vacuum trong sự cố (incident / 인시던트) chỉ là khôi phục (recovery / 복구) hành động (action / 동작). Cần tìm tại sao log tăng và chỉnh retention/sức chứa (capacity / 용량).
 
-> **Chuyển mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Kernel logs** tiếp nhận điểm tựa từ **Journal vacuum** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhật ký kiểm tra (audit log / 감사 로그)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Kernel logs** nối từ **Journal vacuum** sang **Nhật ký kiểm tra (audit log / 감사 로그)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kernel logs
 
@@ -411,7 +411,7 @@ Hai nguồn liên quan nhưng không hoàn toàn giống về persistence và si
 
 Sau reboot, `dmesg` chỉ phản ánh boot hiện tại, còn persistent journal có thể giữ boot trước.
 
-> **Chuyển mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Nhật ký kiểm tra (audit log / 감사 로그)** tiếp nhận điểm tựa từ **Kernel logs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Centralized logging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Nhật ký kiểm tra (audit log / 감사 로그)** nối từ **Kernel logs** sang **Centralized logging**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhật ký kiểm tra (audit log / 감사 로그)
 
@@ -421,7 +421,7 @@ Ví dụ SELinux AVC denials thường nằm trong kiểm tra (audit / 감사) t
 
 Nhật ký kiểm tra (audit log / 감사 로그) có ngữ nghĩa (semantics / 의미론) khác ứng dụng (application / 애플리케이션) log; retention và tamper resistance có thể cần nghiêm ngặt hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Centralized logging** tiếp nhận điểm tựa từ **Nhật ký kiểm tra (audit log / 감사 로그)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **At-most-once và at-least-once trong log shipping** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Centralized logging** nối từ **Nhật ký kiểm tra (audit log / 감사 로그)** sang **At-most-once và at-least-once trong log shipping**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Centralized logging
 
@@ -440,7 +440,7 @@ application
 
 Mỗi mũi tên là một thất bại (failure / 실패) điểm (point / 지점).
 
-> **Chuyển mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **At-most-once và at-least-once trong log shipping** tiếp nhận điểm tựa từ **Centralized logging** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Buffer trên disk** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **At-most-once và at-least-once trong log shipping** nối từ **Centralized logging** sang **Buffer trên disk**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## At-most-once và at-least-once trong log shipping
 
@@ -454,7 +454,7 @@ Vì vậy centralized logs có thể thiếu hoặc duplicate entries.
 
 Không nên giả định log chuỗi xử lý (pipeline / 파이프라인) có exactly-once ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Buffer trên disk** tiếp nhận điểm tựa từ **At-most-once và at-least-once trong log shipping** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Backpressure trong logging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Buffer trên disk** nối từ **At-most-once và at-least-once trong log shipping** sang **Backpressure trong logging**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Buffer trên disk
 
@@ -462,7 +462,7 @@ Collector như Fluent Bit, véc-tơ (vector / 벡터), Filebeat hoặc rsyslog c
 
 Disk buffer giúp chịu mạng (network / 네트워크) outage nhưng cũng chiếm disk và cần sức chứa (capacity / 용량) planning.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Backpressure trong logging** tiếp nhận điểm tựa từ **Buffer trên disk** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Async logging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Backpressure trong logging** nối từ **Buffer trên disk** sang **Async logging**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Backpressure trong logging
 
@@ -479,7 +479,7 @@ Nếu synchronous logging khối (block / 블록) yêu cầu (request / 요청) 
 
 Đây là coupling nguy hiểm.
 
-> **Chuyển mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Async logging** tiếp nhận điểm tựa từ **Backpressure trong logging** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Log và dữ liệu nhạy cảm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Async logging** nối từ **Backpressure trong logging** sang **Log và dữ liệu nhạy cảm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Async logging
 
@@ -491,7 +491,7 @@ Khi hàng đợi (queue / 큐) đầy, chính sách (policy / 정책) có thể 
 
 Async không xóa bottleneck; nó chỉ thêm buffer và thay hành vi khi thất bại (failure behavior / 실패 동작).
 
-> **Chuyển mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Async logging** nêu điều cần giải thích; **Log và dữ liệu nhạy cảm** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Retention khác backup** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Async logging** đặt vấn đề; **Log và dữ liệu nhạy cảm** đối chiếu bằng chứng, rồi **Retention khác backup** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Log và dữ liệu nhạy cảm
 
@@ -507,7 +507,7 @@ Masking phải xảy ra trước khi message đi vào chuỗi xử lý (pipeline
 
 Xóa khỏi dashboard sau khi đã ingest không có nghĩa dữ liệu đã biến mất khỏi lưu trữ (storage / 저장소)/backup.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Log và dữ liệu nhạy cảm** nêu điều cần giải thích; **Retention khác backup** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Thời gian (time / 시간) thứ tự (ordering / 순서)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Log và dữ liệu nhạy cảm** đặt vấn đề; **Retention khác backup** đối chiếu bằng chứng, rồi **Thời gian (time / 시간) thứ tự (ordering / 순서)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Retention khác backup
 
@@ -517,7 +517,7 @@ Retention chỉ nói dữ liệu còn truy vấn (query / 쿼리) được bao l
 
 Backup/archival cần chính sách (policy / 정책) riêng về restore và integrity.
 
-> **Chuyển mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Thời gian (time / 시간) thứ tự (ordering / 순서)** tiếp nhận điểm tựa từ **Retention khác backup** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Multiline dấu vết ngăn xếp (stack trace / 스택 트레이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Thời gian (time / 시간) thứ tự (ordering / 순서)** nối từ **Retention khác backup** sang **Multiline dấu vết ngăn xếp (stack trace / 스택 트레이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thời gian (time / 시간) thứ tự (ordering / 순서)
 
@@ -527,7 +527,7 @@ Ngay cả khi NTP đồng bộ, mạng (network / 네트워크) delay và buffer
 
 Nên giữ sự kiện (event / 이벤트) timestamp tại nguồn (source / 소스) và dấu vết (trace / 추적)/yêu cầu (request / 요청) ID.
 
-> **Chuyển mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Multiline dấu vết ngăn xếp (stack trace / 스택 트레이스)** tiếp nhận điểm tựa từ **Thời gian (time / 시간) thứ tự (ordering / 순서)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Log lược đồ (schema / 스키마)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Multiline dấu vết ngăn xếp (stack trace / 스택 트레이스)** nối từ **Thời gian (time / 시간) thứ tự (ordering / 순서)** sang **Log lược đồ (schema / 스키마)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Multiline dấu vết ngăn xếp (stack trace / 스택 트레이스)
 
@@ -537,7 +537,7 @@ Collector phải biết multiline rules, nếu không mỗi ngăn xếp (stack /
 
 Structured JSON với exception trường dữ liệu (field / 필드) có thể giúp nhưng vẫn cần chiến lược (strategy / 전략) cho dấu vết ngăn xếp (stack trace / 스택 트레이스).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Log lược đồ (schema / 스키마)** tiếp nhận điểm tựa từ **Multiline dấu vết ngăn xếp (stack trace / 스택 트레이스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cardinality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Log lược đồ (schema / 스키마)** nối từ **Multiline dấu vết ngăn xếp (stack trace / 스택 트레이스)** sang **Cardinality**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Log lược đồ (schema / 스키마)
 
@@ -557,7 +557,7 @@ stack_trace
 
 Không phải mọi sự kiện (event / 이벤트) cần mọi trường dữ liệu (field / 필드), nhưng consistency giúp truy vấn (query / 쿼리).
 
-> **Chuyển mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Cardinality** tiếp nhận điểm tựa từ **Log lược đồ (schema / 스키마)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một trường hợp (case / 사례): API độ trễ (latency / 지연 시간) tăng cùng log volume** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Cardinality** nối từ **Log lược đồ (schema / 스키마)** sang **Một trường hợp (case / 사례): API độ trễ (latency / 지연 시간) tăng cùng log volume**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cardinality
 
@@ -567,7 +567,7 @@ Chỉ mục (index / 인덱스) mọi trường dữ liệu (field / 필드) car
 
 Khả năng quan sát (observability / 관측 가능성) lược đồ (schema / 스키마) cần cân bằng truy vấn (query / 쿼리) usefulness với chi phí (cost / 비용).
 
-> **Chuyển mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Cardinality** cho ta quy tắc; **Một trường hợp (case / 사례): API độ trễ (latency / 지연 시간) tăng cùng log volume** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례): disk đầy nhưng du không thấy tệp (file / 파일) lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Cardinality** nêu quy tắc; **Một trường hợp (case / 사례): API độ trễ (latency / 지연 시간) tăng cùng log volume** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례): disk đầy nhưng du không thấy tệp (file / 파일) lớn** mở rộng hệ quả.
 
 ## Một trường hợp (case / 사례): API độ trễ (latency / 지연 시간) tăng cùng log volume
 
@@ -586,7 +586,7 @@ upstream timeout
 
 Log lúc này không chỉ là bằng chứng; nó trở thành một phần nguyên nhân.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Một trường hợp (case / 사례): API độ trễ (latency / 지연 시간) tăng cùng log volume** cho ta quy tắc; **Trường hợp (case / 사례): disk đầy nhưng du không thấy tệp (file / 파일) lớn** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례): journal không có log boot trước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Một trường hợp (case / 사례): API độ trễ (latency / 지연 시간) tăng cùng log volume** nêu quy tắc; **Trường hợp (case / 사례): disk đầy nhưng du không thấy tệp (file / 파일) lớn** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례): journal không có log boot trước** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례): disk đầy nhưng `du` không thấy tệp (file / 파일) lớn
 
@@ -605,7 +605,7 @@ Kiểm tra:
 sudo lsof +L1
 ```
 
-> **Chuyển mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Trường hợp (case / 사례): disk đầy nhưng du không thấy tệp (file / 파일) lớn** cho ta quy tắc; **Trường hợp (case / 사례): journal không có log boot trước** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trường hợp (case / 사례): centralized logging mất vài phút dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Trường hợp (case / 사례): disk đầy nhưng du không thấy tệp (file / 파일) lớn** nêu quy tắc; **Trường hợp (case / 사례): journal không có log boot trước** thử quy tắc trong tình huống, rồi **Trường hợp (case / 사례): centralized logging mất vài phút dữ liệu** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례): journal không có log boot trước
 
@@ -620,7 +620,7 @@ Nếu lưu trữ (storage / 저장소) volatile, log boot cũ có thể đã m�
 
 Đây là thiết kế (design / 설계) quyết định (decision / 결정) cần sửa trước sự cố (incident / 인시던트) tiếp theo.
 
-> **Chuyển mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Trường hợp (case / 사례): journal không có log boot trước** cho ta quy tắc; **Trường hợp (case / 사례): centralized logging mất vài phút dữ liệu** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Trường hợp (case / 사례): journal không có log boot trước** nêu quy tắc; **Trường hợp (case / 사례): centralized logging mất vài phút dữ liệu** thử quy tắc trong tình huống, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Trường hợp (case / 사례): centralized logging mất vài phút dữ liệu
 
@@ -638,7 +638,7 @@ query filter/timezone đúng?
 
 Không nên kết luận “ứng dụng (application / 애플리케이션) không log” chỉ vì dashboard không thấy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, các dấu vết trong **Trường hợp (case / 사례): centralized logging mất vài phút dữ liệu** được đọc cùng nhau ở **Mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Journald, rsyslog và đường đi của nhật ký trong Linux**, các dấu vết trong **Trường hợp (case / 사례): centralized logging mất vài phút dữ liệu** được đọc cùng nhau ở **Mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -656,7 +656,7 @@ producer
 
 Mỗi tầng (layer / 계층) có buffering, retention, tỷ lệ (rate / 비율) limit và dạng thất bại (failure mode / 실패 모드) riêng.
 
-> **Chuyển mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -670,7 +670,7 @@ Mỗi tầng (layer / 계층) có buffering, retention, tỷ lệ (rate / 비율
 
 **“Centralized log là nguồn chuẩn (source of truth / 정본) tuyệt đối.”** chuỗi xử lý (pipeline / 파이프라인) có thể drop, duplicate hoặc reorder events.
 
-> **Chuyển mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Kết nối kiến thức** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Journald, rsyslog và đường đi của nhật ký trong Linux**, **Kết nối kiến thức** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

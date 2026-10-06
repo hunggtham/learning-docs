@@ -25,7 +25,7 @@ Kết quả:
 
 Đây là ví dụ kinh điển của **quan hệ cấu trúc–tính chất (structure–property relationship)**.
 
-> **Chuyển mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Chất rắn tinh thể và vô định hình** tiếp nhận điểm tựa từ **Thành phần chưa đủ để xác định tính chất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạng tinh thể, cơ sở và ô đơn vị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Chất rắn tinh thể và vô định hình** nối từ **Thành phần chưa đủ để xác định tính chất** sang **Mạng tinh thể, cơ sở và ô đơn vị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất rắn tinh thể và vô định hình
 
@@ -37,7 +37,7 @@ Thủy tinh oxide là ví dụ quen thuộc. Nó có mạng liên kết nhưng t
 
 Không nên gọi mọi chất rắn vô định hình là “chất lỏng siêu lạnh” theo nghĩa đơn giản. Ở thang thời gian sử dụng, chúng có đáp ứng cơ học của chất rắn; mô tả chính xác hơn liên quan đến động học thư giãn và chuyển thủy tinh.
 
-> **Chuyển mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Mạng tinh thể, cơ sở và ô đơn vị** tiếp nhận điểm tựa từ **Chất rắn tinh thể và vô định hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các cấu trúc lập phương cơ bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Mạng tinh thể, cơ sở và ô đơn vị** nối từ **Chất rắn tinh thể và vô định hình** sang **Các cấu trúc lập phương cơ bản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mạng tinh thể, cơ sở và ô đơn vị
 
@@ -55,7 +55,7 @@ lattice + basis → crystal structure
 
 Đây là khái niệm hình học, không phải “một phân tử đại diện” của tinh thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Các cấu trúc lập phương cơ bản** tiếp nhận điểm tựa từ **Mạng tinh thể, cơ sở và ô đơn vị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số phối trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Các cấu trúc lập phương cơ bản** nối từ **Mạng tinh thể, cơ sở và ô đơn vị** sang **Số phối trí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các cấu trúc lập phương cơ bản
 
@@ -69,7 +69,7 @@ FCC có độ xếp chặt cao và số phối trí lớn. BCC không phải c�
 
 Vì vậy không nên suy ra cấu trúc tinh thể chỉ từ “cách xếp các quả cầu chặt nhất”. Electron và năng lượng tự do mới quyết định pha ổn định.
 
-> **Chuyển mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Số phối trí** tiếp nhận điểm tựa từ **Các cấu trúc lập phương cơ bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất rắn ion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Số phối trí** nối từ **Các cấu trúc lập phương cơ bản** sang **Chất rắn ion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Số phối trí
 
@@ -79,7 +79,7 @@ Trong tinh thể ion, số phối trí phụ thuộc kích thước tương đ�
 
 Quy tắc tỷ lệ bán kính có thể cho trực giác đầu tiên nhưng không phải định luật tuyệt đối.
 
-> **Chuyển mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Chất rắn ion** tiếp nhận điểm tựa từ **Số phối trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất rắn phân tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Chất rắn ion** nối từ **Số phối trí** sang **Chất rắn phân tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất rắn ion
 
@@ -94,7 +94,7 @@ Tính chất điển hình:
 
 Tính giòn xuất hiện vì trượt mạng có thể đưa các ion cùng dấu tới gần nhau, làm lực đẩy tăng mạnh và tạo nứt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Chất rắn phân tử** tiếp nhận điểm tựa từ **Chất rắn ion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất rắn mạng cộng hóa trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Chất rắn phân tử** nối từ **Chất rắn ion** sang **Chất rắn mạng cộng hóa trị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất rắn phân tử
 
@@ -106,7 +106,7 @@ Nhiệt độ nóng chảy không chỉ phụ thuộc độ mạnh lực liên p
 
 Hai đồng phân có lực liên phân tử gần giống nhau vẫn có thể có nhiệt độ nóng chảy khác đáng kể nếu một cấu trúc đóng gói tinh thể đối xứng hơn.
 
-> **Chuyển mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Chất rắn mạng cộng hóa trị** tiếp nhận điểm tựa từ **Chất rắn phân tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất rắn kim loại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Chất rắn mạng cộng hóa trị** nối từ **Chất rắn phân tử** sang **Chất rắn kim loại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất rắn mạng cộng hóa trị
 
@@ -123,7 +123,7 @@ Mạng mạnh thường tạo độ cứng và nhiệt độ nóng chảy cao, n
 
 Silicon là bán dẫn dù có mạng cộng hóa trị bền.
 
-> **Chuyển mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Chất rắn kim loại** tiếp nhận điểm tựa từ **Chất rắn mạng cộng hóa trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đa hình và thù hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Chất rắn kim loại** nối từ **Chất rắn mạng cộng hóa trị** sang **Đa hình và thù hình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất rắn kim loại
 
@@ -133,7 +133,7 @@ Nếu có các trạng thái năng lượng trống rất gần mức Fermi, ele
 
 Liên kết kim loại không định hướng mạnh như nhiều liên kết cộng hóa trị, nên các mặt nguyên tử có thể trượt thông qua chuyển động lệch mạng mà mạng vẫn duy trì liên kết tổng thể. Đây là một phần nguyên nhân kim loại có tính dẻo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Đa hình và thù hình** tiếp nhận điểm tựa từ **Chất rắn kim loại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khuyết tật điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Đa hình và thù hình** nối từ **Chất rắn kim loại** sang **Khuyết tật điểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đa hình và thù hình
 
@@ -151,7 +151,7 @@ Các pha khác nhau có thể có:
 
 Trong dược phẩm, polymorph khác nhau của cùng hoạt chất có thể hòa tan với tốc độ khác, ảnh hưởng sinh khả dụng và quy trình sản xuất.
 
-> **Chuyển mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Khuyết tật điểm** tiếp nhận điểm tựa từ **Đa hình và thù hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khuyết tật trong tinh thể ion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Khuyết tật điểm** nối từ **Đa hình và thù hình** sang **Khuyết tật trong tinh thể ion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khuyết tật điểm
 
@@ -173,7 +173,7 @@ với \(E_f\) là năng lượng hình thành vacancy.
 
 Khuyết tật không chỉ là lỗi. Chúng tạo đường cho khuếch tán và có thể quyết định độ dẫn ion.
 
-> **Chuyển mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Khuyết tật trong tinh thể ion** tiếp nhận điểm tựa từ **Khuyết tật điểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lệch mạng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Khuyết tật trong tinh thể ion** nối từ **Khuyết tật điểm** sang **Lệch mạng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khuyết tật trong tinh thể ion
 
@@ -183,7 +183,7 @@ Ví dụ, thay một ion bằng ion có hóa trị khác có thể tạo thêm v
 
 Đây là nền của **hóa học khuyết tật (defect chemistry)** và rất quan trọng với pin nhiên liệu oxide rắn, sensor oxygen và điện cực pin.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Lệch mạng** tiếp nhận điểm tựa từ **Khuyết tật trong tinh thể ion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biên hạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Lệch mạng** nối từ **Khuyết tật trong tinh thể ion** sang **Biên hạt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lệch mạng
 
@@ -193,7 +193,7 @@ Nếu tinh thể hoàn hảo tuyệt đối, ứng suất lý thuyết cần đ�
 
 Các cơ chế hóa bền như solution strengthening, precipitation hardening hoặc công việc (work / 작업) hardening hoạt động một phần bằng cách cản chuyển động lệch mạng.
 
-> **Chuyển mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Biên hạt** tiếp nhận điểm tựa từ **Lệch mạng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khuếch tán trong chất rắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Biên hạt** nối từ **Lệch mạng** sang **Khuếch tán trong chất rắn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Biên hạt
 
@@ -209,7 +209,7 @@ Tuy vậy hạt nhỏ cũng có thể làm tăng độ bền chảy theo quan h�
 
 Đây là ví dụ cho sự đánh đổi (trade-off / 트레이드오프): nhiều biên hạt có thể tăng độ bền nhưng đồng thời tăng diện tích giao diện và một số dạng bất ổn hóa học.
 
-> **Chuyển mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Khuếch tán trong chất rắn** tiếp nhận điểm tựa từ **Biên hạt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dao động mạng và phonon** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Khuếch tán trong chất rắn** nối từ **Biên hạt** sang **Dao động mạng và phonon**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khuếch tán trong chất rắn
 
@@ -230,7 +230,7 @@ Do phụ thuộc hàm mũ, tăng nhiệt độ vừa phải có thể làm khu�
 
 Khuếch tán chất rắn chi phối tôi luyện, carburizing, sintering, aging hợp kim, phát triển SEI trong pin và nhiều quá trình bán dẫn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Dao động mạng và phonon** tiếp nhận điểm tựa từ **Khuếch tán trong chất rắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giãn nở nhiệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Dao động mạng và phonon** nối từ **Khuếch tán trong chất rắn** sang **Giãn nở nhiệt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dao động mạng và phonon
 
@@ -245,7 +245,7 @@ Phonon giúp giải thích:
 
 Đây là cầu nối trực tiếp giữa Hóa học chất rắn và Vật lý vật chất ngưng tụ.
 
-> **Chuyển mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Giãn nở nhiệt** tiếp nhận điểm tựa từ **Dao động mạng và phonon** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấu trúc vùng và tính dẫn điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Giãn nở nhiệt** nối từ **Dao động mạng và phonon** sang **Cấu trúc vùng và tính dẫn điện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giãn nở nhiệt
 
@@ -253,7 +253,7 @@ Nếu thế liên nguyên tử hoàn toàn đối xứng quanh cực tiểu, kho
 
 Do đó giãn nở nhiệt là hệ quả của hình dạng thế năng liên nguyên tử chứ không đơn giản vì “nguyên tử phình ra”.
 
-> **Chuyển mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Cấu trúc vùng và tính dẫn điện** tiếp nhận điểm tựa từ **Giãn nở nhiệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính chất cơ học không chỉ là “liên kết mạnh”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Cấu trúc vùng và tính dẫn điện** nối từ **Giãn nở nhiệt** sang **Tính chất cơ học không chỉ là “liên kết mạnh”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cấu trúc vùng và tính dẫn điện
 
@@ -263,7 +263,7 @@ Kim loại có trạng thái điện tử khả dụng gần mức Fermi, còn c
 
 Pha tạp silicon bằng donor hoặc acceptor làm thay đổi mật độ hạt tải mà không cần thay đổi hoàn toàn mạng tinh thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, sau nội dung của **Cấu trúc vùng và tính dẫn điện**, **Tính chất cơ học không chỉ là “liên kết mạnh”** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Chuyển thủy tinh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, sau nội dung của **Cấu trúc vùng và tính dẫn điện**, **Tính chất cơ học không chỉ là “liên kết mạnh”** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Chuyển thủy tinh** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tính chất cơ học không chỉ là “liên kết mạnh”
 
@@ -277,7 +277,7 @@ Gốm có liên kết mạnh và độ cứng cao nhưng có thể giòn. Kim lo
 
 Tính chất cơ học phụ thuộc liên kết, khuyết tật, vi cấu trúc và lịch sử gia công.
 
-> **Chuyển mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Chuyển thủy tinh** tiếp nhận điểm tựa từ **Tính chất cơ học không chỉ là “liên kết mạnh”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiễu xạ tia X và cấu trúc tinh thể** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Chuyển thủy tinh** nối từ **Tính chất cơ học không chỉ là “liên kết mạnh”** sang **Nhiễu xạ tia X và cấu trúc tinh thể**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển thủy tinh
 
@@ -289,7 +289,7 @@ Polymer vô định hình và thủy tinh không nhất thiết có một nhiệ
 
 Điều này khác chuyển pha cân bằng bậc nhất như nóng chảy tinh thể.
 
-> **Chuyển mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Nhiễu xạ tia X và cấu trúc tinh thể** tiếp nhận điểm tựa từ **Chuyển thủy tinh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với pin và vật liệu năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Nhiễu xạ tia X và cấu trúc tinh thể** nối từ **Chuyển thủy tinh** sang **Liên hệ với pin và vật liệu năng lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiễu xạ tia X và cấu trúc tinh thể
 
@@ -305,7 +305,7 @@ cho phép liên hệ góc nhiễu xạ với khoảng cách mạng \(d\).
 
 Nhiễu xạ tia X (XRD) là một trong những công cụ chính để xác định pha và cấu trúc tinh thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Liên hệ với pin và vật liệu năng lượng** tiếp nhận điểm tựa từ **Nhiễu xạ tia X và cấu trúc tinh thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Liên hệ với pin và vật liệu năng lượng** nối từ **Nhiễu xạ tia X và cấu trúc tinh thể** sang **Các hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với pin và vật liệu năng lượng
 
@@ -323,7 +323,7 @@ thế redox phù hợp
 
 Tăng dung lượng bằng cách chèn nhiều ion hơn có thể làm biến dạng mạng mạnh hơn và giảm tuổi thọ. Đây là sự đánh đổi (trade-off / 트레이드오프) vật liệu điển hình.
 
-> **Chuyển mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Các hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Liên hệ với pin và vật liệu năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Các hiểu lầm thường gặp** nối từ **Liên hệ với pin và vật liệu năng lượng** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các hiểu lầm thường gặp
 
@@ -347,7 +347,7 @@ Không. Độ dai còn phụ thuộc khả năng tiêu tán năng lượng và n
 
 Không. Nó vẫn có trật tự cục bộ, chỉ thiếu tuần hoàn dài hạn.
 
-> **Chuyển mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Chất rắn — cấu trúc, khuyết tật và tính chất tập thể**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

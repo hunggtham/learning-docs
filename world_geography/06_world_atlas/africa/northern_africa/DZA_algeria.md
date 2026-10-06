@@ -6,7 +6,7 @@
 
 Algeria là quốc gia có diện tích rất lớn nhưng dân cư và hoạt động kinh tế không phân bố theo diện tích. Phần lớn dân số tập trung ở dải phía bắc hướng ra Địa Trung Hải, còn nội địa phía nam thuộc Sahara có mật độ rất thấp. Vì vậy khi nhìn bản đồ Algeria, cần tách **diện tích lãnh thổ** khỏi **không gian sinh sống thực tế (effective inhabited space)**.
 
-> **Chuyển mạch:** Trong **Algeria**, **Địa hình và chuyển tiếp khí hậu** tiếp nhận điểm tựa từ **Khung không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nước là ràng buộc cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mediterranean coast, Atlas và Sahara tạo **Địa hình và chuyển tiếp khí hậu** theo dải bắc–nam rất rõ. **Nước là ràng buộc cấu trúc** tiếp theo biến chênh lệch mưa và aquifer thành giới hạn phát triển.
 
 ## Địa hình và chuyển tiếp khí hậu
 
@@ -14,7 +14,7 @@ Phía bắc gồm dãy Tell Atlas, các đồng bằng và cao nguyên ven Đị
 
 Khí hậu vì thế chuyển từ Địa Trung Hải ở ven biển sang bán khô hạn rồi hoang mạc. Sự chuyển tiếp trên khoảng cách không quá lớn giải thích vì sao nông nghiệp, đô thị và cơ sở hạ tầng tập trung mạnh ở phía bắc.
 
-> **Chuyển mạch:** Ở chặng này của **Algeria**, **Nước là ràng buộc cấu trúc** tiếp nhận điểm tựa từ **Địa hình và chuyển tiếp khí hậu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dân cư và hệ đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Nước là ràng buộc cấu trúc** tập trung agriculture và cư trú vào phía bắc, trong khi Sahara rộng nhưng khô; **Dân cư và hệ đô thị** tiếp theo cho thấy các cực bám dải dễ sống này.
 
 ## Nước là ràng buộc cấu trúc
 
@@ -22,7 +22,7 @@ Algeria không thể đọc chỉ qua dầu khí; nước mới là một trong 
 
 Trong Sahara, ốc đảo và các điểm nước tạo mạng định cư dạng nút thay vì phân bố liên tục. Đây là ví dụ điển hình của **kết nối có chọn lọc (selective connectivity)** trong môi trường khô hạn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Algeria**, **Dân cư và hệ đô thị** tiếp nhận điểm tựa từ **Nước là ràng buộc cấu trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kinh tế không gian và hành lang năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Algiers, Oran và các đô thị ven biển gom dân cư, ports và dịch vụ; **Dân cư và hệ đô thị** vẫn liên hệ với các mỏ và pipeline xa hơn về nam. **Kinh tế không gian và hành lang năng lượng** tiếp theo nối hai cực.
 
 ## Dân cư và hệ đô thị
 
@@ -30,7 +30,7 @@ Algiers là trung tâm hành chính–cảng lớn, Oran là cực đô thị ph
 
 Do đó Algeria có hai mạng không gian chồng lên nhau: **mạng đô thị–dân cư Địa Trung Hải** và **mạng năng lượng Sahara**.
 
-> **Chuyển mạch:** Trong **Algeria**, **Kinh tế không gian và hành lang năng lượng** tiếp nhận điểm tựa từ **Dân cư và hệ đô thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro và môi trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hydrocarbon, gas pipelines và coastal industry tạo **Kinh tế không gian và hành lang năng lượng**, nhưng resource corridor không đồng nghĩa water security hay regional balance. **Rủi ro và môi trường** tiếp theo đặt energy geography trước hạn, nhiệt và xói lở.
 
 ## Kinh tế không gian và hành lang năng lượng
 
@@ -38,13 +38,13 @@ Dầu khí tập trung chủ yếu ở nội địa Sahara. Giá trị của cá
 
 Nông nghiệp và công nghiệp chế biến lại tập trung nhiều hơn ở phía bắc, nơi nước, đô thị, cảng và thị trường gần nhau hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Algeria**, **Rủi ro và môi trường** tiếp nhận điểm tựa từ **Kinh tế không gian và hành lang năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hạn, heat, desertification, flood cục bộ và áp lực extraction làm **Rủi ro và môi trường** phân hóa theo coast, Atlas và Sahara. **Mô hình tư duy** sẽ tổng hợp dải khí hậu với hành lang năng lượng.
 
 ## Rủi ro và môi trường
 
 Phía bắc đối mặt hạn hán, cháy rừng, động đất và áp lực đô thị; nội địa đối mặt nắng nóng cực đoan, khan hiếm nước và khoảng cách hậu cần lớn. Một sai lầm thường gặp là coi Sahara chỉ là “đất trống”. Trên thực tế đây là không gian năng lượng, hạ tầng và các nút định cư có ý nghĩa chiến lược nhưng mật độ rất thấp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Algeria**, **Mô hình tư duy** gom các mảnh từ **Rủi ro và môi trường** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi Mediterranean–Atlas–Sahara → water constraint → northern cities → energy corridors → environmental risk, rồi bàn giao cho owner **Northern Africa** trong [README](./README.md).
 
 ## Mô hình tư duy
 

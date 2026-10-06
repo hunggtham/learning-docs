@@ -52,7 +52,7 @@ Circle tâm `(2,-1)`, radius `3`:
 
 Điểm `(5,-1)` nằm trên circle vì distance tới center bằng 3.
 
-> **Chuyển mạch:** Trong **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **2. mức (level / 수준) set và normal véc-tơ (vector / 벡터)** tiếp nhận điểm tựa từ **1. Circle: giữ một distance không đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Parabola: cân bằng distance tới điểm (point / 지점) và line** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **2. mức (level / 수준) set và normal véc-tơ (vector / 벡터)** nối từ **1. Circle: giữ một distance không đổi** sang **3. Parabola: cân bằng distance tới điểm (point / 지점) và line**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. mức (level / 수준) set và normal véc-tơ (vector / 벡터)
 
@@ -78,7 +78,7 @@ F(x,y)=0.
 
 Đây là cầu nối (bridge / 브리지) trực tiếp tới multivariable calculus: hình học (geometry / 기하학) của tangent/normal xuất hiện từ độ dốc (gradient / 기울기) của ràng buộc (constraint / 제약조건).
 
-> **Chuyển mạch:** Ở chặng này của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **3. Parabola: cân bằng distance tới điểm (point / 지점) và line** tiếp nhận điểm tựa từ **2. mức (level / 수준) set và normal véc-tơ (vector / 벡터)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Ellipse: tổng hai distance không đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **3. Parabola: cân bằng distance tới điểm (point / 지점) và line** nối từ **2. mức (level / 수준) set và normal véc-tơ (vector / 벡터)** sang **4. Ellipse: tổng hai distance không đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Parabola: cân bằng distance tới điểm (point / 지점) và line
 
@@ -110,7 +110,7 @@ Trong ideal hình học (geometry / 기하학), ray song song với axis của p
 
 Điểm quan trọng là ứng dụng (application / 애플리케이션) này phụ thuộc thêm vật lý (physical / 물리적) law về reflection; geometric shape cung cấp cấu trúc (structure / 구조), physics cung cấp cơ chế (mechanism / 메커니즘).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **4. Ellipse: tổng hai distance không đổi** tiếp nhận điểm tựa từ **3. Parabola: cân bằng distance tới điểm (point / 지점) và line** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Hyperbola: hiệu hai distance không đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **4. Ellipse: tổng hai distance không đổi** nối từ **3. Parabola: cân bằng distance tới điểm (point / 지점) và line** sang **5. Hyperbola: hiệu hai distance không đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Ellipse: tổng hai distance không đổi
 
@@ -152,7 +152,7 @@ Eccentricity đo degree mà conic lệch khỏi circle-like hình học (geometr
 
 Trong ideal two-body mô hình (model / 모델), planetary orbit là ellipse với central body ở một focus. Nhưng đây là consequence của inverse-square dynamics, không phải chỉ vì “ellipse trông giống orbit”. hình học (geometry / 기하학) và vật lý (physical / 물리적) dynamics cần được phân biệt.
 
-> **Chuyển mạch:** Trong **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **5. Hyperbola: hiệu hai distance không đổi** tiếp nhận điểm tựa từ **4. Ellipse: tổng hai distance không đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Một definition thống nhất bằng eccentricity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **5. Hyperbola: hiệu hai distance không đổi** nối từ **4. Ellipse: tổng hai distance không đổi** sang **6. Một definition thống nhất bằng eccentricity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Hyperbola: hiệu hai distance không đổi
 
@@ -182,7 +182,7 @@ Nếu hai sensors đo chênh lệch thời gian đến của một tín hiệu (
 
 Đây là ví dụ đẹp về hình học (geometry / 기하학) → inverse bài toán (problem / 문제).
 
-> **Chuyển mạch:** Ở chặng này của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **6. Một definition thống nhất bằng eccentricity** tiếp nhận điểm tựa từ **5. Hyperbola: hiệu hai distance không đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. General quadratic equation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **6. Một definition thống nhất bằng eccentricity** nối từ **5. Hyperbola: hiệu hai distance không đổi** sang **7. General quadratic equation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Một definition thống nhất bằng eccentricity
 
@@ -204,7 +204,7 @@ Circle có thể xem như limiting/special symmetric trường hợp (case / 사
 
 Cách này cho thấy các conics không phải bốn families hoàn toàn tách rời; chúng là các regimes của cùng một distance-ratio idea.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **7. General quadratic equation** tiếp nhận điểm tựa từ **6. Một definition thống nhất bằng eccentricity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Vì sao rotation loại được cross term xy?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **7. General quadratic equation** nối từ **6. Một definition thống nhất bằng eccentricity** sang **8. Vì sao rotation loại được cross term xy?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. General quadratic equation
 
@@ -232,7 +232,7 @@ x^TQx+d^Tx+F=0.
 
 Đây là cầu nối (bridge / 브리지) trực tiếp từ analytic hình học (geometry / 기하학) sang quadratic forms trong tuyến tính (linear / 선형) algebra.
 
-> **Chuyển mạch:** Trong **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **8. Vì sao rotation loại được cross term xy?** tiếp nhận điểm tựa từ **7. General quadratic equation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Classification bằng B^2-4AC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **8. Vì sao rotation loại được cross term xy?** nối từ **7. General quadratic equation** sang **9. Classification bằng B^2-4AC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Vì sao rotation loại được cross term `xy`?
 
@@ -248,7 +248,7 @@ Vì vậy “rotate axes to simplify conic” thực chất là **diagonalize a 
 
 Đây là cùng cấu trúc (structure / 구조) xuất hiện trong PCA, covariance ellipses và Hessian phân tích (analysis / 분석).
 
-> **Chuyển mạch:** Ở chặng này của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **9. Classification bằng B^2-4AC** tiếp nhận điểm tựa từ **8. Vì sao rotation loại được cross term xy?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Parametric, implicit và ma trận (matrix / 행렬) representations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **9. Classification bằng B^2-4AC** nối từ **8. Vì sao rotation loại được cross term xy?** sang **10. Parametric, implicit và ma trận (matrix / 행렬) representations**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Classification bằng `B^2-4AC`
 
@@ -264,7 +264,7 @@ Nhưng đây không phải complete classification nếu không xét tuyến tí
 
 Quy tắc (rule / 규칙) chỉ có meaning khi các giả định (assumptions / 가정들) được nói rõ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **10. Parametric, implicit và ma trận (matrix / 행렬) representations** tiếp nhận điểm tựa từ **9. Classification bằng B^2-4AC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Conics và tối ưu hóa (optimization / 최적화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **10. Parametric, implicit và ma trận (matrix / 행렬) representations** nối từ **9. Classification bằng B^2-4AC** sang **11. Conics và tối ưu hóa (optimization / 최적화)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Parametric, implicit và ma trận (matrix / 행렬) representations
 
@@ -286,7 +286,7 @@ Implicit biểu diễn (representation / 표현) tốt cho các ràng buộc (co
 
 Biểu diễn (representation / 표현) choice là một kỹ thuật (engineering / 엔지니어링) quyết định (decision / 결정), không chỉ notation preference.
 
-> **Chuyển mạch:** Trong **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **11. Conics và tối ưu hóa (optimization / 최적화)** tiếp nhận điểm tựa từ **10. Parametric, implicit và ma trận (matrix / 행렬) representations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Conics và second-order cục bộ (local / 로컬) các mô hình (models / 모델들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **11. Conics và tối ưu hóa (optimization / 최적화)** nối từ **10. Parametric, implicit và ma trận (matrix / 행렬) representations** sang **12. Conics và second-order cục bộ (local / 로컬) các mô hình (models / 모델들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Conics và tối ưu hóa (optimization / 최적화)
 
@@ -300,7 +300,7 @@ với positive-definite `Q` mô tả an ellipsoidal feasible set.
 
 Trong statistics, covariance ma trận (matrix / 행렬) tạo confidence ellipses. Trong tối ưu hóa (optimization / 최적화), quadratic các ràng buộc (constraints / 제약조건들)/objectives tạo ellipsoidal hình học (geometry / 기하학). Trong machine học tập (learning / 학습), Mahalanobis distance cũng tạo mức (level / 수준) sets dạng ellipse/ellipsoid.
 
-> **Chuyển mạch:** Ở chặng này của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **12. Conics và second-order cục bộ (local / 로컬) các mô hình (models / 모델들)** tiếp nhận điểm tựa từ **11. Conics và tối ưu hóa (optimization / 최적화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Worked example: classify và rotate intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **12. Conics và second-order cục bộ (local / 로컬) các mô hình (models / 모델들)** nối từ **11. Conics và tối ưu hóa (optimization / 최적화)** sang **Worked example: classify và rotate intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Conics và second-order cục bộ (local / 로컬) các mô hình (models / 모델들)
 
@@ -316,7 +316,7 @@ Mức (level / 수준) sets của quadratic form `\Delta^TH\Delta` thường là
 
 Do đó conic hình học (geometry / 기하학) không chỉ là school hình học (geometry / 기하학); nó là cục bộ (local / 로컬) hình học (geometry / 기하학) của multivariable functions.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **12. Conics và second-order cục bộ (local / 로컬) các mô hình (models / 모델들)** cho ta quy tắc; **Worked example: classify và rotate intuition** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **12. Conics và second-order cục bộ (local / 로컬) các mô hình (models / 모델들)** nêu quy tắc; **Worked example: classify và rotate intuition** thử quy tắc trong tình huống, rồi **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả.
 
 ## Worked example: classify và rotate intuition
 
@@ -338,7 +338,7 @@ Q=
 
 `Q` symmetric và positive definite, nên mức (level / 수준) set là ellipse. Cross term chỉ nói axes của ellipse không aligned với original coordinate axes. Eigenvectors của `Q` cho principal axes.
 
-> **Chuyển mạch:** Trong **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **Worked example: classify và rotate intuition** cho ta quy tắc; **Liên kết kiến thức (knowledge connection / 지식 연결)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **Worked example: classify và rotate intuition** nêu quy tắc; **Liên kết kiến thức (knowledge connection / 지식 연결)** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
@@ -357,13 +357,13 @@ Pythagorean distance
 
 Trong Physics, conics xuất hiện trong orbital mechanics và optics. Trong AI/dữ liệu (data / 데이터), ellipsoids xuất hiện trong covariance hình học (geometry / 기하학) và Gaussian contours. Trong Finance, quadratic rủi ro (risk / 위험) các mô hình (models / 모델들) có mức (level / 수준) sets dạng ellipsoid khi covariance ma trận (matrix / 행렬) positive definite.
 
-> **Chuyển mạch:** Ở chặng này của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Conic sections là hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들) và quadratic forms. tiêu chuẩn (standard / 표준) equation chỉ là biểu diễn (representation / 표현) thuận tiện sau khi chọn coordinate hệ thống (system / 시스템) phù hợp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đường tròn, conic sections và quỹ tích: hình học (geometry / 기하학) của distance các ràng buộc (constraints / 제약조건들)**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

@@ -12,7 +12,7 @@ Chuỗi đọc hữu ích là:
 
 Malaysia là trường hợp (case / 사례) đặc biệt tốt để học vì vật lý (physical / 물리적) fragmentation không ngăn hình thành một economy tích hợp nếu gateway và mạng (network / 네트워크) đủ mạnh.
 
-> **Chuyển mạch:** Trong **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Hai phần lãnh thổ tạo geography kết nối khác nhau** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Địa hình và khí hậu: nhiệt đới ẩm nhưng không đồng nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Peninsular và East Malaysia bị ngăn bởi Biển Đông, nên **Hai phần lãnh thổ tạo geography kết nối khác nhau** cần được đọc qua sea, air, port và energy networks. **Địa hình và khí hậu: nhiệt đới ẩm nhưng không đồng nhất** tiếp theo cho thấy hai phần khác nhau ra sao.
 
 ## Hai phần lãnh thổ tạo geography kết nối khác nhau
 
@@ -22,7 +22,7 @@ Khoảng cách biển làm interregional freight và passenger luồng (flow / �
 
 Hai phần cũng có tài nguyên (resource / 자원) cơ sở (base / 기반), density và urban cấu trúc (structure / 구조) khác nhau, nên national average dễ che nội bộ (internal / 내부) contrast.
 
-> **Chuyển mạch:** Ở chặng này của **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Địa hình và khí hậu: nhiệt đới ẩm nhưng không đồng nhất** tiếp nhận điểm tựa từ **Hai phần lãnh thổ tạo geography kết nối khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồng bằng và coast là nơi settlement–hạ tầng (infrastructure / 인프라) tập trung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Monsoon, relief và coast làm rainfall, flood và landslide khác nhau; **Địa hình và khí hậu: nhiệt đới ẩm nhưng không đồng nhất** không đồng nghĩa water risk thấp. **Đồng bằng và coast là nơi settlement–hạ tầng (infrastructure / 인프라) tập trung** tiếp theo đặt city và port lên các vùng dễ tiếp cận.
 
 ## Địa hình và khí hậu: nhiệt đới ẩm nhưng không đồng nhất
 
@@ -32,7 +32,7 @@ Heavy rainfall hỗ trợ forest và water tài nguyên (resource / 자원) như
 
 “Nhiệt đới ẩm” vì thế không có nghĩa water rủi ro (risk / 위험) đơn giản thấp; quá nhiều nước trong thời gian ngắn và thiếu water chất lượng (quality / 품질)/lưu trữ (storage / 저장소) ở nơi khác có thể cùng tồn tại.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Đồng bằng và coast là nơi settlement–hạ tầng (infrastructure / 인프라) tập trung** tiếp nhận điểm tựa từ **Địa hình và khí hậu: nhiệt đới ẩm nhưng không đồng nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Klang Valley: đô thị hóa như một vùng chức năng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Flat lowlands và coastal corridors gom roads, rail, plantations và ports; **Đồng bằng và coast là nơi settlement–hạ tầng (infrastructure / 인프라) tập trung** tạo path dependence cho urbanization. **Klang Valley: đô thị hóa như một vùng chức năng** tiếp theo là ví dụ cực rõ.
 
 ## Đồng bằng và coast là nơi settlement–hạ tầng (infrastructure / 인프라) tập trung
 
@@ -44,7 +44,7 @@ Lowland và coastal corridor thuận lợi hơn cho city, plantation, road, rail
 
 Vật lý (physical / 물리적) geography không quyết định urbanization, nhưng làm một số corridor rẻ hơn để phát triển và sau đó đường dẫn (path / 경로) dependence củng cố lợi thế.
 
-> **Chuyển mạch:** Trong **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Klang Valley: đô thị hóa như một vùng chức năng** tiếp nhận điểm tựa từ **Đồng bằng và coast là nơi settlement–hạ tầng (infrastructure / 인프라) tập trung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cổng (port / 포트) Klang và hinterland** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Kuala Lumpur–Klang Valley là functional metro của commuting, industry, airport, housing và services; **Klang Valley: đô thị hóa như một vùng chức năng** tạo demand lớn cho gateway. **Cổng (port / 포트) Klang và hinterland** tiếp theo nối vùng chức năng với biển.
 
 ## Klang Valley: đô thị hóa như một vùng chức năng
 
@@ -54,7 +54,7 @@ Agglomeration hỗ trợ finance, dịch vụ (service / 서비스), manufacturi
 
 Một factory ở peripheral industrial zone vẫn phụ thuộc worker/housing/dịch vụ (service / 서비스) của metropolitan mạng (network / 네트워크); môi trường vận hành (production / 운영 환경) geography và urban geography gắn chặt.
 
-> **Chuyển mạch:** Ở chặng này của **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Cổng (port / 포트) Klang và hinterland** tiếp nhận điểm tựa từ **Klang Valley: đô thị hóa như một vùng chức năng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Penang và cụm điện tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Port Klang chỉ mạnh khi có terminal, customs, warehouse, road/rail và industrial hinterland; **Cổng (port / 포트) Klang và hinterland** biến location thành interface vận tải. **Penang và cụm điện tử** tiếp theo cho thấy một cluster chuyên môn hóa hình thành thế nào.
 
 ## Cổng (port / 포트) Klang và hinterland
 
@@ -66,7 +66,7 @@ Một cổng (port / 포트) mạnh là giao diện:
 
 Nếu inland congestion hoặc terminal sức chứa (capacity / 용량) trở thành bottleneck, vị trí biển tốt không đủ. Đây là ứng dụng trực tiếp của [Transport & Trade](../../../02_human_geography/08_transport_trade_globalization.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Penang và cụm điện tử** tiếp nhận điểm tựa từ **Cổng (port / 포트) Klang và hinterland** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Semiconductor/electronics như một mạng (network / 네트워크) xuyên biên giới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Penang tích tụ supplier, testing, tooling, skilled labor và logistics; **Penang và cụm điện tử** tạo agglomeration khó thay thế bằng một factory đơn lẻ. **Semiconductor/electronics như một mạng (network / 네트워크) xuyên biên giới** tiếp theo mở cluster ra ASEAN.
 
 ## Penang và cụm điện tử
 
@@ -76,7 +76,7 @@ Giá trị của cluster không chỉ nằm ở một assembly plant. Supplier t
 
 Đây là **agglomeration + đường dẫn (path / 경로) dependence**. Khi supplier ecosystem sâu hơn, region có thể giữ lại nhiều giá trị (value / 값) hơn thay vì chỉ cung cấp labor/land.
 
-> **Chuyển mạch:** Trong **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Semiconductor/electronics như một mạng (network / 네트워크) xuyên biên giới** tiếp nhận điểm tựa từ **Penang và cụm điện tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Eo Malacca: location chỉ có giá trị khi được chuyển thành mạng (network / 네트워크) hàm (function / 함수)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Design, components, assembly, testing và logistics trải qua nhiều nước; **Semiconductor/electronics như một mạng (network / 네트워크) xuyên biên giới** cho thấy export value nằm trong supplier specialization. **Eo Malacca: location chỉ có giá trị khi được chuyển thành mạng (network / 네트워크) hàm (function / 함수)** tiếp theo là gateway của mạng ấy.
 
 ## Semiconductor/electronics như một mạng (network / 네트워크) xuyên biên giới
 
@@ -88,7 +88,7 @@ Học tập (learning / 학습) giá trị (value / 값) nằm ở **supplier m�
 
 Với Korea–Vietnam tuyến (route / 경로), Malaysia giúp thấy East/Southeast Asia hoạt động như môi trường vận hành (production / 운영 환경) hệ thống (system / 시스템) nhiều nút (node / 노드) chứ không phải các economy tách rời.
 
-> **Chuyển mạch:** Ở chặng này của **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Eo Malacca: location chỉ có giá trị khi được chuyển thành mạng (network / 네트워크) hàm (function / 함수)** tiếp nhận điểm tựa từ **Semiconductor/electronics như một mạng (network / 네트워크) xuyên biên giới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Plantation và palm oil: land–climate–thị trường (market / 시장) hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Malacca proximity chỉ tạo value khi có port capacity, hinterland, customs, security và schedule; **Eo Malacca: location chỉ có giá trị khi được chuyển thành mạng (network / 네트워크) hàm (function / 함수)** là network function, không phải bản đồ tĩnh. **Plantation và palm oil: land–climate–thị trường (market / 시장) hệ thống (system / 시스템)** tiếp theo đặt land-use cạnh gateway.
 
 ## Eo Malacca: location chỉ có giá trị khi được chuyển thành mạng (network / 네트워크) hàm (function / 함수)
 
@@ -98,7 +98,7 @@ Cần cổng (port / 포트) sức chứa (capacity / 용량), maritime dịch v
 
 Chokepoint phân tích (analysis / 분석) cũng không nên suy kết quả (outcome / 결과) chính trị từ map. Câu hỏi địa lý là: luồng (flow / 흐름) tập trung bao nhiêu, alternative tuyến (route / 경로) có gì và delay truyền vào inventory/môi trường vận hành (production / 운영 환경) thế nào.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Plantation và palm oil: land–climate–thị trường (market / 시장) hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Eo Malacca: location chỉ có giá trị khi được chuyển thành mạng (network / 네트워크) hàm (function / 함수)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Borneo Malaysia: tài nguyên nhiều nhưng effective distance cao hơn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Oil palm cần tropical land, mills, roads và export terminals, nhưng expansion tạo trade-off với forest, carbon và biodiversity; **Plantation và palm oil: land–climate–thị trường (market / 시장) hệ thống (system / 시스템)** nối farm với market. **Borneo Malaysia: tài nguyên nhiều nhưng effective distance cao hơn** tiếp theo cho thấy interior khác Peninsula thế nào.
 
 ## Plantation và palm oil: land–climate–thị trường (market / 시장) hệ thống (system / 시스템)
 
@@ -110,7 +110,7 @@ Land-use expansion lại tạo sự đánh đổi (trade-off / 트레이드오�
 
 Do đó agriculture/plantation cần đọc cùng [Agriculture & Food Systems](../../../02_human_geography/06_agriculture_food_systems.md) và [Sustainability](../../../04_global_systems/04_environment_sustainability.md).
 
-> **Chuyển mạch:** Trong **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Borneo Malaysia: tài nguyên nhiều nhưng effective distance cao hơn** tiếp nhận điểm tựa từ **Plantation và palm oil: land–climate–thị trường (market / 시장) hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dầu khí và năng lượng (energy / 에너지) geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sabah/Sarawak có rừng, sông, hydropower và hydrocarbon nhưng terrain, density và port distance làm **Borneo Malaysia: tài nguyên nhiều nhưng effective distance cao hơn**. **Dầu khí và năng lượng (energy / 에너지) geography** tiếp theo nối deposits với coastal nodes.
 
 ## Borneo Malaysia: tài nguyên nhiều nhưng effective distance cao hơn
 
@@ -120,7 +120,7 @@ Coastal city/cổng (port / 포트) trở thành gateway giữa interior và bê
 
 Vì vậy tài nguyên (resource / 자원) abundance không đồng nghĩa broad khả năng tiếp cận (accessibility / 접근성). **Deposit location → corridor → cổng (port / 포트)** quyết định phần lớn economic geography.
 
-> **Chuyển mạch:** Ở chặng này của **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Dầu khí và năng lượng (energy / 에너지) geography** tiếp nhận điểm tựa từ **Borneo Malaysia: tài nguyên nhiều nhưng effective distance cao hơn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hydropower và mismatch giữa nguồn (source / 소스) với settlement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Offshore gas, processing, terminals và grids làm **Dầu khí và năng lượng (energy / 에너지) geography** khác giữa Peninsula và Borneo; resource rent không tự tạo regional development. **Hydropower và mismatch giữa nguồn (source / 소스) với settlement** tiếp theo mở bài toán source–load.
 
 ## Dầu khí và năng lượng (energy / 에너지) geography
 
@@ -130,7 +130,7 @@ Tài nguyên (resource / 자원) rent không tự động biến thành regional
 
 Đồng thời electricity grid geography khác giữa bán đảo và Borneo, cho thấy “national năng lượng (energy / 에너지) hệ thống (system / 시스템)” có thể gồm nhiều mạng (network / 네트워크) tương đối tách biệt về vật lý.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Dầu khí và năng lượng (energy / 에너지) geography** nêu điều cần giải thích; **Hydropower và mismatch giữa nguồn (source / 소스) với settlement** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Malaysia như một nền kinh tế cổng (port / 포트)–industry–dịch vụ (service / 서비스) đa cực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hydropower nằm ở mountain/rainfall zones trong khi load tập trung ở urban–industrial corridors; **Hydropower và mismatch giữa nguồn (source / 소스) với settlement** kéo theo grid, dam và social trade-off. **Malaysia như một nền kinh tế cổng (port / 포트)–industry–dịch vụ (service / 서비스) đa cực** tiếp theo tổng hợp các cực.
 
 ## Hydropower và mismatch giữa nguồn (source / 소스) với settlement
 
@@ -140,7 +140,7 @@ Một dam không chỉ là electricity nguồn (source / 소스); nó thay river
 
 Đây là cầu nối (bridge / 브리지) giữa năng lượng (energy / 에너지) geography và development/inequality.
 
-> **Chuyển mạch:** Trong **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Hydropower và mismatch giữa nguồn (source / 소스) với settlement** nêu điều cần giải thích; **Malaysia như một nền kinh tế cổng (port / 포트)–industry–dịch vụ (service / 서비스) đa cực** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Johor–Singapore: border như ma sát và cơ hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Klang Valley, Penang, Johor và Sabah/Sarawak có functional roles khác nhau; **Malaysia như một nền kinh tế cổng (port / 포트)–industry–dịch vụ (service / 서비스) đa cực** không thể đọc bằng một thủ đô duy nhất. **Johor–Singapore: border như ma sát và cơ hội** tiếp theo cho thấy một cross-border region cụ thể.
 
 ## Malaysia như một nền kinh tế cổng (port / 포트)–industry–dịch vụ (service / 서비스) đa cực
 
@@ -150,7 +150,7 @@ Klang Valley mạnh về command/dịch vụ (service / 서비스) và large th�
 
 Đọc functional role giúp hiểu city mạng (network / 네트워크) tốt hơn ranking population.
 
-> **Chuyển mạch:** Ở chặng này của **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Johor–Singapore: border như ma sát và cơ hội** tiếp nhận điểm tựa từ **Malaysia như một nền kinh tế cổng (port / 포트)–industry–dịch vụ (service / 서비스) đa cực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trade phụ thuộc (dependency / 의존성) và lợi ích của diversification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Johor–Singapore flows của labor, goods và capital cho thấy border vừa tạo friction vừa mở specialization; **Johor–Singapore: border như ma sát và cơ hội** là functional region vượt ranh giới. **Trade phụ thuộc (dependency / 의존성) và lợi ích của diversification** tiếp theo mở rộng bài toán dependency.
 
 ## Johor–Singapore: border như ma sát và cơ hội
 
@@ -160,7 +160,7 @@ Khoảng cách ngắn giữa Johor và Singapore tạo cross-border flows của 
 
 Hạ tầng (infrastructure / 인프라) giảm travel thời gian (time / 시간) có thể mở rộng functional labor/môi trường vận hành (production / 운영 환경) thị trường (market / 시장) nhưng cũng gây housing/land-price phản hồi (feedback / 피드백) tại các nút (node / 노드) kết nối.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Trade phụ thuộc (dependency / 의존성) và lợi ích của diversification** tiếp nhận điểm tựa từ **Johor–Singapore: border như ma sát và cơ hội** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Food, năng lượng (energy / 에너지) và urban phụ thuộc (dependency / 의존성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Manufacturing, commodities và shipping tạo scale nhưng external demand, supplier và port disruption làm **Trade phụ thuộc (dependency / 의존성) và lợi ích của diversification** thành bài toán nhiều lớp. **Food, năng lượng (energy / 에너지) và urban phụ thuộc (dependency / 의존성)** tiếp theo chuyển dependency vào đời sống đô thị.
 
 ## Trade phụ thuộc (dependency / 의존성) và lợi ích của diversification
 
@@ -170,7 +170,7 @@ Diversification có nhiều lớp: nhiều export sản phẩm (product / 제품
 
 Đây là lô-gic (logic / 논리) của [Global Trade Networks](../../../04_global_systems/05_global_trade_networks.md).
 
-> **Chuyển mạch:** Trong **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Food, năng lượng (energy / 에너지) và urban phụ thuộc (dependency / 의존성)** tiếp nhận điểm tựa từ **Trade phụ thuộc (dependency / 의존성) và lợi ích của diversification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Flood và đô thị hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cities cần food, fuel, electricity, water và reliable suppliers; **Food, năng lượng (energy / 에너지) và urban phụ thuộc (dependency / 의존성)** biến resilience thành câu hỏi về inventory, redundancy và monsoon. **Flood và đô thị hóa** tiếp theo đặt hệ thống đó trước extreme rainfall.
 
 ## Food, năng lượng (energy / 에너지) và urban phụ thuộc (dependency / 의존성)
 
@@ -180,7 +180,7 @@ Malaysia vì thế là trường hợp (case / 사례) tốt để thấy food/n
 
 Vật lý (physical / 물리적) geography của monsoon, cổng (port / 포트) và two-part territory đi thẳng vào question về inventory và redundancy.
 
-> **Chuyển mạch:** Ở chặng này của **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Flood và đô thị hóa** tiếp nhận điểm tựa từ **Food, năng lượng (energy / 에너지) và urban phụ thuộc (dependency / 의존성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khói mù xuyên biên giới: environmental tiến trình (process / 프로세스) không dừng ở border** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Impervious surfaces, drainage, floodplains và hillside construction làm **Flood và đô thị hóa** phụ thuộc land-use chứ không chỉ rainfall. **Khói mù xuyên biên giới: environmental tiến trình (process / 프로세스) không dừng ở border** tiếp theo chuyển từ nước sang khí quyển khu vực.
 
 ## Flood và đô thị hóa
 
@@ -190,7 +190,7 @@ Flood rủi ro (risk / 위험) vì thế không chỉ do rainfall trend. Land de
 
 Ở hill region, intense rain còn có thể kích hoạt landslide, đặc biệt nơi slope bị thay đổi bởi road/construction.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Flood và đô thị hóa** xác định đầu vào; **Khói mù xuyên biên giới: environmental tiến trình (process / 프로세스) không dừng ở border** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Xã hội đa dạng và urban/economic geography** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Peat/biomass fires và wind transport làm **Khói mù xuyên biên giới: environmental tiến trình (process / 프로세스) không dừng ở border** phụ thuộc source, meteorology, exposure và governance nhiều nước. **Xã hội đa dạng và urban/economic geography** tiếp theo đưa environmental pressure vào không gian xã hội.
 
 ## Khói mù xuyên biên giới: environmental tiến trình (process / 프로세스) không dừng ở border
 
@@ -200,7 +200,7 @@ Phân tích (analysis / 분석) cần tách nguồn (source / 소스), wind/mete
 
 Điều này nối Malaysia với [Southeast Asia](../../../03_regions/02_southeast_asia.md) như một environmental hệ thống (system / 시스템) chứ không chỉ trade region.
 
-> **Chuyển mạch:** Trong **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Khói mù xuyên biên giới: environmental tiến trình (process / 프로세스) không dừng ở border** xác định đầu vào; **Xã hội đa dạng và urban/economic geography** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Vai trò khu vực: nút (node / 노드) giữa maritime corridor và môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ethnicity, language, religion và settlement history tương tác với migration, city và economic networks; **Xã hội đa dạng và urban/economic geography** cần tránh giải thích essentialist. **Vai trò khu vực: nút (node / 노드) giữa maritime corridor và môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)** tiếp theo tổng hợp các lớp này.
 
 ## Xã hội đa dạng và urban/economic geography
 
@@ -210,7 +210,7 @@ Malaysia có sự đa dạng về ethnicity, ngôn ngữ (language / 언어), re
 
 Xem [Culture, Language & Religion](../../../02_human_geography/03_culture_language_religion.md) để giữ khung phần mềm (framework / 프레임워크) trung tính và không essentialize.
 
-> **Chuyển mạch:** Ở chặng này của **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Vai trò khu vực: nút (node / 노드) giữa maritime corridor và môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Xã hội đa dạng và urban/economic geography** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Malacca, ASEAN manufacturing và Borneo resource hinterland ghép thành **Vai trò khu vực: nút (node / 노드) giữa maritime corridor và môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)**. **Những hiểu lầm phổ biến** tiếp theo loại bỏ các cách đọc chỉ dựa vào vị trí hoặc tài nguyên.
 
 ## Vai trò khu vực: nút (node / 노드) giữa maritime corridor và môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)
 
@@ -222,13 +222,13 @@ Regional role đến từ khả năng nối chúng:
 
 Đây là lý do Malaysia có học tập (learning / 학습) giá trị (value / 값) đặc biệt cho Korea–Vietnam tuyến (route / 경로): nó cho thấy regional manufacturing không chỉ là “nước nào sản xuất gì”, mà là mạng (network / 네트워크) specialization giữa nhiều nút (node / 노드).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Vai trò khu vực: nút (node / 노드) giữa maritime corridor và môi trường vận hành (production / 운영 환경) mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Những hiểu lầm phổ biến** nhắc rằng Malaysia không chỉ là Malacca, khí hậu ẩm không xóa flood, Borneo resource không đồng nghĩa access, và electronics export không chứa toàn value chain. **Mô hình tư duy** sẽ khép hồ sơ theo mạng.
 
 ## Những hiểu lầm phổ biến
 
 “Malaysia chỉ quan trọng vì Eo Malacca” bỏ urban/industrial cluster và Borneo resources. “Khí hậu ẩm nghĩa không có water/flood bài toán (problem / 문제)” nhầm abundance với timing/chất lượng (quality / 품질). “Có tài nguyên (resource / 자원) ở Borneo nghĩa dễ phát triển” bỏ effective distance và hạ tầng (infrastructure / 인프라). “Electronics export nghĩa toàn giá trị (value / 값) chuỗi (chain / 사슬) nằm trong nước” bỏ supplier tiers và cross-border specialization.
 
-> **Chuyển mạch:** Trong **Malaysia — quốc gia hai phần, hành lang Malacca và mạng sản xuất ASEAN**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi two-part territory → lowland/coast settlement → Klang/Malacca gateway → Penang electronics → Borneo resources → energy/food/flood/haze → ASEAN role, rồi bàn giao cho owner **South-eastern Asia** trong [README](./README.md).
 
 ## Mô hình tư duy
 

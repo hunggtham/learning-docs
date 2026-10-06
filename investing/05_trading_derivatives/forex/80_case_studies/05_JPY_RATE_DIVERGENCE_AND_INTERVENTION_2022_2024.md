@@ -45,7 +45,7 @@ official communication
 
 Không được coi carry là free return. Carry position có thể bị đảo chiều khi spot jump, tỷ lệ (rate / 비율) đường dẫn (path / 경로) đổi, margin tăng hoặc liquidity co lại.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **2. Vì sao tỷ lệ (rate / 비율) differential truyền vào spot nhưng không quyết định toàn bộ spot?** tiếp nhận điểm tựa từ **1. Regime trước cú sốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Import shock và distributional channel** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **2. Vì sao tỷ lệ (rate / 비율) differential truyền vào spot nhưng không quyết định toàn bộ spot?** nối từ **1. Regime trước cú sốc** sang **3. Import shock và distributional channel**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Vì sao tỷ lệ (rate / 비율) differential truyền vào spot nhưng không quyết định toàn bộ spot?
 
@@ -70,7 +70,7 @@ intervention probability
 
 Một vị thế long USD/JPY có thể kiếm carry trong vài tuần rồi lỗ lớn trong một phiên nếu JPY safe-haven demand, chính sách (policy / 정책) repricing hoặc intervention làm thay đổi spot nhanh hơn carry tích lũy.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **3. Import shock và distributional channel** tiếp nhận điểm tựa từ **2. Vì sao tỷ lệ (rate / 비율) differential truyền vào spot nhưng không quyết định toàn bộ spot?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Intervention là chính sách (policy / 정책) công cụ (tool / 도구) khác với monetary-policy pivot** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **3. Import shock và distributional channel** nối từ **2. Vì sao tỷ lệ (rate / 비율) differential truyền vào spot nhưng không quyết định toàn bộ spot?** sang **4. Intervention là chính sách (policy / 정책) công cụ (tool / 도구) khác với monetary-policy pivot**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Import shock và distributional channel
 
@@ -92,7 +92,7 @@ Investor holding foreign assets
 
 Vì vậy “JPY yếu tốt cho Nhật Bản” là một câu quá thô. Cần tách **foreign-currency revenue**, **foreign-currency chi phí (cost / 비용)**, hedge ratio, timing và pass-through vào giá trong nước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **4. Intervention là chính sách (policy / 정책) công cụ (tool / 도구) khác với monetary-policy pivot** tiếp nhận điểm tựa từ **3. Import shock và distributional channel** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Mốc chính sách (policy / 정책) và intervention cần đọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **4. Intervention là chính sách (policy / 정책) công cụ (tool / 도구) khác với monetary-policy pivot** nối từ **3. Import shock và distributional channel** sang **5. Mốc chính sách (policy / 정책) và intervention cần đọc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Intervention là chính sách (policy / 정책) công cụ (tool / 도구) khác với monetary-policy pivot
 
@@ -128,7 +128,7 @@ private-sector hedging demand
 
 MOF cho biết thống kê can thiệp được công bố theo tổng số hàng tháng và chi tiết theo ngày ở chu kỳ quý. Do đó, một chart spot hoặc reserve thay đổi (change / 변경) đơn lẻ không đủ để suy ra timing, kích thước (size / 크기) và mục tiêu của thao tác (operation / 연산).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **5. Mốc chính sách (policy / 정책) và intervention cần đọc** tiếp nhận điểm tựa từ **4. Intervention là chính sách (policy / 정책) công cụ (tool / 도구) khác với monetary-policy pivot** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Positioning và option thị trường (market / 시장)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **5. Mốc chính sách (policy / 정책) và intervention cần đọc** nối từ **4. Intervention là chính sách (policy / 정책) công cụ (tool / 도구) khác với monetary-policy pivot** sang **6. Positioning và option thị trường (market / 시장)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Mốc chính sách (policy / 정책) và intervention cần đọc
 
@@ -151,7 +151,7 @@ Sang 2024, BOJ rà soát (review / 검토) lại giai đoạn JPY suy yếu mạ
 
 MOF công bố các thao tác (operation / 연산) yen-buying trong quý II/2024 với tổng `¥9,788.5 billion` (29/04 và 01/05), và trong quý III/2024 với tổng `¥5,534.8 billion` (11–12/07). Các con số này là **reported intervention amounts**, không phải lợi nhuận/lỗ của nhà đầu tư và cũng không phải bằng chứng rằng mọi chuyển động spot sau đó do intervention gây ra.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **6. Positioning và option thị trường (market / 시장)** tiếp nhận điểm tựa từ **5. Mốc chính sách (policy / 정책) và intervention cần đọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. nhân quả (causal / 인과적) map của trường hợp (case / 사례)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **6. Positioning và option thị trường (market / 시장)** nối từ **5. Mốc chính sách (policy / 정책) và intervention cần đọc** sang **7. nhân quả (causal / 인과적) map của trường hợp (case / 사례)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Positioning và option thị trường (market / 시장)
 
@@ -177,7 +177,7 @@ margin call before thesis review
 
 Vì thế, “intervention rủi ro (risk / 위험)” phải được ghi như một **state-dependent jump rủi ro (risk / 위험)**, không phải một mức hỗ trợ (support / 지원) cụ thể trên chart.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **6. Positioning và option thị trường (market / 시장)** cho ta quy tắc; **7. nhân quả (causal / 인과적) map của trường hợp (case / 사례)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **8. Balance-sheet cases** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **6. Positioning và option thị trường (market / 시장)** nêu quy tắc; **7. nhân quả (causal / 인과적) map của trường hợp (case / 사례)** thử quy tắc trong tình huống, rồi **8. Balance-sheet cases** mở rộng hệ quả.
 
 ## 7. nhân quả (causal / 인과적) map của trường hợp (case / 사례)
 
@@ -204,7 +204,7 @@ intervention signal → volatility and margin rise → positions reduce → JPY 
 
 Hai vòng lặp (loop / 루프) có thể chạy ngược chiều trong cùng một tuần. Không nên fit một nhân quả (causal / 인과적) story duy nhất sau khi chỉ nhìn chart.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **7. nhân quả (causal / 인과적) map của trường hợp (case / 사례)** cho ta quy tắc; **8. Balance-sheet cases** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **9. What this trường hợp (case / 사례) does not prove** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **7. nhân quả (causal / 인과적) map của trường hợp (case / 사례)** nêu quy tắc; **8. Balance-sheet cases** thử quy tắc trong tình huống, rồi **9. What this trường hợp (case / 사례) does not prove** mở rộng hệ quả.
 
 ## 8. Balance-sheet cases
 
@@ -245,7 +245,7 @@ option barrier trigger
 
 Net P/L phải tách spot, forward points, funding, slippage, margin và hedge adjustment.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **8. Balance-sheet cases** cho ta quy tắc; **9. What this trường hợp (case / 사례) does not prove** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **10. Research exercise** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **8. Balance-sheet cases** nêu quy tắc; **9. What this trường hợp (case / 사례) does not prove** thử quy tắc trong tình huống, rồi **10. Research exercise** mở rộng hệ quả.
 
 ## 9. What this trường hợp (case / 사례) does not prove
 
@@ -261,7 +261,7 @@ reported intervention amount bằng với private order-flow impact
 
 Điều trường hợp (case / 사례) chứng minh là cơ chế phải được conditional hóa theo regime, funding, positioning và thực thi (execution / 실행).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **9. What this trường hợp (case / 사례) does not prove** cho ta quy tắc; **10. Research exercise** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **11. rủi ro (risk / 위험) checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **9. What this trường hợp (case / 사례) does not prove** nêu quy tắc; **10. Research exercise** thử quy tắc trong tình huống, rồi **11. rủi ro (risk / 위험) checklist** mở rộng hệ quả.
 
 ## 10. Research exercise
 
@@ -293,7 +293,7 @@ commodity/import-flow shock
 
 Không được gán nhân quả (causal / 인과적) tác động (effect / 효과) chỉ vì spot đổi hướng sau headline. Ghi rõ dữ liệu (data / 데이터) nào là contemporaneous, dữ liệu (data / 데이터) nào chỉ được công bố sau đó.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **11. rủi ro (risk / 위험) checklist** tiếp nhận điểm tựa từ **10. Research exercise** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Sources** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **11. rủi ro (risk / 위험) checklist** nối từ **10. Research exercise** sang **12. Sources**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. rủi ro (risk / 위험) checklist
 
@@ -310,7 +310,7 @@ Không được gán nhân quả (causal / 인과적) tác động (effect / 효
 [ ] Đánh giá hedge bằng combined exposure và residual risk
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **11. rủi ro (risk / 위험) checklist** nêu điều cần giải thích; **12. Sources** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 05 — JPY 2022–2024: tỷ lệ (rate / 비율) divergence, carry và intervention**, **11. rủi ro (risk / 위험) checklist** đặt vấn đề; **12. Sources** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 12. Sources
 

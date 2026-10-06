@@ -30,7 +30,7 @@ trong đó `\Phi` là công thoát của vật liệu.
 
 Cường độ lớn hơn chủ yếu làm tăng số photon tới trong một đơn vị thời gian; nếu từng photon có năng lượng dưới ngưỡng thì chỉ tăng cường độ không tự giải phóng electron trong mô hình đơn photon đơn giản.
 
-> **Chuyển mạch:** Trong **Photon, độ kết hợp, phát xạ kích thích và laser**, **Độ kết hợp là gì?** tiếp nhận điểm tựa từ **Photon: lượng tử của trường điện từ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ hai mức năng lượng đến hấp thụ và phát xạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Photon, độ kết hợp, phát xạ kích thích và laser**, **Độ kết hợp là gì?** nối từ **Photon: lượng tử của trường điện từ** sang **Từ hai mức năng lượng đến hấp thụ và phát xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ kết hợp là gì?
 
@@ -52,7 +52,7 @@ L_c\sim c\tau_c.
 
 Độ kết hợp không đồng nghĩa với đơn sắc tuyệt đối. Một laser thật luôn có linewidth hữu hạn và coherence thời gian (time / 시간) hữu hạn.
 
-> **Chuyển mạch:** Ở chặng này của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Từ hai mức năng lượng đến hấp thụ và phát xạ** tiếp nhận điểm tựa từ **Độ kết hợp là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ số Einstein và cân bằng chi tiết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Từ hai mức năng lượng đến hấp thụ và phát xạ** nối từ **Độ kết hợp là gì?** sang **Hệ số Einstein và cân bằng chi tiết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ hai mức năng lượng đến hấp thụ và phát xạ
 
@@ -76,7 +76,7 @@ Có ba quá trình cơ bản:
 
 Điểm đặc biệt của phát xạ kích thích là photon mới có tần số, phân cực và pha liên hệ với trường kích thích. Đây là cơ chế tạo khuếch đại kết hợp trong laser.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Hệ số Einstein và cân bằng chi tiết** tiếp nhận điểm tựa từ **Từ hai mức năng lượng đến hấp thụ và phát xạ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Population inversion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Hệ số Einstein và cân bằng chi tiết** nối từ **Từ hai mức năng lượng đến hấp thụ và phát xạ** sang **Population inversion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ số Einstein và cân bằng chi tiết
 
@@ -98,7 +98,7 @@ R_{sp}=A_{21}N_2.
 
 Trong cân bằng nhiệt, các population tuân phân bố Boltzmann nên mức thấp thường đông hơn mức cao. Khi đó hấp thụ không tự nhiên bị vượt qua bởi phát xạ kích thích. Vì vậy để có khuếch đại quang học thuần, cần đưa môi trường ra khỏi cân bằng.
 
-> **Chuyển mạch:** Trong **Photon, độ kết hợp, phát xạ kích thích và laser**, **Population inversion** tiếp nhận điểm tựa từ **Hệ số Einstein và cân bằng chi tiết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao laser hai mức lý tưởng khó hoạt động liên tục?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Photon, độ kết hợp, phát xạ kích thích và laser**, **Population inversion** nối từ **Hệ số Einstein và cân bằng chi tiết** sang **Vì sao laser hai mức lý tưởng khó hoạt động liên tục?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Population inversion
 
@@ -124,7 +124,7 @@ môi trường có gain dương tại tần số đó.
 
 Population inversion không phải trạng thái cân bằng nhiệt thông thường. Nó phải được duy trì bằng pumping: quang học, điện, dòng điện, va chạm hoặc cơ chế khác.
 
-> **Chuyển mạch:** Ở chặng này của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Vì sao laser hai mức lý tưởng khó hoạt động liên tục?** tiếp nhận điểm tựa từ **Population inversion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tỷ lệ (rate / 비율) equations: laser bắt đầu dao động như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Vì sao laser hai mức lý tưởng khó hoạt động liên tục?** nối từ **Population inversion** sang **Tỷ lệ (rate / 비율) equations: laser bắt đầu dao động như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao laser hai mức lý tưởng khó hoạt động liên tục?
 
@@ -136,7 +136,7 @@ Trong laser ba mức, hạt được bơm lên trạng thái cao rồi nhanh ch�
 
 Trong laser bốn mức, mức laser dưới nhanh chóng phân rã xuống mức thấp hơn, vì vậy population của mức laser dưới có thể giữ nhỏ. Điều này làm inversion dễ đạt hơn và giảm threshold.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Tỷ lệ (rate / 비율) equations: laser bắt đầu dao động như thế nào?** tiếp nhận điểm tựa từ **Vì sao laser hai mức lý tưởng khó hoạt động liên tục?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cavity quang học và chế độ (mode / 모드) dọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Tỷ lệ (rate / 비율) equations: laser bắt đầu dao động như thế nào?** nối từ **Vì sao laser hai mức lý tưởng khó hoạt động liên tục?** sang **Cavity quang học và chế độ (mode / 모드) dọc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tỷ lệ (rate / 비율) equations: laser bắt đầu dao động như thế nào?
 
@@ -166,7 +166,7 @@ net gain cân bằng mất mát (loss / 손실). Trên threshold, trường tron
 
 Đây là lý do threshold không chỉ là “đủ nhiều photon”; nó là điều kiện động lực học giữa pumping, gain và mất mát (loss / 손실).
 
-> **Chuyển mạch:** Trong **Photon, độ kết hợp, phát xạ kích thích và laser**, **Cavity quang học và chế độ (mode / 모드) dọc** tiếp nhận điểm tựa từ **Tỷ lệ (rate / 비율) equations: laser bắt đầu dao động như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Threshold từ round-trip gain và mất mát (loss / 손실)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Photon, độ kết hợp, phát xạ kích thích và laser**, **Cavity quang học và chế độ (mode / 모드) dọc** nối từ **Tỷ lệ (rate / 비율) equations: laser bắt đầu dao động như thế nào?** sang **Threshold từ round-trip gain và mất mát (loss / 손실)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cavity quang học và chế độ (mode / 모드) dọc
 
@@ -190,7 +190,7 @@ Khoảng cách giữa hai chế độ (mode / 모드) dọc liên tiếp, hay fr
 
 Môi trường gain chỉ khuếch đại trong một dải tần hữu hạn. Vì vậy chế độ (mode / 모드) laser thực tế được chọn bởi sự chồng lấp giữa spectrum gain và resonances của cavity.
 
-> **Chuyển mạch:** Ở chặng này của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Threshold từ round-trip gain và mất mát (loss / 손실)** tiếp nhận điểm tựa từ **Cavity quang học và chế độ (mode / 모드) dọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Linewidth, photon thời gian tồn tại (lifetime / 수명) và chất lượng (quality / 품질) factor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Threshold từ round-trip gain và mất mát (loss / 손실)** nối từ **Cavity quang học và chế độ (mode / 모드) dọc** sang **Linewidth, photon thời gian tồn tại (lifetime / 수명) và chất lượng (quality / 품질) factor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Threshold từ round-trip gain và mất mát (loss / 손실)
 
@@ -211,7 +211,7 @@ g_{th}
 
 Công thức này cho thấy threshold phụ thuộc đồng thời vào vật liệu gain, mất mát (loss / 손실) nội tại, độ dài cavity và độ phản xạ gương.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Linewidth, photon thời gian tồn tại (lifetime / 수명) và chất lượng (quality / 품질) factor** tiếp nhận điểm tựa từ **Threshold từ round-trip gain và mất mát (loss / 손실)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Coherence và linewidth qua Fourier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Linewidth, photon thời gian tồn tại (lifetime / 수명) và chất lượng (quality / 품질) factor** nối từ **Threshold từ round-trip gain và mất mát (loss / 손실)** sang **Coherence và linewidth qua Fourier**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Linewidth, photon thời gian tồn tại (lifetime / 수명) và chất lượng (quality / 품질) factor
 
@@ -231,7 +231,7 @@ Q=\frac{\omega_0}{\Delta\omega}
 
 Laser linewidth còn bị ảnh hưởng bởi nhiễu pha và phát xạ tự phát. Vì vậy cavity có `Q` cao giúp nhưng không tự bảo đảm linewidth bằng không.
 
-> **Chuyển mạch:** Trong **Photon, độ kết hợp, phát xạ kích thích và laser**, **Coherence và linewidth qua Fourier** tiếp nhận điểm tựa từ **Linewidth, photon thời gian tồn tại (lifetime / 수명) và chất lượng (quality / 품질) factor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chế độ (mode / 모드) locking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Photon, độ kết hợp, phát xạ kích thích và laser**, **Coherence và linewidth qua Fourier** nối từ **Linewidth, photon thời gian tồn tại (lifetime / 수명) và chất lượng (quality / 품질) factor** sang **Chế độ (mode / 모드) locking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Coherence và linewidth qua Fourier
 
@@ -247,7 +247,7 @@ Do đó pulse femtosecond không thể đồng thời có spectrum cực hẹp.
 
 Đây là liên hệ quan trọng giữa laser liên tục narrow-linewidth và laser ultrafast: hai hệ tối ưu những thuộc tính khác nhau của cùng cấu trúc thời gian–tần số.
 
-> **Chuyển mạch:** Ở chặng này của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Chế độ (mode / 모드) locking** tiếp nhận điểm tựa từ **Coherence và linewidth qua Fourier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Laser bán dẫn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Chế độ (mode / 모드) locking** nối từ **Coherence và linewidth qua Fourier** sang **Laser bán dẫn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chế độ (mode / 모드) locking
 
@@ -257,7 +257,7 @@ Kết quả là train pulse ngắn lặp lại với chu kỳ gần thời gian 
 
 Chế độ (mode / 모드) locking là một ví dụ trực tiếp cho thấy pulse ngắn không xuất hiện vì “laser bật tắt rất nhanh” theo nghĩa đơn giản; nó xuất hiện từ sự khóa pha của nhiều chế độ (mode / 모드) phổ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Laser bán dẫn** tiếp nhận điểm tựa từ **Chế độ (mode / 모드) locking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Laser, LED và đèn nhiệt khác nhau ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Laser bán dẫn** nối từ **Chế độ (mode / 모드) locking** sang **Laser, LED và đèn nhiệt khác nhau ở đâu?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Laser bán dẫn
 
@@ -267,7 +267,7 @@ Khi quasi-Fermi levels và mật độ hạt tải đạt điều kiện thích 
 
 Laser bán dẫn nối trực tiếp band lý thuyết (theory / 이론) với photonics: band gap đặt thang năng lượng photon, density of states ảnh hưởng gain spectrum, còn carrier recombination và cavity mất mát (loss / 손실) quyết định threshold cùng efficiency.
 
-> **Chuyển mạch:** Trong **Photon, độ kết hợp, phát xạ kích thích và laser**, **Laser, LED và đèn nhiệt khác nhau ở đâu?** tiếp nhận điểm tựa từ **Laser bán dẫn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: ước lượng FSR của cavity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Photon, độ kết hợp, phát xạ kích thích và laser**, **Laser, LED và đèn nhiệt khác nhau ở đâu?** nối từ **Laser bán dẫn** sang **Ví dụ: ước lượng FSR của cavity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Laser, LED và đèn nhiệt khác nhau ở đâu?
 
@@ -277,7 +277,7 @@ Laser dựa trên stimulated emission cộng cavity phản hồi (feedback / 피
 
 Đèn nhiệt tạo bức xạ từ một phân bố rộng chế độ (mode / 모드) và tần số gần cân bằng nhiệt. Cường độ lớn không biến một nguồn nhiệt thành laser.
 
-> **Chuyển mạch:** Ở chặng này của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Laser, LED và đèn nhiệt khác nhau ở đâu?** cho ta quy tắc; **Ví dụ: ước lượng FSR của cavity** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Điều kiện áp dụng và giới hạn mô hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Laser, LED và đèn nhiệt khác nhau ở đâu?** nêu quy tắc; **Ví dụ: ước lượng FSR của cavity** thử quy tắc trong tình huống, rồi **Điều kiện áp dụng và giới hạn mô hình** mở rộng hệ quả.
 
 ## Ví dụ: ước lượng FSR của cavity
 
@@ -306,7 +306,7 @@ Nếu gain bandwidth rộng `100 GHz`, về mặt hình học có thể chứa k
 
 cavity modes. Nhưng chế độ (mode / 모드) competition, spatial hole burning, dispersion và gain saturation có thể làm số chế độ (mode / 모드) thực sự dao động nhỏ hơn nhiều.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Photon, độ kết hợp, phát xạ kích thích và laser**, trường hợp ở **Ví dụ: ước lượng FSR của cavity** cho thấy quy tắc hoạt động; **Điều kiện áp dụng và giới hạn mô hình** kiểm tra nơi quy tắc ấy không còn áp dụng hoặc dễ bị hiểu nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Photon, độ kết hợp, phát xạ kích thích và laser**, trường hợp ở **Ví dụ: ước lượng FSR của cavity** cho thấy quy tắc hoạt động; **Điều kiện áp dụng và giới hạn mô hình** kiểm tra nơi quy tắc ấy không còn áp dụng hoặc dễ bị hiểu nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Điều kiện áp dụng và giới hạn mô hình
 
@@ -314,13 +314,13 @@ Mô hình Einstein hai mức bỏ qua cấu trúc mức chi tiết, broadenings 
 
 Biểu thức threshold đơn giản giả định cavity một chiều, gain đồng đều và mất mát (loss / 손실) có thể gom thành tham số hiệu dụng. Laser thật có thermal lensing, spatial modes, nonlinearities, carrier dynamics và kỹ thuật stabilization riêng.
 
-> **Chuyển mạch:** Trong **Photon, độ kết hợp, phát xạ kích thích và laser**, **Điều kiện áp dụng và giới hạn mô hình** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Photon, độ kết hợp, phát xạ kích thích và laser**, **Điều kiện áp dụng và giới hạn mô hình** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Laser hình thành khi ba lớp vật lý khớp nhau: **chuyển mức lượng tử tạo khả năng phát xạ, pumping tạo trạng thái không cân bằng có gain, còn cavity chọn và phản hồi các chế độ (mode / 모드) điện từ**. Threshold là điểm gain cân bằng mất mát (loss / 손실); coherence và linewidth là kết quả của động lực học pha, cavity thời gian tồn tại (lifetime / 수명) và noise chứ không chỉ của “độ sáng”.
 
-> **Chuyển mạch:** Ở chặng này của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Photon, độ kết hợp, phát xạ kích thích và laser**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -336,7 +336,7 @@ Không. Chỉ cần population hiệu dụng của chuyển mức laser tạo ne
 
 Phát biểu này quá thô. Quá trình lượng tử làm tăng occupation của chế độ (mode / 모드) tương thích; các tính chất quan sát như phase coherence và directionality xuất hiện từ coupling giữa trường và môi trường trong chế độ (mode / 모드) đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Photon, độ kết hợp, phát xạ kích thích và laser**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Photon, độ kết hợp, phát xạ kích thích và laser**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

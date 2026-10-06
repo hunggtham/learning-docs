@@ -12,7 +12,7 @@ Hạt nhân Linux (Linux kernel / 커널) cung cấp các lớp trừu tượng 
 
 Đây là bước chuyển quan trọng trong **mô hình tư duy (mental model / 사고 모델)**: Linux không chủ yếu là một bộ sưu tập câu lệnh. Nó là một hệ thống quản lý tài nguyên (resource management) thông qua các lớp trừu tượng có quy tắc rõ ràng.
 
-> **Chuyển mạch:** Trong **Mô hình hệ thống Linux và Unix**, **Linux, Unix và GNU** tiếp nhận điểm tựa từ **Vì sao cần hệ điều hành?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Triết lý Unix và khả năng kết hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mô hình hệ thống Linux và Unix**, **Linux, Unix và GNU** nối từ **Vì sao cần hệ điều hành?** sang **Triết lý Unix và khả năng kết hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Linux, Unix và GNU
 
@@ -22,7 +22,7 @@ Nhiều câu lệnh quen thuộc như `ls`, `cp`, `grep` thường đến từ G
 
 Trong môi trường Hàn Quốc, Linux thường được gọi là **리눅스**, kernel là **커널**, hệ điều hành là **운영체제** và bản phân phối Linux là **리눅스 배포판**.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình hệ thống Linux và Unix**, **Triết lý Unix và khả năng kết hợp** tiếp nhận điểm tựa từ **Linux, Unix và GNU** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **"Everything is a tệp (file / 파일)" thực sự có nghĩa gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mô hình hệ thống Linux và Unix**, **Triết lý Unix và khả năng kết hợp** nối từ **Linux, Unix và GNU** sang **"Everything is a tệp (file / 파일)" thực sự có nghĩa gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Triết lý Unix và khả năng kết hợp
 
@@ -38,7 +38,7 @@ journalctl -u app | grep ERROR | tail -n 20
 
 Điều này liên hệ trực tiếp với kỹ nghệ phần mềm (software engineering / 소프트웨어 공학): một thành phần dễ kết hợp khi nó có trách nhiệm và giao diện rõ ràng. Chuỗi xử lý Unix (Unix pipeline) là một ví dụ sớm của tư duy mô-đun (modularity).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình hệ thống Linux và Unix**, **"Everything is a tệp (file / 파일)" thực sự có nghĩa gì?** tiếp nhận điểm tựa từ **Triết lý Unix và khả năng kết hợp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vùng tên: tên không phải là đối tượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mô hình hệ thống Linux và Unix**, **"Everything is a tệp (file / 파일)" thực sự có nghĩa gì?** nối từ **Triết lý Unix và khả năng kết hợp** sang **Vùng tên: tên không phải là đối tượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## "Everything is a tệp (file / 파일)" thực sự có nghĩa gì?
 
@@ -48,7 +48,7 @@ Ví dụ `/dev/null` không phải tệp dữ liệu thông thường trên đĩ
 
 Xem sâu hơn tại [Tệp, luồng dữ liệu và bộ mô tả tệp](../01_filesystem/files_streams_descriptors.md).
 
-> **Chuyển mạch:** Trong **Mô hình hệ thống Linux và Unix**, **Vùng tên: tên không phải là đối tượng** tiếp nhận điểm tựa từ **"Everything is a tệp (file / 파일)" thực sự có nghĩa gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Không gian người dùng và không gian hạt nhân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mô hình hệ thống Linux và Unix**, **Vùng tên: tên không phải là đối tượng** nối từ **"Everything is a tệp (file / 파일)" thực sự có nghĩa gì?** sang **Không gian người dùng và không gian hạt nhân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vùng tên: tên không phải là đối tượng
 
@@ -58,7 +58,7 @@ Sự phân biệt này giải thích nhiều hiện tượng tưởng như lạ.
 
 Vì vậy khi xử lý sự cố trong môi trường vận hành thực tế (production), cần kiểm tra nhiều lớp thay vì suy luận từ một dấu hiệu duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình hệ thống Linux và Unix**, **Không gian người dùng và không gian hạt nhân** tiếp nhận điểm tựa từ **Vùng tên: tên không phải là đối tượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái, quan sát và thay đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mô hình hệ thống Linux và Unix**, **Không gian người dùng và không gian hạt nhân** nối từ **Vùng tên: tên không phải là đối tượng** sang **Trạng thái, quan sát và thay đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Không gian người dùng và không gian hạt nhân
 
@@ -68,7 +68,7 @@ Ví dụ Java gọi API để đọc tệp. Sau nhiều lớp của môi trườ
 
 Xem chi tiết tại [Kernel, không gian người dùng và lời gọi hệ thống](./kernel_userspace_syscalls.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình hệ thống Linux và Unix**, **Trạng thái, quan sát và thay đổi** tiếp nhận điểm tựa từ **Không gian người dùng và không gian hạt nhân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các bản phân phối khác nhau ở đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mô hình hệ thống Linux và Unix**, **Trạng thái, quan sát và thay đổi** nối từ **Không gian người dùng và không gian hạt nhân** sang **Các bản phân phối khác nhau ở đâu?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trạng thái, quan sát và thay đổi
 
@@ -78,7 +78,7 @@ Trong vận hành hệ thống ở mức nâng cao, nguyên tắc quan trọng l
 
 Đây chính là phương pháp khoa học (scientific method) ở quy mô vận hành hệ thống: **quan sát → giả thuyết → kiểm tra → can thiệp → xác minh**.
 
-> **Chuyển mạch:** Trong **Mô hình hệ thống Linux và Unix**, **Các bản phân phối khác nhau ở đâu?** tiếp nhận điểm tựa từ **Trạng thái, quan sát và thay đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mô hình hệ thống Linux và Unix**, **Các bản phân phối khác nhau ở đâu?** nối từ **Trạng thái, quan sát và thay đổi** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các bản phân phối khác nhau ở đâu?
 
@@ -92,7 +92,7 @@ uname -a
 command -v lsof
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình hệ thống Linux và Unix**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Các bản phân phối khác nhau ở đâu?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mô hình hệ thống Linux và Unix**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Các bản phân phối khác nhau ở đâu?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -100,7 +100,7 @@ Có thể hình dung Linux như một thành phố có nhiều lớp quản lý.
 
 Phép so sánh này chỉ hữu ích nếu nhớ rằng kernel không phải một "tiến trình quản trị" thông thường; nó hoạt động trong miền đặc quyền khác với tiến trình người dùng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình hệ thống Linux và Unix**, **Những hiểu lầm phổ biến (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối sang chương tiếp theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mô hình hệ thống Linux và Unix**, **Những hiểu lầm phổ biến (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối sang chương tiếp theo** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến (Common Misconceptions)
 
@@ -112,7 +112,7 @@ Phép so sánh này chỉ hữu ích nếu nhớ rằng kernel không phải m�
 
 **"gốc (root / 루트) có nghĩa là không còn giới hạn."** `root` có đặc quyền rất lớn trong host nhưng vẫn chịu các quy tắc của kernel, trạng thái hệ thống tệp, giới hạn tài nguyên, không gian tên (namespace / 네임스페이스) của bộ chứa (container / 컨테이너), cơ chế kiểm soát truy cập bắt buộc và nhiều ranh giới khác.
 
-> **Chuyển mạch:** Trong **Mô hình hệ thống Linux và Unix**, **Kết nối sang chương tiếp theo** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến (Common Misconceptions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Mô hình hệ thống Linux và Unix**, **Kết nối sang chương tiếp theo** nối từ **Những hiểu lầm phổ biến (Common Misconceptions)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối sang chương tiếp theo
 

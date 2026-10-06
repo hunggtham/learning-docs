@@ -8,7 +8,7 @@ Trong địa lý, câu hỏi “ở đâu?” nghe đơn giản nhưng thực t�
 
 Điểm quan trọng là tọa độ không phải thuộc tính tự nhiên tồn tại độc lập. Hai con số chỉ có nghĩa khi biết **hệ quy chiếu tọa độ (Coordinate Reference system, CRS)**, datum, đơn vị, thứ tự trục và trong các hệ động còn cần cả epoch thời gian.
 
-> **Chuyển mạch:** Trong **Hệ tọa độ, vị trí và thời gian**, **Vĩ độ và kinh độ là tọa độ góc** tiếp nhận điểm tựa từ **Vị trí không chỉ là hai con số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trái Đất thật, ellipsoid và datum** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Một vị trí chỉ có nghĩa khi có CRS, datum, đơn vị và epoch; **Vĩ độ và kinh độ là tọa độ góc** tiếp theo giải thích cặp số này đo gì và vì sao không phải mét. **Trái Đất thật, ellipsoid và datum** sau đó đặt góc lên hình học của hành tinh.
 
 ## Vĩ độ và kinh độ là tọa độ góc
 
@@ -18,7 +18,7 @@ Một độ vĩ độ có chiều dài khá gần nhau ở nhiều nơi vì các
 
 Trong phần mềm, lỗi còn có thể xuất hiện từ thứ tự trục. Nhiều API quen dùng `longitude, latitude`, trong khi nhiều tài liệu viết `latitude, longitude`. Một hệ thống nên coi thứ tự trục như một **dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약)**, không dựa vào trí nhớ của người lập trình.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ tọa độ, vị trí và thời gian**, **Trái Đất thật, ellipsoid và datum** tiếp nhận điểm tựa từ **Vĩ độ và kinh độ là tọa độ góc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tọa độ địa tâm và cách GNSS thật sự định vị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Latitude/longitude là góc và kinh tuyến hội tụ; **Trái Đất thật, ellipsoid và datum** giải thích bề mặt quy chiếu khiến cùng cặp số đổi nghĩa theo CRS. **Tọa độ địa tâm và cách GNSS thật sự định vị** tiếp theo cho thấy máy thu đi từ tín hiệu thời gian tới vị trí như thế nào.
 
 ## Trái Đất thật, ellipsoid và datum
 
@@ -28,7 +28,7 @@ Một datum quy định kích thước–hình dạng ellipsoid, cách nó đư�
 
 Hai lớp dữ liệu có cùng các con số nhưng khác datum có thể đại diện cho hai vị trí khác nhau. Ngược lại, cùng một điểm vật lý có thể có bộ tọa độ khác nhau nếu biểu diễn trong hai CRS khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ tọa độ, vị trí và thời gian**, **Tọa độ địa tâm và cách GNSS thật sự định vị** tiếp nhận điểm tựa từ **Trái Đất thật, ellipsoid và datum** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khoảng cách trên mặt cong** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Datum gắn ellipsoid vào Trái Đất, còn **Tọa độ địa tâm và cách GNSS thật sự định vị** giải ECEF từ nhiều tín hiệu với clock bias và bất định. **Khoảng cách trên mặt cong** tiếp theo tính quan hệ giữa các điểm trên ellipsoid/cầu thay vì mặt phẳng giả định.
 
 ## Tọa độ địa tâm và cách GNSS thật sự định vị
 
@@ -38,7 +38,7 @@ GNSS không “đọc vĩ độ–kinh độ trực tiếp”. Vệ tinh phát t
 
 Độ chính xác chịu ảnh hưởng của hình học vệ tinh, khí quyển, phản xạ nhiều đường (multipath), che khuất bởi nhà cao tầng, chất lượng mô hình quỹ đạo và kỹ thuật hiệu chỉnh. Một điểm trên điện thoại vì thế nên được hiểu như **ước lượng có bất định**, không phải chân lý hình học tuyệt đối.
 
-> **Chuyển mạch:** Trong **Hệ tọa độ, vị trí và thời gian**, **Khoảng cách trên mặt cong** tiếp nhận điểm tựa từ **Tọa độ địa tâm và cách GNSS thật sự định vị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ cao: ellipsoid khác mực nước biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** GNSS cho vị trí trong khung tọa độ, còn **Khoảng cách trên mặt cong** nhắc rằng great-circle/Haversine khác network, time và cost distance. **Độ cao: ellipsoid khác mực nước biển** tiếp theo tách chiều cao hình học khỏi mực nước biển dùng trong kỹ thuật.
 
 ## Khoảng cách trên mặt cong
 
@@ -58,7 +58,7 @@ Trong đó \(\varphi\) là vĩ độ theo radian, \(\lambda\) là kinh độ và
 
 Khoảng cách địa lý cũng không phải lúc nào là khoảng cách có ý nghĩa nhất. Đối với vận tải, ta có thể quan tâm **khoảng cách mạng (network distance)**; đối với thương mại, có thể quan tâm thời gian, chi phí hoặc ma sát biên giới; đối với dịch vụ số, có thể quan tâm độ trễ mạng. Vì vậy “gần” là một khái niệm phụ thuộc quá trình đang phân tích.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ tọa độ, vị trí và thời gian**, **Độ cao: ellipsoid khác mực nước biển** tiếp nhận điểm tựa từ **Khoảng cách trên mặt cong** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trái Đất quay và thời gian địa phương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Khoảng cách nằm trên mặt cong, còn **Độ cao: ellipsoid khác mực nước biển** cho biết h, H và geoid khác nhau ra sao trong pipeline khảo sát. **Trái Đất quay và thời gian địa phương** tiếp theo nối tọa độ kinh độ với nhịp thời gian.
 
 ## Độ cao: ellipsoid khác mực nước biển
 
@@ -72,7 +72,7 @@ h = H + N
 
 với \(h\) là độ cao ellipsoid, \(H\) là độ cao trực chuẩn và \(N\) là độ cao geoid so với ellipsoid. Nếu một chuỗi xử lý (pipeline / 파이프라인) drone hoặc khảo sát dùng nhầm hai loại độ cao, sai số phương đứng có thể lớn dù tọa độ ngang đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ tọa độ, vị trí và thời gian**, **Trái Đất quay và thời gian địa phương** tiếp nhận điểm tựa từ **Độ cao: ellipsoid khác mực nước biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **UTC, offset và timezone không phải một thứ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Geoid cung cấp mốc cao độ, còn **Trái Đất quay và thời gian địa phương** giải thích 15° kinh độ xấp xỉ một giờ nhưng xã hội chọn boundary khác. **UTC, offset và timezone không phải một thứ** tiếp theo phân biệt chuẩn, chênh lệch và bộ quy tắc dân sự.
 
 ## Trái Đất quay và thời gian địa phương
 
@@ -80,7 +80,7 @@ Trái Đất quay khoảng một vòng mỗi ngày. Về hình học, 360° tư�
 
 Nhưng xã hội hiện đại không dùng giờ Mặt Trời cho từng kinh tuyến. Chúng ta dùng **múi giờ dân sự (civil time zone)** có ranh giới bị điều chỉnh theo quốc gia, vùng hành chính và nhu cầu kinh tế. Vì vậy kinh độ chỉ giải thích nền hình học của múi giờ, không quyết định trực tiếp múi giờ pháp lý.
 
-> **Chuyển mạch:** Trong **Hệ tọa độ, vị trí và thời gian**, **UTC, offset và timezone không phải một thứ** tiếp nhận điểm tựa từ **Trái Đất quay và thời gian địa phương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đường đổi ngày quốc tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Local solar time chỉ là hình học, còn **UTC, offset và timezone không phải một thứ** quyết định cách phần mềm biểu diễn instant và lịch lặp; offset không thay tên vùng. **Đường đổi ngày quốc tế** tiếp theo cho thấy nhãn ngày dân sự uốn theo lãnh thổ.
 
 ## UTC, offset và timezone không phải một thứ
 
@@ -90,7 +90,7 @@ Một timezone như `Asia/Seoul` hoặc `Europe/London` là tập quy tắc có 
 
 Ví dụ, `2026-09-21 09:00` chưa xác định một thời điểm duy nhất nếu thiếu timezone. `2026-09-21T09:00+09:00` xác định instant rõ hơn, nhưng nếu là lịch họp lặp lại nhiều năm, tên vùng timezone vẫn có giá trị vì quy tắc tương lai có thể đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ tọa độ, vị trí và thời gian**, **Đường đổi ngày quốc tế** tiếp nhận điểm tựa từ **UTC, offset và timezone không phải một thứ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Epoch: tọa độ cũng có thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Timezone là quy tắc xã hội, còn **Đường đổi ngày quốc tế** làm ngày lịch nhảy khi vượt đường gần 180° mà không có thời gian vật lý biến mất. **Epoch: tọa độ cũng có thời gian** tiếp theo cho thấy ngay cả tọa độ cũng gắn với lịch sử chuyển động của mảng.
 
 ## Đường đổi ngày quốc tế
 
@@ -98,7 +98,7 @@ Ví dụ, `2026-09-21 09:00` chưa xác định một thời điểm duy nhất 
 
 Khi vượt đường này, ngày trên lịch thay đổi một ngày. Không có “nhảy thời gian vật lý”; thay đổi nằm ở hệ thống nhãn ngày dân sự.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ tọa độ, vị trí và thời gian**, **Epoch: tọa độ cũng có thời gian** tiếp nhận điểm tựa từ **Đường đổi ngày quốc tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Múi giờ, bản đồ và các bẫy dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ngày dân sự đổi theo boundary, còn **Epoch: tọa độ cũng có thời gian** ghi chuyển động kiến tạo và dynamic reference frame ở độ chính xác cao. **Múi giờ, bản đồ và các bẫy dữ liệu** tiếp theo ghép các quy tắc xã hội và geocoding dễ sai vào cùng một cảnh báo.
 
 ## Epoch: tọa độ cũng có thời gian
 
@@ -108,7 +108,7 @@ Do đó các **hệ quy chiếu động (dynamic reference frame)** gắn tọa 
 
 Đây là một mô hình tư duy (mental model / 사고 모델) hữu ích cho IT: một vị trí chính xác cao giống bản ghi (record / 레코드) có `value + schema + version`. `latitude/longitude` chỉ là giá trị (value / 값); CRS là lược đồ (schema / 스키마); epoch là phiên bản (version / 버전) theo thời gian.
 
-> **Chuyển mạch:** Trong **Hệ tọa độ, vị trí và thời gian**, **Epoch: tọa độ cũng có thời gian** đã nêu tiêu chí phân biệt, còn **Múi giờ, bản đồ và các bẫy dữ liệu** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Epoch bổ sung version cho tọa độ như schema bổ sung value; **Múi giờ, bản đồ và các bẫy dữ liệu** nhắc rằng polygon timezone và địa chỉ là dữ liệu xã hội cần provenance. **Mô hình tư duy** tiếp theo gom các lớp reference, position, time và application.
 
 ## Múi giờ, bản đồ và các bẫy dữ liệu
 
@@ -116,7 +116,7 @@ Một dataset timezone là dữ liệu polygon xã hội–pháp lý chứ khôn
 
 Tương tự, geocoding địa chỉ thành tọa độ không phải phép toán thuần hình học. Địa chỉ thay đổi theo ngôn ngữ, cải cách hành chính, cách đánh số và quy tắc địa phương. Kết quả geocoder nên có provenance và mức tin cậy.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ tọa độ, vị trí và thời gian**, các dấu vết trong **Múi giờ, bản đồ và các bẫy dữ liệu** được đọc cùng nhau ở **Mô hình tư duy** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy** đặt pipeline đối tượng thật → CRS → tọa độ → biểu diễn → thời điểm; **Những hiểu lầm phổ biến** tiếp theo kiểm tra các lỗi GPS, WGS 84, Web Mercator, timezone và CRS.
 
 ## Mô hình tư duy
 
@@ -126,7 +126,7 @@ Hãy coi vị trí như một cấu trúc nhiều lớp:
 
 Một lỗi ở bất kỳ lớp nào cũng có thể làm dữ liệu trông hợp lệ nhưng đặt sai nơi, sai cao độ hoặc sai thời gian.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ tọa độ, vị trí và thời gian**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Các ngộ nhận về GPS, WGS 84, longitude–timezone và cặp tọa độ đều bỏ qua hệ quy chiếu, datum và thời điểm; **Những hiểu lầm phổ biến** khép phần cảnh báo. Kết luận cuối bàn giao về owner **World Geography** trong [README](../README.md) và mở sang bản đồ, GIS.
 
 ## Những hiểu lầm phổ biến
 

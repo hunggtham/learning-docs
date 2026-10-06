@@ -36,7 +36,7 @@ Thêm vào đó còn:
 
 Ví dụ CPI 3.0% có thể hawkish nếu consensus 2.7%, nhưng dovish nếu thị trường (market / 시장) feared 3.4%.
 
-> **Chuyển mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **2. “Thị trường (market / 시장) expectation” phải được ghi lại trước sự kiện (event / 이벤트)** tiếp nhận điểm tựa từ **1. Sự kiện (event / 이벤트) kết quả (outcome / 결과) không đủ; surprise mới quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Central-bank reaction hàm (function / 함수)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **2. “Thị trường (market / 시장) expectation” phải được ghi lại trước sự kiện (event / 이벤트)** nối từ **1. Sự kiện (event / 이벤트) kết quả (outcome / 결과) không đủ; surprise mới quan trọng** sang **3. Central-bank reaction hàm (function / 함수)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. “Thị trường (market / 시장) expectation” phải được ghi lại trước sự kiện (event / 이벤트)
 
@@ -55,7 +55,7 @@ Key alternative scenarios
 
 Sau sự kiện (event / 이벤트) mới ghi reaction.
 
-> **Chuyển mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **3. Central-bank reaction hàm (function / 함수)** tiếp nhận điểm tựa từ **2. “Thị trường (market / 시장) expectation” phải được ghi lại trước sự kiện (event / 이벤트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Hiện tại (current / 현재) tỷ lệ (rate / 비율) khác expected đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **3. Central-bank reaction hàm (function / 함수)** nối từ **2. “Thị trường (market / 시장) expectation” phải được ghi lại trước sự kiện (event / 이벤트)** sang **4. Hiện tại (current / 현재) tỷ lệ (rate / 비율) khác expected đường dẫn (path / 경로)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Central-bank reaction hàm (function / 함수)
 
@@ -71,7 +71,7 @@ Mỗi central bank có mandate, khung phần mềm (framework / 프레임워크)
 
 Một quyết định (decision / 결정) chỉ có meaning khi đặt trong reaction hàm (function / 함수).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **3. Central-bank reaction hàm (function / 함수)** xác định đầu vào; **4. Hiện tại (current / 현재) tỷ lệ (rate / 비율) khác expected đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **5. FOMC/ECB/BOK sự kiện (event / 이벤트) nên đọc theo nhiều tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **3. Central-bank reaction hàm (function / 함수)** đặt đầu vào cho **4. Hiện tại (current / 현재) tỷ lệ (rate / 비율) khác expected đường dẫn (path / 경로)**, rồi **5. FOMC/ECB/BOK sự kiện (event / 이벤트) nên đọc theo nhiều tầng (layer / 계층)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. Hiện tại (current / 현재) tỷ lệ (rate / 비율) khác expected đường dẫn (path / 경로)
 
@@ -89,7 +89,7 @@ but guidance becomes more hawkish
 
 Ngược lại, hike hiện tại nhưng dovish future guidance có thể tạo reaction trái dấu.
 
-> **Chuyển mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **4. Hiện tại (current / 현재) tỷ lệ (rate / 비율) khác expected đường dẫn (path / 경로)** xác định đầu vào; **5. FOMC/ECB/BOK sự kiện (event / 이벤트) nên đọc theo nhiều tầng (layer / 계층)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. CPI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **4. Hiện tại (current / 현재) tỷ lệ (rate / 비율) khác expected đường dẫn (path / 경로)** đặt đầu vào cho **5. FOMC/ECB/BOK sự kiện (event / 이벤트) nên đọc theo nhiều tầng (layer / 계층)**, rồi **6. CPI** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. FOMC/ECB/BOK sự kiện (event / 이벤트) nên đọc theo nhiều tầng (layer / 계층)
 
@@ -108,7 +108,7 @@ Không nên lấy headline tỷ lệ (rate / 비율) quyết định (decision /
 
 Nguồn chuẩn gốc (canonical / 정본) nên là website chính thức của central bank. Với Fed, lịch FOMC, statements, minutes và projection materials được công bố theo calendar chính thức; với ECB/BOK cũng nên dùng press bản phát hành (release / 릴리스)/quyết định (decision / 결정) chính thức thay vì chỉ secondary headline.
 
-> **Chuyển mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **6. CPI** tiếp nhận điểm tựa từ **5. FOMC/ECB/BOK sự kiện (event / 이벤트) nên đọc theo nhiều tầng (layer / 계층)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Employment dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **6. CPI** nối từ **5. FOMC/ECB/BOK sự kiện (event / 이벤트) nên đọc theo nhiều tầng (layer / 계층)** sang **7. Employment dữ liệu (data / 데이터)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. CPI
 
@@ -132,7 +132,7 @@ Does it alter policy path?
 Does it alter real growth?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **6. CPI** nêu điều cần giải thích; **7. Employment dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **8. GDP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **6. CPI** đặt vấn đề; **7. Employment dữ liệu (data / 데이터)** đối chiếu bằng chứng, rồi **8. GDP** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 7. Employment dữ liệu (data / 데이터)
 
@@ -147,7 +147,7 @@ Employment bản phát hành (release / 릴리스) có thể chứa:
 
 Nếu headline jobs mạnh nhưng prior months revised sharply down và wage growth weakens, interpretation khác headline alone.
 
-> **Chuyển mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **7. Employment dữ liệu (data / 데이터)** nêu điều cần giải thích; **8. GDP** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **9. PMI / nghiệp vụ (business / 비즈니스) surveys** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **7. Employment dữ liệu (data / 데이터)** đặt vấn đề; **8. GDP** đối chiếu bằng chứng, rồi **9. PMI / nghiệp vụ (business / 비즈니스) surveys** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8. GDP
 
@@ -160,7 +160,7 @@ Một strong GDP print không tự động bullish nếu:
 - inflation implications are dovish;
 - other side of pair is stronger.
 
-> **Chuyển mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **9. PMI / nghiệp vụ (business / 비즈니스) surveys** tiếp nhận điểm tựa từ **8. GDP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Retail sales / consumption** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **9. PMI / nghiệp vụ (business / 비즈니스) surveys** nối từ **8. GDP** sang **10. Retail sales / consumption**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. PMI / nghiệp vụ (business / 비즈니스) surveys
 
@@ -168,7 +168,7 @@ PMI-like surveys có thể cung cấp earlier tín hiệu (signal / 신호) về
 
 Nhưng survey diffusion indices không phải GDP growth tỷ lệ (rate / 비율) trực tiếp. Cần hiểu construction và historical relationship.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **10. Retail sales / consumption** tiếp nhận điểm tựa từ **9. PMI / nghiệp vụ (business / 비즈니스) surveys** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Inflation expectations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **10. Retail sales / consumption** nối từ **9. PMI / nghiệp vụ (business / 비즈니스) surveys** sang **11. Inflation expectations**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Retail sales / consumption
 
@@ -176,7 +176,7 @@ Consumption dữ liệu (data / 데이터) ảnh hưởng growth outlook và đ�
 
 Nhưng nominal sales có thể tăng vì prices tăng, không phải real volume. Nếu có thể, phân biệt nominal và real.
 
-> **Chuyển mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **11. Inflation expectations** tiếp nhận điểm tựa từ **10. Retail sales / consumption** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Yield curve** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **11. Inflation expectations** nối từ **10. Retail sales / consumption** sang **12. Yield curve**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Inflation expectations
 
@@ -186,7 +186,7 @@ Một nominal yield tăng 30 bps nhưng expected inflation tăng 40 bps có th�
 
 Do đó FX phân tích (analysis / 분석) cần nhìn decomposition khi relevant.
 
-> **Chuyển mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **12. Yield curve** tiếp nhận điểm tựa từ **11. Inflation expectations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. OIS / money-market pricing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **12. Yield curve** nối từ **11. Inflation expectations** sang **13. OIS / money-market pricing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Yield curve
 
@@ -199,7 +199,7 @@ Different maturities encode different combinations của:
 
 FX short-horizon sự kiện (event / 이벤트) reaction thường nhạy với front-end repricing, nhưng medium-term thesis có thể liên quan broader curve.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **13. OIS / money-market pricing** tiếp nhận điểm tựa từ **12. Yield curve** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Surprise chỉ mục (index / 인덱스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **13. OIS / money-market pricing** nối từ **12. Yield curve** sang **14. Surprise chỉ mục (index / 인덱스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. OIS / money-market pricing
 
@@ -207,7 +207,7 @@ Overnight-indexed instruments thường được dùng để infer market-implie
 
 Không nên đọc implied đường dẫn (path / 경로) như certainty. Nó là price incorporating expectations và rủi ro (risk / 위험) premia.
 
-> **Chuyển mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **14. Surprise chỉ mục (index / 인덱스)** tiếp nhận điểm tựa từ **13. OIS / money-market pricing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Relative dữ liệu (data / 데이터) surprise** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **14. Surprise chỉ mục (index / 인덱스)** nối từ **13. OIS / money-market pricing** sang **15. Relative dữ liệu (data / 데이터) surprise**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Surprise chỉ mục (index / 인덱스)
 
@@ -215,7 +215,7 @@ Một economic surprise chỉ mục (index / 인덱스) tổng hợp actual-vs-c
 
 Nó có thể giúp đo liệu luồng dữ liệu (data flow / 데이터 흐름) đang systematically vượt hay hụt expectation, nhưng construction/nguồn (source / 소스) khác nhau và không phải direct trading tín hiệu (signal / 신호).
 
-> **Chuyển mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **14. Surprise chỉ mục (index / 인덱스)** nêu điều cần giải thích; **15. Relative dữ liệu (data / 데이터) surprise** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. Trade balance và hiện tại (current / 현재) account** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **14. Surprise chỉ mục (index / 인덱스)** đặt vấn đề; **15. Relative dữ liệu (data / 데이터) surprise** đối chiếu bằng chứng, rồi **16. Trade balance và hiện tại (current / 현재) account** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. Relative dữ liệu (data / 데이터) surprise
 
@@ -229,7 +229,7 @@ thay vì chỉ surprise của một economy.
 
 Đây phù hợp với bản chất relative của FX.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **15. Relative dữ liệu (data / 데이터) surprise** nêu điều cần giải thích; **16. Trade balance và hiện tại (current / 현재) account** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. Terms of trade** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **15. Relative dữ liệu (data / 데이터) surprise** đặt vấn đề; **16. Trade balance và hiện tại (current / 현재) account** đối chiếu bằng chứng, rồi **17. Terms of trade** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 16. Trade balance và hiện tại (current / 현재) account
 
@@ -247,7 +247,7 @@ Reserve/intervention activity
 
 Balance of payments là hệ thống (system / 시스템), không phải một dòng headline.
 
-> **Chuyển mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **17. Terms of trade** tiếp nhận điểm tựa từ **16. Trade balance và hiện tại (current / 현재) account** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Fiscal news** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **17. Terms of trade** nối từ **16. Trade balance và hiện tại (current / 현재) account** sang **18. Fiscal news**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Terms of trade
 
@@ -265,7 +265,7 @@ energy price shock
 
 FX tác động (effect / 효과) phụ thuộc chính sách (policy / 정책) phản hồi (response / 응답) và thị trường (market / 시장) pricing.
 
-> **Chuyển mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **18. Fiscal news** tiếp nhận điểm tựa từ **17. Terms of trade** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Geopolitical shock** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **18. Fiscal news** nối từ **17. Terms of trade** sang **19. Geopolitical shock**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Fiscal news
 
@@ -280,7 +280,7 @@ Ngân sách (budget / 예산), tax, spending hoặc debt issuance có thể tác
 
 Không dùng quy tắc (rule / 규칙) đơn giản “fiscal expansion bullish/bearish currency”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **19. Geopolitical shock** tiếp nhận điểm tựa từ **18. Fiscal news** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Intervention rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **19. Geopolitical shock** nối từ **18. Fiscal news** sang **20. Intervention rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Geopolitical shock
 
@@ -298,7 +298,7 @@ Policy reaction?
 
 Cùng một geopolitical sự kiện (event / 이벤트) có thể tác động khác nhau tới JPY, EUR, KRW, CHF, USD tùy origin và exposure.
 
-> **Chuyển mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **20. Intervention rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **19. Geopolitical shock** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Fixing và benchmark flows** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **20. Intervention rủi ro (risk / 위험)** nối từ **19. Geopolitical shock** sang **21. Fixing và benchmark flows**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Intervention rủi ro (risk / 위험)
 
@@ -314,7 +314,7 @@ Intervention thesis phải ghi:
 - chính sách (policy / 정책) consistency;
 - thị trường (market / 시장) positioning.
 
-> **Chuyển mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **20. Intervention rủi ro (risk / 위험)** xác định đầu vào; **21. Fixing và benchmark flows** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **22. Options thị trường (market / 시장) như expectation proxy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **20. Intervention rủi ro (risk / 위험)** đặt đầu vào cho **21. Fixing và benchmark flows**, rồi **22. Options thị trường (market / 시장) như expectation proxy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 21. Fixing và benchmark flows
 
@@ -330,7 +330,7 @@ flow shock
 
 vì expected persistence có thể khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **21. Fixing và benchmark flows** xác định đầu vào; **22. Options thị trường (market / 시장) như expectation proxy** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **23. Sự kiện (event / 이벤트) volatility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **21. Fixing và benchmark flows** đặt đầu vào cho **22. Options thị trường (market / 시장) như expectation proxy**, rồi **23. Sự kiện (event / 이벤트) volatility** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 22. Options thị trường (market / 시장) như expectation proxy
 
@@ -343,7 +343,7 @@ FX options có thể cung cấp thông tin (information / 정보) về:
 
 Nhưng implied volatility không phải direct xác suất (probability / 확률) forecast không điều chỉnh; nó chứa rủi ro (risk / 위험) premium và thị trường (market / 시장) microstructure.
 
-> **Chuyển mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **23. Sự kiện (event / 이벤트) volatility** tiếp nhận điểm tựa từ **22. Options thị trường (market / 시장) như expectation proxy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. First reaction và second reaction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **23. Sự kiện (event / 이벤트) volatility** nối từ **22. Options thị trường (market / 시장) như expectation proxy** sang **24. First reaction và second reaction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Sự kiện (event / 이벤트) volatility
 
@@ -358,7 +358,7 @@ uncertainty resolves
 
 Vì vậy directional view đúng chưa chắc option trade có profit nếu option premium quá cao. Phần này nối với chapter FX options sau.
 
-> **Chuyển mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **24. First reaction và second reaction** tiếp nhận điểm tựa từ **23. Sự kiện (event / 이벤트) volatility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Revisions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **24. First reaction và second reaction** nối từ **23. Sự kiện (event / 이벤트) volatility** sang **25. Revisions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. First reaction và second reaction
 
@@ -374,7 +374,7 @@ Chiến lược (strategy / 전략) horizon phải xác định mình nghiên c�
 
 Không nên backtest daily close rồi suy luận về edge vài giây quanh bản phát hành (release / 릴리스).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **25. Revisions** tiếp nhận điểm tựa từ **24. First reaction và second reaction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Bản phát hành (release / 릴리스) timestamp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **25. Revisions** nối từ **24. First reaction và second reaction** sang **26. Bản phát hành (release / 릴리스) timestamp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Revisions
 
@@ -382,7 +382,7 @@ Macro dữ liệu (data / 데이터) có thể được revised. Backtest dùng 
 
 Sự kiện (event / 이벤트) research nên dùng point-in-time vintage dữ liệu (data / 데이터) khi possible.
 
-> **Chuyển mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **26. Bản phát hành (release / 릴리스) timestamp** tiếp nhận điểm tựa từ **25. Revisions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Thông tin (information / 정보) leakage / pre-release moves** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **26. Bản phát hành (release / 릴리스) timestamp** nối từ **25. Revisions** sang **27. Thông tin (information / 정보) leakage / pre-release moves**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Bản phát hành (release / 릴리스) timestamp
 
@@ -390,7 +390,7 @@ Timestamp phải đúng timezone và daylight-saving convention.
 
 Nếu một bản phát hành (release / 릴리스) xảy ra lúc 08:30 New York thời gian (time / 시간), UTC timestamp thay đổi theo DST. Dữ liệu (data / 데이터) chuỗi xử lý (pipeline / 파이프라인) phải dùng timezone-aware conversion.
 
-> **Chuyển mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **27. Thông tin (information / 정보) leakage / pre-release moves** tiếp nhận điểm tựa từ **26. Bản phát hành (release / 릴리스) timestamp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Sự kiện (event / 이벤트) study khung phần mềm (framework / 프레임워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **27. Thông tin (information / 정보) leakage / pre-release moves** nối từ **26. Bản phát hành (release / 릴리스) timestamp** sang **28. Sự kiện (event / 이벤트) study khung phần mềm (framework / 프레임워크)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Thông tin (information / 정보) leakage / pre-release moves
 
@@ -406,7 +406,7 @@ Không nên tự động kết luận cause từ chart.
 
 Research cần sự kiện (event / 이벤트) cửa sổ (window / 윈도우) và điều khiển (control / 제어) windows.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **28. Sự kiện (event / 이벤트) study khung phần mềm (framework / 프레임워크)** tiếp nhận điểm tựa từ **27. Thông tin (information / 정보) leakage / pre-release moves** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Conditional phản hồi (response / 응답)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **28. Sự kiện (event / 이벤트) study khung phần mềm (framework / 프레임워크)** nối từ **27. Thông tin (information / 정보) leakage / pre-release moves** sang **29. Conditional phản hồi (response / 응답)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Sự kiện (event / 이벤트) study khung phần mềm (framework / 프레임워크)
 
@@ -428,7 +428,7 @@ Group by surprise magnitude / regime
 
 Sau đó kiểm tra phân phối (distribution / 분포), không chỉ average.
 
-> **Chuyển mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **29. Conditional phản hồi (response / 응답)** tiếp nhận điểm tựa từ **28. Sự kiện (event / 이벤트) study khung phần mềm (framework / 프레임워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Narrative phải được falsifiable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **29. Conditional phản hồi (response / 응답)** nối từ **28. Sự kiện (event / 이벤트) study khung phần mềm (framework / 프레임워크)** sang **30. Narrative phải được falsifiable**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Conditional phản hồi (response / 응답)
 
@@ -441,7 +441,7 @@ Một hawkish surprise có thể tạo USD reaction khác khi:
 
 Do đó regression/sự kiện (event / 이벤트) study có thể include interactions.
 
-> **Chuyển mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **30. Narrative phải được falsifiable** tiếp nhận điểm tựa từ **29. Conditional phản hồi (response / 응답)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Sự kiện (event / 이벤트) journal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **30. Narrative phải được falsifiable** nối từ **29. Conditional phản hồi (response / 응답)** sang **31. Sự kiện (event / 이벤트) journal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Narrative phải được falsifiable
 
@@ -458,7 +458,7 @@ If front-end yield differential widens beyond threshold Y while risk regime rema
 Invalidation: data and policy pricing move opposite, or USD fails to respond despite widening differential over specified horizon.
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **31. Sự kiện (event / 이벤트) journal** tiếp nhận điểm tựa từ **30. Narrative phải được falsifiable** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Official sources first** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **31. Sự kiện (event / 이벤트) journal** nối từ **30. Narrative phải được falsifiable** sang **32. Official sources first**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Sự kiện (event / 이벤트) journal
 
@@ -481,7 +481,7 @@ Original hypothesis
 What was wrong/right
 ```
 
-> **Chuyển mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **31. Sự kiện (event / 이벤트) journal** nêu điều cần giải thích; **32. Official sources first** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **33. Không trade headline văn bản (text / 텍스트) bằng cảm giác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **31. Sự kiện (event / 이벤트) journal** đặt vấn đề; **32. Official sources first** đối chiếu bằng chứng, rồi **33. Không trade headline văn bản (text / 텍스트) bằng cảm giác** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 32. Official sources first
 
@@ -497,7 +497,7 @@ Official central bank / statistical agency
 
 Tài liệu cần phân biệt fact với analyst interpretation.
 
-> **Chuyển mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **32. Official sources first** nêu điều cần giải thích; **33. Không trade headline văn bản (text / 텍스트) bằng cảm giác** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **34. Scheduled vs unscheduled events** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **32. Official sources first** đặt vấn đề; **33. Không trade headline văn bản (text / 텍스트) bằng cảm giác** đối chiếu bằng chứng, rồi **34. Scheduled vs unscheduled events** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 33. Không trade headline văn bản (text / 텍스트) bằng cảm giác
 
@@ -505,7 +505,7 @@ Một word như “hawkish” hoặc “dovish” là compressed interpretation.
 
 Nếu research NLP/sự kiện (event / 이벤트) tín hiệu (signal / 신호), cần formalize văn bản (text / 텍스트) features và train/kiểm thử (test / 테스트) chronologically, không label bằng future thị trường (market / 시장) reaction.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **34. Scheduled vs unscheduled events** tiếp nhận điểm tựa từ **33. Không trade headline văn bản (text / 텍스트) bằng cảm giác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Fundamental phân tích (analysis / 분석) không loại bỏ technical/thực thi (execution / 실행) tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **34. Scheduled vs unscheduled events** nối từ **33. Không trade headline văn bản (text / 텍스트) bằng cảm giác** sang **35. Fundamental phân tích (analysis / 분석) không loại bỏ technical/thực thi (execution / 실행) tầng (layer / 계층)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Scheduled vs unscheduled events
 
@@ -525,7 +525,7 @@ Unscheduled:
 
 Unscheduled events có tail/thực thi (execution / 실행) rủi ro (risk / 위험) lớn hơn vì thị trường (market / 시장) chưa chuẩn bị liquidity giống scheduled sự kiện (event / 이벤트).
 
-> **Chuyển mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **35. Fundamental phân tích (analysis / 분석) không loại bỏ technical/thực thi (execution / 실행) tầng (layer / 계층)** tiếp nhận điểm tựa từ **34. Scheduled vs unscheduled events** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Current-source examples** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **35. Fundamental phân tích (analysis / 분석) không loại bỏ technical/thực thi (execution / 실행) tầng (layer / 계층)** nối từ **34. Scheduled vs unscheduled events** sang **36. Current-source examples**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Fundamental phân tích (analysis / 분석) không loại bỏ technical/thực thi (execution / 실행) tầng (layer / 계층)
 
@@ -544,7 +544,7 @@ Fundamental hypothesis
 
 Không nên dùng fundamental story để bỏ stop/vô hiệu hóa (invalidation / 무효화).
 
-> **Chuyển mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **35. Fundamental phân tích (analysis / 분석) không loại bỏ technical/thực thi (execution / 실행) tầng (layer / 계층)** cho ta quy tắc; **36. Current-source examples** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **37. Checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **35. Fundamental phân tích (analysis / 분석) không loại bỏ technical/thực thi (execution / 실행) tầng (layer / 계층)** nêu quy tắc; **36. Current-source examples** thử quy tắc trong tình huống, rồi **37. Checklist** mở rộng hệ quả.
 
 ## 36. Current-source examples
 
@@ -552,7 +552,7 @@ Khi học bằng dữ liệu hiện hành, luôn lấy ngày cụ thể. Ví d�
 
 Không bản sao (copy / 복사) hiện tại (current / 현재) chính sách (policy / 정책) tỷ lệ (rate / 비율) vào tài liệu như một fact vĩnh viễn; nếu cần ví dụ thời điểm phải ghi rõ ngày.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **36. Current-source examples** cho ta quy tắc; **37. Checklist** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **36. Current-source examples** nêu quy tắc; **37. Checklist** thử quy tắc trong tình huống, rồi **Đọc tiếp** mở rộng hệ quả.
 
 ## 37. Checklist
 
@@ -568,13 +568,13 @@ Bạn cần tự giải thích được:
 8. Cách viết một fundamental thesis có vô hiệu hóa (invalidation / 무효화).
 9. Vì sao official nguồn (source / 소스) nên là nguồn (source / 소스) of bản ghi (record / 레코드).
 
-> **Chuyển mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **Đọc tiếp** tiếp nhận điểm tựa từ **37. Checklist** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn nền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **Đọc tiếp** nối từ **37. Checklist** sang **Nguồn nền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đọc tiếp
 
 → [09 — Carry, momentum, value and macro FX strategies](./09_CARRY_MOMENTUM_VALUE_AND_MACRO_FX_STRATEGIES.md)
 
-> **Chuyển mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **Đọc tiếp** nêu điều cần giải thích; **Nguồn nền** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **08 — Fundamental và event-driven FX phân tích (analysis / 분석)**, **Đọc tiếp** đặt vấn đề; **Nguồn nền** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn nền
 

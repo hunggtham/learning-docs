@@ -24,7 +24,7 @@ Các luật này không chỉ dùng trong bài lô-gic (logic / 논리). Chúng 
 
 Xem nền toán chi tiết tại [Logic & Proof](../../mathematics/00_foundations/01_logic_and_proof.md) và [Boolean Algebra](../../mathematics/07_discrete_cs/03_boolean_algebra_and_digital_logic.md).
 
-> **Chuyển mạch:** Boolean logic biểu diễn điều kiện; state lưu dấu vết quá khứ, state machine mô tả chuyển tiếp, còn invariant là điều phải giữ đúng qua mọi chuyển tiếp.
+> **Nối mạch:** Boolean logic biểu diễn điều kiện; state lưu dấu vết quá khứ, state machine mô tả chuyển tiếp, còn invariant là điều phải giữ đúng qua mọi chuyển tiếp.
 
 ## Trạng thái (state / 상태): những gì quá khứ để lại cho hiện tại
 
@@ -34,7 +34,7 @@ Trạng thái (state / 상태) không miễn phí. Khi nhiều thực thi (execu
 
 Đây là một liên kết (connection / 연결) quan trọng: **nhiều độ phức tạp (complexity / 복잡도) trong các hệ thống (systems / 시스템들) đến từ việc quản lý trạng thái (state / 상태) dưới tính đồng thời (concurrency / 동시성), thất bại (failure / 실패) và phân phối (distribution / 분포)**.
 
-> **Chuyển mạch:** Ở chặng này của **Lô-gic (logic / 논리), trạng thái (state / 상태), lớp trừu tượng (abstraction / 추상화) và invariants**, **Máy trạng thái (state machine / 상태 머신): mô hình (model / 모델) hóa hành vi (behavior / 동작) bằng trạng thái và chuyển tiếp** tiếp nhận điểm tựa từ **Trạng thái (state / 상태): những gì quá khứ để lại cho hiện tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bất biến (invariant / 불변식): thuộc tính (property / 속성) phải sống sót qua transitions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Máy trạng thái (state machine / 상태 머신): mô hình (model / 모델) hóa hành vi (behavior / 동작) bằng trạng thái và chuyển tiếp** nối từ **Trạng thái (state / 상태): những gì quá khứ để lại cho hiện tại** sang **Bất biến (invariant / 불변식): thuộc tính (property / 속성) phải sống sót qua transitions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Máy trạng thái (state machine / 상태 머신): mô hình (model / 모델) hóa hành vi (behavior / 동작) bằng trạng thái và chuyển tiếp
 
@@ -54,7 +54,7 @@ Mô hình (model / 모델) này buộc ta hỏi những chuyển tiếp (transit
 
 Giao thức (protocol / 프로토콜), parser, workflow, trình biên dịch (compiler / 컴파일러) lexer, thiết bị (device / 장치) controller và UI đều thường được mô hình (model / 모델) hóa bằng máy trạng thái (state machine / 상태 머신).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lô-gic (logic / 논리), trạng thái (state / 상태), lớp trừu tượng (abstraction / 추상화) và invariants**, **Bất biến (invariant / 불변식): thuộc tính (property / 속성) phải sống sót qua transitions** tiếp nhận điểm tựa từ **Máy trạng thái (state machine / 상태 머신): mô hình (model / 모델) hóa hành vi (behavior / 동작) bằng trạng thái và chuyển tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lớp trừu tượng (abstraction / 추상화) và giao diện (interface / 인터페이스) contracts** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Bất biến (invariant / 불변식): thuộc tính (property / 속성) phải sống sót qua transitions** nối từ **Máy trạng thái (state machine / 상태 머신): mô hình (model / 모델) hóa hành vi (behavior / 동작) bằng trạng thái và chuyển tiếp** sang **Lớp trừu tượng (abstraction / 추상화) và giao diện (interface / 인터페이스) contracts**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bất biến (invariant / 불변식): thuộc tính (property / 속성) phải sống sót qua transitions
 
@@ -64,7 +64,7 @@ Cách chứng minh bằng bất biến (invariant / 불변식) thường gồm b
 
 Đây là cầu nối (bridge / 브리지) giữa mathematical induction và software tính đúng đắn (correctness / 정확성).
 
-> **Chuyển mạch:** Trong **Lô-gic (logic / 논리), trạng thái (state / 상태), lớp trừu tượng (abstraction / 추상화) và invariants**, **Lớp trừu tượng (abstraction / 추상화) và giao diện (interface / 인터페이스) contracts** tiếp nhận điểm tựa từ **Bất biến (invariant / 불변식): thuộc tính (property / 속성) phải sống sót qua transitions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biểu diễn (representation / 표현) bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Lớp trừu tượng (abstraction / 추상화) và giao diện (interface / 인터페이스) contracts** nối từ **Bất biến (invariant / 불변식): thuộc tính (property / 속성) phải sống sót qua transitions** sang **Biểu diễn (representation / 표현) bất biến (invariant / 불변식)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lớp trừu tượng (abstraction / 추상화) và giao diện (interface / 인터페이스) contracts
 
@@ -74,7 +74,7 @@ Ngăn xếp (stack / 스택) lớp trừu tượng (abstraction / 추상화) h�
 
 Đặc tả API (API contract / API 계약) có thể bao gồm đầu vào (input / 입력) lĩnh vực (domain / 도메인), đầu ra (output / 출력), errors, thứ tự (ordering / 순서), thread-safety, độ trễ (latency / 지연 시간) expectations và idempotency. Một giao diện (interface / 인터페이스) chỉ liệt kê phương thức (method / 메서드) signatures là chưa đủ để hiểu ngữ nghĩa (semantic / 의미적) đặc tả hợp đồng (contract / 계약).
 
-> **Chuyển mạch:** Ở chặng này của **Lô-gic (logic / 논리), trạng thái (state / 상태), lớp trừu tượng (abstraction / 추상화) và invariants**, **Biểu diễn (representation / 표현) bất biến (invariant / 불변식)** tiếp nhận điểm tựa từ **Lớp trừu tượng (abstraction / 추상화) và giao diện (interface / 인터페이스) contracts** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Precondition và postcondition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Biểu diễn (representation / 표현) bất biến (invariant / 불변식)** nối từ **Lớp trừu tượng (abstraction / 추상화) và giao diện (interface / 인터페이스) contracts** sang **Precondition và postcondition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Biểu diễn (representation / 표현) bất biến (invariant / 불변식)
 
@@ -82,7 +82,7 @@ Cấu trúc dữ liệu (data structure / 자료구조) thường có nội bộ
 
 Biểu diễn (representation / 표현) bất biến (invariant / 불변식) cho phép các methods lập luận (reasoning / 추론) cục bộ. Nếu mỗi công khai (public / 공개) thao tác (operation / 연산) nhận cấu trúc (structure / 구조) hợp lệ và trả lại cấu trúc (structure / 구조) hợp lệ, toàn mô-đun (module / 모듈) có thể duy trì thuộc tính (property / 속성) qua thời gian.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lô-gic (logic / 논리), trạng thái (state / 상태), lớp trừu tượng (abstraction / 추상화) và invariants**, **Precondition và postcondition** tiếp nhận điểm tựa từ **Biểu diễn (representation / 표현) bất biến (invariant / 불변식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Precondition và postcondition** nối từ **Biểu diễn (representation / 표현) bất biến (invariant / 불변식)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Precondition và postcondition
 
@@ -90,13 +90,13 @@ Precondition là điều caller phải đảm bảo trước thao tác (operatio
 
 Thiết kế (design / 설계) by đặc tả hợp đồng (contract / 계약) biến các giả định (assumptions / 가정들) ẩn thành contracts tường minh (explicit / 명시적). kiểu (type / 타입) các hệ thống (systems / 시스템들), assertions, cơ sở dữ liệu (database / 데이터베이스) các ràng buộc (constraints / 제약조건들) và static phân tích (analysis / 분석) đều là các cách khác nhau để encode một phần contracts.
 
-> **Chuyển mạch:** Trong **Lô-gic (logic / 논리), trạng thái (state / 상태), lớp trừu tượng (abstraction / 추상화) và invariants**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Precondition và postcondition** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Precondition và postcondition**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Khi một hệ thống (system / 시스템) phức tạp, hãy vẽ nó như **trạng thái (state / 상태) + Allowed Transitions + Invariants + ranh giới (boundary / 경계)**. Bug thường là chuyển tiếp (transition / 전이) không được kiểm soát, bất biến (invariant / 불변식) không được encode, hoặc ranh giới (boundary / 경계) khiến caller dựa vào giả định (assumption / 가정) mà hiện thực (implementation / 구현) không hứa.
 
-> **Chuyển mạch:** Ở chặng này của **Lô-gic (logic / 논리), trạng thái (state / 상태), lớp trừu tượng (abstraction / 추상화) và invariants**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -106,7 +106,7 @@ Thiết kế (design / 설계) by đặc tả hợp đồng (contract / 계약) 
 
 **“bất biến (invariant / 불변식) là điều kiện (condition / 조건) chỉ kiểm tra ở cuối.”** bất biến (invariant / 불변식) hữu ích chính vì nó được bảo toàn xuyên quá trình, giúp lập luận (reasoning / 추론) từng bước.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lô-gic (logic / 논리), trạng thái (state / 상태), lớp trừu tượng (abstraction / 추상화) và invariants**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

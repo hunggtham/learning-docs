@@ -18,7 +18,7 @@ Một **phép toán hai ngôi (Binary Operation / 이항연산)** trên set `S` 
 
 Addition trên integers closed vì tổng hai integers vẫn integer. Division trên integers không closed vì `1/2` không phải integer. Chỉ riêng observation này đã cho thấy một thao tác (operation / 연산) không thể được tách khỏi lĩnh vực (domain / 도메인) mà nó đang hoạt động.
 
-> **Chuyển mạch:** Trong **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Group: cấu trúc (structure / 구조) của symmetry và reversible operations** tiếp nhận điểm tựa từ **Nhị phân (binary / 이진) thao tác (operation / 연산) và closure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Symmetry group** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Group: cấu trúc (structure / 구조) của symmetry và reversible operations** nối từ **Nhị phân (binary / 이진) thao tác (operation / 연산) và closure** sang **Symmetry group**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Group: cấu trúc (structure / 구조) của symmetry và reversible operations
 
@@ -33,7 +33,7 @@ Nếu thêm commutativity `a*b=b*a`, group gọi là **Abelian group / 아벨군
 
 Integers dưới addition tạo Abelian group: định danh (identity / 식별자) là `0`, inverse của `a` là `-a`. Nonzero real numbers dưới multiplication cũng là Abelian group: định danh (identity / 식별자) `1`, inverse `1/a`.
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Symmetry group** tiếp nhận điểm tựa từ **Group: cấu trúc (structure / 구조) của symmetry và reversible operations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Subgroup và generated cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Symmetry group** nối từ **Group: cấu trúc (structure / 구조) của symmetry và reversible operations** sang **Subgroup và generated cấu trúc (structure / 구조)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Symmetry group
 
@@ -43,7 +43,7 @@ Hãy xét một hình vuông. Ta có thể rotate `0°,90°,180°,270°` hoặc 
 
 Trong graphics và robotics, rigid-body transformations compose thành algebraic structures. Trong cryptography, operations trên finite groups cung cấp mathematical setting cho nhiều protocols.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Subgroup và generated cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **Symmetry group** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Homomorphism: map giữ cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Subgroup và generated cấu trúc (structure / 구조)** nối từ **Symmetry group** sang **Homomorphism: map giữ cấu trúc (structure / 구조)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Subgroup và generated cấu trúc (structure / 구조)
 
@@ -57,7 +57,7 @@ G=\{g^k\mid k\in\mathbb Z\}.
 
 Trong modular addition `Z_n`, element `1` generate mọi residues. Element khác có thể generate chỉ subset tùy gcd với `n`.
 
-> **Chuyển mạch:** Trong **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Homomorphism: map giữ cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **Subgroup và generated cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ring: hai operations tương tác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Homomorphism: map giữ cấu trúc (structure / 구조)** nối từ **Subgroup và generated cấu trúc (structure / 구조)** sang **Ring: hai operations tương tác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Homomorphism: map giữ cấu trúc (structure / 구조)
 
@@ -71,7 +71,7 @@ Map không nhất thiết giữ raw biểu diễn (representation / 표현); nó
 
 Kernel của homomorphism là elements map về định danh (identity / 식별자). ảnh (image / 이미지) là phần của mục tiêu (target / 대상) thực sự reachable. Ideas kernel/ảnh (image / 이미지) xuất hiện lại trong tuyến tính (linear / 선형) algebra như null không gian (space / 공간)/phạm vi (range / 범위).
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Ring: hai operations tương tác** tiếp nhận điểm tựa từ **Homomorphism: map giữ cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trường dữ liệu (field / 필드): nơi division gần như luôn hợp lệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Ring: hai operations tương tác** nối từ **Homomorphism: map giữ cấu trúc (structure / 구조)** sang **Trường dữ liệu (field / 필드): nơi division gần như luôn hợp lệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ring: hai operations tương tác
 
@@ -87,7 +87,7 @@ Integers `Z` là ring. Matrices `M_n(R)` cũng là ring dưới ma trận (matri
 
 Polynomials với coefficients trong một trường dữ liệu (field / 필드) tạo polynomial ring. Điều này giải thích tại sao factorization và roots có structural rules tương tự integer factorization nhưng không identical.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Ring: hai operations tương tác** nêu điều cần giải thích; **Trường dữ liệu (field / 필드): nơi division gần như luôn hợp lệ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Vì sao modulo composite không phải trường dữ liệu (field / 필드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Ring: hai operations tương tác** đặt vấn đề; **Trường dữ liệu (field / 필드): nơi division gần như luôn hợp lệ** đối chiếu bằng chứng, rồi **Vì sao modulo composite không phải trường dữ liệu (field / 필드)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Trường dữ liệu (field / 필드): nơi division gần như luôn hợp lệ
 
@@ -97,7 +97,7 @@ Finite trường dữ liệu (field / 필드) cũng tồn tại. Với prime `p`
 
 Trường dữ liệu (field / 필드) quan trọng cho tuyến tính (linear / 선형) algebra: véc-tơ (vector / 벡터) không gian (space / 공간) được định nghĩa over a trường dữ liệu (field / 필드). Khi nói vectors với real coefficients, underlying trường dữ liệu (field / 필드) là `R`; trong coding lý thuyết (theory / 이론), vectors thường sống trên finite fields như `F_2`.
 
-> **Chuyển mạch:** Trong **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Trường dữ liệu (field / 필드): nơi division gần như luôn hợp lệ** nêu điều cần giải thích; **Vì sao modulo composite không phải trường dữ liệu (field / 필드)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Permutations và composition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Trường dữ liệu (field / 필드): nơi division gần như luôn hợp lệ** đặt vấn đề; **Vì sao modulo composite không phải trường dữ liệu (field / 필드)** đối chiếu bằng chứng, rồi **Permutations và composition** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Vì sao modulo composite không phải trường dữ liệu (field / 필드)
 
@@ -113,7 +113,7 @@ Vì vậy `Z_6` là ring nhưng không trường dữ liệu (field / 필드). N
 
 Nếu `n` prime, mọi nonzero `a` thỏa điều kiện (condition / 조건).
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Vì sao modulo composite không phải trường dữ liệu (field / 필드)** nêu điều cần giải thích; **Permutations và composition** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Quotient idea và equivalence classes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Vì sao modulo composite không phải trường dữ liệu (field / 필드)** đặt vấn đề; **Permutations và composition** đối chiếu bằng chứng, rồi **Quotient idea và equivalence classes** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Permutations và composition
 
@@ -121,7 +121,7 @@ Một permutation là bijection từ finite set về chính nó. Permutations co
 
 Điều này cho một example rất concrete về non-Abelian group. Thứ tự operations có ý nghĩa: swap A/B rồi B/C thường khác swap B/C rồi A/B. Trong software, chuỗi (sequence / 시퀀스) of trạng thái (state / 상태) transformations cũng thường noncommutative; reorder operations có thể đổi kết quả (result / 결과).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Quotient idea và equivalence classes** tiếp nhận điểm tựa từ **Permutations và composition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết (connection / 연결) với tuyến tính (linear / 선형) algebra** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Quotient idea và equivalence classes** nối từ **Permutations và composition** sang **Liên kết (connection / 연결) với tuyến tính (linear / 선형) algebra**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quotient idea và equivalence classes
 
@@ -137,7 +137,7 @@ Mỗi residue lớp (class / 클래스) trở thành một element của `Z_n`. 
 
 Mô hình tư duy (mental model / 사고 모델) này cũng liên hệ với dữ liệu (data / 데이터) normalization và chuẩn gốc (canonical / 정본) biểu diễn (representation / 표현) trong computing: nhiều raw states có thể được xem là cùng một equivalence lớp (class / 클래스) nếu downstream hành vi (behavior / 동작) không phân biệt chúng.
 
-> **Chuyển mạch:** Trong **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, sau nội dung của **Quotient idea và equivalence classes**, **Liên kết (connection / 연결) với tuyến tính (linear / 선형) algebra** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết (connection / 연결) với cryptography và coding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, sau nội dung của **Quotient idea và equivalence classes**, **Liên kết (connection / 연결) với tuyến tính (linear / 선형) algebra** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết (connection / 연결) với cryptography và coding** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết (connection / 연결) với tuyến tính (linear / 선형) algebra
 
@@ -151,7 +151,7 @@ T(cv)=cT(v).
 
 Kernel/ảnh (image / 이미지), quotient spaces, eigenstructure và ma trận (matrix / 행렬) groups đều nằm trong cùng family ideas. Abstract algebra giúp nhìn tuyến tính (linear / 선형) algebra không chỉ là arrays of numbers mà là lý thuyết (theory / 이론) của structure-preserving transformations.
 
-> **Chuyển mạch:** Ở chặng này của **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Liên kết (connection / 연결) với cryptography và coding** tiếp nhận điểm tựa từ **Liên kết (connection / 연결) với tuyến tính (linear / 선형) algebra** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Liên kết (connection / 연결) với cryptography và coding** nối từ **Liên kết (connection / 연결) với tuyến tính (linear / 선형) algebra** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên kết (connection / 연결) với cryptography và coding
 
@@ -159,13 +159,13 @@ Finite fields được dùng trong error-correcting codes, AES arithmetic và nh
 
 Điều quan trọng là cryptographic bảo mật (security / 보안) không đến chỉ từ “có group/trường dữ liệu (field / 필드)”. Nó phụ thuộc hardness các giả định (assumptions / 가정들), parameter sizes, protocols, randomness và hiện thực (implementation / 구현). Algebra cung cấp cấu trúc (structure / 구조); bảo mật (security / 보안) kỹ thuật (engineering / 엔지니어링) cần nhiều lớp khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết (connection / 연결) với cryptography và coding** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết (connection / 연결) với cryptography và coding** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Abstract algebra bỏ bớt “đối tượng (object / 객체) này làm bằng gì” để giữ lại “operations của nó tuân theo luật nào”. Group là reversible composition, ring là addition + multiplication có distributivity, trường dữ liệu (field / 필드) là môi trường mà nonzero division hoạt động. Khi hai domains share cùng algebraic cấu trúc (structure / 구조), một theorem có thể áp dụng cho cả hai dù objects nhìn hoàn toàn khác.
 
-> **Chuyển mạch:** Trong **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Cấu trúc đại số: group, ring và trường dữ liệu (field / 필드)**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

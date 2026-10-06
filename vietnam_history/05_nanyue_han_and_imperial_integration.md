@@ -8,7 +8,7 @@
 
 Không nên học giai đoạn này bằng công thức “Âu Lạc mất → Bắc thuộc bắt đầu”. Trước nhà Hán còn có **Nam Việt (Nanyue / 南越)**; sau khi Hán thôn tính Nam Việt, quyền lực đế quốc cũng không phủ đều xuống từng làng. Cần nhìn theo nhiều tầng: quân sự, tuyến (route / 경로) giao thông, administrative center, cục bộ (local / 로컬) elite và household.
 
-> **Chuyển mạch:** Trong **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Nam Việt: một polity biên giới, không phải đơn giản “Trung Quốc” hay “Việt Nam” theo nghĩa hiện đại** tiếp nhận điểm tựa từ **Điểm tựa và câu hỏi trung tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **111 TCN: nhà Hán thôn tính Nam Việt và thay đổi quy mô (scale / 규모) quản trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Nam Việt: một polity biên giới, không phải đơn giản “Trung Quốc” hay “Việt Nam” theo nghĩa hiện đại** nối từ **Điểm tựa và câu hỏi trung tâm** sang **111 TCN: nhà Hán thôn tính Nam Việt và thay đổi quy mô (scale / 규모) quản trị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nam Việt: một polity biên giới, không phải đơn giản “Trung Quốc” hay “Việt Nam” theo nghĩa hiện đại
 
@@ -16,7 +16,7 @@ Cuối thế kỷ III TCN, sau khi nhà Tần tan rã, Triệu Đà xây dựng 
 
 Điều quan trọng với Việt Nam là Nam Việt tạo ra một tầng trung gian giữa Cổ Loa và đế quốc Hán. Việc châu thổ sông Hồng bị hấp thụ không diễn ra trực tiếp từ Âu Lạc sang Hán trong một bước duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **111 TCN: nhà Hán thôn tính Nam Việt và thay đổi quy mô (scale / 규모) quản trị** tiếp nhận điểm tựa từ **Nam Việt: một polity biên giới, không phải đơn giản “Trung Quốc” hay “Việt Nam” theo nghĩa hiện đại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao châu thổ sông Hồng đáng để đế quốc đầu tư quản lý?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **111 TCN: nhà Hán thôn tính Nam Việt và thay đổi quy mô (scale / 규모) quản trị** nối từ **Nam Việt: một polity biên giới, không phải đơn giản “Trung Quốc” hay “Việt Nam” theo nghĩa hiện đại** sang **Vì sao châu thổ sông Hồng đáng để đế quốc đầu tư quản lý?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 111 TCN: nhà Hán thôn tính Nam Việt và thay đổi quy mô (scale / 규모) quản trị
 
@@ -40,7 +40,7 @@ more durable imperial presence
 
 Nhưng mỗi mũi tên đều có friction. Official ở trị sở không đồng nghĩa với điều khiển (control / 제어) tuyệt đối tới mọi village.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Vì sao châu thổ sông Hồng đáng để đế quốc đầu tư quản lý?** tiếp nhận điểm tựa từ **111 TCN: nhà Hán thôn tính Nam Việt và thay đổi quy mô (scale / 규모) quản trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Luy Lâu: hãy nhìn nó như một administrative–commercial nút (node / 노드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Vì sao châu thổ sông Hồng đáng để đế quốc đầu tư quản lý?** nối từ **111 TCN: nhà Hán thôn tính Nam Việt và thay đổi quy mô (scale / 규모) quản trị** sang **Luy Lâu: hãy nhìn nó như một administrative–commercial nút (node / 노드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao châu thổ sông Hồng đáng để đế quốc đầu tư quản lý?
 
@@ -48,7 +48,7 @@ Hãy quay lại geography. Bắc Bộ có agricultural cơ sở (base / 기반) 
 
 River tuyến (route / 경로) cũng giải thích vì sao các center như Mê Linh, Luy Lâu hay Long Biên quan trọng. Trong thế giới chưa có đường cao tốc, waterways là hạ tầng (infrastructure / 인프라) vận tải chính. Điều khiển (control / 제어) một nút (node / 노드) sông có thể giúp move grain, officials, troops và thông tin (information / 정보).
 
-> **Chuyển mạch:** Trong **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Luy Lâu: hãy nhìn nó như một administrative–commercial nút (node / 노드)** tiếp nhận điểm tựa từ **Vì sao châu thổ sông Hồng đáng để đế quốc đầu tư quản lý?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Economy dưới imperial quy tắc (rule / 규칙): tax quan trọng, nhưng thị trường (market / 시장) và di chuyển (migration / 마이그레이션) cũng quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Luy Lâu: hãy nhìn nó như một administrative–commercial nút (node / 노드)** nối từ **Vì sao châu thổ sông Hồng đáng để đế quốc đầu tư quản lý?** sang **Economy dưới imperial quy tắc (rule / 규칙): tax quan trọng, nhưng thị trường (market / 시장) và di chuyển (migration / 마이그레이션) cũng quan trọng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Luy Lâu: hãy nhìn nó như một administrative–commercial nút (node / 노드)
 
@@ -58,7 +58,7 @@ Nếu đứng ở vùng Luy Lâu hôm nay, đừng chỉ hỏi “đây có ph�
 
 Hiện nay Bắc Ninh vẫn tiếp tục khảo cổ và quy hoạch bảo tồn vùng Luy Lâu. Điều này cũng nhắc rằng historical landscape không phải sản phẩm tạo ra (artifact / 산출물) đóng băng; nhiều lớp cư trú, religious building và later reconstruction chồng lên nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Economy dưới imperial quy tắc (rule / 규칙): tax quan trọng, nhưng thị trường (market / 시장) và di chuyển (migration / 마이그레이션) cũng quan trọng** tiếp nhận điểm tựa từ **Luy Lâu: hãy nhìn nó như một administrative–commercial nút (node / 노드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cục bộ (local / 로컬) elite: tầng (layer / 계층) trung gian quyết định đế quốc có hoạt động được hay không** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Economy dưới imperial quy tắc (rule / 규칙): tax quan trọng, nhưng thị trường (market / 시장) và di chuyển (migration / 마이그레이션) cũng quan trọng** nối từ **Luy Lâu: hãy nhìn nó như một administrative–commercial nút (node / 노드)** sang **Cục bộ (local / 로컬) elite: tầng (layer / 계층) trung gian quyết định đế quốc có hoạt động được hay không**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Economy dưới imperial quy tắc (rule / 규칙): tax quan trọng, nhưng thị trường (market / 시장) và di chuyển (migration / 마이그레이션) cũng quan trọng
 
@@ -68,7 +68,7 @@ Thứ nhất, trạng thái (state / 상태) cố **extract tài nguyên (resour
 
 Vì vậy imperial tích hợp (integration / 통합) vừa tạo **extraction** vừa tạo **connectivity**. Hai thứ có thể tồn tại cùng lúc; connectivity không làm domination biến mất, còn domination không có nghĩa economy chỉ co lại.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Cục bộ (local / 로컬) elite: tầng (layer / 계층) trung gian quyết định đế quốc có hoạt động được hay không** tiếp nhận điểm tựa từ **Economy dưới imperial quy tắc (rule / 규칙): tax quan trọng, nhưng thị trường (market / 시장) và di chuyển (migration / 마이그레이션) cũng quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chữ Hán và thông tin (information / 정보) technology của nhà nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Cục bộ (local / 로컬) elite: tầng (layer / 계층) trung gian quyết định đế quốc có hoạt động được hay không** nối từ **Economy dưới imperial quy tắc (rule / 규칙): tax quan trọng, nhưng thị trường (market / 시장) và di chuyển (migration / 마이그레이션) cũng quan trọng** sang **Chữ Hán và thông tin (information / 정보) technology của nhà nước**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cục bộ (local / 로컬) elite: tầng (layer / 계층) trung gian quyết định đế quốc có hoạt động được hay không
 
@@ -78,7 +78,7 @@ Một empire rộng không đủ officials để thay thế toàn bộ cục b�
 
 Do đó “assimilation” không phải one-way overwrite. Institutional borrowing có thể về sau phục vụ independence.
 
-> **Chuyển mạch:** Trong **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Chữ Hán và thông tin (information / 정보) technology của nhà nước** tiếp nhận điểm tựa từ **Cục bộ (local / 로컬) elite: tầng (layer / 계층) trung gian quyết định đế quốc có hoạt động được hay không** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hai Bà Trưng 40–43: rebellion là symptom của cấu trúc (structure / 구조) nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Chữ Hán và thông tin (information / 정보) technology của nhà nước** nối từ **Cục bộ (local / 로컬) elite: tầng (layer / 계층) trung gian quyết định đế quốc có hoạt động được hay không** sang **Hai Bà Trưng 40–43: rebellion là symptom của cấu trúc (structure / 구조) nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chữ Hán và thông tin (information / 정보) technology của nhà nước
 
@@ -88,7 +88,7 @@ Trong society chưa có mass literacy, writing là một technology quyền lự
 
 Đây là một continuity dài của lịch sử Việt Nam: sau khi giành independence, các nhà nước Đại Việt vẫn sử dụng Hán văn như một technology hành chính và learned culture trong nhiều thế kỷ.
 
-> **Chuyển mạch:** Ở chặng này của **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Hai Bà Trưng 40–43: rebellion là symptom của cấu trúc (structure / 구조) nào?** tiếp nhận điểm tựa từ **Chữ Hán và thông tin (information / 정보) technology của nhà nước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đền Hai Bà Trưng: bộ nhớ (memory / 메모리) site không phải battlefield map hoàn hảo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Hai Bà Trưng 40–43: rebellion là symptom của cấu trúc (structure / 구조) nào?** nối từ **Chữ Hán và thông tin (information / 정보) technology của nhà nước** sang **Đền Hai Bà Trưng: bộ nhớ (memory / 메모리) site không phải battlefield map hoàn hảo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hai Bà Trưng 40–43: rebellion là symptom của cấu trúc (structure / 구조) nào?
 
@@ -98,7 +98,7 @@ Nếu chỉ nhớ “40 khởi nghĩa, 43 thất bại”, ta bỏ mất câu h�
 
 Ngược lại, việc Hán có thể đưa quân xuống và tái chiếm cho thấy asymmetric sức chứa (capacity / 용량): empire sở hữu mobilization cơ sở (base / 기반) và military mạng (network / 네트워크) vượt ra ngoài châu thổ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Đền Hai Bà Trưng: bộ nhớ (memory / 메모리) site không phải battlefield map hoàn hảo** tiếp nhận điểm tựa từ **Hai Bà Trưng 40–43: rebellion là symptom của cấu trúc (structure / 구조) nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cultural thay đổi (change / 변경): không phải “mất bản sắc” hoặc “giữ nguyên bản sắc”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Đền Hai Bà Trưng: bộ nhớ (memory / 메모리) site không phải battlefield map hoàn hảo** nối từ **Hai Bà Trưng 40–43: rebellion là symptom của cấu trúc (structure / 구조) nào?** sang **Cultural thay đổi (change / 변경): không phải “mất bản sắc” hoặc “giữ nguyên bản sắc”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đền Hai Bà Trưng: bộ nhớ (memory / 메모리) site không phải battlefield map hoàn hảo
 
@@ -106,7 +106,7 @@ Các đền thờ Hai Bà Trưng ở Mê Linh và nhiều nơi khác cho thấy 
 
 Không nên lấy kiến trúc đền hiện nay làm trực tiếp bằng chứng (evidence / 증거) cho hình dạng settlement năm 40. Nhưng việc cult tồn tại lâu dài là bằng chứng (evidence / 증거) về **collective bộ nhớ (memory / 메모리) (ký ức tập thể)** và việc historical actors được reinterpret qua nhiều regime.
 
-> **Chuyển mạch:** Trong **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Cultural thay đổi (change / 변경): không phải “mất bản sắc” hoặc “giữ nguyên bản sắc”** tiếp nhận điểm tựa từ **Đền Hai Bà Trưng: bộ nhớ (memory / 메모리) site không phải battlefield map hoàn hảo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Recap và bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Cultural thay đổi (change / 변경): không phải “mất bản sắc” hoặc “giữ nguyên bản sắc”** nối từ **Đền Hai Bà Trưng: bộ nhớ (memory / 메모리) site không phải battlefield map hoàn hảo** sang **Recap và bàn giao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cultural thay đổi (change / 변경): không phải “mất bản sắc” hoặc “giữ nguyên bản sắc”
 
@@ -114,7 +114,7 @@ Giai đoạn này bắt đầu một quá trình exchange rất dài: administra
 
 Một society có thể dùng institutional technology từ empire mà không trở thành bản sao của empire. Đây sẽ là chìa khóa để hiểu vì sao các nhà nước độc lập thế kỷ X–XI vừa tiếp tục nhiều administrative form Đông Á vừa phát triển political culture riêng.
 
-> **Chuyển mạch:** Ở chặng này của **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Recap và bàn giao** tiếp nhận điểm tựa từ **Cultural thay đổi (change / 변경): không phải “mất bản sắc” hoặc “giữ nguyên bản sắc”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Nam Việt, nhà Hán và việc Bắc Bộ đi vào imperial hệ thống (system / 시스템)**, **Recap và bàn giao** nối từ **Cultural thay đổi (change / 변경): không phải “mất bản sắc” hoặc “giữ nguyên bản sắc”** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

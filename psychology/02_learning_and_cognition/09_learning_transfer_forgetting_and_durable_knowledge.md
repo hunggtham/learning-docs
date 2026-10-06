@@ -10,7 +10,7 @@ Một learner có thể làm bài rất tốt ngay sau khi xem đáp án vì th�
 
 Điều này tạo một nghịch lý: phương pháp khiến buổi học “dễ” và trôi chảy có thể cho cảm giác tiến bộ mạnh nhưng retention kém; ngược lại, một số difficulty hợp lý làm practice chậm hơn nhưng giúp retrieval lâu dài.
 
-> **Chuyển mạch:** Trong **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Forgetting không chỉ là thất bại (failure / 실패)** tiếp nhận điểm tựa từ **Hiệu năng (performance / 성능) hiện tại không bằng học tập (learning / 학습) lâu dài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Retrieval practice** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Forgetting không chỉ là thất bại (failure / 실패)** nối từ **Hiệu năng (performance / 성능) hiện tại không bằng học tập (learning / 학습) lâu dài** sang **Retrieval practice**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Forgetting không chỉ là thất bại (failure / 실패)
 
@@ -18,7 +18,7 @@ Quên xảy ra vì bộ nhớ (memory / 메모리) dấu vết (trace / 추적) 
 
 Mục tiêu học không phải ngăn quên hoàn toàn mà thiết kế repeated retrieval để những biểu diễn (representation / 표현) quan trọng trở nên accessible qua nhiều ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Ở chặng này của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Retrieval practice** tiếp nhận điểm tựa từ **Forgetting không chỉ là thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Spacing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Retrieval practice** nối từ **Forgetting không chỉ là thất bại (failure / 실패)** sang **Spacing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Retrieval practice
 
@@ -28,7 +28,7 @@ Retrieval practice hiệu quả nhất khi có phản hồi (feedback / 피드�
 
 Trong programming, tự implement API từ yêu cầu (requirement / 요구사항) rồi so sánh với tham chiếu (reference / 참조) thường tạo học tập (learning / 학습) sâu hơn chỉ đọc solution nhiều lần.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Spacing** tiếp nhận điểm tựa từ **Retrieval practice** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Interleaving** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Spacing** nối từ **Retrieval practice** sang **Interleaving**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Spacing
 
@@ -36,7 +36,7 @@ Trong programming, tự implement API từ yêu cầu (requirement / 요구사�
 
 Spacing tạo partial forgetting giữa các lần học, buộc retrieval phải hoạt động lại. Khoảng cách tối ưu phụ thuộc retention interval: nếu cần nhớ nhiều tháng, lịch ôn thường nên giãn dần thay vì cram trước deadline.
 
-> **Chuyển mạch:** Trong **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Interleaving** tiếp nhận điểm tựa từ **Spacing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Desirable difficulties** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Interleaving** nối từ **Spacing** sang **Desirable difficulties**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Interleaving
 
@@ -44,7 +44,7 @@ Spacing tạo partial forgetting giữa các lần học, buộc retrieval phả
 
 Ví dụ, làm 20 bài chỉ về phép nối (join / 조인) giúp thực thi (execution / 실행) trơn tru nhưng không luyện lựa chọn giữa phép nối (join / 조인), subquery, hàm cửa sổ (window function / 윈도우 함수) hay aggregation. Interleaving thêm bước classification trước thực thi (execution / 실행).
 
-> **Chuyển mạch:** Ở chặng này của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Desirable difficulties** tiếp nhận điểm tựa từ **Interleaving** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Transfer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Desirable difficulties** nối từ **Interleaving** sang **Transfer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Desirable difficulties
 
@@ -52,7 +52,7 @@ Ví dụ, làm 20 bài chỉ về phép nối (join / 조인) giúp thực thi (
 
 Nếu tác vụ (task / 작업) quá khó khiến learner không có biểu diễn (representation / 표현) nền để reason, difficulty chỉ tạo noise. Vì vậy challenge cần nằm trên nền kiến thức (knowledge / 지식) đủ để phản hồi (feedback / 피드백) có ý nghĩa.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Transfer** tiếp nhận điểm tựa từ **Desirable difficulties** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Analogical học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Transfer** nối từ **Desirable difficulties** sang **Analogical học tập (learning / 학습)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Transfer
 
@@ -62,7 +62,7 @@ Transfer khó vì learner thường encode cả solution cùng ngữ cảnh (con
 
 Muốn tăng transfer, nên học nhiều example có surface khác nhưng deep principle giống, đồng thời giải thích rõ `vì sao` chứ không chỉ `làm thế nào`.
 
-> **Chuyển mạch:** Trong **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Analogical học tập (learning / 학습)** tiếp nhận điểm tựa từ **Transfer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản hồi (feedback / 피드백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Analogical học tập (learning / 학습)** nối từ **Transfer** sang **Phản hồi (feedback / 피드백)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Analogical học tập (learning / 학습)
 
@@ -70,7 +70,7 @@ So sánh hai trường hợp (case / 사례) giúp trích xuất cấu trúc chu
 
 Analogy hữu ích khi ánh xạ (mapping / 매핑) đúng quan hệ (relation / 관계). Analogy sai có thể che mất ranh giới (boundary / 경계) điều kiện (condition / 조건), vì vậy cần hỏi thêm: “điểm nào của hai trường hợp (case / 사례) không tương ứng?”.
 
-> **Chuyển mạch:** Ở chặng này của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Phản hồi (feedback / 피드백)** tiếp nhận điểm tựa từ **Analogical học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Metacognitive calibration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Phản hồi (feedback / 피드백)** nối từ **Analogical học tập (learning / 학습)** sang **Metacognitive calibration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phản hồi (feedback / 피드백)
 
@@ -78,7 +78,7 @@ Phản hồi (feedback / 피드백) tốt trả lời ít nhất ba câu: hiện
 
 Phản hồi (feedback / 피드백) quá sớm có thể biến tác vụ (task / 작업) thành bản sao (copy / 복사). phản hồi (feedback / 피드백) quá muộn có thể cho phép lỗi (error / 오류) mẫu (pattern / 패턴) được lặp nhiều lần. Tần suất hợp lý phụ thuộc độ phức tạp (complexity / 복잡도) và skill mức (level / 수준).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Metacognitive calibration** tiếp nhận điểm tựa từ **Phản hồi (feedback / 피드백)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sleep và consolidation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Metacognitive calibration** nối từ **Phản hồi (feedback / 피드백)** sang **Sleep và consolidation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Metacognitive calibration
 
@@ -88,7 +88,7 @@ Calibration tốt hơn khi dùng prediction trước kiểm thử (test / 테스
 
 Xem [[04_cognitive_biases_and_metacognition]].
 
-> **Chuyển mạch:** Trong **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Sleep và consolidation** tiếp nhận điểm tựa từ **Metacognitive calibration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) và lược đồ (schema / 스키마)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Sleep và consolidation** nối từ **Metacognitive calibration** sang **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) và lược đồ (schema / 스키마)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sleep và consolidation
 
@@ -98,7 +98,7 @@ Học gần bedtime cũng không tự động tốt hơn mọi schedule. Quan tr
 
 Xem [[../01_brain_and_mind/08_sleep_circadian_and_recovery]].
 
-> **Chuyển mạch:** Ở chặng này của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) và lược đồ (schema / 스키마)** tiếp nhận điểm tựa từ **Sleep và consolidation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Học với AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) và lược đồ (schema / 스키마)** nối từ **Sleep và consolidation** sang **Học với AI**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) và lược đồ (schema / 스키마)
 
@@ -106,7 +106,7 @@ Durable kiến thức (knowledge / 지식) không phải tập fact độc lập
 
 Đây là lý do một thư viện kiến thức (knowledge library / 지식 라이브러리) nên có cross-reference thật sự theo cơ chế (mechanism / 메커니즘), không chỉ link vì hai chapter dùng cùng từ khóa (keyword / 키워드).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Học với AI** tiếp nhận điểm tựa từ **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) và lược đồ (schema / 스키마)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Học với AI** nối từ **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) và lược đồ (schema / 스키마)** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Học với AI
 
@@ -116,7 +116,7 @@ Một workflow tốt phân biệt hai chế độ (mode / 모드): **môi trư�
 
 Xem [[10_cognitive_offloading_external_memory_and_extended_cognition]] và [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]].
 
-> **Chuyển mạch:** Trong **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Học với AI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Những hiểu lầm phổ biến** nối từ **Học với AI** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -128,7 +128,7 @@ Xem [[10_cognitive_offloading_external_memory_and_extended_cognition]] và [[../
 
 **“Hiểu concept một lần là transfer được.”** Transfer thường cần nhiều ngữ cảnh (context / 맥락) và tường minh (explicit / 명시적) comparison.
 
-> **Chuyển mạch:** Ở chặng này của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -150,7 +150,7 @@ transfer sang context mới
 
 > Học bền vững được đo bằng khả năng truy xuất và vận dụng sau khi cue quen thuộc đã biến mất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Học bền vững, quên và chuyển giao — Durable học tập (learning / 학습), Forgetting & Transfer**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

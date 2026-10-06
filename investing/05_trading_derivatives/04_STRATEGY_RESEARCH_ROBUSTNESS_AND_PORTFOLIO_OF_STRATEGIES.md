@@ -25,7 +25,7 @@ Giới hạn rủi ro
 
 Nếu hai người đọc mô tả rồi triển khai ra hai hệ thống khác nhau đáng kể, quy tắc vẫn chưa đủ rõ.
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **2. Bắt đầu bằng giả thuyết** tiếp nhận điểm tựa từ **1. Ý tưởng chưa phải chiến lược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Cố gắng bác bỏ giả thuyết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **2. Bắt đầu bằng giả thuyết** nối từ **1. Ý tưởng chưa phải chiến lược** sang **3. Cố gắng bác bỏ giả thuyết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Bắt đầu bằng giả thuyết
 
@@ -40,7 +40,7 @@ Giả thuyết nên giải thích vì sao lợi thế có thể tồn tại, ví
 
 Có một cơ chế hợp lý giúp giảm nguy cơ chỉ tìm thấy mẫu ngẫu nhiên sau khi nhìn dữ liệu.
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **3. Cố gắng bác bỏ giả thuyết** tiếp nhận điểm tựa từ **2. Bắt đầu bằng giả thuyết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Dữ liệu trong mẫu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **3. Cố gắng bác bỏ giả thuyết** nối từ **2. Bắt đầu bằng giả thuyết** sang **4. Dữ liệu trong mẫu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Cố gắng bác bỏ giả thuyết
 
@@ -56,7 +56,7 @@ hoặc không tồn tại ngoài mẫu
 
 # Phần II — Trong mẫu và ngoài mẫu
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **3. Cố gắng bác bỏ giả thuyết** nêu điều cần giải thích; **4. Dữ liệu trong mẫu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. Dữ liệu ngoài mẫu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **3. Cố gắng bác bỏ giả thuyết** đặt vấn đề; **4. Dữ liệu trong mẫu** đối chiếu bằng chứng, rồi **5. Dữ liệu ngoài mẫu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. Dữ liệu trong mẫu
 
@@ -64,7 +64,7 @@ In-sample là nơi hình thành rule và ước lượng tham số, nhưng cũng
 
 **Trong mẫu (in-sample)** là dữ liệu dùng để xây hoặc điều chỉnh chiến lược. Kết quả đẹp ở đây dễ bị khớp quá mức nhất.
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **4. Dữ liệu trong mẫu** nêu điều cần giải thích; **5. Dữ liệu ngoài mẫu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. Kiểm thử cuốn chiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **4. Dữ liệu trong mẫu** đặt vấn đề; **5. Dữ liệu ngoài mẫu** đối chiếu bằng chứng, rồi **6. Kiểm thử cuốn chiếu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. Dữ liệu ngoài mẫu
 
@@ -74,7 +74,7 @@ OOS giữ lại một đoạn dữ liệu chưa từng dùng để thiết kế 
 
 Nếu lợi thế giữ được ngoài mẫu, bằng chứng mạnh hơn nhưng vẫn không bảo đảm tương lai.
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **5. Dữ liệu ngoài mẫu** nêu điều cần giải thích; **6. Kiểm thử cuốn chiếu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. Thiên lệch nhìn trước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **5. Dữ liệu ngoài mẫu** đặt vấn đề; **6. Kiểm thử cuốn chiếu** đối chiếu bằng chứng, rồi **7. Thiên lệch nhìn trước** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 6. Kiểm thử cuốn chiếu
 
@@ -93,7 +93,7 @@ Nó giúp kiểm tra khả năng thích nghi khi chế độ thị trường tha
 
 # Phần III — Các thiên lệch làm kết quả đẹp giả tạo
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **7. Thiên lệch nhìn trước** tiếp nhận điểm tựa từ **6. Kiểm thử cuốn chiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Thiên lệch sống sót** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **7. Thiên lệch nhìn trước** nối từ **6. Kiểm thử cuốn chiếu** sang **8. Thiên lệch sống sót**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Thiên lệch nhìn trước
 
@@ -101,7 +101,7 @@ Look-ahead bias làm chiến lược dùng thông tin mà tại thời điểm g
 
 **Thiên lệch nhìn trước (look-ahead bias)** xuất hiện khi dùng dữ liệu chưa tồn tại tại thời điểm quyết định.
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **8. Thiên lệch sống sót** tiếp nhận điểm tựa từ **7. Thiên lệch nhìn trước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Đào bới dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **8. Thiên lệch sống sót** nối từ **7. Thiên lệch nhìn trước** sang **9. Đào bới dữ liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Thiên lệch sống sót
 
@@ -109,7 +109,7 @@ Survivorship bias loại bỏ những tài sản thất bại khỏi mẫu, khi�
 
 **Thiên lệch sống sót (survivorship bias)** xuất hiện khi chỉ giữ các tài sản còn tồn tại hôm nay và bỏ những tài sản đã hủy niêm yết hoặc phá sản.
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **8. Thiên lệch sống sót** nêu điều cần giải thích; **9. Đào bới dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. Vấn đề thử nhiều giả thuyết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **8. Thiên lệch sống sót** đặt vấn đề; **9. Đào bới dữ liệu** đối chiếu bằng chứng, rồi **10. Vấn đề thử nhiều giả thuyết** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. Đào bới dữ liệu
 
@@ -117,7 +117,7 @@ Data snooping biến số lần thử thành nguồn bias. Mỗi rule, feature v
 
 **Đào bới dữ liệu (data snooping)** là thử rất nhiều quy tắc rồi chỉ giữ kết quả đẹp nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **9. Đào bới dữ liệu** nêu điều cần giải thích; **10. Vấn đề thử nhiều giả thuyết** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. Không tìm một điểm tối ưu duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **9. Đào bới dữ liệu** đặt vấn đề; **10. Vấn đề thử nhiều giả thuyết** đối chiếu bằng chứng, rồi **11. Không tìm một điểm tối ưu duy nhất** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 10. Vấn đề thử nhiều giả thuyết
 
@@ -125,19 +125,19 @@ Nếu thử hàng nghìn chiến lược, một số sẽ có Sharpe cao chỉ d
 
 # Phần IV — Độ ổn định của tham số
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **11. Không tìm một điểm tối ưu duy nhất** tiếp nhận điểm tựa từ **10. Vấn đề thử nhiều giả thuyết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Vùng tham số ổn định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **11. Không tìm một điểm tối ưu duy nhất** nối từ **10. Vấn đề thử nhiều giả thuyết** sang **12. Vùng tham số ổn định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Không tìm một điểm tối ưu duy nhất
 
 Nếu chiến lược chỉ có lãi ở tham số 47 nhưng thua ở 46 và 48, lợi thế có thể là nhiễu.
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **12. Vùng tham số ổn định** tiếp nhận điểm tựa từ **11. Không tìm một điểm tối ưu duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Tham số nên có ý nghĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **12. Vùng tham số ổn định** nối từ **11. Không tìm một điểm tối ưu duy nhất** sang **13. Tham số nên có ý nghĩa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Vùng tham số ổn định
 
 Một vùng tham số rộng có kết quả tương đối ổn định thường đáng tin hơn một đỉnh hẹp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **13. Tham số nên có ý nghĩa** tiếp nhận điểm tựa từ **12. Vùng tham số ổn định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Lợi thế trước và sau chi phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **13. Tham số nên có ý nghĩa** nối từ **12. Vùng tham số ổn định** sang **14. Lợi thế trước và sau chi phí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Tham số nên có ý nghĩa
 
@@ -145,7 +145,7 @@ Nếu có thể, tham số nên gắn với cơ chế kinh tế hoặc cấu tr�
 
 # Phần V — Chi phí và công suất
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **14. Lợi thế trước và sau chi phí** tiếp nhận điểm tựa từ **13. Tham số nên có ý nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Tác động thị trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **14. Lợi thế trước và sau chi phí** nối từ **13. Tham số nên có ý nghĩa** sang **15. Tác động thị trường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Lợi thế trước và sau chi phí
 
@@ -162,13 +162,13 @@ Lợi thế gộp
 > 0
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **15. Tác động thị trường** tiếp nhận điểm tựa từ **14. Lợi thế trước và sau chi phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Công suất chiến lược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **15. Tác động thị trường** nối từ **14. Lợi thế trước và sau chi phí** sang **16. Công suất chiến lược**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Tác động thị trường
 
 Khi vốn tăng, chính lệnh của chiến lược có thể làm giá di chuyển bất lợi. Kiểm thử bỏ qua yếu tố này thường đánh giá quá cao khả năng mở rộng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **16. Công suất chiến lược** tiếp nhận điểm tựa từ **15. Tác động thị trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Lợi thế có thể phụ thuộc chế độ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **16. Công suất chiến lược** nối từ **15. Tác động thị trường** sang **17. Lợi thế có thể phụ thuộc chế độ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Công suất chiến lược
 
@@ -186,7 +186,7 @@ Nó phụ thuộc:
 
 # Phần VI — Phụ thuộc chế độ thị trường
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **17. Lợi thế có thể phụ thuộc chế độ** tiếp nhận điểm tựa từ **16. Công suất chiến lược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Không dùng “chế độ thay đổi” để giải thích mọi thất bại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **17. Lợi thế có thể phụ thuộc chế độ** nối từ **16. Công suất chiến lược** sang **18. Không dùng “chế độ thay đổi” để giải thích mọi thất bại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Lợi thế có thể phụ thuộc chế độ
 
@@ -194,13 +194,13 @@ Chiến lược theo xu hướng có thể tốt khi xu hướng rõ nhưng kém
 
 Chiến lược kiếm lợi từ chênh lệch lãi suất có thể tốt khi biến động thấp nhưng chịu tổn thất đuôi khi nguồn vốn căng thẳng.
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **18. Không dùng “chế độ thay đổi” để giải thích mọi thất bại** tiếp nhận điểm tựa từ **17. Lợi thế có thể phụ thuộc chế độ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Các chế độ nên kiểm thử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **18. Không dùng “chế độ thay đổi” để giải thích mọi thất bại** nối từ **17. Lợi thế có thể phụ thuộc chế độ** sang **19. Các chế độ nên kiểm thử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Không dùng “chế độ thay đổi” để giải thích mọi thất bại
 
 Định nghĩa chế độ phải được đặt trước hoặc có quy tắc quan sát rõ. Nếu chỉ nói “chế độ đã thay đổi” sau khi thua, đó có thể là giải thích bằng nhận thức muộn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **19. Các chế độ nên kiểm thử** tiếp nhận điểm tựa từ **18. Không dùng “chế độ thay đổi” để giải thích mọi thất bại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Trung bình không đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **19. Các chế độ nên kiểm thử** nối từ **18. Không dùng “chế độ thay đổi” để giải thích mọi thất bại** sang **20. Trung bình không đủ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Các chế độ nên kiểm thử
 
@@ -216,7 +216,7 @@ Chiến lược kiếm lợi từ chênh lệch lãi suất có thể tốt khi 
 
 # Phần VII — Phân phối và rủi ro đuôi
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **20. Trung bình không đủ** tiếp nhận điểm tựa từ **19. Các chế độ nên kiểm thử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Cấu trúc bán biến động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **20. Trung bình không đủ** nối từ **19. Các chế độ nên kiểm thử** sang **21. Cấu trúc bán biến động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Trung bình không đủ
 
@@ -228,7 +228,7 @@ Cần xem thêm:
 - mức suy giảm;
 - thua lỗ theo cụm.
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **21. Cấu trúc bán biến động** tiếp nhận điểm tựa từ **20. Trung bình không đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Độ lồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **21. Cấu trúc bán biến động** nối từ **20. Trung bình không đủ** sang **22. Độ lồi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Cấu trúc bán biến động
 
@@ -236,7 +236,7 @@ Chiến lược có nhiều lệnh thắng nhỏ và vài lệnh thua rất lớ
 
 Tỷ lệ thắng 90% không đồng nghĩa an toàn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **22. Độ lồi** tiếp nhận điểm tựa từ **21. Cấu trúc bán biến động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Kỳ vọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **22. Độ lồi** nối từ **21. Cấu trúc bán biến động** sang **23. Kỳ vọng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Độ lồi
 
@@ -250,7 +250,7 @@ Danh mục cần biết mình đang nghiêng về phía nào.
 
 # Phần VIII — Kỳ vọng và bất định
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **23. Kỳ vọng** tiếp nhận điểm tựa từ **22. Độ lồi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Khoảng tin cậy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **23. Kỳ vọng** nối từ **22. Độ lồi** sang **24. Khoảng tin cậy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Kỳ vọng
 
@@ -264,13 +264,13 @@ Kỳ vọng
 
 Bản thân ước lượng này cũng có sai số.
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **24. Khoảng tin cậy** tiếp nhận điểm tựa từ **23. Kỳ vọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Kích thước mẫu hiệu dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **24. Khoảng tin cậy** nối từ **23. Kỳ vọng** sang **25. Kích thước mẫu hiệu dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Khoảng tin cậy
 
 Lợi suất trung bình dương nhưng khoảng tin cậy rất rộng có thể chưa đủ bằng chứng rằng lợi thế là thật.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **25. Kích thước mẫu hiệu dụng** tiếp nhận điểm tựa từ **24. Khoảng tin cậy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Lấy mẫu lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **25. Kích thước mẫu hiệu dụng** nối từ **24. Khoảng tin cậy** sang **26. Lấy mẫu lại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Kích thước mẫu hiệu dụng
 
@@ -278,7 +278,7 @@ Lợi suất trung bình dương nhưng khoảng tin cậy rất rộng có th�
 
 # Phần IX — Bootstrap và Monte Carlo
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **26. Lấy mẫu lại** tiếp nhận điểm tựa từ **25. Kích thước mẫu hiệu dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Mô phỏng Monte Carlo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **26. Lấy mẫu lại** nối từ **25. Kích thước mẫu hiệu dụng** sang **27. Mô phỏng Monte Carlo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Lấy mẫu lại
 
@@ -288,7 +288,7 @@ Bootstrap giúp nhìn độ bất định của kết quả khi thứ tự và m
 
 Nó giúp thấy phân phối mức suy giảm và lợi suất thay vì chỉ một đường vốn.
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **27. Mô phỏng Monte Carlo** tiếp nhận điểm tựa từ **26. Lấy mẫu lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Không biến mô phỏng thành độ chính xác giả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **27. Mô phỏng Monte Carlo** nối từ **26. Lấy mẫu lại** sang **28. Không biến mô phỏng thành độ chính xác giả**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Mô phỏng Monte Carlo
 
@@ -300,7 +300,7 @@ Monte Carlo có thể mô phỏng:
 - chuyển đổi chế độ;
 - bất định tham số.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **28. Không biến mô phỏng thành độ chính xác giả** tiếp nhận điểm tựa từ **27. Mô phỏng Monte Carlo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Nguy cơ phá sản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **28. Không biến mô phỏng thành độ chính xác giả** nối từ **27. Mô phỏng Monte Carlo** sang **29. Nguy cơ phá sản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Không biến mô phỏng thành độ chính xác giả
 
@@ -308,7 +308,7 @@ Kết quả phụ thuộc giả định đầu vào. Nếu phân phối giả đ
 
 # Phần X — Nguy cơ phá sản và quy mô vị thế
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **29. Nguy cơ phá sản** tiếp nhận điểm tựa từ **28. Không biến mô phỏng thành độ chính xác giả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Tiêu chuẩn Kelly** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **29. Nguy cơ phá sản** nối từ **28. Không biến mô phỏng thành độ chính xác giả** sang **30. Tiêu chuẩn Kelly**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Nguy cơ phá sản
 
@@ -320,13 +320,13 @@ Nguy cơ phá sản tăng khi:
 - thua lỗ tương quan;
 - rủi ro đuôi lớn.
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **30. Tiêu chuẩn Kelly** tiếp nhận điểm tựa từ **29. Nguy cơ phá sản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Ngân sách mức suy giảm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **30. Tiêu chuẩn Kelly** nối từ **29. Nguy cơ phá sản** sang **31. Ngân sách mức suy giảm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Tiêu chuẩn Kelly
 
 Kelly tối đa hóa tăng trưởng log dài hạn dưới giả định biết chính xác lợi thế. Trong thực tế thường dùng **Kelly phân số (fractional Kelly)** vì lợi thế chỉ được ước lượng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **31. Ngân sách mức suy giảm** tiếp nhận điểm tựa từ **30. Tiêu chuẩn Kelly** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Vì sao lợi thế suy giảm?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **31. Ngân sách mức suy giảm** nối từ **30. Tiêu chuẩn Kelly** sang **32. Vì sao lợi thế suy giảm?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Ngân sách mức suy giảm
 
@@ -341,7 +341,7 @@ Không nên quyết định trong lúc hoảng loạn.
 
 # Phần XI — Suy giảm chiến lược
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **32. Vì sao lợi thế suy giảm?** tiếp nhận điểm tựa từ **31. Ngân sách mức suy giảm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Phân biệt biến động bình thường và suy giảm thật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **32. Vì sao lợi thế suy giảm?** nối từ **31. Ngân sách mức suy giảm** sang **33. Phân biệt biến động bình thường và suy giảm thật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Vì sao lợi thế suy giảm?
 
@@ -354,13 +354,13 @@ Có thể do:
 - chế độ kinh tế thay đổi;
 - chất lượng thực thi giảm.
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **33. Phân biệt biến động bình thường và suy giảm thật** tiếp nhận điểm tựa từ **32. Vì sao lợi thế suy giảm?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Chỉ số theo dõi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **33. Phân biệt biến động bình thường và suy giảm thật** nối từ **32. Vì sao lợi thế suy giảm?** sang **34. Chỉ số theo dõi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Phân biệt biến động bình thường và suy giảm thật
 
 Một chuỗi thua không tự động chứng minh lợi thế đã mất. Cần so kết quả với phân phối đã kỳ vọng trước đó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **34. Chỉ số theo dõi** tiếp nhận điểm tựa từ **33. Phân biệt biến động bình thường và suy giảm thật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Mỗi thay đổi phải có lý do** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **34. Chỉ số theo dõi** nối từ **33. Phân biệt biến động bình thường và suy giảm thật** sang **35. Mỗi thay đổi phải có lý do**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Chỉ số theo dõi
 
@@ -379,7 +379,7 @@ Công suất
 
 # Phần XII — Nhật ký nghiên cứu
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **35. Mỗi thay đổi phải có lý do** tiếp nhận điểm tựa từ **34. Chỉ số theo dõi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Không viết lại lịch sử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **35. Mỗi thay đổi phải có lý do** nối từ **34. Chỉ số theo dõi** sang **36. Không viết lại lịch sử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Mỗi thay đổi phải có lý do
 
@@ -395,7 +395,7 @@ Lý do
 Kết quả xác thực
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **36. Không viết lại lịch sử** tiếp nhận điểm tựa từ **35. Mỗi thay đổi phải có lý do** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Kiểm thử tiến tới tương lai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **36. Không viết lại lịch sử** nối từ **35. Mỗi thay đổi phải có lý do** sang **37. Kiểm thử tiến tới tương lai**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Không viết lại lịch sử
 
@@ -403,7 +403,7 @@ Nếu chiến lược được sửa sau một chuỗi lỗ, phải giữ phiên
 
 # Phần XIII — Kiểm thử tiến tới tương lai và giao dịch thật nhỏ
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **37. Kiểm thử tiến tới tương lai** tiếp nhận điểm tựa từ **36. Không viết lại lịch sử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Giao dịch thật với quy mô nhỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **37. Kiểm thử tiến tới tương lai** nối từ **36. Không viết lại lịch sử** sang **38. Giao dịch thật với quy mô nhỏ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Kiểm thử tiến tới tương lai
 
@@ -416,13 +416,13 @@ Forward test đưa chiến lược vào dữ liệu mới với rule đã khóa,
 - lỗi phần mềm;
 - chi phí cao hơn giả định.
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **38. Giao dịch thật với quy mô nhỏ** tiếp nhận điểm tựa từ **37. Kiểm thử tiến tới tương lai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Tăng quy mô từng bước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **38. Giao dịch thật với quy mô nhỏ** nối từ **37. Kiểm thử tiến tới tương lai** sang **39. Tăng quy mô từng bước**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Giao dịch thật với quy mô nhỏ
 
 Quy mô nhỏ cho phép đo chất lượng khớp và vận hành trước khi tăng vốn.
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **39. Tăng quy mô từng bước** tiếp nhận điểm tựa từ **38. Giao dịch thật với quy mô nhỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Nhiều chiến lược không tự động tạo đa dạng hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **39. Tăng quy mô từng bước** nối từ **38. Giao dịch thật với quy mô nhỏ** sang **40. Nhiều chiến lược không tự động tạo đa dạng hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Tăng quy mô từng bước
 
@@ -441,19 +441,19 @@ Kiểm thử quá khứ
 
 # Phần XIV — Danh mục nhiều chiến lược
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **40. Nhiều chiến lược không tự động tạo đa dạng hóa** tiếp nhận điểm tựa từ **39. Tăng quy mô từng bước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Tương quan giữa chiến lược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **40. Nhiều chiến lược không tự động tạo đa dạng hóa** nối từ **39. Tăng quy mô từng bước** sang **41. Tương quan giữa chiến lược**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Nhiều chiến lược không tự động tạo đa dạng hóa
 
 Một danh mục có chiến lược theo xu hướng, kiếm chênh lệch lãi suất, bán quyền chọn và hồi quy về trung bình vẫn có thể cùng phụ thuộc vào biến động thấp hoặc thanh khoản dồi dào.
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **41. Tương quan giữa chiến lược** tiếp nhận điểm tựa từ **40. Nhiều chiến lược không tự động tạo đa dạng hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Phân rã theo nhân tố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **41. Tương quan giữa chiến lược** nối từ **40. Nhiều chiến lược không tự động tạo đa dạng hóa** sang **42. Phân rã theo nhân tố**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Tương quan giữa chiến lược
 
 Tương quan nên được đo cả trong giai đoạn bình thường và giai đoạn căng thẳng. Trung bình lịch sử thấp không bảo đảm tương quan thấp khi khủng hoảng.
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **42. Phân rã theo nhân tố** tiếp nhận điểm tựa từ **41. Tương quan giữa chiến lược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Chia vốn bằng nhau khác chia rủi ro bằng nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **42. Phân rã theo nhân tố** nối từ **41. Tương quan giữa chiến lược** sang **43. Chia vốn bằng nhau khác chia rủi ro bằng nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Phân rã theo nhân tố
 
@@ -473,25 +473,25 @@ Quốc gia
 
 Hai chiến lược dùng công cụ khác nhau có thể thực chất là cùng một cược nhân tố.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **43. Chia vốn bằng nhau khác chia rủi ro bằng nhau** tiếp nhận điểm tựa từ **42. Phân rã theo nhân tố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. Điều chỉnh theo độ biến động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **43. Chia vốn bằng nhau khác chia rủi ro bằng nhau** nối từ **42. Phân rã theo nhân tố** sang **44. Điều chỉnh theo độ biến động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. Chia vốn bằng nhau khác chia rủi ro bằng nhau
 
 Một chiến lược có độ biến động 5% và một chiến lược 30% không đóng góp rủi ro ngang nhau chỉ vì tỷ trọng vốn giống nhau.
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **44. Điều chỉnh theo độ biến động** tiếp nhận điểm tựa từ **43. Chia vốn bằng nhau khác chia rủi ro bằng nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. Đóng góp rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **44. Điều chỉnh theo độ biến động** nối từ **43. Chia vốn bằng nhau khác chia rủi ro bằng nhau** sang **45. Đóng góp rủi ro**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. Điều chỉnh theo độ biến động
 
 Có thể điều chỉnh quy mô để các chiến lược có mức rủi ro gần nhau hơn, nhưng vẫn cần giới hạn riêng cho rủi ro đuôi, đòn bẩy và thanh khoản.
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **45. Đóng góp rủi ro** tiếp nhận điểm tựa từ **44. Điều chỉnh theo độ biến động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. Tương quan có thể vỡ cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **45. Đóng góp rủi ro** nối từ **44. Điều chỉnh theo độ biến động** sang **46. Tương quan có thể vỡ cấu trúc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. Đóng góp rủi ro
 
 Cần biết mỗi chiến lược đóng góp bao nhiêu vào độ biến động danh mục và tổn thất trong kịch bản căng thẳng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **46. Tương quan có thể vỡ cấu trúc** tiếp nhận điểm tựa từ **45. Đóng góp rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **47. Tập trung bán biến động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **46. Tương quan có thể vỡ cấu trúc** nối từ **45. Đóng góp rủi ro** sang **47. Tập trung bán biến động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 46. Tương quan có thể vỡ cấu trúc
 
@@ -499,13 +499,13 @@ Trong khủng hoảng nguồn vốn, nhiều chiến lược cùng giảm đòn 
 
 # Phần XV — Độ lồi và rủi ro đuôi trong danh mục
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **47. Tập trung bán biến động** tiếp nhận điểm tựa từ **46. Tương quan có thể vỡ cấu trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **48. Phòng vệ đuôi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **47. Tập trung bán biến động** nối từ **46. Tương quan có thể vỡ cấu trúc** sang **48. Phòng vệ đuôi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. Tập trung bán biến động
 
 Các chiến lược tưởng khác nhau như bán quyền chọn, kiếm carry, cung cấp thanh khoản và một số chiến lược hồi quy về trung bình có thể cùng chịu rủi ro bán biến động.
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **48. Phòng vệ đuôi** tiếp nhận điểm tựa từ **47. Tập trung bán biến động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **49. Ngân sách phòng vệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **48. Phòng vệ đuôi** nối từ **47. Tập trung bán biến động** sang **49. Ngân sách phòng vệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. Phòng vệ đuôi
 
@@ -513,7 +513,7 @@ Tail hedge cần được đánh giá ở cấp portfolio và theo nhiều năm:
 
 **Phòng vệ đuôi (tail hedge)** có thể giảm tổn thất cực đoan nhưng tạo chi phí mang vị thế. Phải đánh giá ở cấp toàn danh mục và qua nhiều năm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **49. Ngân sách phòng vệ** tiếp nhận điểm tựa từ **48. Phòng vệ đuôi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **50. Chiến lược đúng vẫn có thể mất tiền vì lỗi vận hành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **49. Ngân sách phòng vệ** nối từ **48. Phòng vệ đuôi** sang **50. Chiến lược đúng vẫn có thể mất tiền vì lỗi vận hành**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. Ngân sách phòng vệ
 
@@ -521,7 +521,7 @@ Tail hedge cần được đánh giá ở cấp portfolio và theo nhiều năm:
 
 # Phần XVI — Rủi ro vận hành
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **50. Chiến lược đúng vẫn có thể mất tiền vì lỗi vận hành** tiếp nhận điểm tựa từ **49. Ngân sách phòng vệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **51. Công tắc dừng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **50. Chiến lược đúng vẫn có thể mất tiền vì lỗi vận hành** nối từ **49. Ngân sách phòng vệ** sang **51. Công tắc dừng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 50. Chiến lược đúng vẫn có thể mất tiền vì lỗi vận hành
 
@@ -534,13 +534,13 @@ Ví dụ:
 - mất kết nối API;
 - sai trạng thái ký quỹ.
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **51. Công tắc dừng** tiếp nhận điểm tựa từ **50. Chiến lược đúng vẫn có thể mất tiền vì lỗi vận hành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **52. Đối soát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **51. Công tắc dừng** nối từ **50. Chiến lược đúng vẫn có thể mất tiền vì lỗi vận hành** sang **52. Đối soát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 51. Công tắc dừng
 
 Mỗi chiến lược cần điều kiện dừng khi trạng thái vận hành không còn đáng tin.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **52. Đối soát** tiếp nhận điểm tựa từ **51. Công tắc dừng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **53. Không chỉ hỏi giao dịch lời hay lỗ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **52. Đối soát** nối từ **51. Công tắc dừng** sang **53. Không chỉ hỏi giao dịch lời hay lỗ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 52. Đối soát
 
@@ -548,7 +548,7 @@ Vị thế thực tế phải được đối chiếu với trạng thái tại 
 
 # Phần XVII — Phân rã sau giao dịch
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **53. Không chỉ hỏi giao dịch lời hay lỗ** tiếp nhận điểm tựa từ **52. Đối soát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **54. Chất lượng quyết định và kết quả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **53. Không chỉ hỏi giao dịch lời hay lỗ** nối từ **52. Đối soát** sang **54. Chất lượng quyết định và kết quả**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 53. Không chỉ hỏi giao dịch lời hay lỗ
 
@@ -564,7 +564,7 @@ Biến động nhân tố
 Can thiệp thủ công
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **54. Chất lượng quyết định và kết quả** tiếp nhận điểm tựa từ **53. Không chỉ hỏi giao dịch lời hay lỗ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **55. Đánh giá theo chiến lược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **54. Chất lượng quyết định và kết quả** nối từ **53. Không chỉ hỏi giao dịch lời hay lỗ** sang **55. Đánh giá theo chiến lược**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 54. Chất lượng quyết định và kết quả
 
@@ -572,7 +572,7 @@ Một quyết định đúng quy trình vẫn có thể lỗ do bất định. M
 
 # Phần XVIII — Đánh giá định kỳ
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **55. Đánh giá theo chiến lược** tiếp nhận điểm tựa từ **54. Chất lượng quyết định và kết quả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **56. Đánh giá toàn danh mục** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **55. Đánh giá theo chiến lược** nối từ **54. Chất lượng quyết định và kết quả** sang **56. Đánh giá toàn danh mục**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. Đánh giá theo chiến lược
 
@@ -590,7 +590,7 @@ Công suất
 Phơi nhiễm nhân tố
 ```
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **56. Đánh giá toàn danh mục** tiếp nhận điểm tựa từ **55. Đánh giá theo chiến lược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **57. Kỷ luật thay đổi quy tắc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **56. Đánh giá toàn danh mục** nối từ **55. Đánh giá theo chiến lược** sang **57. Kỷ luật thay đổi quy tắc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 56. Đánh giá toàn danh mục
 
@@ -606,7 +606,7 @@ Ký quỹ
 Tổn thất căng thẳng
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **57. Kỷ luật thay đổi quy tắc** tiếp nhận điểm tựa từ **56. Đánh giá toàn danh mục** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **58. Bằng chứng lợi thế đã mất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **57. Kỷ luật thay đổi quy tắc** nối từ **56. Đánh giá toàn danh mục** sang **58. Bằng chứng lợi thế đã mất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 57. Kỷ luật thay đổi quy tắc
 
@@ -614,7 +614,7 @@ Không thay quy tắc chỉ vì tháng vừa rồi xấu. Mọi thay đổi ph�
 
 # Phần XIX — Khi nào nên dừng chiến lược?
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **57. Kỷ luật thay đổi quy tắc** nêu điều cần giải thích; **58. Bằng chứng lợi thế đã mất** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **59. Chi phí chìm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **57. Kỷ luật thay đổi quy tắc** đặt vấn đề; **58. Bằng chứng lợi thế đã mất** đối chiếu bằng chứng, rồi **59. Chi phí chìm** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 58. Bằng chứng lợi thế đã mất
 
@@ -626,7 +626,7 @@ Có thể cân nhắc dừng khi:
 - công suất quá nhỏ;
 - rủi ro vận hành quá cao.
 
-> **Chuyển mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **58. Bằng chứng lợi thế đã mất** nêu điều cần giải thích; **59. Chi phí chìm** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **60. Chuỗi nghiên cứu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **58. Bằng chứng lợi thế đã mất** đặt vấn đề; **59. Chi phí chìm** đối chiếu bằng chứng, rồi **60. Chuỗi nghiên cứu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 59. Chi phí chìm
 
@@ -634,7 +634,7 @@ Thời gian đã bỏ vào nghiên cứu không phải lý do tiếp tục một
 
 # Phần XX — Quy trình nghiên cứu chuẩn
 
-> **Chuyển mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **59. Chi phí chìm** xác định đầu vào; **60. Chuỗi nghiên cứu** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **59. Chi phí chìm** đặt đầu vào cho **60. Chuỗi nghiên cứu**, rồi **Kết luận** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 60. Chuỗi nghiên cứu
 
@@ -656,7 +656,7 @@ Giả thuyết
 → giám sát
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **Kết luận** gom các mảnh từ **60. Chuỗi nghiên cứu** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nghiên cứu độ bền chiến lược và danh mục nhiều chiến lược**, **Kết luận** tổng hợp từ **60. Chuỗi nghiên cứu** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

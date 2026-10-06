@@ -12,7 +12,7 @@ Baseline thực hành chính là **WebSquare5 SP5** vì dòng này có Developme
 
 Trong môi trường vận hành (production / 운영 환경), **engine bản dựng (build / 빌드) cụ thể quan trọng hơn tên “SP5”**. thuộc tính (property / 속성), default, sự kiện (event / 이벤트) thứ tự (ordering / 순서), bộ nhớ đệm (cache / 캐시) hành vi (behavior / 동작), bảo mật (security / 보안) fix và private internals có thể đổi theo bản dựng (build / 빌드). chính xác (exact / 정확한) API/thuộc tính (property / 속성) phải đối chiếu API tham chiếu (reference / 참조) và bản phát hành (release / 릴리스) Notes đúng engine đang chạy. chuẩn gốc (canonical / 정본) chapter ưu tiên mô hình tư duy (mental model / 사고 모델) bền hơn phiên bản (version / 버전).
 
-> **Chuyển mạch:** Trong **WebSquare JavaScript thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Mô hình tư duy (mental model / 사고 모델) cốt lõi** gom các mảnh từ **Baseline và phạm vi phiên bản (version / 버전)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Thứ tự học chuẩn gốc (canonical / 정본)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **WebSquare JavaScript thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Mô hình tư duy (mental model / 사고 모델) cốt lõi** tổng hợp từ **Baseline và phạm vi phiên bản (version / 버전)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Thứ tự học chuẩn gốc (canonical / 정본)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델) cốt lõi
 
@@ -29,7 +29,7 @@ Browser / JavaScript runtime
 
 Khi lỗi xảy ra, câu hỏi đầu tiên không phải “API nào sai?” mà là **ranh giới (boundary / 경계) nào đang vi phạm bất biến (invariant / 불변식)**.
 
-> **Chuyển mạch:** Ở chặng này của **WebSquare JavaScript thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Thứ tự học chuẩn gốc (canonical / 정본)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델) cốt lõi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Phụ thuộc (dependency / 의존성) map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **WebSquare JavaScript thư viện kiến thức (knowledge library / 지식 라이브러리)**, **Thứ tự học chuẩn gốc (canonical / 정본)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델) cốt lõi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Phụ thuộc (dependency / 의존성) map** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Thứ tự học chuẩn gốc (canonical / 정본)
 
@@ -59,7 +59,7 @@ Khi lỗi xảy ra, câu hỏi đầu tiên không phải “API nào sai?” m�
 24. [24 — Event Semantics, Reentrancy & Performance Profiling](24_event_semantics_performance_profiling.md) — người dùng (user / 사용자)/programmatic sự kiện (event / 이벤트) ngữ nghĩa (semantics / 의미론), build-sensitive thứ tự (ordering / 순서), reentrancy/sự kiện (event / 이벤트) storm, binding amplification, formatter đường xử lý nóng (hot path / 핫 패스), WebSquare/trình duyệt (browser / 브라우저) profiling, large-data bộ nhớ (memory / 메모리) và hiệu năng (performance / 성능) regression kỹ thuật (engineering / 엔지니어링).
 25. [Glossary & Coverage Audit](GLOSSARY_AND_COVERAGE.md) — glossary Việt–Anh–Hàn và coverage/mastery kiểm tra (audit / 감사). Khi học chapter 23–24, bổ sung mô hình tư duy (mental model / 사고 모델) `workflow run identity`, `state acknowledgement`, `event reentrancy`, `work amplification` và `performance budget` vào checklist Master hiện có.
 
-> **Chuyển mạch:** Canonical route xác định prerequisite; dependency map chuyển route đó thành các module/runtime boundary cụ thể. Coding style tiếp theo giữ các boundary ấy nhất quán trong codebase WebSquare.
+> **Nối mạch:** Canonical route xác định prerequisite; dependency map chuyển route đó thành các module/runtime boundary cụ thể. Coding style tiếp theo giữ các boundary ấy nhất quán trong codebase WebSquare.
 
 ## Phụ thuộc (dependency / 의존성) map
 
@@ -96,7 +96,7 @@ Các chapter 08–12 xử lý độ phức tạp (complexity / 복잡도) chỉ 
 
 Các chapter 13–24 là **Master nhánh học (track / 트랙)**. Chúng nối nhiều định danh (identity / 식별자): row/thực thể (entity / 엔터티), screen instance, yêu cầu (request / 요청)/giao dịch (transaction / 트랜잭션), upload/tệp (file / 파일), bản địa (native / 네이티브) yêu cầu (request / 요청), correlation, principal/session, sự kiện (event / 이벤트)/phiên bản (version / 버전), thời gian chạy (runtime / 런타임) sản phẩm tạo ra (artifact / 산출물)/bản dựng (build / 빌드) và workflow run. Master không phải nhớ nhiều thuộc tính (property / 속성) hơn; Master là giữ đúng định danh (identity / 식별자), quyền sở hữu (ownership / 소유권), vòng đời (lifecycle / 생명주기), thứ tự (ordering / 순서), chi phí (cost / 비용) và bằng chứng (evidence / 증거) qua nhiều ranh giới (boundary / 경계).
 
-> **Chuyển mạch:** Dependency map cho biết module nào được phép gọi module nào; coding style biến rule đó thành convention có thể review. First principles tiếp theo giải thích vì sao convention phục vụ lifecycle và state ownership.
+> **Nối mạch:** Dependency map cho biết module nào được phép gọi module nào; coding style biến rule đó thành convention có thể review. First principles tiếp theo giải thích vì sao convention phục vụ lifecycle và state ownership.
 
 ## Coding style của thư viện (library / 라이브러리)
 
@@ -108,7 +108,7 @@ Reusable thành phần (component / 컴포넌트) expose năng lực (capability
 
 Ở Master nhánh học (track / 트랙), tên phải thể hiện định danh (identity / 식별자)/coordinate hệ thống (system / 시스템): `viewRowIndex`, `modelRowIndex`, `orderId`, `screenInstanceKey`, `requestId`, `workflowRunId`, `uploadSessionId`, `nativeRequestId`, `eventId`, `principalId`, `buildId`. Từ “loaded” nên được thay bằng source-ready, object-ready, render-ready, data-ready, auth-ready, native-ready hoặc artifact-ready khi vòng đời (lifecycle / 생명주기) quan trọng.
 
-> **Chuyển mạch:** Coding convention chỉ có giá trị khi bảo vệ nguyên lý về page, event, data và state. Project nhỏ tiếp theo dùng các nguyên lý đó trong một flow có thể chạy và review.
+> **Nối mạch:** Coding convention chỉ có giá trị khi bảo vệ nguyên lý về page, event, data và state. Project nhỏ tiếp theo dùng các nguyên lý đó trong một flow có thể chạy và review.
 
 ## Nguyên lý nền tảng (first principles / 제일 원리)
 
@@ -118,7 +118,7 @@ WebSquare chuẩn hóa những việc ứng dụng enterprise phải làm lặp 
 
 Vì vậy câu hỏi “đã tải (load / 로드) chưa?”, “row nào?”, “đã login chưa?”, “API nào?”, “sự kiện (event / 이벤트) nào?”, “đã deploy chưa?” đều phải được thay bằng câu hỏi có định danh (identity / 식별자) và bằng chứng (evidence / 증거) cụ thể.
 
-> **Chuyển mạch:** **Nguyên lý nền tảng** trả lời WebSquare đang mô hình hóa điều gì; **Cách học bằng dự án nhỏ** chuyển mô hình đó thành thao tác trên Page, component và binding, rồi **Nguồn chuẩn để kiểm chứng** đối chiếu hành vi với tài liệu owner.
+> **Nối mạch:** **Nguyên lý nền tảng** trả lời WebSquare đang mô hình hóa điều gì; **Cách học bằng dự án nhỏ** chuyển mô hình đó thành thao tác trên Page, component và binding, rồi **Nguồn chuẩn để kiểm chứng** đối chiếu hành vi với tài liệu owner.
 
 ## Cách học bằng dự án (project / 프로젝트) nhỏ
 
@@ -150,7 +150,7 @@ page open/close lặp lại làm listener invocation tăng dần
 
 Mỗi trường hợp (case / 사례) phải giải thích được bất biến (invariant / 불변식), đơn vị sở hữu (owner / 오너), định danh (identity / 식별자), thứ tự (ordering / 순서), thử lại (retry / 재시도) an toàn (safety / 안전), vô hiệu hóa (invalidation / 무효화), chi phí (cost / 비용) mô hình (model / 모델), bằng chứng (evidence / 증거) và regression guard.
 
-> **Chuyển mạch:** Sau khi thử flow nhỏ, hãy quay về **Nguồn chuẩn để kiểm chứng** để phân biệt hành vi WebSquare thực tế với suy đoán; đó là điểm khóa trước khi mở các chapter runtime và workflow.
+> **Nối mạch:** Sau khi thử flow nhỏ, hãy quay về **Nguồn chuẩn để kiểm chứng** để phân biệt hành vi WebSquare thực tế với suy đoán; đó là điểm khóa trước khi mở các chapter runtime và workflow.
 
 ## Nguồn chuẩn để kiểm chứng
 

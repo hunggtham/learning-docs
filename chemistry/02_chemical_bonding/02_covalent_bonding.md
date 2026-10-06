@@ -25,7 +25,7 @@ quá gần      → năng lượng tăng rất mạnh
 
 Khoảng cách tại cực tiểu chính là **độ dài liên kết cân bằng**.
 
-> **Chuyển mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Phân tử hydrogen — ví dụ tối giản** cho ta quy tắc; **Tại sao mật độ electron giữa hai hạt nhân tạo liên kết?** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình cặp electron Lewis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Phân tử hydrogen — ví dụ tối giản** nêu quy tắc; **Tại sao mật độ electron giữa hai hạt nhân tạo liên kết?** thử quy tắc trong tình huống, rồi **Mô hình cặp electron Lewis** mở rộng hệ quả.
 
 ## Tại sao mật độ electron giữa hai hạt nhân tạo liên kết?
 
@@ -33,7 +33,7 @@ Nếu electron tập trung giữa hai hạt nhân, lực hút electron–hạt n
 
 Có thể hình dung electron density ở giữa như một “vùng keo lượng tử”, nhưng phải nhớ đây chỉ là trực giác. Bản chất chính xác đến từ nghiệm của Hamiltonian nhiều hạt.
 
-> **Chuyển mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Mô hình cặp electron Lewis** tiếp nhận điểm tựa từ **Tại sao mật độ electron giữa hai hạt nhân tạo liên kết?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết đơn, đôi và ba** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Mô hình cặp electron Lewis** nối từ **Tại sao mật độ electron giữa hai hạt nhân tạo liên kết?** sang **Liên kết đơn, đôi và ba**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mô hình cặp electron Lewis
 
@@ -63,7 +63,7 @@ Nhưng nó không trực tiếp mô tả:
 
 Vì vậy Lewis là mô hình bookkeeping rất tốt, không phải bản đồ mật độ electron thực.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, sau nội dung của **Mô hình cặp electron Lewis**, **Liên kết đơn, đôi và ba** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết sigma và pi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, sau nội dung của **Mô hình cặp electron Lewis**, **Liên kết đơn, đôi và ba** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết sigma và pi** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết đơn, đôi và ba
 
@@ -80,7 +80,7 @@ Ví dụ giữa hai carbon:
 
 Nhưng không nên hiểu “liên kết đôi mạnh gấp đôi liên kết đơn”. Năng lượng không tăng tuyến tính vì thành phần sigma và pi có bản chất chồng phủ khác nhau.
 
-> **Chuyển mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Liên kết sigma và pi** tiếp nhận điểm tựa từ **Liên kết đơn, đôi và ba** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết cộng hóa trị và obitan phân tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Liên kết sigma và pi** nối từ **Liên kết đơn, đôi và ba** sang **Liên kết cộng hóa trị và obitan phân tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên kết sigma và pi
 
@@ -110,7 +110,7 @@ Liên kết π hạn chế quay vì xoay quanh trục làm hai orbital p mất s
 - độ phẳng của alkene;
 - conjugation.
 
-> **Chuyển mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Liên kết cộng hóa trị và obitan phân tử** tiếp nhận điểm tựa từ **Liên kết sigma và pi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bậc liên kết trong MO** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Liên kết cộng hóa trị và obitan phân tử** nối từ **Liên kết sigma và pi** sang **Bậc liên kết trong MO**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên kết cộng hóa trị và obitan phân tử
 
@@ -137,7 +137,7 @@ Orbital phản liên kết có nút (node / 노드) giữa hai hạt nhân và e
 
 Điều này giúp giải thích sâu hơn vì sao không phải chỉ “có electron” là tạo liên kết; **electron nằm ở orbital nào** mới quyết định hiệu ứng liên kết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Bậc liên kết trong MO** tiếp nhận điểm tựa từ **Liên kết cộng hóa trị và obitan phân tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **HOMO và LUMO** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Bậc liên kết trong MO** nối từ **Liên kết cộng hóa trị và obitan phân tử** sang **HOMO và LUMO**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bậc liên kết trong MO
 
@@ -156,7 +156,7 @@ Ví dụ này quan trọng khi giải thích:
 - quang hóa;
 - phản ứng làm yếu liên kết.
 
-> **Chuyển mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **HOMO và LUMO** tiếp nhận điểm tựa từ **Bậc liên kết trong MO** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ phân cực của liên kết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **HOMO và LUMO** nối từ **Bậc liên kết trong MO** sang **Độ phân cực của liên kết**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## HOMO và LUMO
 
@@ -180,7 +180,7 @@ Nếu hai orbital có:
 
 thì tương tác có thể mạnh hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, sau nội dung của **HOMO và LUMO**, **Độ phân cực của liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Độ âm điện không phải đại lượng độc lập với môi trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, sau nội dung của **HOMO và LUMO**, **Độ phân cực của liên kết** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Độ âm điện không phải đại lượng độc lập với môi trường** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Độ phân cực của liên kết
 
@@ -196,7 +196,7 @@ Liên kết vẫn là cộng hóa trị nhưng có phân cực.
 
 Chênh lệch độ âm điện giúp dự đoán xu hướng, nhưng không có một ngưỡng tuyệt đối biến liên kết từ “cộng hóa trị” thành “ion”. Hai mô hình nằm trên một phổ liên tục.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Độ âm điện không phải đại lượng độc lập với môi trường** tiếp nhận điểm tựa từ **Độ phân cực của liên kết** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mômen lưỡng cực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Độ âm điện không phải đại lượng độc lập với môi trường** nối từ **Độ phân cực của liên kết** sang **Mômen lưỡng cực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ âm điện không phải đại lượng độc lập với môi trường
 
@@ -210,7 +210,7 @@ Giá trị độ âm điện trong bảng là mô hình hữu ích, nhưng khả
 
 Do đó không nên suy mọi phân bố electron chỉ từ một bảng độ âm điện.
 
-> **Chuyển mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Mômen lưỡng cực** tiếp nhận điểm tựa từ **Độ âm điện không phải đại lượng độc lập với môi trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khả năng phân cực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Mômen lưỡng cực** nối từ **Độ âm điện không phải đại lượng độc lập với môi trường** sang **Khả năng phân cực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mômen lưỡng cực
 
@@ -236,7 +236,7 @@ Do đó:
 độ phân cực liên kết ≠ độ phân cực phân tử
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Khả năng phân cực** tiếp nhận điểm tựa từ **Mômen lưỡng cực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng phân ly liên kết và năng lượng liên kết trung bình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Khả năng phân cực** nối từ **Mômen lưỡng cực** sang **Năng lượng phân ly liên kết và năng lượng liên kết trung bình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khả năng phân cực
 
@@ -254,7 +254,7 @@ Polarizability ảnh hưởng:
 
 Đây là cầu nối giữa covalent bonding và intermolecular forces.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, sau nội dung của **Khả năng phân cực**, **Năng lượng phân ly liên kết và năng lượng liên kết trung bình** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Năng lượng liên kết và năng lượng phản ứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, sau nội dung của **Khả năng phân cực**, **Năng lượng phân ly liên kết và năng lượng liên kết trung bình** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Năng lượng liên kết và năng lượng phản ứng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Năng lượng phân ly liên kết và năng lượng liên kết trung bình
 
@@ -272,7 +272,7 @@ Trong khi đó **năng lượng liên kết trung bình (average bond enthalpy)*
 
 Hai khái niệm không nên dùng thay nhau khi cần độ chính xác cơ chế.
 
-> **Chuyển mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Năng lượng liên kết và năng lượng phản ứng** tiếp nhận điểm tựa từ **Năng lượng phân ly liên kết và năng lượng liên kết trung bình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phá liên kết đồng ly và dị ly** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Năng lượng liên kết và năng lượng phản ứng** nối từ **Năng lượng phân ly liên kết và năng lượng liên kết trung bình** sang **Phá liên kết đồng ly và dị ly**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng liên kết và năng lượng phản ứng
 
@@ -288,7 +288,7 @@ Công thức giúp sửa một hiểu lầm phổ biến:
 
 > phá liên kết **cần năng lượng**; phản ứng tỏa nhiệt khi các liên kết mới hình thành giải phóng nhiều năng lượng hơn lượng cần để phá liên kết cũ.
 
-> **Chuyển mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Phá liên kết đồng ly và dị ly** tiếp nhận điểm tựa từ **Năng lượng liên kết và năng lượng phản ứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết cho–nhận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Phá liên kết đồng ly và dị ly** nối từ **Năng lượng liên kết và năng lượng phản ứng** sang **Liên kết cho–nhận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phá liên kết đồng ly và dị ly
 
@@ -314,7 +314,7 @@ Môi trường dung môi ảnh hưởng rất mạnh đến heterolysis vì ion 
 
 Khác biệt này rất quan trọng trong hóa hữu cơ và cơ chế phản ứng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Liên kết cho–nhận** tiếp nhận điểm tựa từ **Phá liên kết đồng ly và dị ly** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cộng hưởng và phi định xứ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Liên kết cho–nhận** nối từ **Phá liên kết đồng ly và dị ly** sang **Cộng hưởng và phi định xứ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên kết cho–nhận
 
@@ -332,7 +332,7 @@ Sau khi liên kết hình thành, không tồn tại “một loại liên kết
 
 Điều này nối Lewis acid–cơ sở (base / 기반) với coordination chemistry.
 
-> **Chuyển mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Cộng hưởng và phi định xứ** tiếp nhận điểm tựa từ **Liên kết cho–nhận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng cộng hưởng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Cộng hưởng và phi định xứ** nối từ **Liên kết cho–nhận** sang **Năng lượng cộng hưởng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cộng hưởng và phi định xứ
 
@@ -344,7 +344,7 @@ Các hình này không phải phân tử nhảy qua lại giữa nhiều cấu t
 
 Kết quả là ba liên kết C–O có độ dài gần nhau thay vì một đôi và hai đơn hoàn toàn tách biệt.
 
-> **Chuyển mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Năng lượng cộng hưởng** tiếp nhận điểm tựa từ **Cộng hưởng và phi định xứ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conjugation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Năng lượng cộng hưởng** nối từ **Cộng hưởng và phi định xứ** sang **Conjugation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng cộng hưởng
 
@@ -360,7 +360,7 @@ Nó quan trọng trong:
 - allyl hệ thống (system / 시스템);
 - aromatic ion.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Conjugation** tiếp nhận điểm tựa từ **Năng lượng cộng hưởng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hyperconjugation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Conjugation** nối từ **Năng lượng cộng hưởng** sang **Hyperconjugation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Conjugation
 
@@ -382,7 +382,7 @@ Conjugation làm thay đổi:
 
 Đây là lý do polyene dài hấp thụ ánh sáng ở wavelength dài hơn.
 
-> **Chuyển mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Hyperconjugation** tiếp nhận điểm tựa từ **Conjugation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết đa tâm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Hyperconjugation** nối từ **Conjugation** sang **Liên kết đa tâm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hyperconjugation
 
@@ -396,7 +396,7 @@ Nó góp phần giải thích:
 
 Không nên mô tả mọi xu hướng này chỉ bằng “inductive tác động (effect / 효과)”.
 
-> **Chuyển mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, sau nội dung của **Hyperconjugation**, **Liên kết đa tâm** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Hypervalency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, sau nội dung của **Hyperconjugation**, **Liên kết đa tâm** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Hypervalency** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết đa tâm
 
@@ -406,7 +406,7 @@ Một số phân tử electron-deficient như diborane có **liên kết ba tâm
 
 Điều này cho thấy octet/Lewis là mô hình rất mạnh nhưng không phải quy luật tuyệt đối của mọi compound.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Hypervalency** tiếp nhận điểm tựa từ **Liên kết đa tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết cộng hóa trị trong chất rắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Hypervalency** nối từ **Liên kết đa tâm** sang **Liên kết cộng hóa trị trong chất rắn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hypervalency
 
@@ -421,7 +421,7 @@ Mô tả hiện đại thường nhấn mạnh:
 
 Điều quan trọng là không gắn một hình hybridization đơn giản như lời giải vật lý tuyệt đối.
 
-> **Chuyển mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, sau nội dung của **Hypervalency**, **Liên kết cộng hóa trị trong chất rắn** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Cùng nguyên tố, topology khác, tính chất khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, sau nội dung của **Hypervalency**, **Liên kết cộng hóa trị trong chất rắn** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Cùng nguyên tố, topology khác, tính chất khác** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết cộng hóa trị trong chất rắn
 
@@ -439,7 +439,7 @@ Tính chất của mạng phụ thuộc:
 - defect;
 - topology.
 
-> **Chuyển mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Cùng nguyên tố, topology khác, tính chất khác** tiếp nhận điểm tựa từ **Liên kết cộng hóa trị trong chất rắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết và trạng thái kích thích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Cùng nguyên tố, topology khác, tính chất khác** nối từ **Liên kết cộng hóa trị trong chất rắn** sang **Liên kết và trạng thái kích thích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cùng nguyên tố, topology khác, tính chất khác
 
@@ -460,7 +460,7 @@ thành phần hóa học không đủ
 → phải biết cấu trúc liên kết
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, sau nội dung của **Cùng nguyên tố, topology khác, tính chất khác**, **Liên kết và trạng thái kích thích** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết và spectroscopy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, sau nội dung của **Cùng nguyên tố, topology khác, tính chất khác**, **Liên kết và trạng thái kích thích** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Liên kết và spectroscopy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết và trạng thái kích thích
 
@@ -477,7 +477,7 @@ Nếu bond thứ tự (order / 순서) giảm đáng kể, liên kết có thể
 
 Vì vậy bonding không chỉ quyết định cấu trúc ground trạng thái (state / 상태) mà còn quyết định phản ứng ở excited trạng thái (state / 상태).
 
-> **Chuyển mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Liên kết và spectroscopy** tiếp nhận điểm tựa từ **Liên kết và trạng thái kích thích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Liên kết và spectroscopy** nối từ **Liên kết và trạng thái kích thích** sang **Các hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên kết và spectroscopy
 
@@ -493,7 +493,7 @@ Liên kết mạnh hơn thường có force constant lớn hơn và vibration fr
 
 Đây là cách spectroscopy “nhìn thấy” bonding gián tiếp.
 
-> **Chuyển mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Các hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Liên kết và spectroscopy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Các hiểu lầm thường gặp** nối từ **Liên kết và spectroscopy** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các hiểu lầm thường gặp
 
@@ -521,7 +521,7 @@ Không. Hybridization là mô hình localized bonding hữu ích; MO lý thuyế
 
 Không. Phá bond cần năng lượng; quá trình tổng có thể tỏa nhiệt vì bond mới hình thành bù nhiều hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Liên kết cộng hóa trị — tổ chức mật độ electron giữa nhiều hạt nhân**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

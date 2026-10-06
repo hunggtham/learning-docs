@@ -89,7 +89,7 @@ Generated mã (code / 코드) là một phần bản dựng (build / 빌드) ki�
 
 `suspend` không tạo luồng thực thi (thread / 스레드). trình biên dịch (compiler / 컴파일러) biến suspend hàm (function / 함수) thành máy trạng thái (state machine / 상태 머신) với continuation. Coroutine có thể suspend mà không giữ luồng thực thi (thread / 스레드) và resume trên luồng thực thi (thread / 스레드) khác theo dispatcher/ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Mục lục đặt suspension trong runtime context; suspend chỉ nhường execution, còn cancellation tiếp theo là cooperative control cần được code kiểm tra.
+> **Nối mạch:** Mục lục đặt suspension trong runtime context; suspend chỉ nhường execution, còn cancellation tiếp theo là cooperative control cần được code kiểm tra.
 
 ## 6.1 Suspension không đồng nghĩa background
 
@@ -103,7 +103,7 @@ suspend fun parseHugeJson(text: String): Model {
 
 `suspend` chỉ nói hàm (function / 함수) có thể suspend; nó không nói công việc (work / 작업) main-safe. Blocking/CPU-heavy công việc (work / 작업) cần thực thi (execution / 실행) chính sách (policy / 정책) rõ ở tầng (layer / 계층) sở hữu hiện thực (implementation / 구현).
 
-> **Chuyển mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **6.1 Suspension không đồng nghĩa background** xác định đầu vào; **6.2 Cancellation là cooperative điều khiển (control / 제어) luồng (flow / 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6.3 Cleanup và NonCancellable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **6.1 Suspension không đồng nghĩa background** đặt đầu vào cho **6.2 Cancellation là cooperative điều khiển (control / 제어) luồng (flow / 흐름)**, rồi **6.3 Cleanup và NonCancellable** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 6.2 Cancellation là cooperative điều khiển (control / 제어) luồng (flow / 흐름)
 
@@ -130,7 +130,7 @@ try {
 
 Generic `catch (Throwable)` rồi convert thành `UiError` có thể biến screen đã đóng thành thao tác (operation / 연산) tiếp tục chạy và emit trạng thái (state / 상태) muộn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, sau khi thấy quy trình trong **6.2 Cancellation là cooperative điều khiển (control / 제어) luồng (flow / 흐름)**, **6.3 Cleanup và NonCancellable** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **7.1 Concurrent start không phải always faster** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, sau khi thấy quy trình trong **6.2 Cancellation là cooperative điều khiển (control / 제어) luồng (flow / 흐름)**, **6.3 Cleanup và NonCancellable** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **7.1 Concurrent start không phải always faster** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 6.3 Cleanup và `NonCancellable`
 
@@ -150,7 +150,7 @@ Với `coroutineScope`, child thất bại (failure / 실패) thường cancel s
 
 `launch` và `async` khác mục đích: `launch` cho fire-and-join side tác động (effect / 효과) trong phạm vi (scope / 범위); `async` tạo giá trị (value / 값) cần `await`. Dùng `async` mà không `await` thường là smell.
 
-> **Chuyển mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **6.3 Cleanup và NonCancellable** cho ta quy tắc; **7.1 Concurrent start không phải always faster** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **7.2 Stale kết quả (result / 결과) race** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **6.3 Cleanup và NonCancellable** nêu quy tắc; **7.1 Concurrent start không phải always faster** thử quy tắc trong tình huống, rồi **7.2 Stale kết quả (result / 결과) race** mở rộng hệ quả.
 
 ## 7.1 Concurrent start không phải always faster
 
@@ -166,7 +166,7 @@ coroutineScope {
 
 Chỉ parallel nếu A/B độc lập và backend/thiết bị (device / 장치) ngân sách (budget / 예산) cho phép. Parallel hóa quá mức có thể tăng contention, rate-limit và battery chi phí (cost / 비용).
 
-> **Chuyển mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **7.2 Stale kết quả (result / 결과) race** tiếp nhận điểm tựa từ **7.1 Concurrent start không phải always faster** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8.1 Backpressure operator mang nghĩa nghiệp vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **7.2 Stale kết quả (result / 결과) race** nối từ **7.1 Concurrent start không phải always faster** sang **8.1 Backpressure operator mang nghĩa nghiệp vụ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.2 Stale kết quả (result / 결과) race
 
@@ -184,7 +184,7 @@ StateFlow/SharedFlow
 upstream/state có lifetime riêng
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **8.1 Backpressure operator mang nghĩa nghiệp vụ** tiếp nhận điểm tựa từ **7.2 Stale kết quả (result / 결과) race** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8.2 stateIn/shareIn thay đổi thời gian tồn tại (lifetime / 수명)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **8.1 Backpressure operator mang nghĩa nghiệp vụ** nối từ **7.2 Stale kết quả (result / 결과) race** sang **8.2 stateIn/shareIn thay đổi thời gian tồn tại (lifetime / 수명)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8.1 Backpressure operator mang nghĩa nghiệp vụ
 
@@ -201,13 +201,13 @@ Tìm kiếm (search / 검색) phù hợp latest-wins. kiểm tra (audit / 감사
 
 <!-- merge: preserve both chuẩn gốc (canonical / 정본) variants -->
 
-> **Chuyển mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **8.2 stateIn/shareIn thay đổi thời gian tồn tại (lifetime / 수명)** tiếp nhận điểm tựa từ **8.1 Backpressure operator mang nghĩa nghiệp vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8.3 StateFlow vs sự kiện (event / 이벤트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **8.2 stateIn/shareIn thay đổi thời gian tồn tại (lifetime / 수명)** nối từ **8.1 Backpressure operator mang nghĩa nghiệp vụ** sang **8.3 StateFlow vs sự kiện (event / 이벤트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8.2 `stateIn`/`shareIn` thay đổi thời gian tồn tại (lifetime / 수명)
 
 Chúng không chỉ tối ưu subscription; chúng biến cold upstream thành dùng chung (shared / 공유) hot stream trong một phạm vi (scope / 범위). Nếu phạm vi (scope / 범위) application-level, DB/mạng (network / 네트워크) subscription có thể sống lâu hơn screen. `SharingStarted.WhileSubscribed(timeout)` phải chọn theo reconnect chi phí (cost / 비용)/staleness ngữ nghĩa (semantics / 의미론).
 
-> **Chuyển mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **8.2 stateIn/shareIn thay đổi thời gian tồn tại (lifetime / 수명)** xác định đầu vào; **8.3 StateFlow vs sự kiện (event / 이벤트)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9.1 Bắt đầu kiến trúc (architecture / 아키텍처) bằng bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **8.2 stateIn/shareIn thay đổi thời gian tồn tại (lifetime / 수명)** đặt đầu vào cho **8.3 StateFlow vs sự kiện (event / 이벤트)**, rồi **9.1 Bắt đầu kiến trúc (architecture / 아키텍처) bằng bất biến (invariant / 불변식)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8.3 `StateFlow` vs sự kiện (event / 이벤트)
 
@@ -245,7 +245,7 @@ state mới
 
 Điểm cấp cao (senior / 시니어) cần giữ không phải “mọi app phải có reducer”, mà là **mỗi fact quan trọng có đơn vị sở hữu (owner / 오너) và nguồn chuẩn (source of truth / 정본) rõ**. Nếu cùng một bookmark tồn tại thành mutable trạng thái (state / 상태) riêng ở cơ sở dữ liệu (database / 데이터베이스), repository bộ nhớ đệm (cache / 캐시), ViewModel và `remember`, hệ thống có bốn nơi có thể bất đồng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **8.3 StateFlow vs sự kiện (event / 이벤트)** xác định đầu vào; **9.1 Bắt đầu kiến trúc (architecture / 아키텍처) bằng bất biến (invariant / 불변식)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9.2 máy trạng thái (state machine / 상태 머신) tránh impossible trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **8.3 StateFlow vs sự kiện (event / 이벤트)** đặt đầu vào cho **9.1 Bắt đầu kiến trúc (architecture / 아키텍처) bằng bất biến (invariant / 불변식)**, rồi **9.2 máy trạng thái (state machine / 상태 머신) tránh impossible trạng thái (state / 상태)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9.1 Bắt đầu kiến trúc (architecture / 아키텍처) bằng bất biến (invariant / 불변식)
 
@@ -260,7 +260,7 @@ Process recreation có thể reconstruct screen từ stable ID.
 
 Kiến trúc (architecture / 아키텍처) có giá trị khi ranh giới (boundary / 경계) làm bất biến (invariant / 불변식) dễ giữ và dễ kiểm thử (test / 테스트).
 
-> **Chuyển mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **9.2 máy trạng thái (state machine / 상태 머신) tránh impossible trạng thái (state / 상태)** tiếp nhận điểm tựa từ **9.1 Bắt đầu kiến trúc (architecture / 아키텍처) bằng bất biến (invariant / 불변식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9.3 Command, trạng thái (state / 상태) và sự kiện (event / 이벤트) phải phân biệt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **9.2 máy trạng thái (state machine / 상태 머신) tránh impossible trạng thái (state / 상태)** nối từ **9.1 Bắt đầu kiến trúc (architecture / 아키텍처) bằng bất biến (invariant / 불변식)** sang **9.3 Command, trạng thái (state / 상태) và sự kiện (event / 이벤트) phải phân biệt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9.2 máy trạng thái (state machine / 상태 머신) tránh impossible trạng thái (state / 상태)
 
@@ -285,7 +285,7 @@ content có thể coexist với refresh/error metadata
 
 Không ép mọi screen thành sealed trạng thái (state / 상태) nếu UX cần cached content + refresh + warning cùng lúc. mô hình (model / 모델) phải theo nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식), không theo template.
 
-> **Chuyển mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **9.3 Command, trạng thái (state / 상태) và sự kiện (event / 이벤트) phải phân biệt** tiếp nhận điểm tựa từ **9.2 máy trạng thái (state machine / 상태 머신) tránh impossible trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9.4 Stale snapshot là kiến trúc (architecture / 아키텍처) bug, không chỉ tính đồng thời (concurrency / 동시성) bug** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **9.3 Command, trạng thái (state / 상태) và sự kiện (event / 이벤트) phải phân biệt** nối từ **9.2 máy trạng thái (state machine / 상태 머신) tránh impossible trạng thái (state / 상태)** sang **9.4 Stale snapshot là kiến trúc (architecture / 아키텍처) bug, không chỉ tính đồng thời (concurrency / 동시성) bug**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9.3 Command, trạng thái (state / 상태) và sự kiện (event / 이벤트) phải phân biệt
 
@@ -304,7 +304,7 @@ Transient UI effect
 
 Nếu một fact quan trọng bị mô hình (model / 모델) thành sự kiện (event / 이벤트) một lần và collector vắng mặt thì mất, thiết kế (design / 설계) có thể sai. Durable fact nên có durable/source-of-truth biểu diễn (representation / 표현).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **9.4 Stale snapshot là kiến trúc (architecture / 아키텍처) bug, không chỉ tính đồng thời (concurrency / 동시성) bug** tiếp nhận điểm tựa từ **9.3 Command, trạng thái (state / 상태) và sự kiện (event / 이벤트) phải phân biệt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10.1 định danh (identity / 식별자) đến từ vị trí lời gọi (call / 호출) site và key** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **9.4 Stale snapshot là kiến trúc (architecture / 아키텍처) bug, không chỉ tính đồng thời (concurrency / 동시성) bug** nối từ **9.3 Command, trạng thái (state / 상태) và sự kiện (event / 이벤트) phải phân biệt** sang **10.1 định danh (identity / 식별자) đến từ vị trí lời gọi (call / 호출) site và key**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9.4 Stale snapshot là kiến trúc (architecture / 아키텍처) bug, không chỉ tính đồng thời (concurrency / 동시성) bug
 
@@ -357,7 +357,7 @@ Draw — vẽ như thế nào?
 
 Recomposition chỉ nói về việc chạy lại phần **composition** cần thiết. Sau đó bố cục (layout / 레이아웃) hoặc draw có thể chạy hoặc được bỏ qua tùy kết quả. Vì vậy “recomposition count cao” tự nó chưa chứng minh UI chậm.
 
-> **Chuyển mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **10.1 định danh (identity / 식별자) đến từ vị trí lời gọi (call / 호출) site và key** tiếp nhận điểm tựa từ **9.4 Stale snapshot là kiến trúc (architecture / 아키텍처) bug, không chỉ tính đồng thời (concurrency / 동시성) bug** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10.2 remember thuộc Composition, không thuộc nghiệp vụ (business / 비즈니스) đối tượng (object / 객체)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **10.1 định danh (identity / 식별자) đến từ vị trí lời gọi (call / 호출) site và key** nối từ **9.4 Stale snapshot là kiến trúc (architecture / 아키텍처) bug, không chỉ tính đồng thời (concurrency / 동시성) bug** sang **10.2 remember thuộc Composition, không thuộc nghiệp vụ (business / 비즈니스) đối tượng (object / 객체)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10.1 định danh (identity / 식별자) đến từ vị trí lời gọi (call / 호출) site và key
 
@@ -377,7 +377,7 @@ LazyColumn {
 
 Key phải biểu diễn định danh (identity / 식별자) bền vững, không phải chỉ mục (index / 인덱스) nếu chỉ mục (index / 인덱스) thay đổi khi insert/delete/reorder.
 
-> **Chuyển mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **10.2 remember thuộc Composition, không thuộc nghiệp vụ (business / 비즈니스) đối tượng (object / 객체)** tiếp nhận điểm tựa từ **10.1 định danh (identity / 식별자) đến từ vị trí lời gọi (call / 호출) site và key** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10.3 trạng thái (state / 상태) read quyết định phase nào bị invalidated** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **10.2 remember thuộc Composition, không thuộc nghiệp vụ (business / 비즈니스) đối tượng (object / 객체)** nối từ **10.1 định danh (identity / 식별자) đến từ vị trí lời gọi (call / 호출) site và key** sang **10.3 trạng thái (state / 상태) read quyết định phase nào bị invalidated**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10.2 `remember` thuộc Composition, không thuộc nghiệp vụ (business / 비즈니스) đối tượng (object / 객체)
 
@@ -405,7 +405,7 @@ durable data
 → repository + database/DataStore/server
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **10.3 trạng thái (state / 상태) read quyết định phase nào bị invalidated** tiếp nhận điểm tựa từ **10.2 remember thuộc Composition, không thuộc nghiệp vụ (business / 비즈니스) đối tượng (object / 객체)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10.4 Composable body phải gần pure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **10.3 trạng thái (state / 상태) read quyết định phase nào bị invalidated** nối từ **10.2 remember thuộc Composition, không thuộc nghiệp vụ (business / 비즈니스) đối tượng (object / 객체)** sang **10.4 Composable body phải gần pure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10.3 trạng thái (state / 상태) read quyết định phase nào bị invalidated
 
@@ -413,7 +413,7 @@ Compose theo dõi nơi đọc trạng thái (state / 상태), không chỉ nơi 
 
 Cấp cao (senior / 시니어) tối ưu hóa (optimization / 최적화) không phải chuyển mọi read xuống phase thấp nhất bằng mẹo khó đọc; nó là hiểu đường xử lý nóng (hot path / 핫 패스) để tránh công việc (work / 작업) không cần thiết khi profiler chứng minh vấn đề.
 
-> **Chuyển mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **10.4 Composable body phải gần pure** tiếp nhận điểm tựa từ **10.3 trạng thái (state / 상태) read quyết định phase nào bị invalidated** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10.1 định danh (identity / 식별자) quan trọng như trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **10.4 Composable body phải gần pure** nối từ **10.3 trạng thái (state / 상태) read quyết định phase nào bị invalidated** sang **10.1 định danh (identity / 식별자) quan trọng như trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10.4 Composable body phải gần pure
 
@@ -429,7 +429,7 @@ fun Bad(userId: String) {
 
 <!-- merge: preserve both chuẩn gốc (canonical / 정본) variants -->
 
-> **Chuyển mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **10.1 định danh (identity / 식별자) quan trọng như trạng thái (state / 상태)** tiếp nhận điểm tựa từ **10.4 Composable body phải gần pure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10.2 tuyến (route / 경로) vs screen** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **10.1 định danh (identity / 식별자) quan trọng như trạng thái (state / 상태)** nối từ **10.4 Composable body phải gần pure** sang **10.2 tuyến (route / 경로) vs screen**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10.1 định danh (identity / 식별자) quan trọng như trạng thái (state / 상태)
 
@@ -460,7 +460,7 @@ Key sai có thể khiến text-field trạng thái (state / 상태)/animation c�
 
 <!-- merge: preserve both chuẩn gốc (canonical / 정본) variants -->
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **10.2 tuyến (route / 경로) vs screen** tiếp nhận điểm tựa từ **10.1 định danh (identity / 식별자) quan trọng như trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Kotlin + Android Master ghi chú (note / 노트) — Advanced / cấp cao (senior / 시니어)**, **10.2 tuyến (route / 경로) vs screen** nối từ **10.1 định danh (identity / 식별자) quan trọng như trạng thái (state / 상태)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 10.2 tuyến (route / 경로) vs screen
 

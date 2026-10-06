@@ -8,7 +8,7 @@ Công sở Hàn Quốc hiện đại là một “phòng thí nghiệm xã hội
 
 Tuy vậy, một số khái niệm giúp ta đọc được hệ thống.
 
-> **Chuyển mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **Công ty là nơi nhiều lớp văn hoá va vào nhau** đã nêu tiêu chí phân biệt, còn **직급, 직책, 연차: ba trục dễ nhầm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **담당자: người phụ trách và trách nhiệm vận hành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **Công ty là nơi nhiều lớp văn hoá va vào nhau** đặt tiêu chí; **직급, 직책, 연차: ba trục dễ nhầm** dùng tiêu chí đó để kiểm tra ranh giới, rồi **담당자: người phụ trách và trách nhiệm vận hành** mở rộng hệ quả.
 
 ## 직급, 직책, 연차: ba trục dễ nhầm
 
@@ -22,7 +22,7 @@ Nếu coi tổ chức như một hệ thống kiểm soát truy cập, `직급` 
 
 Ngoài ra còn có **phân công công việc (업무분장 / division of duties)**. Đây là lớp quan trọng vì người có chức danh cao chưa chắc là người phụ trách trực tiếp một việc cụ thể. Trong dự án, câu `이 건 담당자가 누구예요?` thường quan trọng hơn việc chỉ nhìn chức vụ.
 
-> **Chuyển mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **직급, 직책, 연차: ba trục dễ nhầm** đã nêu tiêu chí phân biệt, còn **담당자: người phụ trách và trách nhiệm vận hành** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **보고: báo cáo như một giao thức quản trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **직급, 직책, 연차: ba trục dễ nhầm** đặt tiêu chí; **담당자: người phụ trách và trách nhiệm vận hành** dùng tiêu chí đó để kiểm tra ranh giới, rồi **보고: báo cáo như một giao thức quản trị** mở rộng hệ quả.
 
 ## 담당자: người phụ trách và trách nhiệm vận hành
 
@@ -41,7 +41,7 @@ Nếu thiếu một trong bốn, giao tiếp dễ rơi vào trạng thái “m�
 
 `책임소재` chỉ nơi quy trách nhiệm, thường xuất hiện khi có sự cố và tổ chức cần biết trách nhiệm nằm ở lớp nào. Mặt tích cực là tăng **trách nhiệm giải trình (accountability)**; mặt tiêu cực là nếu bị biến thành săn người để đổ lỗi thì nhân viên sẽ giấu lỗi thay vì báo sớm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **보고: báo cáo như một giao thức quản trị** tiếp nhận điểm tựa từ **담당자: người phụ trách và trách nhiệm vận hành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **보고 타이밍: báo sớm hay tự xử lý trước?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **보고: báo cáo như một giao thức quản trị** nối từ **담당자: người phụ trách và trách nhiệm vận hành** sang **보고 타이밍: báo sớm hay tự xử lý trước?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 보고: báo cáo như một giao thức quản trị
 
@@ -51,7 +51,7 @@ Một báo cáo tốt trả lời: trạng thái hiện tại là gì, rủi ro 
 
 Trong nhóm phần mềm có thể phân biệt **kéo thông tin (information pull)** và **đẩy thông tin (information push)**. Bảng điều khiển cho phép quản lý tự xem trạng thái; báo cáo hằng ngày yêu cầu kỹ sư chủ động gửi. Nếu khả năng quan sát hệ thống tốt, nhu cầu báo cáo trạng thái thủ công có thể giảm.
 
-> **Chuyển mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **보고 타이밍: báo sớm hay tự xử lý trước?** tiếp nhận điểm tựa từ **보고: báo cáo như một giao thức quản trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **결재, 승인 và 합의** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **보고 타이밍: báo sớm hay tự xử lý trước?** nối từ **보고: báo cáo như một giao thức quản trị** sang **결재, 승인 và 합의**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 보고 타이밍: báo sớm hay tự xử lý trước?
 
@@ -69,7 +69,7 @@ Trong sự cố hoặc UAT, khuôn mẫu hữu ích là:
 
 `선보고 후조치` — báo trước rồi xử lý — có thể phù hợp khi ảnh hưởng lớn hoặc cần phê duyệt. Nhưng tình huống kỹ thuật khẩn cấp đôi khi cần `선조치 후보고` nếu trì hoãn gây thiệt hại. Điều quan trọng là nhóm phải biết quy tắc, không để kỹ sư phải đoán bằng 눈치.
 
-> **Chuyển mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **결재, 승인 và 합의** tiếp nhận điểm tựa từ **보고 타이밍: báo sớm hay tự xử lý trước?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **회의: cuộc họp và quyền nói** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **결재, 승인 và 합의** nối từ **보고 타이밍: báo sớm hay tự xử lý trước?** sang **회의: cuộc họp và quyền nói**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 결재, 승인 và 합의
 
@@ -87,7 +87,7 @@ Nếu người học dịch tất cả thành một từ “approve”, họ s�
 
 **Định luật Little (Little’s Law)** trong lý thuyết hàng đợi cho thấy lượng công việc đang xử lý liên quan tới tốc độ việc đến và thời gian nằm trong hệ thống. Không cần áp công thức máy móc để thấy lô-gic (logic / 논리): nếu mọi yêu cầu phải qua nhiều người duyệt đang bận, hàng đợi sẽ dài. “Văn hoá chậm” đôi khi không phải thái độ mà là kiến trúc của quy trình phê duyệt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **회의: cuộc họp và quyền nói** tiếp nhận điểm tựa từ **결재, 승인 và 합의** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **회의록, 정리: sau cuộc họp mọi người hiểu cùng một việc chưa?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **회의: cuộc họp và quyền nói** nối từ **결재, 승인 và 합의** sang **회의록, 정리: sau cuộc họp mọi người hiểu cùng một việc chưa?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 회의: cuộc họp và quyền nói
 
@@ -97,7 +97,7 @@ Các tổ chức hiệu quả cố xây dựng **an toàn tâm lý (심리적 �
 
 Ví dụ, thay vì trực tiếp `그건 틀렸습니다` trong tình huống nhạy cảm, người nói có thể dùng `제가 확인한 로그에서는 다른 결과가 보여서요. 이 부분을 다시 확인해 보면 좋을 것 같습니다.` Nội dung kỹ thuật không yếu đi; cách diễn đạt chỉ giảm nguy cơ làm người khác mất mặt.
 
-> **Chuyển mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **회의록, 정리: sau cuộc họp mọi người hiểu cùng một việc chưa?** tiếp nhận điểm tựa từ **회의: cuộc họp và quyền nói** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **공유: “chia sẻ” không chỉ là gửi tệp (file / 파일)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **회의록, 정리: sau cuộc họp mọi người hiểu cùng một việc chưa?** nối từ **회의: cuộc họp và quyền nói** sang **공유: “chia sẻ” không chỉ là gửi tệp (file / 파일)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 회의록, 정리: sau cuộc họp mọi người hiểu cùng một việc chưa?
 
@@ -116,7 +116,7 @@ Ví dụ, thay vì trực tiếp `그건 틀렸습니다` trong tình huống nh
 
 Trong hệ thống phân tán, đạt đồng thuận có chi phí cao. Trong nhóm con người, biên bản họp là một vật chứng đồng thuận có chi phí thấp.
 
-> **Chuyển mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **공유: “chia sẻ” không chỉ là gửi tệp (file / 파일)** tiếp nhận điểm tựa từ **회의록, 정리: sau cuộc họp mọi người hiểu cùng một việc chưa?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **인수인계: bàn giao như chuyển trạng thái giữa người** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **공유: “chia sẻ” không chỉ là gửi tệp (file / 파일)** nối từ **회의록, 정리: sau cuộc họp mọi người hiểu cùng một việc chưa?** sang **인수인계: bàn giao như chuyển trạng thái giữa người**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 공유: “chia sẻ” không chỉ là gửi tệp (file / 파일)
 
@@ -131,7 +131,7 @@ Nhưng chia sẻ quá rộng tạo quá tải thông báo. Giao tiếp tốt c�
 
 Email CC, nhắc tên trên trình nhắn tin và công cụ quản lý dự án đều là các lớp định tuyến thông tin. Văn hoá “chia sẻ nhiều cho an toàn” có thể giảm nguy cơ bị quy trách nhiệm nhưng tăng tải nhận thức.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **인수인계: bàn giao như chuyển trạng thái giữa người** tiếp nhận điểm tựa từ **공유: “chia sẻ” không chỉ là gửi tệp (file / 파일)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **회식: ăn uống như hạ tầng quan hệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **인수인계: bàn giao như chuyển trạng thái giữa người** nối từ **공유: “chia sẻ” không chỉ là gửi tệp (file / 파일)** sang **회식: ăn uống như hạ tầng quan hệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 인수인계: bàn giao như chuyển trạng thái giữa người
 
@@ -149,7 +149,7 @@ Email CC, nhắc tên trên trình nhắn tin và công cụ quản lý dự án
 
 Nếu chỉ truyền tệp (file / 파일) mà không truyền lý do của quyết định cũ, người mới nhận việc có mã nguồn nhưng mất bối cảnh. Đây là vấn đề mất kiến thức tổ chức.
 
-> **Chuyển mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **회식: ăn uống như hạ tầng quan hệ** tiếp nhận điểm tựa từ **인수인계: bàn giao như chuyển trạng thái giữa người** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phép lịch sự khi uống rượu và quyền từ chối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **회식: ăn uống như hạ tầng quan hệ** nối từ **인수인계: bàn giao như chuyển trạng thái giữa người** sang **Phép lịch sự khi uống rượu và quyền từ chối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 회식: ăn uống như hạ tầng quan hệ
 
@@ -159,7 +159,7 @@ Nhưng 회식 cũng có chi phí: thời gian cá nhân, áp lực uống rượ
 
 Điều cần tránh là đồng nhất “회식 = ép uống”. Có môi trường như vậy, nhưng đó không phải định nghĩa của 회식.
 
-> **Chuyển mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **Phép lịch sự khi uống rượu và quyền từ chối** tiếp nhận điểm tựa từ **회식: ăn uống như hạ tầng quan hệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **야근, 연차 và văn hoá luôn sẵn sàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **Phép lịch sự khi uống rượu và quyền từ chối** nối từ **회식: ăn uống như hạ tầng quan hệ** sang **야근, 연차 và văn hoá luôn sẵn sàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phép lịch sự khi uống rượu và quyền từ chối
 
@@ -167,7 +167,7 @@ Tập quán truyền thống thường gồm rót rượu cho người khác b�
 
 Tuy nhiên công sở hiện đại chịu tác động của luật, quy định tuân thủ và thay đổi chuẩn mực. Việc ép uống không nên được hợp thức hoá bằng “văn hoá Hàn”. Kiến thức văn hoá dùng để hiểu tín hiệu, không phải để xoá ranh giới cá nhân.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **야근, 연차 và văn hoá luôn sẵn sàng** tiếp nhận điểm tựa từ **Phép lịch sự khi uống rượu và quyền từ chối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **정규직, 계약직, 파견, 협력사: loại hình việc làm ảnh hưởng trải nghiệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **야근, 연차 và văn hoá luôn sẵn sàng** nối từ **Phép lịch sự khi uống rượu và quyền từ chối** sang **정규직, 계약직, 파견, 협력사: loại hình việc làm ảnh hưởng trải nghiệm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 야근, 연차 và văn hoá luôn sẵn sàng
 
@@ -179,7 +179,7 @@ Trong công việc tri thức, năng suất không tăng tuyến tính theo th�
 
 Đây là ví dụ về **ràng buộc không chính thức (informal constraint)**: quyền pháp lý có thể tồn tại, nhưng chi phí xã hội mà người lao động cảm nhận vẫn ảnh hưởng hành vi.
 
-> **Chuyển mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **정규직, 계약직, 파견, 협력사: loại hình việc làm ảnh hưởng trải nghiệm** tiếp nhận điểm tựa từ **야근, 연차 và văn hoá luôn sẵn sàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SI, SM và văn hoá dự án trong IT Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **정규직, 계약직, 파견, 협력사: loại hình việc làm ảnh hưởng trải nghiệm** nối từ **야근, 연차 và văn hoá luôn sẵn sàng** sang **SI, SM và văn hoá dự án trong IT Hàn Quốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 정규직, 계약직, 파견, 협력사: loại hình việc làm ảnh hưởng trải nghiệm
 
@@ -195,7 +195,7 @@ Hai người ngồi cạnh nhau có thể làm cùng dự án nhưng quyền tru
 
 Trong dự án IT/SI, quan hệ `원청–협력사` hoặc khách hàng–nhà cung cấp có thể tạo bất cân xứng quyền lực. Đây là nơi từ vựng `갑–을` xuất hiện, nhưng không nên mặc định mọi hợp tác đều là lạm dụng. Mấu chốt là ai kiểm soát ngân sách, nghiệm thu và gia hạn.
 
-> **Chuyển mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **SI, SM và văn hoá dự án trong IT Hàn Quốc** tiếp nhận điểm tựa từ **정규직, 계약직, 파견, 협력사: loại hình việc làm ảnh hưởng trải nghiệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **메신저 và email: 확인, 회신, 전달** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **SI, SM và văn hoá dự án trong IT Hàn Quốc** nối từ **정규직, 계약직, 파견, 협력사: loại hình việc làm ảnh hưởng trải nghiệm** sang **메신저 và email: 확인, 회신, 전달**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## SI, SM và văn hoá dự án trong IT Hàn Quốc
 
@@ -216,7 +216,7 @@ Các từ hay gặp:
 
 Văn hoá ngữ cảnh cao dễ làm yêu cầu chỉ tồn tại trong hội thoại thay vì phiếu công việc. Vì vậy dự án đa quốc gia cần biến thoả thuận miệng thành tài liệu hoặc mục công việc rõ ràng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **메신저 và email: 확인, 회신, 전달** tiếp nhận điểm tựa từ **SI, SM và văn hoá dự án trong IT Hàn Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **재택근무·하이브리드근무: khi sự hiện diện không còn đồng nghĩa với có mặt tại văn phòng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **메신저 và email: 확인, 회신, 전달** nối từ **SI, SM và văn hoá dự án trong IT Hàn Quốc** sang **재택근무·하이브리드근무: khi sự hiện diện không còn đồng nghĩa với có mặt tại văn phòng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 메신저 và email: 확인, 회신, 전달
 
@@ -231,7 +231,7 @@ Tiếng Hàn doanh nghiệp có nhiều cụm tưởng giống nhau nhưng chứ
 
 Một phản hồi chỉ `네` có thể xác nhận đã nhận thông tin nhưng chưa có nghĩa hành động đã hoàn tất. Vì vậy với việc quan trọng, nên nói rõ đầu ra: `확인 후 3시까지 회신드리겠습니다.`
 
-> **Chuyển mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **재택근무·하이브리드근무: khi sự hiện diện không còn đồng nghĩa với có mặt tại văn phòng** tiếp nhận điểm tựa từ **메신저 và email: 확인, 회신, 전달** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **꼰대: phê phán quyền lực lỗi thời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **재택근무·하이브리드근무: khi sự hiện diện không còn đồng nghĩa với có mặt tại văn phòng** nối từ **메신저 và email: 확인, 회신, 전달** sang **꼰대: phê phán quyền lực lỗi thời**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 재택근무·하이브리드근무: khi sự hiện diện không còn đồng nghĩa với có mặt tại văn phòng
 
@@ -283,7 +283,7 @@ Khi điện thoại cá nhân cũng là thiết bị làm việc, giờ tan làm
 
 Một tổ chức có thể giảm xung đột bằng cách phân biệt thông tin có thể đọc ngày hôm sau với sự cố thật sự khẩn cấp, dùng lịch gửi chậm, luân phiên trực và quy tắc leo thang rõ. Khi ranh giới không được định nghĩa, nhân viên phải tự suy đoán bằng `눈치`, khiến chi phí tâm lý tăng.
 
-> **Chuyển mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **꼰대: phê phán quyền lực lỗi thời** tiếp nhận điểm tựa từ **재택근무·하이브리드근무: khi sự hiện diện không còn đồng nghĩa với có mặt tại văn phòng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **MZ세대 và giới hạn của nhãn thế hệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **꼰대: phê phán quyền lực lỗi thời** nối từ **재택근무·하이브리드근무: khi sự hiện diện không còn đồng nghĩa với có mặt tại văn phòng** sang **MZ세대 và giới hạn của nhãn thế hệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 꼰대: phê phán quyền lực lỗi thời
 
@@ -291,7 +291,7 @@ Một tổ chức có thể giảm xung đột bằng cách phân biệt thông 
 
 Một “꼰대” không chỉ là người lớn tuổi. Người trẻ cũng có thể bị gọi như vậy nếu suy nghĩ theo kiểu “tôi đã phải chịu nên anh cũng phải chịu”. Vấn đề cốt lõi là dùng thâm niên thay cho lập luận.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **꼰대: phê phán quyền lực lỗi thời** đã nêu tiêu chí phân biệt, còn **MZ세대 và giới hạn của nhãn thế hệ** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **의사결정권: quyền quyết định không đồng nghĩa người làm việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **꼰대: phê phán quyền lực lỗi thời** đặt tiêu chí; **MZ세대 và giới hạn của nhãn thế hệ** dùng tiêu chí đó để kiểm tra ranh giới, rồi **의사결정권: quyền quyết định không đồng nghĩa người làm việc** mở rộng hệ quả.
 
 ## MZ세대 và giới hạn của nhãn thế hệ
 
@@ -299,7 +299,7 @@ Một “꼰대” không chỉ là người lớn tuổi. Người trẻ cũng 
 
 Thay vì nói “MZ không thích thứ bậc”, nên hỏi cụ thể: họ có kỳ vọng đánh giá minh bạch không? có muốn ranh giới công việc–đời sống rõ hơn không? có thích hệ thống chức danh phẳng không? phản ứng thế nào với nghĩa vụ xã hội không được trả công? Những biến này cụ thể hơn.
 
-> **Chuyển mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **MZ세대 và giới hạn của nhãn thế hệ** đã nêu tiêu chí phân biệt, còn **의사결정권: quyền quyết định không đồng nghĩa người làm việc** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **결정 기록: quyết định cần lưu cả lý do, không chỉ kết quả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **MZ세대 và giới hạn của nhãn thế hệ** đặt tiêu chí; **의사결정권: quyền quyết định không đồng nghĩa người làm việc** dùng tiêu chí đó để kiểm tra ranh giới, rồi **결정 기록: quyết định cần lưu cả lý do, không chỉ kết quả** mở rộng hệ quả.
 
 ## 의사결정권: quyền quyết định không đồng nghĩa người làm việc
 
@@ -318,7 +318,7 @@ Nếu một kỹ sư vừa phải làm việc vừa phải đoán ai có quyền
 
 Do đó thiết kế tổ chức tốt phải cân bằng **tốc độ quyết định** với **chất lượng thông tin**.
 
-> **Chuyển mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **결정 기록: quyết định cần lưu cả lý do, không chỉ kết quả** tiếp nhận điểm tựa từ **의사결정권: quyền quyết định không đồng nghĩa người làm việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **리뷰: kiểm tra đồng cấp khác với đánh giá con người** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **결정 기록: quyết định cần lưu cả lý do, không chỉ kết quả** nối từ **의사결정권: quyền quyết định không đồng nghĩa người làm việc** sang **리뷰: kiểm tra đồng cấp khác với đánh giá con người**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 결정 기록: quyết định cần lưu cả lý do, không chỉ kết quả
 
@@ -338,7 +338,7 @@ vấn đề cần giải quyết
 
 Trong phát triển phần mềm, cách làm này gần với **bản ghi quyết định kiến trúc (architecture decision record)**. Giá trị lớn nhất không phải tạo thêm giấy tờ mà là bảo tồn **lô-gic (logic / 논리) của quyết định** để tổ chức không phải trả lại cùng một chi phí suy nghĩ nhiều lần.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **리뷰: kiểm tra đồng cấp khác với đánh giá con người** tiếp nhận điểm tựa từ **결정 기록: quyết định cần lưu cả lý do, không chỉ kết quả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **장애 대응: sự cố cho thấy cấu trúc thật của tổ chức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **리뷰: kiểm tra đồng cấp khác với đánh giá con người** nối từ **결정 기록: quyết định cần lưu cả lý do, không chỉ kết quả** sang **장애 대응: sự cố cho thấy cấu trúc thật của tổ chức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 리뷰: kiểm tra đồng cấp khác với đánh giá con người
 
@@ -357,7 +357,7 @@ phản hồi về sản phẩm
 
 Sự tách này làm an toàn tâm lý thực tế hơn thay vì chỉ là khẩu hiệu.
 
-> **Chuyển mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **장애 대응: sự cố cho thấy cấu trúc thật của tổ chức** tiếp nhận điểm tựa từ **리뷰: kiểm tra đồng cấp khác với đánh giá con người** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **포스트모템: học từ lỗi thay vì săn người có lỗi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **장애 대응: sự cố cho thấy cấu trúc thật của tổ chức** nối từ **리뷰: kiểm tra đồng cấp khác với đánh giá con người** sang **포스트모템: học từ lỗi thay vì săn người có lỗi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 장애 대응: sự cố cho thấy cấu trúc thật của tổ chức
 
@@ -378,7 +378,7 @@ phát hiện
 
 Điểm quan trọng là **khôi phục dịch vụ** và **tìm nguyên nhân gốc** không phải cùng một nhiệm vụ. Trong lúc khách hàng bị ảnh hưởng, mục tiêu đầu tiên có thể là giảm thiệt hại; phân tích sâu diễn ra sau khi trạng thái ổn định.
 
-> **Chuyển mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **포스트모템: học từ lỗi thay vì săn người có lỗi** tiếp nhận điểm tựa từ **장애 대응: sự cố cho thấy cấu trúc thật của tổ chức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **MTTR và chỉ số vận hành: cái gì dễ đo chưa chắc là toàn bộ chất lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **포스트모템: học từ lỗi thay vì săn người có lỗi** nối từ **장애 대응: sự cố cho thấy cấu trúc thật của tổ chức** sang **MTTR và chỉ số vận hành: cái gì dễ đo chưa chắc là toàn bộ chất lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 포스트모템: học từ lỗi thay vì săn người có lỗi
 
@@ -397,7 +397,7 @@ sự kiện kích hoạt
 + hành động nào giảm xác suất lặp lại
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **MTTR và chỉ số vận hành: cái gì dễ đo chưa chắc là toàn bộ chất lượng** tiếp nhận điểm tựa từ **포스트모템: học từ lỗi thay vì săn người có lỗi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **버스 팩터: khi một người trở thành điểm lỗi duy nhất của tri thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **MTTR và chỉ số vận hành: cái gì dễ đo chưa chắc là toàn bộ chất lượng** nối từ **포스트모템: học từ lỗi thay vì săn người có lỗi** sang **버스 팩터: khi một người trở thành điểm lỗi duy nhất của tri thức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## MTTR và chỉ số vận hành: cái gì dễ đo chưa chắc là toàn bộ chất lượng
 
@@ -407,7 +407,7 @@ Ví dụ giảm **thời gian khôi phục trung bình (mean time to recovery)**
 
 Đây là ứng dụng trực tiếp của Định luật Goodhart: khi một chỉ số trở thành mục tiêu tuyệt đối, nó có thể mất giá trị như thước đo.
 
-> **Chuyển mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **버스 팩터: khi một người trở thành điểm lỗi duy nhất của tri thức** tiếp nhận điểm tựa từ **MTTR và chỉ số vận hành: cái gì dễ đo chưa chắc là toàn bộ chất lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **조직학습: tổ chức học bằng cách biến kinh nghiệm thành thay đổi hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **버스 팩터: khi một người trở thành điểm lỗi duy nhất của tri thức** nối từ **MTTR và chỉ số vận hành: cái gì dễ đo chưa chắc là toàn bộ chất lượng** sang **조직학습: tổ chức học bằng cách biến kinh nghiệm thành thay đổi hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 버스 팩터: khi một người trở thành điểm lỗi duy nhất của tri thức
 
@@ -428,7 +428,7 @@ tài liệu có thể tìm được
 
 Tri thức chỉ nằm trong wiki nhưng không ai thử dùng vẫn có thể thất bại khi khẩn cấp.
 
-> **Chuyển mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **조직학습: tổ chức học bằng cách biến kinh nghiệm thành thay đổi hệ thống** tiếp nhận điểm tựa từ **버스 팩터: khi một người trở thành điểm lỗi duy nhất của tri thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: tổ chức như một mạng thông tin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **조직학습: tổ chức học bằng cách biến kinh nghiệm thành thay đổi hệ thống** nối từ **버스 팩터: khi một người trở thành điểm lỗi duy nhất của tri thức** sang **Liên hệ kiến thức: tổ chức như một mạng thông tin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 조직학습: tổ chức học bằng cách biến kinh nghiệm thành thay đổi hệ thống
 
@@ -445,7 +445,7 @@ sự kiện / dự án
 
 Nếu nhóm luôn nói “lần sau chú ý hơn” nhưng quy trình không đổi, kiến thức vẫn nằm ở trí nhớ cá nhân. Nếu checklist, kiểm thử tự động, quyền phê duyệt hoặc tài liệu được cải thiện, bài học đã đi vào hệ thống.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **Liên hệ kiến thức: tổ chức như một mạng thông tin** tiếp nhận điểm tựa từ **조직학습: tổ chức học bằng cách biến kinh nghiệm thành thay đổi hệ thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: văn hoá công sở như hệ điều khiển phản hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **Liên hệ kiến thức: tổ chức như một mạng thông tin** nối từ **조직학습: tổ chức học bằng cách biến kinh nghiệm thành thay đổi hệ thống** sang **Liên hệ kiến thức: văn hoá công sở như hệ điều khiển phản hồi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ kiến thức: tổ chức như một mạng thông tin
 
@@ -453,7 +453,7 @@ Một công ty tồn tại để phối hợp thông tin và hành động. Th�
 
 Văn hoá công sở vì vậy có thể phân tích như thiết kế mạng: quyền lực, thông tin, động lực và niềm tin là các kênh khác nhau.
 
-> **Chuyển mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **Liên hệ kiến thức: văn hoá công sở như hệ điều khiển phản hồi** tiếp nhận điểm tựa từ **Liên hệ kiến thức: tổ chức như một mạng thông tin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **Liên hệ kiến thức: văn hoá công sở như hệ điều khiển phản hồi** nối từ **Liên hệ kiến thức: tổ chức như một mạng thông tin** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ kiến thức: văn hoá công sở như hệ điều khiển phản hồi
 
@@ -471,13 +471,13 @@ mục tiêu
 
 Do đó an toàn tâm lý, tài liệu hoá và khả năng quan sát không phải “phần mềm mềm”. Chúng quyết định chất lượng của vòng phản hồi quản trị.
 
-> **Chuyển mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên hệ kiến thức: văn hoá công sở như hệ điều khiển phản hồi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Hiểu lầm phổ biến (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên hệ kiến thức: văn hoá công sở như hệ điều khiển phản hồi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Hiểu lầm phổ biến (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Đừng chỉ hỏi “công ty Hàn có thứ bậc không?”. Hãy hỏi thứ bậc nằm ở lớp nào: chức danh, lương, phê duyệt, thứ tự phát biểu, đánh giá, loại hợp đồng hay kiến thức. Sau đó hỏi tiếp: ai có quyền quyết định, thông tin được lưu ở đâu, hệ thống phản ứng ra sao khi lỗi xảy ra và bài học có đi vào quy trình hay chỉ nằm trong trí nhớ của một người.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **Hiểu lầm phổ biến (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Công sở Hàn Quốc: tổ chức, chức danh, báo cáo và quan hệ**, **Hiểu lầm phổ biến (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Hiểu lầm phổ biến (Common Misconceptions)
 

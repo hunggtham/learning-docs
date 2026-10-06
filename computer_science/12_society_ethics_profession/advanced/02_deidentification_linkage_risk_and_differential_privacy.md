@@ -10,7 +10,7 @@ Ngày sinh, postcode, nghề nghiệp hoặc timestamp có thể không unique r
 
 Rủi ro (risk / 위험) phụ thuộc population và auxiliary thông tin (information / 정보) attacker có thể có.
 
-> **Chuyển mạch:** Trong **De-identification, linkage rủi ro (risk / 위험) và differential privacy intuition**, **Hashing identifier** tiếp nhận điểm tựa từ **Quasi-identifiers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **k-anonymity intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Hashing identifier** nối từ **Quasi-identifiers** sang **k-anonymity intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hashing identifier
 
@@ -18,7 +18,7 @@ Băm (hash / 해시) email/phone deterministic vẫn cho phép dictionary attack
 
 Pseudonymization hữu ích để giảm exposure nhưng vẫn cần kiểm soát truy cập (access control / 접근 제어) và retention chính sách (policy / 정책).
 
-> **Chuyển mạch:** Ở chặng này của **De-identification, linkage rủi ro (risk / 위험) và differential privacy intuition**, **k-anonymity intuition** tiếp nhận điểm tựa từ **Hashing identifier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Differential privacy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **k-anonymity intuition** nối từ **Hashing identifier** sang **Differential privacy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## k-anonymity intuition
 
@@ -26,7 +26,7 @@ k-anonymity cố làm mỗi bản ghi (record / 레코드) indistinguishable v�
 
 Nó không tự bảo vệ attribute disclosure nếu cả group có cùng sensitive giá trị (value / 값), và không mô hình (model / 모델) mọi auxiliary thông tin (information / 정보).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **De-identification, linkage rủi ro (risk / 위험) và differential privacy intuition**, **Differential privacy** tiếp nhận điểm tựa từ **k-anonymity intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Privacy ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Differential privacy** nối từ **k-anonymity intuition** sang **Privacy ngân sách (budget / 예산)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Differential privacy
 
@@ -34,7 +34,7 @@ Nó không tự bảo vệ attribute disclosure nếu cả group có cùng sensi
 
 Noise được calibrated theo sensitivity và privacy parameters. DP là thuộc tính (property / 속성) của randomized cơ chế (mechanism / 메커니즘)/truy vấn (query / 쿼리) tiến trình (process / 프로세스), không phải “thêm noise ngẫu nhiên vào tệp (file / 파일) rồi gọi là private”.
 
-> **Chuyển mạch:** Trong **De-identification, linkage rủi ro (risk / 위험) và differential privacy intuition**, **Privacy ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **Differential privacy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Utility sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Privacy ngân sách (budget / 예산)** nối từ **Differential privacy** sang **Utility sự đánh đổi (trade-off / 트레이드오프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Privacy ngân sách (budget / 예산)
 
@@ -42,7 +42,7 @@ Nhiều queries cùng dataset làm leakage tích lũy. Privacy accounting theo d
 
 Đây là liên kết (connection / 연결) với tài nguyên (resource / 자원) budgeting: privacy trở thành quantity cần quản trị (governance / 거버넌스), dù interpretation không đơn giản như tiền.
 
-> **Chuyển mạch:** Ở chặng này của **De-identification, linkage rủi ro (risk / 위험) và differential privacy intuition**, **Utility sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **Privacy ngân sách (budget / 예산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quản trị (governance / 거버넌스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Utility sự đánh đổi (trade-off / 트레이드오프)** nối từ **Privacy ngân sách (budget / 예산)** sang **Quản trị (governance / 거버넌스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Utility sự đánh đổi (trade-off / 트레이드오프)
 
@@ -50,7 +50,7 @@ Noise nhiều tăng privacy nhưng giảm accuracy. Dataset nhỏ hoặc truy v�
 
 Do đó cần xác định quyết định (decision / 결정) cần độ chính xác nào, population nào và rủi ro (risk / 위험) mô hình (model / 모델) nào trước khi chọn parameters.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **De-identification, linkage rủi ro (risk / 위험) và differential privacy intuition**, **Quản trị (governance / 거버넌스)** tiếp nhận điểm tựa từ **Utility sự đánh đổi (trade-off / 트레이드오프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Quản trị (governance / 거버넌스)** nối từ **Utility sự đánh đổi (trade-off / 트레이드오프)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quản trị (governance / 거버넌스)
 
@@ -58,7 +58,7 @@ Technical anonymization không thay thế purpose limitation, retention và ki�
 
 Xem thêm: [Data minimization, purpose limitation và retention engineering](./01_data_minimization_purpose_limitation_and_retention_engineering.md).
 
-> **Chuyển mạch:** Trong **De-identification, linkage rủi ro (risk / 위험) và differential privacy intuition**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Quản trị (governance / 거버넌스)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Quản trị (governance / 거버넌스)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

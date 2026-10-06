@@ -27,7 +27,7 @@ Nhu cầu HBM có tăng nhanh hơn nguồn cung hiệu dụng không?
 
 **Cây câu hỏi (question tree)** biến một chủ đề rộng thành chuỗi câu hỏi có dữ liệu trả lời.
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **1. Cây câu hỏi** nêu điều cần giải thích; **2. Câu hỏi phải dẫn tới dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Thứ bậc nguồn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **1. Cây câu hỏi** đặt vấn đề; **2. Câu hỏi phải dẫn tới dữ liệu** đối chiếu bằng chứng, rồi **3. Thứ bậc nguồn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2. Câu hỏi phải dẫn tới dữ liệu
 
@@ -35,7 +35,7 @@ Nếu một câu hỏi không chỉ ra dữ liệu nào có thể xác nhận ho
 
 # Phần II — Thứ tự ưu tiên nguồn
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **2. Câu hỏi phải dẫn tới dữ liệu** nêu điều cần giải thích; **3. Thứ bậc nguồn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Hàn Quốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **2. Câu hỏi phải dẫn tới dữ liệu** đặt vấn đề; **3. Thứ bậc nguồn** đối chiếu bằng chứng, rồi **4. Hàn Quốc** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3. Thứ bậc nguồn
 
@@ -53,7 +53,7 @@ Cơ quan quản lý / Sở giao dịch / Ngân hàng trung ương / Cơ quan th�
 
 Nguồn phía dưới vẫn hữu ích để tìm ý tưởng, nhưng dữ kiện quan trọng nên được kiểm tra lại ở nguồn gốc khi có thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **3. Thứ bậc nguồn** nêu điều cần giải thích; **4. Hàn Quốc** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. Việt Nam** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **3. Thứ bậc nguồn** đặt vấn đề; **4. Hàn Quốc** đối chiếu bằng chứng, rồi **5. Việt Nam** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. Hàn Quốc
 
@@ -66,7 +66,7 @@ Các nhóm nguồn thường dùng:
 - DART và báo cáo doanh nghiệp;
 - trang quan hệ nhà đầu tư.
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **5. Việt Nam** tiếp nhận điểm tựa từ **4. Hàn Quốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Dữ kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **5. Việt Nam** nối từ **4. Hàn Quốc** sang **6. Dữ kiện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Việt Nam
 
@@ -83,7 +83,7 @@ Tên cổng dữ liệu hoặc quy định cụ thể có thể thay đổi, nê
 
 # Phần III — Dữ kiện, ước tính, ý kiến và giả định
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **6. Dữ kiện** tiếp nhận điểm tựa từ **5. Việt Nam** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Ước tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **6. Dữ kiện** nối từ **5. Việt Nam** sang **7. Ước tính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Dữ kiện
 
@@ -91,7 +91,7 @@ Trước khi diễn giải một thị trường, ta cần tách điều đã x�
 
 **Dữ kiện (fact)** là thông tin đã xảy ra và có thể xác minh, ví dụ doanh thu quý, lãi suất chính sách hoặc số cổ phiếu lưu hành.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **7. Ước tính** tiếp nhận điểm tựa từ **6. Dữ kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Ý kiến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **7. Ước tính** nối từ **6. Dữ kiện** sang **8. Ý kiến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Ước tính
 
@@ -101,7 +101,7 @@ Khi đã có dữ kiện, bước tiếp theo là ghi rõ thị trường đang 
 
 Ước tính phải có thời điểm vì nó thay đổi liên tục.
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **8. Ý kiến** tiếp nhận điểm tựa từ **7. Ước tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Giả định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **8. Ý kiến** nối từ **7. Ước tính** sang **9. Giả định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Ý kiến
 
@@ -109,7 +109,7 @@ Sau dữ kiện và ước tính là lớp diễn giải: cùng một con số c
 
 **Ý kiến (opinion)** là cách diễn giải dữ liệu. Một ghi chú nghiên cứu tốt không trình bày ý kiến như thể là dữ kiện.
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **9. Giả định** tiếp nhận điểm tựa từ **8. Ý kiến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Cây động lực của doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **9. Giả định** nối từ **8. Ý kiến** sang **10. Cây động lực của doanh nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Giả định
 
@@ -127,7 +127,7 @@ Kịch bản cơ sở: biên gộp = 35%
 
 # Phần IV — Cây động lực
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **10. Cây động lực của doanh nghiệp** tiếp nhận điểm tựa từ **9. Giả định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Cây động lực ngân hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **10. Cây động lực của doanh nghiệp** nối từ **9. Giả định** sang **11. Cây động lực ngân hàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Cây động lực của doanh nghiệp
 
@@ -143,7 +143,7 @@ Nhu cầu cuối
 → EPS / FCF
 ```
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **11. Cây động lực ngân hàng** tiếp nhận điểm tựa từ **10. Cây động lực của doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Cây động lực bất động sản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **11. Cây động lực ngân hàng** nối từ **10. Cây động lực của doanh nghiệp** sang **12. Cây động lực bất động sản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Cây động lực ngân hàng
 
@@ -159,7 +159,7 @@ Chi phí tiền gửi / CASA
 → ROE / giá trị sổ sách
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **12. Cây động lực bất động sản** tiếp nhận điểm tựa từ **11. Cây động lực ngân hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Chỉ báo sớm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **12. Cây động lực bất động sản** nối từ **11. Cây động lực ngân hàng** sang **13. Chỉ báo sớm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Cây động lực bất động sản
 
@@ -177,7 +177,7 @@ Tiến độ pháp lý
 
 # Phần V — Chỉ báo sớm và chỉ báo trễ
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **13. Chỉ báo sớm** tiếp nhận điểm tựa từ **12. Cây động lực bất động sản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Chỉ báo trễ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **13. Chỉ báo sớm** nối từ **12. Cây động lực bất động sản** sang **14. Chỉ báo trễ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Chỉ báo sớm
 
@@ -194,7 +194,7 @@ Ví dụ:
 - dữ liệu xuất khẩu;
 - bán trước bất động sản.
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **14. Chỉ báo trễ** tiếp nhận điểm tựa từ **13. Chỉ báo sớm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Không mặc định chỉ báo luôn dẫn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **14. Chỉ báo trễ** nối từ **13. Chỉ báo sớm** sang **15. Không mặc định chỉ báo luôn dẫn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Chỉ báo trễ
 
@@ -204,7 +204,7 @@ Chỉ báo trễ đến sau nhưng có giá trị xác nhận. Đặt nó cạnh
 
 Ví dụ NPL hoặc EPS báo cáo có thể xuất hiện sau điểm đảo chiều của tín dụng hoặc tồn kho.
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **15. Không mặc định chỉ báo luôn dẫn** tiếp nhận điểm tựa từ **14. Chỉ báo trễ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Giá phản ứng với thay đổi kỳ vọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **15. Không mặc định chỉ báo luôn dẫn** nối từ **14. Chỉ báo trễ** sang **16. Giá phản ứng với thay đổi kỳ vọng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Không mặc định chỉ báo luôn dẫn
 
@@ -212,19 +212,19 @@ Quan hệ dẫn–trễ có thể thay đổi theo chế độ, vì vậy phải
 
 # Phần VI — Kỳ vọng và điều chỉnh dự báo
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **16. Giá phản ứng với thay đổi kỳ vọng** tiếp nhận điểm tựa từ **15. Không mặc định chỉ báo luôn dẫn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Độ rộng điều chỉnh dự báo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **16. Giá phản ứng với thay đổi kỳ vọng** nối từ **15. Không mặc định chỉ báo luôn dẫn** sang **17. Độ rộng điều chỉnh dự báo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Giá phản ứng với thay đổi kỳ vọng
 
 Một doanh nghiệp báo EPS cao vẫn có thể giảm nếu hướng dẫn tương lai thấp hơn kỳ vọng.
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **17. Độ rộng điều chỉnh dự báo** tiếp nhận điểm tựa từ **16. Giá phản ứng với thay đổi kỳ vọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Điều gì đã được phản ánh trong giá?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **17. Độ rộng điều chỉnh dự báo** nối từ **16. Giá phản ứng với thay đổi kỳ vọng** sang **18. Điều gì đã được phản ánh trong giá?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Độ rộng điều chỉnh dự báo
 
 Không chỉ nhìn một doanh nghiệp. Nếu nhiều nhà phân tích đồng thời nâng EPS ở nhiều công ty trong cùng ngành, chu kỳ có thể đang mở rộng.
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **18. Điều gì đã được phản ánh trong giá?** tiếp nhận điểm tựa từ **17. Độ rộng điều chỉnh dự báo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Bán dẫn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **18. Điều gì đã được phản ánh trong giá?** nối từ **17. Độ rộng điều chỉnh dự báo** sang **19. Bán dẫn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Điều gì đã được phản ánh trong giá?
 
@@ -238,7 +238,7 @@ Trước sự kiện cần ghi:
 
 # Phần VII — Bản đồ ngành Hàn Quốc
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **19. Bán dẫn** tiếp nhận điểm tựa từ **18. Điều gì đã được phản ánh trong giá?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Ô tô và xe điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **19. Bán dẫn** nối từ **18. Điều gì đã được phản ánh trong giá?** sang **20. Ô tô và xe điện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Bán dẫn
 
@@ -255,7 +255,7 @@ USD/KRW
 Điều chỉnh dự báo EPS
 ```
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **20. Ô tô và xe điện** tiếp nhận điểm tựa từ **19. Bán dẫn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Pin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **20. Ô tô và xe điện** nối từ **19. Bán dẫn** sang **21. Pin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Ô tô và xe điện
 
@@ -270,7 +270,7 @@ Tồn kho
 Chi phí pin
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **21. Pin** tiếp nhận điểm tựa từ **20. Ô tô và xe điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Đóng tàu và công nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **21. Pin** nối từ **20. Ô tô và xe điện** sang **22. Đóng tàu và công nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Pin
 
@@ -284,7 +284,7 @@ Hợp đồng khách hàng
 Mở rộng công suất
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **22. Đóng tàu và công nghiệp** tiếp nhận điểm tựa từ **21. Pin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Tài chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **22. Đóng tàu và công nghiệp** nối từ **21. Pin** sang **23. Tài chính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Đóng tàu và công nghiệp
 
@@ -298,7 +298,7 @@ Lịch giao hàng
 Tỷ giá
 ```
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **23. Tài chính** tiếp nhận điểm tựa từ **22. Đóng tàu và công nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Nền tảng, trò chơi và công nghệ sinh học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **23. Tài chính** nối từ **22. Đóng tàu và công nghiệp** sang **24. Nền tảng, trò chơi và công nghệ sinh học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Tài chính
 
@@ -312,7 +312,7 @@ Mức phơi nhiễm PF
 Giá trị giao dịch / môi giới
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **24. Nền tảng, trò chơi và công nghệ sinh học** tiếp nhận điểm tựa từ **23. Tài chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Ngân hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **24. Nền tảng, trò chơi và công nghệ sinh học** nối từ **23. Tài chính** sang **25. Ngân hàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Nền tảng, trò chơi và công nghệ sinh học
 
@@ -320,7 +320,7 @@ Tùy ngành cần theo dõi mức sử dụng và khả năng kiếm tiền, dan
 
 # Phần VIII — Bản đồ ngành Việt Nam
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **25. Ngân hàng** tiếp nhận điểm tựa từ **24. Nền tảng, trò chơi và công nghệ sinh học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Bất động sản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **25. Ngân hàng** nối từ **24. Nền tảng, trò chơi và công nghệ sinh học** sang **26. Bất động sản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Ngân hàng
 
@@ -336,7 +336,7 @@ Vốn
 Mức phơi nhiễm bất động sản
 ```
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **26. Bất động sản** tiếp nhận điểm tựa từ **25. Ngân hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Công ty chứng khoán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **26. Bất động sản** nối từ **25. Ngân hàng** sang **27. Công ty chứng khoán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Bất động sản
 
@@ -351,7 +351,7 @@ Tái cấp vốn trái phiếu
 Bàn giao
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **27. Công ty chứng khoán** tiếp nhận điểm tựa từ **26. Bất động sản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Khu công nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **27. Công ty chứng khoán** nối từ **26. Bất động sản** sang **28. Khu công nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Công ty chứng khoán
 
@@ -365,7 +365,7 @@ Danh mục tự doanh
 Ngân hàng đầu tư
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **28. Khu công nghiệp** tiếp nhận điểm tựa từ **27. Công ty chứng khoán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Tiêu dùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **28. Khu công nghiệp** nối từ **27. Công ty chứng khoán** sang **29. Tiêu dùng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Khu công nghiệp
 
@@ -379,7 +379,7 @@ Quỹ đất
 Hạ tầng
 ```
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **29. Tiêu dùng** tiếp nhận điểm tựa từ **28. Khu công nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Đầu tư công và vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **29. Tiêu dùng** nối từ **28. Khu công nghiệp** sang **30. Đầu tư công và vật liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Tiêu dùng
 
@@ -394,7 +394,7 @@ Tồn kho
 Biên lợi nhuận
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **30. Đầu tư công và vật liệu** tiếp nhận điểm tựa từ **29. Tiêu dùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Tỷ giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **30. Đầu tư công và vật liệu** nối từ **29. Tiêu dùng** sang **31. Tỷ giá**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Đầu tư công và vật liệu
 
@@ -410,7 +410,7 @@ Chi phí đầu vào
 
 # Phần IX — Bảng theo dõi tỷ giá, dòng vốn và độ rộng
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **31. Tỷ giá** tiếp nhận điểm tựa từ **30. Đầu tư công và vật liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Dòng vốn nước ngoài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **31. Tỷ giá** nối từ **30. Đầu tư công và vật liệu** sang **32. Dòng vốn nước ngoài**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Tỷ giá
 
@@ -422,7 +422,7 @@ Theo dõi USD/KRW và USD/VND cùng nguyên nhân:
 - dòng vốn;
 - chính sách.
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **32. Dòng vốn nước ngoài** tiếp nhận điểm tựa từ **31. Tỷ giá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Độ rộng thị trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **32. Dòng vốn nước ngoài** nối từ **31. Tỷ giá** sang **33. Độ rộng thị trường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Dòng vốn nước ngoài
 
@@ -435,13 +435,13 @@ Giảm rủi ro toàn cầu
 Ảnh hưởng phòng vệ tỷ giá
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **33. Độ rộng thị trường** tiếp nhận điểm tựa từ **32. Dòng vốn nước ngoài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Thanh khoản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **33. Độ rộng thị trường** nối từ **32. Dòng vốn nước ngoài** sang **34. Thanh khoản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Độ rộng thị trường
 
 Chỉ số tăng nhưng độ rộng giảm có thể cho thấy nhóm dẫn dắt quá hẹp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **34. Thanh khoản** tiếp nhận điểm tựa từ **33. Độ rộng thị trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Trước khi công bố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **34. Thanh khoản** nối từ **33. Độ rộng thị trường** sang **35. Trước khi công bố**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Thanh khoản
 
@@ -449,7 +449,7 @@ Theo dõi giá trị giao dịch, chênh lệch mua–bán và điều kiện k�
 
 # Phần X — Quy trình quanh báo cáo lợi nhuận
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **35. Trước khi công bố** tiếp nhận điểm tựa từ **34. Thanh khoản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Khi kết quả được công bố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **35. Trước khi công bố** nối từ **34. Thanh khoản** sang **36. Khi kết quả được công bố**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Trước khi công bố
 
@@ -463,7 +463,7 @@ Kỳ vọng KPI chính
 Câu hỏi quan trọng
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **36. Khi kết quả được công bố** tiếp nhận điểm tựa từ **35. Trước khi công bố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Sau báo cáo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **36. Khi kết quả được công bố** nối từ **35. Trước khi công bố** sang **37. Sau báo cáo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Khi kết quả được công bố
 
@@ -477,7 +477,7 @@ so với Hướng dẫn trước đó
 
 Sau đó đi vào các động lực tạo chênh lệch.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **37. Sau báo cáo** tiếp nhận điểm tựa từ **36. Khi kết quả được công bố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. BOK / SBV** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **37. Sau báo cáo** nối từ **36. Khi kết quả được công bố** sang **38. BOK / SBV**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Sau báo cáo
 
@@ -491,7 +491,7 @@ Cập nhật:
 
 # Phần XI — Quy trình quanh sự kiện ngân hàng trung ương
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **38. BOK / SBV** tiếp nhận điểm tựa từ **37. Sau báo cáo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Thông báo không đồng nghĩa thực thi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **38. BOK / SBV** nối từ **37. Sau báo cáo** sang **39. Thông báo không đồng nghĩa thực thi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. BOK / SBV
 
@@ -519,7 +519,7 @@ Phản ứng theo ngành
 
 # Phần XII — Quy trình với chính sách tài khóa và quy định
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **39. Thông báo không đồng nghĩa thực thi** tiếp nhận điểm tựa từ **38. BOK / SBV** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Quy tắc ghi thời điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **39. Thông báo không đồng nghĩa thực thi** nối từ **38. BOK / SBV** sang **40. Quy tắc ghi thời điểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Thông báo không đồng nghĩa thực thi
 
@@ -533,7 +533,7 @@ Thông báo
 → dòng tiền
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **40. Quy tắc ghi thời điểm** tiếp nhận điểm tựa từ **39. Thông báo không đồng nghĩa thực thi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **41. Chất xúc tác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **40. Quy tắc ghi thời điểm** nối từ **39. Thông báo không đồng nghĩa thực thi** sang **41. Chất xúc tác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Quy tắc ghi thời điểm
 
@@ -541,7 +541,7 @@ Quy định phải ghi ngày hiệu lực và nguồn. Không dùng ghi chú cũ
 
 # Phần XIII — Chất xúc tác và điều kiện vô hiệu hóa
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **41. Chất xúc tác** tiếp nhận điểm tựa từ **40. Quy tắc ghi thời điểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Điều kiện vô hiệu hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **41. Chất xúc tác** nối từ **40. Quy tắc ghi thời điểm** sang **42. Điều kiện vô hiệu hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. Chất xúc tác
 
@@ -549,7 +549,7 @@ Sau khi có luận điểm và dữ liệu theo dõi, ta cần chỉ rõ điều
 
 **Chất xúc tác (catalyst)** là sự kiện hoặc dữ liệu có thể khiến thị trường thay đổi kỳ vọng.
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **42. Điều kiện vô hiệu hóa** tiếp nhận điểm tựa từ **41. Chất xúc tác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **43. Danh sách theo dõi không chỉ là mã cổ phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **42. Điều kiện vô hiệu hóa** nối từ **41. Chất xúc tác** sang **43. Danh sách theo dõi không chỉ là mã cổ phiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Điều kiện vô hiệu hóa
 
@@ -561,7 +561,7 @@ Giá đi ngược vài phiên chưa chắc là bằng chứng vô hiệu hóa.
 
 # Phần XIV — Danh sách theo dõi
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **43. Danh sách theo dõi không chỉ là mã cổ phiếu** tiếp nhận điểm tựa từ **42. Điều kiện vô hiệu hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **44. Mức ưu tiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **43. Danh sách theo dõi không chỉ là mã cổ phiếu** nối từ **42. Điều kiện vô hiệu hóa** sang **44. Mức ưu tiên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 43. Danh sách theo dõi không chỉ là mã cổ phiếu
 
@@ -577,7 +577,7 @@ Chất xúc tác
 Dữ liệu tiếp theo cần chờ
 ```
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **44. Mức ưu tiên** tiếp nhận điểm tựa từ **43. Danh sách theo dõi không chỉ là mã cổ phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **45. Hằng ngày** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **44. Mức ưu tiên** nối từ **43. Danh sách theo dõi không chỉ là mã cổ phiếu** sang **45. Hằng ngày**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 44. Mức ưu tiên
 
@@ -590,13 +590,13 @@ Có thể chia:
 
 # Phần XV — Nhịp cập nhật hằng ngày, tuần, tháng và quý
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **45. Hằng ngày** tiếp nhận điểm tựa từ **44. Mức ưu tiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **46. Hằng tuần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **45. Hằng ngày** nối từ **44. Mức ưu tiên** sang **46. Hằng tuần**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 45. Hằng ngày
 
 Chỉ cập nhật dữ liệu tần suất cao như giá, tỷ giá, dòng vốn, tin lớn và kết quả sự kiện. Không viết lại toàn bộ luận điểm mỗi ngày.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **46. Hằng tuần** tiếp nhận điểm tựa từ **45. Hằng ngày** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **47. Hằng tháng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **46. Hằng tuần** nối từ **45. Hằng ngày** sang **47. Hằng tháng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 46. Hằng tuần
 
@@ -608,13 +608,13 @@ Chỉ cập nhật dữ liệu tần suất cao như giá, tỷ giá, dòng vố
 - hàng hóa / tỷ giá quan trọng;
 - chất xúc tác sắp tới.
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **47. Hằng tháng** tiếp nhận điểm tựa từ **46. Hằng tuần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **48. Hằng quý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **47. Hằng tháng** nối từ **46. Hằng tuần** sang **48. Hằng quý**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 47. Hằng tháng
 
 Đánh giá vĩ mô, định giá, tín dụng, thanh khoản và bảng theo dõi ngành.
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **48. Hằng quý** tiếp nhận điểm tựa từ **47. Hằng tháng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **49. Trước quyết định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **48. Hằng quý** nối từ **47. Hằng tháng** sang **49. Trước quyết định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 48. Hằng quý
 
@@ -622,7 +622,7 @@ Chỉ cập nhật dữ liệu tần suất cao như giá, tỷ giá, dòng vố
 
 # Phần XVI — Nhật ký quyết định
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **49. Trước quyết định** tiếp nhận điểm tựa từ **48. Hằng quý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **50. Sau quyết định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **49. Trước quyết định** nối từ **48. Hằng quý** sang **50. Sau quyết định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 49. Trước quyết định
 
@@ -637,7 +637,7 @@ Logic xác định quy mô vị thế
 Điều kiện vô hiệu hóa
 ```
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **50. Sau quyết định** tiếp nhận điểm tựa từ **49. Trước quyết định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **51. Cấu trúc cho một chứng khoán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **50. Sau quyết định** nối từ **49. Trước quyết định** sang **51. Cấu trúc cho một chứng khoán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 50. Sau quyết định
 
@@ -645,7 +645,7 @@ Logic xác định quy mô vị thế
 
 # Phần XVII — Sổ nghiên cứu
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **51. Cấu trúc cho một chứng khoán** tiếp nhận điểm tựa từ **50. Sau quyết định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **52. Bảng theo dõi quốc gia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **51. Cấu trúc cho một chứng khoán** nối từ **50. Sau quyết định** sang **52. Bảng theo dõi quốc gia**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 51. Cấu trúc cho một chứng khoán
 
@@ -662,7 +662,7 @@ Khi nghiên cứu đã đủ sâu, cần lưu nó theo cấu trúc để lần c
 
 Tên tệp (file / 파일) có thể giữ tiếng Anh để tương thích hệ thống, nhưng nội dung giải thích nên dùng tiếng Việt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **52. Bảng theo dõi quốc gia** tiếp nhận điểm tựa từ **51. Cấu trúc cho một chứng khoán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **53. Thiên lệch xác nhận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **52. Bảng theo dõi quốc gia** nối từ **51. Cấu trúc cho một chứng khoán** sang **53. Thiên lệch xác nhận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 52. Bảng theo dõi quốc gia
 
@@ -670,25 +670,25 @@ Tách Hàn Quốc và Việt Nam thành bảng riêng, đồng thời duy trì m
 
 # Phần XVIII — Thiên lệch và vệ sinh dữ liệu
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **53. Thiên lệch xác nhận** tiếp nhận điểm tựa từ **52. Bảng theo dõi quốc gia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **54. Thiên lệch gần đây** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **53. Thiên lệch xác nhận** nối từ **52. Bảng theo dõi quốc gia** sang **54. Thiên lệch gần đây**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 53. Thiên lệch xác nhận
 
 Chủ động tìm bằng chứng chống lại luận điểm, không chỉ dữ liệu ủng hộ.
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **54. Thiên lệch gần đây** tiếp nhận điểm tựa từ **53. Thiên lệch xác nhận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **55. Sao chép câu chuyện từ báo cáo môi giới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **54. Thiên lệch gần đây** nối từ **53. Thiên lệch xác nhận** sang **55. Sao chép câu chuyện từ báo cáo môi giới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 54. Thiên lệch gần đây
 
 Một quý tốt không tự động thay đổi kinh tế cấu trúc dài hạn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **55. Sao chép câu chuyện từ báo cáo môi giới** tiếp nhận điểm tựa từ **54. Thiên lệch gần đây** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **56. Dữ liệu cũ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **55. Sao chép câu chuyện từ báo cáo môi giới** nối từ **54. Thiên lệch gần đây** sang **56. Dữ liệu cũ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 55. Sao chép câu chuyện từ báo cáo môi giới
 
 Không biến câu chuyện phân tích của bên khác thành dữ kiện nếu chưa kiểm tra dữ liệu gốc.
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **55. Sao chép câu chuyện từ báo cáo môi giới** nêu điều cần giải thích; **56. Dữ liệu cũ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **57. Mức độ tin tưởng không đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **55. Sao chép câu chuyện từ báo cáo môi giới** đặt vấn đề; **56. Dữ liệu cũ** đối chiếu bằng chứng, rồi **57. Mức độ tin tưởng không đủ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 56. Dữ liệu cũ
 
@@ -696,7 +696,7 @@ Mọi dữ liệu động phải có thời điểm. Quy định, lãi suất, t
 
 # Phần XIX — Từ nghiên cứu tới quy mô vị thế
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **56. Dữ liệu cũ** nêu điều cần giải thích; **57. Mức độ tin tưởng không đủ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **58. Chất lượng luận điểm và chất lượng thanh khoản là hai việc khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **56. Dữ liệu cũ** đặt vấn đề; **57. Mức độ tin tưởng không đủ** đối chiếu bằng chứng, rồi **58. Chất lượng luận điểm và chất lượng thanh khoản là hai việc khác nhau** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 57. Mức độ tin tưởng không đủ
 
@@ -709,7 +709,7 @@ Quy mô vị thế phải xét:
 - bất định;
 - mức phơi nhiễm toàn danh mục.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **58. Chất lượng luận điểm và chất lượng thanh khoản là hai việc khác nhau** tiếp nhận điểm tựa từ **57. Mức độ tin tưởng không đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **59. Ghi chú doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **58. Chất lượng luận điểm và chất lượng thanh khoản là hai việc khác nhau** nối từ **57. Mức độ tin tưởng không đủ** sang **59. Ghi chú doanh nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 58. Chất lượng luận điểm và chất lượng thanh khoản là hai việc khác nhau
 
@@ -717,7 +717,7 @@ Một luận điểm rất tốt ở cổ phiếu kém thanh khoản vẫn có t
 
 # Phần XX — Mẫu nghiên cứu chuẩn
 
-> **Chuyển mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **59. Ghi chú doanh nghiệp** tiếp nhận điểm tựa từ **58. Chất lượng luận điểm và chất lượng thanh khoản là hai việc khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **60. Ghi chú quốc gia hoặc ngành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **59. Ghi chú doanh nghiệp** nối từ **58. Chất lượng luận điểm và chất lượng thanh khoản là hai việc khác nhau** sang **60. Ghi chú quốc gia hoặc ngành**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 59. Ghi chú doanh nghiệp
 
@@ -737,7 +737,7 @@ Rủi ro vị thế:
 Lần đánh giá tiếp theo:
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **60. Ghi chú quốc gia hoặc ngành** tiếp nhận điểm tựa từ **59. Ghi chú doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **60. Ghi chú quốc gia hoặc ngành** nối từ **59. Ghi chú doanh nghiệp** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 60. Ghi chú quốc gia hoặc ngành
 
@@ -754,7 +754,7 @@ Kịch bản chính:
 Kịch bản thay thế:
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **Kết luận** gom các mảnh từ **60. Ghi chú quốc gia hoặc ngành** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Quy trình nghiên cứu thị trường, nguồn dữ liệu và bản đồ ngành**, **Kết luận** tổng hợp từ **60. Ghi chú quốc gia hoặc ngành** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

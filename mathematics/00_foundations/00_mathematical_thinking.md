@@ -16,7 +16,7 @@ t = \frac{s}{v}
 
 Đây là một mental habit quan trọng: trước khi dùng công thức, hãy hỏi mô hình đang giữ cái gì, bỏ cái gì và điều kiện nào làm nó còn đúng.
 
-> **Chuyển mạch:** Trong **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Đại lượng, trạng thái và quan hệ** tiếp nhận điểm tựa từ **Từ hiện tượng đến mô hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lớp trừu tượng (abstraction / 추상화): bỏ chi tiết để thấy cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Đại lượng, trạng thái và quan hệ** nối từ **Từ hiện tượng đến mô hình** sang **Lớp trừu tượng (abstraction / 추상화): bỏ chi tiết để thấy cấu trúc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đại lượng, trạng thái và quan hệ
 
@@ -26,7 +26,7 @@ Khi hai hay nhiều đại lượng liên hệ với nhau, toán học tìm các
 
 Điểm quan trọng là các ký hiệu không phải chính hiện tượng. `x`, `f(x)` hay `A` chỉ là cách nén thông tin để suy luận dễ hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Lớp trừu tượng (abstraction / 추상화): bỏ chi tiết để thấy cấu trúc** tiếp nhận điểm tựa từ **Đại lượng, trạng thái và quan hệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Suy diễn, quy nạp và kiểm chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Lớp trừu tượng (abstraction / 추상화): bỏ chi tiết để thấy cấu trúc** nối từ **Đại lượng, trạng thái và quan hệ** sang **Suy diễn, quy nạp và kiểm chứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lớp trừu tượng (abstraction / 추상화): bỏ chi tiết để thấy cấu trúc
 
@@ -34,7 +34,7 @@ Trừu tượng hóa (Abstraction / 추상화) là quá trình tách cấu trúc
 
 Lớp trừu tượng (abstraction / 추상화) chỉ hữu ích khi ta nhớ nó dựa trên các giả định (assumptions / 가정들) nào. Ví dụ mô hình Euclid giả định không gian phẳng. Trên bề mặt Trái Đất, đường ngắn nhất giữa hai điểm là cung của great circle chứ không phải đoạn thẳng Euclid trên bản đồ phẳng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Suy diễn, quy nạp và kiểm chứng** tiếp nhận điểm tựa từ **Lớp trừu tượng (abstraction / 추상화): bỏ chi tiết để thấy cấu trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Proof: tại sao toán cần chứng minh?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Suy diễn, quy nạp và kiểm chứng** nối từ **Lớp trừu tượng (abstraction / 추상화): bỏ chi tiết để thấy cấu trúc** sang **Proof: tại sao toán cần chứng minh?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Suy diễn, quy nạp và kiểm chứng
 
@@ -44,7 +44,7 @@ Quy nạp theo nghĩa khoa học (Induction / 귀납) quan sát nhiều trườn
 
 Trong dữ liệu (data / 데이터) science, khác biệt này rất quan trọng. Một mẫu (pattern / 패턴) xuất hiện trong dữ liệu không tự động trở thành quy luật tất định của thế giới. Nó có thể do sampling độ lệch (bias / 편향), confounding hoặc noise.
 
-> **Chuyển mạch:** Trong **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Proof: tại sao toán cần chứng minh?** tiếp nhận điểm tựa từ **Suy diễn, quy nạp và kiểm chứng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Counterexample và vai trò của một trường hợp phản chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Proof: tại sao toán cần chứng minh?** nối từ **Suy diễn, quy nạp và kiểm chứng** sang **Counterexample và vai trò của một trường hợp phản chứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Proof: tại sao toán cần chứng minh?
 
@@ -64,7 +64,7 @@ với `a,b` là số nguyên. Tổng là
 
 nên chia hết cho 2. Ta không cần kiểm tra từng cặp số lẻ vì biểu diễn (representation / 표현) `2k+1` đã capture toàn bộ cấu trúc “lẻ”.
 
-> **Chuyển mạch:** Ở chặng này của **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Proof: tại sao toán cần chứng minh?** cho ta quy tắc; **Counterexample và vai trò của một trường hợp phản chứng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Bất biến (invariant / 불변식): thứ không đổi trong quá trình biến đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Proof: tại sao toán cần chứng minh?** nêu quy tắc; **Counterexample và vai trò của một trường hợp phản chứng** thử quy tắc trong tình huống, rồi **Bất biến (invariant / 불변식): thứ không đổi trong quá trình biến đổi** mở rộng hệ quả.
 
 ## Counterexample và vai trò của một trường hợp phản chứng
 
@@ -72,7 +72,7 @@ Một phát biểu dạng “mọi X đều có tính chất P” chỉ cần m�
 
 Đây là tư duy cực hữu ích trong kỹ nghệ phần mềm (software engineering / 소프트웨어 공학). Khi một yêu cầu (requirement / 요구사항) nói “hàm (function / 함수) này luôn trả về giá trị hợp lệ”, ta nên cố tìm đầu vào (input / 입력) phá vỡ claim: `null`, empty danh sách (list / 목록), overflow, negative đầu vào (input / 입력), timezone ranh giới (boundary / 경계). Testing tốt thường mang tinh thần counterexample tìm kiếm (search / 검색).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Counterexample và vai trò của một trường hợp phản chứng** cho ta quy tắc; **Bất biến (invariant / 불변식): thứ không đổi trong quá trình biến đổi** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Dimensional phân tích (analysis / 분석): đơn vị là một phần của lô-gic (logic / 논리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Counterexample và vai trò của một trường hợp phản chứng** nêu quy tắc; **Bất biến (invariant / 불변식): thứ không đổi trong quá trình biến đổi** thử quy tắc trong tình huống, rồi **Dimensional phân tích (analysis / 분석): đơn vị là một phần của lô-gic (logic / 논리)** mở rộng hệ quả.
 
 ## Bất biến (invariant / 불변식): thứ không đổi trong quá trình biến đổi
 
@@ -80,7 +80,7 @@ Bất biến (Invariant / 불변량) là tính chất vẫn giữ nguyên khi h�
 
 Ví dụ tìm kiếm nhị phân (binary search / 이진 탐색) duy trì bất biến (invariant / 불변식) rằng nếu mục tiêu (target / 대상) còn tồn tại trong vùng chưa loại bỏ, nó nằm trong interval `[low, high]`. Mỗi bước giảm interval nhưng bảo toàn bất biến (invariant / 불변식) đó. Khi interval rỗng, ta kết luận mục tiêu (target / 대상) không tồn tại.
 
-> **Chuyển mạch:** Trong **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Dimensional phân tích (analysis / 분석): đơn vị là một phần của lô-gic (logic / 논리)** tiếp nhận điểm tựa từ **Bất biến (invariant / 불변식): thứ không đổi trong quá trình biến đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Approximation và lỗi (error / 오류)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Dimensional phân tích (analysis / 분석): đơn vị là một phần của lô-gic (logic / 논리)** nối từ **Bất biến (invariant / 불변식): thứ không đổi trong quá trình biến đổi** sang **Approximation và lỗi (error / 오류)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dimensional phân tích (analysis / 분석): đơn vị là một phần của lô-gic (logic / 논리)
 
@@ -96,7 +96,7 @@ thì dù các số có thể cộng được trong calculator, biểu thức kh�
 
 Trong mã (code / 코드), điều này tương tự hệ kiểu (type system / 타입 시스템). Một số thư viện sử dụng type-safe units để tránh cộng `Meters` với `Seconds` giống như trình biên dịch (compiler / 컴파일러) ngăn cộng `LocalDate` với một đối tượng (object / 객체) không phù hợp.
 
-> **Chuyển mạch:** Ở chặng này của **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Approximation và lỗi (error / 오류)** tiếp nhận điểm tựa từ **Dimensional phân tích (analysis / 분석): đơn vị là một phần của lô-gic (logic / 논리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **First-Principles Thinking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Approximation và lỗi (error / 오류)** nối từ **Dimensional phân tích (analysis / 분석): đơn vị là một phần của lô-gic (logic / 논리)** sang **First-Principles Thinking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Approximation và lỗi (error / 오류)
 
@@ -118,7 +118,7 @@ Hai phép đo trả lời hai câu hỏi khác nhau. Sai số tuyệt đối đo
 
 Trong numerical computing, floating-point arithmetic có thể tạo rounding lỗi (error / 오류). Vì vậy `0.1 + 0.2` trong nhiều ngôn ngữ không biểu diễn chính xác `0.3` theo nhị phân (binary / 이진) floating điểm (point / 지점). Đây không phải “bug của toán”; nó là hệ quả của việc biểu diễn một tập vô hạn số thực bằng hữu hạn bit.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **First-Principles Thinking** tiếp nhận điểm tựa từ **Approximation và lỗi (error / 오류)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결): cùng một cấu trúc dưới nhiều tên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **First-Principles Thinking** nối từ **Approximation và lỗi (error / 오류)** sang **Liên kết kiến thức (knowledge connection / 지식 연결): cùng một cấu trúc dưới nhiều tên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## First-Principles Thinking
 
@@ -150,7 +150,7 @@ A_n=P(1+r)^n
 
 Exponential growth xuất hiện vì cùng một multiplicative transformation được lặp lại.
 
-> **Chuyển mạch:** Trong **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Liên kết kiến thức (knowledge connection / 지식 연결): cùng một cấu trúc dưới nhiều tên** tiếp nhận điểm tựa từ **First-Principles Thinking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Liên kết kiến thức (knowledge connection / 지식 연결): cùng một cấu trúc dưới nhiều tên** nối từ **First-Principles Thinking** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결): cùng một cấu trúc dưới nhiều tên
 
@@ -158,13 +158,13 @@ Một trong những kỹ năng toán quan trọng nhất là nhận ra cấu tr�
 
 Khi thấy một khái niệm mới, đừng chỉ hỏi “định nghĩa là gì?”. Hãy hỏi “nó có cùng cấu trúc với thứ gì mình đã biết?”.
 
-> **Chuyển mạch:** Ở chặng này của **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết kiến thức (knowledge connection / 지식 연결): cùng một cấu trúc dưới nhiều tên** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết kiến thức (knowledge connection / 지식 연결): cùng một cấu trúc dưới nhiều tên** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Toán học là quá trình nén một vấn đề thành những đối tượng và quan hệ đủ chính xác để ta có thể suy luận mà không phải mang toàn bộ thế giới thật vào đầu. Một công thức chỉ là phần cuối của quá trình; phần quan trọng hơn là các giả định (assumptions / 가정들), cấu trúc và lô-gic (logic / 논리) dẫn đến nó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tư duy toán học và nguyên lý nền tảng (first principles / 제일 원리)**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

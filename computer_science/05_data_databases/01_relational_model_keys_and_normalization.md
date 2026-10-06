@@ -10,7 +10,7 @@ Trong mô hình (model / 모델) lý tưởng, quan hệ (relation / 관계) là
 
 Attribute có lĩnh vực (domain / 도메인) — tập giá trị hợp lệ. lược đồ (schema / 스키마) đặt types và các ràng buộc (constraints / 제약조건들) để approximate lĩnh vực (domain / 도메인).
 
-> **Chuyển mạch:** Relation gồm tuple và attribute; keys biến định danh thành ràng buộc, functional dependency chỉ ra lặp dữ liệu, còn foreign key nối các quan hệ trước khi normalization giảm anomaly.
+> **Nối mạch:** Relation gồm tuple và attribute; keys biến định danh thành ràng buộc, functional dependency chỉ ra lặp dữ liệu, còn foreign key nối các quan hệ trước khi normalization giảm anomaly.
 
 ## Keys từ định danh (identity / 식별자) và functional phụ thuộc (dependency / 의존성)
 
@@ -20,7 +20,7 @@ Surrogate key như generated ID không làm natural uniqueness biến mất. N�
 
 Functional phụ thuộc (dependency / 의존성) `X → Y` nghĩa nếu hai tuples có cùng X thì phải cùng Y. Đây là foundation của normalization.
 
-> **Chuyển mạch:** Ở chặng này của **Relational mô hình (model / 모델), keys và normalization**, **Foreign key** tiếp nhận điểm tựa từ **Keys từ định danh (identity / 식별자) và functional phụ thuộc (dependency / 의존성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tại sao normalization tồn tại?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Foreign key** nối từ **Keys từ định danh (identity / 식별자) và functional phụ thuộc (dependency / 의존성)** sang **Tại sao normalization tồn tại?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Foreign key
 
@@ -28,7 +28,7 @@ Foreign key encode referential integrity: child giá trị (value / 값) phải 
 
 Cascade tiện nhưng có thể tạo large implicit effects; cần hiểu đồ thị (graph / 그래프) relationships và giao dịch (transaction / 트랜잭션) phạm vi (scope / 범위).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Relational mô hình (model / 모델), keys và normalization**, **Tại sao normalization tồn tại?** tiếp nhận điểm tựa từ **Foreign key** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1NF, 2NF, 3NF và BCNF bằng bản chất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tại sao normalization tồn tại?** nối từ **Foreign key** sang **1NF, 2NF, 3NF và BCNF bằng bản chất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tại sao normalization tồn tại?
 
@@ -36,7 +36,7 @@ Giả sử một bảng (table / 테이블) lặp customer address trên mỗi t
 
 Normalization decomposition tách facts theo dependencies để mỗi fact có một home rõ, giảm redundancy gây inconsistency.
 
-> **Chuyển mạch:** Trong **Relational mô hình (model / 모델), keys và normalization**, **1NF, 2NF, 3NF và BCNF bằng bản chất** tiếp nhận điểm tựa từ **Tại sao normalization tồn tại?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Denormalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **1NF, 2NF, 3NF và BCNF bằng bản chất** nối từ **Tại sao normalization tồn tại?** sang **Denormalization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1NF, 2NF, 3NF và BCNF bằng bản chất
 
@@ -50,7 +50,7 @@ BCNF mạnh hơn: với mọi non-trivial FD `X→Y`, X phải là superkey. M�
 
 Normalization không phải ritual đếm forms; nó là lập luận (reasoning / 추론) “fact này phụ thuộc identifier nào?”.
 
-> **Chuyển mạch:** Ở chặng này của **Relational mô hình (model / 모델), keys và normalization**, **Denormalization** tiếp nhận điểm tựa từ **1NF, 2NF, 3NF và BCNF bằng bản chất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **NULL và three-valued lô-gic (logic / 논리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Denormalization** nối từ **1NF, 2NF, 3NF và BCNF bằng bản chất** sang **NULL và three-valued lô-gic (logic / 논리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Denormalization
 
@@ -58,7 +58,7 @@ Denormalization intentional duplicate/precompute để giảm joins hoặc hỗ 
 
 Materialized view, bộ nhớ đệm (cache / 캐시), tìm kiếm (search / 검색) chỉ mục (index / 인덱스) đều là derived/duplicated trạng thái (state / 상태). Câu hỏi là nguồn chuẩn (source of truth / 정본) và refresh consistency.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Relational mô hình (model / 모델), keys và normalization**, **NULL và three-valued lô-gic (logic / 논리)** tiếp nhận điểm tựa từ **Denormalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Relational algebra intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **NULL và three-valued lô-gic (logic / 논리)** nối từ **Denormalization** sang **Relational algebra intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## NULL và three-valued lô-gic (logic / 논리)
 
@@ -66,19 +66,19 @@ SQL NULL thường biểu diễn unknown/missing/not applicable tùy thiết k�
 
 `NOT IN` với subquery chứa NULL có thể gây kết quả bất ngờ vì UNKNOWN propagation. Đây là chỗ logical mô hình (model / 모델) và SQL ngữ nghĩa (semantics / 의미론) cần phân biệt.
 
-> **Chuyển mạch:** Trong **Relational mô hình (model / 모델), keys và normalization**, **Relational algebra intuition** tiếp nhận điểm tựa từ **NULL và three-valued lô-gic (logic / 논리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Relational algebra intuition** nối từ **NULL và three-valued lô-gic (logic / 논리)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Relational algebra intuition
 
 Selection lọc rows; projection chọn attributes; phép nối (join / 조인) kết hợp tuples theo predicate; union/difference/set operations compose relations. SQL optimizer có thể reorder equivalent operations khi ngữ nghĩa (semantics / 의미론) cho phép, như push predicate trước phép nối (join / 조인) để giảm intermediate dữ liệu (data / 데이터).
 
-> **Chuyển mạch:** Ở chặng này của **Relational mô hình (model / 모델), keys và normalization**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Relational algebra intuition** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Relational algebra intuition**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Relational thiết kế (design / 설계) là **phân bố facts theo dependencies**. Key trả lời “fact thuộc thực thể (entity / 엔터티)/định danh (identity / 식별자) nào”; normalization giảm việc cùng một fact phải được cập nhật ở nhiều nơi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Relational mô hình (model / 모델), keys và normalization**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -88,7 +88,7 @@ Selection lọc rows; projection chọn attributes; phép nối (join / 조인) 
 
 **“NULL là empty string/zero.”** Không; NULL có special ngữ nghĩa (semantics / 의미론) và three-valued lô-gic (logic / 논리).
 
-> **Chuyển mạch:** Trong **Relational mô hình (model / 모델), keys và normalization**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

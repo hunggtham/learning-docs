@@ -6,7 +6,7 @@
 
 Zambia nằm trên cao nguyên nam–trung Phi và không giáp biển. Độ cao làm khí hậu nhìn chung mát hơn nhiều vùng nhiệt đới cùng vĩ độ, trong khi khoảng cách tới cảng biến logistics thành một yếu tố cấu trúc của kinh tế.
 
-> **Chuyển mạch:** Trong **Zambia**, **Hai hệ lưu vực lớn** tiếp nhận điểm tựa từ **Cao nguyên nội lục và vị trí landlocked** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Copperbelt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cao nguyên và landlockedness đặt Zambia giữa các basin, còn **Hai hệ lưu vực lớn** nối Zambezi và Congo với agriculture, hydropower và ecology. **Copperbelt** tiếp theo cho thấy tài nguyên tập trung ở đâu.
 
 ## Hai hệ lưu vực lớn
 
@@ -14,7 +14,7 @@ Phần lớn Zambia thuộc hệ Zambezi hoặc Congo. Ranh giới lưu vực ch
 
 Kariba ở biên giới phía nam là ví dụ về hạ tầng (infrastructure / 인프라) xuyên biên giới nơi nước, điện và quản trị liên kết nhiều quốc gia.
 
-> **Chuyển mạch:** Ở chặng này của **Zambia**, **Copperbelt** tiếp nhận điểm tựa từ **Hai hệ lưu vực lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lusaka và hệ đô thị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Copperbelt gắn copper, cobalt, rail và electricity với một dải khai khoáng xuyên biên giới; **Copperbelt** tạo corridor khác với vùng nông nghiệp. **Lusaka và hệ đô thị** tiếp theo phân vai thủ đô và các mining towns.
 
 ## Copperbelt
 
@@ -22,25 +22,25 @@ Phía bắc Zambia thuộc Copperbelt, liên tục về kinh tế–địa chấ
 
 Copperbelt cho thấy tài nguyên không chỉ là “mỏ”: giá trị nằm trong toàn bộ mạng (network / 네트워크) từ extraction tới cổng (port / 포트).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Zambia**, **Lusaka và hệ đô thị** tiếp nhận điểm tựa từ **Copperbelt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hành lang ra biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Lusaka là administrative–services core, còn Copperbelt và các town dọc tuyến cung cấp industry; **Lusaka và hệ đô thị** cần corridor tin cậy để nối thị trường. **Hành lang ra biển** tiếp theo giải thích các lựa chọn gateway.
 
 ## Lusaka và hệ đô thị
 
 Lusaka nằm trên trục giao thông chính ở phía nam–trung, đóng vai trò thủ đô và trung tâm dịch vụ. Các đô thị Copperbelt tạo một cực thứ hai mạnh hơn nhiều vùng nông thôn.
 
-> **Chuyển mạch:** Trong **Zambia**, **Hành lang ra biển** tiếp nhận điểm tựa từ **Lusaka và hệ đô thị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nông nghiệp và rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Không giáp biển khiến **Hành lang ra biển** phụ thuộc Tanzania, Mozambique, Namibia, Botswana và South Africa; rail/road reliability quyết định competitiveness. **Nông nghiệp và rủi ro** tiếp theo đặt corridor cạnh mùa mưa và drought.
 
 ## Hành lang ra biển
 
 Zambia có nhiều lựa chọn corridor qua Tanzania, Mozambique, Namibia, South Africa và Angola. Đa dạng tuyến giúp giảm phụ thuộc vào một cửa biển duy nhất, nhưng mỗi tuyến có sự đánh đổi (trade-off / 트레이드오프) về distance, border crossing và sức chứa (capacity / 용량).
 
-> **Chuyển mạch:** Ở chặng này của **Zambia**, **Nông nghiệp và rủi ro** tiếp nhận điểm tựa từ **Hành lang ra biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Maize, livestock, wetlands và mining đều nhạy với water variability; **Nông nghiệp và rủi ro** gắn sản xuất với lũ, hạn và power shortages. **Mô hình tư duy** sẽ giữ landlocked corridor trong kết luận.
 
 ## Nông nghiệp và rủi ro
 
 Nông nghiệp phụ thuộc mùa mưa, đặc biệt maize ở nhiều vùng. Hạn có thể đồng thời giảm crop yield và hydropower, tạo **compound water–food–năng lượng (energy / 에너지) stress**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Zambia**, **Mô hình tư duy** gom các mảnh từ **Nông nghiệp và rủi ro** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi plateau–landlocked → Zambezi/Congo basins → Copperbelt → Lusaka → external corridors → agriculture/risk, rồi bàn giao cho owner **Eastern Africa** trong [README](./README.md).
 
 ## Mô hình tư duy
 

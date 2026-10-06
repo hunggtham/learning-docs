@@ -37,7 +37,7 @@ gán một véc-tơ (vector / 벡터) cho mỗi điểm (point / 지점), ví d�
 
 Trường dữ liệu (field / 필드) là hàm (function / 함수) có lĩnh vực (domain / 도메인) là không gian (space / 공간). Vì vậy véc-tơ (vector / 벡터) calculus nối trực tiếp với multivariable functions.
 
-> **Chuyển mạch:** Trong **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **1. Scalar trường dữ liệu (field / 필드) và véc-tơ (vector / 벡터) trường dữ liệu (field / 필드)** nêu điều cần giải thích; **2. độ dốc (gradient / 기울기): đầu ra (output / 출력) tăng nhanh nhất về đâu?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Vì sao độ dốc (gradient / 기울기) vuông góc mức (level / 수준) set?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **1. Scalar trường dữ liệu (field / 필드) và véc-tơ (vector / 벡터) trường dữ liệu (field / 필드)** đặt vấn đề; **2. độ dốc (gradient / 기울기): đầu ra (output / 출력) tăng nhanh nhất về đâu?** đối chiếu bằng chứng, rồi **3. Vì sao độ dốc (gradient / 기울기) vuông góc mức (level / 수준) set?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2. độ dốc (gradient / 기울기): đầu ra (output / 출력) tăng nhanh nhất về đâu?
 
@@ -71,7 +71,7 @@ magnitude của gradient → maximum local rate
 
 Độ dốc (gradient / 기울기) không phải “mũi tên hướng lên đồ thị (graph / 그래프)”; nó sống trong đầu vào (input / 입력) không gian (space / 공간).
 
-> **Chuyển mạch:** Ở chặng này của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **3. Vì sao độ dốc (gradient / 기울기) vuông góc mức (level / 수준) set?** tiếp nhận điểm tựa từ **2. độ dốc (gradient / 기울기): đầu ra (output / 출력) tăng nhanh nhất về đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. độ dốc (gradient / 기울기) và tối ưu hóa (optimization / 최적화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **3. Vì sao độ dốc (gradient / 기울기) vuông góc mức (level / 수준) set?** nối từ **2. độ dốc (gradient / 기울기): đầu ra (output / 출력) tăng nhanh nhất về đâu?** sang **4. độ dốc (gradient / 기울기) và tối ưu hóa (optimization / 최적화)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Vì sao độ dốc (gradient / 기울기) vuông góc mức (level / 수준) set?
 
@@ -91,7 +91,7 @@ Do đó độ dốc (gradient / 기울기) orthogonal với mọi tangent direct
 
 Đây là liên kết (connection / 연결) trực tiếp giữa calculus và hình học (geometry / 기하학) of các ràng buộc (constraints / 제약조건들).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **4. độ dốc (gradient / 기울기) và tối ưu hóa (optimization / 최적화)** tiếp nhận điểm tựa từ **3. Vì sao độ dốc (gradient / 기울기) vuông góc mức (level / 수준) set?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Divergence: cục bộ (local / 로컬) nguồn (source / 소스)/sink strength** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **4. độ dốc (gradient / 기울기) và tối ưu hóa (optimization / 최적화)** nối từ **3. Vì sao độ dốc (gradient / 기울기) vuông góc mức (level / 수준) set?** sang **5. Divergence: cục bộ (local / 로컬) nguồn (source / 소스)/sink strength**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. độ dốc (gradient / 기울기) và tối ưu hóa (optimization / 최적화)
 
@@ -101,7 +101,7 @@ Ràng buộc (constraint / 제약조건) surface `g(x)=0` có normal `\nabla g`.
 
 Véc-tơ (vector / 벡터) calculus vì vậy đứng ngay dưới constrained tối ưu hóa (optimization / 최적화).
 
-> **Chuyển mạch:** Trong **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **4. độ dốc (gradient / 기울기) và tối ưu hóa (optimization / 최적화)** nêu điều cần giải thích; **5. Divergence: cục bộ (local / 로컬) nguồn (source / 소스)/sink strength** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. Divergence từ cục bộ (local / 로컬) expansion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **4. độ dốc (gradient / 기울기) và tối ưu hóa (optimization / 최적화)** đặt vấn đề; **5. Divergence: cục bộ (local / 로컬) nguồn (source / 소스)/sink strength** đối chiếu bằng chứng, rồi **6. Divergence từ cục bộ (local / 로컬) expansion** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. Divergence: cục bộ (local / 로컬) nguồn (source / 소스)/sink strength
 
@@ -127,7 +127,7 @@ Trực giác: lấy một tiny volume quanh điểm (point / 지점). Nếu nhi�
 
 Divergence là **net outward flux per đơn vị (unit / 단위) volume trong limit**.
 
-> **Chuyển mạch:** Ở chặng này của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **5. Divergence: cục bộ (local / 로컬) nguồn (source / 소스)/sink strength** nêu điều cần giải thích; **6. Divergence từ cục bộ (local / 로컬) expansion** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. Curl: cục bộ (local / 로컬) circulation tendency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **5. Divergence: cục bộ (local / 로컬) nguồn (source / 소스)/sink strength** đặt vấn đề; **6. Divergence từ cục bộ (local / 로컬) expansion** đối chiếu bằng chứng, rồi **7. Curl: cục bộ (local / 로컬) circulation tendency** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 6. Divergence từ cục bộ (local / 로컬) expansion
 
@@ -153,7 +153,7 @@ F=(1,0,0)
 
 có divergence 0: trường dữ liệu (field / 필드) đi xuyên region nhưng không được tạo/huỷ bên trong.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **7. Curl: cục bộ (local / 로컬) circulation tendency** tiếp nhận điểm tựa từ **6. Divergence từ cục bộ (local / 로컬) expansion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Worked example: rigid rotation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **7. Curl: cục bộ (local / 로컬) circulation tendency** nối từ **6. Divergence từ cục bộ (local / 로컬) expansion** sang **8. Worked example: rigid rotation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Curl: cục bộ (local / 로컬) circulation tendency
 
@@ -173,7 +173,7 @@ Paddle-wheel intuition hữu ích: đặt tiny wheel vào luồng (flow / 흐름
 
 Nhưng curl không đơn giản bằng “trường dữ liệu (field / 필드) nhìn xoáy”. Nó là differential measure của circulation density.
 
-> **Chuyển mạch:** Trong **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **7. Curl: cục bộ (local / 로컬) circulation tendency** cho ta quy tắc; **8. Worked example: rigid rotation** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **9. Conservative trường dữ liệu (field / 필드) và potential** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **7. Curl: cục bộ (local / 로컬) circulation tendency** nêu quy tắc; **8. Worked example: rigid rotation** thử quy tắc trong tình huống, rồi **9. Conservative trường dữ liệu (field / 필드) và potential** mở rộng hệ quả.
 
 ## 8. Worked example: rigid rotation
 
@@ -197,7 +197,7 @@ Curl:
 
 Trường dữ liệu (field / 필드) không expand locally nhưng có rotational tendency. Đây là ví dụ rõ để tách divergence khỏi curl.
 
-> **Chuyển mạch:** Ở chặng này của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **8. Worked example: rigid rotation** cho ta quy tắc; **9. Conservative trường dữ liệu (field / 필드) và potential** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **10. Curl zero có đủ để conservative không?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **8. Worked example: rigid rotation** nêu quy tắc; **9. Conservative trường dữ liệu (field / 필드) và potential** thử quy tắc trong tình huống, rồi **10. Curl zero có đủ để conservative không?** mở rộng hệ quả.
 
 ## 9. Conservative trường dữ liệu (field / 필드) và potential
 
@@ -223,7 +223,7 @@ Do đó công việc (work / 작업) không phụ thuộc đường dẫn (path 
 
 Trong mechanics, potential năng lượng (energy / 에너지) cho conservative force là manifestation của cấu trúc (structure / 구조) này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **9. Conservative trường dữ liệu (field / 필드) và potential** nêu điều cần giải thích; **10. Curl zero có đủ để conservative không?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. Line integral: accumulate trường dữ liệu (field / 필드) along a đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **9. Conservative trường dữ liệu (field / 필드) và potential** đặt vấn đề; **10. Curl zero có đủ để conservative không?** đối chiếu bằng chứng, rồi **11. Line integral: accumulate trường dữ liệu (field / 필드) along a đường dẫn (path / 경로)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 10. Curl zero có đủ để conservative không?
 
@@ -237,7 +237,7 @@ Nhưng reverse implication cần lĩnh vực (domain / 도메인) các giả đ�
 
 Một trường dữ liệu (field / 필드) có curl zero trên lĩnh vực (domain / 도메인) có hole vẫn có thể có nonzero circulation quanh hole. Đây là ví dụ quan trọng: **cục bộ (local / 로컬) điều kiện (condition / 조건) không luôn imply toàn cục (global / 전역) cấu trúc (structure / 구조)**.
 
-> **Chuyển mạch:** Trong **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **10. Curl zero có đủ để conservative không?** nêu điều cần giải thích; **11. Line integral: accumulate trường dữ liệu (field / 필드) along a đường dẫn (path / 경로)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. Scalar line integral** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **10. Curl zero có đủ để conservative không?** đặt vấn đề; **11. Line integral: accumulate trường dữ liệu (field / 필드) along a đường dẫn (path / 경로)** đối chiếu bằng chứng, rồi **12. Scalar line integral** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 11. Line integral: accumulate trường dữ liệu (field / 필드) along a đường dẫn (path / 경로)
 
@@ -265,7 +265,7 @@ W=\int_C F\cdot dr
 
 là công việc (work / 작업) along đường dẫn (path / 경로).
 
-> **Chuyển mạch:** Ở chặng này của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **11. Line integral: accumulate trường dữ liệu (field / 필드) along a đường dẫn (path / 경로)** nêu điều cần giải thích; **12. Scalar line integral** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. Surface integral và flux** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **11. Line integral: accumulate trường dữ liệu (field / 필드) along a đường dẫn (path / 경로)** đặt vấn đề; **12. Scalar line integral** đối chiếu bằng chứng, rồi **13. Surface integral và flux** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. Scalar line integral
 
@@ -283,7 +283,7 @@ M=\int_C \rho\,ds.
 
 Điều này nhắc rằng “line integral” không chỉ có một form.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **13. Surface integral và flux** tiếp nhận điểm tựa từ **12. Scalar line integral** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Divergence theorem: cục bộ (local / 로컬) nguồn (source / 소스) → toàn cục (global / 전역) flux** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **13. Surface integral và flux** nối từ **12. Scalar line integral** sang **14. Divergence theorem: cục bộ (local / 로컬) nguồn (source / 소스) → toàn cục (global / 전역) flux**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Surface integral và flux
 
@@ -297,7 +297,7 @@ Flux qua oriented surface:
 
 Đổi orientation của normal thì flux đổi dấu.
 
-> **Chuyển mạch:** Trong **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **13. Surface integral và flux** nêu điều cần giải thích; **14. Divergence theorem: cục bộ (local / 로컬) nguồn (source / 소스) → toàn cục (global / 전역) flux** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. Continuity equation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **13. Surface integral và flux** đặt vấn đề; **14. Divergence theorem: cục bộ (local / 로컬) nguồn (source / 소스) → toàn cục (global / 전역) flux** đối chiếu bằng chứng, rồi **15. Continuity equation** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. Divergence theorem: cục bộ (local / 로컬) nguồn (source / 소스) → toàn cục (global / 전역) flux
 
@@ -315,7 +315,7 @@ Interpretation:
 
 Đây không chỉ là tích hợp (integration / 통합) trick. Nó là mathematical form của conservation lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Ở chặng này của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **14. Divergence theorem: cục bộ (local / 로컬) nguồn (source / 소스) → toàn cục (global / 전역) flux** nêu điều cần giải thích; **15. Continuity equation** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. Stokes' theorem: cục bộ (local / 로컬) curl → ranh giới (boundary / 경계) circulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **14. Divergence theorem: cục bộ (local / 로컬) nguồn (source / 소스) → toàn cục (global / 전역) flux** đặt vấn đề; **15. Continuity equation** đối chiếu bằng chứng, rồi **16. Stokes' theorem: cục bộ (local / 로컬) curl → ranh giới (boundary / 경계) circulation** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. Continuity equation
 
@@ -331,7 +331,7 @@ Nếu density giảm tại điểm (point / 지점), mass/charge/xác suất (pr
 
 Đây là một trong các equations sâu nhất nối divergence với Physics.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **15. Continuity equation** đã nêu tiêu chí phân biệt, còn **16. Stokes' theorem: cục bộ (local / 로컬) curl → ranh giới (boundary / 경계) circulation** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **17. Green's theorem trong 2D** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **15. Continuity equation** đặt tiêu chí; **16. Stokes' theorem: cục bộ (local / 로컬) curl → ranh giới (boundary / 경계) circulation** dùng tiêu chí đó để kiểm tra ranh giới, rồi **17. Green's theorem trong 2D** mở rộng hệ quả.
 
 ## 16. Stokes' theorem: cục bộ (local / 로컬) curl → ranh giới (boundary / 경계) circulation
 
@@ -347,7 +347,7 @@ Left side tích lũy cục bộ (local / 로컬) rotation trên surface; right s
 
 Stokes nói rằng nội bộ (internal / 내부) rotational tendency account cho ranh giới (boundary / 경계) circulation.
 
-> **Chuyển mạch:** Trong **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **16. Stokes' theorem: cục bộ (local / 로컬) curl → ranh giới (boundary / 경계) circulation** đã nêu tiêu chí phân biệt, còn **17. Green's theorem trong 2D** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **18. Fundamental theorem mẫu (pattern / 패턴)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **16. Stokes' theorem: cục bộ (local / 로컬) curl → ranh giới (boundary / 경계) circulation** đặt tiêu chí; **17. Green's theorem trong 2D** dùng tiêu chí đó để kiểm tra ranh giới, rồi **18. Fundamental theorem mẫu (pattern / 패턴)** mở rộng hệ quả.
 
 ## 17. Green's theorem trong 2D
 
@@ -364,7 +364,7 @@ Một form:
 
 Nó là cầu nối (bridge / 브리지) dễ thấy trước generalized Stokes theorem.
 
-> **Chuyển mạch:** Ở chặng này của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **18. Fundamental theorem mẫu (pattern / 패턴)** tiếp nhận điểm tựa từ **17. Green's theorem trong 2D** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Coordinate các hệ thống (systems / 시스템들) và Jacobian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **18. Fundamental theorem mẫu (pattern / 패턴)** nối từ **17. Green's theorem trong 2D** sang **19. Coordinate các hệ thống (systems / 시스템들) và Jacobian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Fundamental theorem mẫu (pattern / 패턴)
 
@@ -394,7 +394,7 @@ Unified mô hình tư duy (mental model / 사고 모델):
 
 Generalized Stokes theorem formalizes toàn bộ mẫu (pattern / 패턴) này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **19. Coordinate các hệ thống (systems / 시스템들) và Jacobian** tiếp nhận điểm tựa từ **18. Fundamental theorem mẫu (pattern / 패턴)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Maxwell equations liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **19. Coordinate các hệ thống (systems / 시스템들) và Jacobian** nối từ **18. Fundamental theorem mẫu (pattern / 패턴)** sang **20. Maxwell equations liên kết (connection / 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Coordinate các hệ thống (systems / 시스템들) và Jacobian
 
@@ -410,7 +410,7 @@ dV=r^2\sin\theta\,dr\,d\theta\,d\phi.
 
 Factor `r^2\sin\theta` đến từ cục bộ (local / 로컬) volume scaling của coordinate transform.
 
-> **Chuyển mạch:** Trong **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, sau nội dung của **19. Coordinate các hệ thống (systems / 시스템들) và Jacobian**, **20. Maxwell equations liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **21. Fluid dynamics liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, sau nội dung của **19. Coordinate các hệ thống (systems / 시스템들) và Jacobian**, **20. Maxwell equations liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **21. Fluid dynamics liên kết (connection / 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. Maxwell equations liên kết (connection / 연결)
 
@@ -423,7 +423,7 @@ Faraday law → curl của electric field liên hệ changing magnetic field
 
 Điểm quan trọng không phải memorize physics constants ở chapter này, mà thấy véc-tơ (vector / 벡터) calculus operators được chọn vì chúng encode cục bộ (local / 로컬) nguồn (source / 소스) và circulation cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Ở chặng này của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **21. Fluid dynamics liên kết (connection / 연결)** tiếp nhận điểm tựa từ **20. Maxwell equations liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. AI và scalar fields** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **21. Fluid dynamics liên kết (connection / 연결)** nối từ **20. Maxwell equations liên kết (connection / 연결)** sang **22. AI và scalar fields**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Fluid dynamics liên kết (connection / 연결)
 
@@ -445,7 +445,7 @@ mô tả rotational cấu trúc (structure / 구조) của luồng (flow / 흐�
 
 Nhưng zero divergence không nghĩa zero velocity; zero curl không nghĩa no motion.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **22. AI và scalar fields** tiếp nhận điểm tựa từ **21. Fluid dynamics liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Worked example: flux của radial trường dữ liệu (field / 필드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **22. AI và scalar fields** nối từ **21. Fluid dynamics liên kết (connection / 연결)** sang **Worked example: flux của radial trường dữ liệu (field / 필드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. AI và scalar fields
 
@@ -461,7 +461,7 @@ cho cục bộ (local / 로컬) sensitivity; Hessian cho curvature. Dù không v
 
 Véc-tơ (vector / 벡터) calculus intuition vì vậy vẫn relevant cho tối ưu hóa (optimization / 최적화)/AI.
 
-> **Chuyển mạch:** Trong **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **22. AI và scalar fields** cho ta quy tắc; **Worked example: flux của radial trường dữ liệu (field / 필드)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **22. AI và scalar fields** nêu quy tắc; **Worked example: flux của radial trường dữ liệu (field / 필드)** thử quy tắc trong tình huống, rồi **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả.
 
 ## Worked example: flux của radial trường dữ liệu (field / 필드)
 
@@ -487,7 +487,7 @@ surface area `4\pi R^2`, nên total flux:
 
 Nó independent of `R`. nguồn (source / 소스) hành vi (behavior / 동작) concentrated at excluded origin cho thấy vì sao lĩnh vực (domain / 도메인)/singularity matter khi dùng divergence theorem.
 
-> **Chuyển mạch:** Ở chặng này của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **Worked example: flux của radial trường dữ liệu (field / 필드)** cho ta quy tắc; **Liên kết kiến thức (knowledge connection / 지식 연결)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **Worked example: flux của radial trường dữ liệu (field / 필드)** nêu quy tắc; **Liên kết kiến thức (knowledge connection / 지식 연결)** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
@@ -505,13 +505,13 @@ multivariable derivative
 
 Projection và dot sản phẩm (product / 제품) từ tuyến tính (linear / 선형) Algebra xuất hiện trong directional derivative, công việc (work / 작업) và flux. Topology xuất hiện trong distinction cục bộ (local / 로컬) curl-free vs toàn cục (global / 전역) conservative. Differential equations/PDE dùng các operators này để mô hình (model / 모델) dynamics.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > độ dốc (gradient / 기울기) đo cục bộ (local / 로컬) uphill direction của scalar trường dữ liệu (field / 필드). Divergence đo cục bộ (local / 로컬) creation/expansion of luồng (flow / 흐름). Curl đo cục bộ (local / 로컬) circulation tendency. Integral theorems biến cục bộ (local / 로컬) derivatives thành toàn cục (global / 전역) ranh giới (boundary / 경계) statements.
 
-> **Chuyển mạch:** Trong **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Véc-tơ (vector / 벡터) calculus: cục bộ (local / 로컬) trường dữ liệu (field / 필드) hành vi (behavior / 동작) và toàn cục (global / 전역) conservation**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

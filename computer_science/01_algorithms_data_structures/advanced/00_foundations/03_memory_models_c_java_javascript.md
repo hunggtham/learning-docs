@@ -16,7 +16,7 @@ Vì vậy, **cách biểu diễn (representation / 표현)** không chỉ quyế
 
 Môi trường chạy thực tế có thể tối ưu bằng **phân tích thoát (escape analysis)**, thay thế vô hướng (scalar replacement), các thế hệ GC hoặc các kỹ thuật khác. Tuy nhiên, mô hình ngăn xếp (stack / 스택)–vùng nhớ động (heap / 힙) vẫn rất hữu ích để hiểu đệ quy, cấp phát và vòng đời.
 
-> **Chuyển mạch:** Trong **Mô hình bộ nhớ trong C, Java và JavaScript**, **2. C: con trỏ và địa chỉ bộ nhớ** gom các mảnh từ **1. Ngăn xếp và vùng nhớ động (heap / 힙): mô hình tư duy thực dụng** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **3. Quyền sở hữu trong cấu trúc liên kết bằng C** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. C: con trỏ và địa chỉ bộ nhớ** tổng hợp từ **1. Ngăn xếp và vùng nhớ động (heap / 힙): mô hình tư duy thực dụng**; **3. Quyền sở hữu trong cấu trúc liên kết bằng C** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 2. C: con trỏ và địa chỉ bộ nhớ
 
@@ -36,7 +36,7 @@ Sau `free(a)`, giá trị con trỏ có thể vẫn còn nhưng vùng nhớ khô
 
 C cho quyền kiểm soát cách biểu diễn rất trực tiếp, nhưng đổi lại việc quản lý **quyền sở hữu (ownership / 소유권)** và vòng đời phải được thiết kế rõ ràng.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình bộ nhớ trong C, Java và JavaScript**, sau nội dung của **2. C: con trỏ và địa chỉ bộ nhớ**, **3. Quyền sở hữu trong cấu trúc liên kết bằng C** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **4. Bí danh bộ nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Quyền sở hữu trong cấu trúc liên kết bằng C** nối từ **2. C: con trỏ và địa chỉ bộ nhớ** sang **4. Bí danh bộ nhớ**, vì owner trước quyết định cách đọc reference sau.
 
 ## 3. Quyền sở hữu trong cấu trúc liên kết bằng C
 
@@ -53,7 +53,7 @@ Nếu mỗi nút được `malloc` riêng, khi hủy danh sách ta phải lưu `
 
 Do đó API C nên ghi rõ ai sở hữu vùng nhớ và ai chịu trách nhiệm giải phóng. Hợp đồng quyền sở hữu là một phần của tính đúng đắn, không phải chi tiết phụ của thuật toán.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình bộ nhớ trong C, Java và JavaScript**, **4. Bí danh bộ nhớ** tiếp nhận điểm tựa từ **3. Quyền sở hữu trong cấu trúc liên kết bằng C** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Cấp phát liên tiếp trong C** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Bí danh bộ nhớ** nối từ **3. Quyền sở hữu trong cấu trúc liên kết bằng C** sang **5. Cấp phát liên tiếp trong C**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Bí danh bộ nhớ
 
@@ -71,7 +71,7 @@ printf("%d", *p); // 20
 
 Aliasing làm việc suy luận khó hơn vì một hàm có thể thay đổi vùng nhớ mà nơi gọi vẫn giữ tham chiếu tới đó. Trong cấu trúc dữ liệu, chia sẻ nút giữa nhiều cấu trúc mà không có mô hình quyền sở hữu rõ ràng dễ gây lỗi thay đổi ngoài ý muốn hoặc giải phóng hai lần.
 
-> **Chuyển mạch:** Trong **Mô hình bộ nhớ trong C, Java và JavaScript**, **5. Cấp phát liên tiếp trong C** tiếp nhận điểm tựa từ **4. Bí danh bộ nhớ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Phần đệm và căn chỉnh của struct** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **5. Cấp phát liên tiếp trong C** nối từ **4. Bí danh bộ nhớ** sang **6. Phần đệm và căn chỉnh của struct**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Cấp phát liên tiếp trong C
 
@@ -92,7 +92,7 @@ struct Point points[n];
 
 Mảng struct như trên có hành vi bộ nhớ khác đáng kể so với mảng con trỏ tới các `Point` được cấp phát rời rạc. Hai cách có thể cùng Big-O nhưng khác hiệu năng thực tế.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình bộ nhớ trong C, Java và JavaScript**, **6. Phần đệm và căn chỉnh của struct** tiếp nhận điểm tựa từ **5. Cấp phát liên tiếp trong C** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Java: tham chiếu và thu gom rác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Phần đệm và căn chỉnh của struct** nối từ **5. Cấp phát liên tiếp trong C** sang **7. Java: tham chiếu và thu gom rác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Phần đệm và căn chỉnh của struct
 
@@ -109,7 +109,7 @@ struct X {
 
 Không nên tối ưu vi mô khi chưa cần, nhưng khi đánh giá bộ nhớ phải dùng kích thước thực tế của cấu trúc thay vì chỉ cộng kích thước các trường.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình bộ nhớ trong C, Java và JavaScript**, sau nội dung của **6. Phần đệm và căn chỉnh của struct**, **7. Java: tham chiếu và thu gom rác** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **8. Java vẫn có rò rỉ bộ nhớ ở cấp lô-gic (logic / 논리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Java: tham chiếu và thu gom rác** nối từ **6. Phần đệm và căn chỉnh của struct** sang **8. Java vẫn có rò rỉ bộ nhớ ở cấp lô-gic (logic / 논리)**, vì lifetime khác nhau tạo ra giới hạn khác nhau.
 
 ## 7. Java: tham chiếu và thu gom rác
 
@@ -128,7 +128,7 @@ Bộ thu gom rác (Garbage Collector – GC) có thể thu hồi đối tượng
 
 GC loại bỏ nhiều lỗi use-after-free và double-free, nhưng quản lý bộ nhớ không trở thành miễn phí. Cấp phát, đánh dấu, sao chép, nén vùng nhớ động (heap / 힙) và các khoảng dừng GC đều có chi phí.
 
-> **Chuyển mạch:** Trong **Mô hình bộ nhớ trong C, Java và JavaScript**, **8. Java vẫn có rò rỉ bộ nhớ ở cấp lô-gic (logic / 논리)** tiếp nhận điểm tựa từ **7. Java: tham chiếu và thu gom rác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Chi phí của đối tượng (object / 객체) Java** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Java vẫn có rò rỉ bộ nhớ ở cấp lô-gic (logic / 논리)** nối từ **7. Java: tham chiếu và thu gom rác** sang **9. Chi phí của đối tượng (object / 객체) Java**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Java vẫn có rò rỉ bộ nhớ ở cấp lô-gic (logic / 논리)
 
@@ -142,7 +142,7 @@ Nếu bộ nhớ đệm (cache / 캐시) trên tăng mãi mà không có chính 
 
 Trong ngôn ngữ có GC, rò rỉ bộ nhớ thường không phải “quên free” mà là giữ một đường tham chiếu sống lâu hơn cần thiết.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình bộ nhớ trong C, Java và JavaScript**, **9. Chi phí của đối tượng (object / 객체) Java** tiếp nhận điểm tựa từ **8. Java vẫn có rò rỉ bộ nhớ ở cấp lô-gic (logic / 논리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Mảng Java và đồ thị đối tượng (object / 객체)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Chi phí của đối tượng (object / 객체) Java** nối từ **8. Java vẫn có rò rỉ bộ nhớ ở cấp lô-gic (logic / 논리)** sang **10. Mảng Java và đồ thị đối tượng (object / 객체)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Chi phí của đối tượng (object / 객체) Java
 
@@ -152,7 +152,7 @@ Vì vậy, danh sách liên kết chứa `Integer` có thể tốn nhiều bộ 
 
 Với DSA số học quy mô lớn, `int[]`, `long[]` hoặc các cấu trúc thành phần nguyên thủy (primitive / 기본 요소) chuyên dụng thường gọn và thân thiện với bộ nhớ đệm (cache / 캐시) hơn collection chứa đối tượng (object / 객체) đóng hộp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình bộ nhớ trong C, Java và JavaScript**, **10. Mảng Java và đồ thị đối tượng (object / 객체)** tiếp nhận điểm tựa từ **9. Chi phí của đối tượng (object / 객체) Java** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. JavaScript và định danh đối tượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Mảng Java và đồ thị đối tượng (object / 객체)** nối từ **9. Chi phí của đối tượng (object / 객체) Java** sang **11. JavaScript và định danh đối tượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Mảng Java và đồ thị đối tượng (object / 객체)
 
@@ -168,7 +168,7 @@ right[]
 
 có thể có tính cục bộ tốt hơn cách mỗi nút là một đối tượng (object / 객체) độc lập. Đây là một ví dụ của **thiết kế hướng dữ liệu (data-oriented design)**: cách bố trí được chọn theo mẫu truy cập thay vì chỉ theo mô hình đối tượng (object / 객체).
 
-> **Chuyển mạch:** Trong **Mô hình bộ nhớ trong C, Java và JavaScript**, **11. JavaScript và định danh đối tượng** tiếp nhận điểm tựa từ **10. Mảng Java và đồ thị đối tượng (object / 객체)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Giá trị nguyên thủy và đối tượng (object / 객체) trong JavaScript** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. JavaScript và định danh đối tượng** nối từ **10. Mảng Java và đồ thị đối tượng (object / 객체)** sang **12. Giá trị nguyên thủy và đối tượng (object / 객체) trong JavaScript**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. JavaScript và định danh đối tượng
 
@@ -185,7 +185,7 @@ Phép gán không sao chép sâu đối tượng (object / 객체). `a` và `b` 
 
 Array, `Map`, `Set` và đối tượng (object / 객체) thông thường đều được thời gian chạy (runtime / 런타임) quản lý. Engine có thể thay đổi cách biểu diễn vật lý dựa trên kiểu dữ liệu và hình dạng đối tượng (object / 객체) quan sát được. Lập trình viên không kiểm soát bố trí trực tiếp như C, nhưng mẫu cấp phát và việc giữ tham chiếu (reference / 참조) vẫn ảnh hưởng bộ nhớ và hiệu năng.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình bộ nhớ trong C, Java và JavaScript**, **12. Giá trị nguyên thủy và đối tượng (object / 객체) trong JavaScript** tiếp nhận điểm tựa từ **11. JavaScript và định danh đối tượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Closure và việc giữ dữ liệu trong JavaScript** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Giá trị nguyên thủy và đối tượng (object / 객체) trong JavaScript** nối từ **11. JavaScript và định danh đối tượng** sang **13. Closure và việc giữ dữ liệu trong JavaScript**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Giá trị nguyên thủy và đối tượng (object / 객체) trong JavaScript
 
@@ -199,7 +199,7 @@ console.log(x === y); // false
 
 Hai đối tượng (object / 객체) có nội dung giống nhau vẫn không phải cùng một đối tượng (object / 객체). Điều này đặc biệt quan trọng khi dùng đối tượng (object / 객체) làm khóa của `Map` hoặc phần tử của `Set`: phép so sánh dựa trên định danh, không tự động so sánh sâu cấu trúc bên trong.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình bộ nhớ trong C, Java và JavaScript**, **12. Giá trị nguyên thủy và đối tượng (object / 객체) trong JavaScript** nêu điều cần giải thích; **13. Closure và việc giữ dữ liệu trong JavaScript** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **14. Đồ thị khả năng đạt tới là mô hình tư duy của GC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Giá trị nguyên thủy và đối tượng (object / 객체) trong JavaScript** đặt vấn đề; **13. Closure và việc giữ dữ liệu trong JavaScript** kiểm tra bằng chứng, rồi **14. Đồ thị khả năng đạt tới là mô hình tư duy của GC** mở rộng hệ quả.
 
 ## 13. Closure và việc giữ dữ liệu trong JavaScript
 
@@ -209,7 +209,7 @@ Bộ nhớ đệm (cache / 캐시), biến toàn cục, timer và tham chiếu D
 
 Vì vậy, dùng ngôn ngữ có GC vẫn cần hiểu đồ thị khả năng đạt tới của các đối tượng (object / 객체).
 
-> **Chuyển mạch:** Trong **Mô hình bộ nhớ trong C, Java và JavaScript**, các dấu vết trong **13. Closure và việc giữ dữ liệu trong JavaScript** được đọc cùng nhau ở **14. Đồ thị khả năng đạt tới là mô hình tư duy của GC** để rút ra mô hình, thay vì giữ chúng như những quan sát rời. Từ đây, **15. Tính cục bộ bộ nhớ đệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** các dấu vết trong **13. Closure và việc giữ dữ liệu trong JavaScript** được đọc cùng nhau ở **14. Đồ thị khả năng đạt tới là mô hình tư duy của GC** để rút ra mô hình, thay vì giữ chúng như những quan sát rời; **15. Tính cục bộ bộ nhớ đệm** mở rộng hệ quả hoặc giới hạn của cơ chế này.
 
 ## 14. Đồ thị khả năng đạt tới là mô hình tư duy của GC
 
@@ -219,7 +219,7 @@ Nếu `A` trỏ tới `B` và `B` trỏ lại `A`, nhưng không đối tượng
 
 Mô hình này liên hệ trực tiếp với thuật toán đồ thị: giai đoạn đánh dấu của GC về bản chất là một bài toán tìm các đỉnh có thể đạt tới.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình bộ nhớ trong C, Java và JavaScript**, **15. Tính cục bộ bộ nhớ đệm** gom các mảnh từ **14. Đồ thị khả năng đạt tới là mô hình tư duy của GC** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **16. Lần theo con trỏ và song song ở cấp bộ nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Tính cục bộ bộ nhớ đệm** tổng hợp từ **14. Đồ thị khả năng đạt tới là mô hình tư duy của GC**; **16. Lần theo con trỏ và song song ở cấp bộ nhớ** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 15. Tính cục bộ bộ nhớ đệm
 
@@ -234,7 +234,7 @@ Duyệt mảng có **tính cục bộ không gian (spatial locality)** mạnh. D
 
 Do đó hai thuật toán cùng `O(n)` vẫn có thể khác nhau lớn về thời gian chạy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình bộ nhớ trong C, Java và JavaScript**, **16. Lần theo con trỏ và song song ở cấp bộ nhớ** tiếp nhận điểm tựa từ **15. Tính cục bộ bộ nhớ đệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Chi phí cấp phát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Lần theo con trỏ và song song ở cấp bộ nhớ** nối từ **15. Tính cục bộ bộ nhớ đệm** sang **17. Chi phí cấp phát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Lần theo con trỏ và song song ở cấp bộ nhớ
 
@@ -242,7 +242,7 @@ Danh sách liên kết tạo chuỗi phụ thuộc: phải đọc nút hiện t�
 
 Chỉ số mảng dễ dự đoán hơn, giúp cơ chế prefetch và nhiều truy cập bộ nhớ được xử lý hiệu quả hơn. Đây là một lý do mảng hoặc véc-tơ (vector / 벡터) thường được ưu tiên trong mã hiệu năng cao dù một số thao tác chèn giữa có Big-O kém hơn danh sách liên kết.
 
-> **Chuyển mạch:** Trong **Mô hình bộ nhớ trong C, Java và JavaScript**, **17. Chi phí cấp phát** tiếp nhận điểm tựa từ **16. Lần theo con trỏ và song song ở cấp bộ nhớ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Phân mảnh bộ nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Chi phí cấp phát** nối từ **16. Lần theo con trỏ và song song ở cấp bộ nhớ** sang **18. Phân mảnh bộ nhớ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Chi phí cấp phát
 
@@ -252,7 +252,7 @@ Trong C/C++, **arena/pool allocator** hoặc mảng cấp phát trước có th�
 
 Tuy nhiên, tối ưu phải dựa trên profiling; không nên làm thiết kế khó hiểu chỉ để tránh một vài cấp phát chưa được chứng minh là nút thắt.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình bộ nhớ trong C, Java và JavaScript**, **18. Phân mảnh bộ nhớ** tiếp nhận điểm tựa từ **17. Chi phí cấp phát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Thay đổi dữ liệu qua tham chiếu trong ba ngôn ngữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Phân mảnh bộ nhớ** nối từ **17. Chi phí cấp phát** sang **19. Thay đổi dữ liệu qua tham chiếu trong ba ngôn ngữ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Phân mảnh bộ nhớ
 
@@ -262,7 +262,7 @@ Tuy nhiên, tối ưu phải dựa trên profiling; không nên làm thiết k�
 
 Nhiều cấp phát nhỏ với kích thước khác nhau có hành vi khác với slab, pool hoặc arena dùng các khối đồng nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình bộ nhớ trong C, Java và JavaScript**, **18. Phân mảnh bộ nhớ** nêu điều cần giải thích; **19. Thay đổi dữ liệu qua tham chiếu trong ba ngôn ngữ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. Sao chép nông và sao chép sâu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Phân mảnh bộ nhớ** đặt vấn đề; **19. Thay đổi dữ liệu qua tham chiếu trong ba ngôn ngữ** kiểm tra bằng chứng, rồi **20. Sao chép nông và sao chép sâu** mở rộng hệ quả.
 
 ## 19. Thay đổi dữ liệu qua tham chiếu trong ba ngôn ngữ
 
@@ -296,7 +296,7 @@ C truyền giá trị con trỏ. Java luôn truyền tham số theo giá trị; 
 
 Vì vậy, cách nói “pass by tham chiếu (reference / 참조)” dễ gây hiểu sai nếu không phân biệt cơ chế truyền tham số với việc nhiều biến cùng truy cập một đối tượng (object / 객체).
 
-> **Chuyển mạch:** Trong **Mô hình bộ nhớ trong C, Java và JavaScript**, **19. Thay đổi dữ liệu qua tham chiếu trong ba ngôn ngữ** nêu điều cần giải thích; **20. Sao chép nông và sao chép sâu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **21. Độ sâu đệ quy và ngăn xếp tường minh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Thay đổi dữ liệu qua tham chiếu trong ba ngôn ngữ** đặt vấn đề; **20. Sao chép nông và sao chép sâu** kiểm tra bằng chứng, rồi **21. Độ sâu đệ quy và ngăn xếp tường minh** mở rộng hệ quả.
 
 ## 20. Sao chép nông và sao chép sâu
 
@@ -315,7 +315,7 @@ Trong Java, constructor sao chép hoặc `clone()` cũng có thể chỉ sao ch�
 
 Các cấu trúc dữ liệu bất biến hoặc persistent có thể chủ động dùng **chia sẻ cấu trúc (structural sharing)**; ngược lại, với cấu trúc có thể thay đổi, chia sẻ ngoài ý muốn dễ gây lỗi aliasing.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình bộ nhớ trong C, Java và JavaScript**, **21. Độ sâu đệ quy và ngăn xếp tường minh** tiếp nhận điểm tựa từ **20. Sao chép nông và sao chép sâu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Không nên mặc định có tối ưu lời gọi đuôi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Độ sâu đệ quy và ngăn xếp tường minh** nối từ **20. Sao chép nông và sao chép sâu** sang **22. Không nên mặc định có tối ưu lời gọi đuôi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Độ sâu đệ quy và ngăn xếp tường minh
 
@@ -331,7 +331,7 @@ call stack  -> container do chương trình quản lý
 
 không thay đổi bản chất DFS; nó chỉ thay đổi cách lưu trạng thái điều khiển và giúp ta kiểm soát bộ nhớ tốt hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình bộ nhớ trong C, Java và JavaScript**, **22. Không nên mặc định có tối ưu lời gọi đuôi** tiếp nhận điểm tựa từ **21. Độ sâu đệ quy và ngăn xếp tường minh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Biểu diễn số cũng là vấn đề bộ nhớ và tính đúng đắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. Không nên mặc định có tối ưu lời gọi đuôi** nối từ **21. Độ sâu đệ quy và ngăn xếp tường minh** sang **23. Biểu diễn số cũng là vấn đề bộ nhớ và tính đúng đắn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Không nên mặc định có tối ưu lời gọi đuôi
 
@@ -339,7 +339,7 @@ Một số ngôn ngữ hoặc thời gian chạy (runtime / 런타임) có thể
 
 Nếu độ sâu có thể lớn, thiết kế lặp với ngăn xếp (stack / 스택) tường minh thường an toàn và dễ dự đoán hơn.
 
-> **Chuyển mạch:** Trong **Mô hình bộ nhớ trong C, Java và JavaScript**, **23. Biểu diễn số cũng là vấn đề bộ nhớ và tính đúng đắn** tiếp nhận điểm tựa từ **22. Không nên mặc định có tối ưu lời gọi đuôi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Chia sẻ giả và trực giác về xử lý đồng thời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. Biểu diễn số cũng là vấn đề bộ nhớ và tính đúng đắn** nối từ **22. Không nên mặc định có tối ưu lời gọi đuôi** sang **24. Chia sẻ giả và trực giác về xử lý đồng thời**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Biểu diễn số cũng là vấn đề bộ nhớ và tính đúng đắn
 
@@ -357,7 +357,7 @@ JavaScript `Number` dùng IEEE-754 double và chỉ bảo đảm biểu diễn c
 
 Khoảng cách, số đếm, prefix sum hoặc chi phí của thuật toán có thể sai hoàn toàn nếu kiểu số được chọn không đủ miền giá trị.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình bộ nhớ trong C, Java và JavaScript**, **24. Chia sẻ giả và trực giác về xử lý đồng thời** tiếp nhận điểm tựa từ **23. Biểu diễn số cũng là vấn đề bộ nhớ và tính đúng đắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Array of Structures và cấu trúc (structure / 구조) of Arrays** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. Chia sẻ giả và trực giác về xử lý đồng thời** nối từ **23. Biểu diễn số cũng là vấn đề bộ nhớ và tính đúng đắn** sang **25. Array of Structures và cấu trúc (structure / 구조) of Arrays**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Chia sẻ giả và trực giác về xử lý đồng thời
 
@@ -367,7 +367,7 @@ Trong chương trình đa luồng, hai luồng có thể cập nhật hai biến
 
 Với hàng đợi đồng thời, bộ đếm hoặc thuật toán đồ thị song song, cần nhìn xa hơn Big-O và xét cả tranh chấp cùng hành vi cache-coherence.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình bộ nhớ trong C, Java và JavaScript**, **25. Array of Structures và cấu trúc (structure / 구조) of Arrays** tiếp nhận điểm tựa từ **24. Chia sẻ giả và trực giác về xử lý đồng thời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Khi dữ liệu vượt khỏi RAM** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. Array of Structures và cấu trúc (structure / 구조) of Arrays** nối từ **24. Chia sẻ giả và trực giác về xử lý đồng thời** sang **26. Khi dữ liệu vượt khỏi RAM**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Array of Structures và cấu trúc (structure / 구조) of Arrays
 
@@ -389,7 +389,7 @@ Nếu phép tính chỉ quét `x`, SoA có thể tận dụng bộ nhớ đệm 
 
 Cách triển khai DSA trong hệ thống thực tế đôi khi phải chọn bố trí vật lý theo mẫu truy cập chứ không chỉ theo kiểu dữ liệu trừu tượng.
 
-> **Chuyển mạch:** Trong **Mô hình bộ nhớ trong C, Java và JavaScript**, **25. Array of Structures và cấu trúc (structure / 구조) of Arrays** nêu điều cần giải thích; **26. Khi dữ liệu vượt khỏi RAM** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **27. Độ phức tạp bộ nhớ phải tính cả hệ số thực tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. Array of Structures và cấu trúc (structure / 구조) of Arrays** đặt vấn đề; **26. Khi dữ liệu vượt khỏi RAM** kiểm tra bằng chứng, rồi **27. Độ phức tạp bộ nhớ phải tính cả hệ số thực tế** mở rộng hệ quả.
 
 ## 26. Khi dữ liệu vượt khỏi RAM
 
@@ -399,7 +399,7 @@ B+cây (tree / 트리) tăng hệ số phân nhánh để giảm chiều cao và
 
 Điều này cho thấy mô hình độ phức tạp phải phù hợp với tầng phần cứng. `O(log n)` trong mô hình RAM chưa nói hết chi phí nếu mỗi bước có thể là một lần I/O đĩa.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình bộ nhớ trong C, Java và JavaScript**, **26. Khi dữ liệu vượt khỏi RAM** nêu điều cần giải thích; **27. Độ phức tạp bộ nhớ phải tính cả hệ số thực tế** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **28. Cấu trúc persistent và bất biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **26. Khi dữ liệu vượt khỏi RAM** đặt vấn đề; **27. Độ phức tạp bộ nhớ phải tính cả hệ số thực tế** kiểm tra bằng chứng, rồi **28. Cấu trúc persistent và bất biến** mở rộng hệ quả.
 
 ## 27. Độ phức tạp bộ nhớ phải tính cả hệ số thực tế
 
@@ -409,7 +409,7 @@ Bảng băm (hash table / 해시 테이블) có dung lượng dự phòng theo h
 
 Khi `n` lớn, các hệ số hằng này có thể quyết định cấu trúc có khả thi hay không.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mô hình bộ nhớ trong C, Java và JavaScript**, **28. Cấu trúc persistent và bất biến** tiếp nhận điểm tựa từ **27. Độ phức tạp bộ nhớ phải tính cả hệ số thực tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Benchmark có ý thức về bộ nhớ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **28. Cấu trúc persistent và bất biến** nối từ **27. Độ phức tạp bộ nhớ phải tính cả hệ số thực tế** sang **29. Benchmark có ý thức về bộ nhớ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Cấu trúc persistent và bất biến
 
@@ -419,7 +419,7 @@ Ví dụ, cập nhật một cây persistent cân bằng có thể chỉ sao ch�
 
 Structural sharing giúp duy trì nhiều phiên bản hiệu quả nhưng làm tăng số lần cấp phát và đòi hỏi mô hình vòng đời phù hợp. Đây là một đánh đổi khác giữa bộ nhớ, tính bất biến và khả năng chia sẻ.
 
-> **Chuyển mạch:** Trong **Mô hình bộ nhớ trong C, Java và JavaScript**, **29. Benchmark có ý thức về bộ nhớ** tiếp nhận điểm tựa từ **28. Cấu trúc persistent và bất biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **29. Benchmark có ý thức về bộ nhớ** nối từ **28. Cấu trúc persistent và bất biến** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Benchmark có ý thức về bộ nhớ
 
@@ -429,7 +429,7 @@ Danh sách liên kết có thể thua mảng khi duyệt tuần tự. Đồ th�
 
 Một tuyên bố về hiệu năng chỉ đáng tin khi khối lượng công việc, cách biểu diễn và môi trường chạy được mô tả cụ thể.
 
-> **Chuyển mạch:** Ở chặng này của **Mô hình bộ nhớ trong C, Java và JavaScript**, **Mô hình tư duy** gom các mảnh từ **29. Benchmark có ý thức về bộ nhớ** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** tổng hợp từ **29. Benchmark có ý thức về bộ nhớ**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy
 

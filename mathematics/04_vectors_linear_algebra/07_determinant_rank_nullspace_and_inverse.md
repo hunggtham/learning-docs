@@ -71,7 +71,7 @@ Nếu
 
 volume collapses xuống dimension thấp hơn.
 
-> **Chuyển mạch:** Trong **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **2. Vì sao det(AB)=det(A)det(B)?** tiếp nhận điểm tựa từ **1. Determinant là oriented volume scaling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Row operations và determinant** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **2. Vì sao det(AB)=det(A)det(B)?** nối từ **1. Determinant là oriented volume scaling** sang **3. Row operations và determinant**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Vì sao det(AB)=det(A)det(B)?
 
@@ -94,7 +94,7 @@ Nó cũng giải thích:
 
 khi inverse tồn tại.
 
-> **Chuyển mạch:** Ở chặng này của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **3. Row operations và determinant** tiếp nhận điểm tựa từ **2. Vì sao det(AB)=det(A)det(B)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Cofactor expansion useful conceptually nhưng không phải default thuật toán (algorithm / 알고리즘)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **3. Row operations và determinant** nối từ **2. Vì sao det(AB)=det(A)det(B)?** sang **4. Cofactor expansion useful conceptually nhưng không phải default thuật toán (algorithm / 알고리즘)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Row operations và determinant
 
@@ -108,7 +108,7 @@ Elementary row operations ảnh hưởng determinant có cấu trúc (structure 
 
 Nó cũng cho cách compute determinant qua elimination thay vì cofactor expansion tốn kém.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **4. Cofactor expansion useful conceptually nhưng không phải default thuật toán (algorithm / 알고리즘)** tiếp nhận điểm tựa từ **3. Row operations và determinant** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Rank là dimension của reachable đầu ra (output / 출력)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **4. Cofactor expansion useful conceptually nhưng không phải default thuật toán (algorithm / 알고리즘)** nối từ **3. Row operations và determinant** sang **5. Rank là dimension của reachable đầu ra (output / 출력)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Cofactor expansion useful conceptually nhưng không phải default thuật toán (algorithm / 알고리즘)
 
@@ -130,7 +130,7 @@ formula for theory
 ≠ algorithm for production
 ```
 
-> **Chuyển mạch:** Trong **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **5. Rank là dimension của reachable đầu ra (output / 출력)** tiếp nhận điểm tựa từ **4. Cofactor expansion useful conceptually nhưng không phải default thuật toán (algorithm / 알고리즘)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Row rank = column rank không phải coincidence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **5. Rank là dimension của reachable đầu ra (output / 출력)** nối từ **4. Cofactor expansion useful conceptually nhưng không phải default thuật toán (algorithm / 알고리즘)** sang **6. Row rank = column rank không phải coincidence**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Rank là dimension của reachable đầu ra (output / 출력)
 
@@ -166,7 +166,7 @@ Collapse xuống line có rank 1.
 
 Map mọi thứ về zero có rank 0.
 
-> **Chuyển mạch:** Ở chặng này của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **6. Row rank = column rank không phải coincidence** tiếp nhận điểm tựa từ **5. Rank là dimension của reachable đầu ra (output / 출력)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Null không gian (space / 공간) là thông tin (information / 정보) directions bị mất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **6. Row rank = column rank không phải coincidence** nối từ **5. Rank là dimension của reachable đầu ra (output / 출력)** sang **7. Null không gian (space / 공간) là thông tin (information / 정보) directions bị mất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Row rank = column rank không phải coincidence
 
@@ -178,7 +178,7 @@ Proof đầy đủ cần tuyến tính (linear / 선형) algebra cấu trúc (st
 
 Pivot count là rank.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **7. Null không gian (space / 공간) là thông tin (information / 정보) directions bị mất** tiếp nhận điểm tựa từ **6. Row rank = column rank không phải coincidence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Rank–nullity là accounting định danh (identity / 식별자) của dimensions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **7. Null không gian (space / 공간) là thông tin (information / 정보) directions bị mất** nối từ **6. Row rank = column rank không phải coincidence** sang **8. Rank–nullity là accounting định danh (identity / 식별자) của dimensions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Null không gian (space / 공간) là thông tin (information / 정보) directions bị mất
 
@@ -209,7 +209,7 @@ Transformation không thể phân biệt hai inputs này.
 
 > null directions là directions mà biểu diễn (representation / 표현) làm mất hoàn toàn.
 
-> **Chuyển mạch:** Trong **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **8. Rank–nullity là accounting định danh (identity / 식별자) của dimensions** tiếp nhận điểm tựa từ **7. Null không gian (space / 공간) là thông tin (information / 정보) directions bị mất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. hệ thống (system / 시스템) Ax=b dưới viewpoint rank** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **8. Rank–nullity là accounting định danh (identity / 식별자) của dimensions** nối từ **7. Null không gian (space / 공간) là thông tin (information / 정보) directions bị mất** sang **9. hệ thống (system / 시스템) Ax=b dưới viewpoint rank**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Rank–nullity là accounting định danh (identity / 식별자) của dimensions
 
@@ -234,7 +234,7 @@ total input dimensions
 
 Đây gần như conservation law của tuyến tính (linear / 선형) thông tin (information / 정보).
 
-> **Chuyển mạch:** Ở chặng này của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **9. hệ thống (system / 시스템) Ax=b dưới viewpoint rank** tiếp nhận điểm tựa từ **8. Rank–nullity là accounting định danh (identity / 식별자) của dimensions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Full column rank và parameter identifiability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **9. hệ thống (system / 시스템) Ax=b dưới viewpoint rank** nối từ **8. Rank–nullity là accounting định danh (identity / 식별자) của dimensions** sang **10. Full column rank và parameter identifiability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. hệ thống (system / 시스템) Ax=b dưới viewpoint rank
 
@@ -275,7 +275,7 @@ one particular solution
 all homogeneous solutions
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **10. Full column rank và parameter identifiability** tiếp nhận điểm tựa từ **9. hệ thống (system / 시스템) Ax=b dưới viewpoint rank** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Full row rank có meaning khác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **10. Full column rank và parameter identifiability** nối từ **9. hệ thống (system / 시스템) Ax=b dưới viewpoint rank** sang **11. Full row rank có meaning khác**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Full column rank và parameter identifiability
 
@@ -293,7 +293,7 @@ Trong regression, nếu thiết kế (design / 설계) ma trận (matrix / 행�
 
 Ví dụ nếu một tính năng (feature / 기능) luôn là chính xác (exact / 정확한) sum của hai features khác, nhiều coefficient combinations cho cùng prediction.
 
-> **Chuyển mạch:** Trong **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **11. Full row rank có meaning khác** tiếp nhận điểm tựa từ **10. Full column rank và parameter identifiability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Invertible ma trận (matrix / 행렬) Theorem: nhiều statements là cùng một fact** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **11. Full row rank có meaning khác** nối từ **10. Full column rank và parameter identifiability** sang **12. Invertible ma trận (matrix / 행렬) Theorem: nhiều statements là cùng một fact**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Full row rank có meaning khác
 
@@ -311,7 +311,7 @@ Nhưng nếu `n>m`, null không gian (space / 공간) vẫn có dimension ít nh
 
 Đây là distinction giữa surjectivity và injectivity.
 
-> **Chuyển mạch:** Ở chặng này của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **12. Invertible ma trận (matrix / 행렬) Theorem: nhiều statements là cùng một fact** tiếp nhận điểm tựa từ **11. Full row rank có meaning khác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Determinant zero là nhị phân (binary / 이진) singularity kiểm thử (test / 테스트), nhưng không đo conditioning tốt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **12. Invertible ma trận (matrix / 행렬) Theorem: nhiều statements là cùng một fact** nối từ **11. Full row rank có meaning khác** sang **13. Determinant zero là nhị phân (binary / 이진) singularity kiểm thử (test / 테스트), nhưng không đo conditioning tốt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Invertible ma trận (matrix / 행렬) Theorem: nhiều statements là cùng một fact
 
@@ -332,7 +332,7 @@ A invertible
 
 > Không direction nào bị collapse và transformation giữ đủ thông tin (information / 정보) để undo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **13. Determinant zero là nhị phân (binary / 이진) singularity kiểm thử (test / 테스트), nhưng không đo conditioning tốt** tiếp nhận điểm tựa từ **12. Invertible ma trận (matrix / 행렬) Theorem: nhiều statements là cùng một fact** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Singular values cho quantitative picture của rank mất mát (loss / 손실)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **13. Determinant zero là nhị phân (binary / 이진) singularity kiểm thử (test / 테스트), nhưng không đo conditioning tốt** nối từ **12. Invertible ma trận (matrix / 행렬) Theorem: nhiều statements là cùng một fact** sang **14. Singular values cho quantitative picture của rank mất mát (loss / 손실)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Determinant zero là nhị phân (binary / 이진) singularity kiểm thử (test / 테스트), nhưng không đo conditioning tốt
 
@@ -350,7 +350,7 @@ Ví dụ quy mô (scale / 규모) toàn ma trận (matrix / 행렬) bởi tiny c
 
 Điều kiện (condition / 조건) number dựa trên singular values là chỉ số (metric / 지표) độ tin cậy (reliability / 신뢰성) tốt hơn.
 
-> **Chuyển mạch:** Trong **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **14. Singular values cho quantitative picture của rank mất mát (loss / 손실)** tiếp nhận điểm tựa từ **13. Determinant zero là nhị phân (binary / 이진) singularity kiểm thử (test / 테스트), nhưng không đo conditioning tốt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Near-null directions quan trọng trong dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **14. Singular values cho quantitative picture của rank mất mát (loss / 손실)** nối từ **13. Determinant zero là nhị phân (binary / 이진) singularity kiểm thử (test / 테스트), nhưng không đo conditioning tốt** sang **15. Near-null directions quan trọng trong dữ liệu (data / 데이터)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Singular values cho quantitative picture của rank mất mát (loss / 손실)
 
@@ -382,7 +382,7 @@ cho square invertible ma trận (matrix / 행렬).
 
 Large `\kappa` nghĩa some directions được stretch/compress rất khác nhau, khiến inverse amplify noise.
 
-> **Chuyển mạch:** Ở chặng này của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **14. Singular values cho quantitative picture của rank mất mát (loss / 손실)** nêu điều cần giải thích; **15. Near-null directions quan trọng trong dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. Inverse là mathematical đối tượng (object / 객체), không phải default computational phương thức (method / 메서드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **14. Singular values cho quantitative picture của rank mất mát (loss / 손실)** đặt vấn đề; **15. Near-null directions quan trọng trong dữ liệu (data / 데이터)** đối chiếu bằng chứng, rồi **16. Inverse là mathematical đối tượng (object / 객체), không phải default computational phương thức (method / 메서드)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. Near-null directions quan trọng trong dữ liệu (data / 데이터)
 
@@ -400,7 +400,7 @@ Thông tin (information / 정보) ở direction đó gần như bị xóa; inver
 
 Inverse problems, multicollinearity và ill-conditioned regression đều liên quan cấu trúc (structure / 구조) này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **15. Near-null directions quan trọng trong dữ liệu (data / 데이터)** nêu điều cần giải thích; **16. Inverse là mathematical đối tượng (object / 객체), không phải default computational phương thức (method / 메서드)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. Pseudoinverse mở rộng inverse cho rectangular/rank-deficient matrices** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **15. Near-null directions quan trọng trong dữ liệu (data / 데이터)** đặt vấn đề; **16. Inverse là mathematical đối tượng (object / 객체), không phải default computational phương thức (method / 메서드)** đối chiếu bằng chứng, rồi **17. Pseudoinverse mở rộng inverse cho rectangular/rank-deficient matrices** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 16. Inverse là mathematical đối tượng (object / 객체), không phải default computational phương thức (method / 메서드)
 
@@ -433,7 +433,7 @@ need solution? solve system
 need inverse as object? compute inverse only when justified
 ```
 
-> **Chuyển mạch:** Trong **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **17. Pseudoinverse mở rộng inverse cho rectangular/rank-deficient matrices** tiếp nhận điểm tựa từ **16. Inverse là mathematical đối tượng (object / 객체), không phải default computational phương thức (method / 메서드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Determinant và thay đổi (change / 변경) of variables** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **17. Pseudoinverse mở rộng inverse cho rectangular/rank-deficient matrices** nối từ **16. Inverse là mathematical đối tượng (object / 객체), không phải default computational phương thức (method / 메서드)** sang **18. Determinant và thay đổi (change / 변경) of variables**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Pseudoinverse mở rộng inverse cho rectangular/rank-deficient matrices
 
@@ -451,7 +451,7 @@ Nếu hệ thống (system / 시스템) underdetermined, `A^+b` thường chọn
 
 Nếu overdetermined, nó cho least-squares projection solution.
 
-> **Chuyển mạch:** Ở chặng này của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **18. Determinant và thay đổi (change / 변경) of variables** tiếp nhận điểm tựa từ **17. Pseudoinverse mở rộng inverse cho rectangular/rank-deficient matrices** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Determinant trong xác suất (probability / 확률)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **18. Determinant và thay đổi (change / 변경) of variables** nối từ **17. Pseudoinverse mở rộng inverse cho rectangular/rank-deficient matrices** sang **19. Determinant trong xác suất (probability / 확률)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Determinant và thay đổi (change / 변경) of variables
 
@@ -484,7 +484,7 @@ Do đó multiple integral đổi variables:
 
 Jacobian determinant không phải correction factor bí ẩn; nó đo cục bộ (local / 로컬) volume distortion.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **19. Determinant trong xác suất (probability / 확률)** tiếp nhận điểm tựa từ **18. Determinant và thay đổi (change / 변경) of variables** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Rank trong PCA và compression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **19. Determinant trong xác suất (probability / 확률)** nối từ **18. Determinant và thay đổi (change / 변경) of variables** sang **20. Rank trong PCA và compression**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Determinant trong xác suất (probability / 확률)
 
@@ -503,7 +503,7 @@ Nếu ánh xạ (mapping / 매핑) expand không gian (space / 공간), density 
 
 Đây là cùng geometric meaning với calculus.
 
-> **Chuyển mạch:** Trong **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **20. Rank trong PCA và compression** tiếp nhận điểm tựa từ **19. Determinant trong xác suất (probability / 확률)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Rank trong neural networks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **20. Rank trong PCA và compression** nối từ **19. Determinant trong xác suất (probability / 확률)** sang **21. Rank trong neural networks**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Rank trong PCA và compression
 
@@ -519,7 +519,7 @@ Eckart–Young theorem nói đây là best rank-k approximation dưới dùng ch
 
 Low rank = compressible tuyến tính (linear / 선형) cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Ở chặng này của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **21. Rank trong neural networks** tiếp nhận điểm tựa từ **20. Rank trong PCA và compression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Null không gian (space / 공간) trong các ràng buộc (constraints / 제약조건들)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **21. Rank trong neural networks** nối từ **20. Rank trong PCA và compression** sang **22. Null không gian (space / 공간) trong các ràng buộc (constraints / 제약조건들)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Rank trong neural networks
 
@@ -535,7 +535,7 @@ có thể giảm parameters/computation.
 
 Nhưng rank reduction cũng giới hạn representational sức chứa (capacity / 용량). Compression là sự đánh đổi (trade-off / 트레이드오프), không phải free improvement.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **22. Null không gian (space / 공간) trong các ràng buộc (constraints / 제약조건들)** tiếp nhận điểm tựa từ **21. Rank trong neural networks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Worked example: redundant equations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **22. Null không gian (space / 공간) trong các ràng buộc (constraints / 제약조건들)** nối từ **21. Rank trong neural networks** sang **23. Worked example: redundant equations**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Null không gian (space / 공간) trong các ràng buộc (constraints / 제약조건들)
 
@@ -555,7 +555,7 @@ Do đó feasible directions nằm trong null không gian (space / 공간) của 
 
 Tối ưu hóa (optimization / 최적화) under tuyến tính (linear / 선형) các ràng buộc (constraints / 제약조건들) có thể parameterize solutions bằng null-space basis.
 
-> **Chuyển mạch:** Trong **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **22. Null không gian (space / 공간) trong các ràng buộc (constraints / 제약조건들)** cho ta quy tắc; **23. Worked example: redundant equations** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **24. Worked example: rank mất mát (loss / 손실) as projection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **22. Null không gian (space / 공간) trong các ràng buộc (constraints / 제약조건들)** nêu quy tắc; **23. Worked example: redundant equations** thử quy tắc trong tình huống, rồi **24. Worked example: rank mất mát (loss / 손실) as projection** mở rộng hệ quả.
 
 ## 23. Worked example: redundant equations
 
@@ -599,7 +599,7 @@ nằm trong null không gian (space / 공간).
 
 Solutions form a line, không phải unique điểm (point / 지점).
 
-> **Chuyển mạch:** Ở chặng này của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **23. Worked example: redundant equations** cho ta quy tắc; **24. Worked example: rank mất mát (loss / 손실) as projection** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **25. Numerical rank không phải chính xác (exact / 정확한) rank trong finite precision** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **23. Worked example: redundant equations** nêu quy tắc; **24. Worked example: rank mất mát (loss / 손실) as projection** thử quy tắc trong tình huống, rồi **25. Numerical rank không phải chính xác (exact / 정확한) rank trong finite precision** mở rộng hệ quả.
 
 ## 24. Worked example: rank mất mát (loss / 손실) as projection
 
@@ -630,7 +630,7 @@ inverse = không tồn tại
 
 Bốn concepts đồng thời kể cùng một story.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **24. Worked example: rank mất mát (loss / 손실) as projection** cho ta quy tắc; **25. Numerical rank không phải chính xác (exact / 정확한) rank trong finite precision** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **24. Worked example: rank mất mát (loss / 손실) as projection** nêu quy tắc; **25. Numerical rank không phải chính xác (exact / 정확한) rank trong finite precision** thử quy tắc trong tình huống, rồi **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả.
 
 ## 25. Numerical rank không phải chính xác (exact / 정확한) rank trong finite precision
 
@@ -645,7 +645,7 @@ Threshold phụ thuộc:
 
 Vì vậy numerical rank là mô hình (model / 모델)/kỹ thuật (engineering / 엔지니어링) judgment, không chỉ symbolic count.
 
-> **Chuyển mạch:** Trong **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, sau nội dung của **25. Numerical rank không phải chính xác (exact / 정확한) rank trong finite precision**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, sau nội dung của **25. Numerical rank không phải chính xác (exact / 정확한) rank trong finite precision**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
@@ -662,13 +662,13 @@ low-dimensional structure → SVD/PCA/compression
 coordinate volume change → Jacobian determinant
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > ma trận (matrix / 행렬) là một channel truyền thông tin (information / 정보) qua tuyến tính (linear / 선형) transformation. **Rank** đo dimension của thông tin (information / 정보) đi qua. **Null không gian (space / 공간)** chứa thông tin (information / 정보) bị xóa. **Determinant** đo signed volume distortion khi đầu vào (input / 입력)/đầu ra (output / 출력) dimensions bằng nhau. **Inverse** tồn tại khi không thông tin (information / 정보) nào bị mất. **Conditioning** hỏi việc phục hồi thông tin (information / 정보) nhạy với noise đến đâu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Determinant, rank, null không gian (space / 공간) và inverse: cấu trúc (structure / 구조), thông tin (information / 정보) mất mát (loss / 손실) và reversibility**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

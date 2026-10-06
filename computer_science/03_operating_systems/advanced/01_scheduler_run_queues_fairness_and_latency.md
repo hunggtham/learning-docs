@@ -21,7 +21,7 @@ arrival of runnable work
 
 Khi arrival pressure gần CPU dịch vụ (service / 서비스) sức chứa (capacity / 용량), scheduler delay trở thành thành phần của tail độ trễ (latency / 지연 시간).
 
-> **Chuyển mạch:** Runnable chỉ có nghĩa đủ điều kiện chạy; per-CPU run queues giảm contention nhưng cần load balancing, rồi fairness policy cân bằng throughput với latency theo thời gian.
+> **Nối mạch:** Runnable chỉ có nghĩa đủ điều kiện chạy; per-CPU run queues giảm contention nhưng cần load balancing, rồi fairness policy cân bằng throughput với latency theo thời gian.
 
 ## 2. Per-CPU run hàng đợi (queue / 큐): giảm contention nhưng tạo bài toán cân bằng
 
@@ -38,7 +38,7 @@ Nếu CPU A có hàng đợi (queue / 큐) dài còn CPU B rảnh, di chuyển (
 
 Bất biến (invariant / 불변식) không phải “hàng đợi (queue / 큐) mọi CPU luôn bằng nhau”. Mục tiêu là policy-level fairness/sức chứa (capacity / 용량) mà vẫn giữ locality hợp lý.
 
-> **Chuyển mạch:** Ở chặng này của **Scheduler internals, run hàng đợi (queue / 큐) và fairness/độ trễ (latency / 지연 시간) trade-offs**, **3. Fairness là chính sách (policy / 정책) theo thời gian** tiếp nhận điểm tựa từ **2. Per-CPU run hàng đợi (queue / 큐): giảm contention nhưng tạo bài toán cân bằng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Wake-up đường dẫn (path / 경로) và độ trễ (latency / 지연 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Fairness là chính sách (policy / 정책) theo thời gian** nối từ **2. Per-CPU run hàng đợi (queue / 큐): giảm contention nhưng tạo bài toán cân bằng** sang **4. Wake-up đường dẫn (path / 경로) và độ trễ (latency / 지연 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Fairness là chính sách (policy / 정책) theo thời gian
 
@@ -48,7 +48,7 @@ Fairness cần trả lời câu hỏi: trong một cửa sổ (window / 윈도�
 
 Fairness không đồng nghĩa độ trễ (latency / 지연 시간) tối thiểu. Một tác vụ (task / 작업) có thể nhận “phần CPU công bằng” nhưng wake-up phải chờ quá lâu đối với yêu cầu (request / 요청) latency-sensitive.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Scheduler internals, run hàng đợi (queue / 큐) và fairness/độ trễ (latency / 지연 시간) trade-offs**, **3. Fairness là chính sách (policy / 정책) theo thời gian** xác định đầu vào; **4. Wake-up đường dẫn (path / 경로) và độ trễ (latency / 지연 시간)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **5. ngữ cảnh (context / 맥락) switch chi phí (cost / 비용) không chỉ là save/restore register** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Fairness là chính sách (policy / 정책) theo thời gian** đặt đầu vào cho **4. Wake-up đường dẫn (path / 경로) và độ trễ (latency / 지연 시간)**, rồi **5. ngữ cảnh (context / 맥락) switch chi phí (cost / 비용) không chỉ là save/restore register** mở rộng hệ quả.
 
 ## 4. Wake-up đường dẫn (path / 경로) và độ trễ (latency / 지연 시간)
 
@@ -68,7 +68,7 @@ Thời gian từ wake-up tới thực thi (execution / 실행) là **scheduler �
 
 Đây là lower tầng (layer / 계층) thường bị che bởi ứng dụng (application / 애플리케이션) tracing nếu span chỉ bắt đầu sau khi worker được schedule.
 
-> **Chuyển mạch:** Trong **Scheduler internals, run hàng đợi (queue / 큐) và fairness/độ trễ (latency / 지연 시간) trade-offs**, **4. Wake-up đường dẫn (path / 경로) và độ trễ (latency / 지연 시간)** xác định đầu vào; **5. ngữ cảnh (context / 맥락) switch chi phí (cost / 비용) không chỉ là save/restore register** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. CPU affinity và pinning là ràng buộc (constraint / 제약조건), không phải default tối ưu hóa (optimization / 최적화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Wake-up đường dẫn (path / 경로) và độ trễ (latency / 지연 시간)** đặt đầu vào cho **5. ngữ cảnh (context / 맥락) switch chi phí (cost / 비용) không chỉ là save/restore register**, rồi **6. CPU affinity và pinning là ràng buộc (constraint / 제약조건), không phải default tối ưu hóa (optimization / 최적화)** mở rộng hệ quả.
 
 ## 5. ngữ cảnh (context / 맥락) switch chi phí (cost / 비용) không chỉ là save/restore register
 
@@ -85,7 +85,7 @@ Quantum quá nhỏ tăng responsiveness nhưng tăng switching/locality chi phí
 
 Vì vậy “nhiều threads để tận dụng CPU” chỉ đúng tới điểm tính đồng thời (concurrency / 동시성) còn tạo useful parallelism. Sau đó scheduler và bộ nhớ đệm (cache / 캐시) interference có thể làm dịch vụ (service / 서비스) thời gian (time / 시간) tăng.
 
-> **Chuyển mạch:** Ở chặng này của **Scheduler internals, run hàng đợi (queue / 큐) và fairness/độ trễ (latency / 지연 시간) trade-offs**, **6. CPU affinity và pinning là ràng buộc (constraint / 제약조건), không phải default tối ưu hóa (optimization / 최적화)** tiếp nhận điểm tựa từ **5. ngữ cảnh (context / 맥락) switch chi phí (cost / 비용) không chỉ là save/restore register** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. NUMA nối scheduler với bộ nhớ (memory / 메모리) subsystem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. CPU affinity và pinning là ràng buộc (constraint / 제약조건), không phải default tối ưu hóa (optimization / 최적화)** nối từ **5. ngữ cảnh (context / 맥락) switch chi phí (cost / 비용) không chỉ là save/restore register** sang **7. NUMA nối scheduler với bộ nhớ (memory / 메모리) subsystem**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. CPU affinity và pinning là ràng buộc (constraint / 제약조건), không phải default tối ưu hóa (optimization / 최적화)
 
@@ -95,7 +95,7 @@ Nhưng pinning sai tạo hotspot và ngăn scheduler dùng idle sức chứa (ca
 
 Trước khi pin, cần có hypothesis và bằng chứng (evidence / 증거): di chuyển (migration / 마이그레이션) có thật sự là bottleneck hay không?
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Scheduler internals, run hàng đợi (queue / 큐) và fairness/độ trễ (latency / 지연 시간) trade-offs**, **7. NUMA nối scheduler với bộ nhớ (memory / 메모리) subsystem** tiếp nhận điểm tựa từ **6. CPU affinity và pinning là ràng buộc (constraint / 제약조건), không phải default tối ưu hóa (optimization / 최적화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Priority inversion: scheduling và synchronization giao nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. NUMA nối scheduler với bộ nhớ (memory / 메모리) subsystem** nối từ **6. CPU affinity và pinning là ràng buộc (constraint / 제약조건), không phải default tối ưu hóa (optimization / 최적화)** sang **8. Priority inversion: scheduling và synchronization giao nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. NUMA nối scheduler với bộ nhớ (memory / 메모리) subsystem
 
@@ -103,7 +103,7 @@ Trên NUMA machine, “CPU balance” và “bộ nhớ (memory / 메모리) loc
 
 Vì vậy hiệu năng (performance / 성능) anomaly có thể xuất hiện như scheduler/tải (load / 로드) issue nhưng tầng dưới quyết định chi phí (cost / 비용) là interconnect + bộ nhớ (memory / 메모리) placement. Đọc cùng [NUMA và scalable coherence](../../02_computer_architecture/advanced/04_numa_interconnects_and_scalable_coherence.md).
 
-> **Chuyển mạch:** Trong **Scheduler internals, run hàng đợi (queue / 큐) và fairness/độ trễ (latency / 지연 시간) trade-offs**, **8. Priority inversion: scheduling và synchronization giao nhau** tiếp nhận điểm tựa từ **7. NUMA nối scheduler với bộ nhớ (memory / 메모리) subsystem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Real-time khác với “nhanh”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Priority inversion: scheduling và synchronization giao nhau** nối từ **7. NUMA nối scheduler với bộ nhớ (memory / 메모리) subsystem** sang **9. Real-time khác với “nhanh”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Priority inversion: scheduling và synchronization giao nhau
 
@@ -113,7 +113,7 @@ Priority inheritance tạm nâng priority của khóa (lock / 잠금) holder đ�
 
 Bất biến (invariant / 불변식) real-time không phải “tác vụ (task / 작업) priority cao luôn chạy”. Nó là deadline/blocking bound có thể chứng minh dưới các giả định (assumptions / 가정들) của scheduler + synchronization giao thức (protocol / 프로토콜).
 
-> **Chuyển mạch:** Ở chặng này của **Scheduler internals, run hàng đợi (queue / 큐) và fairness/độ trễ (latency / 지연 시간) trade-offs**, **9. Real-time khác với “nhanh”** tiếp nhận điểm tựa từ **8. Priority inversion: scheduling và synchronization giao nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. cgroup, VM và scheduler tạo thêm tài nguyên (resource / 자원) boundaries** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Real-time khác với “nhanh”** nối từ **8. Priority inversion: scheduling và synchronization giao nhau** sang **10. cgroup, VM và scheduler tạo thêm tài nguyên (resource / 자원) boundaries**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Real-time khác với “nhanh”
 
@@ -121,7 +121,7 @@ Real-time quan tâm bounded worst-case/known độ trễ (latency / 지연 시�
 
 Hard real-time đòi hỏi điều khiển (control / 제어) chặt scheduling, interrupt, bộ nhớ (memory / 메모리) allocation, locks và I/O. Soft real-time chấp nhận một số misses nhưng vẫn cần tail-bound lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Scheduler internals, run hàng đợi (queue / 큐) và fairness/độ trễ (latency / 지연 시간) trade-offs**, **9. Real-time khác với “nhanh”** nêu điều cần giải thích; **10. cgroup, VM và scheduler tạo thêm tài nguyên (resource / 자원) boundaries** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. thất bại (failure / 실패) modes dưới hiệu năng (performance / 성능) pressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Real-time khác với “nhanh”** đặt vấn đề; **10. cgroup, VM và scheduler tạo thêm tài nguyên (resource / 자원) boundaries** kiểm tra bằng chứng, rồi **11. thất bại (failure / 실패) modes dưới hiệu năng (performance / 성능) pressure** mở rộng hệ quả.
 
 ## 10. cgroup, VM và scheduler tạo thêm tài nguyên (resource / 자원) boundaries
 
@@ -136,7 +136,7 @@ application workers
 → physical CPU
 ```
 
-> **Chuyển mạch:** Trong **Scheduler internals, run hàng đợi (queue / 큐) và fairness/độ trễ (latency / 지연 시간) trade-offs**, **10. cgroup, VM và scheduler tạo thêm tài nguyên (resource / 자원) boundaries** nêu điều cần giải thích; **11. thất bại (failure / 실패) modes dưới hiệu năng (performance / 성능) pressure** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. bằng chứng vận hành (production evidence / 운영 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. cgroup, VM và scheduler tạo thêm tài nguyên (resource / 자원) boundaries** đặt vấn đề; **11. thất bại (failure / 실패) modes dưới hiệu năng (performance / 성능) pressure** kiểm tra bằng chứng, rồi **12. bằng chứng vận hành (production evidence / 운영 증거)** mở rộng hệ quả.
 
 ## 11. thất bại (failure / 실패) modes dưới hiệu năng (performance / 성능) pressure
 
@@ -152,7 +152,7 @@ bad affinity → hotspot + remote NUMA access
 
 Các thất bại (failure / 실패) này thường phản hồi (feedback / 피드백) sang thử lại (retry / 재시도)/overload ở tầng ứng dụng (application / 애플리케이션).
 
-> **Chuyển mạch:** Ở chặng này của **Scheduler internals, run hàng đợi (queue / 큐) và fairness/độ trễ (latency / 지연 시간) trade-offs**, **11. thất bại (failure / 실패) modes dưới hiệu năng (performance / 성능) pressure** nêu điều cần giải thích; **12. bằng chứng vận hành (production evidence / 운영 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. liên kết (connection / 연결) với queueing/backpressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. thất bại (failure / 실패) modes dưới hiệu năng (performance / 성능) pressure** đặt vấn đề; **12. bằng chứng vận hành (production evidence / 운영 증거)** kiểm tra bằng chứng, rồi **13. liên kết (connection / 연결) với queueing/backpressure** mở rộng hệ quả.
 
 ## 12. bằng chứng vận hành (production evidence / 운영 증거)
 
@@ -171,7 +171,7 @@ on-CPU vs off-CPU profile
 
 Linux có nhiều facility như scheduler tracepoints, `perf`, pressure metrics và eBPF-based tooling; tên công cụ (tool / 도구) có thể thay nhưng bằng chứng (evidence / 증거) mô hình (model / 모델) không đổi: **tác vụ (task / 작업) runnable từ lúc nào, thật sự chạy lúc nào, bị preempt/khối (block / 블록) bởi gì, trên CPU/nút (node / 노드) nào**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Scheduler internals, run hàng đợi (queue / 큐) và fairness/độ trễ (latency / 지연 시간) trade-offs**, **12. bằng chứng vận hành (production evidence / 운영 증거)** nêu điều cần giải thích; **13. liên kết (connection / 연결) với queueing/backpressure** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **14. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. bằng chứng vận hành (production evidence / 운영 증거)** đặt vấn đề; **13. liên kết (connection / 연결) với queueing/backpressure** kiểm tra bằng chứng, rồi **14. Mô hình tư duy** mở rộng hệ quả.
 
 ## 13. liên kết (connection / 연결) với queueing/backpressure
 
@@ -179,13 +179,13 @@ Run hàng đợi (queue / 큐) là một hàng đợi (queue / 큐) giống nhi�
 
 Đây là lý do tính đồng thời (concurrency / 동시성) limit thường tốt hơn “spawn thêm threads khi chậm”. Đọc [Queueing, tail latency và backpressure](../../08_software_systems/advanced/00_queueing_tail_latency_and_backpressure.md).
 
-> **Chuyển mạch:** Trong **Scheduler internals, run hàng đợi (queue / 큐) và fairness/độ trễ (latency / 지연 시간) trade-offs**, **14. Mô hình tư duy** gom các mảnh từ **13. liên kết (connection / 연결) với queueing/backpressure** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Mô hình tư duy** tổng hợp từ **13. liên kết (connection / 연결) với queueing/backpressure**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 14. Mô hình tư duy
 
 > Scheduler là tài nguyên (resource / 자원) allocator theo thời gian trên topology CPU/NUMA. **Run hàng đợi (queue / 큐) biểu diễn demand chưa được CPU phục vụ; chính sách (policy / 정책) quyết định fairness/priority; preemption/di chuyển (migration / 마이그레이션) đổi độ trễ (latency / 지연 시간) và locality; bằng chứng vận hành (production evidence / 운영 증거) phải tách useful CPU công việc (work / 작업) khỏi queueing, throttling và interference.** Khi pressure tăng, scheduler hành vi (behavior / 동작) trở thành một phần của end-to-end độ trễ (latency / 지연 시간) chứ không còn là chi tiết “bên dưới OS”.
 
-> **Chuyển mạch:** Ở chặng này của **Scheduler internals, run hàng đợi (queue / 큐) và fairness/độ trễ (latency / 지연 시간) trade-offs**, **Kết nối** gom các mảnh từ **14. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **14. Mô hình tư duy**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

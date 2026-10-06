@@ -50,7 +50,7 @@ rounding rule
 source hoặc simulation flag
 ```
 
-> **Chuyển mạch:** Trong **Lab 05 — FX Options Quantitative Lab**, **1. Quy ước và đầu ra** cho ta quy tắc; **2. trường hợp (case / 사례) A — Từ forward đến premium** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **3. trường hợp (case / 사례) B — Greeks và rủi ro (risk / 위험) decomposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lab 05 — FX Options Quantitative Lab**, **1. Quy ước và đầu ra** nêu quy tắc; **2. trường hợp (case / 사례) A — Từ forward đến premium** thử quy tắc trong tình huống, rồi **3. trường hợp (case / 사례) B — Greeks và rủi ro (risk / 위험) decomposition** mở rộng hệ quả.
 
 ## 2. trường hợp (case / 사례) A — Từ forward đến premium
 
@@ -120,7 +120,7 @@ K tăng → call giảm, put tăng, all else equal
 
 Các nhận định “thường” ở trên không thay thế đạo hàm hoặc tính toán cụ thể. Ghi những trường hợp mà funding, quote convention hoặc premium adjustment có thể làm intuition đơn giản sai.
 
-> **Chuyển mạch:** Ở chặng này của **Lab 05 — FX Options Quantitative Lab**, **2. trường hợp (case / 사례) A — Từ forward đến premium** cho ta quy tắc; **3. trường hợp (case / 사례) B — Greeks và rủi ro (risk / 위험) decomposition** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **4. trường hợp (case / 사례) C — Scenario grid, không chỉ nhìn expiry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lab 05 — FX Options Quantitative Lab**, **2. trường hợp (case / 사례) A — Từ forward đến premium** nêu quy tắc; **3. trường hợp (case / 사례) B — Greeks và rủi ro (risk / 위험) decomposition** thử quy tắc trong tình huống, rồi **4. trường hợp (case / 사례) C — Scenario grid, không chỉ nhìn expiry** mở rộng hệ quả.
 
 ## 3. trường hợp (case / 사례) B — Greeks và rủi ro (risk / 위험) decomposition
 
@@ -148,7 +148,7 @@ Bảng kết quả phải có cả dấu và đơn vị:
 
 Đừng kết luận “delta-neutral = risk-neutral”. Một position có delta gần 0 vẫn giữ gamma, vega, theta, skew, jump và liquidity rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab 05 — FX Options Quantitative Lab**, **3. trường hợp (case / 사례) B — Greeks và rủi ro (risk / 위험) decomposition** cho ta quy tắc; **4. trường hợp (case / 사례) C — Scenario grid, không chỉ nhìn expiry** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **5. trường hợp (case / 사례) D — sự kiện (event / 이벤트) straddle và implied move** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lab 05 — FX Options Quantitative Lab**, **3. trường hợp (case / 사례) B — Greeks và rủi ro (risk / 위험) decomposition** nêu quy tắc; **4. trường hợp (case / 사례) C — Scenario grid, không chỉ nhìn expiry** thử quy tắc trong tình huống, rồi **5. trường hợp (case / 사례) D — sự kiện (event / 이벤트) straddle và implied move** mở rộng hệ quả.
 
 ## 4. trường hợp (case / 사례) C — Scenario grid, không chỉ nhìn expiry
 
@@ -199,7 +199,7 @@ hedging and transaction cost
 
 Không cộng các Greeks như thể chúng là chính xác (exact / 정확한) decomposition cho một move lớn. Với move lớn hoặc gap, dùng full revaluation rồi coi Greek approximation là diagnostic.
 
-> **Chuyển mạch:** Trong **Lab 05 — FX Options Quantitative Lab**, **4. trường hợp (case / 사례) C — Scenario grid, không chỉ nhìn expiry** cho ta quy tắc; **5. trường hợp (case / 사례) D — sự kiện (event / 이벤트) straddle và implied move** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **6. trường hợp (case / 사례) E — rủi ro (risk / 위험) reversal và butterfly** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lab 05 — FX Options Quantitative Lab**, **4. trường hợp (case / 사례) C — Scenario grid, không chỉ nhìn expiry** nêu quy tắc; **5. trường hợp (case / 사례) D — sự kiện (event / 이벤트) straddle và implied move** thử quy tắc trong tình huống, rồi **6. trường hợp (case / 사례) E — rủi ro (risk / 위험) reversal và butterfly** mở rộng hệ quả.
 
 ## 5. trường hợp (case / 사례) D — sự kiện (event / 이벤트) straddle và implied move
 
@@ -224,7 +224,7 @@ Nếu IV crush nhưng spot move lớn hơn implied move thì long straddle có c
 
 Nếu dùng dữ liệu lịch sử, snapshot IV phải là dữ liệu có sẵn trước sự kiện (event / 이벤트); không được lấy volatility surface sau sự kiện (event / 이벤트) rồi kể ngược.
 
-> **Chuyển mạch:** Ở chặng này của **Lab 05 — FX Options Quantitative Lab**, **5. trường hợp (case / 사례) D — sự kiện (event / 이벤트) straddle và implied move** cho ta quy tắc; **6. trường hợp (case / 사례) E — rủi ro (risk / 위험) reversal và butterfly** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **7. trường hợp (case / 사례) F — Delta hedge ledger** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lab 05 — FX Options Quantitative Lab**, **5. trường hợp (case / 사례) D — sự kiện (event / 이벤트) straddle và implied move** nêu quy tắc; **6. trường hợp (case / 사례) E — rủi ro (risk / 위험) reversal và butterfly** thử quy tắc trong tình huống, rồi **7. trường hợp (case / 사례) F — Delta hedge ledger** mở rộng hệ quả.
 
 ## 6. trường hợp (case / 사례) E — rủi ro (risk / 위험) reversal và butterfly
 
@@ -264,7 +264,7 @@ surface không bị dùng như executable price nếu chưa có bid/ask
 
 Mục tiêu là hiểu interpolation là một giả định của research chuỗi xử lý (pipeline / 파이프라인), không phải quan sát trực tiếp từ thị trường.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab 05 — FX Options Quantitative Lab**, **6. trường hợp (case / 사례) E — rủi ro (risk / 위험) reversal và butterfly** cho ta quy tắc; **7. trường hợp (case / 사례) F — Delta hedge ledger** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **8. trường hợp (case / 사례) G — Implied-versus-realized attribution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lab 05 — FX Options Quantitative Lab**, **6. trường hợp (case / 사례) E — rủi ro (risk / 위험) reversal và butterfly** nêu quy tắc; **7. trường hợp (case / 사례) F — Delta hedge ledger** thử quy tắc trong tình huống, rồi **8. trường hợp (case / 사례) G — Implied-versus-realized attribution** mở rộng hệ quả.
 
 ## 7. trường hợp (case / 사례) F — Delta hedge ledger
 
@@ -315,7 +315,7 @@ vega và skew có thể chi phối kết quả dù delta đã hedge
 
 Tách **mô hình (model / 모델) hedge P/L** khỏi **executable hedge P/L**. Không dùng mid price cho một leg rồi dùng bid/ask cho leg kia mà không ghi rõ.
 
-> **Chuyển mạch:** Trong **Lab 05 — FX Options Quantitative Lab**, **7. trường hợp (case / 사례) F — Delta hedge ledger** cho ta quy tắc; **8. trường hợp (case / 사례) G — Implied-versus-realized attribution** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **9. dữ liệu (data / 데이터) và hiện thực (implementation / 구현) checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lab 05 — FX Options Quantitative Lab**, **7. trường hợp (case / 사례) F — Delta hedge ledger** nêu quy tắc; **8. trường hợp (case / 사례) G — Implied-versus-realized attribution** thử quy tắc trong tình huống, rồi **9. dữ liệu (data / 데이터) và hiện thực (implementation / 구현) checklist** mở rộng hệ quả.
 
 ## 8. trường hợp (case / 사례) G — Implied-versus-realized attribution
 
@@ -345,7 +345,7 @@ Dùng full revaluation làm P/L chính. Dùng Greeks để attribution gần đ�
 
 Ghi rõ các cross-term bị bỏ qua, ví dụ `vanna`, `volga` hoặc tương tác (interaction / 상호작용) giữa spot và IV. Nếu residual lớn, đó là tín hiệu cần giảm step kích thước (size / 크기), dùng higher-order Greeks hoặc full repricing; không phải lý do để ép attribution khớp bằng tay.
 
-> **Chuyển mạch:** Ở chặng này của **Lab 05 — FX Options Quantitative Lab**, **8. trường hợp (case / 사례) G — Implied-versus-realized attribution** cho ta quy tắc; **9. dữ liệu (data / 데이터) và hiện thực (implementation / 구현) checklist** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **10. Đầu ra đạt yêu cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lab 05 — FX Options Quantitative Lab**, **8. trường hợp (case / 사례) G — Implied-versus-realized attribution** nêu quy tắc; **9. dữ liệu (data / 데이터) và hiện thực (implementation / 구현) checklist** thử quy tắc trong tình huống, rồi **10. Đầu ra đạt yêu cầu** mở rộng hệ quả.
 
 ## 9. dữ liệu (data / 데이터) và hiện thực (implementation / 구현) checklist
 
@@ -374,7 +374,7 @@ delta finite-difference vs analytic delta
 P/L ledger reconciliation
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lab 05 — FX Options Quantitative Lab**, **9. dữ liệu (data / 데이터) và hiện thực (implementation / 구현) checklist** nêu điều cần giải thích; **10. Đầu ra đạt yêu cầu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lab 05 — FX Options Quantitative Lab**, **9. dữ liệu (data / 데이터) và hiện thực (implementation / 구현) checklist** đặt vấn đề; **10. Đầu ra đạt yêu cầu** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 10. Đầu ra đạt yêu cầu
 

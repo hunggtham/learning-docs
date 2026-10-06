@@ -12,7 +12,7 @@ Chuỗi nhân quả (causal chain / 인과 사슬) hữu ích là:
 
 Brazil là trường hợp (case / 사례) tốt để học vì vật lý (physical / 물리적) geography rất lớn nhưng economic geography lại tập trung mạnh vào một số corridor và metropolitan hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Trong **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Amazon Basin: nước nhiều nhưng khả năng tiếp cận (accessibility / 접근성) không đơn giản** tiếp nhận điểm tựa từ **Thesis không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rừng Amazon là thành phần của water–climate hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Quy mô Brazil mở ra nhiều hệ vùng, nhưng **Amazon Basin: nước nhiều nhưng khả năng tiếp cận (accessibility / 접근성) không đơn giản** cho thấy nước dồi dào không đồng nghĩa với đường đi dễ dàng. **Rừng Amazon là thành phần của water–climate hệ thống (system / 시스템)** tiếp theo nối accessibility với sinh thái và khí hậu.
 
 ## Amazon Basin: nước nhiều nhưng khả năng tiếp cận (accessibility / 접근성) không đơn giản
 
@@ -22,7 +22,7 @@ Nhưng “có sông lớn” không đồng nghĩa mọi nơi dễ tiếp cận.
 
 Một settlement ven river có thể kết nối tốt theo waterway nhưng xa road/rail mạng (network / 네트워크); một mining or agricultural dự án (project / 프로젝트) lại cần corridor khác. Brazil vì thế có nhiều **vận chuyển (transport / 전송) geographies chồng nhau**.
 
-> **Chuyển mạch:** Ở chặng này của **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Rừng Amazon là thành phần của water–climate hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Amazon Basin: nước nhiều nhưng khả năng tiếp cận (accessibility / 접근성) không đơn giản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Brazilian Highlands và đường ra biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sông tổ chức settlement và vận chuyển, còn **Rừng Amazon là thành phần của water–climate hệ thống (system / 시스템)** điều tiết moisture, runoff và habitat vượt ranh giới farm. **Brazilian Highlands và đường ra biển** tiếp theo cho thấy nội địa phải vượt relief nào để nối với cảng.
 
 ## Rừng Amazon là thành phần của water–climate hệ thống (system / 시스템)
 
@@ -32,7 +32,7 @@ Deforestation làm thay đổi surface năng lượng (energy / 에너지) balan
 
 Điểm học quan trọng là: land-use thay đổi (change / 변경) trong một place có thể ảnh hưởng water/climate tiến trình (process / 프로세스) vượt ranh giới farm hoặc municipality.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Brazilian Highlands và đường ra biển** tiếp nhận điểm tựa từ **Rừng Amazon là thành phần của water–climate hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cerrado: technology có thể biến “ràng buộc (constraint / 제약조건)” thành frontier** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Amazon là basin rộng nhưng **Brazilian Highlands và đường ra biển** định tuyến road, rail, pass và terminal từ interior tới Atlantic. **Cerrado: technology có thể biến “ràng buộc (constraint / 제약조건)” thành frontier** tiếp theo cho thấy công nghệ mở rộng vùng sản xuất trên nền relief ấy.
 
 ## Brazilian Highlands và đường ra biển
 
@@ -42,7 +42,7 @@ Brazilian Highlands trải rộng ở phần lớn center/east. Escarpment và r
 
 Do đó khi nhìn commodity frontier interior, cần luôn hỏi: tuyến (route / 경로) nào đưa sản phẩm qua plateau tới terminal biển, chi phí (cost / 비용) và sức chứa (capacity / 용량) của tuyến (route / 경로) đó là bao nhiêu?
 
-> **Chuyển mạch:** Trong **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Cerrado: technology có thể biến “ràng buộc (constraint / 제약조건)” thành frontier** tiếp nhận điểm tựa từ **Brazilian Highlands và đường ra biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nông nghiệp: từ farm tới export corridor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Soil amendment, crop variety, machinery và road biến Cerrado từ ràng buộc thành frontier, đồng thời tăng áp lực nước và ecosystem; **Nông nghiệp: từ farm tới export corridor** sẽ lần theo phản hồi đó tới silo, rail và cảng.
 
 ## Cerrado: technology có thể biến “ràng buộc (constraint / 제약조건)” thành frontier
 
@@ -56,7 +56,7 @@ Agricultural frontier sau đó tạo phản hồi (feedback / 피드백):
 
 Phản hồi (feedback / 피드백) này có thể tạo growth nhưng cũng tăng pressure lên ecosystem và water.
 
-> **Chuyển mạch:** Ở chặng này của **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Nông nghiệp: từ farm tới export corridor** tiếp nhận điểm tựa từ **Cerrado: technology có thể biến “ràng buộc (constraint / 제약조건)” thành frontier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mining: deposit, electricity và corridor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Farm chỉ thành commodity flow khi có storage, processing và corridor; **Nông nghiệp: từ farm tới export corridor** vì thế nối productivity với chi phí tới cảng. **Mining: deposit, electricity và corridor** tiếp theo đặt cùng logic hạ tầng lên mineral belts.
 
 ## Nông nghiệp: từ farm tới export corridor
 
@@ -66,7 +66,7 @@ Soy, maize, livestock và các crop khác không tạo trade chỉ nhờ yield. 
 
 Brazil minh họa rõ [Agriculture & Food Systems](../../../02_human_geography/06_agriculture_food_systems.md): vật lý (physical / 물리적) productivity phải được chuyển qua hạ tầng (infrastructure / 인프라) mới trở thành thị trường (market / 시장) luồng (flow / 흐름).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Mining: deposit, electricity và corridor** tiếp nhận điểm tựa từ **Nông nghiệp: từ farm tới export corridor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hydropower và geography của điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mine, railway và terminal cho thấy extraction phụ thuộc điện, engineering và command functions ở các metro khác nhau; **Mining: deposit, electricity và corridor** không chỉ là câu chuyện trữ lượng. **Hydropower và geography của điện** tiếp theo giải thích nguồn điện được nối tới tải ra sao.
 
 ## Mining: deposit, electricity và corridor
 
@@ -76,7 +76,7 @@ Mine location có thể xa major city, trong khi kỹ thuật (engineering / 엔
 
 Câu hỏi development không dừng ở “mỏ lớn bao nhiêu” mà là processing ở đâu, supplier cục bộ (local / 로컬) tới đâu, hạ tầng (infrastructure / 인프라) phục vụ ai và revenue được chuyển thành năng lực (capability / 역량) nào.
 
-> **Chuyển mạch:** Trong **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Hydropower và geography của điện** tiếp nhận điểm tựa từ **Mining: deposit, electricity và corridor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dân cư tập trung mạnh về Atlantic và Southeast** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sông và relief tạo hydropower nhưng dam đổi sediment, ecosystem và settlement; **Hydropower và geography của điện** là bài toán resource–grid–load. **Dân cư tập trung mạnh về Atlantic và Southeast** tiếp theo cho thấy demand và đô thị nằm lệch khỏi nhiều basin nguồn điện.
 
 ## Hydropower và geography của điện
 
@@ -86,7 +86,7 @@ Một basin có hydropower tài nguyên (resource / 자원) lớn nhưng xa indu
 
 Năng lượng (energy / 에너지) geography Brazil vì thế là một phần của regional development chứ không phải sector độc lập.
 
-> **Chuyển mạch:** Ở chặng này của **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Dân cư tập trung mạnh về Atlantic và Southeast** tiếp nhận điểm tựa từ **Hydropower và geography của điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **São Paulo: agglomeration tạo lợi ích và chi phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Atlantic–Southeast gom ports, industry, services và infrastructure dù phần lớn lãnh thổ nằm xa; **Dân cư tập trung mạnh về Atlantic và Southeast** tạo nền cho command economy. **São Paulo: agglomeration tạo lợi ích và chi phí** tiếp theo đi vào cơ chế của cực lớn nhất.
 
 ## Dân cư tập trung mạnh về Atlantic và Southeast
 
@@ -96,7 +96,7 @@ São Paulo trở thành metropolitan–industrial–dịch vụ (service / 서�
 
 Ở Amazon interior, city spacing và vận chuyển (transport / 전송) chế độ (mode / 모드) khác hẳn. Đây là lý do national urbanization tỷ lệ (rate / 비율) không mô tả đủ urban geography.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **São Paulo: agglomeration tạo lợi ích và chi phí** tiếp nhận điểm tựa từ **Dân cư tập trung mạnh về Atlantic và Southeast** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Urban informality và truy cập (access / 접근)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** São Paulo tạo sharing, matching và learning nhưng cũng housing cost, congestion và pollution; **São Paulo: agglomeration tạo lợi ích và chi phí** dẫn thẳng tới câu hỏi ai tiếp cận được lợi ích đô thị. **Urban informality và truy cập (access / 접근)** tiếp theo làm rõ trade-off đó.
 
 ## São Paulo: agglomeration tạo lợi ích và chi phí
 
@@ -106,7 +106,7 @@ Nhưng concentration cũng làm housing chi phí (cost / 비용), congestion, po
 
 Brazil là trường hợp (case / 사례) hữu ích cho [Urbanization](../../../02_human_geography/02_settlement_urbanization.md): city growth không chỉ là population increase mà là tương tác (interaction / 상호작용) giữa land, housing, mobility và economic hàm (function / 함수).
 
-> **Chuyển mạch:** Trong **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Urban informality và truy cập (access / 접근)** tiếp nhận điểm tựa từ **São Paulo: agglomeration tạo lợi ích và chi phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Road frontier: khả năng tiếp cận (accessibility / 접근성) tạo development và environmental pressure đồng thời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Informal settlement phản ánh housing price, tenure, job access và infrastructure chứ không chỉ thiếu quy hoạch; **Urban informality và truy cập (access / 접근)** đặt vị trí gần việc làm lên cùng an toàn. **Road frontier: khả năng tiếp cận (accessibility / 접근성) tạo development và environmental pressure đồng thời** tiếp theo mở câu hỏi accessibility ngoài đô thị.
 
 ## Urban informality và truy cập (access / 접근)
 
@@ -116,7 +116,7 @@ Household có thể chấp nhận hazard exposure hoặc long-term tenure bất 
 
 Do đó upgrading và housing chính sách (policy / 정책) phải cân giữa an toàn (safety / 안전), dịch vụ (service / 서비스) và location.
 
-> **Chuyển mạch:** Ở chặng này của **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Road frontier: khả năng tiếp cận (accessibility / 접근성) tạo development và environmental pressure đồng thời** tiếp nhận điểm tựa từ **Urban informality và truy cập (access / 접근)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Amazon river vs road: hai mạng (network / 네트워크) lô-gic (logic / 논리) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Road giảm chi phí và mở market nhưng cũng đẩy land conversion, fire và deforestation; **Road frontier: khả năng tiếp cận (accessibility / 접근성) tạo development và environmental pressure đồng thời** phải đọc cùng governance. **Amazon river vs road: hai mạng (network / 네트워크) lô-gic (logic / 논리) khác nhau** tiếp theo so sánh hai mode.
 
 ## Road frontier: khả năng tiếp cận (accessibility / 접근성) tạo development và environmental pressure đồng thời
 
@@ -126,7 +126,7 @@ Với firm/farm, khả năng tiếp cận (accessibility / 접근성) tốt hơn
 
 Phân tích đúng không hỏi “road tốt hay xấu” mà hỏi **luồng (flow / 흐름) nào được mở, benefit/chi phí (cost / 비용) rơi vào đâu và quản trị (governance / 거버넌스) kiểm soát land use thế nào**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Amazon river vs road: hai mạng (network / 네트워크) lô-gic (logic / 논리) khác nhau** tiếp nhận điểm tựa từ **Road frontier: khả năng tiếp cận (accessibility / 접근성) tạo development và environmental pressure đồng thời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Atlantic ports và hinterland cạnh tranh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** River network bám channel và season, road network bám linear corridors; **Amazon river vs road: hai mạng (network / 네트워크) lô-gic (logic / 논리) khác nhau** giải thích vì sao effective distance không thể đo bằng đường thẳng. **Atlantic ports và hinterland cạnh tranh** tiếp theo đặt các mạng nội địa trước lựa chọn gateway.
 
 ## Amazon river vs road: hai mạng (network / 네트워크) lô-gic (logic / 논리) khác nhau
 
@@ -136,7 +136,7 @@ River mạng (network / 네트워크) tổ chức settlement theo channel và se
 
 GIS mạng (network / 네트워크) phân tích (analysis / 분석) hữu ích hơn straight-line distance khi đánh giá truy cập (access / 접근) tại đây.
 
-> **Chuyển mạch:** Trong **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Atlantic ports và hinterland cạnh tranh** tiếp nhận điểm tựa từ **Amazon river vs road: hai mạng (network / 네트워크) lô-gic (logic / 논리) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Commodity export và giá trị (value / 값) capture** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Cảng chỉ cạnh tranh khi có rail–road–barge hinterland đủ sức chứa; **Atlantic ports và hinterland cạnh tranh** vì thế thay đổi theo inland infrastructure, không chỉ theo vị trí bờ biển. **Commodity export và giá trị (value / 값) capture** tiếp theo hỏi giá trị dừng ở đâu trong chuỗi.
 
 ## Atlantic ports và hinterland cạnh tranh
 
@@ -146,7 +146,7 @@ Do đó cổng (port / 포트) geography thay đổi theo inland hạ tầng (in
 
 Brazil là trường hợp (case / 사례) tốt để nối [Transport & Trade](../../../02_human_geography/08_transport_trade_globalization.md) với [Global Trade Networks](../../../04_global_systems/05_global_trade_networks.md).
 
-> **Chuyển mạch:** Ở chặng này của **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Commodity export và giá trị (value / 값) capture** tiếp nhận điểm tựa từ **Atlantic ports và hinterland cạnh tranh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Industrial geography và domestic thị trường (market / 시장)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Commodity volume chưa nói đủ về processing, finance, supplier và downstream; **Commodity export và giá trị (value / 값) capture** phân biệt xuất khẩu lớn với upgrading cục bộ. **Industrial geography và domestic thị trường (market / 시장)** tiếp theo nối commodity frontier với demand trong nước.
 
 ## Commodity export và giá trị (value / 값) capture
 
@@ -156,7 +156,7 @@ Brazil có vai trò lớn trong agricultural/mineral commodity networks, nhưng 
 
 Nếu export volume tăng nhưng processing/technology nằm ngoài region sản xuất, cục bộ (local / 로컬) development tác động (effect / 효과) khác scenario có supplier/upgrading mạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Industrial geography và domestic thị trường (market / 시장)** tiếp nhận điểm tựa từ **Commodity export và giá trị (value / 값) capture** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Regional inequality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Southeast industrial clusters dựa vào metropolitan demand, skill, finance và path dependence, còn frontier cung cấp raw inputs; **Industrial geography và domestic thị trường (market / 시장)** nối hai quy mô này. **Regional inequality** tiếp theo đặt câu hỏi ai được tiếp cận jobs, health và mobility.
 
 ## Industrial geography và domestic thị trường (market / 시장)
 
@@ -166,7 +166,7 @@ Khi manufacturing location thay đổi theo chi phí (cost / 비용) hoặc tech
 
 Đây là lý do country profile cần nối commodity frontier với metropolitan industry thay vì mô tả chúng như hai Brazil riêng biệt.
 
-> **Chuyển mạch:** Trong **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Regional inequality** tiếp nhận điểm tựa từ **Industrial geography và domestic thị trường (market / 시장)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hazard mosaic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Metropolitan cores, agricultural/resource corridors và peripheral areas có năng lực tiếp cận rất khác; **Regional inequality** cho thấy hạ tầng chỉ tạo lợi ích khi household/firm đủ capability. **Hazard mosaic** tiếp theo ghép bất bình đẳng với phơi nhiễm rủi ro.
 
 ## Regional inequality
 
@@ -176,7 +176,7 @@ Hạ tầng (infrastructure / 인프라) có thể giảm effective distance nh�
 
 Development nên được đo bằng năng lực (capability / 역량)/khả năng tiếp cận (accessibility / 접근성) chứ không chỉ đầu ra (output / 출력) map.
 
-> **Chuyển mạch:** Ở chặng này của **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Hazard mosaic** tiếp nhận điểm tựa từ **Regional inequality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Brazil trong Nam Mỹ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Flood, drought, fire, landslide và coastal storm phân bố theo basin và đô thị; **Hazard mosaic** chỉ có nghĩa khi ghép hazard với exposure và vulnerability. **Brazil trong Nam Mỹ** tiếp theo nâng bản đồ từ vùng lên vai trò subregional.
 
 ## Hazard mosaic
 
@@ -186,7 +186,7 @@ Một country-scale hazard label vì thế ít hữu ích. rủi ro (risk / 위�
 
 Land-use thay đổi (change / 변경) cũng có thể làm hazard tương tác (interaction / 상호작용) thay đổi, ví dụ vegetation mất mát (loss / 손실) ảnh hưởng runoff/fire regime.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Brazil trong Nam Mỹ** tiếp nhận điểm tựa từ **Hazard mosaic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Korea–Vietnam liên kết (connection / 연결) như một bài học supply chuỗi (chain / 사슬)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Brazil là nút lớn của South America nhờ quy mô, ports, population và diversity, nhưng các basin và border corridors tạo vai trò khác nhau theo subregion; **Brazil trong Nam Mỹ** cần đọc đa quy mô. **Korea–Vietnam liên kết (connection / 연결) như một bài học supply chuỗi (chain / 사슬)** tiếp theo chuyển kết luận đó thành một chuỗi thương mại cụ thể.
 
 ## Brazil trong Nam Mỹ
 
@@ -196,7 +196,7 @@ Các basin, mountain corridor, border hạ tầng (infrastructure / 인프라) v
 
 Đọc Brazil tốt nhất theo multi-scale: national tích hợp (integration / 통합), subregional các hệ thống (systems / 시스템들) và toàn cục (global / 전역) commodity/industrial networks.
 
-> **Chuyển mạch:** Trong **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, sau nội dung của **Brazil trong Nam Mỹ**, **Korea–Vietnam liên kết (connection / 연결) như một bài học supply chuỗi (chain / 사슬)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Chuỗi farm/mine → inland corridor → Atlantic port → maritime network → Asian processor cho thấy physical geography trở thành trade flow thế nào; **Korea–Vietnam liên kết (connection / 연결) như một bài học supply chuỗi (chain / 사슬)** là ứng dụng của owner Brazil, không phải nhánh tách rời. **Những hiểu lầm phổ biến** tiếp theo kiểm tra các giản lược thường gặp.
 
 ## Korea–Vietnam liên kết (connection / 연결) như một bài học supply chuỗi (chain / 사슬)
 
@@ -208,13 +208,13 @@ Học tập (learning / 학습) giá trị (value / 값) nằm ở chuỗi (chai
 
 Đây là cùng mô hình tư duy (mental model / 사고 모델) đã dùng cho Australia, nhưng vật lý (physical / 물리적) geography và commodity mix khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Korea–Vietnam liên kết (connection / 연결) như một bài học supply chuỗi (chain / 사슬)** xác định đầu vào; **Những hiểu lầm phổ biến** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Những hiểu lầm phổ biến** nhắc rằng Brazil không chỉ là Amazon, river không tự động đồng nghĩa accessibility, commodity không loại trừ industry và road không bảo đảm phát triển. **Mô hình tư duy** sẽ khép hồ sơ bằng chuỗi nhân quả đầy đủ.
 
 ## Những hiểu lầm phổ biến
 
 “Brazil = Amazon rainforest” bỏ Southeast urban–industrial cốt lõi (core / 핵심), Cerrado, semi-arid Northeast và temperate south. “Có Amazon River nên vận chuyển (transport / 전송) interior luôn dễ” bỏ mạng (network / 네트워크) frequency, cổng (port / 포트) và last-mile ràng buộc (constraint / 제약조건). “Commodity export đồng nghĩa không có industry” là giản lược. “Road mới chắc chắn phát triển vùng” bỏ land-use externality và phân phối (distribution / 분포) of benefit.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Brazil — lưu vực Amazon, vành đai đô thị Đại Tây Dương và các frontier nội địa**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi basin–highland → land use và frontier → đô thị → corridor–port–trade → value capture → inequality và environmental feedback, rồi bàn giao cho owner **South America** trong [README](./README.md).
 
 ## Mô hình tư duy
 

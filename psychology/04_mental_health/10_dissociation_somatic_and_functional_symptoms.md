@@ -21,7 +21,7 @@ Experiences có thể gồm:
 
 Mild dissociation-like experiences có thể xảy ra trong fatigue, stress hoặc intense absorption. Clinical significance phụ thuộc frequency, distress, impairment và differential diagnosis.
 
-> **Chuyển mạch:** Trong **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **2. Dissociation không đồng nghĩa psychosis** tiếp nhận điểm tựa từ **1. Phân ly là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Trauma và dissociation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **2. Dissociation không đồng nghĩa psychosis** nối từ **1. Phân ly là gì?** sang **3. Trauma và dissociation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Dissociation không đồng nghĩa psychosis
 
@@ -29,7 +29,7 @@ Derealization có thể rất distressing nhưng person thường vẫn recogniz
 
 Psychosis involves different phenomena such as delusions/hallucinations and reality-testing changes. Differential diagnosis cần professional assessment.
 
-> **Chuyển mạch:** Ở chặng này của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **3. Trauma và dissociation** tiếp nhận điểm tựa từ **2. Dissociation không đồng nghĩa psychosis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Somatic symptoms** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **3. Trauma và dissociation** nối từ **2. Dissociation không đồng nghĩa psychosis** sang **4. Somatic symptoms**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Trauma và dissociation
 
@@ -39,7 +39,7 @@ Trauma exposure có association với dissociative symptoms trong many studies, 
 >
 > **Limitation:** không được infer hidden trauma chỉ vì dissociation exists. Correlation và retrospective reports không hỗ trợ (support / 지원) universal trauma-cause claim.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **4. Somatic symptoms** tiếp nhận điểm tựa từ **3. Trauma và dissociation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Somatic Symptom Disorder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **4. Somatic symptoms** nối từ **3. Trauma và dissociation** sang **5. Somatic Symptom Disorder**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Somatic symptoms
 
@@ -49,7 +49,7 @@ Một symptom không trở nên “imaginary” chỉ vì stress influence it. P
 
 Xem [[../01_brain_and_mind/04_interoception_pain_and_embodied_mind]].
 
-> **Chuyển mạch:** Trong **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **5. Somatic Symptom Disorder** tiếp nhận điểm tựa từ **4. Somatic symptoms** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Functional Neurological Disorder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **5. Somatic Symptom Disorder** nối từ **4. Somatic symptoms** sang **6. Functional Neurological Disorder**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Somatic Symptom Disorder
 
@@ -57,7 +57,7 @@ In diagnostic các hệ thống (systems / 시스템들), **Somatic Symptom Diso
 
 This distinction matters: diagnosis should not be shorthand for “doctors found nothing”.
 
-> **Chuyển mạch:** Ở chặng này của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **6. Functional Neurological Disorder** tiếp nhận điểm tựa từ **5. Somatic Symptom Disorder** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Symptoms are not fabricated by default** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **6. Functional Neurological Disorder** nối từ **5. Somatic Symptom Disorder** sang **7. Symptoms are not fabricated by default**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Functional Neurological Disorder
 
@@ -67,7 +67,7 @@ Hiện đại (modern / 현대적) diagnosis increasingly emphasizes **positive 
 
 Examples can include functional weakness, tremor or functional seizures, but chính xác (exact / 정확한) assessment belongs to trained clinicians.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **7. Symptoms are not fabricated by default** tiếp nhận điểm tựa từ **6. Functional Neurological Disorder** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Predictive processing mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **7. Symptoms are not fabricated by default** nối từ **6. Functional Neurological Disorder** sang **8. Predictive processing mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Symptoms are not fabricated by default
 
@@ -77,7 +77,7 @@ A person can have involuntary symptoms produced by altered nervous-system hàm (
 
 This distinction is trọng yếu (critical / 중요) for stigma and treatment engagement.
 
-> **Chuyển mạch:** Trong **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **7. Symptoms are not fabricated by default** xác định đầu vào; **8. Predictive processing mô hình (model / 모델)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **9. Sense of agency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **7. Symptoms are not fabricated by default** đặt đầu vào cho **8. Predictive processing mô hình (model / 모델)**, rồi **9. Sense of agency** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 8. Predictive processing mô hình (model / 모델)
 
@@ -93,7 +93,7 @@ FND = false belief causes symptom
 
 That oversimplifies phân tán (distributed / 분산) motor, sensory, attentional, agency and contextual mechanisms.
 
-> **Chuyển mạch:** Ở chặng này của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **8. Predictive processing mô hình (model / 모델)** xác định đầu vào; **9. Sense of agency** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Attention and symptom amplification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **8. Predictive processing mô hình (model / 모델)** đặt đầu vào cho **9. Sense of agency**, rồi **10. Attention and symptom amplification** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. Sense of agency
 
@@ -101,7 +101,7 @@ Some studies report altered experience of agency — feeling less điều khiể
 
 Agency is itself an suy luận (inference / 추론) integrating intention, motor prediction and sensory phản hồi (feedback / 피드백). Disturbance here is plausible cơ chế (mechanism / 메커니즘), but tác động (effect / 효과) varies across symptoms and patients.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **10. Attention and symptom amplification** tiếp nhận điểm tựa từ **9. Sense of agency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Interoception** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **10. Attention and symptom amplification** nối từ **9. Sense of agency** sang **11. Interoception**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Attention and symptom amplification
 
@@ -113,7 +113,7 @@ This is not “thinking about it creates fake symptom”; it reflects normal ner
 >
 > **Hypothesis/ứng dụng (application / 애플리케이션):** exactly how attention contributes to a specific FND symptom must be assessed trường hợp (case / 사례) by trường hợp (case / 사례).
 
-> **Chuyển mạch:** Trong **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **11. Interoception** tiếp nhận điểm tựa từ **10. Attention and symptom amplification** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Stress is neither necessary nor sufficient** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **11. Interoception** nối từ **10. Attention and symptom amplification** sang **12. Stress is neither necessary nor sufficient**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Interoception
 
@@ -121,7 +121,7 @@ This is not “thinking about it creates fake symptom”; it reflects normal ner
 
 Bằng chứng (evidence / 증거) supports differences in some tasks/populations, but no single interoception deficit explains all FND or somatic symptoms.
 
-> **Chuyển mạch:** Ở chặng này của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **12. Stress is neither necessary nor sufficient** tiếp nhận điểm tựa từ **11. Interoception** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Neural findings** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **12. Stress is neither necessary nor sufficient** nối từ **11. Interoception** sang **13. Neural findings**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Stress is neither necessary nor sufficient
 
@@ -129,7 +129,7 @@ Stress can increase arousal, muscle tension, autonomic symptoms and attentional 
 
 But saying “FND is caused by stress” is too strong. Some patients report no obvious stress trigger; many stressed people never develop FND.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **13. Neural findings** tiếp nhận điểm tựa từ **12. Stress is neither necessary nor sufficient** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Comorbidity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **13. Neural findings** nối từ **12. Stress is neither necessary nor sufficient** sang **14. Comorbidity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Neural findings
 
@@ -141,7 +141,7 @@ Neuroimaging literature reports altered activity/connectivity in networks involv
 
 A brain scan difference does not automatically establish one pathophysiology.
 
-> **Chuyển mạch:** Trong **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **14. Comorbidity** tiếp nhận điểm tựa từ **13. Neural findings** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Treatment as rehabilitation and relearning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **14. Comorbidity** nối từ **13. Neural findings** sang **15. Treatment as rehabilitation and relearning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Comorbidity
 
@@ -149,7 +149,7 @@ Anxiety, depression, trauma-related symptoms, pain or fatigue may co-occur but a
 
 Treatment should address comorbidity when present without assuming it is the hidden cause of every neurological symptom.
 
-> **Chuyển mạch:** Ở chặng này của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **15. Treatment as rehabilitation and relearning** tiếp nhận điểm tựa từ **14. Comorbidity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Psychotherapy role** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **15. Treatment as rehabilitation and relearning** nối từ **14. Comorbidity** sang **16. Psychotherapy role**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Treatment as rehabilitation and relearning
 
@@ -159,7 +159,7 @@ A useful học tập (learning / 학습) frame is to restore automatic movement,
 
 > **bằng chứng (evidence / 증거) status:** multidisciplinary and specialized rehabilitation approaches have growing bằng chứng (evidence / 증거), but treatment tác động (effect / 효과) and optimal gói (package / 패키지) vary by symptom subtype and study chất lượng (quality / 품질).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **16. Psychotherapy role** tiếp nhận điểm tựa từ **15. Treatment as rehabilitation and relearning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Dissociative định danh (identity / 식별자) claims và bộ nhớ (memory / 메모리) caution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **16. Psychotherapy role** nối từ **15. Treatment as rehabilitation and relearning** sang **17. Dissociative định danh (identity / 식별자) claims và bộ nhớ (memory / 메모리) caution**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Psychotherapy role
 
@@ -167,7 +167,7 @@ Psychotherapy can help when symptoms interact with stress, avoidance, trauma, em
 
 Kết quả (outcome / 결과) benefit does not prove one nhân quả (causal / 인과적) lý thuyết (theory / 이론).
 
-> **Chuyển mạch:** Trong **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **17. Dissociative định danh (identity / 식별자) claims và bộ nhớ (memory / 메모리) caution** tiếp nhận điểm tựa từ **16. Psychotherapy role** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **17. Dissociative định danh (identity / 식별자) claims và bộ nhớ (memory / 메모리) caution** nối từ **16. Psychotherapy role** sang **18. dùng chung (common / 공통) misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Dissociative định danh (identity / 식별자) claims và bộ nhớ (memory / 메모리) caution
 
@@ -177,7 +177,7 @@ Dissociative symptoms are real; however, highly specific autobiographical claims
 
 Xem [[../02_learning_and_cognition/07_memory_distortion_eyewitness_and_false_memory]] và [[../90_connections/06_historical_theories_and_modern_evidence_matrix]].
 
-> **Chuyển mạch:** Ở chặng này của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **18. dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **17. Dissociative định danh (identity / 식별자) claims và bộ nhớ (memory / 메모리) caution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **18. dùng chung (common / 공통) misconceptions** nối từ **17. Dissociative định danh (identity / 식별자) claims và bộ nhớ (memory / 메모리) caution** sang **19. mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. dùng chung (common / 공통) misconceptions
 
@@ -201,7 +201,7 @@ Quá mạnh. hiện tại (current / 현재) imaging supports distributed-networ
 
 Sai. Treatment phản hồi (response / 응답) does not uniquely identify cause.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **19. mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **18. dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **19. mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **18. dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. mô hình tư duy (mental model / 사고 모델)
 
@@ -224,7 +224,7 @@ maintenance or recovery
 
 No single arrow is universal for every person.
 
-> **Chuyển mạch:** Trong **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **Kết nối kiến thức** gom các mảnh từ **19. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Phân ly, triệu chứng cơ thể và Functional Neurological Disorder**, **Kết nối kiến thức** tổng hợp từ **19. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

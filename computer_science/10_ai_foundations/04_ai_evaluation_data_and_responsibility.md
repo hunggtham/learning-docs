@@ -10,7 +10,7 @@ Classification có precision, recall, F1, ROC-AUC, PR-AUC, calibration. Regressi
 
 Chỉ số (metric / 지표) chọn sai có thể tối ưu hành vi (behavior / 동작) sai.
 
-> **Chuyển mạch:** Metric phải khớp task và chi phí lỗi; khi lớp lệch, accuracy có thể che failure của lớp hiếm. **Calibration** đi thêm một bước: kiểm tra xác suất dự báo có đúng mức tin cậy quan sát được hay không.
+> **Nối mạch:** Metric phải khớp task và chi phí lỗi; khi lớp lệch, accuracy có thể che failure của lớp hiếm. **Calibration** đi thêm một bước: kiểm tra xác suất dự báo có đúng mức tin cậy quan sát được hay không.
 
 ## Lớp (class / 클래스) imbalance
 
@@ -18,7 +18,7 @@ Nếu fraud tỷ lệ (rate / 비율) 0.1%, mô hình (model / 모델) luôn d�
 
 Precision trả lời trong alerts, bao nhiêu thật; recall trả lời trong positives thật, bắt được bao nhiêu. sự đánh đổi (trade-off / 트레이드오프) threshold phải gắn operational chi phí (cost / 비용).
 
-> **Chuyển mạch:** Class imbalance buộc ta chọn metric theo alert và cost; **calibration** hỏi các score đó có thể dùng như xác suất cho quyết định hay không. Sau khi đo chất lượng dự báo, **benchmark leakage** kiểm tra liệu điểm số có bị thổi phồng do dùng lại dữ liệu đánh giá hay không.
+> **Nối mạch:** Class imbalance buộc ta chọn metric theo alert và cost; **calibration** hỏi các score đó có thể dùng như xác suất cho quyết định hay không. Sau khi đo chất lượng dự báo, **benchmark leakage** kiểm tra liệu điểm số có bị thổi phồng do dùng lại dữ liệu đánh giá hay không.
 
 ## Calibration
 
@@ -26,7 +26,7 @@ Mô hình (model / 모델) calibrated nếu predictions 0.8 xảy ra đúng kho�
 
 High ranking accuracy không đảm bảo calibrated probabilities.
 
-> **Chuyển mạch:** Calibration làm rõ độ tin cậy của score, nhưng score vẫn có thể lạc quan nếu benchmark đã trở thành tín hiệu huấn luyện gián tiếp. **Subgroup evaluation** tiếp theo kiểm tra liệu kết quả còn giữ được trên các nhóm nhỏ và phân phối khác nhau hay không.
+> **Nối mạch:** Calibration làm rõ độ tin cậy của score, nhưng score vẫn có thể lạc quan nếu benchmark đã trở thành tín hiệu huấn luyện gián tiếp. **Subgroup evaluation** tiếp theo kiểm tra liệu kết quả còn giữ được trên các nhóm nhỏ và phân phối khác nhau hay không.
 
 ## Benchmark leakage và overfitting
 
@@ -34,7 +34,7 @@ Nếu community repeatedly tune trên cùng benchmark, benchmark trở thành hu
 
 Evaluation cần held-out/private tests, temporal splits và realistic triển khai (deployment / 배포) tasks.
 
-> **Chuyển mạch:** Benchmark leakage làm suy yếu khả năng khái quát, còn **subgroup evaluation** tìm failure bị che bởi metric trung bình và cỡ mẫu nhỏ. Khi phát hiện khác biệt nhóm, **human-in-the-loop** phải được đánh giá như một phần của workflow chứ không phải lớp sửa lỗi tự động.
+> **Nối mạch:** Benchmark leakage làm suy yếu khả năng khái quát, còn **subgroup evaluation** tìm failure bị che bởi metric trung bình và cỡ mẫu nhỏ. Khi phát hiện khác biệt nhóm, **human-in-the-loop** phải được đánh giá như một phần của workflow chứ không phải lớp sửa lỗi tự động.
 
 ## Subgroup evaluation
 
@@ -42,7 +42,7 @@ Aggregate chỉ số (metric / 지표) có thể che thất bại (failure / 실
 
 Fairness không reducible thành một chỉ số (metric / 지표) duy nhất; definitions như demographic parity, equalized odds có thể xung đột (conflict / 충돌) tùy cơ sở (base / 기반) rates/ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Subgroup evaluation chỉ ra ai chịu lỗi nhiều hơn; **human-in-the-loop** kiểm tra cách người dùng tiếp nhận, bỏ qua hoặc lạm dụng output trong quyết định thật. Muốn diễn giải kết quả và quyền sử dụng, cần truy tiếp **data provenance và consent**.
+> **Nối mạch:** Subgroup evaluation chỉ ra ai chịu lỗi nhiều hơn; **human-in-the-loop** kiểm tra cách người dùng tiếp nhận, bỏ qua hoặc lạm dụng output trong quyết định thật. Muốn diễn giải kết quả và quyền sử dụng, cần truy tiếp **data provenance và consent**.
 
 ## Human-in-the-loop
 
@@ -50,7 +50,7 @@ AI đầu ra (output / 출력) thường đi qua human quyết định (decision
 
 Evaluation phải đo combined human+AI workflow, không chỉ standalone mô hình (model / 모델).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **AI evaluation, dữ liệu (data / 데이터) và responsibility**, **Human-in-the-loop** nêu điều cần giải thích; **Dữ liệu (data / 데이터) provenance và consent** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Robustness và adversarial hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Human-in-the-loop** đặt vấn đề; **Dữ liệu (data / 데이터) provenance và consent** kiểm tra bằng chứng, rồi **Robustness và adversarial hành vi (behavior / 동작)** mở rộng hệ quả.
 
 ## Dữ liệu (data / 데이터) provenance và consent
 
@@ -58,7 +58,7 @@ Dataset cần biết nguồn (source / 소스), license, consent/usage các ràn
 
 Datasheets/mô hình (model / 모델) cards là documentation patterns để làm các giả định (assumptions / 가정들)/limitations tường minh (explicit / 명시적).
 
-> **Chuyển mạch:** Trong **AI evaluation, dữ liệu (data / 데이터) và responsibility**, **Dữ liệu (data / 데이터) provenance và consent** nêu điều cần giải thích; **Robustness và adversarial hành vi (behavior / 동작)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Reproducibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dữ liệu (data / 데이터) provenance và consent** đặt vấn đề; **Robustness và adversarial hành vi (behavior / 동작)** kiểm tra bằng chứng, rồi **Reproducibility** mở rộng hệ quả.
 
 ## Robustness và adversarial hành vi (behavior / 동작)
 
@@ -66,7 +66,7 @@ Phân phối (distribution / 분포) shift, noisy inputs và malicious manipulat
 
 AI bảo mật (security / 보안) cần threat mô hình (model / 모델) như software bảo mật (security / 보안), không chỉ accuracy testing.
 
-> **Chuyển mạch:** Ở chặng này của **AI evaluation, dữ liệu (data / 데이터) và responsibility**, **Reproducibility** tiếp nhận điểm tựa từ **Robustness và adversarial hành vi (behavior / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Reproducibility** nối từ **Robustness và adversarial hành vi (behavior / 동작)** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Reproducibility
 
@@ -74,7 +74,7 @@ Random seeds, dữ liệu (data / 데이터) versions, preprocessing, thư việ
 
 Chính xác (exact / 정확한) bitwise reproducibility không luôn possible/necessary; phải định nghĩa mức (level / 수준) cần.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **AI evaluation, dữ liệu (data / 데이터) và responsibility**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Reproducibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Reproducibility** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -84,13 +84,13 @@ Chính xác (exact / 정확한) bitwise reproducibility không luôn possible/ne
 
 **“Human rà soát (review / 검토) tự giải quyết AI rủi ro (risk / 위험).”** Human reviewers cũng có tải công việc (workload / 워크로드), độ lệch (bias / 편향) và thông tin (information / 정보) các ràng buộc (constraints / 제약조건들).
 
-> **Chuyển mạch:** Trong **AI evaluation, dữ liệu (data / 데이터) và responsibility**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > AI evaluation là hệ thống (system / 시스템) evaluation dưới bất định (uncertainty / 불확실성). mô hình (model / 모델) chỉ số (metric / 지표) chỉ là một tầng (layer / 계층); cần nối dữ liệu (data / 데이터) provenance, subgroup hành vi (behavior / 동작), human workflow và downstream chi phí (cost / 비용).
 
-> **Chuyển mạch:** Ở chặng này của **AI evaluation, dữ liệu (data / 데이터) và responsibility**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

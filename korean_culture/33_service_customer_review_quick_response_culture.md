@@ -8,7 +8,7 @@ Hàn Quốc thường được trải nghiệm như một xã hội có nhiều 
 
 Chất lượng dịch vụ là đầu ra của ít nhất năm lớp: **hạ tầng, cạnh tranh, lao động, nền tảng số và kỳ vọng người tiêu dùng**. Khi một doanh nghiệp làm nhanh hơn, chuẩn kỳ vọng của người tiêu dùng thay đổi; đối thủ phải bắt kịp; người lao động và hệ thống logistics chịu thêm áp lực. Vì vậy tốc độ là một trạng thái cân bằng được cả hệ thống duy trì.
 
-> **Chuyển mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **서비스: một từ có nhiều nghĩa** tiếp nhận điểm tựa từ **“Dịch vụ tốt” không tự nhiên xuất hiện chỉ từ thái độ thân thiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **고객님: kính ngữ được chuẩn hoá thành kịch bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **서비스: một từ có nhiều nghĩa** nối từ **“Dịch vụ tốt” không tự nhiên xuất hiện chỉ từ thái độ thân thiện** sang **고객님: kính ngữ được chuẩn hoá thành kịch bản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 서비스: một từ có nhiều nghĩa
 
@@ -18,7 +18,7 @@ Từ **dịch vụ (service / 서비스)** trong tiếng Hàn có thể chỉ ng
 
 Quà tặng nhỏ kiểu này có chức năng quan hệ: tạo thiện cảm, khuyến khích khách quay lại và làm giao dịch bớt thuần tiền bạc.
 
-> **Chuyển mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **고객님: kính ngữ được chuẩn hoá thành kịch bản** tiếp nhận điểm tựa từ **서비스: một từ có nhiều nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **감정노동: cảm xúc trở thành một phần của công việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **고객님: kính ngữ được chuẩn hoá thành kịch bản** nối từ **서비스: một từ có nhiều nghĩa** sang **감정노동: cảm xúc trở thành một phần của công việc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 고객님: kính ngữ được chuẩn hoá thành kịch bản
 
@@ -28,7 +28,7 @@ Quà tặng nhỏ kiểu này có chức năng quan hệ: tạo thiện cảm, k
 
 Kịch bản giúp tạo tính nhất quán nhưng cũng sinh căng thẳng: nhân viên phải giữ giọng lịch sự ngay cả khi khách hàng có hành vi thù địch. Từ đó xuất hiện khái niệm **lao động cảm xúc (emotional labour / 감정노동)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **감정노동: cảm xúc trở thành một phần của công việc** tiếp nhận điểm tựa từ **고객님: kính ngữ được chuẩn hoá thành kịch bản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **진상: khi khách hàng vượt qua ranh giới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **감정노동: cảm xúc trở thành một phần của công việc** nối từ **고객님: kính ngữ được chuẩn hoá thành kịch bản** sang **진상: khi khách hàng vượt qua ranh giới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 감정노동: cảm xúc trở thành một phần của công việc
 
@@ -38,7 +38,7 @@ Nếu chỉ số hiệu suất yêu cầu “luôn thân thiện” trong khi ng
 
 Điều quan trọng là không lý tưởng hoá dịch vụ lịch sự. Sự tiện lợi của khách có thể dựa trên lao động mà khách không nhìn thấy.
 
-> **Chuyển mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **진상: khi khách hàng vượt qua ranh giới** tiếp nhận điểm tựa từ **감정노동: cảm xúc trở thành một phần của công việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **“Khách hàng là thượng đế” và giới hạn của tư tưởng lấy khách hàng làm trung tâm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **진상: khi khách hàng vượt qua ranh giới** nối từ **감정노동: cảm xúc trở thành một phần của công việc** sang **“Khách hàng là thượng đế” và giới hạn của tư tưởng lấy khách hàng làm trung tâm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 진상: khi khách hàng vượt qua ranh giới
 
@@ -48,7 +48,7 @@ Từ khẩu ngữ **진상** thường dùng cho người có hành vi gây khó
 
 Vì vậy cần hỏi: yêu cầu có nằm trong dịch vụ đã thống nhất không, cách giao tiếp có mang tính lạm dụng không, doanh nghiệp đã thực hiện nghĩa vụ chưa? Nhãn gọi không thay thế bằng chứng.
 
-> **Chuyển mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **진상: khi khách hàng vượt qua ranh giới** đã nêu tiêu chí phân biệt, còn **“Khách hàng là thượng đế” và giới hạn của tư tưởng lấy khách hàng làm trung tâm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **빠른 답변: tốc độ phản hồi trở thành tín hiệu tôn trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **진상: khi khách hàng vượt qua ranh giới** đặt tiêu chí; **“Khách hàng là thượng đế” và giới hạn của tư tưởng lấy khách hàng làm trung tâm** dùng tiêu chí đó để kiểm tra ranh giới, rồi **빠른 답변: tốc độ phản hồi trở thành tín hiệu tôn trọng** mở rộng hệ quả.
 
 ## “Khách hàng là thượng đế” và giới hạn của tư tưởng lấy khách hàng làm trung tâm
 
@@ -64,7 +64,7 @@ phẩm giá và an toàn của người lao động
 
 Hai mục tiêu không nhất thiết đối lập. Chính sách hoàn tiền rõ, quy trình hỗ trợ có ghi nhận và đường chuyển cấp minh bạch có thể bảo vệ cả hai phía tốt hơn câu “khách luôn đúng”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **“Khách hàng là thượng đế” và giới hạn của tư tưởng lấy khách hàng làm trung tâm** đã nêu tiêu chí phân biệt, còn **빠른 답변: tốc độ phản hồi trở thành tín hiệu tôn trọng** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **배달 và 새벽배송: tiện lợi như bài toán độ trễ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **“Khách hàng là thượng đế” và giới hạn của tư tưởng lấy khách hàng làm trung tâm** đặt tiêu chí; **빠른 답변: tốc độ phản hồi trở thành tín hiệu tôn trọng** dùng tiêu chí đó để kiểm tra ranh giới, rồi **배달 và 새벽배송: tiện lợi như bài toán độ trễ** mở rộng hệ quả.
 
 ## 빠른 답변: tốc độ phản hồi trở thành tín hiệu tôn trọng
 
@@ -74,7 +74,7 @@ Một tin chưa được trả lời không chỉ là thiếu thông tin; nó c�
 
 Công nghệ biến độ trễ thành dữ liệu xã hội nhìn thấy được. Trước smartphone, người gửi không biết người nhận đã thấy thư hay chưa. Khi thông báo đã đọc xuất hiện, không gian diễn giải xã hội thay đổi. Đây là lý do `읽씹` tồn tại như một phạm trù văn hoá mới.
 
-> **Chuyển mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **배달 và 새벽배송: tiện lợi như bài toán độ trễ** tiếp nhận điểm tựa từ **빠른 답변: tốc độ phản hồi trở thành tín hiệu tôn trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **무료배송: “miễn phí” nhưng chi phí không biến mất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **배달 và 새벽배송: tiện lợi như bài toán độ trễ** nối từ **빠른 답변: tốc độ phản hồi trở thành tín hiệu tôn trọng** sang **무료배송: “miễn phí” nhưng chi phí không biến mất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 배달 và 새벽배송: tiện lợi như bài toán độ trễ
 
@@ -88,7 +88,7 @@ T_{delivery}=T_{order}+T_{pick}+T_{pack}+T_{dispatch}+T_{travel}+T_{handoff}
 
 Muốn giảm tổng thời gian, doanh nghiệp phải tối ưu nhiều công đoạn cùng lúc. Đây là lý do hạ tầng giải thích tốt hơn định kiến “người Hàn thiếu kiên nhẫn”.
 
-> **Chuyển mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **무료배송: “miễn phí” nhưng chi phí không biến mất** tiếp nhận điểm tựa từ **배달 và 새벽배송: tiện lợi như bài toán độ trễ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **반품·교환: logistics ngược là một phần của trải nghiệm mua hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **무료배송: “miễn phí” nhưng chi phí không biến mất** nối từ **배달 và 새벽배송: tiện lợi như bài toán độ trễ** sang **반품·교환: logistics ngược là một phần của trải nghiệm mua hàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 무료배송: “miễn phí” nhưng chi phí không biến mất
 
@@ -98,7 +98,7 @@ Muốn giảm tổng thời gian, doanh nghiệp phải tối ưu nhiều công 
 
 Hệ quả là người tiêu dùng dần xem phí giao hàng như ma sát bất thường, khiến thị trường tiếp tục tìm cách ẩn hoặc gộp chi phí.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **반품·교환: logistics ngược là một phần của trải nghiệm mua hàng** tiếp nhận điểm tựa từ **무료배송: “miễn phí” nhưng chi phí không biến mất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **리뷰: danh tiếng được biến thành dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **반품·교환: logistics ngược là một phần của trải nghiệm mua hàng** nối từ **무료배송: “miễn phí” nhưng chi phí không biến mất** sang **리뷰: danh tiếng được biến thành dữ liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 반품·교환: logistics ngược là một phần của trải nghiệm mua hàng
 
@@ -108,7 +108,7 @@ Trong phần mềm, hệ thống tốt không chỉ hỗ trợ đường chạy 
 
 Trả hàng dễ làm người tiêu dùng dám mua hơn vì rủi ro cảm nhận giảm. Nhưng tỷ lệ trả cao tạo thêm bao bì, vận chuyển và chi phí xử lý. Tiện lợi phía người dùng tạo khối lượng công việc cho chuỗi cung ứng ngược.
 
-> **Chuyển mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **반품·교환: logistics ngược là một phần của trải nghiệm mua hàng** nêu điều cần giải thích; **리뷰: danh tiếng được biến thành dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **리뷰 이벤트: phản hồi và động lực bị trộn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **반품·교환: logistics ngược là một phần của trải nghiệm mua hàng** đặt vấn đề; **리뷰: danh tiếng được biến thành dữ liệu** đối chiếu bằng chứng, rồi **리뷰 이벤트: phản hồi và động lực bị trộn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 리뷰: danh tiếng được biến thành dữ liệu
 
@@ -123,7 +123,7 @@ Trả hàng dễ làm người tiêu dùng dám mua hơn vì rủi ro cảm nh�
 
 Đây là khác biệt quan trọng trong hiểu biết dữ liệu.
 
-> **Chuyển mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **리뷰: danh tiếng được biến thành dữ liệu** nêu điều cần giải thích; **리뷰 이벤트: phản hồi và động lực bị trộn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **맛집: từ truyền miệng tới khám phá bằng thuật toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **리뷰: danh tiếng được biến thành dữ liệu** đặt vấn đề; **리뷰 이벤트: phản hồi và động lực bị trộn** đối chiếu bằng chứng, rồi **맛집: từ truyền miệng tới khám phá bằng thuật toán** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 리뷰 이벤트: phản hồi và động lực bị trộn
 
@@ -133,7 +133,7 @@ Nếu người đánh giá biết họ nhận phần thưởng, phân bố phả
 
 Trong thống kê, dữ liệu không thể được đánh giá tách khỏi quá trình tạo dữ liệu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **맛집: từ truyền miệng tới khám phá bằng thuật toán** tiếp nhận điểm tựa từ **리뷰 이벤트: phản hồi và động lực bị trộn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **웨이팅: xếp hàng trở thành tín hiệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **맛집: từ truyền miệng tới khám phá bằng thuật toán** nối từ **리뷰 이벤트: phản hồi và động lực bị trộn** sang **웨이팅: xếp hàng trở thành tín hiệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 맛집: từ truyền miệng tới khám phá bằng thuật toán
 
@@ -143,7 +143,7 @@ Nhà hàng tốt nhưng hiện diện số yếu có thể khó được khám p
 
 Vì vậy “nổi tiếng” là hỗn hợp của chất lượng sản phẩm, vị trí, tiếp xúc truyền thông, thuật toán và thời điểm.
 
-> **Chuyển mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **웨이팅: xếp hàng trở thành tín hiệu** tiếp nhận điểm tựa từ **맛집: từ truyền miệng tới khám phá bằng thuật toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **팝업스토어: khan hiếm được thiết kế thành trải nghiệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **웨이팅: xếp hàng trở thành tín hiệu** nối từ **맛집: từ truyền miệng tới khám phá bằng thuật toán** sang **팝업스토어: khan hiếm được thiết kế thành trải nghiệm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 웨이팅: xếp hàng trở thành tín hiệu
 
@@ -153,7 +153,7 @@ Vì vậy “nổi tiếng” là hỗn hợp của chất lượng sản phẩm
 
 Nhưng hàng chờ không chứng minh chất lượng. Năng lực phục vụ thấp hoặc tiếp thị lan truyền cũng có thể tạo hàng dài.
 
-> **Chuyển mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **팝업스토어: khan hiếm được thiết kế thành trải nghiệm** tiếp nhận điểm tựa từ **웨이팅: xếp hàng trở thành tín hiệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **쿠폰, 포인트 và membership** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **팝업스토어: khan hiếm được thiết kế thành trải nghiệm** nối từ **웨이팅: xếp hàng trở thành tín hiệu** sang **쿠폰, 포인트 và membership**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 팝업스토어: khan hiếm được thiết kế thành trải nghiệm
 
@@ -163,7 +163,7 @@ Thương hiệu không chỉ bán sản phẩm mà bán sự kiện: địa đi�
 
 Trong nền kinh tế chú ý, cửa hàng tạm thời tạo một đỉnh chú ý thay vì lưu lượng đều. Nó phù hợp mạng xã hội vì người dùng có lý do đăng “tôi đã đến khi nơi này còn mở”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **쿠폰, 포인트 và membership** tiếp nhận điểm tựa từ **팝업스토어: khan hiếm được thiết kế thành trải nghiệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **기프티콘: quà tặng được số hoá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **쿠폰, 포인트 và membership** nối từ **팝업스토어: khan hiếm được thiết kế thành trải nghiệm** sang **기프티콘: quà tặng được số hoá**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 쿠폰, 포인트 và membership
 
@@ -171,7 +171,7 @@ Phiếu giảm giá, điểm, membership và thuê bao tạo **chi phí chuyển
 
 Người tiêu dùng có thể nghĩ mình đang tối ưu từng lần giảm giá, còn doanh nghiệp tối ưu giá trị vòng đời khách hàng. Hai bên không nhất thiết đối đầu: khách có thể tiết kiệm thật và doanh nghiệp có thể giữ khách thật. Điều cần hiểu là chương trình khách hàng thân thiết là cơ chế thiết kế hành vi chứ không chỉ quà tặng.
 
-> **Chuyển mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **기프티콘: quà tặng được số hoá** tiếp nhận điểm tựa từ **쿠폰, 포인트 và membership** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1+1 và khuyến mãi cửa hàng tiện lợi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **기프티콘: quà tặng được số hoá** nối từ **쿠폰, 포인트 và membership** sang **1+1 và khuyến mãi cửa hàng tiện lợi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 기프티콘: quà tặng được số hoá
 
@@ -181,7 +181,7 @@ Người tiêu dùng có thể nghĩ mình đang tối ưu từng lần giảm g
 
 Quà số vẫn giữ chức năng quan hệ nhưng bỏ logistics vật lý. Đây là ví dụ về tính liên tục chức năng dưới quá trình nền tảng hoá.
 
-> **Chuyển mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **1+1 và khuyến mãi cửa hàng tiện lợi** tiếp nhận điểm tựa từ **기프티콘: quà tặng được số hoá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **알바: văn hoá dịch vụ nhìn từ phía người lao động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **1+1 và khuyến mãi cửa hàng tiện lợi** nối từ **기프티콘: quà tặng được số hoá** sang **알바: văn hoá dịch vụ nhìn từ phía người lao động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1+1 và khuyến mãi cửa hàng tiện lợi
 
@@ -191,7 +191,7 @@ Người tiêu dùng cần phân biệt **tiết kiệm giá trên đơn vị** 
 
 Đây là kinh tế học hành vi xuất hiện trực tiếp trong đời sống hằng ngày.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **알바: văn hoá dịch vụ nhìn từ phía người lao động** tiếp nhận điểm tựa từ **1+1 và khuyến mãi cửa hàng tiện lợi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **컴플레인 và chuyển cấp xử lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **알바: văn hoá dịch vụ nhìn từ phía người lao động** nối từ **1+1 và khuyến mãi cửa hàng tiện lợi** sang **컴플레인 và chuyển cấp xử lý**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 알바: văn hoá dịch vụ nhìn từ phía người lao động
 
@@ -201,7 +201,7 @@ Người từng làm `알바` thường nhìn văn hoá dịch vụ khác một 
 
 Đổi vai làm góc nhìn thay đổi. Văn hoá không phải một bộ quy tắc giống nhau cho mọi chủ thể; cùng một giao dịch được trải nghiệm khác nhau theo vị trí.
 
-> **Chuyển mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **컴플레인 và chuyển cấp xử lý** tiếp nhận điểm tựa từ **알바: văn hoá dịch vụ nhìn từ phía người lao động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **친절 và tính chuyên nghiệp không phải cùng một thứ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **컴플레인 và chuyển cấp xử lý** nối từ **알바: văn hoá dịch vụ nhìn từ phía người lao động** sang **친절 và tính chuyên nghiệp không phải cùng một thứ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 컴플레인 và chuyển cấp xử lý
 
@@ -211,7 +211,7 @@ Tổ chức trưởng thành thường cần đường chuyển cấp rõ: tuy�
 
 Điều này giống **xử lý ngoại lệ (exception handling)** trong phần mềm. Nếu mọi ngoại lệ đều bị đẩy thẳng lên cấp cao nhất, hệ thống không mở rộng được. Nếu mọi lỗi bị nuốt ở tuyến đầu, lỗi hệ thống không được sửa.
 
-> **Chuyển mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **친절 và tính chuyên nghiệp không phải cùng một thứ** tiếp nhận điểm tựa từ **컴플레인 và chuyển cấp xử lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công suất dịch vụ: nhanh hay chậm thường bắt đầu từ toán học hàng chờ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **친절 và tính chuyên nghiệp không phải cùng một thứ** nối từ **컴플레인 và chuyển cấp xử lý** sang **Công suất dịch vụ: nhanh hay chậm thường bắt đầu từ toán học hàng chờ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 친절 và tính chuyên nghiệp không phải cùng một thứ
 
@@ -221,7 +221,7 @@ Một nhân viên có thể ít biểu cảm nhưng xử lý chính xác; ngư�
 
 Đánh giá tốt nên tách hai chiều này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Công suất dịch vụ: nhanh hay chậm thường bắt đầu từ toán học hàng chờ** tiếp nhận điểm tựa từ **친절 và tính chuyên nghiệp không phải cùng một thứ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **웨이팅 시스템: hàng chờ vật lý được chuyển thành hàng chờ số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Công suất dịch vụ: nhanh hay chậm thường bắt đầu từ toán học hàng chờ** nối từ **친절 và tính chuyên nghiệp không phải cùng một thứ** sang **웨이팅 시스템: hàng chờ vật lý được chuyển thành hàng chờ số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Công suất dịch vụ: nhanh hay chậm thường bắt đầu từ toán học hàng chờ
 
@@ -239,7 +239,7 @@ Khi `ρ` tiến gần 1, hệ thống có rất ít khoảng đệm để hấp 
 
 Điều này giải thích vì sao một nơi phục vụ “rất nhanh” trong giờ thường nhưng hỗn loạn vào giờ cao điểm. Văn hoá phản hồi nhanh chỉ bền khi doanh nghiệp thiết kế **công suất dự phòng (capacity buffer)** thay vì ép hệ thống vận hành sát 100% mọi lúc.
 
-> **Chuyển mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **웨이팅 시스템: hàng chờ vật lý được chuyển thành hàng chờ số** tiếp nhận điểm tựa từ **Công suất dịch vụ: nhanh hay chậm thường bắt đầu từ toán học hàng chờ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **예약, 노쇼 và giá trị kinh tế của một khung thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **웨이팅 시스템: hàng chờ vật lý được chuyển thành hàng chờ số** nối từ **Công suất dịch vụ: nhanh hay chậm thường bắt đầu từ toán học hàng chờ** sang **예약, 노쇼 và giá trị kinh tế của một khung thời gian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 웨이팅 시스템: hàng chờ vật lý được chuyển thành hàng chờ số
 
@@ -256,7 +256,7 @@ Tổng thời gian có thể vẫn tương tự, nhưng chi phí cảm nhận gi
 
 Tuy nhiên hệ thống số cũng tạo rào cản mới cho người không quen ứng dụng, người không có số điện thoại phù hợp hoặc khách du lịch. Hiệu quả ở mức trung bình không đồng nghĩa mọi nhóm đều tiếp cận dễ như nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **예약, 노쇼 và giá trị kinh tế của một khung thời gian** tiếp nhận điểm tựa từ **웨이팅 시스템: hàng chờ vật lý được chuyển thành hàng chờ số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản hồi nhanh không đồng nghĩa giải quyết nhanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **예약, 노쇼 và giá trị kinh tế của một khung thời gian** nối từ **웨이팅 시스템: hàng chờ vật lý được chuyển thành hàng chờ số** sang **Phản hồi nhanh không đồng nghĩa giải quyết nhanh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 예약, 노쇼 và giá trị kinh tế của một khung thời gian
 
@@ -273,7 +273,7 @@ Vì vậy tiền cọc, chính sách huỷ, xác nhận trước giờ và danh 
 
 Thiết kế tốt phải phân bổ rủi ro giữa hai bên chứ không đẩy toàn bộ cho khách hoặc doanh nghiệp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Phản hồi nhanh không đồng nghĩa giải quyết nhanh** tiếp nhận điểm tựa từ **예약, 노쇼 và giá trị kinh tế của một khung thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SLA và lời hứa dịch vụ: kỳ vọng cần được đóng gói rõ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Phản hồi nhanh không đồng nghĩa giải quyết nhanh** nối từ **예약, 노쇼 và giá trị kinh tế của một khung thời gian** sang **SLA và lời hứa dịch vụ: kỳ vọng cần được đóng gói rõ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phản hồi nhanh không đồng nghĩa giải quyết nhanh
 
@@ -290,7 +290,7 @@ Nếu chỉ tối ưu chỉ số phản hồi đầu tiên, nhân viên có đ�
 
 Một hệ thống hỗ trợ tốt phải đo cả tốc độ lẫn độ chính xác, tỷ lệ giải quyết ở lần đầu, tỷ lệ tái mở vấn đề và mức độ khách phải lặp lại thông tin.
 
-> **Chuyển mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **SLA và lời hứa dịch vụ: kỳ vọng cần được đóng gói rõ** tiếp nhận điểm tựa từ **Phản hồi nhanh không đồng nghĩa giải quyết nhanh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **서비스 복구: lỗi xảy ra rồi thì hệ thống làm gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **SLA và lời hứa dịch vụ: kỳ vọng cần được đóng gói rõ** nối từ **Phản hồi nhanh không đồng nghĩa giải quyết nhanh** sang **서비스 복구: lỗi xảy ra rồi thì hệ thống làm gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## SLA và lời hứa dịch vụ: kỳ vọng cần được đóng gói rõ
 
@@ -300,7 +300,7 @@ Ngay cả khi không có hợp đồng SLA chính thức, doanh nghiệp vẫn t
 
 Kỳ vọng rõ giúp giảm xung đột vì khách biết “chậm” nghĩa là chậm so với chuẩn nào. Nhưng lời hứa quá tham vọng có thể tạo **nợ kỳ vọng**: doanh nghiệp giành khách bằng cam kết nhanh rồi liên tục chuyển chi phí sang người lao động hoặc cắt chất lượng để giữ thời gian.
 
-> **Chuyển mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **서비스 복구: lỗi xảy ra rồi thì hệ thống làm gì?** tiếp nhận điểm tựa từ **SLA và lời hứa dịch vụ: kỳ vọng cần được đóng gói rõ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kênh dịch vụ và vấn đề mất ngữ cảnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **서비스 복구: lỗi xảy ra rồi thì hệ thống làm gì?** nối từ **SLA và lời hứa dịch vụ: kỳ vọng cần được đóng gói rõ** sang **Kênh dịch vụ và vấn đề mất ngữ cảnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 서비스 복구: lỗi xảy ra rồi thì hệ thống làm gì?
 
@@ -321,7 +321,7 @@ Nếu tổ chức chỉ xin lỗi nhưng không có quyền sửa, lời xin l�
 
 Một lần xử lý lỗi tốt đôi khi có thể phục hồi niềm tin mạnh, nhưng không nên dùng ý tưởng này để biện minh rằng “có lỗi cũng tốt”. Mục tiêu vẫn là giảm xác suất lỗi và có cơ chế phục hồi khi lỗi xảy ra.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Kênh dịch vụ và vấn đề mất ngữ cảnh** tiếp nhận điểm tựa từ **서비스 복구: lỗi xảy ra rồi thì hệ thống làm gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiêu chuẩn hoá và cá nhân hoá: hai mục tiêu thường kéo ngược nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Kênh dịch vụ và vấn đề mất ngữ cảnh** nối từ **서비스 복구: lỗi xảy ra rồi thì hệ thống làm gì?** sang **Tiêu chuẩn hoá và cá nhân hoá: hai mục tiêu thường kéo ngược nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kênh dịch vụ và vấn đề mất ngữ cảnh
 
@@ -337,7 +337,7 @@ không tự động
 
 Đây là điểm giao giữa thiết kế dữ liệu và phép lịch sự. Việc bắt khách lặp thông tin không chỉ tốn thời gian; nó còn phát tín hiệu rằng tổ chức “không nhớ” tương tác trước.
 
-> **Chuyển mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Tiêu chuẩn hoá và cá nhân hoá: hai mục tiêu thường kéo ngược nhau** tiếp nhận điểm tựa từ **Kênh dịch vụ và vấn đề mất ngữ cảnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dịch vụ tiếp cận được: tốc độ không đủ nếu một số người không dùng được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Tiêu chuẩn hoá và cá nhân hoá: hai mục tiêu thường kéo ngược nhau** nối từ **Kênh dịch vụ và vấn đề mất ngữ cảnh** sang **Dịch vụ tiếp cận được: tốc độ không đủ nếu một số người không dùng được**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tiêu chuẩn hoá và cá nhân hoá: hai mục tiêu thường kéo ngược nhau
 
@@ -352,7 +352,7 @@ nhưng
 
 Hệ thống tốt thường chuẩn hoá phần có thể chuẩn hoá — thanh toán, lưu hồ sơ, quy trình an toàn — nhưng để không gian phán đoán cho trường hợp bất thường. Nếu mọi ngoại lệ đều bị ép vào kịch bản, khách cảm thấy “nói chuyện với máy”; nếu mọi nhân viên tự quyết tuỳ ý, chất lượng trở nên không ổn định.
 
-> **Chuyển mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Dịch vụ tiếp cận được: tốc độ không đủ nếu một số người không dùng được** tiếp nhận điểm tựa từ **Tiêu chuẩn hoá và cá nhân hoá: hai mục tiêu thường kéo ngược nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lập lịch lao động: dịch vụ nhanh thường dựa trên dự báo nhu cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Dịch vụ tiếp cận được: tốc độ không đủ nếu một số người không dùng được** nối từ **Tiêu chuẩn hoá và cá nhân hoá: hai mục tiêu thường kéo ngược nhau** sang **Lập lịch lao động: dịch vụ nhanh thường dựa trên dự báo nhu cầu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dịch vụ tiếp cận được: tốc độ không đủ nếu một số người không dùng được
 
@@ -364,7 +364,7 @@ Một quy trình tốt nên có đường thay thế khi người dùng không t
 
 Đọc cùng [`12_city_consumption_digital_life.md`](12_city_consumption_digital_life.md) và [`26_health_medicine_wellness_body.md`](26_health_medicine_wellness_body.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Lập lịch lao động: dịch vụ nhanh thường dựa trên dự báo nhu cầu** tiếp nhận điểm tựa từ **Dịch vụ tiếp cận được: tốc độ không đủ nếu một số người không dùng được** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đo chất lượng dịch vụ: một chỉ số không thể đại diện toàn bộ hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Lập lịch lao động: dịch vụ nhanh thường dựa trên dự báo nhu cầu** nối từ **Dịch vụ tiếp cận được: tốc độ không đủ nếu một số người không dùng được** sang **Đo chất lượng dịch vụ: một chỉ số không thể đại diện toàn bộ hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lập lịch lao động: dịch vụ nhanh thường dựa trên dự báo nhu cầu
 
@@ -382,7 +382,7 @@ khả năng chống chịu khi cầu tăng đột ngột
 
 Một hệ thống bền cần nhìn người lao động như nguồn lực có giới hạn sinh học, không phải công suất co giãn vô hạn.
 
-> **Chuyển mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Đo chất lượng dịch vụ: một chỉ số không thể đại diện toàn bộ hệ thống** tiếp nhận điểm tựa từ **Lập lịch lao động: dịch vụ nhanh thường dựa trên dự báo nhu cầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: ma sát không biến mất, nó được chuyển đi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Đo chất lượng dịch vụ: một chỉ số không thể đại diện toàn bộ hệ thống** nối từ **Lập lịch lao động: dịch vụ nhanh thường dựa trên dự báo nhu cầu** sang **Liên hệ kiến thức: ma sát không biến mất, nó được chuyển đi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đo chất lượng dịch vụ: một chỉ số không thể đại diện toàn bộ hệ thống
 
@@ -402,7 +402,7 @@ dữ liệu vận hành
 
 Nếu chỉ nghe khách, ta bỏ chi phí lao động. Nếu chỉ nhìn năng suất, ta bỏ trải nghiệm khách. Nếu chỉ nhìn trung bình, ta bỏ các nhóm bị phục vụ kém nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Liên hệ kiến thức: ma sát không biến mất, nó được chuyển đi** tiếp nhận điểm tựa từ **Đo chất lượng dịch vụ: một chỉ số không thể đại diện toàn bộ hệ thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ kiến thức: văn hoá dịch vụ như một hệ điều khiển phản hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Liên hệ kiến thức: ma sát không biến mất, nó được chuyển đi** nối từ **Đo chất lượng dịch vụ: một chỉ số không thể đại diện toàn bộ hệ thống** sang **Liên hệ kiến thức: văn hoá dịch vụ như một hệ điều khiển phản hồi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ kiến thức: ma sát không biến mất, nó được chuyển đi
 
@@ -416,7 +416,7 @@ chi phí toàn hệ thống giảm
 
 Nhiều đổi mới thực sự giảm tổng chi phí, nhưng một phần đổi mới chỉ di chuyển chi phí sang chủ thể khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Liên hệ kiến thức: văn hoá dịch vụ như một hệ điều khiển phản hồi** tiếp nhận điểm tựa từ **Liên hệ kiến thức: ma sát không biến mất, nó được chuyển đi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Liên hệ kiến thức: văn hoá dịch vụ như một hệ điều khiển phản hồi** nối từ **Liên hệ kiến thức: ma sát không biến mất, nó được chuyển đi** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ kiến thức: văn hoá dịch vụ như một hệ điều khiển phản hồi
 
@@ -435,13 +435,13 @@ Nếu phản hồi quá chậm, tổ chức học chậm. Nếu chỉ phản ứ
 
 Mục tiêu không phải “nghe mọi khách theo đúng nghĩa đen”, mà là phân biệt tín hiệu, nhiễu và lỗi hệ thống.
 
-> **Chuyển mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Mô hình tư duy** gom các mảnh từ **Liên hệ kiến thức: văn hoá dịch vụ như một hệ điều khiển phản hồi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Mô hình tư duy** tổng hợp từ **Liên hệ kiến thức: văn hoá dịch vụ như một hệ điều khiển phản hồi** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
 > Văn hoá dịch vụ Hàn Quốc nên được hiểu như một **hệ thống độ trễ thấp có giới hạn công suất**. Hạ tầng, cạnh tranh và nền tảng làm tốc độ khả thi; hàng chờ và lịch đặt phân bổ tài nguyên; người lao động hấp thụ biến động; dữ liệu đánh giá đóng vai trò phản hồi; quy trình phục hồi quyết định điều gì xảy ra khi hệ thống thất bại. Phép lịch sự chỉ là lớp giao diện phía trên.
 
-> **Chuyển mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Đọc tiếp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -461,7 +461,7 @@ Mục tiêu không phải “nghe mọi khách theo đúng nghĩa đen”, mà l
 
 “Kiosk luôn làm dịch vụ tốt hơn” bỏ qua khả năng tiếp cận và đường hỗ trợ cho người không dùng được kênh số.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Đọc tiếp** tiếp nhận điểm tựa từ **Những hiểu lầm phổ biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dịch vụ, khách hàng, đánh giá và văn hoá phản hồi nhanh**, **Đọc tiếp** nối từ **Những hiểu lầm phổ biến** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Đọc tiếp
 

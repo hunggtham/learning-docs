@@ -12,7 +12,7 @@ Quần thể (population)/sinh thái học quần xã (community ecology) theo d
 
 Một forest ecosystem không chỉ là cây (tree / 트리), animal, fungi. Nó còn có light đầu vào (input / 입력), lượng mưa (rainfall), đất khoáng chất (mineral), kho carbon (carbon pool), decomposition và heat exchange.
 
-> **Chuyển mạch:** Community describes biotic interaction; ecosystem adds abiotic flows, so primary production brings energy into the food web and trophic transfer loses usable energy at each level.
+> **Nối mạch:** Community describes biotic interaction; ecosystem adds abiotic flows, so primary production brings energy into the food web and trophic transfer loses usable energy at each level.
 
 ## 2. Primary môi trường vận hành (production / 운영 환경): năng lượng (energy / 에너지) vào lưới thức ăn (food web)
 
@@ -26,7 +26,7 @@ NPP=GPP-R
 
 NPP là phần biomass/năng lượng (energy / 에너지) còn lại cho growth và bên tiêu thụ (consumer / 소비자)/decomposer.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **3. năng lượng (energy / 에너지) transfer giữa bậc dinh dưỡng (trophic level)** tiếp nhận điểm tựa từ **2. Primary môi trường vận hành (production / 운영 환경): năng lượng (energy / 에너지) vào lưới thức ăn (food web)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Ecological pyramid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. năng lượng (energy / 에너지) transfer giữa bậc dinh dưỡng (trophic level)** nối từ **2. Primary môi trường vận hành (production / 운영 환경): năng lượng (energy / 에너지) vào lưới thức ăn (food web)** sang **4. Ecological pyramid**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. năng lượng (energy / 에너지) transfer giữa bậc dinh dưỡng (trophic level)
 
@@ -36,7 +36,7 @@ Vì vậy năng lượng (energy / 에너지) giảm mạnh khi đi lên bậc d
 
 Điều này giải thích vì sao top predator thường ít biomass/abundance hơn producer trong nhiều ecosystem.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **4. Ecological pyramid** tiếp nhận điểm tựa từ **3. năng lượng (energy / 에너지) transfer giữa bậc dinh dưỡng (trophic level)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Decomposer: phần lớn matter không đi theo grazing chuỗi (chain / 사슬) đơn giản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Ecological pyramid** nối từ **3. năng lượng (energy / 에너지) transfer giữa bậc dinh dưỡng (trophic level)** sang **5. Decomposer: phần lớn matter không đi theo grazing chuỗi (chain / 사슬) đơn giản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Ecological pyramid
 
@@ -44,7 +44,7 @@ Pyramid có thể biểu diễn number, biomass hoặc năng lượng (energy / 
 
 Phân biệt stock và luồng (flow / 흐름) rất quan trọng: biomass là stock tại thời điểm; productivity là tốc độ (rate).
 
-> **Chuyển mạch:** Trong **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **4. Ecological pyramid** xác định đầu vào; **5. Decomposer: phần lớn matter không đi theo grazing chuỗi (chain / 사슬) đơn giản** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. Chu trình carbon (carbon cycle)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ecological pyramid mô tả phân bố energy; decomposer cho thấy matter không chỉ đi theo grazing chain. **Carbon cycle** kiểm tra hệ quả ở cấp hệ sinh thái.
 
 ## 5. Decomposer: phần lớn matter không đi theo grazing chuỗi (chain / 사슬) đơn giản
 
@@ -54,7 +54,7 @@ Nếu decomposition dừng, nutrient bị khóa trong dead biomass và primary m
 
 Microbiology là engine của ecosystem cycling.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **5. Decomposer: phần lớn matter không đi theo grazing chuỗi (chain / 사슬) đơn giản** xác định đầu vào; **6. Chu trình carbon (carbon cycle)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **7. Kho carbon và dòng chuyển hóa (flux)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Decomposer trả matter về chu trình; carbon cycle mô tả stock và flux. **Carbon pools và metabolic flux** kiểm tra nơi carbon tích lũy hoặc chuyển đi.
 
 ## 6. Chu trình carbon (carbon cycle)
 
@@ -64,7 +64,7 @@ Quang hợp (photosynthesis) đưa CO₂ vào chất hữu cơ; hô hấp/decomp
 
 Timescale rất khác nhau: leaf carbon có thể cycle tháng/năm; rock carbon hàng triệu năm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **7. Kho carbon và dòng chuyển hóa (flux)** tiếp nhận điểm tựa từ **6. Chu trình carbon (carbon cycle)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Chu trình nitơ (nitrogen cycle)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. Kho carbon và dòng chuyển hóa (flux)** nối từ **6. Chu trình carbon (carbon cycle)** sang **8. Chu trình nitơ (nitrogen cycle)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Kho carbon và dòng chuyển hóa (flux)
 
@@ -72,7 +72,7 @@ Một reservoir lớn không nhất thiết có flux lớn nhất. Ocean có kho
 
 Sinh thái học (ecology)/earth science phải phân biệt **pool** (lượng chứa) và **dòng chuyển hóa** (rate transfer).
 
-> **Chuyển mạch:** Trong **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **8. Chu trình nitơ (nitrogen cycle)** tiếp nhận điểm tựa từ **7. Kho carbon và dòng chuyển hóa (flux)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Chu trình phospho (phosphorus cycle)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Chu trình nitơ (nitrogen cycle)** nối từ **7. Kho carbon và dòng chuyển hóa (flux)** sang **9. Chu trình phospho (phosphorus cycle)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Chu trình nitơ (nitrogen cycle)
 
@@ -84,7 +84,7 @@ Nitrification chuyển ammonium → nitrite/nitrate; assimilation đưa nitrogen
 
 Microbial metabolism điều khiển phần lớn cycle.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **9. Chu trình phospho (phosphorus cycle)** tiếp nhận điểm tựa từ **8. Chu trình nitơ (nitrogen cycle)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Chất dinh dưỡng giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Chu trình phospho (phosphorus cycle)** nối từ **8. Chu trình nitơ (nitrogen cycle)** sang **10. Chất dinh dưỡng giới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Chu trình phospho (phosphorus cycle)
 
@@ -94,7 +94,7 @@ Weathering rock giải phóng phosphate, organism uptake, decomposition recycle,
 
 Phosphorus thường là chất dinh dưỡng giới hạn (limiting nutrient) trong freshwater/đất bối cảnh (context).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **9. Chu trình phospho (phosphorus cycle)** đã nêu tiêu chí phân biệt, còn **10. Chất dinh dưỡng giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **11. Eutrophication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Chu trình phospho (phosphorus cycle)** đặt tiêu chí; **10. Chất dinh dưỡng giới hạn** dùng nó để kiểm tra ranh giới, rồi **11. Eutrophication** mở rộng cơ chế.
 
 ## 10. Chất dinh dưỡng giới hạn
 
@@ -104,7 +104,7 @@ Nếu nitrogen đã dư nhưng phosphorus thiếu, thêm nitrogen nữa ít tác
 
 Concept này giúp hiểu fertilizer và eutrophication.
 
-> **Chuyển mạch:** Trong **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **10. Chất dinh dưỡng giới hạn** đã nêu tiêu chí phân biệt, còn **11. Eutrophication** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **12. Water cycle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Chất dinh dưỡng giới hạn** đặt tiêu chí; **11. Eutrophication** dùng nó để kiểm tra ranh giới, rồi **12. Water cycle** mở rộng cơ chế.
 
 ## 11. Eutrophication
 
@@ -123,7 +123,7 @@ nutrient input
 
 Pollution tác động (effect / 효과) xuất hiện qua hệ sinh thái chuyển hóa (metabolism), không chỉ “algae độc”.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **12. Water cycle** tiếp nhận điểm tựa từ **11. Eutrophication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Biome và khí hậu (climate)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Water cycle** nối từ **11. Eutrophication** sang **13. Biome và khí hậu (climate)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Water cycle
 
@@ -133,7 +133,7 @@ Vegetation ảnh hưởng water cycle qua gốc (root / 루트) uptake, canopy i
 
 Deforestation có thể đổi runoff/erosion/cục bộ (local / 로컬) moisture, cho thấy organism cũng modify vật lý (physical / 물리적) môi trường (environment / 환경).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **13. Biome và khí hậu (climate)** tiếp nhận điểm tựa từ **12. Water cycle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Nhiễu động (disturbance)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. Biome và khí hậu (climate)** nối từ **12. Water cycle** sang **14. Nhiễu động (disturbance)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Biome và khí hậu (climate)
 
@@ -143,7 +143,7 @@ Nhưng biome ranh giới (boundary / 경계) không chỉ do khí hậu; fire, �
 
 Climate là ràng buộc (constraint / 제약조건) lớn, không phải sole determinant.
 
-> **Chuyển mạch:** Trong **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **14. Nhiễu động (disturbance)** tiếp nhận điểm tựa từ **13. Biome và khí hậu (climate)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Resistance và khả năng phục hồi (resilience)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Nhiễu động (disturbance)** nối từ **13. Biome và khí hậu (climate)** sang **15. Resistance và khả năng phục hồi (resilience)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Nhiễu động (disturbance)
 
@@ -153,7 +153,7 @@ Nhiều ecosystem evolved với disturbance regime. Fire suppression quá mạnh
 
 Ecological health không đồng nghĩa không có nhiễu động.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **15. Resistance và khả năng phục hồi (resilience)** tiếp nhận điểm tựa từ **14. Nhiễu động (disturbance)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Alternative stable states** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Resistance và khả năng phục hồi (resilience)** nối từ **14. Nhiễu động (disturbance)** sang **16. Alternative stable states**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Resistance và khả năng phục hồi (resilience)
 
@@ -165,7 +165,7 @@ Một ecosystem có thể resistance thấp nhưng resilience cao.
 
 Hai concept khác nhau và cần chỉ số (metric / 지표)/thời gian (time / 시간) quy mô (scale / 규모) cụ thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **16. Alternative stable states** tiếp nhận điểm tựa từ **15. Resistance và khả năng phục hồi (resilience)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Địa sinh học đảo (island biogeography)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Alternative stable states** nối từ **15. Resistance và khả năng phục hồi (resilience)** sang **17. Địa sinh học đảo (island biogeography)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Alternative stable states
 
@@ -175,7 +175,7 @@ Hiện tượng trễ (hysteresis) cho thấy “đảo nguyên nhân” không 
 
 Lý thuyết điều khiển (control theory) và ecology gặp nhau.
 
-> **Chuyển mạch:** Trong **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **17. Địa sinh học đảo (island biogeography)** tiếp nhận điểm tựa từ **16. Alternative stable states** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Phân mảnh sinh cảnh (habitat fragmentation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. Địa sinh học đảo (island biogeography)** nối từ **16. Alternative stable states** sang **18. Phân mảnh sinh cảnh (habitat fragmentation)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Địa sinh học đảo (island biogeography)
 
@@ -185,7 +185,7 @@ Island gần nguồn (source / 소스) có immigration cao; island lớn thườ
 
 Mô hình (model / 모델) này ảnh hưởng conservation reserve thiết kế (design / 설계), dù real landscape phức tạp hơn island ocean.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **18. Phân mảnh sinh cảnh (habitat fragmentation)** tiếp nhận điểm tựa từ **17. Địa sinh học đảo (island biogeography)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Biodiversity và hệ sinh thái chức năng (function)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Phân mảnh sinh cảnh (habitat fragmentation)** nối từ **17. Địa sinh học đảo (island biogeography)** sang **19. Biodiversity và hệ sinh thái chức năng (function)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Phân mảnh sinh cảnh (habitat fragmentation)
 
@@ -195,7 +195,7 @@ Species cần large territory hoặc dispersal kém dễ bị ảnh hưởng.
 
 Wildlife corridor có thể tăng movement/dòng gen (gene flow) nhưng cũng có sự đánh đổi (trade-off / 트레이드오프) như disease spread; thiết kế (design / 설계) cần species-specific bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **19. Biodiversity và hệ sinh thái chức năng (function)** tiếp nhận điểm tựa từ **18. Phân mảnh sinh cảnh (habitat fragmentation)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Ecosystem dịch vụ (service / 서비스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Biodiversity và hệ sinh thái chức năng (function)** nối từ **18. Phân mảnh sinh cảnh (habitat fragmentation)** sang **20. Ecosystem dịch vụ (service / 서비스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Biodiversity và hệ sinh thái chức năng (function)
 
@@ -205,7 +205,7 @@ Nhưng relationship không đơn giản tuyến tính (linear / 선형); định
 
 Bảo tồn biodiversity không chỉ là “càng nhiều species càng tốt” mà là giữ evolutionary/ecological tiến trình (process / 프로세스).
 
-> **Chuyển mạch:** Trong **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **20. Ecosystem dịch vụ (service / 서비스)** tiếp nhận điểm tựa từ **19. Biodiversity và hệ sinh thái chức năng (function)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Biến đổi khí hậu (climate change): cân bằng năng lượng (energy balance) tới ecology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. Ecosystem dịch vụ (service / 서비스)** nối từ **19. Biodiversity và hệ sinh thái chức năng (function)** sang **21. Biến đổi khí hậu (climate change): cân bằng năng lượng (energy balance) tới ecology**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Ecosystem dịch vụ (service / 서비스)
 
@@ -213,7 +213,7 @@ Human society phụ thuộc pollination, water purification, soil formation, lư
 
 **Ecosystem services** là khung phần mềm (framework / 프레임워크) nối ecological tiến trình (process / 프로세스) với human benefit, nhưng monetary valuation không capture toàn bộ intrinsic/cultural giá trị (value / 값).
 
-> **Chuyển mạch:** Ở chặng này của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **21. Biến đổi khí hậu (climate change): cân bằng năng lượng (energy balance) tới ecology** tiếp nhận điểm tựa từ **20. Ecosystem dịch vụ (service / 서비스)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Dịch chuyển vùng phân bố và phenology mismatch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Biến đổi khí hậu (climate change): cân bằng năng lượng (energy balance) tới ecology** nối từ **20. Ecosystem dịch vụ (service / 서비스)** sang **22. Dịch chuyển vùng phân bố và phenology mismatch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Biến đổi khí hậu (climate change): cân bằng năng lượng (energy balance) tới ecology
 
@@ -223,7 +223,7 @@ Ecological tác động (effect / 효과) gồm phenology shift, dịch chuyển
 
 Không nên hiểu climate tác động (effect / 효과) chỉ là “nóng hơn vài độ”; timing và phân bố không gian (spatial distribution) cũng đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **22. Dịch chuyển vùng phân bố và phenology mismatch** tiếp nhận điểm tựa từ **21. Biến đổi khí hậu (climate change): cân bằng năng lượng (energy balance) tới ecology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Axit hóa đại dương (ocean acidification)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. Dịch chuyển vùng phân bố và phenology mismatch** nối từ **21. Biến đổi khí hậu (climate change): cân bằng năng lượng (energy balance) tới ecology** sang **23. Axit hóa đại dương (ocean acidification)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Dịch chuyển vùng phân bố và phenology mismatch
 
@@ -233,7 +233,7 @@ Nếu plant flowering sớm hơn nhưng pollinator timing không shift tương t
 
 Quần xã phản hồi (response / 응답) không đồng bộ giữa species.
 
-> **Chuyển mạch:** Trong **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **23. Axit hóa đại dương (ocean acidification)** tiếp nhận điểm tựa từ **22. Dịch chuyển vùng phân bố và phenology mismatch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Conservation genetics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. Axit hóa đại dương (ocean acidification)** nối từ **22. Dịch chuyển vùng phân bố và phenology mismatch** sang **24. Conservation genetics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Axit hóa đại dương (ocean acidification)
 
@@ -247,7 +247,7 @@ H⁺ tăng làm pH giảm và carbonate availability thay đổi, ảnh hưởng
 
 Chemistry foundation quay lại ở Earth-system quy mô (scale / 규모).
 
-> **Chuyển mạch:** Ở chặng này của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **24. Conservation genetics** tiếp nhận điểm tựa từ **23. Axit hóa đại dương (ocean acidification)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Inbreeding depression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. Conservation genetics** nối từ **23. Axit hóa đại dương (ocean acidification)** sang **25. Inbreeding depression**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Conservation genetics
 
@@ -255,7 +255,7 @@ Small population dễ mất đa dạng di truyền (genetic diversity) bởi dri
 
 Conservation vì vậy không chỉ đếm individual; cần dòng gen, pedigree/genomic diversity và demographic stability.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **25. Inbreeding depression** tiếp nhận điểm tựa từ **24. Conservation genetics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Minimum viable population không phải con số universal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **25. Inbreeding depression** nối từ **24. Conservation genetics** sang **26. Minimum viable population không phải con số universal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Inbreeding depression
 
@@ -265,7 +265,7 @@ Genetic rescue bằng di chuyển (migration / 마이그레이션) có thể tă
 
 Genetics và conservation nối trực tiếp.
 
-> **Chuyển mạch:** Trong **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **26. Minimum viable population không phải con số universal** tiếp nhận điểm tựa từ **25. Inbreeding depression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Restoration ecology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **26. Minimum viable population không phải con số universal** nối từ **25. Inbreeding depression** sang **27. Restoration ecology**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Minimum viable population không phải con số universal
 
@@ -275,7 +275,7 @@ Một threshold cố định áp cho mọi species là sai.
 
 Population viability phân tích (analysis / 분석) dùng simulation/xác suất (probability / 확률) để estimate rủi ro (risk / 위험) dưới giả định (assumption / 가정) cụ thể.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **27. Restoration ecology** tiếp nhận điểm tựa từ **26. Minimum viable population không phải con số universal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Rewilding và trophic restoration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **27. Restoration ecology** nối từ **26. Minimum viable population không phải con số universal** sang **28. Rewilding và trophic restoration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Restoration ecology
 
@@ -285,7 +285,7 @@ Nếu underlying tiến trình (process / 프로세스) không trở lại, cấ
 
 Tư duy hệ thống (systems thinking): phục hồi tiến trình (process / 프로세스) trước khi chỉ phục hồi appearance.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **28. Rewilding và trophic restoration** tiếp nhận điểm tựa từ **27. Restoration ecology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Adaptive management** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **28. Rewilding và trophic restoration** nối từ **27. Restoration ecology** sang **29. Adaptive management**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Rewilding và trophic restoration
 
@@ -293,7 +293,7 @@ Reintroducing key bên tiêu thụ (consumer / 소비자)/predator có thể ph�
 
 Conservation intervention là thí nghiệm (experiment) ở complex hệ thống (system / 시스템), cần monitoring và adaptive management.
 
-> **Chuyển mạch:** Trong **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **29. Adaptive management** tiếp nhận điểm tựa từ **28. Rewilding và trophic restoration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Tình huống phân tích (case study): nitrogen fertilizer và river dead zone** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **29. Adaptive management** nối từ **28. Rewilding và trophic restoration** sang **30. Tình huống phân tích (case study): nitrogen fertilizer và river dead zone**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Adaptive management
 
@@ -309,7 +309,7 @@ hypothesis
 
 Đây là scientific phương thức (method / 메서드) áp dụng vào ecosystem management.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **29. Adaptive management** cho ta quy tắc; **30. Tình huống phân tích (case study): nitrogen fertilizer và river dead zone** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **31. Tình huống phân tích: mangrove** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **29. Adaptive management** nêu quy tắc; **30. Tình huống phân tích (case study): nitrogen fertilizer và river dead zone** thử quy tắc trong tình huống, rồi **31. Tình huống phân tích: mangrove** mở rộng hệ quả.
 
 ## 30. Tình huống phân tích (case study): nitrogen fertilizer và river dead zone
 
@@ -317,7 +317,7 @@ Fertilizer tăng crop môi trường vận hành (production / 운영 환경) nh
 
 Một quyết định (decision / 결정) agriculture cục bộ (local / 로컬) có hệ quả (consequence) ecosystem hàng trăm kilomet qua material luồng (flow / 흐름).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **30. Tình huống phân tích (case study): nitrogen fertilizer và river dead zone** cho ta quy tắc; **31. Tình huống phân tích: mangrove** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **32. Các hiểu lầm phổ biến (common misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **30. Tình huống phân tích (case study): nitrogen fertilizer và river dead zone** nêu quy tắc; **31. Tình huống phân tích: mangrove** thử quy tắc trong tình huống, rồi **32. Các hiểu lầm phổ biến (common misconceptions)** mở rộng hệ quả.
 
 ## 31. Tình huống phân tích: mangrove
 
@@ -325,7 +325,7 @@ Mangrove giữ sediment, buffer wave, nursery habitat, carbon-rich soil và tài
 
 Destroy mangrove không chỉ mất cây (tree / 트리) biomass mà mất nhiều dịch vụ (service / 서비스)/mạng lưới (network) hàm (function / 함수) cùng lúc.
 
-> **Chuyển mạch:** Trong **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **31. Tình huống phân tích: mangrove** cho ta quy tắc; **32. Các hiểu lầm phổ biến (common misconceptions)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ecological stoichiometry: organism không cần “carbon” một mình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **31. Tình huống phân tích: mangrove** nêu quy tắc; **32. Các hiểu lầm phổ biến (common misconceptions)** thử quy tắc trong tình huống, rồi **Ecological stoichiometry: organism không cần “carbon” một mình** mở rộng hệ quả.
 
 ## 32. Các hiểu lầm phổ biến (common misconceptions)
 
@@ -341,7 +341,7 @@ Destroy mangrove không chỉ mất cây (tree / 트리) biomass mà mất nhi�
 
 <!-- depth-audit-2026:stoichiometry-resilience -->
 
-> **Chuyển mạch:** Ở chặng này của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **Ecological stoichiometry: organism không cần “carbon” một mình** tiếp nhận điểm tựa từ **32. Các hiểu lầm phổ biến (common misconceptions)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Resilience, threshold và hysteresis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Ecological stoichiometry: organism không cần “carbon” một mình** nối từ **32. Các hiểu lầm phổ biến (common misconceptions)** sang **Resilience, threshold và hysteresis**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ecological stoichiometry: organism không cần “carbon” một mình
 
@@ -349,7 +349,7 @@ Biomass được xây từ nhiều nguyên tố với tỉ lệ hữu hạn. Pro
 
 Decomposition cũng phụ thuộc chất lượng (quality / 품질) của detritus, temperature, oxygen, moisture và microbial community. Carbon flux không thể tách khỏi nitrogen/phosphorus availability; nutrient limitation có thể đổi NPP, decomposition và carbon lưu trữ (storage / 저장소) cùng lúc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **Resilience, threshold và hysteresis** tiếp nhận điểm tựa từ **Ecological stoichiometry: organism không cần “carbon” một mình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ecosystem phải thỏa bảo toàn vật chất dù organism liên tục biến đổi nó** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Resilience, threshold và hysteresis** nối từ **Ecological stoichiometry: organism không cần “carbon” một mình** sang **Ecosystem phải thỏa bảo toàn vật chất dù organism liên tục biến đổi nó**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Resilience, threshold và hysteresis
 
@@ -361,7 +361,7 @@ Genetic diversity liên kết trực tiếp với resilience dài hạn vì popu
 
 <!-- continuity-2026:mass-balance -->
 
-> **Chuyển mạch:** Trong **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **Ecosystem phải thỏa bảo toàn vật chất dù organism liên tục biến đổi nó** tiếp nhận điểm tựa từ **Resilience, threshold và hysteresis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. cầu nối (bridge / 브리지): từ hiểu life sang can thiệp và đo lường life** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Ecosystem phải thỏa bảo toàn vật chất dù organism liên tục biến đổi nó** nối từ **Resilience, threshold và hysteresis** sang **33. cầu nối (bridge / 브리지): từ hiểu life sang can thiệp và đo lường life**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ecosystem phải thỏa bảo toàn vật chất dù organism liên tục biến đổi nó
 
@@ -377,7 +377,7 @@ Năng lượng (energy / 에너지) khác matter: năng lượng ánh sáng đi 
 
 Conservation theo cơ chế phải tìm **tiến trình (process / 프로세스) giới hạn**: mất pollinator, dòng nước bị chặn, nutrient loading quá cao, fire regime thay đổi hay connectivity bị cắt. Chỉ tăng số cá thể mà không phục hồi tiến trình (process / 프로세스) có thể tạo khôi phục (recovery / 복구) ngắn hạn nhưng không phục hồi self-maintaining hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Ở chặng này của **Hệ sinh thái, Chu trình vật chất và Bảo tồn — Ecosystems, Biogeochemical Cycles and Conservation (생태계, 생지화학적 순환과 보전)**, **Ecosystem phải thỏa bảo toàn vật chất dù organism liên tục biến đổi nó** nêu điều cần giải thích; **33. cầu nối (bridge / 브리지): từ hiểu life sang can thiệp và đo lường life** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Bảo toàn vật chất giữ ecosystem accounting nhất quán dù organism liên tục biến đổi matter; cầu nối sang can thiệp và đo lường khép mạch.
 
 ## 33. cầu nối (bridge / 브리지): từ hiểu life sang can thiệp và đo lường life
 

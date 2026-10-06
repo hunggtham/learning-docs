@@ -44,7 +44,7 @@ Trong xác suất (probability / 확률), `X` có thể là random variable. Tro
 
 Các usages liên quan qua idea “symbol đại diện quantity”, nhưng ngữ nghĩa (semantics / 의미론) khác nhau. Vì vậy ngữ cảnh (context / 맥락) và lĩnh vực (domain / 도메인) phải được nói rõ.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **2. lĩnh vực (domain / 도메인) là part of algebra, không phải footnote** tiếp nhận điểm tựa từ **1. Variable có nhiều vai trò** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Expression, equation, định danh (identity / 식별자) và hàm (function / 함수) khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **2. lĩnh vực (domain / 도메인) là part of algebra, không phải footnote** nối từ **1. Variable có nhiều vai trò** sang **3. Expression, equation, định danh (identity / 식별자) và hàm (function / 함수) khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. lĩnh vực (domain / 도메인) là part of algebra, không phải footnote
 
@@ -82,7 +82,7 @@ không có real solution nhưng có complex solutions.
 
 Do đó solution set không tồn tại độc lập với lĩnh vực (domain / 도메인).
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **3. Expression, equation, định danh (identity / 식별자) và hàm (function / 함수) khác nhau** tiếp nhận điểm tựa từ **2. lĩnh vực (domain / 도메인) là part of algebra, không phải footnote** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Dấu bằng là statement về sameness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **3. Expression, equation, định danh (identity / 식별자) và hàm (function / 함수) khác nhau** nối từ **2. lĩnh vực (domain / 도메인) là part of algebra, không phải footnote** sang **4. Dấu bằng là statement về sameness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Expression, equation, định danh (identity / 식별자) và hàm (function / 함수) khác nhau
 
@@ -120,7 +120,7 @@ là ánh xạ (mapping / 매핑), không chỉ expression bên phải.
 
 Phân biệt này quan trọng vì cách lập luận (reasoning / 추론) khác nhau: expression được simplify/evaluate, equation được solve, định danh (identity / 식별자) được prove, hàm (function / 함수) được analyze như ánh xạ (mapping / 매핑).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **4. Dấu bằng là statement về sameness** tiếp nhận điểm tựa từ **3. Expression, equation, định danh (identity / 식별자) và hàm (function / 함수) khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Equivalence transformation vs implication-only transformation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **4. Dấu bằng là statement về sameness** nối từ **3. Expression, equation, định danh (identity / 식별자) và hàm (function / 함수) khác nhau** sang **5. Equivalence transformation vs implication-only transformation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Dấu bằng là statement về sameness
 
@@ -154,7 +154,7 @@ lên cả hai sides.
 
 Khi transformation one-to-one trên lĩnh vực (domain / 도메인) đang xét, equality quan hệ (relation / 관계) được preserve theo hai chiều.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **5. Equivalence transformation vs implication-only transformation** tiếp nhận điểm tựa từ **4. Dấu bằng là statement về sameness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Arithmetic laws là rules của cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **5. Equivalence transformation vs implication-only transformation** nối từ **4. Dấu bằng là statement về sameness** sang **6. Arithmetic laws là rules của cấu trúc (structure / 구조)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Equivalence transformation vs implication-only transformation
 
@@ -206,7 +206,7 @@ Khi manipulate equation, câu hỏi cần hỏi là:
 
 > Bước này bảo toàn equivalence hay chỉ tạo implication một chiều?
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **6. Arithmetic laws là rules của cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **5. Equivalence transformation vs implication-only transformation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Distributive law: cầu nối (bridge / 브리지) giữa multiplication và addition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **6. Arithmetic laws là rules của cấu trúc (structure / 구조)** nối từ **5. Equivalence transformation vs implication-only transformation** sang **7. Distributive law: cầu nối (bridge / 브리지) giữa multiplication và addition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Arithmetic laws là rules của cấu trúc (structure / 구조)
 
@@ -258,7 +258,7 @@ a\cdot a^{-1}=1.
 
 Những laws này giải thích tại sao symbolic transformations hợp lệ. Abstract algebra sau này chỉ formalize structures có một subset các laws như vậy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **7. Distributive law: cầu nối (bridge / 브리지) giữa multiplication và addition** tiếp nhận điểm tựa từ **6. Arithmetic laws là rules của cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Factorization là reverse kỹ thuật (engineering / 엔지니어링) cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **7. Distributive law: cầu nối (bridge / 브리지) giữa multiplication và addition** nối từ **6. Arithmetic laws là rules của cấu trúc (structure / 구조)** sang **8. Factorization là reverse kỹ thuật (engineering / 엔지니어링) cấu trúc (structure / 구조)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Distributive law: cầu nối (bridge / 브리지) giữa multiplication và addition
 
@@ -282,7 +282,7 @@ Expanded form tốt cho collecting coefficients. Factored form làm zeros/dùng 
 
 Đại số thường là **chọn biểu diễn (representation / 표현) phù hợp với câu hỏi**, không phải luôn “rút gọn nhất”.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **8. Factorization là reverse kỹ thuật (engineering / 엔지니어링) cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **7. Distributive law: cầu nối (bridge / 브리지) giữa multiplication và addition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Exponent laws không phải bảng cần thuộc riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **8. Factorization là reverse kỹ thuật (engineering / 엔지니어링) cấu trúc (structure / 구조)** nối từ **7. Distributive law: cầu nối (bridge / 브리지) giữa multiplication và addition** sang **9. Exponent laws không phải bảng cần thuộc riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Factorization là reverse kỹ thuật (engineering / 엔지니어링) cấu trúc (structure / 구조)
 
@@ -318,7 +318,7 @@ log form
 
 Transformation giữa representations là central skill xuyên suốt Mathematics thư viện (library / 라이브러리).
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **9. Exponent laws không phải bảng cần thuộc riêng** tiếp nhận điểm tựa từ **8. Factorization là reverse kỹ thuật (engineering / 엔지니어링) cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Units là một dạng algebra** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **9. Exponent laws không phải bảng cần thuộc riêng** nối từ **8. Factorization là reverse kỹ thuật (engineering / 엔지니어링) cấu trúc (structure / 구조)** sang **10. Units là một dạng algebra**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Exponent laws không phải bảng cần thuộc riêng
 
@@ -366,7 +366,7 @@ trong lĩnh vực (domain / 도메인) thích hợp.
 
 Một quy tắc (rule / 규칙) tốt nên được nhìn như **extension chosen to preserve structural consistency**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **10. Units là một dạng algebra** tiếp nhận điểm tựa từ **9. Exponent laws không phải bảng cần thuộc riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Algebraic rearrangement là solving for perspective** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **10. Units là một dạng algebra** nối từ **9. Exponent laws không phải bảng cần thuộc riêng** sang **11. Algebraic rearrangement là solving for perspective**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Units là một dạng algebra
 
@@ -408,7 +408,7 @@ không có vật lý (physical / 물리적) meaning trong ordinary mô hình (mo
 
 Đây là reminder rằng symbolic algebra phải respect ngữ nghĩa (semantic / 의미적) kiểu (type / 타입) của quantities.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **11. Algebraic rearrangement là solving for perspective** tiếp nhận điểm tựa từ **10. Units là một dạng algebra** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Parameters, constants và variables** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **11. Algebraic rearrangement là solving for perspective** nối từ **10. Units là một dạng algebra** sang **12. Parameters, constants và variables**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Algebraic rearrangement là solving for perspective
 
@@ -436,7 +436,7 @@ Ta không tạo laws mới; ta thay perspective xem quantity nào là unknown.
 
 Trong kỹ thuật (engineering / 엔지니어링), finance và software sức chứa (capacity / 용량) planning, cùng một mô hình (model / 모델) được rearrange tùy quantity cần estimate.
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **12. Parameters, constants và variables** tiếp nhận điểm tựa từ **11. Algebraic rearrangement là solving for perspective** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Algebra và hàm (function / 함수) composition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **12. Parameters, constants và variables** nối từ **11. Algebraic rearrangement là solving for perspective** sang **13. Algebra và hàm (function / 함수) composition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Parameters, constants và variables
 
@@ -454,7 +454,7 @@ Nếu đã deploy mô hình (model / 모델), chúng có thể được coi cons
 
 Vai trò symbol phụ thuộc phase của bài toán (problem / 문제).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **13. Algebra và hàm (function / 함수) composition** tiếp nhận điểm tựa từ **12. Parameters, constants và variables** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Algebra và computational graphs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **13. Algebra và hàm (function / 함수) composition** nối từ **12. Parameters, constants và variables** sang **14. Algebra và computational graphs**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Algebra và hàm (function / 함수) composition
 
@@ -478,7 +478,7 @@ Khi solve equation hoặc differentiate, nhìn expression cây (tree / 트리) g
 
 Trình biên dịch (compiler / 컴파일러) cũng parse mã nguồn (source code / 소스 코드) thành abstract cú pháp (syntax / 문법) cây (tree / 트리). Symbolic algebra hệ thống (system / 시스템) làm transformations trên trees theo rules có điều kiện.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **14. Algebra và computational graphs** tiếp nhận điểm tựa từ **13. Algebra và hàm (function / 함수) composition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Modeling: ký hiệu chỉ hữu ích nếu ngữ nghĩa (semantics / 의미론) rõ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **14. Algebra và computational graphs** nối từ **13. Algebra và hàm (function / 함수) composition** sang **15. Modeling: ký hiệu chỉ hữu ích nếu ngữ nghĩa (semantics / 의미론) rõ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Algebra và computational graphs
 
@@ -500,7 +500,7 @@ Forward evaluation truyền values; reverse-mode AD truyền sensitivities ngư�
 
 Algebraic cấu trúc (structure / 구조) vì vậy nối trực tiếp tới automatic differentiation.
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **15. Modeling: ký hiệu chỉ hữu ích nếu ngữ nghĩa (semantics / 의미론) rõ** tiếp nhận điểm tựa từ **14. Algebra và computational graphs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Symbolic simplification có thể gây numerical problems** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **15. Modeling: ký hiệu chỉ hữu ích nếu ngữ nghĩa (semantics / 의미론) rõ** nối từ **14. Algebra và computational graphs** sang **16. Symbolic simplification có thể gây numerical problems**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Modeling: ký hiệu chỉ hữu ích nếu ngữ nghĩa (semantics / 의미론) rõ
 
@@ -528,7 +528,7 @@ model assumptions
 → measurements / implementation
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **16. Symbolic simplification có thể gây numerical problems** tiếp nhận điểm tựa từ **15. Modeling: ký hiệu chỉ hữu ích nếu ngữ nghĩa (semantics / 의미론) rõ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. dùng chung (common / 공통) mẫu (pattern / 패턴): preserve bất biến (invariant / 불변식) while changing biểu diễn (representation / 표현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **16. Symbolic simplification có thể gây numerical problems** nối từ **15. Modeling: ký hiệu chỉ hữu ích nếu ngữ nghĩa (semantics / 의미론) rõ** sang **17. dùng chung (common / 공통) mẫu (pattern / 패턴): preserve bất biến (invariant / 불변식) while changing biểu diễn (representation / 표현)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Symbolic simplification có thể gây numerical problems
 
@@ -546,7 +546,7 @@ Equivalent identities/series có thể evaluate ổn định hơn.
 
 Vì vậy “algebraically simpler” không luôn “numerically better”. Numerical Methods sẽ formalize issue này bằng conditioning/stability.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **17. dùng chung (common / 공통) mẫu (pattern / 패턴): preserve bất biến (invariant / 불변식) while changing biểu diễn (representation / 표현)** tiếp nhận điểm tựa từ **16. Symbolic simplification có thể gây numerical problems** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Worked Example: solve nhưng nhánh học (track / 트랙) lĩnh vực (domain / 도메인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **17. dùng chung (common / 공통) mẫu (pattern / 패턴): preserve bất biến (invariant / 불변식) while changing biểu diễn (representation / 표현)** nối từ **16. Symbolic simplification có thể gây numerical problems** sang **Worked Example: solve nhưng nhánh học (track / 트랙) lĩnh vực (domain / 도메인)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. dùng chung (common / 공통) mẫu (pattern / 패턴): preserve bất biến (invariant / 불변식) while changing biểu diễn (representation / 표현)
 
@@ -560,7 +560,7 @@ same underlying object/problem
 
 Đây là một trong những mô hình tư duy (mental models / 사고 모델들) quan trọng nhất của toàn Mathematics thư viện (library / 라이브러리).
 
-> **Chuyển mạch:** Ở chặng này của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **17. dùng chung (common / 공통) mẫu (pattern / 패턴): preserve bất biến (invariant / 불변식) while changing biểu diễn (representation / 표현)** cho ta quy tắc; **Worked Example: solve nhưng nhánh học (track / 트랙) lĩnh vực (domain / 도메인)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **17. dùng chung (common / 공통) mẫu (pattern / 패턴): preserve bất biến (invariant / 불변식) while changing biểu diễn (representation / 표현)** nêu quy tắc; **Worked Example: solve nhưng nhánh học (track / 트랙) lĩnh vực (domain / 도메인)** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Worked Example: solve nhưng nhánh học (track / 트랙) lĩnh vực (domain / 도메인)
 
@@ -604,13 +604,13 @@ Candidate thỏa lĩnh vực (domain / 도메인), nên valid.
 
 Việc ghi lĩnh vực (domain / 도메인) trước làm lập luận (reasoning / 추론) transparent hơn việc “cross multiply” như một ritual.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **Worked Example: solve nhưng nhánh học (track / 트랙) lĩnh vực (domain / 도메인)** cho ta quy tắc; **Mô hình tư duy (mental model / 사고 모델)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **Worked Example: solve nhưng nhánh học (track / 트랙) lĩnh vực (domain / 도메인)** nêu quy tắc; **Mô hình tư duy (mental model / 사고 모델)** thử quy tắc trong tình huống, rồi **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Algebra là **ngôn ngữ của representation-preserving transformations**. Variables giữ quantities chưa cố định; laws mô tả operations nào preserve cấu trúc (structure / 구조); factorization, expansion, rearrangement và substitution đổi cách nhìn để mẫu (pattern / 패턴) cần tìm lộ ra. Algebra mạnh nhất khi ta theo dõi lĩnh vực (domain / 도메인), reversibility và ngữ nghĩa (semantics / 의미론) thay vì chỉ thao tác symbols.
 
-> **Chuyển mạch:** Trong **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Ngôn ngữ đại số: biểu diễn cấu trúc bằng ký hiệu**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

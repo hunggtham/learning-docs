@@ -17,7 +17,7 @@ trauma exposure ≠ PTSD
 PTSD diagnosis ≠ proof về một causal pathway duy nhất
 ```
 
-> **Chuyển mạch:** Trong **Trauma và các rối loạn liên quan stressor**, **2. Acute stress phản hồi (response / 응답)** tiếp nhận điểm tựa từ **1. Exposure không bằng disorder** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. PTSD symptom organization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trauma và các rối loạn liên quan stressor**, **2. Acute stress phản hồi (response / 응답)** nối từ **1. Exposure không bằng disorder** sang **3. PTSD symptom organization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Acute stress phản hồi (response / 응답)
 
@@ -27,7 +27,7 @@ Clinical concern tăng khi symptom persist, intensify, impair functioning hoặc
 
 Không nên pathologize mọi early reaction, nhưng cũng không nên dismiss severe distress bằng câu “thời gian sẽ chữa hết”.
 
-> **Chuyển mạch:** Ở chặng này của **Trauma và các rối loạn liên quan stressor**, **3. PTSD symptom organization** tiếp nhận điểm tựa từ **2. Acute stress phản hồi (response / 응답)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Threat học tập (learning / 학습) và generalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trauma và các rối loạn liên quan stressor**, **3. PTSD symptom organization** nối từ **2. Acute stress phản hồi (response / 응답)** sang **4. Threat học tập (learning / 학습) và generalization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. PTSD symptom organization
 
@@ -37,7 +37,7 @@ Classification hệ thống (system / 시스템) có differences, nên chapter n
 
 Assessment cần thời gian (time / 시간) course, impairment, dissociation, substance use, mood symptoms và hiện tại (current / 현재) an toàn (safety / 안전).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trauma và các rối loạn liên quan stressor**, **4. Threat học tập (learning / 학습) và generalization** tiếp nhận điểm tựa từ **3. PTSD symptom organization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Avoidance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trauma và các rối loạn liên quan stressor**, **4. Threat học tập (learning / 학습) và generalization** nối từ **3. PTSD symptom organization** sang **5. Avoidance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Threat học tập (learning / 학습) và generalization
 
@@ -47,7 +47,7 @@ Extinction/new học tập (learning / 학습) có thể giảm phản hồi (re
 
 Xem [[../02_learning_and_cognition/00_learning_and_conditioning]].
 
-> **Chuyển mạch:** Trong **Trauma và các rối loạn liên quan stressor**, **5. Avoidance** tiếp nhận điểm tựa từ **4. Threat học tập (learning / 학습) và generalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Trauma bộ nhớ (memory / 메모리) không phải video recording** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trauma và các rối loạn liên quan stressor**, **5. Avoidance** nối từ **4. Threat học tập (learning / 학습) và generalization** sang **6. Trauma bộ nhớ (memory / 메모리) không phải video recording**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Avoidance
 
@@ -55,7 +55,7 @@ Avoidance giảm distress ngắn hạn và vì vậy được negative reinforce
 
 Nhưng avoidance không luôn maladaptive: tránh actual danger là adaptive. Treatment formulation phải phân biệt **ongoing threat** với learned threat phản hồi (response / 응답) trong safer ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Ở chặng này của **Trauma và các rối loạn liên quan stressor**, **6. Trauma bộ nhớ (memory / 메모리) không phải video recording** tiếp nhận điểm tựa từ **5. Avoidance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Recovered-memory ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trauma và các rối loạn liên quan stressor**, **6. Trauma bộ nhớ (memory / 메모리) không phải video recording** nối từ **5. Avoidance** sang **7. Recovered-memory ranh giới (boundary / 경계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Trauma bộ nhớ (memory / 메모리) không phải video recording
 
@@ -65,7 +65,7 @@ Bộ nhớ (memory / 메모리) science cho thấy emotion, attention, repeated 
 
 Xem [[../02_learning_and_cognition/07_memory_distortion_eyewitness_and_false_memory]] và [[../02_learning_and_cognition/11_emotion_memory_and_affective_cognition]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trauma và các rối loạn liên quan stressor**, **6. Trauma bộ nhớ (memory / 메모리) không phải video recording** đã nêu tiêu chí phân biệt, còn **7. Recovered-memory ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **8. Appraisal, guilt và shame** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trauma và các rối loạn liên quan stressor**, **6. Trauma bộ nhớ (memory / 메모리) không phải video recording** đặt tiêu chí; **7. Recovered-memory ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **8. Appraisal, guilt và shame** mở rộng hệ quả.
 
 ## 7. Recovered-memory ranh giới (boundary / 경계)
 
@@ -73,7 +73,7 @@ Một người có thể nhớ lại sự kiện (event / 이벤트) đã lâu k
 
 Clinical kiểm tra hợp lệ (validation / 검증) of distress không yêu cầu therapist khẳng định certainty về historical detail chưa independently verified.
 
-> **Chuyển mạch:** Trong **Trauma và các rối loạn liên quan stressor**, **7. Recovered-memory ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **8. Appraisal, guilt và shame** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **9. Hyperarousal và sleep** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trauma và các rối loạn liên quan stressor**, **7. Recovered-memory ranh giới (boundary / 경계)** đặt tiêu chí; **8. Appraisal, guilt và shame** dùng tiêu chí đó để kiểm tra ranh giới, rồi **9. Hyperarousal và sleep** mở rộng hệ quả.
 
 ## 8. Appraisal, guilt và shame
 
@@ -83,7 +83,7 @@ Trauma-focused cognitive approaches mục tiêu (target / 대상) overly broad o
 
 Guilt/shame còn liên quan [[../90_connections/04_moral_injury_shame_guilt_and_value_conflict]].
 
-> **Chuyển mạch:** Ở chặng này của **Trauma và các rối loạn liên quan stressor**, **9. Hyperarousal và sleep** tiếp nhận điểm tựa từ **8. Appraisal, guilt và shame** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Dissociation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trauma và các rối loạn liên quan stressor**, **9. Hyperarousal và sleep** nối từ **8. Appraisal, guilt và shame** sang **10. Dissociation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Hyperarousal và sleep
 
@@ -93,7 +93,7 @@ Sleep mất mát (loss / 손실) lại làm emotion regulation và attention wor
 
 Xem [[11_sleep_insomnia_and_circadian_disorders]] và [[../01_brain_and_mind/06_stress_allostasis_and_psychoneuroimmunology]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trauma và các rối loạn liên quan stressor**, **10. Dissociation** tiếp nhận điểm tựa từ **9. Hyperarousal và sleep** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Complex PTSD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trauma và các rối loạn liên quan stressor**, **10. Dissociation** nối từ **9. Hyperarousal và sleep** sang **11. Complex PTSD**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Dissociation
 
@@ -103,7 +103,7 @@ Depersonalization/derealization cần differential assessment; severe dissociati
 
 Xem [[10_dissociation_somatic_and_functional_symptoms]].
 
-> **Chuyển mạch:** Trong **Trauma và các rối loạn liên quan stressor**, **11. Complex PTSD** tiếp nhận điểm tựa từ **10. Dissociation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Trauma-focused psychotherapy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trauma và các rối loạn liên quan stressor**, **11. Complex PTSD** nối từ **10. Dissociation** sang **12. Trauma-focused psychotherapy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Complex PTSD
 
@@ -111,7 +111,7 @@ ICD-11 có category Complex PTSD ngoài cốt lõi (core / 핵심) PTSD symptoms
 
 Classification differences giữa ICD và DSM cần được hiểu như differences in nosology, không phải một hệ thống “đúng” còn hệ kia “sai”.
 
-> **Chuyển mạch:** Ở chặng này của **Trauma và các rối loạn liên quan stressor**, **12. Trauma-focused psychotherapy** tiếp nhận điểm tựa từ **11. Complex PTSD** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Prolonged Exposure, CPT và EMDR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trauma và các rối loạn liên quan stressor**, **12. Trauma-focused psychotherapy** nối từ **11. Complex PTSD** sang **13. Prolonged Exposure, CPT và EMDR**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Trauma-focused psychotherapy
 
@@ -121,7 +121,7 @@ VA/DoD 2023 đánh giá từng therapy cụ thể thay vì coi “trauma-focused
 
 > **ranh giới (boundary / 경계):** treatment efficacy không chứng minh một lý thuyết (theory / 이론) duy nhất về trauma bộ nhớ (memory / 메모리). Nhiều treatment có thể đạt improvement qua overlapping và distinct mechanisms.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trauma và các rối loạn liên quan stressor**, **13. Prolonged Exposure, CPT và EMDR** tiếp nhận điểm tựa từ **12. Trauma-focused psychotherapy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Early intervention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trauma và các rối loạn liên quan stressor**, **13. Prolonged Exposure, CPT và EMDR** nối từ **12. Trauma-focused psychotherapy** sang **14. Early intervention**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Prolonged Exposure, CPT và EMDR
 
@@ -133,7 +133,7 @@ VA/DoD 2023 đánh giá từng therapy cụ thể thay vì coi “trauma-focused
 
 Đây là ví dụ điển hình của quy tắc (rule / 규칙): **kết quả (outcome / 결과) bằng chứng (evidence / 증거) ≠ complete cơ chế (mechanism / 메커니즘) proof**.
 
-> **Chuyển mạch:** Trong **Trauma và các rối loạn liên quan stressor**, **14. Early intervention** tiếp nhận điểm tựa từ **13. Prolonged Exposure, CPT và EMDR** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Ongoing trauma và xã hội (social / 사회적) ngữ cảnh (context / 맥락)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trauma và các rối loạn liên quan stressor**, **14. Early intervention** nối từ **13. Prolonged Exposure, CPT và EMDR** sang **15. Ongoing trauma và xã hội (social / 사회적) ngữ cảnh (context / 맥락)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Early intervention
 
@@ -143,7 +143,7 @@ Early monitoring, practical hỗ trợ (support / 지원) và targeted intervent
 
 Guideline recommendation phụ thuộc age, acute stress disorder, symptom severity và timing.
 
-> **Chuyển mạch:** Ở chặng này của **Trauma và các rối loạn liên quan stressor**, **15. Ongoing trauma và xã hội (social / 사회적) ngữ cảnh (context / 맥락)** tiếp nhận điểm tựa từ **14. Early intervention** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. công việc (work / 작업) và occupational trauma** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trauma và các rối loạn liên quan stressor**, **15. Ongoing trauma và xã hội (social / 사회적) ngữ cảnh (context / 맥락)** nối từ **14. Early intervention** sang **16. công việc (work / 작업) và occupational trauma**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Ongoing trauma và xã hội (social / 사회적) ngữ cảnh (context / 맥락)
 
@@ -151,7 +151,7 @@ Nếu person còn sống trong violence, exploitation, war, unsafe housing hoặ
 
 PTSD mô hình (model / 모델) phải đặt ongoing environmental threat vào nhân quả (causal / 인과적) phân tích (analysis / 분석).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trauma và các rối loạn liên quan stressor**, **16. công việc (work / 작업) và occupational trauma** tiếp nhận điểm tựa từ **15. Ongoing trauma và xã hội (social / 사회적) ngữ cảnh (context / 맥락)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trauma và các rối loạn liên quan stressor**, **16. công việc (work / 작업) và occupational trauma** nối từ **15. Ongoing trauma và xã hội (social / 사회적) ngữ cảnh (context / 맥락)** sang **17. Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. công việc (work / 작업) và occupational trauma
 
@@ -161,7 +161,7 @@ Không nên biến mọi occupational stress thành “trauma”; burnout, moral
 
 Xem [[../06_applied/14_work_stress_burnout_and_recovery]] và [[../90_connections/04_moral_injury_shame_guilt_and_value_conflict]].
 
-> **Chuyển mạch:** Trong **Trauma và các rối loạn liên quan stressor**, **17. Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **16. công việc (work / 작업) và occupational trauma** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trauma và các rối loạn liên quan stressor**, **17. Những hiểu lầm phổ biến** nối từ **16. công việc (work / 작업) và occupational trauma** sang **18. Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Những hiểu lầm phổ biến
 
@@ -175,7 +175,7 @@ Xem [[../06_applied/14_work_stress_burnout_and_recovery]] và [[../90_connection
 
 **“Exposure nghĩa ép kể lại chi tiết ngay lập tức.”** Sai. Evidence-based treatment có assessment, pacing, consent và giao thức (protocol / 프로토콜).
 
-> **Chuyển mạch:** Ở chặng này của **Trauma và các rối loạn liên quan stressor**, **18. Mô hình tư duy** gom các mảnh từ **17. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Bằng chứng (evidence / 증거) anchors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trauma và các rối loạn liên quan stressor**, **18. Mô hình tư duy** tổng hợp từ **17. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Bằng chứng (evidence / 증거) anchors** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. Mô hình tư duy
 
@@ -191,7 +191,7 @@ traumatic event
 
 Khôi phục (recovery / 복구) có thể đi qua new học tập (learning / 학습), meaning cập nhật (update / 업데이트), restored functioning, xã hội (social / 사회적) hỗ trợ (support / 지원) và treatment khi cần.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trauma và các rối loạn liên quan stressor**, **18. Mô hình tư duy** nêu điều cần giải thích; **Bằng chứng (evidence / 증거) anchors** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trauma và các rối loạn liên quan stressor**, **18. Mô hình tư duy** đặt vấn đề; **Bằng chứng (evidence / 증거) anchors** đối chiếu bằng chứng, rồi **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Bằng chứng (evidence / 증거) anchors
 
@@ -200,7 +200,7 @@ Các mục dưới đây là điểm kiểm tra bằng chứng và hướng đ�
 - VA/DoD Clinical Practice Guideline for PTSD and Acute Stress Disorder, 2023.
 - NICE NG116: Post-traumatic stress disorder.
 
-> **Chuyển mạch:** Trong **Trauma và các rối loạn liên quan stressor**, **Bằng chứng (evidence / 증거) anchors** nêu điều cần giải thích; **Kết nối kiến thức** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Trauma và các rối loạn liên quan stressor**, **Bằng chứng (evidence / 증거) anchors** đặt vấn đề; **Kết nối kiến thức** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

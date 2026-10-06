@@ -10,7 +10,7 @@ Một principle mạnh là hiện vật bản dựng (build artifact / 빌드 �
 
 Environment-specific hành vi (behavior / 동작) nên đến từ cấu hình (configuration / 구성) hoặc injected secrets, không phải nguồn (source / 소스) branch divergent.
 
-> **Chuyển mạch:** Trong **Delivery, cấu hình (configuration / 구성) và operations**, **Cấu hình (configuration / 구성)** tiếp nhận điểm tựa từ **Bản dựng (build / 빌드) once, promote same sản phẩm tạo ra (artifact / 산출물)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính năng (feature / 기능) flags** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cấu hình (configuration / 구성)** nối từ **Bản dựng (build / 빌드) once, promote same sản phẩm tạo ra (artifact / 산출물)** sang **Tính năng (feature / 기능) flags**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cấu hình (configuration / 구성)
 
@@ -18,7 +18,7 @@ Cấu hình (configuration / 구성) là dữ liệu (data / 데이터) thay đ�
 
 Một typo cấu hình (config / 설정) có thể outage như mã (code / 코드) bug. cấu hình (config / 설정) changes nên kiểm tra (audit / 감사)/kiểm thử (test / 테스트)/quay lui (rollback / 롤백) được.
 
-> **Chuyển mạch:** Ở chặng này của **Delivery, cấu hình (configuration / 구성) và operations**, **Tính năng (feature / 기능) flags** tiếp nhận điểm tựa từ **Cấu hình (configuration / 구성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tính năng (feature / 기능) flags** nối từ **Cấu hình (configuration / 구성)** sang **CI**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính năng (feature / 기능) flags
 
@@ -26,7 +26,7 @@ Cờ tính năng (feature flag / 기능 플래그) tách deploy mã (code / 코�
 
 Nhưng flags tạo combinatorial states và technical debt. Mỗi flag nên có đơn vị sở hữu (owner / 오너)/expiry plan; permanent zombie flags làm mã (code / 코드) khó lập luận (reasoning / 추론).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Delivery, cấu hình (configuration / 구성) và operations**, **CI** tiếp nhận điểm tựa từ **Tính năng (feature / 기능) flags** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **CI** nối từ **Tính năng (feature / 기능) flags** sang **CD**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CI
 
@@ -34,7 +34,7 @@ Continuous tích hợp (integration / 통합) nghĩa developers integrate freque
 
 Chuỗi xử lý (pipeline / 파이프라인) phản hồi (feedback / 피드백) càng chậm thì batch kích thước (size / 크기) changes càng lớn và fix chi phí (cost / 비용) tăng.
 
-> **Chuyển mạch:** Trong **Delivery, cấu hình (configuration / 구성) và operations**, **CD** tiếp nhận điểm tựa từ **CI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Triển khai (deployment / 배포) strategies** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **CD** nối từ **CI** sang **Triển khai (deployment / 배포) strategies**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CD
 
@@ -42,7 +42,7 @@ Continuous Delivery giữ hệ thống (system / 시스템) luôn ở trạng th
 
 Hai terms thường bị dùng lẫn; distinction nằm ở automatic môi trường vận hành (production / 운영 환경) bản phát hành (release / 릴리스).
 
-> **Chuyển mạch:** Ở chặng này của **Delivery, cấu hình (configuration / 구성) và operations**, **Triển khai (deployment / 배포) strategies** tiếp nhận điểm tựa từ **CD** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Triển khai (deployment / 배포) strategies** nối từ **CD** sang **Cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Triển khai (deployment / 배포) strategies
 
@@ -50,7 +50,7 @@ Rolling cập nhật (update / 업데이트) thay instances dần. Blue-green gi
 
 Chiến lược (strategy / 전략) chọn theo quay lui (rollback / 롤백) speed, sức chứa (capacity / 용량) chi phí (cost / 비용), trạng thái (state / 상태)/lược đồ (schema / 스키마) tính tương thích (compatibility / 호환성) và khả năng quan sát (observability / 관측 가능성).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Delivery, cấu hình (configuration / 구성) và operations**, **Triển khai (deployment / 배포) strategies** nêu điều cần giải thích; **Cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Triển khai (deployment / 배포) strategies** đặt vấn đề; **Cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션)** kiểm tra bằng chứng, rồi **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라)** mở rộng hệ quả.
 
 ## Cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션)
 
@@ -58,7 +58,7 @@ App deploy quay lui (rollback / 롤백) không đơn giản nếu lược đồ 
 
 Backward/forward tính tương thích (compatibility / 호환성) là yêu cầu (requirement / 요구사항) xuyên nhiều deploy versions.
 
-> **Chuyển mạch:** Trong **Delivery, cấu hình (configuration / 구성) và operations**, **Cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션)** nêu điều cần giải thích; **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Runbook và operational readiness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Cơ sở dữ liệu (database / 데이터베이스) di chuyển (migration / 마이그레이션)** đặt vấn đề; **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라)** kiểm tra bằng chứng, rồi **Runbook và operational readiness** mở rộng hệ quả.
 
 ## Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라)
 
@@ -66,7 +66,7 @@ IaC phiên bản (version / 버전) hóa hạ tầng (infrastructure / 인프라
 
 Declarative cấu hình (config / 설정) mô tả desired trạng thái (state / 상태); controller/công cụ (tool / 도구) reconcile actual trạng thái (state / 상태) với desired trạng thái (state / 상태).
 
-> **Chuyển mạch:** Ở chặng này của **Delivery, cấu hình (configuration / 구성) và operations**, **Runbook và operational readiness** tiếp nhận điểm tựa từ **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quay lui (rollback / 롤백) và roll-forward** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Runbook và operational readiness** nối từ **Hạ tầng dưới dạng mã (infrastructure as code / 코드형 인프라)** sang **Quay lui (rollback / 롤백) và roll-forward**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Runbook và operational readiness
 
@@ -74,7 +74,7 @@ Một dịch vụ (service / 서비스) môi trường vận hành (production /
 
 “Deploy thành công” không phải endpoint; operability là chất lượng (quality / 품질) attribute.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Delivery, cấu hình (configuration / 구성) và operations**, **Quay lui (rollback / 롤백) và roll-forward** tiếp nhận điểm tựa từ **Runbook và operational readiness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Quay lui (rollback / 롤백) và roll-forward** nối từ **Runbook và operational readiness** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quay lui (rollback / 롤백) và roll-forward
 
@@ -82,7 +82,7 @@ Quay lui (rollback / 롤백) nhanh hữu ích nhưng không luôn possible sau i
 
 Bản phát hành (release / 릴리스) thiết kế (design / 설계) nên biết trước khôi phục (recovery / 복구) đường dẫn (path / 경로) thay vì nghĩ sau sự cố (incident / 인시던트).
 
-> **Chuyển mạch:** Trong **Delivery, cấu hình (configuration / 구성) và operations**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Quay lui (rollback / 롤백) và roll-forward** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Quay lui (rollback / 롤백) và roll-forward** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -92,13 +92,13 @@ Bản phát hành (release / 릴리스) thiết kế (design / 설계) nên bi�
 
 **“ảnh bộ chứa (container image / 컨테이너 이미지) giống nhau thì environments giống nhau.”** Kernel, mạng (network / 네트워크), secrets, dữ liệu (data / 데이터) và bên ngoài (external / 외부) dependencies vẫn khác.
 
-> **Chuyển mạch:** Ở chặng này của **Delivery, cấu hình (configuration / 구성) và operations**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Delivery là chuyển tiếp trạng thái (state transition / 상태 전이) của socio-technical hệ thống (system / 시스템). Mỗi bản phát hành (release / 릴리스) phải bảo toàn tính tương thích (compatibility / 호환성)/invariants khi old và new versions có thể cùng tồn tại.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Delivery, cấu hình (configuration / 구성) và operations**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

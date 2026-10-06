@@ -10,7 +10,7 @@ Imperative style mô tả chuỗi (sequence / 시퀀스) commands thay đổi tr
 
 Điểm yếu xuất hiện khi mutable trạng thái (state / 상태) lan rộng: muốn hiểu hiện tại (current / 현재) giá trị (value / 값) phải biết lịch sử (history / 이력) of writes. cục bộ (local / 로컬) mutation có thể rõ và efficient; toàn cục (global / 전역) dùng chung (shared / 공유) mutation khó reason.
 
-> **Chuyển mạch:** Imperative code mô tả bước và state; object-oriented gom state với behavior, functional ưu tiên pure transformation, còn declarative mô tả kết quả cần đạt thay vì chuỗi thao tác.
+> **Nối mạch:** Imperative code mô tả bước và state; object-oriented gom state với behavior, functional ưu tiên pure transformation, còn declarative mô tả kết quả cần đạt thay vì chuỗi thao tác.
 
 ## Object-oriented programming
 
@@ -20,7 +20,7 @@ Inheritance là một cơ chế (mechanism / 메커니즘), không phải essenc
 
 Lĩnh vực (domain / 도메인) mô hình (model / 모델) tốt không đồng nghĩa tạo lớp (class / 클래스) cho mọi noun. giá trị (value / 값) objects, services, modules và data-oriented structures đều có chỗ.
 
-> **Chuyển mạch:** Ở chặng này của **Imperative, object-oriented, functional và declarative paradigms**, **Functional programming** tiếp nhận điểm tựa từ **Object-oriented programming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Declarative programming** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Functional programming** nối từ **Object-oriented programming** sang **Declarative programming**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Functional programming
 
@@ -30,7 +30,7 @@ Real programs vẫn cần I/O/trạng thái (state / 상태). Functional các h�
 
 Persistent immutable dữ liệu (data / 데이터) structures dùng structural sharing để tránh full bản sao (copy / 복사).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Imperative, object-oriented, functional và declarative paradigms**, **Declarative programming** tiếp nhận điểm tựa từ **Functional programming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lô-gic (logic / 논리) programming** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Declarative programming** nối từ **Functional programming** sang **Lô-gic (logic / 논리) programming**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Declarative programming
 
@@ -38,13 +38,13 @@ Declarative style mô tả **what** desired kết quả (result / 결과)/thuộ
 
 Declarative lớp trừu tượng (abstraction / 추상화) mạnh khi engine có thể optimize chiến lược (strategy / 전략), nhưng hiệu năng (performance / 성능) debugging đòi hiểu engine mô hình thực thi (execution model / 실행 모델).
 
-> **Chuyển mạch:** Trong **Imperative, object-oriented, functional và declarative paradigms**, **Lô-gic (logic / 논리) programming** tiếp nhận điểm tựa từ **Declarative programming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Event-driven và reactive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Lô-gic (logic / 논리) programming** nối từ **Declarative programming** sang **Event-driven và reactive**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lô-gic (logic / 논리) programming
 
 Lô-gic (logic / 논리) programming biểu diễn facts/rules và truy vấn (query / 쿼리); engine tìm kiếm (search / 검색)/suy luận (inference / 추론) tìm substitutions. Prolog là example kinh điển. Dù ít dùng mainstream backend, ideas unification, các ràng buộc (constraints / 제약조건들) và quy tắc (rule / 규칙) engines xuất hiện trong solvers/static phân tích (analysis / 분석).
 
-> **Chuyển mạch:** Ở chặng này của **Imperative, object-oriented, functional và declarative paradigms**, **Event-driven và reactive** tiếp nhận điểm tựa từ **Lô-gic (logic / 논리) programming** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Paradigm là sự đánh đổi (trade-off / 트레이드오프) về trạng thái (state / 상태) và điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Event-driven và reactive** nối từ **Lô-gic (logic / 논리) programming** sang **Paradigm là sự đánh đổi (trade-off / 트레이드오프) về trạng thái (state / 상태) và điều khiển (control / 제어)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Event-driven và reactive
 
@@ -52,7 +52,7 @@ Event-driven các hệ thống (systems / 시스템들) react events/callbacks/m
 
 Hidden temporal dependencies có thể khó gỡ lỗi (debug / 디버그); tường minh (explicit / 명시적) trạng thái (state / 상태) machines/observable streams giúp cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Imperative, object-oriented, functional và declarative paradigms**, **Paradigm là sự đánh đổi (trade-off / 트레이드오프) về trạng thái (state / 상태) và điều khiển (control / 제어)** tiếp nhận điểm tựa từ **Event-driven và reactive** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Paradigm là sự đánh đổi (trade-off / 트레이드오프) về trạng thái (state / 상태) và điều khiển (control / 제어)** nối từ **Event-driven và reactive** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Paradigm là sự đánh đổi (trade-off / 트레이드오프) về trạng thái (state / 상태) và điều khiển (control / 제어)
 
@@ -63,13 +63,13 @@ Declarative: specify relations/goals, engine điều khiển (control / 제어) 
 
 Không có paradigm universal winner. truy vấn cơ sở dữ liệu (database query / 데이터베이스 쿼리) bằng SQL declarative hợp hơn manual page vòng lặp (loop / 루프); low-level driver imperative điều khiển (control / 제어) cần thiết; nghiệp vụ (business / 비즈니스) lĩnh vực (domain / 도메인) có thể dùng OOP + functional giá trị (value / 값) transformations.
 
-> **Chuyển mạch:** Trong **Imperative, object-oriented, functional và declarative paradigms**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Paradigm là sự đánh đổi (trade-off / 트레이드오프) về trạng thái (state / 상태) và điều khiển (control / 제어)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Paradigm là sự đánh đổi (trade-off / 트레이드오프) về trạng thái (state / 상태) và điều khiển (control / 제어)**; **Dùng chung (common / 공통) Misconceptions** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Paradigms khác nhau chủ yếu ở **trạng thái (state / 상태) nằm đâu, điều khiển (control / 제어) nằm đâu, và contracts được biểu đạt thế nào**. Hãy chọn mô hình (model / 모델) làm invariants và thay đổi (change / 변경) boundaries rõ nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Imperative, object-oriented, functional và declarative paradigms**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -79,7 +79,7 @@ Không có paradigm universal winner. truy vấn cơ sở dữ liệu (database 
 
 **“Declarative mã (code / 코드) không có thuật toán (algorithm / 알고리즘).”** Engine vẫn execute algorithms; declarative tầng (layer / 계층) chuyển thuật toán (algorithm / 알고리즘) choice sang optimizer/thời gian chạy (runtime / 런타임).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Imperative, object-oriented, functional và declarative paradigms**, **Kết nối** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) Misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

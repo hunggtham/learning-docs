@@ -25,7 +25,7 @@ data class ArticlesUiState(
 
 Điểm quan trọng không phải dữ liệu (data / 데이터) lớp (class / 클래스), mà là ý nghĩa: UI chỉ kết xuất (render / 렌더링) snapshot hiện tại. UI không sở hữu repository, không gọi Retrofit trực tiếp và không tự quyết định bộ nhớ đệm (cache / 캐시) chính sách (policy / 정책).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **1. Từ yêu cầu (requirement / 요구사항) sang trạng thái (state / 상태)** nêu điều cần giải thích; **2. Unidirectional luồng dữ liệu (data flow / 데이터 흐름) không đồng nghĩa một reducer khổng lồ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. ViewModel là screen-level trạng thái (state / 상태) holder, không phải dịch vụ (service / 서비스) locator** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **1. Từ yêu cầu (requirement / 요구사항) sang trạng thái (state / 상태)** đặt vấn đề; **2. Unidirectional luồng dữ liệu (data flow / 데이터 흐름) không đồng nghĩa một reducer khổng lồ** đối chiếu bằng chứng, rồi **3. ViewModel là screen-level trạng thái (state / 상태) holder, không phải dịch vụ (service / 서비스) locator** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2. Unidirectional luồng dữ liệu (data flow / 데이터 흐름) không đồng nghĩa một reducer khổng lồ
 
@@ -42,7 +42,7 @@ Compose đọc `UiState`. người dùng (user / 사용자) bấm bookmark, UI g
 
 Điều này tránh hai nguồn trạng thái (state / 상태) cạnh tranh. Nếu UI tự toggle icon bookmark ngay trong cục bộ (local / 로컬) `remember`, còn cơ sở dữ liệu (database / 데이터베이스) vẫn giữ giá trị cũ, sớm muộn hai trạng thái sẽ lệch nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **2. Unidirectional luồng dữ liệu (data flow / 데이터 흐름) không đồng nghĩa một reducer khổng lồ** nêu điều cần giải thích; **3. ViewModel là screen-level trạng thái (state / 상태) holder, không phải dịch vụ (service / 서비스) locator** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Repository là dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약), không chỉ là wrapper của Retrofit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **2. Unidirectional luồng dữ liệu (data flow / 데이터 흐름) không đồng nghĩa một reducer khổng lồ** đặt vấn đề; **3. ViewModel là screen-level trạng thái (state / 상태) holder, không phải dịch vụ (service / 서비스) locator** đối chiếu bằng chứng, rồi **4. Repository là dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약), không chỉ là wrapper của Retrofit** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3. ViewModel là screen-level trạng thái (state / 상태) holder, không phải dịch vụ (service / 서비스) locator
 
@@ -94,7 +94,7 @@ class ArticlesViewModel(
 
 Ở đây `SavedStateHandle` được dùng cho trạng thái (state / 상태) nhỏ cần phục hồi sau tiến trình (process / 프로세스) recreation như filter/truy vấn (query / 쿼리). Không nên nhét một danh sách hàng nghìn đối tượng (object / 객체) vào SavedStateHandle; dữ liệu lớn phải khôi phục lại từ nguồn chuẩn (source of truth / 정본).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **3. ViewModel là screen-level trạng thái (state / 상태) holder, không phải dịch vụ (service / 서비스) locator** nêu điều cần giải thích; **4. Repository là dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약), không chỉ là wrapper của Retrofit** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. DTO, thực thể (entity / 엔터티), lĩnh vực (domain / 도메인) mô hình (model / 모델) và UI mô hình (model / 모델) không phải lúc nào cũng cần bốn lớp (class / 클래스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **3. ViewModel là screen-level trạng thái (state / 상태) holder, không phải dịch vụ (service / 서비스) locator** đặt vấn đề; **4. Repository là dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약), không chỉ là wrapper của Retrofit** đối chiếu bằng chứng, rồi **5. DTO, thực thể (entity / 엔터티), lĩnh vực (domain / 도메인) mô hình (model / 모델) và UI mô hình (model / 모델) không phải lúc nào cũng cần bốn lớp (class / 클래스)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. Repository là dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약), không chỉ là wrapper của Retrofit
 
@@ -133,7 +133,7 @@ class OfflineFirstArticlesRepository(
 
 UI không biết dữ liệu đang tới từ DB hay mạng (network / 네트워크). Repository đảm bảo sau refresh, cơ sở dữ liệu (database / 데이터베이스) được cập nhật và luồng (flow / 흐름) tự emit snapshot mới.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **4. Repository là dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약), không chỉ là wrapper của Retrofit** nêu điều cần giải thích; **5. DTO, thực thể (entity / 엔터티), lĩnh vực (domain / 도메인) mô hình (model / 모델) và UI mô hình (model / 모델) không phải lúc nào cũng cần bốn lớp (class / 클래스)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. lĩnh vực (domain / 도메인) tầng (layer / 계층) là optional, không phải nghi thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **4. Repository là dữ liệu (data / 데이터) đặc tả hợp đồng (contract / 계약), không chỉ là wrapper của Retrofit** đặt vấn đề; **5. DTO, thực thể (entity / 엔터티), lĩnh vực (domain / 도메인) mô hình (model / 모델) và UI mô hình (model / 모델) không phải lúc nào cũng cần bốn lớp (class / 클래스)** đối chiếu bằng chứng, rồi **6. lĩnh vực (domain / 도메인) tầng (layer / 계층) là optional, không phải nghi thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. DTO, thực thể (entity / 엔터티), lĩnh vực (domain / 도메인) mô hình (model / 모델) và UI mô hình (model / 모델) không phải lúc nào cũng cần bốn lớp (class / 클래스)
 
@@ -143,7 +143,7 @@ Tách mô hình (model / 모델) theo ranh giới (boundary / 경계) giúp ch�
 
 Trong app nhỏ, thực thể (entity / 엔터티) và lĩnh vực (domain / 도메인) có thể tạm dùng chung nếu đặc tả hợp đồng (contract / 계약) thực sự đồng nhất. cấp cao (senior / 시니어) kỹ thuật (engineering / 엔지니어링) không phải tạo nhiều lớp (class / 클래스) nhất; nó là biết coupling nào đáng trả chi phí ánh xạ (mapping / 매핑).
 
-> **Chuyển mạch:** DTO/entity/domain/UI model chỉ tách khi boundary cần bảo vệ; domain layer là lựa chọn theo invariant, rồi main-safe contract xác định nơi UI được phép gọi.
+> **Nối mạch:** DTO/entity/domain/UI model chỉ tách khi boundary cần bảo vệ; domain layer là lựa chọn theo invariant, rồi main-safe contract xác định nơi UI được phép gọi.
 
 ## 6. lĩnh vực (domain / 도메인) tầng (layer / 계층) là optional, không phải nghi thức
 
@@ -163,7 +163,7 @@ class ToggleBookmarkUseCase(
 
 Nếu `GetArticleUseCase` chỉ gọi `repository.getArticle(id)` và không tạo ranh giới (boundary / 경계), reuse hay chính sách (policy / 정책) nào, thêm lớp (class / 클래스) đó có thể chỉ tăng ceremony. Hãy dùng lĩnh vực (domain / 도메인) tầng (layer / 계층) khi nó giảm độ phức tạp (complexity / 복잡도) thật.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **7. Main-safe đặc tả hợp đồng (contract / 계약)** tiếp nhận điểm tựa từ **6. lĩnh vực (domain / 도메인) tầng (layer / 계층) là optional, không phải nghi thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. lỗi (error / 오류) mô hình (model / 모델) phải có vocabulary** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **7. Main-safe đặc tả hợp đồng (contract / 계약)** nối từ **6. lĩnh vực (domain / 도메인) tầng (layer / 계층) là optional, không phải nghi thức** sang **8. lỗi (error / 오류) mô hình (model / 모델) phải có vocabulary**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Main-safe đặc tả hợp đồng (contract / 계약)
 
@@ -178,7 +178,7 @@ suspend fun parseLargePayload(bytes: ByteArray): Parsed =
 
 Điều này biến threading thành hiện thực (implementation / 구현) detail và làm kiểm thử (test / 테스트) dễ hơn vì dispatcher có thể inject.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **8. lỗi (error / 오류) mô hình (model / 모델) phải có vocabulary** tiếp nhận điểm tựa từ **7. Main-safe đặc tả hợp đồng (contract / 계약)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Loading không phải boolean duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **8. lỗi (error / 오류) mô hình (model / 모델) phải có vocabulary** nối từ **7. Main-safe đặc tả hợp đồng (contract / 계약)** sang **9. Loading không phải boolean duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. lỗi (error / 오류) mô hình (model / 모델) phải có vocabulary
 
@@ -197,7 +197,7 @@ sealed interface DataError {
 
 Tầng UI map lỗi (error / 오류) thành message/hành động (action / 동작) phù hợp. `401` có thể trigger session khôi phục (recovery / 복구); kiểm tra hợp lệ (validation / 검증) lỗi (error / 오류) có thể focus trường dữ liệu (field / 필드); offline có thể vẫn kết xuất (render / 렌더링) bộ nhớ đệm (cache / 캐시) cũ. Không nên để Retrofit exception kiểu (type / 타입) lan tới Composable.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **9. Loading không phải boolean duy nhất** tiếp nhận điểm tựa từ **8. lỗi (error / 오류) mô hình (model / 모델) phải có vocabulary** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. One-off sự kiện (event / 이벤트) và durable trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **9. Loading không phải boolean duy nhất** nối từ **8. lỗi (error / 오류) mô hình (model / 모델) phải có vocabulary** sang **10. One-off sự kiện (event / 이벤트) và durable trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Loading không phải boolean duy nhất
 
@@ -213,7 +213,7 @@ data class LoadState(
 
 Trạng thái (state / 상태) mô hình (model / 모델) tốt làm UI hành vi (behavior / 동작) chính xác hơn mà không cần nhiều `if` rải rác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **10. One-off sự kiện (event / 이벤트) và durable trạng thái (state / 상태)** tiếp nhận điểm tựa từ **9. Loading không phải boolean duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. ranh giới mô-đun (module boundary / 모듈 경계) theo năng lực (capability / 역량), không theo tên tầng (layer / 계층) một cách máy móc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **10. One-off sự kiện (event / 이벤트) và durable trạng thái (state / 상태)** nối từ **9. Loading không phải boolean duy nhất** sang **11. ranh giới mô-đun (module boundary / 모듈 경계) theo năng lực (capability / 역량), không theo tên tầng (layer / 계층) một cách máy móc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. One-off sự kiện (event / 이벤트) và durable trạng thái (state / 상태)
 
@@ -221,7 +221,7 @@ Trạng thái (state / 상태) mô hình (model / 모델) tốt làm UI hành vi
 
 Trạng thái (state / 상태) có ý nghĩa lâu dài nên nằm trong UiState. Ví dụ “payment completed” có thể là trạng thái (state / 상태) của giao dịch (transaction / 트랜잭션), không phải chỉ là một Channel sự kiện (event / 이벤트). Snackbar “Đã bản sao (copy / 복사)” có thể transient. điều hướng (navigation / 내비게이션) sau submit nên được thiết kế sao cho không navigate hai lần sau recreation; thường máy trạng thái (state machine / 상태 머신) hoặc consumed trạng thái (state / 상태) rõ ràng an toàn hơn một sự kiện (event / 이벤트) bus vô danh.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **10. One-off sự kiện (event / 이벤트) và durable trạng thái (state / 상태)** đã nêu tiêu chí phân biệt, còn **11. ranh giới mô-đun (module boundary / 모듈 경계) theo năng lực (capability / 역량), không theo tên tầng (layer / 계층) một cách máy móc** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **12. DI đồ thị (graph / 그래프) phải phản ánh thời gian tồn tại (lifetime / 수명)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **10. One-off sự kiện (event / 이벤트) và durable trạng thái (state / 상태)** đặt tiêu chí; **11. ranh giới mô-đun (module boundary / 모듈 경계) theo năng lực (capability / 역량), không theo tên tầng (layer / 계층) một cách máy móc** dùng tiêu chí đó để kiểm tra ranh giới, rồi **12. DI đồ thị (graph / 그래프) phải phản ánh thời gian tồn tại (lifetime / 수명)** mở rộng hệ quả.
 
 ## 11. ranh giới mô-đun (module boundary / 모듈 경계) theo năng lực (capability / 역량), không theo tên tầng (layer / 계층) một cách máy móc
 
@@ -244,7 +244,7 @@ Không có cấu trúc duy nhất đúng. Điều quan trọng là đồ thị (
 
 Quá nhiều mô-đun (module / 모듈) trong app nhỏ làm Gradle/cấu hình (configuration / 구성) và điều hướng (navigation / 내비게이션) phức tạp. Modularization chỉ đáng làm khi có mục tiêu như bản dựng (build / 빌드) isolation, quyền sở hữu (ownership / 소유권), optional delivery, reusable ranh giới (boundary / 경계) hoặc giảm accidental coupling.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **11. ranh giới mô-đun (module boundary / 모듈 경계) theo năng lực (capability / 역량), không theo tên tầng (layer / 계층) một cách máy móc** đã nêu tiêu chí phân biệt, còn **12. DI đồ thị (graph / 그래프) phải phản ánh thời gian tồn tại (lifetime / 수명)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **13. Compose screen ranh giới (boundary / 경계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **11. ranh giới mô-đun (module boundary / 모듈 경계) theo năng lực (capability / 역량), không theo tên tầng (layer / 계층) một cách máy móc** đặt tiêu chí; **12. DI đồ thị (graph / 그래프) phải phản ánh thời gian tồn tại (lifetime / 수명)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **13. Compose screen ranh giới (boundary / 경계)** mở rộng hệ quả.
 
 ## 12. DI đồ thị (graph / 그래프) phải phản ánh thời gian tồn tại (lifetime / 수명)
 
@@ -252,7 +252,7 @@ Phụ thuộc (dependency / 의존성) injection không chỉ để tránh `new`
 
 Các câu hỏi cần hỏi với mỗi phụ thuộc (dependency / 의존성) là: ai tạo nó, sống bao lâu, có mutable trạng thái (state / 상태) không, có thread-safety yêu cầu (requirement / 요구사항) không, và dispose ở đâu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **12. DI đồ thị (graph / 그래프) phải phản ánh thời gian tồn tại (lifetime / 수명)** đã nêu tiêu chí phân biệt, còn **13. Compose screen ranh giới (boundary / 경계)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **14. kiến trúc (architecture / 아키텍처) kiểm thử (test / 테스트) bằng thất bại (failure / 실패) scenario** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **12. DI đồ thị (graph / 그래프) phải phản ánh thời gian tồn tại (lifetime / 수명)** đặt tiêu chí; **13. Compose screen ranh giới (boundary / 경계)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **14. kiến trúc (architecture / 아키텍처) kiểm thử (test / 테스트) bằng thất bại (failure / 실패) scenario** mở rộng hệ quả.
 
 ## 13. Compose screen ranh giới (boundary / 경계)
 
@@ -285,7 +285,7 @@ fun ArticlesScreen(
 
 `ArticlesScreen` không cần biết Hilt, điều hướng (navigation / 내비게이션) Controller hoặc repository. Vì vậy preview, screenshot kiểm thử (test / 테스트) và Compose UI kiểm thử (test / 테스트) đơn giản hơn.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **13. Compose screen ranh giới (boundary / 경계)** đã nêu tiêu chí phân biệt, còn **14. kiến trúc (architecture / 아키텍처) kiểm thử (test / 테스트) bằng thất bại (failure / 실패) scenario** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **15. Một end-to-end read đường dẫn (path / 경로)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **13. Compose screen ranh giới (boundary / 경계)** đặt tiêu chí; **14. kiến trúc (architecture / 아키텍처) kiểm thử (test / 테스트) bằng thất bại (failure / 실패) scenario** dùng tiêu chí đó để kiểm tra ranh giới, rồi **15. Một end-to-end read đường dẫn (path / 경로)** mở rộng hệ quả.
 
 ## 14. kiến trúc (architecture / 아키텍처) kiểm thử (test / 테스트) bằng thất bại (failure / 실패) scenario
 
@@ -302,7 +302,7 @@ fun ArticlesScreen(
 
 Nếu kiến trúc (architecture / 아키텍처) không trả lời được hành vi (behavior / 동작) mong muốn trong các tình huống này, sơ đồ đẹp không có nhiều giá trị.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **14. kiến trúc (architecture / 아키텍처) kiểm thử (test / 테스트) bằng thất bại (failure / 실패) scenario** xác định đầu vào; **15. Một end-to-end read đường dẫn (path / 경로)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. cấp cao (senior / 시니어) notes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **14. kiến trúc (architecture / 아키텍처) kiểm thử (test / 테스트) bằng thất bại (failure / 실패) scenario** đặt đầu vào cho **15. Một end-to-end read đường dẫn (path / 경로)**, rồi **16. cấp cao (senior / 시니어) notes** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. Một end-to-end read đường dẫn (path / 경로)
 
@@ -310,7 +310,7 @@ Khi app khởi động, Room emit cached articles. Repository map thực thể (
 
 Khi người dùng (user / 사용자) bookmark, thao tác (operation / 연산) cập nhật cục bộ (local / 로컬) cơ sở dữ liệu (database / 데이터베이스) trước nếu sản phẩm (product / 제품) muốn optimistic UX. Nếu bookmark phải sync máy chủ (server / 서버), thao tác (operation / 연산) tạo pending mutation hoặc gửi yêu cầu (request / 요청). Nếu máy chủ (server / 서버) thất bại (fail / 실패), chính sách (policy / 정책) quyết định quay lui (rollback / 롤백), thử lại (retry / 재시도) hoặc giữ pending trạng thái (state / 상태). chính sách (policy / 정책) này thuộc dữ liệu (data / 데이터)/lĩnh vực (domain / 도메인) lô-gic (logic / 논리), không nên nằm trong icon click handler.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **15. Một end-to-end read đường dẫn (path / 경로)** xác định đầu vào; **16. cấp cao (senior / 시니어) notes** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 01 — Android kiến trúc (architecture / 아키텍처) End-to-End**, **15. Một end-to-end read đường dẫn (path / 경로)** xác định đầu vào; **16. cấp cao (senior / 시니어) notes** giải thích bước vận hành tạo ra kết quả kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 16. cấp cao (senior / 시니어) notes
 

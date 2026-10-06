@@ -30,7 +30,7 @@ Hành vi
 Hậu quả ngắn hạn và dài hạn
 ```
 
-> **Chuyển mạch:** Trong **CBT, behavioral therapy và third-wave approaches**, **Behavioral experiments** tiếp nhận điểm tựa từ **Cognitive mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Behavioral activation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **CBT, behavioral therapy và third-wave approaches**, **Behavioral experiments** nối từ **Cognitive mô hình (model / 모델)** sang **Behavioral activation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Behavioral experiments
 
@@ -38,7 +38,7 @@ Behavioral experiment mạnh hơn tranh luận thuần túy vì nó tạo dữ l
 
 Nếu một người tin “nếu hỏi lại trong meeting, mọi người sẽ nghĩ mình ngu”, experiment có thể là hỏi một câu clarification nhỏ và quan sát kết quả (outcome / 결과) thật. Kết quả không cần “mọi người đều phản ứng tích cực” mới có giá trị; mục tiêu là cập nhật prediction dựa trên bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Ở chặng này của **CBT, behavioral therapy và third-wave approaches**, **Behavioral activation** tiếp nhận điểm tựa từ **Behavioral experiments** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Exposure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **CBT, behavioral therapy và third-wave approaches**, **Behavioral activation** nối từ **Behavioral experiments** sang **Exposure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Behavioral activation
 
@@ -58,7 +58,7 @@ Mood thấp hơn
 
 Activation không có nghĩa “cứ bận rộn là khỏi”. Nó tập trung vào activity gắn với giá trị (value / 값), mastery, liên kết (connection / 연결) và routine, đồng thời theo dõi relationship giữa activity và mood.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CBT, behavioral therapy và third-wave approaches**, **Exposure** tiếp nhận điểm tựa từ **Behavioral activation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **ACT và psychological flexibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **CBT, behavioral therapy và third-wave approaches**, **Exposure** nối từ **Behavioral activation** sang **ACT và psychological flexibility**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Exposure
 
@@ -75,7 +75,7 @@ Experience mới: “Tim đập nhanh, anxiety tăng rồi giảm, mình vẫn �
 
 Variation về ngữ cảnh (context / 맥락) có thể giúp học tập (learning / 학습) generalize tốt hơn.
 
-> **Chuyển mạch:** Trong **CBT, behavioral therapy và third-wave approaches**, **ACT và psychological flexibility** tiếp nhận điểm tựa từ **Exposure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **DBT và emotion dysregulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **CBT, behavioral therapy và third-wave approaches**, **ACT và psychological flexibility** nối từ **Exposure** sang **DBT và emotion dysregulation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## ACT và psychological flexibility
 
@@ -91,7 +91,7 @@ Cognitive defusion là chuyển từ “thought = fact” sang “tôi đang có
 
 Mục tiêu không phải biến câu tiêu cực thành tích cực, mà tạo khoảng cách đủ để người đó có choice.
 
-> **Chuyển mạch:** Ở chặng này của **CBT, behavioral therapy và third-wave approaches**, **DBT và emotion dysregulation** tiếp nhận điểm tựa từ **ACT và psychological flexibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mindfulness trong therapy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **CBT, behavioral therapy và third-wave approaches**, **DBT và emotion dysregulation** nối từ **ACT và psychological flexibility** sang **Mindfulness trong therapy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## DBT và emotion dysregulation
 
@@ -101,7 +101,7 @@ Các skill lĩnh vực (domain / 도메인) thường gồm mindfulness, distres
 
 Distress tolerance không phải chịu đựng mọi thứ vô thời hạn. Nó giúp người đó tránh biến một crisis tạm thời thành hậu quả lớn hơn bằng impulsive hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CBT, behavioral therapy và third-wave approaches**, **Mindfulness trong therapy** tiếp nhận điểm tựa từ **DBT và emotion dysregulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cognitive restructuring vs acceptance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **CBT, behavioral therapy và third-wave approaches**, **Mindfulness trong therapy** nối từ **DBT và emotion dysregulation** sang **Cognitive restructuring vs acceptance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mindfulness trong therapy
 
@@ -109,7 +109,7 @@ Mindfulness là huấn luyện attention và relationship với experience hiệ
 
 Quan trọng là phân biệt mindfulness như skill có cấu trúc với lời khuyên mơ hồ “hãy sống trong hiện tại”.
 
-> **Chuyển mạch:** Trong **CBT, behavioral therapy và third-wave approaches**, **Cognitive restructuring vs acceptance** tiếp nhận điểm tựa từ **Mindfulness trong therapy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Homework và between-session practice** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **CBT, behavioral therapy và third-wave approaches**, **Cognitive restructuring vs acceptance** nối từ **Mindfulness trong therapy** sang **Homework và between-session practice**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cognitive restructuring vs acceptance
 
@@ -121,7 +121,7 @@ Không phải lúc nào cũng cần chọn một bên.
 
 Một mô hình tư duy (mental model / 사고 모델) thực dụng là chọn intervention theo cơ chế (mechanism / 메커니즘), không theo sở thích lý thuyết.
 
-> **Chuyển mạch:** Ở chặng này của **CBT, behavioral therapy và third-wave approaches**, **Homework và between-session practice** tiếp nhận điểm tựa từ **Cognitive restructuring vs acceptance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **CBT, behavioral therapy và third-wave approaches**, **Homework và between-session practice** nối từ **Cognitive restructuring vs acceptance** sang **Dùng chung (common / 공통) misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Homework và between-session practice
 
@@ -129,7 +129,7 @@ Therapy skill cần được luyện ngoài session. Homework không phải “b
 
 Ví dụ có thể gồm hành vi (behavior / 동작) experiment, activity scheduling, thought bản ghi (record / 레코드), exposure practice hoặc communication rehearsal.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **CBT, behavioral therapy và third-wave approaches**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Homework và between-session practice** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiến thức (knowledge / 지식) connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **CBT, behavioral therapy và third-wave approaches**, **Dùng chung (common / 공통) misconceptions** nối từ **Homework và between-session practice** sang **Kiến thức (knowledge / 지식) connections**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) misconceptions
 
@@ -141,7 +141,7 @@ Ví dụ có thể gồm hành vi (behavior / 동작) experiment, activity sched
 
 **“Exposure càng mạnh càng tốt.”** Không. Exposure cần formulation, pacing và an toàn (safety / 안전) phù hợp.
 
-> **Chuyển mạch:** Trong **CBT, behavioral therapy và third-wave approaches**, **Kiến thức (knowledge / 지식) connections** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) misconceptions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **CBT, behavioral therapy và third-wave approaches**, **Kiến thức (knowledge / 지식) connections** nối từ **Dùng chung (common / 공통) misconceptions** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kiến thức (knowledge / 지식) connections
 

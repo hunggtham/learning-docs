@@ -21,7 +21,7 @@ Các explanation này không nhất thiết cạnh tranh. Chúng có thể là c
 
 Sai lầm phổ biến là **reductionism**: nếu tìm thấy neural correlate, người ta kết luận psychological explanation không còn cần thiết. Nhưng biết transistor trạng thái (state / 상태) của CPU không tự động thay thế algorithm-level explanation của program.
 
-> **Chuyển mạch:** Trong **Psychology kết nối với Biology, Statistics và AI**, **Psychology và Biology** tiếp nhận điểm tựa từ **Một hiện tượng có nhiều mức (level / 수준) giải thích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Neuroscience không phải máy phát hiện truth cho psychology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Psychology kết nối với Biology, Statistics và AI**, **Psychology và Biology** nối từ **Một hiện tượng có nhiều mức (level / 수준) giải thích** sang **Neuroscience không phải máy phát hiện truth cho psychology**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Psychology và Biology
 
@@ -33,7 +33,7 @@ Ví dụ temperament có thể ảnh hưởng cách người khác phản ứng 
 
 Xem thêm: [[../01_brain_and_mind/03_evolution_genetics_and_behavior]], [[../01_brain_and_mind/00_nervous_system_and_brain]], [[../04_mental_health/12_developmental_psychopathology_risk_and_resilience]].
 
-> **Chuyển mạch:** Ở chặng này của **Psychology kết nối với Biology, Statistics và AI**, **Neuroscience không phải máy phát hiện truth cho psychology** tiếp nhận điểm tựa từ **Psychology và Biology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Psychology và Statistics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Psychology kết nối với Biology, Statistics và AI**, **Neuroscience không phải máy phát hiện truth cho psychology** nối từ **Psychology và Biology** sang **Psychology và Statistics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Neuroscience không phải máy phát hiện truth cho psychology
 
@@ -43,7 +43,7 @@ Một brain region thường tham gia nhiều hàm (function / 함수). Đây l�
 
 Neuroscience hữu ích nhất khi experimental thiết kế (design / 설계) phân biệt được competing cơ chế (mechanism / 메커니즘), không phải khi chỉ thêm hình não màu sắc vào psychological claim.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Psychology kết nối với Biology, Statistics và AI**, **Psychology và Statistics** tiếp nhận điểm tựa từ **Neuroscience không phải máy phát hiện truth cho psychology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Correlation, prediction và causation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Psychology kết nối với Biology, Statistics và AI**, **Psychology và Statistics** nối từ **Neuroscience không phải máy phát hiện truth cho psychology** sang **Correlation, prediction và causation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Psychology và Statistics
 
@@ -61,7 +61,7 @@ Mô hình tư duy (mental model / 사고 모델): nếu đo lường (measuremen
 
 Xem thêm: [[../00_foundations/03_measurement_statistics]], [[../00_foundations/05_psychometrics_and_test_interpretation]].
 
-> **Chuyển mạch:** Trong **Psychology kết nối với Biology, Statistics và AI**, **Correlation, prediction và causation** tiếp nhận điểm tựa từ **Psychology và Statistics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Psychology và Khoa học máy tính (computer science / 컴퓨터 과학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Psychology kết nối với Biology, Statistics và AI**, **Correlation, prediction và causation** nối từ **Psychology và Statistics** sang **Psychology và Khoa học máy tính (computer science / 컴퓨터 과학)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Correlation, prediction và causation
 
@@ -77,7 +77,7 @@ Prediction có thể rất tốt mà nhân quả (causal / 인과적) understand
 
 Xem thêm: [[../00_foundations/08_causal_inference_and_psychological_evidence]], [[../00_foundations/07_ecological_momentary_assessment_and_real_world_measurement]].
 
-> **Chuyển mạch:** Ở chặng này của **Psychology kết nối với Biology, Statistics và AI**, **Psychology và Khoa học máy tính (computer science / 컴퓨터 과학)** tiếp nhận điểm tựa từ **Correlation, prediction và causation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reinforcement học tập (learning / 학습) và hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Psychology kết nối với Biology, Statistics và AI**, **Psychology và Khoa học máy tính (computer science / 컴퓨터 과학)** nối từ **Correlation, prediction và causation** sang **Reinforcement học tập (learning / 학습) và hành vi (behavior / 동작)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Psychology và Khoa học máy tính (computer science / 컴퓨터 과학)
 
@@ -87,7 +87,7 @@ Nhưng brain không phải máy tính digital theo nghĩa đơn giản. Metaphor
 
 Một liên kết (connection / 연결) hữu ích là **bounded resources**. Trong software, hàng đợi (queue / 큐) và bộ nhớ đệm (cache / 캐시) có giới hạn; trong cognition, attention và working bộ nhớ (memory / 메모리) cũng có bottleneck. Tuy nhiên cơ chế (mechanism / 메커니즘) cụ thể khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Psychology kết nối với Biology, Statistics và AI**, **Reinforcement học tập (learning / 학습) và hành vi (behavior / 동작)** tiếp nhận điểm tựa từ **Psychology và Khoa học máy tính (computer science / 컴퓨터 과학)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bayesian lập luận (reasoning / 추론) và perception** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Psychology kết nối với Biology, Statistics và AI**, **Reinforcement học tập (learning / 학습) và hành vi (behavior / 동작)** nối từ **Psychology và Khoa học máy tính (computer science / 컴퓨터 과학)** sang **Bayesian lập luận (reasoning / 추론) và perception**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Reinforcement học tập (learning / 학습) và hành vi (behavior / 동작)
 
@@ -105,7 +105,7 @@ Psychology học tập (learning / 학습) lý thuyết (theory / 이론) cũng 
 
 Xem thêm: [[../02_learning_and_cognition/00_learning_and_conditioning]], [[../02_learning_and_cognition/08_decision_under_risk_uncertainty_and_ambiguity]].
 
-> **Chuyển mạch:** Trong **Psychology kết nối với Biology, Statistics và AI**, **Bayesian lập luận (reasoning / 추론) và perception** tiếp nhận điểm tựa từ **Reinforcement học tập (learning / 학습) và hành vi (behavior / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Psychology và AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Psychology kết nối với Biology, Statistics và AI**, **Bayesian lập luận (reasoning / 추론) và perception** nối từ **Reinforcement học tập (learning / 학습) và hành vi (behavior / 동작)** sang **Psychology và AI**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bayesian lập luận (reasoning / 추론) và perception
 
@@ -121,7 +121,7 @@ Perception có thể được mô hình (model / 모델) như suy luận (infere
 
 Xem thêm: [[../01_brain_and_mind/01_sensation_and_perception]], [[../00_foundations/09_replication_meta_analysis_and_bayesian_reasoning]].
 
-> **Chuyển mạch:** Ở chặng này của **Psychology kết nối với Biology, Statistics và AI**, **Psychology và AI** tiếp nhận điểm tựa từ **Bayesian lập luận (reasoning / 추론) và perception** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Anthropomorphism** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Psychology kết nối với Biology, Statistics và AI**, **Psychology và AI** nối từ **Bayesian lập luận (reasoning / 추론) và perception** sang **Anthropomorphism**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Psychology và AI
 
@@ -134,7 +134,7 @@ Nhưng LLM đầu ra (output / 출력) giống human ngôn ngữ (language / 언
 
 Đây là distinction giữa **functional similarity** và **mechanistic định danh (identity / 식별자)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Psychology kết nối với Biology, Statistics và AI**, **Anthropomorphism** tiếp nhận điểm tựa từ **Psychology và AI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **AI như cognitive offloading** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Psychology kết nối với Biology, Statistics và AI**, **Anthropomorphism** nối từ **Psychology và AI** sang **AI như cognitive offloading**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Anthropomorphism
 
@@ -144,7 +144,7 @@ Anthropomorphism có thể giúp tương tác (interaction / 상호작용) dễ 
 
 Xem thêm: [[../06_applied/02_hci_ai_and_human_decision_support]], [[./02_human_ai_collaboration_trust_and_cognitive_offloading]].
 
-> **Chuyển mạch:** Trong **Psychology kết nối với Biology, Statistics và AI**, **AI như cognitive offloading** tiếp nhận điểm tựa từ **Anthropomorphism** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Digital phenotyping** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Psychology kết nối với Biology, Statistics và AI**, **AI như cognitive offloading** nối từ **Anthropomorphism** sang **Digital phenotyping**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## AI như cognitive offloading
 
@@ -158,7 +158,7 @@ Nếu mục tiêu học SQL, việc để AI viết truy vấn (query / 쿼리) 
 
 Xem thêm: [[../02_learning_and_cognition/10_cognitive_offloading_external_memory_and_extended_cognition]], [[../06_applied/01_education_learning_and_habit_design]].
 
-> **Chuyển mạch:** Ở chặng này của **Psychology kết nối với Biology, Statistics và AI**, **Digital phenotyping** tiếp nhận điểm tựa từ **AI như cognitive offloading** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Psychology và Economics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Psychology kết nối với Biology, Statistics và AI**, **Digital phenotyping** nối từ **AI như cognitive offloading** sang **Psychology và Economics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Digital phenotyping
 
@@ -173,7 +173,7 @@ Phone/wearable có thể thu sleep proxy, mobility, typing mẫu (pattern / 패�
 
 Một người di chuyển ít có thể depressed, nhưng cũng có thể làm remote công việc (work / 작업) hoặc đang nghỉ phép. Sensor không tự mang meaning.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Psychology kết nối với Biology, Statistics và AI**, **Psychology và Economics** tiếp nhận điểm tựa từ **Digital phenotyping** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Psychology và Philosophy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Psychology kết nối với Biology, Statistics và AI**, **Psychology và Economics** nối từ **Digital phenotyping** sang **Psychology và Philosophy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Psychology và Economics
 
@@ -183,7 +183,7 @@ Nhưng độ lệch (bias / 편향) danh sách (list / 목록) cũng dễ bị b
 
 Xem thêm: [[../02_learning_and_cognition/08_decision_under_risk_uncertainty_and_ambiguity]], [[../06_applied/18_financial_psychology_and_personal_decision_making]].
 
-> **Chuyển mạch:** Trong **Psychology kết nối với Biology, Statistics và AI**, **Psychology và Philosophy** tiếp nhận điểm tựa từ **Psychology và Economics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Psychology kết nối với Biology, Statistics và AI**, **Psychology và Philosophy** nối từ **Psychology và Economics** sang **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Psychology và Philosophy
 
@@ -193,7 +193,7 @@ Không phải câu hỏi nào cũng được giải quyết chỉ bằng thêm d
 
 Xem thêm: [[../01_brain_and_mind/09_consciousness_theories_and_evidence]].
 
-> **Chuyển mạch:** Ở chặng này của **Psychology kết nối với Biology, Statistics và AI**, **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Psychology và Philosophy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Psychology kết nối với Biology, Statistics và AI**, **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Psychology và Philosophy** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) mô hình tư duy (mental model / 사고 모델)
 
@@ -216,7 +216,7 @@ flowchart TD
 
 Không arrow nào tự động thay thế các arrow khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Psychology kết nối với Biology, Statistics và AI**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Psychology kết nối với Biology, Statistics và AI**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Kiến thức (knowledge / 지식) đồ thị (graph / 그래프) mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -228,7 +228,7 @@ Không arrow nào tự động thay thế các arrow khác.
 
 **“Nếu một hành vi (behavior / 동작) có genetic thành phần (component / 컴포넌트) thì không thay đổi được.”** Heritability không đồng nghĩa immutability.
 
-> **Chuyển mạch:** Trong **Psychology kết nối với Biology, Statistics và AI**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Psychology kết nối với Biology, Statistics và AI**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 

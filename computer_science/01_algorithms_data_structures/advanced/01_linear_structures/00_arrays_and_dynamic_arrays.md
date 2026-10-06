@@ -43,7 +43,7 @@ Bất biến (invariant / 불변식) cốt lõi:
 
 Khi `size == capacity`, append tiếp theo phải grow vùng lưu trữ nền. Một cách triển khai thường cấp khối (block / 블록) mới lớn hơn, bản sao (copy / 복사)/move các phần tử, rồi giải phóng khối (block / 블록) cũ.
 
-> **Chuyển mạch:** Trong **Mảng và mảng động**, **2. Vì sao append có thể amortized O(1)?** tiếp nhận điểm tựa từ **1. mảng cố định và mảng động khác nhau ở đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Growth factor là sự đánh đổi (trade-off / 트레이드오프) bộ nhớ và resize tần suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. Vì sao append có thể amortized O(1)?** nối từ **1. mảng cố định và mảng động khác nhau ở đâu?** sang **3. Growth factor là sự đánh đổi (trade-off / 트레이드오프) bộ nhớ và resize tần suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Vì sao append có thể amortized O(1)?
 
@@ -69,7 +69,7 @@ Do đó `n` appends có total `O(n)` và amortized `O(1)` mỗi append.
 
 Nhưng một append riêng lẻ vẫn có thể `O(n)`. Nếu ứng dụng cần độ trễ đuôi ổn định, growth spike có thể quan trọng hơn amortized thông lượng (throughput / 처리량).
 
-> **Chuyển mạch:** Ở chặng này của **Mảng và mảng động**, **3. Growth factor là sự đánh đổi (trade-off / 트레이드오프) bộ nhớ và resize tần suất** tiếp nhận điểm tựa từ **2. Vì sao append có thể amortized O(1)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. C cách triển khai và transactional sự thay đổi dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Growth factor là sự đánh đổi (trade-off / 트레이드오프) bộ nhớ và resize tần suất** nối từ **2. Vì sao append có thể amortized O(1)?** sang **4. C cách triển khai và transactional sự thay đổi dữ liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Growth factor là sự đánh đổi (trade-off / 트레이드오프) bộ nhớ và resize tần suất
 
@@ -85,7 +85,7 @@ Trong hệ thống thực tế, thư viện (library / 라이브러리) chọn f
 
 Shrink cũng cần hysteresis. Nếu grow khi 100% full và shrink ngay khi usage < 100%, khối lượng công việc dao động có thể resize liên tục. Một chính sách thường shrink ở threshold thấp hơn đáng kể để tránh thrashing.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng và mảng động**, **3. Growth factor là sự đánh đổi (trade-off / 트레이드오프) bộ nhớ và resize tần suất** nêu điều cần giải thích; **4. C cách triển khai và transactional sự thay đổi dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. con trỏ/tham chiếu vô hiệu hóa (invalidation / 무효화)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. Growth factor là sự đánh đổi (trade-off / 트레이드오프) bộ nhớ và resize tần suất** đặt vấn đề; **4. C cách triển khai và transactional sự thay đổi dữ liệu** kiểm tra bằng chứng, rồi **5. con trỏ/tham chiếu vô hiệu hóa (invalidation / 무효화)** mở rộng hệ quả.
 
 ## 4. C cách triển khai và transactional sự thay đổi dữ liệu
 
@@ -122,7 +122,7 @@ bool vector_push(IntVector *v, int x) {
 
 mẫu này là **prepare → validate → lần ghi nhận (commit / 커밋)** và xuất hiện trong rất nhiều có thể thay đổi các cấu trúc dữ liệu.
 
-> **Chuyển mạch:** Trong **Mảng và mảng động**, **4. C cách triển khai và transactional sự thay đổi dữ liệu** nêu điều cần giải thích; **5. con trỏ/tham chiếu vô hiệu hóa (invalidation / 무효화)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. Insert giữa mảng vì sao O(n)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. C cách triển khai và transactional sự thay đổi dữ liệu** đặt vấn đề; **5. con trỏ/tham chiếu vô hiệu hóa (invalidation / 무효화)** kiểm tra bằng chứng, rồi **6. Insert giữa mảng vì sao O(n)?** mở rộng hệ quả.
 
 ## 5. con trỏ/tham chiếu vô hiệu hóa (invalidation / 무효화)
 
@@ -132,7 +132,7 @@ Một API giữ con trỏ/tham chiếu lâu dài vào dynamic-array phần tử 
 
 Đây là điểm khác với các cấu trúc dựa trên nút: địa chỉ nút của danh sách liên kết có thể ổn định hơn nếu nút không bị xóa, đổi lại tính cục bộ (locality) kém hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng và mảng động**, **6. Insert giữa mảng vì sao O(n)?** tiếp nhận điểm tựa từ **5. con trỏ/tham chiếu vô hiệu hóa (invalidation / 무효화)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. ổn định deletion và unstable deletion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. Insert giữa mảng vì sao O(n)?** nối từ **5. con trỏ/tham chiếu vô hiệu hóa (invalidation / 무효화)** sang **7. ổn định deletion và unstable deletion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Insert giữa mảng vì sao O(n)?
 
@@ -154,7 +154,7 @@ Số các phần tử phải move phụ thuộc khoảng cách từ insertion đ
 
 mảng mua `O(1)` truy cập ngẫu nhiên bằng bố trí liên tiếp theo thứ tự; đổi lại structural edit ở giữa đắt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng và mảng động**, **7. ổn định deletion và unstable deletion** tiếp nhận điểm tựa từ **6. Insert giữa mảng vì sao O(n)?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. mảng như một coordinate hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. ổn định deletion và unstable deletion** nối từ **6. Insert giữa mảng vì sao O(n)?** sang **8. mảng như một coordinate hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. ổn định deletion và unstable deletion
 
@@ -171,7 +171,7 @@ và xóa `O(1)`.
 
 yêu cầu “giữ thứ tự (order / 순서)” tưởng nhỏ nhưng đổi độ phức tạp (complexity / 복잡도). Đây là bài học quan trọng khi thiết kế API: ngữ nghĩa quyết định cấu trúc (structure / 구조), cấu trúc (structure / 구조) quyết định chi phí.
 
-> **Chuyển mạch:** Trong **Mảng và mảng động**, **8. mảng như một coordinate hệ thống** tiếp nhận điểm tựa từ **7. ổn định deletion và unstable deletion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. tính cục bộ bộ nhớ đệm và prefetch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. mảng như một coordinate hệ thống** nối từ **7. ổn định deletion và unstable deletion** sang **9. tính cục bộ bộ nhớ đệm và prefetch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. mảng như một coordinate hệ thống
 
@@ -195,7 +195,7 @@ Fenwick cây (tree / 트리) dùng phép toán bit trên chỉ số. Segment câ
 
 mảng mạnh không phải vì “đơn giản”, mà vì chỉ mục (index / 인덱스) arithmetic loại nhiều con trỏ siêu dữ liệu.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng và mảng động**, **9. tính cục bộ bộ nhớ đệm và prefetch** tiếp nhận điểm tựa từ **8. mảng như một coordinate hệ thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. AoS và SoA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. tính cục bộ bộ nhớ đệm và prefetch** nối từ **8. mảng như một coordinate hệ thống** sang **10. AoS và SoA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. tính cục bộ bộ nhớ đệm và prefetch
 
@@ -205,7 +205,7 @@ danh sách liên kết traversal có cùng `O(n)` nhưng mỗi `next` có thể 
 
 Vì vậy trong hệ thống thực tế, cấu trúc dựa trên mảng thường thắng cấu trúc dựa trên nút ngay cả khi Big-O giống nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng và mảng động**, **10. AoS và SoA** tiếp nhận điểm tựa từ **9. tính cục bộ bộ nhớ đệm và prefetch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Dense, sparse và holey các mảng trong JavaScript** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. AoS và SoA** nối từ **9. tính cục bộ bộ nhớ đệm và prefetch** sang **11. Dense, sparse và holey các mảng trong JavaScript**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. AoS và SoA
 
@@ -231,7 +231,7 @@ Nếu thuật toán luôn dùng toàn bản ghi (record / 레코드), AoS tự n
 
 Data-oriented thiết kế (design / 설계) thường bắt đầu từ câu hỏi: **hot thao tác thực sự đọc những byte nào?**
 
-> **Chuyển mạch:** Trong **Mảng và mảng động**, **11. Dense, sparse và holey các mảng trong JavaScript** tiếp nhận điểm tựa từ **10. AoS và SoA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Java các mảng kiểu nguyên thủy và các tập hợp dữ liệu dùng kiểu đóng hộp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Dense, sparse và holey các mảng trong JavaScript** nối từ **10. AoS và SoA** sang **12. Java các mảng kiểu nguyên thủy và các tập hợp dữ liệu dùng kiểu đóng hộp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Dense, sparse và holey các mảng trong JavaScript
 
@@ -246,7 +246,7 @@ a[1_000_000] = 1;
 
 Với dữ liệu số có kích thước cố định, `Int32Array`, `Uint32Array`, `Float64Array` cho cách biểu diễn dễ dự đoán hơn, nhưng ngữ nghĩa về miền giá trị và ép kiểu phải phù hợp.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng và mảng động**, **11. Dense, sparse và holey các mảng trong JavaScript** nêu điều cần giải thích; **12. Java các mảng kiểu nguyên thủy và các tập hợp dữ liệu dùng kiểu đóng hộp** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **13. Multidimensional các mảng và bố trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Dense, sparse và holey các mảng trong JavaScript** đặt vấn đề; **12. Java các mảng kiểu nguyên thủy và các tập hợp dữ liệu dùng kiểu đóng hộp** kiểm tra bằng chứng, rồi **13. Multidimensional các mảng và bố trí** mở rộng hệ quả.
 
 ## 12. Java các mảng kiểu nguyên thủy và các tập hợp dữ liệu dùng kiểu đóng hộp
 
@@ -256,7 +256,7 @@ Nếu Dijkstra, DP hoặc DSU có hàng triệu integers, `int[]`, `long[]`, `bo
 
 sự trừu tượng (abstraction) tiện lợi không xóa cách biểu diễn chi phí.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng và mảng động**, **12. Java các mảng kiểu nguyên thủy và các tập hợp dữ liệu dùng kiểu đóng hộp** nêu điều cần giải thích; **13. Multidimensional các mảng và bố trí** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **14. tổng tiền tố: tiền xử lý đổi truy vấn chi phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Java các mảng kiểu nguyên thủy và các tập hợp dữ liệu dùng kiểu đóng hộp** đặt vấn đề; **13. Multidimensional các mảng và bố trí** kiểm tra bằng chứng, rồi **14. tổng tiền tố: tiền xử lý đổi truy vấn chi phí** mở rộng hệ quả.
 
 ## 13. Multidimensional các mảng và bố trí
 
@@ -270,7 +270,7 @@ Nếu cần numeric ma trận (matrix / 행렬) lớn/thân thiện với bộ n
 int idx = r * cols + c;
 ```
 
-> **Chuyển mạch:** Trong **Mảng và mảng động**, **14. tổng tiền tố: tiền xử lý đổi truy vấn chi phí** tiếp nhận điểm tựa từ **13. Multidimensional các mảng và bố trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. mảng hiệu: đảo chiều khối lượng công việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. tổng tiền tố: tiền xử lý đổi truy vấn chi phí** nối từ **13. Multidimensional các mảng và bố trí** sang **15. mảng hiệu: đảo chiều khối lượng công việc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. tổng tiền tố: tiền xử lý đổi truy vấn chi phí
 
@@ -290,7 +290,7 @@ Preprocess `O(n)`, mỗi truy vấn `O(1)`.
 
 Đây là một mẫu lớn: **trả chi phí trước để truy vấn về sau rẻ hơn**.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng và mảng động**, **15. mảng hiệu: đảo chiều khối lượng công việc** tiếp nhận điểm tựa từ **14. tổng tiền tố: tiền xử lý đổi truy vấn chi phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. hai con trỏ (two pointers) và thứ tự (order / 순서) thông tin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. mảng hiệu: đảo chiều khối lượng công việc** nối từ **14. tổng tiền tố: tiền xử lý đổi truy vấn chi phí** sang **16. hai con trỏ (two pointers) và thứ tự (order / 순서) thông tin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. mảng hiệu: đảo chiều khối lượng công việc
 
@@ -305,7 +305,7 @@ tổng tiền tố cuối cùng phục hồi tác động (effect / 효과) củ
 
 tổng tiền tố tối ưu nhiều truy vấn trên dữ liệu (data / 데이터) tĩnh. mảng hiệu tối ưu nhiều batch các cập nhật trước reconstruction. Cùng mảng nhưng cách biểu diễn được chọn theo khối lượng công việc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng và mảng động**, **16. hai con trỏ (two pointers) và thứ tự (order / 순서) thông tin** tiếp nhận điểm tựa từ **15. mảng hiệu: đảo chiều khối lượng công việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. cửa sổ trượt và trạng thái (state / 상태) reuse** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. hai con trỏ (two pointers) và thứ tự (order / 순서) thông tin** nối từ **15. mảng hiệu: đảo chiều khối lượng công việc** sang **17. cửa sổ trượt và trạng thái (state / 상태) reuse**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. hai con trỏ (two pointers) và thứ tự (order / 순서) thông tin
 
@@ -328,7 +328,7 @@ Nếu sum quá nhỏ, giữ `l` và giảm `r` chỉ làm sum nhỏ hơn hoặc 
 
 Technique này dựa trên bất biến thứ tự chứ không phải chỉ “hai biến chỉ mục (index / 인덱스)”.
 
-> **Chuyển mạch:** Trong **Mảng và mảng động**, **17. cửa sổ trượt và trạng thái (state / 상태) reuse** tiếp nhận điểm tựa từ **16. hai con trỏ (two pointers) và thứ tự (order / 순서) thông tin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Circular mảng và bộ đệm vòng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. cửa sổ trượt và trạng thái (state / 상태) reuse** nối từ **16. hai con trỏ (two pointers) và thứ tự (order / 순서) thông tin** sang **18. Circular mảng và bộ đệm vòng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. cửa sổ trượt và trạng thái (state / 상태) reuse
 
@@ -342,7 +342,7 @@ Mỗi chuyển tiếp (transition / 전이) chỉ cập nhật contribution rờ
 
 General lesson: nếu hai subproblems liên tiếp overlap mạnh, hãy hỏi trạng thái nào có thể reuse.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng và mảng động**, **18. Circular mảng và bộ đệm vòng** tiếp nhận điểm tựa từ **17. cửa sổ trượt và trạng thái (state / 상태) reuse** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Gap bộ đệm, Piece bảng (table / 테이블) và Rope: khi insert giữa là khối lượng công việc chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. Circular mảng và bộ đệm vòng** nối từ **17. cửa sổ trượt và trạng thái (state / 상태) reuse** sang **19. Gap bộ đệm, Piece bảng (table / 테이블) và Rope: khi insert giữa là khối lượng công việc chính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Circular mảng và bộ đệm vòng
 
@@ -362,7 +362,7 @@ index & (capacity - 1)
 
 nhưng chỉ đúng khi các giả định được giữ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng và mảng động**, **19. Gap bộ đệm, Piece bảng (table / 테이블) và Rope: khi insert giữa là khối lượng công việc chính** tiếp nhận điểm tựa từ **18. Circular mảng và bộ đệm vòng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Small véc-tơ (vector / 벡터) tối ưu hóa (optimization / 최적화) và inline lưu trữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. Gap bộ đệm, Piece bảng (table / 테이블) và Rope: khi insert giữa là khối lượng công việc chính** nối từ **18. Circular mảng và bộ đệm vòng** sang **20. Small véc-tơ (vector / 벡터) tối ưu hóa (optimization / 최적화) và inline lưu trữ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Gap bộ đệm, Piece bảng (table / 테이블) và Rope: khi insert giữa là khối lượng công việc chính
 
@@ -370,7 +370,7 @@ Văn bản (text / 텍스트) editor không nên luôn dùng một contiguous m�
 
 Bài học là: mảng động là baseline, nhưng nếu khối lượng công việc có nhiều middle edits, cách biểu diễn cần thay đổi.
 
-> **Chuyển mạch:** Trong **Mảng và mảng động**, **20. Small véc-tơ (vector / 벡터) tối ưu hóa (optimization / 최적화) và inline lưu trữ** tiếp nhận điểm tựa từ **19. Gap bộ đệm, Piece bảng (table / 테이블) và Rope: khi insert giữa là khối lượng công việc chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Persistent/bất biến sau khi tạo các mảng và sao chép khi ghi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. Small véc-tơ (vector / 벡터) tối ưu hóa (optimization / 최적화) và inline lưu trữ** nối từ **19. Gap bộ đệm, Piece bảng (table / 테이블) và Rope: khi insert giữa là khối lượng công việc chính** sang **21. Persistent/bất biến sau khi tạo các mảng và sao chép khi ghi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Small véc-tơ (vector / 벡터) tối ưu hóa (optimization / 최적화) và inline lưu trữ
 
@@ -380,7 +380,7 @@ Nó giảm cấp phát cho dùng chung (common / 공통) small trường hợp (
 
 Đây là ví dụ constants/bộ nhớ bố trí thay đổi thiết kế (design / 설계) dù asymptotic độ phức tạp (complexity / 복잡도) giữ nguyên.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng và mảng động**, **21. Persistent/bất biến sau khi tạo các mảng và sao chép khi ghi** tiếp nhận điểm tựa từ **20. Small véc-tơ (vector / 벡터) tối ưu hóa (optimization / 최적화) và inline lưu trữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. bí danh bộ nhớ và slice/view ngữ nghĩa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **21. Persistent/bất biến sau khi tạo các mảng và sao chép khi ghi** nối từ **20. Small véc-tơ (vector / 벡터) tối ưu hóa (optimization / 최적화) và inline lưu trữ** sang **22. bí danh bộ nhớ và slice/view ngữ nghĩa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Persistent/bất biến sau khi tạo các mảng và sao chép khi ghi
 
@@ -390,7 +390,7 @@ Cách đơn giản bản sao (copy / 복사) toàn mảng là `O(n)`. Persistent
 
 Khi yêu cầu thêm versioning/immutability, “mảng cập nhật O(1)” không còn tự động đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng và mảng động**, **22. bí danh bộ nhớ và slice/view ngữ nghĩa** tiếp nhận điểm tựa từ **21. Persistent/bất biến sau khi tạo các mảng và sao chép khi ghi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. chia sẻ giả trong concurrent các mảng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. bí danh bộ nhớ và slice/view ngữ nghĩa** nối từ **21. Persistent/bất biến sau khi tạo các mảng và sao chép khi ghi** sang **23. chia sẻ giả trong concurrent các mảng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. bí danh bộ nhớ và slice/view ngữ nghĩa
 
@@ -400,7 +400,7 @@ C con trỏ + length gần như luôn là view. Java `Arrays.copyOfRange` tạo 
 
 API phải nói rõ quyền sở hữu (ownership / 소유권)/bí danh bộ nhớ, nếu không tính đúng đắn bug rất dễ xuất hiện.
 
-> **Chuyển mạch:** Trong **Mảng và mảng động**, **23. chia sẻ giả trong concurrent các mảng** tiếp nhận điểm tựa từ **22. bí danh bộ nhớ và slice/view ngữ nghĩa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Bounds, tràn số nguyên (integer overflow) và cấp phát an toàn (safety / 안전)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. chia sẻ giả trong concurrent các mảng** nối từ **22. bí danh bộ nhớ và slice/view ngữ nghĩa** sang **24. Bounds, tràn số nguyên (integer overflow) và cấp phát an toàn (safety / 안전)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. chia sẻ giả trong concurrent các mảng
 
@@ -410,7 +410,7 @@ Một dense mảng rất tốt cho tính cục bộ sequential, nhưng concurren
 
 cách biểu diễn tối ưu cho single-thread không luôn tối ưu cho multi-thread.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng và mảng động**, **23. chia sẻ giả trong concurrent các mảng** xác định đầu vào; **24. Bounds, tràn số nguyên (integer overflow) và cấp phát an toàn (safety / 안전)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **25. kiểm thử động các mảng bằng bất biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. chia sẻ giả trong concurrent các mảng** đặt đầu vào cho **24. Bounds, tràn số nguyên (integer overflow) và cấp phát an toàn (safety / 안전)**, rồi **25. kiểm thử động các mảng bằng bất biến** mở rộng hệ quả.
 
 ## 24. Bounds, tràn số nguyên (integer overflow) và cấp phát an toàn (safety / 안전)
 
@@ -424,7 +424,7 @@ có thể tràn số multiplication trước khi bộ cấp phát được gọi
 
 Trong Java/JavaScript, out-of-bounds ngữ nghĩa khác C nhưng integer/miền giá trị số vẫn cần lập luận (reasoning / 추론). JavaScript Number mất integer precision sau `2^53-1`; TypedArray có độ rộng cố định wrap/coercion ngữ nghĩa.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mảng và mảng động**, **24. Bounds, tràn số nguyên (integer overflow) và cấp phát an toàn (safety / 안전)** xác định đầu vào; **25. kiểm thử động các mảng bằng bất biến** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **26. Khi nào mảng là lựa chọn tốt?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **24. Bounds, tràn số nguyên (integer overflow) và cấp phát an toàn (safety / 안전)** đặt đầu vào cho **25. kiểm thử động các mảng bằng bất biến**, rồi **26. Khi nào mảng là lựa chọn tốt?** mở rộng hệ quả.
 
 ## 25. kiểm thử động các mảng bằng bất biến
 
@@ -441,7 +441,7 @@ resize failure không phá state cũ
 
 tính chất kiểm thử (test / 테스트) có thể so custom véc-tơ (vector / 벡터) với tham chiếu danh sách (list / 목록) trên ngẫu nhiên chuỗi thao tác.
 
-> **Chuyển mạch:** Trong **Mảng và mảng động**, **26. Khi nào mảng là lựa chọn tốt?** tiếp nhận điểm tựa từ **25. kiểm thử động các mảng bằng bất biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **26. Khi nào mảng là lựa chọn tốt?** nối từ **25. kiểm thử động các mảng bằng bất biến** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Khi nào mảng là lựa chọn tốt?
 
@@ -457,7 +457,7 @@ size thay đổi nhưng middle insert không phải hot operation
 
 Nếu cần định danh nút ổn định và thường xuyên nối/tách hoặc chèn/xóa tại vị trí đã biết, cấu trúc liên kết dựa trên nút có thể phù hợp hơn. Nếu tra cứu có thứ tự hoặc truy vấn khoảng là trọng tâm, cây hoặc chỉ mục có thể phù hợp hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Mảng và mảng động**, **Mô hình tư duy** gom các mảnh từ **26. Khi nào mảng là lựa chọn tốt?** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** tổng hợp từ **26. Khi nào mảng là lựa chọn tốt?**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy
 

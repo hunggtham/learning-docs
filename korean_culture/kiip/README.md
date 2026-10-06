@@ -42,7 +42,7 @@ Các nhãn phạm vi được ghi ngay tại chỗ để người học biết n
 15. [`16_coverage_audit.md`](16_coverage_audit.md) — coverage kiểm tra (audit / 감사) và vùng cần hiện tại (current / 현재) xác minh (verification / 확인).
 16. [`SOURCES.md`](SOURCES.md) — provenance của 8 PDF và các trang đối chiếu.
 
-> **Chuyển mạch:** **Cấu trúc hiện tại** cho biết 50 bài đang phân bố theo topic; **Backbone 50 bài** gom chúng thành route, rồi **Workflow học đề xuất** dùng route đó để học theo owner của từng chapter.
+> **Nối mạch:** **Cấu trúc hiện tại** cho biết 50 bài đang phân bố theo topic; **Backbone 50 bài** gom chúng thành route, rồi **Workflow học đề xuất** dùng route đó để học theo owner của từng chapter.
 
 ## Backbone 50 bài
 
@@ -50,11 +50,11 @@ Các nhãn phạm vi được ghi ngay tại chỗ để người học biết n
 
 Phần cơ bản được dựng từ 8 PDF người học cung cấp. Nội dung `귀화용 심화` được **gộp vào đúng lĩnh vực (domain / 도메인) liên quan**, ví dụ `국민·복지` trong 사회, `기본권·헌정·민주주의` trong 정치/법/역사, thay vì tạo một cây thư mục riêng.
 
-> **Chuyển mạch:** Ở chặng này của **KIIP exam notes — 한국사회 이해**, **Backbone 50 bài** xác định đầu vào; **Workflow học đề xuất** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Quan hệ với Master kiến thức (knowledge / 지식) Book** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **KIIP exam notes — 한국사회 이해**, **Backbone 50 bài** đặt đầu vào cho **Workflow học đề xuất**, rồi **Quan hệ với Master kiến thức (knowledge / 지식) Book** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Workflow học đề xuất
 
-Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn tập. Hãy đi theo thứ tự mục tiêu → từ khóa → ví dụ → tự kiểm tra thay vì học thuộc danh sách rời.
+Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn tập. Hãy đi theo thứ tự mục tiêu → từ khóa → ví dụ → đối chiếu lại cơ chế thay vì học thuộc danh sách rời.
 
 ```text
 01~08 읽기
@@ -70,7 +70,7 @@ Mục này biến kiến thức KIIP thành lộ trình hoặc thao tác ôn t�
 
 Nếu một fact khó nhớ vì chưa hiểu nguyên nhân, mở [`12_cross_reference_master_books.md`](12_cross_reference_master_books.md) để đọc chapter sâu rồi quay lại luyện recall.
 
-> **Chuyển mạch:** **Workflow học đề xuất** xác định prerequisite và evidence cần ghi; **Quan hệ với Master Knowledge Book** chỉ ra lúc nào phải quay về owner nền tảng để đọc sâu hơn.
+> **Nối mạch:** **Workflow học đề xuất** xác định prerequisite và evidence cần ghi; **Quan hệ với Master Knowledge Book** chỉ ra lúc nào phải quay về owner nền tảng để đọc sâu hơn.
 
 ## Quan hệ với Master kiến thức (knowledge / 지식) Book
 

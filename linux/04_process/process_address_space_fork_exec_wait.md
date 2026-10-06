@@ -25,7 +25,7 @@ Trong Linux nguồn (source / 소스), một khái niệm trung tâm là `task_s
 
 > Một tác vụ (task / 작업) là một đối tượng (object / 객체) kernel nối nhiều subsystem lại với nhau.
 
-> **Chuyển mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Tiến trình (process / 프로세스) không phải chỉ là PID** xác định đầu vào; **Tiến trình (process / 프로세스) và luồng thực thi (thread / 스레드) trong Linux** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **PID, TID và luồng thực thi (thread / 스레드) group** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Tiến trình (process / 프로세스) không phải chỉ là PID** đặt đầu vào cho **Tiến trình (process / 프로세스) và luồng thực thi (thread / 스레드) trong Linux**, rồi **PID, TID và luồng thực thi (thread / 스레드) group** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tiến trình (process / 프로세스) và luồng thực thi (thread / 스레드) trong Linux
 
@@ -46,7 +46,7 @@ Hai tác vụ (task / 작업) có thể:
 
 Một JVM tiến trình (process / 프로세스) với 200 Java luồng thực thi (thread / 스레드) tương ứng nhiều scheduling entities ở Linux, không phải một đối tượng CPU duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Tiến trình (process / 프로세스) và luồng thực thi (thread / 스레드) trong Linux** xác định đầu vào; **PID, TID và luồng thực thi (thread / 스레드) group** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Address không gian (space / 공간) của tiến trình (process / 프로세스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Tiến trình (process / 프로세스) và luồng thực thi (thread / 스레드) trong Linux** đặt đầu vào cho **PID, TID và luồng thực thi (thread / 스레드) group**, rồi **Address không gian (space / 공간) của tiến trình (process / 프로세스)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## PID, TID và luồng thực thi (thread / 스레드) group
 
@@ -68,7 +68,7 @@ Mỗi entry dưới `/proc/<PID>/task/` đại diện một luồng thực thi (
 
 Điều này rất hữu ích khi ánh xạ (mapping / 매핑) Java luồng thực thi (thread / 스레드) dump với Linux luồng thực thi (thread / 스레드) CPU usage.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **PID, TID và luồng thực thi (thread / 스레드) group** xác định đầu vào; **Address không gian (space / 공간) của tiến trình (process / 프로세스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Mã (code / 코드), dữ liệu (data / 데이터), vùng nhớ động (heap / 힙) và ngăn xếp (stack / 스택)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **PID, TID và luồng thực thi (thread / 스레드) group** đặt đầu vào cho **Address không gian (space / 공간) của tiến trình (process / 프로세스)**, rồi **Mã (code / 코드), dữ liệu (data / 데이터), vùng nhớ động (heap / 힙) và ngăn xếp (stack / 스택)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Address không gian (space / 공간) của tiến trình (process / 프로세스)
 
@@ -98,7 +98,7 @@ Không nên coi address không gian (space / 공간) là một mảng RAM vật 
 
 Xem sâu hơn tại [Virtual memory, page fault và reclaim](../06_resources/virtual_memory_page_fault_reclaim_allocator.md).
 
-> **Chuyển mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, cơ chế trong **Address không gian (space / 공간) của tiến trình (process / 프로세스)** cần được kiểm chứng bằng dấu vết cụ thể; **Mã (code / 코드), dữ liệu (data / 데이터), vùng nhớ động (heap / 힙) và ngăn xếp (stack / 스택)** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **/proc/<PID>/maps giải thích gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, cơ chế trong **Address không gian (space / 공간) của tiến trình (process / 프로세스)** cần được kiểm chứng bằng dấu vết cụ thể; **Mã (code / 코드), dữ liệu (data / 데이터), vùng nhớ động (heap / 힙) và ngăn xếp (stack / 스택)** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **/proc/<PID>/maps giải thích gì?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mã (code / 코드), dữ liệu (data / 데이터), vùng nhớ động (heap / 힙) và ngăn xếp (stack / 스택)
 
@@ -112,7 +112,7 @@ Dùng chung (shared / 공유) libraries được map vào address không gian (s
 
 Do đó nhìn RSS hoặc VSZ mà không hiểu ánh xạ (mapping / 매핑) dễ dẫn tới kết luận sai.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Mã (code / 코드), dữ liệu (data / 데이터), vùng nhớ động (heap / 힙) và ngăn xếp (stack / 스택)** nêu điều cần giải thích; **/proc/<PID>/maps giải thích gì?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **ASLR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Mã (code / 코드), dữ liệu (data / 데이터), vùng nhớ động (heap / 힙) và ngăn xếp (stack / 스택)** đặt vấn đề; **/proc/<PID>/maps giải thích gì?** đối chiếu bằng chứng, rồi **ASLR** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## `/proc/<PID>/maps` giải thích gì?
 
@@ -136,7 +136,7 @@ Permission thường có:
 
 Đây là nền tảng để hiểu W^X, ASLR và exploit mitigation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **ASLR** tiếp nhận điểm tựa từ **/proc/<PID>/maps giải thích gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tạo tiến trình (process / 프로세스): fork() không bản sao (copy / 복사) toàn bộ RAM ngay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **ASLR** nối từ **/proc/<PID>/maps giải thích gì?** sang **Tạo tiến trình (process / 프로세스): fork() không bản sao (copy / 복사) toàn bộ RAM ngay**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## ASLR
 
@@ -152,7 +152,7 @@ PIE nhị phân (binary / 이진) và dùng chung (shared / 공유) thư viện 
 
 Xem thêm [ELF và dynamic linking](../08_operations/elf_dynamic_linking.md).
 
-> **Chuyển mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **ASLR** xác định đầu vào; **Tạo tiến trình (process / 프로세스): fork() không bản sao (copy / 복사) toàn bộ RAM ngay** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **COW không có nghĩa fork luôn rẻ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **ASLR** đặt đầu vào cho **Tạo tiến trình (process / 프로세스): fork() không bản sao (copy / 복사) toàn bộ RAM ngay**, rồi **COW không có nghĩa fork luôn rẻ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tạo tiến trình (process / 프로세스): `fork()` không bản sao (copy / 복사) toàn bộ RAM ngay
 
@@ -186,7 +186,7 @@ child  -> copy page B
 
 Nhờ đó `fork()` thường rẻ hơn rất nhiều so với bản sao (copy / 복사) toàn bộ bộ nhớ (memory / 메모리) ngay lập tức.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Tạo tiến trình (process / 프로세스): fork() không bản sao (copy / 복사) toàn bộ RAM ngay** xác định đầu vào; **COW không có nghĩa fork luôn rẻ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **fork() và multi-threaded tiến trình (process / 프로세스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Tạo tiến trình (process / 프로세스): fork() không bản sao (copy / 복사) toàn bộ RAM ngay** đặt đầu vào cho **COW không có nghĩa fork luôn rẻ**, rồi **fork() và multi-threaded tiến trình (process / 프로세스)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## COW không có nghĩa fork luôn rẻ
 
@@ -196,7 +196,7 @@ Nếu child sau đó ghi nhiều bộ nhớ (memory / 메모리), COW faults và
 
 Đây là lý do thời gian chạy (runtime / 런타임)/cơ sở dữ liệu (database / 데이터베이스) lớn có thể quan tâm sâu tới hành vi (behavior / 동작) của fork.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **COW không có nghĩa fork luôn rẻ** xác định đầu vào; **fork() và multi-threaded tiến trình (process / 프로세스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **clone() và Linux luồng thực thi (thread / 스레드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **COW không có nghĩa fork luôn rẻ** đặt đầu vào cho **fork() và multi-threaded tiến trình (process / 프로세스)**, rồi **clone() và Linux luồng thực thi (thread / 스레드)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## `fork()` và multi-threaded tiến trình (process / 프로세스)
 
@@ -206,7 +206,7 @@ Vì vậy child của multi-threaded tiến trình (process / 프로세스) thư
 
 Đây là một trong những lý do spawn tiến trình (process / 프로세스) trong thời gian chạy (runtime / 런타임) phức tạp cần hiện thực (implementation / 구현) cẩn thận.
 
-> **Chuyển mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **fork() và multi-threaded tiến trình (process / 프로세스)** xác định đầu vào; **clone() và Linux luồng thực thi (thread / 스레드)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **execve() không tạo PID mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **fork() và multi-threaded tiến trình (process / 프로세스)** đặt đầu vào cho **clone() và Linux luồng thực thi (thread / 스레드)**, rồi **execve() không tạo PID mới** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## `clone()` và Linux luồng thực thi (thread / 스레드)
 
@@ -224,7 +224,7 @@ Luồng thực thi (thread / 스레드) có thể được xem như các tác v�
 
 Bộ chứa (container / 컨테이너) thời gian chạy (runtime / 런타임) cũng tận dụng clone/unshare/setns để xây không gian tên (namespace / 네임스페이스) isolation.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **execve() không tạo PID mới** tiếp nhận điểm tựa từ **clone() và Linux luồng thực thi (thread / 스레드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Shell chạy command ngoài thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **execve() không tạo PID mới** nối từ **clone() và Linux luồng thực thi (thread / 스레드)** sang **Shell chạy command ngoài thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `execve()` không tạo PID mới
 
@@ -246,7 +246,7 @@ Address không gian (space / 공간) cũ được thay bằng mappings của exe
 
 Vì vậy `exec` không có nghĩa “tạo tiến trình (process / 프로세스) con”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Shell chạy command ngoài thế nào?** tiếp nhận điểm tựa từ **execve() không tạo PID mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tệp (file / 파일) descriptor inheritance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Shell chạy command ngoài thế nào?** nối từ **execve() không tạo PID mới** sang **Tệp (file / 파일) descriptor inheritance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Shell chạy command ngoài thế nào?
 
@@ -273,7 +273,7 @@ cat file | grep ERROR | sort
 
 Do đó shell cú pháp (syntax / 문법) cuối cùng dựa trên tiến trình (process / 프로세스) vòng đời (lifecycle / 생명주기) + tệp (file / 파일) descriptor inheritance.
 
-> **Chuyển mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Tệp (file / 파일) descriptor inheritance** tiếp nhận điểm tựa từ **Shell chạy command ngoài thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **FDCLOEXEC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Tệp (file / 파일) descriptor inheritance** nối từ **Shell chạy command ngoài thế nào?** sang **FDCLOEXEC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tệp (file / 파일) descriptor inheritance
 
@@ -292,7 +292,7 @@ Program mới không cần biết shell đã setup redirection ra sao. Nó chỉ
 
 Đây là sức mạnh của Unix composition.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **FDCLOEXEC** tiếp nhận điểm tựa từ **Tệp (file / 파일) descriptor inheritance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Môi trường (environment / 환경) được đưa vào exec** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **FDCLOEXEC** nối từ **Tệp (file / 파일) descriptor inheritance** sang **Môi trường (environment / 환경) được đưa vào exec**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `FD_CLOEXEC`
 
@@ -311,7 +311,7 @@ Hậu quả có thể gồm:
 
 Vì vậy descriptor thời gian tồn tại (lifetime / 수명) là một phần của tiến trình (process / 프로세스) vòng đời (lifecycle / 생명주기).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Môi trường (environment / 환경) được đưa vào exec** tiếp nhận điểm tựa từ **FDCLOEXEC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiện tại (current / 현재) working directory** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Môi trường (environment / 환경) được đưa vào exec** nối từ **FDCLOEXEC** sang **Hiện tại (current / 현재) working directory**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Môi trường (environment / 환경) được đưa vào exec
 
@@ -330,7 +330,7 @@ child/exec ảnh (image / 이미지) nhận môi trường (environment / 환경
 
 Tiến trình (process / 프로세스) đã chạy không tự thấy các thay đổi môi trường (environment / 환경) của parent sau đó.
 
-> **Chuyển mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Hiện tại (current / 현재) working directory** tiếp nhận điểm tựa từ **Môi trường (environment / 환경) được đưa vào exec** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gốc (root / 루트) directory của tiến trình (process / 프로세스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Hiện tại (current / 현재) working directory** nối từ **Môi trường (environment / 환경) được đưa vào exec** sang **Gốc (root / 루트) directory của tiến trình (process / 프로세스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiện tại (current / 현재) working directory
 
@@ -346,7 +346,7 @@ Một tiến trình (process / 프로세스) có thể giữ cwd trong filesyste
 
 Đây là ví dụ tiến trình (process / 프로세스) trạng thái (state / 상태) nối trực tiếp với VFS thời gian tồn tại (lifetime / 수명).
 
-> **Chuyển mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Hiện tại (current / 현재) working directory** xác định đầu vào; **Gốc (root / 루트) directory của tiến trình (process / 프로세스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Credentials qua fork/exec** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Hiện tại (current / 현재) working directory** đặt đầu vào cho **Gốc (root / 루트) directory của tiến trình (process / 프로세스)**, rồi **Credentials qua fork/exec** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Gốc (root / 루트) directory của tiến trình (process / 프로세스)
 
@@ -354,7 +354,7 @@ Tiến trình (process / 프로세스) có khái niệm gốc (root / 루트) di
 
 Mount không gian tên (namespace / 네임스페이스) và pivot_root giúp bộ chứa (container / 컨테이너) thời gian chạy (runtime / 런타임) xây filesystem view riêng sâu hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Gốc (root / 루트) directory của tiến trình (process / 프로세스)** xác định đầu vào; **Credentials qua fork/exec** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Tín hiệu (signal / 신호) disposition qua exec** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Gốc (root / 루트) directory của tiến trình (process / 프로세스)** đặt đầu vào cho **Credentials qua fork/exec**, rồi **Tín hiệu (signal / 신호) disposition qua exec** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Credentials qua fork/exec
 
@@ -364,7 +364,7 @@ Kernel phải tính effective credentials cẩn thận khi executable có siêu 
 
 Xem [Credentials, capabilities, ACL và MAC](../03_identity/credentials_capabilities_acl_mac.md).
 
-> **Chuyển mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Tín hiệu (signal / 신호) disposition qua exec** tiếp nhận điểm tựa từ **Credentials qua fork/exec** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Parent-child relationship** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Tín hiệu (signal / 신호) disposition qua exec** nối từ **Credentials qua fork/exec** sang **Parent-child relationship**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tín hiệu (signal / 신호) disposition qua exec
 
@@ -374,7 +374,7 @@ Một số tín hiệu (signal / 신호) disposition thay đổi qua exec theo P
 
 Đây là lý do ngữ nghĩa (semantics / 의미론) của exec là một hợp đồng rất cụ thể.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Parent-child relationship** tiếp nhận điểm tựa từ **Tín hiệu (signal / 신호) disposition qua exec** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Zombie chính xác là gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Parent-child relationship** nối từ **Tín hiệu (signal / 신호) disposition qua exec** sang **Zombie chính xác là gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Parent-child relationship
 
@@ -384,7 +384,7 @@ Khi child exit, kernel giữ một phần exit status để parent thu nhận b�
 
 Khoảng thời gian child đã chết nhưng status chưa được parent thu nhận tạo ra **zombie**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Zombie chính xác là gì?** tiếp nhận điểm tựa từ **Parent-child relationship** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **wait() làm gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Zombie chính xác là gì?** nối từ **Parent-child relationship** sang **wait() làm gì?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Zombie chính xác là gì?
 
@@ -398,7 +398,7 @@ ps -eo pid,ppid,stat,cmd | awk '$3 ~ /Z/'
 
 Zombie ít thường không tiêu thụ nhiều tài nguyên, nhưng tích tụ lớn có thể làm cạn PID/tác vụ (task / 작업) bảng (table / 테이블) và là dấu hiệu parent không reap child đúng.
 
-> **Chuyển mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **wait() làm gì?** tiếp nhận điểm tựa từ **Zombie chính xác là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Orphan khác zombie** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **wait() làm gì?** nối từ **Zombie chính xác là gì?** sang **Orphan khác zombie**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `wait()` làm gì?
 
@@ -422,7 +422,7 @@ exit status returned
 record được giải phóng
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Orphan khác zombie** tiếp nhận điểm tựa từ **wait() làm gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **PID 1 và subreaper** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Orphan khác zombie** nối từ **wait() làm gì?** sang **PID 1 và subreaper**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Orphan khác zombie
 
@@ -434,7 +434,7 @@ Hai khái niệm hoàn toàn khác nhau.
 
 Khi parent biến mất, orphan được reparent theo ngữ nghĩa (semantics / 의미론) không gian tên (namespace / 네임스페이스)/init/subreaper.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **PID 1 và subreaper** tiếp nhận điểm tựa từ **Orphan khác zombie** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Exit status** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **PID 1 và subreaper** nối từ **Orphan khác zombie** sang **Exit status**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## PID 1 và subreaper
 
@@ -446,7 +446,7 @@ Linux còn có khái niệm **child subreaper**, cho phép tiến trình (proces
 
 Đây là cơ sở cho tiến trình (process / 프로세스) supervisor/bộ chứa (container / 컨테이너) init.
 
-> **Chuyển mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Exit status** tiếp nhận điểm tựa từ **PID 1 và subreaper** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiến trình (process / 프로세스) group và session** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Exit status** nối từ **PID 1 và subreaper** sang **Tiến trình (process / 프로세스) group và session**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Exit status
 
@@ -463,7 +463,7 @@ Convention thường dùng 0 là thành công và khác 0 là lỗi, nhưng ngh�
 
 Nếu tiến trình (process / 프로세스) chết do tín hiệu (signal / 신호), shell/thời gian chạy (runtime / 런타임) có thể mã hóa status theo convention riêng để báo lại.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Exit status** xác định đầu vào; **Tiến trình (process / 프로세스) group và session** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Controlling terminal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Exit status** đặt đầu vào cho **Tiến trình (process / 프로세스) group và session**, rồi **Controlling terminal** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tiến trình (process / 프로세스) group và session
 
@@ -477,7 +477,7 @@ Khi nhấn `Ctrl+C`, terminal driver thường gửi `SIGINT` tới foreground t
 
 Đây là lý do chuỗi xử lý (pipeline / 파이프라인) foreground có thể bị dừng cùng nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Tiến trình (process / 프로세스) group và session** xác định đầu vào; **Controlling terminal** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Daemonization cổ điển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Tiến trình (process / 프로세스) group và session** đặt đầu vào cho **Controlling terminal**, rồi **Daemonization cổ điển** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Controlling terminal
 
@@ -487,7 +487,7 @@ Background tiến trình (process / 프로세스) cố đọc terminal có thể
 
 Job điều khiển (control / 제어) vì vậy là collaboration giữa shell, tiến trình (process / 프로세스) groups, session và terminal driver trong kernel.
 
-> **Chuyển mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Daemonization cổ điển** tiếp nhận điểm tựa từ **Controlling terminal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiến trình (process / 프로세스) trạng thái (state / 상태) R, S, D, T, Z** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Daemonization cổ điển** nối từ **Controlling terminal** sang **Tiến trình (process / 프로세스) trạng thái (state / 상태) R, S, D, T, Z**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Daemonization cổ điển
 
@@ -507,7 +507,7 @@ Với systemd, double-fork thường không cần cho dịch vụ (service / 서
 
 Hiểu lịch sử này giúp giải thích vì sao một số daemon cũ có option `--foreground`.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Daemonization cổ điển** xác định đầu vào; **Tiến trình (process / 프로세스) trạng thái (state / 상태) R, S, D, T, Z** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Sleeping không phải “tiến trình (process / 프로세스) không làm gì” theo nghĩa vô ích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Daemonization cổ điển** đặt đầu vào cho **Tiến trình (process / 프로세스) trạng thái (state / 상태) R, S, D, T, Z**, rồi **Sleeping không phải “tiến trình (process / 프로세스) không làm gì” theo nghĩa vô ích** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tiến trình (process / 프로세스) trạng thái (state / 상태) `R`, `S`, `D`, `T`, `Z`
 
@@ -523,7 +523,7 @@ Các trạng thái `ps` là biểu diễn rút gọn của scheduling/tác vụ 
 
 Nhiều tác vụ (task / 작업) `D` có thể làm tải (load / 로드) average cao dù CPU idle đáng kể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Tiến trình (process / 프로세스) trạng thái (state / 상태) R, S, D, T, Z** xác định đầu vào; **Sleeping không phải “tiến trình (process / 프로세스) không làm gì” theo nghĩa vô ích** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và bộ nhớ (memory / 메모리) chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Tiến trình (process / 프로세스) trạng thái (state / 상태) R, S, D, T, Z** đặt đầu vào cho **Sleeping không phải “tiến trình (process / 프로세스) không làm gì” theo nghĩa vô ích**, rồi **Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và bộ nhớ (memory / 메모리) chi phí (cost / 비용)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Sleeping không phải “tiến trình (process / 프로세스) không làm gì” theo nghĩa vô ích
 
@@ -531,7 +531,7 @@ Sleep là cách kernel biểu diễn tác vụ (task / 작업) đang chờ sự 
 
 Ứng dụng (application / 애플리케이션) máy chủ (server / 서버) blocking I/O có thể có hàng trăm luồng thực thi (thread / 스레드) sleeping. Vấn đề chỉ xuất hiện khi luồng thực thi (thread / 스레드) count, ngăn xếp (stack / 스택) bộ nhớ (memory / 메모리) hoặc wakeup contention vượt giới hạn hợp lý.
 
-> **Chuyển mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Sleeping không phải “tiến trình (process / 프로세스) không làm gì” theo nghĩa vô ích** xác định đầu vào; **Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và bộ nhớ (memory / 메모리) chi phí (cost / 비용)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Ngữ cảnh (context / 맥락) switch lưu gì?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Sleeping không phải “tiến trình (process / 프로세스) không làm gì” theo nghĩa vô ích** đặt đầu vào cho **Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và bộ nhớ (memory / 메모리) chi phí (cost / 비용)**, rồi **Ngữ cảnh (context / 맥락) switch lưu gì?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và bộ nhớ (memory / 메모리) chi phí (cost / 비용)
 
@@ -541,7 +541,7 @@ Trong JVM, `-Xss` ảnh hưởng Java luồng thực thi (thread / 스레드) ng
 
 Vì vậy sức chứa (capacity / 용량) planning luồng thực thi (thread / 스레드) count phải nối với bộ nhớ (memory / 메모리) mô hình (model / 모델).
 
-> **Chuyển mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Ngữ cảnh (context / 맥락) switch lưu gì?** tiếp nhận điểm tựa từ **Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và bộ nhớ (memory / 메모리) chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **exec() và triển khai (deployment / 배포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Ngữ cảnh (context / 맥락) switch lưu gì?** nối từ **Luồng thực thi (thread / 스레드) ngăn xếp (stack / 스택) và bộ nhớ (memory / 메모리) chi phí (cost / 비용)** sang **exec() và triển khai (deployment / 배포)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ngữ cảnh (context / 맥락) switch lưu gì?
 
@@ -553,7 +553,7 @@ Nếu hàng nghìn runnable luồng thực thi (thread / 스레드) cạnh tranh
 
 Xem [Kernel scheduler deep dive](../06_resources/kernel_scheduler_deep_dive.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **exec() và triển khai (deployment / 배포)** tiếp nhận điểm tựa từ **Ngữ cảnh (context / 맥락) switch lưu gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tiến trình (process / 프로세스) không gian tên (namespace / 네임스페이스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **exec() và triển khai (deployment / 배포)** nối từ **Ngữ cảnh (context / 맥락) switch lưu gì?** sang **Tiến trình (process / 프로세스) không gian tên (namespace / 네임스페이스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## `exec()` và triển khai (deployment / 배포)
 
@@ -571,7 +571,7 @@ Do đó đơn vị (unit / 단위) cấu hình (configuration / 구성) cuối c
 
 Môi trường (environment / 환경), WorkingDirectory, người dùng (user / 사용자), limits và tệp (file / 파일) descriptors đều có thể ảnh hưởng ứng dụng (application / 애플리케이션) trước khi dòng Java đầu tiên chạy.
 
-> **Chuyển mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **exec() và triển khai (deployment / 배포)** xác định đầu vào; **Tiến trình (process / 프로세스) không gian tên (namespace / 네임스페이스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **/proc/<PID> là cửa sổ tiến trình (process / 프로세스) mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **exec() và triển khai (deployment / 배포)** đặt đầu vào cho **Tiến trình (process / 프로세스) không gian tên (namespace / 네임스페이스)**, rồi **/proc/<PID> là cửa sổ tiến trình (process / 프로세스) mô hình (model / 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tiến trình (process / 프로세스) không gian tên (namespace / 네임스페이스)
 
@@ -583,7 +583,7 @@ Vì vậy PID là tên trong không gian tên (namespace / 네임스페이스), 
 
 Xem [Namespace, cgroup và seccomp](../09_production/namespaces_cgroups_seccomp.md).
 
-> **Chuyển mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Tiến trình (process / 프로세스) không gian tên (namespace / 네임스페이스)** xác định đầu vào; **/proc/<PID> là cửa sổ tiến trình (process / 프로세스) mô hình (model / 모델)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Tiến trình (process / 프로세스) thời gian tồn tại (lifetime / 수명) và tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) không luôn giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Tiến trình (process / 프로세스) không gian tên (namespace / 네임스페이스)** đặt đầu vào cho **/proc/<PID> là cửa sổ tiến trình (process / 프로세스) mô hình (model / 모델)**, rồi **Tiến trình (process / 프로세스) thời gian tồn tại (lifetime / 수명) và tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) không luôn giống nhau** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## `/proc/<PID>` là cửa sổ tiến trình (process / 프로세스) mô hình (model / 모델)
 
@@ -605,7 +605,7 @@ Một số tệp (file / 파일) hữu ích:
 
 Thay vì coi `/proc` là danh sách lệnh phải nhớ, hãy map từng entry vào tài nguyên (resource / 자원) mà tiến trình (process / 프로세스) đang giữ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **/proc/<PID> là cửa sổ tiến trình (process / 프로세스) mô hình (model / 모델)** nêu điều cần giải thích; **Tiến trình (process / 프로세스) thời gian tồn tại (lifetime / 수명) và tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) không luôn giống nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **/proc/<PID> là cửa sổ tiến trình (process / 프로세스) mô hình (model / 모델)** đặt vấn đề; **Tiến trình (process / 프로세스) thời gian tồn tại (lifetime / 수명) và tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) không luôn giống nhau** đối chiếu bằng chứng, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tiến trình (process / 프로세스) thời gian tồn tại (lifetime / 수명) và tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) không luôn giống nhau
 
@@ -619,7 +619,7 @@ Vì vậy “tiến trình (process / 프로세스) đã chết” không luôn 
 
 Conversely, kernel sẽ tự bản phát hành (release / 릴리스) nhiều tài nguyên (resource / 자원) gắn quyền sở hữu (ownership / 소유권) trực tiếp với tiến trình (process / 프로세스) khi tiến trình (process / 프로세스) exit.
 
-> **Chuyển mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Tiến trình (process / 프로세스) thời gian tồn tại (lifetime / 수명) và tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) không luôn giống nhau** nêu điều cần giải thích; **Mô hình tư duy (mental model / 사고 모델)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Tiến trình (process / 프로세스) thời gian tồn tại (lifetime / 수명) và tài nguyên (resource / 자원) thời gian tồn tại (lifetime / 수명) không luôn giống nhau** đặt vấn đề; **Mô hình tư duy (mental model / 사고 모델)** đối chiếu bằng chứng, rồi **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -640,7 +640,7 @@ process/task
 
 `fork()` tạo thực thi (execution / 실행) ngữ cảnh (context / 맥락) mới với nhiều trạng thái (state / 상태) kế thừa/chia sẻ theo ngữ nghĩa (semantics / 의미론). `exec()` thay program ảnh (image / 이미지). `exit()` kết thúc thực thi (execution / 실행). `wait()` hoàn tất quan hệ vòng đời (lifecycle / 생명주기) với parent.
 
-> **Chuyển mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Những hiểu lầm phổ biến** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, **Những hiểu lầm phổ biến** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -656,7 +656,7 @@ process/task
 
 **“Một Java tiến trình (process / 프로세스) là một scheduling thực thể (entity / 엔터티).”** Mỗi bản địa (native / 네이티브) luồng thực thi (thread / 스레드) là tác vụ (task / 작업) scheduler có thể quản lý riêng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, sau nội dung của **Những hiểu lầm phổ biến**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiến trình (process / 프로세스), address không gian (space / 공간), fork, exec và wait trong Linux**, sau nội dung của **Những hiểu lầm phổ biến**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

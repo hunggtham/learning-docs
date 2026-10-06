@@ -18,7 +18,7 @@ Doanh nghiệp cần bao nhiêu vốn để tăng trưởng?
 
 Nếu không giải thích được doanh nghiệp kiếm tiền bằng vài câu đơn giản, các tỷ lệ tài chính phía sau rất dễ bị hiểu sai.
 
-> **Chuyển mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **1. Bắt đầu từ mô hình kinh doanh** xác định đầu vào; **2. Chuỗi giá trị** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. Bể lợi nhuận ngành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **1. Bắt đầu từ mô hình kinh doanh** đặt đầu vào cho **2. Chuỗi giá trị**, rồi **3. Bể lợi nhuận ngành** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2. Chuỗi giá trị
 
@@ -37,7 +37,7 @@ Thiết kế
 
 Mỗi mắt xích có quyền lực giá, cường độ vốn và rủi ro chu kỳ khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **2. Chuỗi giá trị** xác định đầu vào; **3. Bể lợi nhuận ngành** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **4. Phân rã doanh thu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **2. Chuỗi giá trị** đặt đầu vào cho **3. Bể lợi nhuận ngành**, rồi **4. Phân rã doanh thu** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3. Bể lợi nhuận ngành
 
@@ -45,7 +45,7 @@ Doanh thu lớn không đồng nghĩa lợi nhuận lớn. Cần tìm **bể l�
 
 Một mắt xích có doanh thu nhỏ nhưng công nghệ độc quyền và chi phí chuyển đổi cao có thể giữ lợi nhuận tốt hơn nhà sản xuất có doanh thu lớn nhưng cạnh tranh hàng hóa.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **4. Phân rã doanh thu** tiếp nhận điểm tựa từ **3. Bể lợi nhuận ngành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Biên đóng góp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **4. Phân rã doanh thu** nối từ **3. Bể lợi nhuận ngành** sang **5. Biên đóng góp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Phân rã doanh thu
 
@@ -60,7 +60,7 @@ Người dùng × Tỷ lệ chuyển đổi × Giá trị giao dịch × Take ra
 
 Cây động lực giúp dự báo bằng nguyên nhân thay vì kéo dài một tỷ lệ tăng trưởng lịch sử.
 
-> **Chuyển mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **5. Biên đóng góp** tiếp nhận điểm tựa từ **4. Phân rã doanh thu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Kinh tế đơn vị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **5. Biên đóng góp** nối từ **4. Phân rã doanh thu** sang **6. Kinh tế đơn vị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Biên đóng góp
 
@@ -70,7 +70,7 @@ Nó giúp trả lời: tăng thêm doanh thu có tạo thêm lợi nhuận kinh 
 
 Với mô hình số, gross margin cao không đủ nếu chi phí thu hút khách hàng cũng tăng rất nhanh.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **6. Kinh tế đơn vị** tiếp nhận điểm tựa từ **5. Biên đóng góp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. CAC và LTV** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **6. Kinh tế đơn vị** nối từ **5. Biên đóng góp** sang **7. CAC và LTV**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Kinh tế đơn vị
 
@@ -88,7 +88,7 @@ Bán dẫn → ASP, bit shipment, utilization
 
 Chỉ số phải phù hợp với động cơ kinh tế của ngành.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **7. CAC và LTV** tiếp nhận điểm tựa từ **6. Kinh tế đơn vị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Cohort** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **7. CAC và LTV** nối từ **6. Kinh tế đơn vị** sang **8. Cohort**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. CAC và LTV
 
@@ -98,7 +98,7 @@ LTV cao trên mô hình nhưng churn tăng hoặc thời gian hoàn vốn quá d
 
 Không nên dùng tỷ lệ LTV/CAC mà không kiểm tra cách định nghĩa và gross margin.
 
-> **Chuyển mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **8. Cohort** tiếp nhận điểm tựa từ **7. CAC và LTV** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. ROIC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **8. Cohort** nối từ **7. CAC và LTV** sang **9. ROIC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Cohort
 
@@ -106,7 +106,7 @@ Phân tích cohort theo dõi nhóm khách hàng bắt đầu cùng thời điể
 
 Nếu cohort cũ tiếp tục chi tiêu hoặc duy trì thuê bao tốt, tăng trưởng có chất lượng cao hơn doanh nghiệp liên tục phải mua khách hàng mới để bù churn.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **9. ROIC** tiếp nhận điểm tựa từ **8. Cohort** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. ROIC tăng thêm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **9. ROIC** nối từ **8. Cohort** sang **10. ROIC tăng thêm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. ROIC
 
@@ -120,7 +120,7 @@ ROIC cao bền vững cho thấy doanh nghiệp tạo lợi nhuận hoạt độ
 
 Nhưng ROIC lịch sử cao không đủ; phải xem khả năng tái đầu tư vốn mới.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **10. ROIC tăng thêm** tiếp nhận điểm tựa từ **9. ROIC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Tăng trưởng và tạo giá trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **10. ROIC tăng thêm** nối từ **9. ROIC** sang **11. Tăng trưởng và tạo giá trị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. ROIC tăng thêm
 
@@ -128,7 +128,7 @@ ROIC tăng thêm (incremental ROIC) hỏi số NOPAT tăng thêm trên vốn đ�
 
 Doanh nghiệp có ROIC cũ cao nhưng ROIC trên vốn mới giảm nhanh có thể đang cạn dư địa tăng trưởng chất lượng.
 
-> **Chuyển mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **11. Tăng trưởng và tạo giá trị** tiếp nhận điểm tựa từ **10. ROIC tăng thêm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Vòng quay tài sản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **11. Tăng trưởng và tạo giá trị** nối từ **10. ROIC tăng thêm** sang **12. Vòng quay tài sản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Tăng trưởng và tạo giá trị
 
@@ -142,7 +142,7 @@ Tăng trưởng chỉ tạo giá trị khi lợi suất trên vốn mới cao h�
 
 Tăng trưởng nhanh với ROIC thấp có thể phá hủy giá trị cổ đông.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **12. Vòng quay tài sản** tiếp nhận điểm tựa từ **11. Tăng trưởng và tạo giá trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Lợi thế cạnh tranh là cơ chế, không phải tính từ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **12. Vòng quay tài sản** nối từ **11. Tăng trưởng và tạo giá trị** sang **13. Lợi thế cạnh tranh là cơ chế, không phải tính từ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Vòng quay tài sản
 
@@ -152,7 +152,7 @@ Nhà bán lẻ biên mỏng nhưng quay vòng nhanh có thể tạo ROIC tốt. 
 
 Hiểu nguồn ROIC giúp đánh giá độ bền.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **12. Vòng quay tài sản** xác định đầu vào; **13. Lợi thế cạnh tranh là cơ chế, không phải tính từ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. Hiệu ứng mạng lưới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **12. Vòng quay tài sản** đặt đầu vào cho **13. Lợi thế cạnh tranh là cơ chế, không phải tính từ**, rồi **14. Hiệu ứng mạng lưới** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13. Lợi thế cạnh tranh là cơ chế, không phải tính từ
 
@@ -173,7 +173,7 @@ Giấy phép / quy định
 Hệ sinh thái
 ```
 
-> **Chuyển mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **13. Lợi thế cạnh tranh là cơ chế, không phải tính từ** xác định đầu vào; **14. Hiệu ứng mạng lưới** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **15. Chi phí chuyển đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **13. Lợi thế cạnh tranh là cơ chế, không phải tính từ** đặt đầu vào cho **14. Hiệu ứng mạng lưới**, rồi **15. Chi phí chuyển đổi** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. Hiệu ứng mạng lưới
 
@@ -181,7 +181,7 @@ Hiệu ứng mạng lưới (network effect) xuất hiện khi sản phẩm tr�
 
 Nhưng không phải mọi mạng lưới đều mạnh. Nếu người dùng dễ dùng nhiều nền tảng cùng lúc hoặc chi phí chuyển đổi thấp, mạng (network / 네트워크) tác động (effect / 효과) yếu hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **15. Chi phí chuyển đổi** tiếp nhận điểm tựa từ **14. Hiệu ứng mạng lưới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Lợi thế chi phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **15. Chi phí chuyển đổi** nối từ **14. Hiệu ứng mạng lưới** sang **16. Lợi thế chi phí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Chi phí chuyển đổi
 
@@ -189,7 +189,7 @@ Chi phí chuyển đổi (switching cost) có thể là tiền, thời gian, d�
 
 Phần mềm doanh nghiệp tích hợp sâu vào quy trình có thể có switching chi phí (cost / 비용) cao hơn ứng dụng tiêu dùng dễ thay thế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **16. Lợi thế chi phí** tiếp nhận điểm tựa từ **15. Chi phí chuyển đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Thương hiệu và quyền định giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **16. Lợi thế chi phí** nối từ **15. Chi phí chuyển đổi** sang **17. Thương hiệu và quyền định giá**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Lợi thế chi phí
 
@@ -197,7 +197,7 @@ Lợi thế chi phí có thể đến từ quy mô mua hàng, công nghệ sản
 
 Lợi thế tốt phải khó sao chép và tồn tại khi đối thủ cũng tăng quy mô.
 
-> **Chuyển mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **17. Thương hiệu và quyền định giá** tiếp nhận điểm tựa từ **16. Lợi thế chi phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Quy mô và kinh tế theo quy mô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **17. Thương hiệu và quyền định giá** nối từ **16. Lợi thế chi phí** sang **18. Quy mô và kinh tế theo quy mô**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Thương hiệu và quyền định giá
 
@@ -207,7 +207,7 @@ Quyền định giá (pricing power) thể hiện khi giá tăng mà khối lư�
 
 Cần phân biệt tăng giá do lạm phát chung với quyền định giá thật.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **18. Quy mô và kinh tế theo quy mô** tiếp nhận điểm tựa từ **17. Thương hiệu và quyền định giá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Economies of phạm vi (scope / 범위)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **18. Quy mô và kinh tế theo quy mô** nối từ **17. Thương hiệu và quyền định giá** sang **19. Economies of phạm vi (scope / 범위)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Quy mô và kinh tế theo quy mô
 
@@ -215,7 +215,7 @@ Kinh tế theo quy mô (economies of scale) xuất hiện khi chi phí đơn v�
 
 Nhưng quy mô có thể tạo quan liêu hoặc phức tạp. Do đó cần bằng chứng ở biên lợi nhuận, chi phí đơn vị và tốc độ vận hành.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **19. Economies of phạm vi (scope / 범위)** tiếp nhận điểm tựa từ **18. Quy mô và kinh tế theo quy mô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Hệ sinh thái và bánh đà** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **19. Economies of phạm vi (scope / 범위)** nối từ **18. Quy mô và kinh tế theo quy mô** sang **20. Hệ sinh thái và bánh đà**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Economies of phạm vi (scope / 범위)
 
@@ -223,7 +223,7 @@ Kinh tế theo phạm vi (economies of scope) xảy ra khi cùng nền tảng, d
 
 Đây là nguồn lợi thế quan trọng của một số hệ sinh thái tài chính, công nghệ và tiêu dùng.
 
-> **Chuyển mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **20. Hệ sinh thái và bánh đà** tiếp nhận điểm tựa từ **19. Economies of phạm vi (scope / 범위)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Dữ liệu như lợi thế cạnh tranh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **20. Hệ sinh thái và bánh đà** nối từ **19. Economies of phạm vi (scope / 범위)** sang **21. Dữ liệu như lợi thế cạnh tranh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Hệ sinh thái và bánh đà
 
@@ -239,7 +239,7 @@ Nhiều người dùng
 
 Nhưng flywheel chỉ tồn tại nếu mỗi vòng thật sự củng cố vòng tiếp theo. Không nên dùng từ này như khẩu hiệu.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **20. Hệ sinh thái và bánh đà** nêu điều cần giải thích; **21. Dữ liệu như lợi thế cạnh tranh** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **22. Phân phối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **20. Hệ sinh thái và bánh đà** đặt vấn đề; **21. Dữ liệu như lợi thế cạnh tranh** đối chiếu bằng chứng, rồi **22. Phân phối** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 21. Dữ liệu như lợi thế cạnh tranh
 
@@ -247,7 +247,7 @@ Dữ liệu có giá trị khi độc quyền tương đối, được cập nh�
 
 Dữ liệu dễ mua hoặc dễ tái tạo không phải moat mạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **21. Dữ liệu như lợi thế cạnh tranh** nêu điều cần giải thích; **22. Phân phối** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **23. Quy định và giấy phép** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **21. Dữ liệu như lợi thế cạnh tranh** đặt vấn đề; **22. Phân phối** đối chiếu bằng chứng, rồi **23. Quy định và giấy phép** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 22. Phân phối
 
@@ -255,13 +255,13 @@ Quyền kiểm soát kênh phân phối có thể tạo lợi thế lớn. Mạn
 
 Trong nhiều ngành, phân phối mạnh hơn sản phẩm đơn lẻ.
 
-> **Chuyển mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **23. Quy định và giấy phép** tiếp nhận điểm tựa từ **22. Phân phối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Bằng sáng chế và sở hữu trí tuệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **23. Quy định và giấy phép** nối từ **22. Phân phối** sang **24. Bằng sáng chế và sở hữu trí tuệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Quy định và giấy phép
 
 Giấy phép, tiêu chuẩn an toàn hoặc hạn ngạch có thể tạo rào cản gia nhập. Nhưng lợi thế dựa quy định cũng có rủi ro khi luật thay đổi hoặc chính phủ muốn tăng cạnh tranh.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **24. Bằng sáng chế và sở hữu trí tuệ** tiếp nhận điểm tựa từ **23. Quy định và giấy phép** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Five Forces** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **24. Bằng sáng chế và sở hữu trí tuệ** nối từ **23. Quy định và giấy phép** sang **25. Five Forces**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Bằng sáng chế và sở hữu trí tuệ
 
@@ -269,7 +269,7 @@ IP có thể bảo vệ sản phẩm trong thời gian nhất định, nhưng gi
 
 Biotech/pharma cần lập bản đồ patent cliff và chuỗi xử lý (pipeline / 파이프라인) thay thế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **25. Five Forces** tiếp nhận điểm tựa từ **24. Bằng sáng chế và sở hữu trí tuệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Mức độ cạnh tranh hợp lý** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **25. Five Forces** nối từ **24. Bằng sáng chế và sở hữu trí tuệ** sang **26. Mức độ cạnh tranh hợp lý**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Five Forces
 
@@ -285,7 +285,7 @@ Sản phẩm thay thế?
 
 Mục tiêu là hiểu lợi nhuận ngành được phân chia thế nào, không phải điền checklist cơ học.
 
-> **Chuyển mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **26. Mức độ cạnh tranh hợp lý** tiếp nhận điểm tựa từ **25. Five Forces** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Đường chi phí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **26. Mức độ cạnh tranh hợp lý** nối từ **25. Five Forces** sang **27. Đường chi phí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Mức độ cạnh tranh hợp lý
 
@@ -295,7 +295,7 @@ Ngược lại ngành có nhiều doanh nghiệp vẫn có lợi nhuận tốt n
 
 Phải nhìn hành vi giá và đầu tư, không chỉ số lượng đối thủ.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **27. Đường chi phí** tiếp nhận điểm tựa từ **26. Mức độ cạnh tranh hợp lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Chu kỳ công suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **27. Đường chi phí** nối từ **26. Mức độ cạnh tranh hợp lý** sang **28. Chu kỳ công suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Đường chi phí
 
@@ -303,7 +303,7 @@ Trong hàng hóa và công nghiệp, vị trí trên đường chi phí quyết 
 
 Nhà sản xuất chi phí thấp có thể duy trì sản lượng khi giá giảm và giành thị phần khi đối thủ phải cắt công suất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **28. Chu kỳ công suất** tiếp nhận điểm tựa từ **27. Đường chi phí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Tồn kho** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **28. Chu kỳ công suất** nối từ **27. Đường chi phí** sang **29. Tồn kho**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Chu kỳ công suất
 
@@ -322,7 +322,7 @@ Nhu cầu mạnh
 
 Bán dẫn, hóa chất, thép và vận tải biển có biến thể của cơ chế này.
 
-> **Chuyển mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **29. Tồn kho** tiếp nhận điểm tựa từ **28. Chu kỳ công suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Chu kỳ và tăng trưởng cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **29. Tồn kho** nối từ **28. Chu kỳ công suất** sang **30. Chu kỳ và tăng trưởng cấu trúc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Tồn kho
 
@@ -330,7 +330,7 @@ Tồn kho có thể làm chu kỳ ngắn hạn mạnh hơn nhu cầu cuối. Des
 
 Cần phân biệt chu kỳ tồn kho với thay đổi cấu trúc dài hạn.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **30. Chu kỳ và tăng trưởng cấu trúc** tiếp nhận điểm tựa từ **29. Tồn kho** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Công nghệ và đường cong chữ S** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **30. Chu kỳ và tăng trưởng cấu trúc** nối từ **29. Tồn kho** sang **31. Công nghệ và đường cong chữ S**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Chu kỳ và tăng trưởng cấu trúc
 
@@ -338,7 +338,7 @@ Tăng trưởng cấu trúc đến từ thay đổi bền vững như số hóa,
 
 Một ngành có xu hướng dài hạn tốt vẫn có thể trải qua chu kỳ dư cung rất xấu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **31. Công nghệ và đường cong chữ S** tiếp nhận điểm tựa từ **30. Chu kỳ và tăng trưởng cấu trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Disruption** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **31. Công nghệ và đường cong chữ S** nối từ **30. Chu kỳ và tăng trưởng cấu trúc** sang **32. Disruption**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Công nghệ và đường cong chữ S
 
@@ -346,7 +346,7 @@ Công nghệ mới thường trải qua giai đoạn thử nghiệm, tăng nhanh
 
 Cần theo dõi chi phí, tỷ lệ chấp nhận, tiêu chuẩn kỹ thuật và khả năng thay thế công nghệ hiện tại.
 
-> **Chuyển mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **32. Disruption** tiếp nhận điểm tựa từ **31. Công nghệ và đường cong chữ S** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Dấu hiệu moat suy yếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **32. Disruption** nối từ **31. Công nghệ và đường cong chữ S** sang **33. Dấu hiệu moat suy yếu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Disruption
 
@@ -354,7 +354,7 @@ Gián đoạn (disruption) xảy ra khi mô hình mới thay đổi cấu trúc 
 
 Doanh nghiệp incumbent có thể phản ứng, mua lại công nghệ hoặc dùng moat cũ để thích nghi. Không nên mặc định “công nghệ mới = incumbent chết”.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **33. Dấu hiệu moat suy yếu** tiếp nhận điểm tựa từ **32. Disruption** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Văn hóa và nhân tài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **33. Dấu hiệu moat suy yếu** nối từ **32. Disruption** sang **34. Văn hóa và nhân tài**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Dấu hiệu moat suy yếu
 
@@ -373,7 +373,7 @@ Customer concentration tăng
 
 Moat nên được kiểm tra bằng dữ liệu, không chỉ lịch sử thương hiệu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **34. Văn hóa và nhân tài** tiếp nhận điểm tựa từ **33. Dấu hiệu moat suy yếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Chất lượng bảng cân đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **34. Văn hóa và nhân tài** nối từ **33. Dấu hiệu moat suy yếu** sang **35. Chất lượng bảng cân đối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Văn hóa và nhân tài
 
@@ -381,7 +381,7 @@ Trong phần mềm, tư vấn, biotech và các ngành dựa tri thức, khả n
 
 Nhưng văn hóa khó đo. Hãy dùng turnover, thời gian ra sản phẩm, năng suất R&D và lịch sử thực thi thay vì mô tả quảng bá.
 
-> **Chuyển mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **35. Chất lượng bảng cân đối** tiếp nhận điểm tựa từ **34. Văn hóa và nhân tài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Dư địa tái đầu tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **35. Chất lượng bảng cân đối** nối từ **34. Văn hóa và nhân tài** sang **36. Dư địa tái đầu tư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Chất lượng bảng cân đối
 
@@ -389,7 +389,7 @@ Doanh nghiệp tốt nhưng bảng cân đối yếu có thể mất quyền l�
 
 Cần xem tiền mặt, nợ, đáo hạn, covenant, vốn lưu động và nhu cầu capex. Bảng cân đối mạnh cho phép đầu tư khi đối thủ phải cắt giảm.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **36. Dư địa tái đầu tư** tiếp nhận điểm tựa từ **35. Chất lượng bảng cân đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Optionality** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **36. Dư địa tái đầu tư** nối từ **35. Chất lượng bảng cân đối** sang **37. Optionality**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Dư địa tái đầu tư
 
@@ -397,7 +397,7 @@ Doanh nghiệp có ROIC cao chỉ tạo giá trị dài hạn nếu có thể t�
 
 Một doanh nghiệp tuyệt vời nhưng thị trường đã bão hòa có thể phải trả cổ tức/mua lại thay vì tăng trưởng nhanh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **37. Optionality** tiếp nhận điểm tựa từ **36. Dư địa tái đầu tư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Chất lượng tăng trưởng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **37. Optionality** nối từ **36. Dư địa tái đầu tư** sang **38. Chất lượng tăng trưởng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Optionality
 
@@ -405,7 +405,7 @@ Quyền lựa chọn tăng trưởng (optionality) là khả năng mở rộng s
 
 Không nên trả giá cao cho “optionality” mơ hồ. Cần xem năng lực cốt lõi nào cho phép mở rộng và bằng chứng thử nghiệm.
 
-> **Chuyển mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **38. Chất lượng tăng trưởng** tiếp nhận điểm tựa từ **37. Optionality** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Scorecard chất lượng doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **38. Chất lượng tăng trưởng** nối từ **37. Optionality** sang **39. Scorecard chất lượng doanh nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Chất lượng tăng trưởng
 
@@ -422,7 +422,7 @@ Khách hàng giữ lại tốt
 
 Tăng trưởng thấp chất lượng có thể là doanh thu mua bằng chiết khấu, capex hoặc M&A đắt đỏ.
 
-> **Chuyển mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **39. Scorecard chất lượng doanh nghiệp** tiếp nhận điểm tựa từ **38. Chất lượng tăng trưởng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **39. Scorecard chất lượng doanh nghiệp** nối từ **38. Chất lượng tăng trưởng** sang **40. Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Scorecard chất lượng doanh nghiệp
 
@@ -443,7 +443,7 @@ Rủi ro disruption
 
 Không cần biến scorecard thành con số chính xác giả tạo; nó giúp buộc người phân tích trả lời đủ các câu hỏi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **40. Kết luận** gom các mảnh từ **39. Scorecard chất lượng doanh nghiệp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất lượng doanh nghiệp, lợi thế cạnh tranh và cấu trúc ngành**, **40. Kết luận** tổng hợp từ **39. Scorecard chất lượng doanh nghiệp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 40. Kết luận
 

@@ -36,7 +36,7 @@ Private demand for CHF
 → keeps EUR/CHF near or above floor
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **2. Chính sách (policy / 정책) floor changes thị trường (market / 시장) phân phối (distribution / 분포)** tiếp nhận điểm tựa từ **1. Vì sao SNB đặt floor?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Hidden option created by central bank** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **2. Chính sách (policy / 정책) floor changes thị trường (market / 시장) phân phối (distribution / 분포)** nối từ **1. Vì sao SNB đặt floor?** sang **3. Hidden option created by central bank**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Chính sách (policy / 정책) floor changes thị trường (market / 시장) phân phối (distribution / 분포)
 
@@ -56,7 +56,7 @@ Below 1.20 is effectively unavailable
 
 Nhưng chính sách (policy / 정책) ràng buộc (constraint / 제약조건) không phải vật lý (physical / 물리적) law.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **3. Hidden option created by central bank** tiếp nhận điểm tựa từ **2. Chính sách (policy / 정책) floor changes thị trường (market / 시장) phân phối (distribution / 분포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Balance-sheet chi phí (cost / 비용) of maintaining floor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **3. Hidden option created by central bank** nối từ **2. Chính sách (policy / 정책) floor changes thị trường (market / 시장) phân phối (distribution / 분포)** sang **4. Balance-sheet chi phí (cost / 비용) of maintaining floor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Hidden option created by central bank
 
@@ -73,7 +73,7 @@ Upside remains open
 
 Rủi ro (risk / 위험) bài toán (problem / 문제) xuất hiện nếu participants price chính sách (policy / 정책) commitment như certainty thay vì conditional regime.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **4. Balance-sheet chi phí (cost / 비용) of maintaining floor** tiếp nhận điểm tựa từ **3. Hidden option created by central bank** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Euro-area chính sách (policy / 정책) matters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **4. Balance-sheet chi phí (cost / 비용) of maintaining floor** nối từ **3. Hidden option created by central bank** sang **5. Euro-area chính sách (policy / 정책) matters**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Balance-sheet chi phí (cost / 비용) of maintaining floor
 
@@ -94,7 +94,7 @@ stop defending floor
 
 Không có costless option.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **5. Euro-area chính sách (policy / 정책) matters** tiếp nhận điểm tựa từ **4. Balance-sheet chi phí (cost / 비용) of maintaining floor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. December 2014: negative rates as hỗ trợ (support / 지원) công cụ (tool / 도구)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **5. Euro-area chính sách (policy / 정책) matters** nối từ **4. Balance-sheet chi phí (cost / 비용) of maintaining floor** sang **6. December 2014: negative rates as hỗ trợ (support / 지원) công cụ (tool / 도구)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Euro-area chính sách (policy / 정책) matters
 
@@ -110,7 +110,7 @@ EUR weakens
 
 Again, FX is relative macro.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **6. December 2014: negative rates as hỗ trợ (support / 지원) công cụ (tool / 도구)** tiếp nhận điểm tựa từ **5. Euro-area chính sách (policy / 정책) matters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. January 15, 2015 chính sách (policy / 정책) break** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **6. December 2014: negative rates as hỗ trợ (support / 지원) công cụ (tool / 도구)** nối từ **5. Euro-area chính sách (policy / 정책) matters** sang **7. January 15, 2015 chính sách (policy / 정책) break**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. December 2014: negative rates as hỗ trợ (support / 지원) công cụ (tool / 도구)
 
@@ -125,7 +125,7 @@ FX intervention
 
 Nhưng multiple tools không guarantee permanence of the regime.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **7. January 15, 2015 chính sách (policy / 정책) break** tiếp nhận điểm tựa từ **6. December 2014: negative rates as hỗ trợ (support / 지원) công cụ (tool / 도구)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Why price moved discontinuously** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **7. January 15, 2015 chính sách (policy / 정책) break** nối từ **6. December 2014: negative rates as hỗ trợ (support / 지원) công cụ (tool / 도구)** sang **8. Why price moved discontinuously**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. January 15, 2015 chính sách (policy / 정책) break
 
@@ -151,7 +151,7 @@ After announcement:
 That boundary no longer exists
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **8. Why price moved discontinuously** tiếp nhận điểm tựa từ **7. January 15, 2015 chính sách (policy / 정책) break** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Stop-loss is an instruction, not a guaranteed price** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **8. Why price moved discontinuously** nối từ **7. January 15, 2015 chính sách (policy / 정책) break** sang **9. Stop-loss is an instruction, not a guaranteed price**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Why price moved discontinuously
 
@@ -180,7 +180,7 @@ large zones may have almost no executable liquidity
 
 Price can jump through levels rather than trade smoothly through every điểm (point / 지점).
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **9. Stop-loss is an instruction, not a guaranteed price** tiếp nhận điểm tựa từ **8. Why price moved discontinuously** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Leverage turns price gap into account insolvency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **9. Stop-loss is an instruction, not a guaranteed price** nối từ **8. Why price moved discontinuously** sang **10. Leverage turns price gap into account insolvency**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Stop-loss is an instruction, not a guaranteed price
 
@@ -203,7 +203,7 @@ is not maximum loss
 when gap/liquidity discontinuity exists.
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **10. Leverage turns price gap into account insolvency** tiếp nhận điểm tựa từ **9. Stop-loss is an instruction, not a guaranteed price** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Negative-balance rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **10. Leverage turns price gap into account insolvency** nối từ **9. Stop-loss is an instruction, not a guaranteed price** sang **11. Negative-balance rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Leverage turns price gap into account insolvency
 
@@ -231,7 +231,7 @@ Broker maximum leverage
 = potentially catastrophic combination
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **11. Negative-balance rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **10. Leverage turns price gap into account insolvency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Broker rủi ro (risk / 위험) becomes máy khách (client / 클라이언트) rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **11. Negative-balance rủi ro (risk / 위험)** nối từ **10. Leverage turns price gap into account insolvency** sang **12. Broker rủi ro (risk / 위험) becomes máy khách (client / 클라이언트) rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Negative-balance rủi ro (risk / 위험)
 
@@ -248,7 +248,7 @@ Broker policy / regulation
 
 Never assume stop-out guarantees zero floor on equity.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **12. Broker rủi ro (risk / 위험) becomes máy khách (client / 클라이언트) rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **11. Negative-balance rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Hedging is not instantaneous** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **12. Broker rủi ro (risk / 위험) becomes máy khách (client / 클라이언트) rủi ro (risk / 위험)** nối từ **11. Negative-balance rủi ro (risk / 위험)** sang **13. Hedging is not instantaneous**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Broker rủi ro (risk / 위험) becomes máy khách (client / 클라이언트) rủi ro (risk / 위험)
 
@@ -266,7 +266,7 @@ Market gaps
 
 Thus thị trường (market / 시장) rủi ro (risk / 위험) can become counterparty rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **13. Hedging is not instantaneous** tiếp nhận điểm tựa từ **12. Broker rủi ro (risk / 위험) becomes máy khách (client / 클라이언트) rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Why historical VaR fails near regime breaks** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **13. Hedging is not instantaneous** nối từ **12. Broker rủi ro (risk / 위험) becomes máy khách (client / 클라이언트) rủi ro (risk / 위험)** sang **14. Why historical VaR fails near regime breaks**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Hedging is not instantaneous
 
@@ -282,7 +282,7 @@ hedge venue liquidity disappears
 
 A “fully hedged” nghiệp vụ (business / 비즈니스) mô hình (model / 모델) may still have basis, độ trễ (latency / 지연 시간) and gap exposure.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **14. Why historical VaR fails near regime breaks** tiếp nhận điểm tựa từ **13. Hedging is not instantaneous** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Volatility suppression can hide tail rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **14. Why historical VaR fails near regime breaks** nối từ **13. Hedging is not instantaneous** sang **15. Volatility suppression can hide tail rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Why historical VaR fails near regime breaks
 
@@ -304,7 +304,7 @@ old sample no longer describes current process
 
 This is **mô hình (model / 모델) regime rủi ro (risk / 위험)**.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **15. Volatility suppression can hide tail rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **14. Why historical VaR fails near regime breaks** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Position sizing should include regime-gap scenario** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **15. Volatility suppression can hide tail rủi ro (risk / 위험)** nối từ **14. Why historical VaR fails near regime breaks** sang **16. Position sizing should include regime-gap scenario**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Volatility suppression can hide tail rủi ro (risk / 위험)
 
@@ -324,7 +324,7 @@ Low latent economic pressure
 
 This mirrors lesson from managed currencies in other crises.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **16. Position sizing should include regime-gap scenario** tiếp nhận điểm tựa từ **15. Volatility suppression can hide tail rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Chính sách (policy / 정책) credibility is not xác suất (probability / 확률) 100%** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **16. Position sizing should include regime-gap scenario** nối từ **15. Volatility suppression can hide tail rủi ro (risk / 위험)** sang **17. Chính sách (policy / 정책) credibility is not xác suất (probability / 확률) 100%**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Position sizing should include regime-gap scenario
 
@@ -349,7 +349,7 @@ Gap to plausible stress price
 Not only stop level
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **17. Chính sách (policy / 정책) credibility is not xác suất (probability / 확률) 100%** tiếp nhận điểm tựa từ **16. Position sizing should include regime-gap scenario** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Asymmetric rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **17. Chính sách (policy / 정책) credibility is not xác suất (probability / 확률) 100%** nối từ **16. Position sizing should include regime-gap scenario** sang **18. Asymmetric rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Chính sách (policy / 정책) credibility is not xác suất (probability / 확률) 100%
 
@@ -372,7 +372,7 @@ Loss conditional on policy change
 
 Expected mất mát (loss / 손실) may still be large even if policy-change xác suất (probability / 확률) seems small.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **18. Asymmetric rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **17. Chính sách (policy / 정책) credibility is not xác suất (probability / 확률) 100%** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Liquidity is trạng thái (state / 상태) dependent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **18. Asymmetric rủi ro (risk / 위험)** nối từ **17. Chính sách (policy / 정책) credibility is not xác suất (probability / 확률) 100%** sang **19. Liquidity is trạng thái (state / 상태) dependent**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Asymmetric rủi ro (risk / 위험)
 
@@ -397,7 +397,7 @@ frequent small gains
 + rare catastrophic loss
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **19. Liquidity is trạng thái (state / 상태) dependent** tiếp nhận điểm tựa từ **18. Asymmetric rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Thị trường (market / 시장) thứ tự (order / 순서) vs limit thứ tự (order / 순서) sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **19. Liquidity is trạng thái (state / 상태) dependent** nối từ **18. Asymmetric rủi ro (risk / 위험)** sang **20. Thị trường (market / 시장) thứ tự (order / 순서) vs limit thứ tự (order / 순서) sự đánh đổi (trade-off / 트레이드오프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Liquidity is trạng thái (state / 상태) dependent
 
@@ -412,7 +412,7 @@ Normal liquidity
 
 Rủi ro (risk / 위험) mô hình (model / 모델) must distinguish both.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **19. Liquidity is trạng thái (state / 상태) dependent** đã nêu tiêu chí phân biệt, còn **20. Thị trường (market / 시장) thứ tự (order / 순서) vs limit thứ tự (order / 순서) sự đánh đổi (trade-off / 트레이드오프)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **21. Guaranteed stop is a separate sản phẩm (product / 제품) tính năng (feature / 기능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **19. Liquidity is trạng thái (state / 상태) dependent** đặt tiêu chí; **20. Thị trường (market / 시장) thứ tự (order / 순서) vs limit thứ tự (order / 순서) sự đánh đổi (trade-off / 트레이드오프)** dùng tiêu chí đó để đối chiếu ranh giới, rồi **21. Guaranteed stop is a separate sản phẩm (product / 제품) tính năng (feature / 기능)** mở rộng hệ quả.
 
 ## 20. Thị trường (market / 시장) thứ tự (order / 순서) vs limit thứ tự (order / 순서) sự đánh đổi (trade-off / 트레이드오프)
 
@@ -434,7 +434,7 @@ but may not execute
 
 No thứ tự (order / 순서) kiểu (type / 타입) eliminates both price and thực thi (execution / 실행) rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **20. Thị trường (market / 시장) thứ tự (order / 순서) vs limit thứ tự (order / 순서) sự đánh đổi (trade-off / 트레이드오프)** đã nêu tiêu chí phân biệt, còn **21. Guaranteed stop is a separate sản phẩm (product / 제품) tính năng (feature / 기능)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **22. Rủi ro (risk / 위험) concentration across clients** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **20. Thị trường (market / 시장) thứ tự (order / 순서) vs limit thứ tự (order / 순서) sự đánh đổi (trade-off / 트레이드오프)** đặt tiêu chí; **21. Guaranteed stop is a separate sản phẩm (product / 제품) tính năng (feature / 기능)** dùng tiêu chí đó để đối chiếu ranh giới, rồi **22. Rủi ro (risk / 위험) concentration across clients** mở rộng hệ quả.
 
 ## 21. Guaranteed stop is a separate sản phẩm (product / 제품) tính năng (feature / 기능)
 
@@ -449,7 +449,7 @@ Stop order
 Guaranteed stop product
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **22. Rủi ro (risk / 위험) concentration across clients** tiếp nhận điểm tựa từ **21. Guaranteed stop is a separate sản phẩm (product / 제품) tính năng (feature / 기능)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Why backtest cannot reproduce this with ordinary candles** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **22. Rủi ro (risk / 위험) concentration across clients** nối từ **21. Guaranteed stop is a separate sản phẩm (product / 제품) tính năng (feature / 기능)** sang **23. Why backtest cannot reproduce this with ordinary candles**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Rủi ro (risk / 위험) concentration across clients
 
@@ -464,7 +464,7 @@ but factor concentration also high
 
 This is same portfolio lesson at broker mức (level / 수준).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **23. Why backtest cannot reproduce this with ordinary candles** tiếp nhận điểm tựa từ **22. Rủi ro (risk / 위험) concentration across clients** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Options lesson** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **23. Why backtest cannot reproduce this with ordinary candles** nối từ **22. Rủi ro (risk / 위험) concentration across clients** sang **24. Options lesson**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Why backtest cannot reproduce this with ordinary candles
 
@@ -489,7 +489,7 @@ Actual fill availability
 
 Therefore backtest around CHF 2015 needs high-resolution thị trường (market / 시장)/thực thi (execution / 실행) các giả định (assumptions / 가정들) and still contains bất định (uncertainty / 불확실성).
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **24. Options lesson** tiếp nhận điểm tựa từ **23. Why backtest cannot reproduce this with ordinary candles** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Central-bank balance sheet as regime variable** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **24. Options lesson** nối từ **23. Why backtest cannot reproduce this with ordinary candles** sang **25. Central-bank balance sheet as regime variable**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Options lesson
 
@@ -507,7 +507,7 @@ that contains thông tin (information / 정보) about perceived tail rủi ro (r
 
 But options are not perfect oracle; pricing also reflects supply/demand and chính sách (policy / 정책) credibility các giả định (assumptions / 가정들).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **25. Central-bank balance sheet as regime variable** tiếp nhận điểm tựa từ **24. Options lesson** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. What not to learn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **25. Central-bank balance sheet as regime variable** nối từ **24. Options lesson** sang **26. What not to learn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Central-bank balance sheet as regime variable
 
@@ -524,7 +524,7 @@ External central-bank policy
 
 Chính sách (policy / 정책) sustainability is động (dynamic / 동적).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **26. What not to learn** tiếp nhận điểm tựa từ **25. Central-bank balance sheet as regime variable** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Stress-test template** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **26. What not to learn** nối từ **25. Central-bank balance sheet as regime variable** sang **27. Stress-test template**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. What not to learn
 
@@ -557,7 +557,7 @@ Better lesson:
 Reduce exposure to survive discontinuity.
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **27. Stress-test template** tiếp nhận điểm tựa từ **26. What not to learn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Cơ chế (mechanism / 메커니즘) map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **27. Stress-test template** nối từ **26. What not to learn** sang **28. Cơ chế (mechanism / 메커니즘) map**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Stress-test template
 
@@ -583,7 +583,7 @@ Negative-balance risk
 Counterparty dependency
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **27. Stress-test template** xác định đầu vào; **28. Cơ chế (mechanism / 메커니즘) map** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **29. Practical checklist derived from the trường hợp (case / 사례)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **27. Stress-test template** đặt đầu vào cho **28. Cơ chế (mechanism / 메커니즘) map**, rồi **29. Practical checklist derived from the trường hợp (case / 사례)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 28. Cơ chế (mechanism / 메커니즘) map
 
@@ -601,7 +601,7 @@ Safe-haven demand for CHF
 → client losses transmit to brokers/counterparties
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, sau khi thấy quy trình trong **28. Cơ chế (mechanism / 메커니즘) map**, **29. Practical checklist derived from the trường hợp (case / 사례)** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **30. Research exercise** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, sau khi thấy quy trình trong **28. Cơ chế (mechanism / 메커니즘) map**, **29. Practical checklist derived from the trường hợp (case / 사례)** đặt nó vào một trường hợp đủ cụ thể để nhận ra điều kiện thành công và chỗ dễ sai. Từ đây, **30. Research exercise** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 29. Practical checklist derived from the trường hợp (case / 사례)
 
@@ -620,7 +620,7 @@ Can broker survive client losses?
 Is negative-balance protection contractual/regulatory?
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **29. Practical checklist derived from the trường hợp (case / 사례)** cho ta quy tắc; **30. Research exercise** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Nguồn nền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **29. Practical checklist derived from the trường hợp (case / 사례)** nêu quy tắc; **30. Research exercise** thử quy tắc trong tình huống, rồi **Nguồn nền** mở rộng hệ quả.
 
 ## 30. Research exercise
 
@@ -654,7 +654,7 @@ Effective leverage after first move
 
 Mục tiêu là thấy why stop-based rủi ro (risk / 위험) ngân sách (budget / 예산) fails under discontinuity.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **30. Research exercise** nêu điều cần giải thích; **Nguồn nền** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 03 — SNB CHF Floor Removal 2015: chính sách (policy / 정책) floor, gap rủi ro (risk / 위험) và liquidity discontinuity**, **30. Research exercise** đặt vấn đề; **Nguồn nền** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn nền
 

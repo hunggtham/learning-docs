@@ -8,7 +8,7 @@ Angola có mặt tiền Đại Tây Dương dài, một dải đồng bằng ven
 
 Cabinda là một phần lãnh thổ tách rời về không gian khỏi phần chính của Angola, làm geography of quản trị (governance / 거버넌스) và logistics phức tạp hơn.
 
-> **Chuyển mạch:** Trong **Angola**, **Cao nguyên và hệ thống sông** tiếp nhận điểm tựa từ **Khung không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Luanda và sự tập trung ven biển** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đồng bằng ven biển hẹp và cao nguyên nội địa tạo **Cao nguyên và hệ thống sông** như nguồn nước và hành lang đông–tây, trong khi Cabinda làm quản trị không gian phức tạp. **Luanda và sự tập trung ven biển** tiếp theo cho thấy dân cư bám gateway nào.
 
 ## Cao nguyên và hệ thống sông
 
@@ -16,7 +16,7 @@ Cao nguyên trung tâm là vùng nguồn của nhiều con sông lớn chảy v�
 
 Dòng chảy từ cao nguyên phụ thuộc mùa mưa nhiệt đới, trong khi vùng ven biển phía nam khô hơn do ảnh hưởng dòng biển lạnh Benguela và hoàn lưu khí quyển.
 
-> **Chuyển mạch:** Ở chặng này của **Angola**, **Luanda và sự tập trung ven biển** tiếp nhận điểm tựa từ **Cao nguyên và hệ thống sông** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dầu khí và không gian offshore** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Sông từ cao nguyên cấp upstream water, còn **Luanda và sự tập trung ven biển** gom cảng, dịch vụ và thị trường; Lobito và Namibe tạo thêm nút để giảm lệ thuộc một cực. **Dầu khí và không gian offshore** tiếp theo giải thích kinh tế biển.
 
 ## Luanda và sự tập trung ven biển
 
@@ -24,7 +24,7 @@ Luanda là siêu đô thị, cảng và trung tâm kinh tế lớn, tập trung 
 
 Các cảng Lobito và Namibe tạo thêm cửa ngõ, làm mạng ven biển có nhiều nút (node / 노드) thay vì phụ thuộc tuyệt đối vào Luanda.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Angola**, **Dầu khí và không gian offshore** tiếp nhận điểm tựa từ **Luanda và sự tập trung ven biển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lobito Corridor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Mỏ biển, pipeline, terminal và cảng dịch vụ làm **Dầu khí và không gian offshore** phụ thuộc các coastal nodes hơn diện tích đất liền. **Lobito Corridor** tiếp theo thử khả năng nối tài nguyên và inland hinterland.
 
 ## Dầu khí và không gian offshore
 
@@ -32,7 +32,7 @@ Dầu khí tập trung mạnh ở thềm lục địa và offshore, đặc biệ
 
 Chuỗi dầu khí gồm mỏ biển, chuỗi xử lý (pipeline / 파이프라인), terminal, cảng dịch vụ và cơ sở chế biến. Vì vậy các nút (node / 노드) ven biển có giá trị mạng rất cao.
 
-> **Chuyển mạch:** Trong **Angola**, **Lobito Corridor** tiếp nhận điểm tựa từ **Dầu khí và không gian offshore** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nông nghiệp và chênh lệch vùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Benguela Railway và **Lobito Corridor** rút ngắn effective distance từ Atlantic tới Angola và Copperbelt, có thể phục vụ cả mining lẫn đô thị dọc tuyến. **Nông nghiệp và chênh lệch vùng** tiếp theo kiểm tra lợi ích có lan ra ngoài resource corridor không.
 
 ## Lobito Corridor
 
@@ -40,19 +40,19 @@ Chuỗi dầu khí gồm mỏ biển, chuỗi xử lý (pipeline / 파이프라�
 
 Một tuyến đường sắt không chỉ phục vụ khai khoáng; nếu đủ tin cậy, nó có thể kích thích đô thị, logistics và sản xuất dọc tuyến.
 
-> **Chuyển mạch:** Ở chặng này của **Angola**, **Nông nghiệp và chênh lệch vùng** tiếp nhận điểm tựa từ **Lobito Corridor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Nông nghiệp và chênh lệch vùng** phân hóa giữa cao nguyên, vùng khô ven biển và các đô thị–dầu khí; corridor tốt không tự động xóa khoảng cách dịch vụ. **Rủi ro** tiếp theo đặt các vùng trước hạn, lũ, xói lở và phụ thuộc commodity.
 
 ## Nông nghiệp và chênh lệch vùng
 
 Cao nguyên có điều kiện nông nghiệp khác vùng duyên hải khô hơn. Tuy nhiên tiềm năng đất đai không tự động chuyển thành sản lượng nếu thiếu đường, lưu trữ, thị trường và dịch vụ nông nghiệp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Angola**, **Rủi ro** tiếp nhận điểm tựa từ **Nông nghiệp và chênh lệch vùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Hạn và Benguela dryness ở nam, lũ theo mùa, xói lở và các áp lực extraction làm **Rủi ro** khác nhau theo vùng; **Mô hình tư duy** sẽ giữ cả tài nguyên lẫn năng lực phân phối.
 
 ## Rủi ro
 
 Hạn ở phía nam, lũ tại một số lưu vực, xói mòn và áp lực đô thị là các rủi ro quan trọng. Angola cũng minh họa **tài nguyên (resource / 자원) corridor phụ thuộc (dependency / 의존성)**: nền kinh tế có thể mạnh ở một vài nút (node / 노드) nhưng liên kết nội địa vẫn không đồng đều.
 
-> **Chuyển mạch:** Trong **Angola**, **Mô hình tư duy** gom các mảnh từ **Rủi ro** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Mô hình tư duy** khép chuỗi Atlantic coast–plateau → Luanda/Lobito/Namibe → offshore oil → corridor → agriculture và regional gaps → risk, rồi bàn giao cho owner **Middle Africa** trong [README](./README.md).
 
 ## Mô hình tư duy
 

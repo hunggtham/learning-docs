@@ -18,7 +18,7 @@ Thực nghiệm không cho kết quả như vậy. Sáu liên kết C–C tươn
 
 Lời giải thích là **liên kết π phi định xứ (delocalized π bonding)** trên toàn vòng.
 
-> **Chuyển mạch:** Benzene đặt bài toán về delocalized π system; sáu p orbitals tạo một vòng liên tục, và Hückel (4n+2) giải thích khi hệ vòng đạt aromatic stabilization.
+> **Nối mạch:** Benzene đặt bài toán về delocalized π system; sáu p orbitals tạo một vòng liên tục, và Hückel (4n+2) giải thích khi hệ vòng đạt aromatic stabilization.
 
 ## Góc nhìn orbital — sáu orbital p tạo một hệ vòng duy nhất
 
@@ -30,7 +30,7 @@ Việc lấp đầy lớp kín này tạo độ ổn định đặc biệt.
 
 Hai cấu trúc Kekulé vì vậy là **các cấu trúc cộng hưởng (resonance contributors)**, không phải hai trạng thái vật lý đổi qua lại rất nhanh.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học thơm — hệ π vòng phi định xứ**, **Quy tắc Hückel — vì sao xuất hiện \(4n+2\)** tiếp nhận điểm tựa từ **Góc nhìn orbital — sáu orbital p tạo một hệ vòng duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điều kiện để có tính thơm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học thơm — hệ π vòng phi định xứ**, **Quy tắc Hückel — vì sao xuất hiện \(4n+2\)** nối từ **Góc nhìn orbital — sáu orbital p tạo một hệ vòng duy nhất** sang **Điều kiện để có tính thơm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy tắc Hückel — vì sao xuất hiện \(4n+2\)
 
@@ -50,7 +50,7 @@ Ví dụ:
 
 Quy tắc này không phải trò số học; nó phản ánh kiểu suy biến của các orbital phân tử vòng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học thơm — hệ π vòng phi định xứ**, **Điều kiện để có tính thơm** tiếp nhận điểm tựa từ **Quy tắc Hückel — vì sao xuất hiện \(4n+2\)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản thơm — vì sao \(4n\) có thể gây mất ổn định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học thơm — hệ π vòng phi định xứ**, **Điều kiện để có tính thơm** nối từ **Quy tắc Hückel — vì sao xuất hiện \(4n+2\)** sang **Phản thơm — vì sao \(4n\) có thể gây mất ổn định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điều kiện để có tính thơm
 
@@ -63,7 +63,7 @@ Một hệ thường cần đồng thời:
 
 Nếu thiếu một điều kiện, phân tử có thể **không thơm (nonaromatic)** dù hình vẽ có vẻ chứa liên kết đôi xen kẽ.
 
-> **Chuyển mạch:** Trong **Hóa học thơm — hệ π vòng phi định xứ**, **Phản thơm — vì sao \(4n\) có thể gây mất ổn định** tiếp nhận điểm tựa từ **Điều kiện để có tính thơm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ổn định thơm là hiệu ứng năng lượng, không phải “vòng electron” nhìn thấy được** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học thơm — hệ π vòng phi định xứ**, **Phản thơm — vì sao \(4n\) có thể gây mất ổn định** nối từ **Điều kiện để có tính thơm** sang **Ổn định thơm là hiệu ứng năng lượng, không phải “vòng electron” nhìn thấy được**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phản thơm — vì sao \(4n\) có thể gây mất ổn định
 
@@ -81,7 +81,7 @@ Phân biệt quan trọng:
 không đủ phẳng/liên hợp          → không thơm
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học thơm — hệ π vòng phi định xứ**, **Ổn định thơm là hiệu ứng năng lượng, không phải “vòng electron” nhìn thấy được** tiếp nhận điểm tựa từ **Phản thơm — vì sao \(4n\) có thể gây mất ổn định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao benzene ưu tiên phản ứng thế thay vì cộng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học thơm — hệ π vòng phi định xứ**, **Ổn định thơm là hiệu ứng năng lượng, không phải “vòng electron” nhìn thấy được** nối từ **Phản thơm — vì sao \(4n\) có thể gây mất ổn định** sang **Vì sao benzene ưu tiên phản ứng thế thay vì cộng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ổn định thơm là hiệu ứng năng lượng, không phải “vòng electron” nhìn thấy được
 
@@ -89,7 +89,7 @@ Ký hiệu lục giác có vòng tròn ở giữa rất hữu ích nhưng vòng 
 
 “Năng lượng ổn định thơm” cũng không phải một hằng số tuyệt đối độc lập với hệ tham chiếu. Các cách tính dùng phản ứng đẳng liên kết hoặc mô hình tính toán khác nhau có thể cho con số khác nhau. Điều bền vững hơn là tập hợp bằng chứng: độ ổn định nhiệt động bất thường, sự đồng đều liên kết, đáp ứng từ và kiểu phản ứng đặc trưng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học thơm — hệ π vòng phi định xứ**, **Vì sao benzene ưu tiên phản ứng thế thay vì cộng** tiếp nhận điểm tựa từ **Ổn định thơm là hiệu ứng năng lượng, không phải “vòng electron” nhìn thấy được** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nitration như một ví dụ cơ chế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học thơm — hệ π vòng phi định xứ**, **Vì sao benzene ưu tiên phản ứng thế thay vì cộng** nối từ **Ổn định thơm là hiệu ứng năng lượng, không phải “vòng electron” nhìn thấy được** sang **Nitration như một ví dụ cơ chế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao benzene ưu tiên phản ứng thế thay vì cộng
 
@@ -106,7 +106,7 @@ Trình tự tổng quát:
 
 Chi phí năng lượng lớn của việc tạm mất tính thơm khiến bước hình thành phức σ thường là bước chậm.
 
-> **Chuyển mạch:** Trong **Hóa học thơm — hệ π vòng phi định xứ**, **Vì sao benzene ưu tiên phản ứng thế thay vì cộng** cho ta quy tắc; **Nitration như một ví dụ cơ chế** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Halogen hóa và hoạt hóa bằng acid Lewis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học thơm — hệ π vòng phi định xứ**, **Vì sao benzene ưu tiên phản ứng thế thay vì cộng** nêu quy tắc; **Nitration như một ví dụ cơ chế** thử quy tắc trong tình huống, rồi **Halogen hóa và hoạt hóa bằng acid Lewis** mở rộng hệ quả.
 
 ## Nitration như một ví dụ cơ chế
 
@@ -120,7 +120,7 @@ Benzene tấn công \(NO_2^+\), tạo ion arenium rồi mất \(H^+\) để tái
 
 Việc ưu tiên thế hơn cộng không phải ngoại lệ cần học thuộc của benzene; nó xuất phát từ giá trị năng lượng của việc phục hồi tính thơm.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học thơm — hệ π vòng phi định xứ**, **Nitration như một ví dụ cơ chế** cho ta quy tắc; **Halogen hóa và hoạt hóa bằng acid Lewis** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Phản ứng Friedel–Crafts** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học thơm — hệ π vòng phi định xứ**, **Nitration như một ví dụ cơ chế** nêu quy tắc; **Halogen hóa và hoạt hóa bằng acid Lewis** thử quy tắc trong tình huống, rồi **Phản ứng Friedel–Crafts** mở rộng hệ quả.
 
 ## Halogen hóa và hoạt hóa bằng acid Lewis
 
@@ -128,7 +128,7 @@ Việc ưu tiên thế hơn cộng không phải ngoại lệ cần học thuộ
 
 Đây là mô-típ lặp lại trong hóa hữu cơ: chất xúc tác làm giảm hàng rào phản ứng bằng cách làm electrophile ái điện hơn hoặc ổn định sự hình thành điện tích trong trạng thái chuyển tiếp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học thơm — hệ π vòng phi định xứ**, **Phản ứng Friedel–Crafts** tiếp nhận điểm tựa từ **Halogen hóa và hoạt hóa bằng acid Lewis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng nhóm thế — cộng hưởng và cảm ứng định hình lại cảnh quan phức σ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học thơm — hệ π vòng phi định xứ**, **Phản ứng Friedel–Crafts** nối từ **Halogen hóa và hoạt hóa bằng acid Lewis** sang **Hiệu ứng nhóm thế — cộng hưởng và cảm ứng định hình lại cảnh quan phức σ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phản ứng Friedel–Crafts
 
@@ -138,7 +138,7 @@ Alkyl hóa có thể gặp chuyển vị carbocation và đa alkyl hóa vì nhó
 
 Acyl hóa dùng ion acylium, ít gặp chuyển vị thông thường hơn và đưa nhóm carbonyl vào vòng; nhóm carbonyl làm giảm hoạt tính vòng nên hạn chế thế lặp lại. Đây là ví dụ tốt cho việc cơ chế dự đoán hành vi tổng hợp thực tế.
 
-> **Chuyển mạch:** Trong **Hóa học thơm — hệ π vòng phi định xứ**, **Hiệu ứng nhóm thế — cộng hưởng và cảm ứng định hình lại cảnh quan phức σ** tiếp nhận điểm tựa từ **Phản ứng Friedel–Crafts** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiều nhóm thế — khi các hiệu ứng định hướng cạnh tranh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học thơm — hệ π vòng phi định xứ**, **Hiệu ứng nhóm thế — cộng hưởng và cảm ứng định hình lại cảnh quan phức σ** nối từ **Phản ứng Friedel–Crafts** sang **Nhiều nhóm thế — khi các hiệu ứng định hướng cạnh tranh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng nhóm thế — cộng hưởng và cảm ứng định hình lại cảnh quan phức σ
 
@@ -158,7 +158,7 @@ Halogen hút electron theo cảm ứng vì có độ âm điện cao nên làm g
 
 Vì vậy halogen **làm giảm hoạt tính nhưng định hướng ortho/para**. Đây không phải ngoại lệ của cơ chế; nó cho thấy tốc độ hoạt hóa và hướng thế là hai phép so sánh năng lượng khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học thơm — hệ π vòng phi định xứ**, **Nhiều nhóm thế — khi các hiệu ứng định hướng cạnh tranh** tiếp nhận điểm tựa từ **Hiệu ứng nhóm thế — cộng hưởng và cảm ứng định hình lại cảnh quan phức σ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thế ái nhân thơm — vòng thơm cũng có thể bị nucleophile tấn công** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học thơm — hệ π vòng phi định xứ**, **Nhiều nhóm thế — khi các hiệu ứng định hướng cạnh tranh** nối từ **Hiệu ứng nhóm thế — cộng hưởng và cảm ứng định hình lại cảnh quan phức σ** sang **Thế ái nhân thơm — vòng thơm cũng có thể bị nucleophile tấn công**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiều nhóm thế — khi các hiệu ứng định hướng cạnh tranh
 
@@ -166,7 +166,7 @@ Khi vòng có hai nhóm thế, xu hướng định hướng có thể hỗ trợ
 
 Thay vì học thuộc bảng ưu tiên, nên vẽ các phức σ ứng viên rồi so sánh ổn định cộng hưởng/cảm ứng cùng khả năng tiếp cận lập thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học thơm — hệ π vòng phi định xứ**, **Thế ái nhân thơm — vòng thơm cũng có thể bị nucleophile tấn công** tiếp nhận điểm tựa từ **Nhiều nhóm thế — khi các hiệu ứng định hướng cạnh tranh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ dị vòng thơm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học thơm — hệ π vòng phi định xứ**, **Thế ái nhân thơm — vòng thơm cũng có thể bị nucleophile tấn công** nối từ **Nhiều nhóm thế — khi các hiệu ứng định hướng cạnh tranh** sang **Hệ dị vòng thơm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thế ái nhân thơm — vòng thơm cũng có thể bị nucleophile tấn công
 
@@ -186,7 +186,7 @@ Dưới cơ sở (base / 기반) rất mạnh, aryl halide có thể loại HX �
 
 Điều này một lần nữa cho thấy “quy tắc nhóm rời” phụ thuộc cơ chế.
 
-> **Chuyển mạch:** Trong **Hóa học thơm — hệ π vòng phi định xứ**, **Hệ dị vòng thơm** tiếp nhận điểm tựa từ **Thế ái nhân thơm — vòng thơm cũng có thể bị nucleophile tấn công** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ thơm ngưng tụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học thơm — hệ π vòng phi định xứ**, **Hệ dị vòng thơm** nối từ **Thế ái nhân thơm — vòng thơm cũng có thể bị nucleophile tấn công** sang **Hệ thơm ngưng tụ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ dị vòng thơm
 
@@ -206,7 +206,7 @@ Cùng là nitrogen nhưng hành vi khác vì vai trò orbital khác nhau.
 
 Một cặp electron tự do trên O hoặc S tham gia hệ π thơm, còn một cặp khác nằm trong mặt phẳng. Mức ổn định thơm khác nhau giữa các dị vòng vì kích thước orbital và độ âm điện thay đổi mức phi định xứ.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học thơm — hệ π vòng phi định xứ**, **Hệ thơm ngưng tụ** tiếp nhận điểm tựa từ **Hệ dị vòng thơm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ion thơm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học thơm — hệ π vòng phi định xứ**, **Hệ thơm ngưng tụ** nối từ **Hệ dị vòng thơm** sang **Ion thơm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ thơm ngưng tụ
 
@@ -216,7 +216,7 @@ Các liên kết và vị trí khác nhau có mật độ electron cũng như kh
 
 PAH cũng có ý nghĩa môi trường và độc học vì quá trình oxy hóa chuyển hóa có thể tạo chất trung gian epoxide phản ứng với DNA.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học thơm — hệ π vòng phi định xứ**, **Ion thơm** tiếp nhận điểm tựa từ **Hệ thơm ngưng tụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính thơm trong phân tử sinh học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học thơm — hệ π vòng phi định xứ**, **Ion thơm** nối từ **Hệ thơm ngưng tụ** sang **Tính thơm trong phân tử sinh học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ion thơm
 
@@ -226,7 +226,7 @@ Các ví dụ này cho thấy tính thơm phụ thuộc tổng số electron π 
 
 Hóa cơ kim sử dụng phối tử cyclopentadienyl rất rộng vì ổn định thơm và liên kết phi định xứ làm nó trở thành phối tử bền.
 
-> **Chuyển mạch:** Trong **Hóa học thơm — hệ π vòng phi định xứ**, **Tính thơm trong phân tử sinh học** tiếp nhận điểm tựa từ **Ion thơm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ benzene tới graphene** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học thơm — hệ π vòng phi định xứ**, **Tính thơm trong phân tử sinh học** nối từ **Ion thơm** sang **Từ benzene tới graphene**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính thơm trong phân tử sinh học
 
@@ -236,7 +236,7 @@ Phenylalanine, tyrosine, tryptophan và histidine có mạch bên thơm tham gia
 
 Nhiều thuốc chứa dị vòng thơm vì chúng tạo độ cứng, hình học xác định và tính điện tử dễ điều chỉnh. Tuy nhiên quá nhiều vòng thơm và tính ưa lipid cũng có thể làm giảm độ tan và gây bất lợi cho chuyển hóa.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học thơm — hệ π vòng phi định xứ**, **Từ benzene tới graphene** tiếp nhận điểm tựa từ **Tính thơm trong phân tử sinh học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học thơm — hệ π vòng phi định xứ**, **Từ benzene tới graphene** nối từ **Tính thơm trong phân tử sinh học** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ benzene tới graphene
 
@@ -244,7 +244,7 @@ Có thể xem graphene về mặt khái niệm như một mạng carbon sp2 hợ
 
 Vì vậy phi định xứ thơm và lý thuyết vùng năng lượng của chất rắn không phải hai chủ đề tách biệt; chúng là hai thang kích thước của cùng ý tưởng phi định xứ orbital.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học thơm — hệ π vòng phi định xứ**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Từ benzene tới graphene** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học thơm — hệ π vòng phi định xứ**, **Những hiểu lầm thường gặp** nối từ **Từ benzene tới graphene** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -264,7 +264,7 @@ Không. Chúng là các cấu trúc cộng hưởng của một trạng thái el
 
 Không. Halogen thường làm giảm hoạt tính nhưng định hướng ortho/para do sự cạnh tranh giữa cảm ứng và cộng hưởng.
 
-> **Chuyển mạch:** Trong **Hóa học thơm — hệ π vòng phi định xứ**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Hóa học thơm — hệ π vòng phi định xứ**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

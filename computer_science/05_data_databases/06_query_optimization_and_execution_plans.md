@@ -21,7 +21,7 @@ parse SQL
 
 Optimizer không “hiểu nghiệp vụ (business / 비즈니스) meaning”; nó dựa vào lược đồ (schema / 스키마), các ràng buộc (constraints / 제약조건들), statistics và chi phí (cost / 비용) mô hình (model / 모델).
 
-> **Chuyển mạch:** Optimizer biến query text thành physical plan; cardinality estimation cung cấp cost signal, còn join-order explosion buộc hệ thống dùng search/pruning thay vì thử mọi khả năng.
+> **Nối mạch:** Optimizer biến query text thành physical plan; cardinality estimation cung cấp cost signal, còn join-order explosion buộc hệ thống dùng search/pruning thay vì thử mọi khả năng.
 
 ## Cardinality estimation là trái tim của chi phí (cost / 비용) mô hình (model / 모델)
 
@@ -31,7 +31,7 @@ Statistics thường gồm row count, number of distinct values, histograms, nul
 
 Giả định (assumption / 가정) independence giữa columns thường sai. `city='Seoul'` và `country='KR'` có correlation mạnh; multiply selectivities độc lập có thể underestimate/overestimate.
 
-> **Chuyển mạch:** Ở chặng này của **Truy vấn (query / 쿼리) tối ưu hóa (optimization / 최적화) và thực thi (execution / 실행) plans**, **Phép nối (join / 조인) thứ tự (order / 순서) explosion** tiếp nhận điểm tựa từ **Cardinality estimation là trái tim của chi phí (cost / 비용) mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vật lý (physical / 물리적) operators** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Phép nối (join / 조인) thứ tự (order / 순서) explosion** nối từ **Cardinality estimation là trái tim của chi phí (cost / 비용) mô hình (model / 모델)** sang **Vật lý (physical / 물리적) operators**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phép nối (join / 조인) thứ tự (order / 순서) explosion
 
@@ -41,7 +41,7 @@ Phép nối (join / 조인) associativity cho phép `(A join B) join C` và `A j
 
 Outer joins, lateral dependencies và volatile functions giảm freedom này.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Truy vấn (query / 쿼리) tối ưu hóa (optimization / 최적화) và thực thi (execution / 실행) plans**, **Vật lý (physical / 물리적) operators** tiếp nhận điểm tựa từ **Phép nối (join / 조인) thứ tự (order / 순서) explosion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SARGability** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Vật lý (physical / 물리적) operators** nối từ **Phép nối (join / 조인) thứ tự (order / 순서) explosion** sang **SARGability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vật lý (physical / 물리적) operators
 
@@ -51,7 +51,7 @@ Sequential scan có thể nhanh hơn chỉ mục (index / 인덱스) scan khi tr
 
 Không có operator “tốt nhất”; phù hợp phụ thuộc cardinality, thứ tự (ordering / 순서), bộ nhớ (memory / 메모리) và lưu trữ (storage / 저장소).
 
-> **Chuyển mạch:** Trong **Truy vấn (query / 쿼리) tối ưu hóa (optimization / 최적화) và thực thi (execution / 실행) plans**, **SARGability** tiếp nhận điểm tựa từ **Vật lý (physical / 물리적) operators** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Covering chỉ mục (index / 인덱스) và index-only scan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **SARGability** nối từ **Vật lý (physical / 물리적) operators** sang **Covering chỉ mục (index / 인덱스) và index-only scan**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## SARGability
 
@@ -59,7 +59,7 @@ Predicate search-argument-able cho phép chỉ mục (index / 인덱스) truy c�
 
 Concept quan trọng là transformation của column có thể làm chỉ mục (index / 인덱스) key thứ tự (order / 순서) không còn usable trực tiếp.
 
-> **Chuyển mạch:** Ở chặng này của **Truy vấn (query / 쿼리) tối ưu hóa (optimization / 최적화) và thực thi (execution / 실행) plans**, **Covering chỉ mục (index / 인덱스) và index-only scan** tiếp nhận điểm tựa từ **SARGability** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sort, spill và bộ nhớ (memory / 메모리) grants** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Covering chỉ mục (index / 인덱스) và index-only scan** nối từ **SARGability** sang **Sort, spill và bộ nhớ (memory / 메모리) grants**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Covering chỉ mục (index / 인덱스) và index-only scan
 
@@ -67,7 +67,7 @@ Nếu chỉ mục (index / 인덱스) chứa đủ columns truy vấn (query / �
 
 Nhưng chỉ mục (index / 인덱스) rộng tăng lưu trữ (storage / 저장소) và ghi (write / 쓰기) amplification. Mỗi INSERT/cập nhật (update / 업데이트) phải maintain indexes, nên read tối ưu hóa (optimization / 최적화) có ghi (write / 쓰기) chi phí (cost / 비용).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Truy vấn (query / 쿼리) tối ưu hóa (optimization / 최적화) và thực thi (execution / 실행) plans**, **Sort, spill và bộ nhớ (memory / 메모리) grants** tiếp nhận điểm tựa từ **Covering chỉ mục (index / 인덱스) và index-only scan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **EXPLAIN như bằng chứng (evidence / 증거), không phải decoration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sort, spill và bộ nhớ (memory / 메모리) grants** nối từ **Covering chỉ mục (index / 인덱스) và index-only scan** sang **EXPLAIN như bằng chứng (evidence / 증거), không phải decoration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sort, spill và bộ nhớ (memory / 메모리) grants
 
@@ -75,7 +75,7 @@ Sort/băm (hash / 해시) operators cần bộ nhớ (memory / 메모리). Nếu
 
 Truy vấn (query / 쿼리) chậm đột biến khi dữ liệu (data / 데이터) kích thước (size / 크기) vượt bộ nhớ (memory / 메모리) threshold là ví dụ phase thay đổi (change / 변경): cùng plan nhưng vật lý (physical / 물리적) hành vi (behavior / 동작) khác vì tài nguyên (resource / 자원) ràng buộc (constraint / 제약조건).
 
-> **Chuyển mạch:** Trong **Truy vấn (query / 쿼리) tối ưu hóa (optimization / 최적화) và thực thi (execution / 실행) plans**, **Sort, spill và bộ nhớ (memory / 메모리) grants** nêu điều cần giải thích; **EXPLAIN như bằng chứng (evidence / 증거), không phải decoration** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Parameter sensitivity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Sort, spill và bộ nhớ (memory / 메모리) grants** đặt vấn đề; **EXPLAIN như bằng chứng (evidence / 증거), không phải decoration** kiểm tra bằng chứng, rồi **Parameter sensitivity** mở rộng hệ quả.
 
 ## EXPLAIN như bằng chứng (evidence / 증거), không phải decoration
 
@@ -85,7 +85,7 @@ Một debugging đường dẫn (path / 경로) tốt là tìm nơi estimates l�
 
 Không nên tối ưu bằng cách đoán chỉ từ SQL văn bản (text / 텍스트).
 
-> **Chuyển mạch:** Ở chặng này của **Truy vấn (query / 쿼리) tối ưu hóa (optimization / 최적화) và thực thi (execution / 실행) plans**, **EXPLAIN như bằng chứng (evidence / 증거), không phải decoration** nêu điều cần giải thích; **Parameter sensitivity** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **EXPLAIN như bằng chứng (evidence / 증거), không phải decoration** đặt vấn đề; **Parameter sensitivity** kiểm tra bằng chứng, rồi **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả.
 
 ## Parameter sensitivity
 
@@ -93,7 +93,7 @@ Một prepared truy vấn (query / 쿼리) có thể nhận values có selectivi
 
 Điều này cho thấy “một truy vấn (query / 쿼리) = một optimal plan” không luôn đúng trên changing parameters.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Truy vấn (query / 쿼리) tối ưu hóa (optimization / 최적화) và thực thi (execution / 실행) plans**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Parameter sensitivity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Dùng chung (common / 공통) Misconceptions** nối từ **Parameter sensitivity** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -103,13 +103,13 @@ Một prepared truy vấn (query / 쿼리) có thể nhận values có selectivi
 
 **“Rewrite SQL đẹp hơn luôn nhanh hơn.”** Optimizer có thể normalize chúng về cùng plan; phải kiểm tra actual plan.
 
-> **Chuyển mạch:** Trong **Truy vấn (query / 쿼리) tối ưu hóa (optimization / 최적화) và thực thi (execution / 실행) plans**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > truy vấn (query / 쿼리) tối ưu hóa (optimization / 최적화) là tìm kiếm (search / 검색) dưới bất định (uncertainty / 불확실성): optimizer dùng statistics để dự đoán cardinality, từ đó chọn operators có chi phí (cost / 비용) mô hình (model / 모델) phù hợp. Sai estimate thường kéo theo sai plan.
 
-> **Chuyển mạch:** Ở chặng này của **Truy vấn (query / 쿼리) tối ưu hóa (optimization / 최적화) và thực thi (execution / 실행) plans**, **Kết nối** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

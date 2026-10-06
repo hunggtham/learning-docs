@@ -10,7 +10,7 @@ Khi hỏi “nước nóng bao nhiêu?”, “khí có áp suất bao nhiêu?”
 
 Đây là một ví dụ điển hình của tính nổi lên (Emergence / 창발): quy luật ở cấp vĩ mô có thể đơn giản và hữu ích hơn rất nhiều so với mô tả đầy đủ của mọi thành phần vi mô.
 
-> **Chuyển mạch:** Trong **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Hệ, môi trường và trạng thái** tiếp nhận điểm tựa từ **Nhiệt động lực học bắt đầu từ một nghịch lý về mô tả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt độ không phải “lượng nhiệt”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Hệ, môi trường và trạng thái** nối từ **Nhiệt động lực học bắt đầu từ một nghịch lý về mô tả** sang **Nhiệt độ không phải “lượng nhiệt”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ, môi trường và trạng thái
 
@@ -24,7 +24,7 @@ P,\quad V,\quad T,\quad N,\quad U,\quad S
 
 Không phải tất cả các biến này đều độc lập. Phương trình trạng thái (Equation of State / 상태방정식) tạo quan hệ ràng buộc giữa chúng.
 
-> **Chuyển mạch:** Ở chặng này của **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Nhiệt độ không phải “lượng nhiệt”** tiếp nhận điểm tựa từ **Hệ, môi trường và trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thang Kelvin và độ không tuyệt đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Nhiệt độ không phải “lượng nhiệt”** nối từ **Hệ, môi trường và trạng thái** sang **Thang Kelvin và độ không tuyệt đối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệt độ không phải “lượng nhiệt”
 
@@ -34,7 +34,7 @@ Nhiệt độ (Temperature / 온도) là đại lượng trạng thái cho phép
 
 Ở cấp vi mô, nhiệt độ liên hệ với cách năng lượng được phân bố giữa rất nhiều bậc tự do. Nó không có nghĩa mọi hạt trong hệ đều chuyển động với cùng một tốc độ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Thang Kelvin và độ không tuyệt đối** tiếp nhận điểm tựa từ **Nhiệt độ không phải “lượng nhiệt”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt, công và nội năng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Thang Kelvin và độ không tuyệt đối** nối từ **Nhiệt độ không phải “lượng nhiệt”** sang **Nhiệt, công và nội năng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thang Kelvin và độ không tuyệt đối
 
@@ -48,7 +48,7 @@ Nhiều quan hệ nhiệt động lực học chỉ có ý nghĩa đúng khi nhi
 
 `0 K` là độ không tuyệt đối (Absolute Zero / 절대영도), một giới hạn nhiệt động lực học đặc biệt. Không nên hiểu nó đơn giản là “mọi chuyển động vi mô đều dừng hoàn toàn”, vì hệ lượng tử vẫn có thể có năng lượng điểm không và các dao động lượng tử.
 
-> **Chuyển mạch:** Trong **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Nhiệt, công và nội năng** tiếp nhận điểm tựa từ **Thang Kelvin và độ không tuyệt đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định luật I: bảo toàn năng lượng cho hệ nhiệt động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Nhiệt, công và nội năng** nối từ **Thang Kelvin và độ không tuyệt đối** sang **Định luật I: bảo toàn năng lượng cho hệ nhiệt động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệt, công và nội năng
 
@@ -60,7 +60,7 @@ Công (Work / 일) cũng là một cách truyền năng lượng qua ranh giới
 
 Sau khi quá trình truyền kết thúc, ta nói nội năng của hệ đã thay đổi; không nên nói hệ đang “chứa một lượng nhiệt” theo nghĩa nhiệt là một biến trạng thái.
 
-> **Chuyển mạch:** Ở chặng này của **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Định luật I: bảo toàn năng lượng cho hệ nhiệt động** tiếp nhận điểm tựa từ **Nhiệt, công và nội năng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công do khí thực hiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Định luật I: bảo toàn năng lượng cho hệ nhiệt động** nối từ **Nhiệt, công và nội năng** sang **Công do khí thực hiện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định luật I: bảo toàn năng lượng cho hệ nhiệt động
 
@@ -82,7 +82,7 @@ Hai cách viết không mâu thuẫn về vật lý; điều quan trọng là ph
 
 Định luật I chính là bảo toàn năng lượng được áp dụng cho hệ nhiệt động lực học.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Công do khí thực hiện** tiếp nhận điểm tựa từ **Định luật I: bảo toàn năng lượng cho hệ nhiệt động** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khí lý tưởng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Công do khí thực hiện** nối từ **Định luật I: bảo toàn năng lượng cho hệ nhiệt động** sang **Khí lý tưởng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Công do khí thực hiện
 
@@ -102,7 +102,7 @@ Trên đồ thị `P-V`, công là diện tích dưới đường biểu diễn 
 
 Điểm quan trọng là công phụ thuộc đường đi (path dependent). Hai quá trình có cùng trạng thái đầu và cuối có thể có `Q` và `W` khác nhau, trong khi `\Delta U` vẫn giống nhau vì nội năng `U` là hàm trạng thái.
 
-> **Chuyển mạch:** Trong **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Khí lý tưởng** tiếp nhận điểm tựa từ **Công do khí thực hiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định lý phân bố đều năng lượng và bậc tự do** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Khí lý tưởng** nối từ **Công do khí thực hiện** sang **Định lý phân bố đều năng lượng và bậc tự do**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khí lý tưởng
 
@@ -144,7 +144,7 @@ suy ra động năng tịnh tiến trung bình của mỗi phân tử:
 
 Vì vậy, trong mô hình này, nhiệt độ liên hệ trực tiếp với động năng tịnh tiến trung bình của các phân tử. Không nên mở rộng kết luận này máy móc sang mọi hệ, vì các bậc tự do và tương tác có thể phức tạp hơn nhiều.
 
-> **Chuyển mạch:** Ở chặng này của **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Định lý phân bố đều năng lượng và bậc tự do** tiếp nhận điểm tựa từ **Khí lý tưởng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhiệt dung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Định lý phân bố đều năng lượng và bậc tự do** nối từ **Khí lý tưởng** sang **Nhiệt dung**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định lý phân bố đều năng lượng và bậc tự do
 
@@ -160,7 +160,7 @@ Một khí lý tưởng đơn nguyên tử có ba bậc tự do tịnh tiến n�
 
 Phân tử còn có thể có các chế độ (mode / 모드) quay và dao động. Tuy nhiên hiệu ứng lượng tử có thể làm một số chế độ (mode / 모드) gần như không được kích thích nếu khoảng cách mức năng lượng lớn so với `k_BT`. Vì vậy nhiệt dung thực không phải lúc nào cũng tuân giá trị dự đoán bởi phân bố đều năng lượng cổ điển.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Nhiệt dung** tiếp nhận điểm tựa từ **Định lý phân bố đều năng lượng và bậc tự do** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các quá trình cơ bản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Nhiệt dung** nối từ **Định lý phân bố đều năng lượng và bậc tự do** sang **Các quá trình cơ bản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhiệt dung
 
@@ -184,7 +184,7 @@ C_V,\qquad C_P
 
 Ở thể tích không đổi, khí không thực hiện công `P\,dV`. Ở áp suất không đổi, một phần năng lượng truyền vào có thể dùng cho sự giãn nở, nên với khí lý tưởng thông thường ta có `C_P>C_V`.
 
-> **Chuyển mạch:** Trong **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Các quá trình cơ bản** tiếp nhận điểm tựa từ **Nhiệt dung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Các quá trình cơ bản** nối từ **Nhiệt dung** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các quá trình cơ bản
 
@@ -270,13 +270,13 @@ trong đó:
 \gamma=\frac{C_P}{C_V}
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Các quá trình cơ bản** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Các quá trình cơ bản** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Nhiệt động lực học không cố mô tả từng phân tử đang làm gì. Nó tìm một số biến trạng thái và định luật bảo toàn đủ mạnh để dự đoán sự thay đổi ở cấp vĩ mô. Nhiệt và công mô tả **cách năng lượng đi qua ranh giới hệ**; nội năng mô tả một phần năng lượng thuộc trạng thái của hệ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -292,7 +292,7 @@ Không. Nhiệt độ liên hệ với phân bố thống kê của năng lượ
 
 Không. Đoạn nhiệt nghĩa `Q=0`; nhiệt độ vẫn có thể thay đổi do công làm thay đổi nội năng. Đẳng nhiệt và đoạn nhiệt là hai điều kiện khác nhau.
 
-> **Chuyển mạch:** Trong **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Nhiệt động lực học: nhiệt, công, nội năng và các quá trình**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

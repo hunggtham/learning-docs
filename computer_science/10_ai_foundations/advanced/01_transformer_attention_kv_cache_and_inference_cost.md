@@ -24,7 +24,7 @@ tensor/model parallelism
 
 Vì vậy “mô hình (model / 모델) có N parameters” không đủ để sức chứa (capacity / 용량) plan. Cần map tải công việc (workload / 워크로드) phân phối (distribution / 분포) vào tài nguyên (resource / 자원) consumption theo serving phase.
 
-> **Chuyển mạch:** Model math chưa nói rõ serving behavior; transformer block biến token stream thành state, rồi query/key/value attention xác định thông tin nào được trộn ở mỗi bước.
+> **Nối mạch:** Model math chưa nói rõ serving behavior; transformer block biến token stream thành state, rồi query/key/value attention xác định thông tin nào được trộn ở mỗi bước.
 
 ## 2. Transformer khối (block / 블록) và trạng thái (state / 상태) luồng (flow / 흐름)
 
@@ -41,7 +41,7 @@ scheduler metadata: ownership/lifetime of each sequence
 
 Tách các trạng thái (state / 상태) classes này giúp hiểu bộ nhớ (memory / 메모리) pressure.
 
-> **Chuyển mạch:** Ở chặng này của **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **2. Transformer khối (block / 블록) và trạng thái (state / 상태) luồng (flow / 흐름)** xác định đầu vào; **3. truy vấn (query / 쿼리), Key, giá trị (value / 값) và attention bất biến (invariant / 불변식)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **4. Full self-attention có quadratic tương tác (interaction / 상호작용) theo chuỗi (sequence / 시퀀스) length** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **2. Transformer khối (block / 블록) và trạng thái (state / 상태) luồng (flow / 흐름)** đặt đầu vào cho **3. truy vấn (query / 쿼리), Key, giá trị (value / 값) và attention bất biến (invariant / 불변식)**, rồi **4. Full self-attention có quadratic tương tác (interaction / 상호작용) theo chuỗi (sequence / 시퀀스) length** mở rộng hệ quả.
 
 ## 3. truy vấn (query / 쿼리), Key, giá trị (value / 값) và attention bất biến (invariant / 불변식)
 
@@ -51,7 +51,7 @@ Multi-head attention dùng nhiều projections/subspaces. Kiến trúc không h�
 
 Tính đúng đắn (correctness / 정확성) ở serving tầng (layer / 계층) cần giữ **chuỗi (sequence / 시퀀스) association**: K/V của yêu cầu (request / 요청) A không được nhầm với yêu cầu (request / 요청) B, và positions/thứ tự (order / 순서) phải map đúng logical prefix của chuỗi (sequence / 시퀀스).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **3. truy vấn (query / 쿼리), Key, giá trị (value / 값) và attention bất biến (invariant / 불변식)** xác định đầu vào; **4. Full self-attention có quadratic tương tác (interaction / 상호작용) theo chuỗi (sequence / 시퀀스) length** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **5. Prefill và decode là hai thực thi (execution / 실행) phases khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **3. truy vấn (query / 쿼리), Key, giá trị (value / 값) và attention bất biến (invariant / 불변식)** đặt đầu vào cho **4. Full self-attention có quadratic tương tác (interaction / 상호작용) theo chuỗi (sequence / 시퀀스) length**, rồi **5. Prefill và decode là hai thực thi (execution / 실행) phases khác nhau** mở rộng hệ quả.
 
 ## 4. Full self-attention có quadratic tương tác (interaction / 상호작용) theo chuỗi (sequence / 시퀀스) length
 
@@ -63,7 +63,7 @@ Optimized kernels như tiled/flash-style attention có thể tránh materialize 
 
 > Cùng algorithmic ngữ nghĩa (semantics / 의미론), dữ liệu (data / 데이터) movement chiến lược (strategy / 전략) có thể thay dominant bottleneck.
 
-> **Chuyển mạch:** Trong **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **4. Full self-attention có quadratic tương tác (interaction / 상호작용) theo chuỗi (sequence / 시퀀스) length** xác định đầu vào; **5. Prefill và decode là hai thực thi (execution / 실행) phases khác nhau** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. KV bộ nhớ đệm (cache / 캐시) đổi recomputation lấy bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **4. Full self-attention có quadratic tương tác (interaction / 상호작용) theo chuỗi (sequence / 시퀀스) length** đặt đầu vào cho **5. Prefill và decode là hai thực thi (execution / 실행) phases khác nhau**, rồi **6. KV bộ nhớ đệm (cache / 캐시) đổi recomputation lấy bộ nhớ (memory / 메모리)** mở rộng hệ quả.
 
 ## 5. Prefill và decode là hai thực thi (execution / 실행) phases khác nhau
 
@@ -83,7 +83,7 @@ end-to-end request latency
 
 Average tokens/s có thể che UX xấu nếu hàng đợi (queue / 큐)/TTFT cao.
 
-> **Chuyển mạch:** Ở chặng này của **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **6. KV bộ nhớ đệm (cache / 캐시) đổi recomputation lấy bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **5. Prefill và decode là hai thực thi (execution / 실행) phases khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. KV bộ nhớ đệm (cache / 캐시) có quyền sở hữu (ownership / 소유권)/thời gian tồn tại (lifetime / 수명) bất biến (invariant / 불변식)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **6. KV bộ nhớ đệm (cache / 캐시) đổi recomputation lấy bộ nhớ (memory / 메모리)** nối từ **5. Prefill và decode là hai thực thi (execution / 실행) phases khác nhau** sang **7. KV bộ nhớ đệm (cache / 캐시) có quyền sở hữu (ownership / 소유권)/thời gian tồn tại (lifetime / 수명) bất biến (invariant / 불변식)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. KV bộ nhớ đệm (cache / 캐시) đổi recomputation lấy bộ nhớ (memory / 메모리)
 
@@ -99,7 +99,7 @@ per-sequence persistent memory ↑
 
 KV bộ nhớ (memory / 메모리) tăng với ngữ cảnh (context / 맥락) length, active sequences, layers và KV dimensions/precision. ngữ cảnh (context / 맥락) “được hỗ trợ” không đồng nghĩa có thể phục vụ nhiều long-context requests đồng thời.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **7. KV bộ nhớ đệm (cache / 캐시) có quyền sở hữu (ownership / 소유권)/thời gian tồn tại (lifetime / 수명) bất biến (invariant / 불변식)** tiếp nhận điểm tựa từ **6. KV bộ nhớ đệm (cache / 캐시) đổi recomputation lấy bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Paged KV bộ nhớ đệm (cache / 캐시) giảm fragmentation bằng indirection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **7. KV bộ nhớ đệm (cache / 캐시) có quyền sở hữu (ownership / 소유권)/thời gian tồn tại (lifetime / 수명) bất biến (invariant / 불변식)** nối từ **6. KV bộ nhớ đệm (cache / 캐시) đổi recomputation lấy bộ nhớ (memory / 메모리)** sang **8. Paged KV bộ nhớ đệm (cache / 캐시) giảm fragmentation bằng indirection**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. KV bộ nhớ đệm (cache / 캐시) có quyền sở hữu (ownership / 소유권)/thời gian tồn tại (lifetime / 수명) bất biến (invariant / 불변식)
 
@@ -109,7 +109,7 @@ Serving scheduler có thể batch, preempt, swap hoặc free chuỗi (sequence /
 
 Một bug allocator/scheduler có thể tạo corruption cross-request dù mô hình (model / 모델) math hoàn hảo. Đây là liên kết (connection / 연결) trực tiếp giữa AI serving và OS-style bộ nhớ (memory / 메모리) management.
 
-> **Chuyển mạch:** Trong **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **8. Paged KV bộ nhớ đệm (cache / 캐시) giảm fragmentation bằng indirection** tiếp nhận điểm tựa từ **7. KV bộ nhớ đệm (cache / 캐시) có quyền sở hữu (ownership / 소유권)/thời gian tồn tại (lifetime / 수명) bất biến (invariant / 불변식)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Decode thường memory-bandwidth-bound** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **8. Paged KV bộ nhớ đệm (cache / 캐시) giảm fragmentation bằng indirection** nối từ **7. KV bộ nhớ đệm (cache / 캐시) có quyền sở hữu (ownership / 소유권)/thời gian tồn tại (lifetime / 수명) bất biến (invariant / 불변식)** sang **9. Decode thường memory-bandwidth-bound**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Paged KV bộ nhớ đệm (cache / 캐시) giảm fragmentation bằng indirection
 
@@ -125,7 +125,7 @@ allocate incrementally with sequence growth
 
 Đổi lại có siêu dữ liệu (metadata / 메타데이터)/indirection chi phí (cost / 비용) và allocator pressure. “Paged” không miễn phí; nó chuyển memory-contiguity bài toán (problem / 문제) thành ánh xạ (mapping / 매핑)/thời gian tồn tại (lifetime / 수명) bài toán (problem / 문제).
 
-> **Chuyển mạch:** Ở chặng này của **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **9. Decode thường memory-bandwidth-bound** tiếp nhận điểm tựa từ **8. Paged KV bộ nhớ đệm (cache / 캐시) giảm fragmentation bằng indirection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Batching đổi độ trễ (latency / 지연 시간) lấy thông lượng (throughput / 처리량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **9. Decode thường memory-bandwidth-bound** nối từ **8. Paged KV bộ nhớ đệm (cache / 캐시) giảm fragmentation bằng indirection** sang **10. Batching đổi độ trễ (latency / 지연 시간) lấy thông lượng (throughput / 처리량)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Decode thường memory-bandwidth-bound
 
@@ -143,7 +143,7 @@ batching increases reuse/amortization
 
 Đây là lý do theoretical FLOPS cao không tự bảo đảm low đơn vị từ (token / 토큰) độ trễ (latency / 지연 시간).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **10. Batching đổi độ trễ (latency / 지연 시간) lấy thông lượng (throughput / 처리량)** tiếp nhận điểm tựa từ **9. Decode thường memory-bandwidth-bound** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Scheduler là admission controller cho GPU bộ nhớ (memory / 메모리) + compute** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **10. Batching đổi độ trễ (latency / 지연 시간) lấy thông lượng (throughput / 처리량)** nối từ **9. Decode thường memory-bandwidth-bound** sang **11. Scheduler là admission controller cho GPU bộ nhớ (memory / 메모리) + compute**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Batching đổi độ trễ (latency / 지연 시간) lấy thông lượng (throughput / 처리량)
 
@@ -159,7 +159,7 @@ larger batch
 
 Continuous batching chèn/rút sequences động để tận dụng slots tốt hơn fixed batch, nhưng tạo scheduling độ phức tạp (complexity / 복잡도): sequences có lengths khác nhau, finish khác nhau và bộ nhớ (memory / 메모리) footprint thay đổi mỗi decode step.
 
-> **Chuyển mạch:** Trong **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **11. Scheduler là admission controller cho GPU bộ nhớ (memory / 메모리) + compute** tiếp nhận điểm tựa từ **10. Batching đổi độ trễ (latency / 지연 시간) lấy thông lượng (throughput / 처리량)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Head-of-line blocking có thể xuất hiện trong batch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **11. Scheduler là admission controller cho GPU bộ nhớ (memory / 메모리) + compute** nối từ **10. Batching đổi độ trễ (latency / 지연 시간) lấy thông lượng (throughput / 처리량)** sang **12. Head-of-line blocking có thể xuất hiện trong batch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Scheduler là admission controller cho GPU bộ nhớ (memory / 메모리) + compute
 
@@ -178,7 +178,7 @@ latency class / priority / tenant quota
 
 Đây là weighted admission, giống general software các hệ thống (systems / 시스템들) nhưng tài nguyên (resource / 자원) đơn vị (unit / 단위) là tokens/KV/GPU sức chứa (capacity / 용량).
 
-> **Chuyển mạch:** Ở chặng này của **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **12. Head-of-line blocking có thể xuất hiện trong batch** tiếp nhận điểm tựa từ **11. Scheduler là admission controller cho GPU bộ nhớ (memory / 메모리) + compute** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. ngữ cảnh (context / 맥락) length làm giảm effective sức chứa (capacity / 용량) theo nhiều chiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **12. Head-of-line blocking có thể xuất hiện trong batch** nối từ **11. Scheduler là admission controller cho GPU bộ nhớ (memory / 메모리) + compute** sang **13. ngữ cảnh (context / 맥락) length làm giảm effective sức chứa (capacity / 용량) theo nhiều chiều**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Head-of-line blocking có thể xuất hiện trong batch
 
@@ -188,7 +188,7 @@ Multi-tenant serving cần fairness: thông lượng (throughput / 처리량) t�
 
 Separate pools/classes hoặc weighted scheduling có thể cần khi workloads khác mạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **13. ngữ cảnh (context / 맥락) length làm giảm effective sức chứa (capacity / 용량) theo nhiều chiều** tiếp nhận điểm tựa từ **12. Head-of-line blocking có thể xuất hiện trong batch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Quantization giảm bytes nhưng tạo accuracy/kernel sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **13. ngữ cảnh (context / 맥락) length làm giảm effective sức chứa (capacity / 용량) theo nhiều chiều** nối từ **12. Head-of-line blocking có thể xuất hiện trong batch** sang **14. Quantization giảm bytes nhưng tạo accuracy/kernel sự đánh đổi (trade-off / 트레이드오프)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. ngữ cảnh (context / 맥락) length làm giảm effective sức chứa (capacity / 용량) theo nhiều chiều
 
@@ -206,7 +206,7 @@ Sức chứa (capacity / 용량) planning phải dùng **phân phối (distribut
 
 Một p99 100k-token tải công việc (workload / 워크로드) khác hoàn toàn tải công việc (workload / 워크로드) median 1k dù cùng mô hình (model / 모델)/ngữ cảnh (context / 맥락) limit.
 
-> **Chuyển mạch:** Trong **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **14. Quantization giảm bytes nhưng tạo accuracy/kernel sự đánh đổi (trade-off / 트레이드오프)** tiếp nhận điểm tựa từ **13. ngữ cảnh (context / 맥락) length làm giảm effective sức chứa (capacity / 용량) theo nhiều chiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Tensor/mô hình (model / 모델) parallelism đổi cục bộ (local / 로컬) bộ nhớ (memory / 메모리) bài toán (problem / 문제) thành communication bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **14. Quantization giảm bytes nhưng tạo accuracy/kernel sự đánh đổi (trade-off / 트레이드오프)** nối từ **13. ngữ cảnh (context / 맥락) length làm giảm effective sức chứa (capacity / 용량) theo nhiều chiều** sang **15. Tensor/mô hình (model / 모델) parallelism đổi cục bộ (local / 로컬) bộ nhớ (memory / 메모리) bài toán (problem / 문제) thành communication bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Quantization giảm bytes nhưng tạo accuracy/kernel sự đánh đổi (trade-off / 트레이드오프)
 
@@ -223,7 +223,7 @@ some tensors are more sensitive than others
 
 “4-bit” không tự động nhanh hoặc đủ chất lượng (quality / 품질). Phải benchmark end-to-end tải công việc (workload / 워크로드) + chất lượng (quality / 품질) metrics.
 
-> **Chuyển mạch:** Ở chặng này của **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **15. Tensor/mô hình (model / 모델) parallelism đổi cục bộ (local / 로컬) bộ nhớ (memory / 메모리) bài toán (problem / 문제) thành communication bài toán (problem / 문제)** tiếp nhận điểm tựa từ **14. Quantization giảm bytes nhưng tạo accuracy/kernel sự đánh đổi (trade-off / 트레이드오프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Prefix reuse/bộ nhớ đệm (cache / 캐시) chỉ đúng khi ngữ nghĩa (semantic / 의미적) định danh (identity / 식별자) đúng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **15. Tensor/mô hình (model / 모델) parallelism đổi cục bộ (local / 로컬) bộ nhớ (memory / 메모리) bài toán (problem / 문제) thành communication bài toán (problem / 문제)** nối từ **14. Quantization giảm bytes nhưng tạo accuracy/kernel sự đánh đổi (trade-off / 트레이드오프)** sang **16. Prefix reuse/bộ nhớ đệm (cache / 캐시) chỉ đúng khi ngữ nghĩa (semantic / 의미적) định danh (identity / 식별자) đúng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Tensor/mô hình (model / 모델) parallelism đổi cục bộ (local / 로컬) bộ nhớ (memory / 메모리) bài toán (problem / 문제) thành communication bài toán (problem / 문제)
 
@@ -241,7 +241,7 @@ synchronization/skew
 
 Thêm GPU có thể chậm hơn nếu per-step công việc (work / 작업) nhỏ nhưng communication dominates. Topology/locality trở thành lower lớp trừu tượng (abstraction / 추상화) quyết định hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **16. Prefix reuse/bộ nhớ đệm (cache / 캐시) chỉ đúng khi ngữ nghĩa (semantic / 의미적) định danh (identity / 식별자) đúng** tiếp nhận điểm tựa từ **15. Tensor/mô hình (model / 모델) parallelism đổi cục bộ (local / 로컬) bộ nhớ (memory / 메모리) bài toán (problem / 문제) thành communication bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. mô hình (model / 모델) rollout phải phiên bản (version / 버전) cả serving trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **16. Prefix reuse/bộ nhớ đệm (cache / 캐시) chỉ đúng khi ngữ nghĩa (semantic / 의미적) định danh (identity / 식별자) đúng** nối từ **15. Tensor/mô hình (model / 모델) parallelism đổi cục bộ (local / 로컬) bộ nhớ (memory / 메모리) bài toán (problem / 문제) thành communication bài toán (problem / 문제)** sang **17. mô hình (model / 모델) rollout phải phiên bản (version / 버전) cả serving trạng thái (state / 상태)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Prefix reuse/bộ nhớ đệm (cache / 캐시) chỉ đúng khi ngữ nghĩa (semantic / 의미적) định danh (identity / 식별자) đúng
 
@@ -251,7 +251,7 @@ Bộ nhớ đệm (cache / 캐시) hit với wrong ngữ nghĩa (semantic / 의�
 
 Đây là same family với bộ nhớ đệm (cache / 캐시) vô hiệu hóa (invalidation / 무효화): reuse chỉ an toàn khi định danh (identity / 식별자)/vô hiệu hóa (invalidation / 무효화) đặc tả hợp đồng (contract / 계약) đúng.
 
-> **Chuyển mạch:** Trong **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **17. mô hình (model / 모델) rollout phải phiên bản (version / 버전) cả serving trạng thái (state / 상태)** tiếp nhận điểm tựa từ **16. Prefix reuse/bộ nhớ đệm (cache / 캐시) chỉ đúng khi ngữ nghĩa (semantic / 의미적) định danh (identity / 식별자) đúng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. OOM không phải thất bại (failure / 실패) duy nhất của bộ nhớ (memory / 메모리) pressure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **17. mô hình (model / 모델) rollout phải phiên bản (version / 버전) cả serving trạng thái (state / 상태)** nối từ **16. Prefix reuse/bộ nhớ đệm (cache / 캐시) chỉ đúng khi ngữ nghĩa (semantic / 의미적) định danh (identity / 식별자) đúng** sang **18. OOM không phải thất bại (failure / 실패) duy nhất của bộ nhớ (memory / 메모리) pressure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. mô hình (model / 모델) rollout phải phiên bản (version / 버전) cả serving trạng thái (state / 상태)
 
@@ -268,7 +268,7 @@ old in-flight requests drain or migrate only if explicitly supported
 
 Canary mô hình (model / 모델) serving vì vậy là giao thức (protocol / 프로토콜)/trạng thái (state / 상태) rollout, không chỉ tải (load / 로드) new tệp (file / 파일).
 
-> **Chuyển mạch:** Ở chặng này của **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **18. OOM không phải thất bại (failure / 실패) duy nhất của bộ nhớ (memory / 메모리) pressure** tiếp nhận điểm tựa từ **17. mô hình (model / 모델) rollout phải phiên bản (version / 버전) cả serving trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. thử lại (retry / 재시도) suy luận (inference / 추론) có thể gây duplicate expensive công việc (work / 작업)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **18. OOM không phải thất bại (failure / 실패) duy nhất của bộ nhớ (memory / 메모리) pressure** nối từ **17. mô hình (model / 모델) rollout phải phiên bản (version / 버전) cả serving trạng thái (state / 상태)** sang **19. thử lại (retry / 재시도) suy luận (inference / 추론) có thể gây duplicate expensive công việc (work / 작업)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. OOM không phải thất bại (failure / 실패) duy nhất của bộ nhớ (memory / 메모리) pressure
 
@@ -285,7 +285,7 @@ overload → queue/timeout/retry/OOM
 
 Monitor free bộ nhớ (memory / 메모리) alone không đủ; cần khối (block / 블록) fragmentation, active tokens/sequences và hàng đợi (queue / 큐) age.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **19. thử lại (retry / 재시도) suy luận (inference / 추론) có thể gây duplicate expensive công việc (work / 작업)** tiếp nhận điểm tựa từ **18. OOM không phải thất bại (failure / 실패) duy nhất của bộ nhớ (memory / 메모리) pressure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. bằng chứng vận hành (production evidence / 운영 증거)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. thử lại (retry / 재시도) suy luận (inference / 추론) có thể gây duplicate expensive công việc (work / 작업)** nối từ **18. OOM không phải thất bại (failure / 실패) duy nhất của bộ nhớ (memory / 메모리) pressure** sang **20. bằng chứng vận hành (production evidence / 운영 증거)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. thử lại (retry / 재시도) suy luận (inference / 추론) có thể gây duplicate expensive công việc (work / 작업)
 
@@ -295,7 +295,7 @@ If streaming phản hồi (response / 응답), partial đầu ra (output / 출�
 
 AI serving obey same thử lại (retry / 재시도)→overload vòng phản hồi (feedback loop / 피드백 루프) as other phân tán (distributed / 분산) các hệ thống (systems / 시스템들), nhưng công việc (work / 작업) đơn vị (unit / 단위) đắt hơn nhiều.
 
-> **Chuyển mạch:** Trong **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **19. thử lại (retry / 재시도) suy luận (inference / 추론) có thể gây duplicate expensive công việc (work / 작업)** nêu điều cần giải thích; **20. bằng chứng vận hành (production evidence / 운영 증거)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **21. hiệu năng (performance / 성능) experiment phải giữ chất lượng (quality / 품질) + tải công việc (workload / 워크로드) ngữ nghĩa (semantics / 의미론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **19. thử lại (retry / 재시도) suy luận (inference / 추론) có thể gây duplicate expensive công việc (work / 작업)** đặt vấn đề; **20. bằng chứng vận hành (production evidence / 운영 증거)** kiểm tra bằng chứng, rồi **21. hiệu năng (performance / 성능) experiment phải giữ chất lượng (quality / 품질) + tải công việc (workload / 워크로드) ngữ nghĩa (semantics / 의미론)** mở rộng hệ quả.
 
 ## 20. bằng chứng vận hành (production evidence / 운영 증거)
 
@@ -330,7 +330,7 @@ Reliability:
 
 Một GPU-utilization 100% đồ thị (graph / 그래프) không nói thông lượng (throughput / 처리량) useful hay hàng đợi (queue / 큐) health.
 
-> **Chuyển mạch:** Ở chặng này của **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **20. bằng chứng vận hành (production evidence / 운영 증거)** nêu điều cần giải thích; **21. hiệu năng (performance / 성능) experiment phải giữ chất lượng (quality / 품질) + tải công việc (workload / 워크로드) ngữ nghĩa (semantics / 의미론)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **22. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **20. bằng chứng vận hành (production evidence / 운영 증거)** đặt vấn đề; **21. hiệu năng (performance / 성능) experiment phải giữ chất lượng (quality / 품질) + tải công việc (workload / 워크로드) ngữ nghĩa (semantics / 의미론)** kiểm tra bằng chứng, rồi **22. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** mở rộng hệ quả.
 
 ## 21. hiệu năng (performance / 성능) experiment phải giữ chất lượng (quality / 품질) + tải công việc (workload / 워크로드) ngữ nghĩa (semantics / 의미론)
 
@@ -346,19 +346,19 @@ same concurrency/tenant mix
 
 Nếu quantization tăng thông lượng (throughput / 처리량) nhưng chất lượng (quality / 품질) vượt lỗi (error / 오류) ngân sách (budget / 예산), tối ưu hóa (optimization / 최적화) không đạt nghiệp vụ (business / 비즈니스) bất biến (invariant / 불변식).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **22. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** tiếp nhận điểm tựa từ **21. hiệu năng (performance / 성능) experiment phải giữ chất lượng (quality / 품질) + tải công việc (workload / 워크로드) ngữ nghĩa (semantics / 의미론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **22. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** nối từ **21. hiệu năng (performance / 성능) experiment phải giữ chất lượng (quality / 품질) + tải công việc (workload / 워크로드) ngữ nghĩa (semantics / 의미론)** sang **23. Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?
 
 Nếu TTFT cao nhưng decode nhanh, look hàng đợi (queue / 큐)/prefill. Nếu đơn vị từ (token / 토큰) độ trễ (latency / 지연 시간) cao ở large batch, inspect bandwidth/interconnect/scheduler. Nếu OOM dưới long ngữ cảnh (context / 맥락), KV sức chứa (capacity / 용량)/admission quyết định. Nếu one tenant hurts all, fairness is missing. Nếu same mô hình (model / 모델) different hardware behaves oddly, dữ liệu (data / 데이터) movement/kernel hỗ trợ (support / 지원) may dominate theoretical FLOPS.
 
-> **Chuyển mạch:** Trong **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **23. Mô hình tư duy** gom các mảnh từ **22. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **23. Mô hình tư duy** tổng hợp từ **22. lớp trừu tượng (abstraction / 추상화) nào thực sự quyết định hành vi (behavior / 동작)?**; **Kết nối** mở rộng mạch bằng hệ quả hoặc giới hạn liên quan.
 
 ## 23. Mô hình tư duy
 
 > Transformer suy luận (inference / 추론) là tương tác (interaction / 상호작용) giữa **mô hình (model / 모델) phụ thuộc (dependency / 의존성) đồ thị (graph / 그래프), per-sequence KV trạng thái (state / 상태), scheduler và bộ nhớ (memory / 메모리) hierarchy**. KV bộ nhớ đệm (cache / 캐시) đổi recomputation lấy persistent bộ nhớ (memory / 메모리); batching đổi độ trễ (latency / 지연 시간) lấy thông lượng (throughput / 처리량); quantization đổi precision/chất lượng (quality / 품질) lấy bytes; parallelism đổi cục bộ (local / 로컬) compute lấy communication. **Serving tính đúng đắn (correctness / 정확성) cần giữ yêu cầu (request / 요청)/mô hình (model / 모델)/KV quyền sở hữu (ownership / 소유권); serving hiệu năng (performance / 성능) cần quản hàng đợi (queue / 큐), bộ nhớ (memory / 메모리) bandwidth và admission như một các hệ thống (systems / 시스템들) bài toán (problem / 문제).**
 
-> **Chuyển mạch:** Ở chặng này của **Transformer internals, attention, KV bộ nhớ đệm (cache / 캐시) và suy luận (inference / 추론) chi phí (cost / 비용)**, **Kết nối** gom các mảnh từ **23. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **Kết nối** tổng hợp từ **23. Mô hình tư duy**; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Kết nối
 

@@ -10,7 +10,7 @@ Lập trình viên thường muốn công cụ trả lời các câu như “ch�
 
 Suy luận ngữ nghĩa mạnh hơn nhưng cũng khó hơn vì có thể phải xét quá trình thực thi không có giới hạn hữu hạn biết trước.
 
-> **Chuyển mạch:** Syntax có thể được kiểm tra trực tiếp, nhưng semantic property nói về behavior của chương trình; Rice’s theorem nối distinction đó với undecidability và giới hạn của static analysis.
+> **Nối mạch:** Syntax có thể được kiểm tra trực tiếp, nhưng semantic property nói về behavior của chương trình; Rice’s theorem nối distinction đó với undecidability và giới hạn của static analysis.
 
 ## Định lý Rice
 
@@ -18,7 +18,7 @@ Trực giác của **định lý Rice (Rice's theorem)** là: mọi thuộc tín
 
 Điều này không nói bộ phân tích vô dụng. Nó nói không thể có một thuật toán vừa luôn kết thúc vừa luôn trả lời chính xác cho mọi chương trình về mọi thuộc tính ngữ nghĩa thuộc loại đó.
 
-> **Chuyển mạch:** Ở chặng này của **Định lý Rice, thuộc tính ngữ nghĩa và giới hạn của phân tích tĩnh**, **Liên hệ với bài toán dừng** tiếp nhận điểm tựa từ **Định lý Rice** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tính âm thanh và tính đầy đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Liên hệ với bài toán dừng** nối từ **Định lý Rice** sang **Tính âm thanh và tính đầy đủ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với bài toán dừng
 
@@ -26,7 +26,7 @@ Nhiều chứng minh bất khả thi dùng **phép quy giảm (reduction)** từ
 
 Reduction vì vậy là kỹ thuật chuyển giới hạn từ bài toán A sang B bằng lập luận “nếu giải được B thì cũng giải được A”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định lý Rice, thuộc tính ngữ nghĩa và giới hạn của phân tích tĩnh**, **Tính âm thanh và tính đầy đủ** tiếp nhận điểm tựa từ **Liên hệ với bài toán dừng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Diễn giải trừu tượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Tính âm thanh và tính đầy đủ** nối từ **Liên hệ với bài toán dừng** sang **Diễn giải trừu tượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tính âm thanh và tính đầy đủ
 
@@ -34,7 +34,7 @@ Bộ phân tích tĩnh thường phải đánh đổi. Một bộ phân tích **
 
 Công cụ bảo mật thường ưu tiên không bỏ sót ở thuộc tính quan trọng; lint trong IDE có thể ưu tiên tỷ lệ tín hiệu/nhiễu để lập trình viên không bỏ qua quá nhiều cảnh báo.
 
-> **Chuyển mạch:** Trong **Định lý Rice, thuộc tính ngữ nghĩa và giới hạn của phân tích tĩnh**, **Diễn giải trừu tượng** tiếp nhận điểm tựa từ **Tính âm thanh và tính đầy đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giới hạn sức biểu đạt để lấy lại khả năng quyết định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Diễn giải trừu tượng** nối từ **Tính âm thanh và tính đầy đủ** sang **Giới hạn sức biểu đạt để lấy lại khả năng quyết định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Diễn giải trừu tượng
 
@@ -42,7 +42,7 @@ Công cụ bảo mật thường ưu tiên không bỏ sót ở thuộc tính qu
 
 Trừu tượng hóa làm mất thông tin nhưng khiến bài toán phân tích trở nên khả thi. Dương tính giả thường xuất hiện vì nhiều trạng thái cụ thể khác nhau bị gộp thành cùng một trạng thái trừu tượng.
 
-> **Chuyển mạch:** Ở chặng này của **Định lý Rice, thuộc tính ngữ nghĩa và giới hạn của phân tích tĩnh**, **Diễn giải trừu tượng** đã nêu tiêu chí phân biệt, còn **Giới hạn sức biểu đạt để lấy lại khả năng quyết định** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **AI phân tích mã không xóa giới hạn lý thuyết** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Diễn giải trừu tượng** đặt tiêu chí; **Giới hạn sức biểu đạt để lấy lại khả năng quyết định** dùng nó để kiểm tra ranh giới, rồi **AI phân tích mã không xóa giới hạn lý thuyết** mở rộng hệ quả.
 
 ## Giới hạn sức biểu đạt để lấy lại khả năng quyết định
 
@@ -50,13 +50,13 @@ Giao thức hữu hạn trạng thái, kiểm tra mô hình có giới hạn, ng
 
 Đây là nguyên lý lặp lại trong khoa học máy tính: mô hình yếu hơn đôi khi hữu ích hơn vì ta có thể chứng minh được nhiều điều hơn về nó.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định lý Rice, thuộc tính ngữ nghĩa và giới hạn của phân tích tĩnh**, **Giới hạn sức biểu đạt để lấy lại khả năng quyết định** đã nêu tiêu chí phân biệt, còn **AI phân tích mã không xóa giới hạn lý thuyết** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** **Giới hạn sức biểu đạt để lấy lại khả năng quyết định** đặt tiêu chí; **AI phân tích mã không xóa giới hạn lý thuyết** dùng nó để kiểm tra ranh giới, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## AI phân tích mã không xóa giới hạn lý thuyết
 
 ML hoặc LLM có thể dự đoán lỗi dựa trên mẫu đã học, nhưng không biến một thuộc tính không quyết định được thành một chứng minh quyết định được. Dự đoán xác suất và bảo đảm hình thức là hai loại bằng chứng khác nhau.
 
-> **Chuyển mạch:** Trong **Định lý Rice, thuộc tính ngữ nghĩa và giới hạn của phân tích tĩnh**, **AI phân tích mã không xóa giới hạn lý thuyết** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** **AI phân tích mã không xóa giới hạn lý thuyết** đặt tiêu chí; **Mô hình tư duy** dùng nó để kiểm tra ranh giới; mục sau khép mạch bằng giới hạn và ứng dụng.
 
 ## Mô hình tư duy
 
