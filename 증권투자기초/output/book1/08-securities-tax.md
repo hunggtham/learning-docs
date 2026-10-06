@@ -217,6 +217,17 @@ nhau. Các con số này nhằm giúp nhận ra bảng nguồn và câu hỏi tr
 không phải tỷ lệ hiện hành. Khi kiểm tra một giao dịch, phải xác định lại thị
 trường, loại chứng khoán, cư trú thuế và luật áp dụng trước khi tính.
 
+### 11.1. Định giá cổ phiếu chưa niêm yết trong câu hỏi thừa kế/tặng cho
+
+Câu 27 của phần ôn chương 1 kiểm tra một **tỷ trọng định giá**, không phải thuế
+giao dịch. Mệnh đề `주당순자산가치 : 주당수익가치 = 1 : 2` bị answer key đánh
+**Sai**; đáp án source ghi tỷ trọng **1 : 1,5** cho snapshot textbook đó.
+
+Điều cần học là hai input khác bản chất: `주당순자산가치` nhìn vào giá trị tài
+sản ròng trên mỗi cổ phần, còn `주당수익가치` nhìn vào năng lực tạo thu nhập.
+Tỷ trọng **1 : 1,5** ở đây là **SOURCE / TEXTBOOK STATE**, không phải tuyên bố
+về cách định giá thuế thừa kế/tặng cho hiện hành.
+
 ### 12. Kiểm tra hiểu phần thuế
 
 1. Vì sao bán cổ phiếu lỗ vẫn có thể phát sinh `증권거래세` trong khi không có
