@@ -24,8 +24,23 @@ mạch đọc theo tài liệu nguồn và không tạo thêm một định ngh�
 - [Tiền mặt, thị trường tiền tệ và sản phẩm cấu trúc](../../investing/02_asset_classes/06_CASH_MONEY_MARKETS_STRUCTURED_PRODUCTS_AND_PRIVATE_MARKETS.md)
 - [Phái sinh](../../investing/05_trading_derivatives/01_DERIVATIVES_FUTURES_OPTIONS_CFD.md)
 
-## Trạng thái
+## Ownership và cấu trúc của bộ sách
 
-Coverage/prose audit của phạm vi sách 1 đã hoàn tất. Các số liệu lịch sử về pháp
-lý, thuế, giờ giao dịch và điều kiện sản phẩm vẫn cần tra riêng nếu dùng cho
-quyết định hiện hành.
+- **Raw/provenance owner:** `../raw_md/sach1.md` và `../raw/sach1/`; source không
+  được sửa để làm đẹp learning output. Sách 2/3 hiện vẫn ở lớp raw.
+- **Source-specific learning route:** `book1/` là route của Sách 1. Khi Sách 2/3
+  được chuyển đổi, convention là `output/bookN/`; không di chuyển Book 1 chỉ để
+  đồng nhất hình thức khi route khác chưa tồn tại.
+- **Canonical concept owner:** `../../investing/` giữ giải thích chuẩn theo
+  domain. Book 1 giữ trật tự/provenance của giáo trình và cross-link sang
+  canonical owner khi cần đào sâu, không cạnh tranh ownership.
+
+## Trạng thái theo thời gian
+
+**SOURCE / TEXTBOOK STATE:** các ngưỡng pháp lý, thuế, giờ giao dịch, listing,
+public/private offering, KRX/KOSDAQ/KONEX/K-OTC/NXT, authorization/registration
+và product rules được giữ để tái dựng giáo trình và giải câu hỏi nguồn.
+
+**CURRENT VERIFIED STATE:** không có rule 2026 nào được suy ra ngầm từ textbook.
+Chỉ block có nguồn chính thức và ngày snapshot mới được coi là current; nếu không
+có block đó, người đọc phải kiểm tra nguồn chính thức trước khi áp dụng thực tế.
