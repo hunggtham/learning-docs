@@ -59,7 +59,7 @@ Ví dụ `s₁ = 8%`, `s₂ = 10%` cho `f₁,₂ ≈ 12,04%`. Đây là mức đ
 
 ## 3. Tín dụng và xếp hạng
 
-Default risk (신용위험의 핵심인 부도위험) là khả năng issuer không trả đủ hoặc đúng hạn. Credit rating (신용등급) của Moody’s, S&P, Fitch và các tổ chức khác là đánh giá tương đối về credit risk; rating không phải bảo hiểm và có thể chậm hơn thông tin thị trường. Bảng source đặt vùng `BBB-/Baa3` quanh ranh giới investment grade và `BB/Ba` vào vùng speculative/high-yield; tên bậc và quy tắc phân loại phải đọc theo đúng agency, ngày phát hành và jurisdiction. Spread so với trái phiếu tham chiếu bù cho default, liquidity, tax và các rủi ro khác. High-yield/junk bond có spread và xác suất tổn thất cao hơn trong textbook, nhưng lợi suất cao không tự bù đủ nếu recovery thấp hoặc thanh khoản biến mất.
+Rủi ro tín dụng (credit risk / 신용위험) là rủi ro tổn thất do chất lượng tín dụng của issuer hoặc đối tác suy giảm; rủi ro vỡ nợ (default risk / 부도위험) là trường hợp hẹp hơn khi issuer không trả đủ hoặc đúng hạn. Xếp hạng tín dụng (credit rating / 신용등급) của Moody’s, S&P, Fitch và các tổ chức khác là đánh giá tương đối về credit risk; rating không phải bảo hiểm và có thể chậm hơn thông tin thị trường. Bảng source đặt vùng `BBB-/Baa3` quanh ranh giới investment grade và `BB/Ba` vào vùng speculative/high-yield; tên bậc và quy tắc phân loại phải đọc theo đúng agency, ngày phát hành và jurisdiction. Spread so với trái phiếu tham chiếu bù cho default, liquidity, tax và các rủi ro khác. High-yield/junk bond có spread và xác suất tổn thất cao hơn trong textbook, nhưng lợi suất cao không tự bù đủ nếu recovery thấp hoặc thanh khoản biến mất.
 
 ## 4. Duration và convexity
 
@@ -92,7 +92,7 @@ Không được gọi Macaulay duration là “thời gian đáo hạn còn lạ
 
 ## 5. Benchmark và bond index
 
-Một bond index phải xác định universe, maturity, rating, currency, trọng số và cách xử lý phát hành mới, đáo hạn, coupon và default. Price index chỉ theo giá; coupon index theo coupon; yield index theo lợi suất; total-return index tái đầu tư coupon và phản ánh cả giá lẫn income. Benchmark portfolio source nêu dùng để so sánh, không phải danh mục “tối ưu” cho mọi nhà đầu tư.
+Một chỉ số trái phiếu (bond index / 채권지수) phải xác định universe, maturity, rating, currency, trọng số và cách xử lý phát hành mới, đáo hạn, coupon và default. Price index chỉ theo giá; coupon index theo coupon; yield index theo lợi suất; chỉ số tổng lợi suất (total-return index / 총수익지수) tái đầu tư coupon và phản ánh cả giá lẫn income. Benchmark portfolio source nêu dùng để so sánh, không phải danh mục “tối ưu” cho mọi nhà đầu tư.
 
 Source nhắc các bond index Hàn Quốc, gồm KSDA-BLP Korean Bond Index và các phân nhóm market/bond subindex. Tên mã, thành phần và phương pháp hiện tại cần xác minh lại trước khi sử dụng; route chỉ giữ nguyên tắc construction vì OCR không đủ cho mọi chi tiết.
 
@@ -164,7 +164,7 @@ Total return của danh mục trái phiếu có thể phân rã thành carry/cou
 
 ### Reconstruction: bond index, thị trường và auction không phải một unit
 
-Source tách measurement khỏi market plumbing. Bond index (채권지수) có thể là price index, coupon-income index, yield-related measure hoặc total-return index; với mục tiêu đo performance, total return phải cộng income và thay đổi giá theo đúng convention. Tracking error chỉ có ý nghĩa khi portfolio và benchmark dùng cùng universe, pricing time, currency và reinvestment rule.
+Source tách measurement khỏi market plumbing. Chỉ số trái phiếu (bond index / 채권지수) có thể là price index, coupon-income index, yield-related measure hoặc chỉ số tổng lợi suất (total-return index / 총수익지수); với mục tiêu đo performance, total return phải cộng income và thay đổi giá theo đúng convention. Tracking error chỉ có ý nghĩa khi portfolio và benchmark dùng cùng universe, pricing time, currency và reinvestment rule.
 
 Primary market (발행시장) là nơi chứng khoán nợ được phát hành; secondary market (유통시장) là nơi nhà đầu tư giao dịch lại. Auction là cơ chế price discovery ở phát hành và raw phân biệt conventional/multiple-price với Dutch/single-price. Hai cơ chế có incentive bidding khác nhau; không được gom chúng vào một nhãn “auction”. Repo (repurchase agreement / 환매조건부매매) là giao dịch bán chứng khoán kèm cam kết mua lại, kinh tế gần một khoản funding có collateral; haircut tạo buffer nhưng không xóa market, liquidity hay counterparty risk.
 
