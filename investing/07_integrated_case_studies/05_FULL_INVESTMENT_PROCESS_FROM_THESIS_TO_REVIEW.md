@@ -20,7 +20,7 @@ Khoảng cách giữa hai bên
 
 Nếu câu hỏi không thể bị bác bỏ bằng dữ liệu, nó chưa phải hypothesis tốt.
 
-> **Chuyển mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **2. Tách dữ kiện, ước tính, giả định và diễn giải** tiếp nhận điểm tựa từ **1. Bắt đầu từ câu hỏi, không bắt đầu từ ticker** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Kiểm soát nguồn dữ liệu và tính đúng thời điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **2. Tách dữ kiện, ước tính, giả định và diễn giải** nối từ **1. Bắt đầu từ câu hỏi, không bắt đầu từ ticker** sang **3. Kiểm soát nguồn dữ liệu và tính đúng thời điểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Tách dữ kiện, ước tính, giả định và diễn giải
 
@@ -46,7 +46,7 @@ Nếu inventory không giảm 2 quý   → rule / invalidation
 
 Trộn các lớp này tạo cảm giác chắc chắn giả.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **2. Tách dữ kiện, ước tính, giả định và diễn giải** nêu điều cần giải thích; **3. Kiểm soát nguồn dữ liệu và tính đúng thời điểm** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. Xác định thông tin đã được phản ánh trong giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **2. Tách dữ kiện, ước tính, giả định và diễn giải** đặt vấn đề; **3. Kiểm soát nguồn dữ liệu và tính đúng thời điểm** đối chiếu bằng chứng, rồi **4. Xác định thông tin đã được phản ánh trong giá** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3. Kiểm soát nguồn dữ liệu và tính đúng thời điểm
 
@@ -64,7 +64,7 @@ Revision risk
 
 Không được dùng consensus hiện tại để giả lập quyết định quá khứ nếu consensus lịch sử đã thay đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **3. Kiểm soát nguồn dữ liệu và tính đúng thời điểm** nêu điều cần giải thích; **4. Xác định thông tin đã được phản ánh trong giá** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **5. Xây bản đồ macro có chọn lọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **3. Kiểm soát nguồn dữ liệu và tính đúng thời điểm** đặt vấn đề; **4. Xác định thông tin đã được phản ánh trong giá** đối chiếu bằng chứng, rồi **5. Xây bản đồ macro có chọn lọc** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. Xác định thông tin đã được phản ánh trong giá
 
@@ -82,7 +82,7 @@ Positioning proxy nếu có
 
 Mục tiêu là tránh phát hiện một điều đúng nhưng đã được thị trường biết hết.
 
-> **Chuyển mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **5. Xây bản đồ macro có chọn lọc** tiếp nhận điểm tựa từ **4. Xác định thông tin đã được phản ánh trong giá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Đi qua rates trước khi nhảy sang cổ phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **5. Xây bản đồ macro có chọn lọc** nối từ **4. Xác định thông tin đã được phản ánh trong giá** sang **6. Đi qua rates trước khi nhảy sang cổ phiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Xây bản đồ macro có chọn lọc
 
@@ -109,7 +109,7 @@ Biến nào dẫn dắt?
 Biến nào trễ?
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **6. Đi qua rates trước khi nhảy sang cổ phiếu** tiếp nhận điểm tựa từ **5. Xây bản đồ macro có chọn lọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Thêm lớp liquidity / credit / funding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **6. Đi qua rates trước khi nhảy sang cổ phiếu** nối từ **5. Xây bản đồ macro có chọn lọc** sang **7. Thêm lớp liquidity / credit / funding**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Đi qua rates trước khi nhảy sang cổ phiếu
 
@@ -134,7 +134,7 @@ Inflation-expectation effect
 
 Hai lần 10Y tăng 50 bp có thể mang ý nghĩa hoàn toàn khác nếu một lần do tăng trưởng mạnh và một lần do fiscal/term-premium stress.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **7. Thêm lớp liquidity / credit / funding** tiếp nhận điểm tựa từ **6. Đi qua rates trước khi nhảy sang cổ phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Xây cây ngành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **7. Thêm lớp liquidity / credit / funding** nối từ **6. Đi qua rates trước khi nhảy sang cổ phiếu** sang **8. Xây cây ngành**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Thêm lớp liquidity / credit / funding
 
@@ -155,7 +155,7 @@ Supplier financing
 
 Một công ty có ít nợ vẫn có thể chịu shock lớn nếu khách hàng phụ thuộc funding để mua sản phẩm của công ty.
 
-> **Chuyển mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **8. Xây cây ngành** tiếp nhận điểm tựa từ **7. Thêm lớp liquidity / credit / funding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Xây cây doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **8. Xây cây ngành** nối từ **7. Thêm lớp liquidity / credit / funding** sang **9. Xây cây doanh nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Xây cây ngành
 
@@ -175,7 +175,7 @@ Với từng ngành, thay các biến phù hợp. Điều quan trọng là xác 
 
 Không dùng một headline ngành thay cho driver cây (tree / 트리).
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **9. Xây cây doanh nghiệp** tiếp nhận điểm tựa từ **8. Xây cây ngành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Xây FX map riêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **9. Xây cây doanh nghiệp** nối từ **8. Xây cây ngành** sang **10. Xây FX map riêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Xây cây doanh nghiệp
 
@@ -203,7 +203,7 @@ Chuỗi này tạo cầu nối từ dữ liệu vận hành tới dòng tiền.
 
 Nếu không thể giải thích revenue/margin bằng driver, valuation phía sau chỉ là spreadsheet giả định (assumption / 가정).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **10. Xây FX map riêng** tiếp nhận điểm tựa từ **9. Xây cây doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Kiểm tra bảng cân đối trước định giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **10. Xây FX map riêng** nối từ **9. Xây cây doanh nghiệp** sang **11. Kiểm tra bảng cân đối trước định giá**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Xây FX map riêng
 
@@ -221,7 +221,7 @@ Investor base currency
 
 Không dùng quy tắc (rule / 규칙) `nội tệ yếu = exporter tốt` nếu chưa biết net FX exposure.
 
-> **Chuyển mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **11. Kiểm tra bảng cân đối trước định giá** tiếp nhận điểm tựa từ **10. Xây FX map riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트) bảng cân đối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **11. Kiểm tra bảng cân đối trước định giá** nối từ **10. Xây FX map riêng** sang **12. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트) bảng cân đối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Kiểm tra bảng cân đối trước định giá
 
@@ -243,7 +243,7 @@ Revolver / unused facilities
 
 Phải tạo **liquidity runway** và **refinancing map**, không chỉ Debt/EBITDA.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **12. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트) bảng cân đối** tiếp nhận điểm tựa từ **11. Kiểm tra bảng cân đối trước định giá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Chuẩn hóa lợi nhuận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **12. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트) bảng cân đối** nối từ **11. Kiểm tra bảng cân đối trước định giá** sang **13. Chuẩn hóa lợi nhuận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트) bảng cân đối
 
@@ -262,7 +262,7 @@ Revenue -15%
 
 Nếu chỉ một tổ hợp nhẹ đã phá bảng cân đối, valuation upside không còn là vấn đề chính.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **13. Chuẩn hóa lợi nhuận** tiếp nhận điểm tựa từ **12. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트) bảng cân đối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Kiểm tra chất lượng lợi nhuận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **13. Chuẩn hóa lợi nhuận** nối từ **12. Reverse kiểm thử sức chịu tải (stress test / 스트레스 테스트) bảng cân đối** sang **14. Kiểm tra chất lượng lợi nhuận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Chuẩn hóa lợi nhuận
 
@@ -281,7 +281,7 @@ Normalized credit loss nếu phù hợp
 
 Sau đó mới định giá.
 
-> **Chuyển mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **14. Kiểm tra chất lượng lợi nhuận** tiếp nhận điểm tựa từ **13. Chuẩn hóa lợi nhuận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Xây ba kịch bản từ driver** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **14. Kiểm tra chất lượng lợi nhuận** nối từ **13. Chuẩn hóa lợi nhuận** sang **15. Xây ba kịch bản từ driver**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Kiểm tra chất lượng lợi nhuận
 
@@ -300,7 +300,7 @@ One-off recurring item
 
 Một lợi nhuận “beat” nhưng cash conversion xấu có thể làm thesis khác hoàn toàn.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **15. Xây ba kịch bản từ driver** tiếp nhận điểm tựa từ **14. Kiểm tra chất lượng lợi nhuận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Định giá bằng nhiều phương pháp phù hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **15. Xây ba kịch bản từ driver** nối từ **14. Kiểm tra chất lượng lợi nhuận** sang **16. Định giá bằng nhiều phương pháp phù hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Xây ba kịch bản từ driver
 
@@ -331,7 +331,7 @@ FCF
 Valuation
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **16. Định giá bằng nhiều phương pháp phù hợp** tiếp nhận điểm tựa từ **15. Xây ba kịch bản từ driver** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Tách cash-flow tác động (effect / 효과) và discount-rate tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **16. Định giá bằng nhiều phương pháp phù hợp** nối từ **15. Xây ba kịch bản từ driver** sang **17. Tách cash-flow tác động (effect / 효과) và discount-rate tác động (effect / 효과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Định giá bằng nhiều phương pháp phù hợp
 
@@ -348,7 +348,7 @@ Residual income
 
 Tùy ngành. Mục tiêu là xem nhiều phương pháp có cùng kể một câu chuyện hay không.
 
-> **Chuyển mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **16. Định giá bằng nhiều phương pháp phù hợp** xác định đầu vào; **17. Tách cash-flow tác động (effect / 효과) và discount-rate tác động (effect / 효과)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **18. Reverse DCF** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **16. Định giá bằng nhiều phương pháp phù hợp** đặt đầu vào cho **17. Tách cash-flow tác động (effect / 효과) và discount-rate tác động (effect / 효과)**, rồi **18. Reverse DCF** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 17. Tách cash-flow tác động (effect / 효과) và discount-rate tác động (effect / 효과)
 
@@ -364,7 +364,7 @@ cả hai
 
 Đây là cầu nối trực tiếp từ macro/rates sang valuation.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **17. Tách cash-flow tác động (effect / 효과) và discount-rate tác động (effect / 효과)** xác định đầu vào; **18. Reverse DCF** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **19. Chuyển định giá thành phân phối lợi suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **17. Tách cash-flow tác động (effect / 효과) và discount-rate tác động (effect / 효과)** đặt đầu vào cho **18. Reverse DCF**, rồi **19. Chuyển định giá thành phân phối lợi suất** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. Reverse DCF
 
@@ -376,7 +376,7 @@ Nếu giá hiện tại đã giả định gần bull trường hợp (case / �
 
 Reverse DCF cũng giúp phát hiện khi thị trường đã pricing một bear trường hợp (case / 사례) rất sâu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **19. Chuyển định giá thành phân phối lợi suất** tiếp nhận điểm tựa từ **18. Reverse DCF** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Phân tích rủi ro ngoài mô hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **19. Chuyển định giá thành phân phối lợi suất** nối từ **18. Reverse DCF** sang **20. Phân tích rủi ro ngoài mô hình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Chuyển định giá thành phân phối lợi suất
 
@@ -394,7 +394,7 @@ Sau đó tính expectancy gần đúng nhưng không quên tail rủi ro (risk /
 
 Nếu đầu tư xuyên biên giới, chuyển từng scenario sang **đồng tiền cơ sở** bằng FX giả định (assumption / 가정) và chi phí.
 
-> **Chuyển mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **20. Phân tích rủi ro ngoài mô hình** tiếp nhận điểm tựa từ **19. Chuyển định giá thành phân phối lợi suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Kiểm tra tương quan với danh mục hiện có** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **20. Phân tích rủi ro ngoài mô hình** nối từ **19. Chuyển định giá thành phân phối lợi suất** sang **21. Kiểm tra tương quan với danh mục hiện có**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Phân tích rủi ro ngoài mô hình
 
@@ -414,7 +414,7 @@ Cyber / operational
 
 Danh sách này phải ảnh hưởng tới bất định (uncertainty / 불확실성) và quy mô vị thế.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **21. Kiểm tra tương quan với danh mục hiện có** tiếp nhận điểm tựa từ **20. Phân tích rủi ro ngoài mô hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Từ conviction tới position kích thước (size / 크기)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **21. Kiểm tra tương quan với danh mục hiện có** nối từ **20. Phân tích rủi ro ngoài mô hình** sang **22. Từ conviction tới position kích thước (size / 크기)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Kiểm tra tương quan với danh mục hiện có
 
@@ -442,7 +442,7 @@ Liquidity
 China / global demand
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **22. Từ conviction tới position kích thước (size / 크기)** tiếp nhận điểm tựa từ **21. Kiểm tra tương quan với danh mục hiện có** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Sizing bằng stress mất mát (loss / 손실)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **22. Từ conviction tới position kích thước (size / 크기)** nối từ **21. Kiểm tra tương quan với danh mục hiện có** sang **23. Sizing bằng stress mất mát (loss / 손실)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Từ conviction tới position kích thước (size / 크기)
 
@@ -463,7 +463,7 @@ Gap / tail risk
 
 Một thesis tốt nhưng thanh khoản kém vẫn có thể cần vị thế nhỏ.
 
-> **Chuyển mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **23. Sizing bằng stress mất mát (loss / 손실)** tiếp nhận điểm tựa từ **22. Từ conviction tới position kích thước (size / 크기)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Viết vô hiệu hóa (invalidation / 무효화) theo từng tầng trước khi mở vị thế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **23. Sizing bằng stress mất mát (loss / 손실)** nối từ **22. Từ conviction tới position kích thước (size / 크기)** sang **24. Viết vô hiệu hóa (invalidation / 무효화) theo từng tầng trước khi mở vị thế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Sizing bằng stress mất mát (loss / 손실)
 
@@ -482,7 +482,7 @@ Loss contribution ≈ -3,2% danh mục
 
 Sau đó hỏi liệu 3,2% có phù hợp rủi ro (risk / 위험) ngân sách (budget / 예산) hay không.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **24. Viết vô hiệu hóa (invalidation / 무효화) theo từng tầng trước khi mở vị thế** tiếp nhận điểm tựa từ **23. Sizing bằng stress mất mát (loss / 손실)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Viết catalyst nhưng không phụ thuộc hoàn toàn vào catalyst** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **24. Viết vô hiệu hóa (invalidation / 무효화) theo từng tầng trước khi mở vị thế** nối từ **23. Sizing bằng stress mất mát (loss / 손실)** sang **25. Viết catalyst nhưng không phụ thuộc hoàn toàn vào catalyst**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Viết vô hiệu hóa (invalidation / 무효화) theo từng tầng trước khi mở vị thế
 
@@ -499,7 +499,7 @@ Portfolio: correlation / concentration vượt ngưỡng
 
 Giá giảm không tự động là vô hiệu hóa (invalidation / 무효화); cơ chế sai mới là vô hiệu hóa (invalidation / 무효화).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **25. Viết catalyst nhưng không phụ thuộc hoàn toàn vào catalyst** tiếp nhận điểm tựa từ **24. Viết vô hiệu hóa (invalidation / 무효화) theo từng tầng trước khi mở vị thế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Pre-mortem — giả sử quyết định thất bại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **25. Viết catalyst nhưng không phụ thuộc hoàn toàn vào catalyst** nối từ **24. Viết vô hiệu hóa (invalidation / 무효화) theo từng tầng trước khi mở vị thế** sang **26. Pre-mortem — giả sử quyết định thất bại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Viết catalyst nhưng không phụ thuộc hoàn toàn vào catalyst
 
@@ -516,7 +516,7 @@ Asset sale
 
 Nhưng thesis phải sống được nếu catalyst chậm hơn dự kiến, miễn liquidity runway đủ.
 
-> **Chuyển mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **26. Pre-mortem — giả sử quyết định thất bại** tiếp nhận điểm tựa từ **25. Viết catalyst nhưng không phụ thuộc hoàn toàn vào catalyst** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Lập kế hoạch thực thi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **26. Pre-mortem — giả sử quyết định thất bại** nối từ **25. Viết catalyst nhưng không phụ thuộc hoàn toàn vào catalyst** sang **27. Lập kế hoạch thực thi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Pre-mortem — giả sử quyết định thất bại
 
@@ -538,7 +538,7 @@ Liquidity biến mất
 
 Pre-mortem giúp tránh một thesis chỉ có đường thắng.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **27. Lập kế hoạch thực thi** tiếp nhận điểm tựa từ **26. Pre-mortem — giả sử quyết định thất bại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Tách quyết định (decision / 결정) price và thực thi (execution / 실행) price** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **27. Lập kế hoạch thực thi** nối từ **26. Pre-mortem — giả sử quyết định thất bại** sang **28. Tách quyết định (decision / 결정) price và thực thi (execution / 실행) price**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Lập kế hoạch thực thi
 
@@ -556,7 +556,7 @@ Settlement / FX need
 
 Với mã thanh khoản thấp, thực thi (execution / 실행) có thể ảnh hưởng đáng kể tới return.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **28. Tách quyết định (decision / 결정) price và thực thi (execution / 실행) price** tiếp nhận điểm tựa từ **27. Lập kế hoạch thực thi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Nếu dùng phái sinh, theo dõi notional và margin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **28. Tách quyết định (decision / 결정) price và thực thi (execution / 실행) price** nối từ **27. Lập kế hoạch thực thi** sang **29. Nếu dùng phái sinh, theo dõi notional và margin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Tách quyết định (decision / 결정) price và thực thi (execution / 실행) price
 
@@ -574,7 +574,7 @@ Opportunity cost
 
 Sau này có thể phân biệt thesis tốt nhưng thực thi (execution / 실행) tệ.
 
-> **Chuyển mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **29. Nếu dùng phái sinh, theo dõi notional và margin** tiếp nhận điểm tựa từ **28. Tách quyết định (decision / 결정) price và thực thi (execution / 실행) price** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Hedge phải có dạng thất bại (failure mode / 실패 모드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **29. Nếu dùng phái sinh, theo dõi notional và margin** nối từ **28. Tách quyết định (decision / 결정) price và thực thi (execution / 실행) price** sang **30. Hedge phải có dạng thất bại (failure mode / 실패 모드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Nếu dùng phái sinh, theo dõi notional và margin
 
@@ -591,7 +591,7 @@ Liquidity buffer
 Basis risk
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **30. Hedge phải có dạng thất bại (failure mode / 실패 모드)** tiếp nhận điểm tựa từ **29. Nếu dùng phái sinh, theo dõi notional và margin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Theo dõi thesis bằng KPI dẫn dắt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **30. Hedge phải có dạng thất bại (failure mode / 실패 모드)** nối từ **29. Nếu dùng phái sinh, theo dõi notional và margin** sang **31. Theo dõi thesis bằng KPI dẫn dắt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Hedge phải có dạng thất bại (failure mode / 실패 모드)
 
@@ -609,7 +609,7 @@ Cost?
 
 Hedge không khớp factor có thể tạo cảm giác an toàn giả.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **31. Theo dõi thesis bằng KPI dẫn dắt** tiếp nhận điểm tựa từ **30. Hedge phải có dạng thất bại (failure mode / 실패 모드)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Cập nhật xác suất thay vì đổi hoàn toàn quan điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **31. Theo dõi thesis bằng KPI dẫn dắt** nối từ **30. Hedge phải có dạng thất bại (failure mode / 실패 모드)** sang **32. Cập nhật xác suất thay vì đổi hoàn toàn quan điểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Theo dõi thesis bằng KPI dẫn dắt
 
@@ -631,7 +631,7 @@ Debt / liquidity
 
 Giá là đầu ra của nhiều yếu tố, không phải bằng chứng duy nhất.
 
-> **Chuyển mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **32. Cập nhật xác suất thay vì đổi hoàn toàn quan điểm** tiếp nhận điểm tựa từ **31. Theo dõi thesis bằng KPI dẫn dắt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Earnings rà soát (review / 검토)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **32. Cập nhật xác suất thay vì đổi hoàn toàn quan điểm** nối từ **31. Theo dõi thesis bằng KPI dẫn dắt** sang **33. Earnings rà soát (review / 검토)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Cập nhật xác suất thay vì đổi hoàn toàn quan điểm
 
@@ -646,7 +646,7 @@ Không cần chuyển ngay từ “bear” sang “bull” tuyệt đối.
 
 Tư duy xác suất giảm phản ứng cảm xúc.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **33. Earnings rà soát (review / 검토)** tiếp nhận điểm tựa từ **32. Cập nhật xác suất thay vì đổi hoàn toàn quan điểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Attribution sau một giai đoạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **33. Earnings rà soát (review / 검토)** nối từ **32. Cập nhật xác suất thay vì đổi hoàn toàn quan điểm** sang **34. Attribution sau một giai đoạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Earnings rà soát (review / 검토)
 
@@ -664,7 +664,7 @@ Valuation
 
 Cập nhật mô hình (model / 모델) trước khi đọc quá nhiều bình luận thị trường để giảm anchoring.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **34. Attribution sau một giai đoạn** tiếp nhận điểm tựa từ **33. Earnings rà soát (review / 검토)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. quyết định (decision / 결정) chất lượng (quality / 품질) khác kết quả (outcome / 결과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **34. Attribution sau một giai đoạn** nối từ **33. Earnings rà soát (review / 검토)** sang **35. quyết định (decision / 결정) chất lượng (quality / 품질) khác kết quả (outcome / 결과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Attribution sau một giai đoạn
 
@@ -684,7 +684,7 @@ Position sizing
 
 Nếu lời nhờ multiple expansion nhưng thesis earnings sai, không nên tự đánh giá quyết định là hoàn toàn tốt.
 
-> **Chuyển mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **35. quyết định (decision / 결정) chất lượng (quality / 품질) khác kết quả (outcome / 결과)** tiếp nhận điểm tựa từ **34. Attribution sau một giai đoạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Post-mortem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **35. quyết định (decision / 결정) chất lượng (quality / 품질) khác kết quả (outcome / 결과)** nối từ **34. Attribution sau một giai đoạn** sang **36. Post-mortem**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. quyết định (decision / 결정) chất lượng (quality / 품질) khác kết quả (outcome / 결과)
 
@@ -699,7 +699,7 @@ Quyết định xấu + kết quả xấu
 
 Hai trường hợp giữa là nơi học được nhiều nhất.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **36. Post-mortem** tiếp nhận điểm tựa từ **35. quyết định (decision / 결정) chất lượng (quality / 품질) khác kết quả (outcome / 결과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Cập nhật playbook** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **36. Post-mortem** nối từ **35. quyết định (decision / 결정) chất lượng (quality / 품질) khác kết quả (outcome / 결과)** sang **37. Cập nhật playbook**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Post-mortem
 
@@ -718,7 +718,7 @@ Tôi có phá rule?
 
 Không chỉ ghi profit/mất mát (loss / 손실).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **37. Cập nhật playbook** tiếp nhận điểm tựa từ **36. Post-mortem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. cổng chất lượng (quality gate / 품질 게이트) cuối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **37. Cập nhật playbook** nối từ **36. Post-mortem** sang **38. cổng chất lượng (quality gate / 품질 게이트) cuối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Cập nhật playbook
 
@@ -733,7 +733,7 @@ Thường bỏ qua debt maturity
 
 Đây là cách thư viện kiến thức (knowledge library / 지식 라이브러리) trở thành hệ thống học sống.
 
-> **Chuyển mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **38. cổng chất lượng (quality gate / 품질 게이트) cuối** tiếp nhận điểm tựa từ **37. Cập nhật playbook** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Bài tập capstone** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **38. cổng chất lượng (quality gate / 품질 게이트) cuối** nối từ **37. Cập nhật playbook** sang **39. Bài tập capstone**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. cổng chất lượng (quality gate / 품질 게이트) cuối
 
@@ -751,7 +751,7 @@ Capstone chỉ được xem là hoàn thành khi trả lời được cả bảy
 
 Nếu thiếu một tầng, hồ sơ chưa đạt mức vận hành.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **39. Bài tập capstone** tiếp nhận điểm tựa từ **38. cổng chất lượng (quality gate / 품질 게이트) cuối** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Liên kết tới Advanced Labs và worked cases** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **39. Bài tập capstone** nối từ **38. cổng chất lượng (quality gate / 품질 게이트) cuối** sang **40. Liên kết tới Advanced Labs và worked cases**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Bài tập capstone
 
@@ -774,7 +774,7 @@ Chọn một doanh nghiệp hoặc tài sản thực tế và tạo bộ hồ s�
 
 Mỗi tệp (file / 파일) phải liên kết với dữ liệu và giả định cụ thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **39. Bài tập capstone** cho ta quy tắc; **40. Liên kết tới Advanced Labs và worked cases** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **39. Bài tập capstone** nêu quy tắc; **40. Liên kết tới Advanced Labs và worked cases** thử quy tắc trong tình huống, rồi **Kết luận** mở rộng hệ quả.
 
 ## 40. Liên kết tới Advanced Labs và worked cases
 
@@ -789,7 +789,7 @@ Khi quy trình chính đã hoàn tất, các liên kết sau đưa người họ
 - [Worked case: Macro → Rates → Liquidity → Company → Portfolio](./06_MACRO_RATES_LIQUIDITY_COMPANY_VALUATION_PORTFOLIO_CASE.md)
 - [Worked case: USD Funding / FX Korea–Vietnam](./07_USD_FUNDING_FX_KOREA_VIETNAM_CROSS_BORDER_CASE.md)
 
-> **Chuyển mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **40. Liên kết tới Advanced Labs và worked cases** cho ta quy tắc; **Kết luận** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Tình huống tổng hợp 05 — Quy trình đầu tư hoàn chỉnh: từ luận điểm tới đánh giá sau quyết định**, **40. Liên kết tới Advanced Labs và worked cases** cho ta quy tắc; **Kết luận** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

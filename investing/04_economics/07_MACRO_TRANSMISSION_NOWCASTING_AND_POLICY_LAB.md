@@ -22,7 +22,7 @@ thay đổi đó ảnh hưởng hàm phản ứng chính sách thế nào?
 
 Một CPI 3% có thể tích cực nếu thị trường kỳ vọng 3,5%, nhưng tiêu cực nếu kỳ vọng 2,5%.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **2. Xây bản đồ “điều gì đang được định giá”** tiếp nhận điểm tựa từ **1. Macro không phải là đoán GDP** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Nowcasting khác forecasting dài hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **2. Xây bản đồ “điều gì đang được định giá”** nối từ **1. Macro không phải là đoán GDP** sang **3. Nowcasting khác forecasting dài hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Xây bản đồ “điều gì đang được định giá”
 
@@ -41,7 +41,7 @@ Vị thế thị trường nếu có
 
 Sau dữ liệu, không chỉ nhìn con số mà nhìn **mức tái định giá (repricing)**.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **3. Nowcasting khác forecasting dài hạn** tiếp nhận điểm tựa từ **2. Xây bản đồ “điều gì đang được định giá”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Dùng diffusion thay vì phụ thuộc một chỉ tiêu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **3. Nowcasting khác forecasting dài hạn** nối từ **2. Xây bản đồ “điều gì đang được định giá”** sang **4. Dùng diffusion thay vì phụ thuộc một chỉ tiêu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Nowcasting khác forecasting dài hạn
 
@@ -63,7 +63,7 @@ Giá cả
 
 Mục tiêu là cập nhật xác suất của các kịch bản, không tạo một con số GDP “chính xác giả”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **4. Dùng diffusion thay vì phụ thuộc một chỉ tiêu** tiếp nhận điểm tựa từ **3. Nowcasting khác forecasting dài hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Lạm phát phải tách nguồn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **4. Dùng diffusion thay vì phụ thuộc một chỉ tiêu** nối từ **3. Nowcasting khác forecasting dài hạn** sang **5. Lạm phát phải tách nguồn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Dùng diffusion thay vì phụ thuộc một chỉ tiêu
 
@@ -77,7 +77,7 @@ Chỉ tiêu | Tăng tốc | Ổn định | Giảm tốc | Độ tin cậy
 
 Qua thời gian, người đọc học được chỉ tiêu nào dẫn tốt hơn trong từng chế độ.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **4. Dùng diffusion thay vì phụ thuộc một chỉ tiêu** nêu điều cần giải thích; **5. Lạm phát phải tách nguồn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. Từ tiền lương tới lạm phát dịch vụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **4. Dùng diffusion thay vì phụ thuộc một chỉ tiêu** đặt vấn đề; **5. Lạm phát phải tách nguồn** đối chiếu bằng chứng, rồi **6. Từ tiền lương tới lạm phát dịch vụ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. Lạm phát phải tách nguồn
 
@@ -94,7 +94,7 @@ Thực phẩm
 
 Lạm phát hàng hóa giảm nhờ chuỗi cung ứng khác lạm phát dịch vụ giảm nhờ thị trường lao động nguội đi. Hàm phản ứng của ngân hàng trung ương có thể khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **5. Lạm phát phải tách nguồn** nêu điều cần giải thích; **6. Từ tiền lương tới lạm phát dịch vụ** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. Phân biệt disinflation và deflation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **5. Lạm phát phải tách nguồn** đặt vấn đề; **6. Từ tiền lương tới lạm phát dịch vụ** đối chiếu bằng chứng, rồi **7. Phân biệt disinflation và deflation** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 6. Từ tiền lương tới lạm phát dịch vụ
 
@@ -110,7 +110,7 @@ Thị trường lao động chặt
 
 Nhưng năng suất tăng có thể hấp thụ một phần tiền lương. Vì vậy nên theo **chi phí lao động trên một đơn vị sản lượng (unit labor cost)** thay vì chỉ lương danh nghĩa.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **7. Phân biệt disinflation và deflation** tiếp nhận điểm tựa từ **6. Từ tiền lương tới lạm phát dịch vụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. đầu ra (output / 출력) gap là cầu nối giữa tăng trưởng và lạm phát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **7. Phân biệt disinflation và deflation** nối từ **6. Từ tiền lương tới lạm phát dịch vụ** sang **8. đầu ra (output / 출력) gap là cầu nối giữa tăng trưởng và lạm phát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Phân biệt disinflation và deflation
 
@@ -122,7 +122,7 @@ Hai khái niệm này khác nhau về hướng thay đổi của mức giá. Ph�
 
 Hai trạng thái có ý nghĩa hoàn toàn khác với doanh thu danh nghĩa, nợ và chính sách tiền tệ.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **8. đầu ra (output / 출력) gap là cầu nối giữa tăng trưởng và lạm phát** tiếp nhận điểm tựa từ **7. Phân biệt disinflation và deflation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Chính sách tiền tệ tác động qua nhiều kênh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **8. đầu ra (output / 출력) gap là cầu nối giữa tăng trưởng và lạm phát** nối từ **7. Phân biệt disinflation và deflation** sang **9. Chính sách tiền tệ tác động qua nhiều kênh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. đầu ra (output / 출력) gap là cầu nối giữa tăng trưởng và lạm phát
 
@@ -130,7 +130,7 @@ Khoảng cách sản lượng (output gap) dương nghĩa là cầu đang vượ
 
 Không thể quan sát trực tiếp nên phải ước lượng qua lao động, công suất, tiền lương và giá.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **9. Chính sách tiền tệ tác động qua nhiều kênh** tiếp nhận điểm tựa từ **8. đầu ra (output / 출력) gap là cầu nối giữa tăng trưởng và lạm phát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Đọc đường cong lợi suất theo thành phần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **9. Chính sách tiền tệ tác động qua nhiều kênh** nối từ **8. đầu ra (output / 출력) gap là cầu nối giữa tăng trưởng và lạm phát** sang **10. Đọc đường cong lợi suất theo thành phần**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Chính sách tiền tệ tác động qua nhiều kênh
 
@@ -150,7 +150,7 @@ Lãi suất chính sách
 
 Mỗi nền kinh tế có độ trễ khác nhau do cấu trúc nợ cố định/thả nổi và hệ thống tài chính.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **10. Đọc đường cong lợi suất theo thành phần** tiếp nhận điểm tựa từ **9. Chính sách tiền tệ tác động qua nhiều kênh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Bull steepener và bear steepener** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **10. Đọc đường cong lợi suất theo thành phần** nối từ **9. Chính sách tiền tệ tác động qua nhiều kênh** sang **11. Bull steepener và bear steepener**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Đọc đường cong lợi suất theo thành phần
 
@@ -165,7 +165,7 @@ Nếu 10Y tăng vì kỳ vọng Fed cao hơn, ý nghĩa khác với 10Y tăng v�
 
 Cổ phiếu có thể chịu áp lực trong cả hai, nhưng tín hiệu về tăng trưởng/lạm phát khác nhau.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **11. Bull steepener và bear steepener** tiếp nhận điểm tựa từ **10. Đọc đường cong lợi suất theo thành phần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Credit spread là chỉ báo điều kiện tài chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **11. Bull steepener và bear steepener** nối từ **10. Đọc đường cong lợi suất theo thành phần** sang **12. Credit spread là chỉ báo điều kiện tài chính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Bull steepener và bear steepener
 
@@ -181,7 +181,7 @@ Bear steepener:
 
 Bull steepener do kỳ vọng cắt lãi trong suy thoái khác hoàn toàn bear steepener do lo lạm phát/tài khóa.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **12. Credit spread là chỉ báo điều kiện tài chính** tiếp nhận điểm tựa từ **11. Bull steepener và bear steepener** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Lending standards có thể quan trọng hơn chính sách (policy / 정책) tỷ lệ (rate / 비율)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **12. Credit spread là chỉ báo điều kiện tài chính** nối từ **11. Bull steepener và bear steepener** sang **13. Lending standards có thể quan trọng hơn chính sách (policy / 정책) tỷ lệ (rate / 비율)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Credit spread là chỉ báo điều kiện tài chính
 
@@ -199,7 +199,7 @@ Spread ↑
 
 Credit thường là cầu nối giữa vĩ mô và kinh tế doanh nghiệp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **13. Lending standards có thể quan trọng hơn chính sách (policy / 정책) tỷ lệ (rate / 비율)** tiếp nhận điểm tựa từ **12. Credit spread là chỉ báo điều kiện tài chính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. FX là giá tương đối của hai nền kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **13. Lending standards có thể quan trọng hơn chính sách (policy / 정책) tỷ lệ (rate / 비율)** nối từ **12. Credit spread là chỉ báo điều kiện tài chính** sang **14. FX là giá tương đối của hai nền kinh tế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Lending standards có thể quan trọng hơn chính sách (policy / 정책) tỷ lệ (rate / 비율)
 
@@ -216,7 +216,7 @@ Nợ xấu sớm
 
 Nếu kênh tín dụng vẫn thắt, tác động suy giảm có thể tiếp tục dù lãi suất chính sách không tăng thêm.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **14. FX là giá tương đối của hai nền kinh tế** tiếp nhận điểm tựa từ **13. Lending standards có thể quan trọng hơn chính sách (policy / 정책) tỷ lệ (rate / 비율)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Đồng tiền vừa là kết quả vừa là kênh truyền dẫn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **14. FX là giá tương đối của hai nền kinh tế** nối từ **13. Lending standards có thể quan trọng hơn chính sách (policy / 정책) tỷ lệ (rate / 비율)** sang **15. Đồng tiền vừa là kết quả vừa là kênh truyền dẫn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. FX là giá tương đối của hai nền kinh tế
 
@@ -233,7 +233,7 @@ Tâm lý rủi ro toàn cầu
 
 Phân tích FX phải mang tính tương đối.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **15. Đồng tiền vừa là kết quả vừa là kênh truyền dẫn** tiếp nhận điểm tựa từ **14. FX là giá tương đối của hai nền kinh tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Tài khóa và tiền tệ có thể cùng chiều hoặc ngược chiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **15. Đồng tiền vừa là kết quả vừa là kênh truyền dẫn** nối từ **14. FX là giá tương đối của hai nền kinh tế** sang **16. Tài khóa và tiền tệ có thể cùng chiều hoặc ngược chiều**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Đồng tiền vừa là kết quả vừa là kênh truyền dẫn
 
@@ -249,7 +249,7 @@ Nội tệ yếu
 
 Nhưng exporter có doanh thu ngoại tệ có thể được hỗ trợ. Phải xuống cấp doanh nghiệp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **16. Tài khóa và tiền tệ có thể cùng chiều hoặc ngược chiều** tiếp nhận điểm tựa từ **15. Đồng tiền vừa là kết quả vừa là kênh truyền dẫn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Debt dynamics phải nhìn lãi suất hiệu dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **16. Tài khóa và tiền tệ có thể cùng chiều hoặc ngược chiều** nối từ **15. Đồng tiền vừa là kết quả vừa là kênh truyền dẫn** sang **17. Debt dynamics phải nhìn lãi suất hiệu dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Tài khóa và tiền tệ có thể cùng chiều hoặc ngược chiều
 
@@ -264,7 +264,7 @@ Tài khóa nới lỏng
 
 Nếu cả hai cùng thắt, tác động suy giảm có thể mạnh hơn.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **17. Debt dynamics phải nhìn lãi suất hiệu dụng** tiếp nhận điểm tựa từ **16. Tài khóa và tiền tệ có thể cùng chiều hoặc ngược chiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Gross financing need quan trọng hơn nợ tổng trong ngắn hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **17. Debt dynamics phải nhìn lãi suất hiệu dụng** nối từ **16. Tài khóa và tiền tệ có thể cùng chiều hoặc ngược chiều** sang **18. Gross financing need quan trọng hơn nợ tổng trong ngắn hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Debt dynamics phải nhìn lãi suất hiệu dụng
 
@@ -279,7 +279,7 @@ Nếu lãi suất hiệu dụng > tăng trưởng danh nghĩa
 
 Nhưng tác động diễn ra theo lịch đáo hạn: chính phủ có nợ kỳ hạn dài sẽ tái định giá chậm hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **18. Gross financing need quan trọng hơn nợ tổng trong ngắn hạn** tiếp nhận điểm tựa từ **17. Debt dynamics phải nhìn lãi suất hiệu dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Demographics tác động qua nhiều kênh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **18. Gross financing need quan trọng hơn nợ tổng trong ngắn hạn** nối từ **17. Debt dynamics phải nhìn lãi suất hiệu dụng** sang **19. Demographics tác động qua nhiều kênh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Gross financing need quan trọng hơn nợ tổng trong ngắn hạn
 
@@ -295,7 +295,7 @@ Thâm hụt mới
 
 Đây là biến quan trọng khi phân tích rủi ro chủ quyền.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **19. Demographics tác động qua nhiều kênh** tiếp nhận điểm tựa từ **18. Gross financing need quan trọng hơn nợ tổng trong ngắn hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Năng suất là biến dài hạn quan trọng nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **19. Demographics tác động qua nhiều kênh** nối từ **18. Gross financing need quan trọng hơn nợ tổng trong ngắn hạn** sang **20. Năng suất là biến dài hạn quan trọng nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Demographics tác động qua nhiều kênh
 
@@ -312,7 +312,7 @@ Lãi suất cân bằng dài hạn
 
 Tác động phụ thuộc năng suất, nhập cư, tuổi nghỉ hưu và tỷ lệ tham gia lao động.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **20. Năng suất là biến dài hạn quan trọng nhất** tiếp nhận điểm tựa từ **19. Demographics tác động qua nhiều kênh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Xây ma trận regime** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **20. Năng suất là biến dài hạn quan trọng nhất** nối từ **19. Demographics tác động qua nhiều kênh** sang **21. Xây ma trận regime**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Năng suất là biến dài hạn quan trọng nhất
 
@@ -326,7 +326,7 @@ mà không cần lạm phát cao tương ứng
 
 Khi đánh giá AI hoặc công nghệ mới, câu hỏi không phải chỉ là capex tăng bao nhiêu mà là nó có nâng sản lượng trên mỗi đơn vị lao động/vốn hay không.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **21. Xây ma trận regime** tiếp nhận điểm tựa từ **20. Năng suất là biến dài hạn quan trọng nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Regime chuyển tiếp (transition / 전이) quan trọng hơn nhãn hiện tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **21. Xây ma trận regime** nối từ **20. Năng suất là biến dài hạn quan trọng nhất** sang **22. Regime chuyển tiếp (transition / 전이) quan trọng hơn nhãn hiện tại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Xây ma trận regime
 
@@ -347,7 +347,7 @@ Tín dụng
 
 Một “Goldilocks” với định giá cực cao không giống Goldilocks với định giá thấp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **22. Regime chuyển tiếp (transition / 전이) quan trọng hơn nhãn hiện tại** tiếp nhận điểm tựa từ **21. Xây ma trận regime** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Surprise map sau dữ liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **22. Regime chuyển tiếp (transition / 전이) quan trọng hơn nhãn hiện tại** nối từ **21. Xây ma trận regime** sang **23. Surprise map sau dữ liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Regime chuyển tiếp (transition / 전이) quan trọng hơn nhãn hiện tại
 
@@ -362,7 +362,7 @@ Lạm phát cao + tăng trưởng mạnh
 
 có thể hỗ trợ cổ phiếu và trái phiếu trước khi dữ liệu tuyệt đối trông “đẹp”.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **22. Regime chuyển tiếp (transition / 전이) quan trọng hơn nhãn hiện tại** nêu điều cần giải thích; **23. Surprise map sau dữ liệu** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **24. Phân biệt first-order và second-order tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **22. Regime chuyển tiếp (transition / 전이) quan trọng hơn nhãn hiện tại** đặt vấn đề; **23. Surprise map sau dữ liệu** đối chiếu bằng chứng, rồi **24. Phân biệt first-order và second-order tác động (effect / 효과)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 23. Surprise map sau dữ liệu
 
@@ -381,7 +381,7 @@ Equity sector reaction
 
 Sau vài tháng, bảng này cho thấy thị trường đang nhạy nhất với biến nào.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **23. Surprise map sau dữ liệu** nêu điều cần giải thích; **24. Phân biệt first-order và second-order tác động (effect / 효과)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **25. chính sách (policy / 정책) reaction hàm (function / 함수) phải được cập nhật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **23. Surprise map sau dữ liệu** đặt vấn đề; **24. Phân biệt first-order và second-order tác động (effect / 효과)** đối chiếu bằng chứng, rồi **25. chính sách (policy / 정책) reaction hàm (function / 함수) phải được cập nhật** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 24. Phân biệt first-order và second-order tác động (effect / 효과)
 
@@ -400,7 +400,7 @@ Chính sách tiền tệ khó nới lỏng
 
 Các tác động bậc hai thường quyết định lợi nhuận doanh nghiệp sau vài quý.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **25. chính sách (policy / 정책) reaction hàm (function / 함수) phải được cập nhật** tiếp nhận điểm tựa từ **24. Phân biệt first-order và second-order tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Kịch bản vĩ mô phải có xác suất và cơ chế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **25. chính sách (policy / 정책) reaction hàm (function / 함수) phải được cập nhật** nối từ **24. Phân biệt first-order và second-order tác động (effect / 효과)** sang **26. Kịch bản vĩ mô phải có xác suất và cơ chế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. chính sách (policy / 정책) reaction hàm (function / 함수) phải được cập nhật
 
@@ -416,7 +416,7 @@ FX
 
 Không nên dùng một quy tắc cố định qua mọi khủng hoảng.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **25. chính sách (policy / 정책) reaction hàm (function / 함수) phải được cập nhật** xác định đầu vào; **26. Kịch bản vĩ mô phải có xác suất và cơ chế** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **27. Không chuyển thẳng macro view thành vị thế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **25. chính sách (policy / 정책) reaction hàm (function / 함수) phải được cập nhật** đặt đầu vào cho **26. Kịch bản vĩ mô phải có xác suất và cơ chế**, rồi **27. Không chuyển thẳng macro view thành vị thế** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 26. Kịch bản vĩ mô phải có xác suất và cơ chế
 
@@ -428,7 +428,7 @@ Kịch bản | Xác suất | Growth | Inflation | Policy | 2Y | 10Y | USD | Cred
 
 Mỗi kịch bản phải có điều kiện xác nhận và vô hiệu hóa.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **26. Kịch bản vĩ mô phải có xác suất và cơ chế** xác định đầu vào; **27. Không chuyển thẳng macro view thành vị thế** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **28. Bài tập nowcasting 4 tuần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **26. Kịch bản vĩ mô phải có xác suất và cơ chế** đặt đầu vào cho **27. Không chuyển thẳng macro view thành vị thế**, rồi **28. Bài tập nowcasting 4 tuần** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 27. Không chuyển thẳng macro view thành vị thế
 
@@ -444,7 +444,7 @@ Valuation hiện tại đã phản ánh chưa?
 
 Macro đúng nhưng định giá sai vẫn có thể tạo khoản đầu tư xấu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **28. Bài tập nowcasting 4 tuần** tiếp nhận điểm tựa từ **27. Không chuyển thẳng macro view thành vị thế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Bài tập shock transmission** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **28. Bài tập nowcasting 4 tuần** nối từ **27. Không chuyển thẳng macro view thành vị thế** sang **29. Bài tập shock transmission**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Bài tập nowcasting 4 tuần
 
@@ -464,7 +464,7 @@ Không đổi thesis chỉ vì một dữ liệu. Hãy ghi **hướng thay đổ
 
 Sau bốn tuần, so dự báo với dữ liệu chính thức và xem chỉ tiêu nào hữu ích nhất.
 
-> **Chuyển mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **29. Bài tập shock transmission** tiếp nhận điểm tựa từ **28. Bài tập nowcasting 4 tuần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Liên kết đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **29. Bài tập shock transmission** nối từ **28. Bài tập nowcasting 4 tuần** sang **30. Liên kết đọc tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Bài tập shock transmission
 
@@ -489,7 +489,7 @@ CPI
 
 Sau đó ghi điểm nào trong chuỗi có thể không xảy ra. Đây là cách tránh tư duy cơ học.
 
-> **Chuyển mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, sau nội dung của **29. Bài tập shock transmission**, **30. Liên kết đọc tiếp** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, sau nội dung của **29. Bài tập shock transmission**, **30. Liên kết đọc tiếp** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Kết luận** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 30. Liên kết đọc tiếp
 
@@ -501,7 +501,7 @@ Phần này bàn giao lab nowcasting sang các chapter nền tảng, monetary/li
 - [Hệ thống tiền tệ và thanh khoản](./04_MONETARY_SYSTEM_LIQUIDITY_AND_CRISIS_TRANSMISSION.md)
 - [Chế độ vĩ mô và các khủng hoảng lịch sử](./05_MACRO_REGIMES_POLICY_HISTORY_AND_CRISIS_CASES.md)
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **Kết luận** gom các mảnh từ **30. Liên kết đọc tiếp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phòng thí nghiệm nâng cao: truyền dẫn vĩ mô, nowcasting và phản ứng chính sách**, **Kết luận** tổng hợp từ **30. Liên kết đọc tiếp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

@@ -21,7 +21,7 @@ Chủ đầu tư
 
 Khi giao dịch bất động sản mạnh, chủ đầu tư có bán trước và dòng tiền, ngân hàng tăng tín dụng, công ty chứng khoán hưởng lợi từ margin/thanh khoản và giá trị tài sản thế chấp ổn định. Khi chu kỳ đảo chiều, các vòng phản hồi này có thể chạy theo hướng ngược lại.
 
-> **Chuyển mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **2. Bắt đầu từ tình trạng pháp lý** tiếp nhận điểm tựa từ **1. Vì sao bất động sản và ngân hàng liên kết chặt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Dòng thời gian của một dự án** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **2. Bắt đầu từ tình trạng pháp lý** nối từ **1. Vì sao bất động sản và ngân hàng liên kết chặt** sang **3. Dòng thời gian của một dự án**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Bắt đầu từ tình trạng pháp lý
 
@@ -38,7 +38,7 @@ Nghĩa vụ hạ tầng đã hoàn thành chưa?
 
 Tiến độ pháp lý là “cổng” trước khi quỹ đất trở thành hàng tồn kho có thể bán. Đây là khác biệt giữa **tài sản ghi sổ** và **tài sản có thể tạo tiền**.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **3. Dòng thời gian của một dự án** tiếp nhận điểm tựa từ **2. Bắt đầu từ tình trạng pháp lý** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Bán trước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **3. Dòng thời gian của một dự án** nối từ **2. Bắt đầu từ tình trạng pháp lý** sang **4. Bán trước**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Dòng thời gian của một dự án
 
@@ -59,7 +59,7 @@ Mua / tích lũy đất
 
 Doanh thu kế toán có thể xuất hiện rất muộn so với dòng tiền ban đầu từ khách hàng. Vì vậy phải theo dõi đồng thời dòng thời gian kế toán và dòng thời gian tiền mặt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **4. Bán trước** tiếp nhận điểm tựa từ **3. Dòng thời gian của một dự án** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Tiền khách hàng trả trước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **4. Bán trước** nối từ **3. Dòng thời gian của một dự án** sang **5. Tiền khách hàng trả trước**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Bán trước
 
@@ -69,7 +69,7 @@ Nhưng chất lượng bán trước khác nhau. Cần kiểm tra rủi ro hủy
 
 Con số bán trước lớn không đủ nếu tỷ lệ thu tiền yếu.
 
-> **Chuyển mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **5. Tiền khách hàng trả trước** tiếp nhận điểm tựa từ **4. Bán trước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Chất lượng hàng tồn kho** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **5. Tiền khách hàng trả trước** nối từ **4. Bán trước** sang **6. Chất lượng hàng tồn kho**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Tiền khách hàng trả trước
 
@@ -79,7 +79,7 @@ Một chủ đầu tư có lượng tiền khách hàng trả trước lớn và
 
 Đọc bảng cân đối phải hiểu bản chất kinh tế thay vì dùng quy tắc máy móc “nợ phải trả cao = xấu”.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **6. Chất lượng hàng tồn kho** tiếp nhận điểm tựa từ **5. Tiền khách hàng trả trước** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Trái phiếu doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **6. Chất lượng hàng tồn kho** nối từ **5. Tiền khách hàng trả trước** sang **7. Trái phiếu doanh nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Chất lượng hàng tồn kho
 
@@ -95,7 +95,7 @@ Lãi vay được vốn hóa
 
 Hàng tồn kho bị kẹt pháp lý có thể không tạo thanh khoản trong nhiều năm. Vì vậy giá trị ghi sổ không phản ánh đầy đủ thời gian và chi phí để chuyển thành tiền.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **7. Trái phiếu doanh nghiệp** tiếp nhận điểm tựa từ **6. Chất lượng hàng tồn kho** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Bức tường tái cấp vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **7. Trái phiếu doanh nghiệp** nối từ **6. Chất lượng hàng tồn kho** sang **8. Bức tường tái cấp vốn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Trái phiếu doanh nghiệp
 
@@ -117,7 +117,7 @@ Trái phiếu đáo hạn
 
 Nếu phía nguồn tiền nhỏ hơn nghĩa vụ, tái cấp vốn trở thành vấn đề sống còn.
 
-> **Chuyển mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **8. Bức tường tái cấp vốn** tiếp nhận điểm tựa từ **7. Trái phiếu doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Lãi vay được vốn hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **8. Bức tường tái cấp vốn** nối từ **7. Trái phiếu doanh nghiệp** sang **9. Lãi vay được vốn hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Bức tường tái cấp vốn
 
@@ -131,7 +131,7 @@ Tài sản dự án dài hạn
 
 Cơ chế này tương tự rủi ro thanh khoản của ngân hàng, dù loại tài sản khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **9. Lãi vay được vốn hóa** tiếp nhận điểm tựa từ **8. Bức tường tái cấp vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Mức phơi nhiễm của ngân hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **9. Lãi vay được vốn hóa** nối từ **8. Bức tường tái cấp vốn** sang **10. Mức phơi nhiễm của ngân hàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Lãi vay được vốn hóa
 
@@ -146,7 +146,7 @@ Tổng nợ
 Chi phí vốn bình quân
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **10. Mức phơi nhiễm của ngân hàng** tiếp nhận điểm tựa từ **9. Lãi vay được vốn hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. NPL là chỉ báo trễ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **10. Mức phơi nhiễm của ngân hàng** nối từ **9. Lãi vay được vốn hóa** sang **11. NPL là chỉ báo trễ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Mức phơi nhiễm của ngân hàng
 
@@ -165,7 +165,7 @@ Tỷ lệ “cho vay bất động sản” được công bố có thể không
 
 Đọc thêm: [Vietnam Market Playbook](../06_markets_korea_vietnam/02_VIETNAM_MARKET_PLAYBOOK.md).
 
-> **Chuyển mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **11. NPL là chỉ báo trễ** tiếp nhận điểm tựa từ **10. Mức phơi nhiễm của ngân hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Chi phí tín dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **11. NPL là chỉ báo trễ** nối từ **10. Mức phơi nhiễm của ngân hàng** sang **12. Chi phí tín dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. NPL là chỉ báo trễ
 
@@ -182,7 +182,7 @@ Mức tập trung tăng trưởng tín dụng
 
 Lợi nhuận ngân hàng có thể vẫn đẹp trước khi chi phí tín dụng tăng trở lại.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **12. Chi phí tín dụng** tiếp nhận điểm tựa từ **11. NPL là chỉ báo trễ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. NIM và chi phí vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **12. Chi phí tín dụng** nối từ **11. NPL là chỉ báo trễ** sang **13. NIM và chi phí vốn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Chi phí tín dụng
 
@@ -199,7 +199,7 @@ Thu nhập lãi thuần
 
 Nếu dự phòng thấp bất thường trong khi khoản vay yếu tăng, tăng trưởng lợi nhuận tiêu đề có thể có chất lượng thấp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **13. NIM và chi phí vốn** tiếp nhận điểm tựa từ **12. Chi phí tín dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Vòng phản hồi tài sản thế chấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **13. NIM và chi phí vốn** nối từ **12. Chi phí tín dụng** sang **14. Vòng phản hồi tài sản thế chấp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. NIM và chi phí vốn
 
@@ -218,7 +218,7 @@ Nhưng người vay chịu áp lực lớn hơn
 
 Vì vậy lãi suất cao hơn không đồng nghĩa lợi nhuận ngân hàng chắc chắn tốt hơn.
 
-> **Chuyển mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **14. Vòng phản hồi tài sản thế chấp** tiếp nhận điểm tựa từ **13. NIM và chi phí vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Xây dựng và vật liệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **14. Vòng phản hồi tài sản thế chấp** nối từ **13. NIM và chi phí vốn** sang **15. Xây dựng và vật liệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Vòng phản hồi tài sản thế chấp
 
@@ -235,7 +235,7 @@ Giá trị tài sản thế chấp giảm
 
 Đây là một dạng cơ chế khuếch đại tài chính trong nước.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **15. Xây dựng và vật liệu** tiếp nhận điểm tựa từ **14. Vòng phản hồi tài sản thế chấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Kênh công ty chứng khoán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **15. Xây dựng và vật liệu** nối từ **14. Vòng phản hồi tài sản thế chấp** sang **16. Kênh công ty chứng khoán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Xây dựng và vật liệu
 
@@ -243,7 +243,7 @@ Suy giảm bất động sản tác động tới nhà thầu, thép, xi măng, 
 
 Cần tách nhu cầu bất động sản dân dụng khỏi nhu cầu hạ tầng thay vì gom tất cả vào một ngành xây dựng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **16. Kênh công ty chứng khoán** tiếp nhận điểm tựa từ **15. Xây dựng và vật liệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Thanh khoản trong nước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **16. Kênh công ty chứng khoán** nối từ **15. Xây dựng và vật liệu** sang **17. Thanh khoản trong nước**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Kênh công ty chứng khoán
 
@@ -261,7 +261,7 @@ Thanh khoản thị trường giảm
 
 Danh mục margin dùng đòn bẩy cao có thể tạo thêm bán cưỡng bức vòng hai.
 
-> **Chuyển mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **17. Thanh khoản trong nước** tiếp nhận điểm tựa từ **16. Kênh công ty chứng khoán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Giới hạn chính sách của SBV** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **17. Thanh khoản trong nước** nối từ **16. Kênh công ty chứng khoán** sang **18. Giới hạn chính sách của SBV**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Thanh khoản trong nước
 
@@ -279,7 +279,7 @@ Lãi suất tiền gửi giảm
 
 Nhưng giá có thể phục hồi trước khi lợi nhuận doanh nghiệp phục hồi hoàn toàn. Cần phân biệt **đợt tăng do thanh khoản** với **phục hồi lợi nhuận**.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **17. Thanh khoản trong nước** đã nêu tiêu chí phân biệt, còn **18. Giới hạn chính sách của SBV** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **19. Tỷ giá và bất động sản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **17. Thanh khoản trong nước** đặt tiêu chí; **18. Giới hạn chính sách của SBV** dùng tiêu chí đó để kiểm tra ranh giới, rồi **19. Tỷ giá và bất động sản** mở rộng hệ quả.
 
 ## 18. Giới hạn chính sách của SBV
 
@@ -294,7 +294,7 @@ Thanh khoản ngân hàng
 
 Nếu USD toàn cầu mạnh và VND chịu áp lực, nới lỏng quá mạnh có thể tạo chi phí tỷ giá. Vì vậy dư địa chính sách phụ thuộc cả điều kiện bên ngoài.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **18. Giới hạn chính sách của SBV** đã nêu tiêu chí phân biệt, còn **19. Tỷ giá và bất động sản** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **20. Cải cách pháp lý và quy định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **18. Giới hạn chính sách của SBV** đặt tiêu chí; **19. Tỷ giá và bất động sản** dùng tiêu chí đó để kiểm tra ranh giới, rồi **20. Cải cách pháp lý và quy định** mở rộng hệ quả.
 
 ## 19. Tỷ giá và bất động sản
 
@@ -302,7 +302,7 @@ Bất động sản chủ yếu tạo dòng tiền nội địa, nhưng tỷ gi�
 
 Một cú sốc USD mạnh có thể siết điều kiện tài chính trong nước ngay cả khi doanh nghiệp không có doanh thu USD trực tiếp.
 
-> **Chuyển mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **20. Cải cách pháp lý và quy định** tiếp nhận điểm tựa từ **19. Tỷ giá và bất động sản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Phân tích khả năng sống sót trước định giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **20. Cải cách pháp lý và quy định** nối từ **19. Tỷ giá và bất động sản** sang **21. Phân tích khả năng sống sót trước định giá**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Cải cách pháp lý và quy định
 
@@ -320,7 +320,7 @@ Tác động dòng tiền ở cấp dự án
 
 Một quy định thuận lợi chưa trở thành doanh thu cho tới khi dự án được phê duyệt, bán và thu tiền.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **21. Phân tích khả năng sống sót trước định giá** tiếp nhận điểm tựa từ **20. Cải cách pháp lý và quy định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. NAV cho doanh nghiệp bất động sản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **21. Phân tích khả năng sống sót trước định giá** nối từ **20. Cải cách pháp lý và quy định** sang **22. NAV cho doanh nghiệp bất động sản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Phân tích khả năng sống sót trước định giá
 
@@ -339,7 +339,7 @@ Khả năng phát hành thêm vốn
 
 Nếu khả năng sống sót chưa rõ, P/E hay NAV mục tiêu chỉ là bước thứ hai.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **22. NAV cho doanh nghiệp bất động sản** tiếp nhận điểm tựa từ **21. Phân tích khả năng sống sót trước định giá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. P/B cho ngân hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **22. NAV cho doanh nghiệp bất động sản** nối từ **21. Phân tích khả năng sống sót trước định giá** sang **23. P/B cho ngân hàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. NAV cho doanh nghiệp bất động sản
 
@@ -357,7 +357,7 @@ Rủi ro thực thi
 
 Dự án còn xa ngày tạo tiền phải được chiết khấu nhiều hơn dự án gần hoàn thành với bán trước tốt.
 
-> **Chuyển mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **23. P/B cho ngân hàng** tiếp nhận điểm tựa từ **22. NAV cho doanh nghiệp bất động sản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Ma trận kịch bản bất động sản–ngân hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **23. P/B cho ngân hàng** nối từ **22. NAV cho doanh nghiệp bất động sản** sang **24. Ma trận kịch bản bất động sản–ngân hàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. P/B cho ngân hàng
 
@@ -370,7 +370,7 @@ ROE < Chi phí vốn chủ sở hữu → Chiết khấu có thể kéo dài
 
 ROE cần được chuẩn hóa theo chi phí tín dụng và yêu cầu vốn.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **24. Ma trận kịch bản bất động sản–ngân hàng** tiếp nhận điểm tựa từ **23. P/B cho ngân hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Giá cổ phiếu và dữ liệu kế toán có thể đảo chiều khác thời điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **24. Ma trận kịch bản bất động sản–ngân hàng** nối từ **23. P/B cho ngân hàng** sang **25. Giá cổ phiếu và dữ liệu kế toán có thể đảo chiều khác thời điểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Ma trận kịch bản bất động sản–ngân hàng
 
@@ -424,7 +424,7 @@ Ngành hợp nhất
 Doanh nghiệp khỏe giành thị phần
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **24. Ma trận kịch bản bất động sản–ngân hàng** nêu điều cần giải thích; **25. Giá cổ phiếu và dữ liệu kế toán có thể đảo chiều khác thời điểm** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **26. Chỉ báo dẫn dắt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **24. Ma trận kịch bản bất động sản–ngân hàng** đặt vấn đề; **25. Giá cổ phiếu và dữ liệu kế toán có thể đảo chiều khác thời điểm** đối chiếu bằng chứng, rồi **26. Chỉ báo dẫn dắt** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 25. Giá cổ phiếu và dữ liệu kế toán có thể đảo chiều khác thời điểm
 
@@ -442,7 +442,7 @@ Giá cổ phiếu đảo chiều
 
 Thứ tự chính xác có thể thay đổi, nhưng dữ liệu kế toán thường trễ hơn giá thị trường.
 
-> **Chuyển mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **25. Giá cổ phiếu và dữ liệu kế toán có thể đảo chiều khác thời điểm** nêu điều cần giải thích; **26. Chỉ báo dẫn dắt** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **27. Chất lượng bảng cân đối phân hóa người thắng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **25. Giá cổ phiếu và dữ liệu kế toán có thể đảo chiều khác thời điểm** đặt vấn đề; **26. Chỉ báo dẫn dắt** đối chiếu bằng chứng, rồi **27. Chất lượng bảng cân đối phân hóa người thắng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 26. Chỉ báo dẫn dắt
 
@@ -462,7 +462,7 @@ Tăng trưởng tín dụng theo ngành
 
 Không nên chỉ nhìn VN-Index.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **27. Chất lượng bảng cân đối phân hóa người thắng** tiếp nhận điểm tựa từ **26. Chỉ báo dẫn dắt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Quản trị doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **27. Chất lượng bảng cân đối phân hóa người thắng** nối từ **26. Chỉ báo dẫn dắt** sang **28. Quản trị doanh nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Chất lượng bảng cân đối phân hóa người thắng
 
@@ -470,7 +470,7 @@ Trong suy giảm, chủ đầu tư khỏe hơn có thể mua dự án, quỹ đ�
 
 Ngành phục hồi không có nghĩa mọi doanh nghiệp đều phục hồi như nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **28. Quản trị doanh nghiệp** tiếp nhận điểm tựa từ **27. Chất lượng bảng cân đối phân hóa người thắng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Chất lượng kế toán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **28. Quản trị doanh nghiệp** nối từ **27. Chất lượng bảng cân đối phân hóa người thắng** sang **29. Chất lượng kế toán**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Quản trị doanh nghiệp
 
@@ -478,7 +478,7 @@ Các tập đoàn bất động sản và tài chính có thể có cấu trúc 
 
 Đây là các câu hỏi cần điều tra thêm, không tự động là bằng chứng sai phạm.
 
-> **Chuyển mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **29. Chất lượng kế toán** tiếp nhận điểm tựa từ **28. Quản trị doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Lớp nhà đầu tư nước ngoài** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **29. Chất lượng kế toán** nối từ **28. Quản trị doanh nghiệp** sang **30. Lớp nhà đầu tư nước ngoài**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Chất lượng kế toán
 
@@ -488,7 +488,7 @@ Với ngân hàng, theo dõi NPL, nợ nhóm 2, tỷ lệ bao phủ dự phòng,
 
 Với công ty chứng khoán, theo dõi dư nợ margin, chi phí vốn, danh mục tự doanh và mức tập trung tài sản thế chấp.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **30. Lớp nhà đầu tư nước ngoài** tiếp nhận điểm tựa từ **29. Chất lượng kế toán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Vi cấu trúc thị trường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **30. Lớp nhà đầu tư nước ngoài** nối từ **29. Chất lượng kế toán** sang **31. Vi cấu trúc thị trường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Lớp nhà đầu tư nước ngoài
 
@@ -496,7 +496,7 @@ Nhà đầu tư nước ngoài còn chịu thêm biến động USD/VND, giới 
 
 Lợi suất thị trường nội địa cao có thể bị giảm khi quy đổi về đồng tiền cơ sở nếu VND mất giá.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **31. Vi cấu trúc thị trường** tiếp nhận điểm tựa từ **30. Lớp nhà đầu tư nước ngoài** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Vòng phản hồi margin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **31. Vi cấu trúc thị trường** nối từ **30. Lớp nhà đầu tư nước ngoài** sang **32. Vòng phản hồi margin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Vi cấu trúc thị trường
 
@@ -504,7 +504,7 @@ Giới hạn biến động giá hàng ngày có thể làm stop-loss không th�
 
 Quy mô vị thế nên dựa trên giá trị giao dịch trung bình trong điều kiện căng thẳng, không chỉ thanh khoản ngày thường.
 
-> **Chuyển mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **32. Vòng phản hồi margin** tiếp nhận điểm tựa từ **31. Vi cấu trúc thị trường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Điều gì đã nằm trong giá?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **32. Vòng phản hồi margin** nối từ **31. Vi cấu trúc thị trường** sang **33. Điều gì đã nằm trong giá?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Vòng phản hồi margin
 
@@ -519,7 +519,7 @@ Giá giảm
 
 Vòng lặp này có thể làm thị trường giảm nhanh hơn tốc độ cập nhật của dữ liệu cơ bản. Khi phục hồi, vòng phản hồi cũng có thể chạy ngược.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **33. Điều gì đã nằm trong giá?** tiếp nhận điểm tựa từ **32. Vòng phản hồi margin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Xác nhận liên ngành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **33. Điều gì đã nằm trong giá?** nối từ **32. Vòng phản hồi margin** sang **34. Xác nhận liên ngành**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Điều gì đã nằm trong giá?
 
@@ -529,7 +529,7 @@ Có thể kiểm tra xu hướng lãi suất tiền gửi, diễn biến cổ ph
 
 Một chính sách “tốt” vẫn có thể tạo phản ứng bán theo tin nếu vị thế thị trường đã quá cực đoan.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **34. Xác nhận liên ngành** tiếp nhận điểm tựa từ **33. Điều gì đã nằm trong giá?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Quy mô vị thế theo thanh khoản và khả năng sống sót** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **34. Xác nhận liên ngành** nối từ **33. Điều gì đã nằm trong giá?** sang **35. Quy mô vị thế theo thanh khoản và khả năng sống sót**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Xác nhận liên ngành
 
@@ -545,7 +545,7 @@ Phát hành trái phiếu doanh nghiệp bình thường hóa
 
 Nếu chỉ giá cổ phiếu bất động sản tăng trong khi dữ liệu tín dụng xấu đi, mức tin cậy nên thấp hơn.
 
-> **Chuyển mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **35. Quy mô vị thế theo thanh khoản và khả năng sống sót** tiếp nhận điểm tựa từ **34. Xác nhận liên ngành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Kịch bản cơ sở / tích cực / tiêu cực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **35. Quy mô vị thế theo thanh khoản và khả năng sống sót** nối từ **34. Xác nhận liên ngành** sang **36. Kịch bản cơ sở / tích cực / tiêu cực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Quy mô vị thế theo thanh khoản và khả năng sống sót
 
@@ -553,7 +553,7 @@ Với cổ phiếu thanh khoản thấp, cần xem giá trị giao dịch bình 
 
 NAV rẻ không có ý nghĩa nếu không thể thoát vị thế khi luận điểm bị phá vỡ.
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **36. Kịch bản cơ sở / tích cực / tiêu cực** tiếp nhận điểm tựa từ **35. Quy mô vị thế theo thanh khoản và khả năng sống sót** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Điều kiện vô hiệu hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **36. Kịch bản cơ sở / tích cực / tiêu cực** nối từ **35. Quy mô vị thế theo thanh khoản và khả năng sống sót** sang **37. Điều kiện vô hiệu hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Kịch bản cơ sở / tích cực / tiêu cực
 
@@ -571,13 +571,13 @@ Doanh số tiếp tục yếu, nợ đáo hạn tập trung, doanh nghiệp ph�
 
 Mỗi kịch bản cần lập riêng dòng tiền chủ đầu tư, dự phòng ngân hàng, thanh khoản công ty chứng khoán và định giá.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **37. Điều kiện vô hiệu hóa** tiếp nhận điểm tựa từ **36. Kịch bản cơ sở / tích cực / tiêu cực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Chu kỳ đánh giá lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **37. Điều kiện vô hiệu hóa** nối từ **36. Kịch bản cơ sở / tích cực / tiêu cực** sang **38. Chu kỳ đánh giá lại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Điều kiện vô hiệu hóa
 
 Luận điểm phục hồi có thể sai nếu pháp lý tiếp tục đình trệ, bán trước không cải thiện dù lãi suất giảm, tái cấp vốn vẫn đóng, nợ đáo hạn vượt bộ đệm thanh khoản, nợ nhóm 2/NPL tăng tốc hoặc áp lực FX ngăn cản nới lỏng.
 
-> **Chuyển mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **38. Chu kỳ đánh giá lại** tiếp nhận điểm tựa từ **37. Điều kiện vô hiệu hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Phân rã kết quả sau sự kiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **38. Chu kỳ đánh giá lại** nối từ **37. Điều kiện vô hiệu hóa** sang **39. Phân rã kết quả sau sự kiện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Chu kỳ đánh giá lại
 
@@ -618,7 +618,7 @@ Dòng tiền doanh nghiệp
 Lịch đáo hạn nợ
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **39. Phân rã kết quả sau sự kiện** tiếp nhận điểm tựa từ **38. Chu kỳ đánh giá lại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Khung dùng lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **39. Phân rã kết quả sau sự kiện** nối từ **38. Chu kỳ đánh giá lại** sang **40. Khung dùng lại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Phân rã kết quả sau sự kiện
 
@@ -626,7 +626,7 @@ Nếu vị thế tăng giá, không dừng ở kết luận “chính sách có 
 
 Nếu lợi suất chỉ đến từ hệ số định giá và thanh khoản trong khi dòng tiền chưa cải thiện, rủi ro của luận điểm vẫn còn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **40. Khung dùng lại** tiếp nhận điểm tựa từ **39. Phân rã kết quả sau sự kiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **40. Khung dùng lại** nối từ **39. Phân rã kết quả sau sự kiện** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Khung dùng lại
 
@@ -646,7 +646,7 @@ Pháp lý
 → Thanh khoản của vị thế
 ```
 
-> **Chuyển mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **Kết luận** gom các mảnh từ **40. Khung dùng lại** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Tình huống 04 — Chu kỳ bất động sản, ngân hàng và tín dụng tại Việt Nam**, **Kết luận** tổng hợp từ **40. Khung dùng lại** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

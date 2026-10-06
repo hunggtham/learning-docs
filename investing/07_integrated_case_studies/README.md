@@ -55,7 +55,7 @@ Bảng coverage dưới đây cho biết mỗi case đã đi qua những tầng 
 
 Bảng này dùng để kiểm tra (audit / 감사) coverage, không phải checklist hình thức. Mỗi dấu ✓ phải có **cơ chế, dữ liệu, interpretation và dạng thất bại (failure mode / 실패 모드)** tương ứng trong trường hợp (case / 사례).
 
-> **Chuyển mạch:** Trong **07 — Bài tập tích hợp (Integrated case Studies)**, **Thứ tự đọc** cho ta quy tắc; **Cách sử dụng tình huống** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Ghi chú nên tạo sau mỗi tình huống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Bài tập tích hợp (Integrated case Studies)**, **Thứ tự đọc** nêu quy tắc; **Cách sử dụng tình huống** thử quy tắc trong tình huống, rồi **Ghi chú nên tạo sau mỗi tình huống** mở rộng hệ quả.
 
 ## Cách sử dụng tình huống
 
@@ -69,7 +69,7 @@ Không đọc như một câu chuyện để ghi nhớ hướng giá. Hãy dừn
 
 Sau đó mới đọc phần tiếp theo.
 
-> **Chuyển mạch:** Ở chặng này của **07 — Bài tập tích hợp (Integrated case Studies)**, **Cách sử dụng tình huống** cho ta quy tắc; **Ghi chú nên tạo sau mỗi tình huống** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Liên kết với các lĩnh vực trước** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Bài tập tích hợp (Integrated case Studies)**, **Cách sử dụng tình huống** nêu quy tắc; **Ghi chú nên tạo sau mỗi tình huống** thử quy tắc trong tình huống, rồi **Liên kết với các lĩnh vực trước** mở rộng hệ quả.
 
 ## Ghi chú nên tạo sau mỗi tình huống
 
@@ -93,7 +93,7 @@ Bài học rút ra
 
 Với capstone cuối, mở rộng thành một hồ sơ đầu tư hoàn chỉnh gồm cả nguồn dữ liệu, mô hình, định giá, sizing, thực thi (execution / 실행), monitoring và post-mortem template.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Bài tập tích hợp (Integrated case Studies)**, **Ghi chú nên tạo sau mỗi tình huống** cho ta quy tắc; **Liên kết với các lĩnh vực trước** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Tiêu chuẩn hoàn thành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Bài tập tích hợp (Integrated case Studies)**, **Ghi chú nên tạo sau mỗi tình huống** nêu quy tắc; **Liên kết với các lĩnh vực trước** thử quy tắc trong tình huống, rồi **Tiêu chuẩn hoàn thành** mở rộng hệ quả.
 
 ## Liên kết với các lĩnh vực trước
 
@@ -108,7 +108,7 @@ Nếu tình huống có giao dịch hoặc phòng vệ, xem thêm [05 — Giao d
 
 Nếu muốn học theo lớp nâng cao thay vì theo lĩnh vực (domain / 도메인), sử dụng [Advanced Depth Path](../ADVANCED_DEPTH_PATH.md).
 
-> **Chuyển mạch:** **Liên kết với các lĩnh vực trước** cung cấp evidence và vocabulary; **Tiêu chuẩn hoàn thành** kiểm tra người học có thể nối chúng thành một decision memo hay không.
+> **Nối mạch:** **Liên kết với các lĩnh vực trước** cung cấp evidence và vocabulary; **Tiêu chuẩn hoàn thành** kiểm tra người học có thể nối chúng thành một decision memo hay không.
 
 ## Tiêu chuẩn hoàn thành
 
@@ -130,7 +130,7 @@ Một attribution / post-mortem template
 
 Với worked trường hợp (case / 사례) 06 và 07, phải tự thay ít nhất ba giả định và tính lại kết quả. Nếu chỉ đọc số có sẵn, bài chưa đạt.
 
-> **Chuyển mạch:** **Mục tiêu cuối cùng** khép route bằng thesis, downside, sizing và review loop; đây là boundary để quay lại domain owner khi cần đào sâu.
+> **Nối mạch:** **Mục tiêu cuối cùng** khép route bằng thesis, downside, sizing và review loop; đây là boundary để quay lại domain owner khi cần đào sâu.
 
 ## Mục tiêu cuối cùng
 

@@ -10,7 +10,7 @@ Người nắm trái phiếu cho tổ chức phát hành vay vốn và nhận d�
 
 Trái chủ khác cổ đông: trái chủ có quyền đòi theo hợp đồng và thường đứng cao hơn trong cấu trúc vốn, nhưng mức tăng giá trị kinh tế thường bị giới hạn hơn cổ phiếu.
 
-> **Chuyển mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **2. Giá trái phiếu là giá trị hiện tại của dòng tiền** tiếp nhận điểm tựa từ **1. Trái phiếu là hợp đồng cho vay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Giá sạch và giá bẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **2. Giá trái phiếu là giá trị hiện tại của dòng tiền** nối từ **1. Trái phiếu là hợp đồng cho vay** sang **3. Giá sạch và giá bẩn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Giá trái phiếu là giá trị hiện tại của dòng tiền
 
@@ -24,7 +24,7 @@ Khi lợi suất yêu cầu tăng, giá trị hiện tại của dòng tiền c�
 
 Một trái phiếu chính phủ có thể giảm giá mạnh dù gần như không có rủi ro vỡ nợ vì lãi suất chiết khấu đã thay đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **3. Giá sạch và giá bẩn** tiếp nhận điểm tựa từ **2. Giá trái phiếu là giá trị hiện tại của dòng tiền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Coupon, hiện tại (current / 현재) yield và YTM khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **3. Giá sạch và giá bẩn** nối từ **2. Giá trái phiếu là giá trị hiện tại của dòng tiền** sang **4. Coupon, hiện tại (current / 현재) yield và YTM khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Giá sạch và giá bẩn
 
@@ -36,7 +36,7 @@ Dirty Price = Clean Price + Accrued Interest
 
 Khi so báo giá và tính lợi suất, phải biết thị trường đang sử dụng loại giá nào.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **4. Coupon, hiện tại (current / 현재) yield và YTM khác nhau** tiếp nhận điểm tựa từ **3. Giá sạch và giá bẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Yield to lời gọi (call / 호출) và Yield to Worst** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **4. Coupon, hiện tại (current / 현재) yield và YTM khác nhau** nối từ **3. Giá sạch và giá bẩn** sang **5. Yield to lời gọi (call / 호출) và Yield to Worst**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Coupon, hiện tại (current / 현재) yield và YTM khác nhau
 
@@ -44,7 +44,7 @@ Coupon là lãi theo hợp đồng trên mệnh giá. Lợi suất hiện tại 
 
 YTM không phải lợi suất chắc chắn vì nhà đầu tư có thể bán trước đáo hạn, tổ chức phát hành có thể vỡ nợ hoặc dòng tiền phải tái đầu tư ở mức lãi khác.
 
-> **Chuyển mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **5. Yield to lời gọi (call / 호출) và Yield to Worst** tiếp nhận điểm tựa từ **4. Coupon, hiện tại (current / 현재) yield và YTM khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Duration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **5. Yield to lời gọi (call / 호출) và Yield to Worst** nối từ **4. Coupon, hiện tại (current / 현재) yield và YTM khác nhau** sang **6. Duration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Yield to lời gọi (call / 호출) và Yield to Worst
 
@@ -54,7 +54,7 @@ Khi lãi suất giảm, doanh nghiệp có động cơ tái cấp vốn rẻ hơ
 
 Vì vậy cần xem lợi suất tới ngày gọi lại (yield to call) và lợi suất xấu nhất (yield to worst), không chỉ YTM.
 
-> **Chuyển mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **6. Duration** tiếp nhận điểm tựa từ **5. Yield to lời gọi (call / 호출) và Yield to Worst** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. DV01/PV01** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **6. Duration** nối từ **5. Yield to lời gọi (call / 호출) và Yield to Worst** sang **7. DV01/PV01**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Duration
 
@@ -66,7 +66,7 @@ Duration đo thời điểm trung bình có trọng số của dòng tiền và 
 
 Trái phiếu kỳ hạn dài, coupon thấp và lợi suất thấp thường có duration cao hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **7. DV01/PV01** tiếp nhận điểm tựa từ **6. Duration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Convexity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **7. DV01/PV01** nối từ **6. Duration** sang **8. Convexity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. DV01/PV01
 
@@ -74,7 +74,7 @@ DV01/PV01 đo mức thay đổi giá trị khi lợi suất dịch chuyển 1 đ
 
 Đây là thước đo tiền tệ trực tiếp hơn duration. Một danh mục có DV01 lớn có thể biến động đáng kể chỉ với thay đổi nhỏ của lãi suất.
 
-> **Chuyển mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **8. Convexity** tiếp nhận điểm tựa từ **7. DV01/PV01** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Effective Duration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **8. Convexity** nối từ **7. DV01/PV01** sang **9. Effective Duration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Convexity
 
@@ -84,7 +84,7 @@ Với trái phiếu thông thường có convexity dương, mức tăng giá khi
 
 Khi có quyền chọn nhúng, convexity có thể thay đổi mạnh.
 
-> **Chuyển mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **9. Effective Duration** tiếp nhận điểm tựa từ **8. Convexity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Key-Rate Duration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **9. Effective Duration** nối từ **8. Convexity** sang **10. Key-Rate Duration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Effective Duration
 
@@ -92,7 +92,7 @@ Với trái phiếu có dòng tiền thay đổi theo lãi suất, như MBS ho�
 
 Duration hiệu dụng (effective duration) ước lượng độ nhạy sau khi cho phép dòng tiền thay đổi khi lãi suất thay đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **10. Key-Rate Duration** tiếp nhận điểm tựa từ **9. Effective Duration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Đường cong lợi suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **10. Key-Rate Duration** nối từ **9. Effective Duration** sang **11. Đường cong lợi suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Key-Rate Duration
 
@@ -100,7 +100,7 @@ Duration hiệu dụng (effective duration) ước lượng độ nhạy sau khi
 
 Duration theo điểm kỳ hạn (key-rate duration) phân rã độ nhạy theo các đoạn của đường cong. Hai danh mục cùng tổng duration vẫn có thể chịu rủi ro đường cong rất khác nhau.
 
-> **Chuyển mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **11. Đường cong lợi suất** tiếp nhận điểm tựa từ **10. Key-Rate Duration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Steepening và Flattening** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **11. Đường cong lợi suất** nối từ **10. Key-Rate Duration** sang **12. Steepening và Flattening**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Đường cong lợi suất
 
@@ -110,7 +110,7 @@ Duration theo điểm kỳ hạn (key-rate duration) phân rã độ nhạy theo
 Long-term yield ≈ Expected future short rates + Term premium
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **12. Steepening và Flattening** tiếp nhận điểm tựa từ **11. Đường cong lợi suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Đường cong đảo ngược** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **12. Steepening và Flattening** nối từ **11. Đường cong lợi suất** sang **13. Đường cong đảo ngược**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Steepening và Flattening
 
@@ -121,7 +121,7 @@ Long-term yield ≈ Expected future short rates + Term premium
 
 Flattening cũng có phiên bản do lợi suất tăng hoặc giảm. Không nên học thuộc “steepening tốt, inversion xấu” mà không nhìn nguyên nhân.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **13. Đường cong đảo ngược** tiếp nhận điểm tựa từ **12. Steepening và Flattening** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Lợi suất danh nghĩa, lợi suất thực và kỳ vọng lạm phát hòa vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **13. Đường cong đảo ngược** nối từ **12. Steepening và Flattening** sang **14. Lợi suất danh nghĩa, lợi suất thực và kỳ vọng lạm phát hòa vốn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Đường cong đảo ngược
 
@@ -129,7 +129,7 @@ Flattening cũng có phiên bản do lợi suất tăng hoặc giảm. Không n�
 
 Đảo ngược có thông tin về chu kỳ nhưng không cho thời điểm chính xác. Đường cong có thể dốc trở lại vì hạ lãi suất trong suy thoái hoặc vì đầu dài tăng do lạm phát/tài khóa; hai trường hợp có tác động rất khác.
 
-> **Chuyển mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **14. Lợi suất danh nghĩa, lợi suất thực và kỳ vọng lạm phát hòa vốn** tiếp nhận điểm tựa từ **13. Đường cong đảo ngược** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Carry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **14. Lợi suất danh nghĩa, lợi suất thực và kỳ vọng lạm phát hòa vốn** nối từ **13. Đường cong đảo ngược** sang **15. Carry**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Lợi suất danh nghĩa, lợi suất thực và kỳ vọng lạm phát hòa vốn
 
@@ -139,7 +139,7 @@ Chênh lệch giữa Treasury danh nghĩa và TIPS cùng kỳ hạn thường đ
 
 Lợi suất thực đặc biệt quan trọng với vàng và cổ phiếu duration dài.
 
-> **Chuyển mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **15. Carry** tiếp nhận điểm tựa từ **14. Lợi suất danh nghĩa, lợi suất thực và kỳ vọng lạm phát hòa vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Roll-Down** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **15. Carry** nối từ **14. Lợi suất danh nghĩa, lợi suất thực và kỳ vọng lạm phát hòa vốn** sang **16. Roll-Down**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Carry
 
@@ -147,7 +147,7 @@ Lợi suất nắm giữ (carry) là thu nhập mà vị thế tạo ra nếu c�
 
 Carry không phải lợi suất chắc chắn. Một khoản carry nhỏ có thể bị xóa bởi thay đổi lãi suất hoặc spread lớn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **16. Roll-Down** tiếp nhận điểm tựa từ **15. Carry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Trái phiếu chính phủ, doanh nghiệp và thứ tự ưu tiên** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **16. Roll-Down** nối từ **15. Carry** sang **17. Trái phiếu chính phủ, doanh nghiệp và thứ tự ưu tiên**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Roll-Down
 
@@ -158,7 +158,7 @@ Expected fixed-income return
 ≈ Carry + Roll-down + Rate move + Spread move + Default/Recovery + FX
 ```
 
-> **Chuyển mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **17. Trái phiếu chính phủ, doanh nghiệp và thứ tự ưu tiên** tiếp nhận điểm tựa từ **16. Roll-Down** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Chênh lệch tín dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **17. Trái phiếu chính phủ, doanh nghiệp và thứ tự ưu tiên** nối từ **16. Roll-Down** sang **18. Chênh lệch tín dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Trái phiếu chính phủ, doanh nghiệp và thứ tự ưu tiên
 
@@ -168,7 +168,7 @@ Nợ doanh nghiệp thêm rủi ro kinh doanh và vỡ nợ. Nợ có bảo đ�
 
 Không so hai trái phiếu chỉ bằng lợi suất nếu thứ tự ưu tiên, tài sản bảo đảm, kỳ hạn và quyền chọn khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **18. Chênh lệch tín dụng** tiếp nhận điểm tựa từ **17. Trái phiếu chính phủ, doanh nghiệp và thứ tự ưu tiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Z-Spread và OAS** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **18. Chênh lệch tín dụng** nối từ **17. Trái phiếu chính phủ, doanh nghiệp và thứ tự ưu tiên** sang **19. Z-Spread và OAS**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Chênh lệch tín dụng
 
@@ -188,7 +188,7 @@ Công thức trực giác:
 Expected Credit Loss ≈ PD × LGD × Exposure
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **19. Z-Spread và OAS** tiếp nhận điểm tựa từ **18. Chênh lệch tín dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Spread Duration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **19. Z-Spread và OAS** nối từ **18. Chênh lệch tín dụng** sang **20. Spread Duration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Z-Spread và OAS
 
@@ -196,7 +196,7 @@ Z-spread là mức chênh lệch cố định cộng vào toàn bộ đường c
 
 OAS (Option-Adjusted Spread) điều chỉnh thêm giá trị quyền chọn nhúng. Với trái phiếu callable hoặc MBS, OAS thường hữu ích hơn spread đơn giản vì tách một phần tác động của quyền chọn.
 
-> **Chuyển mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **20. Spread Duration** tiếp nhận điểm tựa từ **19. Z-Spread và OAS** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Rating không thay thế phân tích tín dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **20. Spread Duration** nối từ **19. Z-Spread và OAS** sang **21. Rating không thay thế phân tích tín dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Spread Duration
 
@@ -206,7 +206,7 @@ Treasury yield có thể giảm 100bp nhưng credit spread tăng 200bp, khiến 
 
 Đây là lý do high yield thường có hành vi gần cổ phiếu hơn trái phiếu chính phủ trong suy thoái.
 
-> **Chuyển mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **21. Rating không thay thế phân tích tín dụng** tiếp nhận điểm tựa từ **20. Spread Duration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Thanh khoản của doanh nghiệp đi vay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **21. Rating không thay thế phân tích tín dụng** nối từ **20. Spread Duration** sang **22. Thanh khoản của doanh nghiệp đi vay**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Rating không thay thế phân tích tín dụng
 
@@ -214,7 +214,7 @@ Xếp hạng tín dụng là đánh giá hữu ích nhưng có thể chậm hơn
 
 Cần xem đòn bẩy, khả năng trả lãi, dòng tiền tự do, tính chu kỳ, giá trị tài sản, lịch đáo hạn và khả năng tiếp cận vốn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **22. Thanh khoản của doanh nghiệp đi vay** tiếp nhận điểm tựa từ **21. Rating không thay thế phân tích tín dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Bức tường đáo hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **22. Thanh khoản của doanh nghiệp đi vay** nối từ **21. Rating không thay thế phân tích tín dụng** sang **23. Bức tường đáo hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Thanh khoản của doanh nghiệp đi vay
 
@@ -234,7 +234,7 @@ Nợ đáo hạn
 + Nghĩa vụ khác
 ```
 
-> **Chuyển mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **23. Bức tường đáo hạn** tiếp nhận điểm tựa từ **22. Thanh khoản của doanh nghiệp đi vay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Chu kỳ tín dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **23. Bức tường đáo hạn** nối từ **22. Thanh khoản của doanh nghiệp đi vay** sang **24. Chu kỳ tín dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Bức tường đáo hạn
 
@@ -242,7 +242,7 @@ Nếu lượng lớn nợ đáo hạn tập trung trong 12–24 tháng, chi phí
 
 Phải xem nợ cố định/thả nổi, có bảo đảm/không bảo đảm và lịch đáo hạn theo từng năm.
 
-> **Chuyển mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **24. Chu kỳ tín dụng** tiếp nhận điểm tựa từ **23. Bức tường đáo hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Fallen Angels và Rising Stars** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **24. Chu kỳ tín dụng** nối từ **23. Bức tường đáo hạn** sang **25. Fallen Angels và Rising Stars**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Chu kỳ tín dụng
 
@@ -260,7 +260,7 @@ Tín dụng dễ
 
 Tín dụng khuếch đại chu kỳ kinh doanh vì tiêu chuẩn cho vay thay đổi theo giá tài sản và chất lượng người vay.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **25. Fallen Angels và Rising Stars** tiếp nhận điểm tựa từ **24. Chu kỳ tín dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Khoản vay lãi suất thả nổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **25. Fallen Angels và Rising Stars** nối từ **24. Chu kỳ tín dụng** sang **26. Khoản vay lãi suất thả nổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Fallen Angels và Rising Stars
 
@@ -272,7 +272,7 @@ Xếp hạng tín dụng thay đổi có thể tạo dòng lệnh kỹ thuật t
 
 Phân tích phải tách thay đổi chất lượng tín dụng thật khỏi dòng vốn do quy tắc chỉ số.
 
-> **Chuyển mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **26. Khoản vay lãi suất thả nổi** tiếp nhận điểm tựa từ **25. Fallen Angels và Rising Stars** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Leveraged Loans và Covenant** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **26. Khoản vay lãi suất thả nổi** nối từ **25. Fallen Angels và Rising Stars** sang **27. Leveraged Loans và Covenant**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Khoản vay lãi suất thả nổi
 
@@ -280,7 +280,7 @@ Công cụ lãi suất thả nổi có duration lãi suất thấp hơn nhưng n
 
 Nhà đầu tư giảm rủi ro giá do lãi suất nhưng có thể tăng rủi ro tín dụng gián tiếp vì khả năng trả lãi của người vay xấu đi.
 
-> **Chuyển mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **27. Leveraged Loans và Covenant** tiếp nhận điểm tựa từ **26. Khoản vay lãi suất thả nổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Trái phiếu liên kết lạm phát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **27. Leveraged Loans và Covenant** nối từ **26. Khoản vay lãi suất thả nổi** sang **28. Trái phiếu liên kết lạm phát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Leveraged Loans và Covenant
 
@@ -288,7 +288,7 @@ Khoản vay đòn bẩy (leveraged loan) thường cho doanh nghiệp có đòn 
 
 Khoản vay covenant-lite cho người cho vay ít quyền can thiệp sớm hơn. Lợi suất cao phải được đọc cùng chất lượng điều khoản.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, sau nội dung của **27. Leveraged Loans và Covenant**, **28. Trái phiếu liên kết lạm phát** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **29. MBS và convexity âm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, sau nội dung của **27. Leveraged Loans và Covenant**, **28. Trái phiếu liên kết lạm phát** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **29. MBS và convexity âm** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 28. Trái phiếu liên kết lạm phát
 
@@ -296,7 +296,7 @@ TIPS và các trái phiếu liên kết lạm phát điều chỉnh gốc hoặc
 
 Chúng bảo vệ sức mua tốt hơn trong một số tình huống nhưng vẫn chịu duration của lợi suất thực. Một năm CPI cao vẫn có thể tạo lỗ nếu lợi suất thực tăng mạnh.
 
-> **Chuyển mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **29. MBS và convexity âm** tiếp nhận điểm tựa từ **28. Trái phiếu liên kết lạm phát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. ABS và phân tầng rủi ro** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **29. MBS và convexity âm** nối từ **28. Trái phiếu liên kết lạm phát** sang **30. ABS và phân tầng rủi ro**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. MBS và convexity âm
 
@@ -306,7 +306,7 @@ Khi lãi suất giảm, tái cấp vốn tăng và nhà đầu tư nhận lại 
 
 Đây là trực giác của convexity âm.
 
-> **Chuyển mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **30. ABS và phân tầng rủi ro** tiếp nhận điểm tựa từ **29. MBS và convexity âm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Trái phiếu chính phủ nội tệ và ngoại tệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **30. ABS và phân tầng rủi ro** nối từ **29. MBS và convexity âm** sang **31. Trái phiếu chính phủ nội tệ và ngoại tệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. ABS và phân tầng rủi ro
 
@@ -314,7 +314,7 @@ Chứng khoán bảo đảm bằng tài sản (ABS) gom dòng tiền từ các k
 
 Một pool tài sản tương đối ổn định vẫn có thể tạo tranche rủi ro cao nếu cấu trúc phân bổ lỗ phức tạp. Cần hiểu waterfall, credit enhancement và trigger.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **31. Trái phiếu chính phủ nội tệ và ngoại tệ** tiếp nhận điểm tựa từ **30. ABS và phân tầng rủi ro** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. ETF trái phiếu không giống trái phiếu riêng lẻ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **31. Trái phiếu chính phủ nội tệ và ngoại tệ** nối từ **30. ABS và phân tầng rủi ro** sang **32. ETF trái phiếu không giống trái phiếu riêng lẻ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Trái phiếu chính phủ nội tệ và ngoại tệ
 
@@ -322,7 +322,7 @@ Chính phủ vay bằng đồng tiền mình kiểm soát có rủi ro khác ch�
 
 Nợ nội tệ có thể giảm rủi ro vỡ nợ danh nghĩa nhưng vẫn có rủi ro lạm phát và mất giá tiền tệ. Nợ ngoại tệ phụ thuộc dự trữ ngoại hối, cán cân thanh toán và khả năng tiếp cận thị trường quốc tế.
 
-> **Chuyển mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **32. ETF trái phiếu không giống trái phiếu riêng lẻ** tiếp nhận điểm tựa từ **31. Trái phiếu chính phủ nội tệ và ngoại tệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Thanh khoản ETF trái phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **32. ETF trái phiếu không giống trái phiếu riêng lẻ** nối từ **31. Trái phiếu chính phủ nội tệ và ngoại tệ** sang **33. Thanh khoản ETF trái phiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. ETF trái phiếu không giống trái phiếu riêng lẻ
 
@@ -330,7 +330,7 @@ Trái phiếu riêng lẻ giữ tới đáo hạn có kỳ hạn còn lại gi�
 
 Vì vậy “giữ ETF trái phiếu tới đáo hạn” thường là mô hình sai, trừ các quỹ mục tiêu đáo hạn có cấu trúc đặc biệt.
 
-> **Chuyển mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **33. Thanh khoản ETF trái phiếu** tiếp nhận điểm tựa từ **32. ETF trái phiếu không giống trái phiếu riêng lẻ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Thang đáo hạn, bullet và barbell** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **33. Thanh khoản ETF trái phiếu** nối từ **32. ETF trái phiếu không giống trái phiếu riêng lẻ** sang **34. Thang đáo hạn, bullet và barbell**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Thanh khoản ETF trái phiếu
 
@@ -338,7 +338,7 @@ ETF có thể giao dịch thường xuyên dù trái phiếu cơ sở OTC và í
 
 Cần xem spread, AUM, chất lượng tài sản, duration và thanh khoản tài sản cơ sở.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **34. Thang đáo hạn, bullet và barbell** tiếp nhận điểm tựa từ **33. Thanh khoản ETF trái phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Immunization và liability matching** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **34. Thang đáo hạn, bullet và barbell** nối từ **33. Thanh khoản ETF trái phiếu** sang **35. Immunization và liability matching**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Thang đáo hạn, bullet và barbell
 
@@ -352,7 +352,7 @@ Sau khi hiểu duration và đường cong, ta chuyển sang cách sắp xếp c
 
 Hai danh mục có cùng duration tổng nhưng khác cấu trúc đường cong và rủi ro tái đầu tư.
 
-> **Chuyển mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **35. Immunization và liability matching** tiếp nhận điểm tựa từ **34. Thang đáo hạn, bullet và barbell** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Phòng vệ lãi suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **35. Immunization và liability matching** nối từ **34. Thang đáo hạn, bullet và barbell** sang **36. Phòng vệ lãi suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Immunization và liability matching
 
@@ -360,7 +360,7 @@ Immunization cố gắng khớp duration/convexity của tài sản với nghĩa
 
 Đây là tư duy khác với “mua trái phiếu vì nghĩ lãi suất sẽ giảm”. Mục tiêu là bảo vệ khả năng thanh toán nghĩa vụ.
 
-> **Chuyển mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **36. Phòng vệ lãi suất** tiếp nhận điểm tựa từ **35. Immunization và liability matching** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Phòng vệ tín dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **36. Phòng vệ lãi suất** nối từ **35. Immunization và liability matching** sang **37. Phòng vệ tín dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Phòng vệ lãi suất
 
@@ -368,7 +368,7 @@ Có thể dùng futures hoặc swap để điều chỉnh DV01 mà không bán t
 
 Phòng vệ tốt cần khớp độ nhạy theo đường cong, không chỉ giá trị danh nghĩa. Curve twist có thể làm hedge một điểm kỳ hạn không hoàn hảo.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **37. Phòng vệ tín dụng** tiếp nhận điểm tựa từ **36. Phòng vệ lãi suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Khi long-duration bond đa dạng hóa cổ phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **37. Phòng vệ tín dụng** nối từ **36. Phòng vệ lãi suất** sang **38. Khi long-duration bond đa dạng hóa cổ phiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Phòng vệ tín dụng
 
@@ -376,7 +376,7 @@ CDS hoặc chỉ số tín dụng có thể giảm rủi ro spread/default, như
 
 Một hedge tín dụng không loại bỏ rủi ro thanh khoản của trái phiếu cơ sở.
 
-> **Chuyển mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **38. Khi long-duration bond đa dạng hóa cổ phiếu** tiếp nhận điểm tựa từ **37. Phòng vệ tín dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Phân rã lợi suất thu nhập cố định** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **38. Khi long-duration bond đa dạng hóa cổ phiếu** nối từ **37. Phòng vệ tín dụng** sang **39. Phân rã lợi suất thu nhập cố định**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Khi long-duration bond đa dạng hóa cổ phiếu
 
@@ -384,7 +384,7 @@ Trái phiếu chính phủ dài hạn thường hữu ích trong suy thoái do c
 
 Trong cú sốc lạm phát, cổ phiếu và trái phiếu dài hạn có thể cùng giảm. Tương quan cổ phiếu–trái phiếu phụ thuộc chế độ kinh tế.
 
-> **Chuyển mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **39. Phân rã lợi suất thu nhập cố định** tiếp nhận điểm tựa từ **38. Khi long-duration bond đa dạng hóa cổ phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Checklist trái phiếu hoặc ETF trái phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trái phiếu, lãi suất và tín dụng**, **39. Phân rã lợi suất thu nhập cố định** nối từ **38. Khi long-duration bond đa dạng hóa cổ phiếu** sang **40. Checklist trái phiếu hoặc ETF trái phiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Phân rã lợi suất thu nhập cố định
 
@@ -405,7 +405,7 @@ Tổng lợi suất
 
 Phân rã này giúp biết lợi nhuận đến từ nhận coupon, cược duration hay chấp nhận tín dụng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **40. Checklist trái phiếu hoặc ETF trái phiếu** tiếp nhận điểm tựa từ **39. Phân rã lợi suất thu nhập cố định** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trái phiếu, lãi suất và tín dụng**, **40. Checklist trái phiếu hoặc ETF trái phiếu** nối từ **39. Phân rã lợi suất thu nhập cố định** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 40. Checklist trái phiếu hoặc ETF trái phiếu
 
@@ -428,7 +428,7 @@ Kịch bản xấu nhất hợp lý
 
 Với ETF, thêm chất lượng tín dụng trung bình, cơ cấu holdings, thanh khoản tài sản cơ sở, phí, tracking và phòng vệ FX.
 
-> **Chuyển mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **Kết luận** gom các mảnh từ **40. Checklist trái phiếu hoặc ETF trái phiếu** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Trái phiếu, lãi suất và tín dụng**, **Kết luận** tổng hợp từ **40. Checklist trái phiếu hoặc ETF trái phiếu** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 

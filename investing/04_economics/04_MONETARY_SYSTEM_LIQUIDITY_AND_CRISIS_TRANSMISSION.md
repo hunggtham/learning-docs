@@ -16,7 +16,7 @@ Ba khái niệm này không giống nhau.
 
 **Dự trữ ngân hàng (bank reserves)** là tài sản của ngân hàng thương mại tại ngân hàng trung ương, chủ yếu dùng cho thanh toán liên ngân hàng và vận hành hệ thống tiền tệ. Nhà đầu tư cá nhân không trực tiếp sở hữu dự trữ ngân hàng.
 
-> **Chuyển mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **2. Khi ngân hàng cấp tín dụng** tiếp nhận điểm tựa từ **1. Tiền mặt, tiền gửi và dự trữ ngân hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Bảng cân đối ngân hàng trung ương** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **2. Khi ngân hàng cấp tín dụng** nối từ **1. Tiền mặt, tiền gửi và dự trữ ngân hàng** sang **3. Bảng cân đối ngân hàng trung ương**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Khi ngân hàng cấp tín dụng
 
@@ -29,7 +29,7 @@ Nợ phải trả: tiền gửi của khách hàng
 
 Vì vậy tín dụng ngân hàng có thể mở rộng sức mua mà không cần lượng tiền giấy vật lý tăng tương ứng. Đây là lý do khi phân tích “cung tiền” phải phân biệt tiền mặt, tiền gửi, tín dụng và dự trữ.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **3. Bảng cân đối ngân hàng trung ương** tiếp nhận điểm tựa từ **2. Khi ngân hàng cấp tín dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Lãi suất chính sách không phải mọi lãi suất trong nền kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **3. Bảng cân đối ngân hàng trung ương** nối từ **2. Khi ngân hàng cấp tín dụng** sang **4. Lãi suất chính sách không phải mọi lãi suất trong nền kinh tế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Bảng cân đối ngân hàng trung ương
 
@@ -51,7 +51,7 @@ Nới lỏng định lượng (Quantitative Easing, QE), thắt chặt định l
 
 # Phần II — Hệ thống lãi suất ngắn hạn
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **4. Lãi suất chính sách không phải mọi lãi suất trong nền kinh tế** tiếp nhận điểm tựa từ **3. Bảng cân đối ngân hàng trung ương** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Hệ thống sàn và hệ thống hành lang** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **4. Lãi suất chính sách không phải mọi lãi suất trong nền kinh tế** nối từ **3. Bảng cân đối ngân hàng trung ương** sang **5. Hệ thống sàn và hệ thống hành lang**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Lãi suất chính sách không phải mọi lãi suất trong nền kinh tế
 
@@ -68,7 +68,7 @@ Lãi suất chính sách
 
 Cùng một mức lãi suất chính sách có thể tạo điều kiện tài chính rất khác nếu chênh lệch tín dụng, tỷ giá hoặc tiêu chuẩn cho vay thay đổi.
 
-> **Chuyển mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **5. Hệ thống sàn và hệ thống hành lang** tiếp nhận điểm tựa từ **4. Lãi suất chính sách không phải mọi lãi suất trong nền kinh tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Giao dịch mua lại — repo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **5. Hệ thống sàn và hệ thống hành lang** nối từ **4. Lãi suất chính sách không phải mọi lãi suất trong nền kinh tế** sang **6. Giao dịch mua lại — repo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Hệ thống sàn và hệ thống hành lang
 
@@ -80,7 +80,7 @@ Trong **hệ thống hành lang (corridor system)**, lãi suất cho vay và lã
 
 # Phần III — Giao dịch mua lại và tài sản bảo đảm
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **6. Giao dịch mua lại — repo** tiếp nhận điểm tựa từ **5. Hệ thống sàn và hệ thống hành lang** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Tài sản bảo đảm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **6. Giao dịch mua lại — repo** nối từ **5. Hệ thống sàn và hệ thống hành lang** sang **7. Tài sản bảo đảm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Giao dịch mua lại — repo
 
@@ -94,7 +94,7 @@ Bên vay giao tài sản bảo đảm
 
 Chênh lệch giữa giá bán và giá mua lại phản ánh chi phí vốn của giao dịch.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **7. Tài sản bảo đảm** tiếp nhận điểm tựa từ **6. Giao dịch mua lại — repo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Tỷ lệ chiết trừ tài sản bảo đảm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **7. Tài sản bảo đảm** nối từ **6. Giao dịch mua lại — repo** sang **8. Tỷ lệ chiết trừ tài sản bảo đảm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Tài sản bảo đảm
 
@@ -104,7 +104,7 @@ Sau khi hiểu tiền và tín dụng, ta cần xem điều gì cho phép một 
 
 Trong hệ thống tài chính, chất lượng của tài sản bảo đảm có thể quan trọng gần ngang lượng tiền mặt vì nhiều giao dịch tài trợ phụ thuộc vào nó.
 
-> **Chuyển mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **8. Tỷ lệ chiết trừ tài sản bảo đảm** tiếp nhận điểm tựa từ **7. Tài sản bảo đảm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Vòng xoáy tăng haircut** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **8. Tỷ lệ chiết trừ tài sản bảo đảm** nối từ **7. Tài sản bảo đảm** sang **9. Vòng xoáy tăng haircut**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Tỷ lệ chiết trừ tài sản bảo đảm
 
@@ -122,7 +122,7 @@ Khả năng vay ≈ 90
 
 Nếu tỷ lệ này tăng lên 20%, khả năng vay giảm xuống khoảng 80 ngay cả khi giá tài sản chưa đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **9. Vòng xoáy tăng haircut** tiếp nhận điểm tựa từ **8. Tỷ lệ chiết trừ tài sản bảo đảm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Bảng cân đối nhà tạo lập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **9. Vòng xoáy tăng haircut** nối từ **8. Tỷ lệ chiết trừ tài sản bảo đảm** sang **10. Bảng cân đối nhà tạo lập**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Vòng xoáy tăng haircut
 
@@ -141,7 +141,7 @@ Biến động ↑
 
 # Phần IV — Nhà tạo lập và khả năng trung gian thị trường
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **10. Bảng cân đối nhà tạo lập** tiếp nhận điểm tựa từ **9. Vòng xoáy tăng haircut** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Thanh khoản thị trường thay đổi theo trạng thái hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **10. Bảng cân đối nhà tạo lập** nối từ **9. Vòng xoáy tăng haircut** sang **11. Thanh khoản thị trường thay đổi theo trạng thái hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Bảng cân đối nhà tạo lập
 
@@ -155,7 +155,7 @@ Nhà tạo lập hoặc trung gian giao dịch (dealer) kết nối người mua
 
 Khi khả năng sử dụng bảng cân đối giảm, độ sâu thị trường có thể giảm dù tài sản đã trở nên “rẻ”.
 
-> **Chuyển mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **11. Thanh khoản thị trường thay đổi theo trạng thái hệ thống** tiếp nhận điểm tựa từ **10. Bảng cân đối nhà tạo lập** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Quỹ thị trường tiền tệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **11. Thanh khoản thị trường thay đổi theo trạng thái hệ thống** nối từ **10. Bảng cân đối nhà tạo lập** sang **12. Quỹ thị trường tiền tệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Thanh khoản thị trường thay đổi theo trạng thái hệ thống
 
@@ -171,7 +171,7 @@ Vì vậy phải phân biệt **thanh khoản của tài sản** với **thanh k
 
 # Phần V — Quỹ thị trường tiền tệ và quản lý tiền mặt
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **12. Quỹ thị trường tiền tệ** tiếp nhận điểm tựa từ **11. Thanh khoản thị trường thay đổi theo trạng thái hệ thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Tài khoản tiền của chính phủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **12. Quỹ thị trường tiền tệ** nối từ **11. Thanh khoản thị trường thay đổi theo trạng thái hệ thống** sang **13. Tài khoản tiền của chính phủ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Quỹ thị trường tiền tệ
 
@@ -179,7 +179,7 @@ Quỹ thị trường tiền tệ (Money Market Fund, MMF) đầu tư vào tài 
 
 Dòng tiền chuyển giữa tiền gửi ngân hàng, MMF, tín phiếu kho bạc và các công cụ repo có thể làm thay đổi phân bố thanh khoản trong hệ thống.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **13. Tài khoản tiền của chính phủ** tiếp nhận điểm tựa từ **12. Quỹ thị trường tiền tệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Công cụ repo đảo chiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **13. Tài khoản tiền của chính phủ** nối từ **12. Quỹ thị trường tiền tệ** sang **14. Công cụ repo đảo chiều**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Tài khoản tiền của chính phủ
 
@@ -187,7 +187,7 @@ Tại Mỹ, tài khoản tiền của Bộ Tài chính tại ngân hàng trung �
 
 Nếu chính phủ tăng mạnh số dư tại đây, dự trữ của hệ thống ngân hàng có thể giảm nếu các yếu tố khác giữ nguyên. Khi chính phủ chi tiêu từ tài khoản, dự trữ có thể quay lại hệ thống.
 
-> **Chuyển mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **14. Công cụ repo đảo chiều** tiếp nhận điểm tựa từ **13. Tài khoản tiền của chính phủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Cơ cấu phát hành nợ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **14. Công cụ repo đảo chiều** nối từ **13. Tài khoản tiền của chính phủ** sang **15. Cơ cấu phát hành nợ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Công cụ repo đảo chiều
 
@@ -197,13 +197,13 @@ Dòng tiền giữa MMF, công cụ repo đảo chiều, tín phiếu kho bạc 
 
 # Phần VI — Phát hành nợ chính phủ và phần bù kỳ hạn
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **15. Cơ cấu phát hành nợ** tiếp nhận điểm tựa từ **14. Công cụ repo đảo chiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Phần bù kỳ hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **15. Cơ cấu phát hành nợ** nối từ **14. Công cụ repo đảo chiều** sang **16. Phần bù kỳ hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Cơ cấu phát hành nợ
 
 Chính phủ có thể tài trợ bằng tín phiếu ngắn hạn, trái phiếu trung hạn và trái phiếu dài hạn. Cơ cấu kỳ hạn quyết định lượng **rủi ro thời hạn (duration)** mà khu vực tư nhân phải hấp thụ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **16. Phần bù kỳ hạn** tiếp nhận điểm tựa từ **15. Cơ cấu phát hành nợ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Vốn và thanh khoản khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **16. Phần bù kỳ hạn** nối từ **15. Cơ cấu phát hành nợ** sang **17. Vốn và thanh khoản khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Phần bù kỳ hạn
 
@@ -224,7 +224,7 @@ Khi đó điều kiện tài chính có thể thắt chặt dù ngân hàng trun
 
 # Phần VII — Vốn và thanh khoản ngân hàng
 
-> **Chuyển mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **17. Vốn và thanh khoản khác nhau** tiếp nhận điểm tựa từ **16. Phần bù kỳ hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Khả năng thanh toán dài hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **17. Vốn và thanh khoản khác nhau** nối từ **16. Phần bù kỳ hạn** sang **18. Khả năng thanh toán dài hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Vốn và thanh khoản khác nhau
 
@@ -236,7 +236,7 @@ Một tổ chức có thể có đủ vốn trên giấy nhưng vẫn thiếu ti
 
 Một ngân hàng có vốn kế toán tốt vẫn có thể gặp khủng hoảng nếu dòng tiền rút quá nhanh và tài sản không thể chuyển thành tiền kịp thời.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **18. Khả năng thanh toán dài hạn** tiếp nhận điểm tựa từ **17. Vốn và thanh khoản khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Dòng tiền gửi rút ra nhanh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **18. Khả năng thanh toán dài hạn** nối từ **17. Vốn và thanh khoản khác nhau** sang **19. Dòng tiền gửi rút ra nhanh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Khả năng thanh toán dài hạn
 
@@ -246,7 +246,7 @@ Solvency nhìn giá trị kinh tế dài hạn của tài sản so với nghĩa 
 
 Hỗ trợ thanh khoản có thể giải quyết vấn đề thời điểm dòng tiền, nhưng không tự động sửa một bảng cân đối đã mất khả năng thanh toán.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **19. Dòng tiền gửi rút ra nhanh** tiếp nhận điểm tựa từ **18. Khả năng thanh toán dài hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Rủi ro tập trung nguồn vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **19. Dòng tiền gửi rút ra nhanh** nối từ **18. Khả năng thanh toán dài hạn** sang **20. Rủi ro tập trung nguồn vốn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Dòng tiền gửi rút ra nhanh
 
@@ -259,7 +259,7 @@ Tiền gửi có thể rời ngân hàng vì:
 
 Tốc độ rút tiền hiện đại có thể lớn hơn nhiều so với mô hình khủng hoảng ngân hàng truyền thống.
 
-> **Chuyển mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **19. Dòng tiền gửi rút ra nhanh** nêu điều cần giải thích; **20. Rủi ro tập trung nguồn vốn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **21. Tài sản dài hạn, nguồn vốn ngắn hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **19. Dòng tiền gửi rút ra nhanh** đặt vấn đề; **20. Rủi ro tập trung nguồn vốn** đối chiếu bằng chứng, rồi **21. Tài sản dài hạn, nguồn vốn ngắn hạn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 20. Rủi ro tập trung nguồn vốn
 
@@ -267,7 +267,7 @@ Ngân hàng có hàng triệu khoản tiền gửi nhỏ khác hẳn ngân hàng
 
 # Phần VIII — Lệch kỳ hạn trên bảng cân đối ngân hàng
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **20. Rủi ro tập trung nguồn vốn** nêu điều cần giải thích; **21. Tài sản dài hạn, nguồn vốn ngắn hạn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **22. Từ lỗ chưa thực hiện tới lỗ thực hiện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **20. Rủi ro tập trung nguồn vốn** đặt vấn đề; **21. Tài sản dài hạn, nguồn vốn ngắn hạn** đối chiếu bằng chứng, rồi **22. Từ lỗ chưa thực hiện tới lỗ thực hiện** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 21. Tài sản dài hạn, nguồn vốn ngắn hạn
 
@@ -283,7 +283,7 @@ trái phiếu dài hạn / khoản thế chấp dài hạn
 
 Khi lãi suất tăng, giá thị trường của tài sản dài hạn giảm. Nếu người gửi tiền ổn định, ngân hàng có thể tiếp tục nắm giữ. Nếu tiền gửi rút nhanh, ngân hàng có thể buộc phải bán và hiện thực hóa lỗ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **21. Tài sản dài hạn, nguồn vốn ngắn hạn** nêu điều cần giải thích; **22. Từ lỗ chưa thực hiện tới lỗ thực hiện** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **23. Tín dụng không chỉ phụ thuộc lãi suất chính sách** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **21. Tài sản dài hạn, nguồn vốn ngắn hạn** đặt vấn đề; **22. Từ lỗ chưa thực hiện tới lỗ thực hiện** đối chiếu bằng chứng, rồi **23. Tín dụng không chỉ phụ thuộc lãi suất chính sách** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 22. Từ lỗ chưa thực hiện tới lỗ thực hiện
 
@@ -299,7 +299,7 @@ Lỗ chưa thực hiện
 
 # Phần IX — Tạo tín dụng và cơ chế khuếch đại tài chính
 
-> **Chuyển mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **23. Tín dụng không chỉ phụ thuộc lãi suất chính sách** tiếp nhận điểm tựa từ **22. Từ lỗ chưa thực hiện tới lỗ thực hiện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Cơ chế khuếch đại tài chính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **23. Tín dụng không chỉ phụ thuộc lãi suất chính sách** nối từ **22. Từ lỗ chưa thực hiện tới lỗ thực hiện** sang **24. Cơ chế khuếch đại tài chính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Tín dụng không chỉ phụ thuộc lãi suất chính sách
 
@@ -314,7 +314,7 @@ Ngân hàng quyết định cho vay dựa trên:
 
 Do đó giảm lãi suất không bảo đảm tín dụng tăng ngay.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **23. Tín dụng không chỉ phụ thuộc lãi suất chính sách** xác định đầu vào; **24. Cơ chế khuếch đại tài chính** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **25. NBFI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **23. Tín dụng không chỉ phụ thuộc lãi suất chính sách** đặt đầu vào cho **24. Cơ chế khuếch đại tài chính**, rồi **25. NBFI** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 24. Cơ chế khuếch đại tài chính
 
@@ -336,7 +336,7 @@ Một cú sốc tài chính vì vậy có thể truyền sang nền kinh tế th
 
 # Phần X — Tổ chức tài chính phi ngân hàng
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **24. Cơ chế khuếch đại tài chính** xác định đầu vào; **25. NBFI** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **26. Đòn bẩy ẩn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **24. Cơ chế khuếch đại tài chính** đặt đầu vào cho **25. NBFI**, rồi **26. Đòn bẩy ẩn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 25. NBFI
 
@@ -346,7 +346,7 @@ NBFI mở rộng hệ thống tín dụng ra ngoài ngân hàng truyền thống
 
 Rủi ro tín dụng hoặc đòn bẩy có thể chuyển khỏi bảng cân đối ngân hàng sang khu vực này thay vì biến mất.
 
-> **Chuyển mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **26. Đòn bẩy ẩn** tiếp nhận điểm tựa từ **25. NBFI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Nhu cầu USD ngoài nước Mỹ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **26. Đòn bẩy ẩn** nối từ **25. NBFI** sang **27. Nhu cầu USD ngoài nước Mỹ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Đòn bẩy ẩn
 
@@ -354,7 +354,7 @@ Phái sinh, repo và sản phẩm cấu trúc có thể tạo mức phơi nhiễ
 
 # Phần XI — Hệ thống nguồn vốn USD toàn cầu
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **27. Nhu cầu USD ngoài nước Mỹ** tiếp nhận điểm tựa từ **26. Đòn bẩy ẩn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Cơ sở hoán đổi tiền tệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **27. Nhu cầu USD ngoài nước Mỹ** nối từ **26. Đòn bẩy ẩn** sang **28. Cơ sở hoán đổi tiền tệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Nhu cầu USD ngoài nước Mỹ
 
@@ -369,7 +369,7 @@ Chi phí vốn USD ↑
 → tín dụng toàn cầu thắt chặt
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **28. Cơ sở hoán đổi tiền tệ** tiếp nhận điểm tựa từ **27. Nhu cầu USD ngoài nước Mỹ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Nới lỏng định lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **28. Cơ sở hoán đổi tiền tệ** nối từ **27. Nhu cầu USD ngoài nước Mỹ** sang **29. Nới lỏng định lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Cơ sở hoán đổi tiền tệ
 
@@ -381,7 +381,7 @@ Mức cơ sở căng bất thường có thể cho thấy nhu cầu USD hoặc g
 
 # Phần XII — QE và QT
 
-> **Chuyển mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **29. Nới lỏng định lượng** tiếp nhận điểm tựa từ **28. Cơ sở hoán đổi tiền tệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Thắt chặt định lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **29. Nới lỏng định lượng** nối từ **28. Cơ sở hoán đổi tiền tệ** sang **30. Thắt chặt định lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Nới lỏng định lượng
 
@@ -396,7 +396,7 @@ Các kênh tác động có thể gồm:
 
 QE không đồng nghĩa trực tiếp với việc phát tiền mặt cho hộ gia đình.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **30. Thắt chặt định lượng** tiếp nhận điểm tựa từ **29. Nới lỏng định lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Dự trữ dồi dào không bảo đảm mọi thị trường đều thanh khoản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **30. Thắt chặt định lượng** nối từ **29. Nới lỏng định lượng** sang **31. Dự trữ dồi dào không bảo đảm mọi thị trường đều thanh khoản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Thắt chặt định lượng
 
@@ -404,7 +404,7 @@ Thắt chặt định lượng (QT) làm bảng cân đối ngân hàng trung ư
 
 Ảnh hưởng thực tế phụ thuộc tốc độ QT, số dư tiền của chính phủ, dòng tiền khỏi công cụ repo đảo chiều, nhu cầu dự trữ và cơ cấu phát hành nợ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **31. Dự trữ dồi dào không bảo đảm mọi thị trường đều thanh khoản** tiếp nhận điểm tựa từ **30. Thắt chặt định lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Người cho vay cuối cùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **31. Dự trữ dồi dào không bảo đảm mọi thị trường đều thanh khoản** nối từ **30. Thắt chặt định lượng** sang **32. Người cho vay cuối cùng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Dự trữ dồi dào không bảo đảm mọi thị trường đều thanh khoản
 
@@ -420,7 +420,7 @@ Do đó không nên dùng một chỉ số dự trữ duy nhất để kết lu�
 
 # Phần XIII — Công cụ hỗ trợ khẩn cấp
 
-> **Chuyển mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **32. Người cho vay cuối cùng** tiếp nhận điểm tựa từ **31. Dự trữ dồi dào không bảo đảm mọi thị trường đều thanh khoản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Hỗ trợ thanh khoản khác tái cấp vốn chủ sở hữu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **32. Người cho vay cuối cùng** nối từ **31. Dự trữ dồi dào không bảo đảm mọi thị trường đều thanh khoản** sang **33. Hỗ trợ thanh khoản khác tái cấp vốn chủ sở hữu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Người cho vay cuối cùng
 
@@ -428,7 +428,7 @@ Ngân hàng trung ương có thể đóng vai trò **người cho vay cuối cù
 
 Mục tiêu là ngăn thiếu tiền mặt ngắn hạn biến thành bán tháo tài sản không cần thiết.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **33. Hỗ trợ thanh khoản khác tái cấp vốn chủ sở hữu** tiếp nhận điểm tựa từ **32. Người cho vay cuối cùng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Khủng hoảng ngân hàng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **33. Hỗ trợ thanh khoản khác tái cấp vốn chủ sở hữu** nối từ **32. Người cho vay cuối cùng** sang **34. Khủng hoảng ngân hàng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Hỗ trợ thanh khoản khác tái cấp vốn chủ sở hữu
 
@@ -446,7 +446,7 @@ Không nên gọi mọi hình thức hỗ trợ là QE hoặc “cứu trợ”.
 
 # Phần XIV — Các dạng khủng hoảng
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **34. Khủng hoảng ngân hàng** tiếp nhận điểm tựa từ **33. Hỗ trợ thanh khoản khác tái cấp vốn chủ sở hữu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Khủng hoảng tín dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **34. Khủng hoảng ngân hàng** nối từ **33. Hỗ trợ thanh khoản khác tái cấp vốn chủ sở hữu** sang **35. Khủng hoảng tín dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Khủng hoảng ngân hàng
 
@@ -459,19 +459,19 @@ Có thể bắt đầu từ:
 - bất động sản giảm mạnh;
 - mất niềm tin vào khả năng thanh toán.
 
-> **Chuyển mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **35. Khủng hoảng tín dụng** tiếp nhận điểm tựa từ **34. Khủng hoảng ngân hàng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Khủng hoảng tiền tệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **35. Khủng hoảng tín dụng** nối từ **34. Khủng hoảng ngân hàng** sang **36. Khủng hoảng tiền tệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Khủng hoảng tín dụng
 
 Chênh lệch tín dụng mở rộng, thị trường phát hành đóng lại và doanh nghiệp yếu không thể tái cấp vốn. Tác động thường lan qua đầu tư, việc làm và lợi nhuận.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **36. Khủng hoảng tiền tệ** tiếp nhận điểm tựa từ **35. Khủng hoảng tín dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Khủng hoảng chủ quyền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **36. Khủng hoảng tiền tệ** nối từ **35. Khủng hoảng tín dụng** sang **37. Khủng hoảng chủ quyền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Khủng hoảng tiền tệ
 
 Một nền kinh tế dễ tổn thương khi có nợ ngoại tệ lớn, dự trữ thấp, thâm hụt đối ngoại và niềm tin chính sách yếu. Đồng tiền mất giá có thể làm gánh nợ ngoại tệ tăng thêm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **37. Khủng hoảng chủ quyền** tiếp nhận điểm tựa từ **36. Khủng hoảng tiền tệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Bảng theo dõi thanh khoản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **37. Khủng hoảng chủ quyền** nối từ **36. Khủng hoảng tiền tệ** sang **38. Bảng theo dõi thanh khoản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Khủng hoảng chủ quyền
 
@@ -494,7 +494,7 @@ Khi xuất hiện một sự kiện tài chính, hãy đi theo thứ tự:
 10. Chính sách xử lý phần nào của vấn đề?
 ```
 
-> **Chuyển mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **38. Bảng theo dõi thanh khoản** tiếp nhận điểm tựa từ **37. Khủng hoảng chủ quyền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Cầu nối sang tài sản đầu tư** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **38. Bảng theo dõi thanh khoản** nối từ **37. Khủng hoảng chủ quyền** sang **39. Cầu nối sang tài sản đầu tư**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Bảng theo dõi thanh khoản
 
@@ -513,7 +513,7 @@ Một bảng theo dõi thực tế có thể gồm:
 
 Không một chỉ số nào đủ để kết luận “thanh khoản tốt” hay “thanh khoản xấu”.
 
-> **Chuyển mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **39. Cầu nối sang tài sản đầu tư** tiếp nhận điểm tựa từ **38. Bảng theo dõi thanh khoản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **40. Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **39. Cầu nối sang tài sản đầu tư** nối từ **38. Bảng theo dõi thanh khoản** sang **40. Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 39. Cầu nối sang tài sản đầu tư
 
@@ -531,7 +531,7 @@ Nguồn vốn căng
 
 Với cổ phiếu, tác động đi qua cả lợi nhuận và hệ số định giá. Với trái phiếu doanh nghiệp, tác động đi trực tiếp qua chênh lệch tín dụng và khả năng tái cấp vốn. Với FX, tác động phụ thuộc nhu cầu tiền tệ an toàn và cấu trúc nợ ngoại tệ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **40. Kết luận** gom các mảnh từ **39. Cầu nối sang tài sản đầu tư** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hệ thống tiền tệ, thanh khoản và cơ chế truyền dẫn khủng hoảng**, **40. Kết luận** tổng hợp từ **39. Cầu nối sang tài sản đầu tư** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 40. Kết luận
 

@@ -24,7 +24,7 @@ Cú sốc kinh tế
 
 Không nên dừng ở câu như “CPI tăng nên cổ phiếu giảm”.
 
-> **Chuyển mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **2. Hai kênh lớn: earnings và valuation** tiếp nhận điểm tựa từ **1. Điểm xuất phát vẫn là doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Doanh thu và chu kỳ kinh tế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **2. Hai kênh lớn: earnings và valuation** nối từ **1. Điểm xuất phát vẫn là doanh nghiệp** sang **3. Doanh thu và chu kỳ kinh tế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Hai kênh lớn: earnings và valuation
 
@@ -51,7 +51,7 @@ Inflation / Policy
 
 Một cổ phiếu có thể có EPS tăng nhưng P/E giảm. Tổng lợi nhuận phụ thuộc kênh nào mạnh hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **3. Doanh thu và chu kỳ kinh tế** tiếp nhận điểm tựa từ **2. Hai kênh lớn: earnings và valuation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Lạm phát ảnh hưởng doanh nghiệp thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **3. Doanh thu và chu kỳ kinh tế** nối từ **2. Hai kênh lớn: earnings và valuation** sang **4. Lạm phát ảnh hưởng doanh nghiệp thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Doanh thu và chu kỳ kinh tế
 
@@ -65,7 +65,7 @@ Không phải mọi doanh thu phản ứng giống GDP.
 
 Cần lập bản đồ **độ nhạy chu kỳ (cyclical sensitivity)** riêng cho từng doanh nghiệp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **4. Lạm phát ảnh hưởng doanh nghiệp thế nào?** tiếp nhận điểm tựa từ **3. Doanh thu và chu kỳ kinh tế** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Lãi suất ảnh hưởng doanh nghiệp qua nhiều lớp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **4. Lạm phát ảnh hưởng doanh nghiệp thế nào?** nối từ **3. Doanh thu và chu kỳ kinh tế** sang **5. Lãi suất ảnh hưởng doanh nghiệp qua nhiều lớp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Lạm phát ảnh hưởng doanh nghiệp thế nào?
 
@@ -82,7 +82,7 @@ FX
 
 Doanh nghiệp có quyền định giá (pricing power) có thể chuyển một phần chi phí sang khách hàng. Doanh nghiệp cạnh tranh cao có thể bị co biên lợi nhuận.
 
-> **Chuyển mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **5. Lãi suất ảnh hưởng doanh nghiệp qua nhiều lớp** tiếp nhận điểm tựa từ **4. Lạm phát ảnh hưởng doanh nghiệp thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Đường cong lợi suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **5. Lãi suất ảnh hưởng doanh nghiệp qua nhiều lớp** nối từ **4. Lạm phát ảnh hưởng doanh nghiệp thế nào?** sang **6. Đường cong lợi suất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Lãi suất ảnh hưởng doanh nghiệp qua nhiều lớp
 
@@ -96,7 +96,7 @@ Lãi suất cao hơn có thể:
 
 Do đó “lãi suất tăng tốt cho bank” hoặc “lãi suất tăng xấu cho growth” chỉ là khẩu quyết sơ cấp.
 
-> **Chuyển mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **6. Đường cong lợi suất** tiếp nhận điểm tựa từ **5. Lãi suất ảnh hưởng doanh nghiệp qua nhiều lớp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Credit spread** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **6. Đường cong lợi suất** nối từ **5. Lãi suất ảnh hưởng doanh nghiệp qua nhiều lớp** sang **7. Credit spread**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Đường cong lợi suất
 
@@ -110,7 +110,7 @@ Cần tách:
 
 Hai lần lợi suất 10 năm cùng tăng 50bp có thể có ý nghĩa khác nếu một lần do kỳ vọng tăng trưởng, lần khác do lạm phát hoặc cung trái phiếu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **7. Credit spread** tiếp nhận điểm tựa từ **6. Đường cong lợi suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. FX và doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **7. Credit spread** nối từ **6. Đường cong lợi suất** sang **8. FX và doanh nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Credit spread
 
@@ -125,7 +125,7 @@ Rủi ro vỡ nợ
 
 Spread tăng làm tái cấp vốn đắt hơn và có thể là tín hiệu điều kiện tài chính đang thắt chặt ngay cả khi chính sách (policy / 정책) tỷ lệ (rate / 비율) chưa đổi.
 
-> **Chuyển mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **8. FX và doanh nghiệp** tiếp nhận điểm tựa từ **7. Credit spread** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Dầu và hàng hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **8. FX và doanh nghiệp** nối từ **7. Credit spread** sang **9. Dầu và hàng hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. FX và doanh nghiệp
 
@@ -141,7 +141,7 @@ Hedge Policy
 
 KRW yếu không tự động tốt cho mọi exporter Hàn Quốc nếu chi phí đầu vào, nợ hoặc nhu cầu toàn cầu cùng xấu đi.
 
-> **Chuyển mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **9. Dầu và hàng hóa** tiếp nhận điểm tựa từ **8. FX và doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Chính sách tiền tệ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **9. Dầu và hàng hóa** nối từ **8. FX và doanh nghiệp** sang **10. Chính sách tiền tệ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Dầu và hàng hóa
 
@@ -159,7 +159,7 @@ Nhưng nó lại có thể hỗ trợ lợi nhuận producer năng lượng.
 
 Một cú sốc phải được đọc theo **ai là người mua và ai là người bán**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **10. Chính sách tiền tệ** tiếp nhận điểm tựa từ **9. Dầu và hàng hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Fed và FOMC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **10. Chính sách tiền tệ** nối từ **9. Dầu và hàng hóa** sang **11. Fed và FOMC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Chính sách tiền tệ
 
@@ -175,7 +175,7 @@ Hàm phản ứng (reaction function) thường cân bằng:
 
 Thị trường thường giao dịch thay đổi trong **đường đi kỳ vọng của lãi suất**, không chỉ quyết định hôm nay.
 
-> **Chuyển mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **11. Fed và FOMC** tiếp nhận điểm tựa từ **10. Chính sách tiền tệ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. QE và QT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **11. Fed và FOMC** nối từ **10. Chính sách tiền tệ** sang **12. QE và QT**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Fed và FOMC
 
@@ -191,7 +191,7 @@ Financial Conditions
 
 Một cuộc họp giữ nguyên lãi suất vẫn có thể rất “hawkish” hoặc “dovish” nếu kỳ vọng tương lai thay đổi.
 
-> **Chuyển mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **12. QE và QT** tiếp nhận điểm tựa từ **11. Fed và FOMC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Thanh khoản hệ thống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **12. QE và QT** nối từ **11. Fed và FOMC** sang **13. Thanh khoản hệ thống**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. QE và QT
 
@@ -205,7 +205,7 @@ QE = in tiền = stocks up
 
 Cần xem cơ chế cụ thể và bối cảnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **13. Thanh khoản hệ thống** tiếp nhận điểm tựa từ **12. QE và QT** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Repo và collateral** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **13. Thanh khoản hệ thống** nối từ **12. QE và QT** sang **14. Repo và collateral**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Thanh khoản hệ thống
 
@@ -220,7 +220,7 @@ Thanh khoản (liquidity) có nhiều lớp:
 
 Một hệ thống có nhiều tiền danh nghĩa vẫn có thể gặp stress nếu collateral hoặc niềm tin suy giảm.
 
-> **Chuyển mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **14. Repo và collateral** tiếp nhận điểm tựa từ **13. Thanh khoản hệ thống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Ngân hàng và tín dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **14. Repo và collateral** nối từ **13. Thanh khoản hệ thống** sang **15. Ngân hàng và tín dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Repo và collateral
 
@@ -238,7 +238,7 @@ Haircut ↑
 
 Đây là một kênh khủng hoảng quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **15. Ngân hàng và tín dụng** tiếp nhận điểm tựa từ **14. Repo và collateral** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Fiscal chính sách (policy / 정책)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **15. Ngân hàng và tín dụng** nối từ **14. Repo và collateral** sang **16. Fiscal chính sách (policy / 정책)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Ngân hàng và tín dụng
 
@@ -254,7 +254,7 @@ Credit Availability
 
 Ngay cả khi chính sách (policy / 정책) tỷ lệ (rate / 비율) giảm, tín dụng vẫn có thể co nếu ngân hàng đang bảo vệ vốn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **16. Fiscal chính sách (policy / 정책)** tiếp nhận điểm tựa từ **15. Ngân hàng và tín dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Thuế quan và thương mại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **16. Fiscal chính sách (policy / 정책)** nối từ **15. Ngân hàng và tín dụng** sang **17. Thuế quan và thương mại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Fiscal chính sách (policy / 정책)
 
@@ -269,7 +269,7 @@ Chính sách tài khóa ảnh hưởng:
 
 Tác động phụ thuộc quy mô, thời điểm và nền kinh tế đang dư hay thiếu công suất.
 
-> **Chuyển mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **17. Thuế quan và thương mại** tiếp nhận điểm tựa từ **16. Fiscal chính sách (policy / 정책)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Geopolitics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **17. Thuế quan và thương mại** nối từ **16. Fiscal chính sách (policy / 정책)** sang **18. Geopolitics**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Thuế quan và thương mại
 
@@ -284,7 +284,7 @@ Giá nhập khẩu ↑
 
 Nhưng tác động còn phụ thuộc tỷ giá, chuyển nguồn cung, mức pass-through và khả năng nội địa hóa.
 
-> **Chuyển mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **18. Geopolitics** tiếp nhận điểm tựa từ **17. Thuế quan và thương mại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Trung Quốc và chu kỳ châu Á** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **18. Geopolitics** nối từ **17. Thuế quan và thương mại** sang **19. Trung Quốc và chu kỳ châu Á**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Geopolitics
 
@@ -300,7 +300,7 @@ Rủi ro địa chính trị có thể ảnh hưởng qua:
 
 Ảnh hưởng thường khác nhau giữa doanh nghiệp có cùng ngành nhưng khác địa lý.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **19. Trung Quốc và chu kỳ châu Á** tiếp nhận điểm tựa từ **18. Geopolitics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Mỹ và nhu cầu toàn cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **19. Trung Quốc và chu kỳ châu Á** nối từ **18. Geopolitics** sang **20. Mỹ và nhu cầu toàn cầu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Trung Quốc và chu kỳ châu Á
 
@@ -315,7 +315,7 @@ Trung Quốc ảnh hưởng Hàn Quốc và Việt Nam qua:
 
 “China stimulus” không phải một biến duy nhất. Kích thích bất động sản, hạ tầng hay tiêu dùng sẽ giúp các ngành khác nhau.
 
-> **Chuyển mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **20. Mỹ và nhu cầu toàn cầu** tiếp nhận điểm tựa từ **19. Trung Quốc và chu kỳ châu Á** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Bán dẫn và AI capex** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **20. Mỹ và nhu cầu toàn cầu** nối từ **19. Trung Quốc và chu kỳ châu Á** sang **21. Bán dẫn và AI capex**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Mỹ và nhu cầu toàn cầu
 
@@ -330,7 +330,7 @@ Mỹ ảnh hưởng thế giới qua:
 
 Một doanh nghiệp xuất khẩu sang Mỹ có thể chịu đồng thời demand tác động (effect / 효과) và FX tác động (effect / 효과) theo hai hướng khác nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **21. Bán dẫn và AI capex** tiếp nhận điểm tựa từ **20. Mỹ và nhu cầu toàn cầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Kỳ vọng quan trọng hơn headline** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **21. Bán dẫn và AI capex** nối từ **20. Mỹ và nhu cầu toàn cầu** sang **22. Kỳ vọng quan trọng hơn headline**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Bán dẫn và AI capex
 
@@ -347,7 +347,7 @@ Hyperscaler Capex
 
 Nhưng cần tách demand thật, inventory bản dựng (build / 빌드) và supply phản hồi (response / 응답).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **22. Kỳ vọng quan trọng hơn headline** tiếp nhận điểm tựa từ **21. Bán dẫn và AI capex** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Positioning và flows** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **22. Kỳ vọng quan trọng hơn headline** nối từ **21. Bán dẫn và AI capex** sang **23. Positioning và flows**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Kỳ vọng quan trọng hơn headline
 
@@ -361,7 +361,7 @@ Actual
 
 Một số liệu tốt vẫn có thể làm giá giảm nếu thị trường đã kỳ vọng tốt hơn.
 
-> **Chuyển mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **22. Kỳ vọng quan trọng hơn headline** xác định đầu vào; **23. Positioning và flows** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **24. Earnings revision** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **22. Kỳ vọng quan trọng hơn headline** đặt đầu vào cho **23. Positioning và flows**, rồi **24. Earnings revision** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 23. Positioning và flows
 
@@ -377,7 +377,7 @@ và
 Positioning / Flow Change
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **23. Positioning và flows** xác định đầu vào; **24. Earnings revision** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **25. Chu kỳ và xu hướng cấu trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **23. Positioning và flows** đặt đầu vào cho **24. Earnings revision**, rồi **25. Chu kỳ và xu hướng cấu trúc** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 24. Earnings revision
 
@@ -393,7 +393,7 @@ hay không.
 
 Giá cổ phiếu thường đi trước reported earnings vì thị trường phản ánh kỳ vọng mới.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **25. Chu kỳ và xu hướng cấu trúc** tiếp nhận điểm tựa từ **24. Earnings revision** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Regime** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **25. Chu kỳ và xu hướng cấu trúc** nối từ **24. Earnings revision** sang **26. Regime**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Chu kỳ và xu hướng cấu trúc
 
@@ -405,7 +405,7 @@ Cần phân biệt:
 
 Không nên định giá thay đổi chu kỳ như thể nó tồn tại vĩnh viễn.
 
-> **Chuyển mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **26. Regime** tiếp nhận điểm tựa từ **25. Chu kỳ và xu hướng cấu trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Từ macro tới mô hình doanh nghiệp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **26. Regime** nối từ **25. Chu kỳ và xu hướng cấu trúc** sang **27. Từ macro tới mô hình doanh nghiệp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Regime
 
@@ -420,7 +420,7 @@ Từ đó hình thành các trạng thái như Goldilocks, overheating, stagflat
 
 Nhưng đây chỉ là bản đồ, không phải công thức dự báo giá tài sản.
 
-> **Chuyển mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **27. Từ macro tới mô hình doanh nghiệp** tiếp nhận điểm tựa từ **26. Regime** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Khung phân tích một cú sốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **27. Từ macro tới mô hình doanh nghiệp** nối từ **26. Regime** sang **28. Khung phân tích một cú sốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Từ macro tới mô hình doanh nghiệp
 
@@ -438,7 +438,7 @@ USD/KRW ↑
 
 Nếu không thể chỉ ra dòng nào thay đổi trong mô hình (model / 모델), “macro thesis” còn quá mơ hồ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **28. Khung phân tích một cú sốc** tiếp nhận điểm tựa từ **27. Từ macro tới mô hình doanh nghiệp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Các tệp (file / 파일) chuyên sâu tiếp theo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **28. Khung phân tích một cú sốc** nối từ **27. Từ macro tới mô hình doanh nghiệp** sang **29. Các tệp (file / 파일) chuyên sâu tiếp theo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Khung phân tích một cú sốc
 
@@ -457,7 +457,7 @@ Khi có một headline mới, dùng chuỗi:
 10. Điều gì đã được price trước?
 ```
 
-> **Chuyển mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **29. Các tệp (file / 파일) chuyên sâu tiếp theo** tiếp nhận điểm tựa từ **28. Khung phân tích một cú sốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết luận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **29. Các tệp (file / 파일) chuyên sâu tiếp theo** nối từ **28. Khung phân tích một cú sốc** sang **Kết luận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Các tệp (file / 파일) chuyên sâu tiếp theo
 
@@ -470,7 +470,7 @@ Khi có một headline mới, dùng chuỗi:
 - [05_MACRO_REGIMES_POLICY_HISTORY_AND_CRISIS_CASES.md](./05_MACRO_REGIMES_POLICY_HISTORY_AND_CRISIS_CASES.md): chế độ vĩ mô và lịch sử khủng hoảng;
 - [06_FISCAL_MONETARY_INTERACTION_DEBT_DEMOGRAPHICS_AND_PRODUCTIVITY.md](./06_FISCAL_MONETARY_INTERACTION_DEBT_DEMOGRAPHICS_AND_PRODUCTIVITY.md): tài khóa, nợ, dân số và năng suất.
 
-> **Chuyển mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **Kết luận** gom các mảnh từ **29. Các tệp (file / 파일) chuyên sâu tiếp theo** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Cầu nối từ doanh nghiệp tới kinh tế vĩ mô**, **Kết luận** tổng hợp từ **29. Các tệp (file / 파일) chuyên sâu tiếp theo** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết luận
 
