@@ -23,7 +23,7 @@ nếu `\hat r` hướng từ nguồn tới vật thử.
 
 Lực luôn hút trong cơ học Newton vì khối lượng hấp dẫn thông thường có cùng dấu.
 
-> **Chuyển mạch:** Trong **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Vì sao xuất hiện 1/r²?** tiếp nhận điểm tựa từ **Định luật hấp dẫn phổ quát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trường hấp dẫn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Vì sao xuất hiện 1/r²?** nối từ **Định luật hấp dẫn phổ quát** sang **Trường hấp dẫn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao xuất hiện `1/r²`?
 
@@ -37,7 +37,7 @@ Do đó mật độ thông lượng phải giảm theo `1/r^2`. Đây không ph�
 
 Cùng hình học này cũng xuất hiện trong điện trường Coulomb.
 
-> **Chuyển mạch:** Ở chặng này của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Trường hấp dẫn** tiếp nhận điểm tựa từ **Vì sao xuất hiện 1/r²?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định luật Gauss cho hấp dẫn Newton** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Trường hấp dẫn** nối từ **Vì sao xuất hiện 1/r²?** sang **Định luật Gauss cho hấp dẫn Newton**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trường hấp dẫn
 
@@ -61,7 +61,7 @@ g=\frac{GM_E}{R_E^2}.
 
 Nếu độ cao `h\ll R_E`, thay đổi của `g` nhỏ và ta có thể xem `g` gần hằng số.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Định luật Gauss cho hấp dẫn Newton** tiếp nhận điểm tựa từ **Trường hấp dẫn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định lý vỏ cầu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Định luật Gauss cho hấp dẫn Newton** nối từ **Trường hấp dẫn** sang **Định lý vỏ cầu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định luật Gauss cho hấp dẫn Newton
 
@@ -79,7 +79,7 @@ Dạng vi phân là
 
 Nó cho thấy khối lượng là nguồn của trường hấp dẫn, tương tự cấu trúc Gauss trong điện tĩnh nhưng với dấu khác do hấp dẫn luôn hút.
 
-> **Chuyển mạch:** Trong **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Định lý vỏ cầu** tiếp nhận điểm tựa từ **Định luật Gauss cho hấp dẫn Newton** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thế hấp dẫn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Định lý vỏ cầu** nối từ **Định luật Gauss cho hấp dẫn Newton** sang **Thế hấp dẫn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định lý vỏ cầu
 
@@ -102,7 +102,7 @@ g(r)=G\frac{M(r)}{r^2}
 
 Trường tăng tuyến tính theo `r` từ tâm tới bề mặt trong mô hình mật độ đều.
 
-> **Chuyển mạch:** Ở chặng này của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Thế hấp dẫn** tiếp nhận điểm tựa từ **Định lý vỏ cầu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao mgh chỉ là xấp xỉ cục bộ?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Thế hấp dẫn** nối từ **Định lý vỏ cầu** sang **Vì sao mgh chỉ là xấp xỉ cục bộ?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thế hấp dẫn
 
@@ -128,7 +128,7 @@ U=m\Phi=-\frac{GMm}{r}.
 
 Dấu âm nghĩa trạng thái liên kết có năng lượng thấp hơn trạng thái hai vật ở xa vô hạn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Vì sao mgh chỉ là xấp xỉ cục bộ?** tiếp nhận điểm tựa từ **Thế hấp dẫn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quỹ đạo tròn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Vì sao mgh chỉ là xấp xỉ cục bộ?** nối từ **Thế hấp dẫn** sang **Quỹ đạo tròn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao `mgh` chỉ là xấp xỉ cục bộ?
 
@@ -159,7 +159,7 @@ nên
 
 Do đó `mgh` là giới hạn gần mặt đất của thế hấp dẫn Newton tổng quát.
 
-> **Chuyển mạch:** Trong **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Quỹ đạo tròn** tiếp nhận điểm tựa từ **Vì sao mgh chỉ là xấp xỉ cục bộ?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng của quỹ đạo tròn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Quỹ đạo tròn** nối từ **Vì sao mgh chỉ là xấp xỉ cục bộ?** sang **Năng lượng của quỹ đạo tròn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quỹ đạo tròn
 
@@ -190,7 +190,7 @@ T^2\propto r^3,
 
 là dạng của định luật Kepler III cho quỹ đạo tròn.
 
-> **Chuyển mạch:** Ở chặng này của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Năng lượng của quỹ đạo tròn** tiếp nhận điểm tựa từ **Quỹ đạo tròn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quỹ đạo ellipse và bán trục lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Năng lượng của quỹ đạo tròn** nối từ **Quỹ đạo tròn** sang **Quỹ đạo ellipse và bán trục lớn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng của quỹ đạo tròn
 
@@ -217,7 +217,7 @@ Năng lượng âm cho biết quỹ đạo liên kết.
 
 Một điều có vẻ nghịch trực giác là nếu vệ tinh mất một ít năng lượng do lực cản khí quyển, quỹ đạo hạ thấp và tốc độ quỹ đạo tròn mới lại **lớn hơn** vì `v_c\propto r^{-1/2}`. Vệ tinh mất cơ năng nhưng có thể tăng động năng trong quá trình rơi vào quỹ đạo thấp hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Quỹ đạo ellipse và bán trục lớn** tiếp nhận điểm tựa từ **Năng lượng của quỹ đạo tròn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định luật Kepler và bảo toàn mômen động lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Quỹ đạo ellipse và bán trục lớn** nối từ **Năng lượng của quỹ đạo tròn** sang **Định luật Kepler và bảo toàn mômen động lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quỹ đạo ellipse và bán trục lớn
 
@@ -235,7 +235,7 @@ v^2=GM\left(\frac{2}{r}-\frac{1}{a}\right).
 
 Nó thống nhất nhiều trường hợp: quỹ đạo tròn có `a=r`; quỹ đạo ellipse nhanh hơn gần cận điểm và chậm hơn gần viễn điểm.
 
-> **Chuyển mạch:** Trong **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Định luật Kepler và bảo toàn mômen động lượng** tiếp nhận điểm tựa từ **Quỹ đạo ellipse và bán trục lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thế hiệu dụng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Định luật Kepler và bảo toàn mômen động lượng** nối từ **Quỹ đạo ellipse và bán trục lớn** sang **Thế hiệu dụng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định luật Kepler và bảo toàn mômen động lượng
 
@@ -265,7 +265,7 @@ Suy ra tốc độ quét diện tích
 
 là hằng số. Đây chính là định luật Kepler II: bán kính nối hành tinh với Mặt Trời quét những diện tích bằng nhau trong những khoảng thời gian bằng nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Thế hiệu dụng** tiếp nhận điểm tựa từ **Định luật Kepler và bảo toàn mômen động lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vận tốc thoát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Thế hiệu dụng** nối từ **Định luật Kepler và bảo toàn mômen động lượng** sang **Vận tốc thoát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thế hiệu dụng
 
@@ -281,7 +281,7 @@ Hạng thứ hai thường gọi là rào cản ly tâm. Nó không phải một
 
 Cực tiểu của `U_{eff}` tương ứng với quỹ đạo tròn ổn định trong hấp dẫn Newton.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Vận tốc thoát** tiếp nhận điểm tựa từ **Thế hiệu dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chuyển quỹ đạo Hohmann** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Vận tốc thoát** nối từ **Thế hiệu dụng** sang **Chuyển quỹ đạo Hohmann**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vận tốc thoát
 
@@ -305,7 +305,7 @@ v_e=\sqrt2\,v_c.
 
 Khối lượng vật phóng triệt tiêu trong mô hình hai vật lý tưởng.
 
-> **Chuyển mạch:** Trong **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Chuyển quỹ đạo Hohmann** tiếp nhận điểm tựa từ **Vận tốc thoát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao muốn lên quỹ đạo cần nhiều vận tốc ngang?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Chuyển quỹ đạo Hohmann** nối từ **Vận tốc thoát** sang **Vì sao muốn lên quỹ đạo cần nhiều vận tốc ngang?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chuyển quỹ đạo Hohmann
 
@@ -315,7 +315,7 @@ Tàu tăng vận tốc tại `r_1` để đi vào ellipse có cận điểm `r_1
 
 Năng lượng và vis-viva cho phép tính hai thay đổi vận tốc `\Delta v`. Đây là ví dụ cho thấy cơ học quỹ đạo thực tế là bài toán điều khiển **năng lượng và mômen động lượng**, không đơn giản là “bay thẳng lên”.
 
-> **Chuyển mạch:** Ở chặng này của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Vì sao muốn lên quỹ đạo cần nhiều vận tốc ngang?** tiếp nhận điểm tựa từ **Chuyển quỹ đạo Hohmann** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lực thủy triều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Vì sao muốn lên quỹ đạo cần nhiều vận tốc ngang?** nối từ **Chuyển quỹ đạo Hohmann** sang **Lực thủy triều**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao muốn lên quỹ đạo cần nhiều vận tốc ngang?
 
@@ -323,7 +323,7 @@ Năng lượng và vis-viva cho phép tính hai thay đổi vận tốc `\Delta 
 
 Tên lửa vì thế ban đầu bay lên để rời khí quyển dày, sau đó nghiêng dần để tăng vận tốc ngang.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Lực thủy triều** tiếp nhận điểm tựa từ **Vì sao muốn lên quỹ đạo cần nhiều vận tốc ngang?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điểm Lagrange** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Lực thủy triều** nối từ **Vì sao muốn lên quỹ đạo cần nhiều vận tốc ngang?** sang **Điểm Lagrange**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lực thủy triều
 
@@ -343,7 +343,7 @@ ta có độ biến thiên gần đúng
 
 Đây là nguồn của lực thủy triều. Thủy triều đại dương, biến dạng vệ tinh và hiện tượng kéo dài gần vật thể hấp dẫn mạnh đều liên quan đến độ dốc (gradient / 기울기) của trường hấp dẫn chứ không chỉ độ lớn của `g` tại một điểm.
 
-> **Chuyển mạch:** Trong **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Điểm Lagrange** tiếp nhận điểm tựa từ **Lực thủy triều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gravity assist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Điểm Lagrange** nối từ **Lực thủy triều** sang **Gravity assist**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điểm Lagrange
 
@@ -351,7 +351,7 @@ Trong hệ hai vật lớn quay quanh nhau, có những vị trí trong hệ quy
 
 `L4` và `L5` có thể ổn định trong điều kiện tỉ lệ khối lượng thích hợp; `L1`, `L2`, `L3` là các điểm cân bằng không ổn định nhưng rất hữu ích cho nhiệm vụ không gian với điều khiển hiệu chỉnh nhỏ.
 
-> **Chuyển mạch:** Ở chặng này của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Gravity assist** tiếp nhận điểm tựa từ **Điểm Lagrange** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bài toán hai vật và khối lượng rút gọn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Gravity assist** nối từ **Điểm Lagrange** sang **Bài toán hai vật và khối lượng rút gọn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gravity assist
 
@@ -359,7 +359,7 @@ Khi tàu vũ trụ bay qua một hành tinh đang chuyển động quanh Mặt T
 
 Năng lượng không được tạo ra miễn phí; có trao đổi một lượng rất nhỏ với năng lượng quỹ đạo của hành tinh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Bài toán hai vật và khối lượng rút gọn** tiếp nhận điểm tựa từ **Gravity assist** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi cơ học Newton không đủ?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Bài toán hai vật và khối lượng rút gọn** nối từ **Gravity assist** sang **Khi cơ học Newton không đủ?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bài toán hai vật và khối lượng rút gọn
 
@@ -379,7 +379,7 @@ U(r)=-\frac{Gm_1m_2}{r}.
 
 Cách này cho thấy mô hình “một vật nhỏ quay quanh một vật đứng yên” chỉ là giới hạn `m_2\ll m_1`.
 
-> **Chuyển mạch:** Trong **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Khi cơ học Newton không đủ?** tiếp nhận điểm tựa từ **Bài toán hai vật và khối lượng rút gọn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Khi cơ học Newton không đủ?** nối từ **Bài toán hai vật và khối lượng rút gọn** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khi cơ học Newton không đủ?
 
@@ -393,13 +393,13 @@ Hấp dẫn Newton hoạt động rất tốt khi trường yếu và vận tố
 
 Trong các miền này cần thuyết tương đối rộng.
 
-> **Chuyển mạch:** Ở chặng này của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Khi cơ học Newton không đủ?** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Khi cơ học Newton không đủ?**, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Quỹ đạo là chuyển động rơi tự do có mômen động lượng. Năng lượng quyết định hệ liên kết hay không và thang kích thước quỹ đạo; mômen động lượng quyết định hình học quay quanh nguồn; độ dốc (gradient / 기울기) của trường tạo hiệu ứng thủy triều. Cơ học quỹ đạo là bài toán tổ chức các định luật bảo toàn, không phải ghi nhớ từng công thức vệ tinh riêng lẻ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**, rồi **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -419,7 +419,7 @@ Không. Vận tốc ngang là thành phần quyết định để liên tục r�
 
 Không nhất thiết. Khi rơi xuống quỹ đạo tròn thấp hơn, vận tốc quỹ đạo có thể tăng dù tổng cơ năng giảm.
 
-> **Chuyển mạch:** Trong **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Hấp dẫn Newton, trường hấp dẫn và cơ học quỹ đạo**, **Những ngộ nhận thường gặp (Common Misconceptions)** dẫn sang **Liên kết kiến thức (knowledge connection / 지식 연결)**, nơi tài liệu chuẩn và vị trí sở hữu được chỉ rõ để biết chỗ đào sâu tiếp.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

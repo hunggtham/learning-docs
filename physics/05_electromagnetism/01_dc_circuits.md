@@ -20,7 +20,7 @@ I=\frac{dQ}{dt}.
 
 Chiều dòng điện quy ước là chiều chuyển động của điện tích dương. Trong kim loại, electron mang điện âm nên vận tốc trôi của electron ngược chiều dòng điện quy ước.
 
-> **Chuyển mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Vận tốc trôi và tốc độ truyền tín hiệu** tiếp nhận điểm tựa từ **Dòng điện là tốc độ truyền điện tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mật độ dòng điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Vận tốc trôi và tốc độ truyền tín hiệu** nối từ **Dòng điện là tốc độ truyền điện tích** sang **Mật độ dòng điện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vận tốc trôi và tốc độ truyền tín hiệu
 
@@ -36,7 +36,7 @@ vận tốc trôi của hạt tải
 tốc độ lan truyền tín hiệu điện từ
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Mật độ dòng điện** tiếp nhận điểm tựa từ **Vận tốc trôi và tốc độ truyền tín hiệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ Ohm ở mức vĩ mô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Mật độ dòng điện** nối từ **Vận tốc trôi và tốc độ truyền tín hiệu** sang **Quan hệ Ohm ở mức vĩ mô**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mật độ dòng điện
 
@@ -67,7 +67,7 @@ I=\int_A\mathbf J\cdot d\mathbf A.
 
 Đây là cùng cấu trúc bảo toàn xuất hiện trong chất lưu: lượng trong một vùng thay đổi do dòng qua biên.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Quan hệ Ohm ở mức vĩ mô** tiếp nhận điểm tựa từ **Mật độ dòng điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quan hệ Ohm ở mức vi mô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Quan hệ Ohm ở mức vĩ mô** nối từ **Mật độ dòng điện** sang **Quan hệ Ohm ở mức vi mô**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quan hệ Ohm ở mức vĩ mô
 
@@ -85,7 +85,7 @@ R=\rho\frac{L}{A}.
 
 Dây dài hơn có điện trở lớn hơn vì hạt tải phải đi qua quãng đường dài hơn. Tiết diện lớn hơn giảm điện trở vì có nhiều kênh dẫn song song hơn.
 
-> **Chuyển mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Quan hệ Ohm ở mức vi mô** tiếp nhận điểm tựa từ **Quan hệ Ohm ở mức vĩ mô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn điện áp và sức điện động** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Quan hệ Ohm ở mức vi mô** nối từ **Quan hệ Ohm ở mức vĩ mô** sang **Nguồn điện áp và sức điện động**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quan hệ Ohm ở mức vi mô
 
@@ -105,7 +105,7 @@ Quan hệ này cho thấy `V=IR` là kết quả vĩ mô của một quan hệ c
 
 Ohm không phải định luật phổ quát cho mọi linh kiện. Diode, transistor, bóng đèn dây tóc và nhiều điện cực hóa học có đặc tuyến `I-V` phi tuyến.
 
-> **Chuyển mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Quan hệ Ohm ở mức vi mô** nêu điều cần giải thích; **Nguồn điện áp và sức điện động** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Điện trở trong của nguồn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Quan hệ Ohm ở mức vi mô** đặt vấn đề; **Nguồn điện áp và sức điện động** đối chiếu bằng chứng, rồi **Điện trở trong của nguồn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Nguồn điện áp và sức điện động
 
@@ -117,7 +117,7 @@ Pin hoặc nguồn lý tưởng được mô hình như thiết bị cung cấp 
 
 Trong pin, năng lượng hóa học duy trì sự tách điện tích và chênh lệch thế.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Nguồn điện áp và sức điện động** nêu điều cần giải thích; **Điện trở trong của nguồn** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Công suất điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Nguồn điện áp và sức điện động** đặt vấn đề; **Điện trở trong của nguồn** đối chiếu bằng chứng, rồi **Công suất điện** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Điện trở trong của nguồn
 
@@ -131,7 +131,7 @@ V_{terminal}=\mathcal E-Ir.
 
 Khi tải yêu cầu dòng lớn, sụt áp trong nguồn tăng và một phần năng lượng bị tỏa nhiệt bên trong pin.
 
-> **Chuyển mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Điện trở trong của nguồn** nêu điều cần giải thích; **Công suất điện** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Quy tắc dấu công suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Điện trở trong của nguồn** đặt vấn đề; **Công suất điện** đối chiếu bằng chứng, rồi **Quy tắc dấu công suất** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Công suất điện
 
@@ -152,7 +152,7 @@ Năng lượng điện chuyển thành nhiệt qua tương tác giữa hạt t�
 
 Công suất không phải “dòng điện bị tiêu thụ”. Điện tích vẫn được bảo toàn; thứ được chuyển đổi là năng lượng.
 
-> **Chuyển mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Quy tắc dấu công suất** tiếp nhận điểm tựa từ **Công suất điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định luật Kirchhoff về dòng điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Quy tắc dấu công suất** nối từ **Công suất điện** sang **Định luật Kirchhoff về dòng điện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy tắc dấu công suất
 
@@ -166,7 +166,7 @@ khi phần tử hấp thụ năng lượng.
 
 Nếu `P<0`, phần tử đang cung cấp năng lượng cho phần còn lại của mạch. Quy tắc dấu giúp tránh nhầm lẫn khi nguồn có thể vừa nạp vừa xả như pin sạc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Định luật Kirchhoff về dòng điện** tiếp nhận điểm tựa từ **Quy tắc dấu công suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định luật Kirchhoff về điện áp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Định luật Kirchhoff về dòng điện** nối từ **Quy tắc dấu công suất** sang **Định luật Kirchhoff về điện áp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định luật Kirchhoff về dòng điện
 
@@ -187,7 +187,7 @@ Nếu điện tích đáng kể đang tích tụ tại nút, dạng tổng quát
 
 Trong mạch tập trung thông thường, điện tích nút ổn định rất nhanh nên vế phải được xem gần bằng không.
 
-> **Chuyển mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Định luật Kirchhoff về điện áp** tiếp nhận điểm tựa từ **Định luật Kirchhoff về dòng điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Điện trở nối tiếp và song song** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Định luật Kirchhoff về điện áp** nối từ **Định luật Kirchhoff về dòng điện** sang **Điện trở nối tiếp và song song**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định luật Kirchhoff về điện áp
 
@@ -210,7 +210,7 @@ nên tổng “voltage drops” electrostatic đơn giản cần được sửa 
 
 Điều này cho thấy Kirchhoff là xấp xỉ mạch của điện từ học đầy đủ.
 
-> **Chuyển mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Điện trở nối tiếp và song song** tiếp nhận điểm tựa từ **Định luật Kirchhoff về điện áp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chia áp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Điện trở nối tiếp và song song** nối từ **Định luật Kirchhoff về điện áp** sang **Chia áp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Điện trở nối tiếp và song song
 
@@ -229,7 +229,7 @@ Với điện trở song song, cùng hiệu điện thế đặt lên các nhán
 
 Đây không nên học như hai công thức biệt lập. Chúng đi trực tiếp từ topology của mạch cộng với KCL/KVL và quan hệ `V=IR`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Chia áp** tiếp nhận điểm tựa từ **Điện trở nối tiếp và song song** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chia dòng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Chia áp** nối từ **Điện trở nối tiếp và song song** sang **Chia dòng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chia áp
 
@@ -251,7 +251,7 @@ V_2
 
 Khi nối thêm tải vào đầu ra, tải làm thay đổi điện trở tương đương và tỉ số chia áp. Vì vậy công thức chia áp lý tưởng chỉ đúng khi tải không làm mạch thay đổi đáng kể hoặc đã được đưa vào mô hình.
 
-> **Chuyển mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Chia dòng** tiếp nhận điểm tựa từ **Chia áp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tụ điện trong mạch DC** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Chia dòng** nối từ **Chia áp** sang **Tụ điện trong mạch DC**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chia dòng
 
@@ -272,7 +272,7 @@ I_1
 
 Công thức có vẻ “ngược” vì dòng qua `R_1` chứa `R_2`, nhưng điều này chỉ phản ánh việc nhánh điện trở lớn hơn cạnh tranh kém hơn trong chia dòng.
 
-> **Chuyển mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Tụ điện trong mạch DC** tiếp nhận điểm tựa từ **Chia dòng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch RC nạp điện** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Tụ điện trong mạch DC** nối từ **Chia dòng** sang **Mạch RC nạp điện**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tụ điện trong mạch DC
 
@@ -296,7 +296,7 @@ I=0.
 
 Vì vậy ở trạng thái DC xác lập, tụ lý tưởng không cho dòng dẫn liên tục đi qua. Nhưng trong quá trình chuyển tiếp, nó có thể nhận hoặc nhả dòng lớn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Mạch RC nạp điện** tiếp nhận điểm tựa từ **Tụ điện trong mạch DC** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hằng số thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Mạch RC nạp điện** nối từ **Tụ điện trong mạch DC** sang **Hằng số thời gian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mạch RC nạp điện
 
@@ -336,7 +336,7 @@ Dòng điện:
 I(t)=\frac{V_0}{R}e^{-t/RC}.
 ```
 
-> **Chuyển mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Hằng số thời gian** tiếp nhận điểm tựa từ **Mạch RC nạp điện** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xả tụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Hằng số thời gian** nối từ **Mạch RC nạp điện** sang **Xả tụ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hằng số thời gian
 
@@ -364,7 +364,7 @@ Sau khoảng `5\tau`, hệ thường được xem gần trạng thái xác lập
 
 Phân tích thứ nguyên giúp kiểm tra ngay công thức.
 
-> **Chuyển mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Xả tụ** tiếp nhận điểm tựa từ **Hằng số thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Năng lượng khi nạp tụ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Xả tụ** nối từ **Hằng số thời gian** sang **Năng lượng khi nạp tụ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xả tụ
 
@@ -384,7 +384,7 @@ Hàm mũ xuất hiện vì tốc độ thay đổi tỉ lệ với lượng còn
 
 Cùng cấu trúc này xuất hiện trong phân rã phóng xạ, làm nguội tuyến tính hóa và nhiều hệ bậc nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Năng lượng khi nạp tụ** tiếp nhận điểm tựa từ **Xả tụ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạch tập trung có giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Năng lượng khi nạp tụ** nối từ **Xả tụ** sang **Mạch tập trung có giới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Năng lượng khi nạp tụ
 
@@ -404,7 +404,7 @@ Một nửa được lưu trong tụ, một nửa bị tỏa nhiệt trên đi�
 
 Đây là một kết quả đáng chú ý và nhắc rằng cần phân biệt động lực học theo thời gian với cân bằng năng lượng tổng.
 
-> **Chuyển mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Năng lượng khi nạp tụ** đã nêu tiêu chí phân biệt, còn **Mạch tập trung có giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Năng lượng khi nạp tụ** đặt tiêu chí; **Mạch tập trung có giới hạn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Mạch tập trung có giới hạn
 
@@ -414,7 +414,7 @@ Khi kích thước mạch trở nên đáng kể so với bước sóng tín hi�
 
 Một dây dài ở GHz không thể luôn được xem chỉ là một điện trở hoặc một kết nối lý tưởng.
 
-> **Chuyển mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Mạch tập trung có giới hạn** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Mạch tập trung có giới hạn** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -422,7 +422,7 @@ Mạch DC là cách nén điện từ học thành một mạng các phần tử
 
 Điện trở mô tả mất năng lượng có hướng của hạt tải vào dao động vi mô; tụ điện lưu năng lượng trong trường; nguồn chuyển năng lượng từ hóa học hoặc cơ chế khác thành năng lượng điện.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**, rồi **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -442,7 +442,7 @@ Chỉ ở DC xác lập lý tưởng. Trong quá trình nạp/xả hoặc tín h
 
 Không. Quy tắc mạch tập trung là xấp xỉ của Maxwell; ở tần số cao hoặc kích thước lớn phải tính lan truyền và cảm ứng.
 
-> **Chuyển mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Dòng điện, điện trở, Kirchhoff và mạch DC**, **Những ngộ nhận thường gặp (Common Misconceptions)** dẫn sang **Liên kết kiến thức (knowledge connection / 지식 연결)**, nơi tài liệu chuẩn và vị trí sở hữu được chỉ rõ để biết chỗ đào sâu tiếp.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

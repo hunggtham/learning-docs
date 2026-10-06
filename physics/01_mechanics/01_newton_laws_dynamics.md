@@ -8,7 +8,7 @@
 
 Trực giác đời thường dễ dẫn tới ý nghĩ “muốn vật tiếp tục chuyển động thì phải tiếp tục đẩy”. Nhưng phần lớn trải nghiệm hàng ngày luôn có ma sát và lực cản. Khi loại các tương tác đó, Newton chỉ ra rằng chuyển động thẳng đều không cần một lực duy trì liên tục.
 
-> **Chuyển mạch:** Trong **Định luật Newton, quán tính và động lực học**, **Định luật I Newton và ý nghĩa của hệ quy chiếu quán tính** tiếp nhận điểm tựa từ **Từ “chuyển động như thế nào?” sang “vì sao chuyển động thay đổi?”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quán tính và khối lượng quán tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Định luật Newton, quán tính và động lực học**, **Định luật I Newton và ý nghĩa của hệ quy chiếu quán tính** nối từ **Từ “chuyển động như thế nào?” sang “vì sao chuyển động thay đổi?”** sang **Quán tính và khối lượng quán tính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định luật I Newton và ý nghĩa của hệ quy chiếu quán tính
 
@@ -26,7 +26,7 @@ Những hệ như vậy được gọi là **hệ quy chiếu quán tính (inert
 
 Một hệ chuyển động thẳng đều so với một hệ quán tính cũng là hệ quán tính trong cơ học Newton. Hệ đang gia tốc hoặc quay không còn thuộc loại này và cần các hạng quán tính bổ sung.
 
-> **Chuyển mạch:** Ở chặng này của **Định luật Newton, quán tính và động lực học**, **Quán tính và khối lượng quán tính** tiếp nhận điểm tựa từ **Định luật I Newton và ý nghĩa của hệ quy chiếu quán tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Định luật II Newton ở dạng tổng quát** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Định luật Newton, quán tính và động lực học**, **Quán tính và khối lượng quán tính** nối từ **Định luật I Newton và ý nghĩa của hệ quy chiếu quán tính** sang **Định luật II Newton ở dạng tổng quát**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quán tính và khối lượng quán tính
 
@@ -44,7 +44,7 @@ Vật có khối lượng lớn hơn nhận gia tốc nhỏ hơn.
 
 Điều này không có nghĩa khối lượng là một “lực cản”. Khối lượng là tham số liên hệ lực tổng với gia tốc hoặc liên hệ vận tốc với động lượng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định luật Newton, quán tính và động lực học**, **Định luật II Newton ở dạng tổng quát** tiếp nhận điểm tựa từ **Quán tính và khối lượng quán tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao động lượng là cách nhìn tổng quát hơn?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Định luật Newton, quán tính và động lực học**, **Định luật II Newton ở dạng tổng quát** nối từ **Quán tính và khối lượng quán tính** sang **Vì sao động lượng là cách nhìn tổng quát hơn?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định luật II Newton ở dạng tổng quát
 
@@ -75,7 +75,7 @@ Nếu khối lượng của vật đang xét không đổi,
 1\,N=1\,kg\cdot m/s^2.
 ```
 
-> **Chuyển mạch:** Trong **Định luật Newton, quán tính và động lực học**, **Vì sao động lượng là cách nhìn tổng quát hơn?** tiếp nhận điểm tựa từ **Định luật II Newton ở dạng tổng quát** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lực là tương tác, không phải “thuộc tính đang nằm trong vật”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Định luật Newton, quán tính và động lực học**, **Vì sao động lượng là cách nhìn tổng quát hơn?** nối từ **Định luật II Newton ở dạng tổng quát** sang **Lực là tương tác, không phải “thuộc tính đang nằm trong vật”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao động lượng là cách nhìn tổng quát hơn?
 
@@ -92,7 +92,7 @@ Do đó cùng một biến thiên động lượng có thể được tạo bở
 
 Cách nhìn này nối trực tiếp định luật II với xung lượng, va chạm, rocket và định luật bảo toàn động lượng.
 
-> **Chuyển mạch:** Ở chặng này của **Định luật Newton, quán tính và động lực học**, **Lực là tương tác, không phải “thuộc tính đang nằm trong vật”** tiếp nhận điểm tựa từ **Vì sao động lượng là cách nhìn tổng quát hơn?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sơ đồ vật thể tự do** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Định luật Newton, quán tính và động lực học**, **Lực là tương tác, không phải “thuộc tính đang nằm trong vật”** nối từ **Vì sao động lượng là cách nhìn tổng quát hơn?** sang **Sơ đồ vật thể tự do**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lực là tương tác, không phải “thuộc tính đang nằm trong vật”
 
@@ -108,7 +108,7 @@ Ví dụ:
 
 Khi nói “lực tác dụng lên vật”, ta đang mô tả ảnh hưởng của phần còn lại của hệ lên vật đã chọn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định luật Newton, quán tính và động lực học**, **Sơ đồ vật thể tự do** tiếp nhận điểm tựa từ **Lực là tương tác, không phải “thuộc tính đang nằm trong vật”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: vật trên mặt phẳng nghiêng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Định luật Newton, quán tính và động lực học**, **Sơ đồ vật thể tự do** nối từ **Lực là tương tác, không phải “thuộc tính đang nằm trong vật”** sang **Ví dụ: vật trên mặt phẳng nghiêng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sơ đồ vật thể tự do
 
@@ -125,7 +125,7 @@ Quy trình:
 
 Không vẽ đồng thời lực mà vật tác dụng lên môi trường trong cùng FBD, vì đó là lực trên vật khác.
 
-> **Chuyển mạch:** Trong **Định luật Newton, quán tính và động lực học**, **Sơ đồ vật thể tự do** cho ta quy tắc; **Ví dụ: vật trên mặt phẳng nghiêng** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Định luật III Newton** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Định luật Newton, quán tính và động lực học**, **Sơ đồ vật thể tự do** nêu quy tắc; **Ví dụ: vật trên mặt phẳng nghiêng** thử quy tắc trong tình huống, rồi **Định luật III Newton** mở rộng hệ quả.
 
 ## Ví dụ: vật trên mặt phẳng nghiêng
 
@@ -173,7 +173,7 @@ a=g\sin\theta.
 
 Khối lượng triệt tiêu. Đây không phải phép màu: cả lực hấp dẫn và quán tính trong mô hình Newton cùng tỉ lệ với `m`.
 
-> **Chuyển mạch:** Ở chặng này của **Định luật Newton, quán tính và động lực học**, **Ví dụ: vật trên mặt phẳng nghiêng** cho ta quy tắc; **Định luật III Newton** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Định luật III và bảo toàn động lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Định luật Newton, quán tính và động lực học**, **Ví dụ: vật trên mặt phẳng nghiêng** nêu quy tắc; **Định luật III Newton** thử quy tắc trong tình huống, rồi **Định luật III và bảo toàn động lượng** mở rộng hệ quả.
 
 ## Định luật III Newton
 
@@ -190,7 +190,7 @@ Do đó chúng không tự triệt tiêu trong phương trình chuyển động 
 
 Ví dụ khi đi bộ, chân đẩy mặt đất về sau. Mặt đất thông qua ma sát tĩnh đẩy người về trước. Lực làm tâm khối người gia tốc là lực bên ngoài từ mặt đất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định luật Newton, quán tính và động lực học**, **Định luật III và bảo toàn động lượng** tiếp nhận điểm tựa từ **Định luật III Newton** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ràng buộc cơ học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Định luật Newton, quán tính và động lực học**, **Định luật III và bảo toàn động lượng** nối từ **Định luật III Newton** sang **Ràng buộc cơ học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Định luật III và bảo toàn động lượng
 
@@ -220,7 +220,7 @@ Tổng động lượng được bảo toàn.
 
 Trong điện từ học tương đối tính, việc phân chia động lượng giữa hạt và trường tinh tế hơn; trường điện từ cũng mang động lượng. Vì vậy dạng “hai lực tức thời bằng nhau và ngược nhau” không phải cách diễn đạt sâu nhất cho mọi tương tác hiện đại, còn bảo toàn tổng động lượng của hệ đầy đủ vẫn là cấu trúc cơ bản.
 
-> **Chuyển mạch:** Trong **Định luật Newton, quán tính và động lực học**, **Ràng buộc cơ học** tiếp nhận điểm tựa từ **Định luật III và bảo toàn động lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trường lực** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Định luật Newton, quán tính và động lực học**, **Ràng buộc cơ học** nối từ **Định luật III và bảo toàn động lượng** sang **Trường lực**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ràng buộc cơ học
 
@@ -238,7 +238,7 @@ Ví dụ với dây không khối lượng và ròng rọc lý tưởng, lực c
 
 Giả định (assumption / 가정) vì vậy quyết định phương trình nào được phép dùng.
 
-> **Chuyển mạch:** Ở chặng này của **Định luật Newton, quán tính và động lực học**, **Trường lực** tiếp nhận điểm tựa từ **Ràng buộc cơ học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lực phụ thuộc vận tốc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Định luật Newton, quán tính và động lực học**, **Trường lực** nối từ **Ràng buộc cơ học** sang **Lực phụ thuộc vận tốc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trường lực
 
@@ -272,7 +272,7 @@ nguồn tạo trường
 
 Đây là mô hình trung tâm của hấp dẫn, điện từ học và lý thuyết trường hiện đại.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định luật Newton, quán tính và động lực học**, **Lực phụ thuộc vận tốc** tiếp nhận điểm tựa từ **Trường lực** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cảnh báo với hệ biến khối lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Định luật Newton, quán tính và động lực học**, **Lực phụ thuộc vận tốc** nối từ **Trường lực** sang **Cảnh báo với hệ biến khối lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lực phụ thuộc vận tốc
 
@@ -308,7 +308,7 @@ m\ddot{\vec r}
 
 Đây là một ODE bậc hai cùng điều kiện ban đầu về vị trí và vận tốc.
 
-> **Chuyển mạch:** Trong **Định luật Newton, quán tính và động lực học**, **Cảnh báo với hệ biến khối lượng** tiếp nhận điểm tựa từ **Lực phụ thuộc vận tốc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ phi quán tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Định luật Newton, quán tính và động lực học**, **Cảnh báo với hệ biến khối lượng** nối từ **Lực phụ thuộc vận tốc** sang **Hệ phi quán tính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cảnh báo với hệ biến khối lượng
 
@@ -330,7 +330,7 @@ phải được áp dụng với định nghĩa hệ và flux động lượng p
 
 Phương trình rocket xuất hiện từ bookkeeping động lượng của tên lửa và nhiên liệu phụt ra, không chỉ bằng cách thay `m(t)` vào `F=ma`.
 
-> **Chuyển mạch:** Ở chặng này của **Định luật Newton, quán tính và động lực học**, **Hệ phi quán tính** tiếp nhận điểm tựa từ **Cảnh báo với hệ biến khối lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Miền áp dụng của cơ học Newton** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Định luật Newton, quán tính và động lực học**, **Hệ phi quán tính** nối từ **Cảnh báo với hệ biến khối lượng** sang **Miền áp dụng của cơ học Newton**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ phi quán tính
 
@@ -347,7 +347,7 @@ Do đó trước khi viết FBD cần hỏi:
 
 Nếu không, thiếu lực quán tính sẽ làm phương trình sai dù mọi lực thật đã được vẽ đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định luật Newton, quán tính và động lực học**, **Miền áp dụng của cơ học Newton** tiếp nhận điểm tựa từ **Hệ phi quán tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với Kỹ thuật và Khoa học máy tính (computer science / 컴퓨터 과학)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Định luật Newton, quán tính và động lực học**, **Miền áp dụng của cơ học Newton** nối từ **Hệ phi quán tính** sang **Liên hệ với Kỹ thuật và Khoa học máy tính (computer science / 컴퓨터 과학)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Miền áp dụng của cơ học Newton
 
@@ -362,7 +362,7 @@ Khi `v/c` không còn nhỏ, cần thuyết tương đối hẹp. Ở thang nguy
 
 Newton không “sai hoàn toàn”; nó là lý thuyết hiệu dụng cực kỳ chính xác trong miền thích hợp.
 
-> **Chuyển mạch:** Trong **Định luật Newton, quán tính và động lực học**, **Liên hệ với Kỹ thuật và Khoa học máy tính (computer science / 컴퓨터 과학)** tiếp nhận điểm tựa từ **Miền áp dụng của cơ học Newton** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Định luật Newton, quán tính và động lực học**, **Liên hệ với Kỹ thuật và Khoa học máy tính (computer science / 컴퓨터 과학)** nối từ **Miền áp dụng của cơ học Newton** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với Kỹ thuật và Khoa học máy tính (computer science / 컴퓨터 과학)
 
@@ -381,7 +381,7 @@ Trong simulation, sai dấu lực, frame hoặc ràng buộc (constraint / 제�
 - đối xứng trái–phải;
 - đơn vị và bậc độ lớn.
 
-> **Chuyển mạch:** Ở chặng này của **Định luật Newton, quán tính và động lực học**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên hệ với Kỹ thuật và Khoa học máy tính (computer science / 컴퓨터 과학)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Định luật Newton, quán tính và động lực học**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên hệ với Kỹ thuật và Khoa học máy tính (computer science / 컴퓨터 과학)**, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -399,7 +399,7 @@ chọn system
 → kiểm tra units và limiting cases
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Định luật Newton, quán tính và động lực học**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Định luật Newton, quán tính và động lực học**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**, rồi **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -423,7 +423,7 @@ Không. “Hướng tâm” chỉ mô tả hợp lực cần có thành phần h
 
 Không. Phải xét flux động lượng qua biên hệ.
 
-> **Chuyển mạch:** Trong **Định luật Newton, quán tính và động lực học**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Định luật Newton, quán tính và động lực học**, **Những ngộ nhận thường gặp (Common Misconceptions)** dẫn sang **Liên kết kiến thức (knowledge connection / 지식 연결)**, nơi tài liệu chuẩn và vị trí sở hữu được chỉ rõ để biết chỗ đào sâu tiếp.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 

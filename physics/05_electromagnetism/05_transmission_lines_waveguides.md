@@ -27,7 +27,7 @@ Một đoạn rất ngắn `dx` của đường truyền có thể được mô 
 
 Đây là cầu nối giữa mạch điện và phương trình trường. `V(x,t)` và `I(x,t)` không còn là hai số duy nhất cho cả dây mà là các đại lượng phân bố dọc không gian.
 
-> **Chuyển mạch:** Trong **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Đường truyền lý tưởng không tổn hao** tiếp nhận điểm tựa từ **Từ mạch tập trung đến hệ phân bố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trở kháng đặc trưng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Đường truyền lý tưởng không tổn hao** nối từ **Từ mạch tập trung đến hệ phân bố** sang **Trở kháng đặc trưng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đường truyền lý tưởng không tổn hao
 
@@ -75,7 +75,7 @@ v\approx\frac{1}{\sqrt{\mu\varepsilon}}.
 
 Do đó tín hiệu không truyền tức thời dọc dây.
 
-> **Chuyển mạch:** Ở chặng này của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Trở kháng đặc trưng** tiếp nhận điểm tựa từ **Đường truyền lý tưởng không tổn hao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sóng tới và sóng phản xạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Trở kháng đặc trưng** nối từ **Đường truyền lý tưởng không tổn hao** sang **Sóng tới và sóng phản xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trở kháng đặc trưng
 
@@ -89,7 +89,7 @@ Z_0=\sqrt{\frac{L'}{C'}}.
 
 Một coax `50 Ω` có thể có điện trở DC rất nhỏ nhưng vẫn có `Z_0≈50 Ω`. Lý do là `Z_0` mô tả quan hệ giữa điện trường và từ trường của sóng lan truyền, tức cách năng lượng được chia giữa điện dung và điện cảm phân bố.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Sóng tới và sóng phản xạ** tiếp nhận điểm tựa từ **Trở kháng đặc trưng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hệ số phản xạ tại tải** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Sóng tới và sóng phản xạ** nối từ **Trở kháng đặc trưng** sang **Hệ số phản xạ tại tải**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sóng tới và sóng phản xạ
 
@@ -108,7 +108,7 @@ I(x)=\frac{V^+}{Z_0}e^{-i\beta x}
 
 Dấu trừ ở thành phần phản xạ của dòng phản ánh việc sóng này truyền theo hướng ngược.
 
-> **Chuyển mạch:** Trong **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Hệ số phản xạ tại tải** tiếp nhận điểm tựa từ **Sóng tới và sóng phản xạ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bảo toàn năng lượng và công suất phản xạ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Hệ số phản xạ tại tải** nối từ **Sóng tới và sóng phản xạ** sang **Bảo toàn năng lượng và công suất phản xạ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ số phản xạ tại tải
 
@@ -150,7 +150,7 @@ Z_L=0
 
 Phản xạ không phải “lỗi số”. Nó là hệ quả của điều kiện biên: tải không chấp nhận đúng tỉ số `V/I` mà sóng tới mang theo, nên một sóng ngược phải xuất hiện để thỏa điều kiện tải.
 
-> **Chuyển mạch:** Ở chặng này của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Bảo toàn năng lượng và công suất phản xạ** tiếp nhận điểm tựa từ **Hệ số phản xạ tại tải** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sóng đứng và VSWR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Bảo toàn năng lượng và công suất phản xạ** nối từ **Hệ số phản xạ tại tải** sang **Sóng đứng và VSWR**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bảo toàn năng lượng và công suất phản xạ
 
@@ -168,7 +168,7 @@ Tỉ lệ công suất truyền vào tải là
 
 Trong hệ không tổn hao, năng lượng không biến mất tại mismatch; phần không đi vào tải quay trở lại nguồn hoặc tiếp tục phản xạ ở các discontinuities khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Sóng đứng và VSWR** tiếp nhận điểm tựa từ **Bảo toàn năng lượng và công suất phản xạ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đường truyền có tổn hao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Sóng đứng và VSWR** nối từ **Bảo toàn năng lượng và công suất phản xạ** sang **Đường truyền có tổn hao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sóng đứng và VSWR
 
@@ -185,7 +185,7 @@ Nếu `\Gamma=0`, VSWR bằng 1. VSWR lớn cho biết mismatch mạnh.
 
 Trong RF, antenna feedline và microwave các hệ thống (systems / 시스템들), VSWR là một phép đo thực dụng của chất lượng matching.
 
-> **Chuyển mạch:** Trong **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Đường truyền có tổn hao** tiếp nhận điểm tựa từ **Sóng đứng và VSWR** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khi nào phải bỏ mô hình lumped circuit?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Đường truyền có tổn hao** nối từ **Sóng đứng và VSWR** sang **Khi nào phải bỏ mô hình lumped circuit?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đường truyền có tổn hao
 
@@ -217,7 +217,7 @@ thì `Z_0` gần giá trị lossless và `\alpha` nhỏ nhưng không bằng kh�
 
 Skin tác động (effect / 효과), dielectric mất mát (loss / 손실) và surface roughness làm suy hao tăng ở tần số cao.
 
-> **Chuyển mạch:** Ở chặng này của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Khi nào phải bỏ mô hình lumped circuit?** tiếp nhận điểm tựa từ **Đường truyền có tổn hao** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ví dụ: PCB dấu vết (trace / 추적) dài 15 cm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Khi nào phải bỏ mô hình lumped circuit?** nối từ **Đường truyền có tổn hao** sang **Ví dụ: PCB dấu vết (trace / 추적) dài 15 cm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khi nào phải bỏ mô hình lumped circuit?
 
@@ -239,7 +239,7 @@ t_d\gtrsim\frac{t_r}{6}
 
 hoặc cùng bậc với `t_r`, reflection và phân tán (distributed / 분산) effects có thể đáng kể. Hệ số chính xác phụ thuộc yêu cầu tín hiệu (signal / 신호) integrity, nhưng tư tưởng cốt lõi là **edge speed quan trọng hơn clock frequency đơn thuần**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Khi nào phải bỏ mô hình lumped circuit?** cho ta quy tắc; **Ví dụ: PCB dấu vết (trace / 추적) dài 15 cm** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Trở kháng nhìn vào của đường truyền hữu hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Khi nào phải bỏ mô hình lumped circuit?** nêu quy tắc; **Ví dụ: PCB dấu vết (trace / 추적) dài 15 cm** thử quy tắc trong tình huống, rồi **Trở kháng nhìn vào của đường truyền hữu hạn** mở rộng hệ quả.
 
 ## Ví dụ: PCB dấu vết (trace / 추적) dài 15 cm
 
@@ -264,7 +264,7 @@ t_d=\frac{0.15}{1.7\times10^8}
 
 Nếu driver có rise thời gian (time / 시간) `5 ns`, lumped approximation có thể còn tạm chấp nhận tùy yêu cầu. Nhưng nếu rise thời gian (time / 시간) chỉ `0.5 ns`, delay đã lớn hơn rise thời gian (time / 시간); dấu vết (trace / 추적) chắc chắn phải được xem như một đường truyền.
 
-> **Chuyển mạch:** Trong **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Ví dụ: PCB dấu vết (trace / 추적) dài 15 cm** cho ta quy tắc; **Trở kháng nhìn vào của đường truyền hữu hạn** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Smith chart là gì về mặt vật lý?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Ví dụ: PCB dấu vết (trace / 추적) dài 15 cm** nêu quy tắc; **Trở kháng nhìn vào của đường truyền hữu hạn** thử quy tắc trong tình huống, rồi **Smith chart là gì về mặt vật lý?** mở rộng hệ quả.
 
 ## Trở kháng nhìn vào của đường truyền hữu hạn
 
@@ -299,7 +299,7 @@ Z_0=\sqrt{Z_SZ_L}.
 
 Đây là quarter-wave transformer. Nó hoạt động tốt quanh một dải tần hữu hạn chứ không broadband vô hạn.
 
-> **Chuyển mạch:** Ở chặng này của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Smith chart là gì về mặt vật lý?** tiếp nhận điểm tựa từ **Trở kháng nhìn vào của đường truyền hữu hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ống dẫn sóng khác đường truyền TEM như thế nào?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Smith chart là gì về mặt vật lý?** nối từ **Trở kháng nhìn vào của đường truyền hữu hạn** sang **Ống dẫn sóng khác đường truyền TEM như thế nào?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Smith chart là gì về mặt vật lý?
 
@@ -317,7 +317,7 @@ z=\frac{Z}{Z_0}.
 
 Di chuyển dọc đường truyền tương ứng quay pha của `\Gamma`. Vì vậy Smith chart trực quan hóa quá trình reflection và impedance transformation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Ống dẫn sóng khác đường truyền TEM như thế nào?** tiếp nhận điểm tựa từ **Smith chart là gì về mặt vật lý?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ống dẫn sóng chữ nhật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Ống dẫn sóng khác đường truyền TEM như thế nào?** nối từ **Smith chart là gì về mặt vật lý?** sang **Ống dẫn sóng chữ nhật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ống dẫn sóng khác đường truyền TEM như thế nào?
 
@@ -340,7 +340,7 @@ Nếu
 
 thì `\beta` trở thành thuần ảo và trường suy giảm theo chiều dài thay vì lan truyền tự do. Đây là chế độ (mode / 모드) evanescent.
 
-> **Chuyển mạch:** Trong **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Ống dẫn sóng chữ nhật** tiếp nhận điểm tựa từ **Ống dẫn sóng khác đường truyền TEM như thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vận tốc pha và vận tốc nhóm trong waveguide** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Ống dẫn sóng chữ nhật** nối từ **Ống dẫn sóng khác đường truyền TEM như thế nào?** sang **Vận tốc pha và vận tốc nhóm trong waveguide**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ống dẫn sóng chữ nhật
 
@@ -363,7 +363,7 @@ f_c\approx\frac{c}{2a}.
 
 Điều kiện biên hình học đã biến bài toán Maxwell thành bài toán trị riêng. Cùng cấu trúc toán học xuất hiện ở dây đàn, cavity, particle in a box và phonon modes.
 
-> **Chuyển mạch:** Ở chặng này của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Vận tốc pha và vận tốc nhóm trong waveguide** tiếp nhận điểm tựa từ **Ống dẫn sóng chữ nhật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với tín hiệu (signal / 신호) integrity và Computer kỹ thuật (engineering / 엔지니어링)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Vận tốc pha và vận tốc nhóm trong waveguide** nối từ **Ống dẫn sóng chữ nhật** sang **Liên hệ với tín hiệu (signal / 신호) integrity và Computer kỹ thuật (engineering / 엔지니어링)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vận tốc pha và vận tốc nhóm trong waveguide
 
@@ -385,7 +385,7 @@ v_pv_g=c^2,
 
 nên khi `v_p>c`, vận tốc nhóm `v_g<c`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Liên hệ với tín hiệu (signal / 신호) integrity và Computer kỹ thuật (engineering / 엔지니어링)** tiếp nhận điểm tựa từ **Vận tốc pha và vận tốc nhóm trong waveguide** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giới hạn của mô hình transmission line** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Liên hệ với tín hiệu (signal / 신호) integrity và Computer kỹ thuật (engineering / 엔지니어링)** nối từ **Vận tốc pha và vận tốc nhóm trong waveguide** sang **Giới hạn của mô hình transmission line**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với tín hiệu (signal / 신호) integrity và Computer kỹ thuật (engineering / 엔지니어링)
 
@@ -395,7 +395,7 @@ Reflection có thể tạo ringing, overshoot, undershoot, crossing-time shift v
 
 Termination resistor, controlled impedance PCB dấu vết (trace / 추적), differential pair và return-path thiết kế (design / 설계) đều là cách kiểm soát điều kiện biên của trường điện từ.
 
-> **Chuyển mạch:** Trong **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Liên hệ với tín hiệu (signal / 신호) integrity và Computer kỹ thuật (engineering / 엔지니어링)** đã nêu tiêu chí phân biệt, còn **Giới hạn của mô hình transmission line** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Liên hệ với tín hiệu (signal / 신호) integrity và Computer kỹ thuật (engineering / 엔지니어링)** đặt tiêu chí; **Giới hạn của mô hình transmission line** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## Giới hạn của mô hình transmission line
 
@@ -403,13 +403,13 @@ Mô hình một chiều giả định chỉ một chế độ (mode / 모드) đ
 
 Các tham số `R',L',G',C'` cũng có thể phụ thuộc tần số do skin tác động (effect / 효과), dispersion và dielectric mất mát (loss / 손실). Vì vậy dùng hằng số cố định trên dải rất rộng có thể sai.
 
-> **Chuyển mạch:** Ở chặng này của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Giới hạn của mô hình transmission line** đã nêu tiêu chí phân biệt, còn **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Những ngộ nhận thường gặp (Common Misconceptions)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Giới hạn của mô hình transmission line** đặt tiêu chí; **Mô hình tư duy (mental model / 사고 모델)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Những ngộ nhận thường gặp (Common Misconceptions)** mở rộng hệ quả.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 Một interconnect tốc độ cao không phải “dây mang điện áp tức thời”. Nó là **một cấu trúc dẫn sóng có năng lượng điện trường và từ trường phân bố**. `Z_0` mô tả tỉ số trường của sóng chạy; tải đặt điều kiện biên; mismatch tạo phản xạ; hình học đặt chế độ (mode / 모드) và cutoff.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Những ngộ nhận thường gặp (Common Misconceptions)** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Những ngộ nhận thường gặp (Common Misconceptions)** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)**, rồi **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những ngộ nhận thường gặp (Common Misconceptions)
 
@@ -425,7 +425,7 @@ Không. Đây là characteristic impedance của chế độ (mode / 모드) tru
 
 Không. Phase velocity không trực tiếp là tín hiệu (signal / 신호) velocity. Nhân quả vẫn được bảo toàn.
 
-> **Chuyển mạch:** Trong **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, sau nội dung của **Những ngộ nhận thường gặp (Common Misconceptions)**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Đường truyền, lan truyền tín hiệu, phản xạ và ống dẫn sóng**, **Những ngộ nhận thường gặp (Common Misconceptions)** dẫn sang **Liên kết kiến thức (knowledge connection / 지식 연결)**, nơi tài liệu chuẩn và vị trí sở hữu được chỉ rõ để biết chỗ đào sâu tiếp.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
