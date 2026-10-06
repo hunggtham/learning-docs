@@ -62,6 +62,18 @@ Ví dụ có hai đường: A(3 ngày) → B(5) → D(2) = 10 ngày, và A(3) �
 
 Near-critical đường dẫn (path / 경로) cần attention theo mức float và bất định (uncertainty / 불확실성). Một đường dẫn (path / 경로) có 2 ngày float nhưng estimate rất volatile có thể đáng quan tâm hơn đường găng (critical path / 임계 경로) ổn định. Khi simulation được dùng, criticality chỉ mục (index / 인덱스) có thể cho intuition activity/đường dẫn (path / 경로) xuất hiện trên đường găng (critical path / 임계 경로) trong bao nhiêu iteration; mục tiêu không phải học thêm chỉ số (metric / 지표) mà là hiểu criticality có thể thay đổi theo bất định (uncertainty / 불확실성).
 
+## Criticality index và schedule sensitivity
+
+Critical path trong một deterministic schedule chỉ trả lời “với bộ estimate hiện tại, đường nào có zero/lowest float?”. Khi duration là phân phối và nhiều path gần nhau, một path hôm nay không critical vẫn có thể trở thành critical trong nhiều kịch bản. **Criticality index** là trực giác xác suất cho câu hỏi đó: trong bao nhiêu simulated outcomes một activity/path nằm trên critical path?
+
+Điểm quan trọng không phải thuộc một công thức mới mà là hiểu **schedule sensitivity**. Nếu path A critical trong 52% kịch bản và path B trong 44%, việc chỉ quản lý A như “đường găng thật” tạo false certainty. Hệ thống có hai path cạnh tranh; chỉ một biến động nhỏ về vendor, rework hoặc calendar có thể làm criticality switch.
+
+Criticality index cũng không đồng nghĩa impact. Một activity có thể thường xuyên critical nhưng chỉ có variance nhỏ; activity khác ít khi critical nhưng khi nó trượt thì tạo tail rất lớn. Vì vậy khi ưu tiên attention nên đọc cùng ít nhất ba lớp: xác suất trở thành critical, độ lớn của delay nếu xảy ra và mức controllability của nguyên nhân.
+
+Scenario PMP thường không đưa criticality index bằng số, nhưng reasoning vẫn áp dụng: nếu nhiều path “gần găng”, PM không nên chỉ bảo vệ path đang được tô đỏ trên Gantt. Hãy tìm common-cause dependency, convergence point và những activity có thể làm critical path đổi trạng thái.
+
+> **Nối mạch:** Criticality index cho thấy critical path là một trạng thái có thể đổi dưới uncertainty; **Float** tiếp theo giải thích lượng schedule flexibility còn lại và vì sao positive float không đồng nghĩa “không cần quan tâm”.
+
 ## Float và việc hiểu đúng “không trọng yếu (critical / 중요)”
 
 Total float là lượng delay một activity có thể chịu trước khi dự án (project / 프로젝트) finish bị ảnh hưởng theo hiện tại (current / 현재) mạng (network / 네트워크). Free float là lượng delay trước khi successor sớm nhất bị ảnh hưởng.
@@ -200,6 +212,18 @@ Một date có thể là aspirational mục tiêu (target / 대상), contractual
 
 Nếu nhóm (team / 팀) đối xử mục tiêu (target / 대상) nội bộ như legal deadline, họ có thể nhận rủi ro (risk / 위험) không cần thiết. Ngược lại, coi regulatory deadline như estimate có thể gây compliance thất bại (failure / 실패). Schedule lập luận (reasoning / 추론) phải hiểu nguồn (source / 소스) của ràng buộc (constraint / 제약조건).
 
+## Forecast date, target date và committed date
+
+Một nguồn conflict lớn trong schedule là dùng cùng một ngày để biểu diễn ba ý nghĩa khác nhau. **Forecast date** là ngày mô hình hiện tại dự đoán có thể hoàn thành dựa trên evidence và uncertainty. **Target date** là ngày organization muốn đạt để tối ưu value hoặc alignment. **Committed date** là ngày đã trở thành promise/obligation với stakeholder, contract, regulator hoặc downstream operation.
+
+Ba ngày có thể trùng nhau, nhưng không nên giả định chúng luôn giống nhau. Nếu P80 forecast là 30/6 nhưng management đặt target 20/6, khoảng cách đó là một **management challenge**, không phải bằng chứng dự án sẽ xong 20/6. Nếu sales đã cam kết 20/6 với khách hàng, challenge đã biến thành commitment risk; PM cần làm visible probability, recovery options và consequence thay vì sửa estimate để “khớp ngày đã hứa”.
+
+Ngược lại, forecast trễ hơn target không tự động yêu cầu escalation nếu target chỉ là stretch goal và tolerance cho phép. Câu hỏi đúng là: ngày nào thuộc model, ngày nào thuộc preference, ngày nào thuộc obligation; authority nào có thể đổi từng loại ngày; và consequence khi miss là gì.
+
+Phân biệt semantic này giúp tránh **date laundering**: target được trình bày như forecast, rồi forecast lại bị đối xử như guarantee. Một schedule governance tốt giữ provenance của từng date và cập nhật stakeholder khi confidence thay đổi material.
+
+> **Nối mạch:** Forecast/target/commitment tách prediction khỏi preference và obligation; **external window** tiếp theo cho thấy một số commitment còn bị khóa bởi calendar bên ngoài nên cost của miss có thể phi tuyến.
+
 ## Bên ngoài (external / 외부) cửa sổ (window / 윈도우) và cadence mismatch
 
 Một dự án (project / 프로젝트) có thể nội bộ (internal / 내부) cadence nhanh nhưng phụ thuộc cửa sổ (window / 윈도우) hiếm: regulator kiểm thử (test / 테스트) mỗi tháng, vendor cutover mỗi quý, dữ liệu (data / 데이터) center maintenance mỗi cuối tuần.
@@ -215,6 +239,24 @@ Bất định (uncertainty / 불확실성) nên được visible ở hệ thốn
 Buffer không phải lý do để slack công việc (work / 작업) vô hạn. Nó là rủi ro (risk / 위험) sức chứa (capacity / 용량) có trigger và đơn vị sở hữu (owner / 오너). Khi buffer burn nhanh hơn progress, đó là early warning tín hiệu (signal / 신호).
 
 Buffer consumption nên được đọc cùng bất định (uncertainty / 불확실성) retired. Dùng 50% buffer nhưng đã retire 90% major rủi ro (risk / 위험) khác với dùng 50% buffer khi mới hoàn thành 20% uncertain công việc (work / 작업).
+
+## Buffer consumption phải được đọc cùng progress
+
+Reserve hoặc project buffer không nên được đọc như “số ngày còn dư”. Ý nghĩa của buffer chỉ rõ khi so **buffer consumption** với mức progress của chuỗi công việc mà buffer đang bảo vệ. Nếu 20% công việc bảo vệ đã hoàn tất nhưng 70% buffer đã bị consume, hệ thống đang đốt protection nhanh hơn tốc độ tạo progress; đây là tín hiệu sớm mạnh hơn việc chỉ nhìn finish date hiện tại.
+
+Ngược lại, buffer đã dùng nhiều không nhất thiết xấu nếu phần uncertainty lớn nhất đã được retired. Ví dụ integration spike khó nhất đã qua, remaining work routine hơn và estimate distribution đã hẹp lại. Vì vậy buffer burn cần nối với **risk retirement**, không chỉ elapsed time.
+
+Một cách đọc trực giác là đặt hai tỷ lệ cạnh nhau:
+
+```text
+work/protection progress  vs  buffer consumed
+```
+
+Nếu buffer consumption tăng nhanh hơn progress qua nhiều review cycle, PM cần tìm cơ chế: estimate bias, rework, resource contention, hidden queue hay common-cause risk. Phản ứng đúng có thể là giảm WIP, xử lý bottleneck hoặc thay sequencing; “cắt thêm buffer” chỉ làm dashboard đẹp hơn.
+
+Trong predictive context, buffer giúp bảo vệ milestone/system-level date. Trong adaptive flow, cùng mental model xuất hiện dưới dạng service-level expectation, cycle-time percentile hoặc capacity slack. Tên công cụ khác nhau nhưng invariant giống nhau: uncertainty cần protection ở cấp hệ thống, và protection phải được quản lý bằng evidence.
+
+> **Nối mạch:** Buffer burn nối uncertainty với risk retirement; **Adaptive flow** tiếp theo chuyển cùng logic bảo vệ hệ thống từ network schedule sang throughput, WIP và cycle time.
 
 ## Adaptive luồng (flow / 흐름): velocity không phải productivity tuyệt đối
 
