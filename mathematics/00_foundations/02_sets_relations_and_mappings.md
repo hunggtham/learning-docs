@@ -37,7 +37,7 @@ Ordinary set không quan tâm thứ tự (order / 순서) hay duplicate. `{1,2,2
 
 Set lớp trừu tượng (abstraction / 추상화) mạnh vì nó cho phép ta tách **định danh (identity / 식별자) của elements** khỏi **cách lưu trữ chúng**. Trong xác suất (probability / 확률), sự kiện (event / 이벤트) là subset của mẫu (sample / 표본) không gian (space / 공간). Trong tối ưu hóa (optimization / 최적화), feasible set chứa mọi quyết định (decision / 결정) hợp lệ. Trong databases, một truy vấn (query / 쿼리) predicate chọn một subset của rows về mặt conceptual, dù SQL thực tế có bag ngữ nghĩa (semantics / 의미론) và NULL.
 
-> **Chuyển mạch:** Trong **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **2. Subset: universal statement dưới dạng set ngôn ngữ (language / 언어)** tiếp nhận điểm tựa từ **1. Set là lớp trừu tượng (abstraction / 추상화) về membership** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Empty set và vacuous truth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **2. Subset: universal statement dưới dạng set ngôn ngữ (language / 언어)** nối từ **1. Set là lớp trừu tượng (abstraction / 추상화) về membership** sang **3. Empty set và vacuous truth**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Subset: universal statement dưới dạng set ngôn ngữ (language / 언어)
 
@@ -64,7 +64,7 @@ B ⊆ A
 
 Vì set được xác định hoàn toàn bởi membership, nếu hai sets chứa đúng cùng elements thì chúng bằng nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **3. Empty set và vacuous truth** tiếp nhận điểm tựa từ **2. Subset: universal statement dưới dạng set ngôn ngữ (language / 언어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Union, intersection, difference và complement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **3. Empty set và vacuous truth** nối từ **2. Subset: universal statement dưới dạng set ngôn ngữ (language / 언어)** sang **4. Union, intersection, difference và complement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Empty set và vacuous truth
 
@@ -86,7 +86,7 @@ Không có `x` nào thuộc `∅`, nên không tồn tại counterexample làm i
 
 Đây là ví dụ quan trọng của vacuous truth. Cùng mẫu (pattern / 패턴) xuất hiện trong đồ thị (graph / 그래프) lý thuyết (theory / 이론), universal quantification và proofs trên empty structures.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **4. Union, intersection, difference và complement** tiếp nhận điểm tựa từ **3. Empty set và vacuous truth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Cartesian sản phẩm (product / 제품) tạo không gian của possible pairs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **4. Union, intersection, difference và complement** nối từ **3. Empty set và vacuous truth** sang **5. Cartesian sản phẩm (product / 제품) tạo không gian của possible pairs**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Union, intersection, difference và complement
 
@@ -142,7 +142,7 @@ và
 
 không phải hai formula ngẫu nhiên; chúng là De Morgan lô-gic (logic / 논리) applied vào membership predicates.
 
-> **Chuyển mạch:** Trong **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **5. Cartesian sản phẩm (product / 제품) tạo không gian của possible pairs** tiếp nhận điểm tựa từ **4. Union, intersection, difference và complement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. quan hệ (relation / 관계) là subset của sản phẩm (product / 제품) không gian (space / 공간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **5. Cartesian sản phẩm (product / 제품) tạo không gian của possible pairs** nối từ **4. Union, intersection, difference và complement** sang **6. quan hệ (relation / 관계) là subset của sản phẩm (product / 제품) không gian (space / 공간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Cartesian sản phẩm (product / 제품) tạo không gian của possible pairs
 
@@ -179,7 +179,7 @@ là mọi user-product pairs có thể có. “người dùng (user / 사용자)
 
 Trong xác suất (probability / 확률), joint mẫu (sample / 표본) không gian (space / 공간) thường là sản phẩm (product / 제품) của thành phần (component / 컴포넌트) spaces khi mô hình (model / 모델) phù hợp. Trong trạng thái (state / 상태) machines, state-action pairs cũng có sản phẩm (product / 제품) cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Ở chặng này của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **6. quan hệ (relation / 관계) là subset của sản phẩm (product / 제품) không gian (space / 공간)** tiếp nhận điểm tựa từ **5. Cartesian sản phẩm (product / 제품) tạo không gian của possible pairs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Properties của quan hệ (relation / 관계) và ý nghĩa structural** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **6. quan hệ (relation / 관계) là subset của sản phẩm (product / 제품) không gian (space / 공간)** nối từ **5. Cartesian sản phẩm (product / 제품) tạo không gian của possible pairs** sang **7. Properties của quan hệ (relation / 관계) và ý nghĩa structural**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. quan hệ (relation / 관계) là subset của sản phẩm (product / 제품) không gian (space / 공간)
 
@@ -207,7 +207,7 @@ Users × Users.
 
 Đây là reason đồ thị (graph / 그래프) lý thuyết (theory / 이론), cơ sở dữ liệu (database / 데이터베이스) relations và thứ tự (order / 순서) relations có family resemblance: tất cả đều bắt đầu từ **which tuples are allowed**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **7. Properties của quan hệ (relation / 관계) và ý nghĩa structural** tiếp nhận điểm tựa từ **6. quan hệ (relation / 관계) là subset của sản phẩm (product / 제품) không gian (space / 공간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Equivalence quan hệ (relation / 관계): formal hóa “khác biểu diễn (representation / 표현) nhưng cùng đối tượng (object / 객체) lớp (class / 클래스)”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **7. Properties của quan hệ (relation / 관계) và ý nghĩa structural** nối từ **6. quan hệ (relation / 관계) là subset của sản phẩm (product / 제품) không gian (space / 공간)** sang **8. Equivalence quan hệ (relation / 관계): formal hóa “khác biểu diễn (representation / 표현) nhưng cùng đối tượng (object / 객체) lớp (class / 클래스)”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Properties của quan hệ (relation / 관계) và ý nghĩa structural
 
@@ -249,7 +249,7 @@ aRb\land bRc\Rightarrow aRc.
 
 Những properties này không chỉ là checklist. Chúng quyết định quan hệ (relation / 관계) tạo ra cấu trúc (structure / 구조) gì.
 
-> **Chuyển mạch:** Trong **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **8. Equivalence quan hệ (relation / 관계): formal hóa “khác biểu diễn (representation / 표현) nhưng cùng đối tượng (object / 객체) lớp (class / 클래스)”** tiếp nhận điểm tựa từ **7. Properties của quan hệ (relation / 관계) và ý nghĩa structural** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Partial thứ tự (order / 순서): formal hóa phụ thuộc (dependency / 의존성) và hierarchy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **8. Equivalence quan hệ (relation / 관계): formal hóa “khác biểu diễn (representation / 표현) nhưng cùng đối tượng (object / 객체) lớp (class / 클래스)”** nối từ **7. Properties của quan hệ (relation / 관계) và ý nghĩa structural** sang **9. Partial thứ tự (order / 순서): formal hóa phụ thuộc (dependency / 의존성) và hierarchy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Equivalence quan hệ (relation / 관계): formal hóa “khác biểu diễn (representation / 표현) nhưng cùng đối tượng (object / 객체) lớp (class / 클래스)”
 
@@ -280,7 +280,7 @@ Cùng idea xuất hiện khi:
 - quotient spaces trong algebra/topology;
 - canonicalization trong software.
 
-> **Chuyển mạch:** Ở chặng này của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **9. Partial thứ tự (order / 순서): formal hóa phụ thuộc (dependency / 의존성) và hierarchy** tiếp nhận điểm tựa từ **8. Equivalence quan hệ (relation / 관계): formal hóa “khác biểu diễn (representation / 표현) nhưng cùng đối tượng (object / 객체) lớp (class / 클래스)”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. hàm (function / 함수) là quan hệ (relation / 관계) có tính đơn trị toàn phần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **9. Partial thứ tự (order / 순서): formal hóa phụ thuộc (dependency / 의존성) và hierarchy** nối từ **8. Equivalence quan hệ (relation / 관계): formal hóa “khác biểu diễn (representation / 표현) nhưng cùng đối tượng (object / 객체) lớp (class / 클래스)”** sang **10. hàm (function / 함수) là quan hệ (relation / 관계) có tính đơn trị toàn phần**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Partial thứ tự (order / 순서): formal hóa phụ thuộc (dependency / 의존성) và hierarchy
 
@@ -300,7 +300,7 @@ Phụ thuộc (dependency / 의존성) relations cũng thường partial-order-l
 
 Total thứ tự (order / 순서) thêm yêu cầu (requirement / 요구사항) rằng mọi pair comparable. Number line với `≤` là total thứ tự (order / 순서); phụ thuộc (dependency / 의존성) DAG nói chung không phải total thứ tự (order / 순서).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **10. hàm (function / 함수) là quan hệ (relation / 관계) có tính đơn trị toàn phần** tiếp nhận điểm tựa từ **9. Partial thứ tự (order / 순서): formal hóa phụ thuộc (dependency / 의존성) và hierarchy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. lĩnh vực (domain / 도메인), codomain và ảnh (image / 이미지) không thể bỏ qua** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **10. hàm (function / 함수) là quan hệ (relation / 관계) có tính đơn trị toàn phần** nối từ **9. Partial thứ tự (order / 순서): formal hóa phụ thuộc (dependency / 의존성) và hierarchy** sang **11. lĩnh vực (domain / 도메인), codomain và ảnh (image / 이미지) không thể bỏ qua**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. hàm (function / 함수) là quan hệ (relation / 관계) có tính đơn trị toàn phần
 
@@ -319,7 +319,7 @@ Nói cách khác, mỗi đầu vào (input / 입력) có **exactly one** đầu 
 
 Hàm (function / 함수) không cần formula. Lookup bảng (table / 테이블), parser, cơ sở dữ liệu (database / 데이터베이스) projection, ảnh (image / 이미지) transform hay trained mô hình (model / 모델) đều có thể là functions nếu ánh xạ (mapping / 매핑) deterministic trong mô hình (model / 모델) đang xét.
 
-> **Chuyển mạch:** Trong **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **11. lĩnh vực (domain / 도메인), codomain và ảnh (image / 이미지) không thể bỏ qua** tiếp nhận điểm tựa từ **10. hàm (function / 함수) là quan hệ (relation / 관계) có tính đơn trị toàn phần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Injective, surjective, bijective như thông tin (information / 정보) hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **11. lĩnh vực (domain / 도메인), codomain và ảnh (image / 이미지) không thể bỏ qua** nối từ **10. hàm (function / 함수) là quan hệ (relation / 관계) có tính đơn trị toàn phần** sang **12. Injective, surjective, bijective như thông tin (information / 정보) hành vi (behavior / 동작)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. lĩnh vực (domain / 도메인), codomain và ảnh (image / 이미지) không thể bỏ qua
 
@@ -357,7 +357,7 @@ là bijective.
 
 Vì vậy lĩnh vực (domain / 도메인)/codomain không phải siêu dữ liệu (metadata / 메타데이터) phụ.
 
-> **Chuyển mạch:** Ở chặng này của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **12. Injective, surjective, bijective như thông tin (information / 정보) hành vi (behavior / 동작)** tiếp nhận điểm tựa từ **11. lĩnh vực (domain / 도메인), codomain và ảnh (image / 이미지) không thể bỏ qua** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Composition: nối mappings thành chuỗi xử lý (pipeline / 파이프라인)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **12. Injective, surjective, bijective như thông tin (information / 정보) hành vi (behavior / 동작)** nối từ **11. lĩnh vực (domain / 도메인), codomain và ảnh (image / 이미지) không thể bỏ qua** sang **13. Composition: nối mappings thành chuỗi xử lý (pipeline / 파이프라인)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Injective, surjective, bijective như thông tin (information / 정보) hành vi (behavior / 동작)
 
@@ -383,7 +383,7 @@ f^{-1}:B\to A.
 
 Lossless encoding cần khôi phục (recovery / 복구) ánh xạ (mapping / 매핑); unique IDs cần injectivity; coordinate changes dùng bijections trên suitable domains.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **12. Injective, surjective, bijective như thông tin (information / 정보) hành vi (behavior / 동작)** xác định đầu vào; **13. Composition: nối mappings thành chuỗi xử lý (pipeline / 파이프라인)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. Cardinality: đo kích thước (size / 크기) bằng bijection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **12. Injective, surjective, bijective như thông tin (information / 정보) hành vi (behavior / 동작)** đặt đầu vào cho **13. Composition: nối mappings thành chuỗi xử lý (pipeline / 파이프라인)**, rồi **14. Cardinality: đo kích thước (size / 크기) bằng bijection** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13. Composition: nối mappings thành chuỗi xử lý (pipeline / 파이프라인)
 
@@ -423,7 +423,7 @@ g\circ f\ne f\circ g.
 
 Thứ tự (order / 순서) matters vì intermediate spaces/meaning khác nhau.
 
-> **Chuyển mạch:** Trong **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, cơ chế trong **13. Composition: nối mappings thành chuỗi xử lý (pipeline / 파이프라인)** cần được kiểm chứng bằng dấu vết cụ thể; **14. Cardinality: đo kích thước (size / 크기) bằng bijection** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **15. Power set và state-space explosion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, cơ chế trong **13. Composition: nối mappings thành chuỗi xử lý (pipeline / 파이프라인)** cần được kiểm chứng bằng dấu vết cụ thể; **14. Cardinality: đo kích thước (size / 크기) bằng bijection** đưa dữ liệu và nguồn vào đúng điểm đó. Từ đây, **15. Power set và state-space explosion** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. Cardinality: đo kích thước (size / 크기) bằng bijection
 
@@ -453,7 +453,7 @@ Với finite set `|A|=n`:
 
 vì mỗi element tương ứng một include/exclude bit.
 
-> **Chuyển mạch:** Ở chặng này của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **15. Power set và state-space explosion** tiếp nhận điểm tựa từ **14. Cardinality: đo kích thước (size / 크기) bằng bijection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결): quan hệ (relation / 관계) toán học và SQL quan hệ (relation / 관계) không hoàn toàn giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **15. Power set và state-space explosion** nối từ **14. Cardinality: đo kích thước (size / 크기) bằng bijection** sang **16. cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결): quan hệ (relation / 관계) toán học và SQL quan hệ (relation / 관계) không hoàn toàn giống nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Power set và state-space explosion
 
@@ -469,7 +469,7 @@ possible states.
 
 Set lý thuyết (theory / 이론) vì vậy nối trực tiếp sang độ phức tạp (complexity / 복잡도).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **15. Power set và state-space explosion** nêu điều cần giải thích; **16. cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결): quan hệ (relation / 관계) toán học và SQL quan hệ (relation / 관계) không hoàn toàn giống nhau** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **17. xác suất (probability / 확률) liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **15. Power set và state-space explosion** đặt vấn đề; **16. cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결): quan hệ (relation / 관계) toán học và SQL quan hệ (relation / 관계) không hoàn toàn giống nhau** đối chiếu bằng chứng, rồi **17. xác suất (probability / 확률) liên kết (connection / 연결)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 16. cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결): quan hệ (relation / 관계) toán học và SQL quan hệ (relation / 관계) không hoàn toàn giống nhau
 
@@ -484,7 +484,7 @@ mathematical relation
 
 Nhưng set/quan hệ (relation / 관계) thinking vẫn giúp hiểu joins, keys, functional dependencies và normalization.
 
-> **Chuyển mạch:** Trong **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **16. cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결): quan hệ (relation / 관계) toán học và SQL quan hệ (relation / 관계) không hoàn toàn giống nhau** nêu điều cần giải thích; **17. xác suất (probability / 확률) liên kết (connection / 연결)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **18. dùng chung (common / 공통) proof strategies với sets** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **16. cơ sở dữ liệu (database / 데이터베이스) liên kết (connection / 연결): quan hệ (relation / 관계) toán học và SQL quan hệ (relation / 관계) không hoàn toàn giống nhau** đặt vấn đề; **17. xác suất (probability / 확률) liên kết (connection / 연결)** đối chiếu bằng chứng, rồi **18. dùng chung (common / 공통) proof strategies với sets** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 17. xác suất (probability / 확률) liên kết (connection / 연결)
 
@@ -500,7 +500,7 @@ Xác suất (probability / 확률) measure gán number cho subsets/events. Vì v
 
 Conditional xác suất (probability / 확률) còn có thể nhìn như việc **restrict universe sang sự kiện (event / 이벤트) B đã biết xảy ra**, rồi renormalize xác suất (probability / 확률) trong universe mới.
 
-> **Chuyển mạch:** Ở chặng này của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **18. dùng chung (common / 공통) proof strategies với sets** tiếp nhận điểm tựa từ **17. xác suất (probability / 확률) liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **18. dùng chung (common / 공통) proof strategies với sets** nối từ **17. xác suất (probability / 확률) liên kết (connection / 연결)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. dùng chung (common / 공통) proof strategies với sets
 
@@ -528,13 +528,13 @@ show rằng giả sử `x` thuộc cả hai dẫn tới contradiction.
 
 Proof set identities thường trở thành propositional lô-gic (logic / 논리) sau khi expand membership definitions.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **18. dùng chung (common / 공통) proof strategies với sets** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **18. dùng chung (common / 공통) proof strategies với sets** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Set định nghĩa **universe của objects**. Cartesian sản phẩm (product / 제품) tạo **universe của possible tuples**. quan hệ (relation / 관계) chọn **tuples được phép nối**. Equivalence quan hệ (relation / 관계) gom representations thành classes; partial thứ tự (order / 순서) tạo hierarchy/phụ thuộc (dependency / 의존성); hàm (function / 함수) ép mỗi đầu vào (input / 입력) đi tới đúng một đầu ra (output / 출력). Phần lớn cấu trúc toán học cao hơn chỉ là thêm rules lên những nền này.
 
-> **Chuyển mạch:** Trong **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Tập hợp, quan hệ và ánh xạ: từ membership đến cấu trúc**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 

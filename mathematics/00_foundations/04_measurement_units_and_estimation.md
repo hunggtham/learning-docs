@@ -42,7 +42,7 @@ Conversion factor về vật lý (physical / 물리적) meaning bằng 1, nên q
 
 Mô hình tư duy (mental model / 사고 모델) hữu ích trong programming là **đơn vị (unit / 단위) ≈ kiểu (type / 타입)**. `5 m + 3 m` hợp lý, còn `5 m + 3 s` không hợp lý vì hai quantities khác loại. Những thư viện units-of-measure trong software cố encode chính quy tắc (rule / 규칙) này vào hệ kiểu (type system / 타입 시스템).
 
-> **Chuyển mạch:** Trong **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **2. Dimension khác đơn vị (unit / 단위)** tiếp nhận điểm tựa từ **1. Quantity và đơn vị (unit / 단위): đơn vị (unit / 단위) giống như kiểu (type / 타입) thông tin (information / 정보)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Dimensional consistency là kiểu (type / 타입) checker, không phải proof** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **2. Dimension khác đơn vị (unit / 단위)** nối từ **1. Quantity và đơn vị (unit / 단위): đơn vị (unit / 단위) giống như kiểu (type / 타입) thông tin (information / 정보)** sang **3. Dimensional consistency là kiểu (type / 타입) checker, không phải proof**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Dimension khác đơn vị (unit / 단위)
 
@@ -80,7 +80,7 @@ Force:
 [F]=MLT^{-2}.
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **3. Dimensional consistency là kiểu (type / 타입) checker, không phải proof** tiếp nhận điểm tựa từ **2. Dimension khác đơn vị (unit / 단위)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Buckingham-π intuition: vì sao dimensionless groups quan trọng?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **3. Dimensional consistency là kiểu (type / 타입) checker, không phải proof** nối từ **2. Dimension khác đơn vị (unit / 단위)** sang **4. Buckingham-π intuition: vì sao dimensionless groups quan trọng?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Dimensional consistency là kiểu (type / 타입) checker, không phải proof
 
@@ -124,7 +124,7 @@ d=2vt
 
 > Một ràng buộc (constraint / 제약조건) có thể loại bỏ nhiều answer sai mà chưa đủ để xác định answer đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **4. Buckingham-π intuition: vì sao dimensionless groups quan trọng?** tiếp nhận điểm tựa từ **3. Dimensional consistency là kiểu (type / 타입) checker, không phải proof** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Precision, accuracy và bất định (uncertainty / 불확실성) không giống nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **4. Buckingham-π intuition: vì sao dimensionless groups quan trọng?** nối từ **3. Dimensional consistency là kiểu (type / 타입) checker, không phải proof** sang **5. Precision, accuracy và bất định (uncertainty / 불확실성) không giống nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Buckingham-π intuition: vì sao dimensionless groups quan trọng?
 
@@ -148,7 +148,7 @@ Dimensionless groups thường cho phép so sánh các hệ thống (systems / �
 
 Ta không cần formal Buckingham π theorem ở đây, nhưng nên nhớ idea: nếu mô hình (model / 모델) thực sự chỉ phụ thuộc vào một số independent dimensions, có thể tồn tại biểu diễn (representation / 표현) compact hơn bằng dimensionless combinations.
 
-> **Chuyển mạch:** Trong **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **5. Precision, accuracy và bất định (uncertainty / 불확실성) không giống nhau** tiếp nhận điểm tựa từ **4. Buckingham-π intuition: vì sao dimensionless groups quan trọng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Significant figures và false precision** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **5. Precision, accuracy và bất định (uncertainty / 불확실성) không giống nhau** nối từ **4. Buckingham-π intuition: vì sao dimensionless groups quan trọng?** sang **6. Significant figures và false precision**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Precision, accuracy và bất định (uncertainty / 불확실성) không giống nhau
 
@@ -167,7 +167,7 @@ low variance ≠ low bias
 precision ≠ accuracy
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **6. Significant figures và false precision** tiếp nhận điểm tựa từ **5. Precision, accuracy và bất định (uncertainty / 불확실성) không giống nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Absolute lỗi (error / 오류) và relative lỗi (error / 오류) trả lời hai câu hỏi khác nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **6. Significant figures và false precision** nối từ **5. Precision, accuracy và bất định (uncertainty / 불확실성) không giống nhau** sang **7. Absolute lỗi (error / 오류) và relative lỗi (error / 오류) trả lời hai câu hỏi khác nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Significant figures và false precision
 
@@ -202,7 +202,7 @@ computational precision
 ≠ information precision
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **7. Absolute lỗi (error / 오류) và relative lỗi (error / 오류) trả lời hai câu hỏi khác nhau** tiếp nhận điểm tựa từ **6. Significant figures và false precision** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Percentage, percentage điểm (point / 지점) và denominator lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **7. Absolute lỗi (error / 오류) và relative lỗi (error / 오류) trả lời hai câu hỏi khác nhau** nối từ **6. Significant figures và false precision** sang **8. Percentage, percentage điểm (point / 지점) và denominator lập luận (reasoning / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Absolute lỗi (error / 오류) và relative lỗi (error / 오류) trả lời hai câu hỏi khác nhau
 
@@ -229,7 +229,7 @@ Ví dụ lỗi (error / 오류) `1 cm`:
 
 Khi `x` gần 0, relative lỗi (error / 오류) có thể explode và trở nên không ổn định; lúc đó absolute tolerance hoặc problem-specific quy mô (scale / 규모) có thể phù hợp hơn.
 
-> **Chuyển mạch:** Trong **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **8. Percentage, percentage điểm (point / 지점) và denominator lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **7. Absolute lỗi (error / 오류) và relative lỗi (error / 오류) trả lời hai câu hỏi khác nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Propagation of bất định (uncertainty / 불확실성): đầu ra (output / 출력) không thể chính xác hơn inputs một cách kỳ diệu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **8. Percentage, percentage điểm (point / 지점) và denominator lập luận (reasoning / 추론)** nối từ **7. Absolute lỗi (error / 오류) và relative lỗi (error / 오류) trả lời hai câu hỏi khác nhau** sang **9. Propagation of bất định (uncertainty / 불확실성): đầu ra (output / 출력) không thể chính xác hơn inputs một cách kỳ diệu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Percentage, percentage điểm (point / 지점) và denominator lập luận (reasoning / 추론)
 
@@ -253,7 +253,7 @@ Percentage luôn ngầm hỏi:
 
 Đây là lý do percentage thay đổi (change / 변경) thường asymmetric. Tăng từ 80 lên 100 là 25%, nhưng giảm từ 100 về 80 là 20%.
 
-> **Chuyển mạch:** Ở chặng này của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **9. Propagation of bất định (uncertainty / 불확실성): đầu ra (output / 출력) không thể chính xác hơn inputs một cách kỳ diệu** tiếp nhận điểm tựa từ **8. Percentage, percentage điểm (point / 지점) và denominator lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. thứ tự (order / 순서) of magnitude là lập luận (reasoning / 추론) về quy mô (scale / 규모)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **9. Propagation of bất định (uncertainty / 불확실성): đầu ra (output / 출력) không thể chính xác hơn inputs một cách kỳ diệu** nối từ **8. Percentage, percentage điểm (point / 지점) và denominator lập luận (reasoning / 추론)** sang **10. thứ tự (order / 순서) of magnitude là lập luận (reasoning / 추론) về quy mô (scale / 규모)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Propagation of bất định (uncertainty / 불확실성): đầu ra (output / 출력) không thể chính xác hơn inputs một cách kỳ diệu
 
@@ -308,7 +308,7 @@ Chia cho `A=LW`:
 
 Vì vậy relative bất định (uncertainty / 불확실성) của sản phẩm (product / 제품) gần bằng tổng relative sensitivities ở first thứ tự (order / 순서).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **10. thứ tự (order / 순서) of magnitude là lập luận (reasoning / 추론) về quy mô (scale / 규모)** tiếp nhận điểm tựa từ **9. Propagation of bất định (uncertainty / 불확실성): đầu ra (output / 출력) không thể chính xác hơn inputs một cách kỳ diệu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Fermi estimation: decomposition quan trọng hơn decimal precision** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **10. thứ tự (order / 순서) of magnitude là lập luận (reasoning / 추론) về quy mô (scale / 규모)** nối từ **9. Propagation of bất định (uncertainty / 불확실성): đầu ra (output / 출력) không thể chính xác hơn inputs một cách kỳ diệu** sang **11. Fermi estimation: decomposition quan trọng hơn decimal precision**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. thứ tự (order / 순서) of magnitude là lập luận (reasoning / 추론) về quy mô (scale / 규모)
 
@@ -326,7 +326,7 @@ Nếu hệ thống (system / 시스템) A cần `10^3` operations và B cần `1
 
 Đây là lý do order-of-magnitude lập luận (reasoning / 추론) cực kỳ hữu ích trong hệ thống (system / 시스템) thiết kế (design / 설계) và thuật toán (algorithm / 알고리즘) phân tích (analysis / 분석).
 
-> **Chuyển mạch:** Trong **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **11. Fermi estimation: decomposition quan trọng hơn decimal precision** tiếp nhận điểm tựa từ **10. thứ tự (order / 순서) of magnitude là lập luận (reasoning / 추론) về quy mô (scale / 규모)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Sanity check bằng upper/lower bounds** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **11. Fermi estimation: decomposition quan trọng hơn decimal precision** nối từ **10. thứ tự (order / 순서) of magnitude là lập luận (reasoning / 추론) về quy mô (scale / 규모)** sang **12. Sanity check bằng upper/lower bounds**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Fermi estimation: decomposition quan trọng hơn decimal precision
 
@@ -364,7 +364,7 @@ order of magnitude ≈ 10^2 requests/s average
 
 Peak factor, retries và burstiness là các giả định (assumptions / 가정들) tiếp theo.
 
-> **Chuyển mạch:** Ở chặng này của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **12. Sanity check bằng upper/lower bounds** tiếp nhận điểm tựa từ **11. Fermi estimation: decomposition quan trọng hơn decimal precision** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. tuyến tính (linear / 선형) quy mô (scale / 규모) vs logarithmic quy mô (scale / 규모)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **12. Sanity check bằng upper/lower bounds** nối từ **11. Fermi estimation: decomposition quan trọng hơn decimal precision** sang **13. tuyến tính (linear / 선형) quy mô (scale / 규모) vs logarithmic quy mô (scale / 규모)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Sanity check bằng upper/lower bounds
 
@@ -380,7 +380,7 @@ Nếu một dashboard báo `10^13 requests/day`, trước khi gỡ lỗi (debug 
 
 Bounding là một trong những kỹ thuật lập luận (reasoning / 추론) rẻ nhưng mạnh nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **13. tuyến tính (linear / 선형) quy mô (scale / 규모) vs logarithmic quy mô (scale / 규모)** tiếp nhận điểm tựa từ **12. Sanity check bằng upper/lower bounds** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Units trong Finance, CS và AI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **13. tuyến tính (linear / 선형) quy mô (scale / 규모) vs logarithmic quy mô (scale / 규모)** nối từ **12. Sanity check bằng upper/lower bounds** sang **14. Units trong Finance, CS và AI**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. tuyến tính (linear / 선형) quy mô (scale / 규모) vs logarithmic quy mô (scale / 규모)
 
@@ -398,7 +398,7 @@ Log quy mô (scale / 규모) hữu ích khi dữ liệu (data / 데이터) trả
 
 Nhưng log transform thay meaning: difference trên log quy mô (scale / 규모) tương ứng ratio trên original quy mô (scale / 규모).
 
-> **Chuyển mạch:** Trong **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **14. Units trong Finance, CS và AI** tiếp nhận điểm tựa từ **13. tuyến tính (linear / 선형) quy mô (scale / 규모) vs logarithmic quy mô (scale / 규모)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Worked example: phát hiện đơn vị (unit / 단위) bug** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **14. Units trong Finance, CS và AI** nối từ **13. tuyến tính (linear / 선형) quy mô (scale / 규모) vs logarithmic quy mô (scale / 규모)** sang **15. Worked example: phát hiện đơn vị (unit / 단위) bug**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Units trong Finance, CS và AI
 
@@ -425,7 +425,7 @@ Mất mát (loss / 손실) thường dimensionless hoặc phụ thuộc mục ti
 
 Đơn vị (unit / 단위) lập luận (reasoning / 추론) không chỉ dành cho physics.
 
-> **Chuyển mạch:** Ở chặng này của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **14. Units trong Finance, CS và AI** cho ta quy tắc; **15. Worked example: phát hiện đơn vị (unit / 단위) bug** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **16. các giả định (assumptions / 가정들) checklist khi đọc một con số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **14. Units trong Finance, CS và AI** nêu quy tắc; **15. Worked example: phát hiện đơn vị (unit / 단위) bug** thử quy tắc trong tình huống, rồi **16. các giả định (assumptions / 가정들) checklist khi đọc một con số** mở rộng hệ quả.
 
 ## 15. Worked example: phát hiện đơn vị (unit / 단위) bug
 
@@ -458,7 +458,7 @@ t=\frac{120000\,m}{60\,m/s}=2000\,s\approx33.3\,min.
 
 Đơn vị (unit / 단위) algebra tự chỉ ra phép conversion cần thiết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **15. Worked example: phát hiện đơn vị (unit / 단위) bug** cho ta quy tắc; **16. các giả định (assumptions / 가정들) checklist khi đọc một con số** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Liên kết kiến thức (knowledge connection / 지식 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **15. Worked example: phát hiện đơn vị (unit / 단위) bug** nêu quy tắc; **16. các giả định (assumptions / 가정들) checklist khi đọc một con số** thử quy tắc trong tình huống, rồi **Liên kết kiến thức (knowledge connection / 지식 연결)** mở rộng hệ quả.
 
 ## 16. các giả định (assumptions / 가정들) checklist khi đọc một con số
 
@@ -477,7 +477,7 @@ Có sanity bound nào không?
 
 Đây là mathematical hygiene, không phải paperwork.
 
-> **Chuyển mạch:** Trong **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, sau nội dung của **16. các giả định (assumptions / 가정들) checklist khi đọc một con số**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, sau nội dung của **16. các giả định (assumptions / 가정들) checklist khi đọc một con số**, **Liên kết kiến thức (knowledge connection / 지식 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết kiến thức (knowledge connection / 지식 연결)
 
@@ -495,13 +495,13 @@ precision → numerical analysis/floating point
 
 Trong kỹ thuật (engineering / 엔지니어링) và dữ liệu (data / 데이터) science, nhiều lỗi lớn không đến từ calculus khó mà từ đơn vị (unit / 단위) mismatch, denominator sai, false precision hoặc giả định (assumption / 가정) quy mô (scale / 규모) sai.
 
-> **Chuyển mạch:** Ở chặng này của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Liên kết kiến thức (knowledge connection / 지식 연결)** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Một đo lường (measurement / 측정) không phải “một number lấy từ thế giới”. Nó là quantity được biểu diễn trong một đơn vị (unit / 단위), với finite precision và bất định (uncertainty / 불확실성). Good quantitative lập luận (reasoning / 추론) luôn giữ bốn lớp cùng lúc: **giá trị (value / 값), đơn vị (unit / 단위), bất định (uncertainty / 불확실성), quy mô (scale / 규모)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đo lường, đơn vị và ước lượng: từ con số đến quantity có ý nghĩa**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 
