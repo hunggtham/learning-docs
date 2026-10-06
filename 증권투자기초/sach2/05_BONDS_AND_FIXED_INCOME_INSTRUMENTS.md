@@ -26,6 +26,8 @@ Preferred stock có quyền ưu tiên cổ tức hoặc tài sản so với comm
 
 Source minh họa floating-rate bond bằng coupon dạng `benchmark + spread` (ví dụ LIBOR + biên) và có thể đặt floor rate. Reverse floater đi theo dạng `constant − benchmark`, thường cần cap để giới hạn coupon. Cấu trúc này khiến coupon đổi theo benchmark và basis risk; LIBOR ở đây chỉ là ví dụ textbook trong raw, không phải khuyến nghị dùng benchmark hiện hành. Indexed bond có thể gắn coupon hoặc principal với chỉ số/real rate, nên phải kiểm tra index lag, cách điều chỉnh và liệu khoản bảo vệ có thực sự khớp với lạm phát của nhà đầu tư.
 
+Raw còn phân nhóm structured note theo tài sản hoặc điều kiện kích hoạt: interest-rate-linked note (inverse FRN, dual-index FRN, CMS và range accrual), default/credit-spread/credit-linked note, equity hoặc equity-index-linked note, currency/dual-currency note và commodity-linked note. Hãy đọc taxonomy này theo biến làm payoff đổi: benchmark lãi suất, spread tín dụng, giá cổ phiếu, tỷ giá hay hàng hóa. Mỗi tên chỉ là nhãn của tài sản tham chiếu; trước khi định giá vẫn phải tìm barrier, cap/floor, trigger, issuer risk và cách xử lý khi dữ liệu tham chiếu không còn tồn tại.
+
 ### So sánh nhanh: cùng là “fixed income” nhưng payoff không giống nhau
 
 Tên nhóm sản phẩm chỉ cho biết lớp tài sản; muốn đánh giá phải xác định ai sở hữu dòng tiền, biến cố nào làm dòng tiền lệch khỏi kế hoạch và rủi ro nào không thể quan sát từ coupon. Bảng dưới đây dùng cùng một bộ câu hỏi để tránh xếp các sản phẩm khác bản chất vào một rổ:
