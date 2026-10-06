@@ -160,6 +160,18 @@ Transfer không làm rủi ro (risk / 위험) biến mất khỏi dự án (proj
 
 > **Nối mạch:** **Điều khiển (control / 제어) taxonomy: preventive, detective, corrective** nối từ **Threat phản hồi (response / 응답) và opportunity phản hồi (response / 응답)** sang **Điều khiển (control / 제어) effectiveness phải được kiểm chứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
+## Risk owner và risk action owner không phải cùng một vai trò
+
+Một risk cần người **sở hữu risk** và có thể cần nhiều người thực thi response. **Risk owner** chịu trách nhiệm theo dõi exposure, trigger, response strategy và việc risk còn nằm trong tolerance hay không. **Risk action owner** chịu trách nhiệm thực hiện một action cụ thể đã được giao để triển khai response.
+
+Hai vai trò có thể là cùng một người nhưng không nên mặc định như vậy. Một product manager có thể sở hữu risk “adoption thấp”, trong khi training lead chịu action đào tạo, engineering lead chịu action giảm friction và operations lead chịu action support sau go-live. Nếu mỗi action đều hoàn thành nhưng không ai nhìn residual exposure ở cấp risk, organization có thể báo “response done” trong khi risk vẫn cao.
+
+Điểm này cũng giải thích vì sao assignment theo task không đủ. Người thực hiện action cần authority/capability để hoàn thành task; risk owner cần nhìn tổng thể và quyết định khi nào response phải đổi, escalate hoặc risk có thể retire. Một risk register ghi owner nhưng không ghi rõ action accountability dễ tạo khoảng trống giữa “ai theo dõi” và “ai làm”.
+
+Trong scenario, nếu PM thấy response chậm, câu hỏi đầu tiên không phải luôn “thay risk owner”. Có thể risk owner vẫn đúng nhưng action owner thiếu capacity, dependency hoặc authority. Diagnosis phải đúng tầng ownership.
+
+> **Nối mạch:** Phân biệt owner của exposure với owner của action giúp **control taxonomy** tiếp theo được gắn vào đúng người thực thi mà vẫn giữ accountability ở cấp risk.
+
 ## Điều khiển (control / 제어) taxonomy: preventive, detective, corrective
 
 Preventive điều khiển (control / 제어) cố giảm khả năng sự kiện (event / 이벤트) xảy ra. Detective điều khiển (control / 제어) làm tín hiệu (signal / 신호) xuất hiện nhanh hơn. Corrective điều khiển (control / 제어) giảm consequence sau khi sự kiện (event / 이벤트) xảy ra.
@@ -217,6 +229,25 @@ Rủi ro (risk / 위험) burndown không có nghĩa số rủi ro (risk / 위험
 Nếu nhóm (team / 팀) “đóng rủi ro (risk / 위험)” để dashboard đẹp trong khi giả định (assumption / 가정) chưa được kiểm chứng, chỉ số (metric / 지표) trở thành gaming.
 
 > **Nối mạch:** **Rủi ro (risk / 위험) tương tác (interaction / 상호작용) và rủi ro (risk / 위험) cascade** nối từ **Rủi ro (risk / 위험) exposure trend và rủi ro (risk / 위험) burndown** sang **Systemic rủi ro (risk / 위험) và common-cause thất bại (failure / 실패)**, vì cơ chế trước tạo đầu vào cho bước sau.
+
+## Overall project risk khác tổng danh sách individual risks
+
+Danh sách individual risks không tự động cho biết dự án **risky đến mức nào như một hệ thống**. Overall project risk là uncertainty tác động lên project objectives như một tổng thể. Nó bao gồm interaction, concentration, assumptions, complexity và những phần uncertainty chưa thể tách thành một event riêng trong register.
+
+Hai dự án có cùng 20 risk items nhưng overall exposure có thể rất khác. Dự án A có nhiều risk nhỏ, độc lập và reversible. Dự án B có ít risk hơn nhưng tất cả cùng phụ thuộc một regulatory approval, một vendor hoặc một adoption assumption. Đếm số item hoặc cộng mechanical score có thể làm B trông “ít rủi ro hơn” dù viability mong manh hơn nhiều.
+
+Overall risk cũng có thể tăng khi từng individual risk nhìn riêng vẫn không đổi. Ví dụ ba workstream đều gần threshold và cùng mất schedule reserve; không item nào vượt trigger, nhưng hệ thống mất khả năng hấp thụ shock. Ngược lại, discovery tốt có thể làm số risk item tăng trong khi overall uncertainty giảm vì unknowns đã được chuyển thành risk có owner và response rõ.
+
+Vì vậy status risk cần hai tầng:
+
+```text
+individual risk → event/condition cụ thể cần owner và response
+overall project risk → mức uncertainty của toàn bộ objective system
+```
+
+Sponsor và governance quan tâm đặc biệt tới tầng overall vì nó gắn với continue/pivot/stop, funding và risk threshold của dự án; PM vẫn cần individual risk để điều khiển các cơ chế cụ thể.
+
+> **Nối mạch:** Overall risk đặt lens hệ thống lên risk register; **risk interaction và cascade** tiếp theo giải thích một trong những cơ chế làm overall exposure lớn hơn tổng các item độc lập.
 
 ## Rủi ro (risk / 위험) tương tác (interaction / 상호작용) và rủi ro (risk / 위험) cascade
 
