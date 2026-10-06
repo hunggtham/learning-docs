@@ -70,6 +70,21 @@ Khi đọc một khoản mục, cần giữ ba lớp: định nghĩa kế toán,
 
 Source còn đặt báo cáo vào một quy trình phân tích thay vì xem từng bảng riêng lẻ: bắt đầu ở ngành và vị thế cạnh tranh, đọc bảng cân đối để biết nguồn lực–nghĩa vụ, đọc kết quả kinh doanh để theo dõi doanh thu–chi phí–lợi nhuận, rồi đối chiếu lưu chuyển tiền tệ và thuyết minh. IFRS/IASC và K-IFRS định nghĩa cách ghi nhận, đo lường và trình bày; chúng giúp so sánh có kỷ luật nhưng không xóa khác biệt mô hình kinh doanh. Vì thế cùng một chỉ tiêu phải được hỏi thêm “được tạo ra bởi hoạt động nào, có lặp lại không, và chuyển thành tiền khi nào?”.
 
+### Ma trận BCG: vị thế cạnh tranh không đồng nghĩa chất lượng đầu tư
+
+Source dùng ma trận BCG để đặt từng đơn vị kinh doanh trên hai trục: tốc độ tăng trưởng của thị trường và thị phần tương đối. Bốn nhãn cần đọc như các câu hỏi về phân bổ vốn:
+
+| Ô của ma trận | Tình huống khái quát | Câu hỏi phân tích tiếp theo |
+|---|---|---|
+| Question Mark | thị trường tăng nhanh nhưng thị phần tương đối thấp | Có lợi thế đủ bền để tiếp tục đầu tư, hay nên rút vốn? |
+| Star | thị trường tăng nhanh và thị phần tương đối cao | Tăng trưởng cần bao nhiêu vốn lưu động/capex trước khi tạo tiền? |
+| Cash Cow | thị trường tăng chậm nhưng thị phần tương đối cao | Dòng tiền dư có thể tài trợ đơn vị khác hay đang bị hút bởi nợ/capex? |
+| Barking Dog | thị trường tăng chậm và thị phần thấp | Có lý do chiến lược để giữ lại, hay chi phí cơ hội đã quá lớn? |
+
+Ma trận này không tự đo profitability, ROIC, chất lượng tài sản hay định giá cổ phiếu. Một `Star` có thể tăng doanh thu nhưng tiêu nhiều tiền; một `Cash Cow` có thể tạo tiền ổn định nhưng đang suy giảm cấu trúc; một `Question Mark` chỉ đáng tài trợ nếu giả thuyết về thị phần, biên lợi nhuận và economics của khách hàng có thể kiểm chứng. Vì vậy hãy nối từng ô với chuỗi `tăng trưởng thị trường → thị phần → tái đầu tư → dòng tiền → ROIC`, thay vì dùng nhãn BCG như kết luận.
+
+Ví dụ, nếu một mảng có tăng trưởng thị trường 15% nhưng thị phần tương đối 0,6, nó nằm gần `Question Mark`: bước tiếp theo không phải mua vì “tăng trưởng cao”, mà là kiểm tra chi phí giành khách hàng, khả năng nâng thị phần và vốn cần bỏ ra. Nếu một mảng khác tăng trưởng 3% nhưng thị phần tương đối 1,4, nó gần `Cash Cow`; hãy kiểm tra liệu dòng tiền thực sự dương sau capex và vốn lưu động. Các ngưỡng cụ thể phụ thuộc cách doanh nghiệp định nghĩa thị trường, nên đây là ví dụ mental model, không phải chuẩn phân loại phổ quát.
+
 ## 5. ROI và ROE
 
 ROI (Return on Investment) đo lợi nhuận so với khoản đầu tư; ROE (Return on Equity) đo lợi nhuận quy cho vốn chủ sở hữu. Dạng khái quát:

@@ -11,6 +11,7 @@ Bảng này là semantic inventory cấp route. Mỗi ID đại diện cho một
 | B2-C01-S02-U003 | pp.26–34 | CSI, BSI, composite/diffusion index | FORMULA, INDEX, EXAMPLE | 01 §4 | FULL | Giữ công thức và ví dụ số đọc được. |
 | B2-C01-S03-U001 | pp.34–42 | phân tích doanh nghiệp, ngành và báo cáo tài chính | PROCESS, CLASSIFICATION | 01 §4 | FULL | Quy trình và ranh giới IFRS/IASC/K-IFRS đã được giải thích; tên tiểu mục không còn làm thiếu mental model. |
 | B2-C01-S03-U002 | pp.52–58 | IFRS/IASC và các khoản mục báo cáo | LEGAL_RULE, TERMINOLOGY | 01 §4 | FULL | Chỉ mô tả textbook-state. |
+| B2-C01-S03-U003 | pp.46–52 | ma trận BCG: Question Mark, Star, Cash Cow, Barking Dog | FRAMEWORK, CLASSIFICATION | 01 §4 | FULL | Giải thích hai trục tăng trưởng/thị phần và giới hạn khi nối sang dòng tiền, ROIC, định giá. |
 | B2-C01-S04-U001 | pp.68–76 | ROI, ROE và các tỷ số hiệu quả | FORMULA, VARIABLE | 01 §5 | FULL | Công thức và cách đọc được reconstruct. |
 | B2-C02-S01-U001 | pp.78–82 | lãi kép và suất sinh lợi yêu cầu | FORMULA, MECHANISM | 02 §1 | FULL | Bao gồm ví dụ 10% đọc được. |
 | B2-C02-S01-U002 | pp.80–84 | CAPM: risk-free, beta, market premium | FORMULA, VARIABLE | 02 §1 | FULL | Nêu giả định và giới hạn. |
