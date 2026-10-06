@@ -42,14 +42,15 @@ Bốn bảo hiểm cần được nhớ theo rủi ro hoặc mục tiêu bảo v
 
 Bảng này nên được đọc như một chuỗi chức năng: lập pháp → thực thi chính sách → xét xử; sau đó mở rộng sang tiền tệ, điều tra, trợ giúp và hướng dẫn người nước ngoài.
 
-| Cơ quan | Chức năng |
+| Cơ quan | Chức năng hiện hành |
 |---|---|
 | 국회 | 입법 |
 | 정부/행정부 | 정책 집행 |
 | 법원 | 재판 |
 | 한국은행 | 중앙은행 |
-| 경찰 | 치안·수사 |
-| 검찰 | 기소 등 검찰 기능 |
+| 경찰 등 사법경찰 | 일반 범죄 수사·치안 |
+| 중대범죄수사청 | 중대범죄 수사 |
+| 공소청 | 공소 제기·공소 유지 |
 | 한국소비자원 | 소비자 분쟁/피해 지원 |
 | 대한법률구조공단 | 법률 구조 |
 | 국가인권위원회 | 인권 |
@@ -67,7 +68,20 @@ Bảng này nên được đọc như một chuỗi chức năng: lập pháp �
 | tranh chấp tiêu dùng | `한국소비자원` | hỗ trợ tư vấn và xử lý khiếu nại |
 | cần trợ giúp pháp lý | `대한법률구조공단` | tư vấn/trợ giúp pháp luật |
 
-Khi gặp câu hỏi về cơ quan, hãy trả lời bằng **ai làm gì**, không chỉ dịch tên cơ quan. Đây là cách phân biệt `국회` với `정부`, `경찰` với `검찰` và `법원`.
+Khi gặp câu hỏi về cơ quan, hãy trả lời bằng **ai làm gì**, không chỉ dịch tên cơ quan. Đây là cách phân biệt `국회` với `정부`, và trong hệ thống hiện hành phân biệt `수사기관` với `공소청` và `법원`.
+
+## Version change phải nhớ
+
+| Chủ đề | 변경 전 | 변경 후 | 시행 |
+|---|---|---|---|
+| `예금보호한도` | 5천만원 | 1억원 | 2025-09-01 |
+| `법정 최고금리` | 연 24% | 연 20% | 2021-07-07 |
+| `식품 날짜표시` | 유통기한 | 소비기한 중심 | 2023-01-01 |
+| `외국인등록증` | 실물 중심 | 모바일 외국인등록증 추가 | 2025-01-10 |
+| `고교학점제` | 단계 도입 | 2025학년도 고1부터 전면 적용 | 2025학년도 |
+| `형사사법기관` | 검찰청 체계 | 공소청 + 중대범죄수사청 체계 | 2026-10-02 |
+
+Cách nhớ: **old version không phải “sai tuyệt đối”; nó đúng trước ngày 시행.** Nếu đề hỏi `현재/현행`, dùng cột 변경 후.
 
 ## Cặp dễ nhầm
 
@@ -76,7 +90,7 @@ Các cặp dưới đây là điểm giao giữa các chapter. Hãy tự nói m�
 `어린이집 ↔ 유치원`  
 `전세 ↔ 월세`  
 `수시 ↔ 정시`  
-`경찰 ↔ 검찰 ↔ 법원`  
+`수사기관 ↔ 공소청 ↔ 법원`  
 `공공부조 ↔ 사회보험`  
 `국회 ↔ 정부`  
 `호남 ↔ 영남`  
