@@ -14,7 +14,7 @@ Moving average làm trơn nhiễu bằng trung bình các giá gần nhất. SMA
 
 Mẫu hình chỉ có ý nghĩa khi giữ được quan hệ hình học và điều kiện xác nhận. Head-and-shoulders gồm vai trái, đầu, vai phải và neckline; phá neckline là điều kiện xác nhận theo textbook. Double top/bottom và triple top/bottom mô tả nỗ lực thất bại nhiều lần tại một vùng. Round top/bottom nhấn mạnh quá trình chuyển dần giữa bên mua và bên bán. Gap là khoảng trống giữa vùng giá liên tiếp; ý nghĩa phụ thuộc gap tiếp diễn hay gap kiệt sức.
 
-Các mẫu tiếp diễn như flag, pennant, wedge và rectangle mô tả co hẹp sau một nhịp chuyển động. Đừng biến tên mẫu thành dự báo: cùng hình dạng có thể phá theo hướng khác nhau khi thanh khoản, tin tức hoặc regime đổi. Vì source có hình nhưng ảnh OCR không còn, learning edition giữ cấu trúc bằng prose thay vì bịa tọa độ.
+Các mẫu tiếp diễn như flag, pennant, wedge và rectangle mô tả co hẹp sau một nhịp chuyển động. Source cũng nêu Diamond Pattern: biên dao động thường mở rộng rồi thu hẹp, nên cần đọc như sự chuyển từ bất định sang nén giá; hướng phá vỡ chỉ được xác nhận khi giá thoát khỏi biên cùng bối cảnh và khối lượng phù hợp. Đừng biến tên mẫu thành dự báo: cùng hình dạng có thể phá theo hướng khác nhau khi thanh khoản, tin tức hoặc regime đổi. Vì source có hình nhưng ảnh OCR không còn, learning edition giữ cấu trúc bằng prose thay vì bịa tọa độ hay mục tiêu giá.
 
 ## 4. Candlestick
 

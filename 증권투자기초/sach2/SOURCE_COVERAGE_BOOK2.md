@@ -24,7 +24,7 @@ Bảng này là semantic inventory cấp route. Mỗi ID đại diện cho một
 | B2-C03-S01-U001 | pp.106–110 | price chart, trend, support/resistance | CONCEPT, MECHANISM | 03 §1 | FULL | Giải thích tín hiệu không phải nhân quả. |
 | B2-C03-S01-U002 | pp.110–126 | moving average và crossover | FORMULA, PROCESS | 03 §2 | FULL | Có trễ tín hiệu và whipsaw. |
 | B2-C03-S02-U001 | pp.126–144 | head-and-shoulders, double/triple top-bottom, round top, gap | FIGURE, PATTERN | 03 §3 | FULL | Reconstruct bằng ASCII/prose, không có ảnh gốc. |
-| B2-C03-S02-U002 | pp.132–142 | flag, pennant, wedge, rectangle | FIGURE, CLASSIFICATION | 03 §4 | FULL | Giữ hướng phá vỡ như điều kiện, không bảo đảm kết quả. |
+| B2-C03-S02-U002 | pp.132–142 | flag, pennant, wedge, rectangle, Diamond Pattern | FIGURE, CLASSIFICATION | 03 §4 | FULL | Giữ hướng phá vỡ như điều kiện; Diamond Pattern chỉ được reconstruct ở mức cấu trúc vì ảnh OCR không đủ cho tọa độ và mục tiêu giá. |
 | B2-C03-S03-U001 | pp.142–154 | candlestick và mẫu đảo chiều/tiếp diễn | FIGURE, TERMINOLOGY | 03 §4 | FULL | Doji, Harami, morning/evening star và điều kiện đọc đã được reconstruct bằng prose. |
 | B2-C03-S03-U002 | pp.154–168 | MACD, RSI, stochastic, Bollinger, envelope, OBV, VR, P&F | FORMULA, INDICATOR | 03 §5 | FULL | Nêu biến, cách đọc, failure modes. |
 | B2-C03-S04-U001 | pp.170–180 | Dow theory và Elliott wave | THEORY, CLASSIFICATION | 03 §6 | FULL | Đã bổ sung Dow, wave principle, Fibonacci sequence và các tỷ lệ source đọc được. |
