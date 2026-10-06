@@ -28,6 +28,18 @@ Quy tắc này tự động mua tài sản đã giảm và bán tài sản đã 
 
 Portfolio effect xuất hiện vì tổng rủi ro phụ thuộc tương quan chứ không chỉ từng tài sản. Với hai tài sản, phương sai danh mục gồm phương sai riêng và hạng tử hiệp phương sai; khi tương quan thấp hơn 1, kết hợp có thể giảm biến động. Diversification không loại bỏ rủi ro thị trường, rủi ro thanh khoản hay tương quan tăng trong khủng hoảng. Vì vậy, “nhiều mã” không đồng nghĩa đa dạng hóa: các mã cùng ngành, cùng tiền tệ hoặc cùng factor vẫn có thể là một cược duy nhất.
 
+### Worked covariance: cùng volatility nhưng tương quan quyết định kết quả
+
+Giả sử hai tài sản có trọng số 50/50 và cùng độ lệch chuẩn 20%. Với công thức:
+
+```text
+σ²p = w₁²σ₁² + w₂²σ₂² + 2w₁w₂ρ₁₂σ₁σ₂
+```
+
+nếu `ρ₁₂ = 0,2`, phương sai danh mục là `0,024`, nên volatility khoảng `15,5%`, thấp hơn 20% của từng tài sản. Nếu tương quan tăng lên `0,9`, phương sai thành `0,038`, volatility khoảng `19,5%`; lợi ích diversification gần biến mất. Nếu `ρ₁₂ = −0,5`, phương sai chỉ còn `0,010`, volatility khoảng `10%`. Không có con số nào là bảo đảm: tương quan lịch sử có thể tăng mạnh trong stress, khi các tài sản cùng bị bán vì liquidity hoặc leverage.
+
+Ví dụ cũng cho thấy không thể suy luận “hai tài sản đều rủi ro 20% nên danh mục rủi ro 20%”. Cần ghi rõ cửa sổ đo, tần suất, currency, exposure ẩn và kịch bản correlation spike. Diversification là giảm covariance có điều kiện, không phải xóa rủi ro.
+
 Phần tính toán danh mục thuộc [Portfolio Risk, Allocation and Behavior](../../investing/01_foundations/02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md). Trong route Sách 2, chỉ cần giữ mental model: chiến lược tạo exposure, danh mục cộng exposure, benchmark dùng để kiểm tra exposure đó có đáng giá không.
 
 ## 4. Chỉ số giá cổ phiếu
