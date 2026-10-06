@@ -1,6 +1,6 @@
 # 증권투자기초 — Sách 2 learning route
 
-Đây là bản learning edition của Sách 2, được xây từ [source authority](../../증권투자기초/raw/sach2.md) và audit theo [coverage granular](../../증권투자기초/sach2/SOURCE_COVERAGE_BOOK2.md).
+Đây là bản learning edition của Sách 2, được xây từ [source authority](../../증권투자기초/raw/sach2.md) và audit theo [coverage granular](../../증권투자기초/sach2/SOURCE_COVERAGE_BOOK2.md). Bộ QA đi kèm gồm [source-question map](../../증권투자기초/sach2/SOURCE_QUESTION_MAP_BOOK2.md), [formula/table/figure audit](../../증권투자기초/sach2/FORMULA_TABLE_FIGURE_AUDIT_BOOK2.md), [KR/EN terminology audit](../../증권투자기초/sach2/TERMINOLOGY_AUDIT_BOOK2.md) và [source ambiguities](../../증권투자기초/sach2/SOURCE_AMBIGUITIES_BOOK2.md).
 
 Mục tiêu của route này là **thay source OCR để học**, không thay thế canonical owner chuyên sâu của toàn library. Mỗi chapter giữ knowledge của giáo trình theo bốn lớp: **What → Why/mechanism → Application/relationship → Boundary/exception**.
 
@@ -25,7 +25,7 @@ Không gắn Hangul cho noun thông thường và không “khôi phục” Kore
 
 ## Source questions
 
-Các review question trong source được map vào semantic inventory theo **question cluster có knowledge value**. Nếu wording, option hoặc số liệu OCR không đủ chắc, coverage giữ `SOURCE_AMBIGUITY`; route cung cấp reasoning để giải phần đã xác nhận, nhưng không đoán đáp án.
+Các review question trong source được audit riêng trong [SOURCE_QUESTION_MAP_BOOK2.md](../../증권투자기초/sach2/SOURCE_QUESTION_MAP_BOOK2.md), theo chuỗi **source cluster → semantic units → lesson**. Câu hỏi không được dùng như một semantic row để che nhiều concept. Nếu wording, option hoặc số liệu OCR không đủ chắc, [SOURCE_AMBIGUITIES_BOOK2.md](../../증권투자기초/sach2/SOURCE_AMBIGUITIES_BOOK2.md) giữ `SOURCE_AMBIGUITY`; route cung cấp reasoning cho phần đã xác nhận nhưng không đoán đáp án.
 
 ## Formula / table / figure contract
 
