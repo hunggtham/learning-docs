@@ -41,6 +41,18 @@ Ví dụ, một trái phiếu trả lợi suất 4% bằng ngoại tệ nhưng �
 
 Raw còn phân nhóm structured note theo tài sản hoặc điều kiện kích hoạt: interest-rate-linked note (inverse FRN, dual-index FRN, CMS và range accrual), default/credit-spread/credit-linked note, equity hoặc equity-index-linked note, currency/dual-currency note và commodity-linked note. Hãy đọc taxonomy này theo biến làm payoff đổi: benchmark lãi suất, spread tín dụng, giá cổ phiếu, tỷ giá hay hàng hóa. Mỗi tên chỉ là nhãn của tài sản tham chiếu; trước khi định giá vẫn phải tìm barrier, cap/floor, trigger, issuer risk và cách xử lý khi dữ liệu tham chiếu không còn tồn tại.
 
+### Structured note: đọc theo biến làm payoff đổi
+
+| Nhóm trong raw | Driver của coupon/gốc | Cấu phần/rủi ro cần kiểm tra |
+|---|---|---|
+| Interest-rate-linked | Benchmark lãi suất; inverse FRN đi ngược benchmark, dual-index dùng hai benchmark, CMS dùng kỳ hạn swap, range accrual chỉ tích lũy khi lãi suất nằm trong vùng | Công thức `constant − rate`, cap/floor, ngày reset, basis giữa hai benchmark và số ngày đủ điều kiện |
+| Default/credit-spread/credit-linked | Vỡ nợ hoặc credit spread của issuer/reference entity | Trigger là default hay spread barrier, principal chịu lỗ theo waterfall nào, recovery giả định và issuer risk |
+| Equity/equity-index-linked | Giá cổ phiếu hoặc chỉ số cổ phiếu | Quyền chọn mua/bán được nhúng, barrier, participation rate, dividend treatment và dilution |
+| Currency/dual-currency | Tỷ giá hoặc đồng tiền trả coupon/gốc | Ai chịu quyền đổi tiền, strike, cap/floor, currency mismatch và chi phí hedge |
+| Commodity-linked | Giá hoặc chỉ số hàng hóa | Basis với hàng hóa vật chất, futures roll, margin và trigger thanh toán |
+
+Tên gọi không cho biết principal có được bảo vệ hay không. Một note có thể trả coupon cao vì nhà đầu tư đang bán quyền chọn, nhận rủi ro credit hoặc chấp nhận thanh khoản thấp. Trước khi so sánh hai note, hãy viết payoff ở ba trạng thái: benchmark tăng, benchmark giảm và trigger xảy ra; nếu không mô tả được ba trạng thái đó thì chưa thể gọi sản phẩm “fixed income” theo nghĩa an toàn.
+
 ### So sánh nhanh: cùng là “fixed income” nhưng payoff không giống nhau
 
 Tên nhóm sản phẩm chỉ cho biết lớp tài sản; muốn đánh giá phải xác định ai sở hữu dòng tiền, biến cố nào làm dòng tiền lệch khỏi kế hoạch và rủi ro nào không thể quan sát từ coupon. Bảng dưới đây dùng cùng một bộ câu hỏi để tránh xếp các sản phẩm khác bản chất vào một rổ:

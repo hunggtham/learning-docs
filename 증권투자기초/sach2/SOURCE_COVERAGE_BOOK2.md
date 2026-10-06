@@ -37,7 +37,7 @@ Bảng này là semantic inventory cấp route. Mỗi ID đại diện cho một
 | B2-C04-S03-U002 | pp.198–216 | market comparison and review questions | EXERCISE, APPLICATION | 04 §5 | SOURCE_AMBIGUITY | Câu hỏi OCR đọc được ở mức khái niệm; số liệu ảnh không chắc. |
 | B2-C05-S01-U001 | pp.217–224 | bond, fixed-income security, maturity, face value, coupon | DEFINITION, TERMINOLOGY | 05 §1 | FULL | Có coupon/zero-coupon/coupon bond. |
 | B2-C05-S01-U002 | pp.224–232 | bond valuation and price–yield relation | FORMULA, MECHANISM | 05 §2 | FULL | Giải thích discounting. |
-| B2-C05-S02-U001 | pp.232–250 | convertible, warrant, exchangeable, ABS/MBS, floating/reverse floater, preferred, indexed/international bonds, structured notes | CLASSIFICATION, INSTITUTION | 05 §3 | FULL | Có payoff map, worked indexed-bond table, phân biệt foreign/eurobond và boundary ngắn cho từng loại. |
+| B2-C05-S02-U001 | pp.232–250 | convertible, warrant, exchangeable, ABS/MBS, floating/reverse floater, preferred, indexed/international bonds, structured notes | CLASSIFICATION, INSTITUTION | 05 §3 | FULL | Có payoff map, bảng driver structured note, worked indexed-bond table, phân biệt foreign/eurobond và boundary ngắn cho từng loại. |
 | B2-C06-S01-U001 | pp.250–258 | discount rate, IRR, YTM | FORMULA, VARIABLE | 06 §1 | FULL | Nêu YTM là nghiệm quy đổi, không phải realized return. |
 | B2-C06-S01-U002 | pp.258–282 | yield curve, expectations, liquidity premium, market segmentation, preferred habitat | THEORY, RELATIONSHIP | 06 §2 | FULL | Bốn theory được đối chiếu. |
 | B2-C06-S01-U003 | pp.274–282 | default risk, credit rating, spread, junk bond | RISK, INSTITUTION | 06 §3 | FULL | Rating không phải xác suất chắc chắn. |
