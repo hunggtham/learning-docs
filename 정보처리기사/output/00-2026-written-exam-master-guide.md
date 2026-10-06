@@ -32,7 +32,7 @@ Khung ôn dưới đây bám theo 21 chương lớn đang được các giáo tr
 
 Môn 1 kiểm tra khả năng nhìn một hệ thống **trước khi mã (code / 코드)**. Nếu chỉ nhớ từ khóa UML, Agile, 디자인 패턴 mà không hiểu dòng chảy từ yêu cầu → mô hình → kiến trúc → mô-đun (module / 모듈) → giao diện (interface / 인터페이스), rất dễ nhầm đáp án.
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **1.1 요구사항 확인 — Requirements confirmation** tiếp nhận điểm tựa từ **0. Vì sao cần một master guide riêng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1.2 화면 설계 — UI thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **1.1 요구사항 확인 — Requirements confirmation** nối từ **0. Vì sao cần một master guide riêng** sang **1.2 화면 설계 — UI thiết kế (design / 설계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1.1 요구사항 확인 — Requirements confirmation
 
@@ -93,7 +93,7 @@ XP thường gắn với Pair Programming, Test-Driven Development, Continuous t
 
 Đừng đồng nhất “Agile = không có tài liệu”. Agile giảm tài liệu không tạo giá trị, không phủ nhận documentation cần thiết.
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **1.2 화면 설계 — UI thiết kế (design / 설계)** tiếp nhận điểm tựa từ **1.1 요구사항 확인 — Requirements confirmation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1.3 애플리케이션 설계 — ứng dụng (application / 애플리케이션) thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **1.2 화면 설계 — UI thiết kế (design / 설계)** nối từ **1.1 요구사항 확인 — Requirements confirmation** sang **1.3 애플리케이션 설계 — ứng dụng (application / 애플리케이션) thiết kế (design / 설계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1.2 화면 설계 — UI thiết kế (design / 설계)
 
@@ -124,7 +124,7 @@ Storyboard mô tả màn hình, chuyển tiếp (transition / 전이) và tươn
 
 Bẫy: Prototype có thể low-fidelity hoặc high-fidelity; không phải cứ prototype là sản phẩm chạy hoàn chỉnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **1.3 애플리케이션 설계 — ứng dụng (application / 애플리케이션) thiết kế (design / 설계)** tiếp nhận điểm tựa từ **1.2 화면 설계 — UI thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1.4 인터페이스 설계 — giao diện (interface / 인터페이스) thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **1.3 애플리케이션 설계 — ứng dụng (application / 애플리케이션) thiết kế (design / 설계)** nối từ **1.2 화면 설계 — UI thiết kế (design / 설계)** sang **1.4 인터페이스 설계 — giao diện (interface / 인터페이스) thiết kế (design / 설계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1.3 애플리케이션 설계 — ứng dụng (application / 애플리케이션) thiết kế (design / 설계)
 
@@ -178,7 +178,7 @@ Học mẫu (pattern / 패턴) theo “bài toán (problem / 문제) → cơ ch�
 
 Adapter đổi giao diện (interface / 인터페이스) để hai thành phần không tương thích làm việc với nhau. Decorator bọc đối tượng (object / 객체) để thêm hành vi (behavior / 동작) động. Proxy đứng thay đối tượng (object / 객체) để kiểm soát truy cập/lazy loading/remote truy cập (access / 접근). chiến lược (strategy / 전략) đóng gói thuật toán (algorithm / 알고리즘) có thể thay thế. trạng thái (state / 상태) làm hành vi (behavior / 동작) thay đổi theo trạng thái (state / 상태) nội bộ. Observer phát thông báo một-nhiều khi subject đổi.
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **1.4 인터페이스 설계 — giao diện (interface / 인터페이스) thiết kế (design / 설계)** tiếp nhận điểm tựa từ **1.3 애플리케이션 설계 — ứng dụng (application / 애플리케이션) thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.1 데이터 입출력 구현 — dữ liệu (data / 데이터) I/O hiện thực (implementation / 구현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **1.4 인터페이스 설계 — giao diện (interface / 인터페이스) thiết kế (design / 설계)** nối từ **1.3 애플리케이션 설계 — ứng dụng (application / 애플리케이션) thiết kế (design / 설계)** sang **2.1 데이터 입출력 구현 — dữ liệu (data / 데이터) I/O hiện thực (implementation / 구현)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1.4 인터페이스 설계 — giao diện (interface / 인터페이스) thiết kế (design / 설계)
 
@@ -196,7 +196,7 @@ JSON nhẹ, dễ dùng trong web API. XML giàu khả năng mô tả lược đ�
 
 Môn 2 thường gây cảm giác “rải rác” vì trộn 자료구조, testing, packaging, phiên bản (version / 버전) điều khiển (control / 제어), giao diện (interface / 인터페이스). Hãy nhìn nó như giai đoạn **hiện thực (implementation / 구현) → kiểm thử (test / 테스트) → gói (package / 패키지) → integrate**.
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **1.4 인터페이스 설계 — giao diện (interface / 인터페이스) thiết kế (design / 설계)** nêu điều cần giải thích; **2.1 데이터 입출력 구현 — dữ liệu (data / 데이터) I/O hiện thực (implementation / 구현)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **2.2 통합 구현 — tích hợp (integration / 통합) hiện thực (implementation / 구현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **1.4 인터페이스 설계 — giao diện (interface / 인터페이스) thiết kế (design / 설계)** đặt vấn đề; **2.1 데이터 입출력 구현 — dữ liệu (data / 데이터) I/O hiện thực (implementation / 구현)** đối chiếu bằng chứng, rồi **2.2 통합 구현 — tích hợp (integration / 통합) hiện thực (implementation / 구현)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2.1 데이터 입출력 구현 — dữ liệu (data / 데이터) I/O hiện thực (implementation / 구현)
 
@@ -239,7 +239,7 @@ Hashing biến key thành bucket/chỉ mục (index / 인덱스). Collision khô
 
 Tải (load / 로드) factor tăng cao thường làm collision tăng và hiệu năng (performance / 성능) giảm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **2.1 데이터 입출력 구현 — dữ liệu (data / 데이터) I/O hiện thực (implementation / 구현)** nêu điều cần giải thích; **2.2 통합 구현 — tích hợp (integration / 통합) hiện thực (implementation / 구현)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **2.3 제품 소프트웨어 패키징 — sản phẩm (product / 제품) software packaging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **2.1 데이터 입출력 구현 — dữ liệu (data / 데이터) I/O hiện thực (implementation / 구현)** đặt vấn đề; **2.2 통합 구현 — tích hợp (integration / 통합) hiện thực (implementation / 구현)** đối chiếu bằng chứng, rồi **2.3 제품 소프트웨어 패키징 — sản phẩm (product / 제품) software packaging** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2.2 통합 구현 — tích hợp (integration / 통합) hiện thực (implementation / 구현)
 
@@ -249,7 +249,7 @@ IPC — Inter-Process Communication gồm pipe, named pipe, message hàng đợi
 
 Tích hợp (integration / 통합) không chỉ “ghép mô-đun (module / 모듈)”; phải kiểm chứng đặc tả hợp đồng (contract / 계약) và luồng dữ liệu (data flow / 데이터 흐름) giữa mô-đun (module / 모듈).
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **2.3 제품 소프트웨어 패키징 — sản phẩm (product / 제품) software packaging** tiếp nhận điểm tựa từ **2.2 통합 구현 — tích hợp (integration / 통합) hiện thực (implementation / 구현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.4 애플리케이션 테스트 관리 — ứng dụng (application / 애플리케이션) kiểm thử (test / 테스트) management** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **2.3 제품 소프트웨어 패키징 — sản phẩm (product / 제품) software packaging** nối từ **2.2 통합 구현 — tích hợp (integration / 통합) hiện thực (implementation / 구현)** sang **2.4 애플리케이션 테스트 관리 — ứng dụng (application / 애플리케이션) kiểm thử (test / 테스트) management**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2.3 제품 소프트웨어 패키징 — sản phẩm (product / 제품) software packaging
 
@@ -271,7 +271,7 @@ Phân biệt DRM với encryption: encryption bảo mật dữ liệu bằng bi�
 
 Bản dựng (build / 빌드) automation biến nguồn (source / 소스) + phụ thuộc (dependency / 의존성) thành sản phẩm tạo ra (artifact / 산출물) có thể deploy lặp lại. CI thường chạy bản dựng (build / 빌드)/kiểm thử (test / 테스트) mỗi khi thay đổi mã (code / 코드). Jenkins là automation máy chủ (server / 서버); Gradle là bản dựng (build / 빌드) automation công cụ (tool / 도구). Không coi hai công cụ (tool / 도구) là cùng loại chỉ vì cả hai có thể xuất hiện trong chuỗi xử lý (pipeline / 파이프라인).
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **2.4 애플리케이션 테스트 관리 — ứng dụng (application / 애플리케이션) kiểm thử (test / 테스트) management** tiếp nhận điểm tựa từ **2.3 제품 소프트웨어 패키징 — sản phẩm (product / 제품) software packaging** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.5 인터페이스 구현 — giao diện (interface / 인터페이스) hiện thực (implementation / 구현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **2.4 애플리케이션 테스트 관리 — ứng dụng (application / 애플리케이션) kiểm thử (test / 테스트) management** nối từ **2.3 제품 소프트웨어 패키징 — sản phẩm (product / 제품) software packaging** sang **2.5 인터페이스 구현 — giao diện (interface / 인터페이스) hiện thực (implementation / 구현)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2.4 애플리케이션 테스트 관리 — ứng dụng (application / 애플리케이션) kiểm thử (test / 테스트) management
 
@@ -314,7 +314,7 @@ Phản hồi (response / 응답) thời gian (time / 시간) là thời gian t�
 
 Cyclomatic độ phức tạp (complexity / 복잡도) có thể tính từ control-flow đồ thị (graph / 그래프) theo `M = E - N + 2P`, hoặc với đồ thị (graph / 그래프) connected đơn giản thường là số quyết định (decision / 결정) + 1. Nó liên quan số independent đường dẫn (path / 경로) tối thiểu để basis đường dẫn (path / 경로) testing.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **2.5 인터페이스 구현 — giao diện (interface / 인터페이스) hiện thực (implementation / 구현)** tiếp nhận điểm tựa từ **2.4 애플리케이션 테스트 관리 — ứng dụng (application / 애플리케이션) kiểm thử (test / 테스트) management** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.1 논리 데이터베이스 설계 — Logical DB thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **2.5 인터페이스 구현 — giao diện (interface / 인터페이스) hiện thực (implementation / 구현)** nối từ **2.4 애플리케이션 테스트 관리 — ứng dụng (application / 애플리케이션) kiểm thử (test / 테스트) management** sang **3.1 논리 데이터베이스 설계 — Logical DB thiết kế (design / 설계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2.5 인터페이스 구현 — giao diện (interface / 인터페이스) hiện thực (implementation / 구현)
 
@@ -328,7 +328,7 @@ Mạng (network / 네트워크) bảo mật (security / 보안) có thể dùng 
 
 Môn 3 nên học theo chuỗi **mô hình (model / 모델) → key/phụ thuộc (dependency / 의존성) → normalization → vật lý (physical / 물리적) thiết kế (design / 설계) → SQL → giao dịch (transaction / 트랜잭션)/tính đồng thời (concurrency / 동시성)/khôi phục (recovery / 복구)**. Nếu tách SQL khỏi relational mô hình (model / 모델) sẽ dễ làm đúng câu cú pháp (syntax / 문법) nhưng sai câu lý thuyết.
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **3.1 논리 데이터베이스 설계 — Logical DB thiết kế (design / 설계)** tiếp nhận điểm tựa từ **2.5 인터페이스 구현 — giao diện (interface / 인터페이스) hiện thực (implementation / 구현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.2 물리 데이터베이스 설계 — vật lý (physical / 물리적) DB thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **3.1 논리 데이터베이스 설계 — Logical DB thiết kế (design / 설계)** nối từ **2.5 인터페이스 구현 — giao diện (interface / 인터페이스) hiện thực (implementation / 구현)** sang **3.2 물리 데이터베이스 설계 — vật lý (physical / 물리적) DB thiết kế (design / 설계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3.1 논리 데이터베이스 설계 — Logical DB thiết kế (design / 설계)
 
@@ -389,7 +389,7 @@ Union, Difference, Cartesian sản phẩm (product / 제품), Intersection, Divi
 
 Đừng nhầm SELECT của SQL với Selection của relational algebra: SQL `SELECT column` gần projection; SQL `WHERE` gần selection.
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **3.2 물리 데이터베이스 설계 — vật lý (physical / 물리적) DB thiết kế (design / 설계)** tiếp nhận điểm tựa từ **3.1 논리 데이터베이스 설계 — Logical DB thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.3 SQL 활용 — SQL utilization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **3.2 물리 데이터베이스 설계 — vật lý (physical / 물리적) DB thiết kế (design / 설계)** nối từ **3.1 논리 데이터베이스 설계 — Logical DB thiết kế (design / 설계)** sang **3.3 SQL 활용 — SQL utilization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3.2 물리 데이터베이스 설계 — vật lý (physical / 물리적) DB thiết kế (design / 설계)
 
@@ -407,7 +407,7 @@ Thực thể (entity / 엔터티) integrity: primary key không null và xác đ
 Referential integrity: foreign key phải tham chiếu giá trị tồn tại hoặc null nếu ràng buộc (constraint / 제약조건) cho phép.
 lĩnh vực (domain / 도메인) integrity: giá trị thuộc lĩnh vực (domain / 도메인)/phạm vi (range / 범위)/kiểu (type / 타입) hợp lệ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **3.3 SQL 활용 — SQL utilization** tiếp nhận điểm tựa từ **3.2 물리 데이터베이스 설계 — vật lý (physical / 물리적) DB thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.4 SQL 응용 — SQL ứng dụng (application / 애플리케이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **3.3 SQL 활용 — SQL utilization** nối từ **3.2 물리 데이터베이스 설계 — vật lý (physical / 물리적) DB thiết kế (design / 설계)** sang **3.4 SQL 응용 — SQL ứng dụng (application / 애플리케이션)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3.3 SQL 활용 — SQL utilization
 
@@ -460,7 +460,7 @@ COUNT(*), COUNT(column), SUM, AVG, MIN, MAX. `COUNT(column)` bỏ NULL; `COUNT(*
 
 Hàm cửa sổ (window function / 윈도우 함수) như `ROW_NUMBER`, `RANK`, `DENSE_RANK` không gom nhiều row thành một row như GROUP BY. `RANK` có gap khi tie; `DENSE_RANK` không có gap; `ROW_NUMBER` luôn tạo chuỗi (sequence / 시퀀스) duy nhất theo thứ tự (ordering / 순서) được định nghĩa.
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **3.4 SQL 응용 — SQL ứng dụng (application / 애플리케이션)** tiếp nhận điểm tựa từ **3.3 SQL 활용 — SQL utilization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3.5 데이터 전환 — dữ liệu (data / 데이터) conversion / di chuyển (migration / 마이그레이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **3.4 SQL 응용 — SQL ứng dụng (application / 애플리케이션)** nối từ **3.3 SQL 활용 — SQL utilization** sang **3.5 데이터 전환 — dữ liệu (data / 데이터) conversion / di chuyển (migration / 마이그레이션)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3.4 SQL 응용 — SQL ứng dụng (application / 애플리케이션)
 
@@ -503,7 +503,7 @@ Prevention phá ít nhất một điều kiện. Avoidance dùng trạng thái s
 
 Log-based khôi phục (recovery / 복구) dùng before/after ảnh (image / 이미지) tùy giao thức (protocol / 프로토콜). Undo đảo giao dịch (transaction / 트랜잭션) chưa lần ghi nhận (commit / 커밋); redo áp lại giao dịch (transaction / 트랜잭션) đã lần ghi nhận (commit / 커밋) nhưng chưa flush đầy đủ. Checkpoint giảm lượng log phải quét khi khôi phục (recovery / 복구).
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **3.4 SQL 응용 — SQL ứng dụng (application / 애플리케이션)** nêu điều cần giải thích; **3.5 데이터 전환 — dữ liệu (data / 데이터) conversion / di chuyển (migration / 마이그레이션)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4.1 서버 프로그램 구현 — máy chủ (server / 서버) program hiện thực (implementation / 구현)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **3.4 SQL 응용 — SQL ứng dụng (application / 애플리케이션)** đặt vấn đề; **3.5 데이터 전환 — dữ liệu (data / 데이터) conversion / di chuyển (migration / 마이그레이션)** đối chiếu bằng chứng, rồi **4.1 서버 프로그램 구현 — máy chủ (server / 서버) program hiện thực (implementation / 구현)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3.5 데이터 전환 — dữ liệu (data / 데이터) conversion / di chuyển (migration / 마이그레이션)
 
@@ -517,7 +517,7 @@ Quan trọng: “tải (load / 로드) xong không lỗi” không đồng nghĩ
 
 Đây là môn cần chuyển từ học thuộc sang **dấu vết (trace / 추적) thực thi (execution / 실행)**. Chỉ đọc cú pháp (syntax / 문법) không đủ. Mỗi đoạn mã (code / 코드) phải tự mô phỏng variable/trạng thái (state / 상태)/ngăn xếp lời gọi (call stack / 호출 스택).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **3.5 데이터 전환 — dữ liệu (data / 데이터) conversion / di chuyển (migration / 마이그레이션)** nêu điều cần giải thích; **4.1 서버 프로그램 구현 — máy chủ (server / 서버) program hiện thực (implementation / 구현)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4.2 프로그래밍 언어 활용 — ngôn ngữ (language / 언어) ứng dụng (application / 애플리케이션)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **3.5 데이터 전환 — dữ liệu (data / 데이터) conversion / di chuyển (migration / 마이그레이션)** đặt vấn đề; **4.1 서버 프로그램 구현 — máy chủ (server / 서버) program hiện thực (implementation / 구현)** đối chiếu bằng chứng, rồi **4.2 프로그래밍 언어 활용 — ngôn ngữ (language / 언어) ứng dụng (application / 애플리케이션)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4.1 서버 프로그램 구현 — máy chủ (server / 서버) program hiện thực (implementation / 구현)
 
@@ -527,7 +527,7 @@ Máy chủ (server / 서버) program thường phân lớp presentation/controll
 
 Batch program xử lý lượng công việc định kỳ hoặc theo lịch, khác interactive yêu cầu (request / 요청)/phản hồi (response / 응답). Cần hiểu scheduling, logging, thử lại (retry / 재시도), idempotency, checkpoint khi job dài.
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **4.2 프로그래밍 언어 활용 — ngôn ngữ (language / 언어) ứng dụng (application / 애플리케이션)** tiếp nhận điểm tựa từ **4.1 서버 프로그램 구현 — máy chủ (server / 서버) program hiện thực (implementation / 구현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4.3 응용 SW 기초 기술 활용 — Basic ứng dụng (application / 애플리케이션) software technologies** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **4.2 프로그래밍 언어 활용 — ngôn ngữ (language / 언어) ứng dụng (application / 애플리케이션)** nối từ **4.1 서버 프로그램 구현 — máy chủ (server / 서버) program hiện thực (implementation / 구현)** sang **4.3 응용 SW 기초 기술 활용 — Basic ứng dụng (application / 애플리케이션) software technologies**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4.2 프로그래밍 언어 활용 — ngôn ngữ (language / 언어) ứng dụng (application / 애플리케이션)
 
@@ -614,7 +614,7 @@ Recursion phải có cơ sở (base / 기반) trường hợp (case / 사례) v�
 
 Ví dụ factorial `f(4)` tạo `4 * f(3)`, `3 * f(2)`, `2 * f(1)`, sau đó trả ngược.
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **4.3 응용 SW 기초 기술 활용 — Basic ứng dụng (application / 애플리케이션) software technologies** tiếp nhận điểm tựa từ **4.2 프로그래밍 언어 활용 — ngôn ngữ (language / 언어) ứng dụng (application / 애플리케이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.1 소프트웨어 개발 방법론 활용 — Software development methodology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **4.3 응용 SW 기초 기술 활용 — Basic ứng dụng (application / 애플리케이션) software technologies** nối từ **4.2 프로그래밍 언어 활용 — ngôn ngữ (language / 언어) ứng dụng (application / 애플리케이션)** sang **5.1 소프트웨어 개발 방법론 활용 — Software development methodology**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4.3 응용 SW 기초 기술 활용 — Basic ứng dụng (application / 애플리케이션) software technologies
 
@@ -685,7 +685,7 @@ Không nên chỉ học cổng (port / 포트) number, nhưng các cặp kinh đ
 
 Môn 5 rộng nhất về management + hạ tầng (infrastructure / 인프라) + bảo mật (security / 보안). Đây là môn dễ bị “biết IT nhưng vẫn sai” vì nhiều thuật ngữ bảo mật và quản lý có định nghĩa rất sát nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **5.1 소프트웨어 개발 방법론 활용 — Software development methodology** tiếp nhận điểm tựa từ **4.3 응용 SW 기초 기술 활용 — Basic ứng dụng (application / 애플리케이션) software technologies** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.2 IT 프로젝트 정보시스템 구축관리 — IT dự án (project / 프로젝트) / hạ tầng (infrastructure / 인프라) construction management** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **5.1 소프트웨어 개발 방법론 활용 — Software development methodology** nối từ **4.3 응용 SW 기초 기술 활용 — Basic ứng dụng (application / 애플리케이션) software technologies** sang **5.2 IT 프로젝트 정보시스템 구축관리 — IT dự án (project / 프로젝트) / hạ tầng (infrastructure / 인프라) construction management**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5.1 소프트웨어 개발 방법론 활용 — Software development methodology
 
@@ -701,7 +701,7 @@ Hàm (function / 함수) điểm (point / 지점) đo kích thước chức năn
 
 Methodology tailoring là điều chỉnh tiến trình (process / 프로세스)/sản phẩm tạo ra (artifact / 산출물)/điều khiển (control / 제어) phù hợp kích thước (size / 크기), rủi ro (risk / 위험), nhóm (team / 팀), lĩnh vực (domain / 도메인), compliance. Tailoring không có nghĩa tùy tiện bỏ phase; phải giữ các điều khiển (control / 제어) cần thiết theo rủi ro (risk / 위험) và yêu cầu (requirement / 요구사항).
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **5.2 IT 프로젝트 정보시스템 구축관리 — IT dự án (project / 프로젝트) / hạ tầng (infrastructure / 인프라) construction management** tiếp nhận điểm tựa từ **5.1 소프트웨어 개발 방법론 활용 — Software development methodology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.3 소프트웨어 개발 보안 구축 — Secure software development** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **5.2 IT 프로젝트 정보시스템 구축관리 — IT dự án (project / 프로젝트) / hạ tầng (infrastructure / 인프라) construction management** nối từ **5.1 소프트웨어 개발 방법론 활용 — Software development methodology** sang **5.3 소프트웨어 개발 보안 구축 — Secure software development**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5.2 IT 프로젝트 정보시스템 구축관리 — IT dự án (project / 프로젝트) / hạ tầng (infrastructure / 인프라) construction management
 
@@ -744,7 +744,7 @@ RPO — khôi phục (recovery / 복구) điểm (point / 지점) mục tiêu (o
 
 Nếu RPO = 15 phút, backup/replication chiến lược (strategy / 전략) phải đủ để mất tối đa khoảng 15 phút dữ liệu theo mục tiêu (objective / 목표). Nếu RTO = 1 giờ, dịch vụ (service / 서비스) cần được khôi phục trong mục tiêu (target / 대상) một giờ.
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **5.3 소프트웨어 개발 보안 구축 — Secure software development** tiếp nhận điểm tựa từ **5.2 IT 프로젝트 정보시스템 구축관리 — IT dự án (project / 프로젝트) / hạ tầng (infrastructure / 인프라) construction management** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5.4 시스템 보안 구축 — hệ thống (system / 시스템) bảo mật (security / 보안) construction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **5.3 소프트웨어 개발 보안 구축 — Secure software development** nối từ **5.2 IT 프로젝트 정보시스템 구축관리 — IT dự án (project / 프로젝트) / hạ tầng (infrastructure / 인프라) construction management** sang **5.4 시스템 보안 구축 — hệ thống (system / 시스템) bảo mật (security / 보안) construction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5.3 소프트웨어 개발 보안 구축 — Secure software development
 
@@ -793,7 +793,7 @@ ABAC — Attribute-Based kiểm soát truy cập (access control / 접근 제어
 
 Least privilege và separation of duties là nguyên tắc xuyên suốt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **5.4 시스템 보안 구축 — hệ thống (system / 시스템) bảo mật (security / 보안) construction** tiếp nhận điểm tựa từ **5.3 소프트웨어 개발 보안 구축 — Secure software development** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7.1 mã (code / 코드) tracing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **5.4 시스템 보안 구축 — hệ thống (system / 시스템) bảo mật (security / 보안) construction** nối từ **5.3 소프트웨어 개발 보안 구축 — Secure software development** sang **7.1 mã (code / 코드) tracing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5.4 시스템 보안 구축 — hệ thống (system / 시스템) bảo mật (security / 보안) construction
 
@@ -865,7 +865,7 @@ Backup chiến lược (strategy / 전략) cần xét full/incremental/different
 
 Nếu chỉ đọc lý thuyết mà không làm được các thao tác sau thì coverage chưa đủ.
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **7.1 mã (code / 코드) tracing** tiếp nhận điểm tựa từ **5.4 시스템 보안 구축 — hệ thống (system / 시스템) bảo mật (security / 보안) construction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7.2 SQL lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **7.1 mã (code / 코드) tracing** nối từ **5.4 시스템 보안 구축 — hệ thống (system / 시스템) bảo mật (security / 보안) construction** sang **7.2 SQL lập luận (reasoning / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.1 mã (code / 코드) tracing
 
@@ -883,7 +883,7 @@ Với C/Java/Python, phải dấu vết (trace / 추적) được:
 
 Cách làm: tạo bảng từng dòng gồm `step | statement | variable state | output`. Không tính nhẩm toàn đoạn mã (code / 코드).
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **7.2 SQL lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **7.1 mã (code / 코드) tracing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7.3 Scheduling** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **7.2 SQL lập luận (reasoning / 추론)** nối từ **7.1 mã (code / 코드) tracing** sang **7.3 Scheduling**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.2 SQL lập luận (reasoning / 추론)
 
@@ -898,31 +898,31 @@ Phải tự viết/đọc được:
 - giao dịch (transaction / 트랜잭션) lần ghi nhận (commit / 커밋)/quay lui (rollback / 롤백);
 - normalization từ functional phụ thuộc (dependency / 의존성) đơn giản.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **7.3 Scheduling** tiếp nhận điểm tựa từ **7.2 SQL lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7.4 Page replacement** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **7.3 Scheduling** nối từ **7.2 SQL lập luận (reasoning / 추론)** sang **7.4 Page replacement**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.3 Scheduling
 
 Cho arrival/burst/priority/quantum, phải vẽ Gantt chart cho FCFS, SJF/SRTF, Priority, Round Robin rồi tính waiting/turnaround.
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **7.4 Page replacement** tiếp nhận điểm tựa từ **7.3 Scheduling** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7.5 Subnetting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **7.4 Page replacement** nối từ **7.3 Scheduling** sang **7.5 Subnetting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.4 Page replacement
 
 Cho tham chiếu (reference / 참조) string và số frame, phải mô phỏng FIFO/LRU/Optimal và đếm page fault. Dùng bảng frame theo từng tham chiếu (reference / 참조), không làm bằng trực giác.
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **7.5 Subnetting** tiếp nhận điểm tựa từ **7.4 Page replacement** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7.6 cây (tree / 트리) / đồ thị (graph / 그래프) / độ phức tạp (complexity / 복잡도)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **7.5 Subnetting** nối từ **7.4 Page replacement** sang **7.6 cây (tree / 트리) / đồ thị (graph / 그래프) / độ phức tạp (complexity / 복잡도)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.5 Subnetting
 
 Từ CIDR phải suy được số host, mạng (network / 네트워크) phạm vi (range / 범위)/broadcast trong bài cơ bản. Cần nhớ prefix dài hơn → subnet nhỏ hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **7.6 cây (tree / 트리) / đồ thị (graph / 그래프) / độ phức tạp (complexity / 복잡도)** tiếp nhận điểm tựa từ **7.5 Subnetting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7.7 giao dịch (transaction / 트랜잭션) / locking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **7.6 cây (tree / 트리) / đồ thị (graph / 그래프) / độ phức tạp (complexity / 복잡도)** nối từ **7.5 Subnetting** sang **7.7 giao dịch (transaction / 트랜잭션) / locking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.6 cây (tree / 트리) / đồ thị (graph / 그래프) / độ phức tạp (complexity / 복잡도)
 
 Phải viết được preorder/inorder/postorder; nhận biết BFS/DFS; so sánh O(1), O(log n), O(n), O(n log n), O(n²), O(2^n), O(n!).
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **7.7 giao dịch (transaction / 트랜잭션) / locking** tiếp nhận điểm tựa từ **7.6 cây (tree / 트리) / đồ thị (graph / 그래프) / độ phức tạp (complexity / 복잡도)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Môn 1** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **7.7 giao dịch (transaction / 트랜잭션) / locking** nối từ **7.6 cây (tree / 트리) / đồ thị (graph / 그래프) / độ phức tạp (complexity / 복잡도)** sang **Môn 1**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7.7 giao dịch (transaction / 트랜잭션) / locking
 
@@ -934,7 +934,7 @@ Từ lịch interleaving đơn giản phải nhận diện dirty read, lost cậ
 
 Mục tiêu của checklist không phải tự tin mơ hồ. Chỉ đánh dấu khi có thể **giải thích bằng lời của mình và làm một câu biến thể**.
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **Môn 1** tiếp nhận điểm tựa từ **7.7 giao dịch (transaction / 트랜잭션) / locking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Môn 2** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **Môn 1** nối từ **7.7 giao dịch (transaction / 트랜잭션) / locking** sang **Môn 2**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Môn 1
 
@@ -946,7 +946,7 @@ Mục tiêu của checklist không phải tự tin mơ hồ. Chỉ đánh dấu 
 - [ ] hiểu OOP, SOLID, GoF mẫu (pattern / 패턴) cốt lõi;
 - [ ] hiểu EAI/ESB, JSON/XML/AJAX và giao diện (interface / 인터페이스) bảo mật (security / 보안).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **Môn 2** tiếp nhận điểm tựa từ **Môn 1** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Môn 3** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **Môn 2** nối từ **Môn 1** sang **Môn 3**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Môn 2
 
@@ -959,7 +959,7 @@ Mục tiêu của checklist không phải tự tin mơ hồ. Chỉ đánh dấu 
 - [ ] hiệu năng (performance / 성능) chỉ số (metric / 지표) và cyclomatic độ phức tạp (complexity / 복잡도);
 - [ ] giao diện (interface / 인터페이스) hiện thực (implementation / 구현)/xác minh (verification / 확인).
 
-> **Chuyển mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **Môn 3** tiếp nhận điểm tựa từ **Môn 2** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Môn 4** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **Môn 3** nối từ **Môn 2** sang **Môn 4**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Môn 3
 
@@ -974,7 +974,7 @@ Mục tiêu của checklist không phải tự tin mơ hồ. Chỉ đánh dấu 
 - [ ] khóa (lock / 잠금)/2PL/deadlock/khôi phục (recovery / 복구);
 - [ ] di chuyển (migration / 마이그레이션) kiểm tra hợp lệ (validation / 검증).
 
-> **Chuyển mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **Môn 4** tiếp nhận điểm tựa từ **Môn 3** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Môn 5** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **Môn 4** nối từ **Môn 3** sang **Môn 5**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Môn 4
 
@@ -988,7 +988,7 @@ Mục tiêu của checklist không phải tự tin mơ hồ. Chỉ đánh dấu 
 - [ ] OSI/TCP-IP/TCP/UDP/giao thức (protocol / 프로토콜);
 - [ ] IPv4/CIDR cơ bản.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **Môn 5** tiếp nhận điểm tựa từ **Môn 4** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **정보처리기사 필기 2026 — Master Guide học sâu và phủ rộng**, **Môn 5** nối từ **Môn 4** sang phần giải thích tiếp theo, vì phần trước cung cấp điểm tựa cho chủ đề này.
 
 ## Môn 5
 
