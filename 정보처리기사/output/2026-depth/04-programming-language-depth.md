@@ -24,11 +24,11 @@ Không phải mọi tầng (layer / 계층) đều bắt buộc trong mọi hệ
 
 Batch xử lý job theo tập dữ liệu và schedule, phù hợp khi không cần phản hồi (response / 응답) interactive tức thời. Online/giao dịch (transaction / 트랜잭션) processing xử lý yêu cầu (request / 요청) gần real-time. Batch lớn cần restartability, checkpoint, idempotency và lỗi (error / 오류) isolation để không phải chạy lại toàn bộ khi một phần thất bại.
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **2. 프로그래밍 언어 활용 — Programming ngôn ngữ (language / 언어) ứng dụng (application / 애플리케이션)** tiếp nhận điểm tựa từ **1. 서버 프로그램 구현 — máy chủ (server / 서버) Program hiện thực (implementation / 구현)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2.1 dùng chung (common / 공통) ngôn ngữ (language / 언어) concepts** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **2. 프로그래밍 언어 활용 — Programming ngôn ngữ (language / 언어) ứng dụng (application / 애플리케이션)** nối từ **1. 서버 프로그램 구현 — máy chủ (server / 서버) Program hiện thực (implementation / 구현)** sang **2.1 dùng chung (common / 공통) ngôn ngữ (language / 언어) concepts**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. 프로그래밍 언어 활용 — Programming ngôn ngữ (language / 언어) ứng dụng (application / 애플리케이션)
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **2.1 dùng chung (common / 공통) ngôn ngữ (language / 언어) concepts** tiếp nhận điểm tựa từ **2. 프로그래밍 언어 활용 — Programming ngôn ngữ (language / 언어) ứng dụng (application / 애플리케이션)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. C ngôn ngữ (language / 언어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **2.1 dùng chung (common / 공통) ngôn ngữ (language / 언어) concepts** nối từ **2. 프로그래밍 언어 활용 — Programming ngôn ngữ (language / 언어) ứng dụng (application / 애플리케이션)** sang **3. C ngôn ngữ (language / 언어)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2.1 dùng chung (common / 공통) ngôn ngữ (language / 언어) concepts
 
@@ -44,7 +44,7 @@ Giá trị (value / 값) ngữ nghĩa (semantics / 의미론) bản sao (copy / 
 
 Lời gọi (call / 호출) by giá trị (value / 값) truyền bản sao giá trị (value / 값). Nếu giá trị (value / 값) đó bản thân là pointer/tham chiếu (reference / 참조), hàm (function / 함수) nhận bản sao của pointer nhưng vẫn có thể mutate đối tượng (object / 객체) được trỏ tới. Đây là lý do Java được mô tả là pass-by-value, kể cả đối tượng (object / 객체) tham chiếu (reference / 참조).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **3. C ngôn ngữ (language / 언어)** tiếp nhận điểm tựa từ **2.1 dùng chung (common / 공통) ngôn ngữ (language / 언어) concepts** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Java** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **3. C ngôn ngữ (language / 언어)** nối từ **2.1 dùng chung (common / 공통) ngôn ngữ (language / 언어) concepts** sang **4. Java**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. C ngôn ngữ (language / 언어)
 
@@ -92,7 +92,7 @@ C string là chuỗi (sequence / 시퀀스) char kết thúc bằng `\0`. `strle
 
 Recursion cần cơ sở (base / 기반) trường hợp (case / 사례) và recursive step tiến về cơ sở (base / 기반) trường hợp (case / 사례). Mỗi lời gọi (call / 호출) thường tạo ngăn xếp (stack / 스택) frame; recursion sâu có thể ngăn xếp (stack / 스택) overflow.
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **4. Java** tiếp nhận điểm tựa từ **3. C ngôn ngữ (language / 언어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Python** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **4. Java** nối từ **3. C ngôn ngữ (language / 언어)** sang **5. Python**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Java
 
@@ -131,7 +131,7 @@ Java String immutable. thao tác (operation / 연산) như concat tạo String m
 
 `public`: rộng nhất. `private`: trong lớp (class / 클래스). `protected`: gói (package / 패키지) + subclass theo quy tắc (rule / 규칙) Java. Không modifier: package-private.
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **5. Python** tiếp nhận điểm tựa từ **4. Java** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. 운영체제 기초 활용 — Operating hệ thống (system / 시스템) Foundations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **5. Python** nối từ **4. Java** sang **6. 운영체제 기초 활용 — Operating hệ thống (system / 시스템) Foundations**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Python
 
@@ -167,7 +167,7 @@ Danh sách (list / 목록) comprehension rút gọn transform/filter. Ví dụ `
 
 `try/except/else/finally`: except xử lý lỗi (error / 오류), else chạy khi try không raise, finally dùng cleanup và chạy bất kể success/thất bại (failure / 실패) trong luồng (flow / 흐름) bình thường.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **6. 운영체제 기초 활용 — Operating hệ thống (system / 시스템) Foundations** tiếp nhận điểm tựa từ **5. Python** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. 네트워크 기초 활용 — mạng (network / 네트워크) Foundations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **6. 운영체제 기초 활용 — Operating hệ thống (system / 시스템) Foundations** nối từ **5. Python** sang **7. 네트워크 기초 활용 — mạng (network / 네트워크) Foundations**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. 운영체제 기초 활용 — Operating hệ thống (system / 시스템) Foundations
 
@@ -234,7 +234,7 @@ Thrashing xảy ra khi hệ thống (system / 시스템) dành quá nhiều th�
 
 Tệp (file / 파일) allocation chiến lược (strategy / 전략) có thể contiguous, linked, indexed. Contiguous nhanh sequential/random nhưng khó grow và bên ngoài (external / 외부) fragmentation. Linked dễ grow nhưng random truy cập (access / 접근) kém. Indexed dùng chỉ mục (index / 인덱스) khối (block / 블록) để trỏ dữ liệu (data / 데이터) khối (block / 블록).
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **7. 네트워크 기초 활용 — mạng (network / 네트워크) Foundations** tiếp nhận điểm tựa từ **6. 운영체제 기초 활용 — Operating hệ thống (system / 시스템) Foundations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Cặp dễ nhầm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **7. 네트워크 기초 활용 — mạng (network / 네트워크) Foundations** nối từ **6. 운영체제 기초 활용 — Operating hệ thống (system / 시스템) Foundations** sang **8. Cặp dễ nhầm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. 네트워크 기초 활용 — mạng (network / 네트워크) Foundations
 
@@ -286,7 +286,7 @@ Hub phát frame/bit ra nhiều cổng (port / 포트) và hoạt động đơn g
 
 ARP map IPv4 address sang MAC trong cục bộ (local / 로컬) mạng (network / 네트워크). ICMP hỗ trợ điều khiển (control / 제어)/lỗi (error / 오류) diagnostics như ping concept. DNS không làm nhiệm vụ map IP sang MAC.
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **7. 네트워크 기초 활용 — mạng (network / 네트워크) Foundations** đã nêu tiêu chí phân biệt, còn **8. Cặp dễ nhầm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **9. Procedural drills** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **7. 네트워크 기초 활용 — mạng (network / 네트워크) Foundations** đặt tiêu chí; **8. Cặp dễ nhầm** dùng tiêu chí đó để kiểm tra ranh giới, rồi **9. Procedural drills** mở rộng hệ quả.
 
 ## 8. Cặp dễ nhầm
 
@@ -306,7 +306,7 @@ ARP map IPv4 address sang MAC trong cục bộ (local / 로컬) mạng (network 
 | Switch vs Router | MAC/L2 vs IP/L3 |
 | DNS vs ARP | name→IP vs IPv4→MAC cục bộ (local / 로컬) |
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **8. Cặp dễ nhầm** đã nêu tiêu chí phân biệt, còn **9. Procedural drills** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **10. 과락 방지 checklist — Môn 4** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **8. Cặp dễ nhầm** đặt tiêu chí; **9. Procedural drills** dùng tiêu chí đó để kiểm tra ranh giới, rồi **10. 과락 방지 checklist — Môn 4** mở rộng hệ quả.
 
 ## 9. Procedural drills
 
@@ -355,7 +355,7 @@ Giải thích tại sao chỉ có Mutual Exclusion + Hold and Wait chưa đủ k
 
 Một switch xử lý MAC address, router xử lý IP tuyến (route / 경로), TCP dùng cổng (port / 포트). Map ba thao tác này vào OSI tầng (layer / 계층).
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **10. 과락 방지 checklist — Môn 4** tiếp nhận điểm tựa từ **9. Procedural drills** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용: Deep Dive 2026**, **10. 과락 방지 checklist — Môn 4** nối từ **9. Procedural drills** sang phần giải thích tiếp theo, vì phần trước cung cấp điểm tựa cho chủ đề này.
 
 ## 10. 과락 방지 checklist — Môn 4
 

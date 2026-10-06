@@ -8,7 +8,7 @@
 
 1. [Tài liệu học đầy đủ](01-tai-lieu-hoc-day-du.md)
 
-> **Chuyển mạch:** **Bài học** đặt lifecycle, governance và system risk; **Các bài học theo chủ đề** tổ chức chúng theo task Môn 5, rồi **Ghi chú học** nêu control và failure.
+> **Nối mạch:** **Bài học** đặt lifecycle, governance và system risk; **Các bài học theo chủ đề** tổ chức chúng theo task Môn 5, rồi **Ghi chú học** nêu control và failure.
 
 ## Các bài học theo chủ đề
 
@@ -99,7 +99,7 @@
 85. [2. 접근 제어 정책 (Access Control Policies)](lessons/85-bai-hoc.md)
 86. [318. 소프트웨어 재사용 (Software Reuse / Tái sử dụng phần mềm)](lessons/86-bai-hoc.md)
 
-> **Chuyển mạch:** **Ghi chú học** chỉ ra assumption và control boundary; **Mạch bài giảng** nối chúng thành route từ requirements đến vận hành.
+> **Nối mạch:** **Ghi chú học** chỉ ra assumption và control boundary; **Mạch bài giảng** nối chúng thành route từ requirements đến vận hành.
 
 ## Ghi chú học
 
@@ -109,13 +109,13 @@ Phần này hướng dẫn cách dùng tài liệu như một bài giảng, đ�
 - Đọc ví dụ ngay sau khái niệm vì các bài có nhiều cặp dễ nhầm như `결합도 (Coupling) (độ phụ thuộc)` và `응집도 (Cohesion) (độ gắn kết)`.
 - Phần mở rộng/nâng cao không phải nội dung rời: nó nhắc lại kiến thức nền ở mức sâu hơn hoặc trong ngữ cảnh khác.
 
-> **Chuyển mạch:** **Mạch bài giảng** biến governance và risk thành cơ chế có thể truy dấu; **Checklist ôn tập** đối chiếu owner, link và evidence.
+> **Nối mạch:** **Mạch bài giảng** biến governance và risk thành cơ chế có thể truy dấu; **Checklist ôn tập** đối chiếu owner, link và evidence.
 
 ## Mạch bài giảng
 
 Mỗi lesson mở bằng prerequisite và mục đích, đi qua nội dung nguồn bằng các câu nối tự nhiên, rồi kết thúc bằng điểm chốt và hướng bàn giao sang lesson kế tiếp. Khi học, đừng bỏ qua các đoạn prose này: chúng giải thích vì sao các bullet, bảng và ví dụ được đặt cạnh nhau.
 
-> **Chuyển mạch:** **Checklist ôn tập** khép Môn 5 bằng governance boundary và canonical links; chi tiết control quay về chapter chuyên môn.
+> **Nối mạch:** **Checklist ôn tập** khép Môn 5 bằng governance boundary và canonical links; chi tiết control quay về chapter chuyên môn.
 
 ## 복습 체크리스트 (Checklist ôn tập)
 

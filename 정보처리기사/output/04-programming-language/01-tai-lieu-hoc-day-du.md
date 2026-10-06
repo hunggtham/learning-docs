@@ -12,7 +12,7 @@ Phần này đặt mục tiêu của bài, để người mới biết mình c�
 
 > **Câu hỏi trung tâm:** Khi học môn này, người học không chỉ cần nhận ra thuật ngữ Hàn mà còn phải giải thích khái niệm đang giải quyết vấn đề nào, dựa trên điều kiện nào và được dùng để nối sang phần kiến thức nào tiếp theo.
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **권장 학습 순서 (Lộ trình đề xuất)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu học tập)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **프로그래밍 언어 기초 (Programming Language Basics)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **권장 학습 순서 (Lộ trình đề xuất)** nối từ **학습 목표 (Mục tiêu học tập)** sang **프로그래밍 언어 기초 (Programming Language Basics)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 권장 학습 순서 (Lộ trình đề xuất)
 
@@ -32,7 +32,7 @@ Phần này là đường đi của bài giảng: đọc theo thứ tự để m
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **프로그래밍 언어 기초 (Programming Language Basics)** tiếp nhận điểm tựa từ **권장 학습 순서 (Lộ trình đề xuất)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **프로그래밍 언어 기초 (Programming Language Basics)** nối từ **권장 학습 순서 (Lộ trình đề xuất)** sang **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 프로그래밍 언어 기초 (Programming Language Basics)
 
@@ -79,7 +79,7 @@ Sau khi đọc **162. 변수명 작성 규칙 (Variable Naming Rules / Quy tắc
 
 ### 163. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác)
 
-Các ý ngay dưới **163. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **163. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “163. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -95,7 +95,7 @@ Như vậy, **프로그래밍 언어 기초 (Programming Language Basics)** khô
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)** tiếp nhận điểm tựa từ **프로그래밍 언어 기초 (Programming Language Basics)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)** nối từ **프로그래밍 언어 기초 (Programming Language Basics)** sang **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)
 
@@ -122,7 +122,7 @@ Ta vừa chốt **236. Python의 시퀀스 자료형 (Python Sequence Type / Ki�
 
 ### 구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)
 
-Các ý ngay dưới **구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “구조체 정의 예 (Struct Definition Example / Ví dụ định nghĩa Struct)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -166,7 +166,7 @@ Ta vừa chốt **237. 변수의 개요 및 헝가리안 표기법 (Variables & 
 
 ### 238. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác - Nhắc lại)
 
-Các ý ngay dưới **238. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác - Nhắc lại)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **238. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác - Nhắc lại)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “238. 가비지 콜렉터 (Garbage Collector / Trình thu gom rác - Nhắc lại)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -180,7 +180,7 @@ Ta có thể khép mục **프로그래밍 언어 기초 (Mở rộng) (Programm
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)** tiếp nhận điểm tựa từ **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)** nối từ **프로그래밍 언어 기초 (Mở rộng) (Programming Language Basics - Extended)** sang **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)
 
@@ -212,7 +212,7 @@ Phần “072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variabl
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)** tiếp nhận điểm tựa từ **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)** nối từ **072 - 073. 데이터 타입, 변수 및 연산자 (Data Types, Variables & Operators)** sang **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)
 
@@ -238,7 +238,7 @@ Như vậy, **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)**
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)** tiếp nhận điểm tựa từ **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)** nối từ **233. C/C++의 데이터 타입 크기 (Data Type Sizes in C/C++)** sang **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)
 
@@ -264,7 +264,7 @@ Ta có thể khép mục **235. JAVA의 데이터 타입 크기 (Data Type Sizes
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)** tiếp nhận điểm tựa từ **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **237. 변수명 작성 규칙 (Variable Naming Rules)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)** nối từ **235. JAVA의 데이터 타입 크기 (Data Type Sizes in JAVA)** sang **237. 변수명 작성 규칙 (Variable Naming Rules)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)
 
@@ -302,7 +302,7 @@ Phần “087. 환경변수와 쉘 스크립트 명령어 (Environment Variables
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **237. 변수명 작성 규칙 (Variable Naming Rules)** tiếp nhận điểm tựa từ **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **연산자 (Operators)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **237. 변수명 작성 규칙 (Variable Naming Rules)** nối từ **087. 환경변수와 쉘 스크립트 명령어 (Environment Variables & Shell Scripts)** sang **연산자 (Operators)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 237. 변수명 작성 규칙 (Variable Naming Rules)
 
@@ -327,7 +327,7 @@ Như vậy, **237. 변수명 작성 규칙 (Variable Naming Rules)** không ch�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **연산자 (Operators)** tiếp nhận điểm tựa từ **237. 변수명 작성 규칙 (Variable Naming Rules)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **연산자 심화 (Operators - Advanced)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **연산자 (Operators)** nối từ **237. 변수명 작성 규칙 (Variable Naming Rules)** sang **연산자 심화 (Operators - Advanced)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 연산자 (Operators)
 
@@ -358,7 +358,7 @@ Ta vừa chốt **164. 산술 연산자 (Arithmetic Operators / Toán tử số 
 
 ### 165. 비트 연산자 (Bitwise Operators / Toán tử bit)
 
-Các ý ngay dưới **165. 비트 연산자 (Bitwise Operators / Toán tử bit)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **165. 비트 연산자 (Bitwise Operators / Toán tử bit)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “165. 비트 연산자 (Bitwise Operators / Toán tử bit)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -410,7 +410,7 @@ Ta vừa chốt **167. 조건 연산자 (Conditional Operator / Toán tử đi�
 
 ### 168. 연산자 우선순위 (Operator Precedence / Thứ tự ưu tiên toán tử)
 
-Các ý ngay dưới **168. 연산자 우선순위 (Operator Precedence / Thứ tự ưu tiên toán tử)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **168. 연산자 우선순위 (Operator Precedence / Thứ tự ưu tiên toán tử)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “168. 연산자 우선순위 (Operator Precedence / Thứ tự ưu tiên toán tử)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -427,7 +427,7 @@ Ta có thể khép mục **연산자 (Operators)** bằng một câu hỏi bàn 
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **연산자 심화 (Operators - Advanced)** tiếp nhận điểm tựa từ **연산자 (Operators)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **239 - 243. 연산자 (Operators)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **연산자 심화 (Operators - Advanced)** nối từ **연산자 (Operators)** sang **239 - 243. 연산자 (Operators)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 연산자 심화 (Operators - Advanced)
 
@@ -439,7 +439,7 @@ Từ **연산자 (Operators)**, ta đã có điểm tựa để bước vào **�
 
 ### 240. 관계 연산자 (Relational Operators / Toán tử quan hệ)
 
-Các ý ngay dưới **240. 관계 연산자 (Relational Operators / Toán tử quan hệ)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **240. 관계 연산자 (Relational Operators / Toán tử quan hệ)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “240. 관계 연산자 (Relational Operators / Toán tử quan hệ)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -472,7 +472,7 @@ Với **243. 대입 연산자 (Assignment Operators / Toán tử gán)**, hãy �
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **239 - 243. 연산자 (Operators)** tiếp nhận điểm tựa từ **연산자 심화 (Operators - Advanced)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **244. 조건(삼항) 연산자 (Ternary Operator)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **239 - 243. 연산자 (Operators)** nối từ **연산자 심화 (Operators - Advanced)** sang **244. 조건(삼항) 연산자 (Ternary Operator)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 239 - 243. 연산자 (Operators)
 
@@ -495,7 +495,7 @@ Như vậy, **239 - 243. 연산자 (Operators)** không chỉ cung cấp các ý
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **244. 조건(삼항) 연산자 (Ternary Operator)** tiếp nhận điểm tựa từ **239 - 243. 연산자 (Operators)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **245. 연산자 우선순위 (Operator Precedence)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **244. 조건(삼항) 연산자 (Ternary Operator)** nối từ **239 - 243. 연산자 (Operators)** sang **245. 연산자 우선순위 (Operator Precedence)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 244. 조건(삼항) 연산자 (Ternary Operator)
 
@@ -518,7 +518,7 @@ Ta có thể khép mục **244. 조건(삼항) 연산자 (Ternary Operator)** b�
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **245. 연산자 우선순위 (Operator Precedence)** tiếp nhận điểm tựa từ **244. 조건(삼항) 연산자 (Ternary Operator)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **입출력 (Input/Output)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **245. 연산자 우선순위 (Operator Precedence)** nối từ **244. 조건(삼항) 연산자 (Ternary Operator)** sang **입출력 (Input/Output)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 245. 연산자 우선순위 (Operator Precedence)
 
@@ -544,7 +544,7 @@ Thứ tự ưu tiên tính toán: Ngoặc () -> Đơn nguyên (phủ định, t�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **입출력 (Input/Output)** tiếp nhận điểm tựa từ **245. 연산자 우선순위 (Operator Precedence)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **입출력 심화 (Input/Output - Advanced)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **입출력 (Input/Output)** nối từ **245. 연산자 우선순위 (Operator Precedence)** sang **입출력 심화 (Input/Output - Advanced)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 입출력 (Input/Output)
 
@@ -588,7 +588,7 @@ Sau khi đọc **170. printf() 함수 (printf() Function / Hàm in C)**, đừng
 
 ### 171. JAVA의 출력 함수 (Output Functions in JAVA / Hàm in Java)
 
-Các ý ngay dưới **171. JAVA의 출력 함수 (Output Functions in JAVA / Hàm in Java)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **171. JAVA의 출력 함수 (Output Functions in JAVA / Hàm in Java)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “171. JAVA의 출력 함수 (Output Functions in JAVA / Hàm in Java)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -605,7 +605,7 @@ Như vậy, **입출력 (Input/Output)** không chỉ cung cấp các ý cần n
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **입출력 심화 (Input/Output - Advanced)** tiếp nhận điểm tựa từ **입출력 (Input/Output)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **074. 데이터 입출력 (Data Input/Output)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **입출력 심화 (Input/Output - Advanced)** nối từ **입출력 (Input/Output)** sang **074. 데이터 입출력 (Data Input/Output)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 입출력 심화 (Input/Output - Advanced)
 
@@ -634,7 +634,7 @@ Ta vừa chốt **246. scanf() 함수 (scanf() Function / Hàm nhập trong C)**
 
 ### 247. 서식 문자열 (Format String / Chuỗi định dạng - Bổ sung)
 
-Các ý ngay dưới **247. 서식 문자열 (Format String / Chuỗi định dạng - Bổ sung)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **247. 서식 문자열 (Format String / Chuỗi định dạng - Bổ sung)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “247. 서식 문자열 (Format String / Chuỗi định dạng - Bổ sung)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -690,7 +690,7 @@ Ta vừa chốt **250. JAVA에서의 표준 출력 (JAVA Standard Output / Đầ
 
 ### 251. 단순 if문 (Simple if statement / Câu lệnh if đơn giản - Nhắc lại)
 
-Các ý ngay dưới **251. 단순 if문 (Simple if statement / Câu lệnh if đơn giản - Nhắc lại)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **251. 단순 if문 (Simple if statement / Câu lệnh if đơn giản - Nhắc lại)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “251. 단순 if문 (Simple if statement / Câu lệnh if đơn giản - Nhắc lại)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -705,7 +705,7 @@ Ta có thể khép mục **입출력 심화 (Input/Output - Advanced)** bằng m
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **074. 데이터 입출력 (Data Input/Output)** tiếp nhận điểm tựa từ **입출력 심화 (Input/Output - Advanced)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **074. 데이터 입출력 (Data Input/Output)** nối từ **입출력 심화 (Input/Output - Advanced)** sang **246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 074. 데이터 입출력 (Data Input/Output)
 
@@ -735,7 +735,7 @@ Khi lập trình bằng C, bạn dùng `scanf` để nhận dữ liệu người
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)** tiếp nhận điểm tựa từ **074. 데이터 입출력 (Data Input/Output)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **제어문 (Control Statements)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)** nối từ **074. 데이터 입출력 (Data Input/Output)** sang **제어문 (Control Statements)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)
 
@@ -762,7 +762,7 @@ Như vậy, **246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)** 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **제어문 (Control Statements)** tiếp nhận điểm tựa từ **246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **제어문 심화 (Control Statements - Advanced)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **제어문 (Control Statements)** nối từ **246 - 249. 입출력 함수와 포맷 (I/O Functions & Formats)** sang **제어문 심화 (Control Statements - Advanced)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 제어문 (Control Statements)
 
@@ -789,7 +789,7 @@ Ta vừa chốt **172. 단순 if문 (Simple if statement / Câu lệnh if đơn 
 
 ### 173. switch문 (switch statement / Câu lệnh switch)
 
-Các ý ngay dưới **173. switch문 (switch statement / Câu lệnh switch)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **173. switch문 (switch statement / Câu lệnh switch)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “173. switch문 (switch statement / Câu lệnh switch)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -835,7 +835,7 @@ Ta vừa chốt **175. while문 (while loop / Vòng lặp while)** bằng các �
 
 ### 176. do~while문 (do~while loop / Vòng lặp do~while)
 
-Các ý ngay dưới **176. do~while문 (do~while loop / Vòng lặp do~while)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **176. do~while문 (do~while loop / Vòng lặp do~while)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “176. do~while문 (do~while loop / Vòng lặp do~while)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -851,7 +851,7 @@ Ta có thể khép mục **제어문 (Control Statements)** bằng một câu h�
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **제어문 심화 (Control Statements - Advanced)** tiếp nhận điểm tựa từ **제어문 (Control Statements)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **제어문 심화 (Control Statements - Advanced)** nối từ **제어문 (Control Statements)** sang **구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 제어문 심화 (Control Statements - Advanced)
 
@@ -863,7 +863,7 @@ Từ **제어문 (Control Statements)**, ta đã có điểm tựa để bước
 
 ### 252. 다중 if문 (Multi if statement / Câu lệnh if nhiều nhánh)
 
-Các ý ngay dưới **252. 다중 if문 (Multi if statement / Câu lệnh if nhiều nhánh)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **252. 다중 if문 (Multi if statement / Câu lệnh if nhiều nhánh)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “252. 다중 if문 (Multi if statement / Câu lệnh if nhiều nhánh)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -909,7 +909,7 @@ Các bullet của **254. for문 (for loop / Vòng lặp for - Bổ sung)** đang
 
 ### 255. while문 (while loop / Vòng lặp while - Bổ sung)
 
-Các ý ngay dưới **255. while문 (while loop / Vòng lặp while - Bổ sung)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **255. while문 (while loop / Vòng lặp while - Bổ sung)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “255. while문 (while loop / Vòng lặp while - Bổ sung)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -955,7 +955,7 @@ Như vậy, **257. break, continue (Keywords / Từ khóa điều khiển vòng 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)** tiếp nhận điểm tựa từ **제어문 심화 (Control Statements - Advanced)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **배열 심화 (Arrays - Advanced)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)** nối từ **제어문 심화 (Control Statements - Advanced)** sang **배열 심화 (Arrays - Advanced)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)
 
@@ -998,7 +998,7 @@ Sau khi đọc **177. 1차원 배열 (1D Array / Mảng 1 chiều)**, đừng b�
 
 ### 178. 2차원 배열 (2D Array / Mảng 2 chiều)
 
-Các ý ngay dưới **178. 2차원 배열 (2D Array / Mảng 2 chiều)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **178. 2차원 배열 (2D Array / Mảng 2 chiều)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “178. 2차원 배열 (2D Array / Mảng 2 chiều)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1046,7 +1046,7 @@ Sau khi đọc **180. 포인터와 포인터 변수 (Pointers / Con trỏ)**, đ
 
 ### 181. 포인터와 배열 (Pointer and Array / Con trỏ và mảng)
 
-Các ý ngay dưới **181. 포인터와 배열 (Pointer and Array / Con trỏ và mảng)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **181. 포인터와 배열 (Pointer and Array / Con trỏ và mảng)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “181. 포인터와 배열 (Pointer and Array / Con trỏ và mảng)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1063,7 +1063,7 @@ Như vậy, **구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)** 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **배열 심화 (Arrays - Advanced)** tiếp nhận điểm tựa từ **구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **배열과 포인터 심화 (Arrays & Pointers - Advanced)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **배열 심화 (Arrays - Advanced)** nối từ **구조체, 배열 및 포인터 (Structs, Arrays, and Pointers)** sang **배열과 포인터 심화 (Arrays & Pointers - Advanced)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 배열 심화 (Arrays - Advanced)
 
@@ -1091,7 +1091,7 @@ Ta vừa chốt **258. 배열과 1차원 배열 (Array & 1D Array / Mảng 1 chi
 
 ### 259. 2차원 배열 (2D Array / Mảng 2 chiều - Bổ sung)
 
-Các ý ngay dưới **259. 2차원 배열 (2D Array / Mảng 2 chiều - Bổ sung)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **259. 2차원 배열 (2D Array / Mảng 2 chiều - Bổ sung)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “259. 2차원 배열 (2D Array / Mảng 2 chiều - Bổ sung)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1109,7 +1109,7 @@ Ta có thể khép mục **배열 심화 (Arrays - Advanced)** bằng một câu
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **배열과 포인터 심화 (Arrays & Pointers - Advanced)** tiếp nhận điểm tựa từ **배열 심화 (Arrays - Advanced)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **배열과 포인터 심화 (Arrays & Pointers - Advanced)** nối từ **배열 심화 (Arrays - Advanced)** sang **075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 배열과 포인터 심화 (Arrays & Pointers - Advanced)
 
@@ -1121,7 +1121,7 @@ Từ **배열 심화 (Arrays - Advanced)**, ta đã có điểm tựa để bư�
 
 ### 260. 배열의 초기화 (Array Initialization / Khởi tạo mảng)
 
-Các ý ngay dưới **260. 배열의 초기화 (Array Initialization / Khởi tạo mảng)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **260. 배열의 초기화 (Array Initialization / Khởi tạo mảng)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “260. 배열의 초기화 (Array Initialization / Khởi tạo mảng)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1168,7 +1168,7 @@ Các bullet của **262. 포인터와 포인터 변수 (Pointer & Pointer Variab
 
 ### 263. 포인터와 배열 (Pointer & Array / Con trỏ và mảng - Bổ sung)
 
-Các ý ngay dưới **263. 포인터와 배열 (Pointer & Array / Con trỏ và mảng - Bổ sung)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **263. 포인터와 배열 (Pointer & Array / Con trỏ và mảng - Bổ sung)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “263. 포인터와 배열 (Pointer & Array / Con trỏ và mảng - Bổ sung)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1183,7 +1183,7 @@ Với **263. 포인터와 배열 (Pointer & Array / Con trỏ và mảng - Bổ 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)** tiếp nhận điểm tựa từ **배열과 포인터 심화 (Arrays & Pointers - Advanced)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **258 - 261. 배열과 문자열 (Arrays & Strings)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)** nối từ **배열과 포인터 심화 (Arrays & Pointers - Advanced)** sang **258 - 261. 배열과 문자열 (Arrays & Strings)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)
 
@@ -1214,7 +1214,7 @@ Như vậy, **075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Lo
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **258 - 261. 배열과 문자열 (Arrays & Strings)** tiếp nhận điểm tựa từ **075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **262 - 263. 포인터 (Pointers)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **258 - 261. 배열과 문자열 (Arrays & Strings)** nối từ **075 - 077. 배열, 조건문, 반복문 (Arrays, Conditionals & Loops)** sang **262 - 263. 포인터 (Pointers)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 258 - 261. 배열과 문자열 (Arrays & Strings)
 
@@ -1238,7 +1238,7 @@ Ta có thể khép mục **258 - 261. 배열과 문자열 (Arrays & Strings)** b
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **262 - 263. 포인터 (Pointers)** tiếp nhận điểm tựa từ **258 - 261. 배열과 문자열 (Arrays & Strings)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Python 기초 (Python Basics)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **262 - 263. 포인터 (Pointers)** nối từ **258 - 261. 배열과 문자열 (Arrays & Strings)** sang **Python 기초 (Python Basics)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 262 - 263. 포인터 (Pointers)
 
@@ -1263,7 +1263,7 @@ Pointer (Con trỏ) không lưu giá trị (như số 5), mà lưu "địa chỉ
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **Python 기초 (Python Basics)** tiếp nhận điểm tựa từ **262 - 263. 포인터 (Pointers)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Python 기본 문법 (Python Basic Syntax)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **Python 기초 (Python Basics)** nối từ **262 - 263. 포인터 (Pointers)** sang **Python 기본 문법 (Python Basic Syntax)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Python 기초 (Python Basics)
 
@@ -1308,7 +1308,7 @@ Sau khi đọc **185. Python의 리스트 (Python List / Danh sách trong Python
 
 ### 186. Python의 딕셔너리 (Dictionary / Từ điển)
 
-Các ý ngay dưới **186. Python의 딕셔너리 (Dictionary / Từ điển)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **186. Python의 딕셔너리 (Dictionary / Từ điển)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “186. Python의 딕셔너리 (Dictionary / Từ điển)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1360,7 +1360,7 @@ Sau khi đọc **188. Python의 슬라이스 (Python Slice / Cắt chuỗi/mản
 
 ### 182. Python의 input() 함수 (Python input() Function / Hàm nhập)
 
-Các ý ngay dưới **182. Python의 input() 함수 (Python input() Function / Hàm nhập)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **182. Python의 input() 함수 (Python input() Function / Hàm nhập)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “182. Python의 input() 함수 (Python input() Function / Hàm nhập)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1406,7 +1406,7 @@ Sau khi đọc **184. 입력 값의 형변환 (Input Type Casting / Ép kiểu d
 
 ### 189. Python의 for문 (Python for loop)
 
-Các ý ngay dưới **189. Python의 for문 (Python for loop)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **189. Python의 for문 (Python for loop)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “189. Python의 for문 (Python for loop)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1438,7 +1438,7 @@ Như vậy, **Python 기초 (Python Basics)** không chỉ cung cấp các ý c�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **Python 기본 문법 (Python Basic Syntax)** tiếp nhận điểm tựa từ **Python 기초 (Python Basics)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **236. Python의 시퀀스 자료형 (Sequence Data Types in Python)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **Python 기본 문법 (Python Basic Syntax)** nối từ **Python 기초 (Python Basics)** sang **236. Python의 시퀀스 자료형 (Sequence Data Types in Python)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Python 기본 문법 (Python Basic Syntax)
 
@@ -1467,7 +1467,7 @@ Ta vừa chốt **264. Python의 기본 문법 (Python Basic Syntax / Cú pháp 
 
 ### 265 ~ 269. Python 입출력, 리스트, 딕셔너리, 슬라이스 (Python I/O, List, Dict, Slice - Ôn tập)
 
-Các ý ngay dưới **265 ~ 269. Python 입출력, 리스트, 딕셔너리, 슬라이스 (Python I/O, List, Dict, Slice - Ôn tập)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **265 ~ 269. Python 입출력, 리스트, 딕셔너리, 슬라이스 (Python I/O, List, Dict, Slice - Ôn tập)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “265 ~ 269. Python 입출력, 리스트, 딕셔너리, 슬라이스 (Python I/O, List, Dict, Slice - Ôn tập)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1486,7 +1486,7 @@ Ta có thể khép mục **Python 기본 문법 (Python Basic Syntax)** bằng m
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **236. Python의 시퀀스 자료형 (Sequence Data Types in Python)** tiếp nhận điểm tựa từ **Python 기본 문법 (Python Basic Syntax)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **264 - 274. 파이썬 문법 (Python Syntax & Basics)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **236. Python의 시퀀스 자료형 (Sequence Data Types in Python)** nối từ **Python 기본 문법 (Python Basic Syntax)** sang **264 - 274. 파이썬 문법 (Python Syntax & Basics)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 236. Python의 시퀀스 자료형 (Sequence Data Types in Python)
 
@@ -1510,7 +1510,7 @@ List và Tuple đều dùng để lưu danh sách. Nhưng List có thể sửa �
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **264 - 274. 파이썬 문법 (Python Syntax & Basics)** tiếp nhận điểm tựa từ **236. Python의 시퀀스 자료형 (Sequence Data Types in Python)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **264 - 274. 파이썬 문법 (Python Syntax & Basics)** nối từ **236. Python의 시퀀스 자료형 (Sequence Data Types in Python)** sang **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 264 - 274. 파이썬 문법 (Python Syntax & Basics)
 
@@ -1542,7 +1542,7 @@ Như vậy, **264 - 274. 파이썬 문법 (Python Syntax & Basics)** không ch�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름** tiếp nhận điểm tựa từ **264 - 274. 파이썬 문법 (Python Syntax & Basics)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름** nối từ **264 - 274. 파이썬 문법 (Python Syntax & Basics)** sang **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## A+ Deep Dive: Java 비교 연산과 Python 제어 흐름
 
@@ -1579,7 +1579,7 @@ Ta vừa chốt **1. Java의 `==`는 문맥을 먼저 본다** bằng các đi�
 
 ### 2. Python `for`와 `while`의 trace 포인트
 
-Các ý ngay dưới **2. Python `for`와 `while`의 trace 포인트** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **2. Python `for`와 `while`의 trace 포인트** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “2. Python `for`와 `while`의 trace 포인트” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1621,7 +1621,7 @@ Ta có thể khép mục **A+ Deep Dive: Java 비교 연산과 Python 제어 흐
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)** tiếp nhận điểm tựa từ **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **279 - 280. 라이브러리 (Library)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)** nối từ **A+ Deep Dive: Java 비교 연산과 Python 제어 흐름** sang **279 - 280. 라이브러리 (Library)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)
 
@@ -1647,7 +1647,7 @@ Phần “080 - 081. 라이브러리와 예외처리 (Libraries & Exception Hand
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **279 - 280. 라이브러리 (Library)** tiếp nhận điểm tựa từ **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **스크립트 및 운영체제 (Script Languages & Operating Systems)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **279 - 280. 라이브러리 (Library)** nối từ **080 - 081. 라이브러리와 예외처리 (Libraries & Exception Handling)** sang **스크립트 및 운영체제 (Script Languages & Operating Systems)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 279 - 280. 라이브러리 (Library)
 
@@ -1673,7 +1673,7 @@ Như vậy, **279 - 280. 라이브러리 (Library)** không chỉ cung cấp cá
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **스크립트 및 운영체제 (Script Languages & Operating Systems)** tiếp nhận điểm tựa từ **279 - 280. 라이브러리 (Library)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **스크립트 및 운영체제 (Script Languages & Operating Systems)** nối từ **279 - 280. 라이브러리 (Library)** sang **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 스크립트 및 운영체제 (Script Languages & Operating Systems)
 
@@ -1703,7 +1703,7 @@ Ta vừa chốt **193. 스크립트 언어의 종류 (Types of Scripting Languag
 
 ### 194. 쉘 스크립트 제어문 (Shell Script Control Statements)
 
-Các ý ngay dưới **194. 쉘 스크립트 제어문 (Shell Script Control Statements)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **194. 쉘 스크립트 제어문 (Shell Script Control Statements)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “194. 쉘 스크립트 제어문 (Shell Script Control Statements)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1746,7 +1746,7 @@ Ta vừa chốt **196. C언어의 stdlib.h (Standard Library in C)** bằng các
 
 ### 197. UNIX의 특징 (Features of UNIX / Đặc điểm của UNIX)
 
-Các ý ngay dưới **197. UNIX의 특징 (Features of UNIX / Đặc điểm của UNIX)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **197. UNIX의 특징 (Features of UNIX / Đặc điểm của UNIX)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “197. UNIX의 특징 (Features of UNIX / Đặc điểm của UNIX)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1780,7 +1780,7 @@ Ta có thể khép mục **스크립트 및 운영체제 (Script Languages & Ope
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **스크립트 및 운영체제 (Script Languages & Operating Systems)** xác định đầu vào; **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **082. 운영체제 기능 및 종류 (Operating System OS)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **스크립트 및 운영체제 (Script Languages & Operating Systems)** đặt đầu vào cho **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)**, rồi **082. 운영체제 기능 및 종류 (Operating System OS)** mở rộng hệ quả liên quan.
 
 ## 운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)
 
@@ -1792,7 +1792,7 @@ Từ **스크립트 및 운영체제 (Script Languages & Operating Systems)**, t
 
 ### 200. 기억장치의 배치 전략 (Memory Placement Strategies / Chiến lược cấp phát bộ nhớ)
 
-Các ý ngay dưới **200. 기억장치의 배치 전략 (Memory Placement Strategies / Chiến lược cấp phát bộ nhớ)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **200. 기억장치의 배치 전략 (Memory Placement Strategies / Chiến lược cấp phát bộ nhớ)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “200. 기억장치의 배치 전략 (Memory Placement Strategies / Chiến lược cấp phát bộ nhớ)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1835,7 +1835,7 @@ Với **202. 스래싱 (Thrashing)**, hãy đọc các công thức như một c
 
 ### 203. 프로세스 상태 (Process States / Trạng thái tiến trình)
 
-Các ý ngay dưới **203. 프로세스 상태 (Process States / Trạng thái tiến trình)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **203. 프로세스 상태 (Process States / Trạng thái tiến trình)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “203. 프로세스 상태 (Process States / Trạng thái tiến trình)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1879,7 +1879,7 @@ Như vậy, **205. 스케줄링 - HRN (Highest Response-ratio Next)** đã hoàn
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)** xác định đầu vào; **082. 운영체제 기능 및 종류 (Operating System OS)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)** đặt đầu vào cho **082. 운영체제 기능 및 종류 (Operating System OS)**, rồi **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)** mở rộng hệ quả liên quan.
 
 ## 082. 운영체제 기능 및 종류 (Operating System OS)
 
@@ -1914,7 +1914,7 @@ Như vậy, **082. 운영체제 기능 및 종류 (Operating System OS)** không
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)** tiếp nhận điểm tựa từ **082. 운영체제 기능 및 종류 (Operating System OS)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)** nối từ **082. 운영체제 기능 및 종류 (Operating System OS)** sang **283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)
 
@@ -1931,7 +1931,7 @@ Ta có thể khép mục **282. 운영체제의 정의 및 목적 (Definition & 
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)** tiếp nhận điểm tựa từ **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)** nối từ **282. 운영체제의 정의 및 목적 (Definition & Purpose of OS)** sang **083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)
 
@@ -1961,7 +1961,7 @@ Phần “283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)” đư�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)** tiếp nhận điểm tựa từ **283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)** nối từ **283 - 288. 운영체제 구성 및 UNIX 시스템 (OS & UNIX)** sang **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)
 
@@ -1987,7 +1987,7 @@ Như vậy, **083. 메모리 관리 기법 - 배치 전략 (Memory Placement Str
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)** tiếp nhận điểm tựa từ **083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **085. 프로세스 및 스레드 (Process & Thread)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)** nối từ **083. 메모리 관리 기법 - 배치 전략 (Memory Placement Strategies)** sang **085. 프로세스 및 스레드 (Process & Thread)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)
 
@@ -2014,7 +2014,7 @@ Ta có thể khép mục **289 - 296. 메모리 관리 및 가상 기억장치 (
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)** xác định đầu vào; **085. 프로세스 및 스레드 (Process & Thread)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **086. 프로세스 스케줄링 (Process Scheduling)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **289 - 296. 메모리 관리 및 가상 기억장치 (Memory Management)** đặt đầu vào cho **085. 프로세스 및 스레드 (Process & Thread)**, rồi **086. 프로세스 스케줄링 (Process Scheduling)** mở rộng hệ quả liên quan.
 
 ## 085. 프로세스 및 스레드 (Process & Thread)
 
@@ -2047,7 +2047,7 @@ Khi Process A đang chạy, hết thời gian (Timeout), OS sẽ cất trạng t
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **085. 프로세스 및 스레드 (Process & Thread)** xác định đầu vào; **086. 프로세스 스케줄링 (Process Scheduling)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **085. 프로세스 및 스레드 (Process & Thread)** đặt đầu vào cho **086. 프로세스 스케줄링 (Process Scheduling)**, rồi **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속** mở rộng hệ quả liên quan.
 
 ## 086. 프로세스 스케줄링 (Process Scheduling)
 
@@ -2075,7 +2075,7 @@ Như vậy, **086. 프로세스 스케줄링 (Process Scheduling)** không chỉ
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **086. 프로세스 스케줄링 (Process Scheduling)** xác định đầu vào; **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **086. 프로세스 스케줄링 (Process Scheduling)** đặt đầu vào cho **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속**, rồi **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)** mở rộng hệ quả liên quan.
 
 ## 086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속
 
@@ -2112,7 +2112,7 @@ Ta có thể khép mục **086. 프로세스 스케줄링과 교착상태 (Proce
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속** xác định đầu vào; **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **네트워크 통신 (Network Communication)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **086. 프로세스 스케줄링과 교착상태 (Process Scheduling & Deadlock) - 계속** đặt đầu vào cho **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)**, rồi **네트워크 통신 (Network Communication)** mở rộng hệ quả liên quan.
 
 ## 297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)
 
@@ -2139,7 +2139,7 @@ Phần “297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)** xác định đầu vào; **네트워크 통신 (Network Communication)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **297 - 302. 프로세스와 스레드, 스케줄링 (Processes, Threads & Scheduling)** đặt đầu vào cho **네트워크 통신 (Network Communication)**, rồi **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)** mở rộng hệ quả liên quan.
 
 ## 네트워크 통신 (Network Communication)
 
@@ -2179,7 +2179,7 @@ Sau khi đọc **208. 인터넷 주소 체계 - IPv6 (IPv6 Addressing)**, đừn
 
 ### OSI 7계층 (OSI 7 Layers)
 
-Các ý ngay dưới **OSI 7계층 (OSI 7 Layers)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **OSI 7계층 (OSI 7 Layers)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “OSI 7계층 (OSI 7 Layers)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -2230,7 +2230,7 @@ Như vậy, **네트워크 통신 (Network Communication)** không chỉ cung c�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)** tiếp nhận điểm tựa từ **네트워크 통신 (Network Communication)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)** nối từ **네트워크 통신 (Network Communication)** sang **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)
 
@@ -2264,7 +2264,7 @@ Ta có thể khép mục **088. 인터넷 구성과 네트워크 - OSI 7계층 (
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어** tiếp nhận điểm tựa từ **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어** nối từ **088. 인터넷 구성과 네트워크 - OSI 7계층 (OSI 7 Layer)** sang **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어
 
@@ -2295,7 +2295,7 @@ Phần “088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)** tiếp nhận điểm tựa từ **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **189. 구조적 설계의 주요 기본 원리 (Principles of Structured Design / Nguyên lý thiết kế có cấu trúc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)** nối từ **088. 인터넷 구성과 네트워크 - TCP vs UDP & 흐름/오류 제어** sang **189. 구조적 설계의 주요 기본 원리 (Principles of Structured Design / Nguyên lý thiết kế có cấu trúc)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)
 
@@ -2325,7 +2325,7 @@ Như vậy, **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **189. 구조적 설계의 주요 기본 원리 (Principles of Structured Design / Nguyên lý thiết kế có cấu trúc)** tiếp nhận điểm tựa từ **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **202 - 203. 객체지향 기법 & 주요 원칙 (Object-Oriented Techniques & Principles / OOP)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **189. 구조적 설계의 주요 기본 원리 (Principles of Structured Design / Nguyên lý thiết kế có cấu trúc)** nối từ **309 - 314. OSI 7계층과 네트워크 프로토콜 (OSI 7 Layers & Protocols)** sang **202 - 203. 객체지향 기법 & 주요 원칙 (Object-Oriented Techniques & Principles / OOP)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 189. 구조적 설계의 주요 기본 원리 (Principles of Structured Design / Nguyên lý thiết kế có cấu trúc)
 
@@ -2356,7 +2356,7 @@ Ta có thể khép mục **189. 구조적 설계의 주요 기본 원리 (Princi
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **202 - 203. 객체지향 기법 & 주요 원칙 (Object-Oriented Techniques & Principles / OOP)** tiếp nhận điểm tựa từ **189. 구조적 설계의 주요 기본 원리 (Principles of Structured Design / Nguyên lý thiết kế có cấu trúc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **202 - 203. 객체지향 기법 & 주요 원칙 (Object-Oriented Techniques & Principles / OOP)** nối từ **189. 구조적 설계의 주요 기본 원리 (Principles of Structured Design / Nguyên lý thiết kế có cấu trúc)** sang **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 202 - 203. 객체지향 기법 & 주요 원칙 (Object-Oriented Techniques & Principles / OOP)
 
@@ -2395,7 +2395,7 @@ OOP (Lập trình hướng đối tượng) giống như trò chơi xếp hình 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)** tiếp nhận điểm tựa từ **202 - 203. 객체지향 기법 & 주요 원칙 (Object-Oriented Techniques & Principles / OOP)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **252. 다중 if문 (Multiple if Statement)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)** nối từ **202 - 203. 객체지향 기법 & 주요 원칙 (Object-Oriented Techniques & Principles / OOP)** sang **252. 다중 if문 (Multiple if Statement)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)
 
@@ -2435,7 +2435,7 @@ Như vậy, **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)** không c
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **252. 다중 if문 (Multiple if Statement)** tiếp nhận điểm tựa từ **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **252. 다중 if문 (Multiple if Statement)** nối từ **089. IP와 서브네팅, IPv4 vs IPv6 (IP & Subnetting)** sang **305 - 308. IP 주소 체계 (IPv4 vs IPv6)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 252. 다중 if문 (Multiple if Statement)
 
@@ -2455,7 +2455,7 @@ Ta có thể khép mục **252. 다중 if문 (Multiple if Statement)** bằng m�
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** tiếp nhận điểm tựa từ **252. 다중 if문 (Multiple if Statement)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **소프트웨어 공학 및 실무 (Software Engineering & Practice)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** nối từ **252. 다중 if문 (Multiple if Statement)** sang **소프트웨어 공학 및 실무 (Software Engineering & Practice)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 305 - 308. IP 주소 체계 (IPv4 vs IPv6)
 
@@ -2479,7 +2479,7 @@ IPv6 전송 방식 3총사: **유멀애** (Unicast, Multicast, Anycast). *Broadc
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **소프트웨어 공학 및 실무 (Software Engineering & Practice)** tiếp nhận điểm tựa từ **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **소프트웨어 공학 및 실무 (Software Engineering & Practice)** nối từ **305 - 308. IP 주소 체계 (IPv4 vs IPv6)** sang **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 소프트웨어 공학 및 실무 (Software Engineering & Practice)
 
@@ -2523,7 +2523,7 @@ Sau khi đọc **232. 배치 프로그램 필수 요소 (Batch Program Elements 
 
 ### 233. C/C++ 데이터 타입 크기 추가 (C/C++ Data Type Sizes / Kích thước kiểu dữ liệu C++)
 
-Các ý ngay dưới **233. C/C++ 데이터 타입 크기 추가 (C/C++ Data Type Sizes / Kích thước kiểu dữ liệu C++)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **233. C/C++ 데이터 타입 크기 추가 (C/C++ Data Type Sizes / Kích thước kiểu dữ liệu C++)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “233. C/C++ 데이터 타입 크기 추가 (C/C++ Data Type Sizes / Kích thước kiểu dữ liệu C++)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -2537,7 +2537,7 @@ Như vậy, **소프트웨어 공학 및 실무 (Software Engineering & Practice
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)** tiếp nhận điểm tựa từ **소프트웨어 공학 및 실무 (Software Engineering & Practice)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)** nối từ **소프트웨어 공학 및 실무 (Software Engineering & Practice)** sang **190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)
 
@@ -2567,7 +2567,7 @@ Ta có thể khép mục **프로그래밍 언어 종류 및 특징 (Programming
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)** tiếp nhận điểm tựa từ **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **191. 결합도 (Coupling / Mức độ phụ thuộc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)** nối từ **프로그래밍 언어 종류 및 특징 (Programming Languages Types & Features)** sang **191. 결합도 (Coupling / Mức độ phụ thuộc)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)
 
@@ -2589,7 +2589,7 @@ Một thiết kế phần mềm chuẩn mực phải đảm bảo: "Mối liên 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **191. 결합도 (Coupling / Mức độ phụ thuộc)** tiếp nhận điểm tựa từ **190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **192. 응집도 (Cohesion / Mức độ gắn kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **191. 결합도 (Coupling / Mức độ phụ thuộc)** nối từ **190. 바람직한 설계의 특징 (Good Design Characteristics / Đặc điểm của thiết kế tốt)** sang **192. 응집도 (Cohesion / Mức độ gắn kết)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 191. 결합도 (Coupling / Mức độ phụ thuộc)
 
@@ -2621,7 +2621,7 @@ Như vậy, **191. 결합도 (Coupling / Mức độ phụ thuộc)** không ch�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **192. 응집도 (Cohesion / Mức độ gắn kết)** tiếp nhận điểm tựa từ **191. 결합도 (Coupling / Mức độ phụ thuộc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **193 - 194. 효과적인 모듈화 설계 방안 & N-S 차트 (Effective Modular Design & Nassi-Schneiderman Chart)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **192. 응집도 (Cohesion / Mức độ gắn kết)** nối từ **191. 결합도 (Coupling / Mức độ phụ thuộc)** sang **193 - 194. 효과적인 모듈화 설계 방안 & N-S 차트 (Effective Modular Design & Nassi-Schneiderman Chart)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 192. 응집도 (Cohesion / Mức độ gắn kết)
 
@@ -2653,7 +2653,7 @@ Ta có thể khép mục **192. 응집도 (Cohesion / Mức độ gắn kết)**
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **193 - 194. 효과적인 모듈화 설계 방안 & N-S 차트 (Effective Modular Design & Nassi-Schneiderman Chart)** tiếp nhận điểm tựa từ **192. 응집도 (Cohesion / Mức độ gắn kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **195 - 197. 구현 및 구조적 프로그래밍, 제어 흐름도 (Implementation & Structured Programming)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **193 - 194. 효과적인 모듈화 설계 방안 & N-S 차트 (Effective Modular Design & Nassi-Schneiderman Chart)** nối từ **192. 응집도 (Cohesion / Mức độ gắn kết)** sang **195 - 197. 구현 및 구조적 프로그래밍, 제어 흐름도 (Implementation & Structured Programming)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 193 - 194. 효과적인 모듈화 설계 방안 & N-S 차트 (Effective Modular Design & Nassi-Schneiderman Chart)
 
@@ -2678,7 +2678,7 @@ Biểu đồ N-S (Nassi-Schneiderman) là loại biểu đồ khối chữ nhậ
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **195 - 197. 구현 및 구조적 프로그래밍, 제어 흐름도 (Implementation & Structured Programming)** tiếp nhận điểm tựa từ **193 - 194. 효과적인 모듈화 설계 방안 & N-S 차트 (Effective Modular Design & Nassi-Schneiderman Chart)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **195 - 197. 구현 및 구조적 프로그래밍, 제어 흐름도 (Implementation & Structured Programming)** nối từ **193 - 194. 효과적인 모듈화 설계 방안 & N-S 차트 (Effective Modular Design & Nassi-Schneiderman Chart)** sang **196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 195 - 197. 구현 및 구조적 프로그래밍, 제어 흐름도 (Implementation & Structured Programming)
 
@@ -2706,7 +2706,7 @@ Như vậy, **195 - 197. 구현 및 구조적 프로그래밍, 제어 흐름도 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)** tiếp nhận điểm tựa từ **195 - 197. 구현 및 구조적 프로그래밍, 제어 흐름도 (Implementation & Structured Programming)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)** nối từ **195 - 197. 구현 및 구조적 프로그래밍, 제어 흐름도 (Implementation & Structured Programming)** sang **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)
 
@@ -2734,7 +2734,7 @@ Ta có thể khép mục **196. 화이트 박스 테스트 (White Box Test / Ki�
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)** tiếp nhận điểm tựa từ **196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **199. 검사 전략 (Testing Strategies / Chiến lược kiểm thử)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)** nối từ **196. 화이트 박스 테스트 (White Box Test / Kiểm thử Hộp trắng)** sang **199. 검사 전략 (Testing Strategies / Chiến lược kiểm thử)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)
 
@@ -2755,7 +2755,7 @@ Phần “198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **199. 검사 전략 (Testing Strategies / Chiến lược kiểm thử)** tiếp nhận điểm tựa từ **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **200. 유지보수 (Maintenance / Bảo trì phần mềm)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **199. 검사 전략 (Testing Strategies / Chiến lược kiểm thử)** nối từ **198. 블랙 박스 테스트 (Black Box Test / Kiểm thử Hộp đen)** sang **200. 유지보수 (Maintenance / Bảo trì phần mềm)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 199. 검사 전략 (Testing Strategies / Chiến lược kiểm thử)
 
@@ -2787,7 +2787,7 @@ Như vậy, **199. 검사 전략 (Testing Strategies / Chiến lược kiểm th
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **200. 유지보수 (Maintenance / Bảo trì phần mềm)** tiếp nhận điểm tựa từ **199. 검사 전략 (Testing Strategies / Chiến lược kiểm thử)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **201. 외계인 코드 (Alien Code / Mã ngoài hành tinh)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **200. 유지보수 (Maintenance / Bảo trì phần mềm)** nối từ **199. 검사 전략 (Testing Strategies / Chiến lược kiểm thử)** sang **201. 외계인 코드 (Alien Code / Mã ngoài hành tinh)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 200. 유지보수 (Maintenance / Bảo trì phần mềm)
 
@@ -2819,7 +2819,7 @@ Ta có thể khép mục **200. 유지보수 (Maintenance / Bảo trì phần m�
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **201. 외계인 코드 (Alien Code / Mã ngoài hành tinh)** tiếp nhận điểm tựa từ **200. 유지보수 (Maintenance / Bảo trì phần mềm)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **204 - 205. 객체지향 분석 및 럼바우 기법 (OO Analysis & Rumbaugh Method)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **201. 외계인 코드 (Alien Code / Mã ngoài hành tinh)** nối từ **200. 유지보수 (Maintenance / Bảo trì phần mềm)** sang **204 - 205. 객체지향 분석 및 럼바우 기법 (OO Analysis & Rumbaugh Method)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 201. 외계인 코드 (Alien Code / Mã ngoài hành tinh)
 
@@ -2841,7 +2841,7 @@ Phần “201. 외계인 코드 (Alien Code / Mã ngoài hành tinh)” được
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **204 - 205. 객체지향 분석 및 럼바우 기법 (OO Analysis & Rumbaugh Method)** tiếp nhận điểm tựa từ **201. 외계인 코드 (Alien Code / Mã ngoài hành tinh)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **206 - 207. 객체지향 설계 및 프로그래밍 (OO Design & Programming)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **204 - 205. 객체지향 분석 및 럼바우 기법 (OO Analysis & Rumbaugh Method)** nối từ **201. 외계인 코드 (Alien Code / Mã ngoài hành tinh)** sang **206 - 207. 객체지향 설계 및 프로그래밍 (OO Design & Programming)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 204 - 205. 객체지향 분석 및 럼바우 기법 (OO Analysis & Rumbaugh Method)
 
@@ -2878,7 +2878,7 @@ Như vậy, **204 - 205. 객체지향 분석 및 럼바우 기법 (OO Analysis &
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **206 - 207. 객체지향 설계 및 프로그래밍 (OO Design & Programming)** tiếp nhận điểm tựa từ **204 - 205. 객체지향 분석 및 럼바우 기법 (OO Analysis & Rumbaugh Method)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **208. 소프트웨어의 재사용 (Software Reuse / Tái sử dụng phần mềm)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **206 - 207. 객체지향 설계 및 프로그래밍 (OO Design & Programming)** nối từ **204 - 205. 객체지향 분석 및 럼바우 기법 (OO Analysis & Rumbaugh Method)** sang **208. 소프트웨어의 재사용 (Software Reuse / Tái sử dụng phần mềm)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 206 - 207. 객체지향 설계 및 프로그래밍 (OO Design & Programming)
 
@@ -2898,7 +2898,7 @@ Ta có thể khép mục **206 - 207. 객체지향 설계 및 프로그래밍 (O
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **208. 소프트웨어의 재사용 (Software Reuse / Tái sử dụng phần mềm)** tiếp nhận điểm tựa từ **206 - 207. 객체지향 설계 및 프로그래밍 (OO Design & Programming)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **209. 소프트웨어 재공학 (Software Reengineering / Tái cấu trúc phần mềm)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **208. 소프트웨어의 재사용 (Software Reuse / Tái sử dụng phần mềm)** nối từ **206 - 207. 객체지향 설계 및 프로그래밍 (OO Design & Programming)** sang **209. 소프트웨어 재공학 (Software Reengineering / Tái cấu trúc phần mềm)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 208. 소프트웨어의 재사용 (Software Reuse / Tái sử dụng phần mềm)
 
@@ -2922,7 +2922,7 @@ Phần “208. 소프트웨어의 재사용 (Software Reuse / Tái sử dụng p
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **209. 소프트웨어 재공학 (Software Reengineering / Tái cấu trúc phần mềm)** tiếp nhận điểm tựa từ **208. 소프트웨어의 재사용 (Software Reuse / Tái sử dụng phần mềm)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **210. CASE (Computer-Aided Software Engineering)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **209. 소프트웨어 재공학 (Software Reengineering / Tái cấu trúc phần mềm)** nối từ **208. 소프트웨어의 재사용 (Software Reuse / Tái sử dụng phần mềm)** sang **210. CASE (Computer-Aided Software Engineering)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 209. 소프트웨어 재공학 (Software Reengineering / Tái cấu trúc phần mềm)
 
@@ -2954,7 +2954,7 @@ Như vậy, **209. 소프트웨어 재공학 (Software Reengineering / Tái cấ
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **209. 소프트웨어 재공학 (Software Reengineering / Tái cấu trúc phần mềm)** cho ta quy tắc; **210. CASE (Computer-Aided Software Engineering)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **070. 서버개발 프레임워크 (Server Development Framework)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **209. 소프트웨어 재공학 (Software Reengineering / Tái cấu trúc phần mềm)** nêu quy tắc; **210. CASE (Computer-Aided Software Engineering)** thử quy tắc trong tình huống, rồi **070. 서버개발 프레임워크 (Server Development Framework)** mở rộng hệ quả.
 
 ## 210. CASE (Computer-Aided Software Engineering)
 
@@ -2983,7 +2983,7 @@ Ta có thể khép mục **210. CASE (Computer-Aided Software Engineering)** b�
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **210. CASE (Computer-Aided Software Engineering)** cho ta quy tắc; **070. 서버개발 프레임워크 (Server Development Framework)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **210. CASE (Computer-Aided Software Engineering)** nêu quy tắc; **070. 서버개발 프레임워크 (Server Development Framework)** thử quy tắc trong tình huống, rồi **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)** mở rộng hệ quả.
 
 ## 070. 서버개발 프레임워크 (Server Development Framework)
 
@@ -3007,7 +3007,7 @@ Framework (như Spring, Django) là một bộ khung có sẵn. Tính năng đ�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)** tiếp nhận điểm tựa từ **070. 서버개발 프레임워크 (Server Development Framework)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)** nối từ **070. 서버개발 프레임워크 (Server Development Framework)** sang **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)
 
@@ -3035,7 +3035,7 @@ Như vậy, **071. 보안 취약성 식별 (Security Vulnerability Identificatio
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)** tiếp nhận điểm tựa từ **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **079. 프로그래밍 언어의 종류 (Types of Programming Languages)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)** nối từ **071. 보안 취약성 식별 (Security Vulnerability Identification / Lỗ hổng bảo mật)** sang **079. 프로그래밍 언어의 종류 (Types of Programming Languages)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)
 
@@ -3060,7 +3060,7 @@ Ta có thể khép mục **078. 사용자 정의 함수와 클래스 (User Defin
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **079. 프로그래밍 언어의 종류 (Types of Programming Languages)** tiếp nhận điểm tựa từ **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **079. 프로그래밍 언어의 종류 (Types of Programming Languages)** nối từ **078. 사용자 정의 함수와 클래스 (User Defined Functions & Classes)** sang **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 079. 프로그래밍 언어의 종류 (Types of Programming Languages)
 
@@ -3087,7 +3087,7 @@ Phần “079. 프로그래밍 언어의 종류 (Types of Programming Languages)
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)** tiếp nhận điểm tựa từ **079. 프로그래밍 언어의 종류 (Types of Programming Languages)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)** nối từ **079. 프로그래밍 언어의 종류 (Types of Programming Languages)** sang **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)
 
@@ -3121,7 +3121,7 @@ Như vậy, **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)** tiếp nhận điểm tựa từ **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)** nối từ **084. 페이지 교체 알고리즘 (Page Replacement Algorithms / Thuật toán thay thế trang nhớ)** sang **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)
 
@@ -3142,7 +3142,7 @@ Ta có thể khép mục **교착상태 필요충분조건 1 - 상호배제 (Dea
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)** tiếp nhận điểm tựa từ **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **232. 배치 프로그램 (Batch Program)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)** nối từ **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - Mutual Exclusion)** sang **232. 배치 프로그램 (Batch Program)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)
 
@@ -3154,7 +3154,7 @@ Từ **교착상태 필요충분조건 1 - 상호배제 (Deadlock Conditions - M
 
 ### 232. 배치 프로그램 (Batch Program)
 
-Các ý ngay dưới **232. 배치 프로그램 (Batch Program)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **232. 배치 프로그램 (Batch Program)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “232. 배치 프로그램 (Batch Program)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -3203,7 +3203,7 @@ Các ý về **234. C언어의 구조체 (struct)** được nối với ví d�
 
 ### 236. Python 시퀀스 자료형
 
-Các ý ngay dưới **236. Python 시퀀스 자료형** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **236. Python 시퀀스 자료형** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “236. Python 시퀀스 자료형” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -3247,7 +3247,7 @@ Như vậy, **239 - 244. 각종 연산자** đã hoàn thành vai trò của mì
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **232. 배치 프로그램 (Batch Program)** tiếp nhận điểm tựa từ **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **234. C언어의 구조체 (struct in C)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **232. 배치 프로그램 (Batch Program)** nối từ **추가: 응용 SW 기초 기술 (4과목 핵심 요약 1)** sang **234. C언어의 구조체 (struct in C)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 232. 배치 프로그램 (Batch Program)
 
@@ -3274,7 +3274,7 @@ Như vậy, **232. 배치 프로그램 (Batch Program)** không chỉ cung cấp
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **234. C언어의 구조체 (struct in C)** tiếp nhận điểm tựa từ **232. 배치 프로그램 (Batch Program)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **238. 가비지 콜렉터 (Garbage Collector)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **234. C언어의 구조체 (struct in C)** nối từ **232. 배치 프로그램 (Batch Program)** sang **238. 가비지 콜렉터 (Garbage Collector)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 234. C언어의 구조체 (struct in C)
 
@@ -3296,7 +3296,7 @@ Ta có thể khép mục **234. C언어의 구조체 (struct in C)** bằng mộ
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **238. 가비지 콜렉터 (Garbage Collector)** tiếp nhận điểm tựa từ **234. C언어의 구조체 (struct in C)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **250. JAVA에서의 표준 출력 (Standard Output in JAVA)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **238. 가비지 콜렉터 (Garbage Collector)** nối từ **234. C언어의 구조체 (struct in C)** sang **250. JAVA에서의 표준 출력 (Standard Output in JAVA)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 238. 가비지 콜렉터 (Garbage Collector)
 
@@ -3318,7 +3318,7 @@ Phần “238. 가비지 콜렉터 (Garbage Collector)” được nối với n
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **250. JAVA에서의 표준 출력 (Standard Output in JAVA)** tiếp nhận điểm tựa từ **238. 가비지 콜렉터 (Garbage Collector)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **251. 단순 if문 (Simple if Statement)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **250. JAVA에서의 표준 출력 (Standard Output in JAVA)** nối từ **238. 가비지 콜렉터 (Garbage Collector)** sang **251. 단순 if문 (Simple if Statement)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 250. JAVA에서의 표준 출력 (Standard Output in JAVA)
 
@@ -3339,7 +3339,7 @@ Như vậy, **250. JAVA에서의 표준 출력 (Standard Output in JAVA)** khôn
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **251. 단순 if문 (Simple if Statement)** tiếp nhận điểm tựa từ **250. JAVA에서의 표준 출력 (Standard Output in JAVA)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **253. switch문 (switch Statement)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **251. 단순 if문 (Simple if Statement)** nối từ **250. JAVA에서의 표준 출력 (Standard Output in JAVA)** sang **253. switch문 (switch Statement)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 251. 단순 if문 (Simple if Statement)
 
@@ -3359,7 +3359,7 @@ Ta có thể khép mục **251. 단순 if문 (Simple if Statement)** bằng mộ
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **253. switch문 (switch Statement)** tiếp nhận điểm tựa từ **251. 단순 if문 (Simple if Statement)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **253. switch문 (switch Statement)** nối từ **251. 단순 if문 (Simple if Statement)** sang **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 253. switch문 (switch Statement)
 
@@ -3375,7 +3375,7 @@ Phần “253. switch문 (switch Statement)” được nối với nội dung k
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)** tiếp nhận điểm tựa từ **253. switch문 (switch Statement)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)** nối từ **253. switch문 (switch Statement)** sang **275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)
 
@@ -3403,7 +3403,7 @@ Như vậy, **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)** tiếp nhận điểm tựa từ **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)** nối từ **254 - 257. 반복문과 제어 키워드 (Loops & Control Keywords)** sang **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)
 
@@ -3426,7 +3426,7 @@ Ta có thể khép mục **275 - 278. 프로그래밍 언어의 종류 (Types of
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)** tiếp nhận điểm tựa từ **275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)** nối từ **275 - 278. 프로그래밍 언어의 종류 (Types of Programming Languages)** sang **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 281. 매시업과 SOA (SW Related Terms: Mashup & SOA)
 
@@ -3448,7 +3448,7 @@ Phần “281. 매시업과 SOA (SW Related Terms: Mashup & SOA)” được n�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)** tiếp nhận điểm tựa từ **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)** nối từ **281. 매시업과 SOA (SW Related Terms: Mashup & SOA)** sang **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 226 - 227. 데이터베이스 접속 기술 (Database Connectivity)
 
@@ -3469,7 +3469,7 @@ Như vậy, **226 - 227. 데이터베이스 접속 기술 (Database Connectivity
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)** tiếp nhận điểm tựa từ **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **284 & 294. 구역성 (Locality / Tính cục bộ)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)** nối từ **226 - 227. 데이터베이스 접속 기술 (Database Connectivity)** sang **284 & 294. 구역성 (Locality / Tính cục bộ)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)
 
@@ -3497,7 +3497,7 @@ Ta vừa chốt **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** bằng các điều k
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
 
-Các ý ngay dưới **TẦNG B – NOTE 보충 (HIỂU SÂU)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **TẦNG B – NOTE 보충 (HIỂU SÂU)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -3517,7 +3517,7 @@ Ta có thể khép mục **인터프리터 언어 (Interpreter Languages / Ngôn
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **284 & 294. 구역성 (Locality / Tính cục bộ)** tiếp nhận điểm tựa từ **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **285 & 295. 워킹 셋 (Working Set / Tập làm việc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **284 & 294. 구역성 (Locality / Tính cục bộ)** nối từ **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch)** sang **285 & 295. 워킹 셋 (Working Set / Tập làm việc)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 284 & 294. 구역성 (Locality / Tính cục bộ)
 
@@ -3529,7 +3529,7 @@ Từ **인터프리터 언어 (Interpreter Languages / Ngôn ngữ thông dịch
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
 
-Các ý ngay dưới **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -3562,7 +3562,7 @@ Với **TẦNG B – NOTE 보충 (HIỂU SÂU)**, hãy đọc các công thức 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **285 & 295. 워킹 셋 (Working Set / Tập làm việc)** tiếp nhận điểm tựa từ **284 & 294. 구역성 (Locality / Tính cục bộ)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **285 & 295. 워킹 셋 (Working Set / Tập làm việc)** nối từ **284 & 294. 구역성 (Locality / Tính cục bộ)** sang **287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 285 & 295. 워킹 셋 (Working Set / Tập làm việc)
 
@@ -3606,7 +3606,7 @@ Như vậy, **285 & 295. 워킹 셋 (Working Set / Tập làm việc)** không c
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)** tiếp nhận điểm tựa từ **285 & 295. 워킹 셋 (Working Set / Tập làm việc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)** nối từ **285 & 295. 워킹 셋 (Working Set / Tập làm việc)** sang **292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)
 
@@ -3633,7 +3633,7 @@ Ta vừa chốt **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** bằng các điều k
 
 ### TẦNG B – NOTE 보충 (HIỂU SÂU)
 
-Các ý ngay dưới **TẦNG B – NOTE 보충 (HIỂU SÂU)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **TẦNG B – NOTE 보충 (HIỂU SÂU)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “TẦNG B – NOTE 보충 (HIỂU SÂU)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -3651,7 +3651,7 @@ Ta có thể khép mục **287. UNIX 시스템의 구성 (Cấu trúc hệ thố
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)** tiếp nhận điểm tựa từ **287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **298. PCB (Process Control Block)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)** nối từ **287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)** sang **298. PCB (Process Control Block)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)
 
@@ -3663,7 +3663,7 @@ Từ **287. UNIX 시스템의 구성 (Cấu trúc hệ thống UNIX)**, ta đã 
 
 ### TẦNG A – NOTE NÉN (ÔN / ĐI THI)
 
-Các ý ngay dưới **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **TẦNG A – NOTE NÉN (ÔN / ĐI THI)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “TẦNG A – NOTE NÉN (ÔN / ĐI THI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -3698,7 +3698,7 @@ Với **TẦNG B – NOTE 보충 (HIỂU SÂU)**, hãy đọc các công thức 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)** xác định đầu vào; **298. PCB (Process Control Block)** giải thích bước vận hành tạo ra kết quả kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Môn 4 — 프로그래밍 언어 활용 (Programming Language Application) (Ứng dụng ngôn ngữ lập trình)**, **292. 페이지 교체 알고리즘 (Thuật toán thay thế trang / Page Replacement)** đặt đầu vào cho **298. PCB (Process Control Block)**, rồi nối sang phần giải thích tiếp theo.
 
 ## 298. PCB (Process Control Block)
 

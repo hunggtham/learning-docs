@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **5. 요구공학 (Requirements Engineering)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **8. UI 및 UX, HCI (UI, UX, HCI)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **5. 요구공학 (Requirements Engineering)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **5. 요구공학 (Requirements Engineering)**, **핵심 키워드 (Từ khóa)** nối từ **학습 목표 (Mục tiêu)** sang **선행·연결 개념 (Kiến thức liên kết)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 핵심 키워드 (Từ khóa)
 
 요구공학
 
-> **Chuyển mạch:** Ở chặng này của **5. 요구공학 (Requirements Engineering)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **5. 요구공학 (Requirements Engineering)**, **핵심 키워드 (Từ khóa)** dẫn sang **선행·연결 개념 (Kiến thức liên kết)**, nơi tài liệu chuẩn và vị trí sở hữu được chỉ rõ để biết chỗ đào sâu tiếp; **읽는 방법 (Cách đọc)** mở rộng hệ quả liên quan.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)**에서 만든 기준을 이어받아 **5. 요구공학 (Requirements Engineering)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **5. 요구공학 (Requirements Engineering)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 요구공학 (Requirements Engineering)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **5. 요구공학 (Requirements Engineering)**, **읽는 방법 (Cách đọc)** nối từ **선행·연결 개념 (Kiến thức liên kết)** sang **5. 요구공학 (Requirements Engineering)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **5. 요구공학 (Requirements Engineer
 
 ---
 
-> **Chuyển mạch:** Trong **5. 요구공학 (Requirements Engineering)**, **5. 요구공학 (Requirements Engineering)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **5. 요구공학 (Requirements Engineering)**, **5. 요구공학 (Requirements Engineering)** nối từ **읽는 방법 (Cách đọc)** sang phần giải thích tiếp theo, vì phần trước cung cấp điểm tựa cho chủ đề này.
 
 ## 5. 요구공학 (Requirements Engineering)
 
