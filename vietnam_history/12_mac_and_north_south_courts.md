@@ -10,7 +10,7 @@ Câu hỏi của chapter này là: **khi central legitimacy vỡ, tại sao bure
 
 Đây là cầu nối (bridge / 브리지) từ centralized Lê sơ sang era của militarized family alliances.
 
-> **Chuyển mạch:** Trong **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **Sau Lê Thánh Tông: bài toán (problem / 문제) không phải “mọi vua sau đều kém”** tiếp nhận điểm tựa từ **Điểm tựa và câu hỏi trung tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1527: Mạc Đăng Dung lập triều Mạc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **Sau Lê Thánh Tông: bài toán (problem / 문제) không phải “mọi vua sau đều kém”** nối từ **Điểm tựa và câu hỏi trung tâm** sang **1527: Mạc Đăng Dung lập triều Mạc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sau Lê Thánh Tông: bài toán (problem / 문제) không phải “mọi vua sau đều kém”
 
@@ -30,7 +30,7 @@ strong commanders gain political leverage
 
 Mạc Đăng Dung nổi lên trong ngữ cảnh (context / 맥락) này.
 
-> **Chuyển mạch:** Ở chặng này của **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **1527: Mạc Đăng Dung lập triều Mạc** tiếp nhận điểm tựa từ **Sau Lê Thánh Tông: bài toán (problem / 문제) không phải “mọi vua sau đều kém”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Legitimacy là tài nguyên (resource / 자원) có thể mobilize** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **1527: Mạc Đăng Dung lập triều Mạc** nối từ **Sau Lê Thánh Tông: bài toán (problem / 문제) không phải “mọi vua sau đều kém”** sang **Legitimacy là tài nguyên (resource / 자원) có thể mobilize**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1527: Mạc Đăng Dung lập triều Mạc
 
@@ -38,7 +38,7 @@ Năm **1527**, Mạc Đăng Dung thay nhà Lê và lập Mạc dynasty tại Th�
 
 Mạc had military điều khiển (control / 제어), administrative truy cập (access / 접근) và enough elite hỗ trợ (support / 지원) to operate government. Một regime tồn tại nhiều decades, tổ chức examinations và diplomacy không thể explain solely as one man's coup.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **1527: Mạc Đăng Dung lập triều Mạc** nêu điều cần giải thích; **Legitimacy là tài nguyên (resource / 자원) có thể mobilize** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Vì sao Thanh Hóa lại trở thành restoration cơ sở (base / 기반) một lần nữa?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **1527: Mạc Đăng Dung lập triều Mạc** đặt vấn đề; **Legitimacy là tài nguyên (resource / 자원) có thể mobilize** đối chiếu bằng chứng, rồi **Vì sao Thanh Hóa lại trở thành restoration cơ sở (base / 기반) một lần nữa?** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Legitimacy là tài nguyên (resource / 자원) có thể mobilize
 
@@ -48,7 +48,7 @@ Từ đây hình thành mẫu (pattern / 패턴) thường gọi **Nam triều �
 
 Terms “Nam” và “Bắc” là useful coordinate, nhưng territory changed repeatedly; không nên imagine a fixed hiện đại (modern / 현대적) border.
 
-> **Chuyển mạch:** Trong **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **Legitimacy là tài nguyên (resource / 자원) có thể mobilize** nêu điều cần giải thích; **Vì sao Thanh Hóa lại trở thành restoration cơ sở (base / 기반) một lần nữa?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Ming court: civil war trong Đại Việt trở thành foreign-policy bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **Legitimacy là tài nguyên (resource / 자원) có thể mobilize** đặt vấn đề; **Vì sao Thanh Hóa lại trở thành restoration cơ sở (base / 기반) một lần nữa?** đối chiếu bằng chứng, rồi **Ming court: civil war trong Đại Việt trở thành foreign-policy bài toán (problem / 문제)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Vì sao Thanh Hóa lại trở thành restoration cơ sở (base / 기반) một lần nữa?
 
@@ -56,7 +56,7 @@ Thanh Hóa đã là cơ sở (base / 기반) của Hồ và Lam Sơn. Geography 
 
 Lê dynastic bộ nhớ (memory / 메모리) ở Lam Kinh tạo symbolic capital; families with military followings provide organizational capital. Khi Thăng Long controlled by Mạc, restoration movement needs an alternative center far enough to survive.
 
-> **Chuyển mạch:** Ở chặng này của **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **Ming court: civil war trong Đại Việt trở thành foreign-policy bài toán (problem / 문제)** tiếp nhận điểm tựa từ **Vì sao Thanh Hóa lại trở thành restoration cơ sở (base / 기반) một lần nữa?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Examination hệ thống (system / 시스템) tiếp tục dưới Mạc: trạng thái (state / 상태) continuity across dynastic break** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **Ming court: civil war trong Đại Việt trở thành foreign-policy bài toán (problem / 문제)** nối từ **Vì sao Thanh Hóa lại trở thành restoration cơ sở (base / 기반) một lần nữa?** sang **Examination hệ thống (system / 시스템) tiếp tục dưới Mạc: trạng thái (state / 상태) continuity across dynastic break**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ming court: civil war trong Đại Việt trở thành foreign-policy bài toán (problem / 문제)
 
@@ -68,7 +68,7 @@ Cambridge scholarship notes Ming court debated whether to intervene and became i
 
 Ritual hierarchy therefore không equal mất mát (loss / 손실) of all sovereignty.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **Examination hệ thống (system / 시스템) tiếp tục dưới Mạc: trạng thái (state / 상태) continuity across dynastic break** tiếp nhận điểm tựa từ **Ming court: civil war trong Đại Việt trở thành foreign-policy bài toán (problem / 문제)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Civil war economy: fragmentation không có nghĩa economy stops everywhere** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **Examination hệ thống (system / 시스템) tiếp tục dưới Mạc: trạng thái (state / 상태) continuity across dynastic break** nối từ **Ming court: civil war trong Đại Việt trở thành foreign-policy bài toán (problem / 문제)** sang **Civil war economy: fragmentation không có nghĩa economy stops everywhere**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Examination hệ thống (system / 시스템) tiếp tục dưới Mạc: trạng thái (state / 상태) continuity across dynastic break
 
@@ -78,7 +78,7 @@ The UNESCO-listed doctoral stelae include examinations from both Lê and Mạc p
 
 A regime seeking legitimacy often preserves institutions people already recognize.
 
-> **Chuyển mạch:** Trong **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **Civil war economy: fragmentation không có nghĩa economy stops everywhere** tiếp nhận điểm tựa từ **Examination hệ thống (system / 시스템) tiếp tục dưới Mạc: trạng thái (state / 상태) continuity across dynastic break** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Military families replace a single court as the main political actors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **Civil war economy: fragmentation không có nghĩa economy stops everywhere** nối từ **Examination hệ thống (system / 시스템) tiếp tục dưới Mạc: trạng thái (state / 상태) continuity across dynastic break** sang **Military families replace a single court as the main political actors**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Civil war economy: fragmentation không có nghĩa economy stops everywhere
 
@@ -88,7 +88,7 @@ This is a general quy tắc (rule / 규칙): **political fragmentation and comme
 
 Do not infer GDP collapse merely from dynastic warfare without regional bằng chứng (evidence / 증거).
 
-> **Chuyển mạch:** Ở chặng này của **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **Military families replace a single court as the main political actors** tiếp nhận điểm tựa từ **Civil war economy: fragmentation không có nghĩa economy stops everywhere** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1592: Mạc loses Thăng Long, but xung đột (conflict / 충돌) does not simply end** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **Military families replace a single court as the main political actors** nối từ **Civil war economy: fragmentation không có nghĩa economy stops everywhere** sang **1592: Mạc loses Thăng Long, but xung đột (conflict / 충돌) does not simply end**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Military families replace a single court as the main political actors
 
@@ -106,7 +106,7 @@ restoration state
 
 This separation between symbolic sovereign and effective military ruler becomes foundational for later **Lê Trung Hưng – Trịnh lords** hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **1592: Mạc loses Thăng Long, but xung đột (conflict / 충돌) does not simply end** tiếp nhận điểm tựa từ **Military families replace a single court as the main political actors** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **From Lê–Mạc to Trịnh–Nguyễn: why the next split changes axis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **1592: Mạc loses Thăng Long, but xung đột (conflict / 충돌) does not simply end** nối từ **Military families replace a single court as the main political actors** sang **From Lê–Mạc to Trịnh–Nguyễn: why the next split changes axis**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1592: Mạc loses Thăng Long, but xung đột (conflict / 충돌) does not simply end
 
@@ -116,7 +116,7 @@ Therefore 1592 is major coordinate, not an instant national reunification switch
 
 Trạng thái (state / 상태) fragmentation transitions into a new cấu hình (configuration / 구성) rather than disappearing.
 
-> **Chuyển mạch:** Trong **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **From Lê–Mạc to Trịnh–Nguyễn: why the next split changes axis** tiếp nhận điểm tựa từ **1592: Mạc loses Thăng Long, but xung đột (conflict / 충돌) does not simply end** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Di tích và bộ nhớ (memory / 메모리) checkpoint** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **From Lê–Mạc to Trịnh–Nguyễn: why the next split changes axis** nối từ **1592: Mạc loses Thăng Long, but xung đột (conflict / 충돌) does not simply end** sang **Di tích và bộ nhớ (memory / 메모리) checkpoint**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## From Lê–Mạc to Trịnh–Nguyễn: why the next split changes axis
 
@@ -126,7 +126,7 @@ This is not just another family feud. It overlaps with expansion into former Cha
 
 That is why next chapter needs economic and toàn cục (global / 전역) ngữ cảnh (context / 맥락), not merely battle chronology.
 
-> **Chuyển mạch:** Ở chặng này của **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **Di tích và bộ nhớ (memory / 메모리) checkpoint** tiếp nhận điểm tựa từ **From Lê–Mạc to Trịnh–Nguyễn: why the next split changes axis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) misconception: “chính thống” có một answer đơn giản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **Di tích và bộ nhớ (memory / 메모리) checkpoint** nối từ **From Lê–Mạc to Trịnh–Nguyễn: why the next split changes axis** sang **Dùng chung (common / 공통) misconception: “chính thống” có một answer đơn giản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Di tích và bộ nhớ (memory / 메모리) checkpoint
 
@@ -136,7 +136,7 @@ When visiting, ask who commissioned hiện tại (current / 현재) structures a
 
 Heritage itself can reflect winners' historiography.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **Dùng chung (common / 공통) misconception: “chính thống” có một answer đơn giản** tiếp nhận điểm tựa từ **Di tích và bộ nhớ (memory / 메모리) checkpoint** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Recap và bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **Dùng chung (common / 공통) misconception: “chính thống” có một answer đơn giản** nối từ **Di tích và bộ nhớ (memory / 메모리) checkpoint** sang **Recap và bàn giao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) misconception: “chính thống” có một answer đơn giản
 
@@ -146,7 +146,7 @@ Historian should not erase moral ngôn ngữ (language / 언어) from sources, b
 
 The useful question is not “ai thật sự chính thống?” as timeless fact, but “which groups accepted which claim, through what institutions, and with what military consequences?”.
 
-> **Chuyển mạch:** Trong **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **Recap và bàn giao** tiếp nhận điểm tựa từ **Dùng chung (common / 공통) misconception: “chính thống” có một answer đơn giản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Lê–Mạc và Nam–Bắc triều: legitimacy, military families và fragmentation**, **Recap và bàn giao** nối từ **Dùng chung (common / 공통) misconception: “chính thống” có một answer đơn giản** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 
