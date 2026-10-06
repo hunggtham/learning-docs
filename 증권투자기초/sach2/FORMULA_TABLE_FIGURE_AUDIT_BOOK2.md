@@ -20,8 +20,8 @@
 | F10 | NPV | discounted inflows minus investment | cash-flow timing and hurdle rate | 02 §2 | PASS |
 | F11 | dividend discount model | PV of dividends + terminal value | D_t, k, horizon/terminal value | 02 §2 | PASS |
 | F12 | Gordon growth | `P0=D1/(k-g)` | `D1=D0(1+g)`; `k>g` | 02 §2 | PASS |
-| F13 | FCFE/FCFF bridge | FCFF = FCFE + after-tax interest + net debt-flow adjustment | ownership of cash flow vs discount rate | 02 §3 | PASS |
-| F14 | WACC matching | FCFF ↔ WACC; FCFE ↔ cost of equity | market-capital-provider logic; tax-shield boundary | 02 §3 | PASS |
+| F13 | FCFE/FCFF bridge | `FCFF = FCFE + Interest×(1−T) + net debt repayment` | net debt repayment = debt repaid − new borrowing; equivalent to subtracting Net Borrowing | 02 §3 | PASS |
+| F14 | WACC | `[E/(D+E)]Re + [D/(D+E)]Rd(1−T)` | market-value weights, cost of equity/debt, tax-shield assumption; FCFF ownership | 02 §3 | PASS |
 | F15 | EVA | `NOPAT - Invested Capital×WACC` | operating scope and capital charge | 02 §4 | PASS |
 | F16 | EVA/ROIC | `Invested Capital×(ROIC-WACC)` | value creation requires return > capital cost | 02 §4 | PASS |
 | F17 | PER | price / EPS | negative/cyclical earnings boundary | 02 §5 | PASS |
