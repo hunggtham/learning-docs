@@ -12,7 +12,7 @@ Autism là một **rối loạn phát triển thần kinh (neurodevelopmental co
 
 Hai người cùng chẩn đoán có thể có điểm mạnh và khó khăn rất khác nhau. Vì vậy một nhãn chẩn đoán không thay thế mô tả chức năng cụ thể.
 
-> **Chuyển mạch:** Trong **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **2. Góc nhìn phát triển** tiếp nhận điểm tựa từ **1. “Phổ” không phải một đường thẳng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Giao tiếp và tương tác xã hội** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **2. Góc nhìn phát triển** nối từ **1. “Phổ” không phải một đường thẳng** sang **3. Giao tiếp và tương tác xã hội**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Góc nhìn phát triển
 
@@ -22,7 +22,7 @@ Autism bắt đầu từ quá trình phát triển, dù một người có thể
 
 Không nên suy luận rằng “không được chẩn đoán từ nhỏ = không thể autism”. Nhưng cũng không nên chỉ dựa vào mô tả hiện tại của người trưởng thành mà bỏ qua bằng chứng phát triển.
 
-> **Chuyển mạch:** Ở chặng này của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **3. Giao tiếp và tương tác xã hội** tiếp nhận điểm tựa từ **2. Góc nhìn phát triển** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Double Empathy bài toán (problem / 문제)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **3. Giao tiếp và tương tác xã hội** nối từ **2. Góc nhìn phát triển** sang **4. Double Empathy bài toán (problem / 문제)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Giao tiếp và tương tác xã hội
 
@@ -32,7 +32,7 @@ Tuy nhiên khó khăn xã hội không nên bị diễn giải mặc định là
 
 Xem [[../02_learning_and_cognition/05_language_social_cognition_and_theory_of_mind]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **3. Giao tiếp và tương tác xã hội** xác định đầu vào; **4. Double Empathy bài toán (problem / 문제)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **5. Xử lý cảm giác** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **3. Giao tiếp và tương tác xã hội** đặt đầu vào cho **4. Double Empathy bài toán (problem / 문제)**, rồi **5. Xử lý cảm giác** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 4. Double Empathy bài toán (problem / 문제)
 
@@ -42,7 +42,7 @@ Xem [[../02_learning_and_cognition/05_language_social_cognition_and_theory_of_mi
 
 Cách đọc cân bằng là xem đứt gãy giao tiếp như tương tác giữa hồ sơ cá nhân và người/bối cảnh đối diện.
 
-> **Chuyển mạch:** Trong **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **4. Double Empathy bài toán (problem / 문제)** xác định đầu vào; **5. Xử lý cảm giác** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **6. Hành vi lặp lại, sở thích tập trung và tính dự đoán** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **4. Double Empathy bài toán (problem / 문제)** đặt đầu vào cho **5. Xử lý cảm giác**, rồi **6. Hành vi lặp lại, sở thích tập trung và tính dự đoán** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. Xử lý cảm giác
 
@@ -52,7 +52,7 @@ Nếu văn phòng mở tạo quá tải cảm giác, việc né tránh có thể
 
 Xem [[../01_brain_and_mind/01_sensation_and_perception]] và [[../01_brain_and_mind/04_interoception_pain_and_embodied_mind]].
 
-> **Chuyển mạch:** Ở chặng này của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **6. Hành vi lặp lại, sở thích tập trung và tính dự đoán** tiếp nhận điểm tựa từ **5. Xử lý cảm giác** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Masking và camouflaging** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **6. Hành vi lặp lại, sở thích tập trung và tính dự đoán** nối từ **5. Xử lý cảm giác** sang **7. Masking và camouflaging**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Hành vi lặp lại, sở thích tập trung và tính dự đoán
 
@@ -60,7 +60,7 @@ Lặp lại, routine và sở thích tập trung có thể phục vụ nhiều c
 
 Không nên mặc định mọi hành vi lặp lại là thứ phải loại bỏ. Câu hỏi tốt hơn là hành vi đó đang gây hại/suy giảm hay đang giúp tự điều chỉnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **7. Masking và camouflaging** tiếp nhận điểm tựa từ **6. Hành vi lặp lại, sở thích tập trung và tính dự đoán** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Chức năng thích nghi khác IQ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **7. Masking và camouflaging** nối từ **6. Hành vi lặp lại, sở thích tập trung và tính dự đoán** sang **8. Chức năng thích nghi khác IQ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Masking và camouflaging
 
@@ -70,7 +70,7 @@ Biểu hiện bên ngoài có thể trông “ổn” trong khi chi phí bên tr
 
 > **Giới hạn bằng chứng:** camouflaging đang được nghiên cứu nhiều hơn, nhưng cách đo, khả năng khái quát theo giới/văn hóa và quan hệ nhân quả với sức khỏe tâm thần vẫn cần thận trọng.
 
-> **Chuyển mạch:** Trong **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **8. Chức năng thích nghi khác IQ** tiếp nhận điểm tựa từ **7. Masking và camouflaging** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Tình trạng đồng mắc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **8. Chức năng thích nghi khác IQ** nối từ **7. Masking và camouflaging** sang **9. Tình trạng đồng mắc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Chức năng thích nghi khác IQ
 
@@ -78,7 +78,7 @@ Một người có IQ cao vẫn có thể gặp khó khăn đáng kể trong l�
 
 Điều này nối trực tiếp với distinction giữa **năng lực (capacity)** và **chức năng thực tế (adaptive functioning)**.
 
-> **Chuyển mạch:** Ở chặng này của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **9. Tình trạng đồng mắc** tiếp nhận điểm tựa từ **8. Chức năng thích nghi khác IQ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Neurodiversity và suy giảm chức năng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **9. Tình trạng đồng mắc** nối từ **8. Chức năng thích nghi khác IQ** sang **10. Neurodiversity và suy giảm chức năng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Tình trạng đồng mắc
 
@@ -86,7 +86,7 @@ Người autistic có thể đồng thời có ADHD, lo âu, trầm cảm, rối
 
 Điều trị tình trạng đồng mắc cần thích nghi với hồ sơ giao tiếp và cảm giác khi phù hợp. Không nên quy mọi distress cho autism nếu có một tình trạng khác đang cần đánh giá riêng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **10. Neurodiversity và suy giảm chức năng** tiếp nhận điểm tựa từ **9. Tình trạng đồng mắc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Mục tiêu hỗ trợ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **10. Neurodiversity và suy giảm chức năng** nối từ **9. Tình trạng đồng mắc** sang **11. Mục tiêu hỗ trợ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Neurodiversity và suy giảm chức năng
 
@@ -100,7 +100,7 @@ không loại trừ
 suy giảm chức năng + nhu cầu hỗ trợ
 ```
 
-> **Chuyển mạch:** Trong **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **11. Mục tiêu hỗ trợ** tiếp nhận điểm tựa từ **10. Neurodiversity và suy giảm chức năng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Học tập và công việc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **11. Mục tiêu hỗ trợ** nối từ **10. Neurodiversity và suy giảm chức năng** sang **12. Học tập và công việc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Mục tiêu hỗ trợ
 
@@ -110,7 +110,7 @@ Hỗ trợ có thể gồm giao tiếp rõ ràng, điều chỉnh cảm giác, c
 
 Thuốc không được dùng như cách “điều trị autism nói chung”; chỉ định thuốc cần gắn với triệu chứng hoặc tình trạng cụ thể.
 
-> **Chuyển mạch:** Ở chặng này của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **12. Học tập và công việc** tiếp nhận điểm tựa từ **11. Mục tiêu hỗ trợ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Gia đình và hệ thống hỗ trợ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **12. Học tập và công việc** nối từ **11. Mục tiêu hỗ trợ** sang **13. Gia đình và hệ thống hỗ trợ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Học tập và công việc
 
@@ -127,13 +127,13 @@ Thiết kế hòa nhập thường hữu ích hơn lời khuyên kiểu “hãy 
 
 Xem [[../06_applied/00_work_organization_and_leadership]] và [[../06_applied/03_interpersonal_communication_and_conflict]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **13. Gia đình và hệ thống hỗ trợ** tiếp nhận điểm tựa từ **12. Học tập và công việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Ranh giới bằng chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **13. Gia đình và hệ thống hỗ trợ** nối từ **12. Học tập và công việc** sang **14. Ranh giới bằng chứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Gia đình và hệ thống hỗ trợ
 
 Gia đình có thể rất quan trọng nhưng quyền tự chủ của người autistic trưởng thành vẫn cần được tôn trọng. Chăm sóc cần xem đồng thời gánh nặng người chăm sóc, an toàn, nhu cầu giao tiếp và ưu tiên của chính người autistic.
 
-> **Chuyển mạch:** Trong **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **13. Gia đình và hệ thống hỗ trợ** nêu điều cần giải thích; **14. Ranh giới bằng chứng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **15. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **13. Gia đình và hệ thống hỗ trợ** đặt vấn đề; **14. Ranh giới bằng chứng** đối chiếu bằng chứng, rồi **15. Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. Ranh giới bằng chứng
 
@@ -145,7 +145,7 @@ Gia đình có thể rất quan trọng nhưng quyền tự chủ của người
 
 **Không được nói:** autism do parenting, người autistic “không có empathy”, hoặc một điểm số online đủ để tự xác nhận chẩn đoán.
 
-> **Chuyển mạch:** Ở chặng này của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **14. Ranh giới bằng chứng** nêu điều cần giải thích; **15. Những hiểu lầm phổ biến** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **14. Ranh giới bằng chứng** đặt vấn đề; **15. Những hiểu lầm phổ biến** đối chiếu bằng chứng, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. Những hiểu lầm phổ biến
 
@@ -157,7 +157,7 @@ Gia đình có thể rất quan trọng nhưng quyền tự chủ của người
 
 **“Neurodiversity nghĩa là không bao giờ cần điều trị.”** Sai.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **Mô hình tư duy** gom các mảnh từ **15. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **Mô hình tư duy** tổng hợp từ **15. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -175,7 +175,7 @@ chức năng + nhu cầu hỗ trợ
 
 > Autism nên được hiểu như một hồ sơ phát triển tương tác với môi trường, không phải một “khuyết điểm duy nhất” nằm trong một kỹ năng.
 
-> **Chuyển mạch:** Trong **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Autism, giao tiếp xã hội, xử lý cảm giác và hỗ trợ**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

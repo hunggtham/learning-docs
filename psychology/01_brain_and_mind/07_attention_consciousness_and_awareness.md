@@ -16,7 +16,7 @@ Trong công việc lập trình, một notification không chỉ “mất 10 gi�
 
 Xem [[../02_learning_and_cognition/01_memory]].
 
-> **Chuyển mạch:** Trong **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **2. Alerting, orienting và executive điều khiển (control / 제어)** tiếp nhận điểm tựa từ **1. Chú ý là sự ưu tiên trong hệ có tài nguyên hữu hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Bottom-up, top-down và priority map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **2. Alerting, orienting và executive điều khiển (control / 제어)** nối từ **1. Chú ý là sự ưu tiên trong hệ có tài nguyên hữu hạn** sang **3. Bottom-up, top-down và priority map**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Alerting, orienting và executive điều khiển (control / 제어)
 
@@ -26,7 +26,7 @@ Một taxonomy có ảnh hưởng phân biệt ba hàm (function / 함수):
 
 Các hàm (function / 함수) này có thể dissociate phần nào trong behavioral/neural studies, nhưng chúng tương tác và mạng (network / 네트워크) boundaries không tuyệt đối. Meta-analysis và rà soát (review / 검토) gần đây vẫn dùng khung phần mềm (framework / 프레임워크) này như một cách tổ chức bằng chứng (evidence / 증거) chứ không như “ba mô-đun (module / 모듈) độc lập”.
 
-> **Chuyển mạch:** Ở chặng này của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **3. Bottom-up, top-down và priority map** tiếp nhận điểm tựa từ **2. Alerting, orienting và executive điều khiển (control / 제어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Attentional capture không phải phản xạ bất biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **3. Bottom-up, top-down và priority map** nối từ **2. Alerting, orienting và executive điều khiển (control / 제어)** sang **4. Attentional capture không phải phản xạ bất biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Bottom-up, top-down và priority map
 
@@ -36,7 +36,7 @@ Cách nhìn hiện đại thường xem selection là competition giữa salienc
 
 Môi trường (environment / 환경) thiết kế (design / 설계) có thể giảm competition bằng cách giảm cue thay vì yêu cầu inhibition lặp đi lặp lại.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **4. Attentional capture không phải phản xạ bất biến** tiếp nhận điểm tựa từ **3. Bottom-up, top-down và priority map** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Sustained attention và vigilance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **4. Attentional capture không phải phản xạ bất biến** nối từ **3. Bottom-up, top-down và priority map** sang **5. Sustained attention và vigilance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Attentional capture không phải phản xạ bất biến
 
@@ -46,7 +46,7 @@ Stimulus đột ngột hoặc salient thường có khả năng capture attentio
 
 Trong HCI, thiết kế (design / 설계) tốt không nên dựa vào giả định người dùng sẽ luôn thấy warning chỉ vì warning technically visible.
 
-> **Chuyển mạch:** Trong **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **5. Sustained attention và vigilance** tiếp nhận điểm tựa từ **4. Attentional capture không phải phản xạ bất biến** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Attention fluctuation quan trọng hơn một score trung bình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **5. Sustained attention và vigilance** nối từ **4. Attentional capture không phải phản xạ bất biến** sang **6. Attention fluctuation quan trọng hơn một score trung bình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Sustained attention và vigilance
 
@@ -58,7 +58,7 @@ Lý do của decrement vẫn còn tranh luận. Resource-depletion accounts, und
 
 Rà soát (review / 검토) 2024 về strategic allocation of vigilance nhấn mạnh việc phân bổ effort theo expected giá trị (value / 값) hơn là một “bình tài nguyên” đơn giản (PMID: 39295156).
 
-> **Chuyển mạch:** Ở chặng này của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **6. Attention fluctuation quan trọng hơn một score trung bình** tiếp nhận điểm tựa từ **5. Sustained attention và vigilance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Nghỉ giải lao và metacognition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **6. Attention fluctuation quan trọng hơn một score trung bình** nối từ **5. Sustained attention và vigilance** sang **7. Nghỉ giải lao và metacognition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Attention fluctuation quan trọng hơn một score trung bình
 
@@ -68,7 +68,7 @@ Sustained attention không giảm tuyến tính đều. hiệu năng (performanc
 
 Trong monitoring hệ thống (system / 시스템), thiết kế (design / 설계) cần hỗ trợ detection của rare sự kiện (event / 이벤트) thay vì giả định operator sẽ giữ vigilance hoàn hảo hàng giờ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **7. Nghỉ giải lao và metacognition** tiếp nhận điểm tựa từ **6. Attention fluctuation quan trọng hơn một score trung bình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Executive attention và cognitive điều khiển (control / 제어)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **7. Nghỉ giải lao và metacognition** nối từ **6. Attention fluctuation quan trọng hơn một score trung bình** sang **8. Executive attention và cognitive điều khiển (control / 제어)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Nghỉ giải lao và metacognition
 
@@ -78,7 +78,7 @@ Bằng chứng (evidence / 증거) gần đây cho thấy người dùng đôi k
 
 Ứng dụng hợp lý là theo dõi hiệu năng (performance / 성능)/fatigue tín hiệu (signal / 신호) và điều chỉnh pacing, không thần thánh hóa một con số thời gian duy nhất.
 
-> **Chuyển mạch:** Trong **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **8. Executive attention và cognitive điều khiển (control / 제어)** tiếp nhận điểm tựa từ **7. Nghỉ giải lao và metacognition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. tác vụ (task / 작업) switching và switch chi phí (cost / 비용)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **8. Executive attention và cognitive điều khiển (control / 제어)** nối từ **7. Nghỉ giải lao và metacognition** sang **9. tác vụ (task / 작업) switching và switch chi phí (cost / 비용)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Executive attention và cognitive điều khiển (control / 제어)
 
@@ -88,7 +88,7 @@ Attention, working bộ nhớ (memory / 메모리) và executive hàm (function 
 
 Vì vậy một tác vụ (task / 작업) “executive hàm (function / 함수)” đơn lẻ không nên được coi là direct meter của một năng lực duy nhất trong não.
 
-> **Chuyển mạch:** Ở chặng này của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **9. tác vụ (task / 작업) switching và switch chi phí (cost / 비용)** tiếp nhận điểm tựa từ **8. Executive attention và cognitive điều khiển (control / 제어)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Multitasking: tính đồng thời (concurrency / 동시성) và switching phải tách nhau** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **9. tác vụ (task / 작업) switching và switch chi phí (cost / 비용)** nối từ **8. Executive attention và cognitive điều khiển (control / 제어)** sang **10. Multitasking: tính đồng thời (concurrency / 동시성) và switching phải tách nhau**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. tác vụ (task / 작업) switching và switch chi phí (cost / 비용)
 
@@ -98,7 +98,7 @@ Preparation có thể giảm chi phí (cost / 비용) nhưng thường không lo
 
 Trong software công việc (work / 작업), switching giữa rà soát mã (code review / 코드 리뷰), chat, debugging và documentation có thể tạo chi phí (cost / 비용) lớn vì mỗi tác vụ (task / 작업) chứa ngữ cảnh (context / 맥락) trạng thái (state / 상태) rộng hơn laboratory tác vụ (task / 작업).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **10. Multitasking: tính đồng thời (concurrency / 동시성) và switching phải tách nhau** tiếp nhận điểm tựa từ **9. tác vụ (task / 작업) switching và switch chi phí (cost / 비용)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Interruption và resumption lag** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **10. Multitasking: tính đồng thời (concurrency / 동시성) và switching phải tách nhau** nối từ **9. tác vụ (task / 작업) switching và switch chi phí (cost / 비용)** sang **11. Interruption và resumption lag**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Multitasking: tính đồng thời (concurrency / 동시성) và switching phải tách nhau
 
@@ -108,7 +108,7 @@ Do đó câu “con người không thể multitask” cũng quá tuyệt đối
 
 > nhiều **attention-demanding tasks** không thể được xử lý sâu hoàn toàn đồng thời mà không có chi phí (cost / 비용); observed hiệu năng (performance / 성능) phụ thuộc automaticity, modality và tác vụ (task / 작업) demand.
 
-> **Chuyển mạch:** Trong **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **11. Interruption và resumption lag** tiếp nhận điểm tựa từ **10. Multitasking: tính đồng thời (concurrency / 동시성) và switching phải tách nhau** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Mind wandering** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **11. Interruption và resumption lag** nối từ **10. Multitasking: tính đồng thời (concurrency / 동시성) và switching phải tách nhau** sang **12. Mind wandering**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Interruption và resumption lag
 
@@ -118,7 +118,7 @@ Bên ngoài (external / 외부) cue, bookmark, TODO marker hoặc IDE trạng th
 
 Xem [[../02_learning_and_cognition/10_cognitive_offloading_external_memory_and_extended_cognition]].
 
-> **Chuyển mạch:** Ở chặng này của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **12. Mind wandering** tiếp nhận điểm tựa từ **11. Interruption và resumption lag** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Meta-awareness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **12. Mind wandering** nối từ **11. Interruption và resumption lag** sang **13. Meta-awareness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Mind wandering
 
@@ -128,7 +128,7 @@ Nhưng mind wandering không phải luôn dysfunctional. Trong safe ngữ cảnh
 
 Điểm quan trọng là tác vụ (task / 작업) fit: cùng một nội bộ (internal / 내부) thought hữu ích khi đi bộ có thể nguy hiểm khi lái xe.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **13. Meta-awareness** tiếp nhận điểm tựa từ **12. Mind wandering** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Attentional blink** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **13. Meta-awareness** nối từ **12. Mind wandering** sang **14. Attentional blink**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Meta-awareness
 
@@ -136,7 +136,7 @@ Nhưng mind wandering không phải luôn dysfunctional. Trong safe ngữ cảnh
 
 Meta-awareness nối attention với [[../02_learning_and_cognition/04_cognitive_biases_and_metacognition]].
 
-> **Chuyển mạch:** Trong **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **14. Attentional blink** tiếp nhận điểm tựa từ **13. Meta-awareness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Inattentional blindness và thay đổi (change / 변경) blindness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **14. Attentional blink** nối từ **13. Meta-awareness** sang **15. Inattentional blindness và thay đổi (change / 변경) blindness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Attentional blink
 
@@ -146,7 +146,7 @@ Cơ chế (mechanism / 메커니즘) chi tiết vẫn được mô hình (model 
 
 Ứng dụng HCI: alert quan trọng không nên xuất hiện thành chuỗi dày đặc khiến chúng cạnh tranh cùng temporal cửa sổ (window / 윈도우).
 
-> **Chuyển mạch:** Ở chặng này của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **15. Inattentional blindness và thay đổi (change / 변경) blindness** tiếp nhận điểm tựa từ **14. Attentional blink** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Attention và consciousness không đồng nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **15. Inattentional blindness và thay đổi (change / 변경) blindness** nối từ **14. Attentional blink** sang **16. Attention và consciousness không đồng nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Inattentional blindness và thay đổi (change / 변경) blindness
 
@@ -156,7 +156,7 @@ Người tập trung vào tác vụ (task / 작업) có thể bỏ qua stimulus 
 
 Hai phenomenon cảnh báo rằng “nó nằm trên màn hình” không đủ chứng minh người dùng (user / 사용자) đã nhận biết.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **16. Attention và consciousness không đồng nhất** tiếp nhận điểm tựa từ **15. Inattentional blindness và thay đổi (change / 변경) blindness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Attention và neuroscience** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **16. Attention và consciousness không đồng nhất** nối từ **15. Inattentional blindness và thay đổi (change / 변경) blindness** sang **17. Attention và neuroscience**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Attention và consciousness không đồng nhất
 
@@ -166,7 +166,7 @@ No-report paradigms cố giảm confound do report, nhưng chính interpretation
 
 Lý thuyết (theory / 이론) landscape được trình bày riêng tại [[09_consciousness_theories_and_evidence]].
 
-> **Chuyển mạch:** Trong **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **17. Attention và neuroscience** tiếp nhận điểm tựa từ **16. Attention và consciousness không đồng nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. ADHD không phải “thiếu chú ý” đơn giản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **17. Attention và neuroscience** nối từ **16. Attention và consciousness không đồng nhất** sang **18. ADHD không phải “thiếu chú ý” đơn giản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Attention và neuroscience
 
@@ -176,7 +176,7 @@ Attention liên quan phân tán (distributed / 분산) các hệ thống (system
 
 Rà soát (review / 검토) và meta-analytic công việc (work / 작업) 2024 tiếp tục hỗ trợ việc phân biệt alerting/orienting/executive networks theo developmental và neural bằng chứng (evidence / 증거) (PMID: 38392175), đồng thời cho thấy mạng (network / 네트워크) tương tác (interaction / 상호작용) thay đổi theo tuổi.
 
-> **Chuyển mạch:** Ở chặng này của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **18. ADHD không phải “thiếu chú ý” đơn giản** tiếp nhận điểm tựa từ **17. Attention và neuroscience** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Meditation và attention huấn luyện (training / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **18. ADHD không phải “thiếu chú ý” đơn giản** nối từ **17. Attention và neuroscience** sang **19. Meditation và attention huấn luyện (training / 학습)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. ADHD không phải “thiếu chú ý” đơn giản
 
@@ -186,7 +186,7 @@ Rà soát (review / 검토) 2024 về ADHD neurobiology nhấn mạnh heterogene
 
 Xem [[../04_mental_health/05_neurodevelopmental_adhd_autism]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **19. Meditation và attention huấn luyện (training / 학습)** tiếp nhận điểm tựa từ **18. ADHD không phải “thiếu chú ý” đơn giản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Everyday/công việc (work / 작업) thiết kế (design / 설계)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **19. Meditation và attention huấn luyện (training / 학습)** nối từ **18. ADHD không phải “thiếu chú ý” đơn giản** sang **20. Everyday/công việc (work / 작업) thiết kế (design / 설계)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Meditation và attention huấn luyện (training / 학습)
 
@@ -196,7 +196,7 @@ Một số intervention cho tác động (effect / 효과) trên attention/stres
 
 > **ranh giới (boundary / 경계):** meditation không phải bằng chứng (evidence / 증거) cho claim “rewire não vĩnh viễn” hoặc universal productivity boost.
 
-> **Chuyển mạch:** Trong **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **20. Everyday/công việc (work / 작업) thiết kế (design / 설계)** tiếp nhận điểm tựa từ **19. Meditation và attention huấn luyện (training / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **20. Everyday/công việc (work / 작업) thiết kế (design / 설계)** nối từ **19. Meditation và attention huấn luyện (training / 학습)** sang **21. Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Everyday/công việc (work / 작업) thiết kế (design / 설계)
 
@@ -214,7 +214,7 @@ reduce unnecessary capture
 
 Xem [[../06_applied/02_hci_ai_and_human_decision_support]], [[../06_applied/00_work_organization_and_leadership]] và [[../06_applied/12_psychology_in_daily_life_and_self_regulation]].
 
-> **Chuyển mạch:** Ở chặng này của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **21. Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **20. Everyday/công việc (work / 작업) thiết kế (design / 설계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **21. Những hiểu lầm phổ biến** nối từ **20. Everyday/công việc (work / 작업) thiết kế (design / 설계)** sang **22. Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Những hiểu lầm phổ biến
 
@@ -228,7 +228,7 @@ Xem [[../06_applied/02_hci_ai_and_human_decision_support]], [[../06_applied/00_w
 
 **“Thấy stimulus = đã nhận biết stimulus.”** Không. Inattentional/thay đổi (change / 변경) blindness cho thấy visibility không đảm bảo report/awareness.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **22. Mô hình tư duy** gom các mảnh từ **21. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **22. Mô hình tư duy** tổng hợp từ **21. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 22. Mô hình tư duy
 
@@ -248,7 +248,7 @@ salience + goal + reward history + state
 
 Chú ý là một hệ thống phân bổ ưu tiên động, không phải nút bật/tắt “focus”.
 
-> **Chuyển mạch:** Trong **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **Kết nối kiến thức** gom các mảnh từ **22. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Chú ý, kiểm soát nhận thức và giới hạn xử lý**, **Kết nối kiến thức** tổng hợp từ **22. Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

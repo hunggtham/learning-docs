@@ -20,7 +20,7 @@ Mất một người không chỉ làm “buồn”. Nó có thể làm thay đ�
 
 Vì vậy grief có thể gồm sadness, anger, guilt, relief, numbness, yearning và disorientation cùng lúc.
 
-> **Chuyển mạch:** Trong **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Attachment và prediction** tiếp nhận điểm tựa từ **Grief phá vỡ nhiều hệ cùng lúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dual tiến trình (process / 프로세스) mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Attachment và prediction** nối từ **Grief phá vỡ nhiều hệ cùng lúc** sang **Dual tiến trình (process / 프로세스) mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Attachment và prediction
 
@@ -28,7 +28,7 @@ Nếu một người đã xuất hiện trong hàng nghìn routine, não liên t
 
 Một người có thể biết về mặt fact rằng partner đã mất nhưng vẫn có khoảnh khắc “muốn nhắn cho họ”. Đây không phải mất thực tại; nó phản ánh mô hình (model / 모델) quan hệ chưa cập nhật hoàn toàn.
 
-> **Chuyển mạch:** Ở chặng này của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Attachment và prediction** xác định đầu vào; **Dual tiến trình (process / 프로세스) mô hình (model / 모델)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Continuing bonds** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Attachment và prediction** đặt đầu vào cho **Dual tiến trình (process / 프로세스) mô hình (model / 모델)**, rồi **Continuing bonds** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Dual tiến trình (process / 프로세스) mô hình (model / 모델)
 
@@ -39,7 +39,7 @@ Một mô hình (model / 모델) hữu ích phân biệt hai chế độ (mode /
 
 Healthy adaptation thường dao động giữa hai chế độ (mode / 모드) thay vì ở mãi một bên.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Dual tiến trình (process / 프로세스) mô hình (model / 모델)** xác định đầu vào; **Continuing bonds** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Grief và depression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Dual tiến trình (process / 프로세스) mô hình (model / 모델)** đặt đầu vào cho **Continuing bonds**, rồi **Grief và depression** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Continuing bonds
 
@@ -47,7 +47,7 @@ Mục tiêu không nhất thiết là “quên” hoặc cắt mọi liên kết
 
 Vấn đề là bond có cho phép tiếp tục sống hay giữ người ta hoàn toàn bất động.
 
-> **Chuyển mạch:** Trong **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Grief và depression** tiếp nhận điểm tựa từ **Continuing bonds** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Grief và PTSD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Grief và depression** nối từ **Continuing bonds** sang **Grief và PTSD**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Grief và depression
 
@@ -59,7 +59,7 @@ Hai trạng thái có thể đồng tồn tại. Assessment cần xem hàm (func
 
 Xem [[03_depression_bipolar_and_suicidality]].
 
-> **Chuyển mạch:** Ở chặng này của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Grief và PTSD** tiếp nhận điểm tựa từ **Grief và depression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Prolonged Grief Disorder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Grief và PTSD** nối từ **Grief và depression** sang **Prolonged Grief Disorder**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Grief và PTSD
 
@@ -67,7 +67,7 @@ Một death traumatic có thể đồng thời tạo grief và trauma symptom. P
 
 Treatment cần formulation đúng cơ chế (mechanism / 메커니즘) thay vì dùng một giao thức (protocol / 프로토콜) cho mọi mất mát (loss / 손실).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Prolonged Grief Disorder** tiếp nhận điểm tựa từ **Grief và PTSD** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Guilt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Prolonged Grief Disorder** nối từ **Grief và PTSD** sang **Guilt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Prolonged Grief Disorder
 
@@ -75,7 +75,7 @@ Một nhóm người phát triển grief kéo dài, cường độ cao và gây 
 
 Điểm quan trọng là diagnosis không được dùng để pathologize grief bình thường. Duration, impairment và cultural expectation đều quan trọng.
 
-> **Chuyển mạch:** Trong **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Guilt** tiếp nhận điểm tựa từ **Prolonged Grief Disorder** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ambiguous mất mát (loss / 손실)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Guilt** nối từ **Prolonged Grief Disorder** sang **Ambiguous mất mát (loss / 손실)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Guilt
 
@@ -85,7 +85,7 @@ Một số guilt dựa trên responsibility thực, nhưng nhiều guilt xuất 
 
 Lập luận nhân quả (causal reasoning / 인과적 추론) và self-compassion có thể giúp phân biệt responsibility thực với counterfactual impossible tiêu chuẩn (standard / 표준).
 
-> **Chuyển mạch:** Ở chặng này của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Ambiguous mất mát (loss / 손실)** tiếp nhận điểm tựa từ **Guilt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Disenfranchised grief** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Ambiguous mất mát (loss / 손실)** nối từ **Guilt** sang **Disenfranchised grief**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ambiguous mất mát (loss / 손실)
 
@@ -93,7 +93,7 @@ Không phải mọi mất mát (loss / 손실) đều có closure rõ. Ví dụ 
 
 Ở đây, người ta có thể đồng thời trải nghiệm “còn” và “mất”, làm adaptation khó hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Disenfranchised grief** tiếp nhận điểm tựa từ **Ambiguous mất mát (loss / 손실)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trẻ em và grief** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Disenfranchised grief** nối từ **Ambiguous mất mát (loss / 손실)** sang **Trẻ em và grief**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Disenfranchised grief
 
@@ -101,7 +101,7 @@ Một số grief không được xã hội (social / 사회적) recognition đ�
 
 Khi xã hội (social / 사회적) world nói “không đáng buồn vậy”, người ta vừa chịu mất mát (loss / 손실) vừa mất legitimacy để grief.
 
-> **Chuyển mạch:** Trong **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Trẻ em và grief** tiếp nhận điểm tựa từ **Disenfranchised grief** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Grief ở workplace** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Trẻ em và grief** nối từ **Disenfranchised grief** sang **Grief ở workplace**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trẻ em và grief
 
@@ -109,7 +109,7 @@ Children hiểu death theo developmental stage. Có thể hỏi lại cùng câu
 
 Cách hỗ trợ cần phù hợp tuổi, rõ ràng và tránh euphemism gây hiểu sai.
 
-> **Chuyển mạch:** Ở chặng này của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Grief ở workplace** tiếp nhận điểm tựa từ **Trẻ em và grief** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Intervention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Grief ở workplace** nối từ **Trẻ em và grief** sang **Intervention**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Grief ở workplace
 
@@ -117,7 +117,7 @@ Return-to-work quá sớm hoặc expectation “bình thường lại” nhanh c
 
 Hỗ trợ (support / 지원) thực tế gồm flexibility, tải công việc (workload / 워크로드) adjustment và clear communication hơn là chỉ một câu condolence.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Intervention** tiếp nhận điểm tựa từ **Grief ở workplace** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Intervention** nối từ **Grief ở workplace** sang **Dùng chung (common / 공통) misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Intervention
 
@@ -131,7 +131,7 @@ Hỗ trợ (support / 지원) hữu ích thường gồm:
 
 Không có một timeline “đúng” áp dụng cho mọi người.
 
-> **Chuyển mạch:** Trong **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Intervention** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Dùng chung (common / 공통) misconceptions** nối từ **Intervention** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) misconceptions
 
@@ -143,13 +143,13 @@ Không có một timeline “đúng” áp dụng cho mọi người.
 
 **“Nói về người đã mất làm người ta buồn hơn.”** Nhiều người muốn người khác nhớ và gọi tên họ; preference cá nhân cần được hỏi.
 
-> **Chuyển mạch:** Ở chặng này của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Grief là quá trình cập nhật một thế giới nội tâm được xây quanh một relationship nay đã thay đổi không thể đảo ngược.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Mất mát và tang chế — Grief, mất mát (loss / 손실) & Bereavement / 애도·상실**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 
