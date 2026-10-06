@@ -1672,23 +1672,42 @@ Nếu gặp câu tình huống, dùng pattern **위험 인식 → 즉시 행동 
 
 ## D2. Fact hiện hành cần timestamp
 
-Các số dưới đây đã từng xuất hiện khác trong tài liệu cũ. Không học số cũ như fact hiện tại.
+Khi một fact đã đổi theo phiên bản, **không chỉ ghi giá trị mới**. Hãy nhớ cả `변경 전 → 변경 후 → 시행일` để nhận ra câu hỏi dùng giáo trình cũ hay hỏi制度 hiện hành.
 
-- `예금보호한도`: **1억원** (원금+이자 합산 보호한도, 2025-09-01 시행).
-- `법정 최고금리`: **연 20%**.
-- `검찰청`: **2026-10-02 폐지**; `공소청` và `중대범죄수사청` được vận hành theo cơ cấu mới.
+- `예금보호한도`: hiện hành **1억원** (2025-09-01 시행).
+- `법정 최고금리`: hiện hành **연 20%** (2021-07-07 시행).
+- `형사사법 체계`: từ **2026-10-02**, `검찰청` 폐지 → `공소청 + 중대범죄수사청`.
+- `소비기한 표시제`: từ **2023-01-01**, thực phẩm chuyển trọng tâm 표시 từ `유통기한` sang `소비기한` (một số ngoại lệ/chuyển tiếp riêng).
+- `고교학점제`: từ **2025학년도 고1** bắt đầu áp dụng toàn diện; học sinh chọn môn, tích lũy credit và đạt chuẩn để tốt nghiệp.
+- `모바일 외국인등록증`: từ **2025-01-10**, registered foreigners đủ điều kiện có thể dùng mobile residence card có hiệu lực như thẻ vật lý.
 
-**Số cũ cần nhận diện nhưng không dùng làm fact hiện hành:**
-- `예금자보호 5천만원`: từng xuất hiện trong tài liệu cũ; current layer của master dùng `1억원`.
-- `법정 최고금리 연 24%`: dữ liệu cũ; current layer dùng `연 20%`.
-
-Ngoài ba mục trên, **không học cứng** các dữ liệu sau nếu không có timestamp: `1인 가구 비율`, dân số Seoul, tỷ lệ tôn giáo, tỷ lệ học đại học, số du học sinh, mức/trợ cấp sinh con–chăm trẻ, chi tiết visa–quốc tịch, quyền bầu cử của từng nhóm đối tượng và format kỳ thi. Các dữ liệu này có thể thay đổi theo năm, chính sách hoặc loại kỳ đánh giá.
+Ngoài các mục có mốc rõ ở trên, **không học cứng** các dữ liệu sau nếu không có timestamp: `1인 가구 비율`, dân số Seoul, tỷ lệ tôn giáo, tỷ lệ học đại học, số du học sinh, mức/trợ cấp sinh con–chăm trẻ, chi tiết visa–quốc tịch, quyền bầu cử của từng nhóm đối tượng và format kỳ thi.
 
 `시험 문항 수·시간·작문 분량·합격 기준`도 notice에 따라 달라질 수 있으므로, handbook chỉ giữ nguyên tắc và dùng thông báo kỳ thi hiện hành làm authority cuối cùng.
 
+## D3. 최근 제도변경 — 변경 전 ↔ 변경 후
+
+| Chủ đề | 변경 전 | 변경 후 | 시행/기준 | Phản xạ khi thi |
+|---|---|---|---|---|
+| `예금보호한도` | 1인당 `5천만원` | 1인당 `1억원` | 2025-09-01 | Nếu hỏi hiện hành: `1억원`; nếu câu dẫn tài liệu cũ, nhận diện `5천만원` là old version. |
+| `법정 최고금리` | `연 24%` | `연 20%` | 2021-07-07 | Hợp đồng mới/gia hạn sau mốc áp dụng dùng 20%; đừng học 24% như fact hiện hành. |
+| `식품 날짜표시` | 판매가 허용되는 기한 중심의 `유통기한` | 보관조건 준수 시 안전 섭취기한 중심의 `소비기한` | 2023-01-01 | Phân biệt **판매 가능 기간** với **섭취 안전 기간**. |
+| `고교학점제` | 단위제 중심 + 일부 학교/유형 단계 도입 | 학생 선택과목·학점 취득 중심, 2025학년도 고1부터 전면 적용 | 2025학년도 | Keyword mới: `과목 선택 → 이수기준 → 학점 취득·누적 → 졸업`. |
+| `외국인등록증` | 실물 카드 중심 신원확인 | `모바일 외국인등록증·모바일 영주증·모바일 국내거소신고증` 도입 | 2025-01-10 | Mobile ID có **실물 신분증과 동일한 효력** theo điều kiện phát hành. |
+| `형사사법기관` | `경찰/수사기관 → 검찰청(수사·기소 기능) → 법원` | `경찰·중대범죄수사청 등 수사 → 공소청 공소 제기·유지 → 법원` | 2026-10-02 | Current question: tách `수사` và `기소`; tài liệu cũ có thể vẫn ghi `검찰`. |
+| `사회통합프로그램 교육비` | 교육과정이 원칙적으로 무상 운영 | 2025년부터 일부 교육비를 참여자가 부담 | 2025-01 | Đây là **운영제도 change**, không phải 핵심 사회개념; phí cụ thể phải xem notice hiện hành. |
+| `입국신고` | 종이 입국신고서 중심 | 외국인 `전자입국신고` 제도 도입 | 2025-02 | Nhận biết e-Arrival declaration là thủ tục điện tử mới; 대상·면제는 hiện hành 안내 확인. |
+
+### Cách đọc “trước/sau” đúng
+
+- `변경 전` không có nghĩa là “sai”; nó đúng trong **thời kỳ trước ngày hiệu lực**.
+- Nếu đề hỏi `현재/현행/지금`, dùng `변경 후`.
+- Nếu đề dẫn một năm, hợp đồng hoặc sự kiện lịch sử cụ thể, trả lời theo **quy định có hiệu lực tại thời điểm đó**.
+- Với luật/chính sách đang chuyển tiếp, ưu tiên `시행일 + 경과규정 + kỳ thi notice`, không suy từ mỗi tên luật.
+
 Trước ngày thi, mở `00_current_facts_and_corrections.md` và notice mới nhất của `kiiptest.org`.
 
-## D3. 기관 → 한국어 설명 (giải thích tiếng Việt)
+## D4. 기관 → 한국어 설명 (giải thích tiếng Việt)
 
 | Cơ quan/keyword | 한국어 설명 (giải thích tiếng Việt) |
 |---|---|
