@@ -7,7 +7,8 @@
 - Repo không có thư mục asset/image riêng cho Sách 2; vì vậy nơi OCR không đủ evidence được giữ là `SOURCE_AMBIGUITY`.
 - **Learning route:** [`../../investing/90_securities_book2/`](../../investing/90_securities_book2/README.md).
 - `FULL` chỉ được dùng khi unit giữ được meaning + relationship/condition/boundary cần thiết; keyword xuất hiện một mình không đủ.
-- Một hàng chỉ đại diện cho **một semantic unit có thể fail độc lập**. Product, formula, indicator, pattern, theory, auction mechanism và exercise cluster không được gom thành mega-row.
+- Một hàng chỉ đại diện cho **một semantic unit có thể fail độc lập**. Product, formula, indicator, pattern, theory và auction mechanism không được gom thành mega-row.
+- Source questions được audit riêng trong [`SOURCE_QUESTION_MAP_BOOK2.md`](./SOURCE_QUESTION_MAP_BOOK2.md); câu hỏi không được dùng như semantic row để che nhiều concept.
 
 ## Inventory
 
@@ -40,7 +41,7 @@
 | B2-U025 | pp.30–34; raw ~L665–720 | DISTINCTION | Composite Index (CI): mức tổng hợp | 01 §3 | **FULL** |  |
 | B2-U026 | pp.30–34; raw ~L665–720 | DISTINCTION | Diffusion Index (DI): breadth/độ lan tỏa | 01 §3 | **FULL** |  |
 | B2-U027 | pp.30–34 | EXAMPLE | CI tăng nhưng DI yếu: weighted magnitude vs breadth | 01 §3 | **FULL** |  |
-| B2-U028 | pp.30–34 | CLASSIFICATION | Leading/coincident/lagging indicator logic | 01 §3 | **FULL** |  |
+| B2-U028 | pp.30–34 | CLASSIFICATION | Leading indicator: thường đổi trước hoạt động thực | 01 §3 | **FULL** |  |
 | B2-U029 | pp.34–46; raw ~L720–940 | PROCESS | Industry analysis: định lượng + định tính trước company analysis | 01 §4 | **FULL** |  |
 | B2-U030 | pp.40–44; raw ~L930–1020 | FRAMEWORK | Industry life cycle: introduction | 01 §4 | **FULL** |  |
 | B2-U031 | pp.40–44; raw ~L930–1020 | FRAMEWORK | Industry life cycle: growth | 01 §4 | **FULL** |  |
@@ -53,7 +54,7 @@
 | B2-U038 | pp.48–52 | CLASSIFICATION | BCG Cash Cow | 01 §4 | **FULL** |  |
 | B2-U039 | pp.48–52 | CLASSIFICATION | BCG Barking Dog | 01 §4 | **FULL** |  |
 | B2-U040 | pp.48–52 | BOUNDARY | BCG label không thay profitability/ROIC/valuation analysis | 01 §4 | **FULL** |  |
-| B2-U041 | pp.52–58; raw ~L1080–1200 | INSTITUTION | IFRS/IASC/IAS/K-IFRS as accounting presentation framework | 01 §4 | **FULL** |  |
+| B2-U041 | pp.52–58; raw ~L1080–1200 | INSTITUTION | IFRS: framework/standards for recognition, measurement and presentation | 01 §4 | **FULL** |  |
 | B2-U042 | pp.54–66; raw ~L1100–1370 | CLASSIFICATION | Balance sheet: resources and obligations at a point in time | 01 §4 | **FULL** |  |
 | B2-U043 | pp.54–66 | CLASSIFICATION | Income statement: revenue, costs and profit over a period | 01 §4 | **FULL** |  |
 | B2-U044 | pp.54–66 | CLASSIFICATION | Cash-flow statement: profit-to-cash reconciliation | 01 §4 | **FULL** |  |
@@ -85,8 +86,8 @@
 | B2-U070 | pp.84–88 | EXAMPLE | Gordon worked example and growth-sensitivity check | 02 §2 | **FULL** |  |
 | B2-U071 | pp.86–90; raw ~L1800–1840 | DEFINITION | FCFE: cash flow available to equity | 02 §3 | **FULL** |  |
 | B2-U072 | pp.86–90 | DEFINITION | FCFF: cash flow available to all capital providers | 02 §3 | **FULL** |  |
-| B2-U073 | pp.86–90 | RELATIONSHIP | FCFF–FCFE bridge with after-tax interest/net debt flow | 02 §3 | **FULL** |  |
-| B2-U074 | pp.86–90 | FORMULA | WACC as blended cost of capital | 02 §3 | **FULL** |  |
+| B2-U073 | pp.86–90; raw ~L1810–1822 | RELATIONSHIP | FCFF–FCFE bridge with after-tax interest and net debt flow; sign convention made explicit | 02 §3 | **FULL** | Route defines net debt repayment = repayment − new borrowing to avoid sign ambiguity. |
+| B2-U074 | pp.86–90; raw ~L1820–1850 | FORMULA | WACC = E/(D+E)·Re + D/(D+E)·Rd·(1−T), with capital-weight/tax-shield assumptions | 02 §3 | **FULL** | Source formula structure is readable; route defines variables explicitly. |
 | B2-U075 | pp.86–90 | BOUNDARY | FCFE ↔ cost of equity; FCFF ↔ WACC matching rule | 02 §3 | **FULL** |  |
 | B2-U076 | pp.88–90; raw ~L1825–1860 | FORMULA | EVA = NOPAT − Invested Capital×WACC | 02 §4 | **FULL** |  |
 | B2-U077 | pp.88–90 | FORMULA | EVA = Invested Capital×(ROIC−WACC) | 02 §4 | **FULL** |  |
@@ -115,8 +116,8 @@
 | B2-U100 | pp.126–144; raw ~L2500–2740 | PATTERN | Head-and-shoulders: neckline confirmation | 03 §3 | **FULL** |  |
 | B2-U101 | pp.126–144; raw ~L2500–2740 | PATTERN | Double top: break below intervening support | 03 §3 | **FULL** |  |
 | B2-U102 | pp.126–144; raw ~L2500–2740 | PATTERN | Double bottom: break above intervening resistance | 03 §3 | **FULL** |  |
-| B2-U103 | pp.126–144; raw ~L2500–2740 | PATTERN | Triple top/bottom: repeated test plus breakout | 03 §3 | **FULL** |  |
-| B2-U104 | pp.126–144; raw ~L2500–2740 | PATTERN | Round top/bottom: gradual supply-demand transition | 03 §3 | **FULL** |  |
+| B2-U103 | pp.126–144; raw ~L2500–2740 | PATTERN | Triple top: three failed tests near a top plus downside confirmation | 03 §3 | **FULL** |  |
+| B2-U104 | pp.126–144; raw ~L2500–2740 | PATTERN | Round top: gradual weakening of demand before downside confirmation | 03 §3 | **FULL** |  |
 | B2-U105 | pp.126–144; raw ~L2500–2740 | PATTERN | Gap: context-dependent gap classification | 03 §3 | **FULL** |  |
 | B2-U106 | pp.126–144; raw ~L2500–2740 | PATTERN | Flag: short consolidation after impulse | 03 §3 | **FULL** |  |
 | B2-U107 | pp.126–144; raw ~L2500–2740 | PATTERN | Pennant: contracting consolidation after impulse | 03 §3 | **FULL** |  |
@@ -170,13 +171,8 @@
 | B2-U155 | pp.188–198 | INDEX | Equal-weighted index mechanics | 04 §4 | **FULL** |  |
 | B2-U156 | pp.188–198 | CORPORATE_ACTION | Index divisor adjustment for stock split/corporate action | 04 §4 | **FULL** |  |
 | B2-U157 | pp.188–198 | DISTINCTION | Price-return vs total-return index | 04 §4 | **FULL** |  |
-| B2-U158 | pp.188–198 | INSTITUTION | KOSPI/KOSPI200/KOSDAQ as source examples | 04 §4 | **FULL** |  |
-| B2-U159 | pp.188–198 | INSTITUTION | S&P 500/Nikkei 225 as source examples | 04 §4 | **FULL** |  |
-| B2-U160 | pp.198–216; raw ~L3830–4260 | EXERCISE | Stock review cluster: index identification and weighting logic | 04 §5 | **FULL** |  |
-| B2-U161 | pp.198–216 | EXERCISE | Stock review cluster: multiples and denominator interpretation | 02 §9 / 04 §5 | **FULL** |  |
-| B2-U162 | pp.198–216 | EXERCISE | Stock review cluster: technical pattern/indicator recognition | 03 §7 | **FULL** |  |
-| B2-U163 | pp.198–216 | EXERCISE | Stock review cluster: portfolio/diversification reasoning | 04 §5 | **FULL** |  |
-| B2-U164 | pp.198–216 | EXERCISE | Stock review exact option wording/numeric figures where OCR is broken | 04 §5 | **SOURCE_AMBIGUITY** | Knowledge cluster mapped; exact unreadable choices/numbers are not guessed. |
+| B2-U158 | pp.188–198 | INSTITUTION | KOSPI as a textbook/source index example | 04 §4 | **FULL** | Current constituents/methodology are not asserted. |
+| B2-U159 | pp.188–198 | INSTITUTION | S&P 500 as a textbook/source index example | 04 §4 | **FULL** | Current constituents/methodology are not asserted. |
 | B2-U165 | pp.217–224; raw ~L4290–4450 | DEFINITION | Bond/fixed-income claim, face value, maturity, coupon | 05 §1 | **FULL** |  |
 | B2-U166 | pp.217–224 | CLASSIFICATION | Zero-coupon/discount bond | 05 §1 | **FULL** |  |
 | B2-U167 | pp.217–224 | CLASSIFICATION | Coupon bond | 05 §1 | **FULL** |  |
@@ -213,7 +209,7 @@
 | B2-U198 | pp.250–258; raw ~L5000–5570 | DEFINITION | Discount rate as PV conversion rate | 06 §1 | **FULL** |  |
 | B2-U199 | pp.250–258 | FORMULA | IRR as rate making NPV=0 | 06 §1 | **FULL** |  |
 | B2-U200 | pp.250–258 | FORMULA | YTM as bond IRR to maturity | 06 §1 | **FULL** |  |
-| B2-U201 | pp.250–258 | DISTINCTION | Coupon rate vs current yield vs YTM | 06 §1 | **FULL** |  |
+| B2-U201 | pp.250–258 | DISTINCTION | Coupon rate, current yield and YTM answer different return questions | 06 §1 | **FULL** | Individual coupon-rate/current-yield units are tracked separately. |
 | B2-U202 | pp.250–258 | BOUNDARY | YTM assumptions: hold-to-maturity, reinvestment, no default | 06 §1 | **FULL** |  |
 | B2-U203 | pp.250–258 | EXAMPLE | YTM worked equation for price 964.33 | 06 §1 | **FULL** |  |
 | B2-U204 | pp.258–282; raw ~L5575–5950 | CONCEPT | Yield curve / term structure by maturity | 06 §2 | **FULL** |  |
@@ -254,25 +250,33 @@
 | B2-U239 | pp.340–366 | EXAMPLE | Worked repo haircut/funding example | 06 §6 | **FULL** |  |
 | B2-U240 | pp.340–366; raw ~L7060 | INDEX | KSDA-BLP Korean Bond Index as textbook-state source example | 06 §5 | **FULL** |  |
 | B2-U241 | pp.340–366 | BOUNDARY | Institution/index names are textbook-state, not current-state claims | 06 §5 | **FULL** |  |
-| B2-U242 | pp.368–390; raw ~L7120–7950 | EXERCISE | Bond review cluster: coupon/current yield/YTM | 06 §9 | **FULL** |  |
-| B2-U243 | pp.368–390 | EXERCISE | Bond review cluster: term-structure theories and forward/spot logic | 06 §9 | **FULL** |  |
-| B2-U244 | pp.368–390 | EXERCISE | Bond review cluster: credit rating/spread/default risk | 06 §9 | **FULL** |  |
-| B2-U245 | pp.368–390 | EXERCISE | Bond review cluster: duration/modified duration/convexity | 06 §9 | **FULL** |  |
-| B2-U246 | pp.368–390 | EXERCISE | Bond review cluster: primary/secondary market, auction and repo | 06 §9 | **FULL** |  |
-| B2-U247 | pp.368–390 | EXERCISE | Bond review cluster: bond-index/total-return measurement | 06 §9 | **FULL** |  |
-| B2-U248 | pp.368–390 | EXERCISE | Bond review exact numeric/options/figure wording where OCR is broken | 06 §9 | **SOURCE_AMBIGUITY** | Conceptual route is mapped; exact unreadable numbers/options remain unresolved. |
+
+| B2-U249 | pp.30–34 | CLASSIFICATION | Coincident indicator: vận động gần cùng thời điểm với hoạt động thực | 01 §3 | **FULL** |  |
+| B2-U250 | pp.30–34 | CLASSIFICATION | Lagging indicator: phản ứng sau khi chu kỳ đã đổi | 01 §3 | **FULL** |  |
+| B2-U251 | pp.52–58; raw ~L1080–1200 | INSTITUTION | IASC as historical standard-setting body named by the source | 01 §4 | **FULL** | Textbook-state institutional context only. |
+| B2-U252 | pp.52–58; raw ~L1080–1200 | INSTITUTION | IAS as standards named alongside IFRS in the source | 01 §4 | **FULL** | Textbook-state standards context only. |
+| B2-U253 | pp.52–58; raw ~L1080–1200 | INSTITUTION | K-IFRS as Korean IFRS-based reporting framework named by the source | 01 §4 | **FULL** | Current regulatory details are outside the source claim. |
+| B2-U254 | pp.126–144; raw ~L2500–2740 | PATTERN | Triple bottom: three supported tests near a bottom plus upside confirmation | 03 §3 | **FULL** |  |
+| B2-U255 | pp.126–144; raw ~L2500–2740 | PATTERN | Round bottom: gradual recovery of demand before upside confirmation | 03 §3 | **FULL** |  |
+| B2-U256 | pp.188–198 | INSTITUTION | KOSPI200 as a textbook/source index example | 04 §4 | **FULL** | Current constituents/methodology are not asserted. |
+| B2-U257 | pp.188–198 | INSTITUTION | KOSDAQ as a textbook/source index example | 04 §4 | **FULL** | Current constituents/methodology are not asserted. |
+| B2-U258 | pp.188–198 | INSTITUTION | Nikkei 225 as a textbook/source index example | 04 §4 | **FULL** | Current constituents/methodology are not asserted. |
+| B2-U259 | pp.232–250; raw ~L4838–4852 | PRODUCT | Callable bond: issuer call right; call schedule, reinvestment risk and negative convexity | 05 §2–3 | **FULL** | Source explicitly labels Callable Bond. |
+| B2-U260 | pp.232–250; raw ~L4838–4852 | PRODUCT | Puttable bond: holder put right; put date/price and exercise condition | 05 §2–3 | **FULL** | Source explicitly labels Puttable Bond. |
+| B2-U261 | pp.250–258 | FORMULA | Coupon rate = annual coupon / face value | 06 §1 | **FULL** |  |
+| B2-U262 | pp.250–258 | FORMULA | Current yield = annual coupon / current market price | 06 §1 | **FULL** | Excludes capital gain/loss to maturity. |
 
 ## Coverage result
 
-- Total semantic units: **248**
-- `FULL`: **241**
+- Total semantic units: **250**
+- `FULL`: **245**
 - `PARTIAL`: **0**
 - `MISSING`: **0**
-- `SOURCE_AMBIGUITY`: **7**
+- `SOURCE_AMBIGUITY`: **5**
 
 ### Ambiguity policy
 
-`SOURCE_AMBIGUITY` không được đổi thành `FULL` chỉ để đạt KPI. Mỗi ambiguity ở trên có location cụ thể và lý do evidence không đủ. Khi có scan/image gốc tốt hơn, re-open đúng unit thay vì rewrite toàn route.
+`SOURCE_AMBIGUITY` không được đổi thành `FULL` chỉ để đạt KPI. Semantic inventory còn các ambiguity về source text/figure/product distinction; ambiguity riêng của hai review-question sets được theo dõi trong [`SOURCE_AMBIGUITIES_BOOK2.md`](./SOURCE_AMBIGUITIES_BOOK2.md) và không bị tính giả thành knowledge unit. Khi có scan/image gốc tốt hơn, re-open đúng artifact thay vì rewrite toàn route.
 
 ### Reverse-audit rule
 
