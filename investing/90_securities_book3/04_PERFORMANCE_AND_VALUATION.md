@@ -53,6 +53,8 @@ Sharpe hỏi danh mục kiếm được bao nhiêu trên **tổng biến động
 
 **Định giá doanh nghiệp (valuation / 기업가치평가)** là ước lượng fair market value của doanh nghiệp dựa trên hoạt động, môi trường cạnh tranh và dòng tiền tương lai. Quy trình nguồn gồm: hiểu đặc tính doanh nghiệp và ngành; dự báo môi trường kinh doanh và financial performance; đo cash flow; chọn discount rate; chuyển các dòng tiền tương lai về hiện tại; kiểm tra kết quả bằng phương pháp khác.
 
+Raw p.149 và p.160 còn đặt DCF/relative valuation trong một taxonomy rộng hơn gồm **định giá bằng quyền chọn thực (real-option valuation / 실물옵션가치평가법)**, **điều chỉnh giá trị sổ sách (book-value adjustment / 장부가치조정법)** và **điều chỉnh giá trị thị trường (market-value adjustment / 시장가치조정법)**. Source nói rõ phần học này chỉ đi sâu DCF và relative valuation, nên ba tên kia là **positioning units**, không có formula contract riêng trong Book 3; mục tiêu là nhận ra chúng là phương pháp khác, không giả vờ source đã dạy chi tiết cơ chế.
+
 Đừng lẫn cash flow kế toán với cash flow dùng cho valuation. Cần xác định cash flow thuộc về ai (firm hay equity), xử lý thuế thực trả, đầu tư tài sản và vốn lưu động; không trộn numerator sau lãi vay với discount rate trước lãi vay. **Chi phí vốn (cost of capital / 자본비용)** là giá phải trả cho vốn; CAPM thường dùng cho cost of equity:
 
 \[
@@ -126,6 +128,8 @@ EVA=(12\%-10\%)\times1.000=20.
 \]
 
 Doanh nghiệp tạo thêm 20 đơn vị sau khi trả chi phí vốn. Nếu mở rộng nhanh nhưng NOPAT chỉ đạt 80 trên cùng 1.000 vốn, ROIC là 8% và EVA là \(-20\); doanh thu có thể tăng nhưng vốn mới tạo ra giá trị âm. Khi phân tích forecast, phải theo dõi cả tốc độ tăng vốn, ROIC biên và WACC, không chỉ tăng trưởng doanh thu hoặc EPS.
+
+Source còn dùng ba mắt xích để đọc EVA: **NOPAT (세후영업이익)** là lợi nhuận hoạt động sau thuế trước phân phối cho debt/equity; **invested capital (투하자본)** là vốn dùng cho hoạt động, source mô tả từ net working capital + net non-current operating assets; **MVA (market value added / 시장부가가치)** là enterprise value trừ invested capital và bằng present value của EVA tương lai trong logic mô hình. Ba đại lượng phải cùng phạm vi hoạt động; nếu một item financing bị đưa vào NOPAT nhưng lại để ngoài invested capital, ROIC/EVA sẽ mất nhất quán.
 
 ## 5. Relative valuation và bẫy “rẻ”
 
