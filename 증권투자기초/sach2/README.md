@@ -28,9 +28,13 @@ Bản để học/đọc nằm tại:
 
 - [`../../investing/90_securities_book2/README.md`](../../investing/90_securities_book2/README.md)
 
-Coverage source → output nằm tại:
+Coverage và các audit artifact nằm tại:
 
-- [`SOURCE_COVERAGE_BOOK2.md`](./SOURCE_COVERAGE_BOOK2.md)
+- [`SOURCE_COVERAGE_BOOK2.md`](./SOURCE_COVERAGE_BOOK2.md) — semantic inventory/source → output.
+- [`SOURCE_QUESTION_MAP_BOOK2.md`](./SOURCE_QUESTION_MAP_BOOK2.md) — source review/exercise → required units → lesson.
+- [`FORMULA_TABLE_FIGURE_AUDIT_BOOK2.md`](./FORMULA_TABLE_FIGURE_AUDIT_BOOK2.md) — formula/table/figure reconstruction contract.
+- [`TERMINOLOGY_AUDIT_BOOK2.md`](./TERMINOLOGY_AUDIT_BOOK2.md) — KR/EN terminology bridge.
+- [`SOURCE_AMBIGUITIES_BOOK2.md`](./SOURCE_AMBIGUITIES_BOOK2.md) — exact OCR/source evidence boundary.
 
 Branch cũ `feat/securities-investment-book2-learning-edition` chỉ được dùng làm **prose reference**. Publication pass không merge branch đó; nội dung cần thiết được mang sang/regenerate trên clean branch từ current `main` rồi re-audit lại theo source.
 
@@ -43,7 +47,11 @@ Không tạo layout thứ tư cho bộ sách. Sách 2 dùng convention tách rõ
 ├── raw/sach2.md                 # source authority
 └── sach2/                       # provenance + coverage
     ├── README.md
-    └── SOURCE_COVERAGE_BOOK2.md
+    ├── SOURCE_COVERAGE_BOOK2.md
+    ├── SOURCE_QUESTION_MAP_BOOK2.md
+    ├── FORMULA_TABLE_FIGURE_AUDIT_BOOK2.md
+    ├── TERMINOLOGY_AUDIT_BOOK2.md
+    └── SOURCE_AMBIGUITIES_BOOK2.md
 
 investing/
 └── 90_securities_book2/         # publication/learning route
