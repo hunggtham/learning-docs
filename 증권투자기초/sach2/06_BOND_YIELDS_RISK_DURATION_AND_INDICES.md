@@ -77,6 +77,19 @@ Duration dài hơn thường nghĩa là giá nhạy hơn với lãi suất; coup
 
 Duration không dự báo default, spread widening hay prepayment. Với callable/MBS, dòng tiền thay đổi theo lãi suất nên duration có thể biến thiên (negative convexity). Đây là boundary cần giữ khi chuyển từ trái phiếu chính phủ sang sản phẩm cấu trúc.
 
+### Worked Macaulay và modified duration
+
+Với trái phiếu mệnh giá 1.000, coupon năm 60, còn hai năm và YTM 8%, giá là khoảng 964,33. Giá trị hiện tại của coupon năm 1 là `60/1,08 = 55,56`; giá trị hiện tại của coupon + gốc năm 2 là `1.060/(1,08)^2 = 908,78`. Macaulay duration là trung bình trọng số theo các giá trị hiện tại:
+
+```text
+D_Mac = [1 × 55,56 + 2 × 908,78] / 964,33 ≈ 1,94 năm
+D_mod = D_Mac / (1 + YTM) = 1,94 / 1,08 ≈ 1,80
+```
+
+Nếu YTM tăng 50 điểm cơ bản, approximation bậc một cho biết giá giảm khoảng `1,80 × 0,005 = 0,90%`, tương đương khoảng 8,68 trên giá 964,33. Đây là độ nhạy cục bộ: khi cú sốc lớn hơn, convexity và việc yield curve dịch chuyển không song song làm kết quả khác đi. Một zero-coupon hai năm ở cùng YTM có duration gần 2 năm (modified khoảng `2/1,08 = 1,85`), nên nhạy hơn trái phiếu coupon này; coupon trả sớm kéo trọng tâm dòng tiền về phía trước.
+
+Không được gọi Macaulay duration là “thời gian đáo hạn còn lại”. Nó là thời gian bình quân của giá trị hiện tại các dòng tiền, và thay đổi khi giá, coupon, YTM hoặc lịch dòng tiền thay đổi. Với callable, MBS hoặc trái phiếu có spread tín dụng, phải ghi rõ đang đo duration theo rate nào và dòng tiền giả định nào.
+
 ## 5. Benchmark và bond index
 
 Một bond index phải xác định universe, maturity, rating, currency, trọng số và cách xử lý phát hành mới, đáo hạn, coupon và default. Price index chỉ theo giá; coupon index theo coupon; yield index theo lợi suất; total-return index tái đầu tư coupon và phản ánh cả giá lẫn income. Benchmark portfolio source nêu dùng để so sánh, không phải danh mục “tối ưu” cho mọi nhà đầu tư.
