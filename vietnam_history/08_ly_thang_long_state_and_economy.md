@@ -10,7 +10,7 @@ Câu hỏi trung tâm bây giờ là: **khi một trạng thái (state / 상태)
 
 Nhà Lý thường được mô tả như thời kỳ “xây dựng nhà nước phong kiến tập quyền”. Cụm này useful nhưng dễ quá phẳng. Scholarship đã tranh luận mức độ central điều khiển (control / 제어) thực sự mạnh tới đâu; village và regional powers vẫn có autonomy đáng kể. Vì vậy ta nên nói **trạng thái (state / 상태) consolidation (củng cố nhà nước)** thay vì giả định một bureaucracy hiện đại phủ đều lãnh thổ.
 
-> **Chuyển mạch:** Trong **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **1009–1010: triều đại mới và quyết định rời Hoa Lư** tiếp nhận điểm tựa từ **Điểm tựa và câu hỏi trung tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hoàng thành Thăng Long: hãy đọc archaeological layers, không chỉ nhìn cổng thành hiện nay** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **1009–1010: triều đại mới và quyết định rời Hoa Lư** nối từ **Điểm tựa và câu hỏi trung tâm** sang **Hoàng thành Thăng Long: hãy đọc archaeological layers, không chỉ nhìn cổng thành hiện nay**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1009–1010: triều đại mới và quyết định rời Hoa Lư
 
@@ -32,7 +32,7 @@ lower coordination cost
 Thăng Long becomes durable political center
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Hoàng thành Thăng Long: hãy đọc archaeological layers, không chỉ nhìn cổng thành hiện nay** tiếp nhận điểm tựa từ **1009–1010: triều đại mới và quyết định rời Hoa Lư** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thăng Long và Red River: capital lớn đồng nghĩa phải quản water rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Hoàng thành Thăng Long: hãy đọc archaeological layers, không chỉ nhìn cổng thành hiện nay** nối từ **1009–1010: triều đại mới và quyết định rời Hoa Lư** sang **Thăng Long và Red River: capital lớn đồng nghĩa phải quản water rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hoàng thành Thăng Long: hãy đọc archaeological layers, không chỉ nhìn cổng thành hiện nay
 
@@ -42,7 +42,7 @@ Khu khảo cổ **18 Hoàng Diệu** đặc biệt quan trọng vì các archite
 
 Nếu đứng tại site, câu hỏi tốt là: capital cần palace, wall, water management, lưu trữ (storage / 저장소), workshop và road organization ra sao? Một royal city không chỉ là nơi vua ở; nó là **coordination hạ tầng (infrastructure / 인프라)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Thăng Long và Red River: capital lớn đồng nghĩa phải quản water rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **Hoàng thành Thăng Long: hãy đọc archaeological layers, không chỉ nhìn cổng thành hiện nay** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ruộng đất: đừng tưởng toàn bộ land thuộc một single đơn vị sở hữu (owner / 오너)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Thăng Long và Red River: capital lớn đồng nghĩa phải quản water rủi ro (risk / 위험)** nối từ **Hoàng thành Thăng Long: hãy đọc archaeological layers, không chỉ nhìn cổng thành hiện nay** sang **Ruộng đất: đừng tưởng toàn bộ land thuộc một single đơn vị sở hữu (owner / 오너)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thăng Long và Red River: capital lớn đồng nghĩa phải quản water rủi ro (risk / 위험)
 
@@ -64,7 +64,7 @@ larger urban / military / religious population can be supported
 
 Hydraulic công việc (work / 작업) không tự động chứng minh absolute centralization. Village communities và regional actors có thể đóng vai trò lớn trong construction và maintenance.
 
-> **Chuyển mạch:** Trong **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, sau nội dung của **Thăng Long và Red River: capital lớn đồng nghĩa phải quản water rủi ro (risk / 위험)**, **Ruộng đất: đừng tưởng toàn bộ land thuộc một single đơn vị sở hữu (owner / 오너)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Buddhism: religion là legitimacy, mạng (network / 네트워크) và institution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, sau nội dung của **Thăng Long và Red River: capital lớn đồng nghĩa phải quản water rủi ro (risk / 위험)**, **Ruộng đất: đừng tưởng toàn bộ land thuộc một single đơn vị sở hữu (owner / 오너)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Buddhism: religion là legitimacy, mạng (network / 네트워크) và institution** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Ruộng đất: đừng tưởng toàn bộ land thuộc một single đơn vị sở hữu (owner / 오너)
 
@@ -74,7 +74,7 @@ Vì vậy khi nói “ruộng đất nhà nước” hay “ruộng tư”, cầ
 
 Land là economic cơ sở (base / 기반) nhưng cũng là political quan hệ (relation / 관계). Một ruler không cần sở hữu literal mọi trường dữ liệu (field / 필드); trạng thái (state / 상태) power thể hiện qua khả năng claim tax/dịch vụ (service / 서비스) và recognize cục bộ (local / 로컬) rights.
 
-> **Chuyển mạch:** Ở chặng này của **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Buddhism: religion là legitimacy, mạng (network / 네트워크) và institution** tiếp nhận điểm tựa từ **Ruộng đất: đừng tưởng toàn bộ land thuộc một single đơn vị sở hữu (owner / 오너)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Văn Miếu 1070 và khoa cử: kiến thức (knowledge / 지식) trở thành trạng thái (state / 상태) hạ tầng (infrastructure / 인프라)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Buddhism: religion là legitimacy, mạng (network / 네트워크) và institution** nối từ **Ruộng đất: đừng tưởng toàn bộ land thuộc một single đơn vị sở hữu (owner / 오너)** sang **Văn Miếu 1070 và khoa cử: kiến thức (knowledge / 지식) trở thành trạng thái (state / 상태) hạ tầng (infrastructure / 인프라)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Buddhism: religion là legitimacy, mạng (network / 네트워크) và institution
 
@@ -84,7 +84,7 @@ Thời Lý, **Buddhism (Phật giáo)** có vị trí rất lớn trong court cu
 
 Tuy nhiên gọi Buddhism là “quốc giáo” có thể làm người đọc tưởng mọi institution đều Buddhist. Confucian administrative học tập (learning / 학습) và cục bộ (local / 로컬) cults vẫn tồn tại; religious trường dữ liệu (field / 필드) plural hơn một label duy nhất.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Văn Miếu 1070 và khoa cử: kiến thức (knowledge / 지식) trở thành trạng thái (state / 상태) hạ tầng (infrastructure / 인프라)** tiếp nhận điểm tựa từ **Buddhism: religion là legitimacy, mạng (network / 네트워크) và institution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Economy: capital growth tạo demand vượt ra ngoài palace** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Văn Miếu 1070 và khoa cử: kiến thức (knowledge / 지식) trở thành trạng thái (state / 상태) hạ tầng (infrastructure / 인프라)** nối từ **Buddhism: religion là legitimacy, mạng (network / 네트워크) và institution** sang **Economy: capital growth tạo demand vượt ra ngoài palace**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Văn Miếu 1070 và khoa cử: kiến thức (knowledge / 지식) trở thành trạng thái (state / 상태) hạ tầng (infrastructure / 인프라)
 
@@ -106,7 +106,7 @@ state capacity becomes less dependent on oral-personal transmission
 
 Đây là một step dài hướng tới bureaucratic durability.
 
-> **Chuyển mạch:** Trong **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Economy: capital growth tạo demand vượt ra ngoài palace** tiếp nhận điểm tựa từ **Văn Miếu 1070 và khoa cử: kiến thức (knowledge / 지식) trở thành trạng thái (state / 상태) hạ tầng (infrastructure / 인프라)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đại Việt không chỉ nhìn về phương bắc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Economy: capital growth tạo demand vượt ra ngoài palace** nối từ **Văn Miếu 1070 và khoa cử: kiến thức (knowledge / 지식) trở thành trạng thái (state / 상태) hạ tầng (infrastructure / 인프라)** sang **Đại Việt không chỉ nhìn về phương bắc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Economy: capital growth tạo demand vượt ra ngoài palace
 
@@ -116,7 +116,7 @@ Thăng Long tập trung court, soldiers, monks, craftsmen và merchants. Populat
 
 Nhưng urban growth vẫn phụ thuộc countryside. Nếu harvest thất bại (fail / 실패) hoặc vận chuyển (transport / 전송) bị disruption, capital cảm nhận shock nhanh chóng.
 
-> **Chuyển mạch:** Ở chặng này của **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Đại Việt không chỉ nhìn về phương bắc** tiếp nhận điểm tựa từ **Economy: capital growth tạo demand vượt ra ngoài palace** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1075–1077: chiến tranh Tống–Lý và pre-emptive chiến lược (strategy / 전략)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Đại Việt không chỉ nhìn về phương bắc** nối từ **Economy: capital growth tạo demand vượt ra ngoài palace** sang **1075–1077: chiến tranh Tống–Lý và pre-emptive chiến lược (strategy / 전략)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đại Việt không chỉ nhìn về phương bắc
 
@@ -124,7 +124,7 @@ Trạng thái (state / 상태) Lý phải quản relationship với Song ở nor
 
 Diplomacy với Song dùng dùng chung (shared / 공유) written forms; warfare/trade với Champa và upland regions tạo different tương tác (interaction / 상호작용). Định danh trạng thái (state identity / 상태 식별성) hình thành qua multiple frontiers cùng lúc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **1075–1077: chiến tranh Tống–Lý và pre-emptive chiến lược (strategy / 전략)** tiếp nhận điểm tựa từ **Đại Việt không chỉ nhìn về phương bắc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Trạng thái (state / 상태) centralization: tránh overstating** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **1075–1077: chiến tranh Tống–Lý và pre-emptive chiến lược (strategy / 전략)** nối từ **Đại Việt không chỉ nhìn về phương bắc** sang **Trạng thái (state / 상태) centralization: tránh overstating**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1075–1077: chiến tranh Tống–Lý và pre-emptive chiến lược (strategy / 전략)
 
@@ -134,7 +134,7 @@ Cuối thế kỷ XI, tension với Song dẫn tới campaign lớn. Lý Thườ
 
 Defense ở tuyến sông Như Nguyệt cho thấy lại một mẫu (pattern / 패턴) quen thuộc: river geography được tích hợp vào military planning. Không phải “người Việt giỏi đánh sông” như innate trait; repeated use xuất hiện vì north Vietnam có dense river mạng (network / 네트워크) và attackers thường phải cross predictable corridors.
 
-> **Chuyển mạch:** Trong **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Trạng thái (state / 상태) centralization: tránh overstating** tiếp nhận điểm tựa từ **1075–1077: chiến tranh Tống–Lý và pre-emptive chiến lược (strategy / 전략)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nếu đi Hà Nội hôm nay, nối chapter này vào đâu?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Trạng thái (state / 상태) centralization: tránh overstating** nối từ **1075–1077: chiến tranh Tống–Lý và pre-emptive chiến lược (strategy / 전략)** sang **Nếu đi Hà Nội hôm nay, nối chapter này vào đâu?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trạng thái (state / 상태) centralization: tránh overstating
 
@@ -144,7 +144,7 @@ Cách an toàn hơn là nhìn centralization như **độ dốc (gradient / 기�
 
 Điều này không làm nhà Lý “yếu”. Nó chỉ giúp ta dùng đúng mô hình (model / 모델) cho premodern polity.
 
-> **Chuyển mạch:** Ở chặng này của **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Nếu đi Hà Nội hôm nay, nối chapter này vào đâu?** tiếp nhận điểm tựa từ **Trạng thái (state / 상태) centralization: tránh overstating** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tại sao nhà Trần là chapter tiếp theo chứ không phải chỉ “đổi triều”?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Nếu đi Hà Nội hôm nay, nối chapter này vào đâu?** nối từ **Trạng thái (state / 상태) centralization: tránh overstating** sang **Tại sao nhà Trần là chapter tiếp theo chứ không phải chỉ “đổi triều”?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nếu đi Hà Nội hôm nay, nối chapter này vào đâu?
 
@@ -152,7 +152,7 @@ Cách an toàn hơn là nhìn centralization như **độ dốc (gradient / 기�
 
 Đi quanh hồ, sông và old urban cốt lõi (core / 핵심) cũng nên nhớ Thăng Long đã sống cùng water hệ thống (system / 시스템) trong một millennium. Hiện đại (modern / 현대적) Hanoi che lấp nhiều old waterways, nên historical map rất useful để recover geography.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Tại sao nhà Trần là chapter tiếp theo chứ không phải chỉ “đổi triều”?** tiếp nhận điểm tựa từ **Nếu đi Hà Nội hôm nay, nối chapter này vào đâu?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Recap và bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Tại sao nhà Trần là chapter tiếp theo chứ không phải chỉ “đổi triều”?** nối từ **Nếu đi Hà Nội hôm nay, nối chapter này vào đâu?** sang **Recap và bàn giao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tại sao nhà Trần là chapter tiếp theo chứ không phải chỉ “đổi triều”?
 
@@ -160,7 +160,7 @@ Cách an toàn hơn là nhìn centralization như **độ dốc (gradient / 기�
 
 Đó chính là continuity + rupture mà thư viện (library / 라이브러리) cần theo: dynasty name đổi nhanh hơn underlying hạ tầng (infrastructure / 인프라).
 
-> **Chuyển mạch:** Trong **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Recap và bàn giao** tiếp nhận điểm tựa từ **Tại sao nhà Trần là chapter tiếp theo chứ không phải chỉ “đổi triều”?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Nhà Lý: Thăng Long, trạng thái (state / 상태) consolidation, Buddhism và economy của châu thổ**, **Recap và bàn giao** nối từ **Tại sao nhà Trần là chapter tiếp theo chứ không phải chỉ “đổi triều”?** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

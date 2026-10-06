@@ -8,7 +8,7 @@
 
 Câu trả lời không thể là “người Việt liên tục chống lại suốt một nghìn năm”. Có rebellion, nhưng cũng có long periods of accommodation, intermarriage, trade, office-holding, di chuyển (migration / 마이그레이션) và institutional borrowing. Lịch sử thật nằm trong tension giữa **tích hợp (integration / 통합) và localization**.
 
-> **Chuyển mạch:** Trong **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Điểm tựa và câu hỏi trung tâm** cho ta quy tắc; **“Bắc thuộc” là một convenience label, không phải một regime duy nhất** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Administration dần sâu hơn nhưng không bao giờ đồng đều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Điểm tựa và câu hỏi trung tâm** nêu quy tắc; **“Bắc thuộc” là một convenience label, không phải một regime duy nhất** thử quy tắc trong tình huống, rồi **Administration dần sâu hơn nhưng không bao giờ đồng đều** mở rộng hệ quả.
 
 ## “Bắc thuộc” là một convenience label, không phải một regime duy nhất
 
@@ -30,7 +30,7 @@ terrain and distance
 degree of effective control
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **“Bắc thuộc” là một convenience label, không phải một regime duy nhất** cho ta quy tắc; **Administration dần sâu hơn nhưng không bao giờ đồng đều** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Luy Lâu và Long Biên: center dịch chuyển nói gì về political geography?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **“Bắc thuộc” là một convenience label, không phải một regime duy nhất** nêu quy tắc; **Administration dần sâu hơn nhưng không bao giờ đồng đều** thử quy tắc trong tình huống, rồi **Luy Lâu và Long Biên: center dịch chuyển nói gì về political geography?** mở rộng hệ quả.
 
 ## Administration dần sâu hơn nhưng không bao giờ đồng đều
 
@@ -40,7 +40,7 @@ Sau Han conquest, Giao Chỉ, Cửu Chân và Nhật Nam được nối với bu
 
 Mountainous zones, frontier corridors và các communities xa administrative center thường có degrees of autonomy khác nhau. Đây cũng là lý do lịch sử Việt Nam không nên bị giản lược thành lịch sử (history / 이력) của Red River Delta alone.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Luy Lâu và Long Biên: center dịch chuyển nói gì về political geography?** tiếp nhận điểm tựa từ **Administration dần sâu hơn nhưng không bao giờ đồng đều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Buddhism: religion đi cùng trade, di chuyển (migration / 마이그레이션) và translation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Luy Lâu và Long Biên: center dịch chuyển nói gì về political geography?** nối từ **Administration dần sâu hơn nhưng không bao giờ đồng đều** sang **Buddhism: religion đi cùng trade, di chuyển (migration / 마이그레이션) và translation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Luy Lâu và Long Biên: center dịch chuyển nói gì về political geography?
 
@@ -50,7 +50,7 @@ Hãy coi capital/administrative seat như một máy chủ (server / 서버) nú
 
 Luy Lâu đặc biệt đáng chú ý vì nó không chỉ là bureaucracy. Nó còn nằm trong commercial–religious mạng (network / 네트워크) lớn.
 
-> **Chuyển mạch:** Trong **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Buddhism: religion đi cùng trade, di chuyển (migration / 마이그레이션) và translation** tiếp nhận điểm tựa từ **Luy Lâu và Long Biên: center dịch chuyển nói gì về political geography?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sĩ Nhiếp: cục bộ (local / 로컬) quản trị (governance / 거버넌스) có thể ổn định trong lúc imperial center bất ổn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Buddhism: religion đi cùng trade, di chuyển (migration / 마이그레이션) và translation** nối từ **Luy Lâu và Long Biên: center dịch chuyển nói gì về political geography?** sang **Sĩ Nhiếp: cục bộ (local / 로컬) quản trị (governance / 거버넌스) có thể ổn định trong lúc imperial center bất ổn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Buddhism: religion đi cùng trade, di chuyển (migration / 마이그레이션) và translation
 
@@ -62,7 +62,7 @@ Vùng Dâu–Luy Lâu về sau trở thành một trong những trung tâm Buddh
 
 Nếu đến chùa Dâu, hãy nhìn nó như checkpoint của trade + religion + cục bộ (local / 로컬) ecology, không chỉ như “ngôi chùa cổ”.
 
-> **Chuyển mạch:** Ở chặng này của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Sĩ Nhiếp: cục bộ (local / 로컬) quản trị (governance / 거버넌스) có thể ổn định trong lúc imperial center bất ổn** tiếp nhận điểm tựa từ **Buddhism: religion đi cùng trade, di chuyển (migration / 마이그레이션) và translation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Bà Triệu năm 248: vì sao rebellion lặp lại nhưng không identical?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Sĩ Nhiếp: cục bộ (local / 로컬) quản trị (governance / 거버넌스) có thể ổn định trong lúc imperial center bất ổn** nối từ **Buddhism: religion đi cùng trade, di chuyển (migration / 마이그레이션) và translation** sang **Bà Triệu năm 248: vì sao rebellion lặp lại nhưng không identical?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sĩ Nhiếp: cục bộ (local / 로컬) quản trị (governance / 거버넌스) có thể ổn định trong lúc imperial center bất ổn
 
@@ -70,7 +70,7 @@ Cuối thế kỷ II–đầu III, khi nhà Hán suy yếu và thế giới Trun
 
 Điều này quan trọng hơn biography riêng của Sĩ Nhiếp. Nó cho thấy imperial bureaucracy có thể tạo ra **cục bộ (local / 로컬) power bases** mà về sau không hoàn toàn phụ thuộc center.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Bà Triệu năm 248: vì sao rebellion lặp lại nhưng không identical?** tiếp nhận điểm tựa từ **Sĩ Nhiếp: cục bộ (local / 로컬) quản trị (governance / 거버넌스) có thể ổn định trong lúc imperial center bất ổn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lý Bí và Vạn Xuân: bước chuyển từ rebellion sang state-building experiment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Bà Triệu năm 248: vì sao rebellion lặp lại nhưng không identical?** nối từ **Sĩ Nhiếp: cục bộ (local / 로컬) quản trị (governance / 거버넌스) có thể ổn định trong lúc imperial center bất ổn** sang **Lý Bí và Vạn Xuân: bước chuyển từ rebellion sang state-building experiment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Bà Triệu năm 248: vì sao rebellion lặp lại nhưng không identical?
 
@@ -80,7 +80,7 @@ Không nên ghép mọi uprising vào một master story identical. Mỗi rebell
 
 Bộ nhớ (memory / 메모리) về Bà Triệu cũng trở thành một long-term cultural symbol. Như với Hai Bà Trưng, later temples cho ta bằng chứng (evidence / 증거) mạnh về remembrance nhưng không tự động là bằng chứng (evidence / 증거) trực tiếp của battlefield detail.
 
-> **Chuyển mạch:** Trong **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Lý Bí và Vạn Xuân: bước chuyển từ rebellion sang state-building experiment** tiếp nhận điểm tựa từ **Bà Triệu năm 248: vì sao rebellion lặp lại nhưng không identical?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ Tùy sang Đường: empire mạnh trở lại, nhưng cục bộ (local / 로컬) society đã thay đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Lý Bí và Vạn Xuân: bước chuyển từ rebellion sang state-building experiment** nối từ **Bà Triệu năm 248: vì sao rebellion lặp lại nhưng không identical?** sang **Từ Tùy sang Đường: empire mạnh trở lại, nhưng cục bộ (local / 로컬) society đã thay đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lý Bí và Vạn Xuân: bước chuyển từ rebellion sang state-building experiment
 
@@ -92,7 +92,7 @@ Sau pressure từ quân Lương, mạng (network / 네트워크) của Lý Bí v
 
 Vạn Xuân không tồn tại lâu dài, nhưng nó chứng minh cục bộ (local / 로컬) political imagination đã vượt xa episodic revolt.
 
-> **Chuyển mạch:** Ở chặng này của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Từ Tùy sang Đường: empire mạnh trở lại, nhưng cục bộ (local / 로컬) society đã thay đổi** tiếp nhận điểm tựa từ **Lý Bí và Vạn Xuân: bước chuyển từ rebellion sang state-building experiment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mai Thúc Loan: rebellion gắn với fiscal and regional mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Từ Tùy sang Đường: empire mạnh trở lại, nhưng cục bộ (local / 로컬) society đã thay đổi** nối từ **Lý Bí và Vạn Xuân: bước chuyển từ rebellion sang state-building experiment** sang **Mai Thúc Loan: rebellion gắn với fiscal and regional mạng (network / 네트워크)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ Tùy sang Đường: empire mạnh trở lại, nhưng cục bộ (local / 로컬) society đã thay đổi
 
@@ -100,7 +100,7 @@ Nhà Tùy rồi Đường tái lập stronger imperial sức chứa (capacity / 
 
 Tang administration dựa vào officials, garrisons và fiscal hệ thống (system / 시스템), nhưng cục bộ (local / 로컬) families, villages và regional leaders vẫn là actors. Khi Tang power giảm trong thế kỷ IX, những actors này có nhiều room hơn để chuyển administrative experience thành autonomy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Mai Thúc Loan: rebellion gắn với fiscal and regional mạng (network / 네트워크)** tiếp nhận điểm tựa từ **Từ Tùy sang Đường: empire mạnh trở lại, nhưng cục bộ (local / 로컬) society đã thay đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phùng Hưng và cục bộ (local / 로컬) strongmen cuối thời Đường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Mai Thúc Loan: rebellion gắn với fiscal and regional mạng (network / 네트워크)** nối từ **Từ Tùy sang Đường: empire mạnh trở lại, nhưng cục bộ (local / 로컬) society đã thay đổi** sang **Phùng Hưng và cục bộ (local / 로컬) strongmen cuối thời Đường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mai Thúc Loan: rebellion gắn với fiscal and regional mạng (network / 네트워크)
 
@@ -110,7 +110,7 @@ Cuộc nổi dậy của **Mai Thúc Loan** thường được đặt vào đầ
 
 Nếu một date còn debate, mô hình tư duy (mental model / 사고 모델) phải survive even khi date được điều chỉnh.
 
-> **Chuyển mạch:** Trong **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Phùng Hưng và cục bộ (local / 로컬) strongmen cuối thời Đường** tiếp nhận điểm tựa từ **Mai Thúc Loan: rebellion gắn với fiscal and regional mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Economy: từ agriculture đến corridor trade** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Phùng Hưng và cục bộ (local / 로컬) strongmen cuối thời Đường** nối từ **Mai Thúc Loan: rebellion gắn với fiscal and regional mạng (network / 네트워크)** sang **Economy: từ agriculture đến corridor trade**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phùng Hưng và cục bộ (local / 로컬) strongmen cuối thời Đường
 
@@ -118,7 +118,7 @@ Nếu một date còn debate, mô hình tư duy (mental model / 사고 모델) p
 
 Đến thế kỷ IX, Tang empire chịu nhiều nội bộ (internal / 내부) crisis. Distance từ center cộng cục bộ (local / 로컬) mạng (network / 네트워크) mạnh tạo ra **devolution of power (phân quyền thực tế)**. Khi imperial appointment không còn đủ force đứng sau, office-holder tại chỗ có thể hành xử ngày càng autonomous.
 
-> **Chuyển mạch:** Ở chặng này của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Economy: từ agriculture đến corridor trade** tiếp nhận điểm tựa từ **Phùng Hưng và cục bộ (local / 로컬) strongmen cuối thời Đường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cục bộ (local / 로컬) elite học empire rồi dùng kiến thức (knowledge / 지식) đó để tách khỏi empire** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Economy: từ agriculture đến corridor trade** nối từ **Phùng Hưng và cục bộ (local / 로컬) strongmen cuối thời Đường** sang **Cục bộ (local / 로컬) elite học empire rồi dùng kiến thức (knowledge / 지식) đó để tách khỏi empire**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Economy: từ agriculture đến corridor trade
 
@@ -128,7 +128,7 @@ Commercial activity tạo city/thị trường (market / 시장) nodes, demand c
 
 Đây là lý do không nên kể period này như một “đóng băng dân tộc”. Nó là thời kỳ intense connectivity.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Cục bộ (local / 로컬) elite học empire rồi dùng kiến thức (knowledge / 지식) đó để tách khỏi empire** tiếp nhận điểm tựa từ **Economy: từ agriculture đến corridor trade** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **“Đồng hóa” là từ quá đơn giản** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Cục bộ (local / 로컬) elite học empire rồi dùng kiến thức (knowledge / 지식) đó để tách khỏi empire** nối từ **Economy: từ agriculture đến corridor trade** sang **“Đồng hóa” là từ quá đơn giản**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cục bộ (local / 로컬) elite học empire rồi dùng kiến thức (knowledge / 지식) đó để tách khỏi empire
 
@@ -152,7 +152,7 @@ autonomy becomes feasible
 
 Không có mâu thuẫn khi cùng một tiến trình (process / 프로세스) vừa integrate vừa tạo precondition cho separation.
 
-> **Chuyển mạch:** Trong **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **“Đồng hóa” là từ quá đơn giản** tiếp nhận điểm tựa từ **Cục bộ (local / 로컬) elite học empire rồi dùng kiến thức (knowledge / 지식) đó để tách khỏi empire** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Di tích và địa điểm nên gắn khi đọc chapter này** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **“Đồng hóa” là từ quá đơn giản** nối từ **Cục bộ (local / 로컬) elite học empire rồi dùng kiến thức (knowledge / 지식) đó để tách khỏi empire** sang **Di tích và địa điểm nên gắn khi đọc chapter này**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## “Đồng hóa” là từ quá đơn giản
 
@@ -162,7 +162,7 @@ Written administration và elite scholarship chịu ảnh hưởng rất mạnh 
 
 Kết quả là một society có nhiều East Asian institutional layers nhưng vẫn không trở thành một southern Chinese province vĩnh viễn.
 
-> **Chuyển mạch:** Ở chặng này của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Di tích và địa điểm nên gắn khi đọc chapter này** tiếp nhận điểm tựa từ **“Đồng hóa” là từ quá đơn giản** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Recap và bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Di tích và địa điểm nên gắn khi đọc chapter này** nối từ **“Đồng hóa” là từ quá đơn giản** sang **Recap và bàn giao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Di tích và địa điểm nên gắn khi đọc chapter này
 
@@ -170,7 +170,7 @@ Kết quả là một society có nhiều East Asian institutional layers nhưng
 
 Điểm quan trọng không phải collect thật nhiều địa danh, mà dùng địa danh để attach abstract concept vào landscape.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Recap và bàn giao** tiếp nhận điểm tựa từ **Di tích và địa điểm nên gắn khi đọc chapter này** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Bắc thuộc dài hạn: administration, economy, cục bộ (local / 로컬) society và resistance**, **Recap và bàn giao** nối từ **Di tích và địa điểm nên gắn khi đọc chapter này** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

@@ -10,7 +10,7 @@ Câu hỏi trung tâm của thế kỷ X là: **làm thế nào một vùng từ
 
 Đây là lý do 938 rất quan trọng nhưng không đủ để giải thích toàn bộ chuyển tiếp (transition / 전이).
 
-> **Chuyển mạch:** Trong **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **905: Khúc Thừa Dụ và autonomy từ bên trong administrative hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **Điểm tựa và câu hỏi trung tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dương Đình Nghệ: autonomy vẫn fragile vì bên ngoài (external / 외부) states chưa biến mất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **905: Khúc Thừa Dụ và autonomy từ bên trong administrative hệ thống (system / 시스템)** nối từ **Điểm tựa và câu hỏi trung tâm** sang **Dương Đình Nghệ: autonomy vẫn fragile vì bên ngoài (external / 외부) states chưa biến mất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 905: Khúc Thừa Dụ và autonomy từ bên trong administrative hệ thống (system / 시스템)
 
@@ -20,7 +20,7 @@ Khoảng **905**, **Khúc Thừa Dụ** giành quyền kiểm soát Tĩnh Hải 
 
 Khúc Hạo sau đó thường được gắn với reforms nhằm tổ chức administration sâu hơn và giảm burden. Dù detail trong sources cần đọc thận trọng, overall significance khá rõ: cục bộ (local / 로컬) authority đang cố biến military-political autonomy thành routine quản trị (governance / 거버넌스).
 
-> **Chuyển mạch:** Ở chặng này của **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **Dương Đình Nghệ: autonomy vẫn fragile vì bên ngoài (external / 외부) states chưa biến mất** tiếp nhận điểm tựa từ **905: Khúc Thừa Dụ và autonomy từ bên trong administrative hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiều Công Tiễn và crisis of succession** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **Dương Đình Nghệ: autonomy vẫn fragile vì bên ngoài (external / 외부) states chưa biến mất** nối từ **905: Khúc Thừa Dụ và autonomy từ bên trong administrative hệ thống (system / 시스템)** sang **Kiều Công Tiễn và crisis of succession**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dương Đình Nghệ: autonomy vẫn fragile vì bên ngoài (external / 외부) states chưa biến mất
 
@@ -28,7 +28,7 @@ Sau họ Khúc, **Dương Đình Nghệ** tiếp tục điều khiển (control 
 
 State-building vì thế không chỉ là nội bộ (internal / 내부) administration. Nó còn là **deterrence bài toán (problem / 문제)**: nếu neighbor tin rằng can thiệp quân sự rẻ và dễ, autonomy khó bền.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **Kiều Công Tiễn và crisis of succession** tiếp nhận điểm tựa từ **Dương Đình Nghệ: autonomy vẫn fragile vì bên ngoài (external / 외부) states chưa biến mất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **938 Bạch Đằng: thắng lợi military quan trọng vì nó giải quyết strategic truy cập (access / 접근)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **Kiều Công Tiễn và crisis of succession** nối từ **Dương Đình Nghệ: autonomy vẫn fragile vì bên ngoài (external / 외부) states chưa biến mất** sang **938 Bạch Đằng: thắng lợi military quan trọng vì nó giải quyết strategic truy cập (access / 접근)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kiều Công Tiễn và crisis of succession
 
@@ -52,7 +52,7 @@ local civil conflict + interstate war merge
 
 Mẫu (pattern / 패턴) này lặp lại ở nhiều nơi trong world lịch sử (history / 이력); nó không phải đặc điểm riêng Việt Nam.
 
-> **Chuyển mạch:** Trong **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **938 Bạch Đằng: thắng lợi military quan trọng vì nó giải quyết strategic truy cập (access / 접근)** tiếp nhận điểm tựa từ **Kiều Công Tiễn và crisis of succession** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Một ranh giới (boundary / 경계) quan trọng: bãi cọc hiện thấy chủ yếu gắn với 1288** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **938 Bạch Đằng: thắng lợi military quan trọng vì nó giải quyết strategic truy cập (access / 접근)** nối từ **Kiều Công Tiễn và crisis of succession** sang **Một ranh giới (boundary / 경계) quan trọng: bãi cọc hiện thấy chủ yếu gắn với 1288**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 938 Bạch Đằng: thắng lợi military quan trọng vì nó giải quyết strategic truy cập (access / 접근)
 
@@ -74,7 +74,7 @@ large external fleet loses numerical advantage
 
 Đây là military geography, không phải folklore technique.
 
-> **Chuyển mạch:** Ở chặng này của **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **938 Bạch Đằng: thắng lợi military quan trọng vì nó giải quyết strategic truy cập (access / 접근)** đã nêu tiêu chí phân biệt, còn **Một ranh giới (boundary / 경계) quan trọng: bãi cọc hiện thấy chủ yếu gắn với 1288** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Sau 938: independence không tự động tạo stable trạng thái (state / 상태)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **938 Bạch Đằng: thắng lợi military quan trọng vì nó giải quyết strategic truy cập (access / 접근)** đặt tiêu chí; **Một ranh giới (boundary / 경계) quan trọng: bãi cọc hiện thấy chủ yếu gắn với 1288** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Sau 938: independence không tự động tạo stable trạng thái (state / 상태)** mở rộng hệ quả.
 
 ## Một ranh giới (boundary / 경계) quan trọng: bãi cọc hiện thấy chủ yếu gắn với 1288
 
@@ -84,7 +84,7 @@ Vì vậy site vẫn cực kỳ hữu ích để hiểu terrain và recurring st
 
 Cụm di tích **Từ Lương Xâm** ở Hải Phòng được bảo tồn như một bộ nhớ (memory / 메모리) site gắn với căn cứ Ngô Quyền năm 938. Khi đi thực địa, hãy dùng nhiều loại bằng chứng (evidence / 증거) thay vì nghĩ một monument duy nhất “chứng minh toàn bộ trận đánh”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **Một ranh giới (boundary / 경계) quan trọng: bãi cọc hiện thấy chủ yếu gắn với 1288** đã nêu tiêu chí phân biệt, còn **Sau 938: independence không tự động tạo stable trạng thái (state / 상태)** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Đinh Bộ Lĩnh và Hoa Lư: tại sao một capital trong karst landscape lại hợp lý?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **Một ranh giới (boundary / 경계) quan trọng: bãi cọc hiện thấy chủ yếu gắn với 1288** đặt tiêu chí; **Sau 938: independence không tự động tạo stable trạng thái (state / 상태)** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Đinh Bộ Lĩnh và Hoa Lư: tại sao một capital trong karst landscape lại hợp lý?** mở rộng hệ quả.
 
 ## Sau 938: independence không tự động tạo stable trạng thái (state / 상태)
 
@@ -94,7 +94,7 @@ Ngô Quyền xưng vương và đặt trung tâm ở Cổ Loa, nhưng sau khi ô
 
 Nếu nhiều regional strongmen có fortress, troops, land cơ sở (base / 기반) và tax sức chứa (capacity / 용량) riêng, center không còn monopoly. Trạng thái (state / 상태) de facto trở thành mạng (network / 네트워크) của competing nodes.
 
-> **Chuyển mạch:** Trong **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **Đinh Bộ Lĩnh và Hoa Lư: tại sao một capital trong karst landscape lại hợp lý?** tiếp nhận điểm tựa từ **Sau 938: independence không tự động tạo stable trạng thái (state / 상태)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Economy của trạng thái (state / 상태) mới: vấn đề không phải GDP mà là extraction sức chứa (capacity / 용량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **Đinh Bộ Lĩnh và Hoa Lư: tại sao một capital trong karst landscape lại hợp lý?** nối từ **Sau 938: independence không tự động tạo stable trạng thái (state / 상태)** sang **Economy của trạng thái (state / 상태) mới: vấn đề không phải GDP mà là extraction sức chứa (capacity / 용량)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đinh Bộ Lĩnh và Hoa Lư: tại sao một capital trong karst landscape lại hợp lý?
 
@@ -104,7 +104,7 @@ Nếu chỉ so Hoa Lư với Hà Nội hiện đại, location có vẻ “xa ce
 
 UNESCO mô tả Hoa Lư như một strategic capital trong landscape Tràng An thế kỷ X–XI. Cấu trúc tự nhiên giảm chi phí (cost / 비용) phòng thủ trong một thời kỳ central trạng thái (state / 상태) còn fragile.
 
-> **Chuyển mạch:** Ở chặng này của **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **Economy của trạng thái (state / 상태) mới: vấn đề không phải GDP mà là extraction sức chứa (capacity / 용량)** tiếp nhận điểm tựa từ **Đinh Bộ Lĩnh và Hoa Lư: tại sao một capital trong karst landscape lại hợp lý?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **979 succession crisis: trạng thái (state / 상태) vẫn phụ thuộc mạnh vào person** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **Economy của trạng thái (state / 상태) mới: vấn đề không phải GDP mà là extraction sức chứa (capacity / 용량)** nối từ **Đinh Bộ Lĩnh và Hoa Lư: tại sao một capital trong karst landscape lại hợp lý?** sang **979 succession crisis: trạng thái (state / 상태) vẫn phụ thuộc mạnh vào person**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Economy của trạng thái (state / 상태) mới: vấn đề không phải GDP mà là extraction sức chứa (capacity / 용량)
 
@@ -114,7 +114,7 @@ Sau decades fragmentation, ruler cần rebuild **fiscal sức chứa (capacity /
 
 Coinage, tribute, gifts và trade đều có vai trò nhưng không nên áp hiện đại (modern / 현대적) cash-economy mô hình (model / 모델). Large part of trạng thái (state / 상태) sức chứa (capacity / 용량) vẫn dựa vào in-kind resources và personal-political networks.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **979 succession crisis: trạng thái (state / 상태) vẫn phụ thuộc mạnh vào person** tiếp nhận điểm tựa từ **Economy của trạng thái (state / 상태) mới: vấn đề không phải GDP mà là extraction sức chứa (capacity / 용량)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **981: chống Tống và consolidation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **979 succession crisis: trạng thái (state / 상태) vẫn phụ thuộc mạnh vào person** nối từ **Economy của trạng thái (state / 상태) mới: vấn đề không phải GDP mà là extraction sức chứa (capacity / 용량)** sang **981: chống Tống và consolidation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 979 succession crisis: trạng thái (state / 상태) vẫn phụ thuộc mạnh vào person
 
@@ -122,7 +122,7 @@ Coinage, tribute, gifts và trade đều có vai trò nhưng không nên áp hi�
 
 Trong bối cảnh threat từ nhà Tống, **Lê Hoàn** nắm quyền và năm **980** lên ngôi, mở Tiền Lê. Một traditional narrative có thể tập trung vào legitimacy dispute; nhân quả (causal / 인과적) phân tích (analysis / 분석) cần nhìn thêm bảo mật (security / 보안) dilemma: một minor king + factional court + bên ngoài (external / 외부) invasion rủi ro (risk / 위험) là combination rất nguy hiểm.
 
-> **Chuyển mạch:** Trong **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **981: chống Tống và consolidation** tiếp nhận điểm tựa từ **979 succession crisis: trạng thái (state / 상태) vẫn phụ thuộc mạnh vào person** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hoa Lư hôm nay: đọc natural fortress trước khi đọc temple** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **981: chống Tống và consolidation** nối từ **979 succession crisis: trạng thái (state / 상태) vẫn phụ thuộc mạnh vào person** sang **Hoa Lư hôm nay: đọc natural fortress trước khi đọc temple**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 981: chống Tống và consolidation
 
@@ -132,7 +132,7 @@ Strategic significance nằm ở việc polity mới chứng minh rằng 938 kh�
 
 Sau đó diplomacy với Song giúp normalize relationship. Đây là một recurring mẫu (pattern / 패턴) của Đại Việt: **military autonomy + diplomatic accommodation**. Independence không đồng nghĩa với permanent war; tribute/diplomatic ritual có thể coexist với substantial nội bộ (internal / 내부) sovereignty.
 
-> **Chuyển mạch:** Ở chặng này của **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **Hoa Lư hôm nay: đọc natural fortress trước khi đọc temple** tiếp nhận điểm tựa từ **981: chống Tống và consolidation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao 1010 lại hợp lô-gic (logic / 논리) sau Hoa Lư?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **Hoa Lư hôm nay: đọc natural fortress trước khi đọc temple** nối từ **981: chống Tống và consolidation** sang **Vì sao 1010 lại hợp lô-gic (logic / 논리) sau Hoa Lư?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hoa Lư hôm nay: đọc natural fortress trước khi đọc temple
 
@@ -140,7 +140,7 @@ Khi đến Cố đô Hoa Lư, hãy nhìn mountain walls và narrow passages trư
 
 Cố đô Hoa Lư hiện còn nhiều tầng (layer / 계층) như temple, wall traces, cave và archaeological sites. Tràng An cũng lưu dấu human occupation rất dài, nên phải phân biệt prehistoric archaeology với historical capital tầng (layer / 계층).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **Vì sao 1010 lại hợp lô-gic (logic / 논리) sau Hoa Lư?** tiếp nhận điểm tựa từ **Hoa Lư hôm nay: đọc natural fortress trước khi đọc temple** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Recap và bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **Vì sao 1010 lại hợp lô-gic (logic / 논리) sau Hoa Lư?** nối từ **Hoa Lư hôm nay: đọc natural fortress trước khi đọc temple** sang **Recap và bàn giao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao 1010 lại hợp lô-gic (logic / 논리) sau Hoa Lư?
 
@@ -148,7 +148,7 @@ Hoa Lư rất tốt cho survival nhưng limited cho một trạng thái (state /
 
 Đó là lô-gic (logic / 논리) phía sau bước tiếp theo: năm **1010**, Lý Công Uẩn dời capital ra **Thăng Long**. Không cần coi quyết định này chỉ là “vì đất đẹp”. Nó phản ánh trạng thái (state / 상태) chuyển từ defensive consolidation sang larger administrative–economic tích hợp (integration / 통합).
 
-> **Chuyển mạch:** Trong **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **Recap và bàn giao** tiếp nhận điểm tựa từ **Vì sao 1010 lại hợp lô-gic (logic / 논리) sau Hoa Lư?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Thế kỷ X: từ autonomy đến một nhà nước độc lập có khả năng sống sót**, **Recap và bàn giao** nối từ **Vì sao 1010 lại hợp lô-gic (logic / 논리) sau Hoa Lư?** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

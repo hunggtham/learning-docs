@@ -10,7 +10,7 @@ Câu hỏi trung tâm của chapter này là: **vì sao cùng sống dưới col
 
 Muốn hiểu 1945, phải hiểu competition giữa các visions trước đó.
 
-> **Chuyển mạch:** Trong **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **“Phong trào yêu nước” không phải một ideology duy nhất** tiếp nhận điểm tựa từ **Điểm tựa và câu hỏi trung tâm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phan Bội Châu và bên ngoài (external / 외부) mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **“Phong trào yêu nước” không phải một ideology duy nhất** nối từ **Điểm tựa và câu hỏi trung tâm** sang **Phan Bội Châu và bên ngoài (external / 외부) mạng (network / 네트워크)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## “Phong trào yêu nước” không phải một ideology duy nhất
 
@@ -20,7 +20,7 @@ Các group có thể cùng muốn giảm hoặc chấm dứt French domination n
 
 Historical narrative tốt cần giữ disagreement này thay vì retrospectively merge tất cả thành một line duy nhất dẫn tới 1945.
 
-> **Chuyển mạch:** Ở chặng này của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Phan Bội Châu và bên ngoài (external / 외부) mạng (network / 네트워크)** tiếp nhận điểm tựa từ **“Phong trào yêu nước” không phải một ideology duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phan Châu Trinh: reform trạng thái (state / 상태)/society trước khi giành bằng military force** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Phan Bội Châu và bên ngoài (external / 외부) mạng (network / 네트워크)** nối từ **“Phong trào yêu nước” không phải một ideology duy nhất** sang **Phan Châu Trinh: reform trạng thái (state / 상태)/society trước khi giành bằng military force**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phan Bội Châu và bên ngoài (external / 외부) mạng (network / 네트워크)
 
@@ -30,7 +30,7 @@ Nhưng bên ngoài (external / 외부) hỗ trợ (support / 지원) luôn có r
 
 Đây là recurring theme sẽ quay lại nhiều lần trong twentieth century: Vietnamese actors có agency, nhưng operate trong international hệ thống (system / 시스템).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Phan Châu Trinh: reform trạng thái (state / 상태)/society trước khi giành bằng military force** tiếp nhận điểm tựa từ **Phan Bội Châu và bên ngoài (external / 외부) mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **School và press tạo công khai (public / 공개) sphere mới** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Phan Châu Trinh: reform trạng thái (state / 상태)/society trước khi giành bằng military force** nối từ **Phan Bội Châu và bên ngoài (external / 외부) mạng (network / 네트워크)** sang **School và press tạo công khai (public / 공개) sphere mới**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phan Châu Trinh: reform trạng thái (state / 상태)/society trước khi giành bằng military force
 
@@ -42,7 +42,7 @@ Một lý thuyết (theory / 이론) nói political independence phải giành t
 
 Debate này là classic bài toán (problem / 문제) của modernization movements khắp Asia.
 
-> **Chuyển mạch:** Trong **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **School và press tạo công khai (public / 공개) sphere mới** tiếp nhận điểm tựa từ **Phan Châu Trinh: reform trạng thái (state / 상태)/society trước khi giành bằng military force** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **World War I và xã hội (social / 사회적) thay đổi (change / 변경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **School và press tạo công khai (public / 공개) sphere mới** nối từ **Phan Châu Trinh: reform trạng thái (state / 상태)/society trước khi giành bằng military force** sang **World War I và xã hội (social / 사회적) thay đổi (change / 변경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## School và press tạo công khai (public / 공개) sphere mới
 
@@ -62,7 +62,7 @@ political organization at larger scale
 
 Colonial censorship giới hạn công khai (public / 공개) sphere, nhưng suppression cũng không thể đưa thông tin (information / 정보) chi phí (cost / 비용) trở lại pre-print mức (level / 수준).
 
-> **Chuyển mạch:** Ở chặng này của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **World War I và xã hội (social / 사회적) thay đổi (change / 변경)** tiếp nhận điểm tựa từ **School và press tạo công khai (public / 공개) sphere mới** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyễn Ái Quốc / Hồ Chí Minh và communist mạng (network / 네트워크)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **World War I và xã hội (social / 사회적) thay đổi (change / 변경)** nối từ **School và press tạo công khai (public / 공개) sphere mới** sang **Nguyễn Ái Quốc / Hồ Chí Minh và communist mạng (network / 네트워크)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## World War I và xã hội (social / 사회적) thay đổi (change / 변경)
 
@@ -70,7 +70,7 @@ World War I làm French empire huy động manpower và resources từ colonies.
 
 Return di chuyển (migration / 마이그레이션) và toàn cục (global / 전역) exposure không tự động produce nationalism, nhưng chúng mở thông tin (information / 정보) channel. Colonial subjects thấy France vừa nói ngôn ngữ (language / 언어) of civilization/republic vừa duy trì unequal empire—a contradiction political activists có thể khai thác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Nguyễn Ái Quốc / Hồ Chí Minh và communist mạng (network / 네트워크)** tiếp nhận điểm tựa từ **World War I và xã hội (social / 사회적) thay đổi (change / 변경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **VNQDĐ và Yên Bái 1930** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Nguyễn Ái Quốc / Hồ Chí Minh và communist mạng (network / 네트워크)** nối từ **World War I và xã hội (social / 사회적) thay đổi (change / 변경)** sang **VNQDĐ và Yên Bái 1930**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nguyễn Ái Quốc / Hồ Chí Minh và communist mạng (network / 네트워크)
 
@@ -80,7 +80,7 @@ Năm **1930**, Indochinese Communist Party được thành lập sau efforts th�
 
 Communist strength về sau đến không chỉ từ ideology mà từ organization: cadre, cell, propaganda, peasant/workers mobilization và ability to operate clandestinely under repression.
 
-> **Chuyển mạch:** Trong **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **VNQDĐ và Yên Bái 1930** tiếp nhận điểm tựa từ **Nguyễn Ái Quốc / Hồ Chí Minh và communist mạng (network / 네트워크)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nghệ-Tĩnh 1930–1931: protest, repression và cục bộ (local / 로컬) trạng thái (state / 상태) challenge** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **VNQDĐ và Yên Bái 1930** nối từ **Nguyễn Ái Quốc / Hồ Chí Minh và communist mạng (network / 네트워크)** sang **Nghệ-Tĩnh 1930–1931: protest, repression và cục bộ (local / 로컬) trạng thái (state / 상태) challenge**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## VNQDĐ và Yên Bái 1930
 
@@ -88,7 +88,7 @@ Communist strength về sau đến không chỉ từ ideology mà từ organizat
 
 So sánh VNQDĐ và communists giúp thấy survival under repression phụ thuộc organization kiến trúc (architecture / 아키텍처), recruitment cơ sở (base / 기반), bảo mật (security / 보안) và bên ngoài (external / 외부) mạng (network / 네트워크)—not only popularity of ideas.
 
-> **Chuyển mạch:** Ở chặng này của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Nghệ-Tĩnh 1930–1931: protest, repression và cục bộ (local / 로컬) trạng thái (state / 상태) challenge** tiếp nhận điểm tựa từ **VNQDĐ và Yên Bái 1930** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Great Depression: toàn cục (global / 전역) economy đi vào village** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Nghệ-Tĩnh 1930–1931: protest, repression và cục bộ (local / 로컬) trạng thái (state / 상태) challenge** nối từ **VNQDĐ và Yên Bái 1930** sang **Great Depression: toàn cục (global / 전역) economy đi vào village**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nghệ-Tĩnh 1930–1931: protest, repression và cục bộ (local / 로컬) trạng thái (state / 상태) challenge
 
@@ -98,7 +98,7 @@ Economic shock có thể lower legitimacy of colonial hệ thống (system / 시
 
 French repression rất mạnh. Movement defeat không xóa organizational học tập (learning / 학습); cadres và narratives survive into later periods.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Great Depression: toàn cục (global / 전역) economy đi vào village** tiếp nhận điểm tựa từ **Nghệ-Tĩnh 1930–1931: protest, repression và cục bộ (local / 로컬) trạng thái (state / 상태) challenge** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1936–1939: political opening có giới hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Great Depression: toàn cục (global / 전역) economy đi vào village** nối từ **Nghệ-Tĩnh 1930–1931: protest, repression và cục bộ (local / 로컬) trạng thái (state / 상태) challenge** sang **1936–1939: political opening có giới hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Great Depression: toàn cục (global / 전역) economy đi vào village
 
@@ -116,7 +116,7 @@ unrest + migration + political recruitment
 
 Đây là concrete example của toàn cục (global / 전역) capitalism affecting cục bộ (local / 로컬) political lịch sử (history / 이력).
 
-> **Chuyển mạch:** Trong **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Great Depression: toàn cục (global / 전역) economy đi vào village** đã nêu tiêu chí phân biệt, còn **1936–1939: political opening có giới hạn** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **World War II: colonial sovereignty bị split** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Great Depression: toàn cục (global / 전역) economy đi vào village** đặt tiêu chí; **1936–1939: political opening có giới hạn** dùng tiêu chí đó để kiểm tra ranh giới, rồi **World War II: colonial sovereignty bị split** mở rộng hệ quả.
 
 ## 1936–1939: political opening có giới hạn
 
@@ -126,7 +126,7 @@ Vietnamese political actors adapted quickly: petition, journalism, association v
 
 Lesson: political movement không cố định chiến lược (strategy / 전략); nó shifts theo opportunity cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Ở chặng này của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **1936–1939: political opening có giới hạn** đã nêu tiêu chí phân biệt, còn **World War II: colonial sovereignty bị split** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Viet Minh 1941: broad-front organization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **1936–1939: political opening có giới hạn** đặt tiêu chí; **World War II: colonial sovereignty bị split** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Viet Minh 1941: broad-front organization** mở rộng hệ quả.
 
 ## World War II: colonial sovereignty bị split
 
@@ -134,7 +134,7 @@ Sau France thất bại trước Germany năm 1940, French colonial administrati
 
 Điều này weakens colonial legitimacy. Population nhìn thấy French sovereignty không còn absolute.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Viet Minh 1941: broad-front organization** tiếp nhận điểm tựa từ **World War II: colonial sovereignty bị split** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nạn đói 1944–1945: weather + war + chính sách (policy / 정책) thất bại (failure / 실패)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Viet Minh 1941: broad-front organization** nối từ **World War II: colonial sovereignty bị split** sang **Nạn đói 1944–1945: weather + war + chính sách (policy / 정책) thất bại (failure / 실패)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Viet Minh 1941: broad-front organization
 
@@ -144,7 +144,7 @@ Sau France thất bại trước Germany năm 1940, French colonial administrati
 
 Viet Minh xây bases, cục bộ (local / 로컬) committees và armed units, especially in northern uplands/border areas, while navigating relationships with Chinese actors and Allied wartime interests.
 
-> **Chuyển mạch:** Trong **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Nạn đói 1944–1945: weather + war + chính sách (policy / 정책) thất bại (failure / 실패)** tiếp nhận điểm tựa từ **Viet Minh 1941: broad-front organization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **March 1945: Japan removes French colonial administration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Nạn đói 1944–1945: weather + war + chính sách (policy / 정책) thất bại (failure / 실패)** nối từ **Viet Minh 1941: broad-front organization** sang **March 1945: Japan removes French colonial administration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nạn đói 1944–1945: weather + war + chính sách (policy / 정책) thất bại (failure / 실패)
 
@@ -156,7 +156,7 @@ Scholarship estimates death toll very high, though chính xác (exact / 정확�
 
 Famine had enormous political consequence because it transformed abstract regime thất bại (failure / 실패) into direct household catastrophe.
 
-> **Chuyển mạch:** Ở chặng này của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **March 1945: Japan removes French colonial administration** tiếp nhận điểm tựa từ **Nạn đói 1944–1945: weather + war + chính sách (policy / 정책) thất bại (failure / 실패)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **August 1945: collapse of empire + organizational readiness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **March 1945: Japan removes French colonial administration** nối từ **Nạn đói 1944–1945: weather + war + chính sách (policy / 정책) thất bại (failure / 실패)** sang **August 1945: collapse of empire + organizational readiness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## March 1945: Japan removes French colonial administration
 
@@ -166,7 +166,7 @@ This matters because French trạng thái (state / 상태) apparatus suddenly fr
 
 No actor controlled the whole country automatically. Multiple nationalist groups, cục bộ (local / 로컬) administrations, Japanese forces and Viet Minh networks competed in a rapidly changing môi trường (environment / 환경).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **August 1945: collapse of empire + organizational readiness** tiếp nhận điểm tựa từ **March 1945: Japan removes French colonial administration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ba Đình: địa điểm hiện đại nhưng nhiều historical tầng (layer / 계층)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **August 1945: collapse of empire + organizational readiness** nối từ **March 1945: Japan removes French colonial administration** sang **Ba Đình: địa điểm hiện đại nhưng nhiều historical tầng (layer / 계층)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## August 1945: collapse of empire + organizational readiness
 
@@ -186,7 +186,7 @@ rapid seizure of local and central authority
 
 On **2 September 1945**, Hồ Chí Minh proclaimed the Democratic Republic of Vietnam in Hanoi.
 
-> **Chuyển mạch:** Trong **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Ba Đình: địa điểm hiện đại nhưng nhiều historical tầng (layer / 계층)** tiếp nhận điểm tựa từ **August 1945: collapse of empire + organizational readiness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Recap và bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Ba Đình: địa điểm hiện đại nhưng nhiều historical tầng (layer / 계층)** nối từ **August 1945: collapse of empire + organizational readiness** sang **Recap và bàn giao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ba Đình: địa điểm hiện đại nhưng nhiều historical tầng (layer / 계층)
 
@@ -194,7 +194,7 @@ Ba Đình Square today is strongly associated with the 1945 declaration. Khi đ�
 
 Công khai (public / 공개) lịch sử (history / 이력) transforms site over thời gian (time / 시간). Same place can hold sự kiện (event / 이벤트) bộ nhớ (memory / 메모리), trạng thái (state / 상태) ritual and tourism simultaneously.
 
-> **Chuyển mạch:** Ở chặng này của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Recap và bàn giao** tiếp nhận điểm tựa từ **Ba Đình: địa điểm hiện đại nhưng nhiều historical tầng (layer / 계층)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **1900–1945: colonial society, báo chí, nationalism, communism và World War II**, **Recap và bàn giao** nối từ **Ba Đình: địa điểm hiện đại nhưng nhiều historical tầng (layer / 계층)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 

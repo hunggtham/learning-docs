@@ -16,7 +16,7 @@ changes constraint
 new economic/military/social option
 ```
 
-> **Chuyển mạch:** Trong **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Stone/bronze/iron: material changes môi trường vận hành (production / 운영 환경) frontier** tiếp nhận điểm tựa từ **Technology is năng lực (capability / 역량), not gadget danh sách (list / 목록)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Fortification as các hệ thống (systems / 시스템들) kỹ thuật (engineering / 엔지니어링)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Stone/bronze/iron: material changes môi trường vận hành (production / 운영 환경) frontier** nối từ **Technology is năng lực (capability / 역량), not gadget danh sách (list / 목록)** sang **Fortification as các hệ thống (systems / 시스템들) kỹ thuật (engineering / 엔지니어링)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Stone/bronze/iron: material changes môi trường vận hành (production / 운영 환경) frontier
 
@@ -26,7 +26,7 @@ Iron later offers different công cụ (tool / 도구)/weapon economics and supp
 
 Material shift is not instant replacement; bronze and iron coexist for hàm (function / 함수)/status.
 
-> **Chuyển mạch:** Ở chặng này của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Fortification as các hệ thống (systems / 시스템들) kỹ thuật (engineering / 엔지니어링)** tiếp nhận điểm tựa từ **Stone/bronze/iron: material changes môi trường vận hành (production / 운영 환경) frontier** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Irrigation and dike** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Fortification as các hệ thống (systems / 시스템들) kỹ thuật (engineering / 엔지니어링)** nối từ **Stone/bronze/iron: material changes môi trường vận hành (production / 운영 환경) frontier** sang **Irrigation and dike**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Fortification as các hệ thống (systems / 시스템들) kỹ thuật (engineering / 엔지니어링)
 
@@ -36,7 +36,7 @@ Quy mô (scale / 규모) implies survey/planning and mass labor mobilization.
 
 A fortress therefore measures trạng thái (state / 상태) sức chứa (capacity / 용량) as much as military technology.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Irrigation and dike** tiếp nhận điểm tựa từ **Fortification as các hệ thống (systems / 시스템들) kỹ thuật (engineering / 엔지니어링)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **River vận chuyển (transport / 전송) before hiện đại (modern / 현대적) roads** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Irrigation and dike** nối từ **Fortification as các hệ thống (systems / 시스템들) kỹ thuật (engineering / 엔지니어링)** sang **River vận chuyển (transport / 전송) before hiện đại (modern / 현대적) roads**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Irrigation and dike
 
@@ -46,7 +46,7 @@ Hạ tầng (infrastructure / 인프라) produces đường dẫn (path / 경로
 
 Red River civilization cannot be understood without this long hydraulic lịch sử (history / 이력).
 
-> **Chuyển mạch:** Trong **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **River vận chuyển (transport / 전송) before hiện đại (modern / 현대적) roads** tiếp nhận điểm tựa từ **Irrigation and dike** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gunpowder and firearms** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **River vận chuyển (transport / 전송) before hiện đại (modern / 현대적) roads** nối từ **Irrigation and dike** sang **Gunpowder and firearms**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## River vận chuyển (transport / 전송) before hiện đại (modern / 현대적) roads
 
@@ -56,7 +56,7 @@ This explains location of Thăng Long and many thị trường (market / 시장)
 
 Historical map should be read with waterways foregrounded; hiện đại (modern / 현대적) highway map can mislead intuition.
 
-> **Chuyển mạch:** Ở chặng này của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Gunpowder and firearms** tiếp nhận điểm tựa từ **River vận chuyển (transport / 전송) before hiện đại (modern / 현대적) roads** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Maritime điều hướng (navigation / 내비게이션) and cổng (port / 포트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Gunpowder and firearms** nối từ **River vận chuyển (transport / 전송) before hiện đại (modern / 현대적) roads** sang **Maritime điều hướng (navigation / 내비게이션) and cổng (port / 포트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Gunpowder and firearms
 
@@ -66,7 +66,7 @@ Imported technology still requires cục bộ (local / 로컬) casting, powder s
 
 Buying weapon is not same as possessing military năng lực (capability / 역량).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Maritime điều hướng (navigation / 내비게이션) and cổng (port / 포트)** tiếp nhận điểm tựa từ **Gunpowder and firearms** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Printing as thông tin (information / 정보) hạ tầng (infrastructure / 인프라)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Maritime điều hướng (navigation / 내비게이션) and cổng (port / 포트)** nối từ **Gunpowder and firearms** sang **Printing as thông tin (information / 정보) hạ tầng (infrastructure / 인프라)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Maritime điều hướng (navigation / 내비게이션) and cổng (port / 포트)
 
@@ -74,7 +74,7 @@ Sail technology, monsoon kiến thức (knowledge / 지식) and ship mạng (net
 
 Cổng (port / 포트) hạ tầng (infrastructure / 인프라) includes pilot kiến thức (knowledge / 지식), warehouse, merchant quarter, customs and credit—not just pier.
 
-> **Chuyển mạch:** Trong **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Printing as thông tin (information / 정보) hạ tầng (infrastructure / 인프라)** tiếp nhận điểm tựa từ **Maritime điều hướng (navigation / 내비게이션) and cổng (port / 포트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguyễn roads, stations and canals** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Printing as thông tin (information / 정보) hạ tầng (infrastructure / 인프라)** nối từ **Maritime điều hướng (navigation / 내비게이션) and cổng (port / 포트)** sang **Nguyễn roads, stations and canals**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Printing as thông tin (information / 정보) hạ tầng (infrastructure / 인프라)
 
@@ -82,7 +82,7 @@ Woodblock printing increases reproduction độ tin cậy (reliability / 신뢰�
 
 Thông tin (information / 정보) technology belongs in same lịch sử (history / 이력) as road because both reduce transfer chi phí (cost / 비용)—one for ideas, one for goods.
 
-> **Chuyển mạch:** Ở chặng này của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Nguyễn roads, stations and canals** tiếp nhận điểm tựa từ **Printing as thông tin (information / 정보) hạ tầng (infrastructure / 인프라)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Colonial railways** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Nguyễn roads, stations and canals** nối từ **Printing as thông tin (information / 정보) hạ tầng (infrastructure / 인프라)** sang **Colonial railways**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nguyễn roads, stations and canals
 
@@ -90,7 +90,7 @@ Long unified territory requires official road and relay. Canal such as Vĩnh T�
 
 Hạ tầng (infrastructure / 인프라) simultaneously creates economic opportunity and extends trạng thái (state / 상태) reach.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Colonial railways** tiếp nhận điểm tựa từ **Nguyễn roads, stations and canals** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cổng (port / 포트) modernization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Colonial railways** nối từ **Nguyễn roads, stations and canals** sang **Cổng (port / 포트) modernization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Colonial railways
 
@@ -98,7 +98,7 @@ French-built railway integrates selected regions into colonial vận chuyển (t
 
 But mạng (network / 네트워크) hình học (geometry / 기하학) reflects political-economic priorities. Technology itself is neutral in vật lý (physical / 물리적) hàm (function / 함수); investment choice is institutional.
 
-> **Chuyển mạch:** Trong **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Cổng (port / 포트) modernization** tiếp nhận điểm tựa từ **Colonial railways** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Telegraph: speed of trạng thái (state / 상태) thông tin (information / 정보)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Cổng (port / 포트) modernization** nối từ **Colonial railways** sang **Telegraph: speed of trạng thái (state / 상태) thông tin (information / 정보)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cổng (port / 포트) modernization
 
@@ -106,7 +106,7 @@ Saigon/Haiphong cổng (port / 포트) connect commodity export and imported mac
 
 Thời gian (time / 시간) becomes more standardized, supporting regular commercial timetable.
 
-> **Chuyển mạch:** Ở chặng này của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Telegraph: speed of trạng thái (state / 상태) thông tin (information / 정보)** tiếp nhận điểm tựa từ **Cổng (port / 포트) modernization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Electricity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Telegraph: speed of trạng thái (state / 상태) thông tin (information / 정보)** nối từ **Cổng (port / 포트) modernization** sang **Electricity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Telegraph: speed of trạng thái (state / 상태) thông tin (information / 정보)
 
@@ -116,7 +116,7 @@ This is revolutionary for military command, administration and thị trường (
 
 Think of telegraph as nineteenth-century độ trễ (latency / 지연 시간) collapse.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Electricity** tiếp nhận điểm tựa từ **Telegraph: speed of trạng thái (state / 상태) thông tin (information / 정보)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Automobile and road society** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Electricity** nối từ **Telegraph: speed of trạng thái (state / 상태) thông tin (information / 정보)** sang **Automobile and road society**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Electricity
 
@@ -124,7 +124,7 @@ Electricity changes factory, lighting, communication and urban daily rhythm. Gri
 
 Hiện đại (modern / 현대적) society becomes more productive but also vulnerable to grid thất bại (failure / 실패).
 
-> **Chuyển mạch:** Trong **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Automobile and road society** tiếp nhận điểm tựa từ **Electricity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **War logistics and kỹ thuật (engineering / 엔지니어링)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Automobile and road society** nối từ **Electricity** sang **War logistics and kỹ thuật (engineering / 엔지니어링)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Automobile and road society
 
@@ -132,7 +132,7 @@ Twentieth-century road/vehicle changes settlement khả năng tiếp cận (acce
 
 Motorcycle supports informal commerce and urban expansion because household can truy cập (access / 접근) jobs beyond walking radius without full mass transit mạng (network / 네트워크).
 
-> **Chuyển mạch:** Ở chặng này của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **War logistics and kỹ thuật (engineering / 엔지니어링)** tiếp nhận điểm tựa từ **Automobile and road society** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Containerization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **War logistics and kỹ thuật (engineering / 엔지니어링)** nối từ **Automobile and road society** sang **Containerization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## War logistics and kỹ thuật (engineering / 엔지니어링)
 
@@ -140,7 +140,7 @@ Motorcycle supports informal commerce and urban expansion because household can 
 
 Military năng lực (capability / 역량) depends on thông lượng (throughput / 처리량), concealment and repair—not only weapons.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Containerization** tiếp nhận điểm tựa từ **War logistics and kỹ thuật (engineering / 엔지니어링)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Industrial parks as packaged hạ tầng (infrastructure / 인프라)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Containerization** nối từ **War logistics and kỹ thuật (engineering / 엔지니어링)** sang **Industrial parks as packaged hạ tầng (infrastructure / 인프라)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Containerization
 
@@ -148,7 +148,7 @@ Bộ chứa (container / 컨테이너) standardizes cargo handling across truck�
 
 Hiện đại (modern / 현대적) export industrialization of Vietnam is impossible to understand without bộ chứa (container / 컨테이너)/logistics revolution even though bộ chứa (container / 컨테이너) is rarely in political timeline.
 
-> **Chuyển mạch:** Trong **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Industrial parks as packaged hạ tầng (infrastructure / 인프라)** tiếp nhận điểm tựa từ **Containerization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Telecom and internet** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Industrial parks as packaged hạ tầng (infrastructure / 인프라)** nối từ **Containerization** sang **Telecom and internet**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Industrial parks as packaged hạ tầng (infrastructure / 인프라)
 
@@ -156,7 +156,7 @@ Industrial park bundles land, electricity, road, customs/dịch vụ (service / 
 
 This is hạ tầng (infrastructure / 인프라) as **nền tảng (platform / 플랫폼)**, not single construction.
 
-> **Chuyển mạch:** Ở chặng này của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Telecom and internet** tiếp nhận điểm tựa từ **Industrial parks as packaged hạ tầng (infrastructure / 인프라)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Digital government** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Telecom and internet** nối từ **Industrial parks as packaged hạ tầng (infrastructure / 인프라)** sang **Digital government**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Telecom and internet
 
@@ -164,7 +164,7 @@ Mobile mạng (network / 네트워크) allows coordination without fixed-line bu
 
 The economy becomes dependent on fiber, dữ liệu (data / 데이터) center and spectrum—mostly invisible hạ tầng (infrastructure / 인프라).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Digital government** tiếp nhận điểm tựa từ **Telecom and internet** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Technology diffusion is uneven** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Digital government** nối từ **Telecom and internet** sang **Technology diffusion is uneven**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Digital government
 
@@ -172,7 +172,7 @@ Cơ sở dữ liệu (database / 데이터베이스) and online dịch vụ (ser
 
 Historical continuity: trạng thái (state / 상태) still wants accurate registry; medium changed from bamboo/paper book to cơ sở dữ liệu (database / 데이터베이스).
 
-> **Chuyển mạch:** Trong **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Technology diffusion is uneven** tiếp nhận điểm tựa từ **Digital government** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hạ tầng (infrastructure / 인프라) creates winners and losers** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Technology diffusion is uneven** nối từ **Digital government** sang **Hạ tầng (infrastructure / 인프라) creates winners and losers**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Technology diffusion is uneven
 
@@ -180,7 +180,7 @@ Having technology nationally does not mean every household gains same benefit. E
 
 Always distinguish **availability** from **effective truy cập (access / 접근)**.
 
-> **Chuyển mạch:** Ở chặng này của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Hạ tầng (infrastructure / 인프라) creates winners and losers** tiếp nhận điểm tựa từ **Technology diffusion is uneven** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Historical checkpoints** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Hạ tầng (infrastructure / 인프라) creates winners and losers** nối từ **Technology diffusion is uneven** sang **Historical checkpoints**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hạ tầng (infrastructure / 인프라) creates winners and losers
 
@@ -188,13 +188,13 @@ New road can raise nearby land giá trị (value / 값) but bypass old thị tr�
 
 Hạ tầng (infrastructure / 인프라) phân tích (analysis / 분석) needs phân phối (distribution / 분포) and externality, not “built = progress”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Historical checkpoints** tiếp nhận điểm tựa từ **Hạ tầng (infrastructure / 인프라) creates winners and losers** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Recap và bàn giao** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Historical checkpoints** nối từ **Hạ tầng (infrastructure / 인프라) creates winners and losers** sang **Recap và bàn giao**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Historical checkpoints
 
 Cổ Loa → earthwork/metallurgy. Red River dikes → hydraulic coordination. Hội An → maritime logistics. Thành Nhà Hồ → stone kỹ thuật (engineering / 엔지니어링)/labor. Vĩnh Tế Canal → frontier/hạ tầng (infrastructure / 인프라). Long Biên/colonial rail → industrial-era vận chuyển (transport / 전송). Hồ Chí Minh trail sites → wartime logistics. Hải Phòng/Cái Mép ports → bộ chứa (container / 컨테이너) economy. Contemporary industrial parks/dữ liệu (data / 데이터) centers → nền tảng (platform / 플랫폼) hạ tầng (infrastructure / 인프라).
 
-> **Chuyển mạch:** Trong **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Recap và bàn giao** tiếp nhận điểm tựa từ **Historical checkpoints** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Technology & Hạ tầng (infrastructure / 인프라) Lịch sử (history / 이력): từ bronze, đê điều tới điện, bộ chứa (container / 컨테이너) và digital mạng (network / 네트워크)**, **Recap và bàn giao** nối từ **Historical checkpoints** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Recap và bàn giao
 
