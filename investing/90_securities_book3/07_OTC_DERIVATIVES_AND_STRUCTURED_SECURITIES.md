@@ -86,9 +86,11 @@ Khi stress case, hãy ghi riêng: xác suất chạm barrier, xác suất autoca
 
 Đọc cả lớp hedge phía sau sản phẩm. **Funded swap (Funded Swap)** chuyển cả dòng vốn cho bên hedge nên quy mô credit exposure lớn hơn; **unfunded swap (Unfunded Swap)** thường chỉ thanh toán phần lãi/lỗ theo hợp đồng. Hai cấu trúc có thể tạo cùng payoff đối với khách hàng nhưng không tạo cùng rủi ro khi dealer hoặc hedge counterparty vỡ nợ. Ngoài ra, phí bán, spread phát hành, chi phí hedge và giá mua lại sớm có thể khiến lợi suất nhìn trên term sheet không bằng lợi suất nhà đầu tư thực nhận.
 
+Raw p.348 còn tách **tự phòng hộ (self-hedging / 자체헤징)** và **outsourcing hedge (아웃소싱)**. Issuer có thể hedge bằng tài khoản của chính mình hoặc chuyển một phần hedge sang ngân hàng/đối tác lớn hơn. Hai cách không thay đổi lời hứa payoff với investor nhưng thay đổi concentration, counterparty và hedge-operational risk ở phía issuer; vì vậy “issuer đã hedge” không đồng nghĩa rủi ro của investor biến mất.
+
 Ở phía issuer, coupon là kết quả của giá các option đã bán/mua, funding spread, chi phí hedge và biên lợi nhuận phân phối. Nếu issuer dùng volatility cao hơn hoặc correlation thấp hơn trong mô hình, coupon có thể cao hơn nhưng payoff cũng bất lợi hơn cho người mua. Đây là **model disagreement**, không phải arbitrage: người mua chịu rủi ro mô hình, còn issuer phải chịu model risk và hedge slippage khi thị trường nhảy gap. Vì vậy cần tách ba giá: giá lý thuyết, giá phát hành và giá mua lại; chúng có thể khác nhau ngay cả khi underlying chưa đổi.
 
-Nguồn cũng mô tả cơ chế 숙려기간/đánh giá phù hợp cho một số cấu trúc có khả năng mất vốn. Những mốc và điều kiện này là **source-state**; phải kiểm tra quy định và chính sách phân phối hiện hành trước khi dùng làm hướng dẫn giao dịch. Ở cấp độ học tập, nguyên tắc không đổi: sản phẩm càng khó định giá hoặc có lỗ đuôi càng lớn thì càng cần đọc risk disclosure, stress scenario và khả năng chịu lỗ trước khi nhìn coupon.
+Nguồn cũng mô tả cơ chế **thời gian cân nhắc (cooling-off / 숙려기간)** và phân loại nhà đầu tư. **TEXTBOOK/SOURCE STATE tại p.337–338:** giáo trình ghi rằng cấu trúc có mức lỗ tối đa có thể từ 20% trở lên áp dụng 2 ngày cân nhắc cho mọi nhà đầu tư cá nhân, và người từ 65 tuổi trở lên áp dụng cho các cấu trúc có khả năng mất principal; sau thời gian cân nhắc phải xác nhận lại subscription. Cùng vùng source còn phân biệt general/professional investor và nói OTC derivative trực tiếp về nguyên tắc dành cho professional investor, trong khi structured security được phân loại là security nên không đồng nhất với giao dịch OTC derivative trực tiếp. Đây **không phải hướng dẫn pháp lý 2026**; threshold, độ tuổi, thời gian và phạm vi sản phẩm phải đối chiếu quy định/issuer hiện hành trước khi sử dụng thực tế. Ở cấp độ học tập, nguyên tắc không đổi: sản phẩm càng khó định giá hoặc có lỗ đuôi càng lớn thì càng cần đọc risk disclosure, stress scenario và khả năng chịu lỗ trước khi nhìn coupon.
 
 Có thể đọc quy trình phân phối theo bốn lớp source-state:
 
@@ -100,6 +102,10 @@ Có thể đọc quy trình phân phối theo bốn lớp source-state:
 | fund/trust wrapper | exposure thông qua manager/trustee và tài sản wrapper | NAV, fee, liquidity, tax treatment và quyền rút/bán |
 
 Đây là bản đồ học tập, không phải bảng luật hiện hành. Cùng một payoff kinh tế nhưng đổi wrapper có thể đổi counterparty, cách định giá cuối ngày, phí và thuế. Vì vậy câu “tôi đang mua index” chưa đủ: phải hỏi mình đang sở hữu index, option trên index, note do issuer phát hành hay unit của một fund/trust.
+
+### Source-state fee và lợi suất trước thuế
+
+Raw p.349–350 giải thích rằng seller từng nhận upfront sales fee và coupon công bố đã phản ánh một số chi phí phát hành/hedge theo cấu trúc nguồn, nhưng vẫn là **lợi suất trước thuế**. Ví dụ source dùng coupon annualized 8% nhưng early redemption sau 6 tháng chỉ tương ứng khoảng 4% period return trước thuế. Đây là lý do lesson luôn tách `coupon rate` khỏi `expected return` và khỏi `after-tax realized return`: expected return còn phụ thuộc xác suất từng nhánh payoff, còn after-tax phụ thuộc wrapper và luật tại thời điểm đầu tư.
 
 ## 4. Thuế và current state
 
