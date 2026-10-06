@@ -24,7 +24,7 @@ Cùng tải công việc (workload / 워크로드), hai người có thể appra
 
 Xem thêm: [[../01_brain_and_mind/06_stress_allostasis_and_psychoneuroimmunology]], [[../03_human_development_and_person/06_stress_coping_and_emotion_regulation]].
 
-> **Chuyển mạch:** Trong **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Allostasis** tiếp nhận điểm tựa từ **Từ stressor tới physiological phản hồi (response / 응답)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biopsychosocial mô hình (model / 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Allostasis** nối từ **Từ stressor tới physiological phản hồi (response / 응답)** sang **Biopsychosocial mô hình (model / 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Allostasis
 
@@ -43,7 +43,7 @@ Trong đời sống, stress thường ảnh hưởng health cả trực tiếp l
 
 Vì vậy, chỉ dạy relaxation mà bỏ tải công việc (workload / 워크로드) và hành vi (behavior / 동작) có thể thiếu.
 
-> **Chuyển mạch:** Ở chặng này của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Biopsychosocial mô hình (model / 모델)** tiếp nhận điểm tựa từ **Allostasis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pain: nociception không đồng nhất với pain** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Biopsychosocial mô hình (model / 모델)** nối từ **Allostasis** sang **Pain: nociception không đồng nhất với pain**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Biopsychosocial mô hình (model / 모델)
 
@@ -53,7 +53,7 @@ Ví dụ bacterial infection cần biological treatment cụ thể. Psychology v
 
 Mô hình (model / 모델) này là lời nhắc: hãy hỏi **factor nào có nhân quả (causal / 인과적) relevance cho kết quả (outcome / 결과) nào**, không phải trộn mọi thứ thành một câu “tâm thân liên quan”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Pain: nociception không đồng nhất với pain** tiếp nhận điểm tựa từ **Biopsychosocial mô hình (model / 모델)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Placebo và nocebo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Pain: nociception không đồng nhất với pain** nối từ **Biopsychosocial mô hình (model / 모델)** sang **Placebo và nocebo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pain: nociception không đồng nhất với pain
 
@@ -67,7 +67,7 @@ Vì vậy:
 
 Xem thêm: [[../01_brain_and_mind/04_interoception_pain_and_embodied_mind]], [[./13_placebo_nocebo_expectation_and_context]].
 
-> **Chuyển mạch:** Trong **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Placebo và nocebo** tiếp nhận điểm tựa từ **Pain: nociception không đồng nhất với pain** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adherence: tại sao “biết tốt cho sức khỏe” không đủ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Placebo và nocebo** nối từ **Pain: nociception không đồng nhất với pain** sang **Adherence: tại sao “biết tốt cho sức khỏe” không đủ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Placebo và nocebo
 
@@ -75,7 +75,7 @@ Expectation có thể điều chỉnh symptom experience. Nếu clinician nói m
 
 Đạo đức không yêu cầu giấu rủi ro (risk / 위험). Nó yêu cầu communicate rủi ro (risk / 위험) chính xác mà không vô tình tạo threat không cần thiết.
 
-> **Chuyển mạch:** Ở chặng này của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Adherence: tại sao “biết tốt cho sức khỏe” không đủ** tiếp nhận điểm tựa từ **Placebo và nocebo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Motivation và định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Adherence: tại sao “biết tốt cho sức khỏe” không đủ** nối từ **Placebo và nocebo** sang **Motivation và định danh (identity / 식별자)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Adherence: tại sao “biết tốt cho sức khỏe” không đủ
 
@@ -100,7 +100,7 @@ Intervention có thể thay đổi môi trường (environment / 환경):
 
 Xem thêm: [[./01_education_learning_and_habit_design]], [[./12_psychology_in_daily_life_and_self_regulation]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Motivation và định danh (identity / 식별자)** tiếp nhận điểm tựa từ **Adherence: tại sao “biết tốt cho sức khỏe” không đủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sleep như health hành vi (behavior / 동작) nền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Motivation và định danh (identity / 식별자)** nối từ **Adherence: tại sao “biết tốt cho sức khỏe” không đủ** sang **Sleep như health hành vi (behavior / 동작) nền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Motivation và định danh (identity / 식별자)
 
@@ -110,7 +110,7 @@ Ví dụ chạy bộ có thể được duy trì vì xã hội (social / 사회�
 
 Tuy nhiên định danh (identity / 식별자) cũng có rủi ro (risk / 위험). Nếu “tôi là người không bao giờ bỏ tập” trở nên rigid, injury hoặc illness có thể tạo guilt không cần thiết. định danh (identity / 식별자) hữu ích khi nó hỗ trợ flexible value-based hành vi (behavior / 동작).
 
-> **Chuyển mạch:** Trong **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Sleep như health hành vi (behavior / 동작) nền** tiếp nhận điểm tựa từ **Motivation và định danh (identity / 식별자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Psychosomatic không nghĩa tưởng tượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Sleep như health hành vi (behavior / 동작) nền** nối từ **Motivation và định danh (identity / 식별자)** sang **Psychosomatic không nghĩa tưởng tượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sleep như health hành vi (behavior / 동작) nền
 
@@ -122,7 +122,7 @@ Health psychology hỏi cả environmental ràng buộc (constraint / 제약조�
 
 Xem thêm: [[../01_brain_and_mind/08_sleep_circadian_and_recovery]], [[../04_mental_health/11_sleep_insomnia_and_circadian_disorders]].
 
-> **Chuyển mạch:** Ở chặng này của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Psychosomatic không nghĩa tưởng tượng** tiếp nhận điểm tựa từ **Sleep như health hành vi (behavior / 동작) nền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Illness hành vi (behavior / 동작)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Psychosomatic không nghĩa tưởng tượng** nối từ **Sleep như health hành vi (behavior / 동작) nền** sang **Illness hành vi (behavior / 동작)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Psychosomatic không nghĩa tưởng tượng
 
@@ -132,7 +132,7 @@ Functional symptoms, stress-sensitive symptoms và somatic distress đều có t
 
 Xem thêm: [[../04_mental_health/10_dissociation_somatic_and_functional_symptoms]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Illness hành vi (behavior / 동작)** tiếp nhận điểm tựa từ **Psychosomatic không nghĩa tưởng tượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Rủi ro (risk / 위험) communication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Illness hành vi (behavior / 동작)** nối từ **Psychosomatic không nghĩa tưởng tượng** sang **Rủi ro (risk / 위험) communication**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Illness hành vi (behavior / 동작)
 
@@ -147,7 +147,7 @@ Hành vi (behavior / 동작) này phụ thuộc health belief, previous experien
 
 Excessive reassurance có thể vô tình duy trì health-anxiety vòng lặp (loop / 루프) nếu mỗi lần bất định (uncertainty / 불확실성) xuất hiện người đó chỉ giảm anxiety bằng kiểm thử (test / 테스트)/check mới.
 
-> **Chuyển mạch:** Trong **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Rủi ro (risk / 위험) communication** tiếp nhận điểm tựa từ **Illness hành vi (behavior / 동작)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xã hội (social / 사회적) determinants** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Rủi ro (risk / 위험) communication** nối từ **Illness hành vi (behavior / 동작)** sang **Xã hội (social / 사회적) determinants**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Rủi ro (risk / 위험) communication
 
@@ -161,7 +161,7 @@ Natural frequency thường dễ hiểu hơn xác suất (probability / 확률) 
 
 Xem thêm: [[../90_connections/03_risk_uncertainty_and_science_communication]].
 
-> **Chuyển mạch:** Ở chặng này của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Xã hội (social / 사회적) determinants** tiếp nhận điểm tựa từ **Rủi ro (risk / 위험) communication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hành vi (behavior / 동작) thay đổi (change / 변경) maintenance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Xã hội (social / 사회적) determinants** nối từ **Rủi ro (risk / 위험) communication** sang **Hành vi (behavior / 동작) thay đổi (change / 변경) maintenance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xã hội (social / 사회적) determinants
 
@@ -169,7 +169,7 @@ Health hành vi (behavior / 동작) không chỉ là individual choice. Income, 
 
 Nếu intervention chỉ nói “hãy ăn lành mạnh” mà người đó không có thời gian (time / 시간)/money/truy cập (access / 접근), ta đang biến structural bài toán (problem / 문제) thành moral thất bại (failure / 실패) cá nhân.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Hành vi (behavior / 동작) thay đổi (change / 변경) maintenance** tiếp nhận điểm tựa từ **Xã hội (social / 사회적) determinants** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Hành vi (behavior / 동작) thay đổi (change / 변경) maintenance** nối từ **Xã hội (social / 사회적) determinants** sang **Dùng chung (common / 공통) Misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hành vi (behavior / 동작) thay đổi (change / 변경) maintenance
 
@@ -184,7 +184,7 @@ Thay đổi vài ngày khác với duy trì nhiều tháng. Maintenance cần:
 
 Một lần bỏ tập không xóa habit. Biến quan trọng hơn là **khôi phục (recovery / 복구) độ trễ (latency / 지연 시간)**: mất bao lâu để quay lại mẫu (pattern / 패턴) mong muốn.
 
-> **Chuyển mạch:** Trong **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Dùng chung (common / 공통) Misconceptions** tiếp nhận điểm tựa từ **Hành vi (behavior / 동작) thay đổi (change / 변경) maintenance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Dùng chung (common / 공통) Misconceptions** nối từ **Hành vi (behavior / 동작) thay đổi (change / 변경) maintenance** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) Misconceptions
 
@@ -196,7 +196,7 @@ Một lần bỏ tập không xóa habit. Biến quan trọng hơn là **khôi p
 
 **“Placebo nghĩa là không có tác dụng thật.”** Placebo-related thay đổi (change / 변경) có thể là measurable physiological/experiential tác động (effect / 효과); điều đó không làm treatment-specific cơ chế (mechanism / 메커니즘) trở nên không quan trọng.
 
-> **Chuyển mạch:** Ở chặng này của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Connections** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) Misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Connections** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
@@ -206,7 +206,7 @@ Health kết quả (outcome / 결과) dài hạn thường là tích phân của
 
 Psychology hữu ích nhất khi xác định được **behavioral hoặc cognitive leverage điểm (point / 지점) cụ thể**, không phải khi tuyên bố mind điều khiển (control / 제어) body.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Connections** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hành vi sức khỏe, stress và kết nối tâm–thân**, **Connections** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Connections
 

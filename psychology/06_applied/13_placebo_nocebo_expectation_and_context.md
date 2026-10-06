@@ -22,7 +22,7 @@ Hai thuật ngữ cần phân biệt.
 
 Nếu không có điều khiển (control / 제어) phù hợp, không thể tách hai thứ này.
 
-> **Chuyển mạch:** Trong **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Expectation** tiếp nhận điểm tựa từ **Placebo phản hồi (response / 응답) và placebo tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conditioning** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Expectation** nối từ **Placebo phản hồi (response / 응답) và placebo tác động (effect / 효과)** sang **Conditioning**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Expectation
 
@@ -42,7 +42,7 @@ perceived pain có thể giảm
 
 Điều này không có nghĩa tissue damage biến mất.
 
-> **Chuyển mạch:** Ở chặng này của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Conditioning** tiếp nhận điểm tựa từ **Expectation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nocebo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Conditioning** nối từ **Expectation** sang **Nocebo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Conditioning
 
@@ -50,7 +50,7 @@ Nếu một treatment trước đây nhiều lần tạo benefit, cue liên quan
 
 Cơ chế này giúp giải thích vì sao placebo tác động (effect / 효과) không chỉ là “tin bằng lời”. học tập (learning / 학습) lịch sử (history / 이력) cũng quan trọng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Nocebo** tiếp nhận điểm tựa từ **Conditioning** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Attention và symptom amplification** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Nocebo** nối từ **Conditioning** sang **Attention và symptom amplification**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nocebo
 
@@ -60,7 +60,7 @@ Ví dụ nếu communication nhấn mạnh mạnh vào một adverse tác độn
 
 Điều này không có nghĩa clinician nên giấu rủi ro (risk / 위험). Vấn đề là **cách truyền đạt rủi ro (risk / 위험)**.
 
-> **Chuyển mạch:** Trong **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Attention và symptom amplification** tiếp nhận điểm tựa từ **Nocebo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Open-label placebo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Attention và symptom amplification** nối từ **Nocebo** sang **Open-label placebo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Attention và symptom amplification
 
@@ -77,7 +77,7 @@ warning
 
 Vòng lặp (loop / 루프) này đặc biệt quan trọng trong chronic symptom và health anxiety.
 
-> **Chuyển mạch:** Ở chặng này của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Attention và symptom amplification** cho ta quy tắc; **Open-label placebo** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Contextual healing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Attention và symptom amplification** nêu quy tắc; **Open-label placebo** thử quy tắc trong tình huống, rồi **Contextual healing** mở rộng hệ quả.
 
 ## Open-label placebo
 
@@ -87,7 +87,7 @@ Một hướng nghiên cứu thú vị là **open-label placebo**: người bệ
 
 Bằng chứng (evidence / 증거) khác nhau theo điều kiện (condition / 조건); không nên generalize thành “placebo chữa mọi thứ”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Open-label placebo** cho ta quy tắc; **Contextual healing** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Placebo không thay thế treatment có hiệu quả** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Open-label placebo** nêu quy tắc; **Contextual healing** thử quy tắc trong tình huống, rồi **Placebo không thay thế treatment có hiệu quả** mở rộng hệ quả.
 
 ## Contextual healing
 
@@ -101,7 +101,7 @@ Treatment luôn diễn ra trong ngữ cảnh (context / 맥락):
 
 Ngữ cảnh (context / 맥락) có thể ảnh hưởng adherence, expectation và symptom interpretation.
 
-> **Chuyển mạch:** Trong **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Placebo không thay thế treatment có hiệu quả** tiếp nhận điểm tựa từ **Contextual healing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nocebo và informed consent** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Placebo không thay thế treatment có hiệu quả** nối từ **Contextual healing** sang **Nocebo và informed consent**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Placebo không thay thế treatment có hiệu quả
 
@@ -111,7 +111,7 @@ Trong trial tốt, treatment tác động (effect / 효과) thường được �
 
 Placebo science giúp tối ưu care, không phủ nhận biomedical treatment.
 
-> **Chuyển mạch:** Ở chặng này của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Nocebo và informed consent** tiếp nhận điểm tựa từ **Placebo không thay thế treatment có hiệu quả** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chronic conditions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Nocebo và informed consent** nối từ **Placebo không thay thế treatment có hiệu quả** sang **Chronic conditions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nocebo và informed consent
 
@@ -129,7 +129,7 @@ có thể nói thêm:
 
 Xem [[../90_connections/03_risk_uncertainty_and_science_communication]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Chronic conditions** tiếp nhận điểm tựa từ **Nocebo và informed consent** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pain** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Chronic conditions** nối từ **Nocebo và informed consent** sang **Pain**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chronic conditions
 
@@ -137,7 +137,7 @@ Người có điều kiện (condition / 조건) kéo dài thường đã trải
 
 Điều này làm communication consistency và expectation management quan trọng.
 
-> **Chuyển mạch:** Trong **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Pain** tiếp nhận điểm tựa từ **Chronic conditions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Psychiatry** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Pain** nối từ **Chronic conditions** sang **Psychiatry**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pain
 
@@ -145,7 +145,7 @@ Placebo/nocebo research đặc biệt mạnh trong pain vì pain là đầu ra (
 
 Xem [[../01_brain_and_mind/04_interoception_pain_and_embodied_mind]].
 
-> **Chuyển mạch:** Ở chặng này của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Psychiatry** tiếp nhận điểm tựa từ **Pain** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Self-help và expectation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Psychiatry** nối từ **Pain** sang **Self-help và expectation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Psychiatry
 
@@ -153,7 +153,7 @@ Trong psychiatric treatment, expectation, clinician alliance và previous experi
 
 Nhưng không nên dùng placebo tác động (effect / 효과) để phủ nhận biological cơ chế (mechanism / 메커니즘) của medication hoặc disorder.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Self-help và expectation** tiếp nhận điểm tựa từ **Psychiatry** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Self-help và expectation** nối từ **Psychiatry** sang **Dùng chung (common / 공통) misconceptions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Self-help và expectation
 
@@ -169,7 +169,7 @@ Một expectation hữu ích cần **credible** và gắn với hành động (a
 
 Nếu expectation quá unrealistic, thất bại (failure / 실패) có thể tăng hopelessness.
 
-> **Chuyển mạch:** Trong **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Dùng chung (common / 공통) misconceptions** tiếp nhận điểm tựa từ **Self-help và expectation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Dùng chung (common / 공통) misconceptions** nối từ **Self-help và expectation** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Dùng chung (common / 공통) misconceptions
 
@@ -181,13 +181,13 @@ Nếu expectation quá unrealistic, thất bại (failure / 실패) có thể t�
 
 **“Positive thinking chữa bệnh.”** Placebo science không hỗ trợ claim rộng như vậy.
 
-> **Chuyển mạch:** Ở chặng này của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > kết quả (outcome / 결과) điều trị không chỉ là `hoạt chất → cơ thể`; nó là kết quả của **treatment-specific tác động (effect / 효과) + học tập (learning / 학습) lịch sử (history / 이력) + expectation + communication + ngữ cảnh (context / 맥락)**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hiệu ứng placebo, nocebo, kỳ vọng và bối cảnh — Placebo, Nocebo, Expectation & ngữ cảnh (context / 맥락) / 플라세보·노세보**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 
