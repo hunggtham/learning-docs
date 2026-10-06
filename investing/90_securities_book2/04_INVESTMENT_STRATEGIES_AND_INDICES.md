@@ -1,6 +1,6 @@
 # 4. Chiến lược đầu tư và chỉ số thị trường
 
-Bài 3 cho ta các mô tả về giá; bài này hỏi khi nào biến chúng thành quy tắc phân bổ và cách đo kết quả. Một chiến lược không chỉ là tên phương pháp. Nó phải chỉ ra nguồn lợi suất, thời hạn, điều kiện vào–ra, chi phí, rủi ro và benchmark. Source đặt cạnh các chiến lược đơn giản, hiệu ứng quy mô, hiệu ứng danh mục và chỉ số cổ phiếu để người học thấy một kết quả có thể đến từ nhiều cơ chế.
+Bài 3 cho ta các mô tả về giá; bài này hỏi khi nào biến chúng thành quy tắc phân bổ và cách đo kết quả. Chiến lược đầu tư (investment strategy / 투자전략) không chỉ là tên phương pháp. Nó phải chỉ ra nguồn lợi suất, thời hạn, điều kiện vào–ra, chi phí, rủi ro và benchmark. Source đặt cạnh các chiến lược đơn giản, hiệu ứng quy mô, hiệu ứng danh mục và chỉ số cổ phiếu để người học thấy một kết quả có thể đến từ nhiều cơ chế.
 
 ## 1. Buy-and-hold (매수 후 보유 전략), bình quân giá và dòng cổ tức
 
@@ -42,9 +42,9 @@ Ví dụ cũng cho thấy không thể suy luận “hai tài sản đều rủi
 
 Phần tính toán danh mục thuộc [Portfolio Risk, Allocation and Behavior](../01_foundations/02_PORTFOLIO_RISK_ALLOCATION_AND_BEHAVIOR.md). Trong route Sách 2, chỉ cần giữ mental model: chiến lược tạo exposure, danh mục cộng exposure, benchmark dùng để kiểm tra exposure đó có đáng giá không.
 
-## 4. Chỉ số giá cổ phiếu
+## 4. Chỉ số giá cổ phiếu (stock-price index / 주가지수)
 
-Stock Price Index (주가지수) tổng hợp nhiều giá cổ phiếu thành một thước đo. Source mô tả chỉ số được chuẩn hóa theo base như 100 hoặc 1.000; base chỉ là thang đo ban đầu, không phải lợi suất và không nói thành phần đang “an toàn” hơn. Price-weighted index cho trọng số theo giá danh nghĩa; market-cap-weighted index cho trọng số theo giá trị vốn hóa; equal-weighted index cho mỗi thành phần trọng số gần nhau. Cùng một thị trường có thể cho kết quả khác nhau tùy phương pháp. KOSPI, KOSPI200, KOSDAQ, S&P 500 và Nikkei 225 được source nêu như các ví dụ chỉ số; đây là tên thể chế và trạng thái textbook, không phải xác nhận thành phần hiện tại.
+Chỉ số giá cổ phiếu (stock-price index / 주가지수) tổng hợp nhiều giá cổ phiếu thành một thước đo. Source mô tả chỉ số được chuẩn hóa theo base như 100 hoặc 1.000; base chỉ là thang đo ban đầu, không phải lợi suất và không nói thành phần đang “an toàn” hơn. Price-weighted index cho trọng số theo giá danh nghĩa; market-cap-weighted index cho trọng số theo giá trị vốn hóa; equal-weighted index cho mỗi thành phần trọng số gần nhau. Cùng một thị trường có thể cho kết quả khác nhau tùy phương pháp. KOSPI, KOSPI200, KOSDAQ, S&P 500 và Nikkei 225 được source nêu như các ví dụ chỉ số; đây là tên thể chế và trạng thái textbook, không phải xác nhận thành phần hiện tại.
 
 Khi đọc một chỉ số, kiểm tra: universe, quy tắc chọn và loại mã, trọng số, điều chỉnh corporate action, tần suất tái cân bằng và liệu chỉ số là price return hay total return. Chỉ số price chỉ phản ánh biến động giá; total-return index tái đầu tư cổ tức. So sánh quỹ với benchmark sai loại sẽ tạo kết luận sai về năng lực.
 
