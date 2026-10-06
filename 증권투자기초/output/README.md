@@ -26,14 +26,24 @@ mạch đọc theo tài liệu nguồn và không tạo thêm một định ngh�
 
 ## Ownership và cấu trúc của bộ sách
 
-- **Raw/provenance owner:** `../raw_md/sach1.md` và `../raw/sach1/`; source không
-  được sửa để làm đẹp learning output. Sách 2/3 hiện vẫn ở lớp raw.
-- **Source-specific learning route:** `book1/` là route của Sách 1. Khi Sách 2/3
-  được chuyển đổi, convention là `output/bookN/`; không di chuyển Book 1 chỉ để
-  đồng nhất hình thức khi route khác chưa tồn tại.
+Ba lớp ownership được giữ tách biệt, dù learning route của ba sách không nằm cùng
+một parent path:
+
+- **Raw/provenance source:** Sách 1 dùng `../raw_md/sach1.md` và
+  `../raw/sach1/`; Sách 2 dùng `../raw/sach2.md` cùng provenance/coverage tại
+  `../sach2/`; Sách 3 dùng provenance/coverage tại `../sach3/` và raw Markdown
+  tại `../sach3/raw_md/sach3.md`. Raw/source không được sửa chỉ để làm đẹp
+  learning output.
+- **Source-specific textbook learning route:** Sách 1 giữ route hiện tại tại
+  [`book1/`](./book1/00-book1-index.md); Sách 2 nằm tại
+  [`../../investing/90_securities_book2/`](../../investing/90_securities_book2/README.md);
+  Sách 3 nằm tại
+  [`../../investing/90_securities_book3/`](../../investing/90_securities_book3/README.md).
+  Không di chuyển toàn bộ Sách 1 chỉ để đồng nhất path khi ownership và navigation
+  hiện tại đã rõ.
 - **Canonical concept owner:** `../../investing/` giữ giải thích chuẩn theo
-  domain. Book 1 giữ trật tự/provenance của giáo trình và cross-link sang
-  canonical owner khi cần đào sâu, không cạnh tranh ownership.
+  domain. Các source-book route giữ trật tự/provenance cần thiết của giáo trình và
+  cross-link sang canonical owner khi cần đào sâu, không cạnh tranh ownership.
 
 ## Trạng thái theo thời gian
 
