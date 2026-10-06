@@ -61,7 +61,7 @@ Thiết bị có thể đo lặp với RSD 0,5%, nhưng nếu vật liệu khôn
 
 Đất, quặng, thực phẩm, bột dược phẩm, dòng nước thải và nguyên liệu công nghiệp đều có thể biến thiên mạnh theo không gian hoặc thời gian.
 
-> **Chuyển mạch:** Đại lượng cần đo phải được định nghĩa trước; quần thể và mẫu quyết định dữ liệu đại diện đến đâu, rồi lấy mẫu ngẫu nhiên giảm bias trước khi định lượng.
+> **Nối mạch:** Đại lượng cần đo phải được định nghĩa trước; quần thể và mẫu quyết định dữ liệu đại diện đến đâu, rồi lấy mẫu ngẫu nhiên giảm bias trước khi định lượng.
 
 ## Quần thể và mẫu
 
@@ -88,13 +88,13 @@ Không có “một mẫu đại diện” độc lập với câu hỏi và c�
 
 # Mẫu ngẫu nhiên, phân tầng và mẫu tổ hợp
 
-> **Chuyển mạch:** Ở chặng này của **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy**, **Lấy mẫu ngẫu nhiên** tiếp nhận điểm tựa từ **Quần thể và mẫu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lấy mẫu phân tầng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy**, **Lấy mẫu ngẫu nhiên** nối từ **Quần thể và mẫu** sang **Lấy mẫu phân tầng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lấy mẫu ngẫu nhiên
 
 Chọn đơn vị sao cho mỗi phần của quần thể có cơ hội được lấy hợp lý. Cách này giảm thiên lệch do người lấy mẫu chọn điểm thuận tiện.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy**, **Lấy mẫu phân tầng** tiếp nhận điểm tựa từ **Lấy mẫu ngẫu nhiên** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mẫu tổ hợp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy**, **Lấy mẫu phân tầng** nối từ **Lấy mẫu ngẫu nhiên** sang **Mẫu tổ hợp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lấy mẫu phân tầng
 
@@ -102,7 +102,7 @@ Nếu biết hệ có các vùng khác nhau — ví dụ độ sâu, khu sản x
 
 Điều này thường hiệu quả hơn ngẫu nhiên hoàn toàn khi biến thiên giữa các tầng lớn.
 
-> **Chuyển mạch:** Trong **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy**, **Mẫu tổ hợp** tiếp nhận điểm tựa từ **Lấy mẫu phân tầng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Đo lường và lấy mẫu — từ câu hỏi hóa học tới bằng chứng đáng tin cậy**, **Mẫu tổ hợp** nối từ **Lấy mẫu phân tầng** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mẫu tổ hợp
 

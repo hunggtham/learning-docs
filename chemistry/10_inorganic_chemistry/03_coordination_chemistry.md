@@ -22,7 +22,7 @@ Mũi tên cho–nhận đôi khi được dùng để nhấn mạnh nguồn gố
 
 Với phối tử như CO, liên kết còn có hai chiều: phối tử cho σ vào kim loại và kim loại cho ngược π vào phối tử. Vì vậy liên kết phối trí thường là tổ hợp của tương tác tĩnh điện và sự trộn orbital cộng hóa trị.
 
-> **Chuyển mạch:** Lewis acid–base giải thích donor/acceptor; denticity cho biết một ligand bám qua bao nhiêu donor atom, và chelate effect làm phức bền hơn vì cả entropy lẫn hình học.
+> **Nối mạch:** Lewis acid–base giải thích donor/acceptor; denticity cho biết một ligand bám qua bao nhiêu donor atom, và chelate effect làm phức bền hơn vì cả entropy lẫn hình học.
 
 ## Nguyên tử cho electron và độ càng của phối tử
 
@@ -32,7 +32,7 @@ Khái niệm **độ càng (denticity / 자리수)** không chỉ mô tả số 
 
 Một phối tử có nhiều nguyên tử có thể cho electron nhưng chỉ sử dụng một phần trong một phức có thể được gọi là phối tử lưỡng năng hoặc linh hoạt tùy trường hợp. \(SCN^-\) chẳng hạn có thể liên kết qua S hoặc N, tạo **đồng phân liên kết (linkage isomerism)**.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, sau nội dung của **Nguyên tử cho electron và độ càng của phối tử**, **Hiệu ứng càng cua — không chỉ vì “nhiều liên kết nên chắc hơn”** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Hiệu ứng vòng lớn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, sau nội dung của **Nguyên tử cho electron và độ càng của phối tử**, **Hiệu ứng càng cua — không chỉ vì “nhiều liên kết nên chắc hơn”** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Hiệu ứng vòng lớn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Hiệu ứng càng cua — không chỉ vì “nhiều liên kết nên chắc hơn”
 
@@ -46,7 +46,7 @@ Một đóng góp quan trọng đến từ entropy. Ba phân tử en có thể t
 
 EDTA dùng nhiều nguyên tử cho electron để tạo một phức đa vòng quanh ion kim loại. Nếu so với nhiều phối tử một càng cho cùng số nguyên tử cho electron, EDTA vừa giảm xác suất “rơi mất” hoàn toàn khỏi tâm kim loại sau một dao động cục bộ, vừa có lợi thế entropy khi thay thế nhiều phân tử phối tử nhỏ. Độ bền vì thế là kết quả của **nhiều tương tác + cấu trúc vòng + entropy**, không phải một “siêu liên kết” riêng lẻ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Hiệu ứng vòng lớn** tiếp nhận điểm tựa từ **Hiệu ứng càng cua — không chỉ vì “nhiều liên kết nên chắc hơn”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số phối trí và hình học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Hiệu ứng vòng lớn** nối từ **Hiệu ứng càng cua — không chỉ vì “nhiều liên kết nên chắc hơn”** sang **Số phối trí và hình học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng vòng lớn
 
@@ -54,7 +54,7 @@ Phối tử vòng lớn (macrocyclic ligand) như crown ether hoặc porphyrin c
 
 Sinh học khai thác nguyên lý này: porphyrin giữ Fe trong heme; vòng corrin giữ Co trong vitamin B12. Cấu trúc khung phối tử chọn hình học và chức năng hóa học của kim loại.
 
-> **Chuyển mạch:** Trong **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Số phối trí và hình học** tiếp nhận điểm tựa từ **Hiệu ứng vòng lớn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Số oxy hóa, điện tích và đếm electron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Số phối trí và hình học** nối từ **Hiệu ứng vòng lớn** sang **Số oxy hóa, điện tích và đếm electron**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Số phối trí và hình học
 
@@ -66,7 +66,7 @@ Hình học phụ thuộc kích thước kim loại, cấu hình electron d, ổ
 
 Ví dụ \([NiCl_4]^{2-}\) thường có hình học tứ diện, trong khi \([Ni(CN)_4]^{2-}\) thường vuông phẳng. Cả hai đều là Ni(II), \(d^8\), số phối trí 4; độ mạnh trường phối tử khác nhau đủ để làm thay đổi cấu hình điện tử ưu tiên và hình học.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Số oxy hóa, điện tích và đếm electron** tiếp nhận điểm tựa từ **Số phối trí và hình học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Danh pháp là một hệ mã hóa hai chiều** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Số oxy hóa, điện tích và đếm electron** nối từ **Số phối trí và hình học** sang **Danh pháp là một hệ mã hóa hai chiều**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Số oxy hóa, điện tích và đếm electron
 
@@ -80,7 +80,7 @@ Ví dụ \([Fe(CN)_6]^{4-}\): mỗi \(CN^-\) mang −1, sáu phối tử tổng 
 
 Fe(II) là \(d^6\). Từ đó, kết hợp thông tin trường phối tử, ta có thể suy luận trạng thái spin cao/thấp và từ tính.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Danh pháp là một hệ mã hóa hai chiều** tiếp nhận điểm tựa từ **Số oxy hóa, điện tích và đếm electron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đồng phân — cùng công thức, khác thông tin không gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Danh pháp là một hệ mã hóa hai chiều** nối từ **Số oxy hóa, điện tích và đếm electron** sang **Đồng phân — cùng công thức, khác thông tin không gian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Danh pháp là một hệ mã hóa hai chiều
 
@@ -90,7 +90,7 @@ Thay vì học thuộc hàng loạt hậu tố, nên tập trung vào lô-gic (l
 
 Trong giáo trình Hàn Quốc, các thuật ngữ thường gặp gồm **착이온 (ion phức)**, **배위 결합 (liên kết phối trí)**, **배위수 (số phối trí)** và **리간드 (phối tử)**.
 
-> **Chuyển mạch:** Trong **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Đồng phân — cùng công thức, khác thông tin không gian** tiếp nhận điểm tựa từ **Danh pháp là một hệ mã hóa hai chiều** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cân bằng tạo phức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Đồng phân — cùng công thức, khác thông tin không gian** nối từ **Danh pháp là một hệ mã hóa hai chiều** sang **Cân bằng tạo phức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đồng phân — cùng công thức, khác thông tin không gian
 
@@ -102,7 +102,7 @@ Hợp chất phối trí có thể có **đồng phân cấu tạo (constitution
 
 Phức càng cua bát diện như \([M(en)_3]^{n+}\) có thể tồn tại dưới dạng đồng phân quang học Δ và Λ, tương tự tính đối quang nhưng bắt nguồn từ cách các vòng càng cua sắp xếp xoắn quanh kim loại.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Cân bằng tạo phức** tiếp nhận điểm tựa từ **Đồng phân — cùng công thức, khác thông tin không gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ bền có điều kiện và dạng tồn tại hóa học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Cân bằng tạo phức** nối từ **Đồng phân — cùng công thức, khác thông tin không gian** sang **Độ bền có điều kiện và dạng tồn tại hóa học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cân bằng tạo phức
 
@@ -134,7 +134,7 @@ và tiếp tục. Hằng số tạo phức tổng:
 
 Các hằng số từng bước thường giảm khi các vị trí phối trí dần bị lấp, vì số vị trí trống giảm, cản trở lập thể tăng và yếu tố tĩnh điện thay đổi. Tuy vậy những hệ có tính hợp tác có thể cho xu hướng khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Độ bền có điều kiện và dạng tồn tại hóa học** tiếp nhận điểm tựa từ **Cân bằng tạo phức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tạo phức có thể thay đổi độ tan** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Độ bền có điều kiện và dạng tồn tại hóa học** nối từ **Cân bằng tạo phức** sang **Tạo phức có thể thay đổi độ tan**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ bền có điều kiện và dạng tồn tại hóa học
 
@@ -144,7 +144,7 @@ Ví dụ khả năng EDTA liên kết kim loại phụ thuộc pH vì chỉ mộ
 
 Đây là cầu nối trực tiếp giữa cân bằng phối trí, [acid–base](../08_acids_bases/00_acid_base_models.md) và bài toán [dạng tồn tại trong cân bằng ghép](../07_chemical_equilibrium/01_equilibrium_constant.md).
 
-> **Chuyển mạch:** Trong **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Tạo phức có thể thay đổi độ tan** tiếp nhận điểm tựa từ **Độ bền có điều kiện và dạng tồn tại hóa học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tạo phức cũng thay đổi thế oxy hóa-khử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Tạo phức có thể thay đổi độ tan** nối từ **Độ bền có điều kiện và dạng tồn tại hóa học** sang **Tạo phức cũng thay đổi thế oxy hóa-khử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tạo phức có thể thay đổi độ tan
 
@@ -164,7 +164,7 @@ Khi hoạt độ \(Ag^+\) tự do giảm do tạo phức, cân bằng hòa tan d
 
 Đây là nguyên lý của một **mạng cân bằng ghép**: kết quả không thể suy chỉ từ \(K_{sp}\) hoặc chỉ từ \(K_f\) riêng lẻ.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Tạo phức cũng thay đổi thế oxy hóa-khử** tiếp nhận điểm tựa từ **Tạo phức có thể thay đổi độ tan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thế phối tử: nhiệt động lực học và động học là hai trục độc lập** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Tạo phức cũng thay đổi thế oxy hóa-khử** nối từ **Tạo phức có thể thay đổi độ tan** sang **Thế phối tử: nhiệt động lực học và động học là hai trục độc lập**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tạo phức cũng thay đổi thế oxy hóa-khử
 
@@ -172,7 +172,7 @@ Nếu phối tử ổn định một trạng thái oxy hóa mạnh hơn trạng 
 
 Trong điện hóa học, phương trình Nernst dùng hoạt độ của tiểu phân thực sự tồn tại. Do đó việc phối tử điều khiển dạng tồn tại trở thành một công cụ điều khiển thế oxy hóa-khử. Khi cần xem lại nền tảng này, quay lại [phương trình Nernst](../09_redox_and_electrochemistry/03_cell_potential_and_nernst_equation.md).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Thế phối tử: nhiệt động lực học và động học là hai trục độc lập** tiếp nhận điểm tựa từ **Tạo phức cũng thay đổi thế oxy hóa-khử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cơ chế thế phối tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Thế phối tử: nhiệt động lực học và động học là hai trục độc lập** nối từ **Tạo phức cũng thay đổi thế oxy hóa-khử** sang **Cơ chế thế phối tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thế phối tử: nhiệt động lực học và động học là hai trục độc lập
 
@@ -182,7 +182,7 @@ Phức Cr(III) \(d^3\) thường trơ động học; nhiều phức Cu(II) linh 
 
 Đây cũng là lý do không được đồng nhất **hằng số tạo phức lớn** với **tốc độ thế phối tử nhỏ**. Một đại lượng mô tả trạng thái cân bằng; đại lượng kia mô tả đường đi và hàng rào hoạt hóa.
 
-> **Chuyển mạch:** Trong **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Thế phối tử: nhiệt động lực học và động học là hai trục độc lập** xác định đầu vào; **Cơ chế thế phối tử** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Hiệu ứng trans và ảnh hưởng trans** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Thế phối tử: nhiệt động lực học và động học là hai trục độc lập** đặt đầu vào cho **Cơ chế thế phối tử**, rồi **Hiệu ứng trans và ảnh hưởng trans** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Cơ chế thế phối tử
 
@@ -196,7 +196,7 @@ Hình học, số electron và cản trở lập thể ảnh hưởng con đư�
 
 Nếu đã học [cơ chế phản ứng](../06_chemical_kinetics/02_reaction_mechanisms.md), đây chính là cùng cách tư duy: suy cơ chế từ dạng phụ thuộc nồng độ, trạng thái trung gian và ảnh hưởng cấu trúc, không chỉ từ phương trình phản ứng tổng.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Cơ chế thế phối tử** xác định đầu vào; **Hiệu ứng trans và ảnh hưởng trans** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Hóa học phối trí trong phân tích và y học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Cơ chế thế phối tử** đặt đầu vào cho **Hiệu ứng trans và ảnh hưởng trans**, rồi **Hóa học phối trí trong phân tích và y học** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Hiệu ứng trans và ảnh hưởng trans
 
@@ -204,7 +204,7 @@ Trong hóa học vuông phẳng, một phối tử có thể làm phối tử n�
 
 Hai khái niệm có liên quan nhưng không giống nhau. Đây là ví dụ điển hình cho việc phải phân biệt thuật ngữ động học và thuật ngữ cấu trúc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Hóa học phối trí trong phân tích và y học** tiếp nhận điểm tựa từ **Hiệu ứng trans và ảnh hưởng trans** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Hóa học phối trí trong phân tích và y học** nối từ **Hiệu ứng trans và ảnh hưởng trans** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học phối trí trong phân tích và y học
 
@@ -216,7 +216,7 @@ Chất tương phản MRI dùng kim loại thuận từ được càng cua hóa,
 
 Một phối tử rất mạnh nhưng không chọn lọc có thể lấy cả kim loại thiết yếu như Zn, Cu hoặc Ca. Ngược lại, phối tử quá yếu có thể không giữ được kim loại mục tiêu trong môi trường sinh học có vô số chất cạnh tranh. Thiết kế thực tế phải cân bằng **độ bền nhiệt động, tốc độ trao đổi, chọn lọc và khả năng thải trừ**, chứ không tối đa hóa duy nhất \(K_f\).
 
-> **Chuyển mạch:** Trong **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Hóa học phối trí trong phân tích và y học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Những hiểu lầm thường gặp** nối từ **Hóa học phối trí trong phân tích và y học** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -240,7 +240,7 @@ Không. Số phối trí 4 là ví dụ rõ nhất: cả tứ diện và vuông 
 
 Không. Proton hóa phối tử, thủy phân, kết tủa và các phối tử cạnh tranh có thể làm phần kim loại tự do rất khác tổng nồng độ phân tích.
 
-> **Chuyển mạch:** Ở chặng này của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Hóa học phối trí — kim loại, phối tử và kiến trúc phân tử**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 
