@@ -28,7 +28,7 @@ Một indicator có thể được dùng để ước lượng:
 
 Indicator hữu ích khi nó biến một câu hỏi định tính thành chỉ số (metric / 지표) có thể định nghĩa và kiểm thử.
 
-> **Chuyển mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **2. Moving average** tiếp nhận điểm tựa từ **1. Indicator trả lời câu hỏi gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. EMA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **2. Moving average** nối từ **1. Indicator trả lời câu hỏi gì?** sang **3. EMA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Moving average
 
@@ -44,7 +44,7 @@ Nếu price tăng nhanh, moving average phản ứng chậm vì vẫn chứa his
 
 Do đó lag không phải bug; nó là sự đánh đổi (trade-off / 트레이드오프) trực tiếp của smoothing.
 
-> **Chuyển mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **3. EMA** tiếp nhận điểm tựa từ **2. Moving average** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Moving-average crossover** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **3. EMA** nối từ **2. Moving average** sang **4. Moving-average crossover**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. EMA
 
@@ -64,7 +64,7 @@ EMA phản ứng nhanh hơn SMA cùng nominal lookback nhưng vẫn là smoothin
 
 Không có lý do toán học cho rằng EMA20 “tốt” hơn EMA21 một cách universal. Parameter phải được hiểu như horizon choice và kiểm tra robustness.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **4. Moving-average crossover** tiếp nhận điểm tựa từ **3. EMA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Momentum** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **4. Moving-average crossover** nối từ **3. EMA** sang **5. Momentum**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Moving-average crossover
 
@@ -79,7 +79,7 @@ Nó không dự đoán turning điểm (point / 지점) tức thì. Crossover l�
 
 Chiến lược (strategy / 전략) có thể hoạt động khi trend persistence bù được whipsaw chi phí (cost / 비용), nhưng thường gặp khó trong phạm vi (range / 범위).
 
-> **Chuyển mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **5. Momentum** tiếp nhận điểm tựa từ **4. Moving-average crossover** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Tỷ lệ (rate / 비율) of Thay đổi (change / 변경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **5. Momentum** nối từ **4. Moving-average crossover** sang **6. Tỷ lệ (rate / 비율) of Thay đổi (change / 변경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Momentum
 
@@ -97,7 +97,7 @@ m_N = ln(P_t / P_{t-N})
 
 Momentum dương chỉ nói price hiện cao hơn N periods trước. Nó không giải thích tại sao và không bảo đảm tiếp tục.
 
-> **Chuyển mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **6. Tỷ lệ (rate / 비율) of Thay đổi (change / 변경)** tiếp nhận điểm tựa từ **5. Momentum** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. RSI** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **6. Tỷ lệ (rate / 비율) of Thay đổi (change / 변경)** nối từ **5. Momentum** sang **7. RSI**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Tỷ lệ (rate / 비율) of Thay đổi (change / 변경)
 
@@ -112,7 +112,7 @@ price change
 
 nên so sánh giữa periods dễ hơn raw pip movement.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **7. RSI** tiếp nhận điểm tựa từ **6. Tỷ lệ (rate / 비율) of Thay đổi (change / 변경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. RSI divergence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **7. RSI** nối từ **6. Tỷ lệ (rate / 비율) of Thay đổi (change / 변경)** sang **8. RSI divergence**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. RSI
 
@@ -136,7 +136,7 @@ RSI high
 
 Nó chỉ nói recent upward changes lớn tương đối so với downward changes theo calculation cửa sổ (window / 윈도우).
 
-> **Chuyển mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **8. RSI divergence** tiếp nhận điểm tựa từ **7. RSI** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. MACD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **8. RSI divergence** nối từ **7. RSI** sang **9. MACD**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. RSI divergence
 
@@ -151,7 +151,7 @@ Vì RSI là transformed momentum, divergence nói momentum của move đang khá
 
 Để backtest phải formalize pivot detection, tolerance và horizon; nếu không hindsight độ lệch (bias / 편향) rất lớn.
 
-> **Chuyển mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **9. MACD** tiếp nhận điểm tựa từ **8. RSI divergence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Stochastic oscillator** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **9. MACD** nối từ **8. RSI divergence** sang **10. Stochastic oscillator**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. MACD
 
@@ -167,7 +167,7 @@ Vì vậy MACD không phải nguồn (source / 소스) dữ liệu mới. Nó l�
 
 Dùng MACD cùng nhiều moving-average signals có thể tạo **redundant confirmation**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **10. Stochastic oscillator** tiếp nhận điểm tựa từ **9. MACD** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Bollinger Bands** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **10. Stochastic oscillator** nối từ **9. MACD** sang **11. Bollinger Bands**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Stochastic oscillator
 
@@ -185,7 +185,7 @@ Không phải:
 
 > Thị trường (market / 시장) đã quá mua nên chắc chắn đảo chiều.
 
-> **Chuyển mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **11. Bollinger Bands** tiếp nhận điểm tựa từ **10. Stochastic oscillator** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. ATR** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **11. Bollinger Bands** nối từ **10. Stochastic oscillator** sang **12. ATR**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Bollinger Bands
 
@@ -207,7 +207,7 @@ Price chạm upper band có thể nghĩa:
 
 Ngữ cảnh (context / 맥락) quyết định interpretation. Band không tự phát lệnh sell.
 
-> **Chuyển mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **12. ATR** tiếp nhận điểm tựa từ **11. Bollinger Bands** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. ADX** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **12. ATR** nối từ **11. Bollinger Bands** sang **13. ADX**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. ATR
 
@@ -222,7 +222,7 @@ ATR đo phạm vi (range / 범위) magnitude chứ không hướng.
 
 ATR multiplier như `2×ATR` không có universal optimality. Cần liên hệ với chiến lược (strategy / 전략) horizon và phân phối (distribution / 분포).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **13. ADX** tiếp nhận điểm tựa từ **12. ATR** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Donchian channel** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **13. ADX** nối từ **12. ATR** sang **14. Donchian channel**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. ADX
 
@@ -232,7 +232,7 @@ Một ADX cao có thể xảy ra trong downtrend lẫn uptrend.
 
 Nếu dùng ADX như “buy indicator” mà bỏ qua construction, interpretation đã sai từ đầu.
 
-> **Chuyển mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **14. Donchian channel** tiếp nhận điểm tựa từ **13. ADX** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Z-score** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **14. Donchian channel** nối từ **13. ADX** sang **15. Z-score**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Donchian channel
 
@@ -245,7 +245,7 @@ Lower = lowest low over N periods
 
 Nó cho thấy đôi khi “indicator” chỉ là một cách formalize price-action quy tắc (rule / 규칙).
 
-> **Chuyển mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **15. Z-score** tiếp nhận điểm tựa từ **14. Donchian channel** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Indicator normalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **15. Z-score** nối từ **14. Donchian channel** sang **16. Indicator normalization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Z-score
 
@@ -259,7 +259,7 @@ Z-score nói observation cách mean bao nhiêu tiêu chuẩn (standard / 표준)
 
 Nhưng nếu phân phối (distribution / 분포) non-stationary hoặc fat-tailed, `Z=3` không nên được đọc máy móc theo normal phân phối (distribution / 분포) xác suất (probability / 확률).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **16. Indicator normalization** tiếp nhận điểm tựa từ **15. Z-score** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Volume trong spot FX cần cẩn thận** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **16. Indicator normalization** nối từ **15. Z-score** sang **17. Volume trong spot FX cần cẩn thận**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Indicator normalization
 
@@ -278,7 +278,7 @@ Ví dụ moving-average distance:
 
 thường comparable hơn raw pip distance.
 
-> **Chuyển mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **17. Volume trong spot FX cần cẩn thận** tiếp nhận điểm tựa từ **16. Indicator normalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Tick volume** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **17. Volume trong spot FX cần cẩn thận** nối từ **16. Indicator normalization** sang **18. Tick volume**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Volume trong spot FX cần cẩn thận
 
@@ -292,7 +292,7 @@ OTC FX không có một centralized tape toàn cầu. Retail chart thường có
 
 Exchange-traded currency futures có centralized venue volume của exchange đó, nhưng cũng không đại diện toàn bộ OTC thị trường (market / 시장).
 
-> **Chuyển mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **18. Tick volume** tiếp nhận điểm tựa từ **17. Volume trong spot FX cần cẩn thận** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. VWAP trong Forex** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **18. Tick volume** nối từ **17. Volume trong spot FX cần cẩn thận** sang **19. VWAP trong Forex**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Tick volume
 
@@ -300,7 +300,7 @@ Tick volume thường đếm số lần price cập nhật (update / 업데이�
 
 Nếu chiến lược (strategy / 전략) dùng tick volume, phải giữ dữ liệu (data / 데이터) nguồn (source / 소스) nhất quán và kiểm thử (test / 테스트) out-of-sample.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **19. VWAP trong Forex** tiếp nhận điểm tựa từ **18. Tick volume** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Indicator stacking và multicollinearity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **19. VWAP trong Forex** nối từ **18. Tick volume** sang **20. Indicator stacking và multicollinearity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. VWAP trong Forex
 
@@ -314,7 +314,7 @@ Trong decentralized spot FX, “VWAP” trên retail nguồn (source / 소스) c
 
 Phải biết `V_i` thực sự là gì.
 
-> **Chuyển mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **20. Indicator stacking và multicollinearity** tiếp nhận điểm tựa từ **19. VWAP trong Forex** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Parameter sensitivity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **20. Indicator stacking và multicollinearity** nối từ **19. VWAP trong Forex** sang **21. Parameter sensitivity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Indicator stacking và multicollinearity
 
@@ -343,7 +343,7 @@ không phải:
 How many indicators agree?
 ```
 
-> **Chuyển mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **21. Parameter sensitivity** tiếp nhận điểm tựa từ **20. Indicator stacking và multicollinearity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Overfitting bằng indicator combinations** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **21. Parameter sensitivity** nối từ **20. Indicator stacking và multicollinearity** sang **22. Overfitting bằng indicator combinations**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Parameter sensitivity
 
@@ -359,7 +359,7 @@ nhưng thất bại khi parameters thay đổi nhẹ, đó là dấu hiệu frag
 
 Robust edge thường có vùng parameter tương đối ổn định thay vì một spike tối ưu sắc nhọn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **22. Overfitting bằng indicator combinations** tiếp nhận điểm tựa từ **21. Parameter sensitivity** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Indicator lag và quyết định (decision / 결정) độ trễ (latency / 지연 시간)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **22. Overfitting bằng indicator combinations** nối từ **21. Parameter sensitivity** sang **23. Indicator lag và quyết định (decision / 결정) độ trễ (latency / 지연 시간)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Overfitting bằng indicator combinations
 
@@ -378,7 +378,7 @@ sẽ tìm được một combination lịch sử đẹp dù không có true edge
 
 Vì vậy indicator research không thể tách khỏi multiple testing và walk-forward kiểm tra hợp lệ (validation / 검증).
 
-> **Chuyển mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **23. Indicator lag và quyết định (decision / 결정) độ trễ (latency / 지연 시간)** tiếp nhận điểm tựa từ **22. Overfitting bằng indicator combinations** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Repainting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **23. Indicator lag và quyết định (decision / 결정) độ trễ (latency / 지연 시간)** nối từ **22. Overfitting bằng indicator combinations** sang **24. Repainting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Indicator lag và quyết định (decision / 결정) độ trễ (latency / 지연 시간)
 
@@ -398,7 +398,7 @@ bar closes
 
 trừ khi hệ thống (system / 시스템) thật sự có intrabar dữ liệu (data / 데이터)/quy tắc (rule / 규칙).
 
-> **Chuyển mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **24. Repainting** tiếp nhận điểm tựa từ **23. Indicator lag và quyết định (decision / 결정) độ trễ (latency / 지연 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Centered moving averages và look-ahead** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **24. Repainting** nối từ **23. Indicator lag và quyết định (decision / 결정) độ trễ (latency / 지연 시간)** sang **25. Centered moving averages và look-ahead**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Repainting
 
@@ -414,7 +414,7 @@ final value shown later
 
 Nếu indicator repaint, screenshot historical đẹp có thể không phản ánh tín hiệu (signal / 신호) live.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **25. Centered moving averages và look-ahead** tiếp nhận điểm tựa từ **24. Repainting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Indicator as tính năng (feature / 기능), not quy tắc (rule / 규칙)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **25. Centered moving averages và look-ahead** nối từ **24. Repainting** sang **26. Indicator as tính năng (feature / 기능), not quy tắc (rule / 규칙)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Centered moving averages và look-ahead
 
@@ -422,7 +422,7 @@ Một filter dùng observations trước và sau `t` có thể tạo smooth line
 
 Bất kỳ transformation nào dùng future samples đều phải được coi là retrospective phân tích (analysis / 분석), không phải trading tín hiệu (signal / 신호) tại t.
 
-> **Chuyển mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **26. Indicator as tính năng (feature / 기능), not quy tắc (rule / 규칙)** tiếp nhận điểm tựa từ **25. Centered moving averages và look-ahead** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Nhị phân (binary / 이진) threshold làm mất thông tin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **26. Indicator as tính năng (feature / 기능), not quy tắc (rule / 규칙)** nối từ **25. Centered moving averages và look-ahead** sang **27. Nhị phân (binary / 이진) threshold làm mất thông tin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Indicator as tính năng (feature / 기능), not quy tắc (rule / 규칙)
 
@@ -441,7 +441,7 @@ Mô hình (model / 모델) sau đó estimate conditional kết quả (outcome / 
 
 Điều này thường tốt hơn việc gán mystical meaning cho một threshold duy nhất.
 
-> **Chuyển mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **27. Nhị phân (binary / 이진) threshold làm mất thông tin** tiếp nhận điểm tựa từ **26. Indicator as tính năng (feature / 기능), not quy tắc (rule / 규칙)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Conditional indicator phân tích (analysis / 분석)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **27. Nhị phân (binary / 이진) threshold làm mất thông tin** nối từ **26. Indicator as tính năng (feature / 기능), not quy tắc (rule / 규칙)** sang **28. Conditional indicator phân tích (analysis / 분석)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Nhị phân (binary / 이진) threshold làm mất thông tin
 
@@ -465,7 +465,7 @@ Có thể nghiên cứu kết quả (outcome / 결과) theo bins:
 
 để xem quan hệ (relation / 관계) có monotonic hay không.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **28. Conditional indicator phân tích (analysis / 분석)** tiếp nhận điểm tựa từ **27. Nhị phân (binary / 이진) threshold làm mất thông tin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Indicator và nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **28. Conditional indicator phân tích (analysis / 분석)** nối từ **27. Nhị phân (binary / 이진) threshold làm mất thông tin** sang **29. Indicator và nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Conditional indicator phân tích (analysis / 분석)
 
@@ -487,7 +487,7 @@ RSI percentile
 
 Có thể một indicator chỉ hữu ích trong subset cụ thể.
 
-> **Chuyển mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **28. Conditional indicator phân tích (analysis / 분석)** xác định đầu vào; **29. Indicator và nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **30. Không dùng indicator để che một thesis mơ hồ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **28. Conditional indicator phân tích (analysis / 분석)** đặt đầu vào cho **29. Indicator và nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘)**, rồi **30. Không dùng indicator để che một thesis mơ hồ** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 29. Indicator và nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘)
 
@@ -508,7 +508,7 @@ Mean reversion có thể liên hệ:
 
 Cơ chế (mechanism / 메커니즘) là hypothesis, vẫn cần dữ liệu (data / 데이터) kiểm thử (test / 테스트).
 
-> **Chuyển mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **29. Indicator và nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘)** xác định đầu vào; **30. Không dùng indicator để che một thesis mơ hồ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **31. Minimal indicator research template** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **29. Indicator và nhân quả (causal / 인과적) cơ chế (mechanism / 메커니즘)** đặt đầu vào cho **30. Không dùng indicator để che một thesis mơ hồ**, rồi **31. Minimal indicator research template** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 30. Không dùng indicator để che một thesis mơ hồ
 
@@ -532,7 +532,7 @@ What data transformation measures it?
 What invalidates it?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **31. Minimal indicator research template** tiếp nhận điểm tựa từ **30. Không dùng indicator để che một thesis mơ hồ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **31. Minimal indicator research template** nối từ **30. Không dùng indicator để che một thesis mơ hồ** sang **32. Checklist**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Minimal indicator research template
 
@@ -564,7 +564,7 @@ Walk-forward across pairs and decades/regimes.
 
 Indicator chỉ là một thành phần (component / 컴포넌트) trong toàn research chuỗi xử lý (pipeline / 파이프라인).
 
-> **Chuyển mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **32. Checklist** tiếp nhận điểm tựa từ **31. Minimal indicator research template** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **07 — Technical indicators như các phép biến đổi dữ liệu**, **32. Checklist** nối từ **31. Minimal indicator research template** sang **Đọc tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Checklist
 
@@ -580,13 +580,13 @@ Bạn cần tự giải thích được:
 8. Vì sao parameter stability quan trọng hơn single best setting.
 9. Indicator phải được đánh giá sau giao dịch (transaction / 트랜잭션) costs.
 
-> **Chuyển mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **Đọc tiếp** tiếp nhận điểm tựa từ **32. Checklist** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nội bộ (internal / 내부) links** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **07 — Technical indicators như các phép biến đổi dữ liệu**, **Đọc tiếp** nối từ **32. Checklist** sang **Nội bộ (internal / 내부) links**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đọc tiếp
 
 → [08 — Fundamental and event-driven FX analysis](./08_FUNDAMENTAL_AND_EVENT_DRIVEN_FX_ANALYSIS.md)
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **Nội bộ (internal / 내부) links** tiếp nhận điểm tựa từ **Đọc tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **07 — Technical indicators như các phép biến đổi dữ liệu**, **Nội bộ (internal / 내부) links** nối từ **Đọc tiếp** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nội bộ (internal / 내부) links
 

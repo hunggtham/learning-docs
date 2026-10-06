@@ -37,7 +37,7 @@ Raw Data
 
 Nếu không thể dấu vết (trace / 추적) một P/L observation ngược lại raw dữ liệu (data / 데이터), timestamp, quy tắc (rule / 규칙) và thực thi (execution / 실행) giả định (assumption / 가정), research chưa đủ auditability.
 
-> **Chuyển mạch:** **Kiến trúc tổng quát** mô tả data, signal, execution và control plane; **Các module** tách từng responsibility trước khi ghi **Deliverables**.
+> **Nối mạch:** **Kiến trúc tổng quát** mô tả data, signal, execution và control plane; **Các module** tách từng responsibility trước khi ghi **Deliverables**.
 
 ## Các mô-đun (module / 모듈)
 
@@ -46,7 +46,7 @@ Nếu không thể dấu vết (trace / 추적) một P/L observation ngược l
 3. [03_PORTFOLIO_RISK_AND_ATTRIBUTION_ENGINE.md](./03_PORTFOLIO_RISK_AND_ATTRIBUTION_ENGINE.md) — currency-leg aggregation, leverage, rủi ro (risk / 위험) limits, stress tests, factor attribution và trade-level decomposition.
 4. [04_FORWARD_TEST_MONITORING_AND_KILL_SWITCH.md](./04_FORWARD_TEST_MONITORING_AND_KILL_SWITCH.md) — paper/small-live progression, reconciliation, drift monitoring, operational controls và retirement rules.
 
-> **Chuyển mạch:** **Deliverables** biến module boundary thành artifact, test và runbook; **Nguyên tắc thiết kế** dùng evidence đó để khóa invariant.
+> **Nối mạch:** **Deliverables** biến module boundary thành artifact, test và runbook; **Nguyên tắc thiết kế** dùng evidence đó để khóa invariant.
 
 ## Deliverables
 
@@ -69,7 +69,7 @@ retirement_rule.md
 
 Có thể implement bằng Python, Java, SQL hoặc ngăn xếp (stack / 스택) khác. Ngôn ngữ không quan trọng bằng ngữ nghĩa (semantics / 의미론). Hai hiện thực (implementation / 구현) khác nhau đọc cùng specification phải cho kết quả giống nhau trong tolerance định trước.
 
-> **Chuyển mạch:** **Nguyên tắc thiết kế** chọn idempotency, observability và failure boundary làm invariant; **Scope boundary** nói rõ project không sở hữu phần nào.
+> **Nối mạch:** **Nguyên tắc thiết kế** chọn idempotency, observability và failure boundary làm invariant; **Scope boundary** nói rõ project không sở hữu phần nào.
 
 ## Nguyên tắc thiết kế
 
@@ -92,7 +92,7 @@ result_summary
 
 Nếu một kết quả (result / 결과) không thể reproduce từ các siêu dữ liệu (metadata / 메타데이터) trên, không dùng nó làm bằng chứng cho edge.
 
-> **Chuyển mạch:** **Scope boundary** khép README bằng owner, non-goal và link; phần implementation chi tiết quay về module hoặc domain canonical.
+> **Nối mạch:** **Scope boundary** khép README bằng owner, non-goal và link; phần implementation chi tiết quay về module hoặc domain canonical.
 
 ## Phạm vi (scope / 범위) ranh giới (boundary / 경계)
 

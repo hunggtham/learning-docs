@@ -30,7 +30,7 @@ Borrow foreign currency
 
 thì balance sheet có **currency mismatch**.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **2. Currency mismatch** tiếp nhận điểm tựa từ **1. Trước khủng hoảng: thành công kinh tế che giấu fragility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Maturity mismatch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **2. Currency mismatch** nối từ **1. Trước khủng hoảng: thành công kinh tế che giấu fragility** sang **3. Maturity mismatch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Currency mismatch
 
@@ -52,7 +52,7 @@ Ngay cả khi underlying dự án (project / 프로젝트) không thay đổi, l
 
 FX depreciation vì vậy không chỉ là price move; nó có thể làm banking/corporate balance sheet xấu đi ngay lập tức.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **3. Maturity mismatch** tiếp nhận điểm tựa từ **2. Currency mismatch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Stable exchange tỷ lệ (rate / 비율) can suppress perceived rủi ro (risk / 위험)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **3. Maturity mismatch** nối từ **2. Currency mismatch** sang **4. Stable exchange tỷ lệ (rate / 비율) can suppress perceived rủi ro (risk / 위험)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Maturity mismatch
 
@@ -74,7 +74,7 @@ but assets cannot be liquidated without loss
 
 Currency mismatch + maturity mismatch là combination rất nguy hiểm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **4. Stable exchange tỷ lệ (rate / 비율) can suppress perceived rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **3. Maturity mismatch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Thailand as initial focal điểm (point / 지점)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **4. Stable exchange tỷ lệ (rate / 비율) can suppress perceived rủi ro (risk / 위험)** nối từ **3. Maturity mismatch** sang **5. Thailand as initial focal điểm (point / 지점)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Stable exchange tỷ lệ (rate / 비율) can suppress perceived rủi ro (risk / 위험)
 
@@ -97,7 +97,7 @@ not absence of underlying imbalance
 
 Policy-suppressed volatility có thể làm private leverage tăng vì participants underestimate tail rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **5. Thailand as initial focal điểm (point / 지점)** tiếp nhận điểm tựa từ **4. Stable exchange tỷ lệ (rate / 비율) can suppress perceived rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Contagion is not just panic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **5. Thailand as initial focal điểm (point / 지점)** nối từ **4. Stable exchange tỷ lệ (rate / 비율) can suppress perceived rủi ro (risk / 위험)** sang **6. Contagion is not just panic**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Thailand as initial focal điểm (point / 지점)
 
@@ -117,7 +117,7 @@ currency absorbs accumulated pressure rapidly
 
 Nếu private sector có unhedged foreign-currency debt, depreciation làm balance-sheet stress tăng.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **6. Contagion is not just panic** tiếp nhận điểm tựa từ **5. Thailand as initial focal điểm (point / 지점)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Sudden stop** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **6. Contagion is not just panic** nối từ **5. Thailand as initial focal điểm (point / 지점)** sang **7. Sudden stop**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Contagion is not just panic
 
@@ -136,7 +136,7 @@ Funding becomes more expensive
 
 Contagion vì vậy có cả thông tin (information / 정보) channel lẫn balance-sheet/liquidity channel.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **7. Sudden stop** tiếp nhận điểm tựa từ **6. Contagion is not just panic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Reserve adequacy must be compared with liabilities** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **7. Sudden stop** nối từ **6. Contagion is not just panic** sang **8. Reserve adequacy must be compared with liabilities**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Sudden stop
 
@@ -154,7 +154,7 @@ rollover probability collapses
 
 Currency phải điều chỉnh, reserves bị sử dụng, domestic rates có thể tăng, credit conditions tighten.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **8. Reserve adequacy must be compared with liabilities** tiếp nhận điểm tựa từ **7. Sudden stop** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Korea-specific cơ chế (mechanism / 메커니즘)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **8. Reserve adequacy must be compared with liabilities** nối từ **7. Sudden stop** sang **9. Korea-specific cơ chế (mechanism / 메커니즘)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Reserve adequacy must be compared with liabilities
 
@@ -172,7 +172,7 @@ Forward commitments
 
 Một country có reserves lớn nominally nhưng short-term bên ngoài (external / 외부) liabilities còn lớn hơn có thể vẫn dễ bị funding run.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **8. Reserve adequacy must be compared with liabilities** xác định đầu vào; **9. Korea-specific cơ chế (mechanism / 메커니즘)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. Why export strength did not immediately solve funding stress** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **8. Reserve adequacy must be compared with liabilities** đặt đầu vào cho **9. Korea-specific cơ chế (mechanism / 메커니즘)**, rồi **10. Why export strength did not immediately solve funding stress** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. Korea-specific cơ chế (mechanism / 메커니즘)
 
@@ -191,7 +191,7 @@ Korean banks need USD repayment liquidity
 
 Đây là classic adverse vòng phản hồi (feedback loop / 피드백 루프).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **9. Korea-specific cơ chế (mechanism / 메커니즘)** xác định đầu vào; **10. Why export strength did not immediately solve funding stress** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. Banking hệ thống (system / 시스템) as FX transmission cơ chế (mechanism / 메커니즘)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **9. Korea-specific cơ chế (mechanism / 메커니즘)** đặt đầu vào cho **10. Why export strength did not immediately solve funding stress**, rồi **11. Banking hệ thống (system / 시스템) as FX transmission cơ chế (mechanism / 메커니즘)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 10. Why export strength did not immediately solve funding stress
 
@@ -208,7 +208,7 @@ Long-run external earning capacity
 
 Liquidity crisis có thể xảy ra ngay cả khi economy có productive export cơ sở (base / 기반).
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **10. Why export strength did not immediately solve funding stress** xác định đầu vào; **11. Banking hệ thống (system / 시스템) as FX transmission cơ chế (mechanism / 메커니즘)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **12. Interest-rate defense sự đánh đổi (trade-off / 트레이드오프)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **10. Why export strength did not immediately solve funding stress** đặt đầu vào cho **11. Banking hệ thống (system / 시스템) as FX transmission cơ chế (mechanism / 메커니즘)**, rồi **12. Interest-rate defense sự đánh đổi (trade-off / 트레이드오프)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 11. Banking hệ thống (system / 시스템) as FX transmission cơ chế (mechanism / 메커니즘)
 
@@ -225,7 +225,7 @@ Foreign funding shock
 
 FX crisis và banking crisis vì vậy có thể reinforce nhau.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **11. Banking hệ thống (system / 시스템) as FX transmission cơ chế (mechanism / 메커니즘)** xác định đầu vào; **12. Interest-rate defense sự đánh đổi (trade-off / 트레이드오프)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **13. Why depreciation can become contractionary** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **11. Banking hệ thống (system / 시스템) as FX transmission cơ chế (mechanism / 메커니즘)** đặt đầu vào cho **12. Interest-rate defense sự đánh đổi (trade-off / 트레이드오프)**, rồi **13. Why depreciation can become contractionary** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 12. Interest-rate defense sự đánh đổi (trade-off / 트레이드오프)
 
@@ -242,7 +242,7 @@ slow domestic demand
 
 Chính sách (policy / 정책) không có free option.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **13. Why depreciation can become contractionary** tiếp nhận điểm tựa từ **12. Interest-rate defense sự đánh đổi (trade-off / 트레이드오프)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Corporate leverage matters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **13. Why depreciation can become contractionary** nối từ **12. Interest-rate defense sự đánh đổi (trade-off / 트레이드오프)** sang **14. Corporate leverage matters**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Why depreciation can become contractionary
 
@@ -261,7 +261,7 @@ Currency depreciation
 
 Balance-sheet tác động (effect / 효과) có thể dominate competitiveness benefit trong short/medium term.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **14. Corporate leverage matters** tiếp nhận điểm tựa từ **13. Why depreciation can become contractionary** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. From currency pressure to real economy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **14. Corporate leverage matters** nối từ **13. Why depreciation can become contractionary** sang **15. From currency pressure to real economy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Corporate leverage matters
 
@@ -278,7 +278,7 @@ FX depreciation
 
 có thể làm debt-service sức chứa (capacity / 용량) collapse.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **15. From currency pressure to real economy** tiếp nhận điểm tựa từ **14. Corporate leverage matters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. IMF programs** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **15. From currency pressure to real economy** nối từ **14. Corporate leverage matters** sang **16. IMF programs**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. From currency pressure to real economy
 
@@ -296,7 +296,7 @@ Capital outflow / rollover failure
 
 Đây là lý do FX rủi ro (risk / 위험) management không thể tách khỏi balance-sheet phân tích (analysis / 분석).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **16. IMF programs** tiếp nhận điểm tựa từ **15. From currency pressure to real economy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Deposit guarantees and bank closures** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **16. IMF programs** nối từ **15. From currency pressure to real economy** sang **17. Deposit guarantees and bank closures**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. IMF programs
 
@@ -317,7 +317,7 @@ liquidity support
 interact with each other
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **17. Deposit guarantees and bank closures** tiếp nhận điểm tựa từ **16. IMF programs** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Rating and collateral phản hồi (feedback / 피드백)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **17. Deposit guarantees and bank closures** nối từ **16. IMF programs** sang **18. Rating and collateral phản hồi (feedback / 피드백)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Deposit guarantees and bank closures
 
@@ -335,7 +335,7 @@ Authorities có thể dùng guarantees, liquidity hỗ trợ (support / 지원),
 
 Nhưng mỗi công cụ (tool / 도구) có moral hazard và fiscal chi phí (cost / 비용).
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **18. Rating and collateral phản hồi (feedback / 피드백)** tiếp nhận điểm tựa từ **17. Deposit guarantees and bank closures** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Why the crisis spread differently by country** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **18. Rating and collateral phản hồi (feedback / 피드백)** nối từ **17. Deposit guarantees and bank closures** sang **19. Why the crisis spread differently by country**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Rating and collateral phản hồi (feedback / 피드백)
 
@@ -350,7 +350,7 @@ rollover access worsens
 
 Market-price decline và financing ràng buộc (constraint / 제약조건) có thể reinforce nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **19. Why the crisis spread differently by country** tiếp nhận điểm tựa từ **18. Rating and collateral phản hồi (feedback / 피드백)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Korea and corporate restructuring** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **19. Why the crisis spread differently by country** nối từ **18. Rating and collateral phản hồi (feedback / 피드백)** sang **20. Korea and corporate restructuring**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Why the crisis spread differently by country
 
@@ -371,7 +371,7 @@ Capital controls
 
 Không nên gọi toàn bộ region là một trade đồng nhất.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **20. Korea and corporate restructuring** tiếp nhận điểm tựa từ **19. Why the crisis spread differently by country** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Currency crisis as nonlinear hệ thống (system / 시스템)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **20. Korea and corporate restructuring** nối từ **19. Why the crisis spread differently by country** sang **21. Currency crisis as nonlinear hệ thống (system / 시스템)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Korea and corporate restructuring
 
@@ -384,7 +384,7 @@ If FX stress reveals balance-sheet insolvency,
 restoring the exchange rate alone is insufficient.
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **21. Currency crisis as nonlinear hệ thống (system / 시스템)** tiếp nhận điểm tựa từ **20. Korea and corporate restructuring** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Historical volatility can be misleading** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **21. Currency crisis as nonlinear hệ thống (system / 시스템)** nối từ **20. Korea and corporate restructuring** sang **22. Historical volatility can be misleading**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Currency crisis as nonlinear hệ thống (system / 시스템)
 
@@ -409,7 +409,7 @@ credit contracts
 
 Đây là regime shift, không phải tuyến tính (linear / 선형) extension của normal volatility.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **22. Historical volatility can be misleading** tiếp nhận điểm tựa từ **21. Currency crisis as nonlinear hệ thống (system / 시스템)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Carry trade lesson** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **22. Historical volatility can be misleading** nối từ **21. Currency crisis as nonlinear hệ thống (system / 시스템)** sang **23. Carry trade lesson**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Historical volatility can be misleading
 
@@ -424,7 +424,7 @@ Low observed volatility under a policy regime
 can coexist with high latent jump risk.
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **23. Carry trade lesson** tiếp nhận điểm tựa từ **22. Historical volatility can be misleading** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Corporate hedging lesson** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **23. Carry trade lesson** nối từ **22. Historical volatility can be misleading** sang **24. Corporate hedging lesson**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Carry trade lesson
 
@@ -439,7 +439,7 @@ many small gains
 
 Carry phải được stress-tested bằng regime break, không chỉ sample-period Sharpe.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **24. Corporate hedging lesson** tiếp nhận điểm tựa từ **23. Carry trade lesson** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Liquidity vs solvency distinction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **24. Corporate hedging lesson** nối từ **23. Carry trade lesson** sang **25. Liquidity vs solvency distinction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Corporate hedging lesson
 
@@ -456,7 +456,7 @@ Refinancing schedule
 
 Natural hedge có thể giảm rủi ro (risk / 위험) nhưng hiếm khi perfect.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **25. Liquidity vs solvency distinction** tiếp nhận điểm tựa từ **24. Corporate hedging lesson** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Dollar funding matters even outside the US** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **25. Liquidity vs solvency distinction** nối từ **24. Corporate hedging lesson** sang **26. Dollar funding matters even outside the US**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Liquidity vs solvency distinction
 
@@ -473,7 +473,7 @@ asset value < liabilities
 
 FX depreciation có thể biến liquidity bài toán (problem / 문제) thành solvency bài toán (problem / 문제) nếu foreign debt reprices sharply.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **26. Dollar funding matters even outside the US** tiếp nhận điểm tựa từ **25. Liquidity vs solvency distinction** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. What dữ liệu (data / 데이터) would a researcher monitor?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **26. Dollar funding matters even outside the US** nối từ **25. Liquidity vs solvency distinction** sang **27. What dữ liệu (data / 데이터) would a researcher monitor?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Dollar funding matters even outside the US
 
@@ -483,7 +483,7 @@ Do đó USD shortage có thể xuất hiện ở economies không có domestic U
 
 Trường hợp (case / 사례) 2020 ở later chapter mở rộng chính cơ chế (mechanism / 메커니즘) này.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **26. Dollar funding matters even outside the US** nêu điều cần giải thích; **27. What dữ liệu (data / 데이터) would a researcher monitor?** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **28. Korea-specific dashboard idea** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **26. Dollar funding matters even outside the US** đặt vấn đề; **27. What dữ liệu (data / 데이터) would a researcher monitor?** đối chiếu bằng chứng, rồi **28. Korea-specific dashboard idea** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 27. What dữ liệu (data / 데이터) would a researcher monitor?
 
@@ -503,7 +503,7 @@ Property/asset-price leverage
 
 Dữ liệu (data / 데이터) chất lượng (quality / 품질)/thời gian (time / 시간) availability là một phần của phân tích (analysis / 분석).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **27. What dữ liệu (data / 데이터) would a researcher monitor?** nêu điều cần giải thích; **28. Korea-specific dashboard idea** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **29. What not to learn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **27. What dữ liệu (data / 데이터) would a researcher monitor?** đặt vấn đề; **28. Korea-specific dashboard idea** đối chiếu bằng chứng, rồi **29. What not to learn** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 28. Korea-specific dashboard idea
 
@@ -521,7 +521,7 @@ Bank funding spreads
 
 Không chỉ số (metric / 지표) nào một mình dự báo crisis.
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **29. What not to learn** tiếp nhận điểm tựa từ **28. Korea-specific dashboard idea** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Cơ chế (mechanism / 메커니즘) map** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **29. What not to learn** nối từ **28. Korea-specific dashboard idea** sang **30. Cơ chế (mechanism / 메커니즘) map**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. What not to learn
 
@@ -549,7 +549,7 @@ Sai lesson:
 
 Balance-sheet tác động (effect / 효과) có thể dominate.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **29. What not to learn** xác định đầu vào; **30. Cơ chế (mechanism / 메커니즘) map** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **31. Stress-test template derived from the crisis** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **29. What not to learn** đặt đầu vào cho **30. Cơ chế (mechanism / 메커니즘) map**, rồi **31. Stress-test template derived from the crisis** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 30. Cơ chế (mechanism / 메커니즘) map
 
@@ -571,7 +571,7 @@ Trigger / confidence loss
 → more capital pressure
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **30. Cơ chế (mechanism / 메커니즘) map** xác định đầu vào; **31. Stress-test template derived from the crisis** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **32. Practice exercise** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **30. Cơ chế (mechanism / 메커니즘) map** đặt đầu vào cho **31. Stress-test template derived from the crisis**, rồi **32. Practice exercise** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 31. Stress-test template derived from the crisis
 
@@ -598,7 +598,7 @@ Refinancing need
 Bank covenant risk
 ```
 
-> **Chuyển mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **32. Practice exercise** tiếp nhận điểm tựa từ **31. Stress-test template derived from the crisis** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nguồn nền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **32. Practice exercise** nối từ **31. Stress-test template derived from the crisis** sang **Nguồn nền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Practice exercise
 
@@ -618,7 +618,7 @@ Tính lại debt burden và liquidity need.
 
 Mục tiêu là chuyển FX move thành balance-sheet impact.
 
-> **Chuyển mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **32. Practice exercise** nêu điều cần giải thích; **Nguồn nền** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Trường hợp (case / 사례) 02 — Asian Financial Crisis 1997: currency mismatch, sudden stop và banking vòng phản hồi (feedback loop / 피드백 루프)**, **32. Practice exercise** đặt vấn đề; **Nguồn nền** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nguồn nền
 

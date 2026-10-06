@@ -23,7 +23,7 @@ Raw volume chỉ nói activity magnitude.
 
 Hai periods có cùng volume nhưng net aggressive buying khác nhau có thể tạo price impact khác.
 
-> **Chuyển mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **1. Thứ tự (order / 순서) luồng (flow / 흐름) khác volume** xác định đầu vào; **2. FX thứ tự (order / 순서) luồng (flow / 흐름) khó quan sát toàn bộ** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. Dealer inventory** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **1. Thứ tự (order / 순서) luồng (flow / 흐름) khác volume** đặt đầu vào cho **2. FX thứ tự (order / 순서) luồng (flow / 흐름) khó quan sát toàn bộ**, rồi **3. Dealer inventory** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2. FX thứ tự (order / 순서) luồng (flow / 흐름) khó quan sát toàn bộ
 
@@ -39,7 +39,7 @@ Dữ liệu có thể đến từ:
 
 Mỗi nguồn (source / 소스) chỉ quan sát một phần thị trường (market / 시장).
 
-> **Chuyển mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **2. FX thứ tự (order / 순서) luồng (flow / 흐름) khó quan sát toàn bộ** xác định đầu vào; **3. Dealer inventory** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **4. Adverse selection** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **2. FX thứ tự (order / 순서) luồng (flow / 흐름) khó quan sát toàn bộ** đặt đầu vào cho **3. Dealer inventory**, rồi **4. Adverse selection** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3. Dealer inventory
 
@@ -53,7 +53,7 @@ Nếu inventory quá lệch, dealer có thể:
 
 Price thay đổi (change / 변경) ngắn hạn có thể phản ánh inventory management chứ không chỉ công khai (public / 공개) news.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **4. Adverse selection** tiếp nhận điểm tựa từ **3. Dealer inventory** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Spread decomposition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **4. Adverse selection** nối từ **3. Dealer inventory** sang **5. Spread decomposition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Adverse selection
 
@@ -69,7 +69,7 @@ last-look rejection may rise depending on protocol
 
 News windows là ví dụ rõ.
 
-> **Chuyển mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **5. Spread decomposition** tiếp nhận điểm tựa từ **4. Adverse selection** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Price discovery** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **5. Spread decomposition** nối từ **4. Adverse selection** sang **6. Price discovery**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Spread decomposition
 
@@ -83,7 +83,7 @@ Conceptually spread bù cho:
 
 Relative importance thay đổi theo venue/regime.
 
-> **Chuyển mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **6. Price discovery** tiếp nhận điểm tựa từ **5. Spread decomposition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Fragmentation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **6. Price discovery** nối từ **5. Spread decomposition** sang **7. Fragmentation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Price discovery
 
@@ -99,7 +99,7 @@ Trong FX, discovery có thể diễn ra across:
 
 Một venue có thể lead ở một horizon nhưng không mọi lúc.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **7. Fragmentation** tiếp nhận điểm tựa từ **6. Price discovery** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Top-of-book vs độ sâu (depth / 깊이)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **7. Fragmentation** nối từ **6. Price discovery** sang **8. Top-of-book vs độ sâu (depth / 깊이)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Fragmentation
 
@@ -109,7 +109,7 @@ Arbitrage/thị trường (market / 시장) making giữ prices gần nhau nhưn
 
 Do đó “thị trường (market / 시장) price” thường là constructed tham chiếu (reference / 참조) từ multiple quotes.
 
-> **Chuyển mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **8. Top-of-book vs độ sâu (depth / 깊이)** tiếp nhận điểm tựa từ **7. Fragmentation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Thị trường (market / 시장) resilience** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **8. Top-of-book vs độ sâu (depth / 깊이)** nối từ **7. Fragmentation** sang **9. Thị trường (market / 시장) resilience**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Top-of-book vs độ sâu (depth / 깊이)
 
@@ -126,7 +126,7 @@ resiliency after trade
 
 Tight spread nhưng shallow book vẫn có poor liquidity cho large orders.
 
-> **Chuyển mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **9. Thị trường (market / 시장) resilience** tiếp nhận điểm tựa từ **8. Top-of-book vs độ sâu (depth / 깊이)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Impact** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **9. Thị trường (market / 시장) resilience** nối từ **8. Top-of-book vs độ sâu (depth / 깊이)** sang **10. Impact**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Thị trường (market / 시장) resilience
 
@@ -134,7 +134,7 @@ Sau large thứ tự (order / 순서), liquidity có quay lại nhanh không?
 
 Resilience là dimension khác của liquidity bên cạnh spread/độ sâu (depth / 깊이).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **10. Impact** tiếp nhận điểm tựa từ **9. Thị trường (market / 시장) resilience** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Square-root-like impact intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **10. Impact** nối từ **9. Thị trường (market / 시장) resilience** sang **11. Square-root-like impact intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Impact
 
@@ -144,7 +144,7 @@ Temporary impact có thể mean-revert; permanent thành phần (component / 컴
 
 Tách hai phần là thực thi (execution / 실행)/research bài toán (problem / 문제) khó.
 
-> **Chuyển mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **11. Square-root-like impact intuition** tiếp nhận điểm tựa từ **10. Impact** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Internalization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **11. Square-root-like impact intuition** nối từ **10. Impact** sang **12. Internalization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Square-root-like impact intuition
 
@@ -152,7 +152,7 @@ Nhiều markets cho thấy impact tăng sublinearly với kích thước (size /
 
 Need instrument/venue-specific calibration.
 
-> **Chuyển mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **12. Internalization** tiếp nhận điểm tựa từ **11. Square-root-like impact intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Last look** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **12. Internalization** nối từ **11. Square-root-like impact intuition** sang **13. Last look**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Internalization
 
@@ -162,7 +162,7 @@ Dealer có thể match opposite máy khách (client / 클라이언트) flows int
 
 Internalization ratio có thể ảnh hưởng thực thi (execution / 실행) hành vi (behavior / 동작) nhưng dữ liệu (data / 데이터) không phải luôn công khai (public / 공개).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **13. Last look** tiếp nhận điểm tựa từ **12. Internalization** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Request-for-stream / request-for-quote** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **13. Last look** nối từ **12. Internalization** sang **14. Request-for-stream / request-for-quote**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Last look
 
@@ -172,7 +172,7 @@ Purpose có thể liên quan stale-price/độ trễ (latency / 지연 시간) r
 
 Khi đánh giá, cần empirical stats và giao thức (protocol / 프로토콜) disclosure, không chỉ label.
 
-> **Chuyển mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **14. Request-for-stream / request-for-quote** tiếp nhận điểm tựa từ **13. Last look** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Thông tin (information / 정보) leakage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **14. Request-for-stream / request-for-quote** nối từ **13. Last look** sang **15. Thông tin (information / 정보) leakage**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Request-for-stream / request-for-quote
 
@@ -186,7 +186,7 @@ Thực thi (execution / 실행) choice depends on:
 - relationship;
 - expected impact.
 
-> **Chuyển mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **15. Thông tin (information / 정보) leakage** tiếp nhận điểm tựa từ **14. Request-for-stream / request-for-quote** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. TWAP/VWAP/POV concepts** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **15. Thông tin (information / 정보) leakage** nối từ **14. Request-for-stream / request-for-quote** sang **16. TWAP/VWAP/POV concepts**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Thông tin (information / 정보) leakage
 
@@ -200,7 +200,7 @@ vs
 market impact / information leakage
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **16. TWAP/VWAP/POV concepts** tiếp nhận điểm tựa từ **15. Thông tin (information / 정보) leakage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Hiện thực (implementation / 구현) shortfall thuật toán (algorithm / 알고리즘)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **16. TWAP/VWAP/POV concepts** nối từ **15. Thông tin (information / 정보) leakage** sang **17. Hiện thực (implementation / 구현) shortfall thuật toán (algorithm / 알고리즘)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. TWAP/VWAP/POV concepts
 
@@ -215,7 +215,7 @@ Trade as fraction of observed thị trường (market / 시장) volume.
 
 Trong OTC FX, benchmark/dữ liệu (data / 데이터) nguồn (source / 소스) phải được định nghĩa cẩn thận.
 
-> **Chuyển mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **17. Hiện thực (implementation / 구현) shortfall thuật toán (algorithm / 알고리즘)** tiếp nhận điểm tựa từ **16. TWAP/VWAP/POV concepts** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Fixing benchmark thực thi (execution / 실행)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **17. Hiện thực (implementation / 구현) shortfall thuật toán (algorithm / 알고리즘)** nối từ **16. TWAP/VWAP/POV concepts** sang **18. Fixing benchmark thực thi (execution / 실행)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Hiện thực (implementation / 구현) shortfall thuật toán (algorithm / 알고리즘)
 
@@ -230,7 +230,7 @@ immediate market impact
 High urgency → execute faster, accept impact.
 Low urgency → wait, accept price rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **18. Fixing benchmark thực thi (execution / 실행)** tiếp nhận điểm tựa từ **17. Hiện thực (implementation / 구현) shortfall thuật toán (algorithm / 알고리즘)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Stop clusters** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **18. Fixing benchmark thực thi (execution / 실행)** nối từ **17. Hiện thực (implementation / 구현) shortfall thuật toán (algorithm / 알고리즘)** sang **19. Stop clusters**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Fixing benchmark thực thi (execution / 실행)
 
@@ -238,7 +238,7 @@ WM/R-like fixing windows và institutional benchmarks có thể concentrate orde
 
 Participants hedging benchmark rủi ro (risk / 위험) can create predictable activity, nhưng exploitability after chi phí (cost / 비용)/crowding không được assumed.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **19. Stop clusters** tiếp nhận điểm tựa từ **18. Fixing benchmark thực thi (execution / 실행)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Liquidity sweep terminology** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **19. Stop clusters** nối từ **18. Fixing benchmark thực thi (execution / 실행)** sang **20. Liquidity sweep terminology**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Stop clusters
 
@@ -258,7 +258,7 @@ triggered market orders
 
 Đây là cơ chế (mechanism / 메커니즘) có thể giải thích acceleration mà không cần conspiracy narrative.
 
-> **Chuyển mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **20. Liquidity sweep terminology** tiếp nhận điểm tựa từ **19. Stop clusters** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Order-book imbalance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **20. Liquidity sweep terminology** nối từ **19. Stop clusters** sang **21. Order-book imbalance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Liquidity sweep terminology
 
@@ -274,7 +274,7 @@ price reaches area with clustered conditional orders
 
 Term hữu ích nếu quy tắc (rule / 규칙)/dữ liệu (data / 데이터) rõ; không nên biến thành deterministic setup.
 
-> **Chuyển mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **21. Order-book imbalance** tiếp nhận điểm tựa từ **20. Liquidity sweep terminology** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Futures as proxy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **21. Order-book imbalance** nối từ **20. Liquidity sweep terminology** sang **22. Futures as proxy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Order-book imbalance
 
@@ -288,7 +288,7 @@ có thể be short-horizon tính năng (feature / 기능).
 
 Nhưng FX venue book chỉ là one pool, không toàn cục (global / 전역) thị trường (market / 시장).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **22. Futures as proxy** tiếp nhận điểm tựa từ **21. Order-book imbalance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. COT dữ liệu (data / 데이터)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **22. Futures as proxy** nối từ **21. Order-book imbalance** sang **23. COT dữ liệu (data / 데이터)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Futures as proxy
 
@@ -301,7 +301,7 @@ Nhưng ánh xạ (mapping / 매핑) sang OTC spot cần account:
 - đặc tả hợp đồng (contract / 계약) roll;
 - participant mix.
 
-> **Chuyển mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **22. Futures as proxy** nêu điều cần giải thích; **23. COT dữ liệu (data / 데이터)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **24. Dealer-client luồng (flow / 흐름) datasets** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **22. Futures as proxy** đặt vấn đề; **23. COT dữ liệu (data / 데이터)** đối chiếu bằng chứng, rồi **24. Dealer-client luồng (flow / 흐름) datasets** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 23. COT dữ liệu (data / 데이터)
 
@@ -309,7 +309,7 @@ Commitments of Traders cung cấp positioning categories cho futures, thường 
 
 Useful for broad positioning ngữ cảnh (context / 맥락), không phù hợp microsecond thứ tự (order / 순서) luồng (flow / 흐름).
 
-> **Chuyển mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **23. COT dữ liệu (data / 데이터)** nêu điều cần giải thích; **24. Dealer-client luồng (flow / 흐름) datasets** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **25. Toxic luồng (flow / 흐름)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **23. COT dữ liệu (data / 데이터)** đặt vấn đề; **24. Dealer-client luồng (flow / 흐름) datasets** đối chiếu bằng chứng, rồi **25. Toxic luồng (flow / 흐름)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 24. Dealer-client luồng (flow / 흐름) datasets
 
@@ -324,7 +324,7 @@ Which dealer?
 How much market share?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **24. Dealer-client luồng (flow / 흐름) datasets** xác định đầu vào; **25. Toxic luồng (flow / 흐름)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **26. Độ trễ (latency / 지연 시간) arbitrage** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **24. Dealer-client luồng (flow / 흐름) datasets** đặt đầu vào cho **25. Toxic luồng (flow / 흐름)**, rồi **26. Độ trễ (latency / 지연 시간) arbitrage** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 25. Toxic luồng (flow / 흐름)
 
@@ -332,7 +332,7 @@ Dealer gọi luồng (flow / 흐름) “toxic” khi counterparty trades systema
 
 Term phụ thuộc perspective và mô hình thực thi (execution model / 실행 모델), không đồng nghĩa misconduct.
 
-> **Chuyển mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **25. Toxic luồng (flow / 흐름)** xác định đầu vào; **26. Độ trễ (latency / 지연 시간) arbitrage** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **27. Co-location và speed** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **25. Toxic luồng (flow / 흐름)** đặt đầu vào cho **26. Độ trễ (latency / 지연 시간) arbitrage**, rồi **27. Co-location và speed** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 26. Độ trễ (latency / 지연 시간) arbitrage
 
@@ -345,7 +345,7 @@ Thị trường (market / 시장) makers respond bằng:
 - last look;
 - quote throttling.
 
-> **Chuyển mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **27. Co-location và speed** tiếp nhận điểm tựa từ **26. Độ trễ (latency / 지연 시간) arbitrage** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Session handoff** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **27. Co-location và speed** nối từ **26. Độ trễ (latency / 지연 시간) arbitrage** sang **28. Session handoff**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Co-location và speed
 
@@ -353,7 +353,7 @@ Thị trường (market / 시장) makers respond bằng:
 
 Retail internet trader không nên assume edge based on stale retail chart can compete with institutional low-latency các hệ thống (systems / 시스템들).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **28. Session handoff** tiếp nhận điểm tựa từ **27. Co-location và speed** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Rollover cửa sổ (window / 윈도우)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **28. Session handoff** nối từ **27. Co-location và speed** sang **29. Rollover cửa sổ (window / 윈도우)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Session handoff
 
@@ -361,7 +361,7 @@ Liquidity providers/participants thay đổi (change / 변경) across Asia–Eur
 
 Spread/độ sâu (depth / 깊이) and price discovery hành vi (behavior / 동작) vary by cục bộ (local / 로컬) nghiệp vụ (business / 비즈니스) hours and overlap.
 
-> **Chuyển mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **29. Rollover cửa sổ (window / 윈도우)** tiếp nhận điểm tựa từ **28. Session handoff** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. News microstructure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **29. Rollover cửa sổ (window / 윈도우)** nối từ **28. Session handoff** sang **30. News microstructure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Rollover cửa sổ (window / 윈도우)
 
@@ -369,7 +369,7 @@ Retail platforms may show poor liquidity/spread around daily rollover. Chính x�
 
 Short-term chiến lược (strategy / 전략) should exclude/stress this cửa sổ (window / 윈도우) rather than assume daytime spread.
 
-> **Chuyển mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **30. News microstructure** tiếp nhận điểm tựa từ **29. Rollover cửa sổ (window / 윈도우)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Flash events** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **30. News microstructure** nối từ **29. Rollover cửa sổ (window / 윈도우)** sang **31. Flash events**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. News microstructure
 
@@ -385,7 +385,7 @@ quotes pulled/widened
 
 Historical candle cannot fully reconstruct executable đường dẫn (path / 경로).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **31. Flash events** tiếp nhận điểm tựa từ **30. News microstructure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Quote stuffing / manipulation claims** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **31. Flash events** nối từ **30. News microstructure** sang **32. Quote stuffing / manipulation claims**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Flash events
 
@@ -398,7 +398,7 @@ Rủi ro (risk / 위험) controls need:
 - kill switch;
 - leverage headroom.
 
-> **Chuyển mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **32. Quote stuffing / manipulation claims** tiếp nhận điểm tựa từ **31. Flash events** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Spread phân phối (distribution / 분포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **32. Quote stuffing / manipulation claims** nối từ **31. Flash events** sang **33. Spread phân phối (distribution / 분포)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Quote stuffing / manipulation claims
 
@@ -406,7 +406,7 @@ Specific manipulative practices require bằng chứng (evidence / 증거) and r
 
 Use venue/regulator bằng chứng (evidence / 증거) where available.
 
-> **Chuyển mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **33. Spread phân phối (distribution / 분포)** tiếp nhận điểm tựa từ **32. Quote stuffing / manipulation claims** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. Slippage phân phối (distribution / 분포)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **33. Spread phân phối (distribution / 분포)** nối từ **32. Quote stuffing / manipulation claims** sang **34. Slippage phân phối (distribution / 분포)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Spread phân phối (distribution / 분포)
 
@@ -422,7 +422,7 @@ stress periods
 
 Tail spread drives stop/thực thi (execution / 실행) rủi ro (risk / 위험).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **34. Slippage phân phối (distribution / 분포)** tiếp nhận điểm tựa từ **33. Spread phân phối (distribution / 분포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Markout** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **34. Slippage phân phối (distribution / 분포)** nối từ **33. Spread phân phối (distribution / 분포)** sang **35. Markout**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. Slippage phân phối (distribution / 분포)
 
@@ -430,7 +430,7 @@ Average slippage can hide asymmetric tail.
 
 Bản ghi (record / 레코드) positive and negative separately, especially stop orders.
 
-> **Chuyển mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **35. Markout** tiếp nhận điểm tựa từ **34. Slippage phân phối (distribution / 분포)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. TCA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **35. Markout** nối từ **34. Slippage phân phối (distribution / 분포)** sang **36. TCA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Markout
 
@@ -442,7 +442,7 @@ price after 1s / 10s / 1m relative to fill
 
 For liquidity provider, adverse markout suggests informed/toxic luồng (flow / 흐름); for taker, it can measure thực thi (execution / 실행) timing.
 
-> **Chuyển mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **36. TCA** tiếp nhận điểm tựa từ **35. Markout** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Retail TCA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **36. TCA** nối từ **35. Markout** sang **37. Retail TCA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. TCA
 
@@ -457,7 +457,7 @@ Metrics:
 - thị trường (market / 시장) impact;
 - post-trade markout.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **37. Retail TCA** tiếp nhận điểm tựa từ **36. TCA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **38. Microstructure alpha decays fast** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **37. Retail TCA** nối từ **36. TCA** sang **38. Microstructure alpha decays fast**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 37. Retail TCA
 
@@ -474,7 +474,7 @@ exit fill
 
 Across many trades this reveals broker/session/sự kiện (event / 이벤트) thực thi (execution / 실행) chất lượng (quality / 품질).
 
-> **Chuyển mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **38. Microstructure alpha decays fast** tiếp nhận điểm tựa từ **37. Retail TCA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **39. Dữ liệu (data / 데이터) synchronization** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **38. Microstructure alpha decays fast** nối từ **37. Retail TCA** sang **39. Dữ liệu (data / 데이터) synchronization**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 38. Microstructure alpha decays fast
 
@@ -482,7 +482,7 @@ Short-horizon order-flow signals often have short half-life.
 
 If hạ tầng (infrastructure / 인프라) độ trễ (latency / 지연 시간) exceeds tín hiệu (signal / 신호) half-life, research alpha không executable.
 
-> **Chuyển mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **38. Microstructure alpha decays fast** nêu điều cần giải thích; **39. Dữ liệu (data / 데이터) synchronization** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **40. Causality caution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **38. Microstructure alpha decays fast** đặt vấn đề; **39. Dữ liệu (data / 데이터) synchronization** đối chiếu bằng chứng, rồi **40. Causality caution** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 39. Dữ liệu (data / 데이터) synchronization
 
@@ -490,13 +490,13 @@ Combining spot, futures, rates, options requires clock synchronization.
 
 Milliseconds/seconds mismatch can reverse lead-lag suy luận (inference / 추론).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **39. Dữ liệu (data / 데이터) synchronization** nêu điều cần giải thích; **40. Causality caution** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **41. From microstructure to chiến lược (strategy / 전략)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **39. Dữ liệu (data / 데이터) synchronization** đặt vấn đề; **40. Causality caution** đối chiếu bằng chứng, rồi **41. From microstructure to chiến lược (strategy / 전략)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 40. Causality caution
 
 If futures move 50 ms before spot in mẫu (sample / 표본), that does not automatically prove futures “cause” spot fundamentally. Could reflect dùng chung (common / 공통) thông tin (information / 정보) processed at different speeds.
 
-> **Chuyển mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **41. From microstructure to chiến lược (strategy / 전략)** tiếp nhận điểm tựa từ **40. Causality caution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **42. Checklist** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **41. From microstructure to chiến lược (strategy / 전략)** nối từ **40. Causality caution** sang **42. Checklist**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 41. From microstructure to chiến lược (strategy / 전략)
 
@@ -516,7 +516,7 @@ market impact
 
 Otherwise paper alpha can be impossible live.
 
-> **Chuyển mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **42. Checklist** tiếp nhận điểm tựa từ **41. From microstructure to chiến lược (strategy / 전략)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đọc tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **42. Checklist** nối từ **41. From microstructure to chiến lược (strategy / 전략)** sang **Đọc tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 42. Checklist
 
@@ -533,13 +533,13 @@ Bạn cần tự giải thích được:
 9. Why microstructure alpha is execution-dependent.
 10. Why unusual price hành vi (behavior / 동작) is not proof of manipulation.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **Đọc tiếp** tiếp nhận điểm tựa từ **42. Checklist** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nội bộ (internal / 내부) links** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **Đọc tiếp** nối từ **42. Checklist** sang **Nội bộ (internal / 내부) links**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đọc tiếp
 
 → [14 — FX options, volatility and hedging](./14_FX_OPTIONS_VOLATILITY_AND_HEDGING.md)
 
-> **Chuyển mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **Nội bộ (internal / 내부) links** tiếp nhận điểm tựa từ **Đọc tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **13 — Advanced FX microstructure và thứ tự (order / 순서) luồng (flow / 흐름)**, **Nội bộ (internal / 내부) links** nối từ **Đọc tiếp** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Nội bộ (internal / 내부) links
 
