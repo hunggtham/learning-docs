@@ -43,13 +43,14 @@ Phần `02_귀화용_심화` không có PDF 심화 riêng trong bộ file đư�
 Trình tự dưới đây biến toàn bộ folder thành một buổi học có điểm bắt đầu, điểm luyện tập và điểm kiểm tra. Nếu mục tiêu là 귀화, hãy hoàn thành phần 기본 trước rồi mới dùng phần 심화 để mở rộng khái niệm công dân, quyền và nghĩa vụ.
 
 1. Đọc [`00_exam_map_and_strategy.md`](00_exam_map_and_strategy.md).
-2. Nếu mục tiêu trước mắt là 영주: học lần lượt `01_영주용_기본/01~08`.
-3. Học [`00_current_facts_and_corrections.md`](00_current_facts_and_corrections.md) để tránh ghi nhớ dữ liệu cũ.
-4. Luyện [`01_영주용_기본/09_high_yield_numbers_institutions.md`](01_영주용_기본/09_high_yield_numbers_institutions.md).
-5. Luyện viết và nói ở các file `10`, `11`, sau đó đối chiếu các mẫu tình huống ở file `13`.
-6. Nếu thi 귀화: học thêm toàn bộ `02_귀화용_심화`.
-7. Nếu đã nhớ keyword nhưng chưa hiểu vì sao, làm các [concept labs](90_cross_reference/02_exam_concept_labs.md) rồi quay lại câu trả lời ngắn.
-8. Khi đã hiểu lab, luyện [Master-derived Question Bank](90_cross_reference/03_master_derived_question_bank.md): chọn đáp án, giải thích phương án gần sai và nói lại bằng tiếng Hàn.
+2. Dùng [`00_keyword_master_review.md`](00_keyword_master_review.md) như **master checklist** để biết toàn bộ keyword phải nhận diện; nếu một từ chỉ dịch được mà chưa giải thích được chức năng/cặp dễ nhầm, quay lại chapter owner trước khi đánh dấu đã học.
+3. Nếu mục tiêu trước mắt là 영주: học lần lượt `01_영주용_기본/01~08`.
+4. Học [`00_current_facts_and_corrections.md`](00_current_facts_and_corrections.md) để tránh ghi nhớ dữ liệu cũ.
+5. Luyện [`01_영주용_기본/09_high_yield_numbers_institutions.md`](01_영주용_기본/09_high_yield_numbers_institutions.md).
+6. Luyện viết và nói ở các file `10`, `11`, sau đó đối chiếu các mẫu tình huống ở file `13`.
+7. Nếu thi 귀화: học thêm toàn bộ `02_귀화용_심화`, rồi quay lại master checklist để kiểm tra lớp `심화`.
+8. Nếu đã nhớ keyword nhưng chưa hiểu vì sao, làm các [concept labs](90_cross_reference/02_exam_concept_labs.md) rồi quay lại câu trả lời ngắn.
+9. Khi đã hiểu lab, luyện [Master-derived Question Bank](90_cross_reference/03_master_derived_question_bank.md): chọn đáp án, giải thích phương án gần sai và nói lại bằng tiếng Hàn.
 
 Sau khi đi hết trình tự, quay lại `00_exam_map_and_strategy.md` để tự đánh giá phần nào còn yếu. Việc quay vòng này giúp kế hoạch học thích ứng với kết quả làm bài thay vì chỉ chạy một lần từ đầu đến cuối.
 
