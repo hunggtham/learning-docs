@@ -839,7 +839,7 @@ Phần này bám theo 8 lĩnh vực của bộ `한국사회 이해 기본`. M�
 - `국민권익위원회`: 고충민원·부패방지·행정심판 등 국민 권익 관련 업무를 담당합니다. (Ủy ban Quyền lợi công dân/chống tham nhũng.)
 - `한국소비자원`: 소비자 피해 상담과 분쟁 해결을 지원합니다. (Cơ quan bảo vệ người tiêu dùng.)
 
-**주의 — 2026 형사사법 개편:** legacy 교재/문제에는 `경찰–검찰–법원` 구조가 남아 있을 수 있다. 2026-10-02부터 `검찰청`은 폐지되고 `공소청`과 `중대범죄수사청` 체계가 시행되었다. 현재 제도 질문이라면 `공소청 = 공소 제기·유지 중심`, `중대범죄수사청 = 중대범죄 수사`라는 새 구조를 확인해야 한다. 실제 시험에서는 **해당 회차 공지와 적용 교재의 표현**을 우선 확인한다.
+**주의 — 2026 형사사법 개편:** 이전 교재/문제에는 `경찰–검찰–법원` 구조가 남아 있을 수 있다. 2026-10-02부터 `검찰청`은 폐지되고 `공소청`과 `중대범죄수사청` 체계가 시행되었다. 현재 제도 질문이라면 `공소청 = 공소 제기·유지 중심`, `중대범죄수사청 = 중대범죄 수사`라는 새 구조를 확인해야 한다. 실제 시험에서는 **해당 회차 공지와 적용 교재의 표현**을 우선 확인한다.
 
 ---
 
@@ -1342,7 +1342,7 @@ Các dòng dưới đây là phần dễ mất nhất khi chỉ học keyword. H
 
 # C. 귀화용 심화 — phải học thêm
 
-Phần 심화 không chỉ hỏi “đây là gì?” mà thường đòi hỏi **định nghĩa → lý do → quyền/nghĩa vụ → giới hạn → ví dụ**. Ngoài 5 trục chính thức trong tài liệu Bộ Tư pháp, repo legacy đã triển khai thành 20 cụm để dễ ôn sâu; bảng dưới đây giữ cả hai cách nhìn.
+Phần 심화 không chỉ hỏi “đây là gì?” mà thường đòi hỏi **định nghĩa → lý do → quyền/nghĩa vụ → giới hạn → ví dụ**. Để ôn sâu, master triển khai các trục chính thành nhiều cụm nhỏ hơn theo quan hệ khái niệm; mục tiêu là giúp phân biệt, giải thích và xử lý câu tình huống.
 
 ## C1. 대한민국의 국민
 
@@ -1769,7 +1769,7 @@ Trước ngày thi, mở `00_current_facts_and_corrections.md` và notice mới 
 
 `범죄 발생 → 수사 → 공소 제기 → 재판 → 판결`
 
-Từ 2026-10-02, khi hỏi cơ quan hiện hành phải tách rõ hơn `수사기관` và `공소청`; legacy question có thể vẫn dùng từ `검찰`.
+Từ 2026-10-02, khi hỏi cơ quan hiện hành phải tách rõ hơn `수사기관` và `공소청`; câu hỏi/tài liệu cũ có thể vẫn dùng từ `검찰`.
 
 ---
 
@@ -1996,7 +1996,7 @@ Nguồn chính thức cần kiểm tra khi fact có thể thay đổi:
 - 법무부 출입국·외국인정책본부 이민자 사회통합: https://www.moj.go.kr/immigration/1518/subview.do
 
 **Verified-current layer:** 2026-10-06.  
-Đừng sửa một fact cũ trong giáo trình thành fact mới mà xóa dấu vết lịch sử. Nếu số/quy định thay đổi, giữ rõ hai lớp **교재/legacy state** và **current verified state**, rồi dùng notice kỳ thi để quyết định cách trả lời.
+Đừng sửa một fact cũ trong giáo trình thành fact mới mà xóa dấu vết lịch sử. Nếu số/quy định thay đổi, giữ rõ hai lớp **교재/기존 자료 state** và **current verified state**, rồi dùng notice kỳ thi để quyết định cách trả lời.
 
 ---
 
