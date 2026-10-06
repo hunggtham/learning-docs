@@ -48,6 +48,12 @@ Ví dụ source dùng 300 tích cực, 200 tiêu cực trên 500 câu trả lờ
 
 Composite Index (CI) gộp nhiều chỉ báo; Diffusion Index (DI) quan sát độ rộng số thành phần đang cải thiện. CI trả lời mức độ tổng hợp, DI trả lời mức độ lan tỏa. Hai chỉ số có thể lệch nhau: một vài thành phần lớn kéo CI lên trong khi phần lớn thành phần vẫn yếu. Đây là lý do cần đặt khảo sát cạnh dữ liệu thực tế và chu kỳ, thay vì thay thế chúng.
 
+### Worked CI–DI: mức tăng lớn nhưng độ rộng yếu
+
+Giả sử một composite index có hai thành phần lớn, trọng số lần lượt 40% và 30%, cùng tăng 10%; ba thành phần còn lại, mỗi thành phần trọng số 10%, cùng giảm 2%. Thay đổi tổng hợp minh họa là `0,4×10% + 0,3×10% − 3×0,1×2% = 6,4%`, nên CI tăng khá mạnh. Nhưng chỉ 2/5 thành phần cải thiện, DI theo breadth chỉ là 40%. Tín hiệu lúc này là “mức tổng hợp được kéo bởi nhóm lớn, độ lan tỏa yếu”, không phải một đợt tăng đồng đều.
+
+Ngược lại, nếu 4/5 thành phần cùng tăng 2% nhưng thành phần lớn nhất giảm 5%, DI có thể cao trong khi CI vẫn giảm. Khi hai chỉ số lệch nhau, hãy kiểm tra trọng số, ngành dẫn dắt, số thành phần thực sự cải thiện và thời điểm khảo sát. Không dùng CI để che độ rộng yếu, cũng không dùng DI để bỏ qua cú sốc ở một thành phần có trọng số hệ thống.
+
 ### Độ trễ của chỉ báo và bài kiểm tra lệch pha
 
 Không phải chỉ báo nào cũng đo cùng một thời điểm. Hãy phân loại trước khi suy luận:

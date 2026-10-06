@@ -8,7 +8,7 @@ Bảng này là semantic inventory cấp route. Mỗi ID đại diện cho một
 | B2-C01-S01-U002 | pp.14–18, headings 2–4 | chứng khoán, cổ phiếu, trái phiếu, chỉ số | CLASSIFICATION, TERMINOLOGY | 01 §2 | FULL | Thuật ngữ OCR nhiễu; giữ các mục xác nhận được. |
 | B2-C01-S02-U001 | pp.18–26, heading 5.1 | chu kỳ kinh doanh và chu kỳ cổ phiếu | MECHANISM, CAUSE_EFFECT | 01 §3 | FULL | Có Business Cycle, Kitchin/Juglar/Kondratiev đọc được. |
 | B2-C01-S02-U002 | pp.22–26 | GDP và các chỉ báo vĩ mô liên quan | DEFINITION, VARIABLE | 01 §3 | FULL | Không thêm số liệu hiện tại. |
-| B2-C01-S02-U003 | pp.26–34 | CSI, BSI, composite/diffusion index | FORMULA, INDEX, EXAMPLE | 01 §4 | FULL | Giữ công thức và ví dụ số đọc được. |
+| B2-C01-S02-U003 | pp.26–34 | CSI, BSI, composite/diffusion index | FORMULA, INDEX, EXAMPLE | 01 §4 | FULL | Có worked CI–DI về trọng số và breadth, cùng công thức/ví dụ số đọc được. |
 | B2-C01-S03-U001 | pp.34–42 | phân tích doanh nghiệp, ngành và báo cáo tài chính | PROCESS, CLASSIFICATION | 01 §4 | FULL | Quy trình và ranh giới IFRS/IASC/K-IFRS đã được giải thích; tên tiểu mục không còn làm thiếu mental model. |
 | B2-C01-S03-U002 | pp.52–58 | IFRS/IASC và các khoản mục báo cáo | LEGAL_RULE, TERMINOLOGY | 01 §4 | FULL | Chỉ mô tả textbook-state. |
 | B2-C01-S03-U003 | pp.46–52 | ma trận BCG: Question Mark, Star, Cash Cow, Barking Dog | FRAMEWORK, CLASSIFICATION | 01 §4 | FULL | Giải thích hai trục tăng trưởng/thị phần và giới hạn khi nối sang dòng tiền, ROIC, định giá. |
