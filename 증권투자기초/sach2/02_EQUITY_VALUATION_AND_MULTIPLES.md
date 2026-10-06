@@ -27,6 +27,27 @@ NPV (Net Present Value) là giá trị hiện tại của dòng tiền vào tr�
 
 Đừng nhầm NPV dương với lợi nhuận chắc chắn. NPV là kết quả của mô hình và giả định. Hãy ghi rõ tăng trưởng, biên lợi nhuận, vốn tái đầu tư và discount rate; sau đó kiểm thử kịch bản. Đây là cầu nối sang FCFE/FCFF, nơi cùng một doanh nghiệp được nhìn từ hai nhóm người cung cấp vốn.
 
+### Mô hình chiết khấu cổ tức và tăng trưởng ổn định
+
+Raw đặt cổ tức theo chuỗi thời gian cạnh growth rate để nhấn mạnh rằng giá cổ phiếu có thể được nhìn như giá trị hiện tại của các khoản phân phối cho cổ đông:
+
+```text
+P₀ = D₁/(1+k) + D₂/(1+k)² + ... + Pₙ/(1+k)ⁿ
+```
+
+Trong đó `Dₜ` là cổ tức kỳ `t`, `k` là suất sinh lợi yêu cầu của cổ đông và `Pₙ` là giá trị còn lại ở cuối giai đoạn dự báo. Với giả định cổ tức tăng đều mãi mãi, mô hình Gordon rút gọn thành:
+
+```text
+D₁ = D₀ × (1+g)
+P₀ = D₁ / (k−g),  với k > g
+```
+
+`g` không phải tốc độ tăng doanh thu tùy ý; nó phải nhất quán với tỷ lệ giữ lại lợi nhuận, ROE, nhu cầu tái đầu tư và sức cạnh tranh dài hạn. Nếu `k` tiến sát `g`, mẫu số rất nhỏ và giá mô hình trở nên cực kỳ nhạy; nếu `k ≤ g`, công thức không cho một giá trị ổn định hữu hạn. Đây là điều kiện biên quan trọng, không phải lỗi máy tính.
+
+Ví dụ minh họa: nếu cổ tức hiện tại `D₀ = 4`, tăng trưởng dài hạn `g = 5%` và suất sinh lợi yêu cầu `k = 11%`, thì `D₁ = 4,2` và `P₀ = 4,2/(0,11−0,05) = 70`. Nếu chỉ tăng `g` lên 6% trong khi giữ nguyên `k`, giá mô hình thành `4,24/(0,11−0,06) = 84,8`; phần tăng thêm không đến từ “cổ tức hôm nay” mà từ giả định rằng tăng trưởng cao kéo dài. Vì vậy phải kiểm thử `g` cùng ROE, payout và tái đầu tư thay vì chọn một con số thuận mắt.
+
+Mô hình này nối với các phần sau: cổ tức là dòng tiền cho equity; FCFE mở rộng cách đo tiền có thể phân phối; còn PER/PBR/PSR là các multiple cô đọng kỳ vọng về tăng trưởng và rủi ro. Không được cộng giá trị DDM với FCFE hoặc multiple như các nguồn giá trị độc lập; chúng có thể đang đếm cùng một dòng tiền hai lần.
+
 ## 3. FCFE, FCFF và WACC
 
 FCFE (Free Cash Flow to Equity) là tiền còn lại cho cổ đông sau chi đầu tư, thay đổi vốn lưu động và tài trợ nợ cần thiết. FCFF (Free Cash Flow to Firm) là tiền cho toàn bộ nhà cung cấp vốn trước phân phối giữa nợ và vốn chủ. Source ghi quan hệ khái quát:

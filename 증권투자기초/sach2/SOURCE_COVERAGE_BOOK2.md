@@ -15,6 +15,7 @@ Bảng này là semantic inventory cấp route. Mỗi ID đại diện cho một
 | B2-C02-S01-U001 | pp.78–82 | lãi kép và suất sinh lợi yêu cầu | FORMULA, MECHANISM | 02 §1 | FULL | Bao gồm ví dụ 10% đọc được. |
 | B2-C02-S01-U002 | pp.80–84 | CAPM: risk-free, beta, market premium | FORMULA, VARIABLE | 02 §1 | FULL | Nêu giả định và giới hạn. |
 | B2-C02-S02-U001 | pp.84–88 | NPV và PVGO | FORMULA, DECISION_RULE | 02 §2 | FULL | Phân biệt giá trị tài sản và tăng trưởng. |
+| B2-C02-S02-U004 | pp.84–88 | mô hình chiết khấu cổ tức, chuỗi cổ tức và Gordon growth | FORMULA, MECHANISM, BOUNDARY | 02 §2 | FULL | Có `P₀ = D₁/(k−g)`, điều kiện `k > g` và giới hạn độ nhạy. |
 | B2-C02-S02-U002 | pp.86–90 | FCFE, FCFF, WACC | FORMULA, RELATIONSHIP | 02 §3 | FULL | Giải thích discount-rate boundary. |
 | B2-C02-S02-U003 | pp.88–90 | EVA, NOPAT, invested capital, ROIC | FORMULA, MECHANISM | 02 §4 | FULL | Reconstruct công thức đọc được. |
 | B2-C02-S03-U001 | pp.90–94 | PER và EPS | FORMULA, MULTIPLE | 02 §5 | FULL | Có forward/normalization caveat. |
