@@ -216,6 +216,18 @@ Exception register cũng nên theo dõi concentration. Mười exception nhỏ t
 
 > **Nối mạch:** Exception management làm lộ nơi governance cần phản hồi; Organizational Process Assets và Enterprise Environmental Factors cung cấp bối cảnh. **Organizational structure và authority** kiểm tra quyền xử lý.
 
+## Exception debt: deviation tạm thời có thể trở thành cấu trúc vĩnh viễn
+
+Một exception hợp lệ vẫn tạo **exception debt**: organization phải nhớ vì sao deviation tồn tại, compensating control nào đang giữ exposure ở mức chấp nhận được, ai sở hữu remediation và khi nào exception phải hết hiệu lực. Debt tăng khi exception được gia hạn nhiều lần, không còn owner, hoặc hệ thống phụ thuộc vào workaround đến mức quay về standard trở nên đắt.
+
+Nguy hiểm lớn hơn là **normalization of deviance**. Nếu một control được bypass nhiều lần mà chưa xảy ra incident, team có thể dần coi bypass là “cách làm bình thường”. Không có sự kiện xấu không chứng minh residual risk nhỏ; có thể organization chỉ đang may mắn hoặc exposure chưa gặp đúng trigger.
+
+Vì vậy governance nên theo dõi không chỉ số exception đang mở mà còn **age, renewal count, concentration, compensating-control health và exit cost**. Nhiều exception nhỏ quanh cùng một security, architecture hoặc procurement rule có thể cho thấy standard không phù hợp thực tế—hoặc cho thấy một systemic weakness đang bị chia thành nhiều waiver nhỏ để tránh escalation.
+
+Khi exception lặp lại, có ba hướng khác nhau: remediation để quay về standard; formally thay standard nếu evidence cho thấy rule cũ không còn hợp lý; hoặc redesign governance/control nếu cùng mục tiêu có thể đạt bằng mechanism tốt hơn. Gia hạn tự động là lựa chọn thứ tư nhưng thường là lựa chọn kém nhất vì nó che quyết định thật.
+
+> **Nối mạch:** Exception management xác định deviation có kiểm soát; exception debt cho biết khi deviation bắt đầu thay đổi chính operating model. **OPA/EEF** tiếp theo cung cấp bối cảnh để quyết định standard nên được giữ, sửa hay retire.
+
 ## Organizational tiến trình (process / 프로세스) Assets và Enterprise Environmental Factors
 
 Organizational tiến trình (process / 프로세스) Assets (OPA) gồm template, chính sách (policy / 정책), historical dữ liệu (data / 데이터), lessons learned và tiến trình (process / 프로세스) nội bộ mà dự án (project / 프로젝트) có thể dùng. Enterprise Environmental Factors (EEF) là môi trường (environment / 환경) dự án (project / 프로젝트) phải hoạt động trong đó: culture, cấu trúc (structure / 구조), thị trường (market / 시장), regulation, technology, tài nguyên (resource / 자원) availability.
