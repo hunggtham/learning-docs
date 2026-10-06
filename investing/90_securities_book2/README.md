@@ -39,6 +39,12 @@ Knowledge-bearing formula/table/figure được reconstruct khi evidence đủ, 
 
 Figure technical-analysis không còn đủ ảnh hình học trong OCR được reconstruct bằng structure/prose; chi tiết không đọc chắc không được bịa.
 
+## Reconstruction / enrichment boundary
+
+Worked examples, comparison tables, checklists và failure-mode notes trong route có thể là **editorial reconstruction** để làm cơ chế source dễ học hơn. Chúng không tự tạo thêm source coverage. Một claim chỉ được dùng để chứng minh completeness khi semantic inventory trỏ được về source authority; phần mở rộng như stress/backtest/execution framing chỉ là bridge sang canonical owner.
+
+Ngược lại, cross-link sang canonical owner không được dùng để bù một công thức, distinction hoặc exception mà source yêu cầu nhưng route bỏ sót. Reverse audit của publication pass nằm trong `QUALITY_AUDIT_BOOK2.md`.
+
 ## Canonical owners
 
 Khi cần depth vượt source, đi sang owner tương ứng:
