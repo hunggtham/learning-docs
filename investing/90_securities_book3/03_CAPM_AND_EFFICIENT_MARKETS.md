@@ -4,9 +4,9 @@ Danh mục đã cho thấy diversification loại bớt rủi ro riêng lẻ. CA
 
 ## 1. Từ CAL đến CAPM và CML
 
-CAPM thêm hai giả định vào Markowitz: tồn tại tài sản vô rủi ro mà nhà đầu tư có thể vay/cho vay; thị trường hoàn hảo (**perfect market**) không có thuế và transaction cost, tài sản chia nhỏ vô hạn, giá công khai và nhà đầu tư không tự làm giá. Đây là thế giới chuẩn để suy ra quan hệ, không phải mô tả đầy đủ KRX hay bất kỳ thị trường hiện tại nào.
+**Mô hình định giá tài sản vốn (Capital Asset Pricing Model, CAPM / 자본자산가격결정모형)** thêm hai giả định vào Markowitz: tồn tại tài sản vô rủi ro mà nhà đầu tư có thể vay/cho vay; thị trường hoàn hảo (**perfect market**) không có thuế và transaction cost, tài sản chia nhỏ vô hạn, giá công khai và nhà đầu tư không tự làm giá. Đây là thế giới chuẩn để suy ra quan hệ, không phải mô tả đầy đủ KRX hay bất kỳ thị trường hiện tại nào.
 
-Khi mọi nhà đầu tư kết hợp tài sản vô rủi ro với cùng một **market portfolio**, CAL tiếp tuyến với efficient frontier trở thành **capital market line (CML)**:
+Khi mọi nhà đầu tư kết hợp tài sản vô rủi ro với cùng một **danh mục thị trường (market portfolio / 시장포트폴리오)**, CAL tiếp tuyến với efficient frontier trở thành **đường thị trường vốn (capital market line, CML / 자본시장선)**:
 
 \[
 E(r_p)=r_f+\frac{E(r_m)-r_f}{\sigma_m}\sigma_p.
@@ -28,23 +28,25 @@ Một cổ phiếu có thể có độ lệch chuẩn cao vì rủi ro riêng l�
 \beta_i=\frac{\operatorname{Cov}(r_i,r_m)}{\operatorname{Var}(r_m)}.
 \]
 
-Từ đó **security market line (SML)** của CAPM là:
+Trong công thức beta, (r_i) và (r_m) là return của tài sản và market portfolio trên cùng horizon; covariance và variance vì vậy có cùng scale bình phương, nên beta không có đơn vị. Beta là độ nhạy với market return, không phải tổng risk và không tự đo liquidity/default risk.
+
+Từ đó **đường thị trường chứng khoán (security market line, SML / 증권시장선)** của CAPM là:
 
 \[
 E(r_i)=r_f+\beta_i\,[E(r_m)-r_f].
 \]
 
-Intercept là \(r_f\), slope là market risk premium. \(\beta_m=1\), beta của tài sản vô rủi ro bằng 0, và beta danh mục là trung bình có trọng số của beta cấu phần. Nếu A có beta 1,2 và B beta 1,5, tỷ trọng 40/60 cho beta danh mục 1,38.
+Intercept là (r_f), slope là market risk premium. (r_f), (E(r_i)) và (E(r_m)) phải cùng kỳ và cùng scale; SML giả định beta là statistic phù hợp cho systematic risk trong thế giới CAPM. Nếu beta không ổn định, borrowing/lending rate khác nhau, thị trường có frictions hoặc mô hình một nhân tố bỏ sót risk premium khác, required return từ CAPM chỉ là benchmark chứ không phải giá trị “đúng tuyệt đối”. \(\beta_m=1\), beta của tài sản vô rủi ro bằng 0, và beta danh mục là trung bình có trọng số của beta cấu phần. Nếu A có beta 1,2 và B beta 1,5, tỷ trọng 40/60 cho beta danh mục 1,38.
 
 CML dùng \(\sigma\) và dành cho danh mục hiệu quả; SML dùng \(\beta\) và áp dụng cả cho cổ phiếu riêng lẻ hoặc danh mục chưa đa dạng hóa. Đây là cặp dễ nhầm nhất trong phần CAPM. Khi tài sản nằm trên SML, expected return cao hơn mức beta yêu cầu và giá có xu hướng được mua lên; dưới SML, giá chịu áp lực bán. Trong ví dụ nguồn, \(r_f=5\%\), market return 10%, expected return cổ phiếu 12% cho beta \(\beta=(12-5)/(10-5)=1,4\).
 
 Price adjustment phải đọc theo chiều ngược: beta xác định required return; required return dùng để discount expected cash flow; discount rate và cash flow quyết định price; price mới lại thay đổi expected return. Nếu expected return hiện tại cao hơn SML, price có thể đang thấp so với cash flow dự kiến; buying làm price tăng và expected return giảm về SML. CAPM vì thế là mô hình cân bằng, không phải máy dự báo giá ngày mai.
 
-Phân biệt **intrinsic value** và market price giúp nối CAPM với EMH. Nhà phân tích có thể ước lượng intrinsic value từ cash flow, risk và growth; market price là giá giao dịch hiện tại. Trong thị trường hiệu quả, giá không nhất thiết bằng đúng intrinsic value ở từng thời điểm, nhưng sai lệch có kỳ vọng bằng 0 sau khi xét thông tin, rủi ro và chi phí. Nếu tin rằng intrinsic value cao hơn market price, quyết định mua phải ghi rõ giả định nào chưa được thị trường phản ánh và cơ chế nào sẽ làm giá điều chỉnh; nếu không, “undervalued” chỉ là một con số DCF khác.
+Phân biệt **giá trị nội tại (intrinsic value / 내재가치)** và **giá thị trường (market value/price / 시장가치·시장가격)** giúp nối CAPM với EMH. Nhà phân tích có thể ước lượng intrinsic value từ cash flow, risk và growth; market price là giá giao dịch hiện tại. Trong thị trường hiệu quả, giá không nhất thiết bằng đúng intrinsic value ở từng thời điểm, nhưng sai lệch có kỳ vọng bằng 0 sau khi xét thông tin, rủi ro và chi phí. Nếu tin rằng intrinsic value cao hơn market price, quyết định mua phải ghi rõ giả định nào chưa được thị trường phản ánh và cơ chế nào sẽ làm giá điều chỉnh; nếu không, “undervalued” chỉ là một con số DCF khác.
 
 ## 3. Thị trường hiệu quả và ba tập thông tin
 
-Nguồn phân biệt ba loại hiệu quả: **allocative efficiency** (vốn được phân bổ tới nơi có năng suất phù hợp), **operational efficiency** (giao dịch vận hành với chi phí thấp) và **informational efficiency** (giá phản ánh thông tin). Learning edition tập trung loại thứ ba.
+Nguồn phân biệt ba loại hiệu quả: **hiệu quả phân bổ (allocative efficiency / 배분의 효율성)** (vốn được phân bổ tới nơi có năng suất phù hợp), **hiệu quả vận hành (operational efficiency / 운영의 효율성)** (giao dịch vận hành với chi phí thấp) và **hiệu quả thông tin (informational efficiency / 정보의 효율성)** (giá phản ánh thông tin). Learning edition tập trung loại thứ ba.
 
 Một thị trường thông tin hiệu quả cần nhiều người tham gia độc lập theo đuổi lợi ích, thông tin mới lan truyền độc lập và giá điều chỉnh nhanh. “Giá phản ánh thông tin” nghĩa là khi thông tin công khai, giá thay đổi đủ và nhanh để về giá hợp lý; phản ứng chậm hoặc phản ứng quá mức rồi đảo chiều đều không phù hợp với dạng lý tưởng.
 
@@ -62,9 +64,9 @@ Ma trận kiểm định của nguồn có thể đọc như sau: weak-form xem 
 
 ## 4. Kiểm định, anomaly và behavioral boundary
 
-Weak-form được kiểm tra bằng autocorrelation, random walk và trading rules; semi-strong dùng event study quanh stock split, phát hành, thay đổi kế toán hoặc earnings announcement; strong-form xem giao dịch insider, professional traders và quỹ. Một công bố “doanh thu tăng 30% nhưng giá giảm” không tự chứng minh thị trường kém hiệu quả: nếu consensus đã kỳ vọng tăng 50%, tin 30% là negative surprise.
+Weak-form được kiểm tra bằng autocorrelation, random walk và trading rules; semi-strong dùng **nghiên cứu sự kiện (event study / 사건연구)** quanh stock split, phát hành, thay đổi kế toán hoặc earnings announcement; strong-form xem giao dịch insider, professional traders và quỹ. Một công bố “doanh thu tăng 30% nhưng giá giảm” không tự chứng minh thị trường kém hiệu quả: nếu consensus đã kỳ vọng tăng 50%, tin 30% là negative surprise.
 
-Nguồn ghi nhận các anomaly: long-horizon negative autocorrelation (winner/loser reversal), size effect, low-PER effect và January effect. Nhưng anomaly có thể phản ánh risk model sai, sample/data-mining, transaction cost, thuế hoặc hành vi chứ không tự động bác bỏ EMH. Phần “EMH sau đó” đưa behavioral finance vào boundary: heuristic, overconfidence, mental accounting, framing, representativeness, conservatism và disposition effect có thể tạo pattern có hệ thống; hành vi ấy làm giả định “mọi nhà đầu tư luôn rational” trở nên quá mạnh.
+Nguồn ghi nhận các **bất thường thị trường (anomalies / 이상현상)**: long-horizon negative autocorrelation (winner/loser reversal), size effect, low-PER effect và January effect. Nhưng anomaly có thể phản ánh risk model sai, sample/data-mining, transaction cost, thuế hoặc hành vi chứ không tự động bác bỏ EMH. Phần “EMH sau đó” đưa behavioral finance vào boundary: heuristic, overconfidence, mental accounting, framing, representativeness, conservatism và disposition effect có thể tạo pattern có hệ thống; hành vi ấy làm giả định “mọi nhà đầu tư luôn rational” trở nên quá mạnh.
 
 ### Worked check: winner/loser reversal là source-state, không phải alpha hiện tại
 
@@ -78,7 +80,7 @@ Giả sử doanh thu năm trước là 100. Thị trường đã kỳ vọng doa
 
 ## 5. Quản lý danh mục dưới EMH
 
-Ngay cả khi thị trường hiệu quả, portfolio manager vẫn quyết định mức risk phù hợp với khách hàng, diversification, thuế, transaction costs và benchmark. Active management cố tìm mispricing; passive management chấp nhận giá thị trường và tái tạo market portfolio bằng index fund. Không được suy ra rằng EMH làm mọi hoạt động đầu tư vô nghĩa; nó chỉ chuyển câu hỏi từ “tôi có dự báo tốt hơn không?” sang “exposure, chi phí và mục tiêu của tôi có phù hợp không?”.
+Ngay cả khi thị trường hiệu quả, portfolio manager vẫn quyết định mức risk phù hợp với khách hàng, diversification, thuế, transaction costs và benchmark. **Quản lý chủ động (active management / 적극적 투자관리)** cố tìm mispricing; **quản lý thụ động (passive management / 소극적 투자관리)** chấp nhận giá thị trường và tái tạo market portfolio bằng index fund. Không được suy ra rằng EMH làm mọi hoạt động đầu tư vô nghĩa; nó chỉ chuyển câu hỏi từ “tôi có dự báo tốt hơn không?” sang “exposure, chi phí và mục tiêu của tôi có phù hợp không?”.
 
 Source-question test cần phân biệt đúng weak/semi-strong/strong, CML/SML, beta market bằng 1, risk-free beta bằng 0, và nhận diện vì sao event study khác autocorrelation. Mental model bàn giao sang bài kế tiếp: sau khi biết expected return hợp lý theo risk, ta cần đo xem danh mục đã tạo ra thành quả gì sau chi phí và so với benchmark ra sao.
 
