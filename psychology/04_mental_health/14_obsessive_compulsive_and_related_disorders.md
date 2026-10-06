@@ -12,7 +12,7 @@ Intrusive thought, ảnh (image / 이미지) hoặc impulse không hiếm trong 
 
 Một thought như “mình có thể làm ai đó bị thương” không đồng nghĩa intent. OCD có thể làm người đó interpret thought occurrence như bằng chứng (evidence / 증거) về moral character hoặc danger.
 
-> **Chuyển mạch:** Trong **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **2. Thought–hành động (action / 동작) fusion** tiếp nhận điểm tựa từ **1. Obsession khác normal intrusive thought thế nào?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Inflated responsibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **2. Thought–hành động (action / 동작) fusion** nối từ **1. Obsession khác normal intrusive thought thế nào?** sang **3. Inflated responsibility**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Thought–hành động (action / 동작) fusion
 
@@ -20,7 +20,7 @@ Một thought như “mình có thể làm ai đó bị thương” không đồ
 
 Đây là một cognitive construct có research hỗ trợ (support / 지원), nhưng không xuất hiện giống nhau ở mọi người OCD.
 
-> **Chuyển mạch:** Ở chặng này của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **3. Inflated responsibility** tiếp nhận điểm tựa từ **2. Thought–hành động (action / 동작) fusion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Compulsion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **3. Inflated responsibility** nối từ **2. Thought–hành động (action / 동작) fusion** sang **4. Compulsion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Inflated responsibility
 
@@ -35,7 +35,7 @@ uncertainty
 → responsibility belief remains untested
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **4. Compulsion** tiếp nhận điểm tựa từ **3. Inflated responsibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Reassurance cũng có thể trở thành ritual** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **4. Compulsion** nối từ **3. Inflated responsibility** sang **5. Reassurance cũng có thể trở thành ritual**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Compulsion
 
@@ -43,7 +43,7 @@ Compulsion có thể là observable hành vi (behavior / 동작) như washing/ch
 
 Điểm defining không phải hành vi (behavior / 동작) itself mà hàm (function / 함수): hành vi (behavior / 동작) được performed theo rigid quy tắc (rule / 규칙) để giảm distress hoặc prevent feared kết quả (outcome / 결과) theo quan hệ (relation / 관계) không realistic/proportionate.
 
-> **Chuyển mạch:** Trong **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **5. Reassurance cũng có thể trở thành ritual** tiếp nhận điểm tựa từ **4. Compulsion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. OCD và bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **5. Reassurance cũng có thể trở thành ritual** nối từ **4. Compulsion** sang **6. OCD và bất định (uncertainty / 불확실성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Reassurance cũng có thể trở thành ritual
 
@@ -51,7 +51,7 @@ Repeatedly hỏi partner/doctor/internet “chắc chắn không sao chứ?” c
 
 Reassurance không luôn harmful; ngữ cảnh (context / 맥락) và repetition/hàm (function / 함수) matter.
 
-> **Chuyển mạch:** Ở chặng này của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **6. OCD và bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **5. Reassurance cũng có thể trở thành ritual** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. ERP** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **6. OCD và bất định (uncertainty / 불확실성)** nối từ **5. Reassurance cũng có thể trở thành ritual** sang **7. ERP**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. OCD và bất định (uncertainty / 불확실성)
 
@@ -59,7 +59,7 @@ OCD thường không thể được giải quyết bằng “thêm một lần k
 
 Treatment không đòi người bệnh “tin mọi thứ an toàn”; nó xây sức chứa (capacity / 용량) sống với reasonable bất định (uncertainty / 불확실성) mà không ritualize phản hồi (response / 응답).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **7. ERP** tiếp nhận điểm tựa từ **6. OCD và bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Pure O là label gây hiểu nhầm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **7. ERP** nối từ **6. OCD và bất định (uncertainty / 불확실성)** sang **8. Pure O là label gây hiểu nhầm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. ERP
 
@@ -71,7 +71,7 @@ NICE guidance coi CBT có ERP là cốt lõi (core / 핵심) psychological treat
 
 ERP không nên được hiểu là “bắt người bệnh chạm thứ bẩn cho đến khi hết sợ”. Exposure mục tiêu (target / 대상) phải match obsession/compulsion hàm (function / 함수) và được graded/ethical.
 
-> **Chuyển mạch:** Trong **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **7. ERP** cho ta quy tắc; **8. Pure O là label gây hiểu nhầm** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **9. OCD khác OCPD** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **7. ERP** nêu quy tắc; **8. Pure O là label gây hiểu nhầm** thử quy tắc trong tình huống, rồi **9. OCD khác OCPD** mở rộng hệ quả.
 
 ## 8. Pure O là label gây hiểu nhầm
 
@@ -79,7 +79,7 @@ Một số người có obsession rõ nhưng compulsion chủ yếu mental nên 
 
 Clinical formulation nên tìm mental checking, rumination, reassurance, avoidance và neutralizing.
 
-> **Chuyển mạch:** Ở chặng này của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **8. Pure O là label gây hiểu nhầm** cho ta quy tắc; **9. OCD khác OCPD** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **10. Hoarding và related conditions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **8. Pure O là label gây hiểu nhầm** nêu quy tắc; **9. OCD khác OCPD** thử quy tắc trong tình huống, rồi **10. Hoarding và related conditions** mở rộng hệ quả.
 
 ## 9. OCD khác OCPD
 
@@ -87,7 +87,7 @@ OCD không đồng nhất với **obsessive-compulsive personality disorder (OCP
 
 Tên giống nhau không nghĩa same cơ chế (mechanism / 메커니즘).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **10. Hoarding và related conditions** tiếp nhận điểm tựa từ **9. OCD khác OCPD** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Body dysmorphic disorder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **10. Hoarding và related conditions** nối từ **9. OCD khác OCPD** sang **11. Body dysmorphic disorder**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Hoarding và related conditions
 
@@ -95,7 +95,7 @@ Hoarding disorder, body dysmorphic disorder, trichotillomania và excoriation di
 
 Không nên dùng one-loop explanation cho tất cả. Habit/reward, appearance belief, sensory regulation và urge điều khiển (control / 제어) có thể quan trọng khác nhau.
 
-> **Chuyển mạch:** Trong **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **11. Body dysmorphic disorder** tiếp nhận điểm tựa từ **10. Hoarding và related conditions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Hair pulling và skin picking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **11. Body dysmorphic disorder** nối từ **10. Hoarding và related conditions** sang **12. Hair pulling và skin picking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Body dysmorphic disorder
 
@@ -103,7 +103,7 @@ BDD liên quan preoccupation với perceived defect và repetitive hành vi (beh
 
 Concern không chỉ là “low self-esteem”. Attention độ lệch (bias / 편향), appearance belief và compulsive checking/avoidance có thể duy trì cycle.
 
-> **Chuyển mạch:** Ở chặng này của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **12. Hair pulling và skin picking** tiếp nhận điểm tựa từ **11. Body dysmorphic disorder** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Insight thay đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **12. Hair pulling và skin picking** nối từ **11. Body dysmorphic disorder** sang **13. Insight thay đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Hair pulling và skin picking
 
@@ -111,7 +111,7 @@ Trichotillomania/excoriation có thể involve urge, sensory cue, tension/reward
 
 Behavioral treatment vì vậy có thể sử dụng habit-reversal components thay vì ERP lô-gic (logic / 논리) giống contamination OCD.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **13. Insight thay đổi** tiếp nhận điểm tựa từ **12. Hair pulling và skin picking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Family accommodation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **13. Insight thay đổi** nối từ **12. Hair pulling và skin picking** sang **14. Family accommodation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Insight thay đổi
 
@@ -119,7 +119,7 @@ Người OCD có thể biết fear “không hợp lý” nhưng vẫn cảm th�
 
 Lack of full insight không tự động biến symptom thành psychosis; differential diagnosis cần examine belief chất lượng (quality / 품질), ritual quan hệ (relation / 관계) và broader ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Trong **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **14. Family accommodation** tiếp nhận điểm tựa từ **13. Insight thay đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Medication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **14. Family accommodation** nối từ **13. Insight thay đổi** sang **15. Medication**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Family accommodation
 
@@ -127,7 +127,7 @@ Family có thể vô tình tham gia ritual — trả lời reassurance, kiểm t
 
 Accommodation giảm xung đột (conflict / 충돌) ngắn hạn nhưng có thể maintain disorder. Family involvement trong treatment cần hỗ trợ (support / 지원) without blame.
 
-> **Chuyển mạch:** Ở chặng này của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **15. Medication** tiếp nhận điểm tựa từ **14. Family accommodation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. OCD và moral/religious themes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **15. Medication** nối từ **14. Family accommodation** sang **16. OCD và moral/religious themes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Medication
 
@@ -135,7 +135,7 @@ SSRIs có bằng chứng (evidence / 증거) trong OCD và có thể được us
 
 Xem [[../05_intervention/02_biological_and_community_treatment]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **16. OCD và moral/religious themes** tiếp nhận điểm tựa từ **15. Medication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **16. OCD và moral/religious themes** nối từ **15. Medication** sang **17. Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. OCD và moral/religious themes
 
@@ -145,7 +145,7 @@ Content alone không cho biết diagnosis; mẫu (pattern / 패턴) of intrusion
 
 Cultural/religious ngữ cảnh (context / 맥락) phải được hiểu trước khi label belief “obsessive”.
 
-> **Chuyển mạch:** Trong **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **17. Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **16. OCD và moral/religious themes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **17. Những hiểu lầm phổ biến** nối từ **16. OCD và moral/religious themes** sang **18. Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Những hiểu lầm phổ biến
 
@@ -157,7 +157,7 @@ Cultural/religious ngữ cảnh (context / 맥락) phải được hiểu trư�
 
 **“Nếu reassurance làm người bệnh dịu thì nên reassurance mãi.”** Temporary relief có thể reinforce vòng lặp (loop / 루프).
 
-> **Chuyển mạch:** Ở chặng này của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **18. Mô hình tư duy** gom các mảnh từ **17. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Bằng chứng (evidence / 증거) anchors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **18. Mô hình tư duy** tổng hợp từ **17. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Bằng chứng (evidence / 증거) anchors** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. Mô hình tư duy
 
@@ -172,7 +172,7 @@ intrusive event
 → obsession–ritual relation strengthened
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **18. Mô hình tư duy** nêu điều cần giải thích; **Bằng chứng (evidence / 증거) anchors** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **18. Mô hình tư duy** đặt vấn đề; **Bằng chứng (evidence / 증거) anchors** đối chiếu bằng chứng, rồi **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Bằng chứng (evidence / 증거) anchors
 
@@ -181,7 +181,7 @@ Các evidence anchors dưới đây nối mô hình obsession–compulsion với
 - NICE CG31: Obsessive-compulsive disorder and body dysmorphic disorder.
 - Treatment bằng chứng (evidence / 증거) should be interpreted with individual impairment, comorbidity and preference.
 
-> **Chuyển mạch:** Trong **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **Bằng chứng (evidence / 증거) anchors** nêu điều cần giải thích; **Kết nối kiến thức** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **OCD và các rối loạn liên quan ám ảnh–cưỡng chế**, **Bằng chứng (evidence / 증거) anchors** đặt vấn đề; **Kết nối kiến thức** đối chiếu bằng chứng. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

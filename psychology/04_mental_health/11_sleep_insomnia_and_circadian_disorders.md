@@ -32,7 +32,7 @@ sleep pressure + circadian timing + arousal
               khả năng ngủ
 ```
 
-> **Chuyển mạch:** Trong **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Chronotype** tiếp nhận điểm tựa từ **Hai hệ điều khiển giấc ngủ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mất ngủ — insomnia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Chronotype** nối từ **Hai hệ điều khiển giấc ngủ** sang **Mất ngủ — insomnia**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chronotype
 
@@ -42,7 +42,7 @@ Chronotype chịu ảnh hưởng sinh học, tuổi và light exposure, nhưng k
 
 Gọi mọi người ngủ muộn là “thiếu kỷ luật” bỏ qua biology, nhưng biology cũng không có nghĩa schedule không thể điều chỉnh.
 
-> **Chuyển mạch:** Ở chặng này của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Mất ngủ — insomnia** tiếp nhận điểm tựa từ **Chronotype** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Conditioned arousal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Mất ngủ — insomnia** nối từ **Chronotype** sang **Conditioned arousal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mất ngủ — insomnia
 
@@ -61,7 +61,7 @@ một vài đêm ngủ kém
 
 Vì vậy paradox của insomnia là **càng cố kiểm soát sleep trực tiếp, sleep càng khó xuất hiện**.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Conditioned arousal** tiếp nhận điểm tựa từ **Mất ngủ — insomnia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **CBT-I** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Conditioned arousal** nối từ **Mất ngủ — insomnia** sang **CBT-I**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Conditioned arousal
 
@@ -69,7 +69,7 @@ Nếu một người nằm trên giường hàng giờ để lo lắng, lướt 
 
 Đây là lý do **stimulus điều khiển (control / 제어)** trong CBT-I thường nhắm tái liên kết bed với sleep.
 
-> **Chuyển mạch:** Trong **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **CBT-I** tiếp nhận điểm tựa từ **Conditioned arousal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sleep restriction không phải “cố thiếu ngủ”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **CBT-I** nối từ **Conditioned arousal** sang **Sleep restriction không phải “cố thiếu ngủ”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## CBT-I
 
@@ -84,7 +84,7 @@ Nếu một người nằm trên giường hàng giờ để lo lắng, lướt 
 
 Điểm quan trọng: **sleep hygiene đơn thuần không tương đương CBT-I**. Nhiều người biết tránh caffeine nhưng vẫn insomnia vì conditioned arousal và maladaptive sleep effort chưa được xử lý.
 
-> **Chuyển mạch:** Ở chặng này của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Sleep restriction không phải “cố thiếu ngủ”** tiếp nhận điểm tựa từ **CBT-I** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Circadian rhythm sleep-wake disorders** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Sleep restriction không phải “cố thiếu ngủ”** nối từ **CBT-I** sang **Circadian rhythm sleep-wake disorders**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sleep restriction không phải “cố thiếu ngủ”
 
@@ -92,7 +92,7 @@ Trong CBT-I, sleep restriction therapy giới hạn time-in-bed theo sleep abili
 
 Đây là clinical technique, cần thận trọng ở một số điều kiện (condition / 조건) như bipolar disorder, epilepsy hoặc high fall rủi ro (risk / 위험). Không nên tự áp dụng cực đoan.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Circadian rhythm sleep-wake disorders** tiếp nhận điểm tựa từ **Sleep restriction không phải “cố thiếu ngủ”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Light là zeitgeber mạnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Circadian rhythm sleep-wake disorders** nối từ **Sleep restriction không phải “cố thiếu ngủ”** sang **Light là zeitgeber mạnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Circadian rhythm sleep-wake disorders
 
@@ -109,7 +109,7 @@ Treatment có thể dùng:
 
 Timing rất quan trọng; “uống melatonin lúc nào cũng được” là hiểu sai.
 
-> **Chuyển mạch:** Trong **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Light là zeitgeber mạnh** tiếp nhận điểm tựa từ **Circadian rhythm sleep-wake disorders** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xã hội (social / 사회적) jetlag** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Light là zeitgeber mạnh** nối từ **Circadian rhythm sleep-wake disorders** sang **Xã hội (social / 사회적) jetlag**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Light là zeitgeber mạnh
 
@@ -117,7 +117,7 @@ Timing rất quan trọng; “uống melatonin lúc nào cũng được” là h
 
 Morning light thường giúp kéo rhythm sớm hơn; bright light vào tối có thể delay rhythm. Nhưng tác động (effect / 효과) phụ thuộc phase hiện tại, nên không nên áp dụng như một quy tắc (rule / 규칙) đơn giản cho mọi người.
 
-> **Chuyển mạch:** Ở chặng này của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Xã hội (social / 사회적) jetlag** tiếp nhận điểm tựa từ **Light là zeitgeber mạnh** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sleep inertia** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Xã hội (social / 사회적) jetlag** nối từ **Light là zeitgeber mạnh** sang **Sleep inertia**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xã hội (social / 사회적) jetlag
 
@@ -132,7 +132,7 @@ weekend: 03:00 → 11:00
 
 Monday morning lúc đó giống một mini time-zone shift.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Sleep inertia** tiếp nhận điểm tựa từ **Xã hội (social / 사회적) jetlag** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Napping** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Sleep inertia** nối từ **Xã hội (social / 사회적) jetlag** sang **Napping**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sleep inertia
 
@@ -140,7 +140,7 @@ Monday morning lúc đó giống một mini time-zone shift.
 
 Nó giải thích vì sao “đã ngủ đủ 8 tiếng” không đảm bảo tỉnh ngay lập tức.
 
-> **Chuyển mạch:** Trong **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Napping** tiếp nhận điểm tựa từ **Sleep inertia** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Caffeine** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Napping** nối từ **Sleep inertia** sang **Caffeine**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Napping
 
@@ -150,7 +150,7 @@ Nap dài hoặc quá muộn có thể giảm homeostatic sleep pressure buổi t
 
 Nhưng với sleep deprivation cấp tính, shift công việc (work / 작업) hoặc một số schedule đặc biệt, nap có thể rất hữu ích.
 
-> **Chuyển mạch:** Ở chặng này của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Caffeine** tiếp nhận điểm tựa từ **Napping** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Alcohol** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Caffeine** nối từ **Napping** sang **Alcohol**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Caffeine
 
@@ -158,13 +158,13 @@ Caffeine chủ yếu chặn adenosine receptor, giảm cảm giác sleep pressur
 
 Một người uống coffee chiều có thể vẫn ngủ được nhưng sleep độ sâu (depth / 깊이) hoặc độ trễ (latency / 지연 시간) bị ảnh hưởng. Vì vậy “tôi ngủ được nên caffeine không ảnh hưởng” chưa chắc đúng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Alcohol** tiếp nhận điểm tựa từ **Caffeine** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sleep apnea** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Alcohol** nối từ **Caffeine** sang **Sleep apnea**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Alcohol
 
 Alcohol có thể làm sleep onset nhanh hơn nhưng thường fragment sleep về sau và ảnh hưởng kiến trúc (architecture / 아키텍처). Dùng alcohol như sleep aid có thể tạo vòng dependence nguy hiểm.
 
-> **Chuyển mạch:** Trong **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Sleep apnea** tiếp nhận điểm tựa từ **Alcohol** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Restless legs và movement disorders** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Sleep apnea** nối từ **Alcohol** sang **Restless legs và movement disorders**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sleep apnea
 
@@ -174,7 +174,7 @@ Dấu hiệu có thể gồm snoring, witnessed apnea, morning headache hoặc d
 
 OSA là medical điều kiện (condition / 조건) cần assessment; sleep-hygiene advice không giải quyết airway obstruction.
 
-> **Chuyển mạch:** Ở chặng này của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Restless legs và movement disorders** tiếp nhận điểm tựa từ **Sleep apnea** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sleep và depression** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Restless legs và movement disorders** nối từ **Sleep apnea** sang **Sleep và depression**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Restless legs và movement disorders
 
@@ -182,7 +182,7 @@ Restless Legs Syndrome gây urge khó chịu muốn cử động chân, thườn
 
 Một lần nữa, “khó ngủ” là symptom chung của nhiều cơ chế (mechanism / 메커니즘) khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Sleep và depression** tiếp nhận điểm tựa từ **Restless legs và movement disorders** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sleep và bipolar disorder** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Sleep và depression** nối từ **Restless legs và movement disorders** sang **Sleep và bipolar disorder**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sleep và depression
 
@@ -192,7 +192,7 @@ Insomnia kéo dài có thể làm emotion regulation kém hơn, còn depression 
 
 Xem [[03_depression_bipolar_and_suicidality]].
 
-> **Chuyển mạch:** Trong **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Sleep và bipolar disorder** tiếp nhận điểm tựa từ **Sleep và depression** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sleep và anxiety** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Sleep và bipolar disorder** nối từ **Sleep và depression** sang **Sleep và anxiety**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sleep và bipolar disorder
 
@@ -200,7 +200,7 @@ Giảm nhu cầu ngủ có thể là dấu hiệu mania/hypomania, khác với i
 
 Sleep mất mát (loss / 손실) cũng có thể destabilize mood ở người vulnerable. Vì vậy extreme sleep-restriction technique cần đặc biệt cẩn thận.
 
-> **Chuyển mạch:** Ở chặng này của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Sleep và anxiety** tiếp nhận điểm tựa từ **Sleep và bipolar disorder** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Sleep và cognitive hiệu năng (performance / 성능)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Sleep và anxiety** nối từ **Sleep và bipolar disorder** sang **Sleep và cognitive hiệu năng (performance / 성능)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sleep và anxiety
 
@@ -208,7 +208,7 @@ Anxiety tăng physiological arousal và threat monitoring. Ngược lại sleep 
 
 Hai hệ có thể tạo vòng phản hồi (feedback loop / 피드백 루프).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Sleep và cognitive hiệu năng (performance / 성능)** tiếp nhận điểm tựa từ **Sleep và anxiety** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Shift công việc (work / 작업)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Sleep và cognitive hiệu năng (performance / 성능)** nối từ **Sleep và anxiety** sang **Shift công việc (work / 작업)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Sleep và cognitive hiệu năng (performance / 성능)
 
@@ -218,7 +218,7 @@ Người thiếu ngủ có thể **không nhận ra mình đang kém đến mứ
 
 Điều này quan trọng trong driving, on-call công việc (work / 작업), coding môi trường vận hành (production / 운영 환경) và medical decision-making.
 
-> **Chuyển mạch:** Trong **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Shift công việc (work / 작업)** tiếp nhận điểm tựa từ **Sleep và cognitive hiệu năng (performance / 성능)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Shift công việc (work / 작업)** nối từ **Sleep và cognitive hiệu năng (performance / 성능)** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Shift công việc (work / 작업)
 
@@ -232,7 +232,7 @@ Shift công việc (work / 작업) tạo xung đột (conflict / 충돌) giữa 
 
 Đổ toàn bộ responsibility lên cá nhân là không đủ nếu schedule tổ chức gây chronic circadian disruption.
 
-> **Chuyển mạch:** Ở chặng này của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Shift công việc (work / 작업)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Những hiểu lầm phổ biến** nối từ **Shift công việc (work / 작업)** sang **Mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -246,13 +246,13 @@ Shift công việc (work / 작업) tạo xung đột (conflict / 충돌) giữa 
 
 **“Sleep hygiene chữa được mọi insomnia.”** Insomnia chronic thường cần intervention sâu hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Sleep tốt xuất hiện khi **sleep pressure đủ cao, circadian timing phù hợp và arousal đủ thấp**. Đừng chỉ hỏi “làm sao ngủ nhanh hơn”; hãy hỏi hệ nào đang cản sleep.
 
-> **Chuyển mạch:** Trong **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Giấc ngủ, mất ngủ và rối loạn nhịp sinh học — Sleep, Insomnia & Circadian Disorders / 수면·불면·일주기**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

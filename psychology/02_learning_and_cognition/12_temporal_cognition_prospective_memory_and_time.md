@@ -10,7 +10,7 @@ Một phút trên đồng hồ luôn dài 60 giây, nhưng subjective experience
 
 Arousal, boredom, novelty, emotion và attention đều ảnh hưởng thời gian (time / 시간) perception. Vì vậy cảm giác “hôm nay thời gian chạy nhanh” là thuộc tính (property / 속성) của experience chứ không phải clock thay đổi.
 
-> **Chuyển mạch:** Trong **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Prospective bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **Subjective thời gian (time / 시간) không giống clock thời gian (time / 시간)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Why we forget intentions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Prospective bộ nhớ (memory / 메모리)** nối từ **Subjective thời gian (time / 시간) không giống clock thời gian (time / 시간)** sang **Why we forget intentions**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Prospective bộ nhớ (memory / 메모리)
 
@@ -20,7 +20,7 @@ Nó khác retrospective bộ nhớ (memory / 메모리) ở chỗ không chỉ n
 
 Có hai dạng phổ biến. **Event-based prospective bộ nhớ (memory / 메모리)** được trigger bởi sự kiện (event / 이벤트) như “khi gặp A thì hỏi B”. **Time-based prospective bộ nhớ (memory / 메모리)** cần tự theo dõi thời gian như “đúng 17:00 phải gửi report”. Dạng time-based thường cần self-monitoring nhiều hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Why we forget intentions** tiếp nhận điểm tựa từ **Prospective bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Reminder như bên ngoài (external / 외부) trigger** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Why we forget intentions** nối từ **Prospective bộ nhớ (memory / 메모리)** sang **Reminder như bên ngoài (external / 외부) trigger**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Why we forget intentions
 
@@ -28,7 +28,7 @@ Intentions cạnh tranh với hiện tại (current / 현재) tác vụ (task / 
 
 Đây là lý do nói “tôi biết mà, chỉ quên làm” không mâu thuẫn. kiến thức (knowledge / 지식) tồn tại nhưng retrieval đúng thời điểm thất bại.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Reminder như bên ngoài (external / 외부) trigger** tiếp nhận điểm tựa từ **Why we forget intentions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiện thực (implementation / 구현) intention** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Reminder như bên ngoài (external / 외부) trigger** nối từ **Why we forget intentions** sang **Hiện thực (implementation / 구현) intention**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Reminder như bên ngoài (external / 외부) trigger
 
@@ -36,7 +36,7 @@ Calendar, alarm và location-based reminder chuyển burden từ nội bộ (int
 
 Reminder tốt cần xuất hiện gần ngữ cảnh (context / 맥락) có thể hành động. Reminder lúc 9 giờ sáng về việc chỉ có thể làm lúc tối có thể tạo acknowledgment nhưng không tạo completion.
 
-> **Chuyển mạch:** Trong **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Hiện thực (implementation / 구현) intention** tiếp nhận điểm tựa từ **Reminder như bên ngoài (external / 외부) trigger** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Planning fallacy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Hiện thực (implementation / 구현) intention** nối từ **Reminder như bên ngoài (external / 외부) trigger** sang **Planning fallacy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiện thực (implementation / 구현) intention
 
@@ -44,7 +44,7 @@ Reminder tốt cần xuất hiện gần ngữ cảnh (context / 맥락) có th�
 
 Ví dụ “sau khi đánh răng tối, tôi sẽ mở Anki 10 phút” thường mạnh hơn goal mơ hồ “tối nay học”. hiện thực (implementation / 구현) intention không bảo đảm success nếu tải công việc (workload / 워크로드) quá cao, nhưng nó giảm ambiguity ở moment of hành động (action / 동작).
 
-> **Chuyển mạch:** Ở chặng này của **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Planning fallacy** tiếp nhận điểm tựa từ **Hiện thực (implementation / 구현) intention** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Temporal discounting** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Planning fallacy** nối từ **Hiện thực (implementation / 구현) intention** sang **Temporal discounting**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Planning fallacy
 
@@ -52,7 +52,7 @@ Ví dụ “sau khi đánh răng tối, tôi sẽ mở Anki 10 phút” thườn
 
 Kỹ thuật hữu ích là **outside view**: trước khi estimate, xem những tác vụ (task / 작업) gần giống trước đây mất bao lâu. Trong software development, historical lead thời gian (time / 시간) thường đáng tin hơn cảm giác “lần này chắc nhanh”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Temporal discounting** tiếp nhận điểm tựa từ **Planning fallacy** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Procrastination** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Temporal discounting** nối từ **Planning fallacy** sang **Procrastination**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Temporal discounting
 
@@ -62,7 +62,7 @@ Technical debt, saving, exercise và study đều có cấu trúc này. `Không 
 
 Precommitment và môi trường (environment / 환경) thiết kế (design / 설계) giúp bằng cách thay quyết định (decision / 결정) kiến trúc (architecture / 아키텍처) trước khi temptation xuất hiện.
 
-> **Chuyển mạch:** Trong **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Procrastination** tiếp nhận điểm tựa từ **Temporal discounting** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Deadline và Parkinson-like effects** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Procrastination** nối từ **Temporal discounting** sang **Deadline và Parkinson-like effects**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Procrastination
 
@@ -82,7 +82,7 @@ deadline gần hơn → stress tăng
 
 Intervention tốt có thể giảm activation năng lượng (energy / 에너지), chia next hành động (action / 동작) nhỏ, tạo cue rõ và chấp nhận discomfort thay vì đợi motivation hoàn hảo.
 
-> **Chuyển mạch:** Ở chặng này của **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Deadline và Parkinson-like effects** tiếp nhận điểm tựa từ **Procrastination** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thời gian (time / 시간) estimation trong kiến thức (knowledge / 지식) công việc (work / 작업)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Deadline và Parkinson-like effects** nối từ **Procrastination** sang **Thời gian (time / 시간) estimation trong kiến thức (knowledge / 지식) công việc (work / 작업)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Deadline và Parkinson-like effects
 
@@ -90,7 +90,7 @@ Deadline tạo ràng buộc (constraint / 제약조건) giúp prioritize, nhưng
 
 Một dự án (project / 프로젝트) dài thường tốt hơn khi có intermediate milestone tạo phản hồi (feedback / 피드백) thật, không chỉ chia ngày cho đẹp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Thời gian (time / 시간) estimation trong kiến thức (knowledge / 지식) công việc (work / 작업)** tiếp nhận điểm tựa từ **Deadline và Parkinson-like effects** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Future self** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Thời gian (time / 시간) estimation trong kiến thức (knowledge / 지식) công việc (work / 작업)** nối từ **Deadline và Parkinson-like effects** sang **Future self**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Thời gian (time / 시간) estimation trong kiến thức (knowledge / 지식) công việc (work / 작업)
 
@@ -98,13 +98,13 @@ Kiến thức (knowledge / 지식) công việc (work / 작업) có variance l�
 
 Phạm vi (range / 범위) estimate và tường minh (explicit / 명시적) giả định (assumption / 가정) tốt hơn: “2–4 ngày nếu API ổn định; thêm 1–2 ngày nếu phải migrate lược đồ (schema / 스키마)”. Điều này kết nối với [[08_decision_under_risk_uncertainty_and_ambiguity]].
 
-> **Chuyển mạch:** Trong **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Future self** tiếp nhận điểm tựa từ **Thời gian (time / 시간) estimation trong kiến thức (knowledge / 지식) công việc (work / 작업)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Episodic future thinking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Future self** nối từ **Thời gian (time / 시간) estimation trong kiến thức (knowledge / 지식) công việc (work / 작업)** sang **Episodic future thinking**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Future self
 
 Con người đôi khi đối xử future self như một người khác: present self hưởng reward, future self trả chi phí (cost / 비용). Tăng psychological continuity với future self có thể làm long-term choice salient hơn, nhưng không thay thế ràng buộc (constraint / 제약조건) vật chất.
 
-> **Chuyển mạch:** Ở chặng này của **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Episodic future thinking** tiếp nhận điểm tựa từ **Future self** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Episodic future thinking** nối từ **Future self** sang **Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Episodic future thinking
 
@@ -112,7 +112,7 @@ Con người đôi khi đối xử future self như một người khác: presen
 
 Nhưng future simulation cũng chịu độ lệch (bias / 편향) từ hiện tại (current / 현재) mood và autobiographical bộ nhớ (memory / 메모리). Xem [[11_emotion_memory_and_affective_cognition]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **Episodic future thinking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Những hiểu lầm phổ biến** nối từ **Episodic future thinking** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm phổ biến
 
@@ -124,7 +124,7 @@ Nhưng future simulation cũng chịu độ lệch (bias / 편향) từ hiện t
 
 **“Estimate tốt là đưa ra một con số chính xác.”** Với bất định (uncertainty / 불확실성) cao, phạm vi (range / 범위) và giả định (assumption / 가정) thường trung thực hơn.
 
-> **Chuyển mạch:** Trong **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -143,7 +143,7 @@ future intention
 
 > Quản lý thời gian hiệu quả không chỉ là chia lịch; đó là thiết kế cue, future reward, bất định (uncertainty / 불확실성) và emotion quanh hành động.
 
-> **Chuyển mạch:** Ở chặng này của **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Nhận thức thời gian và trí nhớ tương lai — Temporal Cognition & Prospective bộ nhớ (memory / 메모리)**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

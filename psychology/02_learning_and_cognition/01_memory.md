@@ -16,7 +16,7 @@ Khi một sự kiện xảy ra, hệ thần kinh chọn lọc thông tin theo at
 
 Nếu mục tiêu là dùng một từ tiếng Anh trong conversation, chỉ nhớ nghĩa tiếng Việt là chưa đủ. Người học cần pronunciation, collocation, grammar mẫu (pattern / 패턴) và ngữ cảnh (context / 맥락) sử dụng.
 
-> **Chuyển mạch:** Trong **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **2. Trí nhớ làm việc** tiếp nhận điểm tựa từ **1. Mã hóa: bộ não không “ghi hình” toàn bộ trải nghiệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Tải nhận thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **2. Trí nhớ làm việc** nối từ **1. Mã hóa: bộ não không “ghi hình” toàn bộ trải nghiệm** sang **3. Tải nhận thức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Trí nhớ làm việc
 
@@ -26,7 +26,7 @@ Các mô hình (model / 모델) như Baddeley–Hitch mô tả những thành ph
 
 Chuyên môn làm giảm tải (load / 로드) vì nhiều element được nén thành **chunk**. Một beginner thấy một SQL truy vấn (query / 쿼리) dài là hàng chục đơn vị từ (token / 토큰); expert nhận ra vài mẫu (pattern / 패턴) quen thuộc.
 
-> **Chuyển mạch:** Ở chặng này của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **3. Tải nhận thức** tiếp nhận điểm tựa từ **2. Trí nhớ làm việc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Trí nhớ dài hạn không phải một hệ duy nhất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **3. Tải nhận thức** nối từ **2. Trí nhớ làm việc** sang **4. Trí nhớ dài hạn không phải một hệ duy nhất**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Tải nhận thức
 
@@ -36,7 +36,7 @@ Tuy nhiên “cognitive tải (load / 로드) lý thuyết (theory / 이론)” 
 
 Xem [[09_learning_transfer_forgetting_and_durable_knowledge]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **4. Trí nhớ dài hạn không phải một hệ duy nhất** tiếp nhận điểm tựa từ **3. Tải nhận thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Củng cố trí nhớ và sleep** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **4. Trí nhớ dài hạn không phải một hệ duy nhất** nối từ **3. Tải nhận thức** sang **5. Củng cố trí nhớ và sleep**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Trí nhớ dài hạn không phải một hệ duy nhất
 
@@ -44,7 +44,7 @@ Xem [[09_learning_transfer_forgetting_and_durable_knowledge]].
 
 Các các hệ thống (systems / 시스템들) này tương tác nhưng không đồng nhất. Người có difficulty episodic bộ nhớ (memory / 메모리) vẫn có thể duy trì một số procedural học tập (learning / 학습); ngược lại, biết một fact không đồng nghĩa thực hiện skill thành thạo.
 
-> **Chuyển mạch:** Trong **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **5. Củng cố trí nhớ và sleep** tiếp nhận điểm tựa từ **4. Trí nhớ dài hạn không phải một hệ duy nhất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Retrieval là một học tập (learning / 학습) sự kiện (event / 이벤트)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **5. Củng cố trí nhớ và sleep** nối từ **4. Trí nhớ dài hạn không phải một hệ duy nhất** sang **6. Retrieval là một học tập (learning / 학습) sự kiện (event / 이벤트)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Củng cố trí nhớ và sleep
 
@@ -56,7 +56,7 @@ Sleep có vai trò với attention, encoding và consolidation. Nhưng ngủ sau
 
 Xem [[../01_brain_and_mind/08_sleep_circadian_and_recovery]].
 
-> **Chuyển mạch:** Ở chặng này của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **6. Retrieval là một học tập (learning / 학습) sự kiện (event / 이벤트)** tiếp nhận điểm tựa từ **5. Củng cố trí nhớ và sleep** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Spacing và interleaving** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **6. Retrieval là một học tập (learning / 학습) sự kiện (event / 이벤트)** nối từ **5. Củng cố trí nhớ và sleep** sang **7. Spacing và interleaving**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Retrieval là một học tập (learning / 학습) sự kiện (event / 이벤트)
 
@@ -66,7 +66,7 @@ Rereading tạo familiarity và dễ gây **ảo tưởng biết (illusion of co
 
 > **Bằng chứng tương đối vững:** retrieval practice và spacing thường cải thiện retention dài hạn so với massed rereading trong nhiều học tập (learning / 학습) settings, dù tác động (effect / 효과) phụ thuộc tác vụ (task / 작업), timing và phản hồi (feedback / 피드백).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **7. Spacing và interleaving** tiếp nhận điểm tựa từ **6. Retrieval là một học tập (learning / 학습) sự kiện (event / 이벤트)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Quên không chỉ do thời gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **7. Spacing và interleaving** nối từ **6. Retrieval là một học tập (learning / 학습) sự kiện (event / 이벤트)** sang **8. Quên không chỉ do thời gian**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Spacing và interleaving
 
@@ -74,7 +74,7 @@ Rereading tạo familiarity và dễ gây **ảo tưởng biết (illusion of co
 
 Interleaving đặc biệt hữu ích khi mục tiêu là discrimination giữa categories gần nhau. Nhưng không phải mọi tác vụ (task / 작업) đều benefit như nhau; novice đôi khi cần khối (block / 블록) practice ban đầu để hình thành lược đồ (schema / 스키마) trước.
 
-> **Chuyển mạch:** Trong **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **8. Quên không chỉ do thời gian** tiếp nhận điểm tựa từ **7. Spacing và interleaving** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Cue và encoding specificity** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **8. Quên không chỉ do thời gian** nối từ **7. Spacing và interleaving** sang **9. Cue và encoding specificity**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Quên không chỉ do thời gian
 
@@ -91,7 +91,7 @@ Forgetting có thể đến từ:
 
 Quên một phần có thể adaptive: nếu mọi dấu vết (trace / 추적) đều equally accessible, interference sẽ rất lớn.
 
-> **Chuyển mạch:** Ở chặng này của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **9. Cue và encoding specificity** tiếp nhận điểm tựa từ **8. Quên không chỉ do thời gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. nguồn (source / 소스) monitoring** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **9. Cue và encoding specificity** nối từ **8. Quên không chỉ do thời gian** sang **10. nguồn (source / 소스) monitoring**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Cue và encoding specificity
 
@@ -99,7 +99,7 @@ Retrieval thường mạnh hơn khi cue overlap với cách bộ nhớ (memory /
 
 Một learner chỉ học concept trong một chính xác (exact / 정확한) wording có thể thất bại (fail / 실패) khi exam hỏi bằng wording khác. Để transfer tốt, nên bản dựng (build / 빌드) multiple retrieval routes: definition, example, counterexample, comparison và ứng dụng (application / 애플리케이션).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **9. Cue và encoding specificity** nêu điều cần giải thích; **10. nguồn (source / 소스) monitoring** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. bộ nhớ (memory / 메모리) distortion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **9. Cue và encoding specificity** đặt vấn đề; **10. nguồn (source / 소스) monitoring** đối chiếu bằng chứng, rồi **11. bộ nhớ (memory / 메모리) distortion** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 10. nguồn (source / 소스) monitoring
 
@@ -107,7 +107,7 @@ Một learner chỉ học concept trong một chính xác (exact / 정확한) wo
 
 Source-monitoring thất bại (failure / 실패) quan trọng trong misinformation, eyewitness bộ nhớ (memory / 메모리) và AI-assisted công việc (work / 작업). Vì vậy ghi chú (note / 노트) hệ thống (system / 시스템) tốt nên lưu provenance: nguồn (source / 소스), confidence, bằng chứng (evidence / 증거) status và interpretation.
 
-> **Chuyển mạch:** Trong **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **10. nguồn (source / 소스) monitoring** nêu điều cần giải thích; **11. bộ nhớ (memory / 메모리) distortion** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **12. Emotion và bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **10. nguồn (source / 소스) monitoring** đặt vấn đề; **11. bộ nhớ (memory / 메모리) distortion** đối chiếu bằng chứng, rồi **12. Emotion và bộ nhớ (memory / 메모리)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 11. bộ nhớ (memory / 메모리) distortion
 
@@ -117,7 +117,7 @@ Confidence có relationship với accuracy trong một số conditions, nhưng k
 
 Xem [[07_memory_distortion_eyewitness_and_false_memory]].
 
-> **Chuyển mạch:** Ở chặng này của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **12. Emotion và bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **11. bộ nhớ (memory / 메모리) distortion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Reconsolidation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **12. Emotion và bộ nhớ (memory / 메모리)** nối từ **11. bộ nhớ (memory / 메모리) distortion** sang **13. Reconsolidation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Emotion và bộ nhớ (memory / 메모리)
 
@@ -127,7 +127,7 @@ Bộ nhớ (memory / 메모리) cũng tác động ngược lên emotion: autobi
 
 Xem [[11_emotion_memory_and_affective_cognition]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **13. Reconsolidation** tiếp nhận điểm tựa từ **12. Emotion và bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Prospective bộ nhớ (memory / 메모리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **13. Reconsolidation** nối từ **12. Emotion và bộ nhớ (memory / 메모리)** sang **14. Prospective bộ nhớ (memory / 메모리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Reconsolidation
 
@@ -135,7 +135,7 @@ Khi một bộ nhớ (memory / 메모리) được reactivated, biểu diễn (r
 
 > **Trạng thái bằng chứng:** reconsolidation phenomena có empirical hỗ trợ (support / 지원), nhưng mức generalization từ laboratory paradigms sang complex autobiographical/clinical bộ nhớ (memory / 메모리) và cơ chế (mechanism / 메커니즘) chính xác vẫn phụ thuộc paradigm; không nên dùng nó để khẳng định có thể “rewrite mọi ký ức”.
 
-> **Chuyển mạch:** Trong **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **14. Prospective bộ nhớ (memory / 메모리)** tiếp nhận điểm tựa từ **13. Reconsolidation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. bộ nhớ (memory / 메모리) và expertise** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **14. Prospective bộ nhớ (memory / 메모리)** nối từ **13. Reconsolidation** sang **15. bộ nhớ (memory / 메모리) và expertise**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Prospective bộ nhớ (memory / 메모리)
 
@@ -145,7 +145,7 @@ Prospective bộ nhớ (memory / 메모리) phụ thuộc cue, planning và bên
 
 Xem [[12_temporal_cognition_prospective_memory_and_time]] và [[10_cognitive_offloading_external_memory_and_extended_cognition]].
 
-> **Chuyển mạch:** Ở chặng này của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **15. bộ nhớ (memory / 메모리) và expertise** tiếp nhận điểm tựa từ **14. Prospective bộ nhớ (memory / 메모리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **15. bộ nhớ (memory / 메모리) và expertise** nối từ **14. Prospective bộ nhớ (memory / 메모리)** sang **16. Những hiểu lầm phổ biến**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. bộ nhớ (memory / 메모리) và expertise
 
@@ -153,7 +153,7 @@ Expert không nhất thiết có “bộ nhớ (memory / 메모리) sức chứa
 
 Chess expert nhớ meaningful board configurations tốt hơn random configurations. nhà phát triển (developer / 개발자) cấp cao (senior / 시니어) nhớ kiến trúc (architecture / 아키텍처) quan hệ (relation / 관계) tốt hơn chính xác (exact / 정확한) wording của log. Đây là domain-specific organization, không phải toàn cục (global / 전역) photographic bộ nhớ (memory / 메모리).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **16. Những hiểu lầm phổ biến** tiếp nhận điểm tựa từ **15. bộ nhớ (memory / 메모리) và expertise** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **16. Những hiểu lầm phổ biến** nối từ **15. bộ nhớ (memory / 메모리) và expertise** sang **17. mô hình tư duy (mental model / 사고 모델)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Những hiểu lầm phổ biến
 
@@ -177,7 +177,7 @@ Không. Card chất lượng (quality / 품질), cue specificity, spacing, inter
 
 Không thể kết luận chung như vậy. bên ngoài (external / 외부) tools có thể cải thiện tác vụ (task / 작업) hiệu năng (performance / 성능); vấn đề là calibration giữa hiệu năng (performance / 성능) goal và học tập (learning / 학습) goal.
 
-> **Chuyển mạch:** Trong **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **17. mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **16. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **17. mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **16. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 17. mô hình tư duy (mental model / 사고 모델)
 
@@ -201,7 +201,7 @@ Possible updating
 
 Bộ nhớ (memory / 메모리) tốt không phải “lưu nhiều dữ liệu (data / 데이터) nhất”, mà là tạo cấu trúc (structure / 구조) và retrieval đường dẫn (path / 경로) phù hợp với tác vụ (task / 작업) tương lai.
 
-> **Chuyển mạch:** Ở chặng này của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **Kết nối kiến thức** gom các mảnh từ **17. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Trí nhớ — bộ nhớ (memory / 메모리) / 기억**, **Kết nối kiến thức** tổng hợp từ **17. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 
