@@ -1636,7 +1636,9 @@ Ví dụ:
 12. Nhớ `대통령 5년·국회의원 4년·300명·선거 만18세`.
 13. Nhớ `예금보호 1억원`, `법정 최고금리 연20%` nhưng biết đây là current facts cần timestamp.
 14. Nhớ current criminal-justice transition: `검찰청 폐지 → 공소청 + 중대범죄수사청`.
-15. Chọn 5 keyword bất kỳ và tự nói mỗi từ 2 câu Hàn.
+15. Nói đủ 5 `국경일`: `3·1절·제헌절·광복절·개천절·한글날`, và nhớ `현충일` là ngày tưởng niệm quan trọng.
+16. Phân biệt từng từ `보통·평등·직접·비밀선거`, không chỉ đọc thuộc cả cụm.
+17. Chọn 5 keyword bất kỳ và tự nói mỗi từ 2 câu Hàn.
 
 ---
 
@@ -1644,11 +1646,11 @@ Ví dụ:
 
 ## Tier S — không được sai
 
-`국가상징`, `삼권분립`, `국회/정부/법원`, `선거 4대 원칙`, `4대 사회보험`, `사회보험/공공부조`, `영주권/국적`, `전세/월세`, `어린이집/유치원`, `수시/정시`, `112/119/117/1345`, `역사 대순서`, `민주화 3사건`.
+`국가상징`, `국경일 5개`, `삼권분립`, `국회/정부/법원`, `선거 4대 원칙`, `4대 사회보험`, `사회보험/공공부조`, `영주권/국적`, `전세/월세`, `어린이집/유치원`, `수시/정시`, `112/119/117/1345`, `역사 대순서`, `민주화 3사건`.
 
 ## Tier A — rất nên thuộc
 
-`근로계약서`, `소비자 권리`, `한국은행`, `보이스피싱`, `입국·체류·귀화`, `가족법`, `등기부등본·전입신고·확정일자`, `민사/형사`, `수사/기소/재판`, `수도권·충청·호남·영남·강원·제주`.
+`근로계약서`, `소비자 권리`, `한국은행/중앙은행`, `세금`, `보이스피싱`, `입국·체류·귀화`, `정부24·법무부`, `가족법`, `등기부등본·전입신고·확정일자`, `민사/형사`, `수사/기소/재판`, `정보화·고령화·다문화 사회`, `수도권·충청·호남·영남·강원·제주`.
 
 ## Tier B — dùng để tăng độ chắc
 
@@ -1672,6 +1674,8 @@ Nguồn chính thức cần kiểm tra khi fact có thể thay đổi:
 - 한국사회 이해 교재/자료: https://www.moj.go.kr/
 - 국가법령정보센터: https://www.law.go.kr/
 - 금융위원회: https://www.fsc.go.kr/
+- 행정안전부 국가상징·국경일: https://www.mois.go.kr/
+- 법무부 출입국·외국인정책본부 이민자 사회통합: https://www.moj.go.kr/immigration/1518/subview.do
 
 **Verified-current layer:** 2026-10-06.  
 Đừng sửa một fact cũ trong giáo trình thành fact mới mà xóa dấu vết lịch sử. Nếu số/quy định thay đổi, giữ rõ hai lớp **교재/legacy state** và **current verified state**, rồi dùng notice kỳ thi để quyết định cách trả lời.
