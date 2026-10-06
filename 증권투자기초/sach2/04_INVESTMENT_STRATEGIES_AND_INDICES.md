@@ -10,7 +10,7 @@ Cổ tức là phân phối tiền hoặc tài sản cho cổ đông; stock spli
 
 ## 2. Hiệu ứng và quy tắc chiến lược
 
-Source đề cập note, small-firm effect và formula plan. Các hiệu ứng này là quan sát thực nghiệm hoặc quy tắc đơn giản, không phải định luật. Hiệu ứng quy mô có thể biến mất sau phí, thay đổi cấu trúc thị trường hoặc dữ liệu mẫu. Formula plan cố định cách phân bổ theo điều kiện giá hoặc tỷ trọng; ưu điểm là kỷ luật, giới hạn là quy tắc cứng có thể gặp regime chưa từng thấy. Đánh giá chiến lược bằng chuỗi lợi suất, drawdown, turnover và rủi ro thanh khoản, không bằng vài giao dịch đẹp.
+Source đặt note, small-firm effect và formula plan dưới mục tiêu “Beat the Market”. Cần tách ba lớp: note/stock split/dividend là cơ chế hoặc sản phẩm; small-firm effect là quan sát thực nghiệm; formula plan là quy tắc phân bổ. Không lớp nào tự chứng minh rằng danh mục sẽ vượt benchmark. Hiệu ứng quy mô có thể biến mất sau phí, thay đổi cấu trúc thị trường hoặc dữ liệu mẫu. Formula plan cố định cách phân bổ theo điều kiện giá hoặc tỷ trọng; ưu điểm là kỷ luật, giới hạn là quy tắc cứng có thể gặp regime chưa từng thấy. Đánh giá chiến lược bằng chuỗi lợi suất, drawdown, turnover và rủi ro thanh khoản, không bằng vài giao dịch đẹp.
 
 ## 3. Portfolio effect
 
@@ -20,7 +20,7 @@ Phần tính toán danh mục thuộc [Portfolio Risk, Allocation and Behavior](
 
 ## 4. Chỉ số giá cổ phiếu
 
-Stock Price Index tổng hợp nhiều giá cổ phiếu thành một thước đo. Price-weighted index cho trọng số theo giá danh nghĩa; market-cap-weighted index cho trọng số theo giá trị vốn hóa; equal-weighted index cho mỗi thành phần trọng số gần nhau. Cùng một thị trường có thể cho kết quả khác nhau tùy phương pháp. KOSPI, KOSPI200, KOSDAQ, S&P 500 và Nikkei 225 được source nêu như các ví dụ chỉ số; đây là tên thể chế và trạng thái textbook, không phải xác nhận thành phần hiện tại.
+Stock Price Index tổng hợp nhiều giá cổ phiếu thành một thước đo. Source mô tả chỉ số được chuẩn hóa theo base như 100 hoặc 1.000; base chỉ là thang đo ban đầu, không phải lợi suất và không nói thành phần đang “an toàn” hơn. Price-weighted index cho trọng số theo giá danh nghĩa; market-cap-weighted index cho trọng số theo giá trị vốn hóa; equal-weighted index cho mỗi thành phần trọng số gần nhau. Cùng một thị trường có thể cho kết quả khác nhau tùy phương pháp. KOSPI, KOSPI200, KOSDAQ, S&P 500 và Nikkei 225 được source nêu như các ví dụ chỉ số; đây là tên thể chế và trạng thái textbook, không phải xác nhận thành phần hiện tại.
 
 Khi đọc một chỉ số, kiểm tra: universe, quy tắc chọn và loại mã, trọng số, điều chỉnh corporate action, tần suất tái cân bằng và liệu chỉ số là price return hay total return. Chỉ số price chỉ phản ánh biến động giá; total-return index tái đầu tư cổ tức. So sánh quỹ với benchmark sai loại sẽ tạo kết luận sai về năng lực.
 
