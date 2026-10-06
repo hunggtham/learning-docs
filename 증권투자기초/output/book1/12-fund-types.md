@@ -2,6 +2,10 @@
 
 [← Mục lục sách 1](./00-book1-index.md) · [Phần trước](./11-fund-structure.md) · [Phần tiếp theo](./13-fund-management.md)
 
+> **SOURCE / TEXTBOOK STATE:** Mọi ngưỡng, tỷ lệ, giờ giao dịch, điều kiện pháp lý hoặc quy tắc sản phẩm không có block current riêng đều là snapshot của sach1.md và ảnh nguồn tương ứng.
+>
+> **CURRENT VERIFIED STATE:** Không suy ra quy định 2026 từ các con số trong sách. Route này chỉ gọi một rule là current khi có nguồn chính thức và ngày snapshot; nếu không có block như vậy, phải tra nguồn chính thức phù hợp trước khi áp dụng thực tế.
+
 ## 한국어 핵심어 — Từ khóa đọc nhanh
 
 - `주식형` / `채권형` / `혼합형` — quỹ cổ phiếu / trái phiếu / hỗn hợp; hậu tố
