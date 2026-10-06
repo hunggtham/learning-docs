@@ -65,6 +65,12 @@ Repo là giao dịch bán và mua lại, về kinh tế gần khoản vay có t�
 
 Ở phần thị trường trái phiếu, source đặt repo cạnh bond index và mô tả repo như một giao dịch có ngày mua lại, tài sản bảo đảm và lãi repo; `KSDA-BLP Korean Bond Index` được nêu như một chỉ số chuẩn hóa có mức cơ sở 100.00. Một bảng còn dùng hạng tín nhiệm `BBB-` để minh họa normal bond. Đây là trạng thái textbook của ví dụ, không phải xác nhận cấu phần hay mức hiện hành của thị trường Hàn Quốc.
 
+### Worked repo haircut
+
+Giả sử collateral trị giá 100 và haircut ban đầu là 5%, bên vay chỉ nhận 95 tiền mặt. Nếu giá collateral giảm còn 90 mà haircut vẫn là 5%, khoản vay tối đa còn `90 × 95% = 85,5`; bên vay thiếu 9,5 và phải nộp thêm tiền hoặc tài sản. Nếu haircut tăng lên 10% ngay cả khi giá vẫn là 100, khoản vay tối đa cũng giảm còn 90 và tạo margin call 5.
+
+Ví dụ tách hai cú sốc thường bị gộp nhầm: giá tài sản giảm làm giá trị bảo đảm co lại, còn haircut tăng làm lender yêu cầu đệm an toàn lớn hơn. Cả hai đều có thể buộc deleveraging và bán cưỡng bức. Con số trên là mô hình minh họa, không phải ngưỡng margin hiện hành của một thị trường cụ thể.
+
 ## 7. Worked duration and spread scenario
 
 Giả sử một trái phiếu có modified duration bằng 4. Khi lợi suất tăng 50 điểm cơ bản, xấp xỉ bậc một cho biết:

@@ -63,6 +63,19 @@ Với một mẫu head-and-shoulders, quy trình đọc là: xác định ba đ�
 
 Một tín hiệu là biến đổi dữ liệu; một quy tắc là tín hiệu cộng điều kiện vào/ra; một lợi thế là chênh lệch kỳ vọng còn lại sau chi phí và sai số. Ví dụ “RSI dưới 30” chỉ là tín hiệu. Quy tắc phải nói tài sản nào, khung thời gian nào, vào ở đâu, thoát khi nào và xử lý gap ra sao. Lợi thế chỉ được tin sau kiểm thử ngoài mẫu, phân tích độ nhạy tham số và kiểm tra turnover. Đây là boundary ngăn việc biến sách kỹ thuật thành danh sách indicator.
 
+## 10. Đo lợi thế sau chi phí
+
+Tỷ lệ thắng không đủ để kết luận một tín hiệu có lợi thế. Cần ghép xác suất, quy mô lời/lỗ và chi phí:
+
+```
+Expectancy = p_win × lợi nhuận trung bình − p_loss × lỗ trung bình − chi phí mỗi giao dịch
+```
+
+Ví dụ, một quy tắc thắng 45% số giao dịch, lời trung bình 3%, thua 55% với lỗ trung bình 2% và chịu chi phí 0,2% mỗi giao dịch có expectancy khoảng `0,45 × 3% − 0,55 × 2% − 0,2% = 0,05%`. Nếu bỏ chi phí, người học sẽ tưởng lợi thế là 0,25%, tức phóng đại gấp năm lần.
+
+Expectancy dương trên mẫu nhỏ vẫn có thể là nhiễu. Vì vậy phải kiểm tra kích thước mẫu, khoảng tin cậy, thay đổi tham số, regime và kết quả ngoài mẫu; một indicator có expectancy tốt trong giai đoạn xu hướng không mặc nhiên sống được trong thị trường đi ngang. Đây là bước nối từ “tín hiệu” sang “quy tắc có thể chịu chi phí”.
+
+
 ## Chốt và bàn giao
 
 Invariant là “tín hiệu kỹ thuật mô tả hành vi giá với độ trễ và xác suất; nó không tạo ra giá trị nội tại”. Bài 4 đặt tín hiệu vào chiến lược, danh mục và benchmark, rồi kiểm tra một chiến lược có sống được sau chi phí hay không. Xem [Chiến lược và chỉ số](./04_INVESTMENT_STRATEGIES_AND_INDICES.md).
