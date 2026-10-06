@@ -20,7 +20,7 @@ Logic cân bằng của CML có ba bước. Mỗi nhà đầu tư trước hết
 
 Giả sử \(r_f=5\%\), \(E(r_m)=20\%\), \(\sigma_m=3\%\), còn danh mục \(P\) có \(\sigma_P=4\%\). Nếu \(P\) nằm trên CML, \(E(r_P)=5+(20-5)/3\times4=25\%\). Nếu thêm \(\rho_{P,m}=0,5\), covariance là \(\operatorname{Cov}(P,m)=0,5\times4\times3=6\) (đơn vị phần trăm bình phương). Hai phép tính trả lời hai câu hỏi khác nhau: CML nối tổng rủi ro với expected return của danh mục hiệu quả; covariance cho biết danh mục đó cùng chuyển động với market portfolio đến mức nào. Không được dùng covariance riêng lẻ để thay cho vị trí trên CML.
 
-## 2. Beta và Security Market Line
+## 2. Beta (베타) và Security Market Line
 
 Một cổ phiếu có thể có độ lệch chuẩn cao vì rủi ro riêng lẻ, nhưng nhà đầu tư có thể phân tán phần đó. Phần được định giá là mức cổ phiếu cùng chuyển động với market portfolio:
 
