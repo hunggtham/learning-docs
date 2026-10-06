@@ -18,7 +18,7 @@ Ví dụ:
 
 Phân biệt này quan trọng vì phosphate làm thay đổi điện tích, khả năng phản ứng và chức năng truyền năng lượng.
 
-> **Chuyển mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Ribose và deoxyribose** tiếp nhận điểm tựa từ **Nucleotide và nucleoside** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cơ sở (base / 기반) là các dị vòng thơm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Ribose và deoxyribose** nối từ **Nucleotide và nucleoside** sang **Cơ sở (base / 기반) là các dị vòng thơm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ribose và deoxyribose
 
@@ -33,7 +33,7 @@ Chỉ một oxygen khác biệt nhưng tạo hậu quả lớn:
 
 Việc DNA thiếu 2'-OH làm tăng độ bền hóa học dài hạn, phù hợp vai trò kho lưu trữ thông tin.
 
-> **Chuyển mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Cơ sở (base / 기반) là các dị vòng thơm** tiếp nhận điểm tựa từ **Ribose và deoxyribose** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tautomer và độ chính xác sao chép** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Cơ sở (base / 기반) là các dị vòng thơm** nối từ **Ribose và deoxyribose** sang **Tautomer và độ chính xác sao chép**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cơ sở (base / 기반) là các dị vòng thơm
 
@@ -49,7 +49,7 @@ Các cơ sở (base / 기반) này là hệ dị vòng thơm liên hợp. Phân 
 - cân bằng tautomer;
 - tương tác xếp chồng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Tautomer và độ chính xác sao chép** tiếp nhận điểm tựa từ **Cơ sở (base / 기반) là các dị vòng thơm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết glycosidic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Tautomer và độ chính xác sao chép** nối từ **Cơ sở (base / 기반) là các dị vòng thơm** sang **Liên kết glycosidic**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tautomer và độ chính xác sao chép
 
@@ -59,7 +59,7 @@ Các tautomer hiếm có thể thay đổi mẫu liên kết hydrogen và ghép 
 
 Vì vậy đột biến có thể bắt nguồn từ những tái sắp xếp proton/electron hoàn toàn bình thường ở thang phân tử.
 
-> **Chuyển mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, sau nội dung của **Tautomer và độ chính xác sao chép**, **Liên kết glycosidic** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Hóa học phosphate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, sau nội dung của **Tautomer và độ chính xác sao chép**, **Liên kết glycosidic** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Hóa học phosphate** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết glycosidic
 
@@ -69,7 +69,7 @@ Quay quanh liên kết glycosidic cho phép cấu dạng syn/anti; dạng anti p
 
 Cấu dạng ảnh hưởng hình học helix và nhận diện enzyme.
 
-> **Chuyển mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Hóa học phosphate** tiếp nhận điểm tựa từ **Liên kết glycosidic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khung phosphodiester 3'–5'** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Hóa học phosphate** nối từ **Liên kết glycosidic** sang **Khung phosphodiester 3'–5'**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học phosphate
 
@@ -79,7 +79,7 @@ Khung acid nucleic vì vậy là **polyanion**.
 
 Mật độ điện tích cao gây đẩy tĩnh điện; ion đối, \(Mg^{2+}\) và protein che chắn điện tích và ổn định cấu trúc gấp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Khung phosphodiester 3'–5'** tiếp nhận điểm tựa từ **Hóa học phosphate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao polymer hóa DNA dùng nucleotide triphosphate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Khung phosphodiester 3'–5'** nối từ **Hóa học phosphate** sang **Vì sao polymer hóa DNA dùng nucleotide triphosphate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khung phosphodiester 3'–5'
 
@@ -95,7 +95,7 @@ Chiều 5'→3' là bất đối xứng hóa học, không phải quy ước tù
 
 Polymerase khai thác bất đối xứng này vì nucleotide mới được thêm vào nhóm 3'-OH.
 
-> **Chuyển mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Vì sao polymer hóa DNA dùng nucleotide triphosphate** tiếp nhận điểm tựa từ **Khung phosphodiester 3'–5'** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vai trò cơ chế của Mg2+** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Vì sao polymer hóa DNA dùng nucleotide triphosphate** nối từ **Khung phosphodiester 3'–5'** sang **Vai trò cơ chế của Mg2+**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao polymer hóa DNA dùng nucleotide triphosphate
 
@@ -111,7 +111,7 @@ Thủy phân \(PP_i\) sau đó giúp kéo quá trình theo chiều thuận về 
 
 Đây là hóa học chuyển phosphoryl được ghép với sao chép thông tin.
 
-> **Chuyển mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Vì sao polymer hóa DNA dùng nucleotide triphosphate** xác định đầu vào; **Vai trò cơ chế của Mg2+** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Ghép cặp cơ sở (base / 기반) — hydrogen bond cho độ đặc hiệu, xếp chồng đóng góp lớn vào độ bền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Vì sao polymer hóa DNA dùng nucleotide triphosphate** đặt đầu vào cho **Vai trò cơ chế của Mg2+**, rồi **Ghép cặp cơ sở (base / 기반) — hydrogen bond cho độ đặc hiệu, xếp chồng đóng góp lớn vào độ bền** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Vai trò cơ chế của Mg2+
 
@@ -125,7 +125,7 @@ Ion kim loại:
 
 Đây là ví dụ điển hình của xúc tác vô cơ sinh học trong chuyển hóa acid nucleic.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Vai trò cơ chế của Mg2+** xác định đầu vào; **Ghép cặp cơ sở (base / 기반) — hydrogen bond cho độ đặc hiệu, xếp chồng đóng góp lớn vào độ bền** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Hai mạch đối song song** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Vai trò cơ chế của Mg2+** đặt đầu vào cho **Ghép cặp cơ sở (base / 기반) — hydrogen bond cho độ đặc hiệu, xếp chồng đóng góp lớn vào độ bền**, rồi **Hai mạch đối song song** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Ghép cặp cơ sở (base / 기반) — hydrogen bond cho độ đặc hiệu, xếp chồng đóng góp lớn vào độ bền
 
@@ -140,7 +140,7 @@ Nhưng độ bền duplex còn nhận đóng góp lớn từ **xếp chồng cơ
 
 Vì vậy câu “G–C có ba hydrogen bond nên DNA bền hơn” là chưa đủ; tương tác giữa các cặp cơ sở (base / 기반) lân cận và điều kiện ion cũng rất quan trọng.
 
-> **Chuyển mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Hai mạch đối song song** tiếp nhận điểm tựa từ **Ghép cặp cơ sở (base / 기반) — hydrogen bond cho độ đặc hiệu, xếp chồng đóng góp lớn vào độ bền** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **B-DNA, A-DNA và Z-DNA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Hai mạch đối song song** nối từ **Ghép cặp cơ sở (base / 기반) — hydrogen bond cho độ đặc hiệu, xếp chồng đóng góp lớn vào độ bền** sang **B-DNA, A-DNA và Z-DNA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hai mạch đối song song
 
@@ -155,7 +155,7 @@ Hình học này sắp xếp cơ sở (base / 기반) phù hợp cho ghép cặp
 
 Các rãnh để lộ mẫu hóa học đặc trưng mà không cần tách hai mạch, cho phép protein nhận diện trình tự.
 
-> **Chuyển mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **B-DNA, A-DNA và Z-DNA** tiếp nhận điểm tựa từ **Hai mạch đối song song** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhận diện qua rãnh lớn và rãnh nhỏ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **B-DNA, A-DNA và Z-DNA** nối từ **Hai mạch đối song song** sang **Nhận diện qua rãnh lớn và rãnh nhỏ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## B-DNA, A-DNA và Z-DNA
 
@@ -167,7 +167,7 @@ Z-DNA là helix tay trái được ưu tiên ở một số trình tự và đi�
 
 Vì vậy cấu trúc acid nucleic phụ thuộc bối cảnh và tồn tại như ensemble cấu dạng chứ không phải một helix kép bất biến.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Nhận diện qua rãnh lớn và rãnh nhỏ** tiếp nhận điểm tựa từ **B-DNA, A-DNA và Z-DNA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nóng chảy DNA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Nhận diện qua rãnh lớn và rãnh nhỏ** nối từ **B-DNA, A-DNA và Z-DNA** sang **Nóng chảy DNA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhận diện qua rãnh lớn và rãnh nhỏ
 
@@ -177,7 +177,7 @@ Các cặp cơ sở (base / 기반) khác nhau tạo mẫu cạnh khác nhau.
 
 Điều này cho phép nhận diện trình tự mà không phải phá ghép cặp cơ sở (base / 기반).
 
-> **Chuyển mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Nóng chảy DNA** tiếp nhận điểm tựa từ **Nhận diện qua rãnh lớn và rãnh nhỏ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng hyperchromic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Nóng chảy DNA** nối từ **Nhận diện qua rãnh lớn và rãnh nhỏ** sang **Hiệu ứng hyperchromic**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nóng chảy DNA
 
@@ -198,7 +198,7 @@ Nhiệt độ nóng chảy \(T_m\) phụ thuộc:
 
 Muối ổn định duplex một phần bằng cách che chắn đẩy phosphate–phosphate.
 
-> **Chuyển mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Hiệu ứng hyperchromic** tiếp nhận điểm tựa từ **Nóng chảy DNA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ đặc hiệu lai hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Hiệu ứng hyperchromic** nối từ **Nóng chảy DNA** sang **Độ đặc hiệu lai hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng hyperchromic
 
@@ -208,7 +208,7 @@ Khi DNA nóng chảy, độ hấp thụ tăng — **hiệu ứng hyperchromic (h
 
 Đây là cách thực nghiệm đơn giản để theo dõi biến tính.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Độ đặc hiệu lai hóa** tiếp nhận điểm tựa từ **Hiệu ứng hyperchromic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **PCR như chu trình hóa học được lập trình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Độ đặc hiệu lai hóa** nối từ **Hiệu ứng hyperchromic** sang **PCR như chu trình hóa học được lập trình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ đặc hiệu lai hóa
 
@@ -218,7 +218,7 @@ Một mismatch làm giảm độ bền duplex, nhưng mức ảnh hưởng phụ
 
 PCR, giải trình tự, FISH và nhiều kỹ thuật chẩn đoán đều dựa trên việc điều khiển nhiệt động của lai hóa.
 
-> **Chuyển mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **PCR như chu trình hóa học được lập trình** tiếp nhận điểm tựa từ **Độ đặc hiệu lai hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **RNA không chỉ là chất mang tin nhắn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **PCR như chu trình hóa học được lập trình** nối từ **Độ đặc hiệu lai hóa** sang **RNA không chỉ là chất mang tin nhắn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## PCR như chu trình hóa học được lập trình
 
@@ -232,7 +232,7 @@ Nhiệt độ điều khiển tương tác phân tử nào thuận lợi ở t�
 
 Vì vậy PCR là **nhiệt động được lập trình + xúc tác enzyme**.
 
-> **Chuyển mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **RNA không chỉ là chất mang tin nhắn** tiếp nhận điểm tựa từ **PCR như chu trình hóa học được lập trình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao RNA dễ bị cơ sở (base / 기반) cắt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **RNA không chỉ là chất mang tin nhắn** nối từ **PCR như chu trình hóa học được lập trình** sang **Vì sao RNA dễ bị cơ sở (base / 기반) cắt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## RNA không chỉ là chất mang tin nhắn
 
@@ -247,7 +247,7 @@ RNA có thể đóng vai trò:
 
 Nhóm 2'-OH và khả năng ghép cơ sở (base / 기반) linh hoạt hơn làm tăng đa dạng cấu trúc và xúc tác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Vì sao RNA dễ bị cơ sở (base / 기반) cắt** tiếp nhận điểm tựa từ **RNA không chỉ là chất mang tin nhắn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấu trúc bậc hai của RNA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Vì sao RNA dễ bị cơ sở (base / 기반) cắt** nối từ **RNA không chỉ là chất mang tin nhắn** sang **Cấu trúc bậc hai của RNA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao RNA dễ bị cơ sở (base / 기반) cắt
 
@@ -259,7 +259,7 @@ DNA thiếu 2'-OH nên con đường này không tồn tại.
 
 Đây là cơ chế hữu cơ trực tiếp giải thích vì sao DNA bền hơn RNA trong môi trường kiềm.
 
-> **Chuyển mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Cấu trúc bậc hai của RNA** tiếp nhận điểm tựa từ **Vì sao RNA dễ bị cơ sở (base / 기반) cắt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ribozyme** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Cấu trúc bậc hai của RNA** nối từ **Vì sao RNA dễ bị cơ sở (base / 기반) cắt** sang **Ribozyme**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cấu trúc bậc hai của RNA
 
@@ -274,7 +274,7 @@ Một mạch RNA đơn có thể tự gấp nhờ ghép cặp nội bộ thành:
 
 Trình tự quyết định đồ thị ghép cặp có thể có, còn \(Mg^{2+}\) và tương tác bậc ba định hình cấu trúc 3D.
 
-> **Chuyển mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Ribozyme** tiếp nhận điểm tựa từ **Cấu trúc bậc hai của RNA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ chính xác sao chép DNA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Ribozyme** nối từ **Cấu trúc bậc hai của RNA** sang **Độ chính xác sao chép DNA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ribozyme
 
@@ -284,7 +284,7 @@ Chúng dùng nhóm acid/cơ sở (base / 기반), ion kim loại và định v�
 
 Trung tâm peptidyl-transfer của ribosome chủ yếu do RNA tạo thành, cho thấy RNA có thể thực hiện xúc tác sinh học nền tảng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Độ chính xác sao chép DNA** tiếp nhận điểm tựa từ **Ribozyme** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kiểm tra động học** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Độ chính xác sao chép DNA** nối từ **Ribozyme** sang **Kiểm tra động học**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ chính xác sao chép DNA
 
@@ -299,7 +299,7 @@ Polymerase chọn nucleotide bằng hình học, hydrogen bond và cơ chế kh�
 
 Không bước nào hoàn hảo; độ chính xác rất cao xuất hiện từ nhiều lớp lọc lỗi nối tiếp.
 
-> **Chuyển mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Kiểm tra động học** tiếp nhận điểm tựa từ **Độ chính xác sao chép DNA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tổn thương DNA — hóa học liên tục tấn công thông tin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Kiểm tra động học** nối từ **Độ chính xác sao chép DNA** sang **Tổn thương DNA — hóa học liên tục tấn công thông tin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kiểm tra động học
 
@@ -307,7 +307,7 @@ Hệ sinh học có thể đạt độ chính xác vượt mức phân biệt c�
 
 Đây là nguyên lý hệ thống quan trọng: độ chính xác sinh học thường đánh đổi với tốc độ và năng lượng.
 
-> **Chuyển mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Tổn thương DNA — hóa học liên tục tấn công thông tin** tiếp nhận điểm tựa từ **Kiểm tra động học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khử amin cytosine** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Tổn thương DNA — hóa học liên tục tấn công thông tin** nối từ **Kiểm tra động học** sang **Khử amin cytosine**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tổn thương DNA — hóa học liên tục tấn công thông tin
 
@@ -322,7 +322,7 @@ Các tổn thương thường gặp gồm:
 
 DNA bền nhưng không bất tử. Tế bào sống được vì hệ sửa chữa liên tục bảo trì polymer thông tin.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Khử amin cytosine** tiếp nhận điểm tựa từ **Tổn thương DNA — hóa học liên tục tấn công thông tin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quang hóa UV** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Khử amin cytosine** nối từ **Tổn thương DNA — hóa học liên tục tấn công thông tin** sang **Quang hóa UV**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khử amin cytosine
 
@@ -332,7 +332,7 @@ DNA sử dụng thymine thay uracil một phần vì uracil xuất hiện trong 
 
 Nếu DNA vốn dùng uracil bình thường, sản phẩm khử amin của cytosine sẽ khó phát hiện hơn.
 
-> **Chuyển mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Quang hóa UV** tiếp nhận điểm tựa từ **Khử amin cytosine** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tổn thương oxy hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Quang hóa UV** nối từ **Khử amin cytosine** sang **Tổn thương oxy hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quang hóa UV
 
@@ -342,7 +342,7 @@ Photolyase ở một số sinh vật hoặc hệ sửa chữa cắt nucleotide c
 
 Điều này nối phổ học, hóa học trạng thái kích thích và di truyền học.
 
-> **Chuyển mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Tổn thương oxy hóa** tiếp nhận điểm tựa từ **Quang hóa UV** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các con đường sửa chữa DNA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Tổn thương oxy hóa** nối từ **Quang hóa UV** sang **Các con đường sửa chữa DNA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tổn thương oxy hóa
 
@@ -352,7 +352,7 @@ Cơ sở (base / 기반) biến đổi có thể ghép cặp khác, làm tăng x
 
 Vì vậy hóa học oxy hóa-khử tác động trực tiếp tới độ toàn vẹn thông tin.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Các con đường sửa chữa DNA** tiếp nhận điểm tựa từ **Tổn thương oxy hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tô-pô DNA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Các con đường sửa chữa DNA** nối từ **Tổn thương oxy hóa** sang **Tô-pô DNA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các con đường sửa chữa DNA
 
@@ -366,7 +366,7 @@ Những tổn thương hóa học khác nhau cần chiến lược khác nhau:
 
 Lựa chọn con đường phụ thuộc loại tổn thương và bối cảnh chu kỳ tế bào.
 
-> **Chuyển mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Tô-pô DNA** tiếp nhận điểm tựa từ **Các con đường sửa chữa DNA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hóa học topoisomerase** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Tô-pô DNA** nối từ **Các con đường sửa chữa DNA** sang **Hóa học topoisomerase**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tô-pô DNA
 
@@ -382,7 +382,7 @@ Topoisomerase cắt rồi nối lại DNA để thay đổi tô-pô.
 
 Tô-pô ảnh hưởng phiên mã, sao chép và đóng gói chromosome.
 
-> **Chuyển mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Hóa học topoisomerase** tiếp nhận điểm tựa từ **Tô-pô DNA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nucleosome và chromatin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Hóa học topoisomerase** nối từ **Tô-pô DNA** sang **Nucleosome và chromatin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hóa học topoisomerase
 
@@ -390,7 +390,7 @@ Topoisomerase tạo chất trung gian phosphotyrosine enzyme–DNA cộng hóa t
 
 Đây là hóa học chuyển phosphoryl được điều khiển để tránh tạo đứt gãy vĩnh viễn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Nucleosome và chromatin** tiếp nhận điểm tựa từ **Hóa học topoisomerase** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phiên mã RNA** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Nucleosome và chromatin** nối từ **Hóa học topoisomerase** sang **Phiên mã RNA**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nucleosome và chromatin
 
@@ -402,7 +402,7 @@ Biến đổi hóa học đuôi histone làm thay đổi tương tác protein v�
 
 Tĩnh điện + biến đổi cộng hóa trị trở thành một phần của điều hòa gene.
 
-> **Chuyển mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Phiên mã RNA** tiếp nhận điểm tựa từ **Nucleosome và chromatin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với dịch mã** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Phiên mã RNA** nối từ **Nucleosome và chromatin** sang **Liên hệ với dịch mã**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phiên mã RNA
 
@@ -412,7 +412,7 @@ Nhận diện promoter và protein điều hòa quyết định nơi và thời 
 
 Phiên mã chuyển thông tin trình tự DNA thành phân tử RNA có bản chất hóa học khác.
 
-> **Chuyển mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Liên hệ với dịch mã** tiếp nhận điểm tựa từ **Phiên mã RNA** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biến đổi hóa học của acid nucleic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Liên hệ với dịch mã** nối từ **Phiên mã RNA** sang **Biến đổi hóa học của acid nucleic**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với dịch mã
 
@@ -427,7 +427,7 @@ trình tự acid nucleic
 → gấp cuộn/chức năng protein
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Biến đổi hóa học của acid nucleic** tiếp nhận điểm tựa từ **Liên hệ với dịch mã** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giải trình tự như hóa phân tích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Biến đổi hóa học của acid nucleic** nối từ **Liên hệ với dịch mã** sang **Giải trình tự như hóa phân tích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Biến đổi hóa học của acid nucleic
 
@@ -437,7 +437,7 @@ Cơ sở (base / 기반) DNA/RNA có thể được methyl hóa hoặc biến đ
 
 RNA có nhiều nucleoside biến đổi ảnh hưởng gấp cuộn, giải mã và độ bền.
 
-> **Chuyển mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Giải trình tự như hóa phân tích** tiếp nhận điểm tựa từ **Biến đổi hóa học của acid nucleic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ nanopore sequencing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Giải trình tự như hóa phân tích** nối từ **Biến đổi hóa học của acid nucleic** sang **Liên hệ nanopore sequencing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Giải trình tự như hóa phân tích
 
@@ -450,7 +450,7 @@ Các công nghệ giải trình tự chuyển danh tính cơ sở (base / 기반
 
 Đầu ra cuối có dạng số, nhưng bước đầu vẫn là hóa lý của phân tử.
 
-> **Chuyển mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Liên hệ nanopore sequencing** tiếp nhận điểm tựa từ **Giải trình tự như hóa phân tích** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Acid nucleic như vật liệu kỹ thuật** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Liên hệ nanopore sequencing** nối từ **Giải trình tự như hóa phân tích** sang **Acid nucleic như vật liệu kỹ thuật**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ nanopore sequencing
 
@@ -458,7 +458,7 @@ DNA/RNA đi qua nanopore làm thay đổi dòng ion. Các đoạn trình tự c�
 
 Đây là cầu nối trực tiếp giữa hóa học polymer, điện hóa, xử lý tín hiệu và máy học.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Acid nucleic như vật liệu kỹ thuật** tiếp nhận điểm tựa từ **Liên hệ nanopore sequencing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Acid nucleic như vật liệu kỹ thuật** nối từ **Liên hệ nanopore sequencing** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Acid nucleic như vật liệu kỹ thuật
 
@@ -468,7 +468,7 @@ Các trình tự được lập trình có thể tự lắp thành cấu trúc v
 
 DNA origami về bản chất là kỹ thuật cấu trúc ở thang phân tử dùng liên kết phụ thuộc trình tự.
 
-> **Chuyển mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Acid nucleic như vật liệu kỹ thuật** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Những hiểu lầm thường gặp** nối từ **Acid nucleic như vật liệu kỹ thuật** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -488,7 +488,7 @@ Không. RNA có thể xúc tác, điều hòa và tạo cấu trúc phức tạp
 
 Không. DNA liên tục bị tổn thương và được sửa chữa.
 
-> **Chuyển mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Acid nucleic — hóa học polymer của thông tin, nhận diện và tổng hợp theo khuôn**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

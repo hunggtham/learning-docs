@@ -18,7 +18,7 @@ Glucose là aldohexose; fructose là ketohexose.
 
 Nhiều tâm lập thể đồng nghĩa cùng một công thức phân tử có thể tạo nhiều đồng phân lập thể.
 
-> **Chuyển mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Ký hiệu D/L không phải chiều quay quang học** tiếp nhận điểm tựa từ **Monosaccharide là hợp chất carbonyl có nhiều tâm lập thể** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Epimer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Ký hiệu D/L không phải chiều quay quang học** nối từ **Monosaccharide là hợp chất carbonyl có nhiều tâm lập thể** sang **Epimer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ký hiệu D/L không phải chiều quay quang học
 
@@ -28,7 +28,7 @@ D không có nghĩa luôn quay phải (+), còn L không có nghĩa luôn quay t
 
 Đây là quy ước về cấu hình, không phải phép đo trực tiếp chiều quay ánh sáng.
 
-> **Chuyển mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Epimer** tiếp nhận điểm tựa từ **Ký hiệu D/L không phải chiều quay quang học** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đóng vòng — hóa học hemiacetal nội phân tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Epimer** nối từ **Ký hiệu D/L không phải chiều quay quang học** sang **Đóng vòng — hóa học hemiacetal nội phân tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Epimer
 
@@ -38,7 +38,7 @@ Glucose và galactose chẳng hạn khác nhau tại một carbon lập thể.
 
 Một thay đổi lập thể rất nhỏ có thể làm enzyme nhận diện hoàn toàn khác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Đóng vòng — hóa học hemiacetal nội phân tử** tiếp nhận điểm tựa từ **Epimer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Anomer α và β** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Đóng vòng — hóa học hemiacetal nội phân tử** nối từ **Epimer** sang **Anomer α và β**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đóng vòng — hóa học hemiacetal nội phân tử
 
@@ -48,7 +48,7 @@ Glucose chẳng hạn tạo vòng pyranose sáu cạnh.
 
 Đóng vòng tạo một tâm lập thể mới tại carbon vốn là carbonyl: **carbon anomer (anomeric carbon / 아노머 탄소)**.
 
-> **Chuyển mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Anomer α và β** tiếp nhận điểm tựa từ **Đóng vòng — hóa học hemiacetal nội phân tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mutarotation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Anomer α và β** nối từ **Đóng vòng — hóa học hemiacetal nội phân tử** sang **Mutarotation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Anomer α và β
 
@@ -61,7 +61,7 @@ Với đường D theo quy ước Haworth thường dùng:
 
 Không nên học cứng “α = xuống, β = lên” như quy tắc phổ quát vì hướng vẽ phụ thuộc quy ước và ngữ cảnh D/L.
 
-> **Chuyển mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Mutarotation** tiếp nhận điểm tựa từ **Anomer α và β** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Pyranose và furanose** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Mutarotation** nối từ **Anomer α và β** sang **Pyranose và furanose**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mutarotation
 
@@ -75,7 +75,7 @@ Vì vậy góc quay quang học thay đổi theo thời gian cho tới khi hỗn
 
 **Mutarotation (변광회전)** là bằng chứng cho thấy hemiacetal vòng vẫn có thể mở và đóng lại.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Pyranose và furanose** tiếp nhận điểm tựa từ **Mutarotation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấu dạng ghế của đường** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Pyranose và furanose** nối từ **Mutarotation** sang **Cấu dạng ghế của đường**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Pyranose và furanose
 
@@ -85,7 +85,7 @@ Tỉ lệ các dạng vòng phụ thuộc hình học, nhóm thế và dung môi
 
 Fructose có thể tồn tại ở nhiều dạng vòng; hệ sinh học thường nhận diện chọn lọc một trạng thái cấu dạng cụ thể.
 
-> **Chuyển mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Cấu dạng ghế của đường** tiếp nhận điểm tựa từ **Pyranose và furanose** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu ứng anomer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Cấu dạng ghế của đường** nối từ **Pyranose và furanose** sang **Hiệu ứng anomer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cấu dạng ghế của đường
 
@@ -95,7 +95,7 @@ Vòng pyranose không phẳng; nó thường nhận cấu dạng giống ghế c
 
 Đây là một trong các lý do glucose có cấu trúc rất thuận lợi trong họ aldohexose.
 
-> **Chuyển mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Hiệu ứng anomer** tiếp nhận điểm tựa từ **Cấu dạng ghế của đường** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên kết glycosidic là hóa học acetal** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Hiệu ứng anomer** nối từ **Cấu dạng ghế của đường** sang **Liên kết glycosidic là hóa học acetal**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu ứng anomer
 
@@ -107,7 +107,7 @@ Một mô hình orbital đơn giản: cặp electron tự do trên oxygen vòng 
 
 Mức độ hiệu ứng phụ thuộc dung môi và nhóm thế nên không phải quy tắc tuyệt đối.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, sau nội dung của **Hiệu ứng anomer**, **Liên kết glycosidic là hóa học acetal** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Đường khử và đường không khử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, sau nội dung của **Hiệu ứng anomer**, **Liên kết glycosidic là hóa học acetal** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Đường khử và đường không khử** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Liên kết glycosidic là hóa học acetal
 
@@ -117,7 +117,7 @@ Khi carbon anomer bị khóa trong acetal hoàn chỉnh, vòng không còn dễ 
 
 Hướng của liên kết glycosidic mang thông tin lập thể.
 
-> **Chuyển mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Đường khử và đường không khử** tiếp nhận điểm tựa từ **Liên kết glycosidic là hóa học acetal** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Disaccharide** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Đường khử và đường không khử** nối từ **Liên kết glycosidic là hóa học acetal** sang **Disaccharide**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đường khử và đường không khử
 
@@ -127,7 +127,7 @@ Nếu carbon anomer bị khóa trong liên kết acetal, khả năng khử tại
 
 Sucrose nối hai carbon anomer của glucose và fructose nên nhìn chung là đường không khử trong các phép thử thông thường.
 
-> **Chuyển mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Disaccharide** tiếp nhận điểm tựa từ **Đường khử và đường không khử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Tinh bột, glycogen và cellulose — cùng glucose, khác kiến trúc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Disaccharide** nối từ **Đường khử và đường không khử** sang **Tinh bột, glycogen và cellulose — cùng glucose, khác kiến trúc**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Disaccharide
 
@@ -139,7 +139,7 @@ Một số ví dụ quan trọng:
 
 Cùng tập monomer nhưng hình học liên kết khác nhau tạo khả năng tiêu hóa và nhận diện khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Tinh bột, glycogen và cellulose — cùng glucose, khác kiến trúc** tiếp nhận điểm tựa từ **Disaccharide** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chitin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Tinh bột, glycogen và cellulose — cùng glucose, khác kiến trúc** nối từ **Disaccharide** sang **Chitin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Tinh bột, glycogen và cellulose — cùng glucose, khác kiến trúc
 
@@ -161,7 +161,7 @@ Con người không có cellulase để thủy phân hiệu quả liên kết β
 
 Cùng monomer nhưng khác “cạnh” lập thể trong đồ thị polymer → vật liệu và chức năng hoàn toàn khác.
 
-> **Chuyển mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Chitin** tiếp nhận điểm tựa từ **Tinh bột, glycogen và cellulose — cùng glucose, khác kiến trúc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cấu dạng polysaccharide** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Chitin** nối từ **Tinh bột, glycogen và cellulose — cùng glucose, khác kiến trúc** sang **Cấu dạng polysaccharide**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chitin
 
@@ -169,7 +169,7 @@ Chitin là polymer β liên kết của N-acetylglucosamine.
 
 Nhóm acetamide làm tăng khả năng tạo hydrogen bond và độ bền cấu trúc. Chitin là thành phần quan trọng của bộ xương ngoài động vật chân khớp và thành tế bào nấm.
 
-> **Chuyển mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Cấu dạng polysaccharide** tiếp nhận điểm tựa từ **Chitin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Thủy phân liên kết glycosidic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Cấu dạng polysaccharide** nối từ **Chitin** sang **Thủy phân liên kết glycosidic**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cấu dạng polysaccharide
 
@@ -177,7 +177,7 @@ Polysaccharide không chỉ được xác định bởi kết nối. Góc xoắn
 
 Vì vậy trình tự/liên kết → cấu dạng → tính chất vật liệu, tương tự lô-gic (logic / 논리) của protein.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, sau nội dung của **Cấu dạng polysaccharide**, **Thủy phân liên kết glycosidic** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Trạng thái oxy hóa của carbohydrate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, sau nội dung của **Cấu dạng polysaccharide**, **Thủy phân liên kết glycosidic** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Trạng thái oxy hóa của carbohydrate** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Thủy phân liên kết glycosidic
 
@@ -187,7 +187,7 @@ Liên kết acetal tương đối bền với cơ sở (base / 기반) nhưng c�
 
 Độ đặc hiệu enzyme giải thích vì sao con người tiêu hóa tinh bột liên kết α nhưng không tiêu hóa cellulose liên kết β hiệu quả.
 
-> **Chuyển mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Trạng thái oxy hóa của carbohydrate** tiếp nhận điểm tựa từ **Thủy phân liên kết glycosidic** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ester phosphate trong chuyển hóa** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Trạng thái oxy hóa của carbohydrate** nối từ **Thủy phân liên kết glycosidic** sang **Ester phosphate trong chuyển hóa**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Trạng thái oxy hóa của carbohydrate
 
@@ -197,7 +197,7 @@ Khử carbonyl tạo sugar alcohol như sorbitol.
 
 Điều này nối hóa học carbohydrate với hóa học oxy hóa-khử carbonyl thông thường.
 
-> **Chuyển mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Ester phosphate trong chuyển hóa** tiếp nhận điểm tựa từ **Trạng thái oxy hóa của carbohydrate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao tế bào “giữ” glucose dưới dạng glucose-6-phosphate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Ester phosphate trong chuyển hóa** nối từ **Trạng thái oxy hóa của carbohydrate** sang **Vì sao tế bào “giữ” glucose dưới dạng glucose-6-phosphate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ester phosphate trong chuyển hóa
 
@@ -212,7 +212,7 @@ Phosphate thêm điện tích âm, làm giảm khuếch tán thụ động qua m
 
 Nhiều bước phosphoryl hóa được ghép với ATP.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Vì sao tế bào “giữ” glucose dưới dạng glucose-6-phosphate** tiếp nhận điểm tựa từ **Ester phosphate trong chuyển hóa** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Liên hệ với đường phân** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Vì sao tế bào “giữ” glucose dưới dạng glucose-6-phosphate** nối từ **Ester phosphate trong chuyển hóa** sang **Liên hệ với đường phân**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao tế bào “giữ” glucose dưới dạng glucose-6-phosphate
 
@@ -220,7 +220,7 @@ Glucose trung hòa có thể đi qua màng nhờ transporter. Khi đã phosphory
 
 “Đánh dấu hóa học” này giữ carbon trong tế bào và chuẩn bị nó cho các con đường chuyển hóa tiếp theo.
 
-> **Chuyển mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Liên hệ với đường phân** tiếp nhận điểm tựa từ **Vì sao tế bào “giữ” glucose dưới dạng glucose-6-phosphate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Con đường pentose phosphate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Liên hệ với đường phân** nối từ **Vì sao tế bào “giữ” glucose dưới dạng glucose-6-phosphate** sang **Con đường pentose phosphate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Liên hệ với đường phân
 
@@ -235,7 +235,7 @@ Glucose trung hòa có thể đi qua màng nhờ transporter. Khi đã phosphory
 
 Vì vậy chuyển hóa carbohydrate là một mạng cơ chế hữu cơ, không phải một “phép màu sinh học” tách khỏi hóa học.
 
-> **Chuyển mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Con đường pentose phosphate** tiếp nhận điểm tựa từ **Liên hệ với đường phân** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhận diện carbohydrate — glycan như thông tin bề mặt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Con đường pentose phosphate** nối từ **Liên hệ với đường phân** sang **Nhận diện carbohydrate — glycan như thông tin bề mặt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Con đường pentose phosphate
 
@@ -245,7 +245,7 @@ NADPH hỗ trợ sinh tổng hợp khử và hệ chống oxy hóa; ribose cung 
 
 Điểm phân nhánh này cho thấy cùng một khung carbon có thể được phân bổ cho các nhu cầu hệ thống khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Nhận diện carbohydrate — glycan như thông tin bề mặt** tiếp nhận điểm tựa từ **Con đường pentose phosphate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kháng nguyên nhóm máu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Nhận diện carbohydrate — glycan như thông tin bề mặt** nối từ **Con đường pentose phosphate** sang **Kháng nguyên nhóm máu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhận diện carbohydrate — glycan như thông tin bề mặt
 
@@ -261,7 +261,7 @@ Không giống DNA/protein chủ yếu là chuỗi tuyến tính, glycan có th�
 
 Điều này tạo độ đa dạng cấu trúc rất lớn.
 
-> **Chuyển mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Kháng nguyên nhóm máu** tiếp nhận điểm tựa từ **Nhận diện carbohydrate — glycan như thông tin bề mặt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Glycoprotein và glycolipid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Kháng nguyên nhóm máu** nối từ **Nhận diện carbohydrate — glycan như thông tin bề mặt** sang **Glycoprotein và glycolipid**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Kháng nguyên nhóm máu
 
@@ -271,7 +271,7 @@ Một thay đổi nhỏ về độ đặc hiệu của glycosyltransferase → e
 
 Đây là ví dụ rõ ràng về việc hóa lập thể hữu cơ chuyển thành sinh lý học.
 
-> **Chuyển mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Glycoprotein và glycolipid** tiếp nhận điểm tựa từ **Kháng nguyên nhóm máu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lectin** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Glycoprotein và glycolipid** nối từ **Kháng nguyên nhóm máu** sang **Lectin**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Glycoprotein và glycolipid
 
@@ -287,7 +287,7 @@ N-glycan thường gắn vào mạch bên asparagine; O-glycan thường gắn v
 
 Sinh tổng hợp glycan được enzyme điều khiển và không dựa trên một khuôn tuyến tính đơn giản như tổng hợp DNA/protein.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Lectin** tiếp nhận điểm tựa từ **Glycoprotein và glycolipid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Glycation và glycosylation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Lectin** nối từ **Glycoprotein và glycolipid** sang **Glycation và glycosylation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lectin
 
@@ -297,7 +297,7 @@ Vì liên kết carbohydrate thường dựa trên nhiều hydrogen bond và tư
 
 Điều này quan trọng trong bám dính tế bào và nhận diện mầm bệnh.
 
-> **Chuyển mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Glycation và glycosylation** tiếp nhận điểm tựa từ **Lectin** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản ứng Maillard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Glycation và glycosylation** nối từ **Lectin** sang **Phản ứng Maillard**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Glycation và glycosylation
 
@@ -307,7 +307,7 @@ Vì liên kết carbohydrate thường dựa trên nhiều hydrogen bond và tư
 
 Phân biệt này quan trọng trong nghiên cứu tiểu đường, hóa học thực phẩm và lão hóa.
 
-> **Chuyển mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Phản ứng Maillard** tiếp nhận điểm tựa từ **Glycation và glycosylation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Caramel hóa khác Maillard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Phản ứng Maillard** nối từ **Glycation và glycosylation** sang **Caramel hóa khác Maillard**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phản ứng Maillard
 
@@ -315,7 +315,7 @@ Phân biệt này quan trọng trong nghiên cứu tiểu đường, hóa học 
 
 Vì vậy hiện tượng nâu hóa thực phẩm là ứng dụng trực tiếp của hóa học carbonyl + amine.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Caramel hóa khác Maillard** tiếp nhận điểm tựa từ **Phản ứng Maillard** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ tan và liên kết hydrogen** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Caramel hóa khác Maillard** nối từ **Phản ứng Maillard** sang **Độ tan và liên kết hydrogen**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Caramel hóa khác Maillard
 
@@ -323,7 +323,7 @@ Caramel hóa là phân hủy/chuyển vị nhiệt của đường mà không c�
 
 Cả hai đều tạo màu và mùi nhưng cơ chế khác nhau.
 
-> **Chuyển mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, sau nội dung của **Caramel hóa khác Maillard**, **Độ tan và liên kết hydrogen** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, sau nội dung của **Caramel hóa khác Maillard**, **Độ tan và liên kết hydrogen** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Những hiểu lầm thường gặp** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Độ tan và liên kết hydrogen
 
@@ -333,7 +333,7 @@ Tuy nhiên độ tan của polysaccharide không chỉ phụ thuộc độ phân
 
 Một lần nữa: độ tan = cạnh tranh giữa hydrat hóa và độ bền mạng rắn.
 
-> **Chuyển mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Độ tan và liên kết hydrogen** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Những hiểu lầm thường gặp** nối từ **Độ tan và liên kết hydrogen** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -353,7 +353,7 @@ Không. Mạng hydrogen bond trạng thái rắn và độ kết tinh polymer c�
 
 Không. D/L là ký hiệu cấu hình, không phải dấu của góc quay quang học.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Carbohydrate — hóa lập thể, hóa học vòng, dự trữ năng lượng và nhận diện phân tử**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 
