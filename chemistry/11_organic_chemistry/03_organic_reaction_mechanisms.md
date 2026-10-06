@@ -19,7 +19,7 @@ Vì vậy đẩy mũi tên (arrow pushing) mã hóa hai ràng buộc bảo toàn
 - electron không tự sinh ra hoặc biến mất;
 - thay đổi hóa trị/bậc liên kết phải tuân theo đường đi của electron.
 
-> **Chuyển mạch:** Trong **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Mũi tên cong là quy tắc bảo toàn electron** xác định đầu vào; **Cơ chế khác phương trình tổng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Nucleophile — chất cho cặp electron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Mũi tên cong là quy tắc bảo toàn electron** đặt đầu vào cho **Cơ chế khác phương trình tổng**, rồi **Nucleophile — chất cho cặp electron** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Cơ chế khác phương trình tổng
 
@@ -39,7 +39,7 @@ II + dung môi → sản phẩm
 
 Mỗi bước sơ cấp có trạng thái chuyển tiếp và tốc độ riêng. Phương trình hóa lượng không thể tự cho biết liên kết nào bị phá trước, có chất trung gian hay không hoặc yếu tố nào quyết định độ chọn lọc.
 
-> **Chuyển mạch:** Ở chặng này của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Cơ chế khác phương trình tổng** xác định đầu vào; **Nucleophile — chất cho cặp electron** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Electrophile — nơi năng lượng thấp có thể nhận mật độ electron** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Cơ chế khác phương trình tổng** đặt đầu vào cho **Nucleophile — chất cho cặp electron**, rồi **Electrophile — nơi năng lượng thấp có thể nhận mật độ electron** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Nucleophile — chất cho cặp electron
 
@@ -56,7 +56,7 @@ Các vị trí ái nhân thường gặp gồm:
 
 Ví dụ \(I^-\) có thể là nucleophile tốt trong dung môi proton nhưng là cơ sở (base / 기반) yếu hơn nhiều so với alkoxide.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Electrophile — nơi năng lượng thấp có thể nhận mật độ electron** tiếp nhận điểm tựa từ **Nucleophile — chất cho cặp electron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Góc nhìn HOMO–LUMO** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Electrophile — nơi năng lượng thấp có thể nhận mật độ electron** nối từ **Nucleophile — chất cho cặp electron** sang **Góc nhìn HOMO–LUMO**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Electrophile — nơi năng lượng thấp có thể nhận mật độ electron
 
@@ -66,7 +66,7 @@ Các tâm ái điện thường gặp gồm carbocation, carbonyl carbon, carbon
 
 Điện tích dương hình thức giúp nhận diện một số electrophile, nhưng phân cực cũng rất quan trọng. Carbonyl carbon không mang điện tích dương hình thức nhưng vẫn ái điện vì oxygen kéo mật độ electron và orbital \(\pi^*_{C=O}\) dễ nhận electron.
 
-> **Chuyển mạch:** Trong **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Góc nhìn HOMO–LUMO** tiếp nhận điểm tựa từ **Electrophile — nơi năng lượng thấp có thể nhận mật độ electron** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Nhóm rời — sau khi rời phải tạo tiểu phân đủ bền** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Góc nhìn HOMO–LUMO** nối từ **Electrophile — nơi năng lượng thấp có thể nhận mật độ electron** sang **Nhóm rời — sau khi rời phải tạo tiểu phân đủ bền**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Góc nhìn HOMO–LUMO
 
@@ -80,7 +80,7 @@ Phản ứng thuận lợi hơn khi hai orbital phù hợp về năng lượng, 
 
 Điều này giải thích vì sao \(S_N2\) cần tấn công từ phía sau: nucleophile phải chồng phủ với thùy phía sau của orbital \(\sigma^*\) C–LG. Nó cũng giải thích vì sao định hướng lập thể-điện tử quan trọng trong phản ứng loại và cộng.
 
-> **Chuyển mạch:** Ở chặng này của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Nhóm rời — sau khi rời phải tạo tiểu phân đủ bền** tiếp nhận điểm tựa từ **Góc nhìn HOMO–LUMO** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Giản đồ tọa độ phản ứng — bản đồ nằm dưới cơ chế** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Nhóm rời — sau khi rời phải tạo tiểu phân đủ bền** nối từ **Góc nhìn HOMO–LUMO** sang **Giản đồ tọa độ phản ứng — bản đồ nằm dưới cơ chế**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Nhóm rời — sau khi rời phải tạo tiểu phân đủ bền
 
@@ -92,7 +92,7 @@ Nhóm rời tốt thường tạo anion hoặc phân tử trung hòa tương đ�
 
 Vì vậy xúc tác acid thường tăng tốc bằng cách **thay đổi bản chất của nhóm rời**, không phải bằng một cơ chế “thần kỳ”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Nhóm rời — sau khi rời phải tạo tiểu phân đủ bền** xác định đầu vào; **Giản đồ tọa độ phản ứng — bản đồ nằm dưới cơ chế** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **Tiên đề Hammond — trạng thái chuyển tiếp thường giống trạng thái gần nó về năng lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Nhóm rời — sau khi rời phải tạo tiểu phân đủ bền** đặt đầu vào cho **Giản đồ tọa độ phản ứng — bản đồ nằm dưới cơ chế**, rồi **Tiên đề Hammond — trạng thái chuyển tiếp thường giống trạng thái gần nó về năng lượng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Giản đồ tọa độ phản ứng — bản đồ nằm dưới cơ chế
 
@@ -108,7 +108,7 @@ k \propto e^{-\Delta G^{\ddagger}/RT}
 
 Do đó chỉ một chênh lệch nhỏ của \(\Delta G^{\ddagger}\) cũng có thể tạo khác biệt lớn về tốc độ hoặc tỉ lệ sản phẩm.
 
-> **Chuyển mạch:** Trong **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Giản đồ tọa độ phản ứng — bản đồ nằm dưới cơ chế** xác định đầu vào; **Tiên đề Hammond — trạng thái chuyển tiếp thường giống trạng thái gần nó về năng lượng** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **SN2 — một bước đồng thời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Giản đồ tọa độ phản ứng — bản đồ nằm dưới cơ chế** đặt đầu vào cho **Tiên đề Hammond — trạng thái chuyển tiếp thường giống trạng thái gần nó về năng lượng**, rồi **SN2 — một bước đồng thời** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Tiên đề Hammond — trạng thái chuyển tiếp thường giống trạng thái gần nó về năng lượng
 
@@ -122,7 +122,7 @@ Với bước thu năng lượng mạnh, trạng thái chuyển tiếp thường
 
 # Cơ chế thế
 
-> **Chuyển mạch:** Ở chặng này của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **SN2 — một bước đồng thời** tiếp nhận điểm tựa từ **Tiên đề Hammond — trạng thái chuyển tiếp thường giống trạng thái gần nó về năng lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **SN1 — ion hóa rồi bắt giữ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **SN2 — một bước đồng thời** nối từ **Tiên đề Hammond — trạng thái chuyển tiếp thường giống trạng thái gần nó về năng lượng** sang **SN1 — ion hóa rồi bắt giữ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## SN2 — một bước đồng thời
 
@@ -166,7 +166,7 @@ Dung môi phân cực không proton (polar aprotic solvent) thường làm nucle
 
 Vì vậy dung môi có thể thay đổi tính ái nhân hiệu dụng mà không làm thay đổi bản chất tiểu phân.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **SN1 — ion hóa rồi bắt giữ** tiếp nhận điểm tựa từ **SN2 — một bước đồng thời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **E2 — lấy proton và rời nhóm đồng thời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **SN1 — ion hóa rồi bắt giữ** nối từ **SN2 — một bước đồng thời** sang **E2 — lấy proton và rời nhóm đồng thời**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## SN1 — ion hóa rồi bắt giữ
 
@@ -203,7 +203,7 @@ Carbocation lý tưởng gần phẳng có thể bị tấn công từ hai mặt
 
 # Cơ chế loại
 
-> **Chuyển mạch:** Trong **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **E2 — lấy proton và rời nhóm đồng thời** tiếp nhận điểm tựa từ **SN1 — ion hóa rồi bắt giữ** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **E1 — carbocation rồi khử proton** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **E2 — lấy proton và rời nhóm đồng thời** nối từ **SN1 — ion hóa rồi bắt giữ** sang **E1 — carbocation rồi khử proton**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## E2 — lấy proton và rời nhóm đồng thời
 
@@ -227,7 +227,7 @@ Cơ sở (base / 기반) nhỏ thường ưu tiên alkene thế nhiều hơn, b�
 
 Đây không phải luật bất biến; hình học chất nền, nhóm rời và hiệu ứng điện tử có thể đảo xu hướng.
 
-> **Chuyển mạch:** Ở chặng này của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **E1 — carbocation rồi khử proton** tiếp nhận điểm tựa từ **E2 — lấy proton và rời nhóm đồng thời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cộng ái điện và chọn lọc vị trí** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **E1 — carbocation rồi khử proton** nối từ **E2 — lấy proton và rời nhóm đồng thời** sang **Cộng ái điện và chọn lọc vị trí**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## E1 — carbocation rồi khử proton
 
@@ -252,7 +252,7 @@ Cơ chế là sự cạnh tranh giữa các hàng rào hoạt hóa, không phả
 
 Liên kết π giàu electron và electron π lộ ra ngoài hơn electron σ. Vì vậy electrophile dễ tấn công alkene và alkyne.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Cộng ái điện và chọn lọc vị trí** tiếp nhận điểm tựa từ **E1 — carbocation rồi khử proton** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cộng halogen** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Cộng ái điện và chọn lọc vị trí** nối từ **E1 — carbocation rồi khử proton** sang **Cộng halogen**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cộng ái điện và chọn lọc vị trí
 
@@ -260,7 +260,7 @@ Trong phản ứng cộng acid vào alkene không đối xứng, con đường p
 
 Phản ứng cộng HBr có peroxide đi theo cơ chế gốc tự do và có thể đảo chọn lọc vị trí, cho thấy thay đổi cơ chế làm thay đổi “quy tắc”.
 
-> **Chuyển mạch:** Trong **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Cộng halogen** tiếp nhận điểm tựa từ **Cộng ái điện và chọn lọc vị trí** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xúc tác acid** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Cộng halogen** nối từ **Cộng ái điện và chọn lọc vị trí** sang **Xúc tác acid**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cộng halogen
 
@@ -319,19 +319,19 @@ Không phải mọi cơ chế đều phân rã tự nhiên thành các bước i
 
 # Xúc tác
 
-> **Chuyển mạch:** Ở chặng này của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Xúc tác acid** tiếp nhận điểm tựa từ **Cộng halogen** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xúc tác cơ sở (base / 기반)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Xúc tác acid** nối từ **Cộng halogen** sang **Xúc tác cơ sở (base / 기반)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xúc tác acid
 
 Acid có thể proton hóa chất nền, làm giảm năng lượng LUMO hoặc biến nhóm rời kém thành nhóm rời tốt. Chất xúc tác được tái sinh ở bước sau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Xúc tác cơ sở (base / 기반)** tiếp nhận điểm tựa từ **Xúc tác acid** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Xúc tác kim loại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Xúc tác cơ sở (base / 기반)** nối từ **Xúc tác acid** sang **Xúc tác kim loại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xúc tác cơ sở (base / 기반)
 
 Cơ sở (base / 기반) có thể tạo nucleophile hoặc enolate phản ứng mạnh hơn bằng cách khử proton.
 
-> **Chuyển mạch:** Trong **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Xúc tác kim loại** tiếp nhận điểm tựa từ **Xúc tác cơ sở (base / 기반)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Những hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Xúc tác kim loại** nối từ **Xúc tác cơ sở (base / 기반)** sang **Những hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Xúc tác kim loại
 
@@ -393,7 +393,7 @@ Tương quan kiểu Hammett cho biết nhóm đẩy/hút electron ảnh hưởng
 
 Một cơ chế tốt phải giải thích nhiều quan sát độc lập, không chỉ tạo được đúng sản phẩm cuối.
 
-> **Chuyển mạch:** Ở chặng này của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Những hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Xúc tác kim loại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Những hiểu lầm thường gặp** nối từ **Xúc tác kim loại** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Những hiểu lầm thường gặp
 
@@ -417,7 +417,7 @@ Không. Chuyển vị thường đi theo con đường dễ tiếp cận để t
 
 Nhiều phản ứng có tên riêng chỉ là tổ hợp của một số mô-típ sơ cấp lặp lại: chuyển proton, tấn công ái nhân, rời nhóm, cộng, loại, chuyển electron và chuyển vị.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Cơ chế phản ứng hữu cơ — dòng electron, năng lượng và tính chọn lọc**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

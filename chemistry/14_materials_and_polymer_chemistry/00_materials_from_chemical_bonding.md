@@ -56,7 +56,7 @@ Electron dẫn còn giúp nhiều kim loại có độ dẫn điện và dẫn n
 
 Tuy nhiên độ bền thực tế phụ thuộc mạnh vào **lệch mạng (dislocation)**, kích thước hạt, kết tủa và lịch sử biến dạng. Vì vậy không thể giải thích độ bền kim loại chỉ bằng “liên kết kim loại mạnh”.
 
-> **Chuyển mạch:** Trong **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Chất rắn ion** tiếp nhận điểm tựa từ **Liên kết kim loại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mạng cộng hóa trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Chất rắn ion** nối từ **Liên kết kim loại** sang **Mạng cộng hóa trị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất rắn ion
 
@@ -64,7 +64,7 @@ Tương tác Coulomb mạnh có thể tạo nhiệt độ nóng chảy và độ
 
 Đây là một lý do nhiều gốm ion cứng nhưng giòn.
 
-> **Chuyển mạch:** Ở chặng này của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Mạng cộng hóa trị** tiếp nhận điểm tựa từ **Chất rắn ion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chất rắn phân tử và polymer** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Mạng cộng hóa trị** nối từ **Chất rắn ion** sang **Chất rắn phân tử và polymer**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Mạng cộng hóa trị
 
@@ -72,7 +72,7 @@ Liên kết mạnh và định hướng có thể tạo môđun cao, độ cứn
 
 Mặt trái là chuyển động lệch mạng thường khó, nên vật liệu ít khả năng biến dạng dẻo để làm tù đầu khe nứt.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Chất rắn phân tử và polymer** tiếp nhận điểm tựa từ **Mạng cộng hóa trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đa hình** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Chất rắn phân tử và polymer** nối từ **Mạng cộng hóa trị** sang **Đa hình**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chất rắn phân tử và polymer
 
@@ -103,7 +103,7 @@ Tính chất khối vì vậy phụ thuộc mạnh vào:
 
 Thủy tinh là chất rắn vô định hình nằm ngoài trạng thái tinh thể cân bằng, không nên được mô tả đơn giản như “chất lỏng cực nhớt đang chảy ở nhiệt độ phòng”.
 
-> **Chuyển mạch:** Trong **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Đa hình** tiếp nhận điểm tựa từ **Chất rắn phân tử và polymer** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khuyết tật điểm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Đa hình** nối từ **Chất rắn phân tử và polymer** sang **Khuyết tật điểm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đa hình
 
@@ -117,7 +117,7 @@ Vì vậy “công thức hóa học giống nhau” chưa đồng nghĩa “cù
 
 Tinh thể hoàn hảo chỉ là mô hình tham chiếu. Vật liệu thật luôn chứa khuyết tật; nhiều công nghệ còn chủ động tạo chúng.
 
-> **Chuyển mạch:** Ở chặng này của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Khuyết tật điểm** tiếp nhận điểm tựa từ **Đa hình** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Lệch mạng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Khuyết tật điểm** nối từ **Đa hình** sang **Lệch mạng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khuyết tật điểm
 
@@ -130,7 +130,7 @@ Các loại điển hình:
 
 Khuyết tật điểm tạo đường cho khuếch tán, dẫn ion và pha tạp điện tử.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Lệch mạng** tiếp nhận điểm tựa từ **Khuyết tật điểm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Biên hạt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Lệch mạng** nối từ **Khuyết tật điểm** sang **Biên hạt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Lệch mạng
 
@@ -138,7 +138,7 @@ Khuyết tật điểm tạo đường cho khuếch tán, dẫn ion và pha tạ
 
 Nhờ vậy ứng suất biến dạng thấp hơn rất nhiều so với tinh thể lý tưởng. Các cơ chế tăng bền thường hoạt động bằng cách làm lệch mạng khó di chuyển hơn.
 
-> **Chuyển mạch:** Trong **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Biên hạt** tiếp nhận điểm tựa từ **Lệch mạng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Đàn hồi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Biên hạt** nối từ **Lệch mạng** sang **Đàn hồi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Biên hạt
 
@@ -221,7 +221,7 @@ Vì vậy một chuyển pha thuận lợi về nhiệt động chưa chắc x�
 
 # Tính chất cơ học từ cấu trúc
 
-> **Chuyển mạch:** Ở chặng này của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Đàn hồi** tiếp nhận điểm tựa từ **Biên hạt** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Chảy và biến dạng dẻo** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Đàn hồi** nối từ **Biên hạt** sang **Chảy và biến dạng dẻo**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Đàn hồi
 
@@ -235,13 +235,13 @@ E=\frac{\sigma}{\varepsilon}
 
 với \(E\) là môđun Young.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Chảy và biến dạng dẻo** tiếp nhận điểm tựa từ **Đàn hồi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Độ bền và độ dai** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Chảy và biến dạng dẻo** nối từ **Đàn hồi** sang **Độ bền và độ dai**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Chảy và biến dạng dẻo
 
 Sau giới hạn chảy, biến dạng vĩnh viễn xảy ra. Với nhiều kim loại, cơ chế trung tâm là chuyển động lệch mạng.
 
-> **Chuyển mạch:** Trong **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Độ bền và độ dai** tiếp nhận điểm tựa từ **Chảy và biến dạng dẻo** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Gãy nứt** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Độ bền và độ dai** nối từ **Chảy và biến dạng dẻo** sang **Gãy nứt**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ bền và độ dai
 
@@ -251,7 +251,7 @@ Sau giới hạn chảy, biến dạng vĩnh viễn xảy ra. Với nhiều kim 
 
 Một vật liệu rất cứng hoặc rất bền vẫn có thể có độ dai thấp.
 
-> **Chuyển mạch:** Ở chặng này của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Gãy nứt** tiếp nhận điểm tựa từ **Độ bền và độ dai** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Vật liệu từ liên kết hóa học — từ nguyên tử tới tính chất vĩ mô**, **Gãy nứt** nối từ **Độ bền và độ dai** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Gãy nứt
 
