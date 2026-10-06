@@ -48,6 +48,20 @@ nhân” ở cuối:
 - `개방형` là quỹ mở; `폐쇄형` là quỹ đóng; `환매` là việc nhà đầu tư yêu cầu
   quỹ mua lại phần quyền lợi.
 
+### 3.1. Các distinction bắt buộc giữ nguyên từ source
+
+| Tiếng Việt (English / 한국어) | Distinction cần nhớ |
+|---|---|
+| giá phát hành (issue price / `발행가액`) vs mệnh giá (par value / `액면가액`) | không hoán đổi trong công thức `이론권리락주가`; câu 50 kiểm tra đúng bẫy này |
+| vay tiền giao dịch tín dụng (`신용거래융자`) vs vay chứng khoán (`신용거래대주`) | phân loại theo tài sản được cấp: money vs securities |
+| cho vay chứng khoán (securities lending / `증권대차거래`) | nghiệp vụ mượn–hoàn trả chứng khoán, không đồng nhất với lệnh bán hay `대주` |
+| net settlement / centralized settlement / book-entry settlement (`차감결제` / `집중결제` / `대체결제`) | ba cơ chế settlement được source phân biệt; `차금결제` là distractor ở câu 41 |
+| công bố không trung thực (`불성실공시`) và người phụ trách công bố (`공시책임자`, `공시담당자`) | tách biện pháp SRO khỏi kết luận trách nhiệm pháp lý cá nhân |
+| ủy quyền biểu quyết (proxy voting / `의결권대리행사`) và giấy ủy quyền (`위임장`) | tách nội dung quyền được giao khỏi mục đích của bên vận động |
+| tax-base price của quỹ (`과세표준 기준가격`, `과표기준가격`) | có thể khác NAV/base price dùng để nhìn lãi/lỗ kinh tế |
+| tracking error (`추적오차`) | đo độ lệch so với benchmark, không phải bản thân lợi suất |
+| manager-average return / category return (`운용사별 평균수익률` / `유형수익률`) | một cái gom theo manager, một cái gom theo loại quỹ; không dùng thay nhau |
+
 ## 4. Cách ghi chú khi đọc một câu dài
 
 Gạch dưới danh từ chỉ chủ thể (`투자자`, `발행자`, `금융회사`), khoanh động từ
