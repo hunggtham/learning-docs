@@ -110,6 +110,26 @@ Một điểm quan trọng là specification limit và tiến trình (process / 
 
 > **Nối mạch:** **Continuous improvement** nối từ **Statistical thinking ở mức cần thiết** sang **Tài nguyên (resource / 자원) management là năng lực (capability / 역량) + availability**, vì cơ chế trước tạo đầu vào cho bước sau.
 
+## Control limits và specification limits: stable không đồng nghĩa capable
+
+Statistical control và conformance trả lời hai câu hỏi khác nhau. **Control limits** mô tả tiến trình đang biến thiên như thế nào dựa trên dữ liệu của chính tiến trình; chúng giúp phân biệt common-cause variation với tín hiệu special-cause. **Specification limits** đến từ requirement/acceptance: customer, engineering, regulation hoặc contract coi mức nào là đạt.
+
+Vì vậy có bốn trạng thái cần phân biệt. Một tiến trình có thể ổn định và mọi điểm nằm trong control limits nhưng phân phối của nó vẫn vượt specification: hệ thống đang **predictably producing nonconformance**. Ngược lại, vài output hiện vẫn nằm trong spec nhưng process có special-cause signal; deliverable hôm nay pass không chứng minh process ngày mai đáng tin.
+
+Điều này làm thay đổi hành động quản lý. Nếu có special cause, trước hết tìm nguyên nhân bất thường thay vì chỉnh toàn bộ process. Nếu process ổn định nhưng incapable so với specification, cần thay capability của process—thiết kế, tooling, skill, tolerance allocation hoặc workflow—chứ không thể “nhắc team cẩn thận hơn”. Nếu PM phản ứng với mỗi common-cause fluctuation như một sự cố riêng, tampering có thể làm variation tăng.
+
+Ví dụ một vendor gia công chi tiết với tolerance ±0.20 mm. Process có thể chạy rất ổn định quanh một mean lệch và thường xuyên vượt upper specification limit. Dashboard “ổn định” trong trường hợp này không phải tin tốt; nó cho biết failure có tính hệ thống và có thể dự đoán.
+
+Mental model cần giữ là:
+
+```text
+control limits = tiếng nói của process
+specification limits = tiếng nói của requirement
+stable process ≠ capable process
+```
+
+> **Nối mạch:** Khi đã tách process stability khỏi requirement conformance, **Continuous improvement** có thể chọn đúng loại intervention thay vì tối ưu một process ổn định nhưng sai capability.
+
 ## Continuous improvement
 
 Các vòng như Plan-Do-Check-Act (PDCA) hay retrospective đều dựa trên phản hồi (feedback / 피드백). Improvement tốt cần phân biệt symptom và nguyên nhân gốc (root cause / 근본 원인). Nếu defect tăng vì yêu cầu (requirement / 요구사항) ambiguity, tăng số tester có thể chỉ xử lý symptom.
