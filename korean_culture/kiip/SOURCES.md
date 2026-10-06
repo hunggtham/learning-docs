@@ -1,206 +1,77 @@
-# Sources & Provenance — KIIP / 한국사회 이해
+# Sources & Provenance — KIIP inside Korean Culture
 
-Mục đích của file này là tách rõ:
+> **Mạch đọc:** [README](./README.md) là owner của **Sources & Provenance — KIIP inside Korean Culture**; dùng README để phân biệt lesson owner với provenance owner. Từ **Uploaded KIIP study summaries** nối sang official/current references, correction notes và ngày xác minh, rồi quay lại bài học để giữ giải thích tiếng Việt nhưng không biến nguồn thành nội dung học thuộc.
 
-1. giáo trình KIIP;
-2. nguồn chính thức hiện hành cho luật/policy/kỳ thi;
-3. PDF study summaries;
-4. note tự biên soạn trong repository.
+## Uploaded KIIP study summaries
 
----
+Bộ ghi chú (note / 노트) cơ bản được dựng từ các tệp (file / 파일) người dùng cung cấp:
 
-# 1. Official textbook baseline
+- `KIIP 5 CHƯƠNG 1 XÃ HỘI.pdf` — 사회, 1~8과
+- `KIIP 5 - CHƯƠNG 2 GIÁO DỤC.pdf` — 교육, 9~12과
+- `KII5 - CHƯƠNG 3 VĂN HÓA.pdf` — 문화, 13~19과
+- `CHƯƠNG 4 chính trị.pdf` — 정치, 20~24과
+- `CHƯƠNG 5 kinh tế.pdf` — 경제, 25~29과
+- `KIIP 5 - CHƯƠNG 6.pdf` — 법, 30~37과
+- `KIIP 5 - CHƯƠNG 7 LỊCH SỬ.pdf` — 역사, 38~44과
+- `KIIP 5 - CHƯƠNG 8 (ĐỊA LÝ).pdf` — 지리, 45~50과
 
-## 한국사회 이해 : 기본
+Tệp (file / 파일) DOCX được cung cấp chủ yếu là thông báo/link chia sẻ tài liệu, không chứa syllabus substantive nên không dùng làm nguồn học thuật.
 
-Đã xác minh trong audit 2026-10:
+> **Nối mạch:** Trong **Sources & Provenance — KIIP inside Korean Culture**, sau nội dung của **Uploaded KIIP study summaries**, **Official / hiện tại (current / 현재) references** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **Nguồn (source / 소스) hierarchy** mở rộng hệ quả hoặc giới hạn liên quan.
 
-- 기획: `법무부 출입국·외국인정책본부`
-- 판: **12판**
-- 발행: **2025**
-- ISBN: `9791186140291`
+## Official / hiện tại (current / 현재) references
 
-50 bài:
+Phần này giúp đối chiếu phạm vi, nguồn và trạng thái của nội dung KIIP. Hãy ghi rõ tài liệu nào là nền, nội dung nào cần cập nhật và điểm nào phải tra nguồn chính thức.
 
-```text
-사회 1~8
-교육 9~12
-문화 13~19
-정치 20~24
-경제 25~29
-법 30~37
-역사 38~44
-지리 45~50
-```
+- 법무부 사회통합프로그램: https://www.moj.go.kr/moj/369/subview.do
+- 사회통합정보망: https://www.socinet.go.kr/
+- KIIP 평가: https://www.kiiptest.org/
+- 법무부 평가 견본/자료: https://moj.go.kr/moj/415/subview.do
+- 심화 콘텐츠 보완 연구: https://www.moj.go.kr/bbs/immigration/43/440567/artclView.do
+- 한국사회 이해 기본 교재 구성: https://www.moj.go.kr/bbs/moj/164/205208/download.do
+- 사회통합프로그램 개편방향 보도자료 (2026-07-12): 법무부 출입국·외국인정책본부
+- 법정 최고금리 20%: https://www.moj.go.kr/bbs/moj/182/545579/artclView.do
+- 예금보호한도 1억원: https://www.fsc.go.kr/no010101/85200
+- 출입국관리법(외국인등록 90일): https://law.go.kr/LSW/lsInfoP.do?lsiSeq=271511
+- 2024 인구주택총조사(1인가구 36.1%): https://kostat.go.kr/boardDownload.es?bid=203&list_no=437767&seq=3
+- 중앙선거관리위원회: https://www.nec.go.kr/
+- 대한민국 국회: https://www.assembly.go.kr/
 
-## 한국사회 이해 : 심화
+> **Nối mạch:** Ở chặng này của **Sources & Provenance — KIIP inside Korean Culture**, **Official / hiện tại (current / 현재) references** đặt vấn đề; **Nguồn (source / 소스) hierarchy** đối chiếu bằng chứng, rồi **Phiên bản (version / 버전) chính sách (policy / 정책)** mở rộng hệ quả hoặc giới hạn liên quan.
 
-- 판: **10판**
-- 발행: **2024**
+## Nguồn (source / 소스) hierarchy
 
-20 bài được chia thành:
+Khi có xung đột (conflict / 충돌), ưu tiên:
 
-```text
-대한민국의 국민        1~4
-대한민국의 역사와 발전  5~8
-대한민국의 정치와 외교  9~12
-대한민국의 경제        13~16
-대한민국의 법질서      17~20
-```
+1. `교재/공지` áp dụng cho đúng kỳ thi;
+2. văn bản/notice của `법무부`, `사회통합정보망`, `kiiptest.org`;
+3. cơ quan chuyên ngành chính thức như 선관위, 금융위, 교육부;
+4. 8 PDF tóm tắt người học cung cấp;
+5. ghi chú (note / 노트) tổng hợp này;
+6. tài liệu community/thương mại.
 
-Repository không sao chép nguyên văn sách có bản quyền; nội dung được diễn giải lại để học.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Sources & Provenance — KIIP inside Korean Culture**, **Nguồn (source / 소스) hierarchy** đặt vấn đề; **Phiên bản (version / 버전) chính sách (policy / 정책)** đối chiếu bằng chứng, rồi **Phạm vi (scope / 범위) tag chính sách (policy / 정책)** mở rộng hệ quả hoặc giới hạn liên quan.
 
-Coverage:
+## Phiên bản (version / 버전) chính sách (policy / 정책)
 
-- [`17_complete_exam_coverage_map.md`](17_complete_exam_coverage_map.md)
-- [`18_귀화용_심화_20과.md`](18_귀화용_심화_20과.md)
+Fact có thể đổi phải có timestamp hoặc đưa vào `00_current_facts_and_corrections.md`.
 
----
+Không sửa âm thầm nguồn (source / 소스) cũ. Ví dụ:
 
-# 2. KIIP official/current references
+`PDF: 예금보호 5천만원`  
+`Current: 1억원 (2025-09-01~)`.
 
-- 법무부 사회통합프로그램  
-  https://www.moj.go.kr/immigration/1571/subview.do
-- 사회통합정보망  
-  https://www.socinet.go.kr/
-- KIIP 평가  
-  https://www.kiiptest.org/
-- 중앙선거관리위원회  
-  https://www.nec.go.kr/
-- 대한민국 국회  
-  https://www.assembly.go.kr/
+Cả hai được giữ để người học hiểu vì sao tài liệu cũ và thông tin hiện tại khác nhau.
 
-Dùng cho:
+> **Nối mạch:** Trong **Sources & Provenance — KIIP inside Korean Culture**, **Phạm vi (scope / 범위) tag chính sách (policy / 정책)** nối từ **Phiên bản (version / 버전) chính sách (policy / 정책)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
-- course structure/hours
-- evaluation notices
-- registration
-- current institutions
-- election rules
+## Phạm vi (scope / 범위) tag chính sách (policy / 정책)
 
----
+Phần này tập trung vào một nhóm fact hoặc bẫy thường gặp trong KIIP. Hãy đọc giải thích trước, rồi dùng bảng/list để đối chiếu các ngoại lệ trong ngữ cảnh.
 
-# 3. Program facts verified
+- Nội dung lấy từ 8 PDF cơ bản được gắn `공통` vì đó là xương sống của 영주용 và cũng là nền tảng cho 귀화용.
+- Nội dung thêm từ phạm vi 심화/nguồn chính thức được gắn `귀화용 심화`.
+- Dữ liệu pháp luật/statistic mới hơn không được sửa đè nguồn (source / 소스); dùng `현재 확인`.
+- Các tình huống luyện tập là **nội dung tự biên soạn**, không được mô tả như đề thật.
 
-법무부 hiện mô tả:
-
-- `한국어와 한국문화`: 0~4단계
-- `한국사회 이해`: 5단계
-- 영주 mục tiêu: **70시간**
-- 국적 mục tiêu: **100시간**
-
-Socinet vận hành riêng `영주용 종합평가` và `귀화용 종합평가`.
-
-Format đánh giá có thể thay đổi theo notice, vì vậy trước kỳ thi luôn kiểm tra Socinet/KIIP 평가 thay vì học từ screenshot cũ.
-
----
-
-# 4. Current law — 2026 형사사법 개편
-
-Các giáo trình cũ có thể dùng `경찰·검찰·법원` như mô hình đơn giản. Nhưng từ **2026-10-02** cơ cấu đã thay đổi.
-
-Nguồn pháp lý chính thức:
-
-- 국가법령정보센터 — `검찰청법` 폐지 / `공소청법` 시행  
-  https://www.law.go.kr/lsRvsDocListP.do?chrClsCd=010202&lsId=001286&lsRvsGubun=all
-
-- 국가법령정보센터 — `중대범죄수사청 조직 및 운영에 관한 법률`  
-  https://www.law.go.kr/LSW/lsInfoP.do?efYd=20261002&lsiSeq=290127
-
-Current mental model:
-
-```text
-수사
-├─ 경찰 등 사법경찰
-└─ 중대범죄수사청 (법률상 중대범죄)
-
-기소·공소유지
-└─ 공소청
-
-재판
-└─ 법원
-```
-
-Đã phản ánh vào:
-
-- [`00_current_facts_and_corrections.md`](00_current_facts_and_corrections.md)
-- [`06_법.md`](06_법.md)
-- [`09_high_yield_numbers_institutions.md`](09_high_yield_numbers_institutions.md)
-
----
-
-# 5. Other official sources
-
-## 금융
-
-금융위원회 — 예금보호한도 `1억원`  
-https://www.fsc.go.kr/no010101/85200
-
-## 최고금리
-
-법무부 — 법정 최고금리 `20%`  
-https://www.moj.go.kr/bbs/moj/182/545579/artclView.do
-
-## 체류·출입국
-
-HiKorea / `1345`를 사용해 current 체류 rules 확인.
-
----
-
-# 6. Uploaded KIIP study summaries
-
-Bản đầu của repo được dựng một phần từ:
-
-- `KIIP 5 CHƯƠNG 1 XÃ HỘI.pdf`
-- `KIIP 5 - CHƯƠNG 2 GIÁO DỤC.pdf`
-- `KII5 - CHƯƠNG 3 VĂN HÓA.pdf`
-- `CHƯƠNG 4 chính trị.pdf`
-- `CHƯƠNG 5 kinh tế.pdf`
-- `KIIP 5 - CHƯƠNG 6.pdf`
-- `KIIP 5 - CHƯƠNG 7 LỊCH SỬ.pdf`
-- `KIIP 5 - CHƯƠNG 8 (ĐỊA LÝ).pdf`
-
-Chúng hữu ích để ôn nhưng **không đứng trên giáo trình/law/official notice hiện hành**.
-
----
-
-# 7. Source hierarchy
-
-Khi có conflict:
-
-```text
-1. current law / official notice áp dụng đúng thời điểm
-2. 법무부·사회통합정보망·KIIP 평가
-3. giáo trình KIIP hiện hành
-4. cơ quan chuyên ngành chính thức
-5. PDF study summaries
-6. repository notes
-7. community/blog/commercial prep
-```
-
-Cần phân biệt:
-
-- câu hỏi về **교재 내용** → hiểu textbook đang kiểm tra concept gì;
-- câu hỏi về **현재 제도** → ưu tiên law/official current source.
-
----
-
-# 8. Current-fact policy
-
-Các nhóm phải có timestamp hoặc route qua [`00_current_facts_and_corrections.md`](00_current_facts_and_corrections.md):
-
-- finance limits/rates
-- 최저임금 và labor details
-- population/religion/education statistics
-- welfare benefits
-- visa/nationality/residency
-- foreigner voting eligibility
-- ministry/prosecution/judicial structure
-- housing protection rules
-- KIIP format/fee/schedule
-
----
-
-# 9. Mock/recall provenance
-
-Các câu trong mock, recall bank và oral bank là **câu luyện tập tự biên soạn**, trừ khi được ghi rõ là official sample. Không mô tả chúng như đề thi thật bị leak.
+> **Bàn giao:** Sau **Phạm vi (scope / 범위) tag chính sách (policy / 정책)**, hãy giữ lại kết luận và ranh giới của mục này; quay về [README](./README.md) khi cần định vị owner hoặc chọn nhánh học tiếp theo.
