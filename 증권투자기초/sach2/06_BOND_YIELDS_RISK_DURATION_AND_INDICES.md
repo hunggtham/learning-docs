@@ -110,6 +110,21 @@ Tracking error = độ lệch chuẩn(R_danh mục − R_benchmark)
 
 Tracking error thấp không chứng minh danh mục tốt; nó chỉ nói danh mục bám benchmark sát. Cần đọc cùng active return, chi phí, duration, rating và currency để biết phần lệch là chủ ý hay sai lệch không được kiểm soát.
 
+### Thị trường sơ cấp, thứ cấp và đấu giá
+
+Ở thị trường sơ cấp, issuer phát hành trái phiếu và nhận vốn; ở thị trường thứ cấp, nhà đầu tư mua bán lại các trái phiếu đã phát hành. Giá và lợi suất sơ cấp tạo điểm khởi đầu cho khoản nợ, nhưng giá thứ cấp còn phản ánh lãi suất mới, credit spread, thanh khoản và cung–cầu sau phát hành. Vì vậy giá phát hành không phải “giá trị cố định” của trái phiếu; nó có thể lệch ngay sau khi thị trường cập nhật thông tin.
+
+Source đặt cạnh nhau hai kiểu đấu giá textbook:
+
+| Kiểu | Cách phân bổ khái quát | Rủi ro diễn giải |
+|---|---|---|
+| Conventional/American (discriminatory) | Bên trúng trả theo mức giá/lợi suất trong chính lệnh của mình | Cùng một phiên nhưng các bên có thể nhận mức khác nhau |
+| Dutch/uniform-price | Các lệnh trúng cùng chịu một mức giá/lợi suất cắt duy nhất | Chiến lược đặt lệnh và mức cutoff quyết định kết quả chung |
+
+Ví dụ, nếu các mức lợi suất dự thầu hợp lệ là 5,0%, 5,2% và 5,4%, cutoff ở 5,4% thì kiểu discriminatory áp mức riêng cho từng lệnh trúng; kiểu uniform-price áp cùng mức cutoff cho các lệnh trúng. Đây chỉ là sơ đồ cơ chế: quy tắc ưu tiên, khối lượng, lệnh cạnh tranh/không cạnh tranh và cách báo giá phụ thuộc từng jurisdiction và prospectus.
+
+Khi nối đấu giá với yield curve, hãy hỏi ba điều: issuer huy động được vốn ở mức nào, nhà đầu tư nhận exposure kỳ hạn/rating nào, và trái phiếu giao dịch thứ cấp với spread bao nhiêu. Một phiên sơ cấp có lợi suất thấp không tự chứng minh issuer ít rủi ro; có thể thanh khoản dồi dào hoặc lệnh bị giới hạn. Ngược lại, thanh khoản thứ cấp kém có thể làm spread tăng dù default risk chưa đổi.
+
 ## 6. Repo và cơ chế thị trường
 
 Repo là giao dịch bán và mua lại, về kinh tế gần khoản vay có tài sản thế chấp. Haircut, margin, collateral quality và haircut change quyết định đòn bẩy và liquidity. Khi giá tài sản giảm hoặc haircut tăng, bên vay có thể phải bổ sung tài sản hoặc bán cưỡng bức. Vì vậy repo nối đường cong lợi suất với funding và stress thị trường; không nên đọc bond market như một bảng giá tĩnh.
