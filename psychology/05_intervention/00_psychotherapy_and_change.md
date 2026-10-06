@@ -26,7 +26,7 @@ Một treatment có kết quả (outcome / 결과) bằng chứng (evidence / �
 
 Ba câu hỏi cần thiết kế (design / 설계) khác nhau.
 
-> **Chuyển mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **1. Efficacy, effectiveness và cơ chế (mechanism / 메커니즘)** xác định đầu vào; **2. kết quả (outcome / 결과) không chỉ là symptom score** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **3. Treatment gói (package / 패키지) vs ingredient** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **1. Efficacy, effectiveness và cơ chế (mechanism / 메커니즘)** đặt đầu vào cho **2. kết quả (outcome / 결과) không chỉ là symptom score**, rồi **3. Treatment gói (package / 패키지) vs ingredient** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2. kết quả (outcome / 결과) không chỉ là symptom score
 
@@ -44,7 +44,7 @@ Kết quả (outcome / 결과) có thể gồm:
 
 Nếu study chỉ đo symptom ngay sau treatment, nó không trả lời toàn bộ clinical usefulness.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **3. Treatment gói (package / 패키지) vs ingredient** tiếp nhận điểm tựa từ **2. kết quả (outcome / 결과) không chỉ là symptom score** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. dùng chung (common / 공통) factors** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **3. Treatment gói (package / 패키지) vs ingredient** nối từ **2. kết quả (outcome / 결과) không chỉ là symptom score** sang **4. dùng chung (common / 공통) factors**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Treatment gói (package / 패키지) vs ingredient
 
@@ -54,7 +54,7 @@ Nếu gói (package / 패키지) works, chưa biết ingredient nào necessary.
 
 Dismantling studies, mediation studies và experimental manipulation needed to identify cơ chế (mechanism / 메커니즘).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **4. dùng chung (common / 공통) factors** tiếp nhận điểm tựa từ **3. Treatment gói (package / 패키지) vs ingredient** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Specific techniques** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **4. dùng chung (common / 공통) factors** nối từ **3. Treatment gói (package / 패키지) vs ingredient** sang **5. Specific techniques**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. dùng chung (common / 공통) factors
 
@@ -66,7 +66,7 @@ These factors repeatedly associate with kết quả (outcome / 결과) across mo
 >
 > **cơ chế (mechanism / 메커니즘) status:** association alone does not prove alliance causally drives all improvement. Early symptom thay đổi (change / 변경) can improve alliance, and máy khách (client / 클라이언트)/therapist variables may influence both.
 
-> **Chuyển mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **5. Specific techniques** tiếp nhận điểm tựa từ **4. dùng chung (common / 공통) factors** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Therapeutic alliance** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **5. Specific techniques** nối từ **4. dùng chung (common / 공통) factors** sang **6. Therapeutic alliance**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Specific techniques
 
@@ -76,7 +76,7 @@ Therefore “all therapies công việc (work / 작업) only because relationshi
 
 Likewise “only technique matters” ignores therapist/máy khách (client / 클라이언트)/ngữ cảnh (context / 맥락) tiến trình (process / 프로세스).
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **6. Therapeutic alliance** tiếp nhận điểm tựa từ **5. Specific techniques** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Expectancy and rationale** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **6. Therapeutic alliance** nối từ **5. Specific techniques** sang **7. Expectancy and rationale**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Therapeutic alliance
 
@@ -90,7 +90,7 @@ Strong alliance does not mean never challenging máy khách (client / 클라이�
 
 Alliance rupture and repair may itself provide học tập (learning / 학습) opportunity.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **7. Expectancy and rationale** tiếp nhận điểm tựa từ **6. Therapeutic alliance** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. học tập (learning / 학습) as a broad thay đổi (change / 변경) principle** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **7. Expectancy and rationale** nối từ **6. Therapeutic alliance** sang **8. học tập (learning / 학습) as a broad thay đổi (change / 변경) principle**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Expectancy and rationale
 
@@ -100,7 +100,7 @@ But expectancy effects should not be confused with “symptom is imaginary”. E
 
 Xem [[../06_applied/13_placebo_nocebo_expectation_and_context]].
 
-> **Chuyển mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **8. học tập (learning / 학습) as a broad thay đổi (change / 변경) principle** tiếp nhận điểm tựa từ **7. Expectancy and rationale** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Exposure and inhibitory học tập (learning / 학습)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **8. học tập (learning / 학습) as a broad thay đổi (change / 변경) principle** nối từ **7. Expectancy and rationale** sang **9. Exposure and inhibitory học tập (learning / 학습)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. học tập (learning / 학습) as a broad thay đổi (change / 변경) principle
 
@@ -117,7 +117,7 @@ Exposure challenges threat prediction; behavioral activation challenges withdraw
 
 This is useful cross-school mô hình (model / 모델) but still a **hiện tại (current / 현재) khung phần mềm (framework / 프레임워크)**, not one proven universal cơ chế (mechanism / 메커니즘) for every therapy.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **9. Exposure and inhibitory học tập (learning / 학습)** tiếp nhận điểm tựa từ **8. học tập (learning / 학습) as a broad thay đổi (change / 변경) principle** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Cognitive thay đổi (change / 변경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **9. Exposure and inhibitory học tập (learning / 학습)** nối từ **8. học tập (learning / 학습) as a broad thay đổi (change / 변경) principle** sang **10. Cognitive thay đổi (change / 변경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Exposure and inhibitory học tập (learning / 학습)
 
@@ -127,7 +127,7 @@ Ngữ cảnh (context / 맥락) variation, expectancy violation and reduction of
 
 Xem [[01_cbt_behavioral_and_third_wave]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **10. Cognitive thay đổi (change / 변경)** tiếp nhận điểm tựa từ **9. Exposure and inhibitory học tập (learning / 학습)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Emotion regulation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **10. Cognitive thay đổi (change / 변경)** nối từ **9. Exposure and inhibitory học tập (learning / 학습)** sang **11. Emotion regulation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Cognitive thay đổi (change / 변경)
 
@@ -135,7 +135,7 @@ Changing appraisal or belief can affect emotion and hành vi (behavior / 동작)
 
 Mediation requires temporal bằng chứng (evidence / 증거) and điều khiển (control / 제어) of confounding, not just pre-post correlation.
 
-> **Chuyển mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **11. Emotion regulation** tiếp nhận điểm tựa từ **10. Cognitive thay đổi (change / 변경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Psychological flexibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **11. Emotion regulation** nối từ **10. Cognitive thay đổi (change / 변경)** sang **12. Psychological flexibility**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Emotion regulation
 
@@ -145,7 +145,7 @@ Meta-analytic tiến trình (process / 프로세스) research finds some emotion
 
 > **bằng chứng (evidence / 증거) status:** association is stronger than nhân quả (causal / 인과적) proof for many proposed mechanisms.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **12. Psychological flexibility** tiếp nhận điểm tựa từ **11. Emotion regulation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Behavioral activation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **12. Psychological flexibility** nối từ **11. Emotion regulation** sang **13. Behavioral activation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Psychological flexibility
 
@@ -153,7 +153,7 @@ ACT and some integrative các mô hình (models / 모델들) emphasize ability t
 
 Psychological flexibility is an influential hiện tại (current / 현재) construct with substantial research, but it should not be treated as proven single cơ chế (mechanism / 메커니즘) behind all effective psychotherapy.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **13. Behavioral activation** tiếp nhận điểm tựa từ **12. Psychological flexibility** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Skills acquisition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **13. Behavioral activation** nối từ **12. Psychological flexibility** sang **14. Skills acquisition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Behavioral activation
 
@@ -161,7 +161,7 @@ Behavioral activation targets avoidance/inactivity loops and increases contact w
 
 Its bằng chứng (evidence / 증거) for depression supports behavior-focused thay đổi (change / 변경), but “just be active” is not equivalent to structured treatment.
 
-> **Chuyển mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **14. Skills acquisition** tiếp nhận điểm tựa từ **13. Behavioral activation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Psychodynamic tiến trình (process / 프로세스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **14. Skills acquisition** nối từ **13. Behavioral activation** sang **15. Psychodynamic tiến trình (process / 프로세스)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Skills acquisition
 
@@ -169,7 +169,7 @@ DBT and other structured therapies teach emotion regulation, distress tolerance,
 
 Skill kiến thức (knowledge / 지식) alone is insufficient; repeated practice and ngữ cảnh (context / 맥락) generalization matter.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **14. Skills acquisition** xác định đầu vào; **15. Psychodynamic tiến trình (process / 프로세스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. Humanistic tiến trình (process / 프로세스)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **14. Skills acquisition** đặt đầu vào cho **15. Psychodynamic tiến trình (process / 프로세스)**, rồi **16. Humanistic tiến trình (process / 프로세스)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. Psychodynamic tiến trình (process / 프로세스)
 
@@ -179,7 +179,7 @@ Kết quả (outcome / 결과) bằng chứng (evidence / 증거) for psychodyna
 
 Xem [[03_psychodynamic_humanistic_and_systemic_therapy]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **15. Psychodynamic tiến trình (process / 프로세스)** xác định đầu vào; **16. Humanistic tiến trình (process / 프로세스)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **17. Systemic thay đổi (change / 변경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **15. Psychodynamic tiến trình (process / 프로세스)** đặt đầu vào cho **16. Humanistic tiến trình (process / 프로세스)**, rồi **17. Systemic thay đổi (change / 변경)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 16. Humanistic tiến trình (process / 프로세스)
 
@@ -187,7 +187,7 @@ Empathy, congruence and acceptance can reduce interpersonal threat and hỗ tr�
 
 These relational conditions are clinically important but not a complete substitute for disorder-specific intervention when one exists.
 
-> **Chuyển mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **16. Humanistic tiến trình (process / 프로세스)** xác định đầu vào; **17. Systemic thay đổi (change / 변경)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **18. Measurement-Based Care** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **16. Humanistic tiến trình (process / 프로세스)** đặt đầu vào cho **17. Systemic thay đổi (change / 변경)**, rồi **18. Measurement-Based Care** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 17. Systemic thay đổi (change / 변경)
 
@@ -195,7 +195,7 @@ For couple/family problems, reciprocal tương tác (interaction / 상호작용)
 
 Systemic explanation should not become family blame.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **17. Systemic thay đổi (change / 변경)** nêu điều cần giải thích; **18. Measurement-Based Care** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **19. Routine kết quả (outcome / 결과) monitoring** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **17. Systemic thay đổi (change / 변경)** đặt vấn đề; **18. Measurement-Based Care** đối chiếu bằng chứng, rồi **19. Routine kết quả (outcome / 결과) monitoring** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 18. Measurement-Based Care
 
@@ -211,7 +211,7 @@ Potential benefits:
 
 Recent reviews hỗ trợ (support / 지원) clinical giá trị (value / 값), though hiện thực (implementation / 구현) burden, measure choice and người dùng (user / 사용자) acceptance matter.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **18. Measurement-Based Care** nêu điều cần giải thích; **19. Routine kết quả (outcome / 결과) monitoring** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **20. Deterioration and adverse effects** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **18. Measurement-Based Care** đặt vấn đề; **19. Routine kết quả (outcome / 결과) monitoring** đối chiếu bằng chứng, rồi **20. Deterioration and adverse effects** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. Routine kết quả (outcome / 결과) monitoring
 
@@ -221,7 +221,7 @@ But score should not replace conversation. đo lường (measurement / 측정) i
 
 Xem [[../00_foundations/05_psychometrics_and_test_interpretation]].
 
-> **Chuyển mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **20. Deterioration and adverse effects** tiếp nhận điểm tựa từ **19. Routine kết quả (outcome / 결과) monitoring** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Dropout** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **20. Deterioration and adverse effects** nối từ **19. Routine kết quả (outcome / 결과) monitoring** sang **21. Dropout**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Deterioration and adverse effects
 
@@ -229,7 +229,7 @@ Not everyone improves. Some clients deteriorate, experience increased distress, 
 
 Evidence-based practice includes monitoring harm, not only average benefit.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **21. Dropout** tiếp nhận điểm tựa từ **20. Deterioration and adverse effects** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Therapist effects** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **21. Dropout** nối từ **20. Deterioration and adverse effects** sang **22. Therapist effects**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Dropout
 
@@ -237,7 +237,7 @@ Dropout is not always treatment thất bại (failure / 실패): máy khách (cl
 
 Still, high dropout can reduce real-world effectiveness and tín hiệu (signal / 신호) poor fit.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **22. Therapist effects** tiếp nhận điểm tựa từ **21. Dropout** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Treatment adherence and competence** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **22. Therapist effects** nối từ **21. Dropout** sang **23. Treatment adherence and competence**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Therapist effects
 
@@ -247,7 +247,7 @@ This suggests competence, responsiveness, alliance skill, trường hợp (case 
 
 But ranking therapists without adequate rủi ro (risk / 위험) adjustment can be misleading.
 
-> **Chuyển mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **23. Treatment adherence and competence** tiếp nhận điểm tựa từ **22. Therapist effects** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Personalized treatment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **23. Treatment adherence and competence** nối từ **22. Therapist effects** sang **24. Personalized treatment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. Treatment adherence and competence
 
@@ -257,7 +257,7 @@ Competence means using principle skillfully, not merely following steps.
 
 Research on adherence-outcome quan hệ (relation / 관계) is mixed across therapies.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **24. Personalized treatment** tiếp nhận điểm tựa từ **23. Treatment adherence and competence** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Stepped care** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **24. Personalized treatment** nối từ **23. Treatment adherence and competence** sang **25. Stepped care**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Personalized treatment
 
@@ -265,7 +265,7 @@ The goal “choose best therapy for this individual” is scientifically attract
 
 > **hiện tại (current / 현재) goal/hypothesis không gian (space / 공간):** precision mental health is active research; hiện tại (current / 현재) bằng chứng (evidence / 증거) rarely allows deterministic matching from a few traits.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **25. Stepped care** tiếp nhận điểm tựa từ **24. Personalized treatment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Combined treatment** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **25. Stepped care** nối từ **24. Personalized treatment** sang **26. Combined treatment**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Stepped care
 
@@ -273,7 +273,7 @@ Stepped care starts with least intensive evidence-based option appropriate to se
 
 This can improve tài nguyên (resource / 자원) allocation but requires monitoring and clear escalation criteria.
 
-> **Chuyển mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **26. Combined treatment** tiếp nhận điểm tựa từ **25. Stepped care** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Cultural adaptation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **26. Combined treatment** nối từ **25. Stepped care** sang **27. Cultural adaptation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Combined treatment
 
@@ -283,7 +283,7 @@ Psychotherapy and medication can be combined depending điều kiện (condition
 
 Xem [[02_biological_and_community_treatment]].
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **27. Cultural adaptation** tiếp nhận điểm tựa từ **26. Combined treatment** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Evidence-based practice is broader than RCT** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **27. Cultural adaptation** nối từ **26. Combined treatment** sang **28. Evidence-based practice is broader than RCT**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Cultural adaptation
 
@@ -291,7 +291,7 @@ Ngôn ngữ (language / 언어), explanatory mô hình (model / 모델), family 
 
 Cultural adaptation should preserve active treatment principle while fitting ngữ cảnh (context / 맥락); it is not simply translating worksheets.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **27. Cultural adaptation** nêu điều cần giải thích; **28. Evidence-based practice is broader than RCT** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **29. cơ chế (mechanism / 메커니즘) research is hard** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **27. Cultural adaptation** đặt vấn đề; **28. Evidence-based practice is broader than RCT** đối chiếu bằng chứng, rồi **29. cơ chế (mechanism / 메커니즘) research is hard** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 28. Evidence-based practice is broader than RCT
 
@@ -307,7 +307,7 @@ Best available research evidence
 
 This does not mean “anything goes”. Preference cannot turn unsupported treatment into evidence-based treatment, but it matters when selecting among reasonable options.
 
-> **Chuyển mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **28. Evidence-based practice is broader than RCT** nêu điều cần giải thích; **29. cơ chế (mechanism / 메커니즘) research is hard** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **30. dùng chung (common / 공통) misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **28. Evidence-based practice is broader than RCT** đặt vấn đề; **29. cơ chế (mechanism / 메커니즘) research is hard** đối chiếu bằng chứng, rồi **30. dùng chung (common / 공통) misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 29. cơ chế (mechanism / 메커니즘) research is hard
 
@@ -323,7 +323,7 @@ Many psychotherapy cơ chế (mechanism / 메커니즘) studies do not satisfy a
 
 Therefore chapter should use phrases like “associated cơ chế (mechanism / 메커니즘)” or “candidate cơ chế (mechanism / 메커니즘)” when nhân quả (causal / 인과적) bằng chứng (evidence / 증거) incomplete.
 
-> **Chuyển mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **29. cơ chế (mechanism / 메커니즘) research is hard** xác định đầu vào; **30. dùng chung (common / 공통) misconceptions** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **31. mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tâm lý trị liệu và cơ chế thay đổi**, **29. cơ chế (mechanism / 메커니즘) research is hard** đặt đầu vào cho **30. dùng chung (common / 공통) misconceptions**, rồi **31. mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 30. dùng chung (common / 공통) misconceptions
 
@@ -347,7 +347,7 @@ Not necessarily. Manual can specify principle while therapist adapts delivery.
 
 False. Deterioration/adverse effects can occur and should be monitored.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **31. mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **30. dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tâm lý trị liệu và cơ chế thay đổi**, **31. mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **30. dùng chung (common / 공통) misconceptions** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 31. mô hình tư duy (mental model / 사고 모델)
 
@@ -371,7 +371,7 @@ Adapt plan
 
 Psychotherapy is an iterative học tập (learning / 학습) hệ thống (system / 시스템), not one-time ứng dụng (application / 애플리케이션) of lý thuyết (theory / 이론).
 
-> **Chuyển mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **Kết nối kiến thức** gom các mảnh từ **31. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Tâm lý trị liệu và cơ chế thay đổi**, **Kết nối kiến thức** tổng hợp từ **31. mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

@@ -12,7 +12,7 @@ Thông tin sai lệch (misinformation) không tồn tại chỉ vì người ta 
 
 Điều này không có nghĩa repetition luôn thắng fact-check. tác động (effect / 효과) phụ thuộc prior kiến thức (knowledge / 지식), nguồn (source / 소스) cue, tác vụ (task / 작업) và ngữ cảnh (context / 맥락). Nhưng nó giải thích vì sao một headline sai được lặp nhiều lần có thể trở nên “quen tai”.
 
-> **Chuyển mạch:** Trong **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **1. Familiarity và illusory truth** nêu điều cần giải thích; **2. nguồn (source / 소스) monitoring** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **3. Continued influence tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **1. Familiarity và illusory truth** đặt vấn đề; **2. nguồn (source / 소스) monitoring** đối chiếu bằng chứng, rồi **3. Continued influence tác động (effect / 효과)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 2. nguồn (source / 소스) monitoring
 
@@ -27,7 +27,7 @@ quên provenance
 
 Xem [[../02_learning_and_cognition/07_memory_distortion_eyewitness_and_false_memory]].
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **2. nguồn (source / 소스) monitoring** nêu điều cần giải thích; **3. Continued influence tác động (effect / 효과)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **4. định danh (identity / 식별자) và motivated lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **2. nguồn (source / 소스) monitoring** đặt vấn đề; **3. Continued influence tác động (effect / 효과)** đối chiếu bằng chứng, rồi **4. định danh (identity / 식별자) và motivated lập luận (reasoning / 추론)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 3. Continued influence tác động (effect / 효과)
 
@@ -35,7 +35,7 @@ Ngay cả sau khi correction được chấp nhận, misinformation cũ vẫn c�
 
 Correction thường hữu ích hơn khi không chỉ nói “điều đó sai”, mà còn cung cấp explanation thay thế đủ để người đọc xây mô hình (model / 모델) mới.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **4. định danh (identity / 식별자) và motivated lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **3. Continued influence tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Confirmation độ lệch (bias / 편향) không chỉ là chọn nguồn (source / 소스) mình thích** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **4. định danh (identity / 식별자) và motivated lập luận (reasoning / 추론)** nối từ **3. Continued influence tác động (effect / 효과)** sang **5. Confirmation độ lệch (bias / 편향) không chỉ là chọn nguồn (source / 소스) mình thích**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. định danh (identity / 식별자) và motivated lập luận (reasoning / 추론)
 
@@ -43,7 +43,7 @@ Khi một claim gắn mạnh với political, moral hoặc group định danh (i
 
 Điểm quan trọng là motivated lập luận (reasoning / 추론) không phải đặc điểm của “phe kia”. Nó có thể xuất hiện ở nhiều nhóm và nhiều chủ đề.
 
-> **Chuyển mạch:** Trong **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **4. định danh (identity / 식별자) và motivated lập luận (reasoning / 추론)** nêu điều cần giải thích; **5. Confirmation độ lệch (bias / 편향) không chỉ là chọn nguồn (source / 소스) mình thích** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **6. Debunking** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **4. định danh (identity / 식별자) và motivated lập luận (reasoning / 추론)** đặt vấn đề; **5. Confirmation độ lệch (bias / 편향) không chỉ là chọn nguồn (source / 소스) mình thích** đối chiếu bằng chứng, rồi **6. Debunking** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 5. Confirmation độ lệch (bias / 편향) không chỉ là chọn nguồn (source / 소스) mình thích
 
@@ -55,7 +55,7 @@ Một câu hỏi hữu ích là:
 
 Nếu answer là “không có gì”, belief gần như đã mất tính falsifiable.
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **5. Confirmation độ lệch (bias / 편향) không chỉ là chọn nguồn (source / 소스) mình thích** nêu điều cần giải thích; **6. Debunking** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **7. Prebunking / inoculation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **5. Confirmation độ lệch (bias / 편향) không chỉ là chọn nguồn (source / 소스) mình thích** đặt vấn đề; **6. Debunking** đối chiếu bằng chứng, rồi **7. Prebunking / inoculation** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 6. Debunking
 
@@ -71,7 +71,7 @@ fact đúng
 
 Meta-analytic bằng chứng (evidence / 증거) cho thấy debunking nhìn chung có hiệu quả, nhưng misinformation vẫn có thể để lại ảnh hưởng. Hiệu quả phụ thuộc nội dung, mức người đọc đã đầu tư vào belief, chi tiết correction và bối cảnh truyền thông.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **7. Prebunking / inoculation** tiếp nhận điểm tựa từ **6. Debunking** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Accuracy prompts** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **7. Prebunking / inoculation** nối từ **6. Debunking** sang **8. Accuracy prompts**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Prebunking / inoculation
 
@@ -83,7 +83,7 @@ Meta-analysis tín hiệu–phát hiện công bố 2026 trên 33 thí nghiệm,
 
 > **Giới hạn:** tác động (effect / 효과) có thể decay, transfer sang tactic/nội dung khác không tuyệt đối và hiện thực (implementation / 구현) ngoài đời còn phụ thuộc exposure, attention và nền tảng (platform / 플랫폼) ngữ cảnh (context / 맥락).
 
-> **Chuyển mạch:** Trong **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **8. Accuracy prompts** tiếp nhận điểm tựa từ **7. Prebunking / inoculation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Empathy và correction** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **8. Accuracy prompts** nối từ **7. Prebunking / inoculation** sang **9. Empathy và correction**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Accuracy prompts
 
@@ -93,7 +93,7 @@ Một số thí nghiệm cho thấy đưa attention về accuracy trước khi s
 
 Không nên nâng accuracy prompt thành universal solution.
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **8. Accuracy prompts** xác định đầu vào; **9. Empathy và correction** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **10. nền tảng (platform / 플랫폼) incentive** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **8. Accuracy prompts** đặt đầu vào cho **9. Empathy và correction**, rồi **10. nền tảng (platform / 플랫폼) incentive** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. Empathy và correction
 
@@ -101,7 +101,7 @@ Correction có thể thất bại về xã hội (social / 사회적) communicat
 
 Điều này không có nghĩa “phải đồng ý với misinformation để giữ hòa khí”; nó nghĩa communication thiết kế (design / 설계) là một phần của intervention.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **9. Empathy và correction** xác định đầu vào; **10. nền tảng (platform / 플랫폼) incentive** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **11. Health misinformation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **9. Empathy và correction** đặt đầu vào cho **10. nền tảng (platform / 플랫폼) incentive**, rồi **11. Health misinformation** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 10. nền tảng (platform / 플랫폼) incentive
 
@@ -111,7 +111,7 @@ Nếu content sensational nhận engagement cao, creator và recommender hệ th
 
 Xem [[05_digital_psychology_social_media_and_online_behavior]].
 
-> **Chuyển mạch:** Trong **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **11. Health misinformation** tiếp nhận điểm tựa từ **10. nền tảng (platform / 플랫폼) incentive** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. AI-generated thông tin (information / 정보)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **11. Health misinformation** nối từ **10. nền tảng (platform / 플랫폼) incentive** sang **12. AI-generated thông tin (information / 정보)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Health misinformation
 
@@ -125,7 +125,7 @@ mức hậu quả cao
 → cần source gốc + independent confirmation
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **12. AI-generated thông tin (information / 정보)** tiếp nhận điểm tựa từ **11. Health misinformation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. xác minh (verification / 확인) workflow** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **12. AI-generated thông tin (information / 정보)** nối từ **11. Health misinformation** sang **13. xác minh (verification / 확인) workflow**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. AI-generated thông tin (information / 정보)
 
@@ -139,7 +139,7 @@ confidence của câu chữ ≠ calibration
 
 Xem [[../90_connections/02_human_ai_collaboration_trust_and_cognitive_offloading]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **12. AI-generated thông tin (information / 정보)** xác định đầu vào; **13. xác minh (verification / 확인) workflow** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **14. tín hiệu (signal / 신호) Detection lý thuyết (theory / 이론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **12. AI-generated thông tin (information / 정보)** đặt đầu vào cho **13. xác minh (verification / 확인) workflow**, rồi **14. tín hiệu (signal / 신호) Detection lý thuyết (theory / 이론)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 13. xác minh (verification / 확인) workflow
 
@@ -155,7 +155,7 @@ Một workflow thực dụng:
 
 Độ sâu (depth / 깊이) nên match consequence; không phải mọi claim cần investigation như một paper rà soát (review / 검토).
 
-> **Chuyển mạch:** Trong **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **13. xác minh (verification / 확인) workflow** xác định đầu vào; **14. tín hiệu (signal / 신호) Detection lý thuyết (theory / 이론)** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **15. Ranh giới bằng chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **13. xác minh (verification / 확인) workflow** đặt đầu vào cho **14. tín hiệu (signal / 신호) Detection lý thuyết (theory / 이론)**, rồi **15. Ranh giới bằng chứng** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. tín hiệu (signal / 신호) Detection lý thuyết (theory / 이론)
 
@@ -163,7 +163,7 @@ Khi classify thông tin “đúng/sai”, threshold quá nghiêm làm reject c�
 
 Mục tiêu vì vậy không phải “nghi ngờ mọi thứ”, mà là **calibration** với chi phí (cost / 비용) của false positive và false negative.
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **14. tín hiệu (signal / 신호) Detection lý thuyết (theory / 이론)** nêu điều cần giải thích; **15. Ranh giới bằng chứng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **16. Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **14. tín hiệu (signal / 신호) Detection lý thuyết (theory / 이론)** đặt vấn đề; **15. Ranh giới bằng chứng** đối chiếu bằng chứng, rồi **16. Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. Ranh giới bằng chứng
 
@@ -175,7 +175,7 @@ Mục tiêu vì vậy không phải “nghi ngờ mọi thứ”, mà là **cali
 
 **Không được nói:** người thông minh miễn nhiễm misinformation, fact-check một lần xóa belief, hoặc prebunking là “vaccine vĩnh viễn”.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **15. Ranh giới bằng chứng** nêu điều cần giải thích; **16. Những hiểu lầm phổ biến** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **15. Ranh giới bằng chứng** đặt vấn đề; **16. Những hiểu lầm phổ biến** đối chiếu bằng chứng, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 16. Những hiểu lầm phổ biến
 
@@ -185,7 +185,7 @@ Mục tiêu vì vậy không phải “nghi ngờ mọi thứ”, mà là **cali
 
 **“Dạy manipulation tactic làm người ta hoài nghi mọi thứ.”** Meta-analysis gần đây cho thấy inoculation có thể tăng discrimination mà không nhất thiết tăng generalized skepticism.
 
-> **Chuyển mạch:** Trong **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **Mô hình tư duy** gom các mảnh từ **16. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **Mô hình tư duy** tổng hợp từ **16. Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
@@ -201,7 +201,7 @@ memory + familiarity + identity
 
 > Belief không nằm một mình trong đầu; nó nằm trong một mạng nguồn (source / 소스)–bộ nhớ (memory / 메모리)–định danh (identity / 식별자)–incentive.
 
-> **Chuyển mạch:** Ở chặng này của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Thông tin sai lệch, sửa niềm tin và miễn dịch nhận thức**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 

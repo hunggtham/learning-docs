@@ -29,7 +29,7 @@ Phần này chốt mental model thành một chuỗi có thể dùng lại: bố
 | Jungian therapy có bằng chứng (evidence / 증거) | **Limited/moderate literature, not same độ sâu (depth / 깊이) as major bằng chứng (evidence / 증거) bases** | Không dùng treatment kết quả (outcome / 결과) để xác nhận archetype/collective unconscious |
 | Adlerian therapy có bằng chứng (evidence / 증거) | **Limited literature** | Nên đánh giá intervention/tiến trình (process / 프로세스) cụ thể thay vì toàn bộ historical hệ thống (system / 시스템) |
 
-> **Chuyển mạch:** Trong **Freud, Adler, Jung và bằng chứng hiện đại — Historical Theories vs hiện đại (modern / 현대적) bằng chứng (evidence / 증거)**, **Freud: từ historical lý thuyết (theory / 이론) tới hiện đại (modern / 현대적) questions** tiếp nhận điểm tựa từ **Ma trận tổng quan** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Adler: goal, competence và xã hội (social / 사회적) embeddedness** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Freud, Adler, Jung và bằng chứng hiện đại — Historical Theories vs hiện đại (modern / 현대적) bằng chứng (evidence / 증거)**, **Freud: từ historical lý thuyết (theory / 이론) tới hiện đại (modern / 현대적) questions** nối từ **Ma trận tổng quan** sang **Adler: goal, competence và xã hội (social / 사회적) embeddedness**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Freud: từ historical lý thuyết (theory / 이론) tới hiện đại (modern / 현대적) questions
 
@@ -63,7 +63,7 @@ Hiện đại (modern / 현대적) psychodynamic psychotherapy có bằng chứn
 >
 > **Không suy ra:** id–ego–superego, psychosexual stages hay mọi Freudian cơ chế (mechanism / 메커니즘) đều được xác nhận.
 
-> **Chuyển mạch:** Ở chặng này của **Freud, Adler, Jung và bằng chứng hiện đại — Historical Theories vs hiện đại (modern / 현대적) bằng chứng (evidence / 증거)**, **Adler: goal, competence và xã hội (social / 사회적) embeddedness** tiếp nhận điểm tựa từ **Freud: từ historical lý thuyết (theory / 이론) tới hiện đại (modern / 현대적) questions** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Jung: symbol, archetype và individuation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Freud, Adler, Jung và bằng chứng hiện đại — Historical Theories vs hiện đại (modern / 현대적) bằng chứng (evidence / 증거)**, **Adler: goal, competence và xã hội (social / 사회적) embeddedness** nối từ **Freud: từ historical lý thuyết (theory / 이론) tới hiện đại (modern / 현대적) questions** sang **Jung: symbol, archetype và individuation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Adler: goal, competence và xã hội (social / 사회적) embeddedness
 
@@ -97,7 +97,7 @@ Popular birth-order stereotypes mạnh hơn bằng chứng (evidence / 증거) t
 
 > **Trạng thái:** Weak/debated cho broad personality claims.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Freud, Adler, Jung và bằng chứng hiện đại — Historical Theories vs hiện đại (modern / 현대적) bằng chứng (evidence / 증거)**, **Jung: symbol, archetype và individuation** tiếp nhận điểm tựa từ **Adler: goal, competence và xã hội (social / 사회적) embeddedness** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cách tránh lỗi “hiện đại (modern / 현대적) concept = historical lý thuyết (theory / 이론) proven”** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Freud, Adler, Jung và bằng chứng hiện đại — Historical Theories vs hiện đại (modern / 현대적) bằng chứng (evidence / 증거)**, **Jung: symbol, archetype và individuation** nối từ **Adler: goal, competence và xã hội (social / 사회적) embeddedness** sang **Cách tránh lỗi “hiện đại (modern / 현대적) concept = historical lý thuyết (theory / 이론) proven”**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Jung: symbol, archetype và individuation
 
@@ -135,7 +135,7 @@ Có kết quả (outcome / 결과) literature cho Jungian psychotherapy, nhưng 
 
 > **Trạng thái:** Limited/moderate treatment bằng chứng (evidence / 증거); không suy ra truth của archetype hoặc collective unconscious.
 
-> **Chuyển mạch:** Trong **Freud, Adler, Jung và bằng chứng hiện đại — Historical Theories vs hiện đại (modern / 현대적) bằng chứng (evidence / 증거)**, **Cách tránh lỗi “hiện đại (modern / 현대적) concept = historical lý thuyết (theory / 이론) proven”** tiếp nhận điểm tựa từ **Jung: symbol, archetype và individuation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Treatment efficacy và lý thuyết (theory / 이론) truth** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Freud, Adler, Jung và bằng chứng hiện đại — Historical Theories vs hiện đại (modern / 현대적) bằng chứng (evidence / 증거)**, **Cách tránh lỗi “hiện đại (modern / 현대적) concept = historical lý thuyết (theory / 이론) proven”** nối từ **Jung: symbol, archetype và individuation** sang **Treatment efficacy và lý thuyết (theory / 이론) truth**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cách tránh lỗi “hiện đại (modern / 현대적) concept = historical lý thuyết (theory / 이론) proven”
 
@@ -165,7 +165,7 @@ Nhưng:
 
 `self-serving bias exists → shadow is scientifically proven` là kết luận sai.
 
-> **Chuyển mạch:** Ở chặng này của **Freud, Adler, Jung và bằng chứng hiện đại — Historical Theories vs hiện đại (modern / 현대적) bằng chứng (evidence / 증거)**, **Treatment efficacy và lý thuyết (theory / 이론) truth** tiếp nhận điểm tựa từ **Cách tránh lỗi “hiện đại (modern / 현대적) concept = historical lý thuyết (theory / 이론) proven”** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Historical giá trị (value / 값) vẫn quan trọng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Freud, Adler, Jung và bằng chứng hiện đại — Historical Theories vs hiện đại (modern / 현대적) bằng chứng (evidence / 증거)**, **Treatment efficacy và lý thuyết (theory / 이론) truth** nối từ **Cách tránh lỗi “hiện đại (modern / 현대적) concept = historical lý thuyết (theory / 이론) proven”** sang **Historical giá trị (value / 값) vẫn quan trọng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Treatment efficacy và lý thuyết (theory / 이론) truth
 
@@ -179,7 +179,7 @@ Validation of all historical causal claims
 
 Một therapy có thể hiệu quả vì alliance, exposure, behavioral activation, expectation, emotion processing, cognitive thay đổi (change / 변경), interpersonal học tập (learning / 학습) hoặc các dùng chung (common / 공통)/tiến trình (process / 프로세스) factors khác. cơ chế (mechanism / 메커니즘) phải được nghiên cứu riêng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Freud, Adler, Jung và bằng chứng hiện đại — Historical Theories vs hiện đại (modern / 현대적) bằng chứng (evidence / 증거)**, **Historical giá trị (value / 값) vẫn quan trọng** tiếp nhận điểm tựa từ **Treatment efficacy và lý thuyết (theory / 이론) truth** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Quy tắc (rule / 규칙) của thư viện (library / 라이브러리)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Freud, Adler, Jung và bằng chứng hiện đại — Historical Theories vs hiện đại (modern / 현대적) bằng chứng (evidence / 증거)**, **Historical giá trị (value / 값) vẫn quan trọng** nối từ **Treatment efficacy và lý thuyết (theory / 이론) truth** sang **Quy tắc (rule / 규칙) của thư viện (library / 라이브러리)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Historical giá trị (value / 값) vẫn quan trọng
 
@@ -193,7 +193,7 @@ Một lý thuyết (theory / 이론) không còn là consensus mô hình (model 
 
 Giá trị lịch sử không cần được nâng thành empirical fact để đáng học.
 
-> **Chuyển mạch:** Trong **Freud, Adler, Jung và bằng chứng hiện đại — Historical Theories vs hiện đại (modern / 현대적) bằng chứng (evidence / 증거)**, **Quy tắc (rule / 규칙) của thư viện (library / 라이브러리)** tiếp nhận điểm tựa từ **Historical giá trị (value / 값) vẫn quan trọng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Kết nối** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Freud, Adler, Jung và bằng chứng hiện đại — Historical Theories vs hiện đại (modern / 현대적) bằng chứng (evidence / 증거)**, **Quy tắc (rule / 규칙) của thư viện (library / 라이브러리)** nối từ **Historical giá trị (value / 값) vẫn quan trọng** sang **Kết nối**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Quy tắc (rule / 규칙) của thư viện (library / 라이브러리)
 
@@ -205,7 +205,7 @@ Khi một chapter nhắc Freud, Adler hoặc Jung, ưu tiên format:
 4. **Non-equivalence:** vì sao analogue không chứng minh toàn bộ lý thuyết (theory / 이론) cũ.
 5. **Usefulness:** historical, interpretive, clinical hoặc empirical ở mức nào.
 
-> **Chuyển mạch:** Ở chặng này của **Freud, Adler, Jung và bằng chứng hiện đại — Historical Theories vs hiện đại (modern / 현대적) bằng chứng (evidence / 증거)**, **Kết nối** tiếp nhận điểm tựa từ **Quy tắc (rule / 규칙) của thư viện (library / 라이브러리)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Ở chặng này của **Freud, Adler, Jung và bằng chứng hiện đại — Historical Theories vs hiện đại (modern / 현대적) bằng chứng (evidence / 증거)**, **Kết nối** nối từ **Quy tắc (rule / 규칙) của thư viện (library / 라이브러리)** sang  Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối
 

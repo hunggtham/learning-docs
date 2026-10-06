@@ -14,7 +14,7 @@ Trong kỹ thuật, rủi ro (risk / 위험) thường được mô tả gần v
 
 Một sự kiện (event / 이벤트) hiếm nhưng dramatic có thể được cảm nhận lớn hơn một rủi ro (risk / 위험) quen thuộc xảy ra thường xuyên hơn.
 
-> **Chuyển mạch:** Trong **Giao tiếp rủi ro, bất định và khoa học**, **2. Absolute rủi ro (risk / 위험) và relative rủi ro (risk / 위험)** tiếp nhận điểm tựa từ **1. rủi ro (risk / 위험) không chỉ là xác suất (probability / 확률)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Natural frequency** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giao tiếp rủi ro, bất định và khoa học**, **2. Absolute rủi ro (risk / 위험) và relative rủi ro (risk / 위험)** nối từ **1. rủi ro (risk / 위험) không chỉ là xác suất (probability / 확률)** sang **3. Natural frequency**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Absolute rủi ro (risk / 위험) và relative rủi ro (risk / 위험)
 
@@ -25,7 +25,7 @@ Giả sử intervention giảm sự kiện (event / 이벤트) từ 2/1000 xuố
 
 Chỉ nói “giảm 50%” dễ làm người đọc overestimate benefit. Giao tiếp tốt nên cho baseline và absolute number khi có thể.
 
-> **Chuyển mạch:** Ở chặng này của **Giao tiếp rủi ro, bất định và khoa học**, **3. Natural frequency** tiếp nhận điểm tựa từ **2. Absolute rủi ro (risk / 위험) và relative rủi ro (risk / 위험)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. cơ sở (base / 기반) tỷ lệ (rate / 비율) và kiểm thử (test / 테스트) kết quả (result / 결과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giao tiếp rủi ro, bất định và khoa học**, **3. Natural frequency** nối từ **2. Absolute rủi ro (risk / 위험) và relative rủi ro (risk / 위험)** sang **4. cơ sở (base / 기반) tỷ lệ (rate / 비율) và kiểm thử (test / 테스트) kết quả (result / 결과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Natural frequency
 
@@ -33,7 +33,7 @@ Chỉ nói “giảm 50%” dễ làm người đọc overestimate benefit. Giao
 
 Xem [[../00_foundations/09_replication_meta_analysis_and_bayesian_reasoning]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao tiếp rủi ro, bất định và khoa học**, **4. cơ sở (base / 기반) tỷ lệ (rate / 비율) và kiểm thử (test / 테스트) kết quả (result / 결과)** tiếp nhận điểm tựa từ **3. Natural frequency** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Framing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp rủi ro, bất định và khoa học**, **4. cơ sở (base / 기반) tỷ lệ (rate / 비율) và kiểm thử (test / 테스트) kết quả (result / 결과)** nối từ **3. Natural frequency** sang **5. Framing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. cơ sở (base / 기반) tỷ lệ (rate / 비율) và kiểm thử (test / 테스트) kết quả (result / 결과)
 
@@ -41,7 +41,7 @@ Nếu một bệnh rất hiếm, positive kiểm thử (test / 테스트) không
 
 Đây là lý do communication về screening phải trình bày denominator và false-positive possibility thay vì chỉ nói “kiểm thử (test / 테스트) chính xác 99%”.
 
-> **Chuyển mạch:** Trong **Giao tiếp rủi ro, bất định và khoa học**, **5. Framing** tiếp nhận điểm tựa từ **4. cơ sở (base / 기반) tỷ lệ (rate / 비율) và kiểm thử (test / 테스트) kết quả (result / 결과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Verbal xác suất (probability / 확률)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giao tiếp rủi ro, bất định và khoa học**, **5. Framing** nối từ **4. cơ sở (base / 기반) tỷ lệ (rate / 비율) và kiểm thử (test / 테스트) kết quả (result / 결과)** sang **6. Verbal xác suất (probability / 확률)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Framing
 
@@ -49,13 +49,13 @@ Cùng kết quả (outcome / 결과) có thể được mô tả là “90% số
 
 Khi quyết định quan trọng, trình bày cả gain và mất mát (loss / 손실) frame hoặc dùng wording cân bằng có thể giảm framing độ lệch (bias / 편향).
 
-> **Chuyển mạch:** Ở chặng này của **Giao tiếp rủi ro, bất định và khoa học**, **6. Verbal xác suất (probability / 확률)** tiếp nhận điểm tựa từ **5. Framing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. bất định (uncertainty / 불확실성) có nhiều loại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giao tiếp rủi ro, bất định và khoa học**, **6. Verbal xác suất (probability / 확률)** nối từ **5. Framing** sang **7. bất định (uncertainty / 불확실성) có nhiều loại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Verbal xác suất (probability / 확률)
 
 Từ như “rare”, “likely”, “unlikely” được hiểu khác nhau giữa người đọc. Nếu consequence cao, nên gắn verbal label với numeric phạm vi (range / 범위) hoặc frequency khi có thể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao tiếp rủi ro, bất định và khoa học**, **7. bất định (uncertainty / 불확실성) có nhiều loại** tiếp nhận điểm tựa từ **6. Verbal xác suất (probability / 확률)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Confidence interval và precision** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp rủi ro, bất định và khoa học**, **7. bất định (uncertainty / 불확실성) có nhiều loại** nối từ **6. Verbal xác suất (probability / 확률)** sang **8. Confidence interval và precision**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. bất định (uncertainty / 불확실성) có nhiều loại
 
@@ -69,7 +69,7 @@ Từ như “rare”, “likely”, “unlikely” được hiểu khác nhau gi
 
 Giao tiếp tốt cần nói **bất định (uncertainty / 불확실성) nằm ở đâu**, không chỉ thêm câu “kết quả chưa chắc chắn”.
 
-> **Chuyển mạch:** Trong **Giao tiếp rủi ro, bất định và khoa học**, **8. Confidence interval và precision** tiếp nhận điểm tựa từ **7. bất định (uncertainty / 불확실성) có nhiều loại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. bằng chứng (evidence / 증거) thay đổi không có nghĩa science thất bại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giao tiếp rủi ro, bất định và khoa học**, **8. Confidence interval và precision** nối từ **7. bất định (uncertainty / 불확실성) có nhiều loại** sang **9. bằng chứng (evidence / 증거) thay đổi không có nghĩa science thất bại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Confidence interval và precision
 
@@ -77,7 +77,7 @@ Confidence interval không phải “95% xác suất parameter nằm trong inter
 
 Trong công khai (public / 공개) communication, mục tiêu thực dụng hơn là truyền đạt rằng estimate có phạm vi (range / 범위) và precision hữu hạn, tránh false precision.
 
-> **Chuyển mạch:** Ở chặng này của **Giao tiếp rủi ro, bất định và khoa học**, **8. Confidence interval và precision** nêu điều cần giải thích; **9. bằng chứng (evidence / 증거) thay đổi không có nghĩa science thất bại** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **10. bất định (uncertainty / 불확실성) communication và trust** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giao tiếp rủi ro, bất định và khoa học**, **8. Confidence interval và precision** đặt vấn đề; **9. bằng chứng (evidence / 증거) thay đổi không có nghĩa science thất bại** đối chiếu bằng chứng, rồi **10. bất định (uncertainty / 불확실성) communication và trust** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 9. bằng chứng (evidence / 증거) thay đổi không có nghĩa science thất bại
 
@@ -92,7 +92,7 @@ Một mẫu (pattern / 패턴) tốt:
 + dữ liệu nào có thể làm recommendation đổi
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao tiếp rủi ro, bất định và khoa học**, **9. bằng chứng (evidence / 증거) thay đổi không có nghĩa science thất bại** nêu điều cần giải thích; **10. bất định (uncertainty / 불확실성) communication và trust** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **11. Trust gồm nhiều thành phần** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp rủi ro, bất định và khoa học**, **9. bằng chứng (evidence / 증거) thay đổi không có nghĩa science thất bại** đặt vấn đề; **10. bất định (uncertainty / 불확실성) communication và trust** đối chiếu bằng chứng, rồi **11. Trust gồm nhiều thành phần** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 10. bất định (uncertainty / 불확실성) communication và trust
 
@@ -104,7 +104,7 @@ Nghiên cứu 2025 cũng cho thấy tác động (effect / 효과) của bất �
 
 > **Ranh giới:** “nói bất định (uncertainty / 불확실성) luôn tăng trust” cũng là overclaim.
 
-> **Chuyển mạch:** Trong **Giao tiếp rủi ro, bất định và khoa học**, **11. Trust gồm nhiều thành phần** tiếp nhận điểm tựa từ **10. bất định (uncertainty / 불확실성) communication và trust** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. rủi ro (risk / 위험) communication trong healthcare** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giao tiếp rủi ro, bất định và khoa học**, **11. Trust gồm nhiều thành phần** nối từ **10. bất định (uncertainty / 불확실성) communication và trust** sang **12. rủi ro (risk / 위험) communication trong healthcare**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Trust gồm nhiều thành phần
 
@@ -112,7 +112,7 @@ Trust không chỉ là “người này có expertise không”. Người nghe c
 
 Communicator che bất định (uncertainty / 불확실성) để trông tự tin có thể đổi clarity ngắn hạn lấy trust dài hạn.
 
-> **Chuyển mạch:** Ở chặng này của **Giao tiếp rủi ro, bất định và khoa học**, **12. rủi ro (risk / 위험) communication trong healthcare** tiếp nhận điểm tựa từ **11. Trust gồm nhiều thành phần** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Nocebo và wording** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giao tiếp rủi ro, bất định và khoa học**, **12. rủi ro (risk / 위험) communication trong healthcare** nối từ **11. Trust gồm nhiều thành phần** sang **13. Nocebo và wording**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. rủi ro (risk / 위험) communication trong healthcare
 
@@ -120,7 +120,7 @@ Patient thường cần biết benefit absolute, harm absolute, bất định (u
 
 Quyết định (decision / 결정) aid tốt hỗ trợ **dùng chung (shared / 공유) decision-making**, không dùng statistics như cách ép một lựa chọn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao tiếp rủi ro, bất định và khoa học**, **13. Nocebo và wording** tiếp nhận điểm tựa từ **12. rủi ro (risk / 위험) communication trong healthcare** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Crisis communication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp rủi ro, bất định và khoa học**, **13. Nocebo và wording** nối từ **12. rủi ro (risk / 위험) communication trong healthcare** sang **14. Crisis communication**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Nocebo và wording
 
@@ -128,7 +128,7 @@ Communication về adverse tác động (effect / 효과) có thể làm expecta
 
 Xem [[../06_applied/13_placebo_nocebo_expectation_and_context]].
 
-> **Chuyển mạch:** Trong **Giao tiếp rủi ro, bất định và khoa học**, **14. Crisis communication** tiếp nhận điểm tựa từ **13. Nocebo và wording** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Population rủi ro (risk / 위험) và personal quyết định (decision / 결정)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giao tiếp rủi ro, bất định và khoa học**, **14. Crisis communication** nối từ **13. Nocebo và wording** sang **15. Population rủi ro (risk / 위험) và personal quyết định (decision / 결정)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Crisis communication
 
@@ -142,7 +142,7 @@ Trong crisis, bằng chứng (evidence / 증거) thay đổi nhanh. Một khung 
 
 Cách này biến bất định (uncertainty / 불확실성) thành một phần của tiến trình (process / 프로세스) cập nhật thay vì dấu hiệu weakness.
 
-> **Chuyển mạch:** Ở chặng này của **Giao tiếp rủi ro, bất định và khoa học**, **15. Population rủi ro (risk / 위험) và personal quyết định (decision / 결정)** tiếp nhận điểm tựa từ **14. Crisis communication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Headline và relative thay đổi (change / 변경)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giao tiếp rủi ro, bất định và khoa học**, **15. Population rủi ro (risk / 위험) và personal quyết định (decision / 결정)** nối từ **14. Crisis communication** sang **16. Headline và relative thay đổi (change / 변경)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Population rủi ro (risk / 위험) và personal quyết định (decision / 결정)
 
@@ -150,7 +150,7 @@ Population xác suất (probability / 확률) không phải dự đoán chắc c
 
 Cần giải thích population/ngữ cảnh (context / 맥락) của estimate và những factor nào làm applicability thay đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao tiếp rủi ro, bất định và khoa học**, **16. Headline và relative thay đổi (change / 변경)** tiếp nhận điểm tựa từ **15. Population rủi ro (risk / 위험) và personal quyết định (decision / 결정)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Misinformation và strategic bất định (uncertainty / 불확실성)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp rủi ro, bất định và khoa học**, **16. Headline và relative thay đổi (change / 변경)** nối từ **15. Population rủi ro (risk / 위험) và personal quyết định (decision / 결정)** sang **17. Misinformation và strategic bất định (uncertainty / 불확실성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Headline và relative thay đổi (change / 변경)
 
@@ -165,7 +165,7 @@ uncertainty range?
 replication/cumulative evidence?
 ```
 
-> **Chuyển mạch:** Trong **Giao tiếp rủi ro, bất định và khoa học**, **17. Misinformation và strategic bất định (uncertainty / 불확실성)** tiếp nhận điểm tựa từ **16. Headline và relative thay đổi (change / 변경)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. AI và false precision** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giao tiếp rủi ro, bất định và khoa học**, **17. Misinformation và strategic bất định (uncertainty / 불확실성)** nối từ **16. Headline và relative thay đổi (change / 변경)** sang **18. AI và false precision**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Misinformation và strategic bất định (uncertainty / 불확실성)
 
@@ -178,7 +178,7 @@ Giao tiếp tốt phải tránh cả hai.
 
 Xem [[../06_applied/17_misinformation_belief_revision_and_inoculation]].
 
-> **Chuyển mạch:** Ở chặng này của **Giao tiếp rủi ro, bất định và khoa học**, **18. AI và false precision** tiếp nhận điểm tựa từ **17. Misinformation và strategic bất định (uncertainty / 불확실성)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Ranh giới bằng chứng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giao tiếp rủi ro, bất định và khoa học**, **18. AI và false precision** nối từ **17. Misinformation và strategic bất định (uncertainty / 불확실성)** sang **19. Ranh giới bằng chứng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. AI và false precision
 
@@ -188,7 +188,7 @@ Human–AI workflow nên tách fluency khỏi epistemic status, giữ provenance
 
 Xem [[02_human_ai_collaboration_trust_and_cognitive_offloading]].
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao tiếp rủi ro, bất định và khoa học**, **18. AI và false precision** nêu điều cần giải thích; **19. Ranh giới bằng chứng** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Những hiểu lầm phổ biến** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp rủi ro, bất định và khoa học**, **18. AI và false precision** đặt vấn đề; **19. Ranh giới bằng chứng** đối chiếu bằng chứng, rồi **Những hiểu lầm phổ biến** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 19. Ranh giới bằng chứng
 
@@ -200,7 +200,7 @@ Xem [[02_human_ai_collaboration_trust_and_cognitive_offloading]].
 
 **Không được nói:** bất định (uncertainty / 불확실성) = ignorance, relative rủi ro (risk / 위험) một mình đủ để hiểu tác động (effect / 효과), hay nói bất định (uncertainty / 불확실성) luôn làm trust tăng/giảm.
 
-> **Chuyển mạch:** Trong **Giao tiếp rủi ro, bất định và khoa học**, **19. Ranh giới bằng chứng** nêu điều cần giải thích; **Những hiểu lầm phổ biến** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Giao tiếp rủi ro, bất định và khoa học**, **19. Ranh giới bằng chứng** đặt vấn đề; **Những hiểu lầm phổ biến** đối chiếu bằng chứng, rồi **Mô hình tư duy** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Những hiểu lầm phổ biến
 
@@ -210,13 +210,13 @@ Xem [[02_human_ai_collaboration_trust_and_cognitive_offloading]].
 
 **“Nói chắc chắn hơn sẽ tạo trust hơn.”** Có thể ngược lại nếu claim sau đó phải sửa mạnh.
 
-> **Chuyển mạch:** Ở chặng này của **Giao tiếp rủi ro, bất định và khoa học**, **Mô hình tư duy** gom các mảnh từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Giao tiếp rủi ro, bất định và khoa học**, **Mô hình tư duy** tổng hợp từ **Những hiểu lầm phổ biến** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Kết nối kiến thức** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy
 
 > Giao tiếp rủi ro tốt phải giúp người đọc trả lời bốn câu: **điều gì có thể xảy ra, xác suất khoảng bao nhiêu, hậu quả lớn đến đâu, và estimate chắc tới mức nào?**
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Giao tiếp rủi ro, bất định và khoa học**, **Kết nối kiến thức** gom các mảnh từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Giao tiếp rủi ro, bất định và khoa học**, **Kết nối kiến thức** tổng hợp từ **Mô hình tư duy** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Kết nối kiến thức
 
