@@ -10,7 +10,19 @@ Vì hai loại quyền lợi có cơ chế khác nhau, cùng một “lợi su�
 
 ## 2. Từ nền kinh tế đến giá chứng khoán
 
-Giá không chỉ phản ứng với một tin đơn lẻ. Chu kỳ kinh doanh (business cycle) nối sản lượng, doanh thu, lợi nhuận, lãi suất và khẩu vị rủi ro. Các chu kỳ ngắn như Kitchin, trung hạn như Juglar và dài hơn như Kondratiev được source dùng để nhắc rằng cùng một dữ liệu có thể mang ý nghĩa khác nhau tùy chân trời thời gian; đây là khung phân loại, không phải đồng hồ dự báo chắc chắn.
+### Ba chân trời của chu kỳ
+
+Các khoảng thời gian dưới đây là cách source textbook phân biệt chân trời, không phải quy luật cố định:
+
+| Chu kỳ | Khoảng xấp xỉ đọc được từ source | Cơ chế cần đặt cạnh dữ liệu |
+|---|---:|---|
+| Kitchin | khoảng 3–5 năm | tồn kho, đơn hàng và điều chỉnh sản xuất |
+| Juglar | khoảng 7–11 năm | đầu tư máy móc, tín dụng và năng lực sản xuất |
+| Kondratiev | khoảng 50–60 năm | đổi mới công nghệ, cấu trúc vốn và thay đổi dài hạn |
+
+Một nền kinh tế có thể đồng thời ở pha tồn kho giảm của Kitchin nhưng vẫn trong chu kỳ đầu tư dài hơn. Vì vậy không nên dùng một con số chu kỳ để dự báo ngày đảo chiều; hãy hỏi dữ liệu nào đang vận động ở đúng chân trời đó.
+
+Giá không chỉ phản ứng với một tin đơn lẻ. Chu kỳ kinh doanh (business cycle) nối sản lượng, doanh thu, lợi nhuận, lãi suất và khẩu vị rủi ro. Hãy dùng bảng trên để chọn đúng chân trời trước khi gắn một thay đổi dữ liệu vào câu chuyện tăng trưởng hoặc suy thoái.
 
 GDP (Gross Domestic Product) đo giá trị sản lượng cuối cùng trong nền kinh tế. Với nhà đầu tư, GDP hữu ích khi đặt cạnh lợi nhuận doanh nghiệp, cơ cấu ngành và chính sách, chứ không phải khi dùng nó như đại diện trực tiếp cho giá cổ phiếu. Tăng trưởng có thể đi cùng lạm phát, thắt chặt tiền tệ hoặc biên lợi nhuận giảm. Vì vậy, từ GDP phải đi tiếp qua kênh doanh thu → chi phí → dòng tiền → discount rate.
 
@@ -22,7 +34,17 @@ Source có công thức cho CSI (Consumer Sentiment Index) và BSI (Business Sur
 BSI = [(số tích cực − số tiêu cực) / tổng số trả lời] × 100 + 100
 ```
 
-Ví dụ source dùng 300 tích cực, 200 tiêu cực trên 500 câu trả lời: BSI = 120. Chỉ số trên 100 cho thấy số dư kỳ vọng tích cực trong mẫu khảo sát, không nói rằng GDP hay giá cổ phiếu chắc chắn tăng. CSI cũng là một thước đo chuẩn hóa; source đưa ví dụ kết hợp các câu hỏi hiện tại và kỳ vọng để ra giá trị 65. Đọc các chỉ số này theo hướng “động lực và độ rộng của kỳ vọng”, không theo một ngưỡng thần kỳ.
+### CSI: đọc công thức cùng giới hạn của OCR
+
+Ví dụ CSI trong source có bốn nhóm trả lời hiện tại/kỳ vọng, tích cực/tiêu cực. Dạng reconstruct từ các số còn đọc được là:
+
+```text
+CSI ≈ [(tích cực hiện tại + tích cực kỳ vọng − tiêu cực hiện tại − tiêu cực kỳ vọng) / tổng số trả lời] × 100 + 100
+```
+
+Với các số 10, 20, 50 và 50 trên tổng 200 câu trả lời, kết quả là `[(10 + 20 − 50 − 50) / 200] × 100 + 100 = 65`. Vì OCR không bảo đảm toàn bộ tên biến và trọng số gốc, công thức này được dùng để giải thích ví dụ source chứ không được xem là đặc tả hiện hành của một khảo sát cụ thể.
+
+Ví dụ source dùng 300 tích cực, 200 tiêu cực trên 500 câu trả lời: BSI = 120. Chỉ số trên 100 cho thấy số dư kỳ vọng tích cực trong mẫu khảo sát, không nói rằng GDP hay giá cổ phiếu chắc chắn tăng. CSI cũng cần được đọc như cán cân kỳ vọng trong mẫu, với ví dụ source cho giá trị 65; không biến một ngưỡng đơn lẻ thành tín hiệu mua bán.
 
 Composite Index (CI) gộp nhiều chỉ báo; Diffusion Index (DI) quan sát độ rộng số thành phần đang cải thiện. CI trả lời mức độ tổng hợp, DI trả lời mức độ lan tỏa. Hai chỉ số có thể lệch nhau: một vài thành phần lớn kéo CI lên trong khi phần lớn thành phần vẫn yếu. Đây là lý do cần đặt khảo sát cạnh dữ liệu thực tế và chu kỳ, thay vì thay thế chúng.
 
