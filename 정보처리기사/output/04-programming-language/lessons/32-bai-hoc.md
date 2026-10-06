@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **스크립트 및 운영체제 (Script Languages & Operating Systems)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **운영체제 - 메모리 및 프로세스 관리 (OS - Memory & Process Management)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **스크립트 및 운영체제 (Script Languages & Operating Systems)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **스크립트 및 운영체제 (Script Languages & Operating Systems)**, **핵심 키워드 (Từ khóa)** nối từ **학습 목표 (Mục tiêu)** sang **선행·연결 개념 (Kiến thức liên kết)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 핵심 키워드 (Từ khóa)
 
 스크립트, 운영체제
 
-> **Chuyển mạch:** Ở chặng này của **스크립트 및 운영체제 (Script Languages & Operating Systems)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **스크립트 및 운영체제 (Script Languages & Operating Systems)**, **핵심 키워드 (Từ khóa)** dẫn sang **선행·연결 개념 (Kiến thức liên kết)**, nơi tài liệu chuẩn và vị trí sở hữu được chỉ rõ để biết chỗ đào sâu tiếp; **읽는 방법 (Cách đọc)** mở rộng hệ quả liên quan.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **279 - 280. 라이브러리 (Library)**에서 만든 기준을 이어받아 **스크립트 및 운영체제 (Script Languages & Operating Systems)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **스크립트 및 운영체제 (Script Languages & Operating Systems)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **스크립트 및 운영체제 (Script Languages & Operating Systems)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **스크립트 및 운영체제 (Script Languages & Operating Systems)**, **읽는 방법 (Cách đọc)** nối từ **선행·연결 개념 (Kiến thức liên kết)** sang **스크립트 및 운영체제 (Script Languages & Operating Systems)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **스크립트 및 운영체제 (Script 
 
 ---
 
-> **Chuyển mạch:** Trong **스크립트 및 운영체제 (Script Languages & Operating Systems)**, **스크립트 및 운영체제 (Script Languages & Operating Systems)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **스크립트 및 운영체제 (Script Languages & Operating Systems)**, **스크립트 및 운영체제 (Script Languages & Operating Systems)** nối từ **읽는 방법 (Cách đọc)** sang phần giải thích tiếp theo, vì phần trước cung cấp điểm tựa cho chủ đề này.
 
 ## 스크립트 및 운영체제 (Script Languages & Operating Systems)
 
@@ -62,7 +62,7 @@ Ta vừa chốt **193. 스크립트 언어의 종류 (Types of Scripting Languag
 
 ### 194. 쉘 스크립트 제어문 (Shell Script Control Statements)
 
-Các ý ngay dưới **194. 쉘 스크립트 제어문 (Shell Script Control Statements)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **194. 쉘 스크립트 제어문 (Shell Script Control Statements)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “194. 쉘 스크립트 제어문 (Shell Script Control Statements)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -105,7 +105,7 @@ Ta vừa chốt **196. C언어의 stdlib.h (Standard Library in C)** bằng các
 
 ### 197. UNIX의 특징 (Features of UNIX / Đặc điểm của UNIX)
 
-Các ý ngay dưới **197. UNIX의 특징 (Features of UNIX / Đặc điểm của UNIX)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **197. UNIX의 특징 (Features of UNIX / Đặc điểm của UNIX)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “197. UNIX의 특징 (Features of UNIX / Đặc điểm của UNIX)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
