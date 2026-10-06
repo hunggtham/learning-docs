@@ -43,6 +43,8 @@ Các chỉ báo trên không phải nhãn bí truyền; chúng là phép biến 
 
 Đọc bảng theo chuỗi `đầu vào → phép biến đổi → diễn giải → giới hạn`. Nếu thay cửa sổ hoặc nguồn giá, tín hiệu thay đổi; vì vậy không được so sánh hai backtest khi tham số và dữ liệu không cùng định nghĩa.
 
+Trong các ví dụ của source, RSI thường được đọc quanh mốc 70/30 và Stochastic quanh 75/25; Bollinger dùng dải quanh SMA với hệ số độ lệch chuẩn thường là 2; Envelope đặt biên phần trăm cố định quanh SMA. MACD được đọc qua chênh lệch EMA nhanh–chậm, giao cắt với signal line và vị trí so với đường 0. Đây là tham số minh họa của textbook, không phải ngưỡng tự động đúng cho mọi tài sản, khung thời gian hay regime.
+
 ## 6. Dow và Elliott
 
 Dow Theory đặt trọng tâm vào xu hướng chính, xu hướng phụ và dao động ngắn hơn; xác nhận giữa các chỉ số và khối lượng giúp tránh đọc một thị trường đơn lẻ. Elliott Wave diễn tả nhịp động lực và điều chỉnh lồng nhau. Vì việc gán nhãn sóng phụ thuộc cách đếm, nó cần được xem là kịch bản có điều kiện, không là bằng chứng duy nhất. Khi cấu trúc giá không thỏa điều kiện, phải bỏ nhãn thay vì ép dữ liệu vào lý thuyết.
