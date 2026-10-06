@@ -407,6 +407,32 @@ conflict → classify semantics → check authority/version → trace lineage
 
 > **Nối mạch:** Sau khi hiểu cách reconstruct reality từ evidence mâu thuẫn, phần **Cách dùng case study** biến cùng kỹ thuật thành vòng luyện transfer thay vì học thuộc một answer pattern.
 
+## Cross-case synthesis: inside view, outside view và evidence update
+
+Nhiều case trong chapter này bắt đầu bằng một plan cụ thể, nhưng quantitative reasoning mạnh hơn khi giữ đồng thời ba lớp bằng chứng.
+
+**Inside view** giải thích causal mechanics của case hiện tại: WBS, dependency, team capacity, vendor plan, architecture, adoption hypothesis. **Outside view** hỏi project tương tự trước đây thực tế kết thúc ra sao. **Current evidence update** hỏi signal mới hôm nay có đủ mạnh để làm probability/forecast đổi không.
+
+Case D là ví dụ rõ. Recovery team có thể dựng lại schedule và tin ERP rollout cần thêm 4 tháng. Nhưng nếu historical recovery program tương tự thường mất 7–9 tháng, gap đó cần explanation. Có thể project hiện tại thật sự khác vì scope đã cắt mạnh và data migration đã xong; nếu không có mechanism cụ thể, 4 tháng có thể chỉ là optimism được trình bày bằng Gantt chi tiết.
+
+Case B cũng cần evidence update. Ban đầu team có prior từ product/category history rằng adoption đủ cao chỉ có xác suất trung bình. Một experiment nhỏ cho tín hiệu tốt phải được đọc theo diagnostic strength: sample có representative không, metric có gần business outcome không, và signal này mạnh tới đâu so với base rate? Một beta cohort tích cực không tự động biến probability thành gần 100%.
+
+Case C và E tương tự. Vendor đã từng ổn là prior; integration failure lặp lại là evidence mới. Model version trước đã pass là prior evidence; vendor update làm validity envelope đổi và buộc re-evaluation. Điểm chung là quantitative state phải di chuyển cùng evidence.
+
+Mental model:
+
+~~~text
+outside-view base rate
++ inside-view causal differences
++ current evidence
+→ revised forecast / probability
+→ decision threshold / action
+~~~
+
+Nếu ba lớp này conflict, conflict chính là nơi cần management attention. Không nên chọn lớp tạo con số dễ chịu nhất.
+
+> **Nối mạch:** Synthesis này nối quantitative chapter với scenario transfer; phần **Cách dùng case study** tiếp theo biến ba lớp bằng chứng thành deliberate-practice loop.
+
 ## Cách dùng trường hợp (case / 사례) study để tự luyện
 
 ### Pass 1 — Không mở chapter khác
