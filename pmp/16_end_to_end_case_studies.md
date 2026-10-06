@@ -238,13 +238,35 @@ Một 2% lỗi (error / 오류) tỷ lệ (rate / 비율) có thể acceptable c
 
 Assessor phải rà soát (review / 검토) recommendation trước final quyết định (decision / 결정). Nhưng điều khiển (control / 제어) chỉ thật nếu tải công việc (workload / 워크로드) cho phép rà soát (review / 검토) meaningful. Nếu mục tiêu (target / 대상) productivity ép reviewer approve 100 trường hợp (case / 사례)/giờ, human-in-the-loop có thể thành theater.
 
+### Oversight capacity khi scale
+
+Pilot có 1.000 claim/tháng và 12% case cần human review; assessor có thể absorb queue. Nếu rollout lên 100.000 claim/tháng mà abstention/override rate vẫn 12%, manual review trở thành 12.000 case/tháng. “Human-in-the-loop” lúc pilot đúng nhưng operating model lúc scale có thể infeasible.
+
+Nhóm không nên giải bài toán bằng cách ép reviewer duyệt nhanh hơn để giữ productivity KPI. Cần model arrival rate, reviewer capacity, severity priority và SLA; sau đó có thể segment low-risk case, đổi automation threshold, reserve capacity cho high-risk case hoặc giới hạn rollout. Đây là ví dụ control effectiveness thay đổi theo scale dù model accuracy không đổi.
+
 ### Vendor/procurement
 
 Đặc tả hợp đồng (contract / 계약) cần dữ liệu (data / 데이터) handling, mô hình (model / 모델)/phiên bản (version / 버전) thay đổi (change / 변경) notification, sự cố (incident / 인시던트), availability, IP và exit/export. Cheap API price không phản ánh switching chi phí (cost / 비용) hoặc regulatory exposure.
 
+### Evaluation evidence sau vendor model update
+
+Hai tháng sau pilot, vendor phát hành model version mới với benchmark tổng thể tốt hơn. Điều này không tự động cho phép upgrade production. Evidence đã approve trước đó gắn với model/config, prompt, retrieval, claim segments và operating conditions cũ.
+
+PM cần hỏi change này invalidate evidence nào. Low-risk summarization test có thể chỉ cần regression nhỏ; high-risk medical-claim recommendation có thể cần re-validation đầy đủ ở segment đã từng là weak point. Nếu vendor không cho pin version, procurement risk và change-governance risk tăng vì organization khó giữ một evaluated configuration ổn định.
+
+Quyết định đúng vì vậy không phải “new model tốt hơn nên upgrade” hay “đừng bao giờ upgrade”, mà là trace `change → affected assumptions → evidence invalidated → re-evaluation → rollout/rollback rule`.
+
 ### Sustainability
 
 AI suy luận (inference / 추론) tăng compute spend. dự án (project / 프로젝트) có thể đo chi phí (cost / 비용)/năng lượng (energy / 에너지) proxy per claim và total volume. Nếu automation làm claim volume processed tăng mạnh, đơn vị (unit / 단위) efficiency không đủ để kết luận total footprint giảm.
+
+### Counterfactual sustainability claim
+
+Team báo inference energy per claim giảm 25% so với prototype cũ. Nhưng total claim volume sau automation dự kiến tăng 70% vì xử lý nhanh hơn và backlog được giải phóng. Claim “project giảm environmental impact 25%” vì vậy quá mạnh.
+
+Cần chọn counterfactual rõ: nếu không rollout AI, claim volume và manual processing sẽ diễn biến thế nào; nếu rollout, compute, human-review workload và rework thay đổi ra sao. Có thể kết luận unit efficiency tốt hơn nhưng total footprint tăng—hai statement cùng đúng.
+
+Go/no-go không cần một sustainability number “đẹp”; nó cần material impact đủ rõ, system boundary tường minh và claim strength phù hợp với evidence.
 
 ### Go/no-go
 
