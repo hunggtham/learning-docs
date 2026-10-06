@@ -45,6 +45,20 @@ Các chỉ báo trên không phải nhãn bí truyền; chúng là phép biến 
 
 Trong các ví dụ của source, RSI thường được đọc quanh mốc 70/30 và Stochastic quanh 75/25; Bollinger dùng dải quanh SMA với hệ số độ lệch chuẩn thường là 2; Envelope đặt biên phần trăm cố định quanh SMA. MACD được đọc qua chênh lệch EMA nhanh–chậm, giao cắt với signal line và vị trí so với đường 0. Đây là tham số minh họa của textbook, không phải ngưỡng tự động đúng cho mọi tài sản, khung thời gian hay regime.
 
+### VR và Point-and-Figure: volume và thời gian được xử lý khác nhau
+
+Source tách `Volume Ratio (VR)` khỏi OBV dù cả hai đều dùng volume. Với quy ước thường thấy trong phần này, chia volume thành ngày tăng (`V↑`), ngày giảm (`V↓`) và ngày không đổi (`V=`):
+
+```text
+VR = [V↑ + 0,5 × V=] / [V↓ + 0,5 × V=] × 100
+```
+
+Nếu một cửa sổ có `V↑ = 600`, `V↓ = 200`, `V= = 200`, thì `VR = (600 + 100)/(200 + 100) × 100 ≈ 233,3%`. Con số này chỉ nói volume đi cùng các phiên tăng lớn hơn volume đi cùng các phiên giảm trong cửa sổ; nó không nói giá chắc chắn sẽ tăng tiếp. Khi mẫu số rất nhỏ, VR nhảy mạnh và dễ bị chi phối bởi một phiên bất thường. Các mốc 70%, 150% hay 450% xuất hiện trong ví dụ textbook phải được xem là ngưỡng minh họa; muốn dùng thật phải khóa cửa sổ, cách phân loại phiên không đổi và kiểm thử ngoài mẫu.
+
+Point-and-Figure (P&F) xử lý khác: thay vì vẽ mọi đơn vị thời gian, nó chỉ ghi chuyển động đủ lớn để đi thêm một box và đổi cột khi đạt ngưỡng reversal. Vì vậy P&F có thể làm rõ vùng tích lũy/phân phối và mức phá vỡ, nhưng đồng thời bỏ qua thứ tự thời gian và gap trong quá trình lọc. Một biểu đồ P&F chỉ có ý nghĩa khi ghi rõ `box size`, `reversal amount`, nguồn giá (close hay high/low) và quy tắc xác nhận. Đổi box size hoặc reversal có thể biến cùng chuỗi giá thành cấu trúc khác; không được so sánh tín hiệu P&F giữa hai backtest nếu các tham số này không giống nhau.
+
+VR và P&F minh họa hai dạng biến đổi dữ liệu: VR giữ thời gian nhưng gom volume theo hướng giá, còn P&F hy sinh thời gian để giữ các chuyển động vượt ngưỡng. Cả hai đều là bộ lọc quan sát, không phải bằng chứng nhân quả; cần nối với xu hướng, thanh khoản và chi phí thực thi trước khi tạo quy tắc giao dịch.
+
 ## 6. Dow và Elliott
 
 Dow Theory đặt trọng tâm vào xu hướng chính, xu hướng phụ và dao động ngắn hơn; xác nhận giữa các chỉ số và khối lượng giúp tránh đọc một thị trường đơn lẻ. Elliott Wave diễn tả nhịp động lực và điều chỉnh lồng nhau. Vì việc gán nhãn sóng phụ thuộc cách đếm, nó cần được xem là kịch bản có điều kiện, không là bằng chứng duy nhất. Khi cấu trúc giá không thỏa điều kiện, phải bỏ nhãn thay vì ép dữ liệu vào lý thuyết.
