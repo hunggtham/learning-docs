@@ -102,6 +102,18 @@ Nếu human override tỷ lệ (rate / 비율) gần zero trong hệ thống (sy
 
 > **Nối mạch:** **Confidence, bất định (uncertainty / 불확실성) và abstention** nối từ **Human oversight có dạng thất bại (failure mode / 실패 모드) riêng** sang **Dữ liệu (data / 데이터) chất lượng (quality / 품질) là dự án (project / 프로젝트) phụ thuộc (dependency / 의존성)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
+## Human oversight là một capacity-constrained control
+
+Human-in-the-loop không chỉ là câu hỏi “có reviewer hay không”; nó là một **queueing/capacity system**. Nếu AI route 20% trường hợp sang review nhưng arrival rate tăng nhanh hơn reviewer capacity, queue dài ra, SLA trượt và reviewer bắt đầu shortcut. Safety control lúc này degrade chính vì volume mà AI tạo ra.
+
+Oversight design cần ít nhất bốn biến: arrival rate của case cần review, service capacity của reviewer, priority theo consequence và escalation path khi queue vượt tolerance. High-risk case có thể cần reserved capacity hoặc class-of-service riêng thay vì đứng sau hàng nghìn low-risk case.
+
+Một hệ thống có accuracy tốt nhưng abstention/override rate cao vẫn có thể không viable về operations nếu human workload vượt capacity. Ngược lại, giảm human review để đạt productivity target có thể làm control theater. Vì vậy business case của automation phải tính **cost và capacity của oversight**, không coi human review là tài nguyên vô hạn.
+
+Điểm exam/reasoning cần giữ: khi human oversight thất bại do overload, đáp án tốt không nhất thiết là “training reviewer tốt hơn”. Có thể cần thay automation threshold, segment use case, tăng capacity, giảm scope hoặc redesign workflow để control trở lại effective.
+
+> **Nối mạch:** Oversight capacity biến accountability thành operating constraint thật; **confidence/abstention** tiếp theo quyết định case nào nên đi vào queue đó và với priority nào.
+
 ## Confidence, bất định (uncertainty / 불확실성) và abstention
 
 AI hệ thống (system / 시스템) nên có cách biểu diễn bất định (uncertainty / 불확실성) hoặc ít nhất ranh giới (boundary / 경계) nơi đầu ra (output / 출력) không đủ đáng tin để tự động hành động (action / 동작). Trong nhiều use trường hợp (case / 사례), khả năng “không biết” hoặc chuyển trường hợp (case / 사례) sang human là điều khiển (control / 제어) quan trọng hơn việc cố trả lời mọi yêu cầu (request / 요청).
@@ -195,6 +207,26 @@ Một môi trường vận hành (production / 운영 환경) quyết định (d
 Thay đổi (change / 변경) có thể cần regression evaluation trước rollout, canary/pilot, quay lui (rollback / 롤백) criterion và approval theo rủi ro (risk / 위험) tier. “Vendor mô hình (model / 모델) tốt hơn” không tự động có nghĩa safe để auto-upgrade.
 
 > **Nối mạch:** **AI khả năng quan sát (observability / 관측 가능성) phải nhìn ngữ nghĩa (semantic / 의미적) kết quả (outcome / 결과)** nối từ **Mô hình (model / 모델)/phiên bản (version / 버전) thay đổi (change / 변경) cũng là cấu hình (configuration / 구성) management** sang **AI sự cố (incident / 인시던트) phản hồi (response / 응답)**, vì cơ chế trước tạo đầu vào cho bước sau.
+
+## Evaluation evidence có validity envelope và expiry
+
+Một evaluation result không phải certificate vĩnh viễn cho “model này an toàn”. Bằng chứng chỉ có giá trị trong **validity envelope** gồm model/config version, data distribution, prompt/retrieval, tool permission, use case, user population và operating conditions đã được kiểm thử.
+
+Nếu một thành phần material đổi, evidence cũ có thể hết hiệu lực một phần hoặc toàn bộ. Model upgrade có thể cải thiện benchmark nhưng phá behavior ở niche segment; retrieval source mới có thể thay factuality; mở tool permission làm blast radius lớn hơn dù model weights không đổi; rollout sang quốc gia mới có thể thay language, policy và user behavior.
+
+Vì vậy change control cần hỏi không chỉ “component nào đổi?” mà còn **“evidence nào bị invalidated bởi change này?”**. Một useful impact chain là:
+
+```text
+change
+→ affected assumptions / evaluation segments
+→ evidence invalidated
+→ regression / re-validation needed
+→ rollout scope / approval
+```
+
+Điều này nối configuration management với governance. Canary/pilot và rollback criterion chỉ có meaning khi regression evidence target đúng phần validity envelope bị ảnh hưởng, thay vì chạy lại một benchmark chung không liên quan.
+
+> **Nối mạch:** Evidence expiry giải thích vì sao version control chưa đủ; **semantic observability** tiếp theo cung cấp production evidence để biết validity envelope có còn giữ sau rollout hay đã drift.
 
 ## AI khả năng quan sát (observability / 관측 가능성) phải nhìn ngữ nghĩa (semantic / 의미적) kết quả (outcome / 결과)
 
@@ -335,6 +367,27 @@ Không có ranh giới (boundary / 경계) duy nhất đúng cho mọi quyết �
 Ví dụ “giảm compute chi phí (cost / 비용) 20% per giao dịch (transaction / 트랜잭션) so với baseline bản phát hành (release / 릴리스)” rõ hơn “tối ưu green IT”. Nhưng chỉ số (metric / 지표) cũng cần guardrail để tránh chuyển chi phí (cost / 비용) sang nơi khác, như giảm compute nhưng tăng độ trễ (latency / 지연 시간) đến mức người dùng (user / 사용자) phải thử lại (retry / 재시도) nhiều hơn.
 
 > **Nối mạch:** **Impact threshold và escalation** nối từ **Baseline, mục tiêu (target / 대상) và measurable impact** sang **Các hệ thống (systems / 시스템들) thinking và externality**, vì cơ chế trước tạo đầu vào cho bước sau.
+
+## Sustainability claim cần counterfactual baseline
+
+Baseline cho sustainability không chỉ là “số năm ngoái”. Khi claim nói một project **giảm** impact, cần hỏi counterfactual: nếu project không làm option này thì hệ thống hợp lý nhất sẽ vận hành thế nào? Demand growth, workload mix, grid intensity, outsourcing hoặc policy change có thể làm before/after comparison đánh lừa.
+
+Ví dụ total compute tăng 10% sau migration nhưng transaction volume tăng 60%. Project có thể cải thiện impact per transaction dù total footprint tăng. Ngược lại, total energy giảm 15% trong năm suy thoái demand không chứng minh architecture change tạo toàn bộ reduction.
+
+Counterfactual không cần econometric model phức tạp cho mọi project. Cần đủ minh bạch về:
+
+```text
+baseline/counterfactual scenario
+→ system boundary
+→ volume/activity assumption
+→ impact measure
+→ uncertainty
+→ claim strength
+```
+
+Claim mạnh phải proportional với evidence. Nếu counterfactual yếu, nên nói “observed reduction under these assumptions” thay vì “project avoided X impact” như causal fact. Đây là cùng discipline với benefit attribution ở chapter measurement.
+
+> **Nối mạch:** Counterfactual baseline làm sustainability claim có causal boundary rõ; **impact threshold và escalation** tiếp theo quyết định khi observed/counterfactual impact đủ material để đổi option, supplier hoặc governance path.
 
 ## Impact threshold và escalation
 
