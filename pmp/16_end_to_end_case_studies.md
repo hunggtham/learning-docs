@@ -364,6 +364,27 @@ Trường hợp (case / 사례) study nên được dùng để luyện chất l
 
 > **Nối mạch:** **Cross-case synthesis: quyết định (decision / 결정) chất lượng (quality / 품질) và kết quả (outcome / 결과) chất lượng (quality / 품질)** nêu quy tắc; **Cách dùng trường hợp (case / 사례) study để tự luyện** thử quy tắc trong tình huống, rồi **Coverage của các trường hợp (case / 사례)** mở rộng hệ quả.
 
+## Cross-case synthesis: reconstruct state khi evidence mâu thuẫn
+
+Trong dự án thật, evidence hiếm khi hoàn toàn nhất quán. Contract có thể ghi một committed date, schedule có forecast khác, dashboard dùng dữ liệu hôm qua, meeting minutes ghi một target mới, còn stakeholder lại nói “đã thống nhất” một điều chưa từng được approve. Khi đó PM không nên chọn document mình thích nhất hoặc lấy trung bình các con số; phải **reconstruct project state**.
+
+Một reconstruction tốt đi theo bốn trục. Thứ nhất là **semantics**: mỗi artifact đang nói forecast, target, baseline, actual hay obligation? Thứ hai là **authority**: artifact nào có quyền tạo/đổi commitment? Thứ ba là **effective time/version**: thông tin nào đã superseded, thông tin nào chỉ stale? Thứ tư là **lineage**: con số/claim đi từ source nào qua transformation nào?
+
+Ví dụ trường hợp C có vendor contract cam kết API ngày 30/6, integrated schedule forecast 8/7 và steering note nói “aim 3/7”. Ba ngày không conflict theo cùng nghĩa: 30/6 là contractual obligation, 8/7 là current forecast, 3/7 là management target. Nếu PM sửa schedule về 3/7 để “align”, project state không tốt hơn; chỉ mất information quality. Nếu vendor nói 30/6 vẫn achievable nhưng integration evidence cho thấy P80 là 8/7, disagreement phải được trace về assumptions/evidence thay vì giải quyết bằng political compromise.
+
+Cùng logic áp dụng cho risk và quality. Register có thể ghi risk mitigated nhưng control test fail; “response completed” không thắng operational evidence. Dashboard có thể green trong khi exception register cho thấy compensating controls đã hết hạn; derived view không override source evidence.
+
+Mental model là:
+
+```text
+conflict → classify semantics → check authority/version → trace lineage
+→ reconstruct one coherent state → decide
+```
+
+Đây là năng lực nối trực tiếp scenario reasoning, artifact precedence, schedule semantics và governance. Khi state chưa được reconstruct, hành động mạnh thường premature vì PM chưa biết mình đang xử lý deviation thật hay chỉ xử lý disagreement giữa các representation.
+
+> **Nối mạch:** Sau khi hiểu cách reconstruct reality từ evidence mâu thuẫn, phần **Cách dùng case study** biến cùng kỹ thuật thành vòng luyện transfer thay vì học thuộc một answer pattern.
+
 ## Cách dùng trường hợp (case / 사례) study để tự luyện
 
 ### Pass 1 — Không mở chapter khác
