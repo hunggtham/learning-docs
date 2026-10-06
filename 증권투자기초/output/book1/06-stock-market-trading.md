@@ -170,6 +170,27 @@ và rút ngắn việc đối soát. Nhưng chúng cũng làm cho việc hiểu 
 cổ phiếu” phụ thuộc vào hồ sơ tài khoản, thời điểm thanh toán và quy tắc của
 trung gian. Đây là lý do cần tách ngày khớp lệnh khỏi ngày hoàn tất quyền sở hữu.
 
+Source còn dùng ba tên settlement cụ thể trong câu 41; đây là distinction cần giữ nguyên:
+
+| Thuật ngữ | Cơ chế | Boundary trong câu hỏi source |
+|---|---|---|
+| `차감결제` (net settlement / thanh toán bù trừ) | bù các nghĩa vụ mua–bán và chỉ chuyển phần ròng | là phương thức settlement hợp lệ trong source |
+| `집중결제` (centralized settlement / thanh toán tập trung) | nghĩa vụ được xử lý qua cơ quan/hệ thống thanh toán chung | khác với tự thanh toán riêng từng cặp |
+| `대체결제` (book-entry settlement / thanh toán ghi sổ) | chuyển quyền bằng bút toán tài khoản thay vì giao chứng chỉ vật chất | gắn với lưu ký tập trung |
+| `차금결제` | từ gần nghĩa nhưng **không** nằm trong bộ phương thức mà câu 41 chấp nhận | đáp án loại trừ của câu 41 |
+
+**Giao dịch tín dụng (`신용거래`)** phải tách theo thứ được cấp: nếu trung gian cấp
+**tiền**, source gọi `신용거래융자`; nếu cấp **chứng khoán** để bán, source gọi
+`신용거래대주`. Hai từ không phải hai mức độ vay mà là hai loại tài sản được cấp.
+Mã thuộc `관리종목` bị loại khỏi giao dịch tín dụng trong snapshot source, nên
+cả 융자 và 대주 đều bị giới hạn theo rule đó.
+
+**Cho vay chứng khoán (`증권대차거래`)** là lớp khác với `신용거래대주`: chủ thể
+cho vay và chủ thể đi vay chuyển chứng khoán tạm thời rồi hoàn trả chứng khoán
+tương đương. Câu 44 dùng `경쟁거래`, `결제거래`, `맞춤거래` như các loại được
+source nhận diện và đặt `보통거래` làm distractor. Distinction này giúp không
+đồng nhất securities lending với một lệnh bán thông thường.
+
 ### 6. Lệnh giao dịch là cách nhà đầu tư nói rõ điều mình chấp nhận
 
 Sau khi hiểu thứ tự ưu tiên, có thể đọc các loại lệnh như những cách khác nhau
@@ -292,6 +313,13 @@ thay đổi hoặc rút lại nội dung quan trọng, hay trình bày thiếu k
 quản lý hoặc xem xét hủy niêm yết. Các hình thức và thời hạn cụ thể phụ thuộc
 quy tắc áp dụng tại thời điểm xử lý.
 
+**Checkpoint câu 60:** answer key nguồn cho thấy khi xử lý `불성실공시`, KRX với
+vai trò tổ chức tự quản có thể yêu cầu báo cáo diễn biến/sự cố và thực hiện giáo
+dục phòng ngừa đối với `공시책임자`/người phụ trách công bố. Phương án “tố cáo
+người chịu trách nhiệm công bố” là phương án sai trong câu 60. Đây là distinction
+giữa **biện pháp quản lý thị trường/SRO** và một kết luận trách nhiệm pháp lý
+hình sự hoặc hành chính.
+
 ### 10. KOSDAQ là lớp thị trường cho doanh nghiệp tăng trưởng
 
 KOSDAQ (`코스닥시장`) nằm cạnh thị trường cổ phiếu chính, nhưng không coi
@@ -401,8 +429,21 @@ thống của KRX. Ý nghĩa học tập của mô hình này là tách **nơi t
 **một sở giao dịch duy nhất**: cùng một cổ phiếu có thể được giao dịch ở nhiều
 địa điểm, với phiên trước, phiên chính, phiên sau và giao dịch khối lượng lớn có
 quy tắc riêng. Khi đó, nhà đầu tư phải so sánh giá, thanh khoản, loại lệnh,
-phí và cách chuyển lệnh giữa các địa điểm. Giờ giao dịch và cấu trúc NXT trong
-chỉ là mô tả theo thời điểm biên soạn.
+phí và cách chuyển lệnh giữa các địa điểm. Giờ giao dịch và cấu trúc NXT trong source chỉ là mô tả theo thời điểm biên soạn.
+
+Bảng source về NXT cần đọc như một **nhịp venue**, không phải lịch current:
+
+| Phiên NXT trong source | Snapshot | Cơ chế cần hiểu |
+|---|---:|---|
+| Pre-market | 08:00–08:50 | venue nhận/khớp lệnh trước phiên chính theo rule riêng |
+| Main market | 09:00:30–15:20 | cạnh tranh với venue chính trong khoảng source mô tả |
+| After-market nhận lệnh | từ 15:30 | tách thời điểm nhận lệnh khỏi thời điểm bắt đầu khớp |
+| After-market khớp | 15:40–20:00 | kéo dài khả năng giao dịch sau KRX regular session |
+| Closing-price market | 15:30–16:00 | dùng giá đóng cửa KRX làm tham chiếu theo source |
+| Block/basket | 08:00–18:00 | giao dịch khối/rổ có điều kiện khối lượng/giá riêng |
+
+Mọi giờ và điều kiện trong bảng là **SOURCE / TEXTBOOK STATE**; không dùng bảng
+này để đặt lệnh current nếu chưa kiểm tra thông báo chính thức của venue.
 
 ### 14. Bảng nguồn — nhịp giao dịch và giới hạn lịch sử
 
