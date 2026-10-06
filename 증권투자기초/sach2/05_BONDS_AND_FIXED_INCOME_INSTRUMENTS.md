@@ -26,6 +26,19 @@ Preferred stock có quyền ưu tiên cổ tức hoặc tài sản so với comm
 
 Source minh họa floating-rate bond bằng coupon dạng `benchmark + spread` (ví dụ LIBOR + biên) và có thể đặt floor rate. Reverse floater đi theo dạng `constant − benchmark`, thường cần cap để giới hạn coupon. Cấu trúc này khiến coupon đổi theo benchmark và basis risk; LIBOR ở đây chỉ là ví dụ textbook trong raw, không phải khuyến nghị dùng benchmark hiện hành. Indexed bond có thể gắn coupon hoặc principal với chỉ số/real rate, nên phải kiểm tra index lag, cách điều chỉnh và liệu khoản bảo vệ có thực sự khớp với lạm phát của nhà đầu tư.
 
+### International bond, foreign bond và eurobond
+
+Raw tách `foreign bond` và `eurobond` theo nơi phát hành, thị trường và tiền tệ, không chỉ theo tên địa lý:
+
+| Nhóm | Cách đọc | Rủi ro cần tách |
+|---|---|---|
+| Foreign bond | Người vay nước ngoài phát hành trong thị trường nội địa của một nước, thường bằng tiền tệ và theo quy tắc của thị trường đó | Quy định địa phương, issuer risk và FX của nhà đầu tư nước ngoài |
+| Eurobond | Phát hành ngoài thị trường nội địa của đồng tiền định danh; “euro” không nhất thiết nghĩa là phát hành tại châu Âu | FX, jurisdiction, withholding tax, thanh khoản và quy tắc thanh toán |
+
+Các tên `Yankee`, `Samurai` và `Bulldog` trong source là nhãn thị trường/đồng tiền của foreign bond (lần lượt gắn với Mỹ, Nhật và Anh trong ví dụ textbook). Không nên suy ra issuer an toàn hơn từ tên gọi; điều cần đọc vẫn là prospectus, governing law, currency của coupon/gốc và nơi nhà đầu tư nhận tiền.
+
+Ví dụ, một trái phiếu trả lợi suất 4% bằng ngoại tệ nhưng đồng ngoại tệ mất 5% so với KRW sẽ cho lợi suất quy đổi gần `1,04 × 0,95 − 1 = −1,2%` trước phí và thuế. Coupon dương bằng ngoại tệ vì thế không bảo đảm lợi nhuận dương trong đồng tiền của người học. Nếu hedge FX, phải cộng thêm chi phí hedge, basis và kỳ hạn hợp đồng; nếu không hedge, attribution phải tách bond return khỏi currency return.
+
 Raw còn phân nhóm structured note theo tài sản hoặc điều kiện kích hoạt: interest-rate-linked note (inverse FRN, dual-index FRN, CMS và range accrual), default/credit-spread/credit-linked note, equity hoặc equity-index-linked note, currency/dual-currency note và commodity-linked note. Hãy đọc taxonomy này theo biến làm payoff đổi: benchmark lãi suất, spread tín dụng, giá cổ phiếu, tỷ giá hay hàng hóa. Mỗi tên chỉ là nhãn của tài sản tham chiếu; trước khi định giá vẫn phải tìm barrier, cap/floor, trigger, issuer risk và cách xử lý khi dữ liệu tham chiếu không còn tồn tại.
 
 ### So sánh nhanh: cùng là “fixed income” nhưng payoff không giống nhau
