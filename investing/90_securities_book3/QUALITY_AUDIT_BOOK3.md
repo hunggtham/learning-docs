@@ -194,12 +194,13 @@ Result: **PASS**.
 
 ## 12. Link and whitespace audit
 
-- Markdown link occurrences checked: **27**.
+- Markdown link occurrences checked: **32**.
 - Unique relative targets checked on branch: **21**.
 - Broken relative targets: **0**.
-- Changed Book 3 files scanned for trailing whitespace, space-before-tab and merge-conflict markers: **17 files, 0 issues**.
+- Publication rerun initially found **3 non-printing control bytes** that corrupted escaped LaTeX symbols: one `\\rho` occurrence in `02_PORTFOLIO_THEORY.md` and two `\\beta` occurrences in `04_PERFORMANCE_AND_VALUATION.md`. They were corrected on this branch.
+- All **17 Book 3 files** were then rescanned for control characters, trailing whitespace and merge-conflict markers: **0 issues**.
 
-The GitHub connector used in this session has no repository shell, so the literal CLI command `git diff --check` could not be invoked. Because all changed Book 3 files were fetched from the branch and their full contents were scanned, the equivalent whitespace/conflict check is clean. Run the literal CLI command once more in a local checkout/CI before merge if the workflow requires the command itself rather than equivalent content validation.
+A literal `git diff --check` was attempted through a container checkout, but the execution environment could not resolve `github.com`, so `git clone` failed before Git could run the command. The branch contents were therefore checked independently by fetching every Book 3 text file and scanning the full contents; after the formula-symbol fixes above, the equivalent whitespace/control/conflict check is clean. If the merge workflow requires the literal CLI result rather than equivalent content validation, run `git diff --check main...codex/securities-book3-docs-only` from a networked checkout/CI.
 
 Branch comparison at audit time: Book 3 branch is ahead of `main` with Book 3 work but also behind current `main`; synchronize/rebase according to repository workflow before merge. This is a Git integration state, not a semantic publication failure.
 
@@ -217,7 +218,7 @@ Branch comparison at audit time: Book 3 branch is ahead of `main` with Book 3 wo
 | KR/EN terminology audit | PASS — 117 source-confirmed terms |
 | current/source-state audit | PASS |
 | link audit | PASS — 0 broken |
-| whitespace/conflict equivalent of diff-check | PASS — 0 issues |
+| whitespace/control/conflict equivalent of diff-check | PASS — 17 files, 0 issues; literal CLI blocked by checkout network |
 | PARTIAL | **0** |
 | MISSING | **0** |
 | SOURCE_AMBIGUITY | **10** |
