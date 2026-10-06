@@ -1,6 +1,6 @@
 # 7. OTC và chứng khoán phái sinh cấu trúc
 
-OTC cho phép thiết kế payoff theo nhu cầu mà exchange product chuẩn hóa không đáp ứng. Đổi lại, người mua không chỉ mua một “lãi suất cao”: họ đang nhận một gói exposure gồm underlying, option sold/bought, credit của issuer, thanh khoản và điều kiện chấm dứt. Phần này là điểm kết của Sách 3 vì nó buộc người học đọc toàn bộ graph payoff thay vì nhìn coupon.
+**Phái sinh OTC (over-the-counter derivatives / 장외파생상품)** cho phép thiết kế payoff theo nhu cầu mà exchange product chuẩn hóa không đáp ứng. Đổi lại, người mua không chỉ mua một “lãi suất cao”: họ đang nhận một gói exposure gồm underlying, option sold/bought, credit của issuer, thanh khoản và điều kiện chấm dứt. Phần này là điểm kết của Sách 3 vì nó buộc người học đọc toàn bộ graph payoff thay vì nhìn coupon.
 
 ## 1. OTC bắt đầu từ nhu cầu, không phải từ tên sản phẩm
 
@@ -10,7 +10,7 @@ Market participants gồm hedger, speculator, arbitrageur, dealer/issuer và end
 
 ## 2. Đọc chứng khoán phái sinh cấu trúc
 
-**ELS (주가연계증권)** liên kết payoff với stock/index; **ELB** nhấn mạnh cấu trúc bảo vệ vốn theo điều kiện; **ELF** đóng gói exposure qua fund; **DLS/DLB** dùng underlying ngoài cổ phiếu như rates, FX, commodity hoặc credit. Tên gọi chỉ là nhóm sản phẩm; phải đọc term sheet để biết issuer, maturity, observation dates, coupon, barrier, principal protection và settlement.
+**Chứng khoán liên kết cổ phiếu/chỉ số (equity-linked security, ELS / 주가연계증권)** liên kết payoff với stock/index; **ELB** (source xếp vào nhóm equity-linked với điều kiện `원금보장`) nhấn mạnh cấu trúc bảo vệ vốn theo điều kiện; **ELF** đóng gói exposure qua fund; **DLS/DLB** (source xếp vào nhóm derivative-linked ngoài equity) dùng underlying ngoài cổ phiếu như rates, FX, commodity hoặc credit. Tên gọi chỉ là nhóm sản phẩm; phải đọc term sheet để biết issuer, maturity, observation dates, coupon, barrier, principal protection và settlement.
 
 Raw source tách tên theo hai lớp, không nên trộn chúng:
 
@@ -19,15 +19,43 @@ Raw source tách tên theo hai lớp, không nên trộn chúng:
 | underlying + principal condition | payoff gắn với cổ phiếu/chỉ số hay rate, FX, commodity, credit; có điều kiện bảo toàn vốn hay không? | ELS/ELB cho equity-linked; DLS/DLB cho derivative-linked ngoài equity |
 | wrapper phân phối | payoff đó được phát hành dưới dạng security, fund, trust hay deposit? | ELS trực tiếp khác ELF/ELT ở lớp pháp lý, phí, tài sản và cách nhà đầu tư nhận exposure |
 
+### Product-by-product matrix: không đọc acronym thay cho term sheet
+
+Bảng dưới đây là **source-state taxonomy + risk-reading contract**, không phải định nghĩa pháp lý hiện hành. “`원금보장`” trong raw chỉ là nhãn cấu trúc của giáo trình; nó **không** đồng nghĩa government guarantee, deposit insurance hay không có issuer risk.
+
+| Dimension | ELS | ELB | DLS | DLB |
+|---|---|---|---|---|
+| Underlying | cổ phiếu/chỉ số | cổ phiếu/chỉ số | ít nhất một underlying ngoài equity: rate, FX, commodity, credit, fund, volatility… | như DLS, ngoài equity |
+| Wrapper | security/note do issuer phát hành | security/bond-like note theo taxonomy source | security/note | security/bond-like note theo taxonomy source |
+| Issuer | chứng khoán/issuer được phép phát hành trong source-state | issuer của note | issuer của note | issuer của note |
+| Principal condition | có thể mất principal theo payoff | source gắn nhãn `원금보장`, nhưng vẫn phụ thuộc điều khoản + solvency của issuer | có thể mất principal theo payoff | source gắn nhãn `원금보장`, nhưng không phải bảo lãnh nhà nước |
+| Coupon driver | option premium, volatility, correlation, barrier/early-redemption terms, funding | cùng logic option/funding nhưng payoff principal khác | option premium của underlying ngoài equity + funding/model inputs | tương tự DLS với principal condition khác |
+| Barrier/path dependence | có thể có worst-of, knock-in/out, autocall, stepdown, no-knock-in… | chỉ tồn tại nếu term sheet quy định; acronym ELB tự nó không nói barrier | có thể có barrier/path condition theo rate/FX/commodity/credit | tương tự, phải đọc term sheet |
+| Maturity / early redemption | thường có maturity + observation/autocall dates nếu cấu trúc dùng autocall | theo term sheet | theo term sheet | theo term sheet |
+| Liquidity | secondary exit có thể kém, buy-back spread phụ thuộc issuer/market | tương tự | tương tự | tương tự |
+| Credit/counterparty | investor là creditor của issuer; hedge counterparty phía sau có thể tạo thêm risk cho issuer | issuer default vẫn là risk dù source gọi `원금보장` | issuer + model/underlying credit nếu payoff liên quan credit | issuer risk vẫn tồn tại |
+| Fee/economics | issue spread, sales fee, hedge cost, funding và issuer margin nằm trong economics | tương tự | tương tự | tương tự |
+| Tax | **TEXTBOOK/SOURCE STATE**; không suy từ equity tax sang note tax | source-state | source-state | source-state |
+| Suitability | loss-tail/path dependence cần stress; source-state suitability rules | vẫn phải đọc disclosure + issuer risk | underlying/model phức tạp có thể làm suitability khó hơn | source-state |
+
+Wrapper là lớp thứ hai. Raw p.352 xác nhận **security → fund → trust → deposit** là các cách đóng gói khác nhau; OCR đủ để đọc rõ ELF ở lớp fund nhưng làm hỏng một số acronym trust/deposit, nên learning edition không tự điền acronym chưa OCR-verified.
+
+| Wrapper | Ai giữ/đóng gói exposure? | Điều thay đổi dù payoff kinh tế có thể giống |
+|---|---|---|
+| direct security | investor nắm note của issuer | issuer credit, buy-back liquidity, issue spread |
+| fund / ELF | fund/manager nắm tài sản/structured exposure | NAV, management fee, redemption/liquidity, asset segregation |
+| trust | trustee giữ theo trust contract | legal ownership, fee, withdrawal/valuation convention |
+| deposit | bank deposit wrapper trong ví dụ source | deposit terms, bank credit và **quy chế bảo vệ tiền gửi hiện hành phải kiểm tra riêng** |
+
 Trong source-state, “ELB/DLB bảo toàn vốn” chỉ mô tả cấu trúc theo điều kiện và issuer; không nên dịch thành tiền gửi chắc chắn hoặc bỏ qua lạm phát, phí và default của issuer. Cùng một underlying có thể được đóng gói thành security hay fund nhưng tax, liquidity, counterparty và quyền bán sớm có thể khác. Vì vậy acronym là điểm bắt đầu để tìm term sheet, không phải kết luận về rủi ro.
 
-Một ELS thường kết hợp bond-like cash flow với short put hoặc barrier option. Coupon cao hơn tiền gửi là giá của việc nhà đầu tư bán một phần insurance cho issuer: nếu underlying rơi qua **knock-in barrier**, principal có thể chịu loss theo underlying; nếu không chạm barrier và thỏa điều kiện, sản phẩm có thể **knock-out** sớm và trả coupon đã định. Knock-out không có nghĩa “luôn có lợi”: nó chấm dứt upside tiếp theo và tái đầu tư ở mức lãi mới.
+Một ELS thường kết hợp bond-like cash flow với short put hoặc barrier option. Coupon cao hơn tiền gửi là giá của việc nhà đầu tư bán một phần insurance cho issuer: nếu underlying rơi qua **knock-in barrier (Knock In / 낙인)**, principal có thể chịu loss theo underlying; nếu không chạm barrier và thỏa điều kiện, sản phẩm có thể **knock-out (Knock Out / 낙아웃)** sớm và trả coupon đã định. Knock-out không có nghĩa “luôn có lợi”: nó chấm dứt upside tiếp theo và tái đầu tư ở mức lãi mới.
 
-Độ sâu của payoff nằm ở điều kiện chứ không nằm ở tên viết tắt. Với cấu trúc **worst-of**, kết quả lấy tài sản kém nhất trong rổ; correlation giữa các tài sản càng thấp thì xác suất có một tài sản rơi sâu càng cao, nên coupon thường được chào cao hơn để bù rủi ro đó. Volatility cao, barrier bất lợi hoặc autocall level cao cũng làm xác suất mất vốn/không được gọi sớm tăng. Ngược lại, coupon cao không phải bằng chứng sản phẩm “rẻ”; nó có thể chỉ là giá thị trường của short barrier option mà nhà đầu tư đang bán.
+Độ sâu của payoff nằm ở điều kiện chứ không nằm ở tên viết tắt. Với cấu trúc **worst-of (Worst Performer)**, kết quả lấy tài sản kém nhất trong rổ; correlation giữa các tài sản càng thấp thì xác suất có một tài sản rơi sâu càng cao, nên coupon thường được chào cao hơn để bù rủi ro đó. Volatility cao, barrier bất lợi hoặc autocall level cao cũng làm xác suất mất vốn/không được gọi sớm tăng. Ngược lại, coupon cao không phải bằng chứng sản phẩm “rẻ”; nó có thể chỉ là giá thị trường của short barrier option mà nhà đầu tư đang bán.
 
-Trong **autocall stepdown**, mức gọi sớm có thể giảm dần qua các ngày quan sát; điều này làm xác suất được gọi sớm thay đổi theo thời gian nhưng không xóa rủi ro đáo hạn. Cấu trúc **no-knock-in** loại bỏ một trigger mất vốn cụ thể, nhưng không đồng nghĩa principal được bảo vệ tuyệt đối: issuer default, giá đáo hạn, phí và các điều kiện khác vẫn còn. Luôn phân biệt “không có barrier này” với “không có rủi ro”.
+Trong **autocall stepdown (Autocall Stepdown)**, mức gọi sớm có thể giảm dần qua các ngày quan sát; điều này làm xác suất được gọi sớm thay đổi theo thời gian nhưng không xóa rủi ro đáo hạn. Cấu trúc **no-knock-in (No-Knock In)** loại bỏ một trigger mất vốn cụ thể, nhưng không đồng nghĩa principal được bảo vệ tuyệt đối: issuer default, giá đáo hạn, phí và các điều kiện khác vẫn còn. Luôn phân biệt “không có barrier này” với “không có rủi ro”.
 
-OTC còn cho phép nhiều lớp phụ thuộc mà option chuẩn không có: **Asian/average option** dùng giá bình quân; **barrier option** kích hoạt hoặc vô hiệu khi underlying chạm ngưỡng; **lookback** chọn mức thuận lợi nhất trong lịch sử; **ladder** chốt nhiều bậc strike; **cliquet** điều chỉnh strike theo từng kỳ; **shout** cho phép người mua khóa một trạng thái; **digital** trả khoản cố định khi điều kiện đúng; **Bermudan** chỉ exercise ở các ngày định trước; **chooser** cho phép chọn call hoặc put; **rainbow** chọn tài sản có thành quả tốt nhất; **quanto** dùng underlying nước ngoài nhưng settlement bằng đồng tiền khác; leverage structure nhân payoff. Mỗi biến thể thêm value cho khách hàng nhưng cũng thêm model risk, liquidity risk và điều kiện khó đọc hơn.
+OTC còn cho phép nhiều lớp phụ thuộc mà option chuẩn không có: **Asian/average option** dùng giá bình quân; **barrier option** kích hoạt hoặc vô hiệu khi underlying chạm ngưỡng; **lookback** chọn mức thuận lợi nhất trong lịch sử; **ladder** chốt nhiều bậc strike; **cliquet** điều chỉnh strike theo từng kỳ; **shout** cho phép người mua khóa một trạng thái; **digital** trả khoản cố định khi điều kiện đúng; **Bermudan** chỉ exercise ở các ngày định trước; **chooser** cho phép chọn call hoặc put; **rainbow** chọn tài sản có thành quả tốt nhất; **quanto** dùng underlying nước ngoài nhưng settlement bằng đồng tiền khác; **accrual** tích lũy payoff theo từng observation unit trong suốt thời gian; leverage structure nhân payoff. Mỗi biến thể thêm value cho khách hàng nhưng cũng thêm model risk, liquidity risk và điều kiện khó đọc hơn.
 
 Khi tự đọc một term sheet, hãy chuyển từng điều khoản thành hàm payoff: trigger nào làm quyền được kích hoạt, quyền bị mất lúc nào, và khoản tiền phụ thuộc vào mức giá nào. Với barrier, phải phân biệt chạm trong ngày với chạm tại ngày quan sát; với digital, phải biết khoản trả cố định hay tỷ lệ theo underlying; với Bermudan/chooser, phải ghi rõ các ngày exercise. Những chi tiết này quyết định giá option và không thể khôi phục chỉ từ coupon quảng cáo.
 
@@ -40,7 +68,7 @@ Một số cấu trúc trong nguồn minh họa cách thay đổi đường đi 
 
 Những tên gọi này không thay thế term sheet. Chúng chỉ cho biết nhà thiết kế đã đổi trigger, quyền lựa chọn hoặc tần suất reset; muốn biết ai chịu rủi ro, phải viết lại payoff ở từng nhánh.
 
-Payoff phải viết theo kịch bản. Ví dụ một cấu trúc nguồn có underlying KOSPI200, maturity một năm, coupon được khóa khi chỉ số tăng 20% trong thời gian quan sát; nếu không tăng qua mức đó nhưng đáo hạn vẫn trong vùng 100–120%, coupon phụ thuộc participation rate; nếu barrier bị phá, payoff chuyển sang điều khoản mất vốn. Cùng một biểu đồ cần được đọc ở ba thời điểm: phát hành, barrier event và maturity.
+Payoff phải viết theo kịch bản, nhưng không được ghép nhánh của hai sản phẩm khác nhau. **Ví dụ 주가연계예금 ở raw p.360** có KOSPI200, maturity 1 năm và knock-out tại mức tăng 20%: nếu barrier +20% bị chạm trong kỳ, source khóa lãi suất ở 3,70%/năm; nếu không chạm và giá đáo hạn nằm trong vùng 100–120% của mức đầu, participation có thể nâng mức lãi tối đa thêm khoảng 0,70 điểm phần trăm; nếu index giảm, raw vẫn mô tả mức 3,70%/năm. Đây là **deposit example/source-state**, không phải ELS loss branch và không phải mức lãi/guarantee hiện hành. Vì vậy barrier ở sản phẩm này giới hạn upside chứ không kích hoạt principal loss.
 
 ### Worked check: đọc một autocall stepdown bằng ba đường giá
 
@@ -56,7 +84,7 @@ Khi stress case, hãy ghi riêng: xác suất chạm barrier, xác suất autoca
 4. **Liquidity và exit price.** Sản phẩm OTC/structured thường khó bán đúng giá lý thuyết trước maturity; issuer spread, hedge cost và market stress làm giá thứ cấp khác payoff cuối kỳ.
 5. **Issuer credit.** Dù underlying không giảm, default của issuer vẫn có thể làm người mua không nhận được tiền.
 
-Đọc cả lớp hedge phía sau sản phẩm. **Funded swap** chuyển cả dòng vốn cho bên hedge nên quy mô credit exposure lớn hơn; **unfunded swap** thường chỉ thanh toán phần lãi/lỗ theo hợp đồng. Hai cấu trúc có thể tạo cùng payoff đối với khách hàng nhưng không tạo cùng rủi ro khi dealer hoặc hedge counterparty vỡ nợ. Ngoài ra, phí bán, spread phát hành, chi phí hedge và giá mua lại sớm có thể khiến lợi suất nhìn trên term sheet không bằng lợi suất nhà đầu tư thực nhận.
+Đọc cả lớp hedge phía sau sản phẩm. **Funded swap (Funded Swap)** chuyển cả dòng vốn cho bên hedge nên quy mô credit exposure lớn hơn; **unfunded swap (Unfunded Swap)** thường chỉ thanh toán phần lãi/lỗ theo hợp đồng. Hai cấu trúc có thể tạo cùng payoff đối với khách hàng nhưng không tạo cùng rủi ro khi dealer hoặc hedge counterparty vỡ nợ. Ngoài ra, phí bán, spread phát hành, chi phí hedge và giá mua lại sớm có thể khiến lợi suất nhìn trên term sheet không bằng lợi suất nhà đầu tư thực nhận.
 
 Ở phía issuer, coupon là kết quả của giá các option đã bán/mua, funding spread, chi phí hedge và biên lợi nhuận phân phối. Nếu issuer dùng volatility cao hơn hoặc correlation thấp hơn trong mô hình, coupon có thể cao hơn nhưng payoff cũng bất lợi hơn cho người mua. Đây là **model disagreement**, không phải arbitrage: người mua chịu rủi ro mô hình, còn issuer phải chịu model risk và hedge slippage khi thị trường nhảy gap. Vì vậy cần tách ba giá: giá lý thuyết, giá phát hành và giá mua lại; chúng có thể khác nhau ngay cả khi underlying chưa đổi.
 
