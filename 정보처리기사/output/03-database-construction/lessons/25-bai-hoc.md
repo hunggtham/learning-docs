@@ -8,19 +8,19 @@ Sau khi đọc, hãy giải thích được định nghĩa và điểm khác nha
 
 Mục đích của bài này là hiểu **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** như một khái niệm có thể giải thích và áp dụng: nêu được nó dùng để làm gì, nhận diện điều kiện hoặc giới hạn quan trọng, rồi đối chiếu với **143-145. SQL 분류 (SQL Categories)** khi chuyển sang phần tiếp theo.
 
-> **Chuyển mạch:** Trong **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, **핵심 키워드 (Từ khóa)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **선행·연결 개념 (Kiến thức liên kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, **핵심 키워드 (Từ khóa)** nối từ **학습 목표 (Mục tiêu)** sang **선행·연결 개념 (Kiến thức liên kết)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 핵심 키워드 (Từ khóa)
 
 트랜잭션, 관리, 기법, 제어
 
-> **Chuyển mạch:** Ở chặng này của **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, sau nội dung của **핵심 키워드 (Từ khóa)**, **선행·연결 개념 (Kiến thức liên kết)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **읽는 방법 (Cách đọc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, **핵심 키워드 (Từ khóa)** dẫn sang **선행·연결 개념 (Kiến thức liên kết)**, nơi tài liệu chuẩn và vị trí sở hữu được chỉ rõ để biết chỗ đào sâu tiếp; **읽는 방법 (Cách đọc)** mở rộng hệ quả liên quan.
 
 ## 선행·연결 개념 (Kiến thức liên kết)
 
 이 단원은 **9. 인덱스와 트랜잭션 (Index và Giao dịch)**에서 만든 기준을 이어받아 **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**을(를) 확장한다. 먼저 앞 단원의 기준이 여기서 어떤 질문으로 바뀌는지 확인하면, 세부 규칙을 따로 외우지 않고 관계로 읽을 수 있다.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, **읽는 방법 (Cách đọc)** tiếp nhận điểm tựa từ **선행·연결 개념 (Kiến thức liên kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, **읽는 방법 (Cách đọc)** nối từ **선행·연결 개념 (Kiến thức liên kết)** sang **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 읽는 방법 (Cách đọc)
 
@@ -32,7 +32,7 @@ Mục đích của bài này là hiểu **10. 트랜잭션 관리 기법 및 제
 
 ---
 
-> **Chuyển mạch:** Trong **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** tiếp nhận điểm tựa từ **읽는 방법 (Cách đọc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)**, **10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)** nối từ **읽는 방법 (Cách đọc)** sang phần giải thích tiếp theo, vì phần trước cung cấp điểm tựa cho chủ đề này.
 
 ## 10. 트랜잭션 관리 기법 및 제어 (Quản lý và điều khiển giao dịch)
 
@@ -78,7 +78,7 @@ Sau khi đọc **트랜잭션 상태 (Trạng thái giao dịch)**, đừng bắ
 
 ### 데이터 사전 (Data Dictionary / System Catalog / Metadata)
 
-Các ý ngay dưới **데이터 사전 (Data Dictionary / System Catalog / Metadata)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **데이터 사전 (Data Dictionary / System Catalog / Metadata)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “데이터 사전 (Data Dictionary / System Catalog / Metadata)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
