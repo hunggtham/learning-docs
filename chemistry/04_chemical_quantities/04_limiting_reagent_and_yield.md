@@ -16,7 +16,7 @@ Ví dụ:
 
 Nếu có `3 mol H2` và `3 mol O2`, lượng hydrogen không đủ để dùng hết oxygen. Theo tỉ lệ phản ứng, `3 mol H2` chỉ cần `1.5 mol O2`, nên `H2` là chất giới hạn và còn `1.5 mol O2` dư.
 
-> **Chuyển mạch:** Tỉ lệ stoichiometric xác định chất phản ứng giới hạn; biểu diễn mức tiến triển giúp kiểm tra chất nào cạn trước, rồi ví dụ nối giới hạn lý thuyết với hiệu suất thực tế.
+> **Nối mạch:** Tỉ lệ stoichiometric xác định chất phản ứng giới hạn; biểu diễn mức tiến triển giúp kiểm tra chất nào cạn trước, rồi ví dụ nối giới hạn lý thuyết với hiệu suất thực tế.
 
 ## Xác định bằng mức tiến triển phản ứng
 
@@ -32,7 +32,7 @@ Chất cho giá trị `ξ_max` nhỏ nhất sẽ giới hạn hệ.
 
 Cách nhìn này mở rộng tốt sang những phản ứng phức tạp hơn.
 
-> **Chuyển mạch:** Ở chặng này của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Xác định bằng mức tiến triển phản ứng** cho ta quy tắc; **Ví dụ** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Hiệu suất lý thuyết, thực tế và phần trăm hiệu suất** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Xác định bằng mức tiến triển phản ứng** nêu quy tắc; **Ví dụ** thử quy tắc trong tình huống, rồi **Hiệu suất lý thuyết, thực tế và phần trăm hiệu suất** mở rộng hệ quả.
 
 ## Ví dụ
 
@@ -66,7 +66,7 @@ Lượng `NH3` lý thuyết:
 
 `N2` tiêu thụ `4.0 mol`, nên còn lại `1.0 mol`.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Ví dụ** cho ta quy tắc; **Hiệu suất lý thuyết, thực tế và phần trăm hiệu suất** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Độ chuyển hóa và độ chọn lọc** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Ví dụ** nêu quy tắc; **Hiệu suất lý thuyết, thực tế và phần trăm hiệu suất** thử quy tắc trong tình huống, rồi **Độ chuyển hóa và độ chọn lọc** mở rộng hệ quả.
 
 ## Hiệu suất lý thuyết, thực tế và phần trăm hiệu suất
 
@@ -80,7 +80,7 @@ Lượng `NH3` lý thuyết:
 
 Hiệu suất thấp có thể do cân bằng, động học, phản ứng cạnh tranh, phân hủy, tách không hoàn toàn hoặc thất thoát khi thao tác.
 
-> **Chuyển mạch:** Trong **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Độ chuyển hóa và độ chọn lọc** tiếp nhận điểm tựa từ **Hiệu suất lý thuyết, thực tế và phần trăm hiệu suất** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Vì sao cố ý dùng chất dư?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Độ chuyển hóa và độ chọn lọc** nối từ **Hiệu suất lý thuyết, thực tế và phần trăm hiệu suất** sang **Vì sao cố ý dùng chất dư?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Độ chuyển hóa và độ chọn lọc
 
@@ -92,7 +92,7 @@ Trong hóa học công nghiệp và hóa học hữu cơ, phần trăm hiệu su
 
 Một quá trình có độ chuyển hóa cao nhưng độ chọn lọc thấp vẫn gây lãng phí. Thiết kế chất xúc tác thường tập trung mạnh vào tăng độ chọn lọc, không chỉ tăng tốc độ phản ứng.
 
-> **Chuyển mạch:** Ở chặng này của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Vì sao cố ý dùng chất dư?** tiếp nhận điểm tựa từ **Độ chuyển hóa và độ chọn lọc** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hiệu quả nguyên tử** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Vì sao cố ý dùng chất dư?** nối từ **Độ chuyển hóa và độ chọn lọc** sang **Hiệu quả nguyên tử**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Vì sao cố ý dùng chất dư?
 
@@ -107,7 +107,7 @@ Tuy nhiên dùng dư cũng có đánh đổi về chi phí, tinh chế, an toàn
 
 Trong thiết kế quá trình, tỉ lệ tối ưu không nhất thiết chính là tỉ lệ stoichiometric.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Hiệu quả nguyên tử** tiếp nhận điểm tựa từ **Vì sao cố ý dùng chất dư?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khái niệm chất giới hạn ngoài phòng thí nghiệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Hiệu quả nguyên tử** nối từ **Vì sao cố ý dùng chất dư?** sang **Khái niệm chất giới hạn ngoài phòng thí nghiệm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hiệu quả nguyên tử
 
@@ -121,7 +121,7 @@ Khác với phần trăm hiệu suất, hiệu quả nguyên tử là tính ch�
 
 Hóa học xanh quan tâm cả hiệu suất lẫn hiệu quả nguyên tử vì một phản ứng đạt `99%` hiệu suất vẫn có thể tạo lượng lớn chất thải stoichiometric.
 
-> **Chuyển mạch:** Trong **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Hiệu quả nguyên tử** đã nêu tiêu chí phân biệt, còn **Khái niệm chất giới hạn ngoài phòng thí nghiệm** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Hiệu quả nguyên tử** đặt tiêu chí; **Khái niệm chất giới hạn ngoài phòng thí nghiệm** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Các hiểu lầm thường gặp** mở rộng hệ quả.
 
 ## Khái niệm chất giới hạn ngoài phòng thí nghiệm
 
@@ -131,7 +131,7 @@ Nếu dây chuyền có 100 CPU nhưng chỉ 80 bo mạch chủ và mỗi máy t
 
 Trong chuyển hóa sinh học, chất dinh dưỡng có thể giới hạn sinh khối theo yêu cầu nguyên tố. Trong đốt cháy, hỗn hợp giàu nhiên liệu hoặc nghèo nhiên liệu cũng là bài toán mất cân bằng stoichiometric.
 
-> **Chuyển mạch:** Ở chặng này của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Khái niệm chất giới hạn ngoài phòng thí nghiệm** đã nêu tiêu chí phân biệt, còn **Các hiểu lầm thường gặp** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Khái niệm chất giới hạn ngoài phòng thí nghiệm** đặt tiêu chí; **Các hiểu lầm thường gặp** dùng tiêu chí đó để kiểm tra ranh giới, rồi **Mô hình tư duy** mở rộng hệ quả.
 
 ## Các hiểu lầm thường gặp
 
@@ -147,7 +147,7 @@ Mô hình stoichiometric giả định phản ứng tiến hoàn toàn theo phư
 
 Không. Hiệu suất phản ánh quá trình thực tế; cân bằng phương trình là ràng buộc bảo toàn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Chất phản ứng giới hạn và hiệu suất — ràng buộc nguồn lực của phản ứng**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

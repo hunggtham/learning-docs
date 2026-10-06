@@ -14,7 +14,7 @@ Vì vậy cần hỏi công thức đang mô tả:
 - một đơn vị công thức ion;
 - hay thành phần của một mạng mở rộng.
 
-> **Chuyển mạch:** Một công thức có thể mô tả đơn vị công thức thay vì phân tử riêng lẻ; từ đó công thức phân tử giữ số nguyên tử còn công thức thực nghiệm rút về tỉ lệ tối giản để suy luận thành phần.
+> **Nối mạch:** Một công thức có thể mô tả đơn vị công thức thay vì phân tử riêng lẻ; từ đó công thức phân tử giữ số nguyên tử còn công thức thực nghiệm rút về tỉ lệ tối giản để suy luận thành phần.
 
 ## Công thức phân tử
 
@@ -28,7 +28,7 @@ Nhưng công thức phân tử không cho biết cách các nguyên tử nối v
 
 Đây là lý do hóa học hữu cơ cần công thức cấu tạo và ký hiệu đường gấp khúc.
 
-> **Chuyển mạch:** Ở chặng này của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Công thức thực nghiệm** tiếp nhận điểm tựa từ **Công thức phân tử** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Từ phần trăm thành phần tới công thức thực nghiệm** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Công thức thực nghiệm** nối từ **Công thức phân tử** sang **Từ phần trăm thành phần tới công thức thực nghiệm**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Công thức thực nghiệm
 
@@ -38,7 +38,7 @@ Glucose `C6H12O6` có công thức thực nghiệm `CH2O`. Hydrogen peroxide `H2
 
 Công thức thực nghiệm đặc biệt hữu ích khi phân tích thực nghiệm chỉ cho thành phần nguyên tố.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Từ phần trăm thành phần tới công thức thực nghiệm** tiếp nhận điểm tựa từ **Công thức thực nghiệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phần trăm thành phần theo khối lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Từ phần trăm thành phần tới công thức thực nghiệm** nối từ **Công thức thực nghiệm** sang **Phần trăm thành phần theo khối lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Từ phần trăm thành phần tới công thức thực nghiệm
 
@@ -68,7 +68,7 @@ Nếu khối lượng mol thực nghiệm khoảng `180 g/mol`, còn khối lư�
 (CH_2O)_6=C_6H_{12}O_6
 \]
 
-> **Chuyển mạch:** Trong **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Phần trăm thành phần theo khối lượng** tiếp nhận điểm tựa từ **Từ phần trăm thành phần tới công thức thực nghiệm** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Hydrate** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Phần trăm thành phần theo khối lượng** nối từ **Từ phần trăm thành phần tới công thức thực nghiệm** sang **Hydrate**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phần trăm thành phần theo khối lượng
 
@@ -80,7 +80,7 @@ Phần trăm khối lượng của nguyên tố `X` trong hợp chất:
 
 Đây là cầu nối giữa công thức hóa học và thành phần khối lượng có thể đo được.
 
-> **Chuyển mạch:** Ở chặng này của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Hydrate** tiếp nhận điểm tựa từ **Phần trăm thành phần theo khối lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Công thức cấu tạo và các mức biểu diễn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Hydrate** nối từ **Phần trăm thành phần theo khối lượng** sang **Công thức cấu tạo và các mức biểu diễn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hydrate
 
@@ -94,7 +94,7 @@ Dấu chấm không phải phép nhân đại số; nó biểu diễn sự kết
 
 Đun nóng hydrate có thể loại nước và cho phép xác định số phân tử nước kết tinh từ độ giảm khối lượng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Công thức cấu tạo và các mức biểu diễn** tiếp nhận điểm tựa từ **Hydrate** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Khối lượng công thức và khối lượng mol** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Công thức cấu tạo và các mức biểu diễn** nối từ **Hydrate** sang **Khối lượng công thức và khối lượng mol**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Công thức cấu tạo và các mức biểu diễn
 
@@ -106,7 +106,7 @@ Trong hóa học hữu cơ, **công thức khung (skeletal formula)** ẩn phầ
 
 Mỗi cách biểu diễn là một mô hình. Cùng một phân tử có thể được biểu diễn bằng công thức phân tử, cấu trúc Lewis, hình nêm–gạch thể hiện lập thể, mô hình cầu–que hoặc bề mặt mật độ electron. Mỗi cách giữ lại một loại thông tin và bỏ đi những loại khác.
 
-> **Chuyển mạch:** Trong **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Khối lượng công thức và khối lượng mol** tiếp nhận điểm tựa từ **Công thức cấu tạo và các mức biểu diễn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Khối lượng công thức và khối lượng mol** nối từ **Công thức cấu tạo và các mức biểu diễn** sang **Các hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Khối lượng công thức và khối lượng mol
 
@@ -120,7 +120,7 @@ M=2M_{Na}+M_S+4M_O
 
 Không cần học thuộc kết quả; cần hiểu công thức là hướng dẫn hạch toán thành phần.
 
-> **Chuyển mạch:** Ở chặng này của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Các hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Khối lượng công thức và khối lượng mol** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Các hiểu lầm thường gặp** nối từ **Khối lượng công thức và khối lượng mol** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các hiểu lầm thường gặp
 
@@ -136,7 +136,7 @@ Không. Cùng công thức phân tử vẫn có thể tồn tại các đồng p
 
 Không. Chỉ số dưới thay đổi thành phần và bản sắc của tiểu phần; hệ số thay đổi số lượng tiểu phần trong phương trình.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Công thức hóa học — thành phần, công thức thực nghiệm và bản sắc phân tử**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 

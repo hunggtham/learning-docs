@@ -16,7 +16,7 @@ không mô tả cơ chế của từng va chạm. Nó mô tả **biến đổi t
 
 Vì vậy phương trình cân bằng là một lớp hạch toán vĩ mô, không phải “bộ phim phân tử”.
 
-> **Chuyển mạch:** Phương trình mô tả biến đổi, nhưng chỉ phương trình cân bằng mới bảo toàn số nguyên tử; các hệ số sau đó trở thành tỉ lệ mol để chuyển mô tả định tính thành tính toán.
+> **Nối mạch:** Phương trình mô tả biến đổi, nhưng chỉ phương trình cân bằng mới bảo toàn số nguyên tử; các hệ số sau đó trở thành tỉ lệ mol để chuyển mô tả định tính thành tính toán.
 
 ## Vì sao phải cân bằng?
 
@@ -26,7 +26,7 @@ Tổng điện tích cũng phải được bảo toàn.
 
 Do đó cân bằng phương trình là hệ quả của **định luật bảo toàn (conservation laws)**, không phải quy ước ký hiệu tùy ý.
 
-> **Chuyển mạch:** Ở chặng này của **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Hệ số và hệ số stoichiometric** tiếp nhận điểm tựa từ **Vì sao phải cân bằng?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cân bằng bằng suy luận trực tiếp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Hệ số và hệ số stoichiometric** nối từ **Vì sao phải cân bằng?** sang **Cân bằng bằng suy luận trực tiếp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Hệ số và hệ số stoichiometric
 
@@ -48,7 +48,7 @@ dn_i=\nu_i d\xi
 
 với `ν_i` âm cho chất phản ứng và dương cho sản phẩm.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Cân bằng bằng suy luận trực tiếp** tiếp nhận điểm tựa từ **Hệ số và hệ số stoichiometric** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Cân bằng như một bài đại số tuyến tính** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Cân bằng bằng suy luận trực tiếp** nối từ **Hệ số và hệ số stoichiometric** sang **Cân bằng như một bài đại số tuyến tính**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cân bằng bằng suy luận trực tiếp
 
@@ -68,7 +68,7 @@ C_3H_8+5O_2\rightarrow3CO_2+4H_2O
 
 Thứ tự cân bằng không phải luật cứng, nhưng trong phản ứng cháy thường thuận tiện khi xử lý các nguyên tố xuất hiện ít vị trí trước rồi mới tới oxygen và hydrogen.
 
-> **Chuyển mạch:** Trong **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Cân bằng như một bài đại số tuyến tính** tiếp nhận điểm tựa từ **Cân bằng bằng suy luận trực tiếp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phương trình ion** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Cân bằng như một bài đại số tuyến tính** nối từ **Cân bằng bằng suy luận trực tiếp** sang **Phương trình ion**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Cân bằng như một bài đại số tuyến tính
 
@@ -76,7 +76,7 @@ Mỗi nguyên tố tạo một phương trình bảo toàn tuyến tính. Nếu 
 
 Đây là liên hệ trực tiếp giữa Hóa học và **đại số tuyến tính (linear algebra)**. Phần mềm có thể cân bằng phản ứng bằng khử ma trận thay vì dùng các mẹo ghi nhớ của con người.
 
-> **Chuyển mạch:** Ở chặng này của **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Phương trình ion** tiếp nhận điểm tựa từ **Cân bằng như một bài đại số tuyến tính** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Ký hiệu trạng thái** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Phương trình ion** nối từ **Cân bằng như một bài đại số tuyến tính** sang **Ký hiệu trạng thái**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phương trình ion
 
@@ -98,7 +98,7 @@ Ag^+(aq)+Cl^-(aq)\rightarrow AgCl(s)
 
 Dạng ion rút gọn làm lộ sự kiện hóa học cốt lõi thay vì hạch toán cả các ion không trực tiếp tham gia biến đổi.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Ký hiệu trạng thái** tiếp nhận điểm tựa từ **Phương trình ion** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phản ứng thuận nghịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Ký hiệu trạng thái** nối từ **Phương trình ion** sang **Phản ứng thuận nghịch**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Ký hiệu trạng thái
 
@@ -106,7 +106,7 @@ Các ký hiệu `(s)`, `(l)`, `(g)`, `(aq)` chứa thông tin quan trọng. `CaC
 
 Trong hóa học thực tế, dung môi và pha có thể quyết định con đường phản ứng, nên ký hiệu trạng thái không phải phần trang trí.
 
-> **Chuyển mạch:** Trong **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Phản ứng thuận nghịch** tiếp nhận điểm tựa từ **Ký hiệu trạng thái** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Phân loại phản ứng chỉ là cách tổ chức kiến thức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Phản ứng thuận nghịch** nối từ **Ký hiệu trạng thái** sang **Phân loại phản ứng chỉ là cách tổ chức kiến thức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phản ứng thuận nghịch
 
@@ -122,7 +122,7 @@ biểu diễn phản ứng có cả con đường thuận và nghịch đáng k�
 
 Không nên đọc mũi tên hai chiều như “phản ứng chưa hoàn thành”; nó biểu diễn tính thuận nghịch và hành vi cân bằng.
 
-> **Chuyển mạch:** Ở chặng này của **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Phân loại phản ứng chỉ là cách tổ chức kiến thức** tiếp nhận điểm tựa từ **Phản ứng thuận nghịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Các hiểu lầm thường gặp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Phân loại phản ứng chỉ là cách tổ chức kiến thức** nối từ **Phản ứng thuận nghịch** sang **Các hiểu lầm thường gặp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Phân loại phản ứng chỉ là cách tổ chức kiến thức
 
@@ -130,7 +130,7 @@ Tổng hợp, phân hủy, cháy, kết tủa, acid–cơ sở (base / 기반) v
 
 Một phản ứng có thể đồng thời thuộc nhiều nhóm. Ví dụ phản ứng cháy hydrocarbon vừa là phản ứng oxi hóa–khử vừa là một biến đổi hóa học tỏa nhiệt mạnh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Các hiểu lầm thường gặp** tiếp nhận điểm tựa từ **Phân loại phản ứng chỉ là cách tổ chức kiến thức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **Mô hình tư duy** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Các hiểu lầm thường gặp** nối từ **Phân loại phản ứng chỉ là cách tổ chức kiến thức** sang **Mô hình tư duy**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## Các hiểu lầm thường gặp
 
@@ -146,7 +146,7 @@ Không. Cân bằng chỉ thỏa điều kiện bảo toàn. Nhiệt động l�
 
 Không. Hệ số cho tỉ lệ số hạt hoặc số mol; muốn đổi sang tỉ lệ khối lượng phải dùng khối lượng mol.
 
-> **Chuyển mạch:** Trong **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Mô hình tư duy** gom các mảnh từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Phương trình hóa học — bảo toàn và ngôn ngữ định lượng của phản ứng**, **Mô hình tư duy** tổng hợp từ **Các hiểu lầm thường gặp** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Mô hình tư duy
 
