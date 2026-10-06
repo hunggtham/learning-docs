@@ -10,7 +10,7 @@ Beta thị trường là mức phơi nhiễm với chuyển động chung của 
 
 Trước khi gọi một kết quả là alpha, cần kiểm tra liệu nó có thể được giải thích bởi giá trị (value / 값), kích thước (size / 크기), chất lượng (quality / 품질), momentum, duration, tín dụng hoặc FX hay không.
 
-> **Chuyển mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **2. Nhân tố là gì?** tiếp nhận điểm tựa từ **1. Beta thị trường và Alpha** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Nhân tố giá trị** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **2. Nhân tố là gì?** nối từ **1. Beta thị trường và Alpha** sang **3. Nhân tố giá trị**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Nhân tố là gì?
 
@@ -18,7 +18,7 @@ Nhân tố (factor) là đặc điểm có hệ thống giúp giải thích khá
 
 Một nhân tố hữu ích cần có định nghĩa rõ, lý do kinh tế/hành vi hợp lý, bằng chứng tương đối bền và khả năng triển khai sau chi phí.
 
-> **Chuyển mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **3. Nhân tố giá trị** tiếp nhận điểm tựa từ **2. Nhân tố là gì?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Nhân tố tăng trưởng và câu chuyện dài hạn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **3. Nhân tố giá trị** nối từ **2. Nhân tố là gì?** sang **4. Nhân tố tăng trưởng và câu chuyện dài hạn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Nhân tố giá trị
 
@@ -26,7 +26,7 @@ Giá trị (value / 값) ưu tiên tài sản rẻ hơn so với một thước 
 
 Rẻ không đồng nghĩa tốt. Doanh nghiệp có thể rẻ vì chất lượng kém hoặc ngành đang suy giảm cấu trúc. giá trị (value / 값) premium có thể liên quan phần bù rủi ro, hành vi quá phản ứng hoặc cả hai.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **4. Nhân tố tăng trưởng và câu chuyện dài hạn** tiếp nhận điểm tựa từ **3. Nhân tố giá trị** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Chất lượng và khả năng sinh lời** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **4. Nhân tố tăng trưởng và câu chuyện dài hạn** nối từ **3. Nhân tố giá trị** sang **5. Chất lượng và khả năng sinh lời**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Nhân tố tăng trưởng và câu chuyện dài hạn
 
@@ -34,7 +34,7 @@ Tăng trưởng (growth) không phải nhân tố đối lập đơn giản vớ
 
 Phải tách **tốc độ tăng trưởng** khỏi **giá trả cho tăng trưởng**.
 
-> **Chuyển mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **5. Chất lượng và khả năng sinh lời** tiếp nhận điểm tựa từ **4. Nhân tố tăng trưởng và câu chuyện dài hạn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Động lượng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **5. Chất lượng và khả năng sinh lời** nối từ **4. Nhân tố tăng trưởng và câu chuyện dài hạn** sang **6. Động lượng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Chất lượng và khả năng sinh lời
 
@@ -44,7 +44,7 @@ Các thước đo có thể gồm ROIC, ROE, biên lợi nhuận, nợ, biến �
 
 “chất lượng (quality / 품질)” không có một định nghĩa duy nhất; quỹ khác nhau có thể chọn thước đo rất khác.
 
-> **Chuyển mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **6. Động lượng** tiếp nhận điểm tựa từ **5. Chất lượng và khả năng sinh lời** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Quy mô** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **6. Động lượng** nối từ **5. Chất lượng và khả năng sinh lời** sang **7. Quy mô**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Động lượng
 
@@ -52,7 +52,7 @@ Các thước đo có thể gồm ROIC, ROE, biên lợi nhuận, nợ, biến �
 
 Momentum có bằng chứng dài hạn nhưng có thể chịu cú sập mạnh khi thị trường đảo chiều đột ngột sau khủng hoảng.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **7. Quy mô** tiếp nhận điểm tựa từ **6. Động lượng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Biến động thấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **7. Quy mô** nối từ **6. Động lượng** sang **8. Biến động thấp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Quy mô
 
@@ -60,7 +60,7 @@ Nhân tố quy mô (size) liên quan cổ phiếu vốn hóa nhỏ hơn. Small c
 
 Nếu triển khai, phải tính spread và chi phí giao dịch vì chính các cổ phiếu nhỏ thường tốn kém hơn để giao dịch.
 
-> **Chuyển mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **8. Biến động thấp** tiếp nhận điểm tựa từ **7. Quy mô** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Cổ tức** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **8. Biến động thấp** nối từ **7. Quy mô** sang **9. Cổ tức**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Biến động thấp
 
@@ -68,7 +68,7 @@ Nhân tố biến động thấp (low volatility) ưu tiên cổ phiếu có vol
 
 Nó có thể tạo danh mục tập trung vào ngành phòng thủ, tiện ích hoặc tài chính tùy phương pháp. “Low vol” không đồng nghĩa ít rủi ro ở mọi chế độ, đặc biệt khi lãi suất tăng mạnh.
 
-> **Chuyển mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **9. Cổ tức** tiếp nhận điểm tựa từ **8. Biến động thấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Investment Factor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **9. Cổ tức** nối từ **8. Biến động thấp** sang **10. Investment Factor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Cổ tức
 
@@ -76,7 +76,7 @@ ETF cổ tức có thể nghiêng về giá trị (value / 값), chất lượng
 
 Không nên coi dividend yield là nhân tố độc lập khỏi chất lượng bảng cân đối và khả năng duy trì payout.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **10. Investment Factor** tiếp nhận điểm tựa từ **9. Cổ tức** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Smart Beta** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **10. Investment Factor** nối từ **9. Cổ tức** sang **11. Smart Beta**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Investment Factor
 
@@ -84,7 +84,7 @@ Một số mô hình xem mức đầu tư doanh nghiệp là nhân tố. Doanh n
 
 Mối liên hệ phải được đọc cùng profitability và chu kỳ ngành.
 
-> **Chuyển mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **11. Smart Beta** tiếp nhận điểm tựa từ **10. Investment Factor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Xây tín hiệu nhân tố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **11. Smart Beta** nối từ **10. Investment Factor** sang **12. Xây tín hiệu nhân tố**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Smart Beta
 
@@ -103,7 +103,7 @@ Turnover
 Chi phí
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **12. Xây tín hiệu nhân tố** tiếp nhận điểm tựa từ **11. Smart Beta** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Z-Score** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **12. Xây tín hiệu nhân tố** nối từ **11. Smart Beta** sang **13. Z-Score**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Xây tín hiệu nhân tố
 
@@ -121,7 +121,7 @@ Chọn biến cơ bản
 
 Sai ở bất kỳ bước nào cũng làm factor exposure khác mục tiêu.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **13. Z-Score** tiếp nhận điểm tựa từ **12. Xây tín hiệu nhân tố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Trung hòa ngành** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **13. Z-Score** nối từ **12. Xây tín hiệu nhân tố** sang **14. Trung hòa ngành**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Z-Score
 
@@ -133,7 +133,7 @@ z = (x - mean) / standard deviation
 
 Nó giúp kết hợp các tín hiệu có đơn vị khác nhau, nhưng nhạy với ngoại lệ và phân phối không chuẩn.
 
-> **Chuyển mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **14. Trung hòa ngành** tiếp nhận điểm tựa từ **13. Z-Score** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **15. Trung hòa beta** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **14. Trung hòa ngành** nối từ **13. Z-Score** sang **15. Trung hòa beta**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. Trung hòa ngành
 
@@ -143,7 +143,7 @@ Trung hòa ngành (sector neutralization) giúp tách hiệu ứng chọn cổ p
 
 Không có lựa chọn “đúng tuyệt đối”; phải hiểu mục tiêu.
 
-> **Chuyển mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **15. Trung hòa beta** tiếp nhận điểm tựa từ **14. Trung hòa ngành** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **16. Phân rã nhân tố** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **15. Trung hòa beta** nối từ **14. Trung hòa ngành** sang **16. Phân rã nhân tố**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 15. Trung hòa beta
 
@@ -159,7 +159,7 @@ Market Beta
 - Costs
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **16. Phân rã nhân tố** tiếp nhận điểm tựa từ **15. Trung hòa beta** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. giá trị (value / 값) Spread** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **16. Phân rã nhân tố** nối từ **15. Trung hòa beta** sang **17. giá trị (value / 값) Spread**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Phân rã nhân tố
 
@@ -167,7 +167,7 @@ Phân rã lợi suất (factor attribution) giúp biết danh mục đang kiếm
 
 Kết quả phụ thuộc mô hình nhân tố được chọn. Một mô hình thiếu nhân tố quan trọng có thể gán nhầm phần dư thành alpha.
 
-> **Chuyển mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **17. giá trị (value / 값) Spread** tiếp nhận điểm tựa từ **16. Phân rã nhân tố** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Factor Crowding** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **17. giá trị (value / 값) Spread** nối từ **16. Phân rã nhân tố** sang **18. Factor Crowding**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. giá trị (value / 값) Spread
 
@@ -177,7 +177,7 @@ Nếu chênh lệch cực rộng, lợi suất kỳ vọng của giá trị (val
 
 Định giá là tín hiệu chậm, không phải công cụ thời điểm chính xác.
 
-> **Chuyển mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **18. Factor Crowding** tiếp nhận điểm tựa từ **17. giá trị (value / 값) Spread** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Factor Crash** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **18. Factor Crowding** nối từ **17. giá trị (value / 값) Spread** sang **19. Factor Crash**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Factor Crowding
 
@@ -185,7 +185,7 @@ Khi nhiều nhà đầu tư cùng mua một chiến lược, định giá và v�
 
 Khi unwinding, tương quan giữa các vị thế cùng factor tăng mạnh và thanh khoản giảm. “Đa dạng hóa giữa nhiều quỹ factor” có thể thất bại nếu chúng cùng sở hữu các chứng khoán giống nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **19. Factor Crash** tiếp nhận điểm tựa từ **18. Factor Crowding** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Turnover** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **19. Factor Crash** nối từ **18. Factor Crowding** sang **20. Turnover**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Factor Crash
 
@@ -193,7 +193,7 @@ Momentum có thể sụp khi thị trường đảo chiều cực nhanh. Low vol
 
 Mỗi factor có một dạng thất bại riêng. Cần kiểm thử sức chịu tải (stress test / 스트레스 테스트) thay vì chỉ nhìn Sharpe lịch sử.
 
-> **Chuyển mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **20. Turnover** tiếp nhận điểm tựa từ **19. Factor Crash** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. sức chứa (capacity / 용량)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **20. Turnover** nối từ **19. Factor Crash** sang **21. sức chứa (capacity / 용량)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Turnover
 
@@ -201,7 +201,7 @@ Nhân tố thay đổi nhanh như momentum thường cần turnover cao hơn gi�
 
 Turnover làm tăng spread, thị trường (market / 시장) impact, thuế và tracking difference. Premium gộp cao không có ý nghĩa nếu bị chi phí triển khai ăn hết.
 
-> **Chuyển mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **21. sức chứa (capacity / 용량)** tiếp nhận điểm tựa từ **20. Turnover** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Rebalancing tác động (effect / 효과)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **21. sức chứa (capacity / 용량)** nối từ **20. Turnover** sang **22. Rebalancing tác động (effect / 효과)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. sức chứa (capacity / 용량)
 
@@ -209,7 +209,7 @@ Khi quy mô vốn tăng, chiến lược factor có thể phải giao dịch lư
 
 Sức chứa (capacity / 용량) là giới hạn quy mô trước khi tác động thị trường làm lợi thế suy giảm đáng kể.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **22. Rebalancing tác động (effect / 효과)** tiếp nhận điểm tựa từ **21. sức chứa (capacity / 용량)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. chỉ mục (index / 인덱스) Reconstitution** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **22. Rebalancing tác động (effect / 효과)** nối từ **21. sức chứa (capacity / 용량)** sang **23. chỉ mục (index / 인덱스) Reconstitution**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. Rebalancing tác động (effect / 효과)
 
@@ -217,7 +217,7 @@ Nhiều chỉ số factor tái cân bằng định kỳ. Ngày tái cân bằng 
 
 Chi phí ẩn này nên được xem trong tracking difference dài hạn.
 
-> **Chuyển mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **23. chỉ mục (index / 인덱스) Reconstitution** tiếp nhận điểm tựa từ **22. Rebalancing tác động (effect / 효과)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **24. Rủi ro phương pháp luận chỉ số** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **23. chỉ mục (index / 인덱스) Reconstitution** nối từ **22. Rebalancing tác động (effect / 효과)** sang **24. Rủi ro phương pháp luận chỉ số**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 23. chỉ mục (index / 인덱스) Reconstitution
 
@@ -225,7 +225,7 @@ Khi chứng khoán được thêm hoặc loại khỏi chỉ số lớn, quỹ t
 
 Dòng vốn do chỉ số là yếu tố kỹ thuật; nó không thay đổi trực tiếp dòng tiền cơ bản của doanh nghiệp.
 
-> **Chuyển mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **24. Rủi ro phương pháp luận chỉ số** tiếp nhận điểm tựa từ **23. chỉ mục (index / 인덱스) Reconstitution** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **25. Active Share và factor exposure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **24. Rủi ro phương pháp luận chỉ số** nối từ **23. chỉ mục (index / 인덱스) Reconstitution** sang **25. Active Share và factor exposure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 24. Rủi ro phương pháp luận chỉ số
 
@@ -243,7 +243,7 @@ Cách xử lý doanh nghiệp mới
 
 Nhà đầu tư phải đọc methodology, không chỉ tên quỹ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **25. Active Share và factor exposure** tiếp nhận điểm tựa từ **24. Rủi ro phương pháp luận chỉ số** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Tracking lỗi (error / 오류) ngân sách (budget / 예산)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **25. Active Share và factor exposure** nối từ **24. Rủi ro phương pháp luận chỉ số** sang **26. Tracking lỗi (error / 오류) ngân sách (budget / 예산)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. Active Share và factor exposure
 
@@ -251,7 +251,7 @@ Active Share cao nói danh mục khác benchmark nhiều, nhưng không nói kh�
 
 Một quỹ Active Share cao có thể chỉ là cược ngành hoặc cược kích thước (size / 크기) lớn. Vì vậy nên kết hợp Active Share với phân tích nhân tố.
 
-> **Chuyển mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **26. Tracking lỗi (error / 오류) ngân sách (budget / 예산)** tiếp nhận điểm tựa từ **25. Active Share và factor exposure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **27. Multi-Factor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **26. Tracking lỗi (error / 오류) ngân sách (budget / 예산)** nối từ **25. Active Share và factor exposure** sang **27. Multi-Factor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 26. Tracking lỗi (error / 오류) ngân sách (budget / 예산)
 
@@ -259,7 +259,7 @@ Danh mục factor có thể đặt ngân sách sai lệch bám chỉ số (track
 
 Factor tilt nhỏ có thể không tạo khác biệt sau chi phí; tilt quá lớn có thể khiến danh mục khó chịu đựng nhiều năm hoạt động kém.
 
-> **Chuyển mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **27. Multi-Factor** tiếp nhận điểm tựa từ **26. Tracking lỗi (error / 오류) ngân sách (budget / 예산)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **28. Correlation giữa các nhân tố thay đổi** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **27. Multi-Factor** nối từ **26. Tracking lỗi (error / 오류) ngân sách (budget / 예산)** sang **28. Correlation giữa các nhân tố thay đổi**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 27. Multi-Factor
 
@@ -275,7 +275,7 @@ Xây từng sleeve factor rồi ghép lại
 
 Hai cách tạo holdings, turnover và tương quan khác nhau.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **28. Correlation giữa các nhân tố thay đổi** tiếp nhận điểm tựa từ **27. Multi-Factor** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **29. Carry ngoài cổ phiếu** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **28. Correlation giữa các nhân tố thay đổi** nối từ **27. Multi-Factor** sang **29. Carry ngoài cổ phiếu**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 28. Correlation giữa các nhân tố thay đổi
 
@@ -283,7 +283,7 @@ Giá trị (value / 값) và momentum có thể hỗ trợ nhau ở một giai �
 
 Không nên dùng một ma trận tương quan dài hạn cố định để kết luận diversification.
 
-> **Chuyển mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **29. Carry ngoài cổ phiếu** tiếp nhận điểm tựa từ **28. Correlation giữa các nhân tố thay đổi** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **30. Trend** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **29. Carry ngoài cổ phiếu** nối từ **28. Correlation giữa các nhân tố thay đổi** sang **30. Trend**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 29. Carry ngoài cổ phiếu
 
@@ -298,7 +298,7 @@ Volatility: bán premium
 
 Carry thường tạo lợi suất đều trong thời kỳ bình thường nhưng có thể chịu cú tháo chạy lớn trong stress.
 
-> **Chuyển mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **30. Trend** tiếp nhận điểm tựa từ **29. Carry ngoài cổ phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **31. Growth–Inflation Regimes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **30. Trend** nối từ **29. Carry ngoài cổ phiếu** sang **31. Growth–Inflation Regimes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 30. Trend
 
@@ -306,7 +306,7 @@ Chiến lược theo xu hướng (trend following) có thể áp dụng trên c�
 
 Trend có thể đa dạng hóa khi khủng hoảng kéo dài vì có khả năng chuyển sang vị thế bán, nhưng có thể chịu nhiều khoản lỗ nhỏ khi thị trường đi ngang hoặc đảo chiều nhanh.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **31. Growth–Inflation Regimes** tiếp nhận điểm tựa từ **30. Trend** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **32. Hidden Duration** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **31. Growth–Inflation Regimes** nối từ **30. Trend** sang **32. Hidden Duration**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 31. Growth–Inflation Regimes
 
@@ -321,7 +321,7 @@ Tăng trưởng ↓ / Lạm phát ↑
 
 Mỗi chế độ tạo phản ứng khác nhau ở cổ phiếu, duration, tín dụng, hàng hóa và tiền tệ. Đây chỉ là bản đồ, không phải luật chắc chắn.
 
-> **Chuyển mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **32. Hidden Duration** tiếp nhận điểm tựa từ **31. Growth–Inflation Regimes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **33. Hidden Credit Beta** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **32. Hidden Duration** nối từ **31. Growth–Inflation Regimes** sang **33. Hidden Credit Beta**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 32. Hidden Duration
 
@@ -329,7 +329,7 @@ Growth stocks, long-duration bonds và một số REIT có thể cùng nhạy v�
 
 Đây là tập trung ẩn phổ biến trong danh mục đa tài sản.
 
-> **Chuyển mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **33. Hidden Credit Beta** tiếp nhận điểm tựa từ **32. Hidden Duration** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **34. FX Exposure** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **33. Hidden Credit Beta** nối từ **32. Hidden Duration** sang **34. FX Exposure**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 33. Hidden Credit Beta
 
@@ -337,7 +337,7 @@ High-yield bonds, leveraged loans, private credit và một số cổ phiếu t�
 
 Gọi chúng là “bond” không làm chúng trở thành tài sản phòng thủ.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **34. FX Exposure** tiếp nhận điểm tựa từ **33. Hidden Credit Beta** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **35. Factor Timing** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **34. FX Exposure** nối từ **33. Hidden Credit Beta** sang **35. Factor Timing**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 34. FX Exposure
 
@@ -345,7 +345,7 @@ Danh mục toàn cầu phải tách lợi suất tài sản khỏi tỷ giá. C�
 
 Currency exposure là một nhân tố riêng cần được đo và quản lý.
 
-> **Chuyển mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **35. Factor Timing** tiếp nhận điểm tựa từ **34. FX Exposure** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **36. Đánh giá một ETF factor** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **35. Factor Timing** nối từ **34. FX Exposure** sang **36. Đánh giá một ETF factor**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 35. Factor Timing
 
@@ -353,7 +353,7 @@ Dự đoán ngắn hạn nhân tố nào sắp thắng rất khó. Định giá 
 
 Nếu dùng factor dài hạn, nhà đầu tư phải có khả năng chịu nhiều năm hoạt động kém mà không từ bỏ đúng lúc premium có thể quay lại.
 
-> **Chuyển mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **36. Đánh giá một ETF factor** tiếp nhận điểm tựa từ **35. Factor Timing** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **37. Mô hình tư duy cuối cùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **36. Đánh giá một ETF factor** nối từ **35. Factor Timing** sang **37. Mô hình tư duy cuối cùng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 36. Đánh giá một ETF factor
 
@@ -372,7 +372,7 @@ Lịch sử factor crash?
 Exposure có trùng danh mục hiện tại không?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **37. Mô hình tư duy cuối cùng** gom các mảnh từ **36. Đánh giá một ETF factor** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Đầu tư theo nhân tố, phương pháp chỉ số và hành vi đa tài sản**, **37. Mô hình tư duy cuối cùng** tổng hợp từ **36. Đánh giá một ETF factor** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 37. Mô hình tư duy cuối cùng
 

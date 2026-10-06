@@ -20,13 +20,13 @@ Lĩnh vực này xây nền tảng tư duy trước khi học từng loại tài
 
 [06_ADVANCED_PORTFOLIO_DESIGN_STRESS_AND_DECISION_LAB.md](./06_ADVANCED_PORTFOLIO_DESIGN_STRESS_AND_DECISION_LAB.md) là lớp học sâu: chuyển mục tiêu và nghĩa vụ thành bảng cân đối kinh tế, ngân sách rủi ro, MCTR, tương quan theo trạng thái, tầng thanh khoản, kiểm thử cú sốc kết hợp, kiểm thử ngược, quy tắc tái cân bằng và nhật ký quyết định.
 
-> **Chuyển mạch:** **Thứ tự đọc** xây nền về risk, return và time horizon; **Sau lĩnh vực này bạn cần làm được gì?** chuyển chúng thành năng lực phân tích trước khi sang **Bài tập tích hợp**.
+> **Nối mạch:** **Thứ tự đọc** xây nền về risk, return và time horizon; **Sau lĩnh vực này bạn cần làm được gì?** chuyển chúng thành năng lực phân tích trước khi sang **Bài tập tích hợp**.
 
 ## Sau lĩnh vực này bạn cần làm được gì?
 
 Bạn cần có khả năng giải thích tiền của mình đi qua hệ thống nào khi mua chứng khoán, phân biệt rủi ro thị trường, thanh khoản, đối tác và vận hành; xây phân bổ theo mục tiêu thay vì theo mã chứng khoán; đo mức tập trung và đóng góp rủi ro; viết IPS; kiểm thử danh mục và phân tích vì sao danh mục lời hoặc lỗ thay vì chỉ nhìn tổng lợi suất.
 
-> **Chuyển mạch:** **Bài tập tích hợp** kiểm tra cùng một decision qua risk, valuation và portfolio context; kết quả là điểm bàn giao sang owner của asset class kế tiếp.
+> **Nối mạch:** **Bài tập tích hợp** kiểm tra cùng một decision qua risk, valuation và portfolio context; kết quả là điểm bàn giao sang owner của asset class kế tiếp.
 
 ## Bài tập tích hợp
 

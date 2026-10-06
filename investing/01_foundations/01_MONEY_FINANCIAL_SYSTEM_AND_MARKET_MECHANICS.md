@@ -24,7 +24,7 @@ PV = CF_t / (1 + r)^t
 
 Tỷ lệ chiết khấu không phải con số tùy ý. Nó phản ánh giá trị của thời gian, kỳ vọng lạm phát và phần bù rủi ro mà nhà đầu tư yêu cầu.
 
-> **Chuyển mạch:** Trong **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **2. Tiền gửi ngân hàng và tạo tín dụng** tiếp nhận điểm tựa từ **1. Bắt đầu từ tiền thay vì bắt đầu từ cổ phiếu** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. Hệ thống tài chính nối người có vốn với người cần vốn** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **2. Tiền gửi ngân hàng và tạo tín dụng** nối từ **1. Bắt đầu từ tiền thay vì bắt đầu từ cổ phiếu** sang **3. Hệ thống tài chính nối người có vốn với người cần vốn**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Tiền gửi ngân hàng và tạo tín dụng
 
@@ -36,7 +36,7 @@ Vì vậy câu “ngân hàng trung ương in tiền” thường quá đơn gi�
 
 Điều quan trọng đối với nhà đầu tư là hiểu tiền, tín dụng và tài sản thế chấp liên kết với nhau. Khi ngân hàng sẵn sàng cho vay, giá trị tài sản thế chấp cao và chênh lệch tín dụng thấp, điều kiện tài chính thường dễ chịu hơn. Khi tiêu chuẩn cho vay bị siết, tài sản thế chấp giảm và người vay buộc phải giảm đòn bẩy, cùng một mức lãi suất chính sách có thể tạo môi trường tài chính khắc nghiệt hơn nhiều.
 
-> **Chuyển mạch:** Ở chặng này của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **3. Hệ thống tài chính nối người có vốn với người cần vốn** tiếp nhận điểm tựa từ **2. Tiền gửi ngân hàng và tạo tín dụng** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Lợi suất không xuất hiện từ hư không** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **3. Hệ thống tài chính nối người có vốn với người cần vốn** nối từ **2. Tiền gửi ngân hàng và tạo tín dụng** sang **4. Lợi suất không xuất hiện từ hư không**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. Hệ thống tài chính nối người có vốn với người cần vốn
 
@@ -48,7 +48,7 @@ Cổ đông phổ thông là người sở hữu quyền lợi còn lại (resid
 
 Nếu doanh nghiệp phá sản, các quyền đòi không ngang nhau. Chủ nợ có bảo đảm thường đứng trước chủ nợ không bảo đảm; nợ thứ cấp đứng sau nợ cao cấp; cổ phiếu phổ thông thường chịu tổn thất đầu tiên.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **4. Lợi suất không xuất hiện từ hư không** tiếp nhận điểm tựa từ **3. Hệ thống tài chính nối người có vốn với người cần vốn** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Thị trường sơ cấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **4. Lợi suất không xuất hiện từ hư không** nối từ **3. Hệ thống tài chính nối người có vốn với người cần vốn** sang **5. Thị trường sơ cấp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Lợi suất không xuất hiện từ hư không
 
@@ -62,7 +62,7 @@ Tiền đó đến từ hoạt động kinh tế nào?
 Tôi đang nhận rủi ro gì để đổi lấy khoản tiền đó?
 ```
 
-> **Chuyển mạch:** Trong **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **5. Thị trường sơ cấp** tiếp nhận điểm tựa từ **4. Lợi suất không xuất hiện từ hư không** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Thị trường thứ cấp** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **5. Thị trường sơ cấp** nối từ **4. Lợi suất không xuất hiện từ hư không** sang **6. Thị trường thứ cấp**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Thị trường sơ cấp
 
@@ -78,7 +78,7 @@ Các hành động doanh nghiệp có ý nghĩa khác nhau:
 - mua lại cổ phiếu chỉ tạo giá trị nếu giá mua hợp lý và không làm bảng cân đối yếu đi;
 - cổ tức chuyển tiền từ doanh nghiệp sang cổ đông; điều chỉnh giá ngày không hưởng quyền không phải “tiền miễn phí”.
 
-> **Chuyển mạch:** Ở chặng này của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **6. Thị trường thứ cấp** tiếp nhận điểm tựa từ **5. Thị trường sơ cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Giao dịch trên sở và giao dịch phi tập trung** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **6. Thị trường thứ cấp** nối từ **5. Thị trường sơ cấp** sang **7. Giao dịch trên sở và giao dịch phi tập trung**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Thị trường thứ cấp
 
@@ -88,7 +88,7 @@ Tuy vậy thị trường thứ cấp ảnh hưởng chi phí vốn. Chứng kho
 
 Vì vậy điều kiện thị trường thứ cấp có thể quay lại ảnh hưởng quyết định đầu tư thực của doanh nghiệp.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **7. Giao dịch trên sở và giao dịch phi tập trung** tiếp nhận điểm tựa từ **6. Thị trường thứ cấp** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. Môi giới, bù trừ, lưu ký và trung tâm lưu ký** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **7. Giao dịch trên sở và giao dịch phi tập trung** nối từ **6. Thị trường thứ cấp** sang **8. Môi giới, bù trừ, lưu ký và trung tâm lưu ký**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Giao dịch trên sở và giao dịch phi tập trung
 
@@ -98,7 +98,7 @@ Thị trường phi tập trung (over-the-counter, OTC) là nơi hợp đồng �
 
 Do đó với OTC, pháp nhân đối tác, điều khoản tài sản thế chấp, chất lượng đối tác và quy tắc đóng vị thế có thể quan trọng ngang với nhận định thị trường.
 
-> **Chuyển mạch:** Trong **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **8. Môi giới, bù trừ, lưu ký và trung tâm lưu ký** tiếp nhận điểm tựa từ **7. Giao dịch trên sở và giao dịch phi tập trung** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Từ lệnh tới khớp: bid, ask và spread** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **8. Môi giới, bù trừ, lưu ký và trung tâm lưu ký** nối từ **7. Giao dịch trên sở và giao dịch phi tập trung** sang **9. Từ lệnh tới khớp: bid, ask và spread**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. Môi giới, bù trừ, lưu ký và trung tâm lưu ký
 
@@ -110,7 +110,7 @@ Tổ chức lưu ký (custodian) giữ tài sản hoặc hồ sơ quyền sở h
 
 Tách biệt tài sản khách hàng là khái niệm quan trọng. Nhà đầu tư phải hiểu mình ký hợp đồng với pháp nhân nào, chứng khoán được giữ theo cấu trúc nào và cơ chế bảo vệ ra sao nếu trung gian gặp vấn đề.
 
-> **Chuyển mạch:** Ở chặng này của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **9. Từ lệnh tới khớp: bid, ask và spread** tiếp nhận điểm tựa từ **8. Môi giới, bù trừ, lưu ký và trung tâm lưu ký** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. thị trường (market / 시장), limit, stop và stop-limit** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **9. Từ lệnh tới khớp: bid, ask và spread** nối từ **8. Môi giới, bù trừ, lưu ký và trung tâm lưu ký** sang **10. thị trường (market / 시장), limit, stop và stop-limit**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Từ lệnh tới khớp: bid, ask và spread
 
@@ -122,7 +122,7 @@ Spread thường rộng hơn khi thanh khoản thấp, biến động cao, bất
 
 Sổ lệnh chứa các lệnh giới hạn đang chờ. độ sâu (depth / 깊이) cho biết khối lượng ở nhiều mức giá. Một chứng khoán có thanh khoản ngày cao nhưng độ sâu thấp đúng lúc bạn giao dịch vẫn có thể tạo trượt giá lớn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **9. Từ lệnh tới khớp: bid, ask và spread** đã nêu tiêu chí phân biệt, còn **10. thị trường (market / 시장), limit, stop và stop-limit** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **11. Ưu tiên giá–thời gian và đấu giá** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **9. Từ lệnh tới khớp: bid, ask và spread** đặt tiêu chí; **10. thị trường (market / 시장), limit, stop và stop-limit** dùng tiêu chí đó để kiểm tra ranh giới, rồi **11. Ưu tiên giá–thời gian và đấu giá** mở rộng hệ quả.
 
 ## 10. thị trường (market / 시장), limit, stop và stop-limit
 
@@ -136,7 +136,7 @@ Stop-limit kiểm soát giá tốt hơn sau khi kích hoạt nhưng tăng rủi 
 
 Các điều kiện thời gian như DAY, GTC, IOC hoặc FOK mô tả lệnh tồn tại bao lâu và được phép khớp ra sao. Quy tắc có thể khác theo sở giao dịch và môi giới.
 
-> **Chuyển mạch:** Trong **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **10. thị trường (market / 시장), limit, stop và stop-limit** đã nêu tiêu chí phân biệt, còn **11. Ưu tiên giá–thời gian và đấu giá** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **12. Thanh khoản không chỉ là khối lượng giao dịch** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **10. thị trường (market / 시장), limit, stop và stop-limit** đặt tiêu chí; **11. Ưu tiên giá–thời gian và đấu giá** dùng tiêu chí đó để kiểm tra ranh giới, rồi **12. Thanh khoản không chỉ là khối lượng giao dịch** mở rộng hệ quả.
 
 ## 11. Ưu tiên giá–thời gian và đấu giá
 
@@ -148,7 +148,7 @@ Thị trường cũng có thể dùng đấu giá mở cửa, đóng cửa hoặ
 
 Đấu giá đóng cửa đặc biệt quan trọng với quỹ chỉ số vì nhiều chỉ số dùng giá đóng cửa chính thức làm mốc.
 
-> **Chuyển mạch:** Ở chặng này của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **12. Thanh khoản không chỉ là khối lượng giao dịch** tiếp nhận điểm tựa từ **11. Ưu tiên giá–thời gian và đấu giá** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Khám phá giá, thông tin và dòng lệnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **12. Thanh khoản không chỉ là khối lượng giao dịch** nối từ **11. Ưu tiên giá–thời gian và đấu giá** sang **13. Khám phá giá, thông tin và dòng lệnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Thanh khoản không chỉ là khối lượng giao dịch
 
@@ -167,7 +167,7 @@ Một câu hỏi thực tế luôn phải trả lời được:
 
 > Nếu luận điểm sai trong một ngày thị trường xấu, tôi có thể giảm vị thế bằng cách nào?
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **13. Khám phá giá, thông tin và dòng lệnh** tiếp nhận điểm tựa từ **12. Thanh khoản không chỉ là khối lượng giao dịch** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. ETF, NAV và cơ chế tạo–mua lại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **13. Khám phá giá, thông tin và dòng lệnh** nối từ **12. Thanh khoản không chỉ là khối lượng giao dịch** sang **14. ETF, NAV và cơ chế tạo–mua lại**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Khám phá giá, thông tin và dòng lệnh
 
@@ -184,7 +184,7 @@ Vị thế và dòng vốn có thay đổi không?
 Thanh khoản có thay đổi không?
 ```
 
-> **Chuyển mạch:** Trong **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **13. Khám phá giá, thông tin và dòng lệnh** xác định đầu vào; **14. ETF, NAV và cơ chế tạo–mua lại** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **15. Thanh toán, bù trừ và giao dịch thất bại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **13. Khám phá giá, thông tin và dòng lệnh** đặt đầu vào cho **14. ETF, NAV và cơ chế tạo–mua lại**, rồi **15. Thanh toán, bù trừ và giao dịch thất bại** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 14. ETF, NAV và cơ chế tạo–mua lại
 
@@ -194,7 +194,7 @@ Thành viên tạo lập (Authorized Participant, AP) có thể tạo hoặc mua
 
 Tuy nhiên khi tài sản cơ sở đóng cửa, kém thanh khoản hoặc thị trường căng thẳng, giá ETF có thể lệch đáng kể khỏi NAV ước tính. Premium không có nghĩa ETF “tốt hơn”, discount không tự động là cơ hội rẻ.
 
-> **Chuyển mạch:** Ở chặng này của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **14. ETF, NAV và cơ chế tạo–mua lại** xác định đầu vào; **15. Thanh toán, bù trừ và giao dịch thất bại** giải thích bước vận hành tạo ra kết quả kế tiếp. Từ đây, **16. Cho vay chứng khoán và bán khống** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **14. ETF, NAV và cơ chế tạo–mua lại** đặt đầu vào cho **15. Thanh toán, bù trừ và giao dịch thất bại**, rồi **16. Cho vay chứng khoán và bán khống** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 15. Thanh toán, bù trừ và giao dịch thất bại
 
@@ -204,7 +204,7 @@ Không nên ghi nhớ cứng một chu kỳ cho mọi thị trường. Cần ph�
 
 Giao dịch thất bại (failed settlement) có thể phát sinh do thiếu tiền, thiếu chứng khoán, lỗi vận hành hoặc vấn đề đối tác. Trong thị trường bình thường đây có thể là sự cố nhỏ; trong khủng hoảng nó có thể trở thành rủi ro thanh khoản và đối tác.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **16. Cho vay chứng khoán và bán khống** tiếp nhận điểm tựa từ **15. Thanh toán, bù trừ và giao dịch thất bại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Đòn bẩy và ký quỹ** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **16. Cho vay chứng khoán và bán khống** nối từ **15. Thanh toán, bù trừ và giao dịch thất bại** sang **17. Đòn bẩy và ký quỹ**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Cho vay chứng khoán và bán khống
 
@@ -214,7 +214,7 @@ Chi phí vay thay đổi theo độ khan hiếm. Chứng khoán “khó vay” c
 
 Lợi nhuận lý thuyết của bán khống bị giới hạn ở mức giá về 0, còn tổn thất có thể rất lớn nếu giá tăng. Vì vậy sizing và thanh khoản quan trọng hơn việc chỉ có quan điểm “cổ phiếu đắt”.
 
-> **Chuyển mạch:** Trong **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **17. Đòn bẩy và ký quỹ** tiếp nhận điểm tựa từ **16. Cho vay chứng khoán và bán khống** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Ngắt giao dịch, giới hạn giá và rủi ro gap** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **17. Đòn bẩy và ký quỹ** nối từ **16. Cho vay chứng khoán và bán khống** sang **18. Ngắt giao dịch, giới hạn giá và rủi ro gap**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Đòn bẩy và ký quỹ
 
@@ -224,7 +224,7 @@ Khi giá giảm, vốn chủ tài khoản giảm và môi giới/sở giao dịc
 
 Đây là lý do một luận điểm đúng cuối cùng vẫn có thể thất bại nếu đường đi của giá vượt khả năng sống sót của tài khoản.
 
-> **Chuyển mạch:** Ở chặng này của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **17. Đòn bẩy và ký quỹ** đã nêu tiêu chí phân biệt, còn **18. Ngắt giao dịch, giới hạn giá và rủi ro gap** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **19. Quyền sở hữu thụ hưởng và rủi ro trung gian** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **17. Đòn bẩy và ký quỹ** đặt tiêu chí; **18. Ngắt giao dịch, giới hạn giá và rủi ro gap** dùng tiêu chí đó để kiểm tra ranh giới, rồi **19. Quyền sở hữu thụ hưởng và rủi ro trung gian** mở rộng hệ quả.
 
 ## 18. Ngắt giao dịch, giới hạn giá và rủi ro gap
 
@@ -232,7 +232,7 @@ Sở giao dịch có thể sử dụng ngắt mạch (circuit breaker), tạm d�
 
 Stop-loss không bảo đảm thực thi trước khi thị trường bị ngắt hoặc khóa ở giới hạn giá. Vì vậy quản trị rủi ro phải tính đến kịch bản không thể thoát đúng mức dự kiến.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **18. Ngắt giao dịch, giới hạn giá và rủi ro gap** đã nêu tiêu chí phân biệt, còn **19. Quyền sở hữu thụ hưởng và rủi ro trung gian** dùng tiêu chí đó để soi ranh giới và điểm dễ nhầm. Từ đây, **20. Giá thị trường và giá trị nội tại** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **18. Ngắt giao dịch, giới hạn giá và rủi ro gap** đặt tiêu chí; **19. Quyền sở hữu thụ hưởng và rủi ro trung gian** dùng tiêu chí đó để kiểm tra ranh giới, rồi **20. Giá thị trường và giá trị nội tại** mở rộng hệ quả.
 
 ## 19. Quyền sở hữu thụ hưởng và rủi ro trung gian
 
@@ -242,7 +242,7 @@ Trong nhiều cấu trúc, tên nhà đầu tư có thể không trực tiếp x
 
 Không nên chỉ dựa vào thương hiệu của ứng dụng giao dịch.
 
-> **Chuyển mạch:** Trong **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **20. Giá thị trường và giá trị nội tại** tiếp nhận điểm tựa từ **19. Quyền sở hữu thụ hưởng và rủi ro trung gian** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. Checklist trước khi đặt lệnh** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **20. Giá thị trường và giá trị nội tại** nối từ **19. Quyền sở hữu thụ hưởng và rủi ro trung gian** sang **21. Checklist trước khi đặt lệnh**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Giá thị trường và giá trị nội tại
 
@@ -250,7 +250,7 @@ Giá thị trường có thể tách khỏi giá trị nội tại trong ngắn 
 
 Nhưng “giá sai” không có nghĩa nó sẽ sửa ngay. Nhà đầu tư cần đủ thanh khoản và thời gian để sống qua khoảng cách giữa luận điểm và thời điểm thị trường cập nhật.
 
-> **Chuyển mạch:** Ở chặng này của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **21. Checklist trước khi đặt lệnh** tiếp nhận điểm tựa từ **20. Giá thị trường và giá trị nội tại** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **22. Mô hình tư duy cuối cùng** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **21. Checklist trước khi đặt lệnh** nối từ **20. Giá thị trường và giá trị nội tại** sang **22. Mô hình tư duy cuối cùng**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 21. Checklist trước khi đặt lệnh
 
@@ -269,7 +269,7 @@ Có rủi ro vay chứng khoán / đối tác / tài sản thế chấp không?
 Nếu cần thoát gấp, lệnh nào phù hợp?
 ```
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **22. Mô hình tư duy cuối cùng** gom các mảnh từ **21. Checklist trước khi đặt lệnh** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Tiền, hệ thống tài chính và cơ chế vận hành thị trường**, **22. Mô hình tư duy cuối cùng** tổng hợp từ **21. Checklist trước khi đặt lệnh** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## 22. Mô hình tư duy cuối cùng
 
