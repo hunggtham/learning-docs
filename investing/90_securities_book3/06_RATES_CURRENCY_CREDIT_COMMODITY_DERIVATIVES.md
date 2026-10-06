@@ -13,7 +13,7 @@ Các công cụ chính:
 - receiver swap trả floating, nhận fixed, có lợi khi rates giảm;
 - rate options giữ quyền hưởng lợi khi scenario xảy ra nhưng trả premium.
 
-Nguồn phân biệt **strip hedge** — dùng nhiều maturity khớp từng cash flow tương lai — với **stack hedge** — dùng nearby contract rồi roll sang kỳ sau. Strip giảm mismatch maturity nhưng thanh khoản có thể hạn chế; stack dễ giao dịch hơn nhưng rollover/basis risk lớn hơn. Vì vậy “hedge lãi suất” không nói đủ; phải ghi rõ tài sản, kỳ hạn và dấu exposure.
+Nguồn phân biệt **strip hedge (스트립헤지)** — dùng nhiều maturity khớp từng cash flow tương lai — với **stack hedge (스택헤지)** — dùng nearby contract rồi roll sang kỳ sau. Strip giảm mismatch maturity nhưng thanh khoản có thể hạn chế; stack dễ giao dịch hơn nhưng rollover/basis risk lớn hơn. Vì vậy “hedge lãi suất” không nói đủ; phải ghi rõ tài sản, kỳ hạn và dấu exposure.
 
 Ví dụ, một doanh nghiệp trả lãi theo SOFR/KORIBOR sáu tháng một lần sẽ bị lỗ khi reference rate tăng. **Payer swap (고정금리 지급·변동금리 수취)** đổi dòng floating thành fixed nên làm chi phí dự toán ổn định; **receiver swap (고정금리 수취·변동금리 지급)** lại phù hợp người đang nhận floating và muốn khóa mức nhận. **Cap (캡)** mua quyền chỉ trả khi rate vượt strike, **floor (플로어)** trả khi rate xuống dưới strike, còn **collar (칼라)** mua một quyền và bán quyền kia để giảm premium. Cap/floor giới hạn rủi ro nhưng không làm mất basis giữa reference rate trong hợp đồng và chi phí vay thực tế. Với trái phiếu, cần ghép duration và key-rate exposure chứ không chỉ ghép tổng notional.
 
@@ -73,9 +73,9 @@ Một KIKO minh họa trong raw có thể bắt đầu bằng nhu cầu exporter
 
 Hãy vẽ ba nhánh trước khi ký: (1) tỷ giá nằm trong range—premium gần bù nhau; (2) tỷ giá giảm—put bảo vệ sàn; (3) tỷ giá tăng vượt barrier—short call và multiplier tạo loss tail. Nhánh (3) phải được tính trên notional option, không chỉ trên doanh thu USD thật. Đây là textbook warning từ KIKO 2008, không phải mẫu hợp đồng hay khuyến nghị hiện hành.
 
-## 3. Credit derivatives và cash/synthetic securitization
+## 3. Phái sinh tín dụng (credit derivatives / 신용파생상품) và cash/synthetic securitization
 
-**Credit default swap (CDS)** tách credit risk khỏi bond: protection buyer trả premium định kỳ; protection seller bồi thường khi credit event của reference entity xảy ra. Buyer hedge default risk nhưng chịu premium và counterparty risk; seller nhận carry nhưng gánh tail loss. CDS không biến nợ xấu thành an toàn.
+**Credit default swap (CDS)** tách **rủi ro tín dụng (credit risk / 신용위험)** khỏi bond: protection buyer trả premium định kỳ; protection seller bồi thường khi credit event của reference entity xảy ra. Buyer hedge default risk nhưng chịu premium và counterparty risk; seller nhận carry nhưng gánh tail loss. CDS không biến nợ xấu thành an toàn.
 
 CDS còn có **basis risk**: spread CDS, spread trái phiếu và loss thực tế không nhất thiết di chuyển đồng nhất; protection cũng chỉ trả theo reference entity và credit-event definition trong hợp đồng. Với cash securitization, người mua chịu waterfall, prepayment và credit enhancement của pool thật. Với synthetic structure, exposure được chuyển bằng swap nên không cần chuyển toàn bộ tài sản; notional có thể lớn hơn pool vật lý và nhiều bên cùng phụ thuộc một reference entity. Khi stress, collateral, close-out và wrong-way risk có thể làm seller không trả được đúng lúc.
 
