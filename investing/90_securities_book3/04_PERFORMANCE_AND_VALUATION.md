@@ -117,7 +117,7 @@ Khi lập forecast, hãy tách ba lớp: doanh thu/margin tạo ra FCFF, reinves
 EVA=(ROIC-WACC)\times IC,
 \]
 
-trong đó ROIC là NOPAT chia invested capital. EVA dương khi lợi nhuận trên vốn vượt WACC; tăng doanh thu nhưng ROIC dưới WACC vẫn có thể phá hủy giá trị.
+trong đó **ROIC (투하자본이익률)** là NOPAT chia invested capital. EVA dương khi lợi nhuận trên vốn vượt WACC; tăng doanh thu nhưng ROIC dưới WACC vẫn có thể phá hủy giá trị.
 
 ### Worked check: tăng trưởng không đồng nghĩa tạo giá trị
 
