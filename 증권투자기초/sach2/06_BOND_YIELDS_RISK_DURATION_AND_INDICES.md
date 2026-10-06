@@ -6,6 +6,19 @@ Bài 5 đã xác định các dòng tiền hợp đồng. Bài cuối giải quy
 
 Discount rate là suất dùng để quy đổi dòng tiền về hiện tại. IRR (Internal Rate of Return) là nghiệm làm NPV bằng 0 cho một chuỗi dòng tiền. YTM (Yield to Maturity) là IRR của trái phiếu nếu giữ đến đáo hạn và các coupon được tái đầu tư theo cùng lợi suất; đó là quy đổi mô hình, không phải realized return nếu bán sớm, tái đầu tư khác mức hoặc issuer vỡ nợ. Coupon rate chỉ là tỷ lệ trên mệnh giá, không đồng nghĩa YTM.
 
+### Coupon rate, current yield và YTM
+
+Ba tỷ lệ thường bị gọi chung là “lợi suất” nhưng trả lời ba câu hỏi khác nhau:
+
+```text
+Coupon rate = coupon năm / mệnh giá
+Current yield = coupon năm / giá thị trường hiện tại
+YTM = IRR của toàn bộ coupon và gốc đến đáo hạn
+```
+
+Với trái phiếu mệnh giá 1.000, coupon năm 60 và giá 964,33: coupon rate là 6%, current yield khoảng `60 / 964,33 = 6,22%`, còn YTM xấp xỉ 8% vì nhà đầu tư còn nhận phần chênh lệch từ 964,33 lên 1.000. Current yield bỏ qua lãi/lỗ vốn đến đáo hạn; YTM đưa khoản đó vào nghiệm quy đổi. Không dùng current yield để thay cho YTM khi so sánh trái phiếu khác giá hoặc khác thời hạn.
+
+
 ### Worked YTM: coupon không phải lợi suất
 
 Dùng trái phiếu ở Bài 5: mệnh giá 1.000, coupon 60 mỗi năm, còn hai năm và giá 964,33. YTM là nghiệm của phương trình:
