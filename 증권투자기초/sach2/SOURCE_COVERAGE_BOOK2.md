@@ -86,8 +86,8 @@
 | B2-U070 | pp.84–88 | EXAMPLE | Gordon worked example and growth-sensitivity check | 02 §2 | **FULL** |  |
 | B2-U071 | pp.86–90; raw ~L1800–1840 | DEFINITION | FCFE: cash flow available to equity | 02 §3 | **FULL** |  |
 | B2-U072 | pp.86–90 | DEFINITION | FCFF: cash flow available to all capital providers | 02 §3 | **FULL** |  |
-| B2-U073 | pp.86–90 | RELATIONSHIP | FCFF–FCFE bridge with after-tax interest/net debt flow | 02 §3 | **FULL** |  |
-| B2-U074 | pp.86–90 | FORMULA | WACC as blended cost of capital | 02 §3 | **FULL** |  |
+| B2-U073 | pp.86–90; raw ~L1810–1822 | RELATIONSHIP | FCFF–FCFE bridge with after-tax interest and net debt flow; sign convention made explicit | 02 §3 | **FULL** | Route defines net debt repayment = repayment − new borrowing to avoid sign ambiguity. |
+| B2-U074 | pp.86–90; raw ~L1820–1850 | FORMULA | WACC = E/(D+E)·Re + D/(D+E)·Rd·(1−T), with capital-weight/tax-shield assumptions | 02 §3 | **FULL** | Source formula structure is readable; route defines variables explicitly. |
 | B2-U075 | pp.86–90 | BOUNDARY | FCFE ↔ cost of equity; FCFF ↔ WACC matching rule | 02 §3 | **FULL** |  |
 | B2-U076 | pp.88–90; raw ~L1825–1860 | FORMULA | EVA = NOPAT − Invested Capital×WACC | 02 §4 | **FULL** |  |
 | B2-U077 | pp.88–90 | FORMULA | EVA = Invested Capital×(ROIC−WACC) | 02 §4 | **FULL** |  |
