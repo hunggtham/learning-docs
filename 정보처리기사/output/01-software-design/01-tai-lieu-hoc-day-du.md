@@ -12,7 +12,7 @@ Phần này đặt mục tiêu của bài, để người mới biết mình c�
 
 > **Câu hỏi trung tâm:** Khi học môn này, người học không chỉ cần nhận ra thuật ngữ Hàn mà còn phải giải thích khái niệm đang giải quyết vấn đề nào, dựa trên điều kiện nào và được dùng để nối sang phần kiến thức nào tiếp theo.
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **권장 학습 순서 (Lộ trình đề xuất)** tiếp nhận điểm tựa từ **학습 목표 (Mục tiêu học tập)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **권장 학습 순서 (Lộ trình đề xuất)** nối từ **학습 목표 (Mục tiêu học tập)** sang **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 권장 학습 순서 (Lộ trình đề xuất)
 
@@ -32,7 +32,7 @@ Phần này là đường đi của bài giảng: đọc theo thứ tự để m
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)** tiếp nhận điểm tựa từ **권장 학습 순서 (Lộ trình đề xuất)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)** nối từ **권장 학습 순서 (Lộ trình đề xuất)** sang **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)
 
@@ -44,7 +44,7 @@ Như vậy, **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodo
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)** tiếp nhận điểm tựa từ **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)** nối từ **소프트웨어 생명 주기 및 개발 방법론 (SDLC & Methodologies)** sang **1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)
 
@@ -71,7 +71,7 @@ Ta có thể khép mục **1. 소프트웨어 생명 주기 (SDLC - Software Dev
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)** tiếp nhận điểm tựa từ **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 요구사항 개발 (Phát triển Yêu cầu)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)** nối từ **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)** sang **2. 요구사항 개발 (Phát triển Yêu cầu)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)
 
@@ -83,7 +83,7 @@ Từ **1. 소프트웨어 생명 주기 (SDLC - Software Development Life Cycle)
 
 ### 001. 소프트웨어 공학의 기본 원칙 (Nguyên tắc cơ bản của kỹ nghệ phần mềm)
 
-Các ý ngay dưới **001. 소프트웨어 공학의 기본 원칙 (Nguyên tắc cơ bản của kỹ nghệ phần mềm)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **001. 소프트웨어 공학의 기본 원칙 (Nguyên tắc cơ bản của kỹ nghệ phần mềm)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “001. 소프트웨어 공학의 기본 원칙 (Nguyên tắc cơ bản của kỹ nghệ phần mềm)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -133,7 +133,7 @@ Các ý về **003. 나선형 모형 (Spiral Model / Mô hình xoắn ốc)** đ
 
 ### 004. 애자일 모형의 주요 방법론 (Các phương pháp luận chính của mô hình Agile)
 
-Các ý ngay dưới **004. 애자일 모형의 주요 방법론 (Các phương pháp luận chính của mô hình Agile)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **004. 애자일 모형의 주요 방법론 (Các phương pháp luận chính của mô hình Agile)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “004. 애자일 모형의 주요 방법론 (Các phương pháp luận chính của mô hình Agile)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -190,7 +190,7 @@ Như vậy, **006. XP의 핵심 가치 (Giá trị cốt lõi của XP - eXtreme
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 요구사항 개발 (Phát triển Yêu cầu)** tiếp nhận điểm tựa từ **1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 요구사항 개발 (Phát triển Yêu cầu)** nối từ **1. 소프트웨어 공학 및 개발 방법론 (Kỹ nghệ phần mềm và Phương pháp luận phát triển)** sang **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. 요구사항 개발 (Phát triển Yêu cầu)
 
@@ -236,7 +236,7 @@ Sau khi đọc **008. 요구사항 개발 프로세스 (Quy trình phát triển
 
 ### 009. 요구사항 분석 (Phân tích yêu cầu / Requirements Analysis)
 
-Các ý ngay dưới **009. 요구사항 분석 (Phân tích yêu cầu / Requirements Analysis)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **009. 요구사항 분석 (Phân tích yêu cầu / Requirements Analysis)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “009. 요구사항 분석 (Phân tích yêu cầu / Requirements Analysis)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -290,7 +290,7 @@ Sau khi đọc **011. 자료 사전 (Data Dictionary) 의 표기 기호**, đừ
 
 ### 012. HIPO (Hierarchy plus Input-Process-Output)
 
-Các ý ngay dưới **012. HIPO (Hierarchy plus Input-Process-Output)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **012. HIPO (Hierarchy plus Input-Process-Output)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “012. HIPO (Hierarchy plus Input-Process-Output)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -307,7 +307,7 @@ Như vậy, **2. 요구사항 개발 (Phát triển Yêu cầu)** không chỉ c
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)** tiếp nhận điểm tựa từ **2. 요구사항 개발 (Phát triển Yêu cầu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. 요구사항 심화 (Yêu cầu chuyên sâu)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)** nối từ **2. 요구사항 개발 (Phát triển Yêu cầu)** sang **10. 요구사항 심화 (Yêu cầu chuyên sâu)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)
 
@@ -335,7 +335,7 @@ Ta vừa chốt **요구사항 검증 방법 (Phương pháp xác minh yêu cầ
 
 ### 미들웨어 (Middleware)
 
-Các ý ngay dưới **미들웨어 (Middleware)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **미들웨어 (Middleware)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “미들웨어 (Middleware)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -390,7 +390,7 @@ Ta vừa chốt **XP 주요 실천 방법 (Các kỹ thuật thực hành của 
 
 ### 현행 시스템 파악 (Phân tích hệ thống hiện tại)
 
-Các ý ngay dưới **현행 시스템 파악 (Phân tích hệ thống hiện tại)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **현행 시스템 파악 (Phân tích hệ thống hiện tại)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “현행 시스템 파악 (Phân tích hệ thống hiện tại)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -435,7 +435,7 @@ Ta có thể khép mục **9. 요구사항 및 시스템 파악 (Yêu cầu & Ph
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **10. 요구사항 심화 (Yêu cầu chuyên sâu)** tiếp nhận điểm tựa từ **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 요구사항 정의 (Requirements Definition)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **10. 요구사항 심화 (Yêu cầu chuyên sâu)** nối từ **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thống)** sang **2. 요구사항 정의 (Requirements Definition)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. 요구사항 심화 (Yêu cầu chuyên sâu)
 
@@ -447,7 +447,7 @@ Từ **9. 요구사항 및 시스템 파악 (Yêu cầu & Phân tích Hệ thố
 
 ### 요구사항의 유형 (Các loại yêu cầu)
 
-Các ý ngay dưới **요구사항의 유형 (Các loại yêu cầu)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **요구사항의 유형 (Các loại yêu cầu)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “요구사항의 유형 (Các loại yêu cầu)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -490,7 +490,7 @@ Với **요구사항 명세 기법 (Kỹ thuật Đặc tả yêu cầu)**, hãy
 
 ### 요구사항 분석을 위한 CASE 도구 (Công cụ CASE tự động hóa phân tích)
 
-Các ý ngay dưới **요구사항 분석을 위한 CASE 도구 (Công cụ CASE tự động hóa phân tích)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **요구사항 분석을 위한 CASE 도구 (Công cụ CASE tự động hóa phân tích)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “요구사항 분석을 위한 CASE 도구 (Công cụ CASE tự động hóa phân tích)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -507,7 +507,7 @@ Với **요구사항 분석을 위한 CASE 도구 (Công cụ CASE tự động 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 요구사항 정의 (Requirements Definition)** tiếp nhận điểm tựa từ **10. 요구사항 심화 (Yêu cầu chuyên sâu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 요구사항 정의 (Requirements Definition)** nối từ **10. 요구사항 심화 (Yêu cầu chuyên sâu)** sang **3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. 요구사항 정의 (Requirements Definition)
 
@@ -530,7 +530,7 @@ Như vậy, **2. 요구사항 정의 (Requirements Definition)** không chỉ cu
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 요구사항 정의 (Requirements Definition)** cho ta quy tắc; **3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **1. 요구사항 개발 기법 (Requirements Elicitation Techniques)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 요구사항 정의 (Requirements Definition)** nêu quy tắc; **3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)** thử quy tắc trong tình huống, rồi **1. 요구사항 개발 기법 (Requirements Elicitation Techniques)** mở rộng hệ quả.
 
 ## 3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)
 
@@ -556,7 +556,7 @@ Ta có thể khép mục **3. 요구사항 분석기법 및 자동화 도구 (An
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)** cho ta quy tắc; **1. 요구사항 개발 기법 (Requirements Elicitation Techniques)** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **12. 요구사항 (Requirements)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **3. 요구사항 분석기법 및 자동화 도구 (Analysis Techniques & CASE)** nêu quy tắc; **1. 요구사항 개발 기법 (Requirements Elicitation Techniques)** thử quy tắc trong tình huống, rồi **12. 요구사항 (Requirements)** mở rộng hệ quả.
 
 ## 1. 요구사항 개발 기법 (Requirements Elicitation Techniques)
 
@@ -576,7 +576,7 @@ Phần “1. 요구사항 개발 기법 (Requirements Elicitation Techniques)”
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **12. 요구사항 (Requirements)** tiếp nhận điểm tựa từ **1. 요구사항 개발 기법 (Requirements Elicitation Techniques)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **A+ Deep Dive: 개발 모형 선택과 요구사항 검증** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **12. 요구사항 (Requirements)** nối từ **1. 요구사항 개발 기법 (Requirements Elicitation Techniques)** sang **A+ Deep Dive: 개발 모형 선택과 요구사항 검증**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. 요구사항 (Requirements)
 
@@ -618,7 +618,7 @@ Sau khi đọc **요구사항 검증 (Requirements Verification)**, đừng bắ
 
 ### 요구사항 품질 기준 7개 (7 Tiêu chí chất lượng)
 
-Các ý ngay dưới **요구사항 품질 기준 7개 (7 Tiêu chí chất lượng)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **요구사항 품질 기준 7개 (7 Tiêu chí chất lượng)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 1.  **완전성 (Completeness):** 누락 없이 (Đầy đủ).
 2.  **일관성 (Consistency):** 충돌 없이 (Nhất quán).
@@ -638,7 +638,7 @@ Như vậy, **12. 요구사항 (Requirements)** không chỉ cung cấp các ý 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **A+ Deep Dive: 개발 모형 선택과 요구사항 검증** tiếp nhận điểm tựa từ **12. 요구사항 (Requirements)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 현행 시스템 분석 (Current System Analysis)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **A+ Deep Dive: 개발 모형 선택과 요구사항 검증** nối từ **12. 요구사항 (Requirements)** sang **1. 현행 시스템 분석 (Current System Analysis)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## A+ Deep Dive: 개발 모형 선택과 요구사항 검증
 
@@ -668,7 +668,7 @@ Ta vừa chốt **1. 모형 선택 비교표** bằng các điều kiện và đ
 
 ### 2. 요구사항 검증 미니 트레이스
 
-Các ý ngay dưới **2. 요구사항 검증 미니 트레이스** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **2. 요구사항 검증 미니 트레이스** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 1. **완전성(Completeness)**: 모든 기능·제약이 빠짐없이 적혔는가?
 2. **일관성(Consistency)**: 서로 모순되는 요구가 없는가?
@@ -701,7 +701,7 @@ Ta có thể khép mục **A+ Deep Dive: 개발 모형 선택과 요구사항 �
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 현행 시스템 분석 (Current System Analysis)** tiếp nhận điểm tựa từ **A+ Deep Dive: 개발 모형 선택과 요구사항 검증** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 현행 시스템 파악 (Understanding Current System)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 현행 시스템 분석 (Current System Analysis)** nối từ **A+ Deep Dive: 개발 모형 선택과 요구사항 검증** sang **3. 현행 시스템 파악 (Understanding Current System)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1. 현행 시스템 분석 (Current System Analysis)
 
@@ -720,7 +720,7 @@ Phần “1. 현행 시스템 분석 (Current System Analysis)” được nối
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **3. 현행 시스템 파악 (Understanding Current System)** tiếp nhận điểm tựa từ **1. 현행 시스템 분석 (Current System Analysis)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 모델링 및 UML (Mô hình hóa và UML)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **3. 현행 시스템 파악 (Understanding Current System)** nối từ **1. 현행 시스템 분석 (Current System Analysis)** sang **3. 모델링 및 UML (Mô hình hóa và UML)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. 현행 시스템 파악 (Understanding Current System)
 
@@ -738,7 +738,7 @@ Như vậy, **3. 현행 시스템 파악 (Understanding Current System)** không
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **3. 모델링 및 UML (Mô hình hóa và UML)** tiếp nhận điểm tựa từ **3. 현행 시스템 파악 (Understanding Current System)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **3. 모델링 및 UML (Mô hình hóa và UML)** nối từ **3. 현행 시스템 파악 (Understanding Current System)** sang **11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. 모델링 및 UML (Mô hình hóa và UML)
 
@@ -766,7 +766,7 @@ Ta vừa chốt **013. UML (Unified Modeling Language)** bằng các điều ki�
 
 ### 014. UML의 주요 관계 (Các mối quan hệ chính trong UML)
 
-Các ý ngay dưới **014. UML의 주요 관계 (Các mối quan hệ chính trong UML)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **014. UML의 주요 관계 (Các mối quan hệ chính trong UML)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “014. UML의 주요 관계 (Các mối quan hệ chính trong UML)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -824,7 +824,7 @@ Ta vừa chốt **016. 행위(Behavioral) 다이어그램의 종류 (Các loại
 
 ### 017. 스테레오 타입 (Stereotype)
 
-Các ý ngay dưới **017. 스테레오 타입 (Stereotype)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **017. 스테레오 타입 (Stereotype)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “017. 스테레오 타입 (Stereotype)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -873,7 +873,7 @@ Ta có thể khép mục **3. 모델링 및 UML (Mô hình hóa và UML)** bằn
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)** tiếp nhận điểm tựa từ **3. 모델링 및 UML (Mô hình hóa và UML)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. UML (Unified Modeling Language)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)** nối từ **3. 모델링 및 UML (Mô hình hóa và UML)** sang **4. UML (Unified Modeling Language)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)
 
@@ -885,7 +885,7 @@ Từ **3. 모델링 및 UML (Mô hình hóa và UML)**, ta đã có điểm tự
 
 ### 웹 애플리케이션 서버 (WAS - Web Application Server)
 
-Các ý ngay dưới **웹 애플리케이션 서버 (WAS - Web Application Server)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **웹 애플리케이션 서버 (WAS - Web Application Server)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “웹 애플리케이션 서버 (WAS - Web Application Server)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -929,7 +929,7 @@ Các bullet của **HIPO Chart의 종류 (Các loại biểu đồ HIPO)** đang
 
 ### 클래스 다이어그램 심화 (Class Diagram chi tiết)
 
-Các ý ngay dưới **클래스 다이어그램 심화 (Class Diagram chi tiết)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **클래스 다이어그램 심화 (Class Diagram chi tiết)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “클래스 다이어그램 심화 (Class Diagram chi tiết)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -977,7 +977,7 @@ Các bullet của **순차 다이어그램 심화 (Sequence Diagram chi tiết)*
 
 ### 사용자 인터페이스(UI) 특성 (Đặc tính của UI)
 
-Các ý ngay dưới **사용자 인터페이스(UI) 특성 (Đặc tính của UI)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **사용자 인터페이스(UI) 특성 (Đặc tính của UI)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “사용자 인터페이스(UI) 특성 (Đặc tính của UI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -992,7 +992,7 @@ Với **사용자 인터페이스(UI) 특성 (Đặc tính của UI)**, ta đã 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. UML (Unified Modeling Language)** tiếp nhận điểm tựa từ **11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. UML 구성요소 상세 (UML Components Detail)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. UML (Unified Modeling Language)** nối từ **11. 모델링 및 다이어그램 심화 (Mô hình hóa & Biểu đồ chuyên sâu)** sang **5. UML 구성요소 상세 (UML Components Detail)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. UML (Unified Modeling Language)
 
@@ -1017,7 +1017,7 @@ Như vậy, **4. UML (Unified Modeling Language)** không chỉ cung cấp các 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **5. UML 구성요소 상세 (UML Components Detail)** tiếp nhận điểm tựa từ **4. UML (Unified Modeling Language)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. UML 심화 (Advanced UML)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **5. UML 구성요소 상세 (UML Components Detail)** nối từ **4. UML (Unified Modeling Language)** sang **7. UML 심화 (Advanced UML)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. UML 구성요소 상세 (UML Components Detail)
 
@@ -1038,7 +1038,7 @@ Ta có thể khép mục **5. UML 구성요소 상세 (UML Components Detail)** 
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **7. UML 심화 (Advanced UML)** tiếp nhận điểm tựa từ **5. UML 구성요소 상세 (UML Components Detail)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 사용자 인터페이스 (Giao diện người dùng - UI)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **7. UML 심화 (Advanced UML)** nối từ **5. UML 구성요소 상세 (UML Components Detail)** sang **4. 사용자 인터페이스 (Giao diện người dùng - UI)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. UML 심화 (Advanced UML)
 
@@ -1058,7 +1058,7 @@ Phần “7. UML 심화 (Advanced UML)” được nối với nội dung kế t
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. 사용자 인터페이스 (Giao diện người dùng - UI)** tiếp nhận điểm tựa từ **7. UML 심화 (Advanced UML)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 사용자 인터페이스 (User Interface - UI)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. 사용자 인터페이스 (Giao diện người dùng - UI)** nối từ **7. UML 심화 (Advanced UML)** sang **1. 사용자 인터페이스 (User Interface - UI)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. 사용자 인터페이스 (Giao diện người dùng - UI)
 
@@ -1101,7 +1101,7 @@ Sau khi đọc **021. 사용자 인터페이스의 구분 (Phân loại giao di�
 
 ### 022. 사용자 인터페이스의 기본 원칙 (Nguyên tắc cơ bản của UI)
 
-Các ý ngay dưới **022. 사용자 인터페이스의 기본 원칙 (Nguyên tắc cơ bản của UI)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **022. 사용자 인터페이스의 기본 원칙 (Nguyên tắc cơ bản của UI)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “022. 사용자 인터페이스의 기본 원칙 (Nguyên tắc cơ bản của UI)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1134,7 +1134,7 @@ Như vậy, **4. 사용자 인터페이스 (Giao diện người dùng - UI)** k
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 사용자 인터페이스 (User Interface - UI)** tiếp nhận điểm tựa từ **4. 사용자 인터페이스 (Giao diện người dùng - UI)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 사용자 인터페이스 (User Interface - UI)** nối từ **4. 사용자 인터페이스 (Giao diện người dùng - UI)** sang **12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1. 사용자 인터페이스 (User Interface - UI)
 
@@ -1165,7 +1165,7 @@ Ta có thể khép mục **1. 사용자 인터페이스 (User Interface - UI)** 
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)** tiếp nhận điểm tựa từ **1. 사용자 인터페이스 (User Interface - UI)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 요구공학 (Requirements Engineering)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)** nối từ **1. 사용자 인터페이스 (User Interface - UI)** sang **5. 요구공학 (Requirements Engineering)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)
 
@@ -1177,7 +1177,7 @@ Từ **1. 사용자 인터페이스 (User Interface - UI)**, ta đã có điểm
 
 ### 사용자 인터페이스(UI) 추가 유형 (Các loại UI bổ sung)
 
-Các ý ngay dưới **사용자 인터페이스(UI) 추가 유형 (Các loại UI bổ sung)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **사용자 인터페이스(UI) 추가 유형 (Các loại UI bổ sung)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “사용자 인터페이스(UI) 추가 유형 (Các loại UI bổ sung)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1231,7 +1231,7 @@ Như vậy, **UI 설계 도구 심화 (Công cụ thiết kế UI chi tiết)** 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **5. 요구공학 (Requirements Engineering)** tiếp nhận điểm tựa từ **12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. UI 및 UX, HCI (UI, UX, HCI)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **5. 요구공학 (Requirements Engineering)** nối từ **12. UI 및 아키텍처 설계 심화 (Thiết kế UI & Kiến trúc chuyên sâu)** sang **8. UI 및 UX, HCI (UI, UX, HCI)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. 요구공학 (Requirements Engineering)
 
@@ -1254,7 +1254,7 @@ Như vậy, **5. 요구공학 (Requirements Engineering)** không chỉ cung c�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **8. UI 및 UX, HCI (UI, UX, HCI)** tiếp nhận điểm tựa từ **5. 요구공학 (Requirements Engineering)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **8. UI 및 UX, HCI (UI, UX, HCI)** nối từ **5. 요구공학 (Requirements Engineering)** sang **5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. UI 및 UX, HCI (UI, UX, HCI)
 
@@ -1277,7 +1277,7 @@ Ta có thể khép mục **8. UI 및 UX, HCI (UI, UX, HCI)** bằng một câu h
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)** tiếp nhận điểm tựa từ **8. UI 및 UX, HCI (UI, UX, HCI)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 소프트웨어 아키텍처 (Software Architecture)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)** nối từ **8. UI 및 UX, HCI (UI, UX, HCI)** sang **1. 소프트웨어 아키텍처 (Software Architecture)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)
 
@@ -1289,7 +1289,7 @@ Từ **8. UI 및 UX, HCI (UI, UX, HCI)**, ta đã có điểm tựa để bướ
 
 ### 024. ISO/IEC 9126의 품질 특성 (Đặc tính chất lượng theo ISO/IEC 9126)
 
-Các ý ngay dưới **024. ISO/IEC 9126의 품질 특성 (Đặc tính chất lượng theo ISO/IEC 9126)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **024. ISO/IEC 9126의 품질 특성 (Đặc tính chất lượng theo ISO/IEC 9126)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “024. ISO/IEC 9126의 품질 특성 (Đặc tính chất lượng theo ISO/IEC 9126)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1336,7 +1336,7 @@ Các ý về **026. 모듈화 (Modularization / Mô-đun hóa)** được nối 
 
 ### 027. 추상화의 유형 (Các loại trừu tượng hóa)
 
-Các ý ngay dưới **027. 추상화의 유형 (Các loại trừu tượng hóa)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **027. 추상화의 유형 (Các loại trừu tượng hóa)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “027. 추상화의 유형 (Các loại trừu tượng hóa)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1383,7 +1383,7 @@ Các ý về **029. 파이프 - 필터 패턴 (Pipe-Filter Pattern)** được n
 
 ### 030. MVC (Model-View-Controller) 패턴
 
-Các ý ngay dưới **030. MVC (Model-View-Controller) 패턴** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **030. MVC (Model-View-Controller) 패턴** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “030. MVC (Model-View-Controller) 패턴” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1434,7 +1434,7 @@ Các bullet của **040 & 041. 결합도 (Coupling) 의 종류와 정도 (Các l
 
 ### 043. 주요 응집도 (Cohesion)
 
-Các ý ngay dưới **043. 주요 응집도 (Cohesion)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **043. 주요 응집도 (Cohesion)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “043. 주요 응집도 (Cohesion)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1471,7 +1471,7 @@ Các bullet của **044. 팬인(Fan-In) / 팬아웃(Fan-Out)** đang nén nhiề
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 소프트웨어 아키텍처 (Software Architecture)** tiếp nhận điểm tựa từ **5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. 객체지향 (Hướng Đối Tượng - OOP)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 소프트웨어 아키텍처 (Software Architecture)** nối từ **5. 소프트웨어 아키텍처 및 설계 (Kiến trúc và Thiết kế Phần mềm)** sang **6. 객체지향 (Hướng Đối Tượng - OOP)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1. 소프트웨어 아키텍처 (Software Architecture)
 
@@ -1495,7 +1495,7 @@ Như vậy, **1. 소프트웨어 아키텍처 (Software Architecture)** không c
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **6. 객체지향 (Hướng Đối Tượng - OOP)** tiếp nhận điểm tựa từ **1. 소프트웨어 아키텍처 (Software Architecture)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 객체지향 (OOP - Object Oriented Programming)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **6. 객체지향 (Hướng Đối Tượng - OOP)** nối từ **1. 소프트웨어 아키텍처 (Software Architecture)** sang **2. 객체지향 (OOP - Object Oriented Programming)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. 객체지향 (Hướng Đối Tượng - OOP)
 
@@ -1521,7 +1521,7 @@ Ta vừa chốt **031. 메시지 (Message)** bằng các điều kiện và đi�
 
 ### 032. 클래스 (Class)
 
-Các ý ngay dưới **032. 클래스 (Class)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **032. 클래스 (Class)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “032. 클래스 (Class)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1566,7 +1566,7 @@ Ta vừa chốt **034. 상속 (Inheritance / Kế thừa)** bằng các điều 
 
 ### 035. 다형성 (Polymorphism / Đa hình)
 
-Các ý ngay dưới **035. 다형성 (Polymorphism / Đa hình)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **035. 다형성 (Polymorphism / Đa hình)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “035. 다형성 (Polymorphism / Đa hình)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1611,7 +1611,7 @@ Ta vừa chốt **037. 럼바우(Rumbaugh)의 분석 기법 (Kỹ thuật phân 
 
 ### 038. 객체지향 설계 원칙 (SOLID 원칙) (Các nguyên tắc thiết kế OOP)
 
-Các ý ngay dưới **038. 객체지향 설계 원칙 (SOLID 원칙) (Các nguyên tắc thiết kế OOP)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **038. 객체지향 설계 원칙 (SOLID 원칙) (Các nguyên tắc thiết kế OOP)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “038. 객체지향 설계 원칙 (SOLID 원칙) (Các nguyên tắc thiết kế OOP)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1630,7 +1630,7 @@ Ta có thể khép mục **6. 객체지향 (Hướng Đối Tượng - OOP)** b�
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 객체지향 (OOP - Object Oriented Programming)** tiếp nhận điểm tựa từ **6. 객체지향 (Hướng Đối Tượng - OOP)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 객체지향 설계 5대 원칙 (SOLID)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 객체지향 (OOP - Object Oriented Programming)** nối từ **6. 객체지향 (Hướng Đối Tượng - OOP)** sang **1. 객체지향 설계 5대 원칙 (SOLID)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. 객체지향 (OOP - Object Oriented Programming)
 
@@ -1659,7 +1659,7 @@ Phần “2. 객체지향 (OOP - Object Oriented Programming)” được nối 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 객체지향 설계 5대 원칙 (SOLID)** tiếp nhận điểm tựa từ **2. 객체지향 (OOP - Object Oriented Programming)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 객체지향 설계 5대 원칙 (SOLID)** nối từ **2. 객체지향 (OOP - Object Oriented Programming)** sang **7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1. 객체지향 설계 5대 원칙 (SOLID)
 
@@ -1708,7 +1708,7 @@ Như vậy, **1. 객체지향 설계 5대 원칙 (SOLID)** không chỉ cung c�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)** tiếp nhận điểm tựa từ **1. 객체지향 설계 5대 원칙 (SOLID)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 모듈 (Module)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)** nối từ **1. 객체지향 설계 5대 원칙 (SOLID)** sang **3. 모듈 (Module)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)
 
@@ -1738,7 +1738,7 @@ Ta vừa chốt **NS 차트 (Nassi-Shneiderman Chart)** bằng các điều ki�
 
 ### 재사용 (Reuse / Tái sử dụng)
 
-Các ý ngay dưới **재사용 (Reuse / Tái sử dụng)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **재사용 (Reuse / Tái sử dụng)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “재사용 (Reuse / Tái sử dụng)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1785,7 +1785,7 @@ Ta có thể khép mục **7. 설계 도구 및 모듈화 심화 (Công cụ thi
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **3. 모듈 (Module)** tiếp nhận điểm tựa từ **7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 모듈 (Module) & 독립성 (Independence)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **3. 모듈 (Module)** nối từ **7. 설계 도구 및 모듈화 심화 (Công cụ thiết kế & Mô-đun hóa chuyên sâu)** sang **2. 모듈 (Module) & 독립성 (Independence)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. 모듈 (Module)
 
@@ -1809,7 +1809,7 @@ Phần “3. 모듈 (Module)” được nối với nội dung kế tiếp đ�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 모듈 (Module) & 독립성 (Independence)** tiếp nhận điểm tựa từ **3. 모듈 (Module)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. 공통 모듈 (Common Module)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 모듈 (Module) & 독립성 (Independence)** nối từ **3. 모듈 (Module)** sang **7. 공통 모듈 (Common Module)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. 모듈 (Module) & 독립성 (Independence)
 
@@ -1832,7 +1832,7 @@ Như vậy, **2. 모듈 (Module) & 독립성 (Independence)** không chỉ cung 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **7. 공통 모듈 (Common Module)** tiếp nhận điểm tựa từ **2. 모듈 (Module) & 독립성 (Independence)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 효과적인 모듈 설계 방안 (Effective Module Design)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **7. 공통 모듈 (Common Module)** nối từ **2. 모듈 (Module) & 독립성 (Independence)** sang **9. 효과적인 모듈 설계 방안 (Effective Module Design)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. 공통 모듈 (Common Module)
 
@@ -1856,7 +1856,7 @@ Ta có thể khép mục **7. 공통 모듈 (Common Module)** bằng một câu 
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **9. 효과적인 모듈 설계 방안 (Effective Module Design)** tiếp nhận điểm tựa từ **7. 공통 모듈 (Common Module)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **9. 효과적인 모듈 설계 방안 (Effective Module Design)** nối từ **7. 공통 모듈 (Common Module)** sang **9. 소프트웨어 품질 특성 (ISO/IEC 9126)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. 효과적인 모듈 설계 방안 (Effective Module Design)
 
@@ -1876,7 +1876,7 @@ Phần “9. 효과적인 모듈 설계 방안 (Effective Module Design)” đư
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** tiếp nhận điểm tựa từ **9. 효과적인 모듈 설계 방안 (Effective Module Design)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. 디자인 패턴 (Design Patterns)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** nối từ **9. 효과적인 모듈 설계 방안 (Effective Module Design)** sang **8. 디자인 패턴 (Design Patterns)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. 소프트웨어 품질 특성 (ISO/IEC 9126)
 
@@ -1898,7 +1898,7 @@ Như vậy, **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** không chỉ cun
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **8. 디자인 패턴 (Design Patterns)** tiếp nhận điểm tựa từ **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 디자인 패턴 (Design Patterns - GoF)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **8. 디자인 패턴 (Design Patterns)** nối từ **9. 소프트웨어 품질 특성 (ISO/IEC 9126)** sang **4. 디자인 패턴 (Design Patterns - GoF)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. 디자인 패턴 (Design Patterns)
 
@@ -1924,7 +1924,7 @@ Ta vừa chốt **디자인 패턴 (Design Pattern) 개요** bằng các điều
 
 ### 생성 패턴 (Creational Pattern / Mẫu khởi tạo) - 5 loại
 
-Các ý ngay dưới **생성 패턴 (Creational Pattern / Mẫu khởi tạo) - 5 loại** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **생성 패턴 (Creational Pattern / Mẫu khởi tạo) - 5 loại** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “생성 패턴 (Creational Pattern / Mẫu khởi tạo) - 5 loại” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -1989,7 +1989,7 @@ Ta có thể khép mục **8. 디자인 패턴 (Design Patterns)** bằng một 
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. 디자인 패턴 (Design Patterns - GoF)** tiếp nhận điểm tựa từ **8. 디자인 패턴 (Design Patterns)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. 디자인 패턴 (Design Pattern)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. 디자인 패턴 (Design Patterns - GoF)** nối từ **8. 디자인 패턴 (Design Patterns)** sang **11. 디자인 패턴 (Design Pattern)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. 디자인 패턴 (Design Patterns - GoF)
 
@@ -2009,7 +2009,7 @@ Phần “4. 디자인 패턴 (Design Patterns - GoF)” được nối với n�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **11. 디자인 패턴 (Design Pattern)** tiếp nhận điểm tựa từ **4. 디자인 패턴 (Design Patterns - GoF)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **11. 디자인 패턴 (Design Pattern)** nối từ **4. 디자인 패턴 (Design Patterns - GoF)** sang **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. 디자인 패턴 (Design Pattern)
 
@@ -2062,7 +2062,7 @@ Sau khi đọc **11.2 구조 패턴 (Structural - 7개)**, đừng bắt đầu 
 
 ### 11.3 행위 패턴 (Behavioral - 11개)
 
-Các ý ngay dưới **11.3 행위 패턴 (Behavioral - 11개)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **11.3 행위 패턴 (Behavioral - 11개)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 객체 간 상호작용 및 책임 분배 (Tương tác và phân chia trách nhiệm giữa các đối tượng).
 1.  **책임 연쇄 (Chain of Responsibility):** 고리를 따라 책임 넘김 (Truyền yêu cầu theo chuỗi xử lý).
@@ -2087,7 +2087,7 @@ Như vậy, **11. 디자인 패턴 (Design Pattern)** không chỉ cung cấp c�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)** tiếp nhận điểm tựa từ **11. 디자인 패턴 (Design Pattern)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. 시스템 연계 및 인터페이스 (System Interface & Integration)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)** nối từ **11. 디자인 패턴 (Design Pattern)** sang **13. 시스템 연계 및 인터페이스 (System Interface & Integration)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)
 
@@ -2116,7 +2116,7 @@ Ta có thể khép mục **2. 인터페이스 검토 및 연계 기술 (Interfac
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **13. 시스템 연계 및 인터페이스 (System Interface & Integration)** tiếp nhận điểm tựa từ **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. 미들웨어 (Middleware)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **13. 시스템 연계 및 인터페이스 (System Interface & Integration)** nối từ **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)** sang **14. 미들웨어 (Middleware)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. 시스템 연계 및 인터페이스 (System Interface & Integration)
 
@@ -2128,7 +2128,7 @@ Từ **2. 인터페이스 검토 및 연계 기술 (Interface Review & Tech)**, 
 
 ### 13.1 시스템 연계 기술 (Các công nghệ liên kết hệ thống)
 
-Các ý ngay dưới **13.1 시스템 연계 기술 (Các công nghệ liên kết hệ thống)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **13.1 시스템 연계 기술 (Các công nghệ liên kết hệ thống)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 1.  **DB Link:** DB 객체 이용 (Kết nối trực tiếp qua DB Link).
 2.  **API/Open API:** 프로그램 인터페이스 (Mở cổng API để ứng dụng khác gọi).
@@ -2180,7 +2180,7 @@ Như vậy, **13.3 명세화 (Specification)** đã hoàn thành vai trò của 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **14. 미들웨어 (Middleware)** tiếp nhận điểm tựa từ **13. 시스템 연계 및 인터페이스 (System Interface & Integration)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **14. 미들웨어 (Middleware)** nối từ **13. 시스템 연계 및 인터페이스 (System Interface & Integration)** sang **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. 미들웨어 (Middleware)
 
@@ -2205,7 +2205,7 @@ Như vậy, **14. 미들웨어 (Middleware)** không chỉ cung cấp các ý c�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)** tiếp nhận điểm tựa từ **14. 미들웨어 (Middleware)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)** nối từ **14. 미들웨어 (Middleware)** sang **5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)
 
@@ -2235,7 +2235,7 @@ Ta vừa chốt **릴레이션 (Relation / Table) 구성 요소** bằng các đ
 
 ### 릴레이션의 4가지 특징 (4 Đặc trưng của Bảng quan hệ)
 
-Các ý ngay dưới **릴레이션의 4가지 특징 (4 Đặc trưng của Bảng quan hệ)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **릴레이션의 4가지 특징 (4 Đặc trưng của Bảng quan hệ)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “릴레이션의 4가지 특징 (4 Đặc trưng của Bảng quan hệ)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -2285,7 +2285,7 @@ Ta có thể khép mục **4. 관계형 데이터베이스 구조 (Cấu trúc C
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)** tiếp nhận điểm tựa từ **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)** nối từ **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)** sang **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)
 
@@ -2297,7 +2297,7 @@ Từ **4. 관계형 데이터베이스 구조 (Cấu trúc CSDL Quan hệ)**, ta
 
 ### 관계대수와 관계해석 (Đại số quan hệ & Giải tích quan hệ)
 
-Các ý ngay dưới **관계대수와 관계해석 (Đại số quan hệ & Giải tích quan hệ)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **관계대수와 관계해석 (Đại số quan hệ & Giải tích quan hệ)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “관계대수와 관계해석 (Đại số quan hệ & Giải tích quan hệ)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -2343,7 +2343,7 @@ Các bullet của **이상(Anomaly) 현상 (Hiện tượng Dị thường dữ 
 
 ### 정규화(Normalization) 과정과 암기법 (Quy trình chuẩn hóa)
 
-Các ý ngay dưới **정규화(Normalization) 과정과 암기법 (Quy trình chuẩn hóa)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **정규화(Normalization) 과정과 암기법 (Quy trình chuẩn hóa)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “정규화(Normalization) 과정과 암기법 (Quy trình chuẩn hóa)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -2364,7 +2364,7 @@ Với **정규화(Normalization) 과정과 암기법 (Quy trình chuẩn hóa)**
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)** tiếp nhận điểm tựa từ **5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **1. 회복 (Recovery)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)** nối từ **5. 관계 데이터 연산 및 정규화 (Phép toán quan hệ & Chuẩn hóa)** sang **1. 회복 (Recovery)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)
 
@@ -2405,7 +2405,7 @@ Sau khi đọc **SELECT 명령어 구조 (Cấu trúc lệnh SELECT)**, đừng 
 
 ### 삽입 / 삭제 / 갱신 문법 (Cú pháp Thêm, Xóa, Sửa)
 
-Các ý ngay dưới **삽입 / 삭제 / 갱신 문법 (Cú pháp Thêm, Xóa, Sửa)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **삽입 / 삭제 / 갱신 문법 (Cú pháp Thêm, Xóa, Sửa)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “삽입 / 삭제 / 갱신 문법 (Cú pháp Thêm, Xóa, Sửa)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -2451,7 +2451,7 @@ Sau khi đọc **내장 SQL과 시스템 카탈로그 (Embedded SQL & System Cat
 
 ### 트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)
 
-Các ý ngay dưới **트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để tự kiểm tra cách hiểu.
+Các ý ngay dưới **트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)** cung cấp dữ liệu và quy tắc để trả lời câu hỏi vừa đặt ra. Hãy đọc chúng theo quan hệ điều kiện–hệ quả, rồi dùng câu chốt sau đoạn để đối chiếu cách hiểu.
 
 Phần “트랜잭션(Transaction)의 정의와 4가지 특성 (Định nghĩa & 4 Đặc tính ACID)” được nối với nội dung kế tiếp để người mới biết mục đích, tiêu chí đọc và kết luận cần rút ra trước khi xem các dòng nguồn.
 
@@ -2472,7 +2472,7 @@ Như vậy, **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transacti
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 회복 (Recovery)** tiếp nhận điểm tựa từ **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. Commit & Rollback 연산** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **1. 회복 (Recovery)** nối từ **6. SQL과 객체, 시스템 개념 (SQL, View, Catalog & Transaction)** sang **2. Commit & Rollback 연산**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 1. 회복 (Recovery)
 
@@ -2495,7 +2495,7 @@ Ta có thể khép mục **1. 회복 (Recovery)** bằng một câu hỏi bàn g
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. Commit & Rollback 연산** tiếp nhận điểm tựa từ **1. 회복 (Recovery)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 트랜잭션의 상태 (Transaction States)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. Commit & Rollback 연산** nối từ **1. 회복 (Recovery)** sang **3. 트랜잭션의 상태 (Transaction States)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Commit & Rollback 연산
 
@@ -2512,7 +2512,7 @@ Phần “2. Commit & Rollback 연산” được nối với nội dung kế ti
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **3. 트랜잭션의 상태 (Transaction States)** tiếp nhận điểm tựa từ **2. Commit & Rollback 연산** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 병행 제어 (Concurrency Control)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **3. 트랜잭션의 상태 (Transaction States)** nối từ **2. Commit & Rollback 연산** sang **4. 병행 제어 (Concurrency Control)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. 트랜잭션의 상태 (Transaction States)
 
@@ -2533,7 +2533,7 @@ Như vậy, **3. 트랜잭션의 상태 (Transaction States)** không chỉ cung
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. 병행 제어 (Concurrency Control)** tiếp nhận điểm tựa từ **3. 트랜잭션의 상태 (Transaction States)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. 보안 및 암호화 (Security & Encryption)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. 병행 제어 (Concurrency Control)** nối từ **3. 트랜잭션의 상태 (Transaction States)** sang **5. 보안 및 암호화 (Security & Encryption)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. 병행 제어 (Concurrency Control)
 
@@ -2560,7 +2560,7 @@ Ta có thể khép mục **4. 병행 제어 (Concurrency Control)** bằng một
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **5. 보안 및 암호화 (Security & Encryption)** tiếp nhận điểm tựa từ **4. 병행 제어 (Concurrency Control)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. 분산 데이터베이스 (Distributed Database)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **5. 보안 및 암호화 (Security & Encryption)** nối từ **4. 병행 제어 (Concurrency Control)** sang **6. 분산 데이터베이스 (Distributed Database)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. 보안 및 암호화 (Security & Encryption)
 
@@ -2578,7 +2578,7 @@ Phần “5. 보안 및 암호화 (Security & Encryption)” được nối vớ
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **6. 분산 데이터베이스 (Distributed Database)** tiếp nhận điểm tựa từ **5. 보안 및 암호화 (Security & Encryption)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. 자료 구조 (Data Structures)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **6. 분산 데이터베이스 (Distributed Database)** nối từ **5. 보안 및 암호화 (Security & Encryption)** sang **7. 자료 구조 (Data Structures)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. 분산 데이터베이스 (Distributed Database)
 
@@ -2599,7 +2599,7 @@ Như vậy, **6. 분산 데이터베이스 (Distributed Database)** không chỉ
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **7. 자료 구조 (Data Structures)** tiếp nhận điểm tựa từ **6. 분산 데이터베이스 (Distributed Database)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **7. 자료 구조 (Data Structures)** nối từ **6. 분산 데이터베이스 (Distributed Database)** sang **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. 자료 구조 (Data Structures)
 
@@ -2617,7 +2617,7 @@ Ta có thể khép mục **7. 자료 구조 (Data Structures)** bằng một câ
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)** tiếp nhận điểm tựa từ **7. 자료 구조 (Data Structures)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. 트리 (Tree) 용어** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)** nối từ **7. 자료 구조 (Data Structures)** sang **9. 트리 (Tree) 용어**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)
 
@@ -2636,7 +2636,7 @@ Phần “8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)” đ�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **9. 트리 (Tree) 용어** tiếp nhận điểm tựa từ **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. 이진 트리의 운행법 (Binary Tree Traversal)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **9. 트리 (Tree) 용어** nối từ **8. 연결 리스트, 스택, 큐, 데크 (Data Structure Types)** sang **10. 이진 트리의 운행법 (Binary Tree Traversal)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. 트리 (Tree) 용어
 
@@ -2652,7 +2652,7 @@ Như vậy, **9. 트리 (Tree) 용어** không chỉ cung cấp các ý cần nh
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **10. 이진 트리의 운행법 (Binary Tree Traversal)** tiếp nhận điểm tựa từ **9. 트리 (Tree) 용어** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. 수식의 표기법 (Expression Notation)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **10. 이진 트리의 운행법 (Binary Tree Traversal)** nối từ **9. 트리 (Tree) 용어** sang **11. 수식의 표기법 (Expression Notation)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. 이진 트리의 운행법 (Binary Tree Traversal)
 
@@ -2670,7 +2670,7 @@ Ta có thể khép mục **10. 이진 트리의 운행법 (Binary Tree Traversal
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **11. 수식의 표기법 (Expression Notation)** tiếp nhận điểm tựa từ **10. 이진 트리의 운행법 (Binary Tree Traversal)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. 외부 정렬 및 정렬 알고리즘 (External Sort & Sorting Algorithms)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **11. 수식의 표기법 (Expression Notation)** nối từ **10. 이진 트리의 운행법 (Binary Tree Traversal)** sang **12. 외부 정렬 및 정렬 알고리즘 (External Sort & Sorting Algorithms)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. 수식의 표기법 (Expression Notation)
 
@@ -2687,7 +2687,7 @@ Phần “11. 수식의 표기법 (Expression Notation)” được nối với 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **12. 외부 정렬 및 정렬 알고리즘 (External Sort & Sorting Algorithms)** tiếp nhận điểm tựa từ **11. 수식의 표기법 (Expression Notation)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. 검색 및 해싱 (Search & Hashing)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **12. 외부 정렬 및 정렬 알고리즘 (External Sort & Sorting Algorithms)** nối từ **11. 수식의 표기법 (Expression Notation)** sang **13. 검색 및 해싱 (Search & Hashing)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. 외부 정렬 및 정렬 알고리즘 (External Sort & Sorting Algorithms)
 
@@ -2710,7 +2710,7 @@ Như vậy, **12. 외부 정렬 및 정렬 알고리즘 (External Sort & Sorting
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **13. 검색 및 해싱 (Search & Hashing)** tiếp nhận điểm tựa từ **12. 외부 정렬 및 정렬 알고리즘 (External Sort & Sorting Algorithms)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. 파일 편성 방식 (File Organization)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **13. 검색 및 해싱 (Search & Hashing)** nối từ **12. 외부 정렬 및 정렬 알고리즘 (External Sort & Sorting Algorithms)** sang **14. 파일 편성 방식 (File Organization)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. 검색 및 해싱 (Search & Hashing)
 
@@ -2739,7 +2739,7 @@ Ta có thể khép mục **13. 검색 및 해싱 (Search & Hashing)** bằng m�
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **14. 파일 편성 방식 (File Organization)** tiếp nhận điểm tựa từ **13. 검색 및 해싱 (Search & Hashing)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. 애자일 방법론 (Agile Methodology)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **14. 파일 편성 방식 (File Organization)** nối từ **13. 검색 및 해싱 (Search & Hashing)** sang **6. 애자일 방법론 (Agile Methodology)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 14. 파일 편성 방식 (File Organization)
 
@@ -2763,7 +2763,7 @@ Phần “14. 파일 편성 방식 (File Organization)” được nối với n
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **6. 애자일 방법론 (Agile Methodology)** tiếp nhận điểm tựa từ **14. 파일 편성 방식 (File Organization)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. 스크럼(Scrum) 및 XP(eXtreme Programming)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **6. 애자일 방법론 (Agile Methodology)** nối từ **14. 파일 편성 방식 (File Organization)** sang **7. 스크럼(Scrum) 및 XP(eXtreme Programming)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. 애자일 방법론 (Agile Methodology)
 
@@ -2784,7 +2784,7 @@ Như vậy, **6. 애자일 방법론 (Agile Methodology)** không chỉ cung c�
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **7. 스크럼(Scrum) 및 XP(eXtreme Programming)** tiếp nhận điểm tựa từ **6. 애자일 방법론 (Agile Methodology)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **7. 스크럼(Scrum) 및 XP(eXtreme Programming)** nối từ **6. 애자일 방법론 (Agile Methodology)** sang **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. 스크럼(Scrum) 및 XP(eXtreme Programming)
 
@@ -2808,7 +2808,7 @@ Ta có thể khép mục **7. 스크럼(Scrum) 및 XP(eXtreme Programming)** b�
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)** tiếp nhận điểm tựa từ **7. 스크럼(Scrum) 및 XP(eXtreme Programming)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)** nối từ **7. 스크럼(Scrum) 및 XP(eXtreme Programming)** sang **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)
 
@@ -2831,7 +2831,7 @@ Phần “2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)” được n�
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)** tiếp nhận điểm tựa từ **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. 구조적 분석 도구 (Structured Analysis Tools)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)** nối từ **2. 스크럼 및 XP 추가 개념 (Advanced Scrum & XP)** sang **6. 구조적 분석 도구 (Structured Analysis Tools)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. 운영 환경 구축 고려사항 (Operation Environment Considerations)
 
@@ -2851,7 +2851,7 @@ Như vậy, **4. 운영 환경 구축 고려사항 (Operation Environment Consid
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **6. 구조적 분석 도구 (Structured Analysis Tools)** tiếp nhận điểm tựa từ **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. 소프트웨어 설계 원리 (Software Design Principles)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **6. 구조적 분석 도구 (Structured Analysis Tools)** nối từ **4. 운영 환경 구축 고려사항 (Operation Environment Considerations)** sang **10. 소프트웨어 설계 원리 (Software Design Principles)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. 구조적 분석 도구 (Structured Analysis Tools)
 
@@ -2876,7 +2876,7 @@ Ta có thể khép mục **6. 구조적 분석 도구 (Structured Analysis Tools
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **10. 소프트웨어 설계 원리 (Software Design Principles)** tiếp nhận điểm tựa từ **6. 구조적 분석 도구 (Structured Analysis Tools)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. 결합도 (Coupling - Độ phụ thuộc)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **10. 소프트웨어 설계 원리 (Software Design Principles)** nối từ **6. 구조적 분석 도구 (Structured Analysis Tools)** sang **3. 결합도 (Coupling - Độ phụ thuộc)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. 소프트웨어 설계 원리 (Software Design Principles)
 
@@ -2902,7 +2902,7 @@ Phần “10. 소프트웨어 설계 원리 (Software Design Principles)” đư
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **3. 결합도 (Coupling - Độ phụ thuộc)** tiếp nhận điểm tựa từ **10. 소프트웨어 설계 원리 (Software Design Principles)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. 응집도 (Cohesion - Độ gắn kết)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **3. 결합도 (Coupling - Độ phụ thuộc)** nối từ **10. 소프트웨어 설계 원리 (Software Design Principles)** sang **4. 응집도 (Cohesion - Độ gắn kết)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. 결합도 (Coupling - Độ phụ thuộc)
 
@@ -2946,7 +2946,7 @@ Như vậy, **3. 결합도 (Coupling - Độ phụ thuộc)** không chỉ cung 
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. 응집도 (Cohesion - Độ gắn kết)** tiếp nhận điểm tựa từ **3. 결합도 (Coupling - Độ phụ thuộc)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Fan-In / Fan-Out (팬인 / 팬아웃)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **4. 응집도 (Cohesion - Độ gắn kết)** nối từ **3. 결합도 (Coupling - Độ phụ thuộc)** sang **5. Fan-In / Fan-Out (팬인 / 팬아웃)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. 응집도 (Cohesion - Độ gắn kết)
 
@@ -2987,7 +2987,7 @@ Ta có thể khép mục **4. 응집도 (Cohesion - Độ gắn kết)** bằng 
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **5. Fan-In / Fan-Out (팬인 / 팬아웃)** tiếp nhận điểm tựa từ **4. 응집도 (Cohesion - Độ gắn kết)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. N-S 차트 (Nassi-Schneiderman Chart)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **5. Fan-In / Fan-Out (팬인 / 팬아웃)** nối từ **4. 응집도 (Cohesion - Độ gắn kết)** sang **6. N-S 차트 (Nassi-Schneiderman Chart)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Fan-In / Fan-Out (팬인 / 팬아웃)
 
@@ -3012,7 +3012,7 @@ Từ **4. 응집도 (Cohesion - Độ gắn kết)**, ta đã có điểm tựa 
 
 ---
 
-> **Chuyển mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **6. N-S 차트 (Nassi-Schneiderman Chart)** tiếp nhận điểm tựa từ **5. Fan-In / Fan-Out (팬인 / 팬아웃)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. 재사용 (Reuse)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **6. N-S 차트 (Nassi-Schneiderman Chart)** nối từ **5. Fan-In / Fan-Out (팬인 / 팬아웃)** sang **8. 재사용 (Reuse)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. N-S 차트 (Nassi-Schneiderman Chart)
 
@@ -3031,7 +3031,7 @@ Như vậy, **6. N-S 차트 (Nassi-Schneiderman Chart)** không chỉ cung cấp
 
 ---
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **8. 재사용 (Reuse)** tiếp nhận điểm tựa từ **6. N-S 차트 (Nassi-Schneiderman Chart)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. 코드 (Code) 개요 & 종류** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **8. 재사용 (Reuse)** nối từ **6. N-S 차트 (Nassi-Schneiderman Chart)** sang **10. 코드 (Code) 개요 & 종류**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. 재사용 (Reuse)
 
@@ -3054,7 +3054,7 @@ Ta có thể khép mục **8. 재사용 (Reuse)** bằng một câu hỏi bàn g
 
 ---
 
-> **Chuyển mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **10. 코드 (Code) 개요 & 종류** tiếp nhận điểm tựa từ **8. 재사용 (Reuse)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Môn 1 — 소프트웨어 설계 (Software Design) (Thiết kế phần mềm)**, **10. 코드 (Code) 개요 & 종류** nối từ **8. 재사용 (Reuse)** sang phần giải thích tiếp theo, vì phần trước cung cấp điểm tựa cho chủ đề này.
 
 ## 10. 코드 (Code) 개요 & 종류
 

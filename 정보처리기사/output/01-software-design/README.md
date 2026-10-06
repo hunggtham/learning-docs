@@ -8,7 +8,7 @@
 
 1. [Tài liệu học đầy đủ](01-tai-lieu-hoc-day-du.md)
 
-> **Chuyển mạch:** **Bài học** đặt requirement, architecture và design principle; **Các bài học theo chủ đề** gom chúng theo task Môn 1, rồi **Ghi chú học** nêu boundary và trade-off.
+> **Nối mạch:** **Bài học** đặt requirement, architecture và design principle; **Các bài học theo chủ đề** gom chúng theo task Môn 1, rồi **Ghi chú học** nêu boundary và trade-off.
 
 ## Các bài học theo chủ đề
 
@@ -82,7 +82,7 @@
 68. [8. 재사용 (Reuse)](lessons/68-bai-hoc.md)
 69. [10. 코드 (Code) 개요 & 종류](lessons/69-bai-hoc.md)
 
-> **Chuyển mạch:** **Ghi chú học** giải thích constraint và failure của design choice; **Mạch bài giảng** nối chúng thành reasoning từ yêu cầu đến cấu trúc.
+> **Nối mạch:** **Ghi chú học** giải thích constraint và failure của design choice; **Mạch bài giảng** nối chúng thành reasoning từ yêu cầu đến cấu trúc.
 
 ## Ghi chú học
 
@@ -92,13 +92,13 @@ Phần này hướng dẫn cách dùng tài liệu như một bài giảng, đ�
 - Đọc ví dụ ngay sau khái niệm vì các bài có nhiều cặp dễ nhầm như `결합도 (Coupling) (độ phụ thuộc)` và `응집도 (Cohesion) (độ gắn kết)`.
 - Phần mở rộng/nâng cao không phải nội dung rời: nó nhắc lại kiến thức nền ở mức sâu hơn hoặc trong ngữ cảnh khác.
 
-> **Chuyển mạch:** **Mạch bài giảng** biến design mechanism thành route có thể truy dấu; **Checklist ôn tập** đối chiếu invariant, owner và evidence.
+> **Nối mạch:** **Mạch bài giảng** biến design mechanism thành route có thể truy dấu; **Checklist ôn tập** đối chiếu invariant, owner và evidence.
 
 ## Mạch bài giảng
 
 Mỗi lesson mở bằng prerequisite và mục đích, đi qua nội dung nguồn bằng các câu nối tự nhiên, rồi kết thúc bằng điểm chốt và hướng bàn giao sang lesson kế tiếp. Khi học, đừng bỏ qua các đoạn prose này: chúng giải thích vì sao các bullet, bảng và ví dụ được đặt cạnh nhau.
 
-> **Chuyển mạch:** **Checklist ôn tập** xác nhận design boundary và link canonical; **Bài học bổ sung / Deep Dive** chỉ mở khi cần cơ chế sâu hơn.
+> **Nối mạch:** **Checklist ôn tập** xác nhận design boundary và link canonical; **Bài học bổ sung / Deep Dive** chỉ mở khi cần cơ chế sâu hơn.
 
 ## 복습 체크리스트 (Checklist ôn tập)
 
@@ -109,7 +109,7 @@ Checklist này khép lại bài bằng các tiêu chí tự rà soát; hãy dùn
 - [ ] 비슷한 개념과 구별 기준을 말할 수 있는가?
 - [ ] 예시 또는 간단한 문제에 개념을 적용할 수 있는가?
 
-> **Chuyển mạch:** **Deep Dive** khép Môn 1 bằng owner và boundary rõ; chi tiết pattern hoặc architecture quay về chapter chuyên môn tương ứng.
+> **Nối mạch:** **Deep Dive** khép Môn 1 bằng owner và boundary rõ; chi tiết pattern hoặc architecture quay về chapter chuyên môn tương ứng.
 
 ## Bài học bổ sung / Deep Dive
 
