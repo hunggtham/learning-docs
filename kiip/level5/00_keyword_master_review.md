@@ -1705,6 +1705,14 @@ Ngoài các mục có mốc rõ ở trên, **không học cứng** các dữ li�
 - Nếu đề dẫn một năm, hợp đồng hoặc sự kiện lịch sử cụ thể, trả lời theo **quy định có hiệu lực tại thời điểm đó**.
 - Với luật/chính sách đang chuyển tiếp, ưu tiên `시행일 + 경과규정 + kỳ thi notice`, không suy từ mỗi tên luật.
 
+**Số cũ cần nhận diện nhưng không dùng làm fact hiện hành:**
+- `예금자보호 5천만원`: từng xuất hiện trong tài liệu cũ; current layer của master dùng `1억원`.
+- `법정 최고금리 연 24%`: dữ liệu cũ; current layer dùng `연 20%`.
+
+Ngoài ba mục trên, **không học cứng** các dữ liệu sau nếu không có timestamp: `1인 가구 비율`, dân số Seoul, tỷ lệ tôn giáo, tỷ lệ học đại học, số du học sinh, mức/trợ cấp sinh con–chăm trẻ, chi tiết visa–quốc tịch, quyền bầu cử của từng nhóm đối tượng và format kỳ thi. Các dữ liệu này có thể thay đổi theo năm, chính sách hoặc loại kỳ đánh giá.
+
+`시험 문항 수·시간·작문 분량·합격 기준`도 notice에 따라 달라질 수 있으므로, handbook chỉ giữ nguyên tắc và dùng thông báo kỳ thi hiện hành làm authority cuối cùng.
+
 Trước ngày thi, mở `00_current_facts_and_corrections.md` và notice mới nhất của `kiiptest.org`.
 
 ## D4. 기관 → 한국어 설명 (giải thích tiếng Việt)
