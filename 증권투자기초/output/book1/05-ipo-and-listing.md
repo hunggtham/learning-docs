@@ -142,25 +142,25 @@ Phát hành theo giá thị trường có thể giúp công ty huy động
 nhiều tiền hơn với cùng số cổ phiếu, giảm chi phí vốn và làm giá cổ phiếu điều
 chỉnh bớt đột ngột quanh ngày phát hành.
 
-Trong mô hình tính này, giá lý thuyết sau ngày không hưởng quyền được hình
-thành từ giá cơ sở, giá phát hành và tỷ lệ cổ phiếu mới:
+Trong source, phần ôn tập dùng ba quan hệ khác nhau và cần giữ đúng biến:
 
-```text
-Giá lý thuyết sau quyền
-≈ (Giá cơ sở + Giá phát hành × Tỷ lệ tăng vốn)
-  / (1 + Tỷ lệ tăng vốn)
+~~~text
+Giá lý thuyết sau quyền (이론권리락주가)
+= (P0 + E × r) / (1 + r)
 
-Giá phát hành vòng 1
-≈ Giá lý thuyết sau quyền × (1 − Tỷ lệ chiết khấu)
-Giá phát hành vòng 2
-≈ Giá cơ sở vòng 2 × (1 − Tỷ lệ chiết khấu)
-Giá cuối cùng
-= số thấp hơn giữa giá phát hành vòng 1 và vòng 2
-```
+Giá phát hành vòng 1 (1차 발행가액)
+= P0 × (1 − d) / (1 + r × d)
 
-Các công thức này là cách trình bày theo snapshot của ấn bản; biến số, ngày
-tham chiếu, tỷ lệ và quy tắc chiết khấu phải được kiểm tra lại trước khi dùng cho
-một đợt phát hành thực tế.
+Giá phát hành vòng 2 (2차 발행가액)
+= P_ref,2 × (1 − d)
+~~~
+
+Trong đó `P0` là giá cơ sở (`기준주가`), `E` là **giá phát hành
+(`발행가액`)**, `r` là tỷ lệ tăng vốn có thu tiền (`유상증자비율`), `d` là
+tỷ lệ chiết khấu và `P_ref,2` là giá cơ sở dùng cho vòng 2. Đây là
+**SOURCE / TEXTBOOK STATE**: công thức được giữ để giải đúng cơ chế và câu hỏi
+nguồn, không được coi là công thức định giá phát hành hiện hành nếu chưa kiểm tra
+quy tắc của đợt phát hành thực tế.
 
 ### 6. Niêm yết là chấp nhận chứng khoán vào một thị trường giao dịch
 
@@ -251,41 +251,54 @@ Source dùng các tỷ lệ công chúng sau IPO (25% cho từng phương thức
 kết hợp trong phần mô tả lịch sử). Đây là **ngưỡng của ấn bản**, chỉ dùng để
 đọc logic “công khai phải đủ rộng”, không dùng làm tư vấn niêm yết hiện hành.
 
-### 10. Công thức quyền mua và cách kiểm tra OCR
+### 10. Công thức quyền mua — đã đối chiếu ảnh nguồn
 
-Đặt `P0` là giá cơ sở, `F` là mệnh giá, `r` là tỷ lệ cổ phiếu mới trên cổ phiếu
-cũ, `d` là tỷ lệ chiết khấu. Công thức nguồn được chép lại như sau:
+OCR của câu 50 làm công thức dễ bị đọc sai. Ảnh `raw/sach1/221.jpg` (trang in
+220) cho thấy bốn **phương án trắc nghiệm**; ảnh đáp án `raw/sach1/231.jpg`
+(trang in 230) xác nhận phương án ① là phương án sai. Lý do không phải “công
+thức mơ hồ”, mà là phương án ① dùng `액면가액` (**mệnh giá**) ở tử số, trong
+khi quan hệ đúng phải dùng `발행가액` (**giá phát hành**).
 
-```text
-이론권리락주가 = (P0 + F × r) / (1 + r)
-발행가액 = 이론권리락주가 × (1 − d)
-2차 발행가액 = 기준주가 × (1 − d)
-최종 발행가액 = giá thấp hơn giữa các giá phát hành theo vòng, nếu quy tắc nguồn yêu cầu
-```
+Vì vậy, công thức cần giữ là:
 
-Ở dòng `1차 발행가액`, ảnh/OCR của source làm mất dấu ngoặc và vị trí mẫu số;
-không nên tự sửa thành một công thức hiện hành. Khi làm bài, hãy đối chiếu ảnh
-trang 104–105 và ghi rõ biến nào là “giá cơ sở vòng 1”, biến nào là “giá tham
-chiếu”. Mục tiêu của công thức là cho thấy quyền mua làm pha loãng giá lý thuyết,
-không phải tạo một mức giá bảo đảm.
+~~~text
+이론권리락주가 = (P0 + E × r) / (1 + r)
+~~~
 
-#### 10.1. Ví dụ tính để nhìn thấy pha loãng
+- `P0` — `기준주가`: giá cơ sở trước điều chỉnh;
+- `E` — `발행가액`: giá mà cổ phiếu mới được phát hành;
+- `r` — `유상증자비율`: số cổ phiếu mới trên một đơn vị cổ phiếu cũ.
 
-Giả sử theo đúng ký hiệu của bài tập nguồn `P0 = 100`, `F = 10` và tỷ lệ cổ phiếu
-mới trên cổ phiếu cũ `r = 0,2`. Khi chưa thêm chiết khấu, phép tính minh họa là:
+Boundary quan trọng: **`발행가액 ≠ 액면가액`**. Mệnh giá là con số pháp lý/kế
+toán gắn với vốn; giá phát hành là mức dùng trong đợt tăng vốn. Thay hai biến này
+cho nhau sẽ làm sai cả cơ chế pha loãng lẫn đáp án câu 50.
 
-```text
+Cùng ảnh câu hỏi còn xác nhận biểu thức textbook cho vòng 1 và vòng 2:
+
+~~~text
+1차 발행가액 = P0 × (1 − d) / (1 + r × d)
+2차 발행가액 = P_ref,2 × (1 − d)
+~~~
+
+Các biểu thức này là **SOURCE / TEXTBOOK STATE**. Chúng giúp người học đọc đúng
+input, mẫu số và vai trò của discount; không tự động là quy tắc current cho một
+rights offering năm 2026.
+
+#### 10.1. Ví dụ tính để kiểm tra đúng biến
+
+Giả sử `P0 = 100`, **giá phát hành** `E = 80` và `r = 0,2`:
+
+~~~text
 giá lý thuyết sau quyền
-= (100 + 10 × 0,2) / (1 + 0,2)
-= 85
-```
+= (100 + 80 × 0,2) / (1 + 0,2)
+= 116 / 1,2
+≈ 96,67
+~~~
 
-Con số 85 không phải dự báo giá thị trường. Nó chỉ cho thấy khi số cổ phiếu tăng,
-giá trị doanh nghiệp được phân bổ trên nhiều đơn vị hơn nên giá lý thuyết mỗi đơn
-vị thay đổi. Giá phát hành thực tế còn phụ thuộc giá tham chiếu, mức chiết khấu,
-thời điểm tính và quy tắc của đợt phát hành. Nếu thay `F` bằng một biến có nghĩa
-khác trong tài liệu mới, phải viết lại toàn bộ phép tính thay vì bê nguyên kết quả
-85 sang trường hợp mới.
+Nếu thay nhầm `E = 80` bằng một mệnh giá không liên quan, kết quả không còn mô
+tả đúng lượng giá trị mới đi vào doanh nghiệp. Con số 96,67 vẫn chỉ là kết quả
+của mô hình textbook; giá thị trường thực tế còn phản ánh cung cầu, thông tin,
+thời điểm và quy tắc phát hành.
 
 ### 11. Bảng kiểm một hồ sơ IPO/niêm yết
 
