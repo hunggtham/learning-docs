@@ -7,9 +7,12 @@ chính → công cụ → thị trường → sản phẩm đầu tư tập th�
 ## Cách đọc
 
 Đọc tuần tự nếu bạn mới bắt đầu. Nếu cần tra cứu, đi thẳng vào topic tương ứng
-rồi quay lại phần trước để kiểm tra khái niệm nền. Các số liệu pháp lý, thuế,
-giờ giao dịch và điều kiện sản phẩm là snapshot của ấn bản nguồn, không phải
-hướng dẫn hiện hành.
+rồi quay lại phần trước để kiểm tra khái niệm nền.
+
+- **SOURCE / TEXTBOOK STATE:** số liệu pháp lý, thuế, giờ giao dịch, listing,
+  offering threshold và product/venue rule là snapshot của ấn bản nguồn.
+- **CURRENT VERIFIED STATE:** chỉ tồn tại khi lesson ghi rõ nguồn chính thức và
+  ngày snapshot. Nếu không có block đó, không dùng số textbook như quy định 2026.
 
 Nếu mục tiêu là đọc tiếng Hàn tốt hơn, xem trước [Hướng dẫn đọc thuật ngữ tiếng
 Hàn](./00-korean-reading-guide.md), rồi đọc nhóm keyword ở đầu mỗi topic.
