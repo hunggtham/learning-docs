@@ -277,8 +277,8 @@ Authority: `증권투자기초/raw_md/sach1.md`. Khi OCR không đủ để xác
 | Q1-04 | Ch1 review pp.211–231 / images 212–232 | REVIEW_QUESTION | Chapter 1 source question 4 | book1/02 | FULL | source answer O; concept available without returning to raw |
 | Q1-05 | Ch1 review pp.211–231 / images 212–232 | REVIEW_QUESTION | Chapter 1 source question 5 | book1/02 | FULL | source answer O; concept available without returning to raw |
 | Q1-06 | Ch1 review pp.211–231 / images 212–232 | REVIEW_QUESTION | Chapter 1 source question 6 | book1/04 | FULL | source answer O; concept available without returning to raw |
-| Q1-07 | Ch1 review pp.211–231 / images 212–232 | REVIEW_QUESTION | Chapter 1 source question 7 | book1/04 | FULL | source answer O; concept available without returning to raw |
-| Q1-08 | Ch1 review pp.211–231 / images 212–232 | REVIEW_QUESTION | Chapter 1 source question 8 | book1/02/04 | FULL | source answer O; concept available without returning to raw |
+| Q1-07 | Ch1 review pp.211–231 / images 212–232 | REVIEW_QUESTION | Chapter 1 source question 7 | book1/04 | FULL | source answer X; concept available without returning to raw |
+| Q1-08 | Ch1 review pp.211–231 / images 212–232 | REVIEW_QUESTION | Chapter 1 source question 8 | book1/02/04 | FULL | source answer X; concept available without returning to raw |
 | Q1-09 | Ch1 review pp.211–231 / images 212–232 | REVIEW_QUESTION | Chapter 1 source question 9 | book1/05 | FULL | source answer X; concept available without returning to raw |
 | Q1-10 | Ch1 review pp.211–231 / images 212–232 | REVIEW_QUESTION | Chapter 1 source question 10 | book1/02/08 | FULL | source answer X; concept available without returning to raw |
 | Q1-11 | Ch1 review pp.211–231 / images 212–232 | REVIEW_QUESTION | Chapter 1 source question 11 | book1/04 | FULL | source answer X; concept available without returning to raw |
