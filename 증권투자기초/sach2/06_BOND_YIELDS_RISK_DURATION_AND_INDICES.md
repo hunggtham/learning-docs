@@ -46,9 +46,20 @@ Yield curve xếp lợi suất theo kỳ hạn. Source trình bày bốn cách g
 
 Khi đọc một curve, hãy viết hai giả thuyết cạnh nhau: “thị trường đang dự báo short rate nào?” và “term/liquidity premium đang đóng góp bao nhiêu?”. Cách tách này ngăn việc gọi mọi đường cong dốc lên là tăng trưởng hoặc mọi đường cong đảo là suy thoái.
 
+### Spot rate và forward rate
+
+Source còn nối các điểm trên yield curve bằng forward rate. Nếu `s₁` là spot rate một năm và `s₂` là spot rate hai năm, forward một năm bắt đầu từ năm thứ hai thỏa:
+
+```text
+(1 + s₂)^2 = (1 + s₁) × (1 + f₁,₂)
+f₁,₂ = (1 + s₂)^2 / (1 + s₁) − 1
+```
+
+Ví dụ `s₁ = 8%`, `s₂ = 10%` cho `f₁,₂ ≈ 12,04%`. Đây là mức được ngụ ý bởi các spot rate trong mô hình, không phải cam kết lãi suất tương lai; term premium, thanh khoản và sai số đo lường vẫn có thể làm cách diễn giải kinh tế khác đi.
+
 ## 3. Tín dụng và xếp hạng
 
-Default risk là khả năng issuer không trả đủ hoặc đúng hạn. Credit rating của Moody’s, S&P, Fitch và các tổ chức khác là đánh giá tương đối về credit risk; rating không phải bảo hiểm và có thể chậm hơn thông tin thị trường. Spread so với trái phiếu tham chiếu bù cho default, liquidity, tax và các rủi ro khác. High-yield/junk bond có spread và xác suất tổn thất cao hơn trong textbook, nhưng lợi suất cao không tự bù đủ nếu recovery thấp hoặc thanh khoản biến mất.
+Default risk là khả năng issuer không trả đủ hoặc đúng hạn. Credit rating của Moody’s, S&P, Fitch và các tổ chức khác là đánh giá tương đối về credit risk; rating không phải bảo hiểm và có thể chậm hơn thông tin thị trường. Bảng source đặt vùng `BBB-/Baa3` quanh ranh giới investment grade và `BB/Ba` vào vùng speculative/high-yield; tên bậc và quy tắc phân loại phải đọc theo đúng agency, ngày phát hành và jurisdiction. Spread so với trái phiếu tham chiếu bù cho default, liquidity, tax và các rủi ro khác. High-yield/junk bond có spread và xác suất tổn thất cao hơn trong textbook, nhưng lợi suất cao không tự bù đủ nếu recovery thấp hoặc thanh khoản biến mất.
 
 ## 4. Duration và convexity
 
