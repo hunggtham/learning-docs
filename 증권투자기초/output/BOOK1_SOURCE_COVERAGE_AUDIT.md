@@ -8,11 +8,12 @@ hình, công thức hoặc answer key, ảnh tương ứng trong `증권투자�
 
 **PUBLICATION PASS**
 
-Pass này áp dụng cho source-specific learning route của Sách 1 trên branch
-`fix/securities-book1-publication-pass-v2`. Nó xác nhận semantic coverage,
-source fidelity, navigation, terminology và publication structure theo contract
-hiện tại; nó không biến các snapshot pháp lý/thị trường trong textbook thành
-quy định hiện hành 2026.
+Pass này áp dụng cho source-specific learning route của Sách 1 hiện nằm trên
+`main`. Publication audit gốc được thực hiện trên branch
+`fix/securities-book1-publication-pass-v2`; việc tích hợp Sách 2/3 sau đó không
+thay đổi semantic coverage của Sách 1. Pass xác nhận source fidelity, navigation,
+terminology và publication structure theo contract hiện tại; nó không biến các
+snapshot pháp lý/thị trường trong textbook thành quy định hiện hành 2026.
 
 ## 1. Semantic inventory
 
@@ -191,9 +192,11 @@ Ownership được tách rõ:
 - source-specific learning route: `증권투자기초/output/book1/`;
 - canonical concept owner: `investing/`.
 
-`investing/README.md` đăng ký Book 1 như source-specific route và giữ
-`investing/` làm canonical concept owner. Không di chuyển Book 1 chỉ để làm đẹp
-path và không tạo placeholder cho Book 2/3.
+`investing/README.md` đăng ký các source-book route của cả ba sách và giữ
+`investing/` làm canonical concept owner. Book 1 tiếp tục ở
+`증권투자기초/output/book1/`; Book 2/3 dùng
+`investing/90_securities_book2/` và `investing/90_securities_book3/`. Không di
+chuyển Book 1 chỉ để đồng nhất path khi ba lớp ownership vẫn phân biệt rõ.
 
 ## 10. Diff hygiene
 
