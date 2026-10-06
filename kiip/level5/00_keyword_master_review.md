@@ -11,6 +11,19 @@ Nếu chỉ còn ít thời gian, học theo thứ tự: **A. phản xạ bắt 
 
 KIIP 5단계 là `한국사회 이해`. Track **영주용** học phần `기본` 70 giờ; track **귀화용** học thêm `심화` 30 giờ. Trong `종합평가`, kiến thức xã hội không đứng một mình: đề còn kiểm tra năng lực tiếng Hàn, đọc hiểu, viết và nói. Vì vậy file này là **master keyword về kiến thức**, không phải từ điển toàn bộ `한국어와 한국문화 1~4단계`.
 
+## Cách đọc format song ngữ
+
+Từ phiên bản này, keyword chính dùng format thống nhất:
+
+`한국어 keyword: 한국어 설명 (giải thích tiếng Việt)`
+
+Ví dụ:
+
+- `국민주권`: 국가 권력의 정당성이 국민에게서 나온다는 원리입니다. (Chủ quyền nhân dân: quyền lực nhà nước có tính chính danh từ nhân dân.)
+- `전세`: 큰 보증금을 맡기고 일정 기간 주택을 빌리는 한국의 임대차 방식입니다. (Jeonse: thuê nhà bằng khoản đặt cọc lớn, thường không trả tiền thuê hàng tháng.)
+
+Phần tiếng Hàn được viết ngắn theo kiểu có thể dùng trực tiếp khi luyện `구술`; phần tiếng Việt trong ngoặc giúp kiểm tra hiểu đúng bản chất. Với tên người, địa danh và sự kiện, phần giải thích tập trung vào **vai trò cần nhớ trong KIIP**, không chỉ dịch tên.
+
 Phản xạ chuẩn cho một keyword:
 
 ```text
@@ -34,73 +47,98 @@ Ví dụ:
 
 ## A1. 국가·정치
 
-- `대한민국` — nước Đại Hàn Dân Quốc; `민주공화국`.
-- `국민주권` — chủ quyền thuộc về nhân dân.
-- `민주주의` — dân chủ; quyền lực nhà nước phải có tính chính danh và chịu kiểm soát.
-- `법치주의` — nhà nước và công dân đều hoạt động trong khuôn khổ pháp luật.
-- `헌법` — luật nền tảng quy định nguyên tắc nhà nước, cơ quan nhà nước và `기본권`.
-- `삼권분립` — `입법·행정·사법` được phân chia để tránh tập trung quyền lực.
-- `국회` — lập pháp; luật, ngân sách, giám sát.
-- `정부/행정부` — thực thi chính sách và pháp luật.
-- `법원/사법부` — xét xử.
-- `헌법재판소` — xét các vấn đề hiến pháp theo thẩm quyền luật định.
-- `선거의 4대 원칙` — `보통·평등·직접·비밀선거`.
-- `지방자치` — địa phương tự xử lý công việc địa phương trong phạm vi pháp luật.
+- `대한민국`: 국민이 주권을 가지는 민주공화국입니다. (Đại Hàn Dân Quốc là một nước cộng hòa dân chủ, nơi chủ quyền thuộc về nhân dân.)
+- `국민주권`: 국가 권력의 정당성이 국민에게서 나온다는 원리입니다. (Chủ quyền nhân dân: quyền lực nhà nước bắt nguồn từ nhân dân.)
+- `민주주의`: 국민이 정치에 참여하고 선거와 제도를 통해 권력을 통제하는 정치 원리입니다. (Dân chủ: người dân tham gia chính trị và kiểm soát quyền lực bằng bầu cử và thể chế.)
+- `법치주의`: 국가 권력과 국민 모두가 법에 따라 행동해야 한다는 원리입니다. (Pháp quyền: cả nhà nước và công dân đều phải hành động theo pháp luật.)
+- `헌법`: 국가의 기본 원리, 국민의 기본권, 국가기관의 구조를 정하는 최고 규범입니다. (Hiến pháp: quy định nguyên tắc nhà nước, quyền cơ bản và cơ cấu cơ quan nhà nước.)
+- `삼권분립`: 국가 권력을 입법·행정·사법으로 나누어 서로 견제하게 하는 원리입니다. (Tam quyền phân lập: chia quyền lực thành lập pháp, hành pháp và tư pháp để kiểm soát lẫn nhau.)
+- `국회`: 국민을 대표하여 법률을 만들고 예산을 심의하며 정부를 감시하는 입법기관입니다. (Quốc hội: cơ quan lập pháp, làm luật, xét ngân sách và giám sát chính phủ.)
+- `정부/행정부`: 법률과 정책을 실제로 집행하고 국가 행정을 운영합니다. (Chính phủ/hành pháp: thực thi luật, chính sách và vận hành hành chính nhà nước.)
+- `법원/사법부`: 법에 따라 분쟁과 범죄 사건을 재판합니다. (Tòa án/tư pháp: xét xử tranh chấp và vụ án theo pháp luật.)
+- `헌법재판소`: 법률이나 국가 작용이 헌법에 맞는지 등을 심판하는 헌법기관입니다. (Tòa Hiến pháp: xét các vấn đề về tính hợp hiến theo thẩm quyền.)
+- `선거의 4대 원칙`: 보통·평등·직접·비밀선거를 뜻합니다. (Bốn nguyên tắc bầu cử: phổ thông, bình đẳng, trực tiếp và bỏ phiếu kín.)
+- `지방자치`: 지역 주민이 법의 범위 안에서 지역의 일을 스스로 결정하고 처리하는 제도입니다. (Tự quản địa phương: người dân địa phương tham gia quyết định và xử lý công việc địa phương.)
 
 ## A2. 국가상징
 
-- `태극기` — quốc kỳ.
-- `태극` — biểu tượng trung tâm.
-- `건·곤·감·리` — bốn quẻ trên cờ.
-- `애국가` — quốc ca.
-- `무궁화` — quốc hoa.
-- `한글` / `훈민정음` — hệ chữ do vua Sejong cho tạo ra; đừng đồng nhất tên hệ chữ hiện đại với tên văn bản/ý niệm lịch sử một cách máy móc.
-- `세종대왕` — nhân vật gắn với `훈민정음`, khoa học và quản trị thời Joseon.
+- `태극기`: 대한민국의 국기입니다. (Quốc kỳ của Hàn Quốc.)
+- `태극`: 태극기 중앙의 문양으로 음과 양의 조화를 상징합니다. (Biểu tượng âm-dương ở giữa quốc kỳ, thể hiện sự hài hòa.)
+- `건·곤·감·리`: 태극기 네 모서리의 괘로 하늘·땅·물·불을 상징합니다. (Bốn quẻ trên quốc kỳ, tượng trưng cho trời, đất, nước và lửa.)
+- `애국가`: 대한민국의 국가입니다. (Quốc ca của Hàn Quốc.)
+- `무궁화`: 대한민국을 상징하는 나라꽃입니다. (Quốc hoa của Hàn Quốc.)
+- `한글`: 한국어를 적는 문자 체계입니다. (Hệ chữ dùng để viết tiếng Hàn.)
+- `훈민정음`: 세종대왕이 백성을 위해 창제하게 한 문자이자 그 해설서의 이름입니다. (Tên chữ/văn bản do vua Sejong cho sáng tạo để người dân dễ học chữ.)
+- `세종대왕`: 훈민정음 창제와 과학·문화 발전으로 유명한 조선의 왕입니다. (Vua Sejong, nổi tiếng với việc sáng tạo Hunminjeongeum và phát triển khoa học, văn hóa.)
 
 ## A3. Xã hội – đời sống
 
-- `대가족` ↔ `핵가족` ↔ `1인 가구`.
-- `가족` ↔ `가구` ↔ `세대`.
-- `맞벌이`, `비혼`, `만혼`, `한부모가족`, `다문화가족`, `재혼가족`.
-- `자가` ↔ `전세` ↔ `월세`.
-- `전입신고`, `확정일자`, `등기부등본`.
-- `4대 사회보험` — `국민건강보험·고용보험·국민연금·산업재해보상보험`.
-- `사회보험` ↔ `공공부조` ↔ `사회서비스`.
-- `112` 경찰 / `119` 화재·구급 / `117` 학교폭력 / `1345` 외국인종합안내.
+- `대가족`: 여러 세대의 가족이 함께 사는 가족 형태입니다. (Đại gia đình gồm nhiều thế hệ cùng sống.)
+- `핵가족`: 부부와 미혼 자녀를 중심으로 이루어진 가족 형태입니다. (Gia đình hạt nhân gồm vợ chồng và con chưa kết hôn.)
+- `1인 가구`: 한 사람이 독립적으로 생활하는 가구입니다. (Hộ một người sống độc lập.)
+- `가족`: 혼인·혈연·입양 등으로 맺어진 관계를 중심으로 한 집단입니다. (Gia đình: nhóm người gắn kết bởi hôn nhân, huyết thống hoặc nhận nuôi.)
+- `가구`: 주거와 생계를 함께하는 생활 단위입니다. (Hộ gia đình: đơn vị cùng sinh sống và chi tiêu.)
+- `세대`: 비슷한 시기와 경험을 공유하는 연령·사회 집단입니다. (Thế hệ: nhóm tuổi/xã hội chia sẻ thời kỳ và trải nghiệm tương tự.)
+- `맞벌이`: 부부가 모두 경제활동을 하는 형태입니다. (Cả hai vợ chồng đều đi làm.)
+- `비혼`: 결혼하지 않는 삶을 선택하거나 결혼 상태가 아닌 것을 말합니다. (Không kết hôn/lựa chọn sống không kết hôn.)
+- `만혼`: 비교적 늦은 나이에 결혼하는 현상입니다. (Kết hôn muộn.)
+- `한부모가족`: 부 또는 모 한 사람이 자녀를 양육하는 가족입니다. (Gia đình đơn thân.)
+- `다문화가족`: 서로 다른 문화적 배경을 가진 구성원이 함께 이루는 가족입니다. (Gia đình đa văn hóa.)
+- `재혼가족`: 이혼·사별 후 다시 결혼하여 이루어진 가족입니다. (Gia đình hình thành sau tái hôn.)
+- `자가`: 자신이 소유한 집에서 거주하는 형태입니다. (Nhà tự sở hữu.)
+- `전세`: 큰 보증금을 맡기고 일정 기간 주택을 빌리는 한국의 임대차 방식입니다. (Jeonse: thuê nhà bằng khoản đặt cọc lớn.)
+- `월세`: 보증금과 함께 또는 별도로 매달 임대료를 내는 방식입니다. (Wolse: thuê nhà trả tiền hàng tháng.)
+- `전입신고`: 새 주소로 이사한 사실을 행정기관에 신고하는 절차입니다. (Khai báo chuyển đến địa chỉ cư trú mới.)
+- `확정일자`: 주택임대차계약서에 공적인 날짜를 부여받는 절차입니다. (Ngày xác nhận chính thức trên hợp đồng thuê nhà.)
+- `등기부등본`: 부동산의 소유권과 권리관계를 확인하는 등기 기록입니다. (Bản đăng ký bất động sản để kiểm tra chủ sở hữu và quyền liên quan.)
+- `4대 사회보험`: 국민건강보험·고용보험·국민연금·산업재해보상보험을 묶어 부르는 말입니다. (Bốn bảo hiểm xã hội chính: y tế, việc làm, hưu trí và tai nạn lao động.)
+- `사회보험`: 보험료를 바탕으로 사회적 위험에 대비하는 제도입니다. (Bảo hiểm xã hội dựa trên đóng góp để ứng phó rủi ro.)
+- `공공부조`: 생활이 어려운 사람에게 국가가 세금 등으로 지원하는 제도입니다. (Trợ giúp công cho người khó khăn bằng nguồn lực nhà nước.)
+- `사회서비스`: 돌봄·복지·재활 등 생활에 필요한 서비스를 제공하는 제도입니다. (Dịch vụ xã hội như chăm sóc, phúc lợi, phục hồi.)
+- `112`: 범죄 신고와 경찰 긴급 도움을 요청하는 번호입니다. (Số báo cảnh sát/tội phạm.)
+- `119`: 화재·구급·구조가 필요할 때 연락하는 번호입니다. (Số cứu hỏa, cấp cứu và cứu hộ.)
+- `117`: 학교폭력 신고·상담과 관련된 번호입니다. (Số tư vấn/báo cáo bạo lực học đường.)
+- `1345`: 출입국·체류·국적 등 외국인 관련 안내 번호입니다. (Số tư vấn về xuất nhập cảnh, cư trú, quốc tịch.)
 
 ## A4. Giáo dục
 
-- `어린이집` — 보육 중심, 보건복지부.
-- `유치원` — 유아교육 중심, 교육부.
-- `6-3-3` — 초등학교 6년 → 중학교 3년 → 고등학교 3년.
-- `의무교육` — 초등학교 + 중학교.
+- `어린이집`: 보육을 중심으로 영유아를 돌보는 기관이며 보건복지부 체계와 연결됩니다. (Nhà trẻ tập trung chăm sóc trẻ, thuộc hệ thống phúc lợi/y tế.)
+- `유치원`: 유아교육을 중심으로 운영되는 교육기관이며 교육부 체계와 연결됩니다. (Trường mẫu giáo tập trung giáo dục mầm non, thuộc hệ thống giáo dục.)
+- `6-3-3`: 초등학교 6년, 중학교 3년, 고등학교 3년의 학제입니다. (Hệ thống 6 năm tiểu học, 3 năm THCS, 3 năm THPT.)
+- `의무교육`: 국가가 모든 아동에게 받도록 보장하고 의무화한 교육으로 기본적으로 초등학교와 중학교가 해당합니다. (Giáo dục bắt buộc, cơ bản gồm tiểu học và THCS.)
 - `일반고·특수목적고·특성화고·자율형 고등학교`.
-- `수시` ↔ `정시`.
-- `수능` = `대학수학능력시험`.
+- `수시`: 학생부·서류·면접 등 다양한 자료를 활용하는 대학 모집 방식입니다. (Tuyển sinh đại học đợt sớm dùng học bạ, hồ sơ, phỏng vấn và nhiều tiêu chí.)
+- `정시`: 주로 수능 성적 등을 중심으로 선발하는 정기 모집입니다. (Tuyển sinh chính quy, thường tập trung vào điểm CSAT.)
+- `수능`: 대학 입학에 활용되는 국가 단위 시험인 대학수학능력시험의 줄임말입니다. (CSAT, kỳ thi năng lực đại học quốc gia.)
 - `평생교육`, `학점은행제`, `독학학위제`.
 
 ## A5. Kinh tế – tài chính
 
-- `재화` ↔ `서비스`.
+- `재화`: 사람의 욕구를 충족하는 유형의 상품입니다. (Hàng hóa hữu hình.)
+- `서비스`: 형태가 없는 활동이나 편익을 제공하는 경제적 가치입니다. (Dịch vụ, giá trị kinh tế vô hình.)
 - `생산·분배·소비`.
 - `물가`, `금리`, `한국은행`.
 - `소득·지출·저축·자산·부채·유동성`.
 - `예금·적금·대출·이자·신용·투자·보험`.
-- `한국소비자원` — tranh chấp/quyền lợi người tiêu dùng.
+- `한국소비자원`: 소비자 피해 상담과 분쟁 해결을 지원하는 기관입니다. (Cơ quan hỗ trợ tư vấn và giải quyết tranh chấp người tiêu dùng.)
 - `보이스피싱·스미싱·파밍·메신저피싱`.
 - `근로계약서`, `임금`, `근로시간`, `휴일·휴가`, `퇴직금`, `산업안전`.
 
 ## A6. Pháp luật – cư trú
 
-- `출입국관리법`.
+- `출입국관리법`: 외국인의 입국·체류·출국 등을 규율하는 법입니다. (Luật quản lý xuất nhập cảnh và cư trú của người nước ngoài.)
 - `사증(비자)`, `체류자격`, `체류기간`, `외국인등록`.
-- `영주권/영주자격` ↔ `국적`.
+- `영주권/영주자격`: 외국 국적을 유지하면서 장기간 안정적으로 체류할 수 있는 지위입니다. (Tư cách thường trú dài hạn, không đồng nghĩa quốc tịch.)
+- `국적`: 어떤 국가의 국민이라는 법적 지위입니다. (Quốc tịch: địa vị pháp lý là công dân của một quốc gia.)
 - `일반귀화·간이귀화·특별귀화`.
-- `법률혼` ↔ `사실혼`.
-- `협의이혼` ↔ `재판상 이혼`.
-- `민사` ↔ `형사`.
+- `법률혼`: 법이 정한 혼인신고를 마친 법률상 부부 관계입니다. (Hôn nhân hợp pháp đã đăng ký.)
+- `사실혼`: 혼인신고는 없지만 실질적으로 부부처럼 공동생활을 하는 관계입니다. (Quan hệ vợ chồng thực tế nhưng chưa đăng ký.)
+- `협의이혼`: 부부가 이혼에 합의하여 법정 절차를 거쳐 이혼하는 방식입니다. (Ly hôn thuận tình.)
+- `재판상 이혼`: 합의가 어렵거나 법정 사유가 있을 때 재판으로 이혼하는 방식입니다. (Ly hôn qua tòa án.)
+- `민사`: 개인·법인 사이의 권리와 재산 분쟁을 다루는 법 영역입니다. (Dân sự: tranh chấp quyền và tài sản.)
+- `형사`: 범죄와 형벌에 관한 법적 절차나 사건을 말합니다. (Hình sự: vụ việc/thủ tục về tội phạm và hình phạt.)
 - `수사·기소·재판`.
-- `무죄추정`.
+- `무죄추정`: 유죄 판결이 확정되기 전까지는 무죄로 추정한다는 원칙입니다. (Nguyên tắc suy đoán vô tội cho tới khi có phán quyết có hiệu lực.)
 - `대한법률구조공단`, `국가인권위원회`, `국민권익위원회`.
 
 ## A7. Lịch sử
@@ -121,9 +159,10 @@ Chuỗi dân chủ hóa:
 
 - `수도권 = 서울·경기·인천`.
 - `충청·전라(호남)·경상(영남)·강원·제주`.
-- `동고서저`.
+- `동고서저`: 한반도의 지형이 동쪽이 높고 서쪽이 낮다는 특징입니다. (Địa hình bán đảo cao ở phía đông, thấp ở phía tây.)
 - `사계절`, `장마`, `태풍`.
-- `표준어` ↔ `사투리`.
+- `표준어`: 공적인 의사소통의 기준으로 정한 표준적인 말입니다. (Ngôn ngữ chuẩn dùng làm chuẩn giao tiếp chính thức.)
+- `사투리`: 특정 지역에서 주로 사용하는 지역어입니다. (Phương ngữ địa phương.)
 - `수도권 집중`, `지방소멸`.
 
 ---
