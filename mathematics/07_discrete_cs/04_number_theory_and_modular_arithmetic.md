@@ -61,7 +61,7 @@ a\mid(rb+sc).
 
 Đây là nguồn (source / 소스) của rất nhiều arguments về gcd và congruence.
 
-> **Chuyển mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **2. Division thuật toán (algorithm / 알고리즘)** tiếp nhận điểm tựa từ **1. Divisibility là structural quan hệ (relation / 관계)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **3. GCD là greatest dùng chung (common / 공통) cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **2. Division thuật toán (algorithm / 알고리즘)** nối từ **1. Divisibility là structural quan hệ (relation / 관계)** sang **3. GCD là greatest dùng chung (common / 공통) cấu trúc (structure / 구조)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 2. Division thuật toán (algorithm / 알고리즘)
 
@@ -78,7 +78,7 @@ a=qn+r,
 
 Nó là nền của Euclidean thuật toán (algorithm / 알고리즘) và modular arithmetic.
 
-> **Chuyển mạch:** Ở chặng này của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **3. GCD là greatest dùng chung (common / 공통) cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **2. Division thuật toán (algorithm / 알고리즘)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **4. Euclidean thuật toán (algorithm / 알고리즘): vì sao thay (a,b) bằng (b,r) được?** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **3. GCD là greatest dùng chung (common / 공통) cấu trúc (structure / 구조)** nối từ **2. Division thuật toán (algorithm / 알고리즘)** sang **4. Euclidean thuật toán (algorithm / 알고리즘): vì sao thay (a,b) bằng (b,r) được?**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 3. GCD là greatest dùng chung (common / 공통) cấu trúc (structure / 구조)
 
@@ -98,7 +98,7 @@ Ví dụ:
 
 Nhưng definition “largest dùng chung (shared / 공유) factor” chưa cho thuật toán (algorithm / 알고리즘) hiệu quả. Euclid tìm cấu trúc (structure / 구조) sâu hơn.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **4. Euclidean thuật toán (algorithm / 알고리즘): vì sao thay (a,b) bằng (b,r) được?** tiếp nhận điểm tựa từ **3. GCD là greatest dùng chung (common / 공통) cấu trúc (structure / 구조)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **5. Termination và algorithmic lập luận (reasoning / 추론)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **4. Euclidean thuật toán (algorithm / 알고리즘): vì sao thay (a,b) bằng (b,r) được?** nối từ **3. GCD là greatest dùng chung (common / 공통) cấu trúc (structure / 구조)** sang **5. Termination và algorithmic lập luận (reasoning / 추론)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 4. Euclidean thuật toán (algorithm / 알고리즘): vì sao thay `(a,b)` bằng `(b,r)` được?
 
@@ -136,7 +136,7 @@ nên
 
 Điểm quan trọng là mỗi step không “đoán” gcd; nó thay bài toán (problem / 문제) bằng equivalent smaller bài toán (problem / 문제).
 
-> **Chuyển mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **5. Termination và algorithmic lập luận (reasoning / 추론)** tiếp nhận điểm tựa từ **4. Euclidean thuật toán (algorithm / 알고리즘): vì sao thay (a,b) bằng (b,r) được?** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **6. Bézout định danh (identity / 식별자)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **5. Termination và algorithmic lập luận (reasoning / 추론)** nối từ **4. Euclidean thuật toán (algorithm / 알고리즘): vì sao thay (a,b) bằng (b,r) được?** sang **6. Bézout định danh (identity / 식별자)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 5. Termination và algorithmic lập luận (reasoning / 추론)
 
@@ -150,7 +150,7 @@ nên chuỗi (sequence / 시퀀스) remainders là decreasing nonnegative intege
 
 Đây là ví dụ number lý thuyết (theory / 이론) nối trực tiếp với proof of termination trong algorithms.
 
-> **Chuyển mạch:** Ở chặng này của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **6. Bézout định danh (identity / 식별자)** tiếp nhận điểm tựa từ **5. Termination và algorithmic lập luận (reasoning / 추론)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **7. Prime numbers là atoms của multiplication** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **6. Bézout định danh (identity / 식별자)** nối từ **5. Termination và algorithmic lập luận (reasoning / 추론)** sang **7. Prime numbers là atoms của multiplication**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 6. Bézout định danh (identity / 식별자)
 
@@ -176,7 +176,7 @@ Ta có thể tìm:
 
 Bézout định danh (identity / 식별자) là cầu nối (bridge / 브리지) trực tiếp tới modular inverse.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **7. Prime numbers là atoms của multiplication** tiếp nhận điểm tựa từ **6. Bézout định danh (identity / 식별자)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **8. GCD/LCM từ prime exponents** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **7. Prime numbers là atoms của multiplication** nối từ **6. Bézout định danh (identity / 식별자)** sang **8. GCD/LCM từ prime exponents**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 7. Prime numbers là atoms của multiplication
 
@@ -192,7 +192,7 @@ n=p_1^{a_1}\cdots p_k^{a_k}.
 
 Prime factorization đóng vai trò như “coordinate hệ thống (system / 시스템)” cho multiplicative cấu trúc (structure / 구조) của positive integers.
 
-> **Chuyển mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **8. GCD/LCM từ prime exponents** tiếp nhận điểm tựa từ **7. Prime numbers là atoms của multiplication** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **9. Infinitely many primes: proof idea** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **8. GCD/LCM từ prime exponents** nối từ **7. Prime numbers là atoms của multiplication** sang **9. Infinitely many primes: proof idea**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 8. GCD/LCM từ prime exponents
 
@@ -222,7 +222,7 @@ và
 \gcd(n,m)\operatorname{lcm}(n,m)=|nm|.
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **9. Infinitely many primes: proof idea** tiếp nhận điểm tựa từ **8. GCD/LCM từ prime exponents** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **10. Congruence modulo n** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **9. Infinitely many primes: proof idea** nối từ **8. GCD/LCM từ prime exponents** sang **10. Congruence modulo n**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 9. Infinitely many primes: proof idea
 
@@ -242,7 +242,7 @@ Không `p_i` nào chia `N` vì remainder là 1. Nhưng `N>1` phải có prime di
 
 Điểm đáng học không chỉ theorem mà là proof chiến lược (strategy / 전략): bản dựng (build / 빌드) đối tượng (object / 객체) cố tình nằm ngoài assumed complete danh sách (list / 목록).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **10. Congruence modulo n** tiếp nhận điểm tựa từ **9. Infinitely many primes: proof idea** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **11. Modular arithmetic không chỉ là %** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **10. Congruence modulo n** nối từ **9. Infinitely many primes: proof idea** sang **11. Modular arithmetic không chỉ là %**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 10. Congruence modulo n
 
@@ -274,7 +274,7 @@ Nó partition `\mathbb Z` thành remainder classes:
 [0],[1],\ldots,[n-1].
 ```
 
-> **Chuyển mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **11. Modular arithmetic không chỉ là %** tiếp nhận điểm tựa từ **10. Congruence modulo n** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **12. Addition và multiplication descend xuống residue classes** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **11. Modular arithmetic không chỉ là %** nối từ **10. Congruence modulo n** sang **12. Addition và multiplication descend xuống residue classes**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 11. Modular arithmetic không chỉ là `%`
 
@@ -296,7 +296,7 @@ và
 
 Trong mathematics, lớp (class / 클래스) của `-1` và `4` là cùng lớp (class / 클래스) modulo 5.
 
-> **Chuyển mạch:** Ở chặng này của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **12. Addition và multiplication descend xuống residue classes** tiếp nhận điểm tựa từ **11. Modular arithmetic không chỉ là %** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **13. Modular inverse** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **12. Addition và multiplication descend xuống residue classes** nối từ **11. Modular arithmetic không chỉ là %** sang **13. Modular inverse**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 12. Addition và multiplication descend xuống residue classes
 
@@ -328,7 +328,7 @@ Proof đến từ divisibility của differences.
 
 Điều này làm arithmetic trên residue classes well-defined.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **13. Modular inverse** tiếp nhận điểm tựa từ **12. Addition và multiplication descend xuống residue classes** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **14. Worked Example: inverse của 7 modulo 26** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **13. Modular inverse** nối từ **12. Addition và multiplication descend xuống residue classes** sang **14. Worked Example: inverse của 7 modulo 26**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 13. Modular inverse
 
@@ -352,7 +352,7 @@ Theo Bézout, solution tồn tại iff
 
 Vì vậy coprimality là điều kiện (condition / 조건) chính xác cho invertibility modulo `n`.
 
-> **Chuyển mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **13. Modular inverse** cho ta quy tắc; **14. Worked Example: inverse của 7 modulo 26** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **15. Modular division không giống ordinary division** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **13. Modular inverse** nêu quy tắc; **14. Worked Example: inverse của 7 modulo 26** thử quy tắc trong tình huống, rồi **15. Modular division không giống ordinary division** mở rộng hệ quả.
 
 ## 14. Worked Example: inverse của 7 modulo 26
 
@@ -394,7 +394,7 @@ nên inverse của 7 modulo 26 là
 
 vì `-11≡15 mod 26`.
 
-> **Chuyển mạch:** Ở chặng này của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **14. Worked Example: inverse của 7 modulo 26** cho ta quy tắc; **15. Modular division không giống ordinary division** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **16. Fermat's little theorem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **14. Worked Example: inverse của 7 modulo 26** nêu quy tắc; **15. Modular division không giống ordinary division** thử quy tắc trong tình huống, rồi **16. Fermat's little theorem** mở rộng hệ quả.
 
 ## 15. Modular division không giống ordinary division
 
@@ -414,7 +414,7 @@ Ví dụ modulo 6, `2` không invertible vì
 
 Không thể “chia hai vế cho 2” modulo 6 như trên real numbers mà không kiểm tra cấu trúc (structure / 구조).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **16. Fermat's little theorem** tiếp nhận điểm tựa từ **15. Modular division không giống ordinary division** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **17. Euler's theorem** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **16. Fermat's little theorem** nối từ **15. Modular division không giống ordinary division** sang **17. Euler's theorem**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 16. Fermat's little theorem
 
@@ -436,7 +436,7 @@ Sản phẩm (product / 제품) của classes `1,...,p-1` sau permutation vẫn 
 
 Điểm sâu là theorem đến từ symmetry/permutation cấu trúc (structure / 구조) của invertible residues.
 
-> **Chuyển mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **17. Euler's theorem** tiếp nhận điểm tựa từ **16. Fermat's little theorem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **18. Fast modular exponentiation** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **17. Euler's theorem** nối từ **16. Fermat's little theorem** sang **18. Fast modular exponentiation**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 17. Euler's theorem
 
@@ -460,7 +460,7 @@ Fermat là special trường hợp (case / 사례) khi `n=p` prime, vì
 \varphi(p)=p-1.
 ```
 
-> **Chuyển mạch:** Ở chặng này của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **18. Fast modular exponentiation** tiếp nhận điểm tựa từ **17. Euler's theorem** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **19. Chinese Remainder Theorem intuition** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **18. Fast modular exponentiation** nối từ **17. Euler's theorem** sang **19. Chinese Remainder Theorem intuition**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 18. Fast modular exponentiation
 
@@ -489,7 +489,7 @@ combine needed powers, reducing modulo `n` mỗi step.
 
 Đây là liên kết (connection / 연결) trực tiếp number lý thuyết (theory / 이론) ↔ thuật toán (algorithm / 알고리즘) độ phức tạp (complexity / 복잡도).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **19. Chinese Remainder Theorem intuition** tiếp nhận điểm tựa từ **18. Fast modular exponentiation** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **20. Cyclic các hệ thống (systems / 시스템들) trong software** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **19. Chinese Remainder Theorem intuition** nối từ **18. Fast modular exponentiation** sang **20. Cyclic các hệ thống (systems / 시스템들) trong software**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 19. Chinese Remainder Theorem intuition
 
@@ -506,7 +506,7 @@ Conceptually, một large cyclic trạng thái (state / 상태) có thể decomp
 
 CRT là một “thay đổi (change / 변경) of coordinates” cho modular arithmetic.
 
-> **Chuyển mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **20. Cyclic các hệ thống (systems / 시스템들) trong software** tiếp nhận điểm tựa từ **19. Chinese Remainder Theorem intuition** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **21. bảng băm (hash table / 해시 테이블) liên kết (connection / 연결)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **20. Cyclic các hệ thống (systems / 시스템들) trong software** nối từ **19. Chinese Remainder Theorem intuition** sang **21. bảng băm (hash table / 해시 테이블) liên kết (connection / 연결)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 20. Cyclic các hệ thống (systems / 시스템들) trong software
 
@@ -523,7 +523,7 @@ sharding buckets
 
 Nhưng wraparound integer trong hardware không luôn equivalent với intended mathematical modulo, đặc biệt khi signed overflow ngữ nghĩa (semantics / 의미론) khác ngôn ngữ (language / 언어).
 
-> **Chuyển mạch:** Ở chặng này của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, sau nội dung của **20. Cyclic các hệ thống (systems / 시스템들) trong software**, **21. bảng băm (hash table / 해시 테이블) liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **22. lỗi (error / 오류) detection và check digits** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, sau nội dung của **20. Cyclic các hệ thống (systems / 시스템들) trong software**, **21. bảng băm (hash table / 해시 테이블) liên kết (connection / 연결)** chỉ rõ tài liệu chuẩn và vị trí sở hữu để người học biết phần nào cần quay lại khi muốn đào sâu. Từ đây, **22. lỗi (error / 오류) detection và check digits** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 21. bảng băm (hash table / 해시 테이블) liên kết (connection / 연결)
 
@@ -539,7 +539,7 @@ Nếu upstream băm (hash / 해시) có patterns align với `m`, collisions có
 
 Do đó number-theoretic cấu trúc (structure / 구조) của bảng (table / 테이블) kích thước (size / 크기) đôi khi matter, nhưng hiện đại (modern / 현대적) hash-table thiết kế (design / 설계) còn phụ thuộc tải (load / 로드) factor, mixing hàm (function / 함수) và collision chiến lược (strategy / 전략).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **22. lỗi (error / 오류) detection và check digits** tiếp nhận điểm tựa từ **21. bảng băm (hash table / 해시 테이블) liên kết (connection / 연결)** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **23. Finite fields: khi residue arithmetic trở thành trường dữ liệu (field / 필드)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **22. lỗi (error / 오류) detection và check digits** nối từ **21. bảng băm (hash table / 해시 테이블) liên kết (connection / 연결)** sang **23. Finite fields: khi residue arithmetic trở thành trường dữ liệu (field / 필드)**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 22. lỗi (error / 오류) detection và check digits
 
@@ -551,7 +551,7 @@ Thiết kế (design / 설계) tốt cần analyze lỗi (error / 오류) mô h�
 
 Number lý thuyết (theory / 이론) cung cấp bất biến (invariant / 불변식); độ tin cậy (reliability / 신뢰성) phụ thuộc bất biến (invariant / 불변식) detect được loại perturbation nào.
 
-> **Chuyển mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **22. lỗi (error / 오류) detection và check digits** nêu điều cần giải thích; **23. Finite fields: khi residue arithmetic trở thành trường dữ liệu (field / 필드)** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **24. liên kết (connection / 연결) với cryptographic mathematics** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **22. lỗi (error / 오류) detection và check digits** đặt vấn đề; **23. Finite fields: khi residue arithmetic trở thành trường dữ liệu (field / 필드)** đối chiếu bằng chứng, rồi **24. liên kết (connection / 연결) với cryptographic mathematics** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 23. Finite fields: khi residue arithmetic trở thành trường dữ liệu (field / 필드)
 
@@ -575,7 +575,7 @@ Do đó `\mathbb Z/6\mathbb Z` không phải trường dữ liệu (field / 필�
 
 Đây là cầu nối (bridge / 브리지) sang algebraic structures.
 
-> **Chuyển mạch:** Ở chặng này của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **23. Finite fields: khi residue arithmetic trở thành trường dữ liệu (field / 필드)** nêu điều cần giải thích; **24. liên kết (connection / 연결) với cryptographic mathematics** đối chiếu nó với bằng chứng hoặc nguồn kiểm chứng. Từ đây, **25. liên kết (connection / 연결) với Fourier và cyclic cấu trúc (structure / 구조)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **23. Finite fields: khi residue arithmetic trở thành trường dữ liệu (field / 필드)** đặt vấn đề; **24. liên kết (connection / 연결) với cryptographic mathematics** đối chiếu bằng chứng, rồi **25. liên kết (connection / 연결) với Fourier và cyclic cấu trúc (structure / 구조)** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## 24. liên kết (connection / 연결) với cryptographic mathematics
 
@@ -585,7 +585,7 @@ Nhưng một theorem number lý thuyết (theory / 이론) đúng không tự đ
 
 Ở đây mục tiêu chỉ là hiểu mathematical substrate, không đồng nhất “có prime/modulo” với bảo mật (security / 보안).
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **25. liên kết (connection / 연결) với Fourier và cyclic cấu trúc (structure / 구조)** tiếp nhận điểm tựa từ **24. liên kết (connection / 연결) với cryptographic mathematics** nhưng đổi góc nhìn sang câu hỏi của chính nó; đọc liền hai mục để thấy mối quan hệ đó. Từ đây, **26. Worked Example: weekday arithmetic** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **25. liên kết (connection / 연결) với Fourier và cyclic cấu trúc (structure / 구조)** nối từ **24. liên kết (connection / 연결) với cryptographic mathematics** sang **26. Worked Example: weekday arithmetic**, vì cơ chế trước tạo đầu vào cho bước sau.
 
 ## 25. liên kết (connection / 연결) với Fourier và cyclic cấu trúc (structure / 구조)
 
@@ -599,7 +599,7 @@ trong complex numbers.
 
 Finite cyclic structures và modular indexing vì vậy xuất hiện song song trong tín hiệu (signal / 신호) processing và number-theoretic transforms.
 
-> **Chuyển mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **25. liên kết (connection / 연결) với Fourier và cyclic cấu trúc (structure / 구조)** cho ta quy tắc; **26. Worked Example: weekday arithmetic** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **27. Proof chiến lược (strategy / 전략): công việc (work / 작업) modulo small cơ sở (base / 기반) để tìm impossibility** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **25. liên kết (connection / 연결) với Fourier và cyclic cấu trúc (structure / 구조)** nêu quy tắc; **26. Worked Example: weekday arithmetic** thử quy tắc trong tình huống, rồi **27. Proof chiến lược (strategy / 전략): công việc (work / 작업) modulo small cơ sở (base / 기반) để tìm impossibility** mở rộng hệ quả.
 
 ## 26. Worked Example: weekday arithmetic
 
@@ -613,7 +613,7 @@ nên day là Wednesday.
 
 Ta không cần enumerate 100 steps; modulo giữ lại đúng thông tin (information / 정보) relevant cho periodic trạng thái (state / 상태).
 
-> **Chuyển mạch:** Ở chặng này của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **26. Worked Example: weekday arithmetic** cho ta quy tắc; **27. Proof chiến lược (strategy / 전략): công việc (work / 작업) modulo small cơ sở (base / 기반) để tìm impossibility** đặt quy tắc ấy vào tình huống cụ thể để thấy nó hoạt động đến đâu. Từ đây, **Mô hình tư duy (mental model / 사고 모델)** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Ở chặng này của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **26. Worked Example: weekday arithmetic** nêu quy tắc; **27. Proof chiến lược (strategy / 전략): công việc (work / 작업) modulo small cơ sở (base / 기반) để tìm impossibility** thử quy tắc trong tình huống, rồi **Mô hình tư duy (mental model / 사고 모델)** mở rộng hệ quả.
 
 ## 27. Proof chiến lược (strategy / 전략): công việc (work / 작업) modulo small cơ sở (base / 기반) để tìm impossibility
 
@@ -637,13 +637,13 @@ Vậy square chỉ remainder 0 hoặc 1 modulo 4, không thể 2.
 
 Đây là proof technique rất mạnh: quotient infinite integer bài toán (problem / 문제) xuống finite residue classes.
 
-> **Chuyển mạch:** Đặt trong câu hỏi lớn của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **Mô hình tư duy (mental model / 사고 모델)** gom các mảnh từ **27. Proof chiến lược (strategy / 전략): công việc (work / 작업) modulo small cơ sở (base / 기반) để tìm impossibility** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** sẽ cho biết hệ quả hoặc giới hạn ấy hiện ra ở đâu.
+> **Nối mạch:** Đặt trong câu hỏi lớn của **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **Mô hình tư duy (mental model / 사고 모델)** tổng hợp từ **27. Proof chiến lược (strategy / 전략): công việc (work / 작업) modulo small cơ sở (base / 기반) để tìm impossibility** thành một kết luận có thể mang sang phần kế tiếp. Từ đây, **Dùng chung (common / 공통) Misconceptions** mở rộng hệ quả hoặc giới hạn liên quan.
 
 ## Mô hình tư duy (mental model / 사고 모델)
 
 > Number lý thuyết (theory / 이론) nghiên cứu cấu trúc (structure / 구조) của integers dưới divisibility và multiplication. Modular arithmetic quotient infinite integers thành finite equivalence classes nhưng giữ đủ arithmetic cấu trúc (structure / 구조) để tính toán. GCD, inverse, prime factorization và congruence không phải tricks riêng lẻ; chúng là các mặt của cùng cấu trúc divisibility.
 
-> **Chuyển mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **Dùng chung (common / 공통) Misconceptions** gom các mảnh từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Phần còn lại của file dùng kết quả này để khép lại mạch giải thích.
+> **Nối mạch:** Trong **Lý thuyết số và số học modulo: cấu trúc của integers và computation rời rạc**, **Dùng chung (common / 공통) Misconceptions** tổng hợp từ **Mô hình tư duy (mental model / 사고 모델)** thành một kết luận có thể mang sang phần kế tiếp. Mục này khép mạch bằng cách nối kết quả với phạm vi của chapter.
 
 ## Dùng chung (common / 공통) Misconceptions
 
