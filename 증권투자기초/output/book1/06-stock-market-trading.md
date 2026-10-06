@@ -2,6 +2,10 @@
 
 [← Mục lục sách 1](./00-book1-index.md) · [Phần trước](./05-ipo-and-listing.md) · [Phần tiếp theo](./07-index-futures-options.md)
 
+> **SOURCE / TEXTBOOK STATE:** Mọi ngưỡng, tỷ lệ, giờ giao dịch, điều kiện pháp lý hoặc quy tắc sản phẩm không có block current riêng đều là snapshot của sach1.md và ảnh nguồn tương ứng.
+>
+> **CURRENT VERIFIED STATE:** Không suy ra quy định 2026 từ các con số trong sách. Route này chỉ gọi một rule là current khi có nguồn chính thức và ngày snapshot; nếu không có block như vậy, phải tra nguồn chính thức phù hợp trước khi áp dụng thực tế.
+
 ## 한국어 핵심어 — Từ khóa đọc nhanh
 
 - `주식유통시장` — thị trường lưu thông cổ phiếu; `유통` ở đây là lưu thông,
@@ -400,7 +404,7 @@ quy tắc riêng. Khi đó, nhà đầu tư phải so sánh giá, thanh khoản,
 phí và cách chuyển lệnh giữa các địa điểm. Giờ giao dịch và cấu trúc NXT trong
 chỉ là mô tả theo thời điểm biên soạn.
 
-### 12. Bảng nguồn — nhịp giao dịch và giới hạn lịch sử
+### 14. Bảng nguồn — nhịp giao dịch và giới hạn lịch sử
 
 | Mục trong source | Snapshot được ghi | Cách học an toàn |
 |---|---|---|
@@ -410,7 +414,7 @@ chỉ là mô tả theo thời điểm biên soạn.
 | Tự doanh cổ phiếu quỹ | phải có tài khoản riêng, công bố nghị quyết và nộp lệnh trong thời hạn nguồn nêu | tách nghĩa vụ công bố, tài khoản và giới hạn giá khỏi quyền mua bán thông thường |
 | `Circuit Breakers`/`Sidecar` | tạm dừng hoặc giảm tốc khi chỉ số/hợp đồng tương lai biến động mạnh | hiểu cơ chế giảm sốc, không coi là bảo hiểm thua lỗ |
 
-### 13. Bốn thị trường không nên gộp thành “sàn cổ phiếu”
+### 15. Bốn thị trường không nên gộp thành “sàn cổ phiếu”
 
 | Thị trường | Vai trò theo source | Câu hỏi phân biệt |
 |---|---|---|
@@ -424,7 +428,7 @@ NXT (`대체거래소`) bổ sung một địa điểm giao dịch thay thế ch
 việc dùng giá đóng cửa KRX làm tham chiếu cho một số giao dịch; đây là thiết kế
 theo thời điểm biên soạn, cần kiểm tra lại trước khi đặt lệnh.
 
-### 14. Kiểm tra hiểu phần giao dịch
+### 16. Kiểm tra hiểu phần giao dịch
 
 1. Một lệnh mua giá cao hơn nhưng đến sau có luôn được khớp trước lệnh giá thấp
    hơn đến trước không? Hãy dùng `가격우선` và `시간우선` để trả lời.
@@ -432,7 +436,7 @@ theo thời điểm biên soạn, cần kiểm tra lại trước khi đặt l�
 3. Nếu cổ phiếu bị `관리종목`, điều đó đã đồng nghĩa với `상장폐지` chưa? Nêu
    điều kiện trung gian và mục đích bảo vệ của từng trạng thái.
 
-### 15. Cổ phiếu quỹ (`자기주식`) — bảng điều kiện nguồn
+### 17. Cổ phiếu quỹ (`자기주식`) — bảng điều kiện nguồn
 
 Source đối xử với giao dịch cổ phiếu quỹ như một nghiệp vụ có giới hạn riêng,
 không phải lệnh mua bán thông thường của nhà đầu tư:
@@ -450,7 +454,7 @@ Các mốc 3 tháng, 15:00, 1% và ±5% là snapshot lịch sử. Cần giữ c�
 soát (tài khoản riêng → công bố → biên giá → giới hạn lượng) khi đối chiếu quy
 định hiện hành.
 
-### 16. `관리종목` và `정리매매`: điều kiện nguồn cần nhận diện
+### 18. `관리종목` và `정리매매`: điều kiện nguồn cần nhận diện
 
 Source minh họa chuỗi bảo vệ bằng các nhóm dấu hiệu, không phải một ngưỡng duy
 nhất:
@@ -469,7 +473,7 @@ giá trong snapshot) rồi hủy niêm yết. Các số liệu này là lịch s
 **dấu hiệu → thời gian khắc phục → giao dịch cuối → hủy niêm yết**, không phải
 chép ngưỡng thành luật hiện tại.
 
-### 17. Checklist theo từng địa điểm giao dịch
+### 19. Checklist theo từng địa điểm giao dịch
 
 Các thị trường dưới đây không chỉ khác tên; source gắn mỗi thị trường với một
 nhóm doanh nghiệp, cách vào thị trường và cách hình thành thanh khoản:
@@ -488,7 +492,7 @@ tiếp cận cổ phiếu chưa niêm yết nhưng không mang cùng mức công
 cơ chế giá với KRX; NXT tăng lựa chọn venue nhưng buộc nhà đầu tư so sánh điều
 kiện khớp và giá tốt nhất.
 
-### 18. Kiểm tra reconstruction vòng đời giao dịch
+### 20. Kiểm tra reconstruction vòng đời giao dịch
 
 Hãy tự kể một giao dịch cổ phiếu bằng đúng chuỗi sau, không bỏ mắt xích:
 
